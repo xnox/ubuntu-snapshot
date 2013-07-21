@@ -1,0 +1,2990 @@
+Package: apparmor
+Binary: apparmor, apparmor-utils, apparmor-profiles, apparmor-docs, libapparmor-dev, libapparmor1, libapparmor-perl, libapache2-mod-apparmor, libpam-apparmor, apparmor-notify, python-libapparmor, dh-apparmor
+Version: 2.7.102-0ubuntu3.8
+Priority: standard
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Build-Depends: debhelper (>= 8.1.2), flex, bison, bzip2, apache2-prefork-dev, libpam-dev, autotools-dev, libtool, automake, autoconf, chrpath, texlive-latex-base, swig, quilt, po-debconf, dejagnu, python-all-dev, python, perl (>= 5.8.0), liblocale-gettext-perl
+Architecture: any all
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/a/apparmor
+Files:
+ 624c135bab0c8867c53647c55f1193d3 2035 apparmor_2.7.102-0ubuntu3.8.dsc
+ 354541b1e7e21c8e65bacfc85446be5b 1445765 apparmor_2.7.102.orig.tar.gz
+ c93e00ccc11e15b6f14f47fe9bab9e51 85326 apparmor_2.7.102-0ubuntu3.8.debian.tar.gz
+Homepage: http://apparmor.net/
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-core-dev/apparmor/master
+Package-List: 
+ apparmor deb admin extra
+ apparmor-docs deb doc extra
+ apparmor-notify deb admin extra
+ apparmor-profiles deb admin extra
+ apparmor-utils deb admin extra
+ dh-apparmor deb devel extra
+ libapache2-mod-apparmor deb libs extra
+ libapparmor-dev deb libdevel extra
+ libapparmor-perl deb perl extra
+ libapparmor1 deb libs extra
+ libpam-apparmor deb libs extra
+ python-libapparmor deb python extra
+Checksums-Sha1:
+ 737b8c3fa3678a668feba1240b06090f217f59ae 2035 apparmor_2.7.102-0ubuntu3.8.dsc
+ d9abae6b901cfb4bad1f1bb517059defe2e514ce 1445765 apparmor_2.7.102.orig.tar.gz
+ db5632470fd8dc1f03d1ec22715cc40558a2bf15 85326 apparmor_2.7.102-0ubuntu3.8.debian.tar.gz
+Checksums-Sha256:
+ d709d5b0a8e7a317510515bcd059fdcd3003e7fd359598cdb43a9a732a2ce54e 2035 apparmor_2.7.102-0ubuntu3.8.dsc
+ ae8fc125512c58c96670b866331bf3f9fb251da38be1534e8bfb77b9ed8f758d 1445765 apparmor_2.7.102.orig.tar.gz
+ 8b213a129bcfedfbfadc9586a34d4059447e7a6f8fc83bfb493d1d966c5c777d 85326 apparmor_2.7.102-0ubuntu3.8.debian.tar.gz
+
+Package: appmenu-gtk
+Binary: appmenu-gtk, appmenu-gtk3
+Version: 0.3.92-0ubuntu1.2
+Priority: optional
+Section: libs
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Build-Depends: debhelper (>= 8.1.3), cdbs (>= 0.4.93~), libgtk2.0-dev (>= 2.21.2-0ubuntu6), libgtk-3-dev (>= 3.0.8-0ubuntu1), libx11-dev, libdbusmenu-glib-dev (>= 0.4.3-0ubuntu3), libdbusmenu-gtk-dev (>= 0.4.3-0ubuntu3), libdbusmenu-gtk3-dev (>= 0.4.3-0ubuntu3), dh-autoreconf, libtool
+Architecture: any
+Standards-Version: 3.9.2
+Format: 1.0
+Directory: pool/main/a/appmenu-gtk
+Files:
+ 44a862fe624334e10d1937c3066bad9a 2212 appmenu-gtk_0.3.92-0ubuntu1.2.dsc
+ e543b5f122258802b92fa5cb93918158 323924 appmenu-gtk_0.3.92.orig.tar.gz
+ 9c5144ea9eeae1ada0871c8462eb4755 8093 appmenu-gtk_0.3.92-0ubuntu1.2.diff.gz
+Homepage: https://launchpad.net/appmenu-gtk
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-desktop/appmenu-gtk/ubuntu
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/appmenu-gtk/ubuntu
+Package-List: 
+ appmenu-gtk deb libs optional
+ appmenu-gtk3 deb libs optional
+Checksums-Sha1:
+ 79059fe97b8047c9be3377fdcd54d9437d299fda 2212 appmenu-gtk_0.3.92-0ubuntu1.2.dsc
+ 7c054144492ea10fa3a56886e8afccc0b198e5ec 323924 appmenu-gtk_0.3.92.orig.tar.gz
+ 45faae8e53dcfc4ec6674af23d0ad7716dc433dd 8093 appmenu-gtk_0.3.92-0ubuntu1.2.diff.gz
+Checksums-Sha256:
+ 1649ae407d6ee16d6000973d7fa9377ac34b8689e659d4df623781aba018dd83 2212 appmenu-gtk_0.3.92-0ubuntu1.2.dsc
+ 12261e43abfb50d494bfd2c8a49acdfb5df3565ae9c0afe0f37fd56ceecc3fe2 323924 appmenu-gtk_0.3.92.orig.tar.gz
+ 1d96d31cb8961dcf5042f0cf325714a594f1446127c08b9c63b6b081400dfe95 8093 appmenu-gtk_0.3.92-0ubuntu1.2.diff.gz
+
+Package: apport
+Binary: apport, python-problem-report, python-apport, apport-retrace, apport-gtk, apport-kde, dh-apport
+Version: 2.0.1-0ubuntu17.4
+Priority: optional
+Section: utils
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Build-Depends: debhelper (>= 7.3.15ubuntu2), dh-translations, gdb, python-twisted-core, python-gi, gir1.2-glib-2.0 (>= 1.29.17), lsb-release, net-tools, python-all
+Build-Depends-Indep: python-distutils-extra (>= 2.24~), python-apt (>= 0.7.9), intltool, xvfb, python-mock, procps, psmisc, gir1.2-gtk-3.0 (>= 3.1.90), python-launchpadlib (>= 1.5.7), default-jdk | java-sdk
+Architecture: all
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/a/apport
+Files:
+ 1d96dd5a30898d90df4ddb2e8bf850c5 1779 apport_2.0.1-0ubuntu17.4.dsc
+ d19fbf3bafa95104b1cd1aeb13e06366 666382 apport_2.0.1.orig.tar.gz
+ 0f6e99e61e8c04c478cb568892ba80dd 132900 apport_2.0.1-0ubuntu17.4.diff.gz
+Homepage: https://wiki.ubuntu.com/Apport
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-core-dev/ubuntu/precise/apport/ubuntu
+Package-List: 
+ apport deb utils optional
+ apport-gtk deb gnome optional
+ apport-kde deb kde optional
+ apport-retrace deb devel optional
+ dh-apport deb devel optional
+ python-apport deb python optional
+ python-problem-report deb python optional
+Checksums-Sha1:
+ 915a369cff1e638b9f8d7fccef74cd3cb563fb64 1779 apport_2.0.1-0ubuntu17.4.dsc
+ 65deb607b020571a88507172327caae1db400d2e 666382 apport_2.0.1.orig.tar.gz
+ 15ac1b1e69a950cbc53df1286edff730e4c9bdf8 132900 apport_2.0.1-0ubuntu17.4.diff.gz
+Checksums-Sha256:
+ 78299ad02daaae0fabdf09dec46dc6a7097ae389da5cb0b561fb9d839d59cf1c 1779 apport_2.0.1-0ubuntu17.4.dsc
+ 2020aea997fa35fd72a99d55e228cbd5c0686a7904b61b492d44452f3679ff52 666382 apport_2.0.1.orig.tar.gz
+ 65826ec9420020144d485e1dc49d1d8eaee2f79f8b760381f72e6fb29d141833 132900 apport_2.0.1-0ubuntu17.4.diff.gz
+
+Package: apt
+Binary: apt, libapt-pkg4.12, libapt-inst1.4, apt-doc, libapt-pkg-dev, libapt-pkg-doc, apt-utils, apt-transport-https
+Version: 0.8.16~exp12ubuntu10.12
+Priority: important
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Build-Depends: dpkg-dev (>= 1.15.8), debhelper (>= 8.1.3~), libdb-dev, gettext:any (>= 0.12), libcurl4-gnutls-dev (>= 7.19.0), zlib1g-dev | libz-dev, debiandoc-sgml, xsltproc, docbook-xsl, docbook-xml, po4a (>= 0.34-2), autotools-dev, autoconf, automake, doxygen
+Build-Conflicts: autoconf2.13, automake1.4
+Architecture: any all
+Standards-Version: 3.9.2
+Format: 3.0 (native)
+Directory: pool/main/a/apt
+Files:
+ 303b1e55ed543806ca114e9910591b31 1800 apt_0.8.16~exp12ubuntu10.12.dsc
+ a31043e3e4b812cc475800a781d62830 3439027 apt_0.8.16~exp12ubuntu10.12.tar.gz
+Uploaders: Michael Vogt <mvo@debian.org>, Otavio Salvador <otavio@debian.org>, Christian Perrier <bubulle@debian.org>, Daniel Burrows <dburrows@debian.org>, Julian Andres Klode <jak@debian.org>
+Vcs-Browser: http://code.launchpad.net/apt/precise
+Vcs-Bzr: lp:~ubuntu-core-dev/apt/precise
+Package-List: 
+ apt deb admin important
+ apt-doc deb doc optional
+ apt-transport-https deb admin optional
+ apt-utils deb admin important
+ libapt-inst1.4 deb admin important
+ libapt-pkg-dev deb libdevel optional
+ libapt-pkg-doc deb doc optional
+ libapt-pkg4.12 deb admin important
+Checksums-Sha1:
+ 4278d98b10294d7beeb3853b3e9bf72aa8b3945b 1800 apt_0.8.16~exp12ubuntu10.12.dsc
+ f4b2e1c98ed2bfaa336aab630824c62ae2e078df 3439027 apt_0.8.16~exp12ubuntu10.12.tar.gz
+Checksums-Sha256:
+ 04accfad21444c9e284f0b8799cddf31b58039086b417e78e39cf4519b7e6e8d 1800 apt_0.8.16~exp12ubuntu10.12.dsc
+ 39869f1a5dd3e3e95f13413cc95882db09e8e719cf41da2e20863eb1cfb93bdc 3439027 apt_0.8.16~exp12ubuntu10.12.tar.gz
+
+Package: base-installer
+Binary: base-installer, bootstrap-base
+Version: 1.122ubuntu7.3
+Section: debian-installer
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 7.3.10), libdebconfclient0-dev (>= 0.46), libdebian-installer4-dev (>= 0.41)
+Architecture: any all
+Format: 1.0
+Directory: pool/main/b/base-installer
+Files:
+ 173cd201702ec3b24b3a35cb76fe9eea 2046 base-installer_1.122ubuntu7.3.dsc
+ a113b6f386f3329a8b12da02ea0241a4 302719 base-installer_1.122ubuntu7.3.tar.gz
+Uploaders: Petter Reinholdtsen <pere@debian.org>, Colin Watson <cjwatson@debian.org>, dann frazier <dannf@debian.org>, Steve Langasek <vorlon@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/base-installer/ubuntu
+Package-List: 
+ base-installer udeb debian-installer required
+ bootstrap-base udeb debian-installer required
+Checksums-Sha1:
+ b496ad7d83eedb4adda200ac7cb99af2c9bd3597 2046 base-installer_1.122ubuntu7.3.dsc
+ 114a1c6561ef2fe044a10d5dfd04c98de80bd28a 302719 base-installer_1.122ubuntu7.3.tar.gz
+Checksums-Sha256:
+ 6365e47369eabf95d4324a3fd1cf0ac5b387dbe50fab5a02aa7a2bef4869016d 2046 base-installer_1.122ubuntu7.3.dsc
+ 9738cbaa1706e3c3969bdb40339cc08109ac0cb7f1d9e65f35c8dd28a2b87dd1 302719 base-installer_1.122ubuntu7.3.tar.gz
+Debian-Vcs-Browser: http://git.debian.org/?p=d-i/base-installer.git
+Debian-Vcs-Git: git://git.debian.org/d-i/base-installer.git
+
+Package: consolekit
+Binary: consolekit, libck-connector0, libck-connector-dev, libpam-ck-connector
+Version: 0.4.5-2ubuntu0.1
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 8), autotools-dev, pkg-config, libdbus-glib-1-dev (>= 0.30), libglib2.0-dev (>= 2.14.0), libx11-dev (>= 1.0.0), libkvm-dev [kfreebsd-any], xmlto, libpam0g-dev, libpolkit-gobject-1-dev (>= 0.92), zlib1g-dev, dh-autoreconf
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/c/consolekit
+Files:
+ 86c7fecb4de5413e949de68192a42167 1835 consolekit_0.4.5-2ubuntu0.1.dsc
+ f2657f93761206922d558471a936fbc3 425423 consolekit_0.4.5.orig.tar.bz2
+ e0e4ad1f02e47b16416282b937a471ff 15554 consolekit_0.4.5-2ubuntu0.1.debian.tar.gz
+Uploaders: Michael Biebl <biebl@debian.org>
+Homepage: http://www.freedesktop.org/wiki/Software/ConsoleKit
+Vcs-Browser: http://git.debian.org/?p=pkg-utopia/consolekit.git;a=summary
+Vcs-Git: git://git.debian.org/git/pkg-utopia/consolekit.git
+Package-List: 
+ consolekit deb admin optional
+ libck-connector-dev deb libdevel optional
+ libck-connector0 deb libs optional
+ libpam-ck-connector deb admin optional
+Checksums-Sha1:
+ 05066cc849404f5467aee8a7d05179bb793c737e 1835 consolekit_0.4.5-2ubuntu0.1.dsc
+ 6f090c1ce0d459dd6904854532554323755bdeca 425423 consolekit_0.4.5.orig.tar.bz2
+ 6d47e1620c9fbc27a078561ae8bb783f7cbc7a10 15554 consolekit_0.4.5-2ubuntu0.1.debian.tar.gz
+Checksums-Sha256:
+ 51ba316d67a631f18f7fc663b7d55bc3c7f3992ff831c33fac2b4439315b4c81 1835 consolekit_0.4.5-2ubuntu0.1.dsc
+ 43e0780c53078e125efcec3f847e484dc3533e49b408ce6a0ab1b223686b9c38 425423 consolekit_0.4.5.orig.tar.bz2
+ ef657251d9d5fac4a6cc804246e70ec4d0a151bd1b532e66b7694dfda7da7728 15554 consolekit_0.4.5-2ubuntu0.1.debian.tar.gz
+
+Package: dosfstools
+Binary: dosfstools, dosfstools-dbg, dosfstools-udeb
+Version: 3.0.12-1ubuntu1.1
+Priority: standard
+Section: otherosfs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Daniel Baumann <daniel.baumann@progress-technologies.net>
+Build-Depends: debhelper (>= 8)
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/d/dosfstools
+Files:
+ 28fb6e290467f31380f20d95f313d432 2054 dosfstools_3.0.12-1ubuntu1.1.dsc
+ 4c1f1e72b82371704f93ebdd3c7b6259 82117 dosfstools_3.0.12.orig.tar.gz
+ 034691d5ae6c861b6236c3e107251800 9729 dosfstools_3.0.12-1ubuntu1.1.debian.tar.gz
+Homepage: http://www.daniel-baumann.ch/software/dosfstools/
+Package-List: 
+ dosfstools deb otherosfs optional
+ dosfstools-dbg deb debug extra
+ dosfstools-udeb udeb debian-installer optional
+Checksums-Sha1:
+ ff7c9443eb5692070db22182ca120087662cc082 2054 dosfstools_3.0.12-1ubuntu1.1.dsc
+ bb68ba1378285048313ffd3f4764dfe126b5fadd 82117 dosfstools_3.0.12.orig.tar.gz
+ eb049f81902e0c96c05dc0cbd28a27b978288f7f 9729 dosfstools_3.0.12-1ubuntu1.1.debian.tar.gz
+Checksums-Sha256:
+ 835fab9b806763b5fa385348f5cdf63bcadc3620376e37703aa0102084f4917f 2054 dosfstools_3.0.12-1ubuntu1.1.dsc
+ 7c8e572f9d0cc60c1390c35cc2846d957c939f5ff9a3da54fa4bdc034faf6dea 82117 dosfstools_3.0.12.orig.tar.gz
+ 1d6868bf1092086cf0c2b19d11c168408ca036ac3c4f9b24a2b11503bdddc93d 9729 dosfstools_3.0.12-1ubuntu1.1.debian.tar.gz
+
+Package: evince
+Binary: evince, evince-dbg, evince-gtk, evince-common, libevince3-3, libevince-dev, gir1.2-evince-3.0
+Version: 3.4.0-0ubuntu1.7
+Priority: optional
+Section: gnome
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Build-Depends: cdbs (>= 0.4.90), debhelper (>= 8), dh-autoreconf, dh-apparmor, intltool (>= 0.35.0), gnome-pkg-tools (>= 0.10), gnome-doc-utils (>= 0.3.2), gtk-doc-tools (>= 1.0), libx11-dev, libcairo2-dev (>= 1.10.0), libgtk-3-dev (>= 3.0.2), libgail-3-dev (>= 3.0.2), libglib2.0-dev (>= 2.25.1), libgnome-keyring-dev (>= 2.22.0), gnome-icon-theme (>= 2.17.1), libxml2-dev (>= 2.5.0), libsm-dev (>= 2:1.0.0), zlib1g-dev, libnautilus-extension-dev (>= 2.91.4), libpoppler-glib-dev (>= 0.18.0), libspectre-dev (>= 0.2.0), libtiff4-dev, libdjvulibre-dev (>= 3.5.17), libkpathsea-dev, libt1-dev, autotools-dev, gobject-introspection (>= 0.9.12-4~), libgirepository1.0-dev (>= 0.9.12), gir1.2-glib-2.0, gir1.2-gtk-3.0, gsettings-desktop-schemas-dev, gnome-common, hardening-includes, liblaunchpad-integration-3.0-dev (>= 0.1.17), libgrip-dev (>= 0.3.1)
+Architecture: any all
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/e/evince
+Files:
+ 53c3f034935d05df8e0fa2b7f30bec17 2433 evince_3.4.0-0ubuntu1.7.dsc
+ 23c8a5eec7686d2bb607f9c8245ad242 6162936 evince_3.4.0.orig.tar.xz
+ 34ba419055dee6d2e66b36cc0c61b00c 32848 evince_3.4.0-0ubuntu1.7.debian.tar.gz
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Jeremy Bicha <jbicha@ubuntu.com>
+Homepage: http://www.gnome.org/projects/evince/
+Package-List: 
+ evince deb gnome optional
+ evince-common deb gnome optional
+ evince-dbg deb debug extra
+ evince-gtk deb x11 optional
+ gir1.2-evince-3.0 deb libs optional
+ libevince-dev deb libdevel optional
+ libevince3-3 deb libs optional
+Checksums-Sha1:
+ 3279f5486244e66b383917c9542c827bf74b9617 2433 evince_3.4.0-0ubuntu1.7.dsc
+ 7159f4b1486fc07b5be93c3034965395d41c458a 6162936 evince_3.4.0.orig.tar.xz
+ b50a5cf226d9acc16b67184ab298475fc42bd3a0 32848 evince_3.4.0-0ubuntu1.7.debian.tar.gz
+Checksums-Sha256:
+ b310dd74477564588e335cd577bae171f393786fe475ec62bd3f6c8af631847d 2433 evince_3.4.0-0ubuntu1.7.dsc
+ 02f1c74c123ea0cb4c1a98cb9ba2b67d724e9f90d7ff15acbcd6b8dbeef0a129 6162936 evince_3.4.0.orig.tar.xz
+ af96af7a6e4abc87eec3b0b06943d459580e95afa1f75a14dadfb95bac5e87cf 32848 evince_3.4.0-0ubuntu1.7.debian.tar.gz
+
+Package: facter
+Binary: facter
+Version: 1.6.5-1ubuntu1.2
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Puppet Package Maintainers <pkg-puppet-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 8), ruby (>= 1.8), libopenssl-ruby
+Architecture: all
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/f/facter
+Files:
+ 16c2a30b1ba858a0e043a41b81b297bb 2206 facter_1.6.5-1ubuntu1.2.dsc
+ cc3c69d73e86a14832772d2add8b57f9 117372 facter_1.6.5.orig.tar.gz
+ 7fbb21c01f7a3dc614fa95b646270cd2 9611 facter_1.6.5-1ubuntu1.2.debian.tar.gz
+Uploaders: Andrew Pollock <apollock@debian.org>, Nigel Kersten <nigel@explanatorygap.net>, Micah Anderson <micah@debian.org>, Stig Sandbeck Mathisen <ssm@debian.org>
+Homepage: http://projects.puppetlabs.com/projects/facter
+Vcs-Browser: http://git.debian.org/?p=pkg-puppet/facter.git
+Vcs-Git: git://git.debian.org/git/pkg-puppet/facter.git
+Package-List: 
+ facter deb admin optional
+Checksums-Sha1:
+ 0ad3c1001c61a5fe891551cd467abe929639e9e2 2206 facter_1.6.5-1ubuntu1.2.dsc
+ 36fd521fd4a7454570a46dee596bf63f359dedd6 117372 facter_1.6.5.orig.tar.gz
+ d110482b2c2a1c3cfc1005db2ecf86a6f1025b59 9611 facter_1.6.5-1ubuntu1.2.debian.tar.gz
+Checksums-Sha256:
+ 8e2cf4fcdd3eaca66a9fb342fa88c84eeb635ee717040eae43a7ff3e9ae4345e 2206 facter_1.6.5-1ubuntu1.2.dsc
+ 831e6f6f12c2c55c0dc65c004e6a7b8a18c127aa6c0946c5db366517adefd2ac 117372 facter_1.6.5.orig.tar.gz
+ bd51e566c7383472dbf60badb0e496b4bd2a63086165da9b1c8dc2f6c51c3e87 9611 facter_1.6.5-1ubuntu1.2.debian.tar.gz
+Ruby-Versions: all
+Testsuite: autopkgtest
+
+Package: glib2.0
+Binary: libglib2.0-0, libglib2.0-udeb, libglib2.0-bin, libglib2.0-dev, libglib2.0-0-dbg, libglib2.0-data, libglib2.0-doc, libgio-fam, libglib2.0-0-refdbg
+Version: 2.32.4-0ubuntu1
+Priority: required
+Section: libs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 8.1.3), cdbs (>= 0.4.93), dh-autoreconf, pkg-config (>= 0.16.0), gettext, autotools-dev, gnome-pkg-tools (>= 0.11), dpkg-dev (>= 1.16.0), libelf-dev (>= 0.8.12), libpcre3-dev (>= 8.11), desktop-file-utils, gtk-doc-tools (>= 1.15), libselinux1-dev [linux-any], linux-libc-dev [linux-any], libgamin-dev [!linux-any] | libfam-dev [!linux-any], zlib1g-dev, dbus, dbus-x11, shared-mime-info, python (>= 2.5), python-dbus, python-gobject-2, libxml2-utils, libffi-dev (>= 3.0.0)
+Architecture: any all
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/g/glib2.0
+Files:
+ 96e208a615050b171c9c93f80760c627 2927 glib2.0_2.32.4-0ubuntu1.dsc
+ bf84fefd9c1a5b5a7a38736f4ddd674a 6178556 glib2.0_2.32.4.orig.tar.xz
+ d34e43f362ba7ca3d82d6a698493db99 62462 glib2.0_2.32.4-0ubuntu1.debian.tar.gz
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Michael Biebl <biebl@debian.org>
+Homepage: http://www.gtk.org/
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/glib/precise
+Package-List: 
+ libgio-fam deb libs optional
+ libglib2.0-0 deb libs optional
+ libglib2.0-0-dbg deb debug extra
+ libglib2.0-0-refdbg deb debug extra
+ libglib2.0-bin deb misc optional
+ libglib2.0-data deb libs optional
+ libglib2.0-dev deb libdevel optional
+ libglib2.0-doc deb doc optional
+ libglib2.0-udeb udeb debian-installer optional
+Checksums-Sha1:
+ d8dd83bdf6ae33f3ea06a5087a19abfb2f951db2 2927 glib2.0_2.32.4-0ubuntu1.dsc
+ 5b6481cbb34f560e8ea78887200b6b7f5448dcb4 6178556 glib2.0_2.32.4.orig.tar.xz
+ 6e22b802305472bdf77a4cb6f2ab857f06b1eec0 62462 glib2.0_2.32.4-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ ac4724e63bb104e468fc42a803ac8c9a8c8c94b5da415ed6483953a7371a68a0 2927 glib2.0_2.32.4-0ubuntu1.dsc
+ a5d742a4fda22fb6975a8c0cfcd2499dd1c809b8afd4ef709bda4d11b167fae2 6178556 glib2.0_2.32.4.orig.tar.xz
+ e2e5c40ccd27442662d21292e0b5c826c9cdf51bd23964682f5bfbba713a5ba3 62462 glib2.0_2.32.4-0ubuntu1.debian.tar.gz
+
+Package: grub-installer
+Binary: grub-installer
+Version: 1.68ubuntu5.2
+Section: debian-installer
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 7.3.10~), po-debconf (>= 0.5.0), libparted-dev
+Architecture: i386 hurd-i386 amd64 kfreebsd-i386 kfreebsd-amd64 powerpc mipsel
+Format: 1.0
+Directory: pool/main/g/grub-installer
+Files:
+ cfcc5d5f918fd0d99dceb55c5233be88 1992 grub-installer_1.68ubuntu5.2.dsc
+ ce1d924f89fc07d47bf7b6db220a609c 201582 grub-installer_1.68ubuntu5.2.tar.gz
+Uploaders: Otavio Salvador <otavio@debian.org>, Felix Zielcke <fzielcke@z-51.de>, Colin Watson <cjwatson@debian.org>
+Dm-Upload-Allowed: yes
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/grub-installer/ubuntu
+Package-List: 
+ grub-installer udeb debian-installer standard
+Checksums-Sha1:
+ 88c220509c57dc19270ca4ab8b12f48d070ad0a2 1992 grub-installer_1.68ubuntu5.2.dsc
+ 5f29ad6a043ff7ca086ad56085e02f6e08a0ff0e 201582 grub-installer_1.68ubuntu5.2.tar.gz
+Checksums-Sha256:
+ fb96f7adcc56e0d8dc266fe6524f7159a7d6455aa4718508bb62d4f336c5ae3a 1992 grub-installer_1.68ubuntu5.2.dsc
+ 0a1e1a1f5df701701bb6e38db5d5945fa4e6f7f07513351713c7d3493ef759c3 201582 grub-installer_1.68ubuntu5.2.tar.gz
+Debian-Vcs-Browser: http://git.debian.org/?p=d-i/grub-installer.git
+Debian-Vcs-Git: git://git.debian.org/d-i/grub-installer.git
+
+Package: grub2
+Binary: grub2, grub-linuxbios, grub-efi, grub-common, grub2-common, grub-emu, grub-pc-bin, grub-pc, grub-rescue-pc, grub-coreboot-bin, grub-coreboot, grub-efi-ia32-bin, grub-efi-ia32, grub-efi-amd64-bin, grub-efi-amd64, grub-ieee1275-bin, grub-ieee1275, grub-firmware-qemu, grub-yeeloong-bin, grub-yeeloong, grub-mount-udeb
+Version: 1.99-21ubuntu3.10
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 7.4.2~), quilt (>= 0.46-7), patchutils, autoconf, automake, autogen (>= 1:5.10), python, flex (>= 2.5.35), bison, po-debconf, help2man, texinfo, gcc-4.6-multilib [i386 kopensolaris-i386 any-amd64 any-ppc64 any-sparc], gcc-4.6, libncurses5-dev, xfonts-unifont, libfreetype6-dev, gettext, libusb-dev [!hurd-any], libdevmapper-dev (>= 2:1.02.34) [linux-any], libgeom-dev (>= 8.2+ds1-1) [kfreebsd-any] | libgeom-dev (<< 8.2) [kfreebsd-any], libsdl1.2-dev [!hurd-any], xorriso (>= 0.5.6.pl00), qemu-kvm [i386 kfreebsd-i386 kopensolaris-i386 any-amd64], parted [!hurd-any], libfuse-dev (>= 2.8.4-1.4) [linux-any kfreebsd-any], dosfstools [amd64], mtools [amd64]
+Build-Conflicts: autoconf2.13, libnvpair-dev, libzfs-dev
+Architecture: any-i386 any-amd64 any-powerpc any-ppc64 any-sparc any-mipsel
+Standards-Version: 3.8.4
+Format: 1.0
+Directory: pool/main/g/grub2
+Files:
+ d3080d17477d1e5b072bfedf66934b94 3926 grub2_1.99-21ubuntu3.10.dsc
+ ca9f2a2d571b57fc5c53212d1d22e2b5 4652619 grub2_1.99.orig.tar.gz
+ 34b3ddcf20b06aefccb97ac5c267c2cb 460859 grub2_1.99-21ubuntu3.10.diff.gz
+Uploaders: Robert Millan <rmh@debian.org>, Felix Zielcke <fzielcke@z-51.de>, Jordi Mallach <jordi@debian.org>, Colin Watson <cjwatson@debian.org>
+Dm-Upload-Allowed: yes
+Homepage: http://www.gnu.org/software/grub/
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/ubuntu/precise/grub2/precise
+Package-List: 
+ grub-common deb admin optional
+ grub-coreboot deb admin extra
+ grub-coreboot-bin deb admin extra
+ grub-efi deb admin extra
+ grub-efi-amd64 deb admin extra
+ grub-efi-amd64-bin deb admin extra
+ grub-efi-ia32 deb admin extra
+ grub-efi-ia32-bin deb admin extra
+ grub-emu deb admin extra
+ grub-firmware-qemu deb admin extra
+ grub-ieee1275 deb admin extra
+ grub-ieee1275-bin deb admin extra
+ grub-linuxbios deb admin extra
+ grub-mount-udeb udeb debian-installer extra
+ grub-pc deb admin optional
+ grub-pc-bin deb admin optional
+ grub-rescue-pc deb admin extra
+ grub-yeeloong deb admin extra
+ grub-yeeloong-bin deb admin extra
+ grub2 deb admin extra
+ grub2-common deb admin optional
+Checksums-Sha1:
+ 766d5c0704d17069f342e1270f5fef4998333630 3926 grub2_1.99-21ubuntu3.10.dsc
+ 6d0536da38224e7caf94cf2531a5f921ac057b9b 4652619 grub2_1.99.orig.tar.gz
+ e76d66ca05870326cd1911f1d678ef71b8ae9284 460859 grub2_1.99-21ubuntu3.10.diff.gz
+Checksums-Sha256:
+ ab0b6d432e06d09ca7c857ed3a05177c99f75e15081b28348261526fadcc3b9f 3926 grub2_1.99-21ubuntu3.10.dsc
+ b91f420f2c51f6155e088e34ff99bea09cc1fb89585cf7c0179644e57abd28ff 4652619 grub2_1.99.orig.tar.gz
+ f4dd11dfc786c6d0d466158e30e8d0d64ea3b4184e188dc444ae2f5745315521 460859 grub2_1.99-21ubuntu3.10.diff.gz
+Debian-Vcs-Browser: http://anonscm.debian.org/loggerhead/pkg-grub/trunk/grub/
+Debian-Vcs-Bzr: http://anonscm.debian.org/bzr/pkg-grub/trunk/grub/
+
+Package: indicator-appmenu
+Binary: indicator-appmenu, indicator-appmenu-gtk2, indicator-appmenu-tools
+Version: 0.3.97-0ubuntu1.2
+Priority: optional
+Section: gnome
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Build-Depends: debhelper (>= 5.0), dh-autoreconf, cdbs (>= 0.4.41), libgtk2.0-dev (>= 2.12.0), libgtk-3-dev, gnome-doc-utils, intltool, libindicator-dev (>= 0.4.90), libindicator3-dev (>= 0.4.90), libdbusmenu-glib-dev (>= 0.5.90), libdbusmenu-gtk-dev (>= 0.5.90), libdbusmenu-gtk3-dev (>= 0.5.90), libdbusmenu-jsonloader-dev (>= 0.5.90), libbamf-dev (>= 0.2.53), libbamf3-dev (>= 0.2.53), libsqlite3-dev, sqlite3, dbus-test-runner, libreadline-dev, libncurses5-dev, libappindicator3-dev, indicator-application (>= 0.4.90), xvfb, valac-0.16
+Architecture: any
+Standards-Version: 3.9.2
+Format: 1.0
+Directory: pool/main/i/indicator-appmenu
+Files:
+ 90dbc97f216e8239d427da84d4a92180 2630 indicator-appmenu_0.3.97-0ubuntu1.2.dsc
+ 7f7181f80c5e78091a4f5438a9828fd8 638778 indicator-appmenu_0.3.97.orig.tar.gz
+ 881037e43e1eebf28347126a2566249f 8890 indicator-appmenu_0.3.97-0ubuntu1.2.diff.gz
+Homepage: http://launchpad.net/indicator-appmenu
+Vcs-Browser: https://code.launchpad.net/~ubuntu-desktop/indicator-appmenu/ubuntu
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-desktop/indicator-appmenu/ubuntu
+Package-List: 
+ indicator-appmenu deb gnome optional
+ indicator-appmenu-gtk2 deb gnome optional
+ indicator-appmenu-tools deb gnome optional
+Checksums-Sha1:
+ 9bd7aaf2d5759a53ea3c1916f919055fb59e9a30 2630 indicator-appmenu_0.3.97-0ubuntu1.2.dsc
+ 20add9a8d915ee4e9f722f0e40e32efce47f1662 638778 indicator-appmenu_0.3.97.orig.tar.gz
+ 5d8539f36ae6ee71d9ce3fbd04ce8f690af965b8 8890 indicator-appmenu_0.3.97-0ubuntu1.2.diff.gz
+Checksums-Sha256:
+ 150d08863f1d08ab2c6afd751a97009e19946d9e5679583ef0098e21f833ec37 2630 indicator-appmenu_0.3.97-0ubuntu1.2.dsc
+ ed5b10a1b875a827ce7c5d46a7fdbae55a5b9df702daa3a86cc7ca9ef0518654 638778 indicator-appmenu_0.3.97.orig.tar.gz
+ 0687ad7f1565da157dcc60d27a1a40c0a8cf591dde867ffb09c5ad8f727096b6 8890 indicator-appmenu_0.3.97-0ubuntu1.2.diff.gz
+
+Package: jockey
+Binary: jockey-common, jockey-gtk, jockey-kde, dh-modaliases
+Version: 0.9.7-0ubuntu7.9
+Priority: optional
+Section: admin
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50~), dh-translations, python-distutils-extra (>= 2.4), python (>= 2.7)
+Architecture: all
+Standards-Version: 3.9.1
+Format: 1.0
+Directory: pool/main/j/jockey
+Files:
+ fd120d735be263f3203c954c8b8825ce 1330 jockey_0.9.7-0ubuntu7.9.dsc
+ 70b5739a1045140c0faf62b9d2f1f16a 379761 jockey_0.9.7.orig.tar.gz
+ 161616ceef5079616b4cd567e427d0e7 79349 jockey_0.9.7-0ubuntu7.9.diff.gz
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-core-dev/jockey/ubuntu
+Package-List: 
+ dh-modaliases deb admin optional
+ jockey-common deb admin optional
+ jockey-gtk deb admin optional
+ jockey-kde deb admin optional
+Checksums-Sha1:
+ f303a800570caf2f5bc3bceb7c2f61e0f26d5e69 1330 jockey_0.9.7-0ubuntu7.9.dsc
+ 8f8079b661f665ae2a4d99e24cb60c5cf096bbf5 379761 jockey_0.9.7.orig.tar.gz
+ c347f1a09163ca17528fd119ae0937df6301f8ee 79349 jockey_0.9.7-0ubuntu7.9.diff.gz
+Checksums-Sha256:
+ 109a11d98a3785e696487f84c322e106083b963f43c455e79a8ce54578faf46c 1330 jockey_0.9.7-0ubuntu7.9.dsc
+ 35b0514c55abba0407debbbb3a40cc3ac252d7f0615576a3fe881a64eeb2f474 379761 jockey_0.9.7.orig.tar.gz
+ 5ba61290ac4456189718bf3470e20bd733af329803b12d0b54ef496af62b24ff 79349 jockey_0.9.7-0ubuntu7.9.diff.gz
+Python-Version: >= 2.7
+
+Package: lazr.restfulclient
+Binary: python-lazr.restfulclient
+Version: 0.12.0-1ubuntu1.1
+Priority: optional
+Section: python
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Luca Falavigna <dktrkranz@debian.org>
+Build-Depends: debhelper (>= 7.3.0), python (>= 2.6.6-3~), python-setuptools
+Architecture: all
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/l/lazr.restfulclient
+Files:
+ 0c0436bea36cdb84631ca82ddc95776c 2279 lazr.restfulclient_0.12.0-1ubuntu1.1.dsc
+ b4df00c20d19b73593b2f959bbbd955f 52971 lazr.restfulclient_0.12.0.orig.tar.gz
+ 976a643774e855c4074f27244a254158 7258 lazr.restfulclient_0.12.0-1ubuntu1.1.debian.tar.gz
+Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>, James Westby <james.westby@ubuntu.com>
+Homepage: https://launchpad.net/lazr.restfulclient
+Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/lazr.restfulclient/trunk/
+Vcs-Svn: svn://svn.debian.org/python-modules/packages/lazr.restfulclient/trunk/
+Package-List: 
+ python-lazr.restfulclient deb python optional
+Checksums-Sha1:
+ b81dcc0fb37fc70c39c9752790784204a95a8a32 2279 lazr.restfulclient_0.12.0-1ubuntu1.1.dsc
+ 8f75aec04bb757f921158de9dc13da6e031c67e1 52971 lazr.restfulclient_0.12.0.orig.tar.gz
+ 548015e47442c27ec6a7854cc35c3865eee6cf4f 7258 lazr.restfulclient_0.12.0-1ubuntu1.1.debian.tar.gz
+Checksums-Sha256:
+ 78b2a96756fb9a75f2685c9f4ba8f41e07484bc078742a848eb1489589c0f992 2279 lazr.restfulclient_0.12.0-1ubuntu1.1.dsc
+ 7a065d586291b3137c7f7ef150e29197f6013847d3c636497f163b655d137cac 52971 lazr.restfulclient_0.12.0.orig.tar.gz
+ 973cde6b77175b999915c11cf6664fe7877e73e40b32147fe5578d04a0335c0d 7258 lazr.restfulclient_0.12.0-1ubuntu1.1.debian.tar.gz
+
+Package: libappindicator
+Binary: python-appindicator, libappindicator1, gir1.2-appindicator-0.1, libappindicator-dev, libappindicator-doc, libappindicator3-1, libappindicator3-dev, gir1.2-appindicator3-0.1, libappindicator0.1-cil, libappindicator0.1-cil-dev
+Version: 0.4.92-0ubuntu1.1
+Priority: optional
+Section: gnome
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Build-Depends: debhelper (>= 7.0), cdbs (>= 0.4.41), quilt, libgtk2.0-dev (>= 2.12.0), libgtk-3-dev (>= 2.91.3), libdbus-glib-1-dev (>= 0.82), gnome-doc-utils, gtk-doc-tools, intltool, python-all-dev, python-gtk2-dev, libindicate-dev (>= 0.2.0), libindicate-gtk-dev (>= 0.2.0), libindicator-dev (>= 0.3.90), libindicator3-dev (>= 0.3.90), libdbusmenu-glib-dev (>= 0.5.90), libdbusmenu-gtk-dev (>= 0.5.90), libdbusmenu-gtk3-dev (>= 0.5.90), cli-common-dev (>= 0.5.7), mono-devel (>= 2.4.3), gtk-sharp2-gapi, libnunit-cil-dev, libgtk2.0-cil-dev, gobject-introspection, libgirepository1.0-dev, gir1.2-glib-2.0, gir1.2-gtk-2.0, gir1.2-gtk-3.0, dh-autoreconf, valac-0.16, dbus-test-runner
+Architecture: any all
+Standards-Version: 3.9.1
+Format: 1.0
+Directory: pool/main/liba/libappindicator
+Files:
+ 6daaa1a695cda03c38680046723b020f 2519 libappindicator_0.4.92-0ubuntu1.1.dsc
+ 3e960dea059510061553ce0c24d22e75 526779 libappindicator_0.4.92.orig.tar.gz
+ 25fda937e9225dbca1dfe360c2ba4c54 11341 libappindicator_0.4.92-0ubuntu1.1.diff.gz
+Homepage: https://launchpad.net/libappindicator
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-desktop/libappindicator/ubuntu
+Package-List: 
+ gir1.2-appindicator-0.1 deb libs optional
+ gir1.2-appindicator3-0.1 deb libs optional
+ libappindicator-dev deb libdevel optional
+ libappindicator-doc deb doc optional
+ libappindicator0.1-cil deb cli-mono optional
+ libappindicator0.1-cil-dev deb libdevel optional
+ libappindicator1 deb libs optional
+ libappindicator3-1 deb libs optional
+ libappindicator3-dev deb libdevel optional
+ python-appindicator deb python optional
+Checksums-Sha1:
+ 548e2687c9636c9fb0d6010138c1c0d8cbb85c73 2519 libappindicator_0.4.92-0ubuntu1.1.dsc
+ 42c21d7a5cd7b8eaaea3705fdab910292aab5300 526779 libappindicator_0.4.92.orig.tar.gz
+ 68fe2e34f1bc05218c55d180d3c6d32db5fa147e 11341 libappindicator_0.4.92-0ubuntu1.1.diff.gz
+Checksums-Sha256:
+ b7e6d62eee28efef303e5eab0bdfb0ef368d39601c3baf798fd066cef631bf55 2519 libappindicator_0.4.92-0ubuntu1.1.dsc
+ b034263908f79a321542d3aaa32cc30381a3fbed5ee42af4347caaff4a853803 526779 libappindicator_0.4.92.orig.tar.gz
+ 1d0dfc539701da2e3b366db24a362cafb27aa7368d1a5a76a9c2dbc9581c44f4 11341 libappindicator_0.4.92-0ubuntu1.1.diff.gz
+Python-Version: all
+
+Package: libdbusmenu
+Binary: libdbusmenu-glib4, libdbusmenu-glib-dev, libdbusmenu-gtk4, libdbusmenu-gtk-dev, libdbusmenu-tools, gir1.2-dbusmenu-glib-0.4, gir1.2-dbusmenu-gtk-0.4, libdbusmenu-glib-doc, libdbusmenu-gtk-doc, libdbusmenu-jsonloader4, libdbusmenu-jsonloader-dev, libdbusmenu-gtk3-4, libdbusmenu-gtk3-dev, gir1.2-dbusmenu-gtk3-0.4
+Version: 0.6.2-0ubuntu0.2
+Priority: optional
+Section: gnome
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 8.1.3), cdbs (>= 0.4.93), quilt, libgtk2.0-dev (>= 2.24.4-1~), libgtk-3-dev (>= 2.99.2-1ubuntu2), libgdk-pixbuf2.0-dev (>= 2.22.1-0ubuntu4), libdbus-glib-1-dev, libatk1.0-dev, gnome-doc-utils, gtk-doc-tools, libtool, intltool, libjson-glib-dev (>= 0.13.4), gobject-introspection, gir1.2-gtk-2.0, libgirepository1.0-dev (>= 0.9.3), libx11-dev (>= 1.3), dh-autoreconf, valgrind, valac-0.16
+Architecture: any all
+Standards-Version: 3.9.2
+Format: 1.0
+Directory: pool/main/libd/libdbusmenu
+Files:
+ 86012a2a530b63d41a7ca3026b98c5b2 3202 libdbusmenu_0.6.2-0ubuntu0.2.dsc
+ 80b782ac27e84d0ff531ee302a9aac03 730624 libdbusmenu_0.6.2.orig.tar.gz
+ fb5cb7e87e45df15c4df568c6d7d0db2 18025 libdbusmenu_0.6.2-0ubuntu0.2.diff.gz
+Uploaders: Evgeni Golov <evgeni@debian.org>
+Homepage: https://launchpad.net/dbusmenu
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-desktop/dbusmenu/ubuntu
+Package-List: 
+ gir1.2-dbusmenu-glib-0.4 deb libs optional
+ gir1.2-dbusmenu-gtk-0.4 deb libs optional
+ gir1.2-dbusmenu-gtk3-0.4 deb libs optional
+ libdbusmenu-glib-dev deb libdevel optional
+ libdbusmenu-glib-doc deb doc optional
+ libdbusmenu-glib4 deb libs optional
+ libdbusmenu-gtk-dev deb libdevel optional
+ libdbusmenu-gtk-doc deb doc optional
+ libdbusmenu-gtk3-4 deb libs optional
+ libdbusmenu-gtk3-dev deb libdevel optional
+ libdbusmenu-gtk4 deb libs optional
+ libdbusmenu-jsonloader-dev deb libdevel optional
+ libdbusmenu-jsonloader4 deb libs optional
+ libdbusmenu-tools deb devel optional
+Checksums-Sha1:
+ b0e2d3d1c61d40d69d47cd6e7c3dd03ea79595ef 3202 libdbusmenu_0.6.2-0ubuntu0.2.dsc
+ 9ac17f7ead18823cbebe0194982a00f89a962070 730624 libdbusmenu_0.6.2.orig.tar.gz
+ 94e91978e73db7c47e81f9e7b35a2f287d31fb7e 18025 libdbusmenu_0.6.2-0ubuntu0.2.diff.gz
+Checksums-Sha256:
+ a407ba73f498387a08e326ad1308ef0d2a2f396eed76233e04b1806f0aa3ca6c 3202 libdbusmenu_0.6.2-0ubuntu0.2.dsc
+ c2077069ae36c207f0c86cb52a0066691d155e45629d1361eee14fc7a2552649 730624 libdbusmenu_0.6.2.orig.tar.gz
+ 22257366fce39a85eb3cc9351af705e823291ff1f5ee23d811ac3dfe05b0c3db 18025 libdbusmenu_0.6.2-0ubuntu0.2.diff.gz
+
+Package: liblockfile
+Binary: liblockfile1, liblockfile-bin, liblockfile-dev
+Version: 1.09-3ubuntu0.1
+Priority: important
+Section: libs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Miquel van Smoorenburg <miquels@cistron.nl>
+Build-Depends: dpkg-dev (>= 1.16.0)
+Architecture: any
+Standards-Version: 3.8.4
+Format: 3.0 (quilt)
+Directory: pool/main/libl/liblockfile
+Files:
+ 4cceb7e068fe8fc791605691ff2ecb83 1974 liblockfile_1.09-3ubuntu0.1.dsc
+ 2aa269e4405ee8235ff17d1b357c6ae8 32178 liblockfile_1.09.orig.tar.gz
+ cbf3e5467c1ffcc579d30708c17133a5 7337 liblockfile_1.09-3ubuntu0.1.debian.tar.bz2
+Uploaders: Anibal Monsalve Salazar <anibal@debian.org>
+Package-List: 
+ liblockfile-bin deb utils standard
+ liblockfile-dev deb libdevel optional
+ liblockfile1 deb libs standard
+Checksums-Sha1:
+ 34a1cc135e71190a0c135810834e6c882b24bcac 1974 liblockfile_1.09-3ubuntu0.1.dsc
+ 6f3f170bc4c303435ab5b46a6aa49669e16a5a7d 32178 liblockfile_1.09.orig.tar.gz
+ 432512febaa976b41d6ffad85c60eeb75243cedb 7337 liblockfile_1.09-3ubuntu0.1.debian.tar.bz2
+Checksums-Sha256:
+ a6d572e7f81c2f42d2d8f41a71c6b194cb5dbc3af0252733b273480bffc8c2b3 1974 liblockfile_1.09-3ubuntu0.1.dsc
+ 16979eba05396365e1d6af7100431ae9d32f9bc063930d1de66298a0695f1b7f 32178 liblockfile_1.09.orig.tar.gz
+ a7c2bd1f489201c92d48e572e4c0c270912ca3f7c657e2141c57b567a7a2f89c 7337 liblockfile_1.09-3ubuntu0.1.debian.tar.bz2
+
+Package: libxrandr-lts-raring
+Binary: libxrandr-ltsr2, libxrandr-ltsr2-dbg, libxrandr-dev-lts-raring
+Version: 2:1.4.0-1ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8.1.3), libx11-dev (>= 1:0.99.2), libxext-dev (>= 1:0.99.1), x11proto-randr-dev (>= 1.4), x11proto-render-dev, libxrender-dev (>= 1:0.9.0-2), pkg-config, quilt, automake, libtool, xutils-dev (>= 1:7.5+4)
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/libx/libxrandr-lts-raring
+Files:
+ da65406565ef71575a5313ee0ca07799 2400 libxrandr-lts-raring_1.4.0-1ubuntu1~precise1.dsc
+ a06c67d98bee74218fe425b2f91a0f0d 366991 libxrandr-lts-raring_1.4.0.orig.tar.gz
+ d5c9ff6048564f9c00e80b80d681423b 17628 libxrandr-lts-raring_1.4.0-1ubuntu1~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/lib/libxrandr.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/lib/libxrandr
+Package-List: 
+ libxrandr-dev-lts-raring deb libdevel optional
+ libxrandr-ltsr2 deb libs optional
+ libxrandr-ltsr2-dbg deb debug extra
+Checksums-Sha1:
+ 4b7e93801013d48d74ae4c3080345cb50d839fb9 2400 libxrandr-lts-raring_1.4.0-1ubuntu1~precise1.dsc
+ d8614b9fb1d06cb2048a2bba9adf3983a9bca87f 366991 libxrandr-lts-raring_1.4.0.orig.tar.gz
+ 5cad196fc6d9f642aefca396fa997d34a460f1f7 17628 libxrandr-lts-raring_1.4.0-1ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ f21de7762390591f894773439d66c2d269f1b7dc1632b7dc2a5e971344d592f7 2400 libxrandr-lts-raring_1.4.0-1ubuntu1~precise1.dsc
+ d58f32f8e5adf00d16044106a129734a8f401648bb8a43fc371de05b393f4dc8 366991 libxrandr-lts-raring_1.4.0.orig.tar.gz
+ 4778a998f8e7391b7c9b0194daa2b67519a95a945ff85e0109cb28f6f0cc518d 17628 libxrandr-lts-raring_1.4.0-1ubuntu1~precise1.diff.gz
+
+Package: lightdm
+Binary: lightdm, liblightdm-gobject-1-0, gir1.2-lightdm-1, liblightdm-qt-2-0, liblightdm-gobject-1-dev, liblightdm-qt-2-dev, liblightdm-gobject-1-doc
+Version: 1.2.3-0ubuntu2.3
+Priority: optional
+Section: x11
+Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50~), intltool (>= 0.35.0), quilt, libglib2.0-dev, libpam0g-dev, libxdmcp-dev, libxcb1-dev, libxklavier-dev, libgtk-3-dev, gobject-introspection, libgirepository1.0-dev, libqt4-dev, dh-autoreconf, dh-translations, gtk-doc-tools, dbus
+Architecture: any all
+Standards-Version: 3.9.2
+Format: 1.0
+Directory: pool/main/l/lightdm
+Files:
+ fdd88838f879fbba19deb5dd9ae6af20 1802 lightdm_1.2.3-0ubuntu2.3.dsc
+ e0f3781d087872fc745ef4c84d5d6c15 646902 lightdm_1.2.3.orig.tar.gz
+ 2348001efdf8725dc12705352269937c 47921 lightdm_1.2.3-0ubuntu2.3.diff.gz
+Uploaders: Julien Lavergne <gilir@ubuntu.com>
+Homepage: https://launchpad.net/lightdm
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/lightdm/ubuntu
+Package-List: 
+ gir1.2-lightdm-1 deb libs optional
+ liblightdm-gobject-1-0 deb x11 optional
+ liblightdm-gobject-1-dev deb libdevel optional
+ liblightdm-gobject-1-doc deb doc optional
+ liblightdm-qt-2-0 deb x11 optional
+ liblightdm-qt-2-dev deb libdevel optional
+ lightdm deb x11 optional
+Checksums-Sha1:
+ c101c2d2a9a69774f15f3a0090bfd0480efc1431 1802 lightdm_1.2.3-0ubuntu2.3.dsc
+ 450bbfc9e300dd6053d7cc1a9c223dde9c704f8a 646902 lightdm_1.2.3.orig.tar.gz
+ 28ead77b0fc9e25236347bc2d88433082f5ff3fc 47921 lightdm_1.2.3-0ubuntu2.3.diff.gz
+Checksums-Sha256:
+ 60eb620999f8ee7dcb017fa6a2d2d10ff8b446a3b53a1ef44bf672805628dac1 1802 lightdm_1.2.3-0ubuntu2.3.dsc
+ 06cbc59d652e4a17725543ac1a7051388fc85d33d9e284ceb4b9972faeafca58 646902 lightdm_1.2.3.orig.tar.gz
+ 3c1d8710483a01ce1b546126aff8f66f2a0585197856ee9f57b0872b56e4a6f8 47921 lightdm_1.2.3-0ubuntu2.3.diff.gz
+
+Package: linux
+Binary: linux-source-3.2.0, linux-doc, linux-tools-common, linux-headers-3.2.0-50, linux-libc-dev, linux-tools-3.2.0-50, linux-image-3.2.0-50-generic, linux-image-extra-3.2.0-50-generic, linux-headers-3.2.0-50-generic, linux-image-3.2.0-50-generic-dbgsym, linux-image-3.2.0-50-generic-pae, linux-image-extra-3.2.0-50-generic-pae, linux-headers-3.2.0-50-generic-pae, linux-image-3.2.0-50-generic-pae-dbgsym, linux-image-3.2.0-50-highbank, linux-image-extra-3.2.0-50-highbank, linux-headers-3.2.0-50-highbank, linux-image-3.2.0-50-highbank-dbgsym, linux-image-3.2.0-50-omap, linux-image-extra-3.2.0-50-omap, linux-headers-3.2.0-50-omap, linux-image-3.2.0-50-omap-dbgsym, linux-image-3.2.0-50-powerpc64-smp, linux-image-extra-3.2.0-50-powerpc64-smp, linux-headers-3.2.0-50-powerpc64-smp, linux-image-3.2.0-50-powerpc64-smp-dbgsym, linux-image-3.2.0-50-powerpc-smp, linux-image-extra-3.2.0-50-powerpc-smp, linux-headers-3.2.0-50-powerpc-smp, linux-image-3.2.0-50-powerpc-smp-dbgsym,
+ linux-image-3.2.0-50-virtual, linux-image-extra-3.2.0-50-virtual, linux-headers-3.2.0-50-virtual, linux-image-3.2.0-50-virtual-dbgsym, kernel-image-3.2.0-50-generic-di, nic-modules-3.2.0-50-generic-di, nic-shared-modules-3.2.0-50-generic-di, serial-modules-3.2.0-50-generic-di, ppp-modules-3.2.0-50-generic-di, pata-modules-3.2.0-50-generic-di, firewire-core-modules-3.2.0-50-generic-di, scsi-modules-3.2.0-50-generic-di, plip-modules-3.2.0-50-generic-di, floppy-modules-3.2.0-50-generic-di, fat-modules-3.2.0-50-generic-di, nfs-modules-3.2.0-50-generic-di, md-modules-3.2.0-50-generic-di, multipath-modules-3.2.0-50-generic-di, usb-modules-3.2.0-50-generic-di, pcmcia-storage-modules-3.2.0-50-generic-di, fb-modules-3.2.0-50-generic-di, input-modules-3.2.0-50-generic-di, mouse-modules-3.2.0-50-generic-di, irda-modules-3.2.0-50-generic-di, parport-modules-3.2.0-50-generic-di, nic-pcmcia-modules-3.2.0-50-generic-di, pcmcia-modules-3.2.0-50-generic-di,
+ nic-usb-modules-3.2.0-50-generic-di, sata-modules-3.2.0-50-generic-di, crypto-modules-3.2.0-50-generic-di, squashfs-modules-3.2.0-50-generic-di, speakup-modules-3.2.0-50-generic-di, virtio-modules-3.2.0-50-generic-di, fs-core-modules-3.2.0-50-generic-di, fs-secondary-modules-3.2.0-50-generic-di, storage-core-modules-3.2.0-50-generic-di, block-modules-3.2.0-50-generic-di, message-modules-3.2.0-50-generic-di, vlan-modules-3.2.0-50-generic-di, ipmi-modules-3.2.0-50-generic-di, kernel-image-3.2.0-50-virtual-di, nic-modules-3.2.0-50-virtual-di, nic-shared-modules-3.2.0-50-virtual-di, scsi-modules-3.2.0-50-virtual-di, floppy-modules-3.2.0-50-virtual-di, fat-modules-3.2.0-50-virtual-di, md-modules-3.2.0-50-virtual-di, multipath-modules-3.2.0-50-virtual-di, fb-modules-3.2.0-50-virtual-di, mouse-modules-3.2.0-50-virtual-di, irda-modules-3.2.0-50-virtual-di, parport-modules-3.2.0-50-virtual-di, crypto-modules-3.2.0-50-virtual-di, squashfs-modules-3.2.0-50-virtual-di,
+ virtio-modules-3.2.0-50-virtual-di, fs-core-modules-3.2.0-50-virtual-di, fs-secondary-modules-3.2.0-50-virtual-di, storage-core-modules-3.2.0-50-virtual-di, block-modules-3.2.0-50-virtual-di, message-modules-3.2.0-50-virtual-di,
+ vlan-modules-3.2.0-50-virtual-di
+Version: 3.2.0-50.76
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 5), cpio, module-init-tools, kernel-wedge (>= 2.24ubuntu1), makedumpfile [amd64 i386], device-tree-compiler [powerpc], libelf-dev, libnewt-dev, binutils-dev, rsync, libdw-dev, dpkg (>= 1.16.0~ubuntu4), util-linux
+Build-Depends-Indep: xmlto, docbook-utils, ghostscript, transfig, bzip2, sharutils, asciidoc
+Build-Conflicts: findutils (= 4.4.1-1ubuntu1)
+Architecture: all i386 amd64 powerpc ppc64 armel armhf
+Standards-Version: 3.8.4.0
+Format: 1.0
+Directory: pool/main/l/linux
+Files:
+ e3cfbbb9d525ff875db764641fba3c13 10790 linux_3.2.0-50.76.dsc
+ bed3167d6e8c44f463d4f42870598ee2 98621205 linux_3.2.0.orig.tar.gz
+ 274d63d503ed78c7443ae685644a559a 3920239 linux_3.2.0-50.76.diff.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-precise.git
+Package-List: 
+ block-modules-3.2.0-50-generic-di udeb debian-installer standard
+ block-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ crypto-modules-3.2.0-50-generic-di udeb debian-installer extra
+ crypto-modules-3.2.0-50-virtual-di udeb debian-installer extra
+ fat-modules-3.2.0-50-generic-di udeb debian-installer standard
+ fat-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ fb-modules-3.2.0-50-generic-di udeb debian-installer standard
+ fb-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ firewire-core-modules-3.2.0-50-generic-di udeb debian-installer standard
+ floppy-modules-3.2.0-50-generic-di udeb debian-installer standard
+ floppy-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ fs-core-modules-3.2.0-50-generic-di udeb debian-installer standard
+ fs-core-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ fs-secondary-modules-3.2.0-50-generic-di udeb debian-installer standard
+ fs-secondary-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ input-modules-3.2.0-50-generic-di udeb debian-installer standard
+ ipmi-modules-3.2.0-50-generic-di udeb debian-installer standard
+ irda-modules-3.2.0-50-generic-di udeb debian-installer standard
+ irda-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ kernel-image-3.2.0-50-generic-di udeb debian-installer extra
+ kernel-image-3.2.0-50-virtual-di udeb debian-installer extra
+ linux-doc deb doc optional
+ linux-headers-3.2.0-50 deb devel optional
+ linux-headers-3.2.0-50-generic deb devel optional
+ linux-headers-3.2.0-50-generic-pae deb devel optional
+ linux-headers-3.2.0-50-highbank deb devel optional
+ linux-headers-3.2.0-50-omap deb devel optional
+ linux-headers-3.2.0-50-powerpc-smp deb devel optional
+ linux-headers-3.2.0-50-powerpc64-smp deb devel optional
+ linux-headers-3.2.0-50-virtual deb devel optional
+ linux-image-3.2.0-50-generic deb kernel optional
+ linux-image-3.2.0-50-generic-dbgsym deb devel optional
+ linux-image-3.2.0-50-generic-pae deb kernel optional
+ linux-image-3.2.0-50-generic-pae-dbgsym deb devel optional
+ linux-image-3.2.0-50-highbank deb kernel optional
+ linux-image-3.2.0-50-highbank-dbgsym deb devel optional
+ linux-image-3.2.0-50-omap deb kernel optional
+ linux-image-3.2.0-50-omap-dbgsym deb devel optional
+ linux-image-3.2.0-50-powerpc-smp deb kernel optional
+ linux-image-3.2.0-50-powerpc-smp-dbgsym deb devel optional
+ linux-image-3.2.0-50-powerpc64-smp deb kernel optional
+ linux-image-3.2.0-50-powerpc64-smp-dbgsym deb devel optional
+ linux-image-3.2.0-50-virtual deb kernel optional
+ linux-image-3.2.0-50-virtual-dbgsym deb devel optional
+ linux-image-extra-3.2.0-50-generic deb kernel optional
+ linux-image-extra-3.2.0-50-generic-pae deb kernel optional
+ linux-image-extra-3.2.0-50-highbank deb kernel optional
+ linux-image-extra-3.2.0-50-omap deb kernel optional
+ linux-image-extra-3.2.0-50-powerpc-smp deb kernel optional
+ linux-image-extra-3.2.0-50-powerpc64-smp deb kernel optional
+ linux-image-extra-3.2.0-50-virtual deb kernel optional
+ linux-libc-dev deb devel optional
+ linux-source-3.2.0 deb devel optional
+ linux-tools-3.2.0-50 deb devel optional
+ linux-tools-common deb kernel optional
+ md-modules-3.2.0-50-generic-di udeb debian-installer standard
+ md-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ message-modules-3.2.0-50-generic-di udeb debian-installer standard
+ message-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ mouse-modules-3.2.0-50-generic-di udeb debian-installer extra
+ mouse-modules-3.2.0-50-virtual-di udeb debian-installer extra
+ multipath-modules-3.2.0-50-generic-di udeb debian-installer extra
+ multipath-modules-3.2.0-50-virtual-di udeb debian-installer extra
+ nfs-modules-3.2.0-50-generic-di udeb debian-installer standard
+ nic-modules-3.2.0-50-generic-di udeb debian-installer standard
+ nic-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ nic-pcmcia-modules-3.2.0-50-generic-di udeb debian-installer standard
+ nic-shared-modules-3.2.0-50-generic-di udeb debian-installer standard
+ nic-shared-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ nic-usb-modules-3.2.0-50-generic-di udeb debian-installer standard
+ parport-modules-3.2.0-50-generic-di udeb debian-installer standard
+ parport-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ pata-modules-3.2.0-50-generic-di udeb debian-installer standard
+ pcmcia-modules-3.2.0-50-generic-di udeb debian-installer standard
+ pcmcia-storage-modules-3.2.0-50-generic-di udeb debian-installer standard
+ plip-modules-3.2.0-50-generic-di udeb debian-installer standard
+ ppp-modules-3.2.0-50-generic-di udeb debian-installer standard
+ sata-modules-3.2.0-50-generic-di udeb debian-installer standard
+ scsi-modules-3.2.0-50-generic-di udeb debian-installer standard
+ scsi-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ serial-modules-3.2.0-50-generic-di udeb debian-installer standard
+ speakup-modules-3.2.0-50-generic-di udeb debian-installer extra
+ squashfs-modules-3.2.0-50-generic-di udeb debian-installer extra
+ squashfs-modules-3.2.0-50-virtual-di udeb debian-installer extra
+ storage-core-modules-3.2.0-50-generic-di udeb debian-installer standard
+ storage-core-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ usb-modules-3.2.0-50-generic-di udeb debian-installer standard
+ virtio-modules-3.2.0-50-generic-di udeb debian-installer standard
+ virtio-modules-3.2.0-50-virtual-di udeb debian-installer standard
+ vlan-modules-3.2.0-50-generic-di udeb debian-installer extra
+ vlan-modules-3.2.0-50-virtual-di udeb debian-installer extra
+Checksums-Sha1:
+ feec046d8379157626083804a862c76147634fd8 10790 linux_3.2.0-50.76.dsc
+ 591f0741ea1b21fa35967cb74170be9f5d3e62d9 98621205 linux_3.2.0.orig.tar.gz
+ 5993d978a7b2658d087aaf4ab65ad633613cdb12 3920239 linux_3.2.0-50.76.diff.gz
+Checksums-Sha256:
+ 8375cae48126634516ed68ded8b2ee62c80de67c1a19a7982b8b7e17b2eb8550 10790 linux_3.2.0-50.76.dsc
+ ac093c899c5f967fc71816fbd18ca3f73673e64d2a99253bcbc2570c91527f7e 98621205 linux_3.2.0.orig.tar.gz
+ bfd4c910ace9dabbc6dfbfa8aac875aba9b861afc0b5b4312cd32eb60b172b81 3920239 linux_3.2.0-50.76.diff.gz
+
+Package: linux-armadaxp
+Binary: linux-headers-3.2.0-1623, linux-armadaxp-libc-dev, linux-armadaxp-tools-3.2.0-1623, linux-image-3.2.0-1623-armadaxp, linux-headers-3.2.0-1623-armadaxp, linux-image-3.2.0-1623-armadaxp-dbgsym, kernel-image-3.2.0-1623-armadaxp-di, nic-modules-3.2.0-1623-armadaxp-di, nic-shared-modules-3.2.0-1623-armadaxp-di, ppp-modules-3.2.0-1623-armadaxp-di, scsi-modules-3.2.0-1623-armadaxp-di, plip-modules-3.2.0-1623-armadaxp-di, md-modules-3.2.0-1623-armadaxp-di, usb-modules-3.2.0-1623-armadaxp-di, input-modules-3.2.0-1623-armadaxp-di, mouse-modules-3.2.0-1623-armadaxp-di, irda-modules-3.2.0-1623-armadaxp-di, parport-modules-3.2.0-1623-armadaxp-di, nic-usb-modules-3.2.0-1623-armadaxp-di, crypto-modules-3.2.0-1623-armadaxp-di, squashfs-modules-3.2.0-1623-armadaxp-di, fs-core-modules-3.2.0-1623-armadaxp-di, fs-secondary-modules-3.2.0-1623-armadaxp-di, storage-core-modules-3.2.0-1623-armadaxp-di, block-modules-3.2.0-1623-armadaxp-di
+Version: 3.2.0-1623.34
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 5), cpio, module-init-tools, kernel-wedge (>= 2.24ubuntu1), makedumpfile [amd64 i386], device-tree-compiler [powerpc], libelf-dev, binutils-dev, rsync, libdw-dev, dpkg (>= 1.16.0~ubuntu4), util-linux
+Build-Depends-Indep: xmlto, docbook-utils, ghostscript, transfig, bzip2, sharutils, asciidoc
+Build-Conflicts: findutils (= 4.4.1-1ubuntu1)
+Architecture: armhf
+Standards-Version: 3.8.4.0
+Format: 1.0
+Directory: pool/main/l/linux-armadaxp
+Files:
+ e18b173c8bb2790539d6ff92f041f237 4394 linux-armadaxp_3.2.0-1623.34.dsc
+ 4e8dfc3e8c6e3ca4aeef8a5c05e9157c 106643251 linux-armadaxp_3.2.0-1623.34.tar.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/hwe/ubuntu-precise-armadaxp.git
+Package-List: 
+ block-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ crypto-modules-3.2.0-1623-armadaxp-di udeb debian-installer extra
+ fs-core-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ fs-secondary-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ input-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ irda-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ kernel-image-3.2.0-1623-armadaxp-di udeb debian-installer extra
+ linux-armadaxp-libc-dev deb devel optional
+ linux-armadaxp-tools-3.2.0-1623 deb devel optional
+ linux-headers-3.2.0-1623 deb devel optional
+ linux-headers-3.2.0-1623-armadaxp deb devel optional
+ linux-image-3.2.0-1623-armadaxp deb admin optional
+ linux-image-3.2.0-1623-armadaxp-dbgsym deb devel optional
+ md-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ mouse-modules-3.2.0-1623-armadaxp-di udeb debian-installer extra
+ nic-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ nic-shared-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ nic-usb-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ parport-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ plip-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ ppp-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ scsi-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ squashfs-modules-3.2.0-1623-armadaxp-di udeb debian-installer extra
+ storage-core-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+ usb-modules-3.2.0-1623-armadaxp-di udeb debian-installer standard
+Checksums-Sha1:
+ 182c460477900da059f9b44cd63bd1df71fd27a3 4394 linux-armadaxp_3.2.0-1623.34.dsc
+ ec9cd91042bfa0a5d7333b1ae3b4f487e9713e53 106643251 linux-armadaxp_3.2.0-1623.34.tar.gz
+Checksums-Sha256:
+ c6b5460079cad2d9114824c355b524acd6750c5a489f4e6d1800219bef0791d6 4394 linux-armadaxp_3.2.0-1623.34.dsc
+ 0ffd9f4f940809edfeca8376be1ab0efeba5fe1e9d99386f44e5e153d3550a9f 106643251 linux-armadaxp_3.2.0-1623.34.tar.gz
+
+Package: linux-backports-modules-3.2.0
+Binary: linux-headers-lbm-3.2.0-50, linux-headers-lbm-3.2.0-50-generic, linux-backports-modules-cw-3.3-3.2.0-50-generic, linux-backports-modules-cw-3.4-3.2.0-50-generic, linux-backports-modules-cw-3.5-3.2.0-50-generic, linux-backports-modules-cw-3.6-3.2.0-50-generic, linux-backports-modules-cw-3.7-3.2.0-50-generic, linux-backports-modules-cw-3.8-3.2.0-50-generic, linux-backports-modules-net-3.2.0-50-generic, linux-backports-modules-hv-3.2.0-50-generic, linux-headers-lbm-3.2.0-50-generic-pae, linux-backports-modules-cw-3.3-3.2.0-50-generic-pae, linux-backports-modules-cw-3.4-3.2.0-50-generic-pae, linux-backports-modules-cw-3.5-3.2.0-50-generic-pae, linux-backports-modules-cw-3.6-3.2.0-50-generic-pae, linux-backports-modules-cw-3.7-3.2.0-50-generic-pae, linux-backports-modules-cw-3.8-3.2.0-50-generic-pae, linux-backports-modules-net-3.2.0-50-generic-pae, linux-backports-modules-hv-3.2.0-50-generic-pae, linux-headers-lbm-3.2.0-50-virtual,
+ linux-backports-modules-cw-3.3-3.2.0-50-virtual, linux-backports-modules-cw-3.4-3.2.0-50-virtual, linux-backports-modules-cw-3.5-3.2.0-50-virtual, linux-backports-modules-cw-3.6-3.2.0-50-virtual, linux-backports-modules-cw-3.7-3.2.0-50-virtual, linux-backports-modules-cw-3.8-3.2.0-50-virtual, linux-backports-modules-net-3.2.0-50-virtual,
+ linux-backports-modules-hv-3.2.0-50-virtual
+Version: 3.2.0-50.38
+Priority: optional
+Section: kernel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 3), module-init-tools, coreutils, git-core, kernel-wedge (>= 2.24ubuntu1), linux-source-3.2.0, linux-headers-3.2.0-50-generic [i386 amd64], linux-headers-3.2.0-50-generic-pae [i386], linux-headers-3.2.0-50-virtual [i386 amd64]
+Architecture: all i386 amd64
+Standards-Version: 3.6.1
+Format: 1.0
+Directory: pool/main/l/linux-backports-modules-3.2.0
+Files:
+ a617b372e3909f413f0386c7750824a3 4971 linux-backports-modules-3.2.0_3.2.0-50.38.dsc
+ c32bf952b0e318ebe86dfc912f2a7786 39976862 linux-backports-modules-3.2.0_3.2.0-50.38.tar.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-precise-lbm.git
+Package-List: 
+ linux-backports-modules-cw-3.3-3.2.0-50-generic deb admin optional
+ linux-backports-modules-cw-3.3-3.2.0-50-generic-pae deb admin optional
+ linux-backports-modules-cw-3.3-3.2.0-50-virtual deb admin optional
+ linux-backports-modules-cw-3.4-3.2.0-50-generic deb admin optional
+ linux-backports-modules-cw-3.4-3.2.0-50-generic-pae deb admin optional
+ linux-backports-modules-cw-3.4-3.2.0-50-virtual deb admin optional
+ linux-backports-modules-cw-3.5-3.2.0-50-generic deb admin optional
+ linux-backports-modules-cw-3.5-3.2.0-50-generic-pae deb admin optional
+ linux-backports-modules-cw-3.5-3.2.0-50-virtual deb admin optional
+ linux-backports-modules-cw-3.6-3.2.0-50-generic deb admin optional
+ linux-backports-modules-cw-3.6-3.2.0-50-generic-pae deb admin optional
+ linux-backports-modules-cw-3.6-3.2.0-50-virtual deb admin optional
+ linux-backports-modules-cw-3.7-3.2.0-50-generic deb admin optional
+ linux-backports-modules-cw-3.7-3.2.0-50-generic-pae deb admin optional
+ linux-backports-modules-cw-3.7-3.2.0-50-virtual deb admin optional
+ linux-backports-modules-cw-3.8-3.2.0-50-generic deb admin optional
+ linux-backports-modules-cw-3.8-3.2.0-50-generic-pae deb admin optional
+ linux-backports-modules-cw-3.8-3.2.0-50-virtual deb admin optional
+ linux-backports-modules-hv-3.2.0-50-generic deb admin optional
+ linux-backports-modules-hv-3.2.0-50-generic-pae deb admin optional
+ linux-backports-modules-hv-3.2.0-50-virtual deb admin optional
+ linux-backports-modules-net-3.2.0-50-generic deb admin optional
+ linux-backports-modules-net-3.2.0-50-generic-pae deb admin optional
+ linux-backports-modules-net-3.2.0-50-virtual deb admin optional
+ linux-headers-lbm-3.2.0-50 deb devel optional
+ linux-headers-lbm-3.2.0-50-generic deb devel optional
+ linux-headers-lbm-3.2.0-50-generic-pae deb devel optional
+ linux-headers-lbm-3.2.0-50-virtual deb devel optional
+Checksums-Sha1:
+ b586f535bdfc46511ee6fc8ae3b1627950921355 4971 linux-backports-modules-3.2.0_3.2.0-50.38.dsc
+ 342779c1c4e0fa437e934601bbe5a268fe0c2ea6 39976862 linux-backports-modules-3.2.0_3.2.0-50.38.tar.gz
+Checksums-Sha256:
+ e979a77fa2c5a207fb84ab21ea71897ebe2c452fe9b7c6e47017472e9cd32c86 4971 linux-backports-modules-3.2.0_3.2.0-50.38.dsc
+ 05132092fefd8d7d2c4945c0dd0f70d14cdf0b49ae5a5742f4b8ae314a7c3c3d 39976862 linux-backports-modules-3.2.0_3.2.0-50.38.tar.gz
+
+Package: linux-firmware
+Binary: linux-firmware, nic-firmware, scsi-firmware
+Version: 1.79.6
+Priority: optional
+Section: misc
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 4.0.0), rsync, gcc
+Architecture: all
+Standards-Version: 3.6.1
+Format: 1.0
+Directory: pool/main/l/linux-firmware
+Files:
+ 8a7dfb37c365c045fe580e897f4d428a 1641 linux-firmware_1.79.6.dsc
+ db85fb8f89ff5be47f730371a0a5bded 23527440 linux-firmware_1.79.6.tar.gz
+Vcs-Git: git://kernel.ubuntu.com/ubuntu/linux-firmware.git
+Package-List: 
+ linux-firmware deb misc optional
+ nic-firmware udeb debian-installer optional
+ scsi-firmware udeb debian-installer optional
+Checksums-Sha1:
+ 42376694ed3b670b7fbad323fe1661a9f344134f 1641 linux-firmware_1.79.6.dsc
+ f461b70361e5d186540e6f99301f5cc4f5202204 23527440 linux-firmware_1.79.6.tar.gz
+Checksums-Sha256:
+ d0b6201c01b47da75d81090da79a019c053f4f44e5f5aed9e41cb6cfcd6a1ec6 1641 linux-firmware_1.79.6.dsc
+ cf596b145bb57a360fbf0b012ecb33190659678fba1cd86427600528f045e177 23527440 linux-firmware_1.79.6.tar.gz
+
+Package: linux-lts-quantal
+Binary: linux-headers-3.5.0-37, linux-tools-3.5.0-37, linux-image-3.5.0-37-generic, linux-image-extra-3.5.0-37-generic, linux-headers-3.5.0-37-generic, linux-image-3.5.0-37-generic-dbgsym, kernel-image-3.5.0-37-generic-di, nic-modules-3.5.0-37-generic-di, nic-shared-modules-3.5.0-37-generic-di, serial-modules-3.5.0-37-generic-di, ppp-modules-3.5.0-37-generic-di, pata-modules-3.5.0-37-generic-di, firewire-core-modules-3.5.0-37-generic-di, scsi-modules-3.5.0-37-generic-di, plip-modules-3.5.0-37-generic-di, floppy-modules-3.5.0-37-generic-di, fat-modules-3.5.0-37-generic-di, nfs-modules-3.5.0-37-generic-di, md-modules-3.5.0-37-generic-di, multipath-modules-3.5.0-37-generic-di, usb-modules-3.5.0-37-generic-di, pcmcia-storage-modules-3.5.0-37-generic-di, fb-modules-3.5.0-37-generic-di, input-modules-3.5.0-37-generic-di, mouse-modules-3.5.0-37-generic-di, irda-modules-3.5.0-37-generic-di, parport-modules-3.5.0-37-generic-di, nic-pcmcia-modules-3.5.0-37-generic-di,
+ pcmcia-modules-3.5.0-37-generic-di, nic-usb-modules-3.5.0-37-generic-di, sata-modules-3.5.0-37-generic-di, crypto-modules-3.5.0-37-generic-di, squashfs-modules-3.5.0-37-generic-di, speakup-modules-3.5.0-37-generic-di, virtio-modules-3.5.0-37-generic-di, fs-core-modules-3.5.0-37-generic-di, fs-secondary-modules-3.5.0-37-generic-di, storage-core-modules-3.5.0-37-generic-di, block-modules-3.5.0-37-generic-di, message-modules-3.5.0-37-generic-di, vlan-modules-3.5.0-37-generic-di,
+ ipmi-modules-3.5.0-37-generic-di
+Version: 3.5.0-37.58~precise1
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 5), cpio, module-init-tools, kernel-wedge (>= 2.24ubuntu1), makedumpfile [amd64 i386], device-tree-compiler [powerpc], libelf-dev, libnewt-dev, binutils-dev, rsync, libdw-dev, dpkg (>= 1.16.0~ubuntu4), util-linux, pkg-config, flex, bison
+Build-Depends-Indep: xmlto, docbook-utils, ghostscript, transfig, bzip2, sharutils, asciidoc
+Build-Conflicts: findutils (= 4.4.1-1ubuntu1)
+Architecture: all i386 amd64
+Standards-Version: 3.8.4.0
+Format: 1.0
+Directory: pool/main/l/linux-lts-quantal
+Files:
+ 87fbd1bff35511bce51bbe213d895098 6372 linux-lts-quantal_3.5.0-37.58~precise1.dsc
+ 83dbbf2c25e61d3b5b8aaf7101dafd92 102283735 linux-lts-quantal_3.5.0.orig.tar.gz
+ 90fc3764bed455ff0daf348ec6d97cfb 6110643 linux-lts-quantal_3.5.0-37.58~precise1.diff.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-precise.git
+Package-List: 
+ block-modules-3.5.0-37-generic-di udeb debian-installer standard
+ crypto-modules-3.5.0-37-generic-di udeb debian-installer extra
+ fat-modules-3.5.0-37-generic-di udeb debian-installer standard
+ fb-modules-3.5.0-37-generic-di udeb debian-installer standard
+ firewire-core-modules-3.5.0-37-generic-di udeb debian-installer standard
+ floppy-modules-3.5.0-37-generic-di udeb debian-installer standard
+ fs-core-modules-3.5.0-37-generic-di udeb debian-installer standard
+ fs-secondary-modules-3.5.0-37-generic-di udeb debian-installer standard
+ input-modules-3.5.0-37-generic-di udeb debian-installer standard
+ ipmi-modules-3.5.0-37-generic-di udeb debian-installer standard
+ irda-modules-3.5.0-37-generic-di udeb debian-installer standard
+ kernel-image-3.5.0-37-generic-di udeb debian-installer extra
+ linux-headers-3.5.0-37 deb devel optional
+ linux-headers-3.5.0-37-generic deb devel optional
+ linux-image-3.5.0-37-generic deb kernel optional
+ linux-image-3.5.0-37-generic-dbgsym deb devel optional
+ linux-image-extra-3.5.0-37-generic deb kernel optional
+ linux-tools-3.5.0-37 deb devel optional
+ md-modules-3.5.0-37-generic-di udeb debian-installer standard
+ message-modules-3.5.0-37-generic-di udeb debian-installer standard
+ mouse-modules-3.5.0-37-generic-di udeb debian-installer extra
+ multipath-modules-3.5.0-37-generic-di udeb debian-installer extra
+ nfs-modules-3.5.0-37-generic-di udeb debian-installer standard
+ nic-modules-3.5.0-37-generic-di udeb debian-installer standard
+ nic-pcmcia-modules-3.5.0-37-generic-di udeb debian-installer standard
+ nic-shared-modules-3.5.0-37-generic-di udeb debian-installer standard
+ nic-usb-modules-3.5.0-37-generic-di udeb debian-installer standard
+ parport-modules-3.5.0-37-generic-di udeb debian-installer standard
+ pata-modules-3.5.0-37-generic-di udeb debian-installer standard
+ pcmcia-modules-3.5.0-37-generic-di udeb debian-installer standard
+ pcmcia-storage-modules-3.5.0-37-generic-di udeb debian-installer standard
+ plip-modules-3.5.0-37-generic-di udeb debian-installer standard
+ ppp-modules-3.5.0-37-generic-di udeb debian-installer standard
+ sata-modules-3.5.0-37-generic-di udeb debian-installer standard
+ scsi-modules-3.5.0-37-generic-di udeb debian-installer standard
+ serial-modules-3.5.0-37-generic-di udeb debian-installer standard
+ speakup-modules-3.5.0-37-generic-di udeb debian-installer extra
+ squashfs-modules-3.5.0-37-generic-di udeb debian-installer extra
+ storage-core-modules-3.5.0-37-generic-di udeb debian-installer standard
+ usb-modules-3.5.0-37-generic-di udeb debian-installer standard
+ virtio-modules-3.5.0-37-generic-di udeb debian-installer standard
+ vlan-modules-3.5.0-37-generic-di udeb debian-installer extra
+Checksums-Sha1:
+ 56544fff6b66729354d939324ec42ebfba87fe46 6372 linux-lts-quantal_3.5.0-37.58~precise1.dsc
+ 737dc47661d4889861d83ace1705321950de9a55 102283735 linux-lts-quantal_3.5.0.orig.tar.gz
+ 5f9fee77c9c59469693b4c5c0ab8c8d689569c28 6110643 linux-lts-quantal_3.5.0-37.58~precise1.diff.gz
+Checksums-Sha256:
+ ca2253f85de0d47178b24fa53554b61adb9df586144023cf5a0d347068383016 6372 linux-lts-quantal_3.5.0-37.58~precise1.dsc
+ d12d4b8baf39a8122ab253c3b55676ab2e40a078ded1691b551650fd63e3cd9b 102283735 linux-lts-quantal_3.5.0.orig.tar.gz
+ 95b079ccf904692f2f2623a049ddbac142ad60d22305d6fa00219f5f6f7cbf30 6110643 linux-lts-quantal_3.5.0-37.58~precise1.diff.gz
+
+Package: linux-lts-raring
+Binary: linux-headers-3.8.0-27, linux-tools-3.8.0-27, linux-image-3.8.0-27-generic, linux-image-extra-3.8.0-27-generic, linux-headers-3.8.0-27-generic, linux-image-3.8.0-27-generic-dbgsym, kernel-image-3.8.0-27-generic-di, nic-modules-3.8.0-27-generic-di, nic-shared-modules-3.8.0-27-generic-di, serial-modules-3.8.0-27-generic-di, ppp-modules-3.8.0-27-generic-di, pata-modules-3.8.0-27-generic-di, firewire-core-modules-3.8.0-27-generic-di, scsi-modules-3.8.0-27-generic-di, plip-modules-3.8.0-27-generic-di, floppy-modules-3.8.0-27-generic-di, fat-modules-3.8.0-27-generic-di, nfs-modules-3.8.0-27-generic-di, md-modules-3.8.0-27-generic-di, multipath-modules-3.8.0-27-generic-di, usb-modules-3.8.0-27-generic-di, pcmcia-storage-modules-3.8.0-27-generic-di, fb-modules-3.8.0-27-generic-di, input-modules-3.8.0-27-generic-di, mouse-modules-3.8.0-27-generic-di, irda-modules-3.8.0-27-generic-di, parport-modules-3.8.0-27-generic-di, nic-pcmcia-modules-3.8.0-27-generic-di,
+ pcmcia-modules-3.8.0-27-generic-di, nic-usb-modules-3.8.0-27-generic-di, sata-modules-3.8.0-27-generic-di, crypto-modules-3.8.0-27-generic-di, squashfs-modules-3.8.0-27-generic-di, speakup-modules-3.8.0-27-generic-di, virtio-modules-3.8.0-27-generic-di, fs-core-modules-3.8.0-27-generic-di, fs-secondary-modules-3.8.0-27-generic-di, storage-core-modules-3.8.0-27-generic-di, block-modules-3.8.0-27-generic-di, message-modules-3.8.0-27-generic-di, vlan-modules-3.8.0-27-generic-di,
+ ipmi-modules-3.8.0-27-generic-di
+Version: 3.8.0-27.40~precise3
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 5), cpio, module-init-tools, kernel-wedge (>= 2.24ubuntu1), makedumpfile [amd64 i386], libelf-dev, libnewt-dev, binutils-dev, rsync, libdw-dev, dpkg (>= 1.16.0~ubuntu4), util-linux, pkg-config, flex, bison, openssl
+Build-Depends-Indep: xmlto, docbook-utils, ghostscript, transfig, bzip2, sharutils, asciidoc
+Build-Conflicts: findutils (= 4.4.1-1ubuntu1)
+Architecture: all i386 amd64 armhf
+Standards-Version: 3.8.4.0
+Format: 1.0
+Directory: pool/main/l/linux-lts-raring
+Files:
+ 9710566478c962f9b59b6a88057bdefb 5712 linux-lts-raring_3.8.0-27.40~precise3.dsc
+ 2cdbbbc11bcbda9fbdf58b63e39bc184 107018407 linux-lts-raring_3.8.0.orig.tar.gz
+ 5ee171faa8340f62243aaf570b465f4a 15286179 linux-lts-raring_3.8.0-27.40~precise3.diff.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-raring.git
+Package-List: 
+ block-modules-3.8.0-27-generic-di udeb debian-installer standard
+ crypto-modules-3.8.0-27-generic-di udeb debian-installer extra
+ fat-modules-3.8.0-27-generic-di udeb debian-installer standard
+ fb-modules-3.8.0-27-generic-di udeb debian-installer standard
+ firewire-core-modules-3.8.0-27-generic-di udeb debian-installer standard
+ floppy-modules-3.8.0-27-generic-di udeb debian-installer standard
+ fs-core-modules-3.8.0-27-generic-di udeb debian-installer standard
+ fs-secondary-modules-3.8.0-27-generic-di udeb debian-installer standard
+ input-modules-3.8.0-27-generic-di udeb debian-installer standard
+ ipmi-modules-3.8.0-27-generic-di udeb debian-installer standard
+ irda-modules-3.8.0-27-generic-di udeb debian-installer standard
+ kernel-image-3.8.0-27-generic-di udeb debian-installer extra
+ linux-headers-3.8.0-27 deb devel optional
+ linux-headers-3.8.0-27-generic deb devel optional
+ linux-image-3.8.0-27-generic deb kernel optional
+ linux-image-3.8.0-27-generic-dbgsym deb devel optional
+ linux-image-extra-3.8.0-27-generic deb kernel optional
+ linux-tools-3.8.0-27 deb devel optional
+ md-modules-3.8.0-27-generic-di udeb debian-installer standard
+ message-modules-3.8.0-27-generic-di udeb debian-installer standard
+ mouse-modules-3.8.0-27-generic-di udeb debian-installer extra
+ multipath-modules-3.8.0-27-generic-di udeb debian-installer extra
+ nfs-modules-3.8.0-27-generic-di udeb debian-installer standard
+ nic-modules-3.8.0-27-generic-di udeb debian-installer standard
+ nic-pcmcia-modules-3.8.0-27-generic-di udeb debian-installer standard
+ nic-shared-modules-3.8.0-27-generic-di udeb debian-installer standard
+ nic-usb-modules-3.8.0-27-generic-di udeb debian-installer standard
+ parport-modules-3.8.0-27-generic-di udeb debian-installer standard
+ pata-modules-3.8.0-27-generic-di udeb debian-installer standard
+ pcmcia-modules-3.8.0-27-generic-di udeb debian-installer standard
+ pcmcia-storage-modules-3.8.0-27-generic-di udeb debian-installer standard
+ plip-modules-3.8.0-27-generic-di udeb debian-installer standard
+ ppp-modules-3.8.0-27-generic-di udeb debian-installer standard
+ sata-modules-3.8.0-27-generic-di udeb debian-installer standard
+ scsi-modules-3.8.0-27-generic-di udeb debian-installer standard
+ serial-modules-3.8.0-27-generic-di udeb debian-installer standard
+ speakup-modules-3.8.0-27-generic-di udeb debian-installer extra
+ squashfs-modules-3.8.0-27-generic-di udeb debian-installer extra
+ storage-core-modules-3.8.0-27-generic-di udeb debian-installer standard
+ usb-modules-3.8.0-27-generic-di udeb debian-installer standard
+ virtio-modules-3.8.0-27-generic-di udeb debian-installer standard
+ vlan-modules-3.8.0-27-generic-di udeb debian-installer extra
+Checksums-Sha1:
+ 56a96f455d02bf7e8dcfc869502976613d142364 5712 linux-lts-raring_3.8.0-27.40~precise3.dsc
+ 4d30533806ddfc9244d7e883d1298bbf2a5c9905 107018407 linux-lts-raring_3.8.0.orig.tar.gz
+ 00e81a483e187c4b73237610f330426e1e9b9573 15286179 linux-lts-raring_3.8.0-27.40~precise3.diff.gz
+Checksums-Sha256:
+ d2ba96f1105f0e35d9a9c32cd911a3a32441187ccd320c0a9f6457e48d1fabdb 5712 linux-lts-raring_3.8.0-27.40~precise3.dsc
+ 2148578d122c9efb130a073e0024687bfd17e35c7dea1d6fd140eecc06ab97be 107018407 linux-lts-raring_3.8.0.orig.tar.gz
+ ec68a36db40e4c053a8f7dd96c35abf272e7fd4d8151116754eb35ccb2f5b6ed 15286179 linux-lts-raring_3.8.0-27.40~precise3.diff.gz
+
+Package: linux-meta
+Binary: linux, linux-source, linux-image, linux-crashdump, linux-tools, linux-image-hwe-generic, linux-hwe-generic, linux-image-current-generic, linux-current-generic, linux-headers-generic, linux-image-generic, linux-generic, linux-backports-modules-headers-precise-generic, linux-backports-modules-cw-3.3-precise-generic, linux-backports-modules-cw-3.4-precise-generic, linux-backports-modules-cw-3.5-precise-generic, linux-backports-modules-cw-3.6-precise-generic, linux-backports-modules-cw-3.7-precise-generic, linux-backports-modules-cw-3.8-precise-generic, linux-backports-modules-net-precise-generic, linux-backports-modules-hv-precise-generic, linux-headers-generic-pae, linux-image-generic-pae, linux-generic-pae, linux-backports-modules-headers-precise-generic-pae, linux-backports-modules-cw-3.3-precise-generic-pae, linux-backports-modules-cw-3.4-precise-generic-pae, linux-backports-modules-cw-3.5-precise-generic-pae, linux-backports-modules-cw-3.6-precise-generic-pae,
+ linux-backports-modules-cw-3.7-precise-generic-pae, linux-backports-modules-cw-3.8-precise-generic-pae, linux-backports-modules-net-precise-generic-pae, linux-backports-modules-hv-precise-generic-pae, linux-headers-highbank, linux-image-highbank, linux-highbank, linux-headers-omap, linux-image-omap, linux-omap, linux-powerpc, linux-image-powerpc, linux-headers-powerpc, linux-powerpc-smp, linux-image-powerpc-smp, linux-headers-powerpc-smp, linux-powerpc64-smp, linux-image-powerpc64-smp, linux-headers-powerpc64-smp, linux-headers-server, linux-image-server, linux-server, linux-backports-modules-net-precise-server, linux-headers-virtual, linux-image-virtual, linux-virtual, linux-image-extra-virtual,
+ linux-backports-modules-hv-precise-virtual
+Version: 3.2.0.50.60
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: dpkg (>= 1.13.19), debhelper (>= 5), gawk
+Architecture: i386 amd64 all armel armhf powerpc
+Standards-Version: 3.6.1
+Format: 1.0
+Directory: pool/main/l/linux-meta
+Files:
+ c378b2f6b46b68f9b3472935b3e0a83b 6094 linux-meta_3.2.0.50.60.dsc
+ 6fef909cb389de10ffe9e1c4a5759c94 10824 linux-meta_3.2.0.50.60.tar.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-precise-meta.git
+Package-List: 
+ linux deb kernel optional
+ linux-backports-modules-cw-3.3-precise-generic deb devel optional
+ linux-backports-modules-cw-3.3-precise-generic-pae deb devel optional
+ linux-backports-modules-cw-3.4-precise-generic deb devel optional
+ linux-backports-modules-cw-3.4-precise-generic-pae deb devel optional
+ linux-backports-modules-cw-3.5-precise-generic deb devel optional
+ linux-backports-modules-cw-3.5-precise-generic-pae deb devel optional
+ linux-backports-modules-cw-3.6-precise-generic deb devel optional
+ linux-backports-modules-cw-3.6-precise-generic-pae deb devel optional
+ linux-backports-modules-cw-3.7-precise-generic deb devel optional
+ linux-backports-modules-cw-3.7-precise-generic-pae deb devel optional
+ linux-backports-modules-cw-3.8-precise-generic deb devel optional
+ linux-backports-modules-cw-3.8-precise-generic-pae deb devel optional
+ linux-backports-modules-headers-precise-generic deb devel optional
+ linux-backports-modules-headers-precise-generic-pae deb devel optional
+ linux-backports-modules-hv-precise-generic deb devel optional
+ linux-backports-modules-hv-precise-generic-pae deb devel optional
+ linux-backports-modules-hv-precise-virtual deb devel optional
+ linux-backports-modules-net-precise-generic deb devel optional
+ linux-backports-modules-net-precise-generic-pae deb devel optional
+ linux-backports-modules-net-precise-server deb devel optional
+ linux-crashdump deb devel optional
+ linux-current-generic deb kernel optional
+ linux-generic deb kernel optional
+ linux-generic-pae deb kernel optional
+ linux-headers-generic deb kernel optional
+ linux-headers-generic-pae deb kernel optional
+ linux-headers-highbank deb kernel optional
+ linux-headers-omap deb kernel optional
+ linux-headers-powerpc deb kernel optional
+ linux-headers-powerpc-smp deb kernel optional
+ linux-headers-powerpc64-smp deb kernel optional
+ linux-headers-server deb kernel optional
+ linux-headers-virtual deb kernel optional
+ linux-highbank deb kernel optional
+ linux-hwe-generic deb kernel optional
+ linux-image deb kernel optional
+ linux-image-current-generic deb kernel optional
+ linux-image-extra-virtual deb kernel optional
+ linux-image-generic deb kernel optional
+ linux-image-generic-pae deb kernel optional
+ linux-image-highbank deb kernel optional
+ linux-image-hwe-generic deb kernel optional
+ linux-image-omap deb kernel optional
+ linux-image-powerpc deb kernel optional
+ linux-image-powerpc-smp deb kernel optional
+ linux-image-powerpc64-smp deb kernel optional
+ linux-image-server deb kernel optional
+ linux-image-virtual deb kernel optional
+ linux-omap deb kernel optional
+ linux-powerpc deb kernel optional
+ linux-powerpc-smp deb kernel optional
+ linux-powerpc64-smp deb kernel optional
+ linux-server deb kernel optional
+ linux-source deb devel optional
+ linux-tools deb kernel optional
+ linux-virtual deb kernel optional
+Checksums-Sha1:
+ d0c746c95068ae4fbb3e2d529048099c5ed69fdc 6094 linux-meta_3.2.0.50.60.dsc
+ 851cb52c23eb09f7bcfc83470727f634d286d4cb 10824 linux-meta_3.2.0.50.60.tar.gz
+Checksums-Sha256:
+ 7e3fc1b2ee802e998fe89e927f1e0cd2cb7f2e3ef258d603b9334005ddce0089 6094 linux-meta_3.2.0.50.60.dsc
+ f02d5af11f852a43d9649dadabe40e2eb241d53fbd78e3812a7a9c3a289a8a83 10824 linux-meta_3.2.0.50.60.tar.gz
+
+Package: linux-meta-armadaxp
+Binary: linux-headers-armadaxp, linux-image-armadaxp, linux-armadaxp
+Version: 3.2.0.1623.29
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: dpkg (>= 1.13.19), debhelper (>= 5), gawk
+Architecture: armhf
+Standards-Version: 3.6.1
+Format: 1.0
+Directory: pool/main/l/linux-meta-armadaxp
+Files:
+ b6edf17a24a7b101a10c00322ea9c514 1723 linux-meta-armadaxp_3.2.0.1623.29.dsc
+ 255121a184bccd9195263b5f2d31d0f8 3239 linux-meta-armadaxp_3.2.0.1623.29.tar.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/hwe/ubuntu-precise-meta-armadaxp.git
+Package-List: 
+ linux-armadaxp deb kernel optional
+ linux-headers-armadaxp deb devel optional
+ linux-image-armadaxp deb kernel optional
+Checksums-Sha1:
+ 3f5facd7d91b2b29f76799c8f10e4be4f8f14db8 1723 linux-meta-armadaxp_3.2.0.1623.29.dsc
+ 561f51ef74bb58743fff459aad01703cb7aeff4c 3239 linux-meta-armadaxp_3.2.0.1623.29.tar.gz
+Checksums-Sha256:
+ 37a9da614c97ae363982d995f53358362cb53d6c8251796aae958a8cf5b9e403 1723 linux-meta-armadaxp_3.2.0.1623.29.dsc
+ b307adae750714821edb1fe9b0c3b5909edddfc7cf8183a5a15cdc4775c628bf 3239 linux-meta-armadaxp_3.2.0.1623.29.tar.gz
+
+Package: linux-meta-lts-quantal
+Binary: linux-tools-lts-quantal, linux-headers-generic-lts-quantal, linux-image-generic-lts-quantal, linux-generic-lts-quantal, linux-generic-lts-quantal-eol-upgrade, linux-signed-image-generic-lts-quantal, linux-signed-generic-lts-quantal, linux-signed-generic-lts-quantal-eol-upgrade
+Version: 3.5.0.37.43
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: dpkg (>= 1.13.19), debhelper (>= 5), gawk
+Architecture: i386 amd64
+Standards-Version: 3.6.1
+Format: 1.0
+Directory: pool/main/l/linux-meta-lts-quantal
+Files:
+ 559d05f347b1600c49b2abdcd7cf8b54 2315 linux-meta-lts-quantal_3.5.0.37.43.dsc
+ 9f995258522fc20e5c21bb4320c1c393 4111 linux-meta-lts-quantal_3.5.0.37.43.tar.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-precise-meta.git lts-backport-quantal
+Package-List: 
+ linux-generic-lts-quantal deb metapackages optional
+ linux-generic-lts-quantal-eol-upgrade deb metapackages optional
+ linux-headers-generic-lts-quantal deb devel optional
+ linux-image-generic-lts-quantal deb metapackages optional
+ linux-signed-generic-lts-quantal deb metapackages optional
+ linux-signed-generic-lts-quantal-eol-upgrade deb metapackages optional
+ linux-signed-image-generic-lts-quantal deb metapackages optional
+ linux-tools-lts-quantal deb kernel optional
+Checksums-Sha1:
+ a5460e41495d7cc82988099895ef0d7860f10c51 2315 linux-meta-lts-quantal_3.5.0.37.43.dsc
+ c3320bcd4b39199c8dcc4711bb805fa86eed4bd0 4111 linux-meta-lts-quantal_3.5.0.37.43.tar.gz
+Checksums-Sha256:
+ ba6b520b0a4d152e246fb340e1af21517ced4405f22ee96c970f542354ede1f3 2315 linux-meta-lts-quantal_3.5.0.37.43.dsc
+ 7fd212e896af448ae9f1570aaa2ab37d44481a785d1681cd49ff9bd3c20a2fd8 4111 linux-meta-lts-quantal_3.5.0.37.43.tar.gz
+
+Package: linux-meta-lts-raring
+Binary: linux-tools-lts-raring, linux-headers-generic-lts-raring, linux-image-generic-lts-raring, linux-generic-lts-raring, linux-generic-lts-raring-eol-upgrade, linux-signed-image-generic-lts-raring, linux-signed-generic-lts-raring, linux-signed-generic-lts-raring-eol-upgrade
+Version: 3.8.0.27.27
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: dpkg (>= 1.13.19), debhelper (>= 5), gawk
+Architecture: i386 amd64 armhf
+Standards-Version: 3.6.1
+Format: 1.0
+Directory: pool/main/l/linux-meta-lts-raring
+Files:
+ 0838201146c724b13e6c4ace48452014 2302 linux-meta-lts-raring_3.8.0.27.27.dsc
+ 179738f4e6c6b87283687ac985c8b313 3480 linux-meta-lts-raring_3.8.0.27.27.tar.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-precise-meta.git lts-backport-raring
+Package-List: 
+ linux-generic-lts-raring deb metapackages optional
+ linux-generic-lts-raring-eol-upgrade deb metapackages optional
+ linux-headers-generic-lts-raring deb devel optional
+ linux-image-generic-lts-raring deb metapackages optional
+ linux-signed-generic-lts-raring deb metapackages optional
+ linux-signed-generic-lts-raring-eol-upgrade deb metapackages optional
+ linux-signed-image-generic-lts-raring deb metapackages optional
+ linux-tools-lts-raring deb kernel optional
+Checksums-Sha1:
+ fb294b8b995375dcfe336acab1b6c7b973a8b986 2302 linux-meta-lts-raring_3.8.0.27.27.dsc
+ 30da56ae8d2587281e1a06fc9f6640e92b6558f3 3480 linux-meta-lts-raring_3.8.0.27.27.tar.gz
+Checksums-Sha256:
+ 6e4b954b4151bd6e230189549437097594d45ad1fd2d4b7f1716f3b57cb6b1ce 2302 linux-meta-lts-raring_3.8.0.27.27.dsc
+ a6a3efa966287d5e7415a26fc8acc5ca60d712823a1aa9e74222c8cd71d9e89f 3480 linux-meta-lts-raring_3.8.0.27.27.tar.gz
+
+Package: linux-meta-ti-omap4
+Binary: linux-tools-omap4, linux-headers-omap4, linux-image-omap4, linux-omap4
+Version: 3.2.0.1435.34
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: dpkg (>= 1.13.19), debhelper (>= 5), gawk
+Architecture: armel armhf
+Standards-Version: 3.6.1
+Format: 1.0
+Directory: pool/main/l/linux-meta-ti-omap4
+Files:
+ 8044b68636940406c9c2c097d646e8c8 1795 linux-meta-ti-omap4_3.2.0.1435.34.dsc
+ 344712beada301b949c628e3bf021052 4451 linux-meta-ti-omap4_3.2.0.1435.34.tar.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-precise-meta.git ti-omap4
+Package-List: 
+ linux-headers-omap4 deb metapackages optional
+ linux-image-omap4 deb metapackages optional
+ linux-omap4 deb metapackages optional
+ linux-tools-omap4 deb metapackages optional
+Checksums-Sha1:
+ cff31ae3669c2ba1502663886500cc2574e6ee97 1795 linux-meta-ti-omap4_3.2.0.1435.34.dsc
+ 64647c4aa9c2604c6b78e19a6bd406118eb3e1a4 4451 linux-meta-ti-omap4_3.2.0.1435.34.tar.gz
+Checksums-Sha256:
+ a2f080c76cde564b9d4b0c82c7bc664f3118bba4d4a0539042efeb7a2945bd09 1795 linux-meta-ti-omap4_3.2.0.1435.34.dsc
+ 5dd8c8faf8f7a046c8d7306278554e737ab9db3bb0df36159f77e26be94e8f75 4451 linux-meta-ti-omap4_3.2.0.1435.34.tar.gz
+
+Package: linux-signed-lts-quantal
+Binary: linux-signed-image-3.5.0-37-generic, kernel-signed-image-3.5.0-37-generic-di
+Version: 3.5.0-37.58~precise1
+Priority: optional
+Section: utils
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9), lsb-release, python3, python3-apt, sbsigntool, linux-image-3.5.0-37-generic (>= 3.5.0-37.58~precise1)
+Architecture: linux-amd64
+Standards-Version: 3.9.3
+Format: 3.0 (native)
+Directory: pool/main/l/linux-signed-lts-quantal
+Files:
+ cc38a1d176bb9218e06280c3dfdbb29b 1804 linux-signed-lts-quantal_3.5.0-37.58~precise1.dsc
+ ada905bf8d9aae333c14cf0e6a71b43f 5203 linux-signed-lts-quantal_3.5.0-37.58~precise1.tar.gz
+Package-List: 
+ kernel-signed-image-3.5.0-37-generic-di udeb debian-installer extra
+ linux-signed-image-3.5.0-37-generic deb utils optional
+Checksums-Sha1:
+ 2ed66855550be06d414fa4a7e296c4d886409102 1804 linux-signed-lts-quantal_3.5.0-37.58~precise1.dsc
+ ff43f89642b74e1084f935ff4c4ce04a4231f113 5203 linux-signed-lts-quantal_3.5.0-37.58~precise1.tar.gz
+Checksums-Sha256:
+ 39f9cf03ee634a0a14f40e88785219d7697383af28c00d5a02f570dacf12b469 1804 linux-signed-lts-quantal_3.5.0-37.58~precise1.dsc
+ 15c35dc04394b3fca778ef1ce2eedae18c17b5775bc3774ebab484d39222e3c2 5203 linux-signed-lts-quantal_3.5.0-37.58~precise1.tar.gz
+
+Package: linux-signed-lts-raring
+Binary: linux-signed-image-3.8.0-27-generic, kernel-signed-image-3.8.0-27-generic-di
+Version: 3.8.0-27.40~precise3
+Priority: optional
+Section: utils
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9), lsb-release, python3, python3-apt, sbsigntool, linux-image-3.8.0-27-generic (>= 3.8.0-27.40~precise3)
+Architecture: linux-amd64
+Standards-Version: 3.9.3
+Format: 3.0 (native)
+Directory: pool/main/l/linux-signed-lts-raring
+Files:
+ d90404d38d3e3d5cb7917f0e3d5f8d20 1800 linux-signed-lts-raring_3.8.0-27.40~precise3.dsc
+ 59f21d9cbf32178e1995531757e06f58 5328 linux-signed-lts-raring_3.8.0-27.40~precise3.tar.gz
+Package-List: 
+ kernel-signed-image-3.8.0-27-generic-di udeb debian-installer extra
+ linux-signed-image-3.8.0-27-generic deb utils optional
+Checksums-Sha1:
+ 6365ecff5e267c6c93d89b6d15d31a0c830bfd9c 1800 linux-signed-lts-raring_3.8.0-27.40~precise3.dsc
+ 542d6f8219d2b7c6a8bf7f8ddbb6d8c5a075e18d 5328 linux-signed-lts-raring_3.8.0-27.40~precise3.tar.gz
+Checksums-Sha256:
+ b751b4732a8be5f01c8fbac326c11a8935a2138660781c0e89854d6fa6bf89f4 1800 linux-signed-lts-raring_3.8.0-27.40~precise3.dsc
+ a928b2f6540ca1f88891ecfa0bcdb33297b7ecdbebc6ff59078ef6e403a6e94d 5328 linux-signed-lts-raring_3.8.0-27.40~precise3.tar.gz
+
+Package: linux-ti-omap4
+Binary: linux-headers-3.2.0-1435, linux-ti-omap4-tools-3.2.0-1435, linux-image-3.2.0-1435-omap4, linux-headers-3.2.0-1435-omap4, linux-image-3.2.0-1435-omap4-dbgsym
+Version: 3.2.0-1435.46
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 5), cpio, module-init-tools, kernel-wedge (>= 2.24ubuntu1), makedumpfile [amd64 i386], device-tree-compiler [powerpc], libelf-dev, binutils-dev, rsync, libdw-dev
+Build-Depends-Indep: xmlto, docbook-utils, ghostscript, transfig, bzip2, sharutils, asciidoc
+Build-Conflicts: findutils (= 4.4.1-1ubuntu1)
+Architecture: armel armhf
+Standards-Version: 3.8.4.0
+Format: 1.0
+Directory: pool/main/l/linux-ti-omap4
+Files:
+ 042ae14a828ac5ea2958cf7223906427 2216 linux-ti-omap4_3.2.0-1435.46.dsc
+ b95dfc541a5f20028dafe783a35de8e0 105693958 linux-ti-omap4_3.2.0-1435.46.tar.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-maverick.git
+Package-List: 
+ linux-headers-3.2.0-1435 deb devel optional
+ linux-headers-3.2.0-1435-omap4 deb devel optional
+ linux-image-3.2.0-1435-omap4 deb kernel optional
+ linux-image-3.2.0-1435-omap4-dbgsym deb devel optional
+ linux-ti-omap4-tools-3.2.0-1435 deb devel optional
+Checksums-Sha1:
+ 3c68446c74ae5d8942d462c70b3583a0e034ed29 2216 linux-ti-omap4_3.2.0-1435.46.dsc
+ f42e09bca33912198bc7b40147d5d3c419b2051a 105693958 linux-ti-omap4_3.2.0-1435.46.tar.gz
+Checksums-Sha256:
+ d0d66795b48c694851c0915c869c5ab16d85e72a9d7aaa82fdece0c7a2214412 2216 linux-ti-omap4_3.2.0-1435.46.dsc
+ 363874566960731c1e67747d891f8a93f435a4d734138ac8cfb837e810814af6 105693958 linux-ti-omap4_3.2.0-1435.46.tar.gz
+
+Package: llvm-3.2
+Binary: libllvm3.2, libllvm3.2-dbg, llvm-3.2, llvm-3.2-runtime, llvm-3.2-dev, libllvm-3.2-ocaml-dev, llvm-3.2-doc, llvm-3.2-examples, llvm-3.2-source
+Version: 3.2-2ubuntu5~precise1
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), flex, bison, dejagnu, tcl8.5, expect, autoconf, automake1.9, perl, libtool, doxygen, chrpath, texinfo, quilt, sharutils, autotools-dev (>= 20060702.1), libffi-dev (>= 3.0.9), lsb-release, xz-utils, python, python-sphinx, binutils-dev (>= 2.20.51.20100222-1~), ocaml-nox (>= 3.11.2), dh-ocaml (>= 0.9.1)
+Build-Conflicts: oprofile
+Architecture: amd64 i386 all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/l/llvm-3.2
+Files:
+ 05536c266ad285065f19b082c3db57d0 2776 llvm-3.2_3.2-2ubuntu5~precise1.dsc
+ e59680198f9e5055f38c441c6167b2fe 9401674 llvm-3.2_3.2.orig.tar.bz2
+ 73047c53d9a6e7974ac68ddfc63a5293 192110 llvm-3.2_3.2-2ubuntu5~precise1.debian.tar.gz
+Uploaders: Sylvestre Ledru <sylvestre@debian.org>
+Homepage: http://www.llvm.org/
+Vcs-Browser: http://svn.debian.org/viewsvn/pkg-llvm/llvm/trunk/
+Vcs-Svn: svn://svn.debian.org/svn/pkg-llvm/llvm/trunk/
+Package-List: 
+ libllvm-3.2-ocaml-dev deb ocaml optional
+ libllvm3.2 deb libs optional
+ libllvm3.2-dbg deb debug extra
+ llvm-3.2 deb devel optional
+ llvm-3.2-dev deb devel optional
+ llvm-3.2-doc deb doc optional
+ llvm-3.2-examples deb doc optional
+ llvm-3.2-runtime deb devel optional
+ llvm-3.2-source deb devel optional
+Checksums-Sha1:
+ ac8cde695efc8a374be6c083dc9d3b7c6b689b8a 2776 llvm-3.2_3.2-2ubuntu5~precise1.dsc
+ ced4778ff39ba71eb03101501a0aade672d43008 9401674 llvm-3.2_3.2.orig.tar.bz2
+ f212a403875fb9401915d15a17d8ffa6214b93c8 192110 llvm-3.2_3.2-2ubuntu5~precise1.debian.tar.gz
+Checksums-Sha256:
+ 182b9f99021abcc85154eff414082bf56a2e64babcccc8cf8de82bb2cdd9b2a9 2776 llvm-3.2_3.2-2ubuntu5~precise1.dsc
+ f4d31cf624f9a18093fcce3c4e6eb64c3d989597b663e80743be514af5f2e6ac 9401674 llvm-3.2_3.2.orig.tar.bz2
+ ccf100bc3b6094b878989b6443bf7c8b4b7056fdf7c448971e920864ea227bf7 192110 llvm-3.2_3.2-2ubuntu5~precise1.debian.tar.gz
+
+Package: lsb
+Binary: lsb-core, lsb-graphics, lsb-cxx, lsb-desktop, lsb-qt4, lsb-languages, lsb-multimedia, lsb-printing, lsb-security, lsb, lsb-base, lsb-release, lsb-invalid-mta
+Version: 4.0-0ubuntu20.3
+Priority: important
+Section: misc
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chris Lawrence <lawrencc@debian.org>
+Build-Depends: debhelper (>> 7), po-debconf (>= 0.5.0), dpkg-dev (>= 1.10), python-all-dev (>= 2.6.6-3~), python3-all-dev
+Architecture: any all
+Standards-Version: 3.8.2
+Format: 1.0
+Directory: pool/main/l/lsb
+Files:
+ 13a2f960cfdecb5adcc4437183bf4cc2 2104 lsb_4.0-0ubuntu20.3.dsc
+ 44795a99b22bbd0db314881bf431b496 62668 lsb_4.0-0ubuntu20.3.tar.gz
+Homepage: http://www.linux-foundation.org/en/LSB
+Package-List: 
+ lsb deb misc extra
+ lsb-base deb misc required
+ lsb-core deb misc extra
+ lsb-cxx deb misc extra
+ lsb-desktop deb misc extra
+ lsb-graphics deb misc extra
+ lsb-invalid-mta deb misc extra
+ lsb-languages deb misc extra
+ lsb-multimedia deb misc extra
+ lsb-printing deb misc extra
+ lsb-qt4 deb misc extra
+ lsb-release deb misc extra
+ lsb-security deb misc extra
+Checksums-Sha1:
+ aae4434318afdab729fa3d62e4184db7f64ea1b1 2104 lsb_4.0-0ubuntu20.3.dsc
+ 049958554bf7a87e147f8f0f6e85be11157250e1 62668 lsb_4.0-0ubuntu20.3.tar.gz
+Checksums-Sha256:
+ 3ef24ca1cdf95746fdf5bb76b231c945ec7c0b430e9b6777c0be29b29bbe818f 2104 lsb_4.0-0ubuntu20.3.dsc
+ eaca2326684fc6d68f246964fee2e51689d2eb8006a618314c70d60bad130741 62668 lsb_4.0-0ubuntu20.3.tar.gz
+
+Package: mdadm
+Binary: mdadm, mdadm-udeb
+Version: 3.2.5-1ubuntu0.3
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian mdadm maintainers <pkg-mdadm-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 7.4.2), po-debconf, groff-base
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/m/mdadm
+Files:
+ c50c9e3b805fa9f23ccb89699dc22eab 2116 mdadm_3.2.5-1ubuntu0.3.dsc
+ 83ba4a6249ae24677e915e44c9cfcc58 369582 mdadm_3.2.5.orig.tar.bz2
+ 94c14991df13a8e2c08872e5741a4faf 128446 mdadm_3.2.5-1ubuntu0.3.debian.tar.bz2
+Uploaders: martin f. krafft <madduck@debian.org>, Michael Tokarev <mjt@tls.msk.ru>
+Homepage: http://neil.brown.name/blog/mdadm
+Vcs-Browser: http://git.debian.org/?p=pkg-mdadm/mdadm.git
+Vcs-Git: git://git.debian.org/git/pkg-mdadm/mdadm
+Package-List: 
+ mdadm deb admin optional
+ mdadm-udeb udeb debian-installer optional
+Checksums-Sha1:
+ 60d5be98e425de12dc741ded79079e7261be30a2 2116 mdadm_3.2.5-1ubuntu0.3.dsc
+ c8bab20578d5188f65da6acacd7fdeb4b489dfb9 369582 mdadm_3.2.5.orig.tar.bz2
+ 09145113b1ffb788e8ddeb16f53aadb7d109d710 128446 mdadm_3.2.5-1ubuntu0.3.debian.tar.bz2
+Checksums-Sha256:
+ 60371e05e2b875dbc4445f988690de38667947e6a3046748ffebc7c5bdf3868d 2116 mdadm_3.2.5-1ubuntu0.3.dsc
+ 5ae2bfd241c88601c1ef9072806248491e025fa09a388c40230d72d65eabbd3c 369582 mdadm_3.2.5.orig.tar.bz2
+ 50af12d6326492005446114c3000c3b73ca77e3257795d612384848bd8b7b3f7 128446 mdadm_3.2.5-1ubuntu0.3.debian.tar.bz2
+
+Package: mesa-lts-raring
+Binary: libxatracker1-lts-raring, libxatracker1-lts-raring-dbg, libxatracker-dev-lts-raring, libgbm1-lts-raring, libgbm1-lts-raring-dbg, libgbm-dev-lts-raring, libegl1-mesa-lts-raring, libegl1-mesa-lts-raring-dbg, libegl1-mesa-dev-lts-raring, libegl1-mesa-drivers-lts-raring, libegl1-mesa-drivers-lts-raring-dbg, libopenvg1-mesa-lts-raring, libopenvg1-mesa-lts-raring-dbg, libopenvg1-mesa-dev-lts-raring, libgles1-mesa-lts-raring, libgles1-mesa-lts-raring-dbg, libgles1-mesa-dev-lts-raring, libgles2-mesa-lts-raring, libgles2-mesa-lts-raring-dbg, libgles2-mesa-dev-lts-raring, libglapi-mesa-lts-raring, libglapi-mesa-lts-raring-dbg, libgl1-mesa-glx-lts-raring, libgl1-mesa-glx-lts-raring-dbg, libgl1-mesa-dri-lts-raring, libgl1-mesa-dri-lts-raring-dbg, libgl1-mesa-dev-lts-raring, mesa-common-dev-lts-raring
+Version: 9.1.4-0ubuntu0.1~precise1
+Priority: optional
+Section: graphics
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8.1.3), quilt (>= 0.40), pkg-config, libdrm-dev (>= 2.4.42) [!hurd-any], libx11-dev, x11proto-gl-dev (>= 1.4.14), libxxf86vm-dev, libexpat1-dev, dpkg-dev (>= 1.15.6), libxfixes-dev, libxdamage-dev, libxext-dev, autoconf, automake, libtool, x11proto-dri2-dev (>= 2.6), linux-libc-dev (>= 2.6.31) [linux-any], libx11-xcb-dev, libxcb-dri2-0-dev, libxcb-glx0-dev, libxcb-xfixes0-dev, python-libxml2, libudev-dev [linux-any], flex, bison, llvm-3.2-dev [amd64 i386 kfreebsd-amd64 kfreebsd-i386 armhf armel powerpc], libwayland-dev-lts-raring (>= 1.0.2) [linux-any]
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/m/mesa-lts-raring
+Files:
+ 3b3caf51c64161392170a434ad349753 4678 mesa-lts-raring_9.1.4-0ubuntu0.1~precise1.dsc
+ 8c7e9ce5b05cb2223f0587396dd9dc08 8202499 mesa-lts-raring_9.1.4.orig.tar.gz
+ 4d8df511f5b40669479e5b9364a63da9 61866 mesa-lts-raring_9.1.4-0ubuntu0.1~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Homepage: http://mesa3d.sourceforge.net/
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/lib/mesa.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/lib/mesa
+Package-List: 
+ libegl1-mesa-dev-lts-raring deb libdevel optional
+ libegl1-mesa-drivers-lts-raring deb libs optional
+ libegl1-mesa-drivers-lts-raring-dbg deb debug extra
+ libegl1-mesa-lts-raring deb libs optional
+ libegl1-mesa-lts-raring-dbg deb debug extra
+ libgbm-dev-lts-raring deb libdevel optional
+ libgbm1-lts-raring deb libs optional
+ libgbm1-lts-raring-dbg deb debug extra
+ libgl1-mesa-dev-lts-raring deb libdevel optional
+ libgl1-mesa-dri-lts-raring deb libs optional
+ libgl1-mesa-dri-lts-raring-dbg deb debug extra
+ libgl1-mesa-glx-lts-raring deb libs optional
+ libgl1-mesa-glx-lts-raring-dbg deb debug extra
+ libglapi-mesa-lts-raring deb libs optional
+ libglapi-mesa-lts-raring-dbg deb debug extra
+ libgles1-mesa-dev-lts-raring deb libdevel optional
+ libgles1-mesa-lts-raring deb libs optional
+ libgles1-mesa-lts-raring-dbg deb debug extra
+ libgles2-mesa-dev-lts-raring deb libdevel optional
+ libgles2-mesa-lts-raring deb libs optional
+ libgles2-mesa-lts-raring-dbg deb debug extra
+ libopenvg1-mesa-dev-lts-raring deb libdevel optional
+ libopenvg1-mesa-lts-raring deb libs optional
+ libopenvg1-mesa-lts-raring-dbg deb debug extra
+ libxatracker-dev-lts-raring deb libdevel optional
+ libxatracker1-lts-raring deb libs optional
+ libxatracker1-lts-raring-dbg deb debug extra
+ mesa-common-dev-lts-raring deb libdevel optional
+Checksums-Sha1:
+ 5561f43b9efb9c62bdf3f0c453181bc41d74e7ba 4678 mesa-lts-raring_9.1.4-0ubuntu0.1~precise1.dsc
+ 16574f804cbadf86c091dc2f98492685b55ddc17 8202499 mesa-lts-raring_9.1.4.orig.tar.gz
+ 5fd2f81c579b2d11b5fac9e99d70ea6a43b66dfa 61866 mesa-lts-raring_9.1.4-0ubuntu0.1~precise1.diff.gz
+Checksums-Sha256:
+ 198c009db745abdc596286d355ff5f6d335b057d2aea908cf425e610fff5b2f5 4678 mesa-lts-raring_9.1.4-0ubuntu0.1~precise1.dsc
+ a2bee4b7807e0cb201f8259e3ca5788f25950c0e2620e0a149ce27887ca1b540 8202499 mesa-lts-raring_9.1.4.orig.tar.gz
+ 76b9680e849ec8e17b6a6e9d701cb3d2d59f3c617fb8a91a283b2494b3e2dcd0 61866 mesa-lts-raring_9.1.4-0ubuntu0.1~precise1.diff.gz
+
+Package: network-manager
+Binary: network-manager, network-manager-dev, libnm-glib4, libnm-glib-dev, libnm-glib-vpn1, libnm-glib-vpn-dev, libnm-util2, libnm-util-dev, network-manager-dbg, gir1.2-networkmanager-1.0
+Version: 0.9.4.0-0ubuntu4.3
+Priority: optional
+Section: net
+Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 8.1.0~), dh-autoreconf, autotools-dev, pkg-config, intltool, libdbus-glib-1-dev (>= 0.75), libdbus-1-dev (>= 1.1), libiw-dev (>= 27+28pre9), libglib2.0-dev (>= 2.22), libnl-3-dev, libnl-genl-3-dev, libnl-route-3-dev, ppp-dev (>= 2.4.5), libpolkit-gobject-1-dev, libnss3-dev, uuid-dev, libudev-dev (>= 147), libgudev-1.0-dev, libnotify-dev (>= 0.3), isc-dhcp-client (>= 4.1.1-P1-4), gtk-doc-tools, dbus-test-runner, libgirepository1.0-dev (>= 0.9.12), gobject-introspection (>= 0.9.12-4~), python-gobject-2, python-dbus, gir1.2-glib-2.0, gir1.2-freedesktop
+Architecture: any
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/n/network-manager
+Files:
+ f203ea209168e7343008a1fca3083d74 3129 network-manager_0.9.4.0-0ubuntu4.3.dsc
+ 66a54b51a4998c484613911b72a7e6ff 1885364 network-manager_0.9.4.0.orig.tar.xz
+ 03c28330a85e3f792231ad9dbd1d8d97 109103 network-manager_0.9.4.0-0ubuntu4.3.debian.tar.gz
+Uploaders: Michael Biebl <biebl@debian.org>
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Vcs-Bzr: https://code.launchpad.net/~network-manager/network-manager/ubuntu
+Package-List: 
+ gir1.2-networkmanager-1.0 deb libs optional
+ libnm-glib-dev deb libdevel optional
+ libnm-glib-vpn-dev deb libdevel optional
+ libnm-glib-vpn1 deb libs optional
+ libnm-glib4 deb libs optional
+ libnm-util-dev deb libdevel optional
+ libnm-util2 deb libs optional
+ network-manager deb net optional
+ network-manager-dbg deb debug extra
+ network-manager-dev deb devel optional
+Checksums-Sha1:
+ 1350854284b903ad078ffa2e084e9dd4f0192836 3129 network-manager_0.9.4.0-0ubuntu4.3.dsc
+ bf5c1857bad5a3321a57488c2b87537c9fb7ee9b 1885364 network-manager_0.9.4.0.orig.tar.xz
+ c4321c82bd0776b01223c31883ce64b35c115af0 109103 network-manager_0.9.4.0-0ubuntu4.3.debian.tar.gz
+Checksums-Sha256:
+ 0043b2e538919e03ce76b23679ed6327f9dfaa7261fde7ee0a2afa1ad4eca140 3129 network-manager_0.9.4.0-0ubuntu4.3.dsc
+ eb4f124008b3d855a37205d03ef035b7218639cd7332bdae5567095977e93e0f 1885364 network-manager_0.9.4.0.orig.tar.xz
+ 9193cf3086c569c4f03cef663c4c5cea5cc48823a6f345a3db8d4b0261135c03 109103 network-manager_0.9.4.0-0ubuntu4.3.debian.tar.gz
+
+Package: networkmanagement
+Binary: plasma-widget-networkmanagement, network-manager-kde, plasma-widget-networkmanagement-dbg
+Version: 0.9.0.1-0ubuntu2.1
+Priority: optional
+Section: kde
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian KDE Extras Team <pkg-kde-extras@lists.alioth.debian.org>
+Build-Depends: cmake (>= 2.6.2), debhelper (>= 8.0.0), kde-workspace-dev (>= 4:4.6.0), kdelibs5-dev (>= 4:4.6.0), libnm-util-dev (>= 0.9.0), libqt4-dev (>= 4:4.6.0), mobile-broadband-provider-info, network-manager-dev (>= 0.9.0), pkg-kde-tools (>= 0.5), libnm-glib-dev
+Architecture: any
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/n/networkmanagement
+Files:
+ 5111ff06fe80470122fab97292b2fc86 1911 networkmanagement_0.9.0.1-0ubuntu2.1.dsc
+ acae23711269a94763a87532f55d301d 1203498 networkmanagement_0.9.0.1.orig.tar.bz2
+ 09d61cfd62d5c1055a2d7b5083e0883e 10357 networkmanagement_0.9.0.1-0ubuntu2.1.debian.tar.gz
+Uploaders: Modestas Vainius <modax@debian.org>, Michael Biebl <biebl@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-extras/networkmanagement.git
+Vcs-Git: git://git.debian.org/git/pkg-kde/kde-extras/networkmanagement.git
+Package-List: 
+ network-manager-kde deb oldlibs extra
+ plasma-widget-networkmanagement deb kde optional
+ plasma-widget-networkmanagement-dbg deb debug extra
+Checksums-Sha1:
+ 1e27562376842d83ddbbc719c172bcb9c8063f2f 1911 networkmanagement_0.9.0.1-0ubuntu2.1.dsc
+ 75e16397d00de06947fa183f09632caed11d8857 1203498 networkmanagement_0.9.0.1.orig.tar.bz2
+ 55d49dd5a29d5f8ac4b5f358fe15bdfdb7cb7b7a 10357 networkmanagement_0.9.0.1-0ubuntu2.1.debian.tar.gz
+Checksums-Sha256:
+ 982c859d501e261a44eb3174f9d147e8b5b1b144721aa8ac81bfeccdd78c7fba 1911 networkmanagement_0.9.0.1-0ubuntu2.1.dsc
+ c836c6095cab363ccd1bbde9f96d0fa008eaa880ed838c9ce04579bc0d283d3a 1203498 networkmanagement_0.9.0.1.orig.tar.bz2
+ 565c73c206ba3c160756866fa6891dfa6d2797406806c0028d0a97aa6b808f3c 10357 networkmanagement_0.9.0.1-0ubuntu2.1.debian.tar.gz
+
+Package: pacemaker
+Binary: pacemaker, pacemaker-dev, libcib1-dev, libcib1, libcrmcluster1-dev, libcrmcluster1, libcrmcommon2-dev, libcrmcommon2, libpe-rules2-dev, libpe-rules2, libpe-status3-dev, libpe-status3, libpengine3-dev, libpengine3, libstonithd1-dev, libstonithd1, libtransitioner1-dev, libtransitioner1
+Version: 1.1.6-2ubuntu3.1
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 7), automake, autoconf, chrpath, libsnmp-dev, libglib2.0-dev, perl, net-tools, python (>= 2.6.6-3~), libtool, libcurl4-openssl-dev | libcurl3-openssl-dev, libxml2-dev, bison, flex, uuid-dev, libbz2-dev, zlib1g-dev, libltdl3-dev, openssh-client, libgnutls-dev, libpam0g-dev, libncurses5-dev, libcorosync-dev (>= 1.4.1), libheartbeat2-dev (>= 3.0), libxslt1-dev, libesmtp-dev, cluster-glue-dev (>= 1.0.7+hg2618), liblrm2-dev, libpils2-dev, libplumb2-dev, libplumbgpl2-dev, libstonith1-dev, help2man, libxml2-utils, xsltproc, docbook-xsl, resource-agents-dev, libcorosync4, libcman-dev (>= 3.1), libfence-dev (>= 3.1)
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/p/pacemaker
+Files:
+ 6f3862ccdad0cf691c98323239d52fcb 3638 pacemaker_1.1.6-2ubuntu3.1.dsc
+ 41520fbd9ba0552f807e7dd8a3011cc1 15451785 pacemaker_1.1.6.orig.tar.bz2
+ 60ef6467aeca8781226889c88ca70104 24470 pacemaker_1.1.6-2ubuntu3.1.debian.tar.gz
+Uploaders: Martin Loschwitz <madkiss@debian.org>, Anibal Monsalve Salazar <anibal@debian.org>, Simon Horman <horms@debian.org>, Frederik Schüler <fs@debian.org>
+Homepage: http://clusterlabs.org/
+Vcs-Browser: http://hg.debian.org/hg/debian-ha/pacemaker
+Vcs-Hg: http://hg.debian.org/hg/debian-ha/pacemaker
+Package-List: 
+ libcib1 deb libs optional
+ libcib1-dev deb libdevel optional
+ libcrmcluster1 deb libs optional
+ libcrmcluster1-dev deb libdevel optional
+ libcrmcommon2 deb libs optional
+ libcrmcommon2-dev deb libdevel optional
+ libpe-rules2 deb libs optional
+ libpe-rules2-dev deb libdevel optional
+ libpe-status3 deb libs optional
+ libpe-status3-dev deb libdevel optional
+ libpengine3 deb libs optional
+ libpengine3-dev deb libdevel optional
+ libstonithd1 deb libs optional
+ libstonithd1-dev deb libdevel optional
+ libtransitioner1 deb libs optional
+ libtransitioner1-dev deb libdevel optional
+ pacemaker deb admin optional
+ pacemaker-dev deb devel optional
+Checksums-Sha1:
+ 5c175a2ba9aaa3784f76690a785a814f3933fe0d 3638 pacemaker_1.1.6-2ubuntu3.1.dsc
+ 570072ed6447054d5d45aabf370730a121b0176a 15451785 pacemaker_1.1.6.orig.tar.bz2
+ 9f20c945503f2619d603d050f84d476b11c705dd 24470 pacemaker_1.1.6-2ubuntu3.1.debian.tar.gz
+Checksums-Sha256:
+ 57c55b18e33f6b73afececc19bf0f32cf3b3ec0c2c0bd5cc6230c328efb671d9 3638 pacemaker_1.1.6-2ubuntu3.1.dsc
+ de4fd39c91f0a9477d81e203f69e3159cc1f57b97316e0e7fb671d04f8d84080 15451785 pacemaker_1.1.6.orig.tar.bz2
+ 49b5167b1176b6d456058cf74d4b852b0084224f31e5ad471b2f95c553079a30 24470 pacemaker_1.1.6-2ubuntu3.1.debian.tar.gz
+
+Package: partman-auto-lvm
+Binary: partman-auto-lvm
+Version: 42ubuntu2.3
+Section: misc
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 7.0.8), dh-di, po-debconf (>= 0.5.0)
+Architecture: all
+Format: 1.0
+Directory: pool/main/p/partman-auto-lvm
+Files:
+ bc766b49267c50fe332794dfe2d22661 1839 partman-auto-lvm_42ubuntu2.3.dsc
+ 9773032ea21d814debc942d9c7b0fcb0 132550 partman-auto-lvm_42ubuntu2.3.tar.gz
+Uploaders: Anton Zinoviev <zinoviev@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/partman-auto-lvm/ubuntu
+Package-List: 
+ partman-auto-lvm udeb debian-installer optional
+Checksums-Sha1:
+ 5044a12c46ac3e85f6bb6c91af53e15285a7e754 1839 partman-auto-lvm_42ubuntu2.3.dsc
+ 27d3e345d56938b624f1d9ddb457d430a2ad6414 132550 partman-auto-lvm_42ubuntu2.3.tar.gz
+Checksums-Sha256:
+ 5043f58fa749a7a4453aed972874520f847ba819df184c1e61fd75bce5625116 1839 partman-auto-lvm_42ubuntu2.3.dsc
+ f7e04ac80de2fcab33cfc530966f17fa87a6c46a7b277082b27a87e323bdc013 132550 partman-auto-lvm_42ubuntu2.3.tar.gz
+Debian-Vcs-Browser: http://git.debian.org/?p=d-i/partman-auto-lvm.git
+Debian-Vcs-Git: git://git.debian.org/d-i/partman-auto-lvm.git
+
+Package: partman-basicfilesystems
+Binary: partman-basicfilesystems
+Version: 71ubuntu3.1
+Section: debian-installer
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 7.0.8), dh-di, po-debconf (>= 0.5.0)
+Architecture: all
+Format: 1.0
+Directory: pool/main/p/partman-basicfilesystems
+Files:
+ 45c43637555b29a5630f88a9108dbb05 2003 partman-basicfilesystems_71ubuntu3.1.dsc
+ 116a1f6f4d73b85ef6e689aed6adbec9 186299 partman-basicfilesystems_71ubuntu3.1.tar.gz
+Uploaders: Anton Zinoviev <zinoviev@debian.org>, Colin Watson <cjwatson@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/partman-basicfilesystems/ubuntu
+Package-List: 
+ partman-basicfilesystems udeb debian-installer standard
+Checksums-Sha1:
+ 221b9ef3871e70801b6f30b1d59629cc9bb12e71 2003 partman-basicfilesystems_71ubuntu3.1.dsc
+ 28128700ac3b0cdd88f65b10186f31831927a482 186299 partman-basicfilesystems_71ubuntu3.1.tar.gz
+Checksums-Sha256:
+ 6eb3988eb6219d009a267325e775c8fc806b4632c4ee72e7432c97efb5996c5b 2003 partman-basicfilesystems_71ubuntu3.1.dsc
+ b43d23a9b65d89d872b2bd608adcb4b13ed99c48c969b2c9cd44089acc343bf4 186299 partman-basicfilesystems_71ubuntu3.1.tar.gz
+Debian-Vcs-Browser: http://git.debian.org/?p=d-i/partman-basicfilesystems.git
+Debian-Vcs-Git: git://git.debian.org/d-i/partman-basicfilesystems.git
+
+Package: partman-efi
+Binary: partman-efi
+Version: 25ubuntu1.1
+Section: debian-installer
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 7.0.8), dh-di, po-debconf (>= 0.5.0)
+Architecture: i386 ia64 amd64
+Standards-Version: 3.8.1
+Format: 1.0
+Directory: pool/main/p/partman-efi
+Files:
+ ee7c962dd125a0e7a70334e20b92b07c 1919 partman-efi_25ubuntu1.1.dsc
+ 49c7009db606bb0da49963024c71371d 53275 partman-efi_25ubuntu1.1.tar.gz
+Uploaders: dann frazier <dannf@debian.org>, Christian Perrier <bubulle@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/partman-efi/ubuntu
+Package-List: 
+ partman-efi udeb debian-installer standard
+Checksums-Sha1:
+ 9b6874f3759f86af6eede61d1290caa9d661fb80 1919 partman-efi_25ubuntu1.1.dsc
+ 2d30e44fa664ff787863188f632cd547b48d6f9e 53275 partman-efi_25ubuntu1.1.tar.gz
+Checksums-Sha256:
+ 9f168088d17676ca85008f59cb81ba1e8660f1ddffb363ccc0d5c50a47ab6e30 1919 partman-efi_25ubuntu1.1.dsc
+ b2896f039d529f0b870b22ab6f119dca626b2c923348b1fa856f654ea1234abe 53275 partman-efi_25ubuntu1.1.tar.gz
+Debian-Vcs-Browser: http://git.debian.org/?p=d-i/partman-efi.git
+Debian-Vcs-Git: git://git.debian.org/d-i/partman-efi.git
+
+Package: phonon-backend-gstreamer
+Binary: phonon-backend-gstreamer, phonon-backend-gstreamer-dbg
+Version: 4:4.7.0really4.6.3-0ubuntu0.12.04.1
+Priority: optional
+Section: sound
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Jonathan Riddell <jriddell@ubuntu.com>
+Build-Depends: debhelper (>= 8.1.3~), cmake (>= 2.6.2), pkg-kde-tools (>= 0.12), automoc, libphonon-dev (>= 4:4.7.0really4.6.0), libphononexperimental-dev (>= 4:4.7.0really4.6.0), libasound2-dev [linux-any], libglib2.0-dev, libgstreamer0.10-dev, libgstreamer-plugins-base0.10-dev, libxml2-dev, libqt4-dev (>= 4.5), libgl1-mesa-dev [!armel !armhf], libqt4-opengl-dev (>= 4.5) [!armel !armhf], libx11-dev
+Build-Conflicts: libgl1-mesa-dev [armel armhf]
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/p/phonon-backend-gstreamer
+Files:
+ ee8281db090a609d6618545d0ee84d52 2110 phonon-backend-gstreamer_4.7.0really4.6.3-0ubuntu0.12.04.1.dsc
+ d7b0b6245f380347c52c09033a814931 72364 phonon-backend-gstreamer_4.7.0really4.6.3.orig.tar.xz
+ 77349b1b2f478027a6cd20678f6f5ac8 3962 phonon-backend-gstreamer_4.7.0really4.6.3-0ubuntu0.12.04.1.debian.tar.gz
+Uploaders: Modestas Vainius <modax@debian.org>
+Homepage: http://phonon.kde.org/
+Vcs-Browser: http://git.debian.org/?p=pkg-kde/kde-std/phonon-backend-gstreamer.git
+Vcs-Git: git://git.debian.org/pkg-kde/kde-std/phonon-backend-gstreamer.git
+Package-List: 
+ phonon-backend-gstreamer deb sound optional
+ phonon-backend-gstreamer-dbg deb debug extra
+Checksums-Sha1:
+ 148228af0b09a70302a2ebae7948db23d4b7a6f6 2110 phonon-backend-gstreamer_4.7.0really4.6.3-0ubuntu0.12.04.1.dsc
+ a79829df44622ec69f4a57464a16ab4ce5cc6f78 72364 phonon-backend-gstreamer_4.7.0really4.6.3.orig.tar.xz
+ 12191357d774611ffee90d732395c885146e789e 3962 phonon-backend-gstreamer_4.7.0really4.6.3-0ubuntu0.12.04.1.debian.tar.gz
+Checksums-Sha256:
+ 642d6d471860b4bc602642831ca39abcdcf4e8e0a17c4bd8ebad332dc8b227f4 2110 phonon-backend-gstreamer_4.7.0really4.6.3-0ubuntu0.12.04.1.dsc
+ 55e273f113e309f2fc3f316baf4b220562cc8fb37b25193ac257ff1eae7aaf58 72364 phonon-backend-gstreamer_4.7.0really4.6.3.orig.tar.xz
+ 88b16ab3d401519a6ea9b6f4eb735895c87111b9a8c04080ae9ee855bca44562 3962 phonon-backend-gstreamer_4.7.0really4.6.3-0ubuntu0.12.04.1.debian.tar.gz
+
+Package: python-boto
+Binary: python-boto
+Version: 2.2.2-0ubuntu3
+Priority: optional
+Section: python
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Eric Evans <eevans@debian.org>
+Build-Depends: debhelper (>= 7), python-all (>= 2.6.6-3)
+Architecture: all
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/p/python-boto
+Files:
+ 39adcdecd4477097766e40868e103a18 2009 python-boto_2.2.2-0ubuntu3.dsc
+ b23b9137abd7286615236ed03929d282 456632 python-boto_2.2.2.orig.tar.gz
+ 813c6491165d5185fedf03c2d5e73d92 5635 python-boto_2.2.2-0ubuntu3.debian.tar.gz
+Homepage: http://code.google.com/p/boto/
+Package-List: 
+ python-boto deb python optional
+Checksums-Sha1:
+ 2c60bbc8b83c0ce5be9478b781ea4e138d35de9d 2009 python-boto_2.2.2-0ubuntu3.dsc
+ b4ac32ae01fd504d7867b205fb3784bb8c5c65eb 456632 python-boto_2.2.2.orig.tar.gz
+ 10576a3c294f80708ad2882423af19e7f3dc5fe4 5635 python-boto_2.2.2-0ubuntu3.debian.tar.gz
+Checksums-Sha256:
+ 0eca4a03ee77be63a48fa12ee45bdc47e4a2be6ace846028ce07320fa8bf7aff 2009 python-boto_2.2.2-0ubuntu3.dsc
+ 17dce8082a650da50cdc966a5325b97873fac14916dcf1b9d9130b7e212ee292 456632 python-boto_2.2.2.orig.tar.gz
+ 3771473db81c35dced359230595a5d581da42d70bd2d51cce357899f71c89d7f 5635 python-boto_2.2.2-0ubuntu3.debian.tar.gz
+Debian-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=users/eevans/python-boto.git
+Debian-Vcs-Git: git://git.debian.org/git/users/eevans/python-boto
+
+Package: python2.7
+Binary: python2.7, python2.7-minimal, libpython2.7, python2.7-examples, python2.7-dev, idle-python2.7, python2.7-doc, python2.7-dbg
+Version: 2.7.3-0ubuntu3.3
+Priority: important
+Section: python
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Build-Depends: debhelper (>= 5), quilt, autoconf, lsb-release, sharutils, libreadline-dev, libtinfo-dev, libncursesw5-dev (>= 5.3), tk8.5-dev, blt-dev (>= 2.4z), libssl-dev, zlib1g-dev, libbz2-dev, libexpat1-dev, libbluetooth-dev [linux-any], locales [!armel !avr32 !hppa !ia64 !mipsel], libsqlite3-dev, libffi-dev (>= 3.0.5), libgpm2 [linux-any], mime-support, netbase, bzip2, libdb5.1-dev, libgdbm-dev, gdb, python, help2man, xvfb, xauth
+Build-Depends-Indep: python-sphinx
+Build-Conflicts: autoconf2.13, python-cxx-dev, python-xml, python2.7-xml, tcl8.4-dev, tk8.4-dev
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/p/python2.7
+Files:
+ a162aaaa71044f52ac1a6cbba1629f57 2808 python2.7_2.7.3-0ubuntu3.3.dsc
+ 20e7d671051f7a8c81d58965efcdf638 14216076 python2.7_2.7.3.orig.tar.gz
+ 828eacc3dfad0e20d1d76724342d7f0a 252427 python2.7_2.7.3-0ubuntu3.3.diff.gz
+Vcs-Browser: https://code.launchpad.net/~doko/python/pkg2.7-debian
+Vcs-Bzr: http://bazaar.launchpad.net/~doko/python/pkg2.7-debian
+Package-List: 
+ idle-python2.7 deb python optional
+ libpython2.7 deb libs optional
+ python2.7 deb python optional
+ python2.7-dbg deb debug extra
+ python2.7-dev deb python optional
+ python2.7-doc deb doc optional
+ python2.7-examples deb python optional
+ python2.7-minimal deb python optional
+Checksums-Sha1:
+ cd7d1237653223a3a6f0f5564a0ea748c26fd146 2808 python2.7_2.7.3-0ubuntu3.3.dsc
+ 7eb972b37f596bea7215efce2da40fcb24bed5d9 14216076 python2.7_2.7.3.orig.tar.gz
+ 77ffb9c11dcb5e10c9a672364edd83c80b87d670 252427 python2.7_2.7.3-0ubuntu3.3.diff.gz
+Checksums-Sha256:
+ 6c7a1f3c3b65229e35decc2f9b9d3e986eb8f8df3fc7b85bdce2427ef34fe733 2808 python2.7_2.7.3-0ubuntu3.3.dsc
+ 68bddd390a22ce9a9946ad711fc0042c831889be1f8ff79c0945f7a973e05bda 14216076 python2.7_2.7.3.orig.tar.gz
+ 20e8d750b9c1c6ed75bcb250a367225bbb3e276c407b614f51d95c2963ee2a51 252427 python2.7_2.7.3-0ubuntu3.3.diff.gz
+
+Package: python3.2
+Binary: python3.2, python3.2-minimal, libpython3.2, python3.2-examples, python3.2-dev, idle-python3.2, python3.2-doc, python3.2-dbg, python3.2-udeb
+Version: 3.2.3-0ubuntu3.4
+Priority: optional
+Section: python
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Build-Depends: debhelper (>= 5.0.51~), quilt, autoconf, libreadline-dev, libncursesw5-dev (>= 5.3), zlib1g-dev, libdb5.1-dev, libgdbm-dev, tk8.5-dev, blt-dev (>= 2.4z), libssl-dev, sharutils, libbz2-dev, libexpat1-dev, libbluetooth-dev [linux-any], locales [!armel !avr32 !hppa !ia64 !mipsel], libsqlite3-dev, libffi-dev (>= 3.0.5), mime-support, libgpm2 [linux-any], netbase, lsb-release, bzip2, gdb, python, xvfb, xauth
+Build-Depends-Indep: python-sphinx
+Build-Conflicts: autoconf2.13
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/p/python3.2
+Files:
+ b34d5f8f0e95f93ab89fc95fae3f886a 2787 python3.2_3.2.3-0ubuntu3.4.dsc
+ f62e7515e445b72126a50a9aa4283511 12854910 python3.2_3.2.3.orig.tar.gz
+ a890254c573d94003e318c515bb1c3e4 232029 python3.2_3.2.3-0ubuntu3.4.diff.gz
+Vcs-Browser: https://code.launchpad.net/~doko/python/pkg3.2-debian
+Vcs-Bzr: http://bazaar.launchpad.net/~doko/python/pkg3.2-debian
+Package-List: 
+ idle-python3.2 deb python optional
+ libpython3.2 deb libs optional
+ python3.2 deb python optional
+ python3.2-dbg deb debug extra
+ python3.2-dev deb python optional
+ python3.2-doc deb doc optional
+ python3.2-examples deb python optional
+ python3.2-minimal deb python optional
+ python3.2-udeb udeb debian-installer optional
+Checksums-Sha1:
+ 98d19874184e02d49d01dd892f3ce8581da72983 2787 python3.2_3.2.3-0ubuntu3.4.dsc
+ c68c6812e534f3e0171d929fc22558b292853b76 12854910 python3.2_3.2.3.orig.tar.gz
+ 3a52e777da2cb8f8b9802d3b99559bf6a878b20e 232029 python3.2_3.2.3-0ubuntu3.4.diff.gz
+Checksums-Sha256:
+ 79362c54005cad2530459e48247af3b78d7ad6311042ad2c3dc1ab8db3b962e7 2787 python3.2_3.2.3-0ubuntu3.4.dsc
+ 33b0b651d3dbbc9cac02f2941db4996c8e96dfa1ead6ad21ab3706578746a15e 12854910 python3.2_3.2.3.orig.tar.gz
+ ebc690431d987ad412d5254a664f5e3755a19b7eb3a639d773aaab305bc36291 232029 python3.2_3.2.3-0ubuntu3.4.diff.gz
+
+Package: remmina
+Binary: remmina, remmina-common, remmina-plugin-rdp, remmina-plugin-vnc, remmina-plugin-xdmcp, remmina-plugin-nx, remmina-plugin-telepathy, remmina-plugin-gnome
+Version: 1.0.0-1ubuntu6.3
+Priority: optional
+Section: gnome
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Luca Falavigna <dktrkranz@debian.org>
+Build-Depends: debhelper (>= 9~), cmake (>= 2.6), libgtk-3-dev, libgcrypt11-dev, libssh-dev (>= 0.4), libvte-2.90-dev, libxkbfile-dev, libfreerdp-dev (>= 1.0), libtelepathy-glib-dev, libjpeg-dev, libgnutls-dev, libgnome-keyring-dev, libavahi-ui-gtk3-dev (>= 0.6.0), libvncserver-dev, libappindicator3-dev, intltool
+Architecture: any all
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/r/remmina
+Files:
+ 04ed4ba259441d649026a54edd56d42e 2023 remmina_1.0.0-1ubuntu6.3.dsc
+ 701c540acaab961bc3adf130a2ddb8b1 540568 remmina_1.0.0.orig.tar.gz
+ 57eace1e50a40759a5094d29cec3414c 15441 remmina_1.0.0-1ubuntu6.3.debian.tar.gz
+Homepage: http://remmina.sourceforge.net/
+Vcs-Browser: http://git.debian.org/?p=users/dktrkranz/remmina.git;a=summary
+Vcs-Git: git://git.debian.org/git/users/dktrkranz/remmina.git
+Package-List: 
+ remmina deb gnome optional
+ remmina-common deb gnome optional
+ remmina-plugin-gnome deb gnome optional
+ remmina-plugin-nx deb gnome optional
+ remmina-plugin-rdp deb gnome optional
+ remmina-plugin-telepathy deb gnome optional
+ remmina-plugin-vnc deb gnome optional
+ remmina-plugin-xdmcp deb gnome optional
+Checksums-Sha1:
+ 5d290d2c1da694e9139217f5b40099eee1c00d82 2023 remmina_1.0.0-1ubuntu6.3.dsc
+ eeaefe53e9770849ed0e11ebae92f54ebffec2de 540568 remmina_1.0.0.orig.tar.gz
+ a64f0d6e69b083d32ca771b5f59b643c6f807d44 15441 remmina_1.0.0-1ubuntu6.3.debian.tar.gz
+Checksums-Sha256:
+ 9ae1245982b2d89b5e2c2e891fca12aceb023c978a424bb2fca86ca640ee40ae 2023 remmina_1.0.0-1ubuntu6.3.dsc
+ 7cd0d2d6adbd96c7139da8c4bfc4cf4821e1fa97242bb9cc9db32a53df289731 540568 remmina_1.0.0.orig.tar.gz
+ 10f20493e45db553577d5b1f80c900454b75cc1121bd60bc72b8ca2a88d041e4 15441 remmina_1.0.0-1ubuntu6.3.debian.tar.gz
+
+Package: rhythmbox-ubuntuone
+Binary: rhythmbox-ubuntuone
+Version: 4.2.0-0ubuntu0.0.1
+Priority: extra
+Section: gnome
+Maintainer: Rodney Dawes <rodney.dawes@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.14), gir1.2-glib-2.0, gir1.2-peas-1.0, intltool, python (>= 2.6.6-3), python-dirspec, python-distutils-extra (>= 2.10), python-gi
+Architecture: all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/r/rhythmbox-ubuntuone
+Files:
+ 98e921b9337fe787dd66a580dcce045a 1345 rhythmbox-ubuntuone_4.2.0-0ubuntu0.0.1.dsc
+ d172252e79fb0e72cd7aeed1f6889d93 24474 rhythmbox-ubuntuone_4.2.0.orig.tar.gz
+ e32d98dcaf0e5c584f7a6182fb08aec6 4443 rhythmbox-ubuntuone_4.2.0-0ubuntu0.0.1.debian.tar.gz
+Homepage: https://launchpad.net/rhythmbox-ubuntuone
+Package-List: 
+ rhythmbox-ubuntuone deb gnome extra
+Checksums-Sha1:
+ cf208f824b6f8e031e39de32b03b0007de917d8f 1345 rhythmbox-ubuntuone_4.2.0-0ubuntu0.0.1.dsc
+ b53ee1edc474115b31b67e89a1f2ed40c088e0a1 24474 rhythmbox-ubuntuone_4.2.0.orig.tar.gz
+ 10016c79ba9f71834961babfef545355c5c4bf03 4443 rhythmbox-ubuntuone_4.2.0-0ubuntu0.0.1.debian.tar.gz
+Checksums-Sha256:
+ f1a28894bdb07bad5def531a52f975e99f2fd96a53942edcace12ad607ef4677 1345 rhythmbox-ubuntuone_4.2.0-0ubuntu0.0.1.dsc
+ 54cf945c1602b787f8797a1160eeb0cc0be13271563544e196840084870f5156 24474 rhythmbox-ubuntuone_4.2.0.orig.tar.gz
+ a4009c31374fa04dbc9be17a0dc47c4efe774e98e46bb2ae6962237e0c1c6018 4443 rhythmbox-ubuntuone_4.2.0-0ubuntu0.0.1.debian.tar.gz
+
+Package: rpm
+Binary: rpm, rpm2cpio, rpm-common, rpm-i18n, librpm-dbg, librpm2, librpmio2, librpmbuild2, librpmsign0, librpm-dev, python-rpm
+Version: 4.9.1.1-1ubuntu0.2
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michal Čihař <nijel@debian.org>
+Build-Depends: debhelper (>= 7.0.50), dh-autoreconf, libtool (>= 2.2.10), autoconf, automake, autotools-dev, autopoint, zlib1g-dev, libbz2-dev, libpopt-dev, libxml2-dev, libreadline-dev, libselinux1-dev [linux-any], libsepol1-dev [linux-any], libcap-dev (>= 1:2) [linux-any], libsqlite3-dev, python-all-dev (>= 2.6.6-3), bzip2, pkg-config, libnspr4-dev, libnss3-dev, liblzma-dev, xz-utils, libmagic-dev, libelf-dev, libdw-dev, libdb-dev, liblua5.1-0-dev (>= 5.1.4-4)
+Architecture: any all
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/r/rpm
+Files:
+ c3cdd193d882d54110a16dc2e887245a 2786 rpm_4.9.1.1-1ubuntu0.2.dsc
+ 3077f1c68442aeb420e00099d5d4c117 4567320 rpm_4.9.1.1.orig.tar.gz
+ 4cf7eda2eb16d6a300e820412337d244 36976 rpm_4.9.1.1-1ubuntu0.2.debian.tar.gz
+Uploaders: Loic Minier <lool@dooz.org>
+Homepage: http://rpm.org/
+Vcs-Browser: http://git.debian.org/?p=collab-maint/rpm.git
+Vcs-Git: git://git.debian.org/git/collab-maint/rpm.git
+Package-List: 
+ librpm-dbg deb debug extra
+ librpm-dev deb libdevel extra
+ librpm2 deb libs optional
+ librpmbuild2 deb libs optional
+ librpmio2 deb libs optional
+ librpmsign0 deb libs optional
+ python-rpm deb python extra
+ rpm deb admin optional
+ rpm-common deb admin optional
+ rpm-i18n deb localization optional
+ rpm2cpio deb admin optional
+Checksums-Sha1:
+ 416fb7758f06a8d5d6b01c1a5f9f0676db1bb098 2786 rpm_4.9.1.1-1ubuntu0.2.dsc
+ d1bba5ca1132b17f832d918dad6a62763a4d63ce 4567320 rpm_4.9.1.1.orig.tar.gz
+ f2968d9ef842b0354b5902abb269f153435f78b7 36976 rpm_4.9.1.1-1ubuntu0.2.debian.tar.gz
+Checksums-Sha256:
+ 6bb581304f93090a8fed440673084e579113c4d18549d763c4fc92843603e28d 2786 rpm_4.9.1.1-1ubuntu0.2.dsc
+ d87d8b517c8fb4c4fb0d57b7e5c7ede6def3bb650124060317b0d31158adb937 4567320 rpm_4.9.1.1.orig.tar.gz
+ 2f399367f2526a924a4e202aea9ea60b90540128de77f5ebee5074dce4539cf8 36976 rpm_4.9.1.1-1ubuntu0.2.debian.tar.gz
+
+Package: sessioninstaller
+Binary: sessioninstaller
+Version: 0.20+bzr128-0ubuntu1.3
+Priority: extra
+Section: gnome
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Julian Andres Klode <jak@debian.org>
+Build-Depends: debhelper (>= 7.3), python (>= 2.6.6-3~), python-setuptools, python-distutils-extra
+Architecture: all
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/s/sessioninstaller
+Files:
+ 2d66adac28736fa6c1aae7d9b068e964 1522 sessioninstaller_0.20+bzr128-0ubuntu1.3.dsc
+ 4d99ec456e82fbffcb7ce424102eb754 33740 sessioninstaller_0.20+bzr128.orig.tar.gz
+ ec2b9b5deb556dfaa1347bd68ff8361e 5503 sessioninstaller_0.20+bzr128-0ubuntu1.3.debian.tar.gz
+Homepage: http://launchpad.net/sessioninstaller
+Vcs-Browser: http://bazaar.launchpad.net/~aptdaemon-developers/sessioninstaller/ubuntu-precise
+Vcs-Bzr: lp:~aptdaemon-developers/sessioninstaller/ubuntu-precise
+Package-List: 
+ sessioninstaller deb gnome extra
+Checksums-Sha1:
+ b8e1d4cbec19fd87ed1a867e371d664e82e7b7cd 1522 sessioninstaller_0.20+bzr128-0ubuntu1.3.dsc
+ 96d310cdbd07018095925ad1b3451fa80abc9bf9 33740 sessioninstaller_0.20+bzr128.orig.tar.gz
+ 056b96044af6a4a6b15cf53675ddfe4e3f7a2ef7 5503 sessioninstaller_0.20+bzr128-0ubuntu1.3.debian.tar.gz
+Checksums-Sha256:
+ 8a2f40c735403f4e91c7d4e0a04ec44d7db5cb605b4e55a3c2b08119bd7d57cf 1522 sessioninstaller_0.20+bzr128-0ubuntu1.3.dsc
+ a310e4ca6b275a129d0a7ef7a7dcf3f9bfc511910514ccdfb8bcb678dd24c557 33740 sessioninstaller_0.20+bzr128.orig.tar.gz
+ a4a2d67f34c1e720d01f7be150d6e8f3193f1e405c070ae1b4a0835ec5a5ceed 5503 sessioninstaller_0.20+bzr128-0ubuntu1.3.debian.tar.gz
+
+Package: udev
+Binary: udev, udev-udeb, libudev0, libudev-dev, libudev0-udeb, libgudev-1.0-0, libgudev-1.0-dev, gir1.2-gudev-1.0
+Version: 175-0ubuntu9.4
+Priority: required
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper (>= 8.1.2ubuntu2), dh-autoreconf, pkg-config, libselinux1-dev (>= 1.28), libsepol1-dev, libglib2.0-dev (>= 2.12.0), libusb-dev (>= 1:0.1.12), libacl1-dev, gobject-introspection, libgirepository1.0-dev, gir1.2-glib-2.0, usbutils (>= 0.82), pciutils, xsltproc, docbook-xsl, gtk-doc-tools, gperf, gawk
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/u/udev
+Files:
+ 349acb643dc210b080dcf759d03aa92d 2487 udev_175-0ubuntu9.4.dsc
+ ceb74a09dd12075e75d0eb4043269251 765304 udev_175.orig.tar.gz
+ 0ef54903e949933dd2aed7c5b7f67c17 74812 udev_175-0ubuntu9.4.debian.tar.gz
+Homepage: http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-core-dev/ubuntu/precise/udev/ubuntu
+Package-List: 
+ gir1.2-gudev-1.0 deb libs optional
+ libgudev-1.0-0 deb libs important
+ libgudev-1.0-dev deb libdevel important
+ libudev-dev deb libdevel optional
+ libudev0 deb admin important
+ libudev0-udeb udeb debian-installer important
+ udev deb admin important
+ udev-udeb udeb debian-installer important
+Checksums-Sha1:
+ ec79bd9ed08834b7285e9694157898a2926f752b 2487 udev_175-0ubuntu9.4.dsc
+ 353d0f3cf742b3750327cbe10d3290ad7a48d5c3 765304 udev_175.orig.tar.gz
+ f998bd7bbf0931742bae7297dfae024c485da336 74812 udev_175-0ubuntu9.4.debian.tar.gz
+Checksums-Sha256:
+ 620556524a2109617f5b279848d64689200e1b51c86c15178936b6987028235c 2487 udev_175-0ubuntu9.4.dsc
+ 6d54ea8e692f40d3fa267529c613ac708f8e01dd05017476c38c62af5aa3708d 765304 udev_175.orig.tar.gz
+ 2a42cee40e364f39e2a6c18dcd5110345e05e5041a090be73343fa8d0f93a758 74812 udev_175-0ubuntu9.4.debian.tar.gz
+
+Package: wayland-lts-raring
+Binary: libwayland-ltsr0, libwayland-ltsr0-dbg, libwayland-dev-lts-raring
+Version: 1.0.5-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 9), quilt, dh-autoreconf, pkg-config, doxygen, xsltproc, docbook-xsl, libexpat1-dev, libffi-dev
+Architecture: amd64 i386
+Standards-Version: 3.9.4
+Format: 1.0
+Directory: pool/main/w/wayland-lts-raring
+Files:
+ d4f1b81f50c09a86d768d6f11f3c6a0f 2306 wayland-lts-raring_1.0.5-0ubuntu1~precise1.dsc
+ 01fd7abec31a09b7c409c49f654f0a9b 275017 wayland-lts-raring_1.0.5.orig.tar.gz
+ 80f00e26757cf2f235cc712fb4d1bebf 8107 wayland-lts-raring_1.0.5-0ubuntu1~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Homepage: http://wayland.freedesktop.org/
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/wayland/wayland.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/wayland/wayland
+Package-List: 
+ libwayland-dev-lts-raring deb libdevel extra
+ libwayland-ltsr0 deb libs optional
+ libwayland-ltsr0-dbg deb debug extra
+Checksums-Sha1:
+ 9d0d55b4ccd60e14af45ed5f05de7b1547418c4a 2306 wayland-lts-raring_1.0.5-0ubuntu1~precise1.dsc
+ 0392bee0fb5288cad9d38bac92b2c8287ee93806 275017 wayland-lts-raring_1.0.5.orig.tar.gz
+ e76e51e27359ca72dc2b2036335e7214020a0e0c 8107 wayland-lts-raring_1.0.5-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ 4b4b93d96b6fa0176962bcf9cabac073a698e0db990e531bb9482a37b20cec1b 2306 wayland-lts-raring_1.0.5-0ubuntu1~precise1.dsc
+ 0c837babca8b8d4b8b2264812d59cc8dc66e41cc56bbca3c6bdf6c9d946abf4e 275017 wayland-lts-raring_1.0.5.orig.tar.gz
+ ca559e051c3b945e08a1932746b16a28c09920bf3081ddb43c6dc47ec86b5798 8107 wayland-lts-raring_1.0.5-0ubuntu1~precise1.diff.gz
+
+Package: wpasupplicant
+Binary: wpasupplicant, wpagui, wpasupplicant-udeb
+Version: 0.7.3-6ubuntu2.2
+Priority: optional
+Section: net
+Maintainer: Debian/Ubuntu wpasupplicant Maintainers <pkg-wpa-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>> 8), libdbus-glib-1-dev, libssl-dev, libreadline-dev, libqt4-dev, libdbus-1-dev, libncurses5-dev, libpcsclite-dev, libnl-3-dev (>= 3.2.3-2~) [linux-any], libnl-genl-3-dev (>= 3.2.3-2~) [linux-any], libpcap-dev [kfreebsd-any], libbsd-dev [kfreebsd-any], pkg-config, qt4-qmake
+Build-Conflicts: libqt3-dev
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/w/wpasupplicant
+Files:
+ 53901c9790b855e6f917c254a743a3e4 2455 wpasupplicant_0.7.3-6ubuntu2.2.dsc
+ f516f191384a9a546e3f5145c08addda 1638224 wpasupplicant_0.7.3.orig.tar.gz
+ 61f39160c919efea3fa944d693fc53ad 92769 wpasupplicant_0.7.3-6ubuntu2.2.debian.tar.gz
+Uploaders: Kel Modderman <kel@otaku42.de>, Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Homepage: http://w1.fi/wpa_supplicant/
+Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-wpa/wpasupplicant/trunk/
+Vcs-Svn: svn://anonscm.debian.org/svn/pkg-wpa/wpasupplicant/trunk/
+Package-List: 
+ wpagui deb net optional
+ wpasupplicant deb net optional
+ wpasupplicant-udeb udeb debian-installer standard
+Checksums-Sha1:
+ 7f2edf37ae9c63ae5412462871d3a6324bb61831 2455 wpasupplicant_0.7.3-6ubuntu2.2.dsc
+ ca51db8931fabf386352c87422f3e62fb44c3fe3 1638224 wpasupplicant_0.7.3.orig.tar.gz
+ 9b38b484b8c3df7e93e7fc71d13f073960780c1c 92769 wpasupplicant_0.7.3-6ubuntu2.2.debian.tar.gz
+Checksums-Sha256:
+ e0eac0dcbf24b2cf5250d0626988e97d7acac2e66ddc7fe5a31530dd9aec3e1b 2455 wpasupplicant_0.7.3-6ubuntu2.2.dsc
+ d0cd50caa85346ccc376dcda5ed3c258eef19a93b3cade39d25760118ad59443 1638224 wpasupplicant_0.7.3.orig.tar.gz
+ aa0e24b2e1324faaf6e29abe284a3043d8e5032775f42832f01eb28121a6b7c5 92769 wpasupplicant_0.7.3-6ubuntu2.2.debian.tar.gz
+
+Package: x11-xserver-utils-lts-raring
+Binary: x11-xserver-utils-lts-raring
+Version: 7.7~3ubuntu2~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 5.0.0), pkg-config, x11proto-core-dev (>= 7.0.17), libx11-dev (>= 2:1.0.0), libxaw7-dev (>= 1:1.0.1), libxext-dev (>= 1:1.0.0), libxi-dev (>= 1:1.0.0-3), libxmuu-dev (>= 1:1.0.1), libxrandr-dev-lts-raring (>= 2:1.4.0), libxt-dev (>= 1:1.0.0), libxxf86vm-dev (>= 1:1.0.0), xbitmaps, quilt, x11proto-input-dev (>= 1.4), xutils-dev (>= 1:7.5+4), libxcursor-dev
+Architecture: amd64 i386
+Standards-Version: 3.9.2
+Format: 1.0
+Directory: pool/main/x/x11-xserver-utils-lts-raring
+Files:
+ 72a5f25cc17a2f13fac478083360050c 2192 x11-xserver-utils-lts-raring_7.7~3ubuntu2~precise1.dsc
+ 083f42ac4d986b84dde4187631e3937e 2328684 x11-xserver-utils-lts-raring_7.7~3ubuntu2~precise1.tar.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/app/x11-xserver-utils.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/app/x11-xserver-utils
+Package-List: 
+ x11-xserver-utils-lts-raring deb x11 optional
+Checksums-Sha1:
+ b73fdb2586756d941c50bfdcf155fc04fb730ac0 2192 x11-xserver-utils-lts-raring_7.7~3ubuntu2~precise1.dsc
+ d1459d0aab9f7d55b0ad61a16bfd6b284b324c92 2328684 x11-xserver-utils-lts-raring_7.7~3ubuntu2~precise1.tar.gz
+Checksums-Sha256:
+ d9c26021103c7a341590ae871f56fc8ef63e29c2ef7e8cfffc52cf5d736e5492 2192 x11-xserver-utils-lts-raring_7.7~3ubuntu2~precise1.dsc
+ b598530218fb5ce308f6c4795ddec97510d2bb98fa8d1e13cd4ef65f593293e3 2328684 x11-xserver-utils-lts-raring_7.7~3ubuntu2~precise1.tar.gz
+
+Package: xorg-lts-raring
+Binary: xserver-xorg-lts-raring, xserver-xorg-video-all-lts-raring, xserver-xorg-input-all-lts-raring
+Version: 1:7.7+1ubuntu4~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: dpkg (>= 1.16.1), debhelper (>= 7.3.15ubuntu3), po-debconf, asciidoc
+Architecture: amd64 i386
+Standards-Version: 3.9.2
+Format: 1.0
+Directory: pool/main/x/xorg-lts-raring
+Files:
+ 233a396bffa26cb1bfe68bf56b358919 2016 xorg-lts-raring_7.7+1ubuntu4~precise1.dsc
+ b5d87876b848bce3159928b9ede2f96d 890016 xorg-lts-raring_7.7+1ubuntu4~precise1.tar.gz
+Uploaders: Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/debian/xorg.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/debian/xorg
+Package-List: 
+ xserver-xorg-input-all-lts-raring deb x11 optional
+ xserver-xorg-lts-raring deb x11 optional
+ xserver-xorg-video-all-lts-raring deb x11 optional
+Checksums-Sha1:
+ 478996774c7eceadb0c65fbaa4fc93824e26b56a 2016 xorg-lts-raring_7.7+1ubuntu4~precise1.dsc
+ 6f3dba9f9e88753bb32984c255726cc1d6880c54 890016 xorg-lts-raring_7.7+1ubuntu4~precise1.tar.gz
+Checksums-Sha256:
+ dd02a10c801d688ac3faf17595f27cf2b8197a9c35c362976f9cabdf3cb9a07c 2016 xorg-lts-raring_7.7+1ubuntu4~precise1.dsc
+ 87bb9523143b33b7af97a04ed6a7e3a2455e2e9c8af9d83d33ea24e466092aab 890016 xorg-lts-raring_7.7+1ubuntu4~precise1.tar.gz
+
+Package: xorg-server-lts-raring
+Binary: xserver-xorg-core-lts-raring, xserver-xorg-dev-lts-raring, xserver-xorg-core-lts-raring-dbg, xserver-common-lts-raring
+Version: 2:1.13.3-0ubuntu6~precise2
+Priority: optional
+Section: x11
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 7), quilt, lsb-release, pkg-config, bison, flex, automake, libtool, xauth, xutils-dev (>= 1:7.6+4), xfonts-utils (>= 1:7.5+1), x11proto-bigreqs-dev (>= 1:1.1.0), x11proto-composite-dev (>= 1:0.4), x11proto-core-dev (>= 7.0.22), x11proto-damage-dev (>= 1.1), x11proto-fixes-dev (>= 1:5.0-2ubuntu1), x11proto-kb-dev (>= 1.0.3), x11proto-xinerama-dev, x11proto-randr-dev (>= 1.4.0), x11proto-record-dev (>= 1.13.99.1), x11proto-render-dev (>= 2:0.11), x11proto-resource-dev, x11proto-scrnsaver-dev, x11proto-video-dev, x11proto-xcmisc-dev (>= 1.2.0), x11proto-xext-dev (>= 7.1.99), x11proto-xf86bigfont-dev (>= 1.2.0), x11proto-xf86dga-dev (>= 2.0.99.1), x11proto-xf86vidmode-dev (>= 2.2.99.1), xtrans-dev (>= 1.2.2), libxau-dev (>= 1:1.0.5-2), x11proto-input-dev (>= 2.1.99.6), x11proto-dri2-dev (>= 2.8), libxdmcp-dev (>= 1:0.99.1), libxfont-dev (>= 1:1.4.2), libxkbfile-dev (>= 1:0.99.1), libpixman-1-dev (>= 0.21.8), libpciaccess-dev (>= 0.12.901), libgcrypt-dev, nettle-dev, libdbus-1-dev [kfreebsd-any], libhal-dev [kfreebsd-any], libudev-dev (>= 151-3) [linux-any], libunwind7-dev [i386 amd64], libselinux1-dev (>= 2.0.80) [linux-any], x11proto-xf86dri-dev (>= 2.1.0), libdrm-dev (>= 2.4.38-0ubuntu2~) [!hurd-i386], x11proto-gl-dev (>= 1.4.16), mesa-common-dev-lts-raring (>= 7.10.3-0ubuntu1), libgl1-mesa-dev-lts-raring (>= 7.8), libxmuu-dev (>= 1:0.99.1), libxext-dev (>= 1:0.99.1), libx11-dev (>= 1:0.99.2), libxrender-dev (>= 1:0.9.0), libxi-dev (>= 2:1.2.99.1), x11proto-dmx-dev (>= 1:2.2.99.1), libdmx-dev (>= 1:1.0.1), libxpm-dev (>= 1:3.5.3), libxaw7-dev (>= 1:0.99.1), libxt-dev (>= 1:0.99.1), libxmu-dev (>= 1:0.99.1), libxtst-dev (>= 1:0.99.1), libxres-dev (>= 1:0.99.1), libxfixes-dev (>= 1:3.0.0), libxv-dev, libxinerama-dev, xkb-data, x11-xkb-utils
+Architecture: amd64 i386 all
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xorg-server-lts-raring
+Files:
+ 45ce6dc07ad6217780c7d5d7ff5ccb08 3511 xorg-server-lts-raring_1.13.3-0ubuntu6~precise2.dsc
+ 2d924ba826a9d64330fa2d00280670eb 7539183 xorg-server-lts-raring_1.13.3.orig.tar.gz
+ c4d828f9a070e72cc27668138ef118a2 170867 xorg-server-lts-raring_1.13.3-0ubuntu6~precise2.diff.gz
+Uploaders: Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/xserver/xorg-server.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/xserver/xorg-server
+Package-List: 
+ xserver-common-lts-raring deb x11 optional
+ xserver-xorg-core-lts-raring deb x11 optional
+ xserver-xorg-core-lts-raring-dbg deb debug extra
+ xserver-xorg-dev-lts-raring deb x11 optional
+Checksums-Sha1:
+ bc977e8d896619be34787065763150255a8e3162 3511 xorg-server-lts-raring_1.13.3-0ubuntu6~precise2.dsc
+ 091ace82f040bd0afeab07daf5b3c81ff364ce62 7539183 xorg-server-lts-raring_1.13.3.orig.tar.gz
+ 76ec659c0aa7836b914cc54bd5c9d4788b398de5 170867 xorg-server-lts-raring_1.13.3-0ubuntu6~precise2.diff.gz
+Checksums-Sha256:
+ 29d0d26bae3e21db4ff6cf30f81e7d0379e2ac5bf8cd18dd35f726141b4c5581 3511 xorg-server-lts-raring_1.13.3-0ubuntu6~precise2.dsc
+ b7ded70682e5b11697449435a498fd9e83ac57da3639c2a08b75855f3a53ca45 7539183 xorg-server-lts-raring_1.13.3.orig.tar.gz
+ 63d6a587f00e43f26a9d5820e4ac532af14bf95fb02a7cdfa56fa541f94e990c 170867 xorg-server-lts-raring_1.13.3-0ubuntu6~precise2.diff.gz
+
+Package: xserver-xorg-input-evdev-lts-raring
+Binary: xserver-xorg-input-evdev-lts-raring, xserver-xorg-input-evdev-udeb-lts-raring, xserver-xorg-input-evdev-dev-lts-raring, xserver-xorg-input-evdev-lts-raring-dbg
+Version: 1:2.7.3-0ubuntu2b2~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, quilt, xserver-xorg-dev-lts-raring (>= 2:1.11.99.901), x11proto-core-dev, x11proto-randr-dev, x11proto-input-dev (>= 2.1.99.3), x11proto-kb-dev, libxkbfile-dev, xutils-dev (>= 1:7.5+4), libudev-dev, libmtdev-dev
+Architecture: amd64 i386 all
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-input-evdev-lts-raring
+Files:
+ ea782c85a979c4082f364f035e18bfb6 2836 xserver-xorg-input-evdev-lts-raring_2.7.3-0ubuntu2b2~precise1.dsc
+ 79692b6aad047fe27249710052128a56 447638 xserver-xorg-input-evdev-lts-raring_2.7.3.orig.tar.gz
+ eab3b0b39f85f09406829f868f80f4be 13439 xserver-xorg-input-evdev-lts-raring_2.7.3-0ubuntu2b2~precise1.diff.gz
+Uploaders: Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-input-evdev.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-input-evdev
+Package-List: 
+ xserver-xorg-input-evdev-dev-lts-raring deb libdevel optional
+ xserver-xorg-input-evdev-lts-raring deb x11 optional
+ xserver-xorg-input-evdev-lts-raring-dbg deb debug extra
+ xserver-xorg-input-evdev-udeb-lts-raring udeb debian-installer optional
+Checksums-Sha1:
+ 54d462e565c884a9587f8c3f3ec27bc198cc9d43 2836 xserver-xorg-input-evdev-lts-raring_2.7.3-0ubuntu2b2~precise1.dsc
+ 1757524edd815fc58e9d5965eb628598b8a45e8d 447638 xserver-xorg-input-evdev-lts-raring_2.7.3.orig.tar.gz
+ 874acee52bf07202255b75bdb4d03444c226083b 13439 xserver-xorg-input-evdev-lts-raring_2.7.3-0ubuntu2b2~precise1.diff.gz
+Checksums-Sha256:
+ a44e56f949365fb9c4ed431dfde6a62c5a02f85802437cde19c793589d8fbeea 2836 xserver-xorg-input-evdev-lts-raring_2.7.3-0ubuntu2b2~precise1.dsc
+ 2208d886bf2b37f4341771c6120717e87ad275f03e4c5bda533e4bd37b63f91a 447638 xserver-xorg-input-evdev-lts-raring_2.7.3.orig.tar.gz
+ 54ce67782cb19df15534d260461cf041f1cffe9db33bed7b25c8dfdc2d459c41 13439 xserver-xorg-input-evdev-lts-raring_2.7.3-0ubuntu2b2~precise1.diff.gz
+
+Package: xserver-xorg-input-keyboard-lts-raring
+Binary: xserver-xorg-input-kbd-lts-raring, xserver-xorg-input-kbd-udeb-lts-raring
+Version: 1:1.6.1-1build1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.12.99.902), x11proto-kb-dev, x11proto-input-dev, x11proto-core-dev, x11proto-randr-dev, quilt, xutils-dev (>= 1:7.5+4)
+Architecture: amd64 i386 hurd-any kfreebsd-any
+Standards-Version: 3.9.1
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-input-keyboard-lts-raring
+Files:
+ a17f3c37ef84d7bd6143332a0d0d4064 2615 xserver-xorg-input-keyboard-lts-raring_1.6.1-1build1~precise1.dsc
+ c2188611990880f06f7d6c2a7672af1b 379735 xserver-xorg-input-keyboard-lts-raring_1.6.1.orig.tar.gz
+ a9668dcb84e3989f93428074f0cd0fc7 8274 xserver-xorg-input-keyboard-lts-raring_1.6.1-1build1~precise1.diff.gz
+Uploaders: Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-input-keyboard.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-input-keyboard
+Package-List: 
+ xserver-xorg-input-kbd-lts-raring deb x11 optional
+ xserver-xorg-input-kbd-udeb-lts-raring udeb debian-installer optional
+Checksums-Sha1:
+ 1b7d73c539a5f516835910b333b4006e7a666f78 2615 xserver-xorg-input-keyboard-lts-raring_1.6.1-1build1~precise1.dsc
+ 695069472f69806b0583bcd7342c8f7f4df84736 379735 xserver-xorg-input-keyboard-lts-raring_1.6.1.orig.tar.gz
+ 337b5a51fb4c4a71acdec67109c2a7ae2cb1e8bc 8274 xserver-xorg-input-keyboard-lts-raring_1.6.1-1build1~precise1.diff.gz
+Checksums-Sha256:
+ aaa43b0f41c0ed9029012282076f5d59f7ff182c6feda8179378b599729d1c77 2615 xserver-xorg-input-keyboard-lts-raring_1.6.1-1build1~precise1.dsc
+ 601c27fd6073ad02c1013e23b2bd8ef4ad49b6d8f0965e66dde55328eee7b262 379735 xserver-xorg-input-keyboard-lts-raring_1.6.1.orig.tar.gz
+ a4aba738a8ed713c851d872e2ec63514f13a851f02f27ef84091e6bc23a9af44 8274 xserver-xorg-input-keyboard-lts-raring_1.6.1-1build1~precise1.diff.gz
+
+Package: xserver-xorg-input-mouse-lts-raring
+Binary: xserver-xorg-input-mouse-lts-raring, xserver-xorg-input-mouse-udeb-lts-raring
+Version: 1:1.7.2-3~precise1
+Priority: optional
+Section: x11
+Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.9.99.902), x11proto-input-dev, x11proto-core-dev, x11proto-randr-dev, quilt, xutils-dev (>= 1:7.5+4)
+Architecture: amd64 i386 hurd-any kfreebsd-any
+Standards-Version: 3.9.2
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-input-mouse-lts-raring
+Files:
+ a04969041156408eac656196fbadde2c 2475 xserver-xorg-input-mouse-lts-raring_1.7.2-3~precise1.dsc
+ 0f2f2dfb7b769544f04b3469803098a5 418736 xserver-xorg-input-mouse-lts-raring_1.7.2.orig.tar.gz
+ f9e6637d99ca233524076a7344380ba3 8497 xserver-xorg-input-mouse-lts-raring_1.7.2-3~precise1.diff.gz
+Uploaders: Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-input-mouse.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-input-mouse
+Package-List: 
+ xserver-xorg-input-mouse-lts-raring deb x11 optional
+ xserver-xorg-input-mouse-udeb-lts-raring udeb debian-installer optional
+Checksums-Sha1:
+ 56c7ba10c6518b124ac318021d86202138870b6c 2475 xserver-xorg-input-mouse-lts-raring_1.7.2-3~precise1.dsc
+ 0f1248b782a2c3fe17cabd3c4127dfc7654a075c 418736 xserver-xorg-input-mouse-lts-raring_1.7.2.orig.tar.gz
+ e6cf169f650caf9cc0a5b6a69b100004b6af587b 8497 xserver-xorg-input-mouse-lts-raring_1.7.2-3~precise1.diff.gz
+Checksums-Sha256:
+ 640d46e98caf5acd9c21f4fffd28543dcb83c5f08a2aed7ab7a9a7bcea8bd187 2475 xserver-xorg-input-mouse-lts-raring_1.7.2-3~precise1.dsc
+ e17b7243ee254d0b88292bea6cf216babcc92fbec461a5e32b40ebbdd94e3298 418736 xserver-xorg-input-mouse-lts-raring_1.7.2.orig.tar.gz
+ c37c7418ad8797e3835e2129fe0b3769355a6ec2fdfaa2f570d9853305d36692 8497 xserver-xorg-input-mouse-lts-raring_1.7.2-3~precise1.diff.gz
+
+Package: xserver-xorg-input-synaptics-lts-raring
+Binary: xserver-xorg-input-synaptics-lts-raring, xserver-xorg-input-synaptics-dev-lts-raring, xserver-xorg-input-synaptics-lts-raring-dbg
+Version: 1.6.2-1ubuntu6~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, libx11-dev, libxext-dev, libxi-dev (>= 2:1.2.0), x11proto-core-dev, xserver-xorg-dev-lts-raring (>= 2:1.12.99.902), pkg-config, quilt, xutils-dev (>= 1:7.5+4), x11proto-input-dev (>= 2.1.99.5), libmtdev-dev [linux-any]
+Build-Conflicts: libxtst-dev
+Architecture: amd64 i386 all
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-input-synaptics-lts-raring
+Files:
+ 36689b10f5bd28bceb4634b48661d8bb 2813 xserver-xorg-input-synaptics-lts-raring_1.6.2-1ubuntu6~precise1.dsc
+ 6a374aa03ea64e895991f812c47743b1 573002 xserver-xorg-input-synaptics-lts-raring_1.6.2.orig.tar.gz
+ 43ec86a8327c00e612eeb0e24f1c91fe 49853 xserver-xorg-input-synaptics-lts-raring_1.6.2-1ubuntu6~precise1.diff.gz
+Uploaders: Mattia Dongili <malattia@debian.org>, Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-input-synaptics.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-input-synaptics
+Package-List: 
+ xserver-xorg-input-synaptics-dev-lts-raring deb libdevel optional
+ xserver-xorg-input-synaptics-lts-raring deb x11 optional
+ xserver-xorg-input-synaptics-lts-raring-dbg deb debug extra
+Checksums-Sha1:
+ 6648d7b9f2e6ce30f0ab43c8bcb12cb229eb5c5c 2813 xserver-xorg-input-synaptics-lts-raring_1.6.2-1ubuntu6~precise1.dsc
+ ee8c803cc0f15235c290409af3a6f8316d4f4de2 573002 xserver-xorg-input-synaptics-lts-raring_1.6.2.orig.tar.gz
+ 01803689a75369445fa904fb566c08fdbbfe995b 49853 xserver-xorg-input-synaptics-lts-raring_1.6.2-1ubuntu6~precise1.diff.gz
+Checksums-Sha256:
+ b52efeae8ba900593ca0fccf77b95d0f84d699a4c7993ea325a712d16f2ff18b 2813 xserver-xorg-input-synaptics-lts-raring_1.6.2-1ubuntu6~precise1.dsc
+ adfe967a891694a5b6fbd9001b365a673d19d96a56092388fc223288e61f714a 573002 xserver-xorg-input-synaptics-lts-raring_1.6.2.orig.tar.gz
+ 145399ae395942458ec8d5c44fbe551a7b0a4dda27687aaef9d60a6cdd58f68b 49853 xserver-xorg-input-synaptics-lts-raring_1.6.2-1ubuntu6~precise1.diff.gz
+
+Package: xserver-xorg-input-vmmouse-lts-raring
+Binary: xserver-xorg-input-vmmouse-lts-raring
+Version: 1:12.9.0-0ubuntu3~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.9.4), x11proto-input-dev, x11proto-core-dev, x11proto-randr-dev, quilt, xutils-dev (>= 1:7.5+4)
+Architecture: i386 amd64
+Standards-Version: 3.9.1
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-input-vmmouse-lts-raring
+Files:
+ c471d8b6e7e3c995f39f82f00a39e9ff 2469 xserver-xorg-input-vmmouse-lts-raring_12.9.0-0ubuntu3~precise1.dsc
+ b5fcdc6149ce98c4e962bd4944fa7fb0 383446 xserver-xorg-input-vmmouse-lts-raring_12.9.0.orig.tar.gz
+ 0e58b67f91b51f86c8c26222f12edef5 8164 xserver-xorg-input-vmmouse-lts-raring_12.9.0-0ubuntu3~precise1.diff.gz
+Uploaders: Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-input-vmmouse.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-input-vmmouse
+Package-List: 
+ xserver-xorg-input-vmmouse-lts-raring deb x11 optional
+Checksums-Sha1:
+ b4c36192b7a659c9d9fa28e3a28f6dd417ae8694 2469 xserver-xorg-input-vmmouse-lts-raring_12.9.0-0ubuntu3~precise1.dsc
+ 7de723bf5856c7923daf0a46d4a31b627915e2cb 383446 xserver-xorg-input-vmmouse-lts-raring_12.9.0.orig.tar.gz
+ fcc3cb2f7ad6a2f83123c52d441ff47f478b14d7 8164 xserver-xorg-input-vmmouse-lts-raring_12.9.0-0ubuntu3~precise1.diff.gz
+Checksums-Sha256:
+ 2a3e3fd78f34b38c6a9fbab7752a6d213a1b565e1cef9253969dcd6326925118 2469 xserver-xorg-input-vmmouse-lts-raring_12.9.0-0ubuntu3~precise1.dsc
+ b28d5e2426478bbec22e221e162167b0cff8a17b5c6b374aa8bbb1525f9bea26 383446 xserver-xorg-input-vmmouse-lts-raring_12.9.0.orig.tar.gz
+ 5b2c1b84038877b56a985377bbe82864382d8d8ff3fb55aef22778137ede8cf6 8164 xserver-xorg-input-vmmouse-lts-raring_12.9.0-0ubuntu3~precise1.diff.gz
+
+Package: xserver-xorg-video-ati-lts-raring
+Binary: xserver-xorg-video-ati-lts-raring, xserver-xorg-video-ati-lts-raring-dbg, xserver-xorg-video-radeon-lts-raring, xserver-xorg-video-radeon-lts-raring-dbg
+Version: 1:7.1.0-0ubuntu2~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, quilt, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.12.99.901), x11proto-gl-dev, x11proto-xext-dev, x11proto-core-dev, x11proto-video-dev, libgl1-mesa-dev-lts-raring | libgl-dev, x11proto-fonts-dev, x11proto-randr-dev (>= 1.2), x11proto-render-dev, libdrm-dev (>= 2.4.39) [!hurd-i386], x11proto-dri2-dev, x11proto-xf86dri-dev, libudev-dev [linux-any], xutils-dev (>= 1:7.5+4)
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-ati-lts-raring
+Files:
+ 466783c2b5717093c5b1946f7587af64 2946 xserver-xorg-video-ati-lts-raring_7.1.0-0ubuntu2~precise1.dsc
+ 8a2694537b1fc6ff85b2aee1c00a0eb9 1004723 xserver-xorg-video-ati-lts-raring_7.1.0.orig.tar.gz
+ f312ecc8c869683ade78a64ed60cfdb0 31363 xserver-xorg-video-ati-lts-raring_7.1.0-0ubuntu2~precise1.diff.gz
+Uploaders: Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-ati.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-ati
+Package-List: 
+ xserver-xorg-video-ati-lts-raring deb x11 optional
+ xserver-xorg-video-ati-lts-raring-dbg deb debug extra
+ xserver-xorg-video-radeon-lts-raring deb x11 optional
+ xserver-xorg-video-radeon-lts-raring-dbg deb debug extra
+Checksums-Sha1:
+ 09bc503d3ebb0c65d80896a1b03f3064790ee140 2946 xserver-xorg-video-ati-lts-raring_7.1.0-0ubuntu2~precise1.dsc
+ 88b94a7503e813f8a12066dbda8d9642934f5a08 1004723 xserver-xorg-video-ati-lts-raring_7.1.0.orig.tar.gz
+ 318764844d0f993637e5aa4390e0750e82586295 31363 xserver-xorg-video-ati-lts-raring_7.1.0-0ubuntu2~precise1.diff.gz
+Checksums-Sha256:
+ 06d659d6ad5e61c8b14903315dbf40b5433c30f604cdf8dc240f474833641b2b 2946 xserver-xorg-video-ati-lts-raring_7.1.0-0ubuntu2~precise1.dsc
+ 187230127739de179118e54205dd5c17fdb1e04cfbee1f9a63fde0030f39fcb0 1004723 xserver-xorg-video-ati-lts-raring_7.1.0.orig.tar.gz
+ f3a1a437122b89689c5fed347df79c8bab867adb915070a7beea29d27539897c 31363 xserver-xorg-video-ati-lts-raring_7.1.0-0ubuntu2~precise1.diff.gz
+
+Package: xserver-xorg-video-cirrus-lts-raring
+Binary: xserver-xorg-video-cirrus-lts-raring
+Version: 1:1.5.2-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, quilt, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.12.99.901), x11proto-video-dev, x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev, x11proto-xext-dev, xutils-dev
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-cirrus-lts-raring
+Files:
+ bc106a9747fb5579e75e5766fc8c8947 2452 xserver-xorg-video-cirrus-lts-raring_1.5.2-0ubuntu1~precise1.dsc
+ a00cf7eb9a9e27e9738cdbe716012b61 405237 xserver-xorg-video-cirrus-lts-raring_1.5.2.orig.tar.gz
+ aede773dff5c72df0ab7c9094b8ed2b4 7123 xserver-xorg-video-cirrus-lts-raring_1.5.2-0ubuntu1~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-cirrus.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-cirrus
+Package-List: 
+ xserver-xorg-video-cirrus-lts-raring deb x11 optional
+Checksums-Sha1:
+ 59cf7bd0857c6c351aea7dc2e864bd14a87371c2 2452 xserver-xorg-video-cirrus-lts-raring_1.5.2-0ubuntu1~precise1.dsc
+ c9ed50a3f7d81a7aafd75dc262d90a3df961558d 405237 xserver-xorg-video-cirrus-lts-raring_1.5.2.orig.tar.gz
+ 0c2b4e3311b987f45f67cb721d5e9ef20d85f0b2 7123 xserver-xorg-video-cirrus-lts-raring_1.5.2-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ 9f1f0112e1e4433898bbad08bd709c0e846a6da32ea7afe0608e6cdab022ffc2 2452 xserver-xorg-video-cirrus-lts-raring_1.5.2-0ubuntu1~precise1.dsc
+ 7c882c9064f58edf6cb08ef889b6e1d9e7bf6be0eb0002c052d5b4cb6a9bf74d 405237 xserver-xorg-video-cirrus-lts-raring_1.5.2.orig.tar.gz
+ 5e0a4886488d17f2a4761dbb58a4583aea21d238701655435c29693d8e640623 7123 xserver-xorg-video-cirrus-lts-raring_1.5.2-0ubuntu1~precise1.diff.gz
+
+Package: xserver-xorg-video-fbdev-lts-raring
+Binary: xserver-xorg-video-fbdev-lts-raring, xserver-xorg-video-fbdev-udeb-lts-raring
+Version: 1:0.4.3-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, quilt, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.11.99.901), x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev, x11proto-video-dev, xutils-dev (>= 1:7.5+1)
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-fbdev-lts-raring
+Files:
+ 35980a604eb092c8341e8b57e8debac6 2566 xserver-xorg-video-fbdev-lts-raring_0.4.3-0ubuntu1~precise1.dsc
+ b6d00f6d84cee879e86ce402fef746e7 344906 xserver-xorg-video-fbdev-lts-raring_0.4.3.orig.tar.gz
+ ba7a87107e9a4bc15eb454d3cb680a98 6732 xserver-xorg-video-fbdev-lts-raring_0.4.3-0ubuntu1~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-fbdev.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-fbdev
+Package-List: 
+ xserver-xorg-video-fbdev-lts-raring deb x11 optional
+ xserver-xorg-video-fbdev-udeb-lts-raring udeb debian-installer optional
+Checksums-Sha1:
+ 3afb960d6c1526d6ba9e1a00d0f1f93c42d81f89 2566 xserver-xorg-video-fbdev-lts-raring_0.4.3-0ubuntu1~precise1.dsc
+ e88113f41dc029f8158d370f818d897c0e6e77d2 344906 xserver-xorg-video-fbdev-lts-raring_0.4.3.orig.tar.gz
+ 4012d720d000a9d8a8ae19a1619106b931589019 6732 xserver-xorg-video-fbdev-lts-raring_0.4.3-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ e57af5f2dc37dc5e0e8dff153d8dd9d64e7496e77bc2e4dcffce57662f5c6994 2566 xserver-xorg-video-fbdev-lts-raring_0.4.3-0ubuntu1~precise1.dsc
+ 4241ef30ba538d91999fe03e5110bfbe753ad3dbd07e800163bb4a8f08fcac27 344906 xserver-xorg-video-fbdev-lts-raring_0.4.3.orig.tar.gz
+ ce3e863215576c02e2cc7d790fdccc7bd35ab849076ce0864c8d3a4b33c4387d 6732 xserver-xorg-video-fbdev-lts-raring_0.4.3-0ubuntu1~precise1.diff.gz
+
+Package: xserver-xorg-video-geode-lts-raring
+Binary: xserver-xorg-video-geode-lts-raring, xserver-xorg-video-geode-lts-raring-dbg
+Version: 2.11.14-1~precise1
+Priority: optional
+Section: x11
+Maintainer: Martin-Éric Racine <martin-eric.racine@iki.fi>
+Build-Depends: cdbs, debhelper (>= 5), dpkg-dev (>= 1.14.17~), autotools-dev, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.3), x11proto-core-dev, x11proto-fonts-dev, x11proto-gl-dev, x11proto-randr-dev, x11proto-render-dev, x11proto-video-dev, x11proto-xext-dev, x11proto-xf86dga-dev, x11proto-xf86dri-dev, x11proto-xinerama-dev, xutils-dev
+Architecture: any-i386
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/x/xserver-xorg-video-geode-lts-raring
+Files:
+ cefd4f22471dae5e17bb78ae0c52ccb4 2425 xserver-xorg-video-geode-lts-raring_2.11.14-1~precise1.dsc
+ afed1102009241f4fcc5639cd2d131af 835412 xserver-xorg-video-geode-lts-raring_2.11.14.orig.tar.gz
+ c6a59f82ea62af87d5a36a163b2ac476 11335 xserver-xorg-video-geode-lts-raring_2.11.14-1~precise1.debian.tar.gz
+Homepage: http://www.x.org/wiki/GeodeDriver
+Package-List: 
+ xserver-xorg-video-geode-lts-raring deb x11 optional
+ xserver-xorg-video-geode-lts-raring-dbg deb debug extra
+Checksums-Sha1:
+ 2b4ad43240c9034aac80ec8c8a659ce6ef8655ef 2425 xserver-xorg-video-geode-lts-raring_2.11.14-1~precise1.dsc
+ 21cf4132ed459f4c26f757614ac6a9b93936fc35 835412 xserver-xorg-video-geode-lts-raring_2.11.14.orig.tar.gz
+ 33618c1ca0599761a19adb90434038c34ebea7ac 11335 xserver-xorg-video-geode-lts-raring_2.11.14-1~precise1.debian.tar.gz
+Checksums-Sha256:
+ 9d5b2493fa708417f18ca110328511dcb407c619cbcdc59911e43117d008ff2f 2425 xserver-xorg-video-geode-lts-raring_2.11.14-1~precise1.dsc
+ e203d0031f09da2698760b985750acded9a425a2d86225d12de936974634cb71 835412 xserver-xorg-video-geode-lts-raring_2.11.14.orig.tar.gz
+ 736d1683110c071cd61c8360b5ac624b8fe0971063d0ed75aed1211e970b2621 11335 xserver-xorg-video-geode-lts-raring_2.11.14-1~precise1.debian.tar.gz
+
+Package: xserver-xorg-video-intel-lts-raring
+Binary: xserver-xorg-video-intel-lts-raring, xserver-xorg-video-intel-lts-raring-dbg
+Version: 2:2.21.6-0ubuntu4.1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.11.99.901), x11proto-core-dev, x11proto-fonts-dev, x11proto-xinerama-dev, x11proto-randr-dev, x11proto-render-dev, x11proto-xext-dev, x11proto-video-dev, libx11-dev, libdrm-dev (>= 2.4.23), x11proto-xf86dri-dev, x11proto-gl-dev, libgl1-mesa-dev-lts-raring | libgl-dev, libpciaccess-dev (>= 0.8.0+git20071002), x11proto-dri2-dev, libxvmc-dev (>= 1:1.0.1), libxext-dev, libxfixes-dev, libx11-xcb-dev, libxcb-util0-dev, libxcb-dri2-0-dev, libudev-dev [linux-any], dpkg-dev (>= 1.14.17), quilt (>= 0.46-7~), xutils-dev (>= 1:7.5+4), valgrind
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-intel-lts-raring
+Files:
+ d77edb6429bd25ac54d5de0b7b318f24 3001 xserver-xorg-video-intel-lts-raring_2.21.6-0ubuntu4.1~precise1.dsc
+ e9521894594ecd15d0607bbeb3e7f004 2308294 xserver-xorg-video-intel-lts-raring_2.21.6.orig.tar.gz
+ 9ad392b313c5c74fdf2fc2fae5d9894a 26155 xserver-xorg-video-intel-lts-raring_2.21.6-0ubuntu4.1~precise1.diff.gz
+Uploaders: Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-intel.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-intel
+Package-List: 
+ xserver-xorg-video-intel-lts-raring deb x11 optional
+ xserver-xorg-video-intel-lts-raring-dbg deb debug extra
+Checksums-Sha1:
+ 54ec8ad99919b2f9e19493297b7c1d627702607b 3001 xserver-xorg-video-intel-lts-raring_2.21.6-0ubuntu4.1~precise1.dsc
+ 70bcffdb3980586c93fc897c2a689363904bfed1 2308294 xserver-xorg-video-intel-lts-raring_2.21.6.orig.tar.gz
+ d40b23ed2f914d1ea31521592f146375c8a47df4 26155 xserver-xorg-video-intel-lts-raring_2.21.6-0ubuntu4.1~precise1.diff.gz
+Checksums-Sha256:
+ d1f33b9abcf75394a0cc5061a7b086209fac11e5b82c27b7b62b58ef4c79207f 3001 xserver-xorg-video-intel-lts-raring_2.21.6-0ubuntu4.1~precise1.dsc
+ e4a45d13bd0e35e98b52a99a82e4106e50ff575b8ddf142007836f0da10fec4e 2308294 xserver-xorg-video-intel-lts-raring_2.21.6.orig.tar.gz
+ 44e9aabaf642ccd6ea2e032e1c7dbf0402aac436ee1e849c6f14bf3810e431da 26155 xserver-xorg-video-intel-lts-raring_2.21.6-0ubuntu4.1~precise1.diff.gz
+
+Package: xserver-xorg-video-mach64-lts-raring
+Binary: xserver-xorg-video-mach64-lts-raring, xserver-xorg-video-mach64-lts-raring-dbg
+Version: 6.9.3-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.11.99.901), x11proto-gl-dev, x11proto-xext-dev, x11proto-core-dev, x11proto-video-dev, x11proto-xinerama-dev, libgl1-mesa-dev-lts-raring | libgl-dev, x11proto-fonts-dev, x11proto-randr-dev (>= 1.2), x11proto-render-dev, libdrm-dev (>> 2.2) [!hurd-i386], x11proto-xf86dri-dev, quilt, xutils-dev
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-mach64-lts-raring
+Files:
+ 16bef1e6dee4f1bce6cbcf06a920c7db 2750 xserver-xorg-video-mach64-lts-raring_6.9.3-0ubuntu1~precise1.dsc
+ 872f09b14e54c4859559e0cbbc91ce63 651366 xserver-xorg-video-mach64-lts-raring_6.9.3.orig.tar.gz
+ e9d65b415a9bec933ed43a67a30aee16 14909 xserver-xorg-video-mach64-lts-raring_6.9.3-0ubuntu1~precise1.diff.gz
+Uploaders: Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-mach64.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-mach64
+Package-List: 
+ xserver-xorg-video-mach64-lts-raring deb x11 optional
+ xserver-xorg-video-mach64-lts-raring-dbg deb debug extra
+Checksums-Sha1:
+ 8c260f8ec6d06670f04c63296d2f98f5c59c42a8 2750 xserver-xorg-video-mach64-lts-raring_6.9.3-0ubuntu1~precise1.dsc
+ 300c8578ba3a5fcc106f72bb2c58a40447c47e27 651366 xserver-xorg-video-mach64-lts-raring_6.9.3.orig.tar.gz
+ 17e4d8dded91e3552f7a7131749670d8f6e2ff76 14909 xserver-xorg-video-mach64-lts-raring_6.9.3-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ fdf8bc5133a56f298b0aef103bc92935f3e5dca06aeaadc0367a9f1b04d76753 2750 xserver-xorg-video-mach64-lts-raring_6.9.3-0ubuntu1~precise1.dsc
+ 15bdddacd0e5bd7b9288ccaa88f8af1162bc83f546d8e7469f2ebd5d7c673a69 651366 xserver-xorg-video-mach64-lts-raring_6.9.3.orig.tar.gz
+ 1ca1b6b8a2bcadf6cb985b67617270e6afa85345dc1c28736bb27a82eb75eda8 14909 xserver-xorg-video-mach64-lts-raring_6.9.3-0ubuntu1~precise1.diff.gz
+
+Package: xserver-xorg-video-mga-lts-raring
+Binary: xserver-xorg-video-mga-lts-raring
+Version: 1:1.6.2-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.9.4), x11proto-gl-dev, x11proto-video-dev, libgl1-mesa-dev-lts-raring | libgl-dev, x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev, x11proto-xext-dev, libdrm-dev (>> 2.0) [!hurd-i386], x11proto-xf86dri-dev, quilt, xutils-dev (>= 1:7.5+4)
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-mga-lts-raring
+Files:
+ 222892b6e1ca86540ffee6bb2db6b043 2600 xserver-xorg-video-mga-lts-raring_1.6.2-0ubuntu1~precise1.dsc
+ d462f9a99d3bbd6cfd6d09ab56afc594 538352 xserver-xorg-video-mga-lts-raring_1.6.2.orig.tar.gz
+ 4ff68938e141734bea0fbf341dedb98f 10276 xserver-xorg-video-mga-lts-raring_1.6.2-0ubuntu1~precise1.diff.gz
+Uploaders:  Cyril Brulebois <kibi@debian.org>, Tormod Volden <debian.tormod@gmail.com>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-mga.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-mga
+Package-List: 
+ xserver-xorg-video-mga-lts-raring deb x11 optional
+Checksums-Sha1:
+ c5fb505365ddbb18594b7a9ca76c180277ed117c 2600 xserver-xorg-video-mga-lts-raring_1.6.2-0ubuntu1~precise1.dsc
+ 9a3c2be73b734c8f11340521a0f10f8973e44bfa 538352 xserver-xorg-video-mga-lts-raring_1.6.2.orig.tar.gz
+ 92d3bf3779712efc2012a925332563b435f36454 10276 xserver-xorg-video-mga-lts-raring_1.6.2-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ e993690d1b374a7661ffe0102e0e4fa087972a6d3d979cae28a456c04677cbcb 2600 xserver-xorg-video-mga-lts-raring_1.6.2-0ubuntu1~precise1.dsc
+ d2ce6f3c2d0eac9de1263fd548e927a5d1cf33ee3890413c1e1cb786745fc093 538352 xserver-xorg-video-mga-lts-raring_1.6.2.orig.tar.gz
+ e9f78a731a20b635bd8de888cd9ec5af87c490b77e860ff31facb4de233236b9 10276 xserver-xorg-video-mga-lts-raring_1.6.2-0ubuntu1~precise1.diff.gz
+
+Package: xserver-xorg-video-modesetting-lts-raring
+Binary: xserver-xorg-video-modesetting-lts-raring, xserver-xorg-video-modesetting-lts-raring-dbg
+Version: 0.7.0-0ubuntu2~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.12.99.901), x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-xext-dev, libdrm-dev (>= 2.2), libpciaccess-dev (>= 0.10), libudev-dev [linux-any], quilt, xutils-dev (>= 1:7.5+4)
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-modesetting-lts-raring
+Files:
+ 5d0215f357d73c82ec9aeece8b1b2daf 2677 xserver-xorg-video-modesetting-lts-raring_0.7.0-0ubuntu2~precise1.dsc
+ 66ab3524c6b3cb605ab43d10a835669b 367145 xserver-xorg-video-modesetting-lts-raring_0.7.0.orig.tar.gz
+ aa9fe293187a0da73cc170eb22ec884b 4501 xserver-xorg-video-modesetting-lts-raring_0.7.0-0ubuntu2~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-modesetting.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-modesetting
+Package-List: 
+ xserver-xorg-video-modesetting-lts-raring deb x11 optional
+ xserver-xorg-video-modesetting-lts-raring-dbg deb debug extra
+Checksums-Sha1:
+ 2eafbddd4dc5d653dd75966c0e6070936325790d 2677 xserver-xorg-video-modesetting-lts-raring_0.7.0-0ubuntu2~precise1.dsc
+ 97efee14a6dd2e9f92fe3c8af883aae58b5cd3be 367145 xserver-xorg-video-modesetting-lts-raring_0.7.0.orig.tar.gz
+ af104e7557662f43e92778b09054030148219aa1 4501 xserver-xorg-video-modesetting-lts-raring_0.7.0-0ubuntu2~precise1.diff.gz
+Checksums-Sha256:
+ ef76f8af5c5c01592699c70676aeb46cda26952fbc3c3d650b4a0aa57e081d9a 2677 xserver-xorg-video-modesetting-lts-raring_0.7.0-0ubuntu2~precise1.dsc
+ f7a168efb1112959b3aba0d400fca4b54a5b8320a51f1198a0b9c8b860a5a81a 367145 xserver-xorg-video-modesetting-lts-raring_0.7.0.orig.tar.gz
+ d3aa25d6caad387ff48fd9ed8d224540ddb946c3c2b2932c95c4a1962a3439d9 4501 xserver-xorg-video-modesetting-lts-raring_0.7.0-0ubuntu2~precise1.diff.gz
+
+Package: xserver-xorg-video-neomagic-lts-raring
+Binary: xserver-xorg-video-neomagic-lts-raring
+Version: 1:1.2.7-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, quilt, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.9.4), x11proto-video-dev, x11proto-xf86dga-dev, x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev, x11proto-xext-dev, xutils-dev (>= 1:7.5+4)
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-neomagic-lts-raring
+Files:
+ d8b3b2b6f87f3d8cf92435235da80a42 2519 xserver-xorg-video-neomagic-lts-raring_1.2.7-0ubuntu1~precise1.dsc
+ 6093c18f90b67f92bb07fc7a912fe81a 393874 xserver-xorg-video-neomagic-lts-raring_1.2.7.orig.tar.gz
+ 0a70512ce41e4c1ce152b769d7da7c94 6714 xserver-xorg-video-neomagic-lts-raring_1.2.7-0ubuntu1~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-neomagic.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-neomagic
+Package-List: 
+ xserver-xorg-video-neomagic-lts-raring deb x11 optional
+Checksums-Sha1:
+ 57cc8bb60ead5a902faa45dc69bcedcf1e3e2ddf 2519 xserver-xorg-video-neomagic-lts-raring_1.2.7-0ubuntu1~precise1.dsc
+ 50a2d66e777f304ae1cfab5f803f499b10060beb 393874 xserver-xorg-video-neomagic-lts-raring_1.2.7.orig.tar.gz
+ 2d510c745ba72a3c26d38a03cb7c247e5f2e5efa 6714 xserver-xorg-video-neomagic-lts-raring_1.2.7-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ c71401f8fb092e4e93bd0849cebe6872e18f0fab29438968e0cbf7fa1c8d2e69 2519 xserver-xorg-video-neomagic-lts-raring_1.2.7-0ubuntu1~precise1.dsc
+ a2a3edfeead9cbd0f370aaa3228ffeb823bf920cb70d317e31f67677d92e63fe 393874 xserver-xorg-video-neomagic-lts-raring_1.2.7.orig.tar.gz
+ 3b60f931411cfe8096592c339e541701cc1733e65b35cfbe7ce11c8fac4432be 6714 xserver-xorg-video-neomagic-lts-raring_1.2.7-0ubuntu1~precise1.diff.gz
+
+Package: xserver-xorg-video-nouveau-lts-raring
+Binary: xserver-xorg-video-nouveau-lts-raring, xserver-xorg-video-nouveau-lts-raring-dbg
+Version: 1:1.0.7-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.9.4), x11proto-video-dev, x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev (>= 1.2), x11proto-render-dev, x11proto-xext-dev, libdrm-dev (>= 2.4.40-1), x11proto-xf86dri-dev, x11proto-gl-dev, mesa-common-dev-lts-raring, libudev-dev, automake, libtool, xutils-dev, quilt
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-nouveau-lts-raring
+Files:
+ 3c6b3726e3d3cf29be756b06aded8148 2775 xserver-xorg-video-nouveau-lts-raring_1.0.7-0ubuntu1~precise1.dsc
+ 916348b36ef337341fa24aab52cfc579 698427 xserver-xorg-video-nouveau-lts-raring_1.0.7.orig.tar.gz
+ a9e3eb6a9bbf4f8371b57709890db24f 41306 xserver-xorg-video-nouveau-lts-raring_1.0.7-0ubuntu1~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>, Sven Joachim <svenjoac@gmx.de>
+Homepage: http://nouveau.freedesktop.org/wiki/
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-nouveau.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-nouveau
+Package-List: 
+ xserver-xorg-video-nouveau-lts-raring deb x11 optional
+ xserver-xorg-video-nouveau-lts-raring-dbg deb debug extra
+Checksums-Sha1:
+ 55ff5aeeae52e1ef0b9e219cf6092bf297cada25 2775 xserver-xorg-video-nouveau-lts-raring_1.0.7-0ubuntu1~precise1.dsc
+ c2d994368ea9a01a2a51078030e87469f207a683 698427 xserver-xorg-video-nouveau-lts-raring_1.0.7.orig.tar.gz
+ 7bba0a34a68339bf8467fdf71003989edd257a03 41306 xserver-xorg-video-nouveau-lts-raring_1.0.7-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ b9dc5048e4a5c9e6dd85aea6c816fc8c43ff57c2e66960269028d37f6d95fb54 2775 xserver-xorg-video-nouveau-lts-raring_1.0.7-0ubuntu1~precise1.dsc
+ 588c3000b5ea2c3f91fd560bfc4c24faaf9ed7c4b56582a35e6101f00b17b2b5 698427 xserver-xorg-video-nouveau-lts-raring_1.0.7.orig.tar.gz
+ 4fe87f68de15ebd79f76ffe6f7c8129d29bb20f7a31eb76f649b837106cd8fc2 41306 xserver-xorg-video-nouveau-lts-raring_1.0.7-0ubuntu1~precise1.diff.gz
+
+Package: xserver-xorg-video-openchrome-lts-raring
+Binary: xserver-xorg-video-openchrome-lts-raring, xserver-xorg-video-openchrome-lts-raring-dbg
+Version: 1:0.3.1-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.9.4), xutils-dev, x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev, x11proto-xext-dev, x11proto-xf86dri-dev, x11proto-video-dev, x11proto-gl-dev, libdrm-dev (>> 2.0), libx11-dev, libgl1-mesa-dev-lts-raring | libgl1-dev, libxvmc-dev, quilt
+Build-Conflicts: autoconf2.13
+Architecture: i386 amd64 hurd-i386 kfreebsd-i386 kfreebsd-amd64 lpia
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-openchrome-lts-raring
+Files:
+ f2168b67afbb305585917c8cd82b52fc 2911 xserver-xorg-video-openchrome-lts-raring_0.3.1-0ubuntu1~precise1.dsc
+ 8fc07354bb92def9f5eff6d94c020fdd 636405 xserver-xorg-video-openchrome-lts-raring_0.3.1.orig.tar.gz
+ 463a23b2b154998fc20d78cd58b6c13b 19381 xserver-xorg-video-openchrome-lts-raring_0.3.1-0ubuntu1~precise1.diff.gz
+Uploaders: Julien Viard de Galbert <julien@vdg.blogsite.org>, Cyril Brulebois <kibi@debian.org>
+Dm-Upload-Allowed: yes
+Homepage: http://www.openchrome.org
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-openchrome.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-openchrome
+Package-List: 
+ xserver-xorg-video-openchrome-lts-raring deb x11 optional
+ xserver-xorg-video-openchrome-lts-raring-dbg deb debug extra
+Checksums-Sha1:
+ 69955384c9f2ba93095ad74916f44a48d200a7b3 2911 xserver-xorg-video-openchrome-lts-raring_0.3.1-0ubuntu1~precise1.dsc
+ 1fc5739125eb4acb8fd83a49a6ffd16c57c745e8 636405 xserver-xorg-video-openchrome-lts-raring_0.3.1.orig.tar.gz
+ 904ce24a4987be4b9966575ac636d05b3146b872 19381 xserver-xorg-video-openchrome-lts-raring_0.3.1-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ aab7335537e7f47483d30d27af990ef46933ba0df455e93b93617177d3751f21 2911 xserver-xorg-video-openchrome-lts-raring_0.3.1-0ubuntu1~precise1.dsc
+ 580cc4033eaf303e3511e6244a6464e263c604713034e80ae9cb248882e575ef 636405 xserver-xorg-video-openchrome-lts-raring_0.3.1.orig.tar.gz
+ 17247bc767940f27e387c38c8e4dbe9f15c47bd495c8ce1fcd3e87d7e45e5a55 19381 xserver-xorg-video-openchrome-lts-raring_0.3.1-0ubuntu1~precise1.diff.gz
+
+Package: xserver-xorg-video-r128-lts-raring
+Binary: xserver-xorg-video-r128-lts-raring, xserver-xorg-video-r128-lts-raring-dbg
+Version: 6.9.1-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.11.99.901), x11proto-gl-dev, x11proto-xext-dev, x11proto-core-dev, x11proto-video-dev, x11proto-xinerama-dev, libgl1-mesa-dev-lts-raring | libgl-dev, x11proto-fonts-dev, x11proto-randr-dev (>= 1.2), x11proto-render-dev, libdrm-dev (>> 2.2) [!hurd-i386], x11proto-xf86dri-dev, quilt, xutils-dev
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-r128-lts-raring
+Files:
+ 9205fd8510aedddaa709019a60370816 2705 xserver-xorg-video-r128-lts-raring_6.9.1-0ubuntu1~precise1.dsc
+ f69c938292fd2537d67e4d09350fb757 570601 xserver-xorg-video-r128-lts-raring_6.9.1.orig.tar.gz
+ 8867525aff6162d0e0cce2da698f1a7b 9702 xserver-xorg-video-r128-lts-raring_6.9.1-0ubuntu1~precise1.diff.gz
+Uploaders: Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-r128.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-r128
+Package-List: 
+ xserver-xorg-video-r128-lts-raring deb x11 optional
+ xserver-xorg-video-r128-lts-raring-dbg deb debug extra
+Checksums-Sha1:
+ 7444ed25ad18ebc859b0f0ce24afe3788ec92595 2705 xserver-xorg-video-r128-lts-raring_6.9.1-0ubuntu1~precise1.dsc
+ 62061720f51eb125e50c629bfda230b86e5f3727 570601 xserver-xorg-video-r128-lts-raring_6.9.1.orig.tar.gz
+ e8bd58c8caad55852052b478ef02300ed7c443a5 9702 xserver-xorg-video-r128-lts-raring_6.9.1-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ 76688bfe4ba00871882416e324d84d1970e58cce7dd5c1bffcc5d76e33ee7e13 2705 xserver-xorg-video-r128-lts-raring_6.9.1-0ubuntu1~precise1.dsc
+ e6cb3e92d5471a029bccb635dec735ecd777de24c2da502fdf26ddaa2a67b40e 570601 xserver-xorg-video-r128-lts-raring_6.9.1.orig.tar.gz
+ d324e43046fb40ce979269c928f6b2fa6e105b6a945ca4aea773cd883998839d 9702 xserver-xorg-video-r128-lts-raring_6.9.1-0ubuntu1~precise1.diff.gz
+
+Package: xserver-xorg-video-s3-lts-raring
+Binary: xserver-xorg-video-s3-lts-raring
+Version: 1:0.6.5-0ubuntu3~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, quilt, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.9.4), x11proto-video-dev, x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev, x11proto-xext-dev, xutils-dev
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-s3-lts-raring
+Files:
+ 61ffb6fa56b263f45746cdca6095bf86 2418 xserver-xorg-video-s3-lts-raring_0.6.5-0ubuntu3~precise1.dsc
+ 65ccfea47e36b2799e8cdd9bda1ab6fa 390366 xserver-xorg-video-s3-lts-raring_0.6.5.orig.tar.gz
+ 03791c632685561d06439d5ecf470e07 6113 xserver-xorg-video-s3-lts-raring_0.6.5-0ubuntu3~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-s3.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-s3
+Package-List: 
+ xserver-xorg-video-s3-lts-raring deb x11 optional
+Checksums-Sha1:
+ 34105117c0a7539c5f4b331f4520bc1533c1f844 2418 xserver-xorg-video-s3-lts-raring_0.6.5-0ubuntu3~precise1.dsc
+ 72fd4f99bfd1149bd695bc449f84362f5f046276 390366 xserver-xorg-video-s3-lts-raring_0.6.5.orig.tar.gz
+ c819600df0de95a946bbcb95180996be59b3ae63 6113 xserver-xorg-video-s3-lts-raring_0.6.5-0ubuntu3~precise1.diff.gz
+Checksums-Sha256:
+ e546199499478651fb3239b07ac14cf6516e41fbabdec03fcefd9151b83d5d9b 2418 xserver-xorg-video-s3-lts-raring_0.6.5-0ubuntu3~precise1.dsc
+ 37a070258a43acd610908429cc94e68b6d321860d3ff73c5b49c6bb1ad0765fa 390366 xserver-xorg-video-s3-lts-raring_0.6.5.orig.tar.gz
+ ef40fb1b55e478ffbea36143d7b0410c6a1fce053dea766aa417550444610f23 6113 xserver-xorg-video-s3-lts-raring_0.6.5-0ubuntu3~precise1.diff.gz
+
+Package: xserver-xorg-video-savage-lts-raring
+Binary: xserver-xorg-video-savage-lts-raring
+Version: 1:2.3.6-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.9.99.901+git20110131), x11proto-video-dev, x11proto-xext-dev, x11proto-gl-dev, libgl1-mesa-dev-lts-raring | libgl-dev, x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev, libdrm-dev (>> 2.0) [!hurd-i386], x11proto-xf86dri-dev, quilt, xutils-dev (>= 1:7.5+4)
+Architecture: amd64 i386
+Standards-Version: 3.9.2
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-savage-lts-raring
+Files:
+ 84d3fc8b72cf811b493cac5f8e782de7 2627 xserver-xorg-video-savage-lts-raring_2.3.6-0ubuntu1~precise1.dsc
+ 297e781879842f3d2d161b073589b212 476749 xserver-xorg-video-savage-lts-raring_2.3.6.orig.tar.gz
+ 4c24314579b3769ebe525573ddba1a7f 9150 xserver-xorg-video-savage-lts-raring_2.3.6-0ubuntu1~precise1.diff.gz
+Uploaders:  Cyril Brulebois <kibi@debian.org>, Tormod Volden <debian.tormod@gmail.com>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-savage.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-savage
+Package-List: 
+ xserver-xorg-video-savage-lts-raring deb x11 optional
+Checksums-Sha1:
+ 92630e0bf44bb09c380b5166cb1e500654e6f581 2627 xserver-xorg-video-savage-lts-raring_2.3.6-0ubuntu1~precise1.dsc
+ 41a84f3ff3083c81ab2e89643419f068177c39c2 476749 xserver-xorg-video-savage-lts-raring_2.3.6.orig.tar.gz
+ e08b7dfbf2b21110353c78001dd90f275ff1b916 9150 xserver-xorg-video-savage-lts-raring_2.3.6-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ 13ac5c83ffe4385d1c6cdd848d89d377554d2301b0b4d331643f0d3a5d5f714d 2627 xserver-xorg-video-savage-lts-raring_2.3.6-0ubuntu1~precise1.dsc
+ f91e809c579b3e0a917a8bf6a3f4f9f268bf08ce5976019a5bae72687c24bbcc 476749 xserver-xorg-video-savage-lts-raring_2.3.6.orig.tar.gz
+ 45e357fac07b9f8d959aca8bfcef9cd4de654e9e200eaf4db9a698186b94e19b 9150 xserver-xorg-video-savage-lts-raring_2.3.6-0ubuntu1~precise1.diff.gz
+Orig-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+
+Package: xserver-xorg-video-siliconmotion-lts-raring
+Binary: xserver-xorg-video-siliconmotion-lts-raring
+Version: 1:1.7.7-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.9.4), x11proto-video-dev, x11proto-xext-dev, x11proto-core-dev, x11proto-fonts-dev, quilt, xutils-dev (>= 1:7.5+4)
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-siliconmotion-lts-raring
+Files:
+ 309c48b9bc966014eaa6b68ca6c3e3f6 2511 xserver-xorg-video-siliconmotion-lts-raring_1.7.7-0ubuntu1~precise1.dsc
+ 94c44123d8d0a46a7f6bace8508763d8 455094 xserver-xorg-video-siliconmotion-lts-raring_1.7.7.orig.tar.gz
+ 5cf08f93a61ab8e4330567c49e747067 6220 xserver-xorg-video-siliconmotion-lts-raring_1.7.7-0ubuntu1~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-siliconmotion.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-siliconmotion
+Package-List: 
+ xserver-xorg-video-siliconmotion-lts-raring deb x11 optional
+Checksums-Sha1:
+ 40d2ff007213550bcde241ada380382a1b3d0327 2511 xserver-xorg-video-siliconmotion-lts-raring_1.7.7-0ubuntu1~precise1.dsc
+ a916c11e1beb09db2da74f4f7fff567d2176b6ee 455094 xserver-xorg-video-siliconmotion-lts-raring_1.7.7.orig.tar.gz
+ 98f4bac0f4c5d7fcaddf7ffd32cb9291b25d43f8 6220 xserver-xorg-video-siliconmotion-lts-raring_1.7.7-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ dc0c475d4505de3512f0fcf82a47fadb19fd14d1206c81f07d1c41bc74e1c49f 2511 xserver-xorg-video-siliconmotion-lts-raring_1.7.7-0ubuntu1~precise1.dsc
+ 2c680f10fe4549db6d6699a537c2edd0ee4500379c23b1dfeac42864c7eae442 455094 xserver-xorg-video-siliconmotion-lts-raring_1.7.7.orig.tar.gz
+ 80e9fe3e08d5f2298aa7a4cffab2b68859b2c92645f58157d4289ea429918bf9 6220 xserver-xorg-video-siliconmotion-lts-raring_1.7.7-0ubuntu1~precise1.diff.gz
+
+Package: xserver-xorg-video-sis-lts-raring
+Binary: xserver-xorg-video-sis-lts-raring
+Version: 1:0.10.7-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 5.0.0), pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.9.0.901), x11proto-video-dev, x11proto-xext-dev, x11proto-gl-dev, x11proto-xinerama-dev, x11proto-xf86dga-dev, libgl1-mesa-dev-lts-raring | libgl-dev, x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev, libdrm-dev (>> 2.0) [!hurd-i386], x11proto-xf86dri-dev, quilt, dpkg-dev (>= 1.14.17), automake, libtool, xutils-dev (>= 1:7.5+1)
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-sis-lts-raring
+Files:
+ efef02d022f9c95398770cd52f6ff71c 2717 xserver-xorg-video-sis-lts-raring_0.10.7-0ubuntu1~precise1.dsc
+ 56de97297a909bb7642879a5bc83bcca 851282 xserver-xorg-video-sis-lts-raring_0.10.7.orig.tar.gz
+ 5a2f3cd5bb232910af20371a43a5433a 17272 xserver-xorg-video-sis-lts-raring_0.10.7-0ubuntu1~precise1.diff.gz
+Uploaders: David Nusinow <dnusinow@debian.org>, Brice Goglin <bgoglin@debian.org>, Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-sis.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-sis
+Package-List: 
+ xserver-xorg-video-sis-lts-raring deb x11 optional
+Checksums-Sha1:
+ 9759aa637b2459b7e6d3b5b84edc68572b159458 2717 xserver-xorg-video-sis-lts-raring_0.10.7-0ubuntu1~precise1.dsc
+ 8af5b2ed4c32a043a61a9e5dd9eaf64e9c92694a 851282 xserver-xorg-video-sis-lts-raring_0.10.7.orig.tar.gz
+ f7bee58923d6f61f39ebe5690aeee86b54d5b86b 17272 xserver-xorg-video-sis-lts-raring_0.10.7-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ 6cd53250d457781947bd49a420baf9c047be2c46c2c766d04f2c5417874d3445 2717 xserver-xorg-video-sis-lts-raring_0.10.7-0ubuntu1~precise1.dsc
+ 7a899df83738f4a716e4aaacd1284e9910f21c4da4cc494ff47e6c6195a68f20 851282 xserver-xorg-video-sis-lts-raring_0.10.7.orig.tar.gz
+ c85b58a3a439697f62bed0616831a41bb83fe44790a851b0fc7d3018959c7651 17272 xserver-xorg-video-sis-lts-raring_0.10.7-0ubuntu1~precise1.diff.gz
+
+Package: xserver-xorg-video-sisusb-lts-raring
+Binary: xserver-xorg-video-sisusb-lts-raring
+Version: 1:0.9.6-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, quilt, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.9.4), x11proto-video-dev, x11proto-xext-dev, x11proto-xinerama-dev, x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev, xutils-dev
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-sisusb-lts-raring
+Files:
+ c7c97048d70f58243ef01823a4941537 2485 xserver-xorg-video-sisusb-lts-raring_0.9.6-0ubuntu1~precise1.dsc
+ e9c5479c86a63ad92237aed5cdd50a13 453744 xserver-xorg-video-sisusb-lts-raring_0.9.6.orig.tar.gz
+ 75d21c396702104bb32d34b63ca9d282 5441 xserver-xorg-video-sisusb-lts-raring_0.9.6-0ubuntu1~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-sisusb.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-sisusb
+Package-List: 
+ xserver-xorg-video-sisusb-lts-raring deb x11 optional
+Checksums-Sha1:
+ 3440ebe85d4a266d0f9792a814dee8c77b75e00b 2485 xserver-xorg-video-sisusb-lts-raring_0.9.6-0ubuntu1~precise1.dsc
+ c6ac523fb6ae48ccbc09f3683224825efdc0af3a 453744 xserver-xorg-video-sisusb-lts-raring_0.9.6.orig.tar.gz
+ 8365566f83265a41bde110a983db07aaa21bbdc0 5441 xserver-xorg-video-sisusb-lts-raring_0.9.6-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ 2af1f074108f9d38a0556858f1f6bb477d58bdbc17131aad887f695496958fe2 2485 xserver-xorg-video-sisusb-lts-raring_0.9.6-0ubuntu1~precise1.dsc
+ 42722a8c54ab28a0b75115677a94d255caf1121ef3d56f47e044a781c484462d 453744 xserver-xorg-video-sisusb-lts-raring_0.9.6.orig.tar.gz
+ 2ad4226591122f32a828889dfd659617044e80b097b4b3904fc5e8c31b445e8d 5441 xserver-xorg-video-sisusb-lts-raring_0.9.6-0ubuntu1~precise1.diff.gz
+
+Package: xserver-xorg-video-tdfx-lts-raring
+Binary: xserver-xorg-video-tdfx-lts-raring
+Version: 1:1.4.5-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xutils-dev, xserver-xorg-dev-lts-raring (>= 2:1.9.4), x11proto-gl-dev, x11proto-video-dev, x11proto-xf86dga-dev, libgl1-mesa-dev-lts-raring | libgl-dev, x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev, x11proto-xext-dev, libdrm-dev (>> 2.0) [!hurd-i386], x11proto-xf86dri-dev, quilt
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-tdfx-lts-raring
+Files:
+ 27efa67405a4bc081e46ece17ccc2985 2575 xserver-xorg-video-tdfx-lts-raring_1.4.5-0ubuntu1~precise1.dsc
+ 8b0fbbc7c1cfceada7e452e73e27c68a 405914 xserver-xorg-video-tdfx-lts-raring_1.4.5.orig.tar.gz
+ a2ed6a7ce568814343b4a9b05c3591bf 7115 xserver-xorg-video-tdfx-lts-raring_1.4.5-0ubuntu1~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-tdfx.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-tdfx
+Package-List: 
+ xserver-xorg-video-tdfx-lts-raring deb x11 optional
+Checksums-Sha1:
+ da395f1b982297f4ff0098c45b1a54f8890ddae9 2575 xserver-xorg-video-tdfx-lts-raring_1.4.5-0ubuntu1~precise1.dsc
+ 90b1fb9a9c28e37a81263553f5feda384fd557f9 405914 xserver-xorg-video-tdfx-lts-raring_1.4.5.orig.tar.gz
+ c27428c4f2eb76698d3c2f873824ee04227ba9b0 7115 xserver-xorg-video-tdfx-lts-raring_1.4.5-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ eb5130ed2825a330e9d31d0ad2c5224a6e6460f8e682506f2def33f00506043a 2575 xserver-xorg-video-tdfx-lts-raring_1.4.5-0ubuntu1~precise1.dsc
+ 815cadcbef13c2ac2052ee2a4bbe27815bcccf6c4a72b7a39e0bda1a141019bb 405914 xserver-xorg-video-tdfx-lts-raring_1.4.5.orig.tar.gz
+ f107fe25ac71b83eb0c8ff4ddeaea2d9a5f12fd65ff7ff2b070cebda9ab3e1ae 7115 xserver-xorg-video-tdfx-lts-raring_1.4.5-0ubuntu1~precise1.diff.gz
+
+Package: xserver-xorg-video-trident-lts-raring
+Binary: xserver-xorg-video-trident-lts-raring
+Version: 1:1.3.6-0ubuntu2~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, quilt, xutils-dev, xserver-xorg-dev-lts-raring (>= 2:1.9.4), x11proto-video-dev, x11proto-xext-dev, x11proto-xf86dga-dev, x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-trident-lts-raring
+Files:
+ 6e28927f25001d01765c997b41b672ea 2495 xserver-xorg-video-trident-lts-raring_1.3.6-0ubuntu2~precise1.dsc
+ d6026b3e5e51d1ca5a77e3cd4ababd43 421624 xserver-xorg-video-trident-lts-raring_1.3.6.orig.tar.gz
+ ded7b1b3bfa7706742e1a26d4522fb4d 5931 xserver-xorg-video-trident-lts-raring_1.3.6-0ubuntu2~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-trident.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-trident
+Package-List: 
+ xserver-xorg-video-trident-lts-raring deb x11 optional
+Checksums-Sha1:
+ 13da69747cdd29c651e29ada6414f24f2489ca24 2495 xserver-xorg-video-trident-lts-raring_1.3.6-0ubuntu2~precise1.dsc
+ d233a762bda42e652eebd3617dc1d51033415821 421624 xserver-xorg-video-trident-lts-raring_1.3.6.orig.tar.gz
+ 994fcffb6937ea6441d64d34773113021ff7ce3a 5931 xserver-xorg-video-trident-lts-raring_1.3.6-0ubuntu2~precise1.diff.gz
+Checksums-Sha256:
+ 456b8f24aa6c689adb6af9f9bc159fa08b94e3001e78df9c6b4fe2684a19782d 2495 xserver-xorg-video-trident-lts-raring_1.3.6-0ubuntu2~precise1.dsc
+ e716846650fbf2c4bc7c296f5dd8fbd37a30eef63c0fedef41bd3004d1273681 421624 xserver-xorg-video-trident-lts-raring_1.3.6.orig.tar.gz
+ 84390e709802b0f72d169fa2d1cecd121f493c714ce599ea7242bbd6f16fb7b2 5931 xserver-xorg-video-trident-lts-raring_1.3.6-0ubuntu2~precise1.diff.gz
+
+Package: xserver-xorg-video-vesa-lts-raring
+Binary: xserver-xorg-video-vesa-lts-raring, xserver-xorg-video-vesa-udeb-lts-raring
+Version: 1:2.3.2-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.11), x11proto-xext-dev, x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev, xutils-dev (>= 1:7.5+4), quilt, libpciaccess-dev (>= 0.12.901)
+Architecture: amd64 i386 hurd-any kfreebsd-any
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-vesa-lts-raring
+Files:
+ 62fd4fc7502742cdddcb9e223cbea432 2599 xserver-xorg-video-vesa-lts-raring_2.3.2-0ubuntu1~precise1.dsc
+ 49ed8e984a767102508d5ebfcaa353b0 356643 xserver-xorg-video-vesa-lts-raring_2.3.2.orig.tar.gz
+ 5f7bf3755c51ab18ad1883f548367cce 6292 xserver-xorg-video-vesa-lts-raring_2.3.2-0ubuntu1~precise1.diff.gz
+Uploaders: Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-vesa.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-vesa
+Package-List: 
+ xserver-xorg-video-vesa-lts-raring deb x11 optional
+ xserver-xorg-video-vesa-udeb-lts-raring udeb debian-installer optional
+Checksums-Sha1:
+ 2d6488acdebc70dcd3a15413a48cbf2b31d347d9 2599 xserver-xorg-video-vesa-lts-raring_2.3.2-0ubuntu1~precise1.dsc
+ 03f35e721a7707381c185c5bd6b1ca7c74777d0e 356643 xserver-xorg-video-vesa-lts-raring_2.3.2.orig.tar.gz
+ 9897e86db5847d56ee34fd3c63f8a9c5c721e690 6292 xserver-xorg-video-vesa-lts-raring_2.3.2-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ 44e6ba5fa97222356457f966ae0a571f78697529c3cf1c4f670a0fb69750a5c0 2599 xserver-xorg-video-vesa-lts-raring_2.3.2-0ubuntu1~precise1.dsc
+ a88fdfd228e4b1c1c3e2c3f221218366eb78e288349869f91d6f3eef9de72f3f 356643 xserver-xorg-video-vesa-lts-raring_2.3.2.orig.tar.gz
+ f7f1c52d7b3a08fff711861ccfc4a9c4351f741160190920b5ea2a54371e20b9 6292 xserver-xorg-video-vesa-lts-raring_2.3.2-0ubuntu1~precise1.diff.gz
+
+Package: xserver-xorg-video-vmware-lts-raring
+Binary: xserver-xorg-video-vmware-lts-raring
+Version: 1:12.0.2+git.e5ac80d8-0ubuntu1~precise1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Build-Depends: debhelper (>= 8), dh-autoreconf, quilt, pkg-config, xserver-xorg-dev-lts-raring (>= 2:1.9.4), x11proto-core-dev, x11proto-fonts-dev, x11proto-randr-dev, x11proto-render-dev, x11proto-xext-dev, x11proto-xinerama-dev, xutils-dev (>= 1:7.5+4), libdrm-dev [!hurd-i386], libxext-dev, libx11-dev, libxatracker-dev-lts-raring
+Architecture: amd64 i386
+Standards-Version: 3.9.1
+Format: 1.0
+Directory: pool/main/x/xserver-xorg-video-vmware-lts-raring
+Files:
+ 2f442a9cfae6df224793744666d558fc 2678 xserver-xorg-video-vmware-lts-raring_12.0.2+git.e5ac80d8-0ubuntu1~precise1.dsc
+ 9f52c8adeba069b291a423366f767abb 154528 xserver-xorg-video-vmware-lts-raring_12.0.2+git.e5ac80d8.orig.tar.gz
+ 6c7c84b1562a8464c7b781a73403c18e 37470 xserver-xorg-video-vmware-lts-raring_12.0.2+git.e5ac80d8-0ubuntu1~precise1.diff.gz
+Uploaders: Drew Parsons <dparsons@debian.org>, Cyril Brulebois <kibi@debian.org>
+Vcs-Browser: http://git.debian.org/?p=pkg-xorg/driver/xserver-xorg-video-vmware.git
+Vcs-Git: git://git.debian.org/git/pkg-xorg/driver/xserver-xorg-video-vmware
+Package-List: 
+ xserver-xorg-video-vmware-lts-raring deb x11 optional
+Checksums-Sha1:
+ 5d9b9f3420be0f098fc0c479bb6edcceef7b3af7 2678 xserver-xorg-video-vmware-lts-raring_12.0.2+git.e5ac80d8-0ubuntu1~precise1.dsc
+ b8a8b4f0fd6a3eed99db9a14653a8b8f0d8cddf7 154528 xserver-xorg-video-vmware-lts-raring_12.0.2+git.e5ac80d8.orig.tar.gz
+ e3aeeb1f6e2bbdfff4b473a6df6847fe8686ffa5 37470 xserver-xorg-video-vmware-lts-raring_12.0.2+git.e5ac80d8-0ubuntu1~precise1.diff.gz
+Checksums-Sha256:
+ 4bf630a96c3ba917450eeaa5a562617c5e836d82d958b57fb121c45db09facf6 2678 xserver-xorg-video-vmware-lts-raring_12.0.2+git.e5ac80d8-0ubuntu1~precise1.dsc
+ 9907ae3bfd7ae063f8b1f008e06e0cd46a7df51c2e90240c59db9c4c689b32d0 154528 xserver-xorg-video-vmware-lts-raring_12.0.2+git.e5ac80d8.orig.tar.gz
+ 27beb1145239f058cca39e5df099cfd49f07e4764403e5e0ef8483dae3a4e117 37470 xserver-xorg-video-vmware-lts-raring_12.0.2+git.e5ac80d8-0ubuntu1~precise1.diff.gz
+
