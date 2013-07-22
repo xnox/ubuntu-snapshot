@@ -7621,6 +7621,89 @@ Description-md5: 34d8653653a5596a7c54dd2932291702
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: oem-config
+Priority: extra
+Section: admin
+Installed-Size: 253
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.10.26
+Replaces: oem-config-gtk (<< 1.54.13), oem-config-kde (<< 1.54.13), oem-config-keyboard, oem-config-locale, oem-config-timezone
+Depends: debconf (>= 0.5) | debconf-2.0, upstart-job, ubiquity (= 2.10.26), oem-config-frontend-2.10.26
+Conflicts: oem-config-keyboard, oem-config-locale, oem-config-timezone
+Filename: pool/main/u/ubiquity/oem-config_2.10.26_all.deb
+Size: 14580
+MD5sum: 697eb81535794f9389286947f03f048b
+SHA1: 7a6ca47b38177aedd6215ad98291e12fdbd85658
+SHA256: 7bc6d0b43fc7c12143b4cced6e95c79a07aae8324458c10affb15114621cddab
+Description: Perform end-user configuration after initial OEM installation
+Description-md5: 9380d07ec19991f384138c016b142ce0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: oem-config-debconf
+Priority: extra
+Section: admin
+Installed-Size: 173
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.10.26
+Provides: oem-config-frontend-2.10.26
+Depends: upstart-job, oem-config (= 2.10.26), ubiquity-frontend-debconf (= 2.10.26)
+Filename: pool/main/u/ubiquity/oem-config-debconf_2.10.26_all.deb
+Size: 2960
+MD5sum: f7a8d1f6cbfefa709bd28b6ea6863710
+SHA1: 0cbf308adb2378d9aad5c084f50278306c0b8ac0
+SHA256: a54de69753541590bc85e74d4d076720ec32f188067ebbb564c86783e428ee86
+Description: debconf frontend for end-user post-OEM-install configuration
+Description-md5: 0b339016cd37fb3df25a4085c60673e9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: oem-config-gtk
+Priority: extra
+Section: admin
+Installed-Size: 184
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.10.26
+Replaces: oem-config (<< 1.0)
+Provides: oem-config-frontend-2.10.26
+Depends: oem-config (= 2.10.26), ubiquity-frontend-gtk (= 2.10.26), python-aptdaemon.gtk3widgets, aptdaemon
+Filename: pool/main/u/ubiquity/oem-config-gtk_2.10.26_all.deb
+Size: 4198
+MD5sum: 0e53ba468a157ae2f9b63e4edae3050c
+SHA1: aef7775ebf0b02d6b4f275dbdd925f3d707e5e53
+SHA256: 6f206d4933b73307208bd0cbe74d7506c101a60f9b5acc6a200201d599fe9766
+Description: GTK+ frontend for end-user post-OEM-install configuration
+Description-md5: 8709c78036a09529b74b507a6299fd60
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: oem-config-kde
+Priority: extra
+Section: admin
+Installed-Size: 180
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.10.26
+Replaces: oem-config (<< 1.0)
+Provides: oem-config-frontend-2.10.26
+Depends: oem-config (= 2.10.26), ubiquity-frontend-kde (= 2.10.26)
+Filename: pool/main/u/ubiquity/oem-config-kde_2.10.26_all.deb
+Size: 3008
+MD5sum: 88e377f0cd3cbe73ac5d7b792b38c043
+SHA1: 7194d19dcb1f4aa52b0aeab5ae22bcf35309593b
+SHA256: 9fb09b38a0549b8566de5e26b9c42b901c00218f1091bb141c23672910d06a39
+Description: KDE frontend for end-user post-OEM-install configuration
+Description-md5: 97a76af3c01b8626949160b1d8f526ba
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: pacemaker
 Priority: optional
 Section: admin
@@ -8373,6 +8456,49 @@ Description-md5: 57680fcf03a76826442d47d94b8ebaed
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop
+
+Package: ubiquity-frontend-kde
+Priority: optional
+Section: admin
+Installed-Size: 588
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.10.26
+Provides: ubiquity-frontend-2.10.26
+Depends: python (>= 2.7.1-0ubuntu2), ubiquity (= 2.10.26), python-qt4, kde-window-manager, xauth
+Filename: pool/main/u/ubiquity/ubiquity-frontend-kde_2.10.26_all.deb
+Size: 121292
+MD5sum: e18e3993a31d4618036b72a339f09127
+SHA1: 83788bce87b757edebe350c8c73abaa03c7ac0d8
+SHA256: 84d7ba4157d7230d98103229c1f233a00936aa1d088ae9e78b2f87b64a322568
+Description: KDE frontend for Ubiquity live installer
+Description-md5: 18525a27bf09029b1b67c008f57f3d0b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-live, kubuntu-active-live, kubuntu-active-live
+
+Package: ubiquity-ubuntu-artwork
+Priority: optional
+Section: admin
+Installed-Size: 800
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.10.26
+Replaces: espresso-ubuntu-artwork, espresso-ubuntu-doc, ubiquity (<< 1.13.0), ubiquity-ubuntu-doc, ubuntu-express-ubuntu-artwork, ubuntu-express-ubuntu-doc
+Provides: ubiquity-artwork-2.10.26
+Conflicts: espresso-ubuntu-artwork, espresso-ubuntu-doc, ubiquity-ubuntu-doc, ubuntu-express-ubuntu-artwork, ubuntu-express-ubuntu-doc
+Filename: pool/main/u/ubiquity/ubiquity-ubuntu-artwork_2.10.26_all.deb
+Size: 530042
+MD5sum: 5ef780cf1aafe0859fc2c241ec96a2a1
+SHA1: f06f7b211b7183bb21df3289c3a02404fe445c90
+SHA256: 39460d46fa5cedf630be3a9356394eeea6345201c3d1b1b4543ec9e14ba0f327
+Description: Ubuntu artwork for Ubiquity live installer
+Description-md5: a7bbb2b9a8b2a3fbc7110f5a8d336a36
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live
 
 Package: udev
 Priority: required
