@@ -778,6 +778,42 @@ Checksums-Sha256:
  fc1710854d26d527087dbbefb110193650d9aae1876f90cb64b8d5c0a8dd95a4 390454 libnetfilter-conntrack_1.0.3.orig.tar.bz2
  adc65b532bdf665b1f235e3ce9d2731c4d4607aec874e4ed226c828d47c969b0 2694 libnetfilter-conntrack_1.0.3-1.debian.tar.gz
 
+Package: lightdm
+Binary: lightdm, liblightdm-gobject-1-0, gir1.2-lightdm-1, liblightdm-qt-3-0, liblightdm-qt5-3-0, liblightdm-gobject-1-dev, liblightdm-qt-dev, liblightdm-qt5-3-dev, liblightdm-gobject-1-doc
+Version: 1.7.6-0ubuntu2
+Priority: optional
+Section: x11
+Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50~), gnome-common, intltool (>= 0.35.0), quilt, libgcrypt11-dev, libglib2.0-dev, libpam0g-dev, libxdmcp-dev, libxcb1-dev, libxklavier-dev, libgtk-3-dev, gobject-introspection, libgirepository1.0-dev, libqt4-dev, qtbase5-dev, dh-autoreconf, dh-translations, gtk-doc-tools, yelp-tools, dbus
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/l/lightdm
+Files:
+ 134ea4847bc7f0dc24af8e19df61331b 2568 lightdm_1.7.6-0ubuntu2.dsc
+ f00bb2e51428384c6cb9b56ec625714a 436436 lightdm_1.7.6.orig.tar.xz
+ 6ceead827285e605da358e5c2ec6cd02 52856 lightdm_1.7.6-0ubuntu2.debian.tar.gz
+Uploaders: Julien Lavergne <gilir@ubuntu.com>
+Homepage: https://launchpad.net/lightdm
+Package-List: 
+ gir1.2-lightdm-1 deb libs optional
+ liblightdm-gobject-1-0 deb x11 optional
+ liblightdm-gobject-1-dev deb libdevel optional
+ liblightdm-gobject-1-doc deb doc optional
+ liblightdm-qt-3-0 deb x11 optional
+ liblightdm-qt-dev deb libdevel optional
+ liblightdm-qt5-3-0 deb x11 optional
+ liblightdm-qt5-3-dev deb libdevel optional
+ lightdm deb x11 optional
+Checksums-Sha1:
+ d05ea34cb74f498cc0d3e73580148bfc7d54e7e3 2568 lightdm_1.7.6-0ubuntu2.dsc
+ 462bfcd72672248cc9afe28a005ed812eee6c398 436436 lightdm_1.7.6.orig.tar.xz
+ 7aa5cd5d6d248771c840532bdb3c806983a6bc43 52856 lightdm_1.7.6-0ubuntu2.debian.tar.gz
+Checksums-Sha256:
+ a5f19a2bc52d5ce2a1f4d422fd52662ccb5f0e697122876142eaed1bb899e967 2568 lightdm_1.7.6-0ubuntu2.dsc
+ fb9fcfb507466dae4793cfcb743a56df5ff7b870c87498839c02107c8c512ebf 436436 lightdm_1.7.6.orig.tar.xz
+ 37d4a814e51520e0cb3e2be4e175e6b5f53063fa85644d32118ac1614a7cd392 52856 lightdm_1.7.6-0ubuntu2.debian.tar.gz
+
 Package: mesa
 Binary: libxatracker1, libxatracker1-dbg, libxatracker-dev, libgbm1, libgbm1-dbg, libgbm-dev, libegl1-mesa, libegl1-mesa-dbg, libegl1-mesa-dev, libegl1-mesa-drivers, libegl1-mesa-drivers-dbg, libopenvg1-mesa, libopenvg1-mesa-dbg, libopenvg1-mesa-dev, libgles1-mesa, libgles1-mesa-dbg, libgles1-mesa-dev, libgles2-mesa, libgles2-mesa-dbg, libgles2-mesa-dev, libglapi-mesa, libglapi-mesa-dbg, libgl1-mesa-glx, libgl1-mesa-glx-dbg, libgl1-mesa-dri, libgl1-mesa-dri-dbg, libgl1-mesa-dri-experimental, libgl1-mesa-dri-experimental-dbg, libgl1-mesa-dev, mesa-common-dev, libosmesa6, libosmesa6-dev
 Version: 9.1.4-0ubuntu4
@@ -1383,51 +1419,6 @@ Checksums-Sha256:
  7e7f0aee2eb4e4a6a6e7e433b8d9bd9bed9bcc7a24496fc391fff0356f871c1f 2233 webapps-applications_2.4.16+13.10.20130719-0ubuntu1.dsc
  1b25dfbf4598324f33cbc64eef17659d7120973acb77a2823c17b4bfaaf6708d 92114 webapps-applications_2.4.16+13.10.20130719.orig.tar.gz
  23164e2b9752c593d0d55ac49d0a416f27870a2ae7df3d3a38859a3e7426256a 4746 webapps-applications_2.4.16+13.10.20130719-0ubuntu1.diff.gz
-
-Package: xen
-Binary: xen-docs-4.2, libxen-4.2, libxenstore3.0, libxen-dev, xenstore-utils, libxen-ocaml, libxen-ocaml-dev, xen-utils-common, xen-utils-4.2, xen-hypervisor-4.2-amd64, xen-system-amd64, xen-hypervisor-4.2-i386, xen-system-i386
-Version: 4.2.2-1ubuntu1
-Priority: optional
-Section: kernel
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Xen Team <pkg-xen-devel@lists.alioth.debian.org>
-Build-Depends: debhelper (>> 7), dpkg-dev (>= 1.16.0~), lsb-release, python-dev, bcc, gcc-multilib, e2fslibs-dev, iasl, ipxe-qemu, seabios, libaio-dev, libglib2.0-dev, libgnutls-dev, liblzma-dev, libncurses5-dev, libpci-dev, libyajl-dev, libssl-dev, pkg-config, uuid-dev, zlib1g-dev, ocaml-nox, dh-ocaml, ocaml-findlib
-Build-Depends-Indep: graphviz, ghostscript, texlive-fonts-recommended, texlive-font-utils, texlive-latex-recommended
-Architecture: all amd64 i386
-Standards-Version: 3.9.2
-Format: 3.0 (quilt)
-Directory: pool/main/x/xen
-Files:
- 91a7811de9023d4cbadab9925ee2d56d 3186 xen_4.2.2-1ubuntu1.dsc
- c6bb132cd1eaaf68a6763494c4e76676 3806198 xen_4.2.2.orig-qemu.tar.gz
- a8a5147809df5e21a5d09c10a465021f 5860055 xen_4.2.2.orig.tar.gz
- 2e331ea2f223feccc6c2722175814c5d 154482 xen_4.2.2-1ubuntu1.debian.tar.gz
-Uploaders: Guido Trotter <ultrotter@debian.org>, Bastian Blank <waldi@debian.org>
-Package-List: 
- libxen-4.2 deb libs optional
- libxen-dev deb libdevel optional
- libxen-ocaml deb ocaml optional
- libxen-ocaml-dev deb ocaml optional
- libxenstore3.0 deb libs optional
- xen-docs-4.2 deb doc optional
- xen-hypervisor-4.2-amd64 deb kernel optional
- xen-hypervisor-4.2-i386 deb kernel optional
- xen-system-amd64 deb kernel optional
- xen-system-i386 deb kernel optional
- xen-utils-4.2 deb kernel optional
- xen-utils-common deb kernel optional
- xenstore-utils deb admin optional
-Checksums-Sha1:
- 6b2747a9a83bab1b31cd5ee9838192dcb87317b3 3186 xen_4.2.2-1ubuntu1.dsc
- 18c5ac03afb2ab65fa710ac3627e88a1355f3dc6 3806198 xen_4.2.2.orig-qemu.tar.gz
- 54e42252cd65f134479a5af3c773a16cebf52905 5860055 xen_4.2.2.orig.tar.gz
- 34496ada35f8e57a4d4928754607b6099145952f 154482 xen_4.2.2-1ubuntu1.debian.tar.gz
-Checksums-Sha256:
- e77ace2b645695503aee8afb7426fed6ed8786a394a31427df1c78e467b1d343 3186 xen_4.2.2-1ubuntu1.dsc
- 1f931a74208cdf742550ee0f83e2ec54edba825f5f39a71e161b827b23b77226 3806198 xen_4.2.2.orig-qemu.tar.gz
- 54b4b2cf934a717fbbc4be4b8317e2e9e3fe689bfa0fbbaa1291e3bdd848fbb4 5860055 xen_4.2.2.orig.tar.gz
- 7121129e591082914dfe1b1424a4a8b9b479c68c47435db6bd7da2c2927e2c68 154482 xen_4.2.2-1ubuntu1.debian.tar.gz
-Python-Version: current
 
 Package: xsp
 Binary: dh-xsp, mono-xsp2-base, mono-xsp4-base, mono-xsp4, mono-xsp2, mono-xsp, asp.net-examples, mono-apache-server4, mono-apache-server2, mono-apache-server, mono-fastcgi-server4, mono-fastcgi-server2, mono-fastcgi-server
