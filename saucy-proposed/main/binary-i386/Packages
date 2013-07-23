@@ -946,6 +946,27 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: gir1.2-timezonemap-1.0
+Priority: optional
+Section: libs
+Installed-Size: 38
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libtimezonemap
+Version: 0.4.0.1
+Depends: gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-json-1.0, libtimezonemap1
+Filename: pool/main/libt/libtimezonemap/gir1.2-timezonemap-1.0_0.4.0.1_i386.deb
+Size: 2598
+MD5sum: aaa0255fabca3277e32539ed2093d879
+SHA1: 34950af92756745ad6146b4e800aeb338b509ad1
+SHA256: a9b4249d523ef007038bd5ffe393268f7cf66e550f91cd322fb6139116bed335
+Description: typelib interface for libtimezonemap
+Description-md5: 231074d1b59567e384d19c2c4a8351dc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, ubuntu-usb-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
 Package: gnome-control-center-signon
 Priority: optional
 Section: gnome
@@ -4645,6 +4666,49 @@ Origin: Ubuntu
 Supported: 9m
 Task: edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
 
+Package: libtimezonemap1
+Priority: optional
+Section: libs
+Installed-Size: 4067
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libtimezonemap
+Version: 0.4.0.1
+Depends: libc6 (>= 2.4), libcairo2 (>= 1.10), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.1.4), libjson-glib-1.0-0 (>= 0.12.0)
+Filename: pool/main/libt/libtimezonemap/libtimezonemap1_0.4.0.1_i386.deb
+Size: 1467212
+MD5sum: 1025507e87be6c19c3d5845e8de5fced
+SHA1: 7f96ac35c4071fce900b50c9c6b6253e512e8672
+SHA256: 472055686061823d0acf97751375f824dee4f53fc80e5c2e8e74d68cf7699b9f
+Description: GTK+3 timezone map widget
+Description-md5: 68bf660fca1f57fed3f2f66e19a091a1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: libtimezonemap1-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 70
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libtimezonemap
+Version: 0.4.0.1
+Replaces: gir1.2-timezonemap-1.0 (<< 0.3)
+Depends: libtimezonemap1 (= 0.4.0.1), libglib2.0-dev (>= 2.25.0), libgtk-3-dev (>= 3.1.4), libjson-glib-dev
+Breaks: gir1.2-timezonemap-1.0 (<< 0.3)
+Filename: pool/main/libt/libtimezonemap/libtimezonemap1-dev_0.4.0.1_i386.deb
+Size: 5080
+MD5sum: 3c622ebe9ee91978df835a4c9d895c89
+SHA1: dcdf11c29e6cca1af202877213ca4275613ce13e
+SHA256: 41c56c9afd020b728376c2907d275d3f7a52b446997bfd051c32df21529aec30
+Description: GTK+3 timezone map widget - development files
+Description-md5: e9452a2add044380ccdd472c39751e74
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libtotem-pg-dev
 Priority: optional
 Section: libdevel
@@ -6674,50 +6738,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: walinuxagent
-Priority: extra
-Section: python
-Installed-Size: 159
-Maintainer: Ben Howard <ben.howard@ubuntu.com>
-Original-Maintainer: Microsoft Corporation <walinuxagent@microsoft.com>
-Architecture: i386
-Version: 1.3.2-0ubuntu4
-Depends: cloud-init (>= 0.7.3~bzr826-0ubuntu2), linux-image-extra-virtual, openssh-server (>= 1:5.9p1), openssl (>= 1.0), passwd (>= 4.1.4.2), python (>= 2.4), util-linux (>= 2.0), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
-Pre-Depends: walinuxagent-data-saver (= 1.3.2-0ubuntu4)
-Conflicts: network-manager
-Filename: pool/main/w/walinuxagent/walinuxagent_1.3.2-0ubuntu4_i386.deb
-Size: 40450
-MD5sum: 7cae505e9c39e7de1c851a463151ca30
-SHA1: 07be8e00a06af9338f8b54b535e19df5e5b3345b
-SHA256: 7265aaeb12df3413b7191f7227c4bf1d1c0516285c823846616b52b28f8892df
-Description: Windows Azure Linux Agent
-Homepage: http://go.microsoft.com/fwlink/?LinkId=250998
-Description-md5: 6c6e08b89d2f59e8bdc1b7bf37e6f34c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: walinuxagent-data-saver
-Priority: extra
-Section: python
-Installed-Size: 36
-Maintainer: Ben Howard <ben.howard@ubuntu.com>
-Original-Maintainer: Microsoft Corporation <walinuxagent@microsoft.com>
-Architecture: i386
-Source: walinuxagent
-Version: 1.3.2-0ubuntu4
-Filename: pool/main/w/walinuxagent/walinuxagent-data-saver_1.3.2-0ubuntu4_i386.deb
-Size: 4122
-MD5sum: 45d187580ea0c8a528cad30e20fa1b60
-SHA1: 974c44369653fba6ed6252c2beebaa18e751043c
-SHA256: 2a33c7a6a5edb770e944bd2c26c5fba766594f56a9c5371b76b3efd6e3b403d3
-Description: Helper package which ensures safe upgrade for walinuxagent
-Homepage: http://go.microsoft.com/fwlink/?LinkId=250998
-Description-md5: bb28935a6c885eea42fbe6844befa622
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
 
 Package: wget
 Priority: standard
