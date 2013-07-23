@@ -128,6 +128,28 @@ Description-md5: 24b72fcd3b9c9afee8776f2d281499a4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: akonadi-facebook
+Priority: optional
+Section: universe/oldlibs
+Installed-Size: 39
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: kdepim-runtime
+Version: 4:4.10.95-0ubuntu2
+Depends: kdepim-runtime
+Filename: pool/universe/k/kdepim-runtime/akonadi-facebook_4.10.95-0ubuntu2_all.deb
+Size: 3622
+MD5sum: 325975f9a23e5a2c262d8cd417649878
+SHA1: f486ac29815c04f0a07b5b05fb75290b0fc6cdc0
+SHA256: 96d2087135a497c5d04c3aa43c9e43ee38628626e38711caa406c09415ea4366
+Description: Facebook resource for Akonadi -- transitional package
+Homepage: http://pim.kde.org/
+Description-md5: 5b082a70ead0ce48017d039a8c9d2e3a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full
+
 Package: amarok
 Priority: optional
 Section: universe/kde
@@ -3652,26 +3674,51 @@ Description-md5: 0367ba448d4852fce6bc8c7eafbfbcae
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: kdf
+Package: kdepim-runtime
 Priority: optional
-Section: universe/utils
-Installed-Size: 776
+Section: universe/kde
+Installed-Size: 12289
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: powerpc
-Version: 4:4.10.95-0ubuntu1
-Depends: kde-runtime, libc6 (>= 2.1.3), libgcc1 (>= 1:4.2.1), libkdecore5 (>= 4:4.10.95), libkdeui5 (>= 4:4.10.95), libkio5 (>= 4:4.10.95), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.8.0), libstdc++6 (>= 4.1.1)
-Filename: pool/universe/k/kdf/kdf_4.10.95-0ubuntu1_powerpc.deb
-Size: 199154
-MD5sum: e9f741576d45294bdab0ccb487ae123d
-SHA1: c9a63c2be25214c0732b0c7d88af34a8f69c3452
-SHA256: 592aded40f1ccdd6c1ad6de63be0a84e3195162051c9511758056177ebb067ff
-Description: disk information utility
-Homepage: http://www.kde.org/
-Description-md5: 10fb70f114cce645324b2253bb8e9818
+Version: 4:4.10.95-0ubuntu2
+Replaces: akonadi-facebook (<< 4:4.10.90-0ubuntu3), akonadi-kde, libmaildir4
+Depends: kde-runtime, kdepimlibs-kio-plugins, libakonadi-calendar4 (>= 4:4.10.80), libakonadi-contact4 (>= 4:4.10.95), libakonadi-kabc4 (>= 4:4.10.95), libakonadi-kcal4 (>= 4:4.10.95), libakonadi-kde4 (>= 4:4.10.95), libakonadi-kmime4 (>= 4:4.10.95), libakonadi-notes4 (>= 4:4.9.80), libakonadi-socialutils4 (>= 4:4.9.80), libakonadiprotocolinternals1 (>= 1.5.1), libc6 (>= 2.4), libgcc1 (>= 1:4.2.1), libkabc4 (>= 4:4.10.95), libkalarmcal2 (>= 4:4.9.80), libkcal4 (>= 4:4.10.95), libkcalcore4 (>= 4:4.10.80), libkcalutils4 (>= 4:4.5.86), libkcmutils4 (>= 4:4.10.95), libkdecore5 (>= 4:4.10.95), libkdeui5 (>= 4:4.10.95), libkfbapi1 (>= 1.0), libkgapi2-2 (>= 2.0.1), libkidletime4 (>= 4:4.10.95), libkimap4 (>= 4:4.10.95), libkio5 (>= 4:4.10.95), libkmbox4 (>= 4:4.5.86), libkmime4 (>= 4:4.10.95), libknewstuff3-4 (>= 4:4.10.95), libknotifyconfig4 (>= 4:4.10.95), libkolab0 (>= 0.2.0), libkpimidentities4 (>= 4:4.10.95), libkpimtextedit4 (>= 4:4.10.95), libkpimutils4 (>= 4:4.10.95), libkresources4 (>= 4:4.10.95), libkrosscore4 (>= 4:4.10.95), libmailtransport4 (>= 4:4.10.95), libmicroblog4 (>= 4:4.10.95), libnepomukcore4abi1 (>= 4:4.9.80), libqjson0 (>= 0.7.1), libqt4-dbus (>= 4:4.5.3), libqt4-declarative (>= 4:4.7.0~rc1), libqt4-network (>= 4:4.5.3), libqt4-script (>= 4:4.5.3), libqt4-xml (>= 4:4.5.3), libqt4-xmlpatterns (>= 4:4.5.3), libqtcore4 (>= 4:4.8.0), libqtgui4 (>= 4:4.8.0), libsolid4 (>= 4:4.10.95), libsoprano4 (>= 2.4.3), libstdc++6 (>= 4.1.1), libxml2 (>= 2.7.4), akonadi-server (>= 1.8)
+Breaks: akonadi-facebook (<< 4:4.10.90-0ubuntu3), akonadi-kde, kdepimlibs5 (<< 4:4.4), libmaildir4
+Filename: pool/universe/k/kdepim-runtime/kdepim-runtime_4.10.95-0ubuntu2_powerpc.deb
+Size: 2355162
+MD5sum: 93a0b3f3560e7ffd2edd206d30675f68
+SHA1: 8bf9dad169e91c94df9f2edea69c7c8e3543ea0d
+SHA256: bc8e40b0efe4c7d992bdad9db99c0913b65baff3fe33e54ff939762e73414220
+Description: runtime components for Akonadi KDE
+Homepage: http://pim.kde.org/
+Description-md5: 0967d17f860788c8f2abc91821679d4e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome
+
+Package: kdepim-runtime-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 108797
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: powerpc
+Source: kdepim-runtime
+Version: 4:4.10.95-0ubuntu2
+Replaces: kdepim-dbg (<< 4:4.4)
+Depends: kdepim-runtime (= 4:4.10.95-0ubuntu2)
+Breaks: kdepim-dbg (<< 4:4.4)
+Filename: pool/universe/k/kdepim-runtime/kdepim-runtime-dbg_4.10.95-0ubuntu2_powerpc.deb
+Size: 22125346
+MD5sum: f2736ae46f5e7a7fe199474bfd018d0a
+SHA1: 0c52652bdab7260b2494cca45044a57071511e9d
+SHA256: 8af5c1dbe469ff2b21cfb6fc3703015bc5e0a39fe7fb7da65276b5a41829e7ca
+Description: debugging files for Akonadi KDE runtime components
+Homepage: http://pim.kde.org/
+Description-md5: 30ad0b2ade7fc870bbf98ae519515672
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: khelpcenter4
 Priority: optional
@@ -9388,49 +9435,6 @@ SHA256: 57342d34e4507cc20da5db8cb62a05800c710b807e1f9c70938f5649c92b2b60
 Description: Geographic objects support for PostgreSQL 9.1 -- scripts
 Homepage: http://postgis.refractions.net/
 Description-md5: 7f992f8ebbd49e497b86c7acbe51cc1d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: poxml
-Priority: optional
-Section: universe/devel
-Installed-Size: 745
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Architecture: powerpc
-Version: 4:4.10.95-0ubuntu1
-Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libstdc++6 (>= 4.4.0)
-Filename: pool/universe/p/poxml/poxml_4.10.95-0ubuntu1_powerpc.deb
-Size: 117288
-MD5sum: 0c137bcc630c2a762bc55651dbc008dc
-SHA1: eacc976af004f9e8cd3fcf02534b5a61faf5c266
-SHA256: 6ca6872c0ba67af5c17cbd5ad19d00842934d0242f696ee50b2009584996f3ee
-Description: tools for translating DocBook XML files with Gettext
-Homepage: http://www.kde.org
-Description-md5: 2ea6ef7ec3fbb8ba316b75ba53436f46
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
-
-Package: poxml-dbg
-Priority: extra
-Section: universe/debug
-Installed-Size: 1564
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Architecture: powerpc
-Source: poxml
-Version: 4:4.10.95-0ubuntu1
-Replaces: kdesdk-dbg, kdeutils-dbg (<< 4:4.6)
-Depends: kde-runtime-dbg, kate-dbg
-Suggests: poxml (= 4:4.10.95-0ubuntu1)
-Breaks: kdesdk-dbg, kdeutils-dbg (<< 4:4.6)
-Filename: pool/universe/p/poxml/poxml-dbg_4.10.95-0ubuntu1_powerpc.deb
-Size: 1416390
-MD5sum: 07ee1b4e635f76aee832bcbd1b7cf9d6
-SHA1: a3022a7c44f4c13c176b55472044dec9e2700cfb
-SHA256: a72d3313ea6457f2438a7902f4299761b05decc1f1444f891abc794d7513a1fe
-Description: debugging symbols for poxml
-Homepage: http://www.kde.org
-Description-md5: 5377e7bac4957617778888632690517f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
