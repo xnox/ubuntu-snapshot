@@ -796,6 +796,7 @@ Checksums-Sha256:
 Package: libav
 Binary: libav-tools, ffmpeg, ffmpeg-doc, libav-doc, libavutil51, libavcodec53, libavdevice53, libavformat53, libavfilter2, libpostproc52, libswscale2, libavutil-dev, libavcodec-dev, libavdevice-dev, libavformat-dev, libavfilter-dev, libpostproc-dev, libswscale-dev, libav-source
 Version: 6:0.8.7-1ubuntu1
+Priority: optional
 Section: libs
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
@@ -937,6 +938,38 @@ Checksums-Sha256:
  bbe62dd1df964fe56991a1a674a4d78617e75bfb119c94887ff86ff7bcbed533 5619231 libgphoto2_2.4.14.orig.tar.gz
  2ecf8379015dd93d837c9ca93bd2d5ce50f9fdb5d83b051c20dbe4ce51b8b6f7 27154 libgphoto2_2.4.14-2.1.debian.tar.gz
 
+Package: libibverbs
+Binary: libibverbs1, libibverbs-dev, libibverbs1-dbg, ibverbs-utils
+Version: 1.1.6-1ubuntu2
+Priority: extra
+Section: libs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Roland Dreier <roland@digitalvampire.org>
+Build-Depends: debhelper (>= 7.0.50~), dpkg-dev (>= 1.13.19), dh-autoreconf
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/libi/libibverbs
+Files:
+ 598ad32e88796f3117da06b3fcafa7ef 1401 libibverbs_1.1.6-1ubuntu2.dsc
+ 4800845cdc323efbb9663c180f18723a 387794 libibverbs_1.1.6.orig.tar.gz
+ 643e90fca09c80830043b2523da5a726 5252 libibverbs_1.1.6-1ubuntu2.debian.tar.gz
+Dm-Upload-Allowed: yes
+Homepage: http://www.openfabrics.org/
+Package-List: 
+ ibverbs-utils deb net extra
+ libibverbs-dev deb libdevel extra
+ libibverbs1 deb libs extra
+ libibverbs1-dbg deb debug extra
+Checksums-Sha1:
+ 5e59afc2482deca3a78e50d5cc4865baa3506279 1401 libibverbs_1.1.6-1ubuntu2.dsc
+ 3b407ca32c3bd07782c281d82f045ea8c6672080 387794 libibverbs_1.1.6.orig.tar.gz
+ 2fe692e5d8c217fff6e10ab7701c389437d76095 5252 libibverbs_1.1.6-1ubuntu2.debian.tar.gz
+Checksums-Sha256:
+ bf262b84a963091a39ab47215b3e0bdeb9e5f3a25c382ed7a6792cf1df0b5815 1401 libibverbs_1.1.6-1ubuntu2.dsc
+ e8fb1adc02b693a5377b5f7eaf22a9dd54cd68a6fba289296393de9f76c1ae93 387794 libibverbs_1.1.6.orig.tar.gz
+ bcc667b5f68a7b22a37c0a5246654c5c3828328ae352d1b71d4d8d1a93ad5a48 5252 libibverbs_1.1.6-1ubuntu2.debian.tar.gz
+
 Package: libidn
 Binary: idn, libidn11-dev, libidn11, libidn11-java
 Version: 1.28-1
@@ -998,6 +1031,36 @@ Checksums-Sha256:
  a8a2ac59d79d332074877ffb8bd0bb4ec4969d0279194ec39f6fd0df75e8e8b4 1583 libnetfilter-conntrack_1.0.3-1.dsc
  fc1710854d26d527087dbbefb110193650d9aae1876f90cb64b8d5c0a8dd95a4 390454 libnetfilter-conntrack_1.0.3.orig.tar.bz2
  adc65b532bdf665b1f235e3ce9d2731c4d4607aec874e4ed226c828d47c969b0 2694 libnetfilter-conntrack_1.0.3-1.debian.tar.gz
+
+Package: libstatgrab
+Binary: libstatgrab6, libstatgrab-dev, saidar, statgrab
+Version: 0.17-1ubuntu1
+Priority: optional
+Section: libs
+Maintainer: Bartosz Fenski <fenio@debian.org>
+Build-Depends: debhelper (>> 8.0.0), libncurses5-dev, autotools-dev, dh-autoreconf
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/libs/libstatgrab
+Files:
+ af878903ccda7f7736ae884d8d5cbe34 1297 libstatgrab_0.17-1ubuntu1.dsc
+ 58385c9392898be3b09ffc5e3ebe8717 463224 libstatgrab_0.17.orig.tar.gz
+ a9d75c349070a2c458bb0e276a9e7819 3943 libstatgrab_0.17-1ubuntu1.debian.tar.gz
+Homepage: http://www.i-scream.org/libstatgrab/
+Package-List: 
+ libstatgrab-dev deb libdevel optional
+ libstatgrab6 deb libs optional
+ saidar deb utils optional
+ statgrab deb utils optional
+Checksums-Sha1:
+ 8008361de465badb54b672744b8109aa900b534b 1297 libstatgrab_0.17-1ubuntu1.dsc
+ c3f146ac5baa69ca0f8521c5a6daa6e6c8603ee5 463224 libstatgrab_0.17.orig.tar.gz
+ b1419dec86dc55e32474a6096f2439b01914429a 3943 libstatgrab_0.17-1ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 2de164bc544baec742beba74b5cbf767f1945731569e495a23b5ecd1ab82df9e 1297 libstatgrab_0.17-1ubuntu1.dsc
+ bbaa88c6bde8bd3cf2720b81a26528cc055a7e83e4ea3bdb1d0a3c4287cceb88 463224 libstatgrab_0.17.orig.tar.gz
+ 0c12a7dac1ee8fdd03146b7f51de2512c3c2e9be0badcc3bd5430070771c1d7c 3943 libstatgrab_0.17-1ubuntu1.debian.tar.gz
 
 Package: lintian
 Binary: lintian
