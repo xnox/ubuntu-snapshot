@@ -19,6 +19,55 @@ Description-md5: 78c404926f64e6525ea240a527f23143
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: binutils
+Priority: optional
+Section: devel
+Installed-Size: 12184
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: powerpc
+Version: 2.23.52.20130722-1ubuntu1
+Replaces: binutils-gold (<< 2.20.51.20100415), binutils-mingw-w64-i686 (<< 2.23.52.20130612-1+3), binutils-mingw-w64-x86-64 (<< 2.23.52.20130612-1+3)
+Provides: binutils-gold, elf-binutils
+Depends: libc6 (>= 2.11), zlib1g (>= 1:1.2.0)
+Suggests: binutils-doc (>= 2.23.52.20130722-1ubuntu1)
+Conflicts: binutils-gold (<< 2.20.51.20100415), elf-binutils, gas, modutils (<< 2.4.19-1)
+Breaks: binutils-mingw-w64-i686 (<< 2.23.52.20130612-1+3), binutils-mingw-w64-x86-64 (<< 2.23.52.20130612-1+3)
+Filename: pool/main/b/binutils/binutils_2.23.52.20130722-1ubuntu1_powerpc.deb
+Size: 4094704
+MD5sum: 502d763f1fde29fd04b151fc775b31d7
+SHA1: 970e68cc4b3431395beb006ce6160ef4653c9641
+SHA256: 32ae7e50bbb3e10773275ecfbd2321a80cef3b75d08350dc93e1b0c993d41d60
+Description: GNU assembler, linker and binary utilities
+Description-md5: fde49b4cfeaad346a6e094f973da28d7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: binutils-dev
+Priority: extra
+Section: devel
+Installed-Size: 13719
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: powerpc
+Source: binutils
+Version: 2.23.52.20130722-1ubuntu1
+Replaces: libbfd-dev, libc5-dev
+Provides: libbfd-dev
+Depends: binutils (= 2.23.52.20130722-1ubuntu1)
+Conflicts: libbfd-dev
+Filename: pool/main/b/binutils/binutils-dev_2.23.52.20130722-1ubuntu1_powerpc.deb
+Size: 5145872
+MD5sum: 929964ea87d3f62a87984f42be23897e
+SHA1: 4fd254be10cb9bc047cb609d498b96326ae73741
+SHA256: bf2e05e7acf648e30bd16b808cff24d4416a905ad9c09c0f7f78d31057567fd8
+Description: GNU binary utilities (BFD development files)
+Description-md5: ddc22c04156534b000b4f021b88a6023
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: binutils-doc
 Priority: optional
 Section: doc
@@ -38,6 +87,31 @@ SHA1: 28cbd476822f85c173a3e6ea9008e9606757fda0
 SHA256: 7ef40be2cfabc8a0a63ab7d28bc4bddafc08635507ad778e26a1af8f195014a7
 Description: Documentation for the GNU assembler, linker and binary utilities
 Description-md5: 61fd9f95707b9eb9ad8fe9b13a862636
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: binutils-spu
+Priority: optional
+Section: devel
+Installed-Size: 4013
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: powerpc
+Source: binutils
+Version: 2.23.52.20130722-1ubuntu1
+Replaces: spu-binutils
+Provides: spu-binutils
+Depends: libc6 (>= 2.11), zlib1g (>= 1:1.2.0), binutils (= 2.23.52.20130722-1ubuntu1)
+Recommends: libc6-dev
+Suggests: binutils-doc (>= 2.23.52.20130722-1ubuntu1)
+Conflicts: spu-binutils
+Filename: pool/main/b/binutils/binutils-spu_2.23.52.20130722-1ubuntu1_powerpc.deb
+Size: 1576396
+MD5sum: 19bacaade5eabb78d39d96fcc6ae1d5d
+SHA1: a213aeba2b611abad811a45575c006e4beee2e81
+SHA256: 0e3c99b39499daa2e372faaf0f88b122b47b05d70c2a2184673d70b17dd2d3cf
+Description: GNU assembler, linker and binary utilities targeted for spu-elf
+Description-md5: 4e89b57caad5a98c31bb85ee97a40e16
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -716,13 +790,13 @@ Installed-Size: 64
 Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
 Architecture: powerpc
 Source: lightdm
-Version: 1.7.6-0ubuntu2
-Depends: liblightdm-gobject-1-0 (= 1.7.6-0ubuntu2)
-Filename: pool/main/l/lightdm/gir1.2-lightdm-1_1.7.6-0ubuntu2_powerpc.deb
-Size: 5524
-MD5sum: cd9f86d1599df181975dcde442638624
-SHA1: 2f94c1c4ee7079d308748417a31cb7c1a4ea1df1
-SHA256: 0f873ccb0043840f0fa6bcb5194533391e42edc213d4043239f0cd1436c62f9f
+Version: 1.7.7-0ubuntu1
+Depends: liblightdm-gobject-1-0 (= 1.7.7-0ubuntu1)
+Filename: pool/main/l/lightdm/gir1.2-lightdm-1_1.7.7-0ubuntu1_powerpc.deb
+Size: 5528
+MD5sum: 8e0c6ebaffbb66cc80938dd190d6cf18
+SHA1: f1282c958f3096c1759b9d0fc90fcc9a2a413881
+SHA256: a95cdfe270bd33b8be91ad6448a494be679e7403286425ce0f02842ef0bc82d3
 Description: Typelib file for liblightdm-1
 Homepage: https://launchpad.net/lightdm
 Description-md5: 15edc3a87b41d0dccba5699c5b28aa73
@@ -837,6 +911,220 @@ Homepage: http://gcc.gnu.org/
 Description-md5: ef51de6b57526dc4a161944678606486
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: gvfs
+Priority: optional
+Section: libs
+Installed-Size: 563
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Version: 1.17.2-0ubuntu3
+Depends: libc6 (>= 2.7), libglib2.0-0 (>= 2.37.3), libudev1 (>= 183), gvfs-daemons (>= 1.17.2-0ubuntu3), gvfs-daemons (<< 1.17.2-0ubuntu3.1~), gvfs-libs (= 1.17.2-0ubuntu3), gvfs-common (= 1.17.2-0ubuntu3)
+Suggests: gvfs-backends, gvfs-backends-goa
+Breaks: brasero (<< 2.28.0-2), libgdu0 (<< 2.28.1-3), libglib2.0-0 (<< 2.30), rhythmbox (<< 0.12.6-2)
+Filename: pool/main/g/gvfs/gvfs_1.17.2-0ubuntu3_powerpc.deb
+Size: 77002
+MD5sum: 4e1b8a1b9d81857be7ac8582c86121a4
+SHA1: 520afc5fcc475817249be56283992409df26542a
+SHA256: 6a50f61b035964a8be80f66d2936f930533d21e18688daa5d10a14f485dda3bb
+Description: userspace virtual filesystem - GIO module
+Multi-Arch: same
+Description-md5: 61f453207c2ab18880315d27f13ee0fb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-dvd-live, kubuntu-active-dvd-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gvfs-backends
+Priority: optional
+Section: libs
+Installed-Size: 1404
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gvfs
+Version: 1.17.2-0ubuntu3
+Replaces: gvfs-common (<< 1.12.0-2)
+Depends: libarchive13, libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libavahi-glib1 (>= 0.6.16), libbluetooth3 (>= 4.91), libc6 (>= 2.7), libcdio-cdda1 (>= 0.83), libcdio-paranoia1 (>= 0.83), libcdio13 (>= 0.83), libdbus-1-3 (>= 1.0.2), libdbus-glib-1-2 (>= 0.78), libexpat1 (>= 2.0.1), libgcrypt11 (>= 1.4.5), libglib2.0-0 (>= 2.37.3), libgphoto2-2 (>= 2.4.10.1), libgphoto2-port0 (>= 2.4.10.1), libgtk-3-0 (>= 3.0.0), libgudev-1.0-0 (>= 146), libimobiledevice3 (>= 1.1.0), libmtp9 (>= 1.1.6), libplist1 (>= 0.16), libsmbclient (>= 2:3.3.1), libsoup-gnome2.4-1 (>= 2.34.0), libsoup2.4-1 (>= 2.33.92), libxml2 (>= 2.7.4), dconf-gsettings-backend | gsettings-backend, gvfs (= 1.17.2-0ubuntu3), gvfs-daemons (= 1.17.2-0ubuntu3), gvfs-libs (= 1.17.2-0ubuntu3), gvfs-common (= 1.17.2-0ubuntu3), psmisc
+Recommends: gnome-keyring
+Suggests: obex-data-server, samba-common
+Breaks: gvfs-common (<< 1.12.0-2)
+Filename: pool/main/g/gvfs/gvfs-backends_1.17.2-0ubuntu3_powerpc.deb
+Size: 213722
+MD5sum: 57a656d2976d9f1fea6e8458b9eeef28
+SHA1: 95790038e01d4093e6bb1510be23ff266137edae
+SHA256: 0f84e30027fc3210dff2b2b00f0ca422680a84dfaf0ec8c20034a22303472f3c
+Description: userspace virtual filesystem - backends
+Multi-Arch: foreign
+Description-md5: 33d9d0b77211277edc2b5fdaf9916857
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gvfs-backends-goa
+Priority: optional
+Section: gnome
+Installed-Size: 324
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gvfs
+Version: 1.17.2-0ubuntu3
+Replaces: gvfs-common (<< 1.12.0-2)
+Depends: libc6 (>= 2.3.5), libglib2.0-0 (>= 2.37.3), libgoa-1.0-0 (>= 3.7.90), gvfs (= 1.17.2-0ubuntu3), gvfs-backends (= 1.17.2-0ubuntu3), gvfs-daemons (= 1.17.2-0ubuntu3), gvfs-libs (= 1.17.2-0ubuntu3), gvfs-common (= 1.17.2-0ubuntu3), psmisc
+Recommends: gnome-keyring
+Suggests: obex-data-server, samba-common
+Breaks: gvfs-common (<< 1.12.0-2)
+Filename: pool/main/g/gvfs/gvfs-backends-goa_1.17.2-0ubuntu3_powerpc.deb
+Size: 22896
+MD5sum: 99df7aa9b756b3b8c7085eddecb76c44
+SHA1: b9641202145be3e0d3772fd5e9f756170b4d0d16
+SHA256: bac68fd36b2a7772b008ae03cf75cd0cb82e7a498450f95ff2f6b020d5f7c7f1
+Description: userspace virtual filesystem - GOA backend
+Multi-Arch: foreign
+Description-md5: 34ef27102d4efa7c7e035d90ecec253c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gvfs-bin
+Priority: optional
+Section: libs
+Installed-Size: 422
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gvfs
+Version: 1.17.2-0ubuntu3
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.37.0), gvfs-common (= 1.17.2-0ubuntu3)
+Suggests: gvfs
+Filename: pool/main/g/gvfs/gvfs-bin_1.17.2-0ubuntu3_powerpc.deb
+Size: 47174
+MD5sum: b4aacbc7f19a6fa779fb97287cadeb9b
+SHA1: a0cdc44eb972118bddc333c8c21bdff888bb4d46
+SHA256: b54d030a38d491d415fcd9fba17a1b8f95e6b00cb1303af7dc8370521be625d2
+Description: userspace virtual filesystem - binaries
+Multi-Arch: foreign
+Description-md5: 02be92bf6407403290f8dec1428dea18
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gvfs-common
+Priority: optional
+Section: libs
+Installed-Size: 340
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: gvfs
+Version: 1.17.2-0ubuntu3
+Replaces: gvfs (<< 1.10.1-1)
+Depends: desktop-file-utils
+Recommends: gvfs
+Breaks: gvfs (<< 1.10.1-1)
+Filename: pool/main/g/gvfs/gvfs-common_1.17.2-0ubuntu3_all.deb
+Size: 40488
+MD5sum: 903d393bb9a466411c11ff8b801679ae
+SHA1: 034b4d4e839ef30f85abc6cd337a2ad0fc88868c
+SHA256: eb770eac1571c00c910f67fdb45dc8cbc38f09881bed5c0472826e280797fcfa
+Description: userspace virtual filesystem - common data files
+Multi-Arch: foreign
+Description-md5: 9572165fd324aff77138e36127f7d629
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-dvd-live, kubuntu-active-dvd-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gvfs-daemons
+Priority: optional
+Section: libs
+Installed-Size: 646
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gvfs
+Version: 1.17.2-0ubuntu3
+Replaces: gvfs (<< 1.10.1-1), gvfs-backends (<< 1.8.1-1)
+Depends: libc6 (>= 2.7), libglib2.0-0 (>= 2.37.3), libgudev-1.0-0 (>= 146), libsecret-1-0 (>= 0.7), libsystemd-login0 (>= 31), libudev1 (>= 183), libudisks2-0 (>= 2.0.91), x11-utils, udisks2, gvfs-libs (= 1.17.2-0ubuntu3), gvfs-common (= 1.17.2-0ubuntu3)
+Recommends: dbus, policykit-1-gnome, gvfs
+Suggests: gvfs-backends, gvfs-backends-goa
+Breaks: brasero (<< 2.28.0-2), gvfs (<< 1.10.1-1), gvfs-backends (<< 1.8.1-1), libgdu0 (<< 2.28.1-3), libglib2.0-0 (<< 2.28.6-2), rhythmbox (<< 0.12.6-2)
+Filename: pool/main/g/gvfs/gvfs-daemons_1.17.2-0ubuntu3_powerpc.deb
+Size: 91556
+MD5sum: 032e8ba1ad29f8222533423bb2efb227
+SHA1: 46284b5c1ab4a2fbecf29b50e98cbb40d1fd5975
+SHA256: 5e4533a002b848f8bc1f3b1315257eb96c4a3fff14aa42b3049676ad1f432d1d
+Description: userspace virtual filesystem - servers
+Multi-Arch: foreign
+Description-md5: 3ce59381bd6888364e59f20a23789369
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-dvd-live, kubuntu-active-dvd-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gvfs-dbg
+Priority: extra
+Section: debug
+Installed-Size: 7364
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gvfs
+Version: 1.17.2-0ubuntu3
+Depends: gvfs (= 1.17.2-0ubuntu3)
+Filename: pool/main/g/gvfs/gvfs-dbg_1.17.2-0ubuntu3_powerpc.deb
+Size: 1580540
+MD5sum: 9e195896d8ac1eb32f5cd314f9193444
+SHA1: e7cc87251c1555761e3ebd1d991d5fb24ec5ac1d
+SHA256: 23527df6d09830ac35440b903497fd9e5b57f2ad49bd9e5e3b0d5ec8e40a636c
+Description: userspace virtual filesystem - debugging information
+Description-md5: 5812d809c0496325bb376dd4fd9c9dc0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gvfs-fuse
+Priority: optional
+Section: libs
+Installed-Size: 263
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gvfs
+Version: 1.17.2-0ubuntu3
+Depends: libc6 (>= 2.3.5), libfuse2 (>= 2.8.1), libglib2.0-0 (>= 2.37.0), gvfs (= 1.17.2-0ubuntu3), fuse (>= 2.8.4)
+Filename: pool/main/g/gvfs/gvfs-fuse_1.17.2-0ubuntu3_powerpc.deb
+Size: 12014
+MD5sum: c55b5b83912b05ebcf0ccab89442dae3
+SHA1: 4802ba5fe50ceae1b40f2c5d9789fd5e0e83da59
+SHA256: 47e8293340270b0d113bee5e46e51a84f2ac9c39670142cddb173cb1f87afda8
+Description: userspace virtual filesystem - fuse server
+Description-md5: e8ae435dfe556826602d3a021208211e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gvfs-libs
+Priority: optional
+Section: libs
+Installed-Size: 610
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gvfs
+Version: 1.17.2-0ubuntu3
+Replaces: gvfs (<< 1.10.1-1), libgvfscommon0
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3), libsecret-1-0 (>= 0.7), gvfs-common (= 1.17.2-0ubuntu3)
+Conflicts: libgvfscommon0
+Breaks: gvfs (<< 1.10.1-1)
+Filename: pool/main/g/gvfs/gvfs-libs_1.17.2-0ubuntu3_powerpc.deb
+Size: 89968
+MD5sum: d44e378c078028aaee5e7fab968b6e37
+SHA1: 8ab31f266ad6a1a79ba3a5a0a4edd74b14567d22
+SHA256: 1f816b610e98533a4e532b7dcadc5b419adb1bbdc5ebe591f453f0d0a6a1bbf0
+Description: userspace virtual filesystem - private libraries
+Multi-Arch: same
+Description-md5: 6558598d97ea2bbb18ca95c90e7c0683
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-dvd-live, kubuntu-active-dvd-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: hardening-includes
 Priority: extra
@@ -2487,6 +2775,128 @@ Description-md5: 7e2cdd49ce630cb7e2347d7fe5ca5677
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libgphoto2-2
+Priority: optional
+Section: libs
+Installed-Size: 3195
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: libgphoto2
+Version: 2.4.14-2.1
+Depends: libc6 (>= 2.15), libexif12, libgd3 (>= 2.1.0~alpha~), libgphoto2-port0 (>= 2.4.10.1), libjpeg8 (>= 8c), libltdl7 (>= 2.4.2)
+Pre-Depends: multiarch-support
+Recommends: udev (>= 0.175), libgphoto2-l10n (>= 2.4.14-2.1)
+Suggests: gphoto2 (>= 2.1.1)
+Breaks: gphoto2 (<= 2.1.1)
+Filename: pool/main/libg/libgphoto2/libgphoto2-2_2.4.14-2.1_powerpc.deb
+Size: 992092
+MD5sum: d6f2d5345295a6cfac2cd3d96ce6d894
+SHA1: 0903206f36d398b83a5dd14ac6e438a7114a60dd
+SHA256: 6f952bd24c2405fa4770fd26e66e994a58810f0b12a3b227ae3436004bc17b14
+Description: gphoto2 digital camera library
+Multi-Arch: same
+Homepage: http://www.gphoto.org/proj/libgphoto2/
+Description-md5: 0667f79ceb3d5a999a0ff55ad225e156
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgphoto2-2-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 8470
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: libgphoto2
+Version: 2.4.14-2.1
+Depends: libgphoto2-2 (= 2.4.14-2.1), libexif-dev, libusb-dev, libc-dev, pkg-config
+Filename: pool/main/libg/libgphoto2/libgphoto2-2-dev_2.4.14-2.1_powerpc.deb
+Size: 3328418
+MD5sum: d608c37c49190d21fef06fc1d7bb0d25
+SHA1: 62462195f39ca463f33e320e080126625ad75484
+SHA256: d79e2672e866f4bff6df0a51c6fb36f15de1bf9b684a588589735bd6fbf7d838
+Description: gphoto2 digital camera library (development files)
+Homepage: http://www.gphoto.org/proj/libgphoto2/
+Description-md5: 09f6d0ae3f118a398b90fb84845618e0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgphoto2-dev-doc
+Priority: optional
+Section: doc
+Installed-Size: 6222
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Architecture: all
+Source: libgphoto2
+Version: 2.4.14-2.1
+Depends: libjs-jquery
+Filename: pool/main/libg/libgphoto2/libgphoto2-dev-doc_2.4.14-2.1_all.deb
+Size: 3074576
+MD5sum: 29690c25bdcd13963e218a04d3aefdac
+SHA1: bdded397f6cca094f867b193b7457203010032a0
+SHA256: e9eaa13d7f90c7d3c1bbecce7bdba6e317e89363ae15d01aa8faa4c52bfe71ee
+Description: gphoto2 digital camera library (development documentation)
+Homepage: http://www.gphoto.org/proj/libgphoto2/
+Description-md5: 80bdc5b1f735d5956b63d68eeabdaa75
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgphoto2-l10n
+Priority: optional
+Section: localization
+Installed-Size: 64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Architecture: all
+Source: libgphoto2
+Version: 2.4.14-2.1
+Replaces: libgphoto2-2 (<= 2.4.10.1-4)
+Breaks: libgphoto2-2 (<= 2.4.10.1-4)
+Filename: pool/main/libg/libgphoto2/libgphoto2-l10n_2.4.14-2.1_all.deb
+Size: 7214
+MD5sum: ddda40ec00c03f8bd6b68513a42ec390
+SHA1: cd709f796a9170e527f714ca773a221587ba57a6
+SHA256: 360f8674500658e7fde011511a43b1fc7b141391c87e69efa5c4f101094c6d4c
+Description: gphoto2 digital camera library - localized messages
+Multi-Arch: foreign
+Homepage: http://www.gphoto.org/proj/libgphoto2/
+Description-md5: ab44a2500d46c48e4f7f5c712df346d2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgphoto2-port0
+Priority: optional
+Section: libs
+Installed-Size: 236
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: libgphoto2
+Version: 2.4.14-2.1
+Replaces: libgphoto2port
+Provides: libgphoto2port
+Depends: libc6 (>= 2.15), libltdl7 (>= 2.4.2), libusb-1.0-0 (>= 2:1.0.8)
+Pre-Depends: multiarch-support
+Suggests: gphoto2 (>> 2.1.0), gtkam
+Conflicts: libgphoto2port
+Breaks: gphoto2 (<= 2.1.1)
+Filename: pool/main/libg/libgphoto2/libgphoto2-port0_2.4.14-2.1_powerpc.deb
+Size: 44012
+MD5sum: bb5129d1519f2d462c5402a14e335280
+SHA1: 1e7a64d5fe6bd9bb8402dbf9c9a1989ca7acf687
+SHA256: b1164c7f4cf9ba14aed2a2adde031f1274edc655d0fe4c9ffe299c24a5248b39
+Description: gphoto2 digital camera port library
+Multi-Arch: same
+Homepage: http://www.gphoto.org/proj/libgphoto2/
+Description-md5: 6e52236fade1dd1f9b033de909479e66
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: liblightdm-gobject-1-0
 Priority: optional
 Section: x11
@@ -2494,14 +2904,14 @@ Installed-Size: 130
 Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
 Architecture: powerpc
 Source: lightdm
-Version: 1.7.6-0ubuntu2
+Version: 1.7.7-0ubuntu1
 Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3), libx11-6, libxklavier16 (>= 5.0)
 Recommends: lightdm, accountsservice
-Filename: pool/main/l/lightdm/liblightdm-gobject-1-0_1.7.6-0ubuntu2_powerpc.deb
-Size: 33016
-MD5sum: 46df107613a7dcbb69319b6c9f732a47
-SHA1: a46dab3dde2d5e83ac4dd8eb5f5a55f06fb8e135
-SHA256: d445c4d6f1e91855cfefe185625852271c268b151a7bfdb1d03a1d61e3b94071
+Filename: pool/main/l/lightdm/liblightdm-gobject-1-0_1.7.7-0ubuntu1_powerpc.deb
+Size: 32968
+MD5sum: d17d37e18cfe86e2a920f243f497346c
+SHA1: 7a5a135ce8fe538bbc2e170830f1903f1d70f3b1
+SHA256: 7ebdc1780b7b5c69040e8b1bb4f7a20fb0706cafd36f802befff500c2b772a20
 Description: LightDM GObject client library
 Homepage: https://launchpad.net/lightdm
 Description-md5: 6c3bad2fb3c13c192ee2080b06f2b9b2
@@ -2516,13 +2926,13 @@ Installed-Size: 170
 Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
 Architecture: powerpc
 Source: lightdm
-Version: 1.7.6-0ubuntu2
-Depends: liblightdm-gobject-1-0 (= 1.7.6-0ubuntu2), libglib2.0-dev, libdbus-glib-1-dev, libxklavier-dev
-Filename: pool/main/l/lightdm/liblightdm-gobject-1-dev_1.7.6-0ubuntu2_powerpc.deb
-Size: 11384
-MD5sum: f02b54654e5d33356ba481bd51fd60ae
-SHA1: 3ce54fbf293b032bfd8f3313ab151a852fc477ca
-SHA256: 519b2f09705b59cf75886c715a316d8e9ac268631c859ddc47810a09459698e0
+Version: 1.7.7-0ubuntu1
+Depends: liblightdm-gobject-1-0 (= 1.7.7-0ubuntu1), libglib2.0-dev, libdbus-glib-1-dev, libxklavier-dev
+Filename: pool/main/l/lightdm/liblightdm-gobject-1-dev_1.7.7-0ubuntu1_powerpc.deb
+Size: 11382
+MD5sum: 6351a560550ddf27b58702fb496b6972
+SHA1: 3b61db25acd1b85f9925fc8734e0d70868582616
+SHA256: 8878b99c80ffe4cd2734a2b6fd5785c06226431247fbce01356c9f5db4c2e0aa
 Description: LightDM GObject client library (development files)
 Homepage: https://launchpad.net/lightdm
 Description-md5: 7b47429d527a03b25da17dce04d74b8e
@@ -2536,12 +2946,12 @@ Installed-Size: 226
 Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
 Architecture: all
 Source: lightdm
-Version: 1.7.6-0ubuntu2
-Filename: pool/main/l/lightdm/liblightdm-gobject-1-doc_1.7.6-0ubuntu2_all.deb
-Size: 20714
-MD5sum: 373cb932207273879e7cb6761b4230f7
-SHA1: 02bf2338a18c9b03d8c0fa1fa73eac2b40b08132
-SHA256: 0899f463396ce747766ee585ca14ac51a9892c6843ef162686fcc054d229c625
+Version: 1.7.7-0ubuntu1
+Filename: pool/main/l/lightdm/liblightdm-gobject-1-doc_1.7.7-0ubuntu1_all.deb
+Size: 20666
+MD5sum: 58b12a28a6c767a8c0de73c601cb9f91
+SHA1: 62149190978df1692667c8dce656abde52eda157
+SHA256: d29e70708e54b9a0fba79e0cd6c6d6400f7bd005216271fc7de7b9fd27abd6b2
 Description: LightDM client library (documentation)
 Homepage: https://launchpad.net/lightdm
 Description-md5: ed7ca117d51a427f54238d598a2c843e
@@ -2551,20 +2961,20 @@ Origin: Ubuntu
 Package: liblightdm-qt-3-0
 Priority: optional
 Section: x11
-Installed-Size: 155
+Installed-Size: 156
 Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
 Architecture: powerpc
 Source: lightdm
-Version: 1.7.6-0ubuntu2
+Version: 1.7.7-0ubuntu1
 Replaces: liblightdm-qt-1-0 (>= 1.1.1)
 Depends: libc6 (>= 2.1.3), libgcc1 (>= 1:4.1.1), liblightdm-gobject-1-0 (>= 1.4.0), libqt4-dbus (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.1.1)
 Recommends: lightdm
 Conflicts: liblightdm-qt-1-0 (>= 1.1.1)
-Filename: pool/main/l/lightdm/liblightdm-qt-3-0_1.7.6-0ubuntu2_powerpc.deb
-Size: 37228
-MD5sum: 56feeb86232810bafbd62dc5c29b8c21
-SHA1: 91b8f69f66bece1b023b1be4a699966d2c6c5c0f
-SHA256: a740bade1408e422c92150bd078ece2b148471c1025ec30a0e2e6ac6ed094ffa
+Filename: pool/main/l/lightdm/liblightdm-qt-3-0_1.7.7-0ubuntu1_powerpc.deb
+Size: 37230
+MD5sum: d42d7abc59a0bb94a7b8654c9acc45a4
+SHA1: f6cc84fb8ce13ec907c5cfecbdc3ee04399df7e0
+SHA256: d5533b92e2f189301ae347178de3397bb80e8c52ad2a6e42ee3a2eec4b4b9a8b
 Description: LightDM Qt client library
 Homepage: https://launchpad.net/lightdm
 Description-md5: e4829922d725966a3547148f5055fe94
@@ -2579,15 +2989,15 @@ Installed-Size: 72
 Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
 Architecture: powerpc
 Source: lightdm
-Version: 1.7.6-0ubuntu2
+Version: 1.7.7-0ubuntu1
 Replaces: liblightdm-qt-1-dev (>= 1.1.1), liblightdm-qt-3-dev
-Depends: liblightdm-qt-3-0 (= 1.7.6-0ubuntu2), libqt4-dev
+Depends: liblightdm-qt-3-0 (= 1.7.7-0ubuntu1), libqt4-dev
 Breaks: liblightdm-qt-1-dev (>= 1.1.1), liblightdm-qt-3-dev
-Filename: pool/main/l/lightdm/liblightdm-qt-dev_1.7.6-0ubuntu2_powerpc.deb
-Size: 4348
-MD5sum: 03446a416c028d5d90a9e26b93469490
-SHA1: 6e78eec8320b50b140294687eb9fab363fc4f482
-SHA256: 75e8c0e0b71b70f34425817f908f8c12beb16d9c8a23aae2859e8ddd4299eb9d
+Filename: pool/main/l/lightdm/liblightdm-qt-dev_1.7.7-0ubuntu1_powerpc.deb
+Size: 4346
+MD5sum: fa0b5c9c48253ec31db5223923a6213f
+SHA1: dbfc55a26f762fef52bbfe476ade120ba73212e5
+SHA256: 879c8f54652ed02e0778a449d7d9ff609af375bab9c7091d6bb9e0f3085b15fa
 Description: LightDM Qt client library (development files)
 Homepage: https://launchpad.net/lightdm
 Description-md5: ff0d940b50715c82bbf4f79a43e4beb8
@@ -2601,14 +3011,14 @@ Installed-Size: 163
 Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
 Architecture: powerpc
 Source: lightdm
-Version: 1.7.6-0ubuntu2
+Version: 1.7.7-0ubuntu1
 Depends: libc6 (>= 2.1.3), libgcc1 (>= 1:4.1.1), liblightdm-gobject-1-0 (>= 1.4.0), libqt5core5 (>= 5.0.2), libqt5dbus5 (>= 5.0.2), libqt5gui5 (>= 5.0.2), libstdc++6 (>= 4.1.1)
 Recommends: lightdm
-Filename: pool/main/l/lightdm/liblightdm-qt5-3-0_1.7.6-0ubuntu2_powerpc.deb
+Filename: pool/main/l/lightdm/liblightdm-qt5-3-0_1.7.7-0ubuntu1_powerpc.deb
 Size: 39796
-MD5sum: 87b1ff499f21ded7fb8f61d59083e258
-SHA1: 4c50e294fd9fcdbb7d62f9b92a9ccf9df482cb3a
-SHA256: e43e71448e219fb335ac73d774623817b011f8d25783e19913ed241ed3a67cdb
+MD5sum: ad27d70f631ebbf88e8fe38891a6307f
+SHA1: be39905a3758fc1da8fcefc9db3bfd03ecda6c46
+SHA256: cad2878eb4dc02e31aed56d1b867f4750535c79a0a7e776f3ebf5ff2b612b4ec
 Description: LightDM Qt 5 client library
 Homepage: https://launchpad.net/lightdm
 Description-md5: 14bad12e84d0c8c995dabc65095c9b02
@@ -2622,13 +3032,13 @@ Installed-Size: 72
 Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
 Architecture: powerpc
 Source: lightdm
-Version: 1.7.6-0ubuntu2
-Depends: liblightdm-qt5-3-0 (= 1.7.6-0ubuntu2), libqt4-dev
-Filename: pool/main/l/lightdm/liblightdm-qt5-3-dev_1.7.6-0ubuntu2_powerpc.deb
+Version: 1.7.7-0ubuntu1
+Depends: liblightdm-qt5-3-0 (= 1.7.7-0ubuntu1), libqt4-dev
+Filename: pool/main/l/lightdm/liblightdm-qt5-3-dev_1.7.7-0ubuntu1_powerpc.deb
 Size: 4316
-MD5sum: 617cee09e33ae176bd56c40565902757
-SHA1: b507c1700596814ffd3cf16b69cf108d28c7b4e1
-SHA256: 9afd06e9b076b848b49f491c2f3688bce5e21d174ec670a4cba8acf411938a50
+MD5sum: c458e66d6b313e1a45cad254db323821
+SHA1: acebaad5f8a3120d9599dec45c5d71788a007efa
+SHA256: d465873c724c2af178dddd182205ff83b19e8f593a17d509d141cbdec6ae7f99
 Description: LightDM Qt 5 client library (development files)
 Homepage: https://launchpad.net/lightdm
 Description-md5: befe4f3f090b62ea12a3d96e66eeecbd
@@ -3149,23 +3559,62 @@ Section: x11
 Installed-Size: 496
 Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
 Architecture: powerpc
-Version: 1.7.6-0ubuntu2
+Version: 1.7.7-0ubuntu1
 Provides: x-display-manager
 Depends: debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.4), libgcrypt11 (>= 1.4.5), libglib2.0-0 (>= 2.37.3), libpam0g (>= 0.99.7.1), libxcb1, libxdmcp6, libpam-runtime (>= 0.76-14), libpam-modules, adduser, libglib2.0-bin, dbus, plymouth (>= 0.8.8-0ubuntu6.1)
 Pre-Depends: dpkg (>= 1.15.7.2)
 Recommends: xserver-xorg, unity-greeter | lightdm-greeter | lightdm-kde-greeter
 Conflicts: liblightdm-gobject-0-0, liblightdm-qt-0-0
-Filename: pool/main/l/lightdm/lightdm_1.7.6-0ubuntu2_powerpc.deb
-Size: 100498
-MD5sum: e90d50bb1ab09ea47f56882dff758ba8
-SHA1: 1bfc8027df9540e92020bc09fcbcdeecf9fc5967
-SHA256: 1a8f095054892a391ec16f84e61b68d3109c71f50d59932b179eaa91817e60b8
+Filename: pool/main/l/lightdm/lightdm_1.7.7-0ubuntu1_powerpc.deb
+Size: 100380
+MD5sum: 36c3ebcd7af4d605d680fbb7b4fbb47e
+SHA1: c48fce28f1451ba31c4861dcdd86697deeb68962
+SHA256: 09f1a4368c3ecd37f5a01dc8d10df7203957c9b5b9297357911469a05694c8d1
 Description: Display Manager
 Homepage: https://launchpad.net/lightdm
 Description-md5: a04ec89b09d7becf8ba288295841fad0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop
+
+Package: linux-doc
+Priority: optional
+Section: doc
+Installed-Size: 28214
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.10.0-5.14
+Replaces: linux-doc-3
+Conflicts: linux-doc-3
+Filename: pool/main/l/linux/linux-doc_3.10.0-5.14_all.deb
+Size: 8889970
+MD5sum: 0c2c5313649f3019d97b8eb8a646e682
+SHA1: 89b6b22f1b83d190c0602c2be96a985c130b78d6
+SHA256: 5013602e4bfbc2643209fc5c051b94dfce905babf9ba50b3d94763d3dccaa976
+Description: Linux kernel specific documentation for version 3.10.0
+Description-md5: 58b806404a9ba0df67f52afd3846213e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-3.10.0-5
+Priority: optional
+Section: devel
+Installed-Size: 60096
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.10.0-5.14
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux/linux-headers-3.10.0-5_3.10.0-5.14_all.deb
+Size: 12507744
+MD5sum: 63a3e88e51e54dab1c07e4ce99df62aa
+SHA1: 0ab7f20fd2a43ab2db816df1380d021aa3f45c37
+SHA256: 79bd01e1bfb4e94f7ec95df5f1b5a1912becb3a8efc4af975d399443876be7ea
+Description: Header files related to Linux kernel version 3.10.0
+Description-md5: 845bea33ecbffcb9e77471a82f1138b9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: linux-libc-dev
 Priority: optional
@@ -3207,6 +3656,47 @@ SHA1: b32750688cd6c60116b1642e74c35e9b7ecea23b
 SHA256: c16addc408e1b22459af95091946659f9bac51a2fd242c520a13eb23cb29ffcc
 Description: Linux kernel source with Ubuntu patches
 Description-md5: 1cac084d2ae18dfd06b96585b4be564d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-source-3.10.0
+Priority: optional
+Section: devel
+Installed-Size: 90999
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.10.0-5.14
+Provides: linux-source, linux-source-3
+Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
+Recommends: libc-dev, gcc, make
+Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
+Filename: pool/main/l/linux/linux-source-3.10.0_3.10.0-5.14_all.deb
+Size: 89649984
+MD5sum: 73586ca326a849d94e98cffb81d11a7f
+SHA1: 10decb7b234c3b7057a764274ba03cdb0b2c9611
+SHA256: bdca3cfc38a67e70b338c5433e05cf7df5690e30d635e8d90137b3a1308fbd1b
+Description: Linux kernel source for version 3.10.0 with Ubuntu patches
+Description-md5: 327c731447c46b8333ec862af2de6b3a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-tools-common
+Priority: optional
+Section: kernel
+Installed-Size: 175
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.10.0-5.14
+Replaces: linux-tools (<= 2.6.32-16.25)
+Filename: pool/main/l/linux/linux-tools-common_3.10.0-5.14_all.deb
+Size: 63158
+MD5sum: 7a4e8ad7465cc944afde75fb49eceb7b
+SHA1: bb40259f895d18ba2abd8c33a20181541b5becf9
+SHA256: 24d09fca36ae7edf9e2605bf536e0668edeeb8cc7419aa222035c043726ddd3f
+Description: Linux kernel version specific tools for version 3.10.0
+Description-md5: b183b6019cd2075ef15fe1723de9e3ce
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 

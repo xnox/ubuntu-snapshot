@@ -592,6 +592,7 @@ Testsuite: autopkgtest
 Package: gvfs
 Binary: gvfs, gvfs-daemons, gvfs-libs, gvfs-common, gvfs-fuse, gvfs-backends, gvfs-backends-goa, gvfs-bin, gvfs-dbg
 Version: 1.17.2-0ubuntu3
+Priority: optional
 Section: libs
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
@@ -781,6 +782,41 @@ Checksums-Sha256:
  1df55a02c4d173ff4e417503b67e6d7896409966a1560d3bb2b4e50f658a9376 284547 libglib-perl_1.301.orig.tar.gz
  f9beae91bde0dce3265dcbc031bd782b102b1f3194e74485a193932bb1b11c98 10022 libglib-perl_1.301-1.debian.tar.gz
 
+Package: libgphoto2
+Binary: libgphoto2-2-dev, libgphoto2-dev-doc, libgphoto2-port0, libgphoto2-2, libgphoto2-l10n
+Version: 2.4.14-2.1
+Priority: optional
+Section: libs
+Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 8.1.3~), libtool, libltdl-dev, zlib1g-dev, libusb-1.0-0-dev [!hurd-i386], libgpmg1-dev [linux-any], pkg-config, libexif-dev (>= 0.5.9), libjpeg-dev, doxygen, graphviz, libdbus-1-dev, libgd2-xpm-dev
+Build-Conflicts: liblockdev1-dev
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/libg/libgphoto2
+Files:
+ 5bbbf0199e48b7cc4dd0c053d0d104e9 2510 libgphoto2_2.4.14-2.1.dsc
+ 492bec63dd610906c3a28030be77e650 5619231 libgphoto2_2.4.14.orig.tar.gz
+ 7b09ef91172d17ec99b9608e8499fd6e 27154 libgphoto2_2.4.14-2.1.debian.tar.gz
+Uploaders: Frederic Peters <fpeters@debian.org> , David Paleino <dapal@debian.org> , Gürkan Sengün <gurkan@phys.ethz.ch>
+Homepage: http://www.gphoto.org/proj/libgphoto2/
+Vcs-Browser: http://git.debian.org/?p=pkg-phototools/libgphoto2.git
+Vcs-Git: git://git.debian.org/git/pkg-phototools/libgphoto2.git
+Package-List: 
+ libgphoto2-2 deb libs optional
+ libgphoto2-2-dev deb libdevel optional
+ libgphoto2-dev-doc deb doc optional
+ libgphoto2-l10n deb localization optional
+ libgphoto2-port0 deb libs optional
+Checksums-Sha1:
+ 35bf1a36ad441ad58e2b4e8882a2c1333e6ae280 2510 libgphoto2_2.4.14-2.1.dsc
+ 51ab570b50a56d137b1c5e921b564dc8d62f981b 5619231 libgphoto2_2.4.14.orig.tar.gz
+ 4b6b8df97d681bce06b1ea31f16120008ecf557b 27154 libgphoto2_2.4.14-2.1.debian.tar.gz
+Checksums-Sha256:
+ 7f7f7006e0bca5558df784ccf825fe2fca943eeea6388e5b358b96d0878f2550 2510 libgphoto2_2.4.14-2.1.dsc
+ bbe62dd1df964fe56991a1a674a4d78617e75bfb119c94887ff86ff7bcbed533 5619231 libgphoto2_2.4.14.orig.tar.gz
+ 2ecf8379015dd93d837c9ca93bd2d5ce50f9fdb5d83b051c20dbe4ce51b8b6f7 27154 libgphoto2_2.4.14-2.1.debian.tar.gz
+
 Package: libidn
 Binary: idn, libidn11-dev, libidn11, libidn11-java
 Version: 1.28-1
@@ -845,7 +881,7 @@ Checksums-Sha256:
 
 Package: lightdm
 Binary: lightdm, liblightdm-gobject-1-0, gir1.2-lightdm-1, liblightdm-qt-3-0, liblightdm-qt5-3-0, liblightdm-gobject-1-dev, liblightdm-qt-dev, liblightdm-qt5-3-dev, liblightdm-gobject-1-doc
-Version: 1.7.6-0ubuntu2
+Version: 1.7.7-0ubuntu1
 Priority: optional
 Section: x11
 Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
@@ -855,9 +891,9 @@ Standards-Version: 3.9.4
 Format: 3.0 (quilt)
 Directory: pool/main/l/lightdm
 Files:
- 134ea4847bc7f0dc24af8e19df61331b 2568 lightdm_1.7.6-0ubuntu2.dsc
- f00bb2e51428384c6cb9b56ec625714a 436436 lightdm_1.7.6.orig.tar.xz
- 6ceead827285e605da358e5c2ec6cd02 52856 lightdm_1.7.6-0ubuntu2.debian.tar.gz
+ 613103392428a6704bf397c7c0dfd880 1928 lightdm_1.7.7-0ubuntu1.dsc
+ 731be34de68cfbd44d7db33ae73608c9 436540 lightdm_1.7.7.orig.tar.xz
+ fe59911d5d9c51425c0b30a497837e69 52477 lightdm_1.7.7-0ubuntu1.debian.tar.gz
 Uploaders: Julien Lavergne <gilir@ubuntu.com>
 Homepage: https://launchpad.net/lightdm
 Package-List: 
@@ -871,13 +907,13 @@ Package-List:
  liblightdm-qt5-3-dev deb libdevel optional
  lightdm deb x11 optional
 Checksums-Sha1:
- d05ea34cb74f498cc0d3e73580148bfc7d54e7e3 2568 lightdm_1.7.6-0ubuntu2.dsc
- 462bfcd72672248cc9afe28a005ed812eee6c398 436436 lightdm_1.7.6.orig.tar.xz
- 7aa5cd5d6d248771c840532bdb3c806983a6bc43 52856 lightdm_1.7.6-0ubuntu2.debian.tar.gz
+ 232baf3c8de62c0112f3c9b97c312867f780e272 1928 lightdm_1.7.7-0ubuntu1.dsc
+ ab86a4812d1f562e89265667192d2734a906a009 436540 lightdm_1.7.7.orig.tar.xz
+ af2d7b69818539ea86bf43aa2b094278d6e43f87 52477 lightdm_1.7.7-0ubuntu1.debian.tar.gz
 Checksums-Sha256:
- a5f19a2bc52d5ce2a1f4d422fd52662ccb5f0e697122876142eaed1bb899e967 2568 lightdm_1.7.6-0ubuntu2.dsc
- fb9fcfb507466dae4793cfcb743a56df5ff7b870c87498839c02107c8c512ebf 436436 lightdm_1.7.6.orig.tar.xz
- 37d4a814e51520e0cb3e2be4e175e6b5f53063fa85644d32118ac1614a7cd392 52856 lightdm_1.7.6-0ubuntu2.debian.tar.gz
+ 1d1c58efa000bba18f55abd6a76e24d7d5fcccbc188f8af6d09e55a07a8a302b 1928 lightdm_1.7.7-0ubuntu1.dsc
+ 6165cb442c4e0e823d230f7bea82990fd514fcdb096fbb738dcd97c694f53913 436540 lightdm_1.7.7.orig.tar.xz
+ d4c96f112f3ff77a3ca1d7f6508bf9ce9b620263beaf90caf45feebb893494bf 52477 lightdm_1.7.7-0ubuntu1.debian.tar.gz
 
 Package: linux
 Binary: linux-source-3.10.0, linux-doc, linux-tools-common, linux-headers-3.10.0-5, linux-libc-dev, linux-tools-3.10.0-5, linux-image-3.10.0-5-generic, linux-image-extra-3.10.0-5-generic, linux-headers-3.10.0-5-generic, linux-image-3.10.0-5-generic-dbgsym, linux-udebs-generic, kernel-image-3.10.0-5-generic-di, nic-modules-3.10.0-5-generic-di, nic-shared-modules-3.10.0-5-generic-di, serial-modules-3.10.0-5-generic-di, ppp-modules-3.10.0-5-generic-di, firewire-core-modules-3.10.0-5-generic-di, scsi-modules-3.10.0-5-generic-di, plip-modules-3.10.0-5-generic-di, floppy-modules-3.10.0-5-generic-di, fat-modules-3.10.0-5-generic-di, nfs-modules-3.10.0-5-generic-di, md-modules-3.10.0-5-generic-di, usb-modules-3.10.0-5-generic-di, pcmcia-storage-modules-3.10.0-5-generic-di, fb-modules-3.10.0-5-generic-di, input-modules-3.10.0-5-generic-di, mouse-modules-3.10.0-5-generic-di, irda-modules-3.10.0-5-generic-di, parport-modules-3.10.0-5-generic-di, nic-pcmcia-modules-3.10.0-5-generic-di, pcmcia-modules-3.10.0-5-generic-di,
