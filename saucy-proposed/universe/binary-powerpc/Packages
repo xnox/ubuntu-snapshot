@@ -128,6 +128,98 @@ Description-md5: 24b72fcd3b9c9afee8776f2d281499a4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: akonadi-backend-mysql
+Priority: extra
+Section: universe/misc
+Installed-Size: 65
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: akonadi
+Version: 1.10.1-0ubuntu1
+Replaces: akonadi-server (<< 1.3.60~)
+Depends: mysql-server-core-5.5, mysql-client-core-5.5, libqt4-sql-mysql
+Recommends: akonadi-server
+Breaks: akonadi-server (<< 1.3.60~)
+Filename: pool/universe/a/akonadi/akonadi-backend-mysql_1.10.1-0ubuntu1_all.deb
+Size: 9080
+MD5sum: 940f8e39709448a7eb0b7d845cfa4ebd
+SHA1: a4f56dc5244e50d9fea13fcf1f0fddd6bfba4ffe
+SHA256: fe269294998038de9d9700ca81d1951518871f53816a8b80576f0856d4cfb2aa
+Description: MySQL storage backend for Akonadi
+Homepage: http://pim.kde.org/akonadi
+Description-md5: 44bbff2187bd34b353f73253edf50334
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome
+
+Package: akonadi-backend-postgresql
+Priority: extra
+Section: universe/misc
+Installed-Size: 40
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: akonadi
+Version: 1.10.1-0ubuntu1
+Replaces: akonadi-server (<< 1.3.60~)
+Depends: libqt4-sql-psql
+Recommends: akonadi-server, postgresql
+Breaks: akonadi-server (<< 1.3.60~)
+Filename: pool/universe/a/akonadi/akonadi-backend-postgresql_1.10.1-0ubuntu1_all.deb
+Size: 6558
+MD5sum: cc39eaad2d52da3bc3a217f6ff8cf5da
+SHA1: 64bb91558280a27c006a3c82e0eb3346b59dd277
+SHA256: 2dd271455a8a2fcf047b3e26781646bcc4a7ac1f64a69d3faf53fbd40bb9f82f
+Description: PostgreSQL storage backend for Akonadi
+Homepage: http://pim.kde.org/akonadi
+Description-md5: bd88f5341863115ed0f5865ef888ddfd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: akonadi-backend-sqlite
+Priority: extra
+Section: universe/misc
+Installed-Size: 109
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: powerpc
+Source: akonadi
+Version: 1.10.1-0ubuntu1
+Depends: libc6 (>= 2.1.3), libgcc1 (>= 1:4.1.1), libqt4-sql (>= 4:4.6.1), libqtcore4 (>= 4:4.7.0~beta1), libsqlite3-0 (>= 3.5.9), libstdc++6 (>= 4.1.1)
+Recommends: akonadi-server
+Filename: pool/universe/a/akonadi/akonadi-backend-sqlite_1.10.1-0ubuntu1_powerpc.deb
+Size: 24740
+MD5sum: 740afa25b533591474f64c5f11f23642
+SHA1: e753a22c730029315939597ec0ec769c3ad054cb
+SHA256: 5acf49f48303bf3bb487622226dab38e0124fb58ffbd360bc9d5bca492c158bf
+Description: SQLite storage backend for Akonadi
+Homepage: http://pim.kde.org/akonadi
+Description-md5: 904b79b56e98a3db270456d32ff78921
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: akonadi-dbg
+Priority: extra
+Section: universe/libdevel
+Installed-Size: 35713
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: powerpc
+Source: akonadi
+Version: 1.10.1-0ubuntu1
+Suggests: akonadi-server (= 1.10.1-0ubuntu1)
+Filename: pool/universe/a/akonadi/akonadi-dbg_1.10.1-0ubuntu1_powerpc.deb
+Size: 6789832
+MD5sum: f374a0fc043ebe27aeb2785662ed5a3c
+SHA1: bc946064d998da312c6c0171165a7edc41a69440
+SHA256: c9faf167e5a8feeefd9dcf60e6ae6509e34b2b49ccedd8167020b7ffda77502f
+Description: debugging symbols for the Akonadi PIM storage service
+Homepage: http://pim.kde.org/akonadi
+Description-md5: 58dd297f5d7987fa1880da046427f822
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: akonadi-facebook
 Priority: optional
 Section: universe/oldlibs
@@ -148,6 +240,29 @@ Homepage: http://pim.kde.org/
 Description-md5: 5b082a70ead0ce48017d039a8c9d2e3a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: akonadi-server
+Priority: extra
+Section: universe/net
+Installed-Size: 2326
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: powerpc
+Source: akonadi
+Version: 1.10.1-0ubuntu1
+Depends: libakonadiprotocolinternals1 (= 1.10.1-0ubuntu1), libboost-program-options1.53.0, libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libqt4-dbus (>= 4:4.8.0), libqt4-network (>= 4:4.6.0), libqt4-sql (>= 4:4.6.0), libqt4-xml (>= 4:4.6.0), libqtcore4 (>= 4:4.8.0), libqtgui4 (>= 4:4.6.0), libsoprano4 (>= 2.2.69), libstdc++6 (>= 4.4.0), akonadi-backend-mysql (= 1.10.1-0ubuntu1)
+Suggests: akonadi-backend-sqlite (= 1.10.1-0ubuntu1), akonadi-backend-postgresql (= 1.10.1-0ubuntu1)
+Filename: pool/universe/a/akonadi/akonadi-server_1.10.1-0ubuntu1_powerpc.deb
+Size: 499224
+MD5sum: 3e81344b793487d0d11fbc819373a5de
+SHA1: 606a3691c46bb0ad9ff9558a8288b06fe0892e17
+SHA256: 3eb7be7a59604875f4be15dab0fed2a97fdc06aead226666c16f5ef0e95b1ddb
+Description: Akonadi PIM storage service
+Homepage: http://pim.kde.org/akonadi
+Description-md5: 80144a9a021e5f971cbb61777684d38e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome
 
 Package: amarok
 Priority: optional
@@ -3390,26 +3505,6 @@ Description-md5: a7a36dcc9d48e26aac0cbc1afea0d55f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: hgsubversion
-Priority: extra
-Section: universe/vcs
-Installed-Size: 362
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Qijiang Fan <fqj1994@gmail.com>
-Architecture: all
-Version: 1.5-1
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), mercurial (>= 1.9.1-1~), subversion (>= 1.5), python-subvertpy (>= 0.7.4) | python-subversion
-Filename: pool/universe/h/hgsubversion/hgsubversion_1.5-1_all.deb
-Size: 76548
-MD5sum: 2993d8b7cec10a356982273ce5d8ecc3
-SHA1: 8c2c46781ee2801dd1bad2136001a45a52c09705
-SHA256: a8195f5e518139317eb800feb6a7db874c66c79b58e71ca49ca47b47cc74f8ae
-Description: Subversion client as Mercurial extension
-Homepage: http://bitbucket.org/durin42/hgsubversion
-Description-md5: 23995d280b6c113e11579a2d74eb9e5b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: hyperestraier
 Priority: optional
 Section: universe/text
@@ -3576,116 +3671,6 @@ SHA256: 8af5c1dbe469ff2b21cfb6fc3703015bc5e0a39fe7fb7da65276b5a41829e7ca
 Description: debugging files for Akonadi KDE runtime components
 Homepage: http://pim.kde.org/
 Description-md5: 30ad0b2ade7fc870bbf98ae519515672
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: knot
-Priority: extra
-Section: universe/net
-Installed-Size: 1208
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ondřej Surý <ondrej@debian.org>
-Architecture: powerpc
-Version: 1.3.0~rc4-2
-Depends: libc6 (>= 2.17), libssl1.0.0 (>= 1.0.0), liburcu1 (>= 0.6.7), zlib1g (>= 1:1.1.4), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), adduser
-Filename: pool/universe/k/knot/knot_1.3.0~rc4-2_powerpc.deb
-Size: 497680
-MD5sum: cdd364fa8f775d21d4669c1468e12f0c
-SHA1: 545884b705864db28ff9faeeeb54cc51a087be0a
-SHA256: 451c46ad94bced140cfc0c7e87219ee15d4f489bdccdfb3fffb9d188e3ff0fc0
-Description: authoritative domain name server
-Homepage: http://www.knot-dns.cz/
-Description-md5: c77d44009776f4be0b6783b06d4bef5e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: knot-dbg
-Priority: extra
-Section: universe/debug
-Installed-Size: 2668
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ondřej Surý <ondrej@debian.org>
-Architecture: powerpc
-Source: knot
-Version: 1.3.0~rc4-2
-Depends: knot (= 1.3.0~rc4-2)
-Recommends: gdb
-Filename: pool/universe/k/knot/knot-dbg_1.3.0~rc4-2_powerpc.deb
-Size: 2413490
-MD5sum: bfb1ce44332e36959655df9c00cd0fa1
-SHA1: 2df78f0b5d600e0b484438c105cfaa7318ef0e00
-SHA256: f581e08a9ff5b63183583c5cc09bb74fdefd50bb7ed3d08cacd83aa7f81a6da9
-Description: Debug symbols for Knot DNS
-Homepage: http://www.knot-dns.cz/
-Description-md5: 0781925147c63041d6938a3a3e20187d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: knot-dnsutils
-Priority: optional
-Section: universe/net
-Installed-Size: 699
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ondřej Surý <ondrej@debian.org>
-Architecture: powerpc
-Source: knot
-Version: 1.3.0~rc4-2
-Replaces: dnsutils
-Provides: dnsutils
-Depends: libc6 (>= 2.4), libssl1.0.0 (>= 1.0.0), liburcu1 (>= 0.6.7)
-Conflicts: dnsutils
-Filename: pool/universe/k/knot/knot-dnsutils_1.3.0~rc4-2_powerpc.deb
-Size: 274442
-MD5sum: ca9358f2bf8561ecb39b03aac32b6b64
-SHA1: 700cdb42fefa3555e1caf1173e485996b5007ba7
-SHA256: ba5db8c7a0c28d716959b6ccb4dd10b736a09d03b7aade21180608d453ed56e5
-Description: Clients provided with Knot DNS (kdig, knslookup, knsupdate)
-Homepage: http://www.knot-dns.cz/
-Description-md5: ec5da5ec140799142895955ceeeaeb40
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: knot-doc
-Priority: optional
-Section: universe/doc
-Installed-Size: 873
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ondřej Surý <ondrej@debian.org>
-Architecture: all
-Source: knot
-Version: 1.3.0~rc4-2
-Filename: pool/universe/k/knot/knot-doc_1.3.0~rc4-2_all.deb
-Size: 308180
-MD5sum: fc737ed8ddbfcf8fa8df4a48821b28aa
-SHA1: d0b32a3b9683f33bce7f06f19931831cadf32aec
-SHA256: 5710e04a972b044a22ac1b2b605bbdd78ae7017d663f7309211ed33f12a0ea67
-Description: Documentation for Knot DNS
-Homepage: http://www.knot-dns.cz/
-Description-md5: fb223756521e83a57fe71881a0d5c019
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: knot-host
-Priority: optional
-Section: universe/net
-Installed-Size: 381
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ondřej Surý <ondrej@debian.org>
-Architecture: powerpc
-Source: knot
-Version: 1.3.0~rc4-2
-Replaces: host
-Provides: host
-Depends: libc6 (>= 2.4), libssl1.0.0 (>= 1.0.0), liburcu1 (>= 0.6.7)
-Conflicts: host
-Filename: pool/universe/k/knot/knot-host_1.3.0~rc4-2_powerpc.deb
-Size: 140788
-MD5sum: e58044f3edfcccd1e67f15e6155e08f4
-SHA1: 1939a139d33a6a678a0c6e5cf03e538818c5ee99
-SHA256: 63ab2b96842dfc4a19d0e05ad7c14174a1543ac62f13015f8960d2d49194992b
-Description: Version of 'host' bundled with Knot DNS
-Homepage: http://www.knot-dns.cz/
-Description-md5: 41fb8f72b8e66baced10d2a5dd4615e7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -4654,6 +4639,53 @@ Homepage: http://gcc.gnu.org/
 Description-md5: ccd8d083ef8baca5305286f5c32217ea
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libakonadi-dev
+Priority: extra
+Section: universe/libdevel
+Installed-Size: 137
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: powerpc
+Source: akonadi
+Version: 1.10.1-0ubuntu1
+Depends: libakonadiprotocolinternals1 (= 1.10.1-0ubuntu1), libboost-dev, akonadi-server
+Suggests: pkg-config
+Filename: pool/universe/a/akonadi/libakonadi-dev_1.10.1-0ubuntu1_powerpc.deb
+Size: 15496
+MD5sum: be9a6aede0754c5d3a408ea4c86123dd
+SHA1: 8b2dbaa98ff46c65fd856813a819623c947e8cf2
+SHA256: 81cc5f76b65448ec1be54f3424cb576d6ec9d06a581e31019b2814de3cf4f8f3
+Description: development files for the Akonadi PIM storage service
+Homepage: http://pim.kde.org/akonadi
+Description-md5: 7a5c6d60679631d3585bce30c8e84f52
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libakonadiprotocolinternals1
+Priority: extra
+Section: universe/libs
+Installed-Size: 246
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: powerpc
+Source: akonadi
+Version: 1.10.1-0ubuntu1
+Replaces: libakonadiprivate1 (<< 1.4.90)
+Depends: libc6 (>= 2.1.3), libgcc1 (>= 1:4.1.1), libqt4-dbus (>= 4:4.6.0), libqtcore4 (>= 4:4.7.0~beta1), libstdc++6 (>= 4.1.1)
+Suggests: akonadi-server (= 1.10.1-0ubuntu1)
+Breaks: libakonadiprivate1 (<< 1.4.90)
+Filename: pool/universe/a/akonadi/libakonadiprotocolinternals1_1.10.1-0ubuntu1_powerpc.deb
+Size: 57890
+MD5sum: 627ada07db56cdcf98e92be30dc5bbb9
+SHA1: 1a4f3f6d650948c5664cd407b083c755ae04e369
+SHA256: 04c1e158afaf683972880920b0fd2263f5fb6d478f7853dcab2d9f76ca2f9efb
+Description: libraries for the Akonadi PIM storage service
+Homepage: http://pim.kde.org/akonadi
+Description-md5: fc68b591ff20eff8fb7e4c5e3375b4dd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome
 
 Package: libapache2-mod-musicindex
 Priority: optional
@@ -7458,16 +7490,16 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
 Architecture: all
 Source: postgis
-Version: 2.0.3-3
+Version: 2.0.3-4
 Replaces: libpostgis-jdbc, libpostgisjava, postgresql-postgis-java
 Depends: libpostgresql-jdbc-java
 Suggests: postgresql-9.1-postgis-2.0
 Breaks: libpostgis-jdbc, libpostgisjava, postgresql-postgis-java
-Filename: pool/universe/p/postgis/libpostgis-java_2.0.3-3_all.deb
-Size: 77448
-MD5sum: 30fa9865e8cc518903b771b61ca1ac7a
-SHA1: 5907ccc596aafd1f098cfcca28fffd9fe1d1a475
-SHA256: 64bb3e5e11e42f8cd6b331dca10fafb0c8425044b31ab739642227f5735a2a23
+Filename: pool/universe/p/postgis/libpostgis-java_2.0.3-4_all.deb
+Size: 77538
+MD5sum: cf3ada6d54d3978c4d83beaff7bb05c1
+SHA1: 449207d35d6b8ba34484bb6202a1cbc6a29f0afa
+SHA256: 810ba80af4009765e927704c8340cd489a3c494e89e3a9747164892e9193cfa9
 Description: Geographic objects support for PostgreSQL -- JDBC support
 Homepage: http://postgis.refractions.net/
 Description-md5: 9a0091420d5a2bf380ec2f5dff0a1246
@@ -7796,27 +7828,6 @@ SHA256: 4f75899540cc98019abfa46c9658f00af50afc8ff087aad9e6e1b6147e4763c9
 Description: AMQP client library written in C
 Homepage: https://github.com/alanxz/rabbitmq-c
 Description-md5: d813b0dbcf2f33c93fba8ae5959a1228
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: librdf-linkeddata-perl
-Priority: optional
-Section: universe/perl
-Installed-Size: 119
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
-Architecture: all
-Version: 0.58-1
-Depends: perl, libmoose-perl, libmoosex-log-log4perl-perl, liblog-log4perl-perl, librdf-trine-perl, libplack-perl, libwww-perl, libhtml-html5-writer-perl, libmoosex-undeftolerant-perl, librdf-rdfa-generator-perl, librdf-helper-properties-perl, liburi-namespacemap-perl, libnamespace-autoclean-perl (>= 0.12), liburi-perl (>= 1.52)
-Recommends: libconfig-jfdi-perl, libjson-perl, libplack-middleware-crossorigin-perl, librdf-endpoint-perl, librdf-generator-void-perl
-Filename: pool/universe/libr/librdf-linkeddata-perl/librdf-linkeddata-perl_0.58-1_all.deb
-Size: 29902
-MD5sum: 764c39a02dd9fa59afed394176057bbc
-SHA1: a637be6e605ff273708526f3ce828d294537ff22
-SHA256: 7c5f74b44ca55ab8016817fbc6d1740045f9072f984136ebca06d2d79bcb38d0
-Description: simple Linked Data implementation
-Homepage: http://search.cpan.org/dist/RDF-LinkedData/
-Description-md5: 2b4b40623bfa57e1aa6883aa0f7facfb
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -8718,6 +8729,29 @@ Description-md5: 5d06e6efd6c544b9560d549817573939
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: manaplus-data
+Priority: optional
+Section: universe/games
+Installed-Size: 3120
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Andrei Karas <akaras@inbox.ru>
+Architecture: all
+Source: manaplus
+Version: 1.3.7.21-1
+Depends: ttf-dejavu-core, fonts-liberation
+Pre-Depends: dpkg (>= 1.15.6~)
+Recommends: manaplus, fonts-mplus
+Filename: pool/universe/m/manaplus/manaplus-data_1.3.7.21-1_all.deb
+Size: 959786
+MD5sum: 302a97b6a424d3492a1d700934283bb1
+SHA1: de2df114f4ffaa4935a02851873dc4c3856a3a38
+SHA256: c6e3537bae5455d756e65ed1bc3a3849e0619a3123ad46001fb5207a09d40d3a
+Description: Extended client for Evol Online and The Mana World (data files)
+Homepage: http://manaplus.org/
+Description-md5: 84561c2e0bad9f1d7f04d0b41a6863e9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: manaplus-dbg
 Priority: extra
 Section: universe/debug
@@ -8737,6 +8771,29 @@ SHA256: 8d3848eacc5bc327586de2b20358885a3e056d7405502729baae27a25a7c62ec
 Description: Extended client for Evol Online and The Mana World (debugging symbols)
 Homepage: http://manaplus.org/
 Description-md5: 0e0528b7b4b21be0c0c765750dc774b5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mercurial
+Priority: optional
+Section: universe/devel
+Installed-Size: 240
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Python Applications Packaging Team <python-apps-team@lists.alioth.debian.org>
+Architecture: powerpc
+Version: 2.6.3-1
+Depends: libc6 (>= 2.4), python (>= 2.7), python (<< 2.8), ucf (>= 2.0020), mercurial-common (= 2.6.3-1)
+Recommends: openssh-client
+Suggests: qct, wish, vim | emacs, kdiff3 | kdiff3-qt | kompare | meld | tkcvs | mgdiff
+Breaks: hgsubversion (<< 1.5~), hgview (<< 1.7.1-1~), mercurial-git (<= 0.3.3), qct (<< 1.7-2~)
+Filename: pool/universe/m/mercurial/mercurial_2.6.3-1_powerpc.deb
+Size: 47706
+MD5sum: 1caea93a2315ecdea495fb2a3ebade08
+SHA1: afb2f51227dac6a24df4a984e726842b633854c6
+SHA256: 759482b0f2e549002e9003ba594d75225aa8a7bced311a32a65e50b4794644ea
+Description: easy-to-use, scalable distributed version control system
+Homepage: http://mercurial.selenic.com/
+Description-md5: 01f62ef3bd1477c40a17577e8dcc5e14
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -9150,28 +9207,6 @@ Description-md5: 29c5f7005b3cf23a19cb69fdf63a2cf6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: node-vows
-Priority: optional
-Section: universe/web
-Installed-Size: 172
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
-Architecture: all
-Source: vows
-Version: 0.7.0-2
-Depends: nodejs (>= 0.6.19~dfsg1-3~), node-eyes, node-diff (>= 1.0.3)
-Recommends: coffeescript
-Filename: pool/universe/v/vows/node-vows_0.7.0-2_all.deb
-Size: 41990
-MD5sum: cb73f0ec9c5b3710b8a07731ac6a3bd0
-SHA1: af6c3dfb3f95f2087018b7bfda05b30e77a32098
-SHA256: 29306585d1c2e3eb8b8c6b9dec5e4e240907a97a63a7e88b893c22d5aabdba50
-Description: asynchronous BDD & continuous integration for Node
-Homepage: http://vowsjs.org/
-Description-md5: d8dbaad9646ff8fc7a1edfd588ff27b9
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: ocaml-batteries-included
 Priority: optional
 Section: universe/ocaml
@@ -9419,13 +9454,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
 Architecture: all
 Source: postgis
-Version: 2.0.3-3
+Version: 2.0.3-4
 Suggests: postgis
-Filename: pool/universe/p/postgis/postgis-doc_2.0.3-3_all.deb
-Size: 357736
-MD5sum: 267792d02c78a6be2ddf9c94e6842000
-SHA1: c7033f952471781bf03c60d692b5b9311db1b47c
-SHA256: 373df82414f5845eb6c2280dadf6761d7661be228f9ce884b4c8a269fc74d4a4
+Filename: pool/universe/p/postgis/postgis-doc_2.0.3-4_all.deb
+Size: 357874
+MD5sum: b96c9120d81c53921042716729cca427
+SHA1: ff45957b48701804b6bdd80f5498dbf4ad91f351
+SHA256: 908a7a72af8d9020536ca593d085a41732522da5485b1b94c1a2be49229a60d2
 Description: Geographic objects support for PostgreSQL -- documentation
 Homepage: http://postgis.refractions.net/
 Description-md5: d9fb6ebb1016d9274a6318204b1d5d9b
@@ -9440,13 +9475,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
 Architecture: all
 Source: postgis
-Version: 2.0.3-3
+Version: 2.0.3-4
 Recommends: postgresql-9.1-postgis-2.0
-Filename: pool/universe/p/postgis/postgresql-9.1-postgis-2.0-scripts_2.0.3-3_all.deb
-Size: 2063904
-MD5sum: 2de1f155984e25fc9ec47cdb1ad3c382
-SHA1: 29e2447a706ff6be7e2897c225162440b8814f7a
-SHA256: 57342d34e4507cc20da5db8cb62a05800c710b807e1f9c70938f5649c92b2b60
+Filename: pool/universe/p/postgis/postgresql-9.1-postgis-2.0-scripts_2.0.3-4_all.deb
+Size: 2064032
+MD5sum: 3a7ba20ace2d9059df0a5990d2164deb
+SHA1: c109ec91c98ca75eb4e19fd094924beac5308466
+SHA256: 134d140648c58c572d82ca37b2212f89d825a36380c94315777d2d4e6899df5e
 Description: Geographic objects support for PostgreSQL 9.1 -- scripts
 Homepage: http://postgis.refractions.net/
 Description-md5: 7f992f8ebbd49e497b86c7acbe51cc1d
@@ -11348,6 +11383,26 @@ SHA1: 3a078d31307d4a05034c33cde9b59a797e73b7f8
 SHA256: 389076e76af875f0e163f8e46f4ca5e92e32230713270ad2ce474243bf6b924c
 Description: Text application that manages apt updates
 Description-md5: aa4497c457be7fb52921608df76d70b6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: xmount
+Priority: optional
+Section: universe/admin
+Installed-Size: 101
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michael Prokop <mika@debian.org>
+Architecture: powerpc
+Version: 0.5.0-3
+Depends: libafflib0, libc6 (>= 2.4), libewf2 (>= 20121209), libfuse2 (>= 2.8.1)
+Filename: pool/universe/x/xmount/xmount_0.5.0-3_powerpc.deb
+Size: 34610
+MD5sum: 237f28a85df3315f94538224690124c7
+SHA1: e9498cfe92174785ac0dc886907d837a075b3072
+SHA256: 29db11f4b3f310e5aa73ddfcb3ecf2d68b353711b60241964ccb60f5fab144a8
+Description: tool to crossmount between multiple input and output harddisk images
+Homepage: https://www.pinguin.lu/
+Description-md5: 44c11fa4c04f7ce2ce1b88d2f97b76c9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
