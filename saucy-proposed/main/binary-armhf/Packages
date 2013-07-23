@@ -1011,6 +1011,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: krb5-multidev
+Priority: optional
+Section: libdevel
+Installed-Size: 687
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: armhf
+Source: krb5
+Version: 1.10.1+dfsg-6.1ubuntu1
+Depends: libkrb5-3 (= 1.10.1+dfsg-6.1ubuntu1), libk5crypto3 (= 1.10.1+dfsg-6.1ubuntu1), libgssapi-krb5-2 (= 1.10.1+dfsg-6.1ubuntu1), libgssrpc4 (= 1.10.1+dfsg-6.1ubuntu1), libkadm5srv-mit8 (= 1.10.1+dfsg-6.1ubuntu1), libkadm5clnt-mit8 (= 1.10.1+dfsg-6.1ubuntu1), comerr-dev
+Suggests: krb5-doc
+Filename: pool/main/k/krb5/krb5-multidev_1.10.1+dfsg-6.1ubuntu1_armhf.deb
+Size: 124418
+MD5sum: 95457af03c0988a401c183a09a846dec
+SHA1: d8eb6fa251c99b3c39ef745e0eef3b52a2737c3d
+SHA256: 3b40628f138c800b7d917277e74bf9276f6acd1aa8a01bb5e4473efacf0d3451
+Description: Development files for MIT Kerberos without Heimdal conflict
+Homepage: http://web.mit.edu/kerberos/
+Description-md5: 7761820aba399b20f00deab931782fe1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libaccount-plugin-1.0-0
 Priority: optional
 Section: libs
@@ -2853,6 +2875,57 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: libgssapi-krb5-2
+Priority: standard
+Section: libs
+Installed-Size: 225
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: armhf
+Source: krb5
+Version: 1.10.1+dfsg-6.1ubuntu1
+Depends: libc6 (>= 2.7), libcomerr2 (>= 1.34), libk5crypto3 (>= 1.8+dfsg), libkrb5-3 (= 1.10.1+dfsg-6.1ubuntu1), libkrb5support0 (>= 1.7dfsg~beta2)
+Pre-Depends: multiarch-support
+Suggests: krb5-doc, krb5-user
+Breaks: libgssglue1 (<< 0.2-2)
+Filename: pool/main/k/krb5/libgssapi-krb5-2_1.10.1+dfsg-6.1ubuntu1_armhf.deb
+Size: 94492
+MD5sum: 77d1d8c2fa8fd2682511ab3f84f37f7a
+SHA1: ab17a1458f1819d21eb0bf77d11cede5a49b9d36
+SHA256: 238e5117c339641c13ed4e1d5d9543a6019c212399fb9d05c8881eea2964eb1b
+Description: MIT Kerberos runtime libraries - krb5 GSS-API Mechanism
+Multi-Arch: same
+Homepage: http://web.mit.edu/kerberos/
+Description-md5: 2dd7fe357b29d0ba6727171c01f0301c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libgssrpc4
+Priority: optional
+Section: libs
+Installed-Size: 154
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: armhf
+Source: krb5
+Version: 1.10.1+dfsg-6.1ubuntu1
+Depends: libc6 (>= 2.15), libgssapi-krb5-2 (>= 1.10+dfsg~)
+Pre-Depends: multiarch-support
+Suggests: krb5-doc, krb5-user
+Conflicts: libkadm55
+Filename: pool/main/k/krb5/libgssrpc4_1.10.1+dfsg-6.1ubuntu1_armhf.deb
+Size: 47718
+MD5sum: 92cb4164d9193bb3f52ff09b65a78938
+SHA1: e132d4db2ff2940667baa134a5f7da589e759f60
+SHA256: 3f18b5dd9f7cf7a6ed8613f4919a113307288c1418584d552f88a67b084931f3
+Description: MIT Kerberos runtime libraries - GSS enabled ONCRPC
+Multi-Arch: same
+Homepage: http://web.mit.edu/kerberos/
+Description-md5: f18b3ce27893cc2b96de6c617dc25d94
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libgtk-3-0
 Priority: optional
 Section: libs
@@ -2997,6 +3070,205 @@ Description-md5: 0daae17852bb4b449b026f369e26dde3
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb, edubuntu-usb
+
+Package: libk5crypto3
+Priority: standard
+Section: libs
+Installed-Size: 196
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: armhf
+Source: krb5
+Version: 1.10.1+dfsg-6.1ubuntu1
+Depends: libc6 (>= 2.4), libkrb5support0 (>= 1.7dfsg~beta2)
+Pre-Depends: multiarch-support
+Suggests: krb5-doc, krb5-user
+Conflicts: libkrb53
+Breaks: libgssapi-krb5-2 (<= 1.10+dfsg~alpha1), libkrb5-3 (<= 1.8~aa)
+Filename: pool/main/k/krb5/libk5crypto3_1.10.1+dfsg-6.1ubuntu1_armhf.deb
+Size: 75954
+MD5sum: c4fd602d60aa1b24bf133fcac2e5999d
+SHA1: 974aea9ac8d032a94aaa48c6624b27c2fb6ad81c
+SHA256: 50c8bb6596828906ccbb9c93f5eb67d60a743ead52f09c0e0514a4b46c81697b
+Description: MIT Kerberos runtime libraries - Crypto Library
+Multi-Arch: same
+Homepage: http://web.mit.edu/kerberos/
+Description-md5: 4b107bcb8481fee0b8b11744a386a6b0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libkadm5clnt-mit8
+Priority: optional
+Section: libs
+Installed-Size: 127
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: armhf
+Source: krb5
+Version: 1.10.1+dfsg-6.1ubuntu1
+Depends: libc6 (>= 2.7), libcomerr2 (>= 1.01), libgssapi-krb5-2 (>= 1.10+dfsg~), libgssrpc4 (>= 1.6.dfsg.2), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.8+dfsg), libkrb5support0 (>= 1.7dfsg~beta2)
+Pre-Depends: multiarch-support
+Suggests: krb5-doc, krb5-user
+Filename: pool/main/k/krb5/libkadm5clnt-mit8_1.10.1+dfsg-6.1ubuntu1_armhf.deb
+Size: 31596
+MD5sum: 256c27ecc1c72b981184768e1509fb42
+SHA1: a2e37f7bd80bbe2d2c800ad6d74c6470d73ab59c
+SHA256: d6feefab72caeb3ee8c20939cafaefdb12be753865838e56ff593f6e94f05f89
+Description: MIT Kerberos runtime libraries - Administration Clients
+Multi-Arch: same
+Homepage: http://web.mit.edu/kerberos/
+Description-md5: 8b2bac04328bfaffc8a1b6b57144cc9b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libkadm5srv-mit8
+Priority: optional
+Section: libs
+Installed-Size: 143
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: armhf
+Source: krb5
+Version: 1.10.1+dfsg-6.1ubuntu1
+Depends: libc6 (>= 2.7), libcomerr2 (>= 1.01), libgssapi-krb5-2 (>= 1.6.dfsg.2), libgssrpc4 (>= 1.6.dfsg.2), libk5crypto3 (>= 1.6.dfsg.2), libkdb5-6, libkrb5-3 (>= 1.9+dfsg~beta1), libkrb5support0 (>= 1.7dfsg~beta2)
+Pre-Depends: multiarch-support
+Suggests: krb5-doc, krb5-user
+Filename: pool/main/k/krb5/libkadm5srv-mit8_1.10.1+dfsg-6.1ubuntu1_armhf.deb
+Size: 43822
+MD5sum: 9e3cdf53695bfb1d1fe22fd5abd110cd
+SHA1: 5221bbdb3d1bc7d91ff0ed7e88368b12811da348
+SHA256: 254d1d1e01ca232af12b7fd7fb39c5a35d22a75750c506e2a91263f4bcab8cfd
+Description: MIT Kerberos runtime libraries - KDC and Admin Server
+Multi-Arch: same
+Homepage: http://web.mit.edu/kerberos/
+Description-md5: 34bc9a3bc5f24d8493ce16a753dc317d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libkdb5-6
+Priority: optional
+Section: libs
+Installed-Size: 119
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: armhf
+Source: krb5
+Version: 1.10.1+dfsg-6.1ubuntu1
+Depends: libc6 (>= 2.4), libcomerr2 (>= 1.01), libgssrpc4 (>= 1.7dfsg~alpha1), libk5crypto3 (>= 1.7+dfsg), libkrb5-3 (>= 1.7dfsg), libkrb5support0 (>= 1.7dfsg~beta2)
+Pre-Depends: multiarch-support
+Suggests: krb5-doc, krb5-user
+Breaks: libkadm5srv-mit8 (<< 1.10+dfsg~)
+Filename: pool/main/k/krb5/libkdb5-6_1.10.1+dfsg-6.1ubuntu1_armhf.deb
+Size: 30204
+MD5sum: 65916d5afe10c792cedfb18eea2002a5
+SHA1: 63efc6b7f8f688cbc2a05287387afa0718d8b68e
+SHA256: acdf43c5694788c3591fa01752f932ded5ad0dbb3e489fe0ad831ed6b459263c
+Description: MIT Kerberos runtime libraries - Kerberos database
+Multi-Arch: same
+Homepage: http://web.mit.edu/kerberos/
+Description-md5: 339dba7d5a44f05699e73cc493c3def3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libkrb5-3
+Priority: standard
+Section: libs
+Installed-Size: 663
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: armhf
+Source: krb5
+Version: 1.10.1+dfsg-6.1ubuntu1
+Depends: libc6 (>= 2.16), libcomerr2 (>= 1.34), libk5crypto3 (>= 1.9+dfsg~beta1), libkeyutils1, libkrb5support0 (= 1.10.1+dfsg-6.1ubuntu1)
+Pre-Depends: multiarch-support
+Recommends: krb5-locales
+Suggests: krb5-doc, krb5-user
+Conflicts: libkrb53
+Breaks: libsmbclient (<= 2:3.6.1-2), sssd (<= 1.2.1-4.3)
+Filename: pool/main/k/krb5/libkrb5-3_1.10.1+dfsg-6.1ubuntu1_armhf.deb
+Size: 297352
+MD5sum: 6101889d671eeb37e34ff86f1220e507
+SHA1: 22cdbe7a0b054a9a2ae01990ccda0d1be1f63f48
+SHA256: 09434bcfda948be3c0407131cd9e8ddd27a597a5e15bda86799657a68b0ecd54
+Description: MIT Kerberos runtime libraries
+Multi-Arch: same
+Homepage: http://web.mit.edu/kerberos/
+Description-md5: 07bb931a85fb24c6a0ef0f62a94bb26c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libkrb5-dbg
+Priority: extra
+Section: debug
+Installed-Size: 5582
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: armhf
+Source: krb5
+Version: 1.10.1+dfsg-6.1ubuntu1
+Depends: libkrb5-3 (= 1.10.1+dfsg-6.1ubuntu1) | libk5crypto3 (= 1.10.1+dfsg-6.1ubuntu1) | libkrb5support0 (= 1.10.1+dfsg-6.1ubuntu1)
+Filename: pool/main/k/krb5/libkrb5-dbg_1.10.1+dfsg-6.1ubuntu1_armhf.deb
+Size: 2003822
+MD5sum: b9c43122ac9d31f51ca139204b14628a
+SHA1: 395366ff98b389aa50b487353088ea8e700c213e
+SHA256: cc89a52922a7bcbbb2a7d783d350146c3f213e7937360097ba11bb558aaa3c6b
+Description: Debugging files for MIT Kerberos
+Multi-Arch: same
+Homepage: http://web.mit.edu/kerberos/
+Description-md5: 5a4b785ef1af9c8f242b4f1a2d5710a0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libkrb5-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 123
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: armhf
+Source: krb5
+Version: 1.10.1+dfsg-6.1ubuntu1
+Replaces: krb5-multidev (<< 1.8+dfsg~alpha1-3)
+Depends: krb5-multidev (= 1.10.1+dfsg-6.1ubuntu1)
+Suggests: krb5-doc
+Conflicts: heimdal-dev
+Filename: pool/main/k/krb5/libkrb5-dev_1.10.1+dfsg-6.1ubuntu1_armhf.deb
+Size: 11040
+MD5sum: 2255bad2a8eb61f8639c74e7244234fd
+SHA1: e88cfc8def0c681ac81ecbb8aeb0b522d71dc59c
+SHA256: a86348746f94737a3bf7d7473a68538358b07cd70533fe8b6812f41d8c7cce88
+Description: Headers and development libraries for MIT Kerberos
+Homepage: http://web.mit.edu/kerberos/
+Description-md5: 2ab394392864dbbc72c409c7aec58377
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libkrb5support0
+Priority: standard
+Section: libs
+Installed-Size: 98
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Sam Hartman <hartmans@debian.org>
+Architecture: armhf
+Source: krb5
+Version: 1.10.1+dfsg-6.1ubuntu1
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Conflicts: libkrb53
+Filename: pool/main/k/krb5/libkrb5support0_1.10.1+dfsg-6.1ubuntu1_armhf.deb
+Size: 20042
+MD5sum: a2e59d68b0f3753669b1821769229297
+SHA1: 4d7b688f349c0adf839aaf4cf42026ca2432402c
+SHA256: e2fb15c743c3bc854c35ac522130f3aa8f36f3fced972627503527a25379394f
+Description: MIT Kerberos runtime libraries - Support library
+Multi-Arch: same
+Homepage: http://web.mit.edu/kerberos/
+Description-md5: 4f3abf66dd7bfd20406fc400a05b0693
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: liblcms2-2
 Priority: optional
