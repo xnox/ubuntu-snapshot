@@ -6457,6 +6457,26 @@ Origin: Ubuntu
 Supported: 9m
 Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: paramiko-doc
+Priority: optional
+Section: doc
+Installed-Size: 6974
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jeremy T. Bouse <jbouse@debian.org>
+Architecture: all
+Source: paramiko
+Version: 1.10.1-1
+Filename: pool/main/p/paramiko/paramiko-doc_1.10.1-1_all.deb
+Size: 722488
+MD5sum: 9bc5f8b712264fa5a62a2242a793f578
+SHA1: 933e1e8f51fdf59b3bc1370ce8d692586409197f
+SHA256: a4e43a0aa734529da439ec1a39a4a0517654d5e5780837f92e59f69c63a3f580
+Description: Make ssh v2 connections with Python (Documentation)
+Homepage: https://github.com/paramiko/paramiko/
+Description-md5: 64abd13842f9844afdfb841ebdde4eac
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-cinder
 Priority: extra
 Section: net
@@ -6759,6 +6779,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: python-paramiko
+Priority: optional
+Section: python
+Installed-Size: 555
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jeremy T. Bouse <jbouse@debian.org>
+Architecture: all
+Source: paramiko
+Version: 1.10.1-1
+Provides: python2.7-paramiko
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-crypto (>= 2.1.0-2)
+Filename: pool/main/p/paramiko/python-paramiko_1.10.1-1_all.deb
+Size: 132128
+MD5sum: fede8077bf75409a511bd087c5cf7f20
+SHA1: ea99846fb833993b86ee93b62a503d6d37fb3001
+SHA256: f00eea7cd23bcbfb6e51dffc64dc93db88c3db294a73b756bca071fdaf4cc5d8
+Description: Make ssh v2 connections with Python (Python 2)
+Homepage: https://github.com/paramiko/paramiko/
+Description-md5: ef19708cf575fb15646b6a0f32043a47
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: cloud-image, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
+
 Package: python-quantum
 Priority: optional
 Section: python
@@ -6873,6 +6917,32 @@ Description-md5: 513a3818b96b6d6cae8f4b58c5de95f5
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: python-ubuntuone-client
+Priority: optional
+Section: python
+Installed-Size: 1475
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ubuntu One Developers <ubuntuone-users@lists.launchpad.net>
+Architecture: all
+Source: ubuntuone-client
+Version: 13.07-0ubuntu2
+Replaces: ubuntuone-client (<< 0.92.0-0ubuntu1)
+Provides: python2.7-ubuntuone-client
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), apport, python-configglue, python-dbus, python-dirspec, python-oauthlib (>= 0.3.5), python-pyinotify, python-twisted-names, python-twisted-web, python-ubuntu-sso-client (>= 4.1), python-ubuntuone-storageprotocol (>= 4.1), python3-dirspec, ubuntu-sso-client (>= 4.1), ubuntuone-client-data (>= 4.1)
+Filename: pool/main/u/ubuntuone-client/python-ubuntuone-client_13.07-0ubuntu2_all.deb
+Size: 226864
+MD5sum: 6d3a444e0fab5d2afec9440507af9fb6
+SHA1: ce121c823577b690e4f6eb48a56d250eda0cde01
+SHA256: e30f6c5a3837e44e4fd1d1a2c8ce59e1c49549773ebbca1dd6adcd6797f6472c
+Description: Ubuntu One client Python libraries
+Homepage: https://one.ubuntu.com
+Python-Version: 2.7
+Description-md5: 33c64f03af29f43eedcea97ff84512b0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
 Package: python3-greenlet
 Priority: extra
@@ -7361,6 +7431,57 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: ubuntuone-client
+Priority: optional
+Section: net
+Installed-Size: 152
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ubuntu One Developers <ubuntuone-users@lists.launchpad.net>
+Architecture: all
+Version: 13.07-0ubuntu2
+Replaces: nautilus-ubuntuone, ubuntuone-client-gnome (<< 1.7.0.0), ubuntuone-oauth-login, ubuntuone-storagefs
+Depends: python, python-ubuntuone-client (= 13.07-0ubuntu2), python-gi | python-gobject (>= 2.90), gir1.2-notify-0.7, ubuntu-sso-client (>= 4.1)
+Recommends: gir1.2-unity-5.0 | gir1.2-unity-4.0 | gir1.2-unity-3.0 (>= 3.8.4), ubuntu-sso-client-gui (>= 4.1)
+Suggests: ubuntuone-client-proxy
+Conflicts: nautilus-ubuntuone, ubuntuone-client-gnome (<< 1.7.0.0), ubuntuone-oauth-login, ubuntuone-storagefs
+Filename: pool/main/u/ubuntuone-client/ubuntuone-client_13.07-0ubuntu2_all.deb
+Size: 11412
+MD5sum: a95842dbac16f6dd4444ba0c603c5e0b
+SHA1: ee7643c95213ad1ab4dd30f5cd217285f702614b
+SHA256: e61ae960cca097e106dbb825be9bf2704b1c3c2cb974a3524b0a29418404c8f9
+Description: Ubuntu One client
+Homepage: https://one.ubuntu.com
+Description-md5: 29297db1079e0fcb7f339d9d03a51e52
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
+Package: ubuntuone-client-proxy
+Priority: optional
+Section: python
+Installed-Size: 118
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ubuntu One Developers <ubuntuone-users@lists.launchpad.net>
+Architecture: all
+Source: ubuntuone-client
+Version: 13.07-0ubuntu2
+Replaces: python-ubuntuone-client (<< 13.07-0ubuntu2)
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-qt4, python-qt4-dbus, python-twisted-core, python-ubuntu-sso-client (>= 4.1), python-ubuntuone-client (>= 4.1), python-zope.interface
+Breaks: python-ubuntuone-client (<< 13.07-0ubuntu2)
+Filename: pool/main/u/ubuntuone-client/ubuntuone-client-proxy_13.07-0ubuntu2_all.deb
+Size: 8692
+MD5sum: 4603a9bf8c5c973234ba364f447a794e
+SHA1: 548c8f999f8651e9519bf4cea54c4766651421d0
+SHA256: c2d62c9148546cf81491978cf5accbb785f168b39bde58d52358ce650962c887
+Description: Ubuntu One client Proxy support
+Homepage: https://one.ubuntu.com
+Python-Version: 2.7
+Description-md5: 6a0f581d4b5168ef69cf12e106ea7984
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: unity-webapps-common
 Priority: optional
