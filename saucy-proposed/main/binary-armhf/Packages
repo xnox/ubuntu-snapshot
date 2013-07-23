@@ -402,6 +402,30 @@ Description-md5: 10c077168b23f9e2baf359b50747ddb8
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: ffmpeg
+Priority: optional
+Section: graphics
+Installed-Size: 239
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Replaces: libav-tools (<< 6:0.8.3-0ubuntu1)
+Depends: libav-tools, libavcodec53 (>= 6:0.8.3-1~) | libavcodec-extra-53 (>= 6:0.8.7), libavdevice53 (>= 6:0.8.3-1~) | libavdevice-extra-53 (>= 6:0.8.7), libavfilter2 (>= 6:0.8.3-1~) | libavfilter-extra-2 (>= 6:0.8.7), libavformat53 (>= 6:0.8.3-1~) | libavformat-extra-53 (>= 6:0.8.7), libavutil51 (>= 6:0.8.3-1~) | libavutil-extra-51 (>= 6:0.8.7), libc6 (>= 2.7), libpostproc52 (>= 6:0.8.3-1~) | libpostproc-extra-52 (>= 6:0.8.7), libswscale2 (>= 6:0.8.3-1~) | libswscale-extra-2 (>= 6:0.8.7)
+Conflicts: libav-tools (<< 6:0.8.3-0ubuntu1)
+Filename: pool/main/liba/libav/ffmpeg_0.8.7-1ubuntu1_armhf.deb
+Size: 100040
+MD5sum: 1f2431207d4b72603344d94f68c59444
+SHA1: a5683c3f2118e66cec30e784beac5f369d6f6c05
+SHA256: a860c4ceba29611953ca26f5363cc04c1ae8673dfe5a160dee1d20c4fa68b276
+Description: Multimedia player, server, encoder and transcoder (transitional package)
+Homepage: http://libav.org/
+Description-md5: 5ff27b47c3b68cc2af2a245c108535a8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntustudio-video, ubuntustudio-graphics
+
 Package: ffmpeg-doc
 Priority: optional
 Section: doc
@@ -1288,6 +1312,267 @@ Homepage: http://libav.org/
 Description-md5: e1b6e29d8d3ee890016d0afc785a0596
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libav-tools
+Priority: optional
+Section: video
+Installed-Size: 1532
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Replaces: ffmpeg (<< 4:0.8~), libavcodec-extra-53 (<< 4:0.6~), libavcodec53 (<< 6:0.8.7-1ubuntu1)
+Depends: libavcodec53 (>= 6:0.8.3-1~) | libavcodec-extra-53 (>= 6:0.8.7), libavdevice53 (>= 6:0.8.3-1~) | libavdevice-extra-53 (>= 6:0.8.7), libavfilter2 (>= 6:0.8.3-1~) | libavfilter-extra-2 (>= 6:0.8.7), libavformat53 (>= 6:0.8.3-1~) | libavformat-extra-53 (>= 6:0.8.7), libavutil51 (>= 6:0.8.3-1~) | libavutil-extra-51 (>= 6:0.8.7), libc6 (>= 2.7), libpostproc52 (>= 6:0.8.3-1~) | libpostproc-extra-52 (>= 6:0.8.7), libsdl1.2debian (>= 1.2.11), libswscale2 (>= 6:0.8.3-1~) | libswscale-extra-2 (>= 6:0.8.7)
+Pre-Depends: dpkg (>= 1.15.7.2~)
+Conflicts: ffprobe
+Breaks: ffmpeg (<< 4:0.8~)
+Filename: pool/main/liba/libav/libav-tools_0.8.7-1ubuntu1_armhf.deb
+Size: 325702
+MD5sum: 3fc3c616e51e1f53dcd5a00b5fb97768
+SHA1: 3cafe884fb6e3fb0f235d2887187c09159314253
+SHA256: 9323589472ecb417ee184101235dff3e9ad6e88b13d3aaf1459357e73460c93e
+Description: Multimedia player, server, encoder and transcoder
+Homepage: http://libav.org/
+Description-md5: 0911282df0f4b0ccab197667699075b4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntustudio-video, ubuntustudio-graphics
+
+Package: libavcodec-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 6764
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Depends: libavcodec53 (<= 6:0.8.7-99) | libavcodec-extra-53 (<= 6:0.8.7.99), libavcodec53 (>= 6:0.8.7-1ubuntu1) | libavcodec-extra-53 (>= 6:0.8.7), libavutil-dev (= 6:0.8.7-1ubuntu1)
+Suggests: libdc1394-22-dev, libgsm1-dev, libogg-dev, libraw1394-dev, libschroedinger-dev, libspeex-dev, libtheora-dev (>> 0.0.0.alpha4), libvorbis-dev, libx11-dev, libxext-dev, zlib1g-dev
+Filename: pool/main/liba/libav/libavcodec-dev_0.8.7-1ubuntu1_armhf.deb
+Size: 2435404
+MD5sum: 035864e33cb157c4f423ff9706e3cc1b
+SHA1: 5dffe2e21ab2aafcc85cc468c9d66350ed5d495a
+SHA256: ac8b51de42a49b930c40202d0f5841a7dd2a2bae6423d8405a3d6f61d2cb7b6b
+Description: Development files for libavcodec
+Homepage: http://libav.org/
+Description-md5: dbbfe8ba88ea77a86c51d6548a08bbe4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libavcodec53
+Priority: optional
+Section: libs
+Installed-Size: 10651
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Depends: libavutil51 (>= 6:0.8.3-1~) | libavutil-extra-51 (>= 6:0.8.7), libc6 (>= 2.7), libgsm1 (>= 1.0.13), libschroedinger-1.0-0 (>= 1.0.0), libspeex1 (>= 1.2~beta3-1), libtheora0 (>= 1.0), libva1 (>> 1.1.0~), libvorbis0a (>= 1.1.2), libvorbisenc2 (>= 1.1.2), libvpx1 (>= 1.0.0), zlib1g (>= 1:1.2.0)
+Pre-Depends: multiarch-support
+Conflicts: libavcodec-extra-53
+Breaks: mplayer (<< 2:1.0~rc4.dfsg1+svn34540-1~)
+Filename: pool/main/liba/libav/libavcodec53_0.8.7-1ubuntu1_armhf.deb
+Size: 2471654
+MD5sum: 58e8b465045a08650313575b623fe1cc
+SHA1: 634ca225e49081b15c01181b9a78d75a8dd3fa01
+SHA256: e43ba996b48748a722d38f5ceeb110e014b77b64ff1f71031b7ae6fd56977feb
+Description: Libav codec library
+Multi-Arch: same
+Homepage: http://libav.org/
+Description-md5: 5f84501419e837b17ce3db3bce1ea636
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
+
+Package: libavdevice-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 186
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Depends: libavdevice53 (= 6:0.8.7-1ubuntu1) | libavdevice-extra-53 (>= 6:0.8.7), libavformat-dev (= 6:0.8.7-1ubuntu1)
+Filename: pool/main/liba/libav/libavdevice-dev_0.8.7-1ubuntu1_armhf.deb
+Size: 26990
+MD5sum: aeb4e77008c5f9e59b07371d06de43b2
+SHA1: 480e572714d0f42f4c372c6078d8cc96abd86c4a
+SHA256: 12b7671c8bc57a85110fb5c3ccbf31327949e89d0eca1a03629e66273134306e
+Description: Development files for libavdevice
+Homepage: http://libav.org/
+Description-md5: d1a143a45e429a3ceda0d58733f017aa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libavdevice53
+Priority: optional
+Section: libs
+Installed-Size: 217
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Replaces: libavdevice-extra-53
+Depends: libasound2 (>= 1.0.16), libavcodec53 (>= 6:0.8.3-1~) | libavcodec-extra-53 (>= 6:0.8.7), libavformat53 (>= 6:0.8.3-1~) | libavformat-extra-53 (>= 6:0.8.7), libavutil51 (>= 6:0.8.3-1~) | libavutil-extra-51 (>= 6:0.8.7), libc6 (>= 2.7), libcdio-cdda1 (>= 0.83), libcdio-paranoia1 (>= 0.83), libdc1394-22, libjack-jackd2-0 (>= 1.9.5~dfsg-14) | libjack-0.116, libpulse0 (>= 1:0.99.1), libx11-6 (>= 2:1.4.99.1), libxext6, libxfixes3
+Pre-Depends: multiarch-support
+Conflicts: libavdevice-extra-53
+Breaks: libavdevice-extra-53 (<< 5:0.8.1-2)
+Filename: pool/main/liba/libav/libavdevice53_0.8.7-1ubuntu1_armhf.deb
+Size: 28722
+MD5sum: 88054cf1994eea2eafa9b059647f3fa4
+SHA1: 1d4fc2c475f3cc6a8b1f09b63b5adeed7f670f77
+SHA256: c2be1c85ffad7031040aa204ed34af54f071d58b1e80f0b4acfe0d54bb1bdbd7
+Description: Libav device handling library
+Multi-Arch: same
+Homepage: http://libav.org/
+Description-md5: 749c8f83866b20c4cc64ea76a0e145de
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libavfilter-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 381
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Depends: libavcodec-dev (= 6:0.8.7-1ubuntu1), libavfilter2 (= 6:0.8.7-1ubuntu1) | libavfilter-extra-2 (>= 6:0.8.7)
+Filename: pool/main/liba/libav/libavfilter-dev_0.8.7-1ubuntu1_armhf.deb
+Size: 76166
+MD5sum: f446c1c5898f929112b815bceacd3c31
+SHA1: f52ef1b7dc440354a62b821ed057961719204763
+SHA256: 6fe2afb3bf2c0c790bb0258b395a0e87aeaef68d6a2f5e554bcfaa5c11ce4806
+Description: Development files for libavfilter
+Homepage: http://libav.org/
+Description-md5: ecbb9d2a01e9cb4ef59f02b92dbfd55e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libavfilter2
+Priority: optional
+Section: libs
+Installed-Size: 380
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Replaces: libavfilter-extra-2
+Depends: libavcodec53 (>= 6:0.8.3-1~) | libavcodec-extra-53 (>= 6:0.8.7), libavformat53 (>= 6:0.8.3-1~) | libavformat-extra-53 (>= 6:0.8.7), libavutil51 (>= 6:0.8.3-1~) | libavutil-extra-51 (>= 6:0.8.7), libc6 (>= 2.7), libfreetype6 (>= 2.2.1), libswscale2 (>= 6:0.8.3-1~) | libswscale-extra-2 (>= 6:0.8.7)
+Pre-Depends: multiarch-support
+Conflicts: libavfilter-extra-2
+Filename: pool/main/liba/libav/libavfilter2_0.8.7-1ubuntu1_armhf.deb
+Size: 65364
+MD5sum: dc578e7cda5fd2c7714db35db24dd443
+SHA1: dc0201430c0a04db563acb8069e5e6ce8ca6602c
+SHA256: b851ca3da9444dcf6132c7f448baaba52b3be43ce891a28bca1f683c53cb35a5
+Description: Libav video filtering library
+Multi-Arch: same
+Homepage: http://libav.org/
+Description-md5: b3ffe3ea2238f3fde78a2d51145467fc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libavformat-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 1835
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Depends: libavcodec-dev (= 6:0.8.7-1ubuntu1), libavformat53 (= 6:0.8.7-1ubuntu1) | libavformat-extra-53 (>= 6:0.8.7), libavutil-dev (= 6:0.8.7-1ubuntu1)
+Filename: pool/main/liba/libav/libavformat-dev_0.8.7-1ubuntu1_armhf.deb
+Size: 497762
+MD5sum: 0528c93c37f443fd1cc9c3f6d569fb7f
+SHA1: ddcab569d5d1cdd358bafeea1ebaff8b836e3597
+SHA256: a734d015960db62d21d217cd62443c71d75d9043e83bc36d8e0e449a780307be
+Description: Development files for libavformat
+Homepage: http://libav.org/
+Description-md5: a12d6dbfdd1f3cd14055f14bf26eb067
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libavformat53
+Priority: optional
+Section: libs
+Installed-Size: 1922
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Replaces: libavformat-extra-53
+Depends: libavcodec53 (>= 6:0.8.3-1~) | libavcodec-extra-53 (>= 6:0.8.7), libavutil51 (>= 6:0.8.3-1~) | libavutil-extra-51 (>= 6:0.8.7), libbz2-1.0, libc6 (>= 2.7), libgnutls26 (>= 2.12.17-0), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Conflicts: libavformat-extra-53
+Filename: pool/main/liba/libav/libavformat53_0.8.7-1ubuntu1_armhf.deb
+Size: 511846
+MD5sum: 134ae05747ac0805411c109d8076e8be
+SHA1: 722aef0bd7e470c5f60d7bae564e1e9b651af731
+SHA256: b6ac0689cad1fe7815b07b3519ec4817b6d28be7d3c418a2ebceb6148750932e
+Description: Libav file format library
+Multi-Arch: same
+Homepage: http://libav.org/
+Description-md5: 464655e4bb8f0f07e6e1f702e07fb04c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
+
+Package: libavutil-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 431
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Depends: libavutil51 (= 6:0.8.7-1ubuntu1) | libavutil-extra-51 (>= 6:0.8.7)
+Filename: pool/main/liba/libav/libavutil-dev_0.8.7-1ubuntu1_armhf.deb
+Size: 88928
+MD5sum: 0508c5915a672c1df34b842aea9acd44
+SHA1: a1b99957ec9ba79ba7e6134e7183e35cd2a4b407
+SHA256: 811bdb917020d69266069782882b0db4c0391f758639cd7fc8b1cb620786f4d9
+Description: Development files for libavutil
+Homepage: http://libav.org/
+Description-md5: 7c9bb8e9578ac880019a066991fefbcb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libavutil51
+Priority: optional
+Section: libs
+Installed-Size: 304
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Replaces: libavutil-extra-51
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Conflicts: libavutil-extra-51
+Filename: pool/main/liba/libav/libavutil51_0.8.7-1ubuntu1_armhf.deb
+Size: 62820
+MD5sum: 27f3f52f4dbb1ebae6ecafa87cdd05f1
+SHA1: ab9dac9ac09d63d5c74dbc52b0f04acb98cae71d
+SHA256: 4050f8a0d2837bc4e1cc05238516d18428a221124eff88765b36a4fe9856459e
+Description: Libav utility library
+Multi-Arch: same
+Homepage: http://libav.org/
+Description-md5: 5474c0d7634f2c2a9b642ce3c78d1c79
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
 
 Package: libcfg-dev
 Priority: optional
@@ -3001,6 +3286,53 @@ Description-md5: 9b1d7a0b3e6a2ea021f4443f42dcff4f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libpostproc-dev
+Priority: optional
+Section: misc
+Installed-Size: 156
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Depends: libavutil-dev (= 6:0.8.7-1ubuntu1), libpostproc52 (= 6:0.8.7-1ubuntu1) | libpostproc-extra-52 (>= 6:0.8.7)
+Filename: pool/main/liba/libav/libpostproc-dev_0.8.7-1ubuntu1_armhf.deb
+Size: 22814
+MD5sum: 102ec6f16b2a8b696f7db474935ab41a
+SHA1: 0936520890266cdf87e26c5780959c047033898c
+SHA256: 06d2e40b2e308bf9ce16a2a702c9c98d90d535c7624508886fb30df9b2283613
+Description: Development files for libpostproc
+Homepage: http://libav.org/
+Description-md5: 86f863657363a4743bdf715ad27d245e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpostproc52
+Priority: optional
+Section: libs
+Installed-Size: 205
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Replaces: libpostproc-extra-52
+Depends: libavutil51 (>= 6:0.8.3-1~) | libavutil-extra-51 (>= 6:0.8.7), libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Conflicts: libpostproc-extra-52
+Filename: pool/main/liba/libav/libpostproc52_0.8.7-1ubuntu1_armhf.deb
+Size: 28352
+MD5sum: aadc90f6275ba6d3553088f3f907e795
+SHA1: 94ada8c28a1cf30e0206af107023c2e481b8650e
+SHA256: ce5190539dc842516c7251fd9ece03f899ebe069415ee2ad305e7cfc935a3f85
+Description: Libav video postprocessing library
+Multi-Arch: same
+Homepage: http://libav.org/
+Description-md5: 3052ad99e7f387d07661b0f5efe77dcd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
+
 Package: libquorum-dev
 Priority: optional
 Section: libdevel
@@ -3780,6 +4112,53 @@ Homepage: http://gcc.gnu.org/
 Description-md5: 6d699ea4429a346bc58e56d70e561407
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libswscale-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 309
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Depends: libavutil-dev (= 6:0.8.7-1ubuntu1), libswscale2 (= 6:0.8.7-1ubuntu1) | libswscale-extra-2 (>= 6:0.8.7)
+Filename: pool/main/liba/libav/libswscale-dev_0.8.7-1ubuntu1_armhf.deb
+Size: 61374
+MD5sum: 90e26355c00651669e7d2796b573f0d1
+SHA1: 16feaa43b3ccd4947775343d39de4e224475d1fe
+SHA256: bcfdc21468984291b6b55fddf8956addf0267a3c1f6ec7082abe0eab3b0e0e89
+Description: Development files for libswscale
+Homepage: http://libav.org/
+Description-md5: edcc124cb02dafb94c43a541fb77930a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libswscale2
+Priority: optional
+Section: libs
+Installed-Size: 429
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libav
+Version: 6:0.8.7-1ubuntu1
+Replaces: libswscale-extra-2
+Depends: libavutil51 (>= 6:0.8.3-1~) | libavutil-extra-51 (>= 6:0.8.7), libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Conflicts: libswscale-extra-2
+Filename: pool/main/liba/libav/libswscale2_0.8.7-1ubuntu1_armhf.deb
+Size: 66526
+MD5sum: f98e3a1341fd895d97f17f293d958804
+SHA1: 9d1d63a43b2dfe01506854fa6a8a1b314f539d9c
+SHA256: c14538d533de6432f6c748b488fdda95ed9d23fa67cf347200f2e2de11170861
+Description: Libav video scaling library
+Multi-Arch: same
+Homepage: http://libav.org/
+Description-md5: f82c97141b203436bbbde1eed00e5472
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
 
 Package: libtotem-pg-dev
 Priority: optional
@@ -4778,6 +5157,27 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
+Package: python-warlock
+Priority: optional
+Section: python
+Installed-Size: 71
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: PKG OpenStack <openstack-devel@lists.alioth.debian.org>
+Architecture: all
+Version: 1.0.1-1ubuntu2
+Depends: python-json-patch (>= 0.10), python-jsonschema (>= 0.7), python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-six
+Pre-Depends: dpkg (>= 1.15.6~)
+Filename: pool/main/p/python-warlock/python-warlock_1.0.1-1ubuntu2_all.deb
+Size: 5864
+MD5sum: 71ab8e265c3ea5c3a57b9cbe4b06fa96
+SHA1: 7c1c7efe67e8dbee7e055e1036a2f4767f4a8bcc
+SHA256: 69385d9763eb87d528d7f29e9e5cbde57b39cb7ab99f221d0fa46bbc3a04a68c
+Description: object model built on top of JSON schema (python2)
+Homepage: http://pypi.python.org/pypi/warlock
+Description-md5: 384bc9a2da21f0f1d950b32fbc728400
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python3-greenlet
 Priority: extra
 Section: python
@@ -4931,6 +5331,28 @@ Description-md5: ecfb930b93b3c3391fc6ad445be08cee
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: python3-warlock
+Priority: optional
+Section: python
+Installed-Size: 58
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: PKG OpenStack <openstack-devel@lists.alioth.debian.org>
+Architecture: all
+Source: python-warlock
+Version: 1.0.1-1ubuntu2
+Depends: python-json-patch (>= 0.10), python-jsonschema (>= 0.7), python3 (>= 3.2.3-3~), python3-jsonschema, python3-json-patch, python3-six
+Pre-Depends: dpkg (>= 1.15.6~)
+Filename: pool/main/p/python-warlock/python3-warlock_1.0.1-1ubuntu2_all.deb
+Size: 5644
+MD5sum: 972ba878576c49126c836f414d199d2b
+SHA1: 9bbb29bd6fc1811c72d1430ce6878793a25db45a
+SHA256: 957cf004dd2acb0628809b14a3e8aaa2f28d917a8339f76c0f74d97c69941a94
+Description: object model built on top of JSON schema (python3)
+Homepage: http://pypi.python.org/pypi/warlock
+Description-md5: ca9aecbf6e4c8b9a631ae76d1f6d815c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: signon-plugin-oauth2
 Priority: optional
