@@ -521,6 +521,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: etckeeper
+Priority: optional
+Section: admin
+Installed-Size: 226
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Joey Hess <joeyh@debian.org>
+Architecture: all
+Version: 1.4ubuntu1
+Depends: bzr (>= 1.5~) | git (>= 1:1.7) | mercurial | darcs, hostname, debconf (>= 0.5) | debconf-2.0
+Recommends: cron
+Suggests: sudo (>= 1.7.4p4)
+Conflicts: bzr (<< 1.5~)
+Filename: pool/main/e/etckeeper/etckeeper_1.4ubuntu1_all.deb
+Size: 29084
+MD5sum: a9ab83703b1f8a663f2d1613f502f014
+SHA1: e0413ff67771b79d2641a9cb2ee6fed22efcb156
+SHA256: d83182d62ceb9362fecbeb329e1b8212496a50b5bb754ff520ec7b334c96359f
+Description: store /etc in git, mercurial, bzr or darcs
+Homepage: http://kitenet.net/~joey/code/etckeeper/
+Description-md5: 95cb5b7044929ac8be07759fde67a217
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: friends
 Priority: extra
 Section: misc
@@ -1303,6 +1327,30 @@ Description-md5: 3345448d3a8754631900ad7f4bb201db
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: hostname
+Essential: yes
+Priority: required
+Section: admin
+Installed-Size: 83
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Hostname Team <hostname-devel@lists.alioth.debian.org>
+Architecture: amd64
+Version: 3.13ubuntu1
+Replaces: nis (<< 3.17-30)
+Pre-Depends: libc6 (>= 2.4), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
+Breaks: nis (<< 3.17-30)
+Filename: pool/main/h/hostname/hostname_3.13ubuntu1_amd64.deb
+Size: 12838
+MD5sum: 1790bf94f6ff8b09dedf47226838f20d
+SHA1: 3c3118550d55a343cd38079713792e17481084dc
+SHA256: 61c2af2522e7900b9943ecc229d68c7be06b18cc24b4fcc132a26839d8c79006
+Description: utility to set/show the host name or domain name
+Description-md5: a5a22acc3c69a7f40f07f1a8dfc93af1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
 
 Package: lib32asan0
 Priority: extra
@@ -6112,6 +6160,29 @@ Description-md5: 3e15f47206a9b1ca5987f3753bfb67cc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python3-update-manager
+Priority: standard
+Section: python
+Installed-Size: 239
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: update-manager
+Version: 1:0.190
+Replaces: update-manager-core (<< 1:0.163)
+Depends: python3 (>= 3.2.3-3~), python3-apt (>= 0.8.5~), python3-distupgrade, lsb-release
+Breaks: update-manager-core (<< 1:0.163)
+Filename: pool/main/u/update-manager/python3-update-manager_0.190_all.deb
+Size: 35182
+MD5sum: 421c7160938020ab128994d03d731f8f
+SHA1: ecdd9cd8e5ff10dfc44a37248e4d111680d30791
+SHA256: cac94922a0786ec3fb42aff326997070340d1306e78402800cb04b4c2c729ec5
+Description: python 3.x module for update-manager
+Description-md5: ecfb930b93b3c3391fc6ad445be08cee
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
 Package: signon-plugin-oauth2
 Priority: optional
 Section: libs
@@ -6251,6 +6322,52 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
+Package: update-manager
+Priority: optional
+Section: gnome
+Installed-Size: 1054
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 1:0.190
+Depends: python3 (>= 3.2.3-3~), dconf-gsettings-backend | gsettings-backend, update-manager-core (= 1:0.190), python3-aptdaemon.gtk3widgets (>= 0.40) | synaptic, policykit-1, python3-dbus, python3-gi (>= 3.8), gir1.2-vte-2.90, gir1.2-gtk-3.0, ubuntu-release-upgrader-gtk, update-notifier
+Recommends: software-properties-gtk (>= 0.71.2)
+Suggests: gir1.2-dbusmenu-glib-0.4, gir1.2-unity-5.0
+Filename: pool/main/u/update-manager/update-manager_0.190_all.deb
+Size: 557888
+MD5sum: 2ae271f2fa72978e673011fc28200686
+SHA1: d0244f0c5e4661d6e0a9d6fa5e04f5df7b3923b1
+SHA256: f3d0c77b606e719f16027d1f6ed653437551b788d2d90e2c3782e96e7aca50af
+Description: GNOME application that manages apt updates
+Description-md5: 590b36e19703392a6fe86ceaa8467c85
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: update-manager-core
+Priority: standard
+Section: admin
+Installed-Size: 152
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: update-manager
+Version: 1:0.190
+Replaces: update-manager (<< 1:0.146.2)
+Depends: python3 (>= 3.2), python3-update-manager (= 1:0.190), lsb-release, ubuntu-release-upgrader-core
+Recommends: libpam-modules (>= 1.0.1-9ubuntu3)
+Breaks: computer-janitor (<= 1.11-0ubuntu1), update-manager (<< 1:0.146.2)
+Filename: pool/main/u/update-manager/update-manager-core_0.190_all.deb
+Size: 5178
+MD5sum: 79a70870350d1b6a73e10d99109f159c
+SHA1: 2da372c881ef4d37e9fd5dc2fa416ccb1f0384ca
+SHA256: ba682708287274b2f269b852d8cfbb57159b9c2ecd44a6a09ad27b90a306df4f
+Description: manage release upgrades
+Description-md5: 0a19dc54e8c67de7adf0ecfe839b541f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
 Package: usb-modeswitch-data
 Priority: extra
 Section: comm
@@ -6276,4 +6393,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: wget
+Priority: standard
+Section: web
+Installed-Size: 636
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Noël Köthe <noel@debian.org>
+Architecture: amd64
+Version: 1.14-2ubuntu1
+Depends: libc6 (>= 2.17), libidn11 (>= 1.13), libssl1.0.0 (>= 1.0.0), libuuid1 (>= 2.16), zlib1g (>= 1:1.1.4)
+Conflicts: wget-ssl
+Filename: pool/main/w/wget/wget_1.14-2ubuntu1_amd64.deb
+Size: 294832
+MD5sum: a0ca4ee339e32645007a7945bdb594c4
+SHA1: 72612189bfea65e22ed4347539b75369a5a3f937
+SHA256: faf4924d2917e606a6436468c8ab1cd84f8a41307c99129126c8dd5657e4c473
+Description: retrieves files from the web
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/wget/
+Description-md5: 63a4a740bcd9e8e94bf661e4f1806e02
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
