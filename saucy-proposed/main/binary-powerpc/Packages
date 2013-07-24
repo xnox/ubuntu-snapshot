@@ -1,3 +1,136 @@
+Package: apparmor
+Priority: standard
+Section: admin
+Installed-Size: 1331
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: powerpc
+Version: 2.8.0-0ubuntu23
+Replaces: apparmor-parser, apparmor-utils (<< 2.8.0-0ubuntu15), libapache2-mod-apparmor (<< 2.5.1-0ubuntu3)
+Depends: libc6 (>= 2.8), debconf (>= 0.5) | debconf-2.0, libapparmor-perl, lsb-base, initramfs-tools, debconf
+Suggests: apparmor-profiles, apparmor-docs, apparmor-utils
+Breaks: apparmor-utils (<< 2.8.0-0ubuntu15), libapache2-mod-apparmor (<< 2.5.1-0ubuntu3)
+Filename: pool/main/a/apparmor/apparmor_2.8.0-0ubuntu23_powerpc.deb
+Size: 419488
+MD5sum: d55af5471991fc95752a4f50147bcffb
+SHA1: b201990bd556e5eb097adba7dec03929dddf16de
+SHA256: 595360ce2ebe7b7923a4d8ad7adf2144e8092c8cd3ac3f82d79996c001875033
+Description: User-space parser utility for AppArmor
+Homepage: http://apparmor.net/
+Description-md5: 35c06b71e31a437828d84b93a41bd493
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
+
+Package: apparmor-docs
+Priority: extra
+Section: doc
+Installed-Size: 287
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: all
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Filename: pool/main/a/apparmor/apparmor-docs_2.8.0-0ubuntu23_all.deb
+Size: 238938
+MD5sum: 436bcb2cf0c96c65f8f9f45c4e7e7101
+SHA1: 3614b5308e9c7925b8cbbf17600b81c377f34756
+SHA256: 1e062c7e6dd8cf2a30b0963a66323e7d3dc1e805e31606b12ac0d71fa15e5e03
+Description: Documentation for AppArmor
+Homepage: http://apparmor.net/
+Description-md5: ca238fbee0c75e966c57c3649cd3bc9a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apparmor-easyprof
+Priority: extra
+Section: admin
+Installed-Size: 159
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: all
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Replaces: apparmor-utils (<< 2.8.0-0ubuntu14)
+Depends: python3 (>= 3.2.3-3~), apparmor-easyprof-ubuntu
+Breaks: apparmor-utils (<< 2.8.0-0ubuntu14)
+Filename: pool/main/a/apparmor/apparmor-easyprof_2.8.0-0ubuntu23_all.deb
+Size: 22154
+MD5sum: 9d46bc098fab13828bed96f41e171437
+SHA1: 607dc91e6c7d90309ae9cf5d0b7848a81860ba3a
+SHA256: 3ec0cc3585b1a74fb5fdb16b323d38b0656bfde6c79030e81ba4280fae060edf
+Description: AppArmor easyprof profiling tool
+Multi-Arch: foreign
+Homepage: http://apparmor.net/
+Description-md5: e82ab0ed04f6b741d056bf09b6fa0a55
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apparmor-notify
+Priority: extra
+Section: admin
+Installed-Size: 107
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: all
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: libapparmor-perl, perl
+Suggests: libnotify-bin
+Filename: pool/main/a/apparmor/apparmor-notify_2.8.0-0ubuntu23_all.deb
+Size: 12090
+MD5sum: 7cc4193a1963c285e68709150830e0e1
+SHA1: 6fbec76624fdfebb7fe60322da8a8b50da3e3f16
+SHA256: 54dc4f23a46b463b1980e75c323b04970d38d5521ff283f0c844e89561955645
+Description: AppArmor notification system
+Homepage: http://apparmor.net/
+Description-md5: e52281d3d6b2d671b6cf682c76155a65
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apparmor-profiles
+Priority: extra
+Section: admin
+Installed-Size: 271
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: all
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Recommends: apparmor
+Filename: pool/main/a/apparmor/apparmor-profiles_2.8.0-0ubuntu23_all.deb
+Size: 36832
+MD5sum: 21aab49c007e4658aa7fdeecf59b2c47
+SHA1: dc2ea44aef8a9151e638619ebbe88906d7317b4a
+SHA256: c2fefc956cd07e30275bb158e36687e68d1865382980aac89366cb192c55d869
+Description: Profiles for AppArmor Security policies
+Homepage: http://apparmor.net/
+Description-md5: dd1ced2ad1af9effef302648735d913e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apparmor-utils
+Priority: optional
+Section: admin
+Installed-Size: 454
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: powerpc
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: apparmor (>= 2.6.1-4ubuntu1), liblocale-gettext-perl, libterm-readkey-perl, librpc-xml-perl, libapparmor-perl, perl
+Suggests: apparmor-docs, libterm-readline-gnu-perl, vim-addon-manager
+Filename: pool/main/a/apparmor/apparmor-utils_2.8.0-0ubuntu23_powerpc.deb
+Size: 100002
+MD5sum: 96534167ad059d584b7e3703fa007c18
+SHA1: 58c3ec6fa0578ff8b95b7ca61d7a8d0aa7c22c18
+SHA256: 094e3b7899615747b6c59b38699168135f3130ac695b2453769f532413f99480
+Description: Utilities for controlling AppArmor
+Homepage: http://apparmor.net/
+Description-md5: 22a5090997862bae53e19125fba08de9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: binutils
 Priority: optional
 Section: devel
@@ -332,6 +465,52 @@ SHA256: 5184cd9efcf7c5c7a45af6f97b08ffb0e5ff6947872fdb152877a0b3d264fb8c
 Description: Documentation for the GNU C preprocessor (cpp)
 Homepage: http://gcc.gnu.org/
 Description-md5: 22a9ba311e91d8d744a9e4df2030d2bf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: curl
+Priority: optional
+Section: web
+Installed-Size: 298
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: powerpc
+Version: 7.31.0-2ubuntu1
+Depends: libc6 (>= 2.17), libcurl3 (= 7.31.0-2ubuntu1), zlib1g (>= 1:1.1.4)
+Filename: pool/main/c/curl/curl_7.31.0-2ubuntu1_powerpc.deb
+Size: 126932
+MD5sum: b3e7a1feb241312612924cef6c87583a
+SHA1: 4c4fc1e53a36cfd8da433b10ea155a5e61a179ef
+SHA256: 789c10d9cc373b52c7837174942a712d2c1c8ec297c6ad3e54e9923508ffccea
+Description: command line tool for transferring data with URL syntax
+Multi-Arch: foreign
+Homepage: http://curl.haxx.se
+Description-md5: f83293d10df083ae6f7bb7d01642913c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: cloud-image, server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: dh-apparmor
+Priority: extra
+Section: devel
+Installed-Size: 83
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: all
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Replaces: debhelper (<< 9.20120115ubuntu3)
+Depends: perl, apparmor-easyprof
+Breaks: debhelper (<< 9.20120115ubuntu3)
+Filename: pool/main/a/apparmor/dh-apparmor_2.8.0-0ubuntu23_all.deb
+Size: 7718
+MD5sum: d6f29c8eaf8b668ee1aa5619573259eb
+SHA1: 251f43ea044299232c9b075fe72185408cafd018
+SHA256: adcad2b065ae2117dde1e2ffa4fb0cef70896017ac09ad405fc4737718b72afa
+Description: AppArmor debhelper routines
+Multi-Arch: foreign
+Homepage: http://apparmor.net/
+Description-md5: efd212d2f49b2d33d3233f07e30c77cc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -934,6 +1113,92 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
+Package: glance
+Priority: extra
+Section: python
+Installed-Size: 32
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Architecture: all
+Version: 1:2013.2~b2-0ubuntu2
+Depends: glance-api (= 1:2013.2~b2-0ubuntu2), glance-registry (= 1:2013.2~b2-0ubuntu2)
+Suggests: python-ceph
+Filename: pool/main/g/glance/glance_2013.2~b2-0ubuntu2_all.deb
+Size: 1684
+MD5sum: c89f61caf59e83f4c77cf124995a8114
+SHA1: 8f64ee337cd9f1dc4f49cf5e3c631a8e6bc7826e
+SHA256: 9b4cdcd15e3c654c305ef39364c22402c396729a68d5aef31015a5b660b98d98
+Description: OpenStack Image Registry and Delivery Service - Daemons
+Homepage: http://launchpad.net/glance
+Description-md5: 339da060766773f0f887cd36e425e1e7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: glance-api
+Priority: extra
+Section: python
+Installed-Size: 127
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Architecture: all
+Source: glance
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: glance (<< 2012.1~e1~20110919.1021-0ubuntu2)
+Depends: glance-common (= 1:2013.2~b2-0ubuntu2), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Recommends: python-glanceclient
+Filename: pool/main/g/glance/glance-api_2013.2~b2-0ubuntu2_all.deb
+Size: 18806
+MD5sum: 109cd60383d440d3a6ccde9ffbe0b209
+SHA1: 5576fb9c0c30dcae52e74011e0b7eb69484aef42
+SHA256: 94b0e95866b9d64a443e2d3b3cba33a22a17fab9cdb4328fc79e37277ae1dfc9
+Description: OpenStack Image Registry and Delivery Service - API
+Homepage: http://launchpad.net/glance
+Description-md5: 42730c4382da9ba8dd9214037a2fa93e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: glance-common
+Priority: extra
+Section: python
+Installed-Size: 83
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Architecture: all
+Source: glance
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: glance (<= 2011.3-0ubuntu4.1)
+Depends: adduser, python-glance (= 1:2013.2~b2-0ubuntu2), python
+Breaks: glance (<= 2011.3-0ubuntu4.1)
+Filename: pool/main/g/glance/glance-common_2013.2~b2-0ubuntu2_all.deb
+Size: 5040
+MD5sum: a637e88975eb0ca0d53b02f06f067c4f
+SHA1: a09b4626c1fc441c8f08a71063e479db7f2dc057
+SHA256: 369d8dcba5230cadd64299a64226d46ae47914ba12fd52536d9a15c500253aa7
+Description: OpenStack Image Registry and Delivery Service - Common
+Homepage: http://launchpad.net/glance
+Description-md5: 30114b8292754cb9dbc0df08ef8677a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: glance-registry
+Priority: extra
+Section: python
+Installed-Size: 67
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Architecture: all
+Source: glance
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: glance (<< 2012.1~e1~20110919.1021-0ubuntu2)
+Depends: glance-common (= 1:2013.2~b2-0ubuntu2), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Recommends: python-glanceclient
+Filename: pool/main/g/glance/glance-registry_2013.2~b2-0ubuntu2_all.deb
+Size: 5704
+MD5sum: c57edba3939ea9cf15f25fb8727c64ec
+SHA1: 97afa3713c37676e25975cd419c388fd68b621f2
+SHA256: e08c9455b57810a21750f7a187a88e89e5d26306d084fb350c7f14050ced503e
+Description: OpenStack Image Registry and Delivery Service - Registry
+Homepage: http://launchpad.net/glance
+Description-md5: fe9b1490f5110376f973da81ebc05838
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: gobjc-4.8
 Priority: optional
 Section: devel
@@ -1111,6 +1376,722 @@ Homepage: http://web.mit.edu/kerberos/
 Description-md5: 7761820aba399b20f00deab931782fe1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: language-pack-af
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-af (<< 1:13.10+20130723), language-pack-af-base, language-pack-gnome-af (<< 1:13.10+20130723), language-pack-gnome-af-base (<< 1:13.10+20130723), language-pack-kde-af (<< 1:13.10+20130723), language-pack-kde-af-base (<< 1:13.10+20130723)
+Depends: language-pack-af-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-af/language-pack-af_13.10+20130723_all.deb
+Size: 1976
+MD5sum: d88b92b63feb26fd8afe1abe5f85c2d5
+SHA1: 7d6ffcb866d2fcdb8dbd6ddf077863ddaf5c2b6e
+SHA256: 64429220a17397c2c1e0089a13bf206dd26ae34dc27985a513df24c2c461f6b6
+Description: translation updates for language Afrikaans
+Description-md5: d2d9e90761f53e2a13002b27ce8f5d64
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-af-base
+Priority: optional
+Section: translations
+Installed-Size: 896
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-af (<< 1:13.10+20130723), language-pack-af-base (<< 1:13.10+20130723), language-pack-gnome-af (<< 1:13.10+20130723), language-pack-gnome-af-base (<< 1:13.10+20130723), language-pack-kde-af (<< 1:13.10+20130723), language-pack-kde-af-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-af (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Recommends: firefox-locale-af
+Conflicts: language-pack-af (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-af-base/language-pack-af-base_13.10+20130723_all.deb
+Size: 288780
+MD5sum: 652ee41f240280c826e0e50b8d096644
+SHA1: 54c6ae845f3c8e303f740e9022381de8e908e873
+SHA256: de35d97bc3bbd4201220fea9eba93971b5e50cbce3e90b14e1a663974c79a3d0
+Description: translations for language Afrikaans
+Description-md5: f2472f2187166553fd095a522d2d6014
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-am
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-am (<< 1:13.10+20130723), language-pack-am-base, language-pack-gnome-am (<< 1:13.10+20130723), language-pack-gnome-am-base (<< 1:13.10+20130723), language-pack-kde-am (<< 1:13.10+20130723), language-pack-kde-am-base (<< 1:13.10+20130723)
+Depends: language-pack-am-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-am/language-pack-am_13.10+20130723_all.deb
+Size: 1970
+MD5sum: 5ec042f898eea925c0aa3a74af2c727e
+SHA1: c69c4b6d3917bef40ff36910432550eb99ef7823
+SHA256: 35a185728a978bc4dd6c5d9b5ba250d1a8af8a9b6b361c8886d4e67ec66ca6b5
+Description: translation updates for language Amharic
+Description-md5: b1e3cb56c9a6998181138cf208c5317c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-am-base
+Priority: optional
+Section: translations
+Installed-Size: 140
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-am (<< 1:13.10+20130723), language-pack-am-base (<< 1:13.10+20130723), language-pack-gnome-am (<< 1:13.10+20130723), language-pack-gnome-am-base (<< 1:13.10+20130723), language-pack-kde-am (<< 1:13.10+20130723), language-pack-kde-am-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-am (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Conflicts: language-pack-am (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-am-base/language-pack-am-base_13.10+20130723_all.deb
+Size: 28442
+MD5sum: e58f56da3e18d5e537072a5a52544a15
+SHA1: c76ea81c428d4e925c1ffa8918cdcae31da55e13
+SHA256: f5e14ebb7b1396f6f4647fae59ab00a63abe8fb1d01ffa2646bef91d6206350a
+Description: translations for language Amharic
+Description-md5: 225a82c408273f3a2be38716c8a70a5a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-an
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-an (<< 1:13.10+20130723), language-pack-an-base, language-pack-gnome-an (<< 1:13.10+20130723), language-pack-gnome-an-base (<< 1:13.10+20130723), language-pack-kde-an (<< 1:13.10+20130723), language-pack-kde-an-base (<< 1:13.10+20130723)
+Depends: language-pack-an-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-an/language-pack-an_13.10+20130723_all.deb
+Size: 1996
+MD5sum: a733107eea805f7c3269951c4f8aa181
+SHA1: 0cc5841638a76b642c48e075244de92d9066c86a
+SHA256: 9107db7a43da1cffd423d2a3fe2222c21043c68cd40572d2bfafd810f8c0a138
+Description: translation updates for language Aragonese
+Description-md5: e2a096d70c7c7fec5b3ec7bbe59a0267
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-an-base
+Priority: optional
+Section: translations
+Installed-Size: 84
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-an (<< 1:13.10+20130723), language-pack-an-base (<< 1:13.10+20130723), language-pack-gnome-an (<< 1:13.10+20130723), language-pack-gnome-an-base (<< 1:13.10+20130723), language-pack-kde-an (<< 1:13.10+20130723), language-pack-kde-an-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-an (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Conflicts: language-pack-an (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-an-base/language-pack-an-base_13.10+20130723_all.deb
+Size: 13828
+MD5sum: 030746a2fbaeebce078258a400e3766e
+SHA1: c46174f060956adb529b871033c26c030ba38903
+SHA256: 31c2c89a95bd7713430a4026ec2af2867467d9eaf09249a33f018524cf62343f
+Description: translations for language Aragonese
+Description-md5: 10bfd3179da46c760b2294e970e184da
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-ar
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-ar (<< 1:13.10+20130723), language-pack-ar-base, language-pack-gnome-ar (<< 1:13.10+20130723), language-pack-gnome-ar-base (<< 1:13.10+20130723), language-pack-kde-ar (<< 1:13.10+20130723), language-pack-kde-ar-base (<< 1:13.10+20130723)
+Depends: language-pack-ar-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-ar/language-pack-ar_13.10+20130723_all.deb
+Size: 1982
+MD5sum: d54c3aaae8bd6fe44d66a4bc16402a07
+SHA1: 6dacd8a5e2e6fcada6133be8dc02e3472786ffe8
+SHA256: 37f7a1137abdd818dc6ecc581ee13504e32f00c8a537e96a6979cba8de7611c2
+Description: translation updates for language Arabic
+Description-md5: b7461fa593f1c6fcd1db9db0c40d9039
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-ar-base
+Priority: optional
+Section: translations
+Installed-Size: 1065
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-ar (<< 1:13.10+20130723), language-pack-ar-base (<< 1:13.10+20130723), language-pack-gnome-ar (<< 1:13.10+20130723), language-pack-gnome-ar-base (<< 1:13.10+20130723), language-pack-kde-ar (<< 1:13.10+20130723), language-pack-kde-ar-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-ar (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Recommends: firefox-locale-ar
+Conflicts: language-pack-ar (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-ar-base/language-pack-ar-base_13.10+20130723_all.deb
+Size: 279510
+MD5sum: 634e71fbd981e865955ebfabf24c205a
+SHA1: bdf4b1773102ec1ff2520d8fed335a930695cb45
+SHA256: 334334853f65fe8fe7722ffc7b9379f30de1f43764676f50c7f3c415e22dda3e
+Description: translations for language Arabic
+Description-md5: 774e1cdd50e244f821c0560eba60e5d8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-ast
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-ast (<< 1:13.10+20130723), language-pack-ast-base, language-pack-gnome-ast (<< 1:13.10+20130723), language-pack-gnome-ast-base (<< 1:13.10+20130723), language-pack-kde-ast (<< 1:13.10+20130723), language-pack-kde-ast-base (<< 1:13.10+20130723)
+Depends: language-pack-ast-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-ast/language-pack-ast_13.10+20130723_all.deb
+Size: 1988
+MD5sum: 8f577cc2cc0410a9e77cdbd8e46df0dc
+SHA1: 75a2e16b1840923a0bcfb8b7c0072739db05c2da
+SHA256: 8d1bdcf1c87f1322894c765f8b60ba65d8d15f609e772bd9e3644765047cea0a
+Description: translation updates for language Asturian
+Description-md5: 786fb5ebccafbf7ec8c011f2a4076942
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-ast-base
+Priority: optional
+Section: translations
+Installed-Size: 3171
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-ast (<< 1:13.10+20130723), language-pack-ast-base (<< 1:13.10+20130723), language-pack-gnome-ast (<< 1:13.10+20130723), language-pack-gnome-ast-base (<< 1:13.10+20130723), language-pack-kde-ast (<< 1:13.10+20130723), language-pack-kde-ast-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-ast (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Recommends: firefox-locale-ast
+Conflicts: language-pack-ast (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-ast-base/language-pack-ast-base_13.10+20130723_all.deb
+Size: 1000738
+MD5sum: 435c0faac21f29684d99f01b5057bce5
+SHA1: b0ecdfd1f4cc1dd1dc14785d03173a256dfbbef3
+SHA256: 64c0c09710438a35017247b253f6cab63ad7c452cdcd520131d87603aa2619bc
+Description: translations for language Asturian
+Description-md5: e812a27ce8778aa9ee7c4e14ad29e632
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-be
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-be (<< 1:13.10+20130723), language-pack-be-base, language-pack-gnome-be (<< 1:13.10+20130723), language-pack-gnome-be-base (<< 1:13.10+20130723), language-pack-kde-be (<< 1:13.10+20130723), language-pack-kde-be-base (<< 1:13.10+20130723)
+Depends: language-pack-be-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-be/language-pack-be_13.10+20130723_all.deb
+Size: 1994
+MD5sum: 40898824aa2a87a570dcf6eecd31b77c
+SHA1: b156387bf470e85e5fc31c34c73713629b0eba55
+SHA256: 6aaa74bdf2c481b2b2735ce5214efc6c30fe8e9d865ba5cbd5af3501eb8bb2ac
+Description: translation updates for language Belarusian
+Description-md5: b33689d929a5da2b17030649e9dbcbcb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-be-base
+Priority: optional
+Section: translations
+Installed-Size: 1713
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-be (<< 1:13.10+20130723), language-pack-be-base (<< 1:13.10+20130723), language-pack-gnome-be (<< 1:13.10+20130723), language-pack-gnome-be-base (<< 1:13.10+20130723), language-pack-kde-be (<< 1:13.10+20130723), language-pack-kde-be-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-be (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Recommends: firefox-locale-be
+Conflicts: language-pack-be (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-be-base/language-pack-be-base_13.10+20130723_all.deb
+Size: 465708
+MD5sum: 5888b84ae3b5cde7c4b1d01500bd267b
+SHA1: 30625e4a57d247e9e9b3913caf5fc00556a62caf
+SHA256: 988eb403688f50c126abf7420f95bc754fc6de64b0ed2db6060d173b78a26f83
+Description: translations for language Belarusian
+Description-md5: 8845113bd3cc7413c31f90b0871d0d18
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-eu
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-eu (<< 1:13.10+20130723), language-pack-eu-base, language-pack-gnome-eu (<< 1:13.10+20130723), language-pack-gnome-eu-base (<< 1:13.10+20130723), language-pack-kde-eu (<< 1:13.10+20130723), language-pack-kde-eu-base (<< 1:13.10+20130723)
+Depends: language-pack-eu-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-eu/language-pack-eu_13.10+20130723_all.deb
+Size: 1984
+MD5sum: 5a6fbe17ad9618e92c102fae40314c81
+SHA1: a0c222b3be14e1be8416ffd5941a71f502dcf4c3
+SHA256: eb0f460fa9f54c4c9e932b54cd5defefeb828b8f7e00d27c94b18f46686c4ada
+Description: translation updates for language Basque
+Description-md5: 3df38419401806ba95f38ddb438ac3c4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-eu-base
+Priority: optional
+Section: translations
+Installed-Size: 1868
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-eu (<< 1:13.10+20130723), language-pack-eu-base (<< 1:13.10+20130723), language-pack-gnome-eu (<< 1:13.10+20130723), language-pack-gnome-eu-base (<< 1:13.10+20130723), language-pack-kde-eu (<< 1:13.10+20130723), language-pack-kde-eu-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-eu (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Recommends: firefox-locale-eu
+Conflicts: language-pack-eu (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-eu-base/language-pack-eu-base_13.10+20130723_all.deb
+Size: 574196
+MD5sum: e6208438fd6345579b1570fd3602580b
+SHA1: a847deed3f5ad170bbdf9df73f48ad73bb6383bf
+SHA256: ef79b756192161e8eeceaa9bbf1e652aa558bd955c5b6754800838c7925a4fd9
+Description: translations for language Basque
+Description-md5: f66eef54282ee6ff8369aaacfffec24c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-af
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-af (<< 1:13.10+20130723), language-pack-af-base (<< 1:13.10+20130723), language-pack-gnome-af (<< 1:13.10+20130723), language-pack-gnome-af-base, language-pack-kde-af (<< 1:13.10+20130723), language-pack-kde-af-base (<< 1:13.10+20130723)
+Depends: language-pack-gnome-af-base (>= 1:13.10+20130723), language-pack-af
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-af/language-pack-gnome-af_13.10+20130723_all.deb
+Size: 1994
+MD5sum: ef8acc788f92e56e0cd8df6bb59f7582
+SHA1: 5eae8e21b41aa2130c5b4757d1b0da5ded4a03f8
+SHA256: 1ebcfdfdcb86ae0ca477ace301f0d128f6f9aee6290c6ceb07c496e4cca4e638
+Description: GNOME translation updates for language Afrikaans
+Description-md5: 03f00246cba45c8f55d1443f8e7dc385
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-af-base
+Priority: optional
+Section: translations
+Installed-Size: 1537
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-af (<< 1:13.10+20130723), language-pack-af-base (<< 1:13.10+20130723), language-pack-gnome-af (<< 1:13.10+20130723), language-pack-gnome-af-base (<< 1:13.10+20130723), language-pack-kde-af (<< 1:13.10+20130723), language-pack-kde-af-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-gnome-af (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Conflicts: language-pack-gnome-af (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-gnome-af-base/language-pack-gnome-af-base_13.10+20130723_all.deb
+Size: 484456
+MD5sum: abedd5172f188a87b4b30b241077d8e8
+SHA1: 221984a15c61bf18955056d9c2becf06c1397569
+SHA256: c106a70f958283490e987abad98414945928856740ac4c537caf974d2027d227
+Description: GNOME translations for language Afrikaans
+Description-md5: 8e716c92217a4d1abc824304e2590795
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-am
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-am (<< 1:13.10+20130723), language-pack-am-base (<< 1:13.10+20130723), language-pack-gnome-am (<< 1:13.10+20130723), language-pack-gnome-am-base, language-pack-kde-am (<< 1:13.10+20130723), language-pack-kde-am-base (<< 1:13.10+20130723)
+Depends: language-pack-gnome-am-base (>= 1:13.10+20130723), language-pack-am
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-am/language-pack-gnome-am_13.10+20130723_all.deb
+Size: 1996
+MD5sum: 967a980f916b4208b4cca54dca84ea8b
+SHA1: 4281f14e8449d643edcb8c98e4b6a11f5c5104c4
+SHA256: 8f8bd9c2f0216f35664db46229ce64eb8e37eb1adc3068cb69ab4bf84d75f601
+Description: GNOME translation updates for language Amharic
+Description-md5: 6a0f6906d5e65f8d586a550508d05fb0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-am-base
+Priority: optional
+Section: translations
+Installed-Size: 1079
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-am (<< 1:13.10+20130723), language-pack-am-base (<< 1:13.10+20130723), language-pack-gnome-am (<< 1:13.10+20130723), language-pack-gnome-am-base (<< 1:13.10+20130723), language-pack-kde-am (<< 1:13.10+20130723), language-pack-kde-am-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-gnome-am (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Conflicts: language-pack-gnome-am (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-gnome-am-base/language-pack-gnome-am-base_13.10+20130723_all.deb
+Size: 231160
+MD5sum: 0e7b2865e05b93d7130e49881317ac3c
+SHA1: 9c73ec74a60bbd145527b2a1d51de4d86f917302
+SHA256: c5e702fe449add74ae6fc425f172fdfecddf3706af08834360c2e68eedae336d
+Description: GNOME translations for language Amharic
+Description-md5: fc178baa34307057585db99c60f5ae4e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-an
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-an (<< 1:13.10+20130723), language-pack-an-base (<< 1:13.10+20130723), language-pack-gnome-an (<< 1:13.10+20130723), language-pack-gnome-an-base, language-pack-kde-an (<< 1:13.10+20130723), language-pack-kde-an-base (<< 1:13.10+20130723)
+Depends: language-pack-gnome-an-base (>= 1:13.10+20130723), language-pack-an
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-an/language-pack-gnome-an_13.10+20130723_all.deb
+Size: 2008
+MD5sum: cb6348dae474bda3a66eb76b2b41337d
+SHA1: 6f29d5c6b1da6586e7a106d478f07d63a96a7440
+SHA256: f7a43df00118aee2c5bc198651e9a8cb8219536d012d9c96415785b4bc18c771
+Description: GNOME translation updates for language Aragonese
+Description-md5: 0aac3e51000a31708c6f4462b77eafbc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-an-base
+Priority: optional
+Section: translations
+Installed-Size: 608
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-an (<< 1:13.10+20130723), language-pack-an-base (<< 1:13.10+20130723), language-pack-gnome-an (<< 1:13.10+20130723), language-pack-gnome-an-base (<< 1:13.10+20130723), language-pack-kde-an (<< 1:13.10+20130723), language-pack-kde-an-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-gnome-an (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Conflicts: language-pack-gnome-an (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-gnome-an-base/language-pack-gnome-an-base_13.10+20130723_all.deb
+Size: 177652
+MD5sum: 40317d9cdcf0460a8f0d35a02e659a6f
+SHA1: f486d77148fce3762af514486b0d2c5bd31bf2ee
+SHA256: da541f97936d273a39e58089bca10de282cd1f84960236e4fbdbb9e71e60719a
+Description: GNOME translations for language Aragonese
+Description-md5: 4cc2b9efba21b7cd1d341f2b6448d179
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-ar
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-ar (<< 1:13.10+20130723), language-pack-ar-base (<< 1:13.10+20130723), language-pack-gnome-ar (<< 1:13.10+20130723), language-pack-gnome-ar-base, language-pack-kde-ar (<< 1:13.10+20130723), language-pack-kde-ar-base (<< 1:13.10+20130723)
+Depends: language-pack-gnome-ar-base (>= 1:13.10+20130723), language-pack-ar
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-ar/language-pack-gnome-ar_13.10+20130723_all.deb
+Size: 2012
+MD5sum: c4b1786919cd447579967bf5e9577b26
+SHA1: 6f73de85e0d25c520ea9df7f89974a19f30b72d0
+SHA256: 7e6e14d02290418eead25af0c87e765570d9d7c446e575422402c7155ba2f474
+Description: GNOME translation updates for language Arabic
+Description-md5: 0f6f92054b1a7dc34e76963baffa4d89
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-ar-base
+Priority: optional
+Section: translations
+Installed-Size: 5315
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-ar (<< 1:13.10+20130723), language-pack-ar-base (<< 1:13.10+20130723), language-pack-gnome-ar (<< 1:13.10+20130723), language-pack-gnome-ar-base (<< 1:13.10+20130723), language-pack-kde-ar (<< 1:13.10+20130723), language-pack-kde-ar-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-gnome-ar (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Conflicts: language-pack-gnome-ar (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-gnome-ar-base/language-pack-gnome-ar-base_13.10+20130723_all.deb
+Size: 1424312
+MD5sum: a9d2aeb231eb258b935481499292b38b
+SHA1: fc61f7e9bdc7ec095775cac7d7f656a442c1610f
+SHA256: 4e161cd96fcff63a4e4d8fc1fbc648ccf316c834a518de9f4ec0e92402e0a281
+Description: GNOME translations for language Arabic
+Description-md5: 6b409ad3ecfa0957ec92465c34b220a7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-ast
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-ast (<< 1:13.10+20130723), language-pack-ast-base (<< 1:13.10+20130723), language-pack-gnome-ast (<< 1:13.10+20130723), language-pack-gnome-ast-base, language-pack-kde-ast (<< 1:13.10+20130723), language-pack-kde-ast-base (<< 1:13.10+20130723)
+Depends: language-pack-gnome-ast-base (>= 1:13.10+20130723), language-pack-ast
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-ast/language-pack-gnome-ast_13.10+20130723_all.deb
+Size: 2002
+MD5sum: 46c4bc8ba88035af16f508c2a259c6f6
+SHA1: 5660d127546b505c9730bb6628b9bb6da06a3b0f
+SHA256: 750912ca4be1e467f4ca47a7eef42d1da36a1a2ff8627b206098c7a0f43a0b67
+Description: GNOME translation updates for language Asturian
+Description-md5: 6a3be15a2b74123351bfddd4c40ccb80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-ast-base
+Priority: optional
+Section: translations
+Installed-Size: 5098
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-ast (<< 1:13.10+20130723), language-pack-ast-base (<< 1:13.10+20130723), language-pack-gnome-ast (<< 1:13.10+20130723), language-pack-gnome-ast-base (<< 1:13.10+20130723), language-pack-kde-ast (<< 1:13.10+20130723), language-pack-kde-ast-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-gnome-ast (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Conflicts: language-pack-gnome-ast (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-gnome-ast-base/language-pack-gnome-ast-base_13.10+20130723_all.deb
+Size: 1522760
+MD5sum: 481cc22e5cdbdc9abc46590ce8faa7d5
+SHA1: e1b242cb4c56353f09720f36dbd036641540ed92
+SHA256: ca08a8f11439fe18bb437f30b53a304eaf96f1309a4aa81d52a7de4dbf57291d
+Description: GNOME translations for language Asturian
+Description-md5: 29a3c2b3c1e77a9a015f376afe296fc6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-be
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-be (<< 1:13.10+20130723), language-pack-be-base (<< 1:13.10+20130723), language-pack-gnome-be (<< 1:13.10+20130723), language-pack-gnome-be-base, language-pack-kde-be (<< 1:13.10+20130723), language-pack-kde-be-base (<< 1:13.10+20130723)
+Depends: language-pack-gnome-be-base (>= 1:13.10+20130723), language-pack-be
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-be/language-pack-gnome-be_13.10+20130723_all.deb
+Size: 2016
+MD5sum: c5bf34a996f8980708cfa38893f3f703
+SHA1: b3f385dbe3ae0f1fc637a99eba24e803a68e8bf4
+SHA256: 4569a32ce10385b7f4728339708d1ef7fabee4bb6aed800230058cf47c2484a3
+Description: GNOME translation updates for language Belarusian
+Description-md5: 96ea9c7f50faf1c2a796fb79251da380
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-be-base
+Priority: optional
+Section: translations
+Installed-Size: 6253
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-be (<< 1:13.10+20130723), language-pack-be-base (<< 1:13.10+20130723), language-pack-gnome-be (<< 1:13.10+20130723), language-pack-gnome-be-base (<< 1:13.10+20130723), language-pack-kde-be (<< 1:13.10+20130723), language-pack-kde-be-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-gnome-be (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Conflicts: language-pack-gnome-be (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-gnome-be-base/language-pack-gnome-be-base_13.10+20130723_all.deb
+Size: 1703406
+MD5sum: 60c42c4c38c1f5db403fddb1a499f1c0
+SHA1: 381f9c05f1b0ec8ee221b8543cdd274d5c241c41
+SHA256: 9264de1deb1ef3f85a5c96c319204bdc67914c038f36109edde299a400c37148
+Description: GNOME translations for language Belarusian
+Description-md5: 2f05d17b9a548c01ecb664544f50ba1e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-eu
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-eu (<< 1:13.10+20130723), language-pack-eu-base (<< 1:13.10+20130723), language-pack-gnome-eu (<< 1:13.10+20130723), language-pack-gnome-eu-base, language-pack-kde-eu (<< 1:13.10+20130723), language-pack-kde-eu-base (<< 1:13.10+20130723)
+Depends: language-pack-gnome-eu-base (>= 1:13.10+20130723), language-pack-eu
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-eu/language-pack-gnome-eu_13.10+20130723_all.deb
+Size: 2010
+MD5sum: 6e4bec3bf04493e39fb5a5134543743d
+SHA1: 506ce576ac70fb22fc6c06d642b548369231c87b
+SHA256: e144d0bb67ec37ddc1848b5d7d2344363523853d8d58f4601125b1b882796809
+Description: GNOME translation updates for language Basque
+Description-md5: 9d58b7ea5c4c440d487ef4a0edfc5906
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-sq
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-gnome-sq (<< 1:13.10+20130723), language-pack-gnome-sq-base, language-pack-kde-sq (<< 1:13.10+20130723), language-pack-kde-sq-base (<< 1:13.10+20130723), language-pack-sq (<< 1:13.10+20130723), language-pack-sq-base (<< 1:13.10+20130723)
+Depends: language-pack-gnome-sq-base (>= 1:13.10+20130723), language-pack-sq
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-sq/language-pack-gnome-sq_13.10+20130723_all.deb
+Size: 1982
+MD5sum: 2f64d9b48e61c0375a4f3fc2491e4123
+SHA1: aed7fdf84b438d1859902329f7e4c39de774a2b8
+SHA256: 8f418575d464a66392f80e334c5fcf1028a640c7e46b0903b99e0ef00048f9ac
+Description: GNOME translation updates for language Albanian
+Description-md5: b1866be86dde73bbc352177c4681624a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-sq-base
+Priority: optional
+Section: translations
+Installed-Size: 3778
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-gnome-sq (<< 1:13.10+20130723), language-pack-gnome-sq-base (<< 1:13.10+20130723), language-pack-kde-sq (<< 1:13.10+20130723), language-pack-kde-sq-base (<< 1:13.10+20130723), language-pack-sq (<< 1:13.10+20130723), language-pack-sq-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-gnome-sq (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Conflicts: language-pack-gnome-sq (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-gnome-sq-base/language-pack-gnome-sq-base_13.10+20130723_all.deb
+Size: 1097644
+MD5sum: d0522a078ee0f60542dc6f39e4a55abf
+SHA1: 31961cc1864508f7761da422a23b05c8d61dd9fc
+SHA256: 3ac79b07f17061d71bf709de1819799f8f04b8ff953f827f9d8c9c3ecb80ff62
+Description: GNOME translations for language Albanian
+Description-md5: 4dde5935c1ef292cfb9a3847415f9203
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-sq
+Priority: optional
+Section: translations
+Installed-Size: 30
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-gnome-sq (<< 1:13.10+20130723), language-pack-gnome-sq-base (<< 1:13.10+20130723), language-pack-kde-sq (<< 1:13.10+20130723), language-pack-kde-sq-base (<< 1:13.10+20130723), language-pack-sq (<< 1:13.10+20130723), language-pack-sq-base
+Depends: language-pack-sq-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-sq/language-pack-sq_13.10+20130723_all.deb
+Size: 1964
+MD5sum: 388eb7d97291d56c4ebde58275a105dc
+SHA1: 2471e20e8bd461c631c5f5238fe22489c9a0e42d
+SHA256: b4f1adbaee14b65480d746eb0277d70acb6960919156a115367b4f305b229b58
+Description: translation updates for language Albanian
+Description-md5: 65c046608d75d827e60d17bd98616840
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-sq-base
+Priority: optional
+Section: translations
+Installed-Size: 2101
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130723
+Replaces: language-pack-gnome-sq (<< 1:13.10+20130723), language-pack-gnome-sq-base (<< 1:13.10+20130723), language-pack-kde-sq (<< 1:13.10+20130723), language-pack-kde-sq-base (<< 1:13.10+20130723), language-pack-sq (<< 1:13.10+20130723), language-pack-sq-base (<< 1:13.10+20130723)
+Depends: locales (>= 2.3.6), language-pack-sq (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Recommends: firefox-locale-sq
+Conflicts: language-pack-sq (<< 1:13.10+20130723)
+Filename: pool/main/l/language-pack-sq-base/language-pack-sq-base_13.10+20130723_all.deb
+Size: 666186
+MD5sum: e3227a84177bb7cab9d25b2a7a36e28c
+SHA1: 30b64f0cfc8249d8e049312d4c103f2fba795a34
+SHA256: d18f7f523cceeb587f783e20025f04f0dee76ef3c97d3ea41bba58eeb7dfd4d2
+Description: translations for language Albanian
+Description-md5: de1f3ebacd8d0aae60790904e97d7dc9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-selector-common
+Priority: standard
+Section: admin
+Installed-Size: 2203
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: language-selector
+Version: 0.114
+Depends: python3 (>= 3.2.3-3~), python3.3, iso-codes, python3-apt (>= 0.7.12.0), python3-dbus, dbus, accountsservice (>= 0.6.29-1ubuntu6)
+Pre-Depends: dpkg (>= 1.15.7.2)
+Filename: pool/main/l/language-selector/language-selector-common_0.114_all.deb
+Size: 273746
+MD5sum: 68871c1bdb65c71a4b89751bcabc2331
+SHA1: 256f85072cbb0e8706e34346e14055ae94b50993
+SHA256: a9fc79224db0d370aa95eb4b18fb190510a674bc02c0dcb07bc63ce4e70d8992
+Description: Language selector for Ubuntu
+Description-md5: 2289b4df765931b87d6dfc592bc87ebc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-live
+
+Package: language-selector-gnome
+Priority: optional
+Section: admin
+Installed-Size: 168
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: language-selector
+Version: 0.114
+Replaces: language-selector (<< 0.17)
+Depends: language-selector-common (= 0.114), python3 (>= 3.2.3-3~), python3.3, python3-gi, gir1.2-gtk-3.0, gir1.2-vte-2.90, python3-apt, aptdaemon (>= 0.40+bzr527), python3-aptdaemon.gtk3widgets, im-config (>= 0.19ubuntu2~)
+Recommends: yelp
+Conflicts: language-selector (<< 0.17)
+Filename: pool/main/l/language-selector/language-selector-gnome_0.114_all.deb
+Size: 20238
+MD5sum: 86408894b448540cc3c70c4e685a4b0a
+SHA1: 1d3b8aee6695d2f6e86eec24aed9e6972e1d7d34
+SHA256: 3e527e1d72f83e14ee7ffbf6f8cddf41d75fea5702d34a74523f6506569a2e68
+Description: Language selector for Ubuntu
+Description-md5: 788d18b75f9a70e3ac7605d12641951d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop
 
 Package: lib64asan0
 Priority: extra
@@ -1543,15 +2524,36 @@ Installed-Size: 162
 Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
 Architecture: all
 Source: gnome-control-center-signon
-Version: 0.1.7~+13.10.20130723-0ubuntu1
-Filename: pool/main/g/gnome-control-center-signon/libaccount-plugin-1.0-doc_0.1.7~+13.10.20130723-0ubuntu1_all.deb
-Size: 19454
-MD5sum: c29bdd9f166fdc18178f472cf36504eb
-SHA1: c4acf7873d5292aa9af557fe029e46388f227fbc
-SHA256: 2b468f6bffcbb4b66187127bae7208e00800e86e2005d370ecb8bf8ce15895ab
+Version: 0.1.7~+13.10.20130724.1-0ubuntu1
+Filename: pool/main/g/gnome-control-center-signon/libaccount-plugin-1.0-doc_0.1.7~+13.10.20130724.1-0ubuntu1_all.deb
+Size: 19428
+MD5sum: b7c74a19b526ce282ca1320e1abbe1b8
+SHA1: 37079a0a8f99b43b83a3de6cb6858a5a61e6d8ca
+SHA256: 01bad512e99be764cc49a33479a398a5057b6c906e0b3f626c4e928f5cd1f866
 Description: libaccount-plugin for GNOME Control Center - Developer Docs
 Homepage: https://launchpad.net/online-accounts-gnome-control-center
 Description-md5: 31bf1a2908be95c12379e0aee0ecfc5c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libapache2-mod-apparmor
+Priority: extra
+Section: web
+Installed-Size: 145
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: powerpc
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: libapparmor1 (>= 2.6~devel), libc6 (>= 2.1.3), apache2-api-20120211
+Filename: pool/main/a/apparmor/libapache2-mod-apparmor_2.8.0-0ubuntu23_powerpc.deb
+Size: 25486
+MD5sum: 808b62feb64c3f8deb26c9e0f8fcc084
+SHA1: 02e4414bbe9a1e0c025d618fc2a21ad80656bbbd
+SHA256: d021b67c018417e15d94069ddc2d5043331406725681bfdec450ed597b8fc732
+Description: changehat AppArmor library as an Apache module
+Homepage: http://apparmor.net/
+Description-md5: a5901c8ca6f4b08d12fc507332ec3d1f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1574,6 +2576,71 @@ Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libapparmor-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 124
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: powerpc
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: libapparmor1 (= 2.8.0-0ubuntu23)
+Filename: pool/main/a/apparmor/libapparmor-dev_2.8.0-0ubuntu23_powerpc.deb
+Size: 23822
+MD5sum: 62697b8655d499a43823eead039d7bdd
+SHA1: 117b67a750e682b9dfa5298c09cab4d2656e24ee
+SHA256: fa985f5b4f4bcaef44e9da9a695857869b207b3ea91051f6af2ce54dada51f25
+Description: AppArmor development libraries and header files
+Homepage: http://apparmor.net/
+Description-md5: 4854e8f39d4ec17f1ef336b898438f73
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libapparmor-perl
+Priority: optional
+Section: perl
+Installed-Size: 169
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: powerpc
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: perl-base (>= 5.14.2-21build1), perlapi-5.14.2, libapparmor1 (>= 2.7.0~beta1+bzr1772), libc6 (>= 2.4)
+Filename: pool/main/a/apparmor/libapparmor-perl_2.8.0-0ubuntu23_powerpc.deb
+Size: 29678
+MD5sum: 7a2d1f266a7119896d79b075ffaf8f59
+SHA1: a4051134e411930944b3a3b54d3c1ffc9c452c86
+SHA256: 76ca6f181835f16a1b7f90c8f036629509ffd64dd03312cf6168096fb8ed23ac
+Description: AppArmor library Perl bindings
+Homepage: http://apparmor.net/
+Description-md5: 42d32a45493e77e0e2b388d84ea70892
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
+
+Package: libapparmor1
+Priority: optional
+Section: libs
+Installed-Size: 120
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: powerpc
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: libc6 (>= 2.8)
+Filename: pool/main/a/apparmor/libapparmor1_2.8.0-0ubuntu23_powerpc.deb
+Size: 36590
+MD5sum: c9010dab453d06edcd6be0c5ba03bba5
+SHA1: e9d713dc740f2f49a9f84d8a49ea131d8387d2f0
+SHA256: 95f4054e9c18aad871930ebb36c89003e5625563903566a0869597637122eff2
+Description: changehat AppArmor library
+Homepage: http://apparmor.net/
+Description-md5: b066f3d6ec4f1e72570ebf49e31e9490
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
 
 Package: libasan0
 Priority: optional
@@ -1996,6 +3063,52 @@ Description-md5: d2e0d05de0acab0cdc443672b08301eb
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libcib3
+Priority: optional
+Section: libs
+Installed-Size: 153
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libcib1, libcib2, pacemaker (<= 1.0.9.1+hg15626-2)
+Depends: libc6 (>= 2.4), libcrmcommon3 (>= 1.1.9+git20130321), libglib2.0-0 (>= 2.12.0), libgnutls26 (>= 2.12.17-0), libpe-rules2 (>= 1.1.9+git20130321), libqb0, libxml2 (>= 2.7.4)
+Conflicts: libcib1, libcib2, pacemaker (<= 1.0.9.1+hg15626-2)
+Filename: pool/main/p/pacemaker/libcib3_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 45392
+MD5sum: dea3d77c3d47bcec37bcbfd5633ced0d
+SHA1: 07dc794e1106bf5a7b58571d34c5d4f6c44e2537
+SHA256: 3f300fb338251615cacb2a189dd655275756b81fc35b10408ee7fafdb49d45d6
+Description: Pacemaker libraries - CIB
+Homepage: http://clusterlabs.org/
+Description-md5: e4c9b943061f8bb08f63f286e0e29ccb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcib3-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 207
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libcib1-dev, libcib2-dev, pacemaker-dev (<< 1.1.8+git20121010-1)
+Depends: libcib3 (= 1.1.9+git20130321-1ubuntu2)
+Conflicts: libcib1-dev, libcib2-dev, pacemaker-dev (<< 1.1.8+git20121010-1)
+Filename: pool/main/p/pacemaker/libcib3-dev_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 52106
+MD5sum: 04fce66e1b075262d372509f2a94896e
+SHA1: 097a818e81867ffbc226a58972574fe24c026f98
+SHA256: 9ba1884b48e19cb791327caedeb337177f1cdba4605b2c9193d0ce3abb8de3b8
+Description: Development file for pacemaker's cib library
+Homepage: http://clusterlabs.org/
+Description-md5: fce0c8bd401410afbf71087b9faf9799
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libcmap-dev
 Priority: optional
 Section: libdevel
@@ -2133,27 +3246,6 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
 Architecture: all
 Source: corosync
-Version: 2.3.0-1ubuntu1
-Depends: libcmap-dev, libcorosync-common-dev, libcpg-dev, libquorum-dev, libsam-dev, libtotem-pg-dev, libvotequorum-dev
-Conflicts: libopenais-dev (<< 0.85), libopenais-legacy-dev (<< 1.0.0)
-Filename: pool/main/c/corosync/libcorosync-dev_2.3.0-1ubuntu1_all.deb
-Size: 3288
-MD5sum: 5515b06292cd1bf675280b524ef3c833
-SHA1: 1a7caf8936b6d8cd930354b4306bd1965b4c358f
-SHA256: 53d3a66ef11f0f016ac258b1b10474b8a27d015a6d45dd00d9316ed3f8a1214f
-Description: Standards-based cluster framework (transitional package)
-Description-md5: 6e6d0431e37192faa27fa9bcdcf6fa08
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libcorosync-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 196
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
-Architecture: all
-Source: corosync
 Version: 2.3.0-1ubuntu2
 Depends: libcmap-dev, libcorosync-common-dev, libcpg-dev, libquorum-dev, libsam-dev, libtotem-pg-dev, libvotequorum-dev
 Conflicts: libopenais-dev (<< 0.85), libopenais-legacy-dev (<< 1.0.0)
@@ -2164,27 +3256,6 @@ SHA1: ea4f5f497074e59ae7c462adef7c0d90677c17f3
 SHA256: 8603ddd79c604843092b0f1a7b6a28329d2e8ed4ff36b9ce42c669f8276281c3
 Description: Standards-based cluster framework (transitional package)
 Description-md5: 6e6d0431e37192faa27fa9bcdcf6fa08
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libcorosync4
-Priority: optional
-Section: libs
-Installed-Size: 196
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
-Architecture: all
-Source: corosync
-Version: 2.3.0-1ubuntu1
-Depends: libcfg6, libcmap4, libcorosync-common4, libcpg4, libquorum5, libsam4, libtotem-pg5, libvotequorum6
-Conflicts: libopenais2 (<< 0.85)
-Filename: pool/main/c/corosync/libcorosync4_2.3.0-1ubuntu1_all.deb
-Size: 3274
-MD5sum: 3cd221aeb9c411ae0a15bcfe9893d053
-SHA1: b362756a0ba5d29b29713a894b9e643bbcfecc8f
-SHA256: 6f077943a174db4135362f6f48df8ae3dbb17c5e005fe170da32e337dcf0e418
-Description: Standards-based cluster framework (transitional package)
-Description-md5: 0733b47ac69d02d40f10868bc8aeac0c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -2318,6 +3389,332 @@ SHA256: 006617c379325ecfec3deadc9e1a615ad83fcd5eae828774f3bd918b3457ff7f
 Description: Unit Testing Library for C++
 Homepage: http://www.freedesktop.org/wiki/Software/cppunit
 Description-md5: dca7bb14a898276dca99f38b635142d2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcrmcluster2
+Priority: optional
+Section: libs
+Installed-Size: 124
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libcrmcluster1, pacemaker (<= 1.0.9.1+hg15626-2)
+Depends: libbz2-1.0, libc6 (>= 2.4), libcmap4 (>= 2.3.0), libcorosync-common4 (>= 2.3.0), libcpg4 (>= 2.3.0), libcrmcommon3 (>= 1.1.9+git20130321), libglib2.0-0 (>= 2.12.0), libplumb2 (>= 1.0.11+hg2754), libqb0, libquorum5 (>= 2.3.0), libstonithd2 (>= 1.1.9+git20130321), libxml2 (>= 2.7.4)
+Conflicts: libcrmcluster1, pacemaker (<= 1.0.9.1+hg15626-2)
+Filename: pool/main/p/pacemaker/libcrmcluster2_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 33800
+MD5sum: 9a319b6aaec7730f4062102d03728155
+SHA1: ab3c989d3647bed0cdcefbfd07eec5b0cd74abf9
+SHA256: 0b71a87f6d0145905ae880a943d511a82b746225f9da733747454150d28d9944
+Description: Pacemaker libraries - CRM
+Homepage: http://clusterlabs.org/
+Description-md5: a892ca8a76afa79809cd4a0148b7b15b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcrmcluster2-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 221
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libcrmcluster1-dev, pacemaker-dev (<= 1.0.9.1+hg15626-2)
+Depends: libcrmcluster2 (= 1.1.9+git20130321-1ubuntu2)
+Conflicts: libcrmcluster1-dev, pacemaker-dev (<= 1.0.9.1+hg15626-2)
+Filename: pool/main/p/pacemaker/libcrmcluster2-dev_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 53482
+MD5sum: de2a6a349307f5cefff5bf1de1de700e
+SHA1: 26055acdf5fc8e5d6b330e4114e50b2d41201898
+SHA256: 6eda7d2abbddc1c4cb916ba13e0f9f55f60267e9b8e70c3cce5067ced629588f
+Description: Development file for pacemaker's crm library
+Homepage: http://clusterlabs.org/
+Description-md5: 8e8b9f56e872e331ed3643e7092c0d20
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcrmcommon3
+Priority: optional
+Section: libs
+Installed-Size: 281
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libcrmcommon2, pacemaker (<= 1.0.9.1+hg15626-2)
+Depends: libbz2-1.0, libc6 (>= 2.17), libglib2.0-0 (>= 2.28.0), libgnutls26 (>= 2.12.17-0), libqb0, libuuid1 (>= 2.16), libxml2 (>= 2.7.4), libxslt1.1 (>= 1.1.25)
+Conflicts: libcrmcommon2, pacemaker (<= 1.0.9.1+hg15626-2)
+Filename: pool/main/p/pacemaker/libcrmcommon3_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 99974
+MD5sum: b77d93c0f544a84fca4cb9ec470c2340
+SHA1: c3b1267e7e4632f1e3be360f62e6f7908d745736
+SHA256: abf28941c7fa1f89c4af186c6fd8ccbcf8c7d20042e1ea9052f5ca1ce689ea23
+Description: Pacemaker libraries - common CRM
+Homepage: http://clusterlabs.org/
+Description-md5: f0a505f556eae75644cdd2bc62447550
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcrmcommon3-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 394
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libcrmcommon2-dev, pacemaker-dev (<< 1.1.8+git20121010-1)
+Depends: libcrmcommon3 (= 1.1.9+git20130321-1ubuntu2), cluster-glue-dev (>= 1.0.7+hg2618)
+Conflicts: libcrmcommon2-dev, pacemaker-dev (<< 1.1.8+git20121010-1)
+Filename: pool/main/p/pacemaker/libcrmcommon3-dev_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 118646
+MD5sum: fad770a8706ba0a64d19332e657b7739
+SHA1: 6370f4713e81deef118e95cc46efae45076de641
+SHA256: 61e1430de769a1ec450b334418c7c5137815802413f8b602934c7343913c2525
+Description: Development file for pacemaker's common library
+Homepage: http://clusterlabs.org/
+Description-md5: 58679e4fb14f5fff47a5f79805af3682
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcrmservice1
+Priority: optional
+Section: libs
+Installed-Size: 96
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Depends: libc6 (>= 2.8), libglib2.0-0 (>= 2.28.0), libqb0
+Filename: pool/main/p/pacemaker/libcrmservice1_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 23934
+MD5sum: 09a9d6abb5556990526f9efd5273f034
+SHA1: 839d2001f1f5491b35b4f03f359f317b6e23bc2f
+SHA256: e2008c37ca6d1384446ed3f6dfec8c57d52806868cbb08e3b010731b930cbdac
+Description: Pacemaker libraries - crmservice
+Homepage: http://clusterlabs.org/
+Description-md5: c43d70cca679c3f725d486ebcc426fb5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcrmservice1-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 113
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Depends: libcrmservice1 (= 1.1.9+git20130321-1ubuntu2)
+Filename: pool/main/p/pacemaker/libcrmservice1-dev_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 24166
+MD5sum: 6e3cae93b55766e2f7a27b609f9f0a4d
+SHA1: 9bf30ecdc7adb4018e43da393084058ece072a1f
+SHA256: 73beb72c4ff977def8ae62e91110a39522b58f8f26f64848cc043836cde1b0e1
+Description: Development file for pacemaker's crmservice library
+Homepage: http://clusterlabs.org/
+Description-md5: 0833331082c9a7f7951b058c9fc388e8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcurl3
+Priority: optional
+Section: libs
+Installed-Size: 561
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: powerpc
+Source: curl
+Version: 7.31.0-2ubuntu1
+Depends: libc6 (>= 2.17), libgssapi-krb5-2 (>= 1.10+dfsg~), libidn11 (>= 1.13), libldap-2.4-2 (>= 2.4.7), librtmp0 (>= 2.3), libssl1.0.0 (>= 1.0.1), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Recommends: ca-certificates
+Filename: pool/main/c/curl/libcurl3_7.31.0-2ubuntu1_powerpc.deb
+Size: 201808
+MD5sum: 7ee8f38c5b868e2327b58480e787df81
+SHA1: b461a283f4a60bd10c6f54868aa3b2d0a45ce18f
+SHA256: 90d0e472030569b0bf43dacb3c6193f3c68804801f39c699fc083b3a295b891f
+Description: easy-to-use client-side URL transfer library (OpenSSL flavour)
+Multi-Arch: same
+Homepage: http://curl.haxx.se
+Description-md5: f1c7f18aba2d8ab7a7e32acea1dc61e7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntu-gnome-desktop
+
+Package: libcurl3-dbg
+Priority: extra
+Section: libdevel
+Installed-Size: 3531
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: powerpc
+Source: curl
+Version: 7.31.0-2ubuntu1
+Provides: libcurl4-dbg
+Depends: libcurl3 (= 7.31.0-2ubuntu1) | libcurl3-gnutls (= 7.31.0-2ubuntu1) | libcurl3-nss (= 7.31.0-2ubuntu1)
+Suggests: libc-dbg
+Filename: pool/main/c/curl/libcurl3-dbg_7.31.0-2ubuntu1_powerpc.deb
+Size: 3217370
+MD5sum: 7972e2c727ceac9ccdc8d02cbe5f494f
+SHA1: 20c48a97a46b8a47124b1ea1d97f4ffca7c3cd5a
+SHA256: ca74a55997f592f8d1a7d1b6338cf2a191149acd30ebbc4b26357ed7d190606c
+Description: debugging symbols for libcurl (OpenSSL, GnuTLS and NSS flavours)
+Multi-Arch: same
+Homepage: http://curl.haxx.se
+Description-md5: fb54017039bcf3b29ee313d6fc59d8cb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcurl3-gnutls
+Priority: standard
+Section: libs
+Installed-Size: 541
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: powerpc
+Source: curl
+Version: 7.31.0-2ubuntu1
+Depends: libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libgnutls26 (>= 2.12.17-0), libgssapi-krb5-2 (>= 1.10+dfsg~), libidn11 (>= 1.13), libldap-2.4-2 (>= 2.4.7), librtmp0 (>= 2.3), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Recommends: ca-certificates
+Filename: pool/main/c/curl/libcurl3-gnutls_7.31.0-2ubuntu1_powerpc.deb
+Size: 192936
+MD5sum: 9b009435088ff9d331a1ddee3aee8c41
+SHA1: 7612c35d76a3f17df455c73fea1cdee91e427c16
+SHA256: 5f2a31c947f8a9800e994eecf30c73c9f9cbadd39f1ec0692826478d653ac3c3
+Description: easy-to-use client-side URL transfer library (GnuTLS flavour)
+Multi-Arch: same
+Homepage: http://curl.haxx.se
+Description-md5: 785baf29d91f9f781677a7f569940052
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libcurl3-nss
+Priority: optional
+Section: libs
+Installed-Size: 553
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: powerpc
+Source: curl
+Version: 7.31.0-2ubuntu1
+Depends: libc6 (>= 2.17), libgssapi-krb5-2 (>= 1.10+dfsg~), libidn11 (>= 1.13), libldap-2.4-2 (>= 2.4.7), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.5), librtmp0 (>= 2.3), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Recommends: ca-certificates
+Filename: pool/main/c/curl/libcurl3-nss_7.31.0-2ubuntu1_powerpc.deb
+Size: 199064
+MD5sum: 2d9d2758dd79181bd70081a3a23d77a0
+SHA1: 62cdda13a13b47457cd09652e2bbf1cf171987c4
+SHA256: b7bab2f4289b6a4607e29f84c399b71876fc9b9c332bb2812c6560f646f69326
+Description: easy-to-use client-side URL transfer library (NSS flavour)
+Multi-Arch: same
+Homepage: http://curl.haxx.se
+Description-md5: 459d2b4fbb16cf9975276e1d24a7ffe8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcurl4-doc
+Priority: optional
+Section: doc
+Installed-Size: 1823
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: all
+Source: curl
+Version: 7.31.0-2ubuntu1
+Replaces: libcurl4-gnutls-dev (<< 7.30.0-2), libcurl4-nss-dev (<< 7.30.0-2), libcurl4-openssl-dev (<< 7.30.0-2)
+Breaks: libcurl4-gnutls-dev (<< 7.30.0-2), libcurl4-nss-dev (<< 7.30.0-2), libcurl4-openssl-dev (<< 7.30.0-2)
+Filename: pool/main/c/curl/libcurl4-doc_7.31.0-2ubuntu1_all.deb
+Size: 955896
+MD5sum: 6e98b856c2aa6b6a88fa240de1606cd1
+SHA1: 9cce99802a93709218ddfe1eb499735e7a927bac
+SHA256: 07c6dd0470dc8a0bb57ae7f415894f520febf654ee2babf27afd4f5638a01a6c
+Description: documentation for libcurl
+Homepage: http://curl.haxx.se
+Description-md5: 6462959fec3647baef16ff31a5f39d94
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcurl4-gnutls-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 955
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: powerpc
+Source: curl
+Version: 7.31.0-2ubuntu1
+Provides: libcurl-dev, libcurl-ssl-dev, libcurl3-gnutls-dev, libcurl4-dev
+Depends: libcurl3-gnutls (= 7.31.0-2ubuntu1), libc6-dev | libc-dev, libgnutls-dev, libidn11-dev, libkrb5-dev, libldap2-dev, librtmp-dev, zlib1g-dev
+Suggests: libcurl4-doc, libcurl3-dbg
+Conflicts: libcurl4-nss-dev, libcurl4-openssl-dev
+Filename: pool/main/c/curl/libcurl4-gnutls-dev_7.31.0-2ubuntu1_powerpc.deb
+Size: 292642
+MD5sum: ad85b69b26bff5532ccd643565143670
+SHA1: 332f4ab36040f0a47a6c60dcc8b3ea5562912b5b
+SHA256: 6bbb1b3f2652c7bab3276f5dcf2d10d8e4f0ce4003ef215f14f7d278e0202a04
+Description: development files and documentation for libcurl (GnuTLS flavour)
+Homepage: http://curl.haxx.se
+Description-md5: 934268033e9ea26fd8907507a9f641bd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcurl4-nss-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 969
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: powerpc
+Source: curl
+Version: 7.31.0-2ubuntu1
+Provides: libcurl-dev, libcurl-ssl-dev, libcurl3-nss-dev, libcurl4-dev
+Depends: libcurl3-nss (= 7.31.0-2ubuntu1), libc6-dev | libc-dev, libidn11-dev, libkrb5-dev, libldap2-dev, libnss3-dev, librtmp-dev, zlib1g-dev
+Suggests: libcurl4-doc, libcurl3-dbg
+Conflicts: libcurl4-gnutls-dev, libcurl4-openssl-dev
+Filename: pool/main/c/curl/libcurl4-nss-dev_7.31.0-2ubuntu1_powerpc.deb
+Size: 300614
+MD5sum: 8924f02381e3ffd2c031e001e23b2304
+SHA1: 5b23a521cc2f912944de1c65134e6720c70293cc
+SHA256: 4c8d66794faa747f988b8309cb80ef7c25ebf912a4642941aa18ef1d7c3772d9
+Description: development files and documentation for libcurl (NSS flavour)
+Homepage: http://curl.haxx.se
+Description-md5: 03ed99f13850346b8ac59c56c3e4521f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcurl4-openssl-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 978
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: powerpc
+Source: curl
+Version: 7.31.0-2ubuntu1
+Provides: libcurl-dev, libcurl-ssl-dev, libcurl3-dev, libcurl3-openssl-dev, libcurl4-dev
+Depends: libcurl3 (= 7.31.0-2ubuntu1), libc6-dev | libc-dev, libidn11-dev, libkrb5-dev, libldap2-dev, librtmp-dev, libssl-dev, zlib1g-dev
+Suggests: libcurl4-doc, libcurl3-dbg
+Conflicts: libcurl4-gnutls-dev, libcurl4-nss-dev
+Filename: pool/main/c/curl/libcurl4-openssl-dev_7.31.0-2ubuntu1_powerpc.deb
+Size: 302520
+MD5sum: 77fbc6a477798bc2c465c33f500d8595
+SHA1: 9f3da7aafd5318a18f26538790fcb696b1ccda5e
+SHA256: c953397373969275a60b8e59837e5fc0fa819363741a9304c4babc34b44a1367
+Description: development files and documentation for libcurl (OpenSSL flavour)
+Homepage: http://curl.haxx.se
+Description-md5: 9ef3e0d3a9a6f50f79b0deaff858c410
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -3893,6 +5290,48 @@ Description-md5: 87ff14435a28f46ae1486d878912dfa7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: liblrmd1
+Priority: optional
+Section: libs
+Installed-Size: 92
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Depends: libc6 (>= 2.4), libcrmcommon3 (>= 1.1.9+git20130321), libcrmservice1 (>= 1.1.9+git20130321), libglib2.0-0 (>= 2.28.0), libgnutls26 (>= 2.12.17-0), libqb0, libstonithd2 (>= 1.1.9+git20130321), libxml2 (>= 2.7.4)
+Filename: pool/main/p/pacemaker/liblrmd1_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 20224
+MD5sum: add80ec0f59569abfc40e1e53716705e
+SHA1: a643bc22a1f0b26e931f0fc1cd0c4faf6b028fe7
+SHA256: eccf973724c78862248ce7a26ae0d0b66ae0a98b665d355e559ab194be57ff1b
+Description: Pacemaker libraries - lrmd
+Homepage: http://clusterlabs.org/
+Description-md5: de6573b7d14f11e4d6b515edcc19cba2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: liblrmd1-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 128
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Depends: liblrmd1 (= 1.1.9+git20130321-1ubuntu2)
+Filename: pool/main/p/pacemaker/liblrmd1-dev_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 25190
+MD5sum: e7edaa0c08f09dda8dc807bfa6e180a1
+SHA1: d3a5ef34b3439baeb7241981b52e52045a82bba6
+SHA256: 6c5bd94e94e9d54d99147f6a0f0fb7b9ffbd09e6f39ccb55bc0cec5d8527a766
+Description: Development file for pacemaker's lrmd library
+Homepage: http://clusterlabs.org/
+Description-md5: 863ba4bcb2d8fb0a246a702bdbb9631e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libnux-4.0-0
 Priority: optional
 Section: libs
@@ -4139,6 +5578,165 @@ SHA256: 53a17cc1928eebc16efe921c4127db442d092d1971bc40175da6a7cabb53647e
 Description: Mesa Off-screen rendering extension -- development files
 Homepage: http://mesa3d.sourceforge.net/
 Description-md5: 9b1d7a0b3e6a2ea021f4443f42dcff4f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpam-apparmor
+Priority: extra
+Section: libs
+Installed-Size: 76
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: powerpc
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: libapparmor1 (>= 2.6~devel), libc6 (>= 2.1.3), libpam0g (>= 0.99.7.1)
+Filename: pool/main/a/apparmor/libpam-apparmor_2.8.0-0ubuntu23_powerpc.deb
+Size: 7650
+MD5sum: 49c7bc58ed7091d84eea1f8a874dde21
+SHA1: 1d94b6e5df590bd920bc0aba7c6f6edbb125fa66
+SHA256: 559e392b7ec2cda52728dcf055c68fc516f5eb7086b004731bd44f1deed19690
+Description: changehat AppArmor library as a PAM module
+Homepage: http://apparmor.net/
+Description-md5: e416b01d786a37c6ad586d6663ee5027
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpe-rules2
+Priority: optional
+Section: libs
+Installed-Size: 85
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libpe-rules-2 (<= 1.0.10-1), pacemaker (<= 1.0.9.1+hg15626-2)
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.28.0), libqb0
+Conflicts: libpe-rules-2 (<= 1.0.10-1), pacemaker (<= 1.0.9.1+hg15626-2)
+Filename: pool/main/p/pacemaker/libpe-rules2_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 18526
+MD5sum: 8c6660e9ba9b3ac595635b09366a4b94
+SHA1: 4442926072051e312c54afba2295f2da85fe8035
+SHA256: 5875ca5454517db41535130149550842ed9a25c1a0479da3dc121c870a5c819f
+Description: Pacemaker libraries - rules for P-Engine
+Homepage: http://clusterlabs.org/
+Description-md5: c9973e28b11e88b80273ac25fa092956
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpe-rules2-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 89
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libpe-rules-2-dev (<= 1.0.10-1), pacemaker-dev (<= 1.0.9.1+hg15626-2)
+Depends: libpe-rules2 (= 1.1.9+git20130321-1ubuntu2)
+Conflicts: libpe-rules-2-dev (<= 1.0.10-1), pacemaker-dev (<= 1.0.9.1+hg15626-2)
+Filename: pool/main/p/pacemaker/libpe-rules2-dev_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 17310
+MD5sum: 2678c66288b15d27220c11a7053e1a05
+SHA1: 3feb62bbf0f0d155b7cf002c3c8608675baa044f
+SHA256: 486f51a96ab930ebf729b8fb88664c210a714a9cc04ad44c5534a0e4a98b2e57
+Description: Development file for pacemaker's rules library
+Homepage: http://clusterlabs.org/
+Description-md5: 95030e3a0fd7d07823478ba562e19ce1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpe-status4
+Priority: optional
+Section: libs
+Installed-Size: 249
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libpe-status-2 (<= 1.0.10-1), libpe-status3, pacemaker (<= 1.0.9.1+hg15626-2)
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.28.0), libncurses5 (>= 5.5-5~), libqb0, libtinfo5, libxml2 (>= 2.7.4)
+Conflicts: libpe-status-2 (<= 1.0.10-1), libpe-status3, pacemaker (<= 1.0.9.1+hg15626-2)
+Filename: pool/main/p/pacemaker/libpe-status4_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 87674
+MD5sum: f6eb874cb4c0b451c0c4036481186b2a
+SHA1: 705c74734642631af4bc718297c0a97d6501958c
+SHA256: 73d3016fbb540576939e2707c1af360384853744d61cc0a092bba198cb59f26f
+Description: Pacemaker libraries - status for P-Engine
+Homepage: http://clusterlabs.org/
+Description-md5: f4372d525f4f0c133a0ffa27c2f67016
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpe-status4-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 312
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libpe-status-2-dev (<= 1.0.10-1), libpe-status2-dev, libpe-status3-dev, pacemaker-dev (<= 1.0.9.1+hg15626-2)
+Depends: libpe-status4 (= 1.1.9+git20130321-1ubuntu2)
+Conflicts: libpe-status-2-dev (<= 1.0.10-1), libpe-status2-dev, libpe-status3-dev, pacemaker-dev (<= 1.0.9.1+hg15626-2)
+Filename: pool/main/p/pacemaker/libpe-status4-dev_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 98234
+MD5sum: e2f300bf67a61fc80e0b4ae78710b12e
+SHA1: 7efde82a4fe5a0798a8a9ab6a7effd2c0429c911
+SHA256: 30104310cae69d69c3d4aff35d167793449ee65719d877d31e96296ecd910656
+Description: Development file for pacemaker's status library
+Homepage: http://clusterlabs.org/
+Description-md5: 7922ec9a8a41c138ba00b6f2bbe39e60
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpengine4
+Priority: optional
+Section: libs
+Installed-Size: 357
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libpengine3, pacemaker (<= 1.0.9.1+hg15626-2), pacemaker-dev (<< 1.1.8+git20121010-1)
+Depends: libc6 (>= 2.4), libcib3 (>= 1.1.9+git20130321), libglib2.0-0 (>= 2.28.0), libpe-status4 (>= 1.1.9+git20130321), libqb0, libxml2 (>= 2.7.4)
+Conflicts: libpengine3, pacemaker (<= 1.0.9.1+hg15626-2), pacemaker-dev (<< 1.1.8+git20121010-1)
+Filename: pool/main/p/pacemaker/libpengine4_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 127610
+MD5sum: 2eac82d5d6ce334b1320a8f4e50dcc60
+SHA1: a39ab7b2db31d42b1924051fd4bb4c80eeeea4bc
+SHA256: fc9bf3195fc34586578b25804d34871fe7483ec97ebe24f96f8d84472464ef5d
+Description: Pacemaker libraries - P-Engine
+Homepage: http://clusterlabs.org/
+Description-md5: f26b8e819a87fc3637afefe72e60d21c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpengine4-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 499
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libpengine3-dev, pacemaker-dev (<= 1.0.9.1+hg15626-2)
+Depends: libpengine4 (= 1.1.9+git20130321-1ubuntu2)
+Conflicts: libpengine3-dev, pacemaker-dev (<= 1.0.9.1+hg15626-2)
+Filename: pool/main/p/pacemaker/libpengine4-dev_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 157174
+MD5sum: b99b6f47eeb55884265f27f1eb4592d9
+SHA1: 09588fd84685c9187a92d5b6851298e5302fa26a
+SHA256: 52698723d74988a038b2c763a34336092af1f4b009b1d47e58971c682971a523
+Description: Development file for pacemaker's pengine library
+Homepage: http://clusterlabs.org/
+Description-md5: a14b6499b011e9dad1273150f994aff0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -4650,6 +6248,52 @@ Description-md5: 6d699ea4429a346bc58e56d70e561407
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libstonithd2
+Priority: optional
+Section: libs
+Installed-Size: 104
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libstonithd0, pacemaker (<= 1.0.9.1+hg15626-2)
+Depends: libc6 (>= 2.4), libcrmcommon3 (>= 1.1.9+git20130321), libglib2.0-0 (>= 2.12.0), libpils2 (>= 1.0.11+hg2754), libqb0, libxml2 (>= 2.7.4)
+Conflicts: libstonithd0, pacemaker (<= 1.0.9.1+hg15626-2)
+Filename: pool/main/p/pacemaker/libstonithd2_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 26212
+MD5sum: 0ef3405d032894b431252b5381fea98f
+SHA1: 64fcf603e099e931cdfbd1c5bc081a807c5b3fc0
+SHA256: b6fc254b18b641805d1ba8dbef0f141ae487e569aeac6e0db528d4b96e6f6cb4
+Description: Pacemaker libraries - stonith
+Homepage: http://clusterlabs.org/
+Description-md5: 67bb1316543aa3beed4e79f9d581cd18
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libstonithd2-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 112
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libstonithd0-dev, pacemaker-dev (<= 1.0.9.1+hg15626-2)
+Depends: libstonithd2 (= 1.1.9+git20130321-1ubuntu2)
+Conflicts: libstonithd0-dev, pacemaker-dev (<= 1.0.9.1+hg15626-2)
+Filename: pool/main/p/pacemaker/libstonithd2-dev_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 27322
+MD5sum: 2915f7d9e033a8843bda5b1fe1da3e1e
+SHA1: 3c5529c0159c4ab14dc01ff85ff2e18cc2ce408f
+SHA256: 1d34560c2cd3156f14fc4df609337ac4d05a579f10c7f4db585c1b3af83bbd3a
+Description: Development file for pacemaker's stonith library
+Homepage: http://clusterlabs.org/
+Description-md5: 866bcacda5049a039e49a6b60e6e38f7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libswscale-dev
 Priority: optional
 Section: libdevel
@@ -4779,6 +6423,52 @@ SHA1: bcb3ebdd6a1db0e8afc7ec06bb5743429fdee19b
 SHA256: a41032cfc65988795fb3eb89e141b8c3736f61bdcae2b6b6b783f9d18f4b2c49
 Description: Standards-based cluster framework, Totem library
 Description-md5: 164ea2308745ca8156991d1e7b39c4bd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libtransitioner2
+Priority: optional
+Section: libs
+Installed-Size: 76
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libtransitioner1, pacemaker (<= 1.0.9.1+hg15626-2)
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.16.0), libqb0
+Conflicts: libtransitioner1, pacemaker (<= 1.0.9.1+hg15626-2)
+Filename: pool/main/p/pacemaker/libtransitioner2_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 16300
+MD5sum: 8aa09c485225d914884dd83238f39b10
+SHA1: 6ad784640b0cc46b3b4f714667868fb17d512914
+SHA256: 0f21f3838f34cfecb4cd0df75a99eee940afdb0dffd2f58ad528ec6c652bbe20
+Description: Pacemaker libraries - transitioner
+Homepage: http://clusterlabs.org/
+Description-md5: a43b49090be76a0116065825ae14238a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libtransitioner2-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 82
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: libtransitioner1-dev, pacemaker-dev (<= 1.0.9.1+hg15626-2)
+Depends: libtransitioner2 (= 1.1.9+git20130321-1ubuntu2)
+Conflicts: libtransitioner1-dev, pacemaker-dev (<= 1.0.9.1+hg15626-2)
+Filename: pool/main/p/pacemaker/libtransitioner2-dev_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 15776
+MD5sum: b885487d7a4238fd96046f185fa451f7
+SHA1: 73cefdd1fe1fa56f6215ce26ed352771746e074b
+SHA256: 57f5d397e8d4a6dcf73892493502cedd13966b42207295291a9193badfbf2977
+Description: Development file for pacemaker's transitioner library
+Homepage: http://clusterlabs.org/
+Description-md5: 10d7a2c733c5b75c4ca941b7388adbbe
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -5159,48 +6849,136 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
-Package: paramiko-doc
+Package: pacemaker
 Priority: optional
-Section: doc
-Installed-Size: 6974
+Section: admin
+Installed-Size: 1503
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Jeremy T. Bouse <jbouse@debian.org>
-Architecture: all
-Source: paramiko
-Version: 1.10.1-1
-Filename: pool/main/p/paramiko/paramiko-doc_1.10.1-1_all.deb
-Size: 722488
-MD5sum: 9bc5f8b712264fa5a62a2242a793f578
-SHA1: 933e1e8f51fdf59b3bc1370ce8d692586409197f
-SHA256: a4e43a0aa734529da439ec1a39a4a0517654d5e5780837f92e59f69c63a3f580
-Description: Make ssh v2 connections with Python (Documentation)
-Homepage: https://github.com/paramiko/paramiko/
-Description-md5: 64abd13842f9844afdfb841ebdde4eac
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: pacemaker-heartbeat, pacemaker-openais
+Depends: libc6 (>= 2.4), libcfg6 (>= 2.3.0), libcib3 (>= 1.1.9+git20130321), libcmap4 (>= 2.3.0), libcorosync-common4 (>= 2.3.0), libcpg4 (>= 2.3.0), libcrmcluster2 (>= 1.1.9+git20130321), libcrmcommon3 (>= 1.1.9+git20130321), libcrmservice1 (>= 1.1.9+git20130321), libglib2.0-0 (>= 2.28.0), libgnutls26 (>= 2.12.17-0), liblrmd1 (>= 1.1.9+git20130321), libpam0g (>= 0.99.7.1), libpe-rules2 (>= 1.1.9+git20130321), libpe-status4 (>= 1.1.9+git20130321), libpengine4 (>= 1.1.9+git20130321), libplumb2 (>= 1.0.11+hg2754), libqb0, libstonithd2 (>= 1.1.9+git20130321), libtransitioner2 (>= 1.1.9+git20130321), libxml2 (>= 2.7.4), python (>= 2.7.1-0ubuntu2), python (<< 2.8), resource-agents, adduser, corosync (>= 2.3.0) | heartbeat (>= 3.0), crmsh, pacemaker-cli-utils
+Conflicts: pacemaker-heartbeat, pacemaker-openais
+Filename: pool/main/p/pacemaker/pacemaker_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 455968
+MD5sum: b55fe709b83fc6b27c90d161012fa02f
+SHA1: 3a8c099a14d629a47ae2b4fd0b763d13b9bd5154
+SHA256: d07d82e15062253c2a3b26551ccefbf6aec028edccfcb1e68573d2f727622b54
+Description: HA cluster resource manager
+Homepage: http://clusterlabs.org/
+Description-md5: eccce3a1485fdccecf06cfd5b57852c3
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: python-cheetah
+Package: pacemaker-cli-utils
 Priority: optional
-Section: text
-Installed-Size: 817
+Section: admin
+Installed-Size: 507
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Arnaud Fontaine <arnau@debian.org>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
 Architecture: powerpc
-Source: cheetah
-Version: 2.4.4-3.fakesync
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python2.7, libc6 (>= 2.3.5)
-Suggests: python-markdown (>= 2.0.1), python-pygments, python-memcache
-Filename: pool/main/c/cheetah/python-cheetah_2.4.4-3.fakesync_powerpc.deb
-Size: 172004
-MD5sum: cedd60e71e9a2f9464d116b733565e0e
-SHA1: c1c46380dd7b58d6aadca62e77dd4e57acee5a24
-SHA256: 29a199083b6d4f36450a5345bc72b392fa04dcb152089176282a8c4abbc167d5
-Description: text-based template engine and Python code generator
-Homepage: http://www.cheetahtemplate.org/
-Description-md5: 7ea556f71dbb09af303eee70f24822f5
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: pacemaker (<< 1.1.9+git20130321-1)
+Depends: libc6 (>= 2.15), libcib3 (>= 1.1.9+git20130321), libcpg4 (>= 2.3.0), libcrmcluster2 (>= 1.1.9+git20130321), libcrmcommon3 (>= 1.1.9+git20130321), libcrmservice1 (>= 1.1.9+git20130321), libesmtp6, libglib2.0-0 (>= 2.16.0), liblrmd1 (>= 1.1.9+git20130321), libncurses5 (>= 5.5-5~), libpe-rules2 (>= 1.1.9+git20130321), libpe-status4 (>= 1.1.9+git20130321), libpengine4 (>= 1.1.9+git20130321), libplumb2 (>= 1.0.11+hg2754), libqb0, libquorum5 (>= 2.3.0), libsnmp30 (>= 5.7.2~dfsg), libstonithd2 (>= 1.1.9+git20130321), libtinfo5, libtransitioner2 (>= 1.1.9+git20130321), libxml2 (>= 2.7.4)
+Conflicts: pacemaker (<< 1.1.9+git20130321-1)
+Filename: pool/main/p/pacemaker/pacemaker-cli-utils_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 182168
+MD5sum: 9f3f8765328751605ef67d20ad972a7e
+SHA1: 03e1c670ccd2e425143126fab8fbccc9fb39a0e8
+SHA256: ad1cb94692a543ad61688d79cafa2dc03c9d08fe1f8fe97aa2f2c2777d72e203
+Description: Command line interface utilities for Pacemaker
+Homepage: http://clusterlabs.org/
+Description-md5: 3c7c85297daa7a355331d5519e1b5e8c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: cloud-image
+
+Package: pacemaker-dev
+Priority: optional
+Section: devel
+Installed-Size: 17460
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Replaces: pacemaker-heartbeat-dev, pacemaker-openais-dev
+Depends: pacemaker (>= 1.1.9+git20130321-1ubuntu2), python, libcorosync-dev (>= 2.3.0), libheartbeat2-dev (>= 3.0), libglib2.0-dev, libxml2-dev, libcluster-glue-dev (>= 1.0.7+hg2618), libcib3-dev (>= 1.1.9+git20130321-1ubuntu2), libcrmcluster2-dev (>= 1.1.9+git20130321-1ubuntu2), libcrmcommon3-dev (>= 1.1.9+git20130321-1ubuntu2), libpe-rules2-dev (>= 1.1.9+git20130321-1ubuntu2), libpe-status4-dev (>= 1.1.9+git20130321-1ubuntu2), libpengine4-dev (>= 1.1.9+git20130321-1ubuntu2), libstonithd2-dev (>= 1.1.9+git20130321-1ubuntu2), libtransitioner2-dev (>= 1.1.9+git20130321-1ubuntu2), liblrmd1-dev (>= 1.1.9+git20130321-1ubuntu2), libcrmservice1-dev (>= 1.1.9+git20130321-1ubuntu2)
+Conflicts: pacemaker-heartbeat-dev, pacemaker-openais-dev
+Filename: pool/main/p/pacemaker/pacemaker-dev_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 1072298
+MD5sum: e2b4cecbb176e8e38eb116cfe4119b9a
+SHA1: b0a7bccd0933ab6353448fcab19fbf2bbbc603fd
+SHA256: 3c7e0bed1f809237eff4b13a728acaa2f893d4c6bc27e84d291fb588d36ea0b5
+Description: HA cluster resource manager (development files)
+Homepage: http://clusterlabs.org/
+Description-md5: 84975a748b75e47909c7bb0cfd965795
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: pacemaker-remote
+Priority: optional
+Section: admin
+Installed-Size: 140
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: pacemaker
+Version: 1.1.9+git20130321-1ubuntu2
+Depends: libc6 (>= 2.4), libcrmcommon3 (>= 1.1.9+git20130321), libcrmservice1 (>= 1.1.9+git20130321), libglib2.0-0 (>= 2.16.0), libgnutls26 (>= 2.12.17-0), liblrmd1 (>= 1.1.9+git20130321), libqb0, libstonithd2 (>= 1.1.9+git20130321), resource-agents, python, pacemaker-cli-utils
+Filename: pool/main/p/pacemaker/pacemaker-remote_1.1.9+git20130321-1ubuntu2_powerpc.deb
+Size: 27242
+MD5sum: 9b95a5ef0a3b679e5e5ade103b451f23
+SHA1: c49e208f59f3e92db92d19031e3c560a036ccf66
+SHA256: bcd171bd8038c9218bb60c362e65d0081e28a82891ee020fdb08d995b255a8b1
+Description: Pacemaker add-on to control virtualized services
+Homepage: http://clusterlabs.org/
+Description-md5: f57f71c6289d2e55d6e516dc2b395677
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-glance
+Priority: extra
+Section: python
+Installed-Size: 4248
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Architecture: all
+Source: glance
+Version: 1:2013.2~b2-0ubuntu2
+Provides: python2.7-glance
+Depends: python-argparse, python-crypto (>= 2.1.0~alpha1), python-dateutil, python-eventlet, python-httplib2, python-iso8601, python-jsonschema, python-keystone, python-kombu, python-migrate, python-oslo-config, python-pastedeploy, python-requests, python-routes, python-setuptools, python-sqlalchemy-ext | python-sqlalchemy (<< 0.6.3-2), python-swiftclient, python-webob, python-xattr, python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-greenlet, python-sqlalchemy (>= 0.8~), python-sqlalchemy (<< 0.9), python-anyjson, python-boto, python-oslo.config, python-lxml, python-paste, python-passlib, python-cinderclient, python-keystoneclient, python-openssl, python-six
+Filename: pool/main/g/glance/python-glance_2013.2~b2-0ubuntu2_all.deb
+Size: 652602
+MD5sum: df8e3c7fb6e9a2349a856b90efdff38a
+SHA1: c1fde72914d9db40cc45f2d34803b161d2e1235f
+SHA256: bc6378529dc14998a95ed157d4e01060c5ce4f6c8a3525681ecd41c8ccf1a3da
+Description: OpenStack Image Registry and Delivery Service - Python library
+Homepage: http://launchpad.net/glance
+Python-Version: 2.7
+Description-md5: ec0b5e83302f9dde6c1f98f25a8f33c7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-glance-doc
+Priority: extra
+Section: doc
+Installed-Size: 657
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Architecture: all
+Source: glance
+Version: 1:2013.2~b2-0ubuntu2
+Depends: libjs-jquery
+Filename: pool/main/g/glance/python-glance-doc_2013.2~b2-0ubuntu2_all.deb
+Size: 140234
+MD5sum: 5d108fb21b2d8ae07ba47fb0c5432265
+SHA1: 4eb94970eb297de6b5dc703183429e7facdf86ad
+SHA256: e6c00e0639eefbd160da84833bfb32b275e72337b44ea185e77b5a067690839c
+Description: OpenStack Image Registry and Delivery Service - Documentation
+Homepage: http://launchpad.net/glance
+Description-md5: bad2142db8d3e8aad00122582264f750
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: python-greenlet
 Priority: extra
@@ -5312,6 +7090,27 @@ Description-md5: 38b38ebd2f1d82dff433fbfa8e243dc0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-libapparmor
+Priority: extra
+Section: python
+Installed-Size: 178
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: powerpc
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), libapparmor1 (>= 2.7.0~beta1+bzr1772), libc6 (>= 2.4)
+Filename: pool/main/a/apparmor/python-libapparmor_2.8.0-0ubuntu23_powerpc.deb
+Size: 25850
+MD5sum: c268d13bba4611ab65cbf434fd8526d7
+SHA1: 6cbcd6313e892758688eb31bf482243a9a89cb50
+SHA256: cdd91bd0a03bc90de2c8f1ab4b0df8013a430c524626d4996ea659c66441fa5f
+Description: AppArmor library Python bindings
+Homepage: http://apparmor.net/
+Description-md5: 36d3d516db38bd0cbb93cfa172912961
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-mutagen
 Priority: optional
 Section: python
@@ -5358,29 +7157,6 @@ Python-Version: 2.7
 Description-md5: 5c78ea4471c165a17eb0e76db000842a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: python-paramiko
-Priority: optional
-Section: python
-Installed-Size: 555
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Jeremy T. Bouse <jbouse@debian.org>
-Architecture: all
-Source: paramiko
-Version: 1.10.1-1
-Provides: python2.7-paramiko
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-crypto (>= 2.1.0-2)
-Filename: pool/main/p/paramiko/python-paramiko_1.10.1-1_all.deb
-Size: 132128
-MD5sum: fede8077bf75409a511bd087c5cf7f20
-SHA1: ea99846fb833993b86ee93b62a503d6d37fb3001
-SHA256: f00eea7cd23bcbfb6e51dffc64dc93db88c3db294a73b756bca071fdaf4cc5d8
-Description: Make ssh v2 connections with Python (Python 2)
-Homepage: https://github.com/paramiko/paramiko/
-Description-md5: ef19708cf575fb15646b6a0f32043a47
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: cloud-image, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
 
 Package: python-pyicu
 Priority: optional
@@ -5451,28 +7227,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
-Package: python-webob
-Priority: extra
-Section: python
-Installed-Size: 319
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Architecture: all
-Version: 1.2.3-2ubuntu1
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Suggests: libjs-jquery
-Filename: pool/main/p/python-webob/python-webob_1.2.3-2ubuntu1_all.deb
-Size: 64294
-MD5sum: 5f493f7518c0bd436ae4070d8ee6c595
-SHA1: 18a452b6ef6649c9055ead3d2fefa54ca5bf6974
-SHA256: fe4bb658795de7de11d739d39e5be49a993500a5d4c1e6c9ff58394caa2932f3
-Description: Python module providing WSGI request and response objects (python2)
-Homepage: http://webob.org/
-Description-md5: c4669074be619d53b6e7c7b9427f2a19
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: edubuntu-desktop-gnome
-
 Package: python3-icu
 Priority: optional
 Section: python
@@ -5514,6 +7268,27 @@ SHA256: bf1864fad88644bc16bee0c67c44bcb751171706ef1a15254e3cf679fcaa5ade
 Description: Python 3 extension wrapping the ICU C++ API (debug extension)
 Homepage: http://pyicu.osafoundation.org/
 Description-md5: 387c97faeb1c422866b4185f26db825c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-libapparmor
+Priority: extra
+Section: python
+Installed-Size: 158
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: powerpc
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: python3 (>= 3.3), python3 (<< 3.4), libapparmor1 (>= 2.7.0~beta1+bzr1772), libc6 (>= 2.4)
+Filename: pool/main/a/apparmor/python3-libapparmor_2.8.0-0ubuntu23_powerpc.deb
+Size: 25390
+MD5sum: 59658e7907f56adc4c86a503d774a9ad
+SHA1: fc680b41477d2141ec9ef2b3374758538c2d2b68
+SHA256: 2a17d6ac832469ff9a7133a8bfdb9931fe94ed18dffde8784aebd41b904d0704
+Description: AppArmor library Python3 bindings
+Homepage: http://apparmor.net/
+Description-md5: 48fb2712cf2310bd6af2d05c836cc285
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -5581,28 +7356,6 @@ Description-md5: ecfb930b93b3c3391fc6ad445be08cee
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
-Package: python3-webob
-Priority: optional
-Section: python
-Installed-Size: 293
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Architecture: all
-Source: python-webob
-Version: 1.2.3-2ubuntu1
-Depends: python3 (>= 3.2.3-3~)
-Suggests: libjs-jquery
-Filename: pool/main/p/python-webob/python3-webob_1.2.3-2ubuntu1_all.deb
-Size: 63658
-MD5sum: 5b75ec4e32b418eee0a66c78fc7e2b93
-SHA1: 9198b382bd1ad3cc2cf2d92f50a41847f7abfa09
-SHA256: 3141b42912ff3525849ae2b7e041c9d50faeae0e63e52d2755cde75fcb015630
-Description: Python module providing WSGI request and response objects (python3)
-Homepage: http://webob.org/
-Description-md5: 53b75b3342501b80df8369a9dcee645c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
 
 Package: signon-plugin-oauth2-dev
 Priority: optional
@@ -6713,6 +8466,27 @@ SHA1: adb79f6e4444c66836d2204002384b8aaef8e8cc
 SHA256: baf8104373ed62d1a931abff6a228f3348d0c4e5aed86d68487be8a622acfb58
 Description: X11 XKB utilities
 Description-md5: a2adce3cb7ed4a10d97bc7fd4558b944
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: xfonts-utils
+Priority: optional
+Section: x11
+Installed-Size: 436
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Version: 1:7.7~1ubuntu1
+Depends: libc6 (>= 2.8), libfontenc1, libfreetype6 (>= 2.2.1), libxfont1 (>= 1:1.4.2), zlib1g (>= 1:1.1.4), x11-common, xfonts-encodings
+Filename: pool/main/x/xfonts-utils/xfonts-utils_7.7~1ubuntu1_powerpc.deb
+Size: 97216
+MD5sum: a12b26d9c0166b9516e764e6d5c5b0a0
+SHA1: 22d2dba99e6c35475d20125b5cd30d348e9a6afa
+SHA256: 020d0a5f00f6499934a8fa59eeb4257de9319847a2df560409135047e8001029
+Description: X Window System font utility programs
+Multi-Arch: foreign
+Description-md5: cfb627fb99a0d0ef5d7b0b2f94423328
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop

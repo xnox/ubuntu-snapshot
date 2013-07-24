@@ -745,33 +745,28 @@ Checksums-Sha256:
  2cc76a8f5004778d0d16ab9ed4c8104ace0eeec7d5a43bc85f193091d8d3296b 1859117 clhep_2.1.3.1.orig.tar.gz
  6154f66cceb7a47944fd3b9d8d6dc652c9dd19545de50fd33ede9b250c242732 4598 clhep_2.1.3.1-1.debian.tar.gz
 
-Package: click
-Binary: click, click-dev, python3-click, click-doc, packagekit-plugin-click
-Version: 0.2.3
-Priority: optional
+Package: click-apparmor
+Binary: click-apparmor, python3-apparmor-click
+Version: 0.0.3
 Section: universe/admin
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Build-Depends: debhelper (>= 9~), dh-autoreconf, autopoint (>= 0.18.1), intltool, python3 (>= 3.2), python3-all, python3-setuptools, python3-debian, python3 (>= 3.3) | python3-mock, pep8, pyflakes, python3-sphinx, libglib2.0-dev (>= 2.28), libjson-glib-dev (>= 0.10), libpackagekit-glib2-dev (>= 0.7.2), libpackagekit-glib2-dev (<< 0.8.1)
-Architecture: any all
+Maintainer: Steve Beattie <steve.beattie@canoinical.com>
+Build-Depends: debhelper (>= 9), python3 (>= 3.3), python3-all, python3-setuptools, python3-debian, pep8, click-dev
+Architecture: all
 Standards-Version: 3.9.4
 Format: 3.0 (native)
-Directory: pool/universe/c/click
+Directory: pool/universe/c/click-apparmor
 Files:
- e1f38d9a6c49e41dcda616021a56e675 1991 click_0.2.3.dsc
- 125591405ed4b019aa241be381b732a2 55366 click_0.2.3.tar.gz
-Vcs-Bzr: http://bazaar.launchpad.net/+branch/click
+ 762d9f8072228f37a9ce71c964a39756 1589 click-apparmor_0.0.3.dsc
+ 82498e440d47c5a1a3e6ecdcfc62e150 12228 click-apparmor_0.0.3.tar.gz
 Package-List: 
- click deb admin optional
- click-dev deb admin optional
- click-doc deb doc optional
- packagekit-plugin-click deb admin optional
- python3-click deb python optional
+ click-apparmor deb admin optional
+ python3-apparmor-click deb admin optional
 Checksums-Sha1:
- 8ed23195f33d50526bbbedbb8a87bffb86b7d4f8 1991 click_0.2.3.dsc
- 605b8413628135b4efe5af42bee78676e0af5e51 55366 click_0.2.3.tar.gz
+ d31e7b688e52d524f369d30cce72cfa7f3104ecf 1589 click-apparmor_0.0.3.dsc
+ c9cb9e915f51f3e7b978750774725ed5be60297a 12228 click-apparmor_0.0.3.tar.gz
 Checksums-Sha256:
- 322e98bd64ce67c0ac95faf57d159f6f6b5bc51f90507dcf0cee8c3df6927a11 1991 click_0.2.3.dsc
- 7872481644ae8de1481c7dc8293a5fe2e8494bedc187ce0190e086e489a7518b 55366 click_0.2.3.tar.gz
+ 4eb7ea7e82806e234b563198e937a68ba4a1c9790707083b088ad1fc44d3a534 1589 click-apparmor_0.0.3.dsc
+ 5a1d267bab1d36c7fc34c6815757bbfc8cba60fcb0cfa56a9e76ff3b972c88a6 12228 click-apparmor_0.0.3.tar.gz
 
 Package: coquelicot
 Binary: coquelicot
@@ -802,32 +797,6 @@ Checksums-Sha256:
  59990d2874d2e56dd4cf3403dbaa4e9be485d29fb81548297c7ff87e2c001938 174781 coquelicot_0.9.2.orig.tar.gz
  d1fe07902fc8146eb1f3c4c3b5b9aa23143d7520b3c68262dfb58a69c86bdd8d 26643 coquelicot_0.9.2-2.debian.tar.gz
 Ruby-Versions: ruby1.9.1
-
-Package: cowdancer
-Binary: cowdancer, cowbuilder, qemubuilder
-Version: 0.72
-Section: universe/utils
-Maintainer: Junichi Uekawa <dancer@debian.org>
-Build-Depends: cpio, busybox-static, debhelper (>> 4.0.0), klibc-utils, libklibc-dev, pbuilder, qemu-system [i386 amd64 powerpc]
-Architecture: any
-Standards-Version: 3.9.2
-Format: 1.0
-Directory: pool/universe/c/cowdancer
-Files:
- 0c91cb082057d5770417b0258921955d 1040 cowdancer_0.72.dsc
- fc1c718e5b6b358db360cdf3c8979f53 89465 cowdancer_0.72.tar.gz
-Vcs-Browser: http://git.debian.org/?p=pbuilder/cowdancer.git
-Vcs-Git: git://git.debian.org/git/pbuilder/cowdancer.git
-Package-List: 
- cowbuilder deb utils optional
- cowdancer deb utils optional
- qemubuilder deb utils optional
-Checksums-Sha1:
- 7bb5a8a6d11256fc440cd5b574f0d842a97f98ba 1040 cowdancer_0.72.dsc
- c6cde41a036caaddd6ce8922750ede6f65f391e1 89465 cowdancer_0.72.tar.gz
-Checksums-Sha256:
- 06ebee93929280d7c658c7daf7e1c2a7e01dd6de64e5bfd486f6f3bd170c56c3 1040 cowdancer_0.72.dsc
- c74ce5dfe3ac6079ce4698a4f6da92685b14f406fee58049092522975a2c0af2 89465 cowdancer_0.72.tar.gz
 
 Package: cpl
 Binary: libcpl-dev, libcpl-doc, libcplcore20, libcpldfs20, libcpldrs20, libcplui20, libcext0, libcext-dev, libcext-doc, libcplgasgano20
@@ -1593,6 +1562,52 @@ Checksums-Sha256:
  3c4fad031531ac0a2f73d2d8393e498989f7728bec7c1d23e969909db9c6fa9d 49910 fieldslib_108.00.02.orig.tar.gz
  48cc3f89688ec724de1fc0782db96ae7867decea4e8a2def8f83c77ee4f9e2bc 2327 fieldslib_108.00.02-1.debian.tar.gz
 
+Package: firebird2.5
+Binary: firebird2.5-super, firebird2.5-classic, firebird2.5-superclassic, libfbclient2, libfbembed2.5, libib-util, firebird2.5-common, firebird2.5-server-common, firebird2.5-classic-common, firebird-dev, firebird2.5-examples, firebird2.5-doc, firebird2.5-common-doc, firebird2.5-super-dbg, firebird2.5-classic-dbg, libfbclient2-dbg
+Version: 2.5.2.26540.ds4-3
+Priority: optional
+Section: universe/database
+Maintainer: Debian Firebird Group <pkg-firebird-general@lists.alioth.debian.org>
+Build-Depends: autoconf, automake, bison, debhelper (>= 8.1.3), docbook-to-man, dpkg-dev (>= 1.16.1), gawk, help2man, libatomic-ops-dev (>= 1.2+cvs20091005), libedit-dev, libicu-dev, libtool, po-debconf
+Build-Conflicts: autoconf2.13, automake1.4
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/f/firebird2.5
+Files:
+ 44f6984a87963620182b9bed26689e99 3142 firebird2.5_2.5.2.26540.ds4-3.dsc
+ bf697fbeef43ba1bcbd218de6753b479 3917484 firebird2.5_2.5.2.26540.ds4.orig.tar.xz
+ cd603addae9ab879fb30269456ea34ec 145331 firebird2.5_2.5.2.26540.ds4-3.debian.tar.gz
+Uploaders: Damyan Ivanov <dmn@debian.org>
+Homepage: http://firebirdsql.org/
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-firebird/2.5.git;a=summary
+Vcs-Git: git://anonscm.debian.org/pkg-firebird/2.5.git
+Package-List: 
+ firebird-dev deb libdevel optional
+ firebird2.5-classic deb database optional
+ firebird2.5-classic-common deb database optional
+ firebird2.5-classic-dbg deb debug extra
+ firebird2.5-common deb database optional
+ firebird2.5-common-doc deb doc optional
+ firebird2.5-doc deb doc optional
+ firebird2.5-examples deb doc optional
+ firebird2.5-server-common deb database optional
+ firebird2.5-super deb database optional
+ firebird2.5-super-dbg deb debug extra
+ firebird2.5-superclassic deb database optional
+ libfbclient2 deb libs optional
+ libfbclient2-dbg deb debug extra
+ libfbembed2.5 deb libs optional
+ libib-util deb libs optional
+Checksums-Sha1:
+ 9483b7c4cba238cf3d77033ab9d3e4d0df8637f3 3142 firebird2.5_2.5.2.26540.ds4-3.dsc
+ ea18243a6cb5657af03f968fb36e7247857614f3 3917484 firebird2.5_2.5.2.26540.ds4.orig.tar.xz
+ f171bd83e63d6cb3ac7bb5734c30987cfc4033ad 145331 firebird2.5_2.5.2.26540.ds4-3.debian.tar.gz
+Checksums-Sha256:
+ 4d4d647e4a219695f11018c8a2ccb81b02745f9b69cce8654b60352287375d2a 3142 firebird2.5_2.5.2.26540.ds4-3.dsc
+ e4744fc62ab734e5b73e82a8777732fbcbfa49899d330ff80a9e680cb6f6a88c 3917484 firebird2.5_2.5.2.26540.ds4.orig.tar.xz
+ 8589e51c2151be1aa5fe8e379be4841896fcb7acf493364d6dcb06d061f940a8 145331 firebird2.5_2.5.2.26540.ds4-3.debian.tar.gz
+
 Package: flightgear
 Binary: flightgear
 Version: 2.6.0-1.1
@@ -1881,6 +1896,33 @@ Checksums-Sha256:
  bcfaada7092fd988a23659cd285ec40919541bae2d9516daefcbd278f78bbc3b 1667739 gcalcli_2.4.2.orig.tar.gz
  2ae1cea45004dfd5f71d5e76a4ea6ee315a5b2c80df1383d2876e27741b00e90 4314 gcalcli_2.4.2-1.debian.tar.gz
 
+Package: gcl
+Binary: gcl, gcl-doc
+Version: 2.6.7+dfsga-34
+Priority: optional
+Section: universe/interpreters
+Maintainer: Camm Maguire <camm@debian.org>
+Build-Depends: debhelper (>= 5), libreadline-dev, m4, tk8.5-dev, texlive-latex-base, texinfo, libgmp3-dev, autotools-dev, libxmu-dev, libxaw7-dev, po-debconf, binutils-dev, zlib1g-dev
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/universe/g/gcl
+Files:
+ d3446258cc8723ee26d884a10ce2001b 1220 gcl_2.6.7+dfsga-34.dsc
+ 365e15f91285c6a67c5fb9f0503eda5a 8147123 gcl_2.6.7+dfsga.orig.tar.gz
+ c1f75b107b208ea4b24f5f05b68f4c87 5460995 gcl_2.6.7+dfsga-34.debian.tar.gz
+Package-List: 
+ gcl deb lisp optional
+ gcl-doc deb doc optional
+Checksums-Sha1:
+ 05791f8abd98f30b620822fc59edf40b936d008a 1220 gcl_2.6.7+dfsga-34.dsc
+ 977b1f56bfbfb477f4a1af038336e6d7f0f45577 8147123 gcl_2.6.7+dfsga.orig.tar.gz
+ 3baa03de2a5cf3585b061151a62072378b212acb 5460995 gcl_2.6.7+dfsga-34.debian.tar.gz
+Checksums-Sha256:
+ 5f656aa9a2eafd8f391c978455a54bf526cde25028b1e929bd4e037baceaef26 1220 gcl_2.6.7+dfsga-34.dsc
+ de4722d45e5c0b8b22540159b89b3ecfe6fc78e29b6b49e545822616a463d60b 8147123 gcl_2.6.7+dfsga.orig.tar.gz
+ d3d1382a2312818c56da45597561a7f0052ec4c6c4bf9352bf5671147e5943ff 5460995 gcl_2.6.7+dfsga-34.debian.tar.gz
+
 Package: gearman-interface
 Binary: python-gearman.libgearman, python3-gearman.libgearman
 Version: 0.13.2-3
@@ -2073,7 +2115,7 @@ Checksums-Sha256:
 
 Package: git-annex
 Binary: git-annex
-Version: 4.20130709
+Version: 4.20130723
 Priority: optional
 Section: universe/utils
 Maintainer: Joey Hess <joeyh@debian.org>
@@ -2083,18 +2125,18 @@ Standards-Version: 3.9.4
 Format: 1.0
 Directory: pool/universe/g/git-annex
 Files:
- 09fbcbd13a199a939d0d0f01840eee09 3188 git-annex_4.20130709.dsc
- 29713153ccc31670cb926855702a2ca5 4078808 git-annex_4.20130709.tar.gz
+ 2f41b34af561cfa3095368ab04a736aa 3188 git-annex_4.20130723.dsc
+ 7bf139c9f385e9b7fd7cccb603389e4b 4221230 git-annex_4.20130723.tar.gz
 Homepage: http://git-annex.branchable.com/
 Vcs-Git: git://git.kitenet.net/git-annex
 Package-List: 
  git-annex deb utils optional
 Checksums-Sha1:
- 56dfa5c06831643b3aa3422650518c617d31fcaa 3188 git-annex_4.20130709.dsc
- 0a432c2012bf9db03b97f176fd4c0f2d7843cd1c 4078808 git-annex_4.20130709.tar.gz
+ 8925f7ba6c05d9a1542d96ba6505b67c144bd362 3188 git-annex_4.20130723.dsc
+ ff48b31ce63e0371229e070b00ebd83b05d99618 4221230 git-annex_4.20130723.tar.gz
 Checksums-Sha256:
- ac6b74a890d44f5188ed67839c2668967b4aeeb0b543bbd4b1eecf0ad4fda492 3188 git-annex_4.20130709.dsc
- 55c4bd0af18d9d47150f0f31ed0aa38bdaab5f4884520d6589297c6c37324e02 4078808 git-annex_4.20130709.tar.gz
+ e0f4cc71799047a01000bd58d3abd307891212d1b365c967bfb7ada5e8537dbc 3188 git-annex_4.20130723.dsc
+ 4d306d3f3b4ec2cd9ee34a5d727a1dd1018881a732cdfab0bbf00fb650edf19b 4221230 git-annex_4.20130723.tar.gz
 
 Package: git-buildpackage
 Binary: git-buildpackage
@@ -2740,6 +2782,36 @@ Checksums-Sha256:
  edea7d2f5ab17cccda2fe1152a416032b7687ecf36fac4235de36b3621d0844b 2698047 jetty8_8.1.3.orig.tar.gz
  9dc619cc7abdb6d548e33ed9ac581e8825589a24f450338fcfd54b46f9991db1 26348 jetty8_8.1.3-7.debian.tar.gz
 
+Package: k3d
+Binary: k3d, k3d-data
+Version: 0.8.0.3-2
+Priority: optional
+Section: universe/graphics
+Maintainer: Manuel A. Fernandez Montecelo <mafm@debian.org>
+Build-Depends: debhelper (>= 9~), cmake (>> 2.6), pkg-config, asciidoc, libxml2-utils, xsltproc, docbook-xml, docbook-xsl, zlib1g-dev, uuid-dev, libsigc++-2.0-dev, libglibmm-2.4-dev, libgtkmm-2.4-dev, libgnomevfs2-dev, libgtksourceview2.0-dev, libgtkglext1-dev, libcairomm-1.0-dev, libdbus-glib-1-dev, libxml2-dev | libexpat1-dev, libfreetype6-dev, libboost-dev (>= 1.42), libboost-date-time-dev (>= 1.42), libboost-regex-dev (>= 1.42), libboost-program-options-dev (>= 1.42), libboost-test-dev (>= 1.42), libboost-python-dev (>= 1.42), libcgal-dev (>= 4.0) [!armel], libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev, libftgl-dev, libglew-dev, libglewmx-dev, libpng-dev, librsvg2-dev, libjpeg-dev, libopenexr-dev, libtiff-dev, libmagick++-dev, lib3ds-dev, libgts-dev, python-dev, python-support, graphviz, libsuperlu3-dev, libode-dev, gettext
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/k/k3d
+Files:
+ 0471ac7279fb888ec2b6ec245a919a9c 2667 k3d_0.8.0.3-2.dsc
+ 8cc320c105cddc67e58242d4f8a1b3b5 6198320 k3d_0.8.0.3.orig.tar.xz
+ e10428579b3fcc22473cfae059ce1efb 14713 k3d_0.8.0.3-2.debian.tar.gz
+Homepage: http://www.k-3d.org/
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/k3d.git
+Vcs-Git: git://anonscm.debian.org/collab-maint/k3d.git
+Package-List: 
+ k3d deb graphics extra
+ k3d-data deb graphics extra
+Checksums-Sha1:
+ 9c42a60b7da00bc0a60aa7758178e26d51a3ed00 2667 k3d_0.8.0.3-2.dsc
+ e5d357e09b4da887ed7a1b0af7ac5592df35a037 6198320 k3d_0.8.0.3.orig.tar.xz
+ 2004f1e8828d38e23f2863b22472cf9f74d0ee83 14713 k3d_0.8.0.3-2.debian.tar.gz
+Checksums-Sha256:
+ a9e78f5f85e78aab612eb87ad3145000c4f3356bce57401ec742291b7baf6716 2667 k3d_0.8.0.3-2.dsc
+ effc15c6c23ab50b4fa7dfa4cd9549bbb5701d54033bbc402965ec8cd4ecdbd9 6198320 k3d_0.8.0.3.orig.tar.xz
+ 7b99c4b38482795c64c6bddc6e50d66587ee25ed4008b020e0699364b3387421 14713 k3d_0.8.0.3-2.debian.tar.gz
+
 Package: kaccessible
 Binary: kaccessible, kaccessible-dbg
 Version: 4:4.10.95-0ubuntu1
@@ -2832,6 +2904,64 @@ Checksums-Sha256:
  81cd64a0946b794a741ac199ad5b91b3e7eb3c37b92f0383c32a75d726ade69c 1326 kinput2_3.1-11.dsc
  2815c35181f9e9b866fb6e7f3d9bb8814b98312aad703ce5c7560d449eb60a9a 512177 kinput2_3.1.orig.tar.gz
  3608512ccec71b1c4c5bcd68bf04b18e871c976887eb9e32ddb3380f0d46bf60 14862 kinput2_3.1-11.diff.gz
+
+Package: kubuntu-meta
+Binary: kubuntu-desktop, kubuntu-netbook, kubuntu-full, kubuntu-active
+Version: 1.285
+Priority: optional
+Section: universe/metapackages
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Build-Depends: debhelper (>= 7.0.8), germinate (>= 1.18)
+Architecture: any all
+Standards-Version: 3.9.2
+Format: 3.0 (native)
+Directory: pool/universe/k/kubuntu-meta
+Files:
+ b0fff98a2386443dfe4e758ffa5335aa 1007 kubuntu-meta_1.285.dsc
+ 070f04bd0eca899642c71d5f0d69f147 46557 kubuntu-meta_1.285.tar.gz
+Package-List: 
+ kubuntu-active deb metapackages optional
+ kubuntu-desktop deb metapackages optional
+ kubuntu-full deb metapackages optional
+ kubuntu-netbook deb metapackages optional
+Checksums-Sha1:
+ 5eebe5bec09f9d8d9ed82160eae105698fbf9a26 1007 kubuntu-meta_1.285.dsc
+ c1586a64873d93238c2e061abf367d138d820515 46557 kubuntu-meta_1.285.tar.gz
+Checksums-Sha256:
+ 96f523d6e59d257940f5c973eab26762b97066fac56f145761b0d5f12583ad5f 1007 kubuntu-meta_1.285.dsc
+ b6fc5d664958ff6823527d83264a2870d093e23b91c50f3b8dfc10196ebdbfdf 46557 kubuntu-meta_1.285.tar.gz
+
+Package: kubuntu-settings
+Binary: kubuntu-settings-active, kubuntu-settings-desktop, kubuntu-settings-netbook, plymouth-theme-kubuntu-logo, plymouth-theme-kubuntu-text, kubuntu-active-default-settings, kubuntu-default-settings, kubuntu-netbook-default-settings
+Version: 1:13.10ubuntu3
+Priority: optional
+Section: universe/kde
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9), pkg-kde-tools (>= 0.9.2ubuntu14)
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/universe/k/kubuntu-settings
+Files:
+ 25d278e9a36f7e0a9ea32cee718a8864 1615 kubuntu-settings_13.10ubuntu3.dsc
+ d5972b51a9a658189e25bd5c045512f5 148892 kubuntu-settings_13.10ubuntu3.tar.xz
+Vcs-Browser: http://bazaar.launchpad.net/~kubuntu-packagers/kubuntu-settings/kubuntu-settings
+Vcs-Bzr: http://code.launchpad.net/~kubuntu-packagers/kubuntu-settings/kubuntu-settings
+Package-List: 
+ kubuntu-active-default-settings deb oldlibs optional
+ kubuntu-default-settings deb oldlibs optional
+ kubuntu-netbook-default-settings deb oldlibs optional
+ kubuntu-settings-active deb kde optional
+ kubuntu-settings-desktop deb kde optional
+ kubuntu-settings-netbook deb kde optional
+ plymouth-theme-kubuntu-logo deb kde optional
+ plymouth-theme-kubuntu-text deb kde optional
+Checksums-Sha1:
+ afc115f63694afe03aca958ab965170ab3b8650f 1615 kubuntu-settings_13.10ubuntu3.dsc
+ 3ce8743a0ff2d1479a60d1b3b7270887d3561c24 148892 kubuntu-settings_13.10ubuntu3.tar.xz
+Checksums-Sha256:
+ 3906794872a31a154788da2a8e95deae382955034873a377ba91be6b64684182 1615 kubuntu-settings_13.10ubuntu3.dsc
+ d323d9e3ea6883667565e31fc52a8816ec6eb9e78d7b257af3d50e8d0e4ce481 148892 kubuntu-settings_13.10ubuntu3.tar.xz
 
 Package: kwin-style-crystal
 Binary: kwin-style-crystal
@@ -4024,6 +4154,112 @@ Checksums-Sha256:
  4a3b47727a1f6ca4cf95d532a9746cb3f0c2272fe0d6c1147940b9d3a8a72e56 174920 lua-penlight_1.0.3a.orig.tar.gz
  9f4b859b06bff70e792865d8e6d01948ba0570723d844fc67cba4211110b43b2 2854 lua-penlight_1.0.3a-1.debian.tar.gz
 
+Package: maliit-framework
+Binary: maliit-framework, libmaliit-plugins0, maliit-framework-dev, maliit-framework-dbg, gir1.2-maliit-1.0, libmaliit-glib0, libmaliit0, maliit-dbus-activation, maliit-inputcontext-gtk2, maliit-inputcontext-gtk3, maliit-inputcontext-qt4
+Version: 0.99.0+git20130615+97e8335-0ubuntu1
+Priority: extra
+Section: universe/libs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Mobile Team <debian-mobile@lists.debian.org>
+Build-Depends: cdbs, debhelper (>= 9), libdbus-glib-1-dev, libudev-dev, libxcb-composite0-dev, libxcb-damage0-dev, libxcb-xfixes0-dev, libxext-dev, pkg-config, qt5-default, qtbase5-dev, qtbase5-private-dev, qtdeclarative5-dev, quilt
+Architecture: any
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/m/maliit-framework
+Files:
+ b085dcfe674be6571dc559eff0d60c19 3063 maliit-framework_0.99.0+git20130615+97e8335-0ubuntu1.dsc
+ c106af308f51c42c4aea2dd65b4b3aa1 541408 maliit-framework_0.99.0+git20130615+97e8335.orig.tar.gz
+ 5878e846ff050376419230d6b354ed92 8168 maliit-framework_0.99.0+git20130615+97e8335-0ubuntu1.debian.tar.gz
+Uploaders: Michał Zając <quintasan@kubuntu.org>, Iain Lane <laney@debian.org>
+Homepage: https://wiki.maliit.org
+Vcs-Browser: https://code.launchpad.net/~ubuntu-core-dev/maliit/maliit-framework-ubuntu
+Vcs-Bzr: lp:~ubuntu-core-dev/maliit/maliit-framework-ubuntu
+Package-List: 
+ gir1.2-maliit-1.0 deb oldlibs extra
+ libmaliit-glib0 deb oldlibs extra
+ libmaliit-plugins0 deb libs extra
+ libmaliit0 deb oldlibs extra
+ maliit-dbus-activation deb oldlibs extra
+ maliit-framework deb libs extra
+ maliit-framework-dbg deb debug extra
+ maliit-framework-dev deb libdevel extra
+ maliit-inputcontext-gtk2 deb oldlibs extra
+ maliit-inputcontext-gtk3 deb oldlibs extra
+ maliit-inputcontext-qt4 deb oldlibs extra
+Checksums-Sha1:
+ 5802d0d9b2adc7c78bb077309ec0259043498d09 3063 maliit-framework_0.99.0+git20130615+97e8335-0ubuntu1.dsc
+ 6851a70380591255faa8bbe12ca16e12dc246138 541408 maliit-framework_0.99.0+git20130615+97e8335.orig.tar.gz
+ e86cc32dca16a2ed5e0be997eefd9c86a1a707d8 8168 maliit-framework_0.99.0+git20130615+97e8335-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 2716a5a0fd2caa2a81ba9dada48386930c5be4d3442b920a97f821fec549754e 3063 maliit-framework_0.99.0+git20130615+97e8335-0ubuntu1.dsc
+ 4a63190250133b30c419751f7cc8cfd83b4c7fb98f6415dbe3c84290528a02d9 541408 maliit-framework_0.99.0+git20130615+97e8335.orig.tar.gz
+ bac6158a244d6c50a9836c27df5b3802d1812d04d72c84b1407cd38148452723 8168 maliit-framework_0.99.0+git20130615+97e8335-0ubuntu1.debian.tar.gz
+
+Package: maliit-plugins
+Binary: maliit-keyboard, maliit-keyboard-data, nemo-keyboard
+Version: 0.99.0+git20130524+73edacd-0ubuntu1
+Priority: extra
+Section: universe/libs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Mobile Team <debian-mobile@lists.debian.org>
+Build-Depends: debhelper (>= 9), doxygen, qt5-default, qtbase5-dev, qtdeclarative5-dev, libgles2-mesa-dev, maliit-framework-dev (>= 0.99), libxml2-utils, pkg-config, xauth, xvfb, quilt
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/m/maliit-plugins
+Files:
+ 0efde960f58b0ab87bf299adaba80e93 2504 maliit-plugins_0.99.0+git20130524+73edacd-0ubuntu1.dsc
+ 4d350836d61f84613b13fa50820739e6 576715 maliit-plugins_0.99.0+git20130524+73edacd.orig.tar.gz
+ de273934366252034af0e29dc34df82c 10367 maliit-plugins_0.99.0+git20130524+73edacd-0ubuntu1.debian.tar.gz
+Uploaders: Michał Zając <quintasan@kubuntu.org>, Iain Lane <laney@debian.org>
+Homepage: https://wiki.maliit.org
+Vcs-Browser: https://code.launchpad.net/~ubuntu-core-dev/maliit/maliit-plugins-ubuntu
+Vcs-Bzr: lp:~ubuntu-core-dev/maliit/maliit-plugins-ubuntu
+Package-List: 
+ maliit-keyboard deb libs extra
+ maliit-keyboard-data deb libs extra
+ nemo-keyboard deb libs extra
+Checksums-Sha1:
+ c8e98dd4514f6539beb171d4aea0847ffc32cfd5 2504 maliit-plugins_0.99.0+git20130524+73edacd-0ubuntu1.dsc
+ 36d8add03f890c5b5d652f0c351ccb12cf5d2683 576715 maliit-plugins_0.99.0+git20130524+73edacd.orig.tar.gz
+ a38f7759b0e9340abe9187e88769472cbef57d94 10367 maliit-plugins_0.99.0+git20130524+73edacd-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ b5946d1b3e1068822e482e55c00ee3fa2c1518ba69a89a8c5f96a74481ce6c1d 2504 maliit-plugins_0.99.0+git20130524+73edacd-0ubuntu1.dsc
+ 49edfec7bf8fbb573982176b3ff27584005a5061f9daf092830f188e1c1ea5ef 576715 maliit-plugins_0.99.0+git20130524+73edacd.orig.tar.gz
+ 12d85f420bd7729407027561c41611cee35d2126e82b6c7bcdcb3043c1f3d5f4 10367 maliit-plugins_0.99.0+git20130524+73edacd-0ubuntu1.debian.tar.gz
+
+Package: maxima
+Binary: maxima, maxima-src, maxima-test, maxima-doc, xmaxima, maxima-emacs, maxima-share
+Version: 5.30.0-12
+Priority: optional
+Section: universe/math
+Maintainer: Camm Maguire <camm@debian.org>
+Build-Depends: gcl (>= 2.6.7+dfsga-34), texinfo, libgmp3-dev, libreadline-dev, locales, automake, debhelper (>= 5), autoconf2.13, gawk | awk, texlive-latex-recommended, sharutils, libxmu-dev, libxaw7-dev, tex-common
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/universe/m/maxima
+Files:
+ e44936950f7811a8b221fa87e4c45d9a 1467 maxima_5.30.0-12.dsc
+ f98925dd1920c074aefae227711ecb69 27182046 maxima_5.30.0.orig.tar.gz
+ 966683d39a1064f83f7f5719fcf56f76 1808906 maxima_5.30.0-12.debian.tar.gz
+Package-List: 
+ maxima deb math optional
+ maxima-doc deb doc optional
+ maxima-emacs deb math optional
+ maxima-share deb math optional
+ maxima-src deb math optional
+ maxima-test deb math optional
+ xmaxima deb math optional
+Checksums-Sha1:
+ 63757c0caea5d43a14c4f1cc073d40a78d108e14 1467 maxima_5.30.0-12.dsc
+ ae009d71524f55264b346b03dac8e504e3b18ac0 27182046 maxima_5.30.0.orig.tar.gz
+ 6d307ea6134604df299bf629b7c3972ec8b99535 1808906 maxima_5.30.0-12.debian.tar.gz
+Checksums-Sha256:
+ d556bfecef701c3e0de016caca4e848f04e7f4be4fce6062381f9b8eb07427ad 1467 maxima_5.30.0-12.dsc
+ a05239ee16dc3d792887959823944f9106ace955f00b7dd27b2ade3fc13b1dd6 27182046 maxima_5.30.0.orig.tar.gz
+ 46962d0568214ca57e28120dad6058d931f40a8df77add512024f497fa46b8e4 1808906 maxima_5.30.0-12.debian.tar.gz
+
 Package: mercator
 Binary: libmercator-0.3-3, libmercator-0.3-dev, libmercator-0.3-3-dbg
 Version: 0.3.2-1
@@ -4768,6 +5004,38 @@ Checksums-Sha256:
  137d28014a7896d5af65587208a86d5631525b386de354b2dd0ef868e6ab3952 2057 oce_0.12-3.dsc
  d7c39082f2579bb5b72ec98c10e41bbc300f89ed547b3471d876f4482e9de42a 24792840 oce_0.12.orig.tar.gz
  92e466594b7c0feef69d3e0ee8774debbd15c2254bde5a8c613a43157f131071 103198 oce_0.12-3.debian.tar.gz
+
+Package: openbox
+Binary: openbox, libobt0, libobrender27, openbox-dev
+Version: 3.5.0-8
+Priority: optional
+Section: universe/x11
+Maintainer: Mateusz Łukasik <mati75@linuxmint.pl>
+Build-Depends: debhelper (>= 9), gettext, libstartup-notification0-dev, libxrender-dev, pkg-config, libglib2.0-dev, libxml2-dev (>= 2.6.0), perl, libxt-dev, libxinerama-dev, libxrandr-dev, libpango1.0-dev, libx11-dev, autoconf, automake (>= 1:1.11), python-xdg, libimlib2-dev, dh-autoreconf, autopoint
+Architecture: any
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/o/openbox
+Files:
+ d19fbe91f66bfb5773d832970b5c3dca 2194 openbox_3.5.0-8.dsc
+ 00441b53cf14c03566c8e82643544ff9 911834 openbox_3.5.0.orig.tar.gz
+ 400e10de3768626e6712b4d4bf594ff4 45505 openbox_3.5.0-8.debian.tar.gz
+Homepage: http://www.openbox.org
+Vcs-Browser: https://github.com/mati75/openbox-debian
+Vcs-Git: git://github.com/mati75/openbox-debian
+Package-List: 
+ libobrender27 deb libs optional
+ libobt0 deb libs optional
+ openbox deb x11 optional
+ openbox-dev deb libdevel optional
+Checksums-Sha1:
+ dc66cd7d55222f715429f3255ea1461f52208e6a 2194 openbox_3.5.0-8.dsc
+ 3c3b8d2bc4f4e229871254e92d6b18639be00302 911834 openbox_3.5.0.orig.tar.gz
+ 19a7a8a11d4b9053eba82e76c65b39a7851940e6 45505 openbox_3.5.0-8.debian.tar.gz
+Checksums-Sha256:
+ 8ee1c81a965bf576031afc9a17940b52ea08a7637768873bfd28b06099be977c 2194 openbox_3.5.0-8.dsc
+ 6fa90016530b3aa6102e254079461977439398531fb23e7ec076ff2c140fea0a 911834 openbox_3.5.0.orig.tar.gz
+ fcc3d4fecef806ad1bf0f6008e29082c2e59fb2e20e7c8370621b3db2c972036 45505 openbox_3.5.0-8.debian.tar.gz
 
 Package: openstack-meta-packages
 Binary: openstack-clients, openstack-cloud-services, openstack-cloud-identity, openstack-proxy-node, openstack-compute-node, openstack-toaster
@@ -7416,6 +7684,36 @@ Checksums-Sha256:
  f57358bc1d464aa46e6dc69a2bde69f139fee551f4103b8cb629416b4da0c42f 2009 yorick-gy_0.0.2-1.dsc
  34b3f0254fa192e005544a1fd0cb1de856c3b04334cdf6fb076903bfa218b464 176131 yorick-gy_0.0.2.orig.tar.gz
  392f5825555e9ed8e8f9486c62f336293136d137c03bf2f8c0bd633d65f63b60 1698 yorick-gy_0.0.2-1.debian.tar.gz
+
+Package: yubikey-personalization-gui
+Binary: yubikey-personalization-gui
+Version: 3.1.10-1
+Priority: extra
+Section: universe/utils
+Maintainer: Yubico Open Source Maintainers <ossmaint@yubico.com>
+Build-Depends: debhelper (>= 9), pkg-config, qt4-qmake, libqt4-dev, libyubikey-dev, libykpers-1-dev (>= 1.14.0)
+Architecture: any
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/y/yubikey-personalization-gui
+Files:
+ 8c8f9db59d99c6462cfe902ccf222100 1906 yubikey-personalization-gui_3.1.10-1.dsc
+ 891aa53b0073c24e8547a357f815081e 1368391 yubikey-personalization-gui_3.1.10.orig.tar.gz
+ e52e8bcccf60ebab1e60136071f0e076 2989 yubikey-personalization-gui_3.1.10-1.debian.tar.gz
+Uploaders: Simon Josefsson <simon@yubico.com>, Klas Lindfors <klas@yubico.com>, Dain Nilsson <dain@yubico.com>
+Homepage: http://yubico.github.com/yubikey-personalization-gui/
+Vcs-Browser: https://github.com/Yubico/yubikey-personalization-gui-dpkg
+Vcs-Git: git://github.com/Yubico/yubikey-personalization-gui-dpkg.git
+Package-List: 
+ yubikey-personalization-gui deb utils extra
+Checksums-Sha1:
+ 63bddc6ac183f53e67cef2c2849cd88ff14a9c64 1906 yubikey-personalization-gui_3.1.10-1.dsc
+ 558ee58200346080ea54b410c8714c6f5f9a54f0 1368391 yubikey-personalization-gui_3.1.10.orig.tar.gz
+ 88f42f7d9163cd6aeb12290ffc31cdb144244416 2989 yubikey-personalization-gui_3.1.10-1.debian.tar.gz
+Checksums-Sha256:
+ fc8989849998a0f074e2414324dee266543426457fc8427bef8bbbb54d146052 1906 yubikey-personalization-gui_3.1.10-1.dsc
+ e09006745e97378961a7683cb671f30c19880d0f731b606b8f98809d7faa69fa 1368391 yubikey-personalization-gui_3.1.10.orig.tar.gz
+ c6370c24f6ff4880df790b0917e91c9bb0bac4e121a60eb9bd0225864a2d2f0c 2989 yubikey-personalization-gui_3.1.10-1.debian.tar.gz
 
 Package: zeroinstall-injector
 Binary: zeroinstall-injector
