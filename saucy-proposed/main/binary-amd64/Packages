@@ -261,16 +261,16 @@ Section: admin
 Installed-Size: 851
 Maintainer: Scott Moser <smoser@ubuntu.com>
 Architecture: all
-Version: 0.7.3~bzr845-0ubuntu1
+Version: 0.7.3~bzr845-0ubuntu2
 Replaces: ec2-init (<< 0.5.3)
 Provides: ec2-init
-Depends: cloud-utils, ifupdown (>= 0.6.10ubuntu5), procps, python (>= 2.7.1-0ubuntu2), python-argparse, python-boto, python-cheetah, python-configobj, python-jsonp, python-oauth, python-prettytable, python-requests (>= 0.8.2), python-yaml, software-properties-common, debconf (>= 0.5) | debconf-2.0, python (<< 2.8), python-jsonpatch
+Depends: cloud-utils, ifupdown (>= 0.6.10ubuntu5), procps, python (>= 2.7.1-0ubuntu2), python-argparse, python-boto, python-cheetah, python-configobj, python-json-patch, python-oauth, python-prettytable, python-requests (>= 0.8.2), python-yaml, software-properties-common, debconf (>= 0.5) | debconf-2.0, python (<< 2.8), python-jsonpatch
 Conflicts: ec2-init (<< 0.5.3)
-Filename: pool/main/c/cloud-init/cloud-init_0.7.3~bzr845-0ubuntu1_all.deb
-Size: 195506
-MD5sum: af3d0a52777075cbc337e1ab2d797ac3
-SHA1: 5ac3aee62551832163b1b34a6d37c51dfbc844d2
-SHA256: 7a606d27230302f46fae529856c1bb7fde4ee236369ef2f38a9082c86a145c5e
+Filename: pool/main/c/cloud-init/cloud-init_0.7.3~bzr845-0ubuntu2_all.deb
+Size: 195420
+MD5sum: 87052de36757b5597ed4f84d48b65c33
+SHA1: b3ecc33c346cf6ef7fd05c25ce2ad5d6f36749b0
+SHA256: 90bee1f685cd062ed2d56b4474db07271e7e40d5e6c43d6ef57288c7d99ca526
 Description: Init scripts for cloud instances
 Python-Version: 2.7
 Description-md5: 8719ef0e4178017b7147590b1fde082e
@@ -1303,15 +1303,15 @@ Installed-Size: 143
 Maintainer: Scott Moser <smoser@ubuntu.com>
 Architecture: all
 Source: cloud-init
-Version: 0.7.3~bzr845-0ubuntu1
+Version: 0.7.3~bzr845-0ubuntu2
 Depends: debconf (>= 1.5.19) | cdebconf, ucf, util-linux (>= 2.15-1), debconf (>= 0.5) | debconf-2.0
 Suggests: grub-legacy-doc
 Conflicts: grub
-Filename: pool/main/c/cloud-init/grub-legacy-ec2_0.7.3~bzr845-0ubuntu1_all.deb
-Size: 25066
-MD5sum: 5d0578e4f95e0cc9622a284f0b2b6255
-SHA1: 542a8c31e8e3daf46b24b5a41cc67600754e83a9
-SHA256: 32fa49ae7103edda8b0b5720ce7cf423ea42aa885b2d9b4af62add3bb50aca0d
+Filename: pool/main/c/cloud-init/grub-legacy-ec2_0.7.3~bzr845-0ubuntu2_all.deb
+Size: 24766
+MD5sum: a0112d314a3ac53dc17585f643ed8bdc
+SHA1: afcb70218ad05817059053d2ecc5e16e90dfad4f
+SHA256: 7e3b0e2ba1fecd81d3248a2387093307884f997a52de180fce8e74b265062f41
 Description: Handles update-grub for ec2 instances
 Description-md5: e5f8ea347000ef0d0aedb42c000e0b9c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -9614,6 +9614,72 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: ocfs2-tools
+Priority: optional
+Section: admin
+Installed-Size: 2138
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jeremy Lainé <jeremy.laine@m4x.org>
+Architecture: amd64
+Version: 1.6.4-2ubuntu2
+Depends: libc6 (>= 2.14), libcomerr2 (>= 1.01), libglib2.0-0 (>= 2.24.0), libreadline6 (>= 6.0), libuuid1 (>= 2.16), debconf (>= 0.5) | debconf-2.0, psmisc
+Suggests: ocfs2console
+Filename: pool/main/o/ocfs2-tools/ocfs2-tools_1.6.4-2ubuntu2_amd64.deb
+Size: 993700
+MD5sum: a0711d3c1b2b475373c8380020f6e564
+SHA1: 9434a8b319073b7690315eba815ac36726d7e537
+SHA256: 245f26426635d5ca2047692dc45f0c3b92749ad32e6cca3b1983ef0e2c1d9c42
+Description: tools for managing OCFS2 cluster filesystems
+Homepage: http://oss.oracle.com/projects/ocfs2-tools/
+Description-md5: 35dcd82fb739cced2d7441e218050187
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ocfs2-tools-dev
+Priority: optional
+Section: devel
+Installed-Size: 641
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jeremy Lainé <jeremy.laine@m4x.org>
+Architecture: amd64
+Source: ocfs2-tools
+Version: 1.6.4-2ubuntu2
+Depends: ocfs2-tools (= 1.6.4-2ubuntu2)
+Filename: pool/main/o/ocfs2-tools/ocfs2-tools-dev_1.6.4-2ubuntu2_amd64.deb
+Size: 180166
+MD5sum: 8162818462fab6e65555f637bdfcec5c
+SHA1: 84b606b3f44459d70d8a8545480898e9036da318
+SHA256: dfd47700a2ef167f51375ccdc9d8d2c21ad5bfdb8306e187ce04ae30fc5ef633
+Description: tools for managing OCFS2 cluster filesystems - development files
+Homepage: http://oss.oracle.com/projects/ocfs2-tools/
+Description-md5: c83e087ed43fbcb16a766887bb9e850a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ocfs2console
+Priority: optional
+Section: admin
+Installed-Size: 463
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jeremy Lainé <jeremy.laine@m4x.org>
+Architecture: amd64
+Source: ocfs2-tools
+Version: 1.6.4-2ubuntu2
+Depends: libblkid1 (>= 2.16), libc6 (>= 2.14), libcomerr2 (>= 1.01), libglib2.0-0 (>= 2.12.0), libuuid1 (>= 2.16), python (>= 2.7.1-0ubuntu2), python (<< 2.8), ocfs2-tools (= 1.6.4-2ubuntu2), python-gtk2
+Filename: pool/main/o/ocfs2-tools/ocfs2console_1.6.4-2ubuntu2_amd64.deb
+Size: 144722
+MD5sum: 56bc7c2b5874126fa4b03695e434cc5f
+SHA1: a4a6e97081739475a76d85e97389cb4f6396c180
+SHA256: e1c836f90520b4b6a14ee77533d5432e472dd2850db969d5f82ee4336daeb1d4
+Description: tools for managing OCFS2 cluster filesystems - graphical interface
+Homepage: http://oss.oracle.com/projects/ocfs2-tools/
+Description-md5: 2ebccbcd5437a0267ea7af244d081c49
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: openssl
 Priority: standard
