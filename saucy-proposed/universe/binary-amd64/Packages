@@ -1603,6 +1603,25 @@ Description-md5: 81093a661a0a0968b589cf2c7b141aa8
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: click-apparmor
+Priority: optional
+Section: universe/admin
+Installed-Size: 59
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Beattie <steve.beattie@canoinical.com>
+Architecture: all
+Version: 0.0.4
+Depends: python3 (>= 3.3), apparmor-easyprof, click, python3-apparmor-click (= 0.0.4)
+Filename: pool/universe/c/click-apparmor/click-apparmor_0.0.4_all.deb
+Size: 3530
+MD5sum: 31f5ca29988f2e7549d79fe53d386a73
+SHA1: 3b8b4da1b8f88ef056c6b30038beb60620a6e01c
+SHA256: 4df0c2c72854fe5c553f5f7a9fec1dd24841d788f063d3954a0a1a021e762ba1
+Description: Click manifest to AppArmor easyprof conversion tools
+Description-md5: 2f38f52265e23d1e53ff74e49c902daa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: compiz-plugins
 Priority: optional
 Section: universe/x11
@@ -14357,6 +14376,26 @@ Description-md5: eef99ef9ce9ddfb760f116c5c3a374c1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python3-apparmor-click
+Priority: optional
+Section: universe/admin
+Installed-Size: 61
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Beattie <steve.beattie@canoinical.com>
+Architecture: all
+Source: click-apparmor
+Version: 0.0.4
+Depends: python3 (>= 3.3), apparmor-easyprof, click
+Filename: pool/universe/c/click-apparmor/python3-apparmor-click_0.0.4_all.deb
+Size: 7062
+MD5sum: 0b1e4fca87d045562bbfe345ade439dc
+SHA1: 69ce63282bf5d64a46f83764c523bc5da5a8e75d
+SHA256: 289425a8c3d3cdf69f96bda1f956ec3eb579ee0fb9c054f4d03e3145d881229b
+Description: Click manifest to AppArmor easyprof conversion tools
+Description-md5: 753c20b93f7c33ee3e7c64c06bf058bc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python3-csb
 Priority: optional
 Section: universe/python
@@ -14528,26 +14567,6 @@ Description: HTTP server for sleepy Rack applications
 Homepage: http://rainbows.rubyforge.org/
 Ruby-Versions: ruby1.8 ruby1.9.1
 Description-md5: 88e84d2d57b7281798dc42992b0b5b38
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: rcconf
-Priority: optional
-Section: universe/admin
-Installed-Size: 108
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Atsushi KAMOSHIDA <kamop@debian.org>
-Architecture: all
-Version: 2.5ubuntu3
-Depends: whiptail | whiptail-provider | dialog, sysv-rc, perl, perl-modules
-Conflicts: file-rc
-Filename: pool/universe/r/rcconf/rcconf_2.5ubuntu3_all.deb
-Size: 21308
-MD5sum: 291e1341c120d07fd15eafd2dc668b3c
-SHA1: cf276f5d65d99d84f30582215466a5e4518cb2ed
-SHA256: b8d6e199a33fe7f7d4ac1e2f85452cc6e57097650cb3b15d32229ed65fbb5570
-Description: Debian Runlevel configuration tool
-Description-md5: 940d205300e8788b44ab5d6fdcf8a14c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -16138,6 +16157,47 @@ Description-md5: c26103566eee74886ea2d2fbbb4fc520
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: xdmx
+Priority: optional
+Section: universe/x11
+Installed-Size: 2036
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: xorg-server
+Version: 2:1.14.2-0ubuntu2
+Depends: xserver-common (>= 2:1.14.2-0ubuntu2), libaudit1 (>= 1:2.2.1), libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libpixman-1-0 (>= 0.27.2), libselinux1 (>= 2.0.82), libx11-6 (>= 2:1.4.99.1), libxau6, libxdmcp6, libxext6, libxfixes3, libxfont1 (>= 1:1.4.2), libxi6, libxmuu1, libxrender1
+Filename: pool/universe/x/xorg-server/xdmx_1.14.2-0ubuntu2_amd64.deb
+Size: 890420
+MD5sum: 3dec2af4854812f0b90796021a5a00c7
+SHA1: af6d17de74bb620a607d2674314989a9f817e096
+SHA256: 70bee4176cc707f4786434ab5440490f873807017dfc652ee0d983c9fbe21898
+Description: distributed multihead X server
+Description-md5: d52dd645b5fa9daf3052065e2345991f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: xdmx-tools
+Priority: optional
+Section: universe/x11
+Installed-Size: 426
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: xorg-server
+Version: 2:1.14.2-0ubuntu2
+Replaces: xdmx (<= 2:1.1.1-10)
+Depends: xdmx, libc6 (>= 2.4), libdmx1, libx11-6, libxaw7, libxt6
+Filename: pool/universe/x/xorg-server/xdmx-tools_1.14.2-0ubuntu2_amd64.deb
+Size: 86030
+MD5sum: b2b555637791a9870f2c5e5be9041351
+SHA1: 84abc4193d15228ea1628a405d3bc3d2090ef3ac
+SHA256: e1ede145ae072e0c4dfdc7040ac6fb96f87fde8df7dfc6b581bada9ca0d044de
+Description: Distributed Multihead X tools
+Description-md5: d19e4657677c5d6dc4d36c168f58a7f4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: xmaxima
 Priority: optional
 Section: universe/math
@@ -16178,6 +16238,73 @@ SHA256: d30913a23970ba54c23fccd83ddf509e8c5a38d4694975c2a0b439209a4d5d41
 Description: tool to crossmount between multiple input and output harddisk images
 Homepage: https://www.pinguin.lu/
 Description-md5: 44c11fa4c04f7ce2ce1b88d2f97b76c9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: xnest
+Priority: optional
+Section: universe/x11
+Installed-Size: 1637
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: xorg-server
+Version: 2:1.14.2-0ubuntu2
+Provides: xserver
+Depends: xserver-common (>= 2:1.14.2-0ubuntu2), libaudit1 (>= 1:2.2.1), libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libpixman-1-0 (>= 0.13.2), libselinux1 (>= 2.0.82), libx11-6, libxau6, libxdmcp6, libxext6, libxfont1 (>= 1:1.4.2)
+Recommends: libgl1-mesa-dri (>= 7.1~rc1)
+Filename: pool/universe/x/xorg-server/xnest_1.14.2-0ubuntu2_amd64.deb
+Size: 709558
+MD5sum: 9c7a07c165f93f70e75287738d150667
+SHA1: 449d85331b685ad2c41623e40e9d58841d76363b
+SHA256: c9d87c11f8965e70eb1780fa14c3792286d1ad88a4518ab7d3a6c0adb404ba5c
+Description: Nested X server
+Description-md5: 48a07c59b44bacd1e2bed508f80542b4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full
+
+Package: xserver-xephyr
+Priority: optional
+Section: universe/x11
+Installed-Size: 2299
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: xorg-server
+Version: 2:1.14.2-0ubuntu2
+Provides: xserver
+Depends: xserver-common (>= 2:1.14.2-0ubuntu2), libaudit1 (>= 1:2.2.1), libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libgl1-mesa-glx | libgl1, libpixman-1-0 (>= 0.27.2), libselinux1 (>= 2.0.82), libx11-6 (>= 2:1.4.99.1), libxau6, libxdmcp6, libxext6, libxfont1 (>= 1:1.4.2), libxv1
+Recommends: libgl1-mesa-dri (>= 7.1~rc1)
+Filename: pool/universe/x/xorg-server/xserver-xephyr_1.14.2-0ubuntu2_amd64.deb
+Size: 993924
+MD5sum: d0e9263fe422fce393bab1a3ca5fa0df
+SHA1: cfa06cbad835e38beccae2ceafeb742611ba2c4d
+SHA256: 735c900b84c0b9bb1213649096a4153740c894fc8d655a3d14c90772738cf67a
+Description: nested X server
+Description-md5: 516dc4b8b7e15f13bc99547d4869e159
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-gnome-desktop
+
+Package: xserver-xfbdev
+Priority: optional
+Section: universe/x11
+Installed-Size: 1860
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: xorg-server
+Version: 2:1.14.2-0ubuntu2
+Provides: xserver
+Depends: xserver-common (>= 2:1.14.2-0ubuntu2), libaudit1 (>= 1:2.2.1), libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libpixman-1-0 (>= 0.27.2), libselinux1 (>= 2.0.82), libxau6, libxdmcp6, libxfont1 (>= 1:1.4.2)
+Filename: pool/universe/x/xorg-server/xserver-xfbdev_1.14.2-0ubuntu2_amd64.deb
+Size: 830206
+MD5sum: 5cb16773d024aebf4be86c6729a049c4
+SHA1: d0857f03e30fb3a2fe785606610ec8238be8c44a
+SHA256: b572c77089960712c4edf2733c35e46549ebaafed97bf817d398aa7a0267977b
+Description: Linux framebuffer device tiny X server
+Description-md5: 952ef27a58e5dee1c023edecc5e03fb8
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
