@@ -8232,6 +8232,524 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-full, kubuntu-active-full
 
+Package: neutron-common
+Priority: optional
+Section: net
+Installed-Size: 102
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-common (<< 1:2013.2~b2-0ubuntu1~)
+Depends: adduser, python-neutron (= 1:2013.2~b2-0ubuntu2), python
+Breaks: quantum-common (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-common_2013.2~b2-0ubuntu2_all.deb
+Size: 10642
+MD5sum: 80562cbabf97e7b0f381885788023c1c
+SHA1: c7b4f10b077751e27fe376dd9ba4d9823c38a94d
+SHA256: 07d9c9fd10da306199bb491a3ea86029f237fcc17d4251a469b95525f6b12915
+Description: Neutron is a virtual network service for Openstack - common
+Description-md5: ab28986d7d849a4c4d59da3e76788645
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-dhcp-agent
+Priority: optional
+Section: net
+Installed-Size: 66
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-dhcp-agent (<< 1:2013.2~b2-0ubuntu1~)
+Depends: dnsmasq-base, dnsmasq-utils, neutron-common (= 1:2013.2~b2-0ubuntu2), neutron-metadata-agent (= 1:2013.2~b2-0ubuntu2), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Breaks: quantum-dhcp-agent (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-dhcp-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 4834
+MD5sum: df709cc5d74b77543fead709f72ec1f7
+SHA1: ecaefc2de6a67ff7d969bc20a99af1a3a85e4b40
+SHA256: 4d1173184439a80ea74d8b0860c463ad9abc4cc69c5eaf4210b11edb8e388898
+Description: Neutron is a virtual network service for Openstack - DHCP agent
+Description-md5: 572c3866ff7d431ed7a69af059be88b1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-l3-agent
+Priority: optional
+Section: net
+Installed-Size: 65
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-l3-agent (<< 1:2013.2~b2-0ubuntu1~)
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2), neutron-metadata-agent (= 1:2013.2~b2-0ubuntu2), iputils-arping, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Breaks: quantum-l3-agent (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-l3-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 4606
+MD5sum: ebb542f91d2480fbaccda7bd421bb7ed
+SHA1: 1e19b029ff58d9d7a97482bb7c9cab2c193e2185
+SHA256: 715cdb45b627830e8b8d176d6726a1ac1c6e177cc22b242d6777bc51fb06d0c4
+Description: Neutron is a virtual network service for Openstack - l3 agent
+Description-md5: 7dc64a3d701aa413a40358ba3069904a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-lbaas-agent
+Priority: optional
+Section: net
+Installed-Size: 64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-lbass-agent (<< 1:2013.2~b2-0ubuntu1~)
+Depends: haproxy, neutron-common (= 1:2013.2~b2-0ubuntu2), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Breaks: quantum-lbaas-agent (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-lbaas-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 4080
+MD5sum: 012c812707b458cc04998b171140d85c
+SHA1: 65121ef26f6fc232047ba8aa52fa73fd52009a54
+SHA256: 38d27bb3551e2cc2272593b0515ea130b5e07adf3f86ec9d754e2b9b4f68c286
+Description: Neutron is a virtual network service for Openstack - LBaaS agent
+Description-md5: d83e4461d001c52fe3847b97d170869c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-metadata-agent
+Priority: optional
+Section: net
+Installed-Size: 55
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-metadata-agent (<< 1:2013.2~b2-0ubuntu1~)
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Breaks: quantum-metadata-agent (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-metadata-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 3554
+MD5sum: f3f240093a2d9e7ebb530fc0b837c8cb
+SHA1: 383b1209c5e435a0786bb72654abf41f84108da2
+SHA256: 384612263d8b637642f77efecb4b2a5c2ee6bb2c036bdca6025fd8952561fe7e
+Description: Neutron is a virtual network service for Openstack - metadata agent
+Description-md5: 7f661aa618ba5bb4655c68b01afa2e23
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-bigswitch
+Priority: optional
+Section: net
+Installed-Size: 49
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-bigswitch (<< 1:2013.2~b2-0ubuntu1~)
+Provides: neutron-plugin
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2)
+Breaks: quantum-plugin-bigswitch (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-bigswitch_2013.2~b2-0ubuntu2_all.deb
+Size: 2838
+MD5sum: 57ce65e896d6238a1be3f8c926db9f5a
+SHA1: 44438d843851462a5d9ec63583b327b020808774
+SHA256: 5a56fe20e0ffbd221b0caf4b3fcd4e20e2f23971f55c79e729756a9dabdfaab7
+Description: Neutron is a virtual network service for Openstack - BigSwitch plugin
+Description-md5: 0c8688cdfb7e40df3850c1f2b0acaad0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-brocade
+Priority: optional
+Section: net
+Installed-Size: 48
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-brocade (<< 1:2013.2~b2-0ubuntu1~)
+Provides: neutron-plugin
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2)
+Breaks: quantum-plugin-brocade (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-brocade_2013.2~b2-0ubuntu2_all.deb
+Size: 2328
+MD5sum: c629db289a6f611a225b1d327e9e8d25
+SHA1: 3e1844b94670ae3c64e92fbb820ea6b1b6eb248f
+SHA256: b83d09ab7bb8302e3fc98d0904a2a53edc555b7901dab12a553f63bfa9bb8aae
+Description: Neutron is a virtual network service for Openstack - Brocade plugin
+Description-md5: 5656889e8687a6807d6566ab215b278a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-cisco
+Priority: optional
+Section: net
+Installed-Size: 49
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-cisco (<< 1:2013.2~b2-0ubuntu1~)
+Provides: neutron-plugin
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2)
+Breaks: quantum-plugin-cisco (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-cisco_2013.2~b2-0ubuntu2_all.deb
+Size: 2526
+MD5sum: f014e8771025aeda6c776661b0d9486b
+SHA1: bc63f43f4e0bef3abaf75ff8e1158be9ad3b9962
+SHA256: 05b7b9705ad3f738f9666c33322ee3e20036affc7617594a5481ab51e1ba4faf
+Description: Neutron is a virtual network service for Openstack - Cisco plugin
+Description-md5: 810ab0477ad7e271b158b82400fad3d2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-hyperv
+Priority: optional
+Section: net
+Installed-Size: 54
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-hyperv (<< 1:2013.2~b2-0ubuntu1~)
+Provides: neutron-plugin
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2), python
+Breaks: quantum-plugin-hyperv (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-hyperv_2013.2~b2-0ubuntu2_all.deb
+Size: 3216
+MD5sum: 29ab989b48abd7ba1de94ba6a6b30208
+SHA1: 9cf8200f1f760f94b1c826d0843e48be064bc188
+SHA256: 63d57014f5cfa14809af5636bc260590646809b52941acb5301ed20f38e8bb67
+Description: Neutron is a virtual network service for Openstack - Hyper-V plugin
+Description-md5: 37c0b26054c14f78d0c1b31694fb0a65
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-linuxbridge
+Priority: optional
+Section: net
+Installed-Size: 50
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-linuxbridge (<< 1:2013.2~b2-0ubuntu1~)
+Provides: neutron-plugin
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2)
+Breaks: quantum-plugin-linuxbridge (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-linuxbridge_2013.2~b2-0ubuntu2_all.deb
+Size: 2882
+MD5sum: 86abe47c350600217e37d830184cff28
+SHA1: 6aa2cd7a96e1ba45bb3d59dfecf0975ef0d4b555
+SHA256: d4c8778abe87dc4a0b839e8227c841046c495b43c44e26b1744dcef127f2f8bd
+Description: Neutron is a virtual network service for Openstack - linuxbridge plugin
+Description-md5: d39abc40d5041118f3e04179c9961117
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-linuxbridge-agent
+Priority: optional
+Section: net
+Installed-Size: 67
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-linuxbridge-agent (<< 1:2013.2~b2-0ubuntu1~)
+Depends: bridge-utils, neutron-common (= 1:2013.2~b2-0ubuntu2), neutron-plugin-linuxbridge, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Breaks: quantum-plugin-linuxbirdge-agent (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-linuxbridge-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 3706
+MD5sum: 14f36d01a944ce773a122380df55e75f
+SHA1: 6c2fbff40542e8eb4ca1cb20a2cb7a3e080a9fa2
+SHA256: e80025599e95d360f894c37af4307b05db1bcd2e9f6518057a8687f46b76b45e
+Description: Neutron is a virtual network service for Openstack - linuxbridge plugin agent
+Description-md5: 954a060c661df8e8272f394f152b1457
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-metaplugin
+Priority: optional
+Section: net
+Installed-Size: 48
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-metaplugin (<< 1:2013.2~b2-0ubuntu1~)
+Provides: neutron-plugin
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2)
+Breaks: quantum-plugin-metaplugin (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-metaplugin_2013.2~b2-0ubuntu2_all.deb
+Size: 2308
+MD5sum: 6c30f3eb4592730867438c99da64ebb7
+SHA1: e8ab38733969787db0e41f466d23f83a5fb508e0
+SHA256: 386f596fb65490dbaa8790a9b5475569d94818ccccd807bf6e2e470b972223a2
+Description: Neutron is a virtual network service for Openstack - Metaplugin plugin
+Description-md5: f715311c2870b755d570e906eacdda25
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-midonet
+Priority: optional
+Section: net
+Installed-Size: 48
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-midonet (<< 1:2013.2~b2-0ubuntu1~)
+Provides: neutron-plugin
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2)
+Breaks: quantum-plugin-midonet (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-midonet_2013.2~b2-0ubuntu2_all.deb
+Size: 2262
+MD5sum: b2ea0d0169ab984b40dd4dc24627e9ae
+SHA1: 618fc8614bd1c31dfb3f00ff75218926c02ef6b9
+SHA256: 4f84d4168b2c88f64324b71a7c7369ebaf4f82bf49d7c7d9888b07706ce39bf8
+Description: Neutron is a virtual network service for Openstack - Midonet plugin
+Description-md5: 8c0d47b7abaab3927d126fd9999b8001
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-mlnx-agent
+Priority: optional
+Section: net
+Installed-Size: 59
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Provides: neutron-plugin
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Filename: pool/main/n/neutron/neutron-plugin-mlnx-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 3634
+MD5sum: f888abff7e478ecec0610ac94d4f322b
+SHA1: 1d7b5cd6addbc078ad1ce442e40b5e632d0e3c9b
+SHA256: f5568259828dc95fdda22f8ae3862c3515f527f3a63e283bdfe522c366bcee22
+Description: Neutron is a virtual network service for Openstack - mlnx plugin agent
+Description-md5: b7c6e04d1b511c99940180c1534e8f9f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-nec
+Priority: optional
+Section: net
+Installed-Size: 49
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-nec (<< 1:2013.2~b2-0ubuntu1~)
+Provides: neutron-plugin
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2)
+Breaks: quantum-plugin-nec (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-nec_2013.2~b2-0ubuntu2_all.deb
+Size: 2668
+MD5sum: 33148771ec08d6dbc19dc39d884d4e0f
+SHA1: 2db64f526ff8eb72eb8a20c8a1dfd37a6c9a1443
+SHA256: fc441ae76c54efa44ae2433209b599315d39c20715b0882e0dc23ad35ff4fae0
+Description: Neutron is a virtual network service for Openstack - NEC plugin
+Description-md5: 6d6eb20270ec73f719d84e9651e48a67
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-nec-agent
+Priority: optional
+Section: net
+Installed-Size: 66
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-nec-agent (<< 1:2013.2~b2-0ubuntu1~)
+Depends: openvswitch-switch, neutron-common (= 1:2013.2~b2-0ubuntu2), neutron-plugin-nec, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Breaks: quantum-plugin-nec-agent (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-nec-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 3578
+MD5sum: 86dd8c490644b24c85f1d6535c35b652
+SHA1: fbafa1cf70afd98e06ec329f80073383a6077097
+SHA256: e8af87ca58685ff75d08f5b05c6125d1dde23cfb9a2b2797e07b64eb0777c2eb
+Description: Neutron is a virtual network service for Openstack - NEC plugin agent
+Description-md5: 1874bab5146c27ea9df335395d7eef64
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-nicira
+Priority: optional
+Section: net
+Installed-Size: 55
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-nicira (<< 1:2013.2~b2-0ubuntu1~)
+Provides: neutron-plugin
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2), python
+Breaks: quantum-plugin-nicira (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-nicira_2013.2~b2-0ubuntu2_all.deb
+Size: 3778
+MD5sum: ae5409a68740982706c6d3670498d2b7
+SHA1: 704f9c36de2b41b949d7b3bed1d12be24836543a
+SHA256: bfcf70de18b686c88e2caee678bbdcb83accd95013f9810ec669cbf2efd73b27
+Description: Neutron is a virtual network service for Openstack - Nicira plugin
+Description-md5: 05c549fe7d3c9c2bd92de995f0170412
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-openvswitch
+Priority: optional
+Section: net
+Installed-Size: 53
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-openvswitch (<< 1:2013.2~b2-0ubuntu1~)
+Provides: neutron-plugin
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2)
+Breaks: quantum-plugin-openvswitch (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-openvswitch_2013.2~b2-0ubuntu2_all.deb
+Size: 3968
+MD5sum: 523fcd64060639c2647054fe22a93c42
+SHA1: af0cf89d399a207e490b58845db909e69708d69d
+SHA256: 845e17b067448ba51e3ec80ac3b3eae758e6cde791a1d02d694cb6348fab2d86
+Description: Neutron is a virtual network service for Openstack - Open vSwitch plugin
+Description-md5: ea6e653f58f6ca6af645de5e8de0410b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-openvswitch-agent
+Priority: optional
+Section: net
+Installed-Size: 67
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-openvswitch-agent (<< 1:2013.2~b2-0ubuntu1~)
+Depends: openvswitch-switch, neutron-common (= 1:2013.2~b2-0ubuntu2), neutron-plugin-openvswitch, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Breaks: quantum-plugin-openvswitch-agent (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-openvswitch-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 3712
+MD5sum: 990bb86697ab3338f6b933103253f6a9
+SHA1: 6a5bb45553d551d2f748521297511b4a270a93b8
+SHA256: 9f7193d6bf8bc1b70ad279eb56c5bc50addb8b7614009459e529c82e35873349
+Description: Neutron is a virtual network service for Openstack - Open vSwitch plugin agent
+Description-md5: e9697f8391ec5ff56d028b4049eb9f25
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-plumgrid
+Priority: optional
+Section: net
+Installed-Size: 48
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-plumgrid (<< 1:2013.2~b2-0ubuntu1~)
+Provides: neutron-plugin
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2)
+Breaks: quantum-plugin-plumgrid (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-plumgrid_2013.2~b2-0ubuntu2_all.deb
+Size: 2332
+MD5sum: e0393a3b91960dfe83b18a5afbff8212
+SHA1: d9d5888c228e97e35c70382fc2189c93a16e0e5a
+SHA256: 348c087a312154a92db17e0f68e6775a2db73a50b2fbc56540c3973b4de875bb
+Description: Neutron is a virtual network service for Openstack - PLUMgrid plugin
+Description-md5: 17a095d0417b01c889378a6acf398e14
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-ryu
+Priority: optional
+Section: net
+Installed-Size: 49
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-ryu (<< 1:2013.2~b2-0ubuntu1~)
+Provides: neutron-plugin
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2)
+Breaks: quantum-plugin-ryu (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-ryu_2013.2~b2-0ubuntu2_all.deb
+Size: 2636
+MD5sum: ced624619b9079adac02cef0e263de3e
+SHA1: 96358944346444a014c76225dc1ca51cd823d4ae
+SHA256: d3b22b925115039167a3d9c3ad0e1206eeaaeeaa5d40d210a10902e39af47711
+Description: Neutron is a virtual network service for Openstack - RYU plugin
+Description-md5: 90383a20bbdf9b71c4cab189a18193b2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-plugin-ryu-agent
+Priority: optional
+Section: net
+Installed-Size: 67
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-plugin-ryu-agent (<< 1:2013.2~b2-0ubuntu1~)
+Depends: neutron-common (= 1:2013.2~b2-0ubuntu2), neutron-plugin-ryu, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Breaks: quantum-plugin-ryu-agent (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-plugin-ryu-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 3694
+MD5sum: f1b25271e8298d71b3cc5f0cafbf99ea
+SHA1: 222f5177f2ab2ca070075a28f1fd6e4077f6310f
+SHA256: 7faac5d32c9229d23f3e3b3018b7e68b6e532b21b623c0aaee1089eb6bc557c0
+Description: Neutron is a virtual network service for Openstack - RYU plugin agent
+Description-md5: b210cd3ceed8f1ba200f8c787fb6036a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: neutron-server
+Priority: optional
+Section: net
+Installed-Size: 62
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: quantum-server (<< 1:2013.2~b2-0ubuntu1~)
+Depends: adduser, neutron-common (= 1:2013.2~b2-0ubuntu2), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Recommends: neutron-plugin-openvswitch
+Breaks: quantum-server (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/neutron-server_2013.2~b2-0ubuntu2_all.deb
+Size: 3722
+MD5sum: eb5175016a18207c3cfec5905314ed79
+SHA1: b71c076391d33fbbd6283529f3518c3c4c9513d8
+SHA256: 9ba212bcce6f7d81e3b65bcfe67bc63152a84c6c2a34b8d6c86ed186e54cdec8
+Description: Neutron is a virtual network service for Openstack - server
+Description-md5: 1b00fccfd02ac8a9014e7ee4bfb0ddd5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: nux-tools
 Priority: optional
 Section: x11
@@ -9003,6 +9521,30 @@ Description-md5: 5c78ea4471c165a17eb0e76db000842a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-neutron
+Priority: optional
+Section: python
+Installed-Size: 10608
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Replaces: python-quantum (<< 1:2013.2~b2-0ubuntu1~)
+Provides: python2.7-neutron
+Depends: python-amqplib, python-anyjson, python-configobj, python-eventlet, python-gflags, python-httplib2, python-iso8601, python-keystone, python-kombu (>= 2.5.12), python-lxml, python-netaddr, python-paste, python-pastedeploy, python-pyudev, python-neutronclient (>= 1:0.1.0.1-0ubuntu1), python-routes, python-simplejson, python-stevedore (>= 0.8), python-sqlalchemy (>= 0.8~), python-webob, python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-d2to1, python-pbr, python-greenlet, python-sqlalchemy (<< 0.9), python-keystoneclient, alembic, python-six, python-oslo.config, python-novaclient
+Breaks: python-quantum (<< 1:2013.2~b2-0ubuntu1~)
+Filename: pool/main/n/neutron/python-neutron_2013.2~b2-0ubuntu2_all.deb
+Size: 1634980
+MD5sum: fd1a1ce93d2a4200b0f569301b7a72c6
+SHA1: ea418e162766740139b2773b09769caf367e4d0f
+SHA256: 4825bbf4754ec8cfc927cc2a7d49bf8e413fa6813ebfc64de1903fd3986b017d
+Description: Neutron is a virutal network service for Openstack - Python library
+Python-Version: 2.7
+Description-md5: 696162f82e78115f82ea6203be5b7e92
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-pyicu
 Priority: optional
 Section: python
@@ -9044,6 +9586,26 @@ SHA256: 89ebddf24e7c57f6278ee9ef9c9a197f6fe353ad0acbfba97e6d9519f321eb4e
 Description: Python extension wrapping the ICU C++ API (debug extension)
 Homepage: http://pyicu.osafoundation.org/
 Description-md5: 6e867ee6d24f8a0027bd9ebb793971c7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-quantum
+Priority: optional
+Section: python
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: python-neutron
+Filename: pool/main/n/neutron/python-quantum_2013.2~b2-0ubuntu2_all.deb
+Size: 1654
+MD5sum: a5da08065eed8296df7799c79396f828
+SHA1: ee2f507474acacc07b09f96679bb73f0971e6df2
+SHA256: ff5f9dad59a4c96bdd7b632bc1b4b49e688fdf0dd46728d9318bfffbf013385d
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -9203,6 +9765,346 @@ Description-md5: ecfb930b93b3c3391fc6ad445be08cee
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: quantum-common
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-common
+Filename: pool/main/n/neutron/quantum-common_2013.2~b2-0ubuntu2_all.deb
+Size: 1652
+MD5sum: e35082da86f346600d599b8ff1c9333d
+SHA1: 2c6ca1a8d81d807bc7f65bedf3eeb221f585170f
+SHA256: 254304827df260a3c55be5da3230c433ea89456bf2783db5b134ce9b7c66846a
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-dhcp-agent
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-dhcp-agent
+Filename: pool/main/n/neutron/quantum-dhcp-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 1664
+MD5sum: 763a186faaafde914038a20009fb683b
+SHA1: 83965687bcc99475225e3b46e41acf643dc6d63f
+SHA256: 36f83b06b18d1ab21d4f85a9536ffe922b80b312407ad560295bf64f8d938875
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-l3-agent
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-l3-agent
+Filename: pool/main/n/neutron/quantum-l3-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 1662
+MD5sum: 1952179aad5e803cf976fe615d743b06
+SHA1: f8192fc5aa1f51bf9bc8b27c1ec50ec4cb63b3e3
+SHA256: 137f2d3a4921f93b3d39428940ea64b3605c2a84357d6535f5b77d852206441c
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-lbaas-agent
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-lbaas-agent
+Filename: pool/main/n/neutron/quantum-lbaas-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 1666
+MD5sum: 3c956ce64efbdb53c7999ae5be12dfd4
+SHA1: 71dab1f7a8937fe049e76676deacf92226980ea2
+SHA256: 60760dea50b3175d03b6f441638d19cd177e268c65759f130c58b1de17abc876
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-metadata-agent
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-metadata-agent
+Filename: pool/main/n/neutron/quantum-metadata-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 1666
+MD5sum: 7c7a9aba6fd202f06f9a5d4a82c26006
+SHA1: ee171944304e3ccd4909c27ba0a990e20db7744d
+SHA256: 50043621414532bf04144de21e2dc659fec4b52cf62c6c82389afb477730fa2a
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-plugin-cisco
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-plugin-cisco
+Filename: pool/main/n/neutron/quantum-plugin-cisco_2013.2~b2-0ubuntu2_all.deb
+Size: 1668
+MD5sum: a93f3f77ba01ea8eab2404a6f2c6b959
+SHA1: c1eebb3770cf2c0d21f3df6482bc25434b9b9266
+SHA256: 9979c045ee251341cc1dc4c29634f19d016b77ca9cfb1a8d3184a88c65ebb7ca
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-plugin-linuxbridge
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-plugin-linuxbridge
+Filename: pool/main/n/neutron/quantum-plugin-linuxbridge_2013.2~b2-0ubuntu2_all.deb
+Size: 1676
+MD5sum: 33000583986b33b1c9d69722c55083bf
+SHA1: 155b5038ca25ee20cc506163827fb6bc10be6c3f
+SHA256: 6bea8635b03eff3738999e5136bdd0de3155b132c4c0e2e5e6c1fe68d090884c
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-plugin-linuxbridge-agent
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-plugin-linuxbridge-agent
+Filename: pool/main/n/neutron/quantum-plugin-linuxbridge-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 1682
+MD5sum: f0557f5f6c5cbf0df4fc3c00112f2ae5
+SHA1: b157e1244670eeaf6ff78cc479d73cb2d180ec5f
+SHA256: 91a401be2c43f44e504728ae832e31f09fedf528e6337ec9060971ebbaca08b4
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-plugin-metaplugin
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-plugin-metaplugin
+Filename: pool/main/n/neutron/quantum-plugin-metaplugin_2013.2~b2-0ubuntu2_all.deb
+Size: 1668
+MD5sum: 87a64760f03cfaf074467a0934296345
+SHA1: ed65afc2b6992690e6fefb5ec6a251d7b5e41865
+SHA256: c89ea270163e4cc84a201f86906e1fefa4bfc93611f2f37bbd44a2d81f2d6723
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-plugin-midonet
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-plugin-midonet
+Filename: pool/main/n/neutron/quantum-plugin-midonet_2013.2~b2-0ubuntu2_all.deb
+Size: 1668
+MD5sum: 6895a785c0bc36f95d4f078da8f00f9c
+SHA1: 2a05107e8c2b766ea09ab9cba66106ad2b41333f
+SHA256: 959f172bc8681083ec97e8db513949a49733f09a2968484cccac12d6e1833ebd
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-plugin-nec
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-plugin-nec
+Filename: pool/main/n/neutron/quantum-plugin-nec_2013.2~b2-0ubuntu2_all.deb
+Size: 1662
+MD5sum: fd2962aa169ff10505f71168e37b6f11
+SHA1: 685cd603ed7b95065c2ddc3c7e6aeb2597f503bc
+SHA256: 8fe24ca2d7e6d5fac00535e718d2a2181dd19a49b481bbf4220765e0835dee22
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-plugin-nicira
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-plugin-nicira
+Filename: pool/main/n/neutron/quantum-plugin-nicira_2013.2~b2-0ubuntu2_all.deb
+Size: 1662
+MD5sum: 7a78c57369b39eac5648a1e3de041b31
+SHA1: 9ff6082e91e9fae31f0d325860d094f006a304c3
+SHA256: fe101b4b571dce8da5bba4ef9cc559df31e3f3a2f350bc44674040052c9a6657
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-plugin-openvswitch
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-plugin-openvswitch
+Filename: pool/main/n/neutron/quantum-plugin-openvswitch_2013.2~b2-0ubuntu2_all.deb
+Size: 1678
+MD5sum: 349fccdeba8ad326321fa901f4641beb
+SHA1: 3d6101c907d62a8d057582d966faffd9dbbaa981
+SHA256: 6a530063b4fc6be02a5785c4a58797d68073669ada9f79b440ef239f1fbd2dcc
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-plugin-openvswitch-agent
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-plugin-openvswitch-agent
+Filename: pool/main/n/neutron/quantum-plugin-openvswitch-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 1688
+MD5sum: c53d11244e9c475857ae4346c67d578b
+SHA1: 733f0a05c19fa13fc920461ae20a3cdecae90375
+SHA256: 28eec4ee5568e1de0b9434a22efbeb497f66fe2e847127df3c76f134f5fd37bb
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-plugin-ryu
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-plugin-ryu
+Filename: pool/main/n/neutron/quantum-plugin-ryu_2013.2~b2-0ubuntu2_all.deb
+Size: 1666
+MD5sum: c97110f9ee6112b6ee9121962b2a7d20
+SHA1: 6e06b27283b82986145ec538adf93e8ecea6f2f3
+SHA256: 6555727e498be5db227f47599550d609857ffb661c0cf856264a8d7edb89ce6c
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-plugin-ryu-agent
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-plugin-ryu-agent
+Filename: pool/main/n/neutron/quantum-plugin-ryu-agent_2013.2~b2-0ubuntu2_all.deb
+Size: 1672
+MD5sum: 9d7ff5c8185e44e32c00147690e9efa5
+SHA1: 95997e1fe28a41979a565a5f3fe97149848980e1
+SHA256: 17bc387bd1e705fcf8ffe3506e7034a08855a4e2d426c13371a37fccdd695153
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: quantum-server
+Priority: optional
+Section: net
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: neutron
+Version: 1:2013.2~b2-0ubuntu2
+Depends: neutron-server
+Filename: pool/main/n/neutron/quantum-server_2013.2~b2-0ubuntu2_all.deb
+Size: 2032
+MD5sum: dcb07819128745822dfff269d3dd1e8c
+SHA1: bab93f24663181c5d89f137cc16677e2a0a56710
+SHA256: 6799c2d6f65b911b2d33c8402dd6a8259bd7c40eddf0eb827ecd6e2f3af5db35
+Description: transitional dummy package
+Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: signon-plugin-oauth2-dev
 Priority: optional
