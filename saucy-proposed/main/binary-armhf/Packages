@@ -1,3 +1,27 @@
+Package: apparmor
+Priority: standard
+Section: admin
+Installed-Size: 787
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: armhf
+Version: 2.8.0-0ubuntu23
+Replaces: apparmor-parser, apparmor-utils (<< 2.8.0-0ubuntu15), libapache2-mod-apparmor (<< 2.5.1-0ubuntu3)
+Depends: libc6 (>= 2.8), debconf (>= 0.5) | debconf-2.0, libapparmor-perl, lsb-base, initramfs-tools, debconf
+Suggests: apparmor-profiles, apparmor-docs, apparmor-utils
+Breaks: apparmor-utils (<< 2.8.0-0ubuntu15), libapache2-mod-apparmor (<< 2.5.1-0ubuntu3)
+Filename: pool/main/a/apparmor/apparmor_2.8.0-0ubuntu23_armhf.deb
+Size: 307982
+MD5sum: 57d46bcd0782401b8caa2f0aa8ec4a25
+SHA1: 208d6614806b7e19478bf73134cf73599a161e27
+SHA256: 33564b898d625c2bced867b95735ebeb3c0fd7797779f49c08a31288e7311380
+Description: User-space parser utility for AppArmor
+Homepage: http://apparmor.net/
+Description-md5: 35c06b71e31a437828d84b93a41bd493
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
+
 Package: apparmor-docs
 Priority: extra
 Section: doc
@@ -82,6 +106,28 @@ SHA256: c2fefc956cd07e30275bb158e36687e68d1865382980aac89366cb192c55d869
 Description: Profiles for AppArmor Security policies
 Homepage: http://apparmor.net/
 Description-md5: dd1ced2ad1af9effef302648735d913e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apparmor-utils
+Priority: optional
+Section: admin
+Installed-Size: 454
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: armhf
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: apparmor (>= 2.6.1-4ubuntu1), liblocale-gettext-perl, libterm-readkey-perl, librpc-xml-perl, libapparmor-perl, perl
+Suggests: apparmor-docs, libterm-readline-gnu-perl, vim-addon-manager
+Filename: pool/main/a/apparmor/apparmor-utils_2.8.0-0ubuntu23_armhf.deb
+Size: 100032
+MD5sum: 1629aca8f21b825788026c668fdd9297
+SHA1: ad9e5e96aaeafa75134c0bbf3124da20dc6b6d50
+SHA256: 3853aed0ba4e3bd7bdd105389fd2b052ad39e38854f2e67a4c7d54a210335e28
+Description: Utilities for controlling AppArmor
+Homepage: http://apparmor.net/
+Description-md5: 22a5090997862bae53e19125fba08de9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -3228,6 +3274,27 @@ Description-md5: 31bf1a2908be95c12379e0aee0ecfc5c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libapache2-mod-apparmor
+Priority: extra
+Section: web
+Installed-Size: 144
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: armhf
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: libapparmor1 (>= 2.6~devel), libc6 (>= 2.4), apache2-api-20120211
+Filename: pool/main/a/apparmor/libapache2-mod-apparmor_2.8.0-0ubuntu23_armhf.deb
+Size: 25012
+MD5sum: a3a45e07d710b707c3caa3e5a0f03f91
+SHA1: cd4ea7c39287a4f82929e7ab80924e4e3f596ee3
+SHA256: bf7dd19c6352625bd1c54e969f2ad69e1cbfc4b69de3c3d5fbf806312155207a
+Description: changehat AppArmor library as an Apache module
+Homepage: http://apparmor.net/
+Description-md5: a5901c8ca6f4b08d12fc507332ec3d1f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libapache2-mod-auth-mysql
 Priority: optional
 Section: web
@@ -3247,6 +3314,71 @@ Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libapparmor-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 114
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: armhf
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: libapparmor1 (= 2.8.0-0ubuntu23)
+Filename: pool/main/a/apparmor/libapparmor-dev_2.8.0-0ubuntu23_armhf.deb
+Size: 21090
+MD5sum: 2a6f205d36198e11ef8df483a983ad89
+SHA1: a750ff3d4053043ec59b7ee2994c0e405418507a
+SHA256: 6c77cab0f1ef19807b6e1a53531fe48b66fa813014bc0b31d2ff97329a7b0f6b
+Description: AppArmor development libraries and header files
+Homepage: http://apparmor.net/
+Description-md5: 4854e8f39d4ec17f1ef336b898438f73
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libapparmor-perl
+Priority: optional
+Section: perl
+Installed-Size: 145
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: armhf
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: perl-base (>= 5.14.2-21build1), perlapi-5.14.2, libapparmor1 (>= 2.7.0~beta1+bzr1772), libc6 (>= 2.4)
+Filename: pool/main/a/apparmor/libapparmor-perl_2.8.0-0ubuntu23_armhf.deb
+Size: 28782
+MD5sum: 1383fa9c30a81ecae27916aa709df464
+SHA1: b01671eed3ccd96b683506f46215d6559d184659
+SHA256: c5f405bd263848e878206170cde940a97cfe1f99c5e67c88b335034b231d3744
+Description: AppArmor library Perl bindings
+Homepage: http://apparmor.net/
+Description-md5: 42d32a45493e77e0e2b388d84ea70892
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
+
+Package: libapparmor1
+Priority: optional
+Section: libs
+Installed-Size: 108
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: armhf
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: libc6 (>= 2.8)
+Filename: pool/main/a/apparmor/libapparmor1_2.8.0-0ubuntu23_armhf.deb
+Size: 34030
+MD5sum: 74fa8044bccada76f0fc9406c4669c6f
+SHA1: 2765a2ec5084fdadd667c661dc9220da4348d9d8
+SHA256: 8e3637d82e57ee2bca05841cf3b81a2a4393bddd2babc0aef65c89b09f242dfd
+Description: changehat AppArmor library
+Homepage: http://apparmor.net/
+Description-md5: b066f3d6ec4f1e72570ebf49e31e9490
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
 
 Package: libasan0
 Priority: optional
@@ -6117,6 +6249,27 @@ Description-md5: 9b1d7a0b3e6a2ea021f4443f42dcff4f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libpam-apparmor
+Priority: extra
+Section: libs
+Installed-Size: 76
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: armhf
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: libapparmor1 (>= 2.6~devel), libc6 (>= 2.4), libpam0g (>= 0.99.7.1)
+Filename: pool/main/a/apparmor/libpam-apparmor_2.8.0-0ubuntu23_armhf.deb
+Size: 7430
+MD5sum: 604711e0ebf434733c38af64aa3dbb08
+SHA1: 7260f38c29916fa18ce9ac6ae1e4b1f74d3e162d
+SHA256: 0455d72036befe8782ee53871e1368a683c45f93effa113cc4ed8ad2c101097f
+Description: changehat AppArmor library as a PAM module
+Homepage: http://apparmor.net/
+Description-md5: e416b01d786a37c6ad586d6663ee5027
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libpe-rules2
 Priority: optional
 Section: libs
@@ -8441,6 +8594,27 @@ Description-md5: 38b38ebd2f1d82dff433fbfa8e243dc0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-libapparmor
+Priority: extra
+Section: python
+Installed-Size: 154
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: armhf
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), libapparmor1 (>= 2.7.0~beta1+bzr1772), libc6 (>= 2.4)
+Filename: pool/main/a/apparmor/python-libapparmor_2.8.0-0ubuntu23_armhf.deb
+Size: 22724
+MD5sum: 9417836989e81ec68bc3dd9a65895379
+SHA1: 634593accab920857b8619e2c0b2640d2395f74a
+SHA256: 0297c7e34757f58000b1d54fb4564132e487c13e73c3914c80dae7310a666669
+Description: AppArmor library Python bindings
+Homepage: http://apparmor.net/
+Description-md5: 36d3d516db38bd0cbb93cfa172912961
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-mutagen
 Priority: optional
 Section: python
@@ -8645,6 +8819,27 @@ SHA256: cec9173eede6af3872abc143cbed388dc4fff4f83fcab97c1bd370be472b99e4
 Description: Python 3 extension wrapping the ICU C++ API (debug extension)
 Homepage: http://pyicu.osafoundation.org/
 Description-md5: 387c97faeb1c422866b4185f26db825c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-libapparmor
+Priority: extra
+Section: python
+Installed-Size: 134
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: armhf
+Source: apparmor
+Version: 2.8.0-0ubuntu23
+Depends: python3 (>= 3.3), python3 (<< 3.4), libapparmor1 (>= 2.7.0~beta1+bzr1772), libc6 (>= 2.4)
+Filename: pool/main/a/apparmor/python3-libapparmor_2.8.0-0ubuntu23_armhf.deb
+Size: 22202
+MD5sum: 54b6bba036a98518373b739535b3e6ae
+SHA1: bedb511067e3a99b7956bcc8f6223f5179cfd3c7
+SHA256: 74aa67e25423c2c308e5b32e907e7f742d41dfac64100a593a9ee3f59d992438
+Description: AppArmor library Python3 bindings
+Homepage: http://apparmor.net/
+Description-md5: 48fb2712cf2310bd6af2d05c836cc285
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
