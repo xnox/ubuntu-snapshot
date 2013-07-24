@@ -1034,6 +1034,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: gir1.2-telepathyglib-0.12
+Priority: optional
+Section: libs
+Installed-Size: 263
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: telepathy-glib
+Version: 0.20.4-1
+Replaces: gir1.0-telepathyglib-0.12
+Depends: gir1.2-glib-2.0, libtelepathy-glib0 (>= 0.19.10)
+Conflicts: gir1.0-telepathyglib-0.12
+Filename: pool/main/t/telepathy-glib/gir1.2-telepathyglib-0.12_0.20.4-1_armhf.deb
+Size: 64428
+MD5sum: 0d8a80582774d1eec631333a3272338c
+SHA1: 12a53d6b1fa79dd2ea27028bedb8f77a9974e83c
+SHA256: 13a28c2f8d4d7202565c13676153c6d2e1429cf2a1fabc4eac676b5fbb5e4b9b
+Description: GLib Telepathy connection manager library (GObject-Introspection)
+Homepage: http://telepathy.freedesktop.org/wiki/
+Description-md5: 79b134317a8965965a687e169f21caea
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-gnome-desktop
+
 Package: gir1.2-unity-5.0
 Priority: optional
 Section: libs
@@ -7608,6 +7632,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
 
+Package: libtelepathy-glib-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 6340
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: telepathy-glib
+Version: 0.20.4-1
+Depends: libtelepathy-glib0 (= 0.20.4-1), gir1.2-telepathyglib-0.12 (= 0.20.4-1), libglib2.0-dev (>= 2.32), libdbus-1-dev (>= 0.95), libdbus-glib-1-dev (>= 0.90), pkg-config (>= 0.21)
+Suggests: libtelepathy-glib-doc
+Filename: pool/main/t/telepathy-glib/libtelepathy-glib-dev_0.20.4-1_armhf.deb
+Size: 1351178
+MD5sum: d8b59ef9e731f435ed9a441270b52436
+SHA1: a8f273ae384e1e775ffde051ace3c982762b7b03
+SHA256: cf1ec06669e3689a0b3018e42062c26eba992901a45fa69eeeb6ed302dcc28e8
+Description: GLib Telepathy connection manager library (headers)
+Homepage: http://telepathy.freedesktop.org/wiki/
+Description-md5: cecc48489d9277257f3e75f69d84e5a8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libtelepathy-glib-doc
 Priority: optional
 Section: doc
@@ -7626,6 +7672,52 @@ SHA256: 44e043938b3073e6dcee1ed4032cce40f5a4eb454c15013c999c11c4b07a5ecb
 Description: GLib Telepathy library (documentation)
 Homepage: http://telepathy.freedesktop.org/wiki/
 Description-md5: 4a02941f4dc85c9b62b0b5e012eeb814
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libtelepathy-glib0
+Priority: optional
+Section: libs
+Installed-Size: 1627
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: telepathy-glib
+Version: 0.20.4-1
+Depends: libc6 (>= 2.4), libdbus-1-3 (>= 1.0.2), libdbus-glib-1-2 (>= 0.92), libglib2.0-0 (>= 2.37.3)
+Pre-Depends: multiarch-support
+Filename: pool/main/t/telepathy-glib/libtelepathy-glib0_0.20.4-1_armhf.deb
+Size: 656050
+MD5sum: a6253f0b5969b626f8fd10a90b7b4861
+SHA1: 1c061f0d318982bb3422f4a0976621f4331520e2
+SHA256: e9b29503224fc8c6640a1e76b130db62b2216bb9eb8ffc3ace2f9221e543cf5b
+Description: Telepathy framework - GLib library
+Multi-Arch: same
+Homepage: http://telepathy.freedesktop.org/wiki/
+Description-md5: bbae6d3ff9e905985fa54ab934ff329f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libtelepathy-glib0-dbg
+Priority: extra
+Section: libdevel
+Installed-Size: 2519
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: telepathy-glib
+Version: 0.20.4-1
+Depends: libtelepathy-glib0 (= 0.20.4-1)
+Filename: pool/main/t/telepathy-glib/libtelepathy-glib0-dbg_0.20.4-1_armhf.deb
+Size: 2007580
+MD5sum: 2a467a6989ae745b4d1707840923dac9
+SHA1: 5738b8c4461900ef5f1855a2c21ec0885ca39477
+SHA256: 31162e0d6f3ca4cafd013d17b73b60b3aec8dd70fb19ff876bf3654b02623c05
+Description: GLib Telepathy library (debug symbols)
+Multi-Arch: same
+Homepage: http://telepathy.freedesktop.org/wiki/
+Description-md5: 0cfc4d9765b9f67c68f2d8cb09d8c803
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
