@@ -469,50 +469,6 @@ Description-md5: 8059068d01bfb939336097d2add7f12f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: autopilot-desktop
-Priority: optional
-Section: universe/metapackages
-Installed-Size: 32
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomi Richards <thomi.richards@canonical.com>
-Architecture: all
-Source: autopilot
-Version: 1.3.1+13.10.20130724.1-0ubuntu1
-Depends: gir1.2-gconf-2.0, gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-ibus-1.0, python-autopilot, python-xlib
-Recommends: python-autopilot-vis, python-evdev
-Filename: pool/universe/a/autopilot/autopilot-desktop_1.3.1+13.10.20130724.1-0ubuntu1_all.deb
-Size: 1552
-MD5sum: 74001314ec5c920479ce378ad119a31e
-SHA1: e7683b44839b84cf44dc51a12ac16b82ba1f94f1
-SHA256: 69112b4c2d86ad482948217ec017909b969e828041d4c546b838a82d950bf407
-Description: Autopilot support for the ubuntu Desktop platform
-Homepage: https://launchpad.net/autopilot
-Description-md5: 99df27e48b3a55cb5ac3b22c0d393ac9
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: autopilot-touch
-Priority: optional
-Section: universe/metapackages
-Installed-Size: 32
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomi Richards <thomi.richards@canonical.com>
-Architecture: amd64
-Source: autopilot
-Version: 1.3.1+13.10.20130724.1-0ubuntu1
-Depends: python-autopilot, python-evdev
-Recommends: libautopilot-qt (>= 1.3)
-Filename: pool/universe/a/autopilot/autopilot-touch_1.3.1+13.10.20130724.1-0ubuntu1_amd64.deb
-Size: 3100
-MD5sum: 0a2e91c5769fd844be51e44317c8a660
-SHA1: e5a8e860142a1b6213fd7d0a7a5491c2827b55ca
-SHA256: 5958e7c48983d28c1347d3594f751bdacf051074f3ee17995af21fcbeb44637b
-Description: Autopilot support for the ubuntu Touch platform
-Homepage: https://launchpad.net/autopilot
-Description-md5: 0fada5f3a785ddc69e56e3cf6c4e1485
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: axiom
 Priority: optional
 Section: universe/math
@@ -12331,6 +12287,52 @@ Description-md5: 8e9571cd8272deb590641878894194ca
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libykpers-1-1
+Priority: extra
+Section: universe/libs
+Installed-Size: 125
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: yubikey-personalization
+Version: 1.14.0-2
+Replaces: yubikey-personalization (<< 1.12.0-4)
+Depends: libc6 (>= 2.14), libjson-c2 (>= 0.10), libusb-1.0-0 (>= 2:1.0.8), libyubikey0 (>= 1.5)
+Pre-Depends: multiarch-support
+Breaks: yubikey-personalization (<< 1.12.0-4)
+Filename: pool/universe/y/yubikey-personalization/libykpers-1-1_1.14.0-2_amd64.deb
+Size: 32438
+MD5sum: 00137b401726a4ff44febe25a179b3ea
+SHA1: 38995c172ad9debdce1c5f591efb31b12c5a8b02
+SHA256: 5cf3372129ccbd32723ed6c5cdfcfc305058bee9aa638c3e2691510fe506b92b
+Description: Library for personalization of YubiKey OTP tokens
+Multi-Arch: same
+Homepage: http://yubico.github.io/yubikey-personalization/
+Description-md5: d9fcfe448bc8c3eff331b752a822aa21
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libykpers-1-dev
+Priority: extra
+Section: universe/libdevel
+Installed-Size: 193
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: yubikey-personalization
+Version: 1.14.0-2
+Depends: libykpers-1-1 (= 1.14.0-2)
+Filename: pool/universe/y/yubikey-personalization/libykpers-1-dev_1.14.0-2_amd64.deb
+Size: 41356
+MD5sum: cc5695f69e62c59af981d2f9868098a1
+SHA1: 5783b704cfe8bfd3ea5b54fd7d3845dbc97f61cb
+SHA256: 6d7c4489586922972c98ecdcab8de59146d0cdf5ebc619e12f35546172eb52cd
+Description: Development files for the YubiKey OTP personalization library
+Homepage: http://yubico.github.io/yubikey-personalization/
+Description-md5: d9135124815a3a6ac4ef02b8723140b0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libzarith-ocaml
 Priority: optional
 Section: universe/ocaml
@@ -14166,91 +14168,6 @@ SHA256: fafbd2be7c1f9a1abd188f2dad802f2e767dc073d3175c8fa8cf953759da84a8
 Description: standard library for PyPy (an alternative Python interpreter)
 Homepage: http://pypy.org/
 Description-md5: 3383c775a50b6d640b85c1f43b10a2cc
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: python-autopilot
-Priority: optional
-Section: universe/python
-Installed-Size: 2132
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomi Richards <thomi.richards@canonical.com>
-Architecture: all
-Source: autopilot
-Version: 1.3.1+13.10.20130724.1-0ubuntu1
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-dbus, python-junitxml, python-testscenarios, python-testtools, udev
-Recommends: autopilot-desktop | autopilot-touch, libautopilot-gtk (>= 1.3), libautopilot-qt (>= 1.3), python-autopilot-trace, recordmydesktop
-Filename: pool/universe/a/autopilot/python-autopilot_1.3.1+13.10.20130724.1-0ubuntu1_all.deb
-Size: 700246
-MD5sum: 670b6b5a2dfa7b3d1d88492d3cf0f8e2
-SHA1: 65862cd6fb7041a071fb0e7c128380514e642723
-SHA256: c4c4acee96f633e2e7a526147ea0b16ba6f6c804e9be553a564a8acb63b03242
-Description: Utility to write and run integration tests easily
-Homepage: https://launchpad.net/autopilot
-Description-md5: 1cea8e2d895c31846b8d3482f96a24d4
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: python-autopilot-tests
-Priority: optional
-Section: universe/python
-Installed-Size: 213
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomi Richards <thomi.richards@canonical.com>
-Architecture: all
-Source: autopilot
-Version: 1.3.1+13.10.20130724.1-0ubuntu1
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), libautopilot-gtk, libautopilot-qt, python-autopilot, python-evdev, python-mock, python-windowmocker, qmlscene, recordmydesktop
-Filename: pool/universe/a/autopilot/python-autopilot-tests_1.3.1+13.10.20130724.1-0ubuntu1_all.deb
-Size: 24144
-MD5sum: e7fee6321bd2237708c3e4a1a2b52737
-SHA1: dd9fb5073de70126839971930c379b70bfc9b5ee
-SHA256: 6b8c8a32e7d4d5dbe9a3b84f91482f88d08e14a16da104f77a1ada3fb0a7ece3
-Description: Tests for the autopilot functional test tool.
-Homepage: https://launchpad.net/autopilot
-Description-md5: ffc8cdd1e4b4d177f285a3f79fbd0e1e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: python-autopilot-trace
-Priority: optional
-Section: universe/python
-Installed-Size: 71
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomi Richards <thomi.richards@canonical.com>
-Architecture: amd64
-Source: autopilot
-Version: 1.3.1+13.10.20130724.1-0ubuntu1
-Depends: libc6 (>= 2.4), liblttng-ust0, python-autopilot
-Filename: pool/universe/a/autopilot/python-autopilot-trace_1.3.1+13.10.20130724.1-0ubuntu1_amd64.deb
-Size: 6978
-MD5sum: 4c991129f0abc60e489a337148540953
-SHA1: ae7d15f94b06581ece7bccb411e111e9fd4e6181
-SHA256: 00f194b90ef383352bd075d32821a278321542da10bdd810a4514843fc3055bb
-Description: Support for tracing in autopilot
-Homepage: https://launchpad.net/autopilot
-Description-md5: 4dd1bcb7c21bfe1d4ba39f89a6263699
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: python-autopilot-vis
-Priority: optional
-Section: universe/python
-Installed-Size: 87
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomi Richards <thomi.richards@canonical.com>
-Architecture: all
-Source: autopilot
-Version: 1.3.1+13.10.20130724.1-0ubuntu1
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-autopilot, python-dbus, python-qt4, python-qt4-dbus
-Filename: pool/universe/a/autopilot/python-autopilot-vis_1.3.1+13.10.20130724.1-0ubuntu1_all.deb
-Size: 7274
-MD5sum: 1592113c130567fb0f3c8724a7243212
-SHA1: ffbac284a115a2772ea5624ed36973e0c08dc8bf
-SHA256: c260fe7df5c208a685308c3f87cdf0f853ef53baf6247a10f552b2ce70b182ea
-Description: The visualisation application for Autopilot.
-Homepage: https://launchpad.net/autopilot
-Description-md5: 9086f1fe4b447d13470edb2e3b91e7dc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -16458,6 +16375,26 @@ SHA256: 9b32f0aa1915fd3072561efc156900e56ca2d688aab50137ce4c9762614892c9
 Description: High-performance Prolog System
 Homepage: http://www.dcc.fc.up.pt/~vsc/Yap/
 Description-md5: 5b9139183d8390c94f42d0f53f35351c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: yubikey-personalization
+Priority: extra
+Section: universe/utils
+Installed-Size: 114
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Version: 1.14.0-2
+Depends: libc6 (>= 2.14), libykpers-1-1 (>= 1.14.0), libyubikey0 (>= 1.5)
+Filename: pool/universe/y/yubikey-personalization/yubikey-personalization_1.14.0-2_amd64.deb
+Size: 37446
+MD5sum: b3451f8927af58aad1fd5c026375bc96
+SHA1: cad9e7da587ba9b2a9e23d67bce4808a1fe52a25
+SHA256: 8fd5b248c53cbaa00627f6f8522c285794bb847d56d155ac01881bf22be52a7d
+Description: Personalization tool for Yubikey OTP tokens
+Homepage: http://yubico.github.io/yubikey-personalization/
+Description-md5: 82f7bd05e2168cf6a93b92963aaab5a1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
