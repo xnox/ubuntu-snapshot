@@ -269,6 +269,29 @@ Description-md5: 4e89b57caad5a98c31bb85ee97a40e16
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: cloud-init
+Priority: extra
+Section: admin
+Installed-Size: 851
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Version: 0.7.3~bzr845-0ubuntu1
+Replaces: ec2-init (<< 0.5.3)
+Provides: ec2-init
+Depends: cloud-utils, ifupdown (>= 0.6.10ubuntu5), procps, python (>= 2.7.1-0ubuntu2), python-argparse, python-boto, python-cheetah, python-configobj, python-jsonp, python-oauth, python-prettytable, python-requests (>= 0.8.2), python-yaml, software-properties-common, debconf (>= 0.5) | debconf-2.0, python (<< 2.8), python-jsonpatch
+Conflicts: ec2-init (<< 0.5.3)
+Filename: pool/main/c/cloud-init/cloud-init_0.7.3~bzr845-0ubuntu1_all.deb
+Size: 195506
+MD5sum: af3d0a52777075cbc337e1ab2d797ac3
+SHA1: 5ac3aee62551832163b1b34a6d37c51dfbc844d2
+SHA256: 7a606d27230302f46fae529856c1bb7fde4ee236369ef2f38a9082c86a145c5e
+Description: Init scripts for cloud instances
+Python-Version: 2.7
+Description-md5: 8719ef0e4178017b7147590b1fde082e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: cloud-image
+
 Package: compiz
 Priority: optional
 Section: x11
@@ -1201,6 +1224,28 @@ Homepage: http://gcc.gnu.org/
 Description-md5: ef51de6b57526dc4a161944678606486
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: grub-legacy-ec2
+Priority: extra
+Section: admin
+Installed-Size: 143
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Source: cloud-init
+Version: 0.7.3~bzr845-0ubuntu1
+Depends: debconf (>= 1.5.19) | cdebconf, ucf, util-linux (>= 2.15-1), debconf (>= 0.5) | debconf-2.0
+Suggests: grub-legacy-doc
+Conflicts: grub
+Filename: pool/main/c/cloud-init/grub-legacy-ec2_0.7.3~bzr845-0ubuntu1_all.deb
+Size: 25066
+MD5sum: 5d0578e4f95e0cc9622a284f0b2b6255
+SHA1: 542a8c31e8e3daf46b24b5a41cc67600754e83a9
+SHA256: 32fa49ae7103edda8b0b5720ce7cf423ea42aa885b2d9b4af62add3bb50aca0d
+Description: Handles update-grub for ec2 instances
+Description-md5: e5f8ea347000ef0d0aedb42c000e0b9c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: cloud-image
 
 Package: gtk-3-examples
 Priority: extra
