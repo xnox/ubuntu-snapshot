@@ -1392,19 +1392,19 @@ Checksums-Sha256:
 
 Package: eigen3
 Binary: libeigen3-dev, libeigen3-doc
-Version: 3.1.3-2
+Version: 3.2.0-1
 Section: universe/libdevel
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 9), cmake (>= 2.6.2), libsparsehash-dev, libadolc-dev, libmpfr-dev, libgmp-dev, pkg-config, libfftw3-dev, libqt4-opengl-dev, freeglut3-dev, qt4-dev-tools, libsuitesparse-dev, libsuperlu3-dev, libscotch-dev, libscotchmetis-dev, gfortran
+Build-Depends: debhelper (>= 9), cmake (>= 2.6.2), libsparsehash-dev, libadolc-dev, libmpfr-dev, libgmp-dev, pkg-config, libfftw3-dev, libqt4-opengl-dev, freeglut3-dev, qt4-dev-tools, libsuperlu3-dev, libscotch-dev, libmetis-dev, gfortran
 Build-Depends-Indep: doxygen-latex, ghostscript, ttf-freefont, graphviz, libjs-jquery
-Architecture: all
+Architecture: any all
 Standards-Version: 3.9.4
 Format: 3.0 (quilt)
 Directory: pool/universe/e/eigen3
 Files:
- 538cfd4beb4bfa466ae4fae52dba8f67 2305 eigen3_3.1.3-2.dsc
- 43eee0e9252a77149d6b65e93e73b79d 1052724 eigen3_3.1.3.orig.tar.bz2
- 288c8861aa474c1fb4a9f105359c43ae 20488 eigen3_3.1.3-2.debian.tar.gz
+ 00013365c26e49e2d8a78707cf6e3ad4 2283 eigen3_3.2.0-1.dsc
+ 894381be5be65bb7099c6fd91d61b357 1135851 eigen3_3.2.0.orig.tar.bz2
+ 47a284cebe466a92410db79220ec7e0f 21795 eigen3_3.2.0-1.debian.tar.gz
 Uploaders: Anton Gladky <gladk@debian.org>
 Homepage: http://eigen.tuxfamily.org
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debian-science/packages/eigen3.git
@@ -1413,13 +1413,13 @@ Package-List:
  libeigen3-dev deb libdevel extra
  libeigen3-doc deb doc extra
 Checksums-Sha1:
- 9fa3fb83c61f15572ef5f4e88a7765f0f442de56 2305 eigen3_3.1.3-2.dsc
- 07e248deaaa5d2a8822a0581a606151127fce450 1052724 eigen3_3.1.3.orig.tar.bz2
- 612cba84a1cde333a6f15f012c2d68f18adc53a1 20488 eigen3_3.1.3-2.debian.tar.gz
+ 72ffa6015fdfe79552aa771b082eeef9b9055579 2283 eigen3_3.2.0-1.dsc
+ 97de9df52c035dd260ccee6cf6ab09bb559fa441 1135851 eigen3_3.2.0.orig.tar.bz2
+ 3a486e52bf0730552be695dbed7e14dfb45f97c0 21795 eigen3_3.2.0-1.debian.tar.gz
 Checksums-Sha256:
- 0816fc5bba1611eff0c6b14a4996b0322058c42438c165cc8713e6f4a9944bda 2305 eigen3_3.1.3-2.dsc
- 1a443145f321dd47a5ca11f176e7319056198a6124a7577723d92e3c3cd59ece 1052724 eigen3_3.1.3.orig.tar.bz2
- 9bb5363dc2501e8bd37c897973f4cc907b7e239ef269b8c247e068c9bc222c52 20488 eigen3_3.1.3-2.debian.tar.gz
+ 2068803fb0e73f04fe6f9f9c7894be3fbfa3b2b7b7442d711485107c2c853b2c 2283 eigen3_3.2.0-1.dsc
+ 011f78960d939227f9276173d0c4cc0053bb9e0a7356539a9a6c7c89d984fab6 1135851 eigen3_3.2.0.orig.tar.bz2
+ 6ee8797d9da9cc38c7d0137174d302f1d95bc7101f9b4c31f49f3a8942ce493d 21795 eigen3_3.2.0-1.debian.tar.gz
 
 Package: ejs.js
 Binary: node-ejs, libjs-ejs
@@ -5482,6 +5482,38 @@ Checksums-Sha256:
  1717917c3b56978680935c71f3d7f712086609c9565b2a26a624a51581f9be68 2348 pypy_2.0.2+dfsg-4.dsc
  23a8563956501010357e06b0198ba4d6efa428dad902707199ab6b70c00d19bd 11413288 pypy_2.0.2+dfsg.orig.tar.xz
  29b2f5ca8f8d647b9915ab7bb89146b9efbfea46dca0ce3a88adf678f622088a 71086 pypy_2.0.2+dfsg-4.debian.tar.gz
+
+Package: pyspf
+Binary: python-spf, python3-spf, spf-tools-python
+Version: 2.0.8-1
+Priority: optional
+Section: universe/python
+Maintainer: Scott Kitterman <scott@kitterman.com>
+Build-Depends: debhelper (>= 9), python-all (>= 2.6.6-6), python3-all, quilt (>= 0.46-7)
+Architecture: all
+Standards-Version: 3.9.4
+Format: 1.0
+Directory: pool/universe/p/pyspf
+Files:
+ 6159d9883a5513cdde8a861842068757 1467 pyspf_2.0.8-1.dsc
+ 8ef1a5714939d6df5ab40006ac8930ac 48818 pyspf_2.0.8.orig.tar.gz
+ f61331f670db3081956569cba007594e 12188 pyspf_2.0.8-1.diff.gz
+Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>, Gustavo Franco <stratus@debian.org>
+Homepage: http://cheeseshop.python.org/pypi/pyspf/
+Vcs-Browser: http://anonscm.debian.org/viewvc/python-modules/packages/pyspf/trunk/
+Vcs-Svn: svn://anonscm.debian.org/python-modules/packages/pyspf/trunk/
+Package-List: 
+ python-spf deb python optional
+ python3-spf deb python optional
+ spf-tools-python deb python optional
+Checksums-Sha1:
+ c8d3c591cb2cc0dea6c984bb0bc01274dc93d157 1467 pyspf_2.0.8-1.dsc
+ 279634a93614d3887d4bbf44852bd6d73944af5c 48818 pyspf_2.0.8.orig.tar.gz
+ 4bc71cf93c717b14b4c78862e62a59fc8868a6ad 12188 pyspf_2.0.8-1.diff.gz
+Checksums-Sha256:
+ d5ae00c98f8d62add364efb2f9d594bed84c27e9d9a12bc713f024a47143516c 1467 pyspf_2.0.8-1.dsc
+ b9ff846a7b6c883383451d1d4be526762f1d88de84e89d6de05f73f51c2c3dcf 48818 pyspf_2.0.8.orig.tar.gz
+ 0a8e9acbb62c8c29fc8faa738459cf750ae75c9da734dd6fac793dd881af4e81 12188 pyspf_2.0.8-1.diff.gz
 
 Package: python-csb
 Binary: python-csb, python3-csb, python-csb-doc
