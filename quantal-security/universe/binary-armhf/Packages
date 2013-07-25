@@ -1037,6 +1037,48 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-desktop, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-kde, edubuntu-desktop-gnome
 
+Package: libafsauthent1
+Priority: optional
+Section: universe/libs
+Installed-Size: 306
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: armhf
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.6.dfsg.2)
+Filename: pool/universe/o/openafs/libafsauthent1_1.6.1-2+ubuntu2.1_armhf.deb
+Size: 86210
+MD5sum: e3fc925afeedb35c6e9f06e37313b1af
+SHA1: 71538c8eae361410e7b4d79b84d6049e6718814d
+SHA256: dde700fe1af2621ec9a88dcaeda2998bcbd82875fed48b6c61f86465b2c933a9
+Description: AFS distributed file system runtime library (authentication)
+Homepage: http://www.openafs.org/
+Description-md5: a0feedf62f2fa5d341102110cd7a1d2b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libafsrpc1
+Priority: optional
+Section: universe/libs
+Installed-Size: 422
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: armhf
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: libc6 (>= 2.15-0ubuntu8)
+Filename: pool/universe/o/openafs/libafsrpc1_1.6.1-2+ubuntu2.1_armhf.deb
+Size: 136782
+MD5sum: 8fbcb6894936de8c6b15442145c02b7d
+SHA1: dbe7f92ee65ecbfa8f7e6ee9c9d3c3e602f95bff
+SHA256: c0fa2b89fd98eef61cf4299b2bbdbf730cb714d76d90dc2bf4081cf10a8a5d56
+Description: AFS distributed file system runtime library (RPC layer)
+Homepage: http://www.openafs.org/
+Description-md5: 7523708cbcd58ca51ccd0bb131f7807a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libapache2-mod-php5filter
 Priority: optional
 Section: universe/httpd
@@ -2197,6 +2239,27 @@ Description-md5: 5dd7a96ef8d09af745a7b33828f2819d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libkopenafs1
+Priority: optional
+Section: universe/libs
+Installed-Size: 123
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: armhf
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: libc6 (>= 2.15-0ubuntu8)
+Filename: pool/universe/o/openafs/libkopenafs1_1.6.1-2+ubuntu2.1_armhf.deb
+Size: 15088
+MD5sum: 807a64211b2278416463a5fce8ea54c7
+SHA1: b8c628a2db365d28414c45d5dfc377585a8d7958
+SHA256: cf0cdfe4191c6abdcb534db879e09cd39f19cc90878f08db0125124c0af70528
+Description: AFS distributed file system runtime library (PAGs)
+Homepage: http://www.openafs.org/
+Description-md5: 0f99201d0fae91ddb99faa36485b802d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libmysqld-pic
 Priority: optional
 Section: universe/libdevel
@@ -2261,6 +2324,29 @@ Description-md5: 33cc2c7795e9ef6579f85eabb1dbee18
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libopenafs-dev
+Priority: extra
+Section: universe/libdevel
+Installed-Size: 8008
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: armhf
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: libc6 (>= 2.15-0ubuntu8), libafsauthent1 (= 1.6.1-2+ubuntu2.1), libafsrpc1 (= 1.6.1-2+ubuntu2.1), libkopenafs1 (= 1.6.1-2+ubuntu2.1)
+Suggests: openafs-doc
+Conflicts: arla-dev, liblwp-dev
+Filename: pool/universe/o/openafs/libopenafs-dev_1.6.1-2+ubuntu2.1_armhf.deb
+Size: 2596886
+MD5sum: d0da2a8db30d349eab1d382982df91df
+SHA1: 0abdc112b31d57b4703c45677e7d6ab0b128c89d
+SHA256: 275e91d9aaeba34c92b2bf319611e0c6d559488fe568c5ceed22a260f24e07f7
+Description: AFS distributed filesystem development libraries
+Homepage: http://www.openafs.org/
+Description-md5: b6f316eebfa1cc038bb9afed528de9fc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libopenid-ruby
 Priority: optional
 Section: universe/libs
@@ -2300,6 +2386,27 @@ SHA256: 03649097d347427eda0b35a399307d4b5fced592c45d9cc6681ccb21f5b7b625
 Description: Transitional package for ruby-openid
 Homepage: http://github.com/openid/ruby-openid
 Description-md5: 0d8da277b1111f47896e547e31f10b3b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpam-openafs-kaserver
+Priority: extra
+Section: universe/net
+Installed-Size: 823
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: armhf
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: libc6 (>= 2.15-0ubuntu8), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.6.dfsg.2), openafs-client (= 1.6.1-2+ubuntu2.1)
+Filename: pool/universe/o/openafs/libpam-openafs-kaserver_1.6.1-2+ubuntu2.1_armhf.deb
+Size: 332492
+MD5sum: a9888263ec7b5d6b2f18e6642ce4f8e6
+SHA1: 9a4e3e1ba64fac67f2aa1c812655c99e63eab050
+SHA256: 97d516cc149f9fa5fca608a6561e5b1753330320dc9f286aaf55ee6ba1ce4b27
+Description: AFS distributed filesystem kaserver PAM module
+Homepage: http://www.openafs.org/
+Description-md5: dccbdd7a0350f2d0910ffa2a1c209e26
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -3996,6 +4103,227 @@ SHA256: d69c7bfd692ffcdb151e1fd6a1225af761c009ea27f4615a77fb53dc844219d5
 Description: OpenStack Compute - XVP VNC proxy
 Homepage: http://launchpad.net/nova
 Description-md5: b3739b7ab9595f5c68b1c0e141861b74
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openafs-client
+Priority: optional
+Section: universe/net
+Installed-Size: 7521
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: armhf
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.10+dfsg~), libncurses5 (>= 5.5-5~), libtinfo5, debconf (>= 0.5) | debconf-2.0
+Recommends: lsof, openafs-modules-dkms (>= 1.6.1-2+ubuntu2.1) | openafs-modules-source (>= 1.6.1-2+ubuntu2.1) | openafs-modules3
+Suggests: openafs-doc, openafs-krb5
+Conflicts: arla
+Breaks: openafs-modules1, openafs-modules2
+Filename: pool/universe/o/openafs/openafs-client_1.6.1-2+ubuntu2.1_armhf.deb
+Size: 3608240
+MD5sum: 70377b7e08f0e95f30c8d7bc4c3487f5
+SHA1: c7dbf7130a613fb44d8263a626c1184641c12f55
+SHA256: 1014e0e3bf285238a15a173689e339fba722552337bc857c107960e6dbda9ce9
+Description: AFS distributed filesystem client support
+Homepage: http://www.openafs.org/
+Description-md5: 2d948f9c8a661ee8bc5d31e3f8cd9962
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openafs-dbg
+Priority: extra
+Section: universe/libdevel
+Installed-Size: 14900
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: armhf
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: openafs-fileserver (= 1.6.1-2+ubuntu2.1) | openafs-dbserver (= 1.6.1-2+ubuntu2.1)
+Filename: pool/universe/o/openafs/openafs-dbg_1.6.1-2+ubuntu2.1_armhf.deb
+Size: 12241784
+MD5sum: 9dbbd5f7f38d1f3bdfc816111a4dd2d7
+SHA1: 644c94cd4c05cfd5efa503140915a24cf0a2d24f
+SHA256: 5ca4b5de4f132aa024be3b9b02c8c316acacea0f19a73beaf05ba78d338a48ed
+Description: AFS distributed filesystem debugging information
+Homepage: http://www.openafs.org/
+Description-md5: 170cf4fa45f627423cec477ca98780d5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openafs-dbserver
+Priority: optional
+Section: universe/net
+Installed-Size: 1635
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: armhf
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.6.dfsg.2), perl, openafs-client (= 1.6.1-2+ubuntu2.1), openafs-fileserver
+Suggests: openafs-doc
+Filename: pool/universe/o/openafs/openafs-dbserver_1.6.1-2+ubuntu2.1_armhf.deb
+Size: 714936
+MD5sum: 28b1da73843f55f308ff80987d169c3f
+SHA1: bd89a7bb46a3510546b58abf218f10a9a0fb590a
+SHA256: 0f9b10daa440b191334c9087e13784c4d50c3c2a4511e8d1103ee30e1eedc06a
+Description: AFS distributed filesystem database server
+Homepage: http://www.openafs.org/
+Description-md5: 900518e8d991aca7a295eb31861c8d53
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openafs-doc
+Priority: optional
+Section: universe/doc
+Installed-Size: 10650
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: all
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Recommends: libjs-jquery
+Filename: pool/universe/o/openafs/openafs-doc_1.6.1-2+ubuntu2.1_all.deb
+Size: 4569936
+MD5sum: de06db91f1d3f57f25b96fc4d40ed4ef
+SHA1: c624f91afd1d45b0cb75d0d680f520600d9103f6
+SHA256: 1948bff5f065d14b48124c725e2163cd65073f0d4f60cf5939e976af3c608862
+Description: AFS distributed filesystem documentation
+Homepage: http://www.openafs.org/
+Description-md5: dfed3aa1cb0c1548af7ed6d6191c122f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openafs-fileserver
+Priority: optional
+Section: universe/net
+Installed-Size: 6669
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: armhf
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.6.dfsg.2), debconf (>= 0.5) | debconf-2.0, openafs-client, lsb-base
+Recommends: ntp | time-daemon
+Suggests: openafs-doc
+Filename: pool/universe/o/openafs/openafs-fileserver_1.6.1-2+ubuntu2.1_armhf.deb
+Size: 2815940
+MD5sum: efa9a92b78554f65941b9cc361194f5f
+SHA1: 2aafecd0baa276264aa27d55d69e42d84a2ec00d
+SHA256: d2575c797520a8c9cdd49422649a4d61ae0266faf9afcb7eb6c74f9ca848b21a
+Description: AFS distributed filesystem file server
+Homepage: http://www.openafs.org/
+Description-md5: 6f505856f48ff78dd8989e4474f85129
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openafs-fuse
+Priority: extra
+Section: universe/net
+Installed-Size: 555
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: armhf
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: libc6 (>= 2.15-0ubuntu8), libfuse2 (>= 2.8.1), libgcc1 (>= 1:4.4.0), openafs-client (= 1.6.1-2+ubuntu2.1)
+Filename: pool/universe/o/openafs/openafs-fuse_1.6.1-2+ubuntu2.1_armhf.deb
+Size: 273214
+MD5sum: 2d8308f24647f18196c40f0debb83bf8
+SHA1: d5a4caf60d4b12ccac50b88f6b465c47f66091b0
+SHA256: b9a3ad1a4a68bdac8aadc7fedae261362df6393d6ee1e718e0b2834f7a9a9d4f
+Description: AFS distributed file system experimental FUSE client
+Homepage: http://www.openafs.org/
+Description-md5: 5b93a5360d9c82b3edf7a7962b3ba594
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openafs-kpasswd
+Priority: extra
+Section: universe/net
+Installed-Size: 621
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: armhf
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: libc6 (>= 2.15-0ubuntu8), openafs-client (= 1.6.1-2+ubuntu2.1)
+Conflicts: heimdal-clients, kerberos4kth-clients, krb5-user
+Filename: pool/universe/o/openafs/openafs-kpasswd_1.6.1-2+ubuntu2.1_armhf.deb
+Size: 305074
+MD5sum: 9a51a8f97baad47b8c11919adfe35202
+SHA1: 59b0f584687839bdb96f7a1f2152b4be64fdc034
+SHA256: 13548fb2d4517c4ee7074797ec5a0241cf6a013c5e0208ff32662fdfb9f300af
+Description: AFS distributed filesystem old password changing
+Homepage: http://www.openafs.org/
+Description-md5: f74d50639a69caee2da2fc932e76bd6b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openafs-krb5
+Priority: optional
+Section: universe/net
+Installed-Size: 775
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: armhf
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.10+dfsg~)
+Breaks: openafs-client (<< 1.4.7.dfsg1-1)
+Filename: pool/universe/o/openafs/openafs-krb5_1.6.1-2+ubuntu2.1_armhf.deb
+Size: 294400
+MD5sum: 83e1e422d5d8602e62149feb2d7fb1c4
+SHA1: 0291292b70def0da4be87f632d5a3974806a4e1c
+SHA256: a045d05abac54e54845e7b8f1043a41a2f7357e0c8a81b7517a9f3380de91b7d
+Description: AFS distributed filesystem Kerberos 5 integration
+Homepage: http://www.openafs.org/
+Description-md5: f601778f8cbfe2c4f9aa8e886d6408dc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openafs-modules-dkms
+Priority: extra
+Section: universe/net
+Installed-Size: 5825
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: all
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: dkms (>= 2.1.0.0), perl, libc6-dev
+Recommends: openafs-client (>= 1.6.1-2+ubuntu2.1)
+Filename: pool/universe/o/openafs/openafs-modules-dkms_1.6.1-2+ubuntu2.1_all.deb
+Size: 1294458
+MD5sum: 6954da0707aafea6a10e04287a234129
+SHA1: 833fe824740f31aa7e7e8880659527e5ec55d22c
+SHA256: 9664a228fde06fdb6adb3ff223f1808267d6382a1a32f9579cc7c3bd37333dfd
+Description: AFS distributed filesystem kernel module DKMS source
+Homepage: http://www.openafs.org/
+Description-md5: 959c8c641c8855622b3e660d47f8f210
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openafs-modules-source
+Priority: extra
+Section: universe/net
+Installed-Size: 1134
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Russ Allbery <rra@debian.org>
+Architecture: all
+Source: openafs
+Version: 1.6.1-2+ubuntu2.1
+Depends: debhelper (>= 8), module-assistant | kernel-package, perl
+Recommends: openafs-client (>= 1.6.1-2+ubuntu2.1)
+Filename: pool/universe/o/openafs/openafs-modules-source_1.6.1-2+ubuntu2.1_all.deb
+Size: 1054880
+MD5sum: 0b601b702e0bf022063662bd276aebef
+SHA1: 67620e1b3e7e4fb36e14bd53533eb1e520714389
+SHA256: af1cf9ba99a076490e9fd9be379d2c97339ebb7e5a9292a3054170750fd3779d
+Description: AFS distributed filesystem kernel module source
+Homepage: http://www.openafs.org/
+Description-md5: 01e11a95da0fec3f0bbe15d0a3897346
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
