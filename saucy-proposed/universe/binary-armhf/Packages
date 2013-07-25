@@ -2833,6 +2833,28 @@ Description-md5: 53e52d23df55ba0244dcd80b9d29e25e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: gammu
+Priority: optional
+Section: universe/comm
+Installed-Size: 470
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michal Čihař <nijel@debian.org>
+Architecture: armhf
+Version: 1.33.0-3
+Depends: libbluetooth3 (>= 4.91), libc6 (>= 2.7), libcurl3-gnutls (>= 7.16.2), libgammu7 (>= 1.33.0), libglib2.0-0 (>= 2.16.0), libgudev-1.0-0 (>= 146)
+Recommends: whiptail | dialog, libgammu-i18n (>= 1.33.0-3)
+Suggests: wammu, gammu-doc (>= 1.33.0-3)
+Filename: pool/universe/g/gammu/gammu_1.33.0-3_armhf.deb
+Size: 219816
+MD5sum: 3beb75ce1994b1190b5a55b43eb0d171
+SHA1: c0dfb46cfd334638ea0819652fea2017f8e27a41
+SHA256: 1ed1506575d726b20c6ca69c625d7e8c1fd76686a070d3ec9b57cf2adbe8c963
+Description: mobile phone management utility
+Homepage: http://www.gammu.org
+Description-md5: 12551c0ae5fdb3bc3de3855bc96d1015
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: gammu-doc
 Priority: optional
 Section: universe/doc
@@ -2853,6 +2875,28 @@ SHA256: e6fec4fd08f2420d604452dd2b2699d960c2976e2541e5fe5d819e1b9678f50a
 Description: Gammu Manual
 Homepage: http://www.gammu.org
 Description-md5: 134d10d3d22ac60cd01e546ffa9518dd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gammu-smsd
+Priority: optional
+Section: universe/comm
+Installed-Size: 190
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michal Čihař <nijel@debian.org>
+Architecture: armhf
+Source: gammu
+Version: 1.33.0-3
+Depends: libc6 (>= 2.7), libgammu7 (>= 1.33.0), libgsmsd7 (>= 1.33.0), adduser
+Suggests: gammu, gammu-doc (>= 1.33.0-3)
+Filename: pool/universe/g/gammu/gammu-smsd_1.33.0-3_armhf.deb
+Size: 64982
+MD5sum: fff3eb6440318905d0478a03dc4d56b1
+SHA1: 8f511f4c2fa146595663fdc07ecd9220ff6a8afd
+SHA256: 27fe8ad78906322eae2826d5af21687223021dbc62965d55c2948b7701531471
+Description: SMS message daemon
+Homepage: http://www.gammu.org
+Description-md5: e36e4d0f7657805b68533f3d10f281f5
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -5611,6 +5655,55 @@ Description-md5: 43293b31a3122ea119db75aa96fb00cf
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libgammu-dbg
+Priority: extra
+Section: universe/libdevel
+Installed-Size: 2528
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michal Čihař <nijel@debian.org>
+Architecture: armhf
+Source: gammu
+Version: 1.33.0-3
+Replaces: libgammu2-dbg, libgammu3-dbg, libgammu4-dbg
+Depends: libgammu7 (= 1.33.0-3)
+Suggests: gammu
+Conflicts: libgammu2-dbg, libgammu3-dbg, libgammu4-dbg
+Breaks: gammu (>> 1.33.0-3), gammu (<< 1.33.0-3)
+Filename: pool/universe/g/gammu/libgammu-dbg_1.33.0-3_armhf.deb
+Size: 2222446
+MD5sum: ded292488d7b13af00c6a67b8031202d
+SHA1: cdfc6f013b07f3c6e8799057682ee7d819858eb3
+SHA256: 6af722dcbf1bf87381270df0e0763dd6d313ebb4e3620174400d4063097d3663
+Description: mobile phone management library (debugger symbols)
+Homepage: http://www.gammu.org
+Description-md5: 377c39483d4c23e88b47f2dc7c828c34
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgammu-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 488
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michal Čihař <nijel@debian.org>
+Architecture: armhf
+Source: gammu
+Version: 1.33.0-3
+Replaces: libgammu1-dev
+Depends: libgammu7 (= 1.33.0-3), libgsmsd7 (= 1.33.0-3)
+Suggests: pkg-config, gammu-doc (>= 1.33.0-3)
+Conflicts: libgammu1-dev
+Filename: pool/universe/g/gammu/libgammu-dev_1.33.0-3_armhf.deb
+Size: 203526
+MD5sum: e2c86cff4dd8c7646bddce77667d2403
+SHA1: e789c5dc938b245b9c31a7a89c86f9496ffc9279
+SHA256: 178cb88804b1512989914aec046c5bb363c02ffd2433c9180b841478d7ddd46a
+Description: mobile phone management library (development files)
+Homepage: http://www.gammu.org
+Description-md5: edd57e45f8c49e9140d3d02bd2f8a25b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libgammu-i18n
 Priority: optional
 Section: universe/libs
@@ -5631,6 +5724,29 @@ SHA256: 4f81f54912741be36f64cdbdf6600538482f14a35a78837f544389fdbb915833
 Description: mobile phone management library (i18n files)
 Homepage: http://www.gammu.org
 Description-md5: 545e21badad930bd5c1dae878f31ce4a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgammu7
+Priority: optional
+Section: universe/libs
+Installed-Size: 939
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michal Čihař <nijel@debian.org>
+Architecture: armhf
+Source: gammu
+Version: 1.33.0-3
+Depends: libbluetooth3 (>= 4.91), libc6 (>= 2.15), libglib2.0-0 (>= 2.16.0), libusb-1.0-0 (>= 2:1.0.8)
+Recommends: libgammu-i18n (>= 1.33.0-3), usb-modeswitch
+Suggests: gammu
+Filename: pool/universe/g/gammu/libgammu7_1.33.0-3_armhf.deb
+Size: 425678
+MD5sum: 7c5de1aaceaa84b5162c72f12fe41e84
+SHA1: 9e183781fe1ed394ba2f388d3da1f11521c22c4e
+SHA256: 9a22eff55d4e24d393e5cf706a3cd82dd13d8b21d7d9d1a62d87523d3b59734c
+Description: mobile phone management library
+Homepage: http://www.gammu.org
+Description-md5: 56f1325a9dd659a19ed4453a5c3f9a21
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -6053,6 +6169,28 @@ Description: Library for implementing GSM 07.10 multiplexing servers
 Multi-Arch: same
 Homepage: http://freesmartphone.org/
 Description-md5: 8918a914bb6d2b0447d0f89eed63cd02
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgsmsd7
+Priority: optional
+Section: universe/libs
+Installed-Size: 106
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michal Čihař <nijel@debian.org>
+Architecture: armhf
+Source: gammu
+Version: 1.33.0-3
+Depends: libc6 (>= 2.4), libdbi1 (>= 0.8.4), libgammu7 (>= 1.33.0), libmysqlclient18 (>= 5.5.13-1), libodbc1 (>= 2.2.11) | unixodbc (>= 2.2.11), libpq5
+Suggests: gammu-smsd
+Filename: pool/universe/g/gammu/libgsmsd7_1.33.0-3_armhf.deb
+Size: 39432
+MD5sum: e2fc900136277310af8dcda46b6c0c17
+SHA1: c4f552db686d1e5e7eaba50ff7eb7935601a834b
+SHA256: 5b5d12dbebbcb489520116046500d220bfc5b3c395074001beff89305b6250e8
+Description: SMS daemon helper library
+Homepage: http://www.gammu.org
+Description-md5: 184df381819c3cd620ea38d91af3649c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -9178,6 +9316,54 @@ SHA256: 32e4678f3db9e9806c3e56d0a2664c7c34ede18647840f69a071a37f67ee7f56
 Description: Python framework for structural bioinformatics (documentation)
 Homepage: http://csb.codeplex.com/
 Description-md5: 2189186774d48b41c3a5f6f976a78d69
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-gammu
+Priority: optional
+Section: universe/python
+Installed-Size: 246
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michal Čihař <nijel@debian.org>
+Architecture: armhf
+Source: gammu
+Version: 1.33.0-3
+Replaces: python2.3-gammu (<< 0.14-1), python2.4-gammu (<< 0.14-1)
+Provides: python2.7-gammu
+Depends: libc6 (>= 2.4), libgammu7 (>= 1.33.0), libgsmsd7 (>= 1.33.0), python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Suggests: gammu-doc (>= 1.33.0-3)
+Breaks: python2.3-gammu (<< 0.14-1), python2.4-gammu (<< 0.14-1)
+Filename: pool/universe/g/gammu/python-gammu_1.33.0-3_armhf.deb
+Size: 81554
+MD5sum: ec1eca008dcbf40b86e8894c5f50bd24
+SHA1: c2e50bafe0493791dc3710505bd56635934a56ad
+SHA256: cbaf381aaadba8b447bc5eec7ea83ce669db1c97d9abe669a2d11e35b56aa292
+Description: Python module to communicate with mobile phones
+Homepage: http://www.gammu.org
+Description-md5: 074b2bafe866f2ed028d7acc9385424c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-gammu-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 218
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michal Čihař <nijel@debian.org>
+Architecture: armhf
+Source: gammu
+Version: 1.33.0-3
+Provides: python2.7-gammu-dbg
+Depends: python-gammu (= 1.33.0-3), python-dbg (>= 2.7), libc6 (>= 2.4), libgammu7 (>= 1.33.0), libgsmsd7 (>= 1.33.0), python-dbg (<< 2.8)
+Suggests: gammu-doc (>= 1.33.0-3)
+Filename: pool/universe/g/gammu/python-gammu-dbg_1.33.0-3_armhf.deb
+Size: 83854
+MD5sum: 392a90232bae02f862af682bddf0367e
+SHA1: 551b6dd47b376e5c8b8578d72e098da77951cfb7
+SHA256: c4a42d274b4d07dae26e2e6b5091e697ac83365b91777cb0d145db009730ae98
+Description: Python module to communicate with mobile phones (debug version)
+Homepage: http://www.gammu.org
+Description-md5: 862d04e631eb616feb7c94e667d26ea9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
