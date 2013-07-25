@@ -1660,42 +1660,47 @@ Origin: Ubuntu
 Package: fp-compiler
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-compiler-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-compiler_2.6.2-2_armhf.deb
-Size: 2502
-MD5sum: f85647652a924a0ef1ab8cb98d81a71e
-SHA1: 97ddc8e7506ce9a3823d07928a4132014ca484ea
-SHA256: 627482084917c62061001f7098408452fc0018890a9ba4195df4495bab140170
+Version: 2.6.2-5
+Depends: fp-compiler-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-compiler_2.6.2-5_armhf.deb
+Size: 2508
+MD5sum: cb6b9b2963377ce2d645c8007fc18fe0
+SHA1: 3ad7dcd4b72c511a88d17f720b9e238e55fd6267
+SHA256: 7bd507fa4189e3264930cdb0167d80879e53843a0f9c21a6b5c0ca3d5967e4f4
 Description: Free Pascal - compiler dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: a8d7d8737d893733a2cffaecf2cac458
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: fp-docs
+Package: fp-compiler-2.6.2
 Priority: optional
-Section: universe/doc
-Installed-Size: 39
+Section: universe/devel
+Installed-Size: 6692
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
-Architecture: all
+Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-docs-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-docs_2.6.2-2_all.deb
-Size: 2406
-MD5sum: 4229b5829c28587c7677905b39b90d6b
-SHA1: a0e24040307bdaf71088b75ed0615a83eba0cbaf
-SHA256: 30a68f154a185c8518cb8b4aaebe5d2509887e7be6185b0115826452e5eabf70
-Description: Free Pascal - documentation dependency package
+Version: 2.6.2-5
+Replaces: fp-compiler (<= 2.4.0-3), fp-utils-2.4.4 (<= 2.4.4-1)
+Provides: fp-compiler
+Depends: debconf (>= 0.5) | debconf-2.0, fp-units-rtl-2.6.2 (= 2.6.2-5), binutils
+Recommends: fp-utils-2.6.2 (>= 2.6.2-5)
+Suggests: fp-docs-2.6.2 (>= 2.6.2), mingw32-binutils
+Breaks: fp-compiler (<= 2.4.0-3), fp-utils-2.4.2 (<= 2.4.2-3), fp-utils-2.4.4 (<= 2.4.4-2)
+Filename: pool/universe/f/fpc/fp-compiler-2.6.2_2.6.2-5_armhf.deb
+Size: 1863544
+MD5sum: cd0dc882f647a39b69edf1ce87334ff3
+SHA1: 397b3bf9cd53c0c83f38f24632d0977712ce4889
+SHA256: 8e54dead1e13b7e7b40110428d6a7fbe2a772e5fc7126bca1939a19d4ed940a9
+Description: Free Pascal - compiler
 Homepage: http://www.freepascal.org/
-Description-md5: 87030c98df63171b1a3903d17286416a
+Description-md5: 63713eee8e06aca4b4428ee844beaa96
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1728,29 +1733,6 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: all
 Source: fpc
-Version: 2.6.2-2
-Replaces: fp-docs (<= 2.4.0-3)
-Provides: fp-docs
-Breaks: fp-docs (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-docs-2.6.2_2.6.2-2_all.deb
-Size: 1963016
-MD5sum: b91ec951ad786ecbc07f5a1ebea121bb
-SHA1: e570da1a4fabccefce3c1c9d1b2afc9933939559
-SHA256: 7adae7229105e389c6cc8484d4bf9cf822b144a4fe3ca77800ed9f7f63c9a680
-Description: Free Pascal - documentation
-Homepage: http://www.freepascal.org/
-Description-md5: 143764395ee871181071ce25cc590993
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: fp-docs-2.6.2
-Priority: optional
-Section: universe/doc
-Installed-Size: 33373
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Carlos Laviola <claviola@debian.org>
-Architecture: all
-Source: fpc
 Version: 2.6.2-5
 Replaces: fp-docs (<= 2.4.0-3)
 Provides: fp-docs
@@ -1769,18 +1751,18 @@ Origin: Ubuntu
 Package: fp-ide
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-ide-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-ide_2.6.2-2_armhf.deb
-Size: 2526
-MD5sum: d4330085ea7a640ce4222b2e743760d0
-SHA1: 0a06e31d8d5357057ba9264a9c6e4cd769a82d22
-SHA256: 80cd6f0f278cfa251468f8e91bbf525300a4fc1bc5c7993de6e06c56ac00ff75
+Version: 2.6.2-5
+Depends: fp-ide-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-ide_2.6.2-5_armhf.deb
+Size: 2536
+MD5sum: 47383a8e025a6a09fe484b6e426575b0
+SHA1: b58e5da9ee026402232ce3cac96cd05c597f01c3
+SHA256: 78b51845d549b28966184d7921212407196ca69ab44ece62d2a9fe4b05e2f488
 Description: Free Pascal - IDE dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: 833771529aa9954efe6d2950e13bffc6
@@ -1790,23 +1772,23 @@ Origin: Ubuntu
 Package: fp-ide-2.6.2
 Priority: optional
 Section: universe/devel
-Installed-Size: 3145
+Installed-Size: 3146
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-ide (<= 2.4.0-3)
 Provides: fp-ide
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2)
-Recommends: fp-utils-2.6.2 (>= 2.6.2-2)
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5)
+Recommends: fp-utils-2.6.2 (>= 2.6.2-5)
 Suggests: fp-docs-2.6.2 (>= 2.6.2)
 Breaks: fp-ide (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-ide-2.6.2_2.6.2-2_armhf.deb
-Size: 1070968
-MD5sum: b478e04e1b3aff51f68e50e8d3c119d0
-SHA1: d3523e79fb4bb1ba97a87e58b2d18fa379a00ee2
-SHA256: baefd1996da533f3489b960937aa8380a6399b088a2dac84700bbefc1fa3ebf2
+Filename: pool/universe/f/fpc/fp-ide-2.6.2_2.6.2-5_armhf.deb
+Size: 1071296
+MD5sum: 5014b25001eeceed1fbd568fb718041c
+SHA1: 73e103e28d4696ae23ff5e271fd3bd24b3bf314d
+SHA256: 1eae97155e3c18425b093b7077b7ca78fa13e0c059f022db22cb80c974df267b
 Description: Free Pascal - IDE
 Homepage: http://www.freepascal.org/
 Description-md5: 0c775e9bd2bab35e68a41e63d2ffaec7
@@ -1816,18 +1798,18 @@ Origin: Ubuntu
 Package: fp-units-base
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-units-base-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-units-base_2.6.2-2_armhf.deb
+Version: 2.6.2-5
+Depends: fp-units-base-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-units-base_2.6.2-5_armhf.deb
 Size: 2464
-MD5sum: 9a390728246afcb88d48bb904bdcafab
-SHA1: 213f8ee4713a66b8b78fc2ef889e690aba72920b
-SHA256: 6e2de4204a2fb2bccde97f9eb628f1afc9b0353efa992962dc593cbc19a76c76
+MD5sum: 1743287c1596ee2e92c8f45800b71e30
+SHA1: e347ac7340a4de061ceece0e6c76e69e5aa15d40
+SHA256: 5b031e04d3490ae6ee9d6df497de32c8814a45170c0de707f23a2bdcbc026561
 Description: Free Pascal - base units dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: ac8ae251072c9a38e311648315a7b0fc
@@ -1842,16 +1824,16 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-units-base (<= 2.4.0-3)
 Provides: fp-units-base
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2)
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5)
 Breaks: fp-units-base (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-units-base-2.6.2_2.6.2-2_armhf.deb
-Size: 1204086
-MD5sum: 2d075c1264a20706efba52d44b567d3c
-SHA1: 96fe9ad0df6ce06642f012e3b104e209e89e850c
-SHA256: dd89c67988f14c74b8987ee718f38aff90c48983f0c57b1fd58dae01df6535cc
+Filename: pool/universe/f/fpc/fp-units-base-2.6.2_2.6.2-5_armhf.deb
+Size: 1188030
+MD5sum: 9d2859dd8b9d2a4e09432ca7cccf9259
+SHA1: be2feed27cdb608d3eedf4b4631046ea5ac1ebdf
+SHA256: 5d8cbc7868132f08118d4f443c51893704414b45c884d534861916adeb3f4996
 Description: Free Pascal - base units
 Homepage: http://www.freepascal.org/
 Description-md5: 1f5b86e2d3012a425e60c02e04941229
@@ -1861,18 +1843,18 @@ Origin: Ubuntu
 Package: fp-units-db
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-units-db-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-units-db_2.6.2-2_armhf.deb
-Size: 2462
-MD5sum: 885cc8f52174ccca04bab7000e472141
-SHA1: 8b65fe67e7d4cb4211b204f80f22cef272204785
-SHA256: 780c2bb4d3455d31b7379f9a57219a53484e2a30fc25780c1da0f44cd0694479
+Version: 2.6.2-5
+Depends: fp-units-db-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-units-db_2.6.2-5_armhf.deb
+Size: 2454
+MD5sum: ade9bb705d1c5c4445129bef19012af1
+SHA1: 1d90ca2b5ddbc2c542a0f279240bf2ce64898f5a
+SHA256: af8b7132c898124a894edb4dee0d407dd875160fc027800d589df60e1e51297a
 Description: Free Pascal - database-library units dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: 7cc1ac6e7f8c271a06030379ab8c6e9d
@@ -1882,21 +1864,21 @@ Origin: Ubuntu
 Package: fp-units-db-2.6.2
 Priority: optional
 Section: universe/devel
-Installed-Size: 5796
+Installed-Size: 5797
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-units-db (<= 2.4.0-3)
 Provides: fp-units-db
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2)
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5)
 Breaks: fp-units-db (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-units-db-2.6.2_2.6.2-2_armhf.deb
-Size: 1136918
-MD5sum: 2c3207a73456e0c01d1bbdac32643986
-SHA1: a011d3f3f11795138e3cb273b610a884b040d52d
-SHA256: 80aad797f678ee26588966689f4c00b27d51659f7bc45e83faf5300bf3018f8e
+Filename: pool/universe/f/fpc/fp-units-db-2.6.2_2.6.2-5_armhf.deb
+Size: 1159674
+MD5sum: 25aefbec878e125094cc872c6d743715
+SHA1: 86f4e0b0fe34556bcf558e60b8e2db987f78b452
+SHA256: 7c37f36f1ce325948de0d803a5c393d1f225b04fdf4bee112129e35f247684e8
 Description: Free Pascal - database-library units
 Homepage: http://www.freepascal.org/
 Description-md5: fc9677bc51d01a4478e803f7fe8ebdea
@@ -1906,18 +1888,18 @@ Origin: Ubuntu
 Package: fp-units-fcl
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-units-fcl-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-units-fcl_2.6.2-2_armhf.deb
-Size: 2406
-MD5sum: 4fd0d3d59b938c50c84a1a36d31b938d
-SHA1: 84e2d686ad1b913b243468bb506db2e4abd6ad79
-SHA256: d9ae72d274682e615bdb8cb596d7aab88ecff1c0aaea77521b165810131aca5a
+Version: 2.6.2-5
+Depends: fp-units-fcl-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-units-fcl_2.6.2-5_armhf.deb
+Size: 2398
+MD5sum: 5e9d5803b79b469b3016f3ba486becd8
+SHA1: 8d10d38f586f5d5e63416ae55b793a06174a3e08
+SHA256: 300293bad15b90f6133313e6087bca45a5f694ee908b09bc3e352106d014b210
 Description: Free Pascal - Free Component Library dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: 263bb8d2c3929df6845ebc00e421b61c
@@ -1932,16 +1914,16 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-units-fcl (<= 2.4.0-3)
 Provides: fp-units-fcl
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2), fp-units-base-2.6.2 (= 2.6.2-2)
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5), fp-units-base-2.6.2 (= 2.6.2-5)
 Breaks: fp-units-fcl (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-units-fcl-2.6.2_2.6.2-2_armhf.deb
-Size: 4574292
-MD5sum: e63e3f9a6796eb15230fa6ada5d9f848
-SHA1: ff7e58ff4c423180c7ec4484b914af5c2661a9cc
-SHA256: a66699f791354ae9021304a6124c492b5a391eb09f5cd0122c58331a66e4be35
+Filename: pool/universe/f/fpc/fp-units-fcl-2.6.2_2.6.2-5_armhf.deb
+Size: 4573634
+MD5sum: 1792ee05ad547714c5a759489eed54bd
+SHA1: ec6040be50219b1e1cef0569b52eedd6bf546fb2
+SHA256: 15bacf27d73f3b607e751f997561966a9193032b32c63bdf514b6e8888b492d8
 Description: Free Pascal - Free Component Library
 Homepage: http://www.freepascal.org/
 Description-md5: 998a24bd855977c5f2247590e4fa39fa
@@ -1951,18 +1933,18 @@ Origin: Ubuntu
 Package: fp-units-fv
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-units-fv-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-units-fv_2.6.2-2_armhf.deb
-Size: 2440
-MD5sum: 10d329e116037deee8f03ad04d2f34a0
-SHA1: da7e7e250a83d5ff79d041172a2da0dfe99f211a
-SHA256: 2fad68792c16f92720107ce02d3ff78a43dd00242eb97b67dda5b9b6011fe5d9
+Version: 2.6.2-5
+Depends: fp-units-fv-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-units-fv_2.6.2-5_armhf.deb
+Size: 2444
+MD5sum: 58bf8326d94a28eff4e0c718ffab4b17
+SHA1: e1a09f3d488d143422afe8559260020a70a1f458
+SHA256: 95b96febe016f603a73a999ec68923df659c13033851c423061245650ca178ae
 Description: Free Pascal - Free Vision units dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: b01fcc2bc910452afc8844b23d128541
@@ -1972,21 +1954,21 @@ Origin: Ubuntu
 Package: fp-units-fv-2.6.2
 Priority: optional
 Section: universe/devel
-Installed-Size: 1486
+Installed-Size: 1487
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-units-fv (<= 2.4.0-3)
 Provides: fp-units-fv
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2)
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5)
 Breaks: fp-units-fv (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-units-fv-2.6.2_2.6.2-2_armhf.deb
-Size: 348188
-MD5sum: d286e4fecba8cba153acb28a3bce65ff
-SHA1: 98d91f67273ec15d34e69115686f4bc82a889d6c
-SHA256: d4ccd42b9d7e98f2551bb47467781dd3411a767ec2ab0976b65c7a2e0501749f
+Filename: pool/universe/f/fpc/fp-units-fv-2.6.2_2.6.2-5_armhf.deb
+Size: 349728
+MD5sum: ee6c61e7efe7077dee4065579bc9d3fc
+SHA1: 4f7add087dba7fe9a5a54f5242c7f853a9500d78
+SHA256: 8412911971e5b224f0aaa65a9f00d99eaa51526fae490e24a02b7a41d7b2745c
 Description: Free Pascal - Free Vision units
 Homepage: http://www.freepascal.org/
 Description-md5: 4d0968ad113531e9ffaf936115d98458
@@ -1996,18 +1978,18 @@ Origin: Ubuntu
 Package: fp-units-gfx
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-units-gfx-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-units-gfx_2.6.2-2_armhf.deb
-Size: 2446
-MD5sum: 54d33ed60f325db76bc7e053d3770585
-SHA1: 378da59c479c78d907376e03d1a37535d1c3d32f
-SHA256: a4c195c9725577c69b0089e9ed2d0e64b143347b5ec3815459bd2354e7ea6e0f
+Version: 2.6.2-5
+Depends: fp-units-gfx-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-units-gfx_2.6.2-5_armhf.deb
+Size: 2444
+MD5sum: ea8e2fe2af036517a90fc1189b6a245f
+SHA1: be71ace0725375238d950d53c8a96f8023d8bad2
+SHA256: 4cf9a0fb5b4fb20b72952b1195ad09cd32b27afcced8813dabe96be553c2c188
 Description: Free Pascal - graphics-library units dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: 181cbc2084e1762c1d23c5b45c9ef75e
@@ -2017,21 +1999,21 @@ Origin: Ubuntu
 Package: fp-units-gfx-2.6.2
 Priority: optional
 Section: universe/devel
-Installed-Size: 5393
+Installed-Size: 5394
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-units-gfx (<= 2.4.0-3)
 Provides: fp-units-gfx
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2), fp-units-base-2.6.2 (= 2.6.2-2), libsvga1-dev
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5), fp-units-base-2.6.2 (= 2.6.2-5), libsvga1-dev
 Breaks: fp-units-gfx (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-units-gfx-2.6.2_2.6.2-2_armhf.deb
-Size: 1464424
-MD5sum: 79b3b983663990e65de0fde790316ef6
-SHA1: bf85d21105c03c27de124fc6a7609d138bc83cdf
-SHA256: 63353a72b03f1a59dfa0cfb25f7a17f3db4732779db22dc61efea852119c80f4
+Filename: pool/universe/f/fpc/fp-units-gfx-2.6.2_2.6.2-5_armhf.deb
+Size: 1472106
+MD5sum: d0f790b6bd9edd1504df744d1126e844
+SHA1: 9a935d8328564231062ba365bd9e5c7b029fc3d9
+SHA256: 73a822637a16bacfc1e847ccf77c7e87e2d327b48d93ca497258125450d082f7
 Description: Free Pascal - graphics-library units
 Homepage: http://www.freepascal.org/
 Description-md5: 825674f113b74a38f0775cb981a0d2b1
@@ -2041,18 +2023,18 @@ Origin: Ubuntu
 Package: fp-units-gnome1
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-units-gnome1-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-units-gnome1_2.6.2-2_armhf.deb
-Size: 2440
-MD5sum: 0451ef2bf0326820a84f242890ec8522
-SHA1: e299d9b80fd6a98699ee0ac84c47b3ab84a60d67
-SHA256: 5bef481866a6927b3ae1f90126f70c8ec5f3606f4ebeb99e969443e6c6976eef
+Version: 2.6.2-5
+Depends: fp-units-gnome1-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-units-gnome1_2.6.2-5_armhf.deb
+Size: 2446
+MD5sum: efef234ac526e555bbb38439d2ab23f4
+SHA1: 550aa0baf6af523c6954b03b35ff48b8e3f1ce3e
+SHA256: a872d08c6e314c0e769f613b1b6f8ba1c20b747071dd918ea29453675ea8f52c
 Description: Free Pascal - GNOME 1 units dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: 69ac1dbee99d8c807250b0605e4a1da2
@@ -2062,21 +2044,21 @@ Origin: Ubuntu
 Package: fp-units-gnome1-2.6.2
 Priority: optional
 Section: universe/devel
-Installed-Size: 1708
+Installed-Size: 1709
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-units-gnome1 (<= 2.4.0-3)
 Provides: fp-units-gnome1
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2), fp-units-gtk-2.6.2 (= 2.6.2-2)
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5), fp-units-gtk-2.6.2 (= 2.6.2-5)
 Breaks: fp-units-gnome1 (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-units-gnome1-2.6.2_2.6.2-2_armhf.deb
-Size: 318630
-MD5sum: bb541b6eb491cbde6a97d5f44131088c
-SHA1: 9b24b9bba422946bf0f57328c8d50f2feb5df2b3
-SHA256: 6a28af8f7589563798074ec6a31207a7be5946f75115af22f21d223185ba1a8f
+Filename: pool/universe/f/fpc/fp-units-gnome1-2.6.2_2.6.2-5_armhf.deb
+Size: 315388
+MD5sum: 6ce4a48969d44e3752028b66a2663dc7
+SHA1: a3b46d52552986f17af1b113a4d9a42821ee4688
+SHA256: 0689f35820a1a7890f35be35d8915852bb4a90ec21298bf43257ad30803f3809
 Description: Free Pascal - GNOME 1 units
 Homepage: http://www.freepascal.org/
 Description-md5: 0121da8b651b9e58c73953bb9017ed2f
@@ -2086,18 +2068,18 @@ Origin: Ubuntu
 Package: fp-units-gtk
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-units-gtk-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-units-gtk_2.6.2-2_armhf.deb
-Size: 2428
-MD5sum: d8815846d5cf76ae3370626f77cb7838
-SHA1: 4083ab564facbd129d3dadee6e41840017079701
-SHA256: 79a9f0510341cf8c9cfa7d1c8548b97066b0621ec1d0ac734f6372f4194be335
+Version: 2.6.2-5
+Depends: fp-units-gtk-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-units-gtk_2.6.2-5_armhf.deb
+Size: 2424
+MD5sum: 6e04f7922c8901c8780ee5b59ab490ff
+SHA1: e194076e03a95ff43d052430b0b81a768f7b6b3c
+SHA256: 0c0fcbc6d48ad32c23b9640e3903dae762780af8bf1ad8e1fe4ac088b9a829f4
 Description: Free Pascal - GTK+ 1.2 units dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: d31676689eb155ec111552266a382cf2
@@ -2107,21 +2089,21 @@ Origin: Ubuntu
 Package: fp-units-gtk-2.6.2
 Priority: optional
 Section: universe/devel
-Installed-Size: 4483
+Installed-Size: 4484
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-units-gtk (<= 2.4.0-3)
 Provides: fp-units-gtk
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2), fp-units-fcl-2.6.2 (= 2.6.2-2), libgtk2.0-dev
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5), fp-units-fcl-2.6.2 (= 2.6.2-5), libgtk2.0-dev
 Breaks: fp-units-gtk (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-units-gtk-2.6.2_2.6.2-2_armhf.deb
-Size: 921464
-MD5sum: 3cdda21eb8d58504b84786435fa78df2
-SHA1: 3ea33480e58b1d16a2bb055830c3a9a27940efac
-SHA256: a48ea294e0efd7afa797939e93bd6e3c2f2844d1925454a67cdabab9bb960c87
+Filename: pool/universe/f/fpc/fp-units-gtk-2.6.2_2.6.2-5_armhf.deb
+Size: 931014
+MD5sum: 6c95ddcbf8815842fefa9370046c0cc3
+SHA1: 3e0ba259ce27a9df31e23dcf6c80f4b1ff2d4a87
+SHA256: 3a6ebfcfeec014e18b4437c17347ec1ebb87d037fcceb7ea4979bc6ec5e05107
 Description: Free Pascal - GTK+ 1.2 units
 Homepage: http://www.freepascal.org/
 Description-md5: 46b0f0be538f71e1c5daa0e322390230
@@ -2131,18 +2113,18 @@ Origin: Ubuntu
 Package: fp-units-gtk2
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-units-gtk2-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-units-gtk2_2.6.2-2_armhf.deb
-Size: 2432
-MD5sum: 91c4f15344302ace2095e8387985cd47
-SHA1: 57ac5e1e96726341a2cb6241e6da0a1bbd744d5f
-SHA256: a2cf62a26694d4eb01464afc97ba6ba41f4b8a7c0fac9b0091cc321a24135df0
+Version: 2.6.2-5
+Depends: fp-units-gtk2-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-units-gtk2_2.6.2-5_armhf.deb
+Size: 2434
+MD5sum: 9dc01a141e789105a43a489933aa8a4a
+SHA1: eac1bf13ab990adba832212a455513af5ffa6e43
+SHA256: 3cbcc3144a984ef176a9e08e20962ad8c13f4b5252b107cf330fb76fd29f4b2a
 Description: Free Pascal - GTK+ 2.x units dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: e564d7cf698380a9efe635d9f2c3d9f6
@@ -2152,21 +2134,21 @@ Origin: Ubuntu
 Package: fp-units-gtk2-2.6.2
 Priority: optional
 Section: universe/devel
-Installed-Size: 6907
+Installed-Size: 6908
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-units-gtk2 (<= 2.4.0-3)
 Provides: fp-units-gtk2
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2), fp-units-fcl-2.6.2 (= 2.6.2-2)
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5), fp-units-fcl-2.6.2 (= 2.6.2-5)
 Breaks: fp-units-gtk2 (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-units-gtk2-2.6.2_2.6.2-2_armhf.deb
-Size: 1500098
-MD5sum: c54e41ba11ceda8274a53971691bc902
-SHA1: 16795856de58eedfa3fa00a80d6b14ec68323bed
-SHA256: a989ad3db617ec22754f227a50d04a89714148788bf5f5ae194b82813f1325fc
+Filename: pool/universe/f/fpc/fp-units-gtk2-2.6.2_2.6.2-5_armhf.deb
+Size: 1499276
+MD5sum: 04d736e55c6f5ffb0daaaed67932b2df
+SHA1: 86c404e46bf4182c7acde529351e993b9d8323b8
+SHA256: 3f22af38d04bbbdd1cd2442ff7b9d30bce7a1a1807eb0d0f00dc90b2acaf6310
 Description: Free Pascal - GTK+ 2.x units
 Homepage: http://www.freepascal.org/
 Description-md5: deb572a4c869b97386961af09a7346d7
@@ -2176,18 +2158,18 @@ Origin: Ubuntu
 Package: fp-units-math
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-units-math-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-units-math_2.6.2-2_armhf.deb
-Size: 2488
-MD5sum: 135ebf7acf004abd2842181a4c3a62f7
-SHA1: 8bdc8dc94eb095ebf2f751b2d272750fd35c65b8
-SHA256: 331279560def9b66e71a271664cf4c486b7dda00be888c2a23d93104da91a6a1
+Version: 2.6.2-5
+Depends: fp-units-math-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-units-math_2.6.2-5_armhf.deb
+Size: 2494
+MD5sum: 82b97161fbbd71989cfdf1a03c963a61
+SHA1: d20256f73e98da22a8d098363265e94b6d5f8199
+SHA256: 57327c19ad6cb86edd7f1188d9fe5742d8d0a6dfa2dd8ba5e4f3735775a8ef90
 Description: Free Pascal - math units dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: 73e070ec4f1ad53b77254e382bc7856d
@@ -2202,16 +2184,16 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-units-math (<= 2.4.0-3), fp-units-misc (<= 2.2.4-4)
 Provides: fp-units-math
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2)
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5)
 Breaks: fp-units-math (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-units-math-2.6.2_2.6.2-2_armhf.deb
-Size: 382086
-MD5sum: 71b0fe8d13d9e9758f93dfdf9296f1ad
-SHA1: 97a8d349b85eb1c88d102a6ccd9b953a1e511e76
-SHA256: 7d1675b1861e472a2c87a2543aad5d4207e6e4c0fc6eecbb75479e0f8a45c84f
+Filename: pool/universe/f/fpc/fp-units-math-2.6.2_2.6.2-5_armhf.deb
+Size: 382590
+MD5sum: 2ff2be5bfee74db01406e7d0db0dc804
+SHA1: 235b02adabaf5c403a16e828865db2c1f2d5160a
+SHA256: 1e71f5862969075b98babc09994105bd896c460b0bd9347a662c1e8da560cfe1
 Description: Free Pascal - math units
 Homepage: http://www.freepascal.org/
 Description-md5: 32f8990183224659357bc760d29e6c7a
@@ -2221,18 +2203,18 @@ Origin: Ubuntu
 Package: fp-units-misc
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-units-misc-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-units-misc_2.6.2-2_armhf.deb
-Size: 2466
-MD5sum: ea32239ea645379c7c729d5d04854ce3
-SHA1: 842a9da69c0e3e102b19b90f982fda219cf3cc86
-SHA256: 77e19bb61c5a829cbf3e13108e4420e9b8e29bba285607cfdd97b6dc6e79e265
+Version: 2.6.2-5
+Depends: fp-units-misc-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-units-misc_2.6.2-5_armhf.deb
+Size: 2460
+MD5sum: 9f34835a8cfb6feda314ad15d4ed27a8
+SHA1: 303793a93d17c5577d440cf27c1cb7bee1b274cf
+SHA256: 5555d0f6417b54a6779442f37c4124d141557ad0a7243d4f68f7c5e5e06696dc
 Description: Free Pascal - miscellaneous units dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: 8ceac8a7b9ad07aadac92dac389ce805
@@ -2247,16 +2229,16 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-units-misc (<= 2.4.0-3)
 Provides: fp-units-misc
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2)
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5)
 Breaks: fp-units-misc (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-units-misc-2.6.2_2.6.2-2_armhf.deb
-Size: 1490660
-MD5sum: 0f808ffd785058e35690cb7fbe9458c5
-SHA1: 0d6b4cc31ca3f4336a01726810c4d5a5aa959fc6
-SHA256: eeab99fef77c447fd032ba046fec94fe4b0b911c86ba5bae6b9dee9cdb98f273
+Filename: pool/universe/f/fpc/fp-units-misc-2.6.2_2.6.2-5_armhf.deb
+Size: 1495430
+MD5sum: 024637a2f024b6bedc9c0aa7ee7fa9f9
+SHA1: 42957fde707ba64b8e3e1083d360878ec03ce903
+SHA256: 914e440ef47104b300243249408b122552c1443ef8cf88814c53220fd4fa09f3
 Description: Free Pascal - miscellaneous units
 Homepage: http://www.freepascal.org/
 Description-md5: c7020a40d9768d977adda0cf8c053d78
@@ -2266,18 +2248,18 @@ Origin: Ubuntu
 Package: fp-units-multimedia
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-units-multimedia-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-units-multimedia_2.6.2-2_armhf.deb
-Size: 2442
-MD5sum: 257b400f8c9a3d267886e1082f28bdb8
-SHA1: 50151276c5a173c676bea07638e95f2e82d1a282
-SHA256: f54d3a991b13b334091b080f13d69dfe84c03ea4e8b5b9a64cd42fde614764ae
+Version: 2.6.2-5
+Depends: fp-units-multimedia-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-units-multimedia_2.6.2-5_armhf.deb
+Size: 2440
+MD5sum: 853c60eded0a22b7a2463cf52ba06d48
+SHA1: 350e380f04311be199db8230084d0921e146bda0
+SHA256: b1669f93dd5d8b62adbede8dc9f5b02af0e2243274d7f745b53884ad361880ca
 Description: Free Pascal - multimedia units dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: 30ee360bbf01d19a4916279c54b133f0
@@ -2287,21 +2269,21 @@ Origin: Ubuntu
 Package: fp-units-multimedia-2.6.2
 Priority: optional
 Section: universe/devel
-Installed-Size: 875
+Installed-Size: 876
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-units-gfx (<= 2.2.4-3), fp-units-multimedia (<= 2.4.0-3)
 Provides: fp-units-multimedia
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2), libogg-dev, libvorbis-dev, a52dec-dev, libdts-dev, libmad0-dev, libmodplug-dev, libsdl-mixer1.2-dev
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5), libogg-dev, libvorbis-dev, a52dec-dev, libdts-dev, libmad0-dev, libmodplug-dev, libsdl-mixer1.2-dev
 Breaks: fp-units-multimedia (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-units-multimedia-2.6.2_2.6.2-2_armhf.deb
-Size: 186060
-MD5sum: 912e6bf34b04159a525beb8070376b56
-SHA1: 57d68279b3b2b3f73f227dd2eb226d859f2ce2ea
-SHA256: ef2c156163f08c30bb96c5fdf40a95a87eedda7e87aa78a73c507e875b60c2ee
+Filename: pool/universe/f/fpc/fp-units-multimedia-2.6.2_2.6.2-5_armhf.deb
+Size: 186028
+MD5sum: da1de224d4f7210dad0bf0358b67d8e3
+SHA1: 4682e88932962905d9a1e7447f7454ce5a73e43d
+SHA256: 7b90b99200932c75a35ca1026e8da0fc56526539117160fd6bc52648e273db43
 Description: Free Pascal - multimedia units
 Homepage: http://www.freepascal.org/
 Description-md5: 561722dc1ff6a33a8b2eb97344924c34
@@ -2311,18 +2293,18 @@ Origin: Ubuntu
 Package: fp-units-net
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-units-net-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-units-net_2.6.2-2_armhf.deb
-Size: 2466
-MD5sum: c8512ca00e9f6a076f6b599625eb91a7
-SHA1: ade4e97b0f9a5394328dddae9b50f0adc18911a4
-SHA256: 6420dce90ed505fca560d2bafe38085baf0b5e9ebf42fadb34e1141220180bf8
+Version: 2.6.2-5
+Depends: fp-units-net-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-units-net_2.6.2-5_armhf.deb
+Size: 2470
+MD5sum: 95c7a2f6cdf4708c0da9482200d45bd2
+SHA1: 7f25002f8232965d074bf1168421f57a6604bc04
+SHA256: c3945b1fcb128d2c4648cd25e7adb47cf07b799c778706108c0fead556543ef9
 Description: Free Pascal - networking units dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: c0cbe4cce5252033a0619131316d8893
@@ -2332,21 +2314,21 @@ Origin: Ubuntu
 Package: fp-units-net-2.6.2
 Priority: optional
 Section: universe/devel
-Installed-Size: 2130
+Installed-Size: 2131
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-units-net (<= 2.4.0-3)
 Provides: fp-units-net
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2)
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5)
 Breaks: fp-units-net (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-units-net-2.6.2_2.6.2-2_armhf.deb
-Size: 448590
-MD5sum: 75e375291e6053a4152e5991dfdd09e8
-SHA1: cb1c1a2788ad67d1ce6a3685beccc7e38e5fbc2d
-SHA256: d88b9a0cfdadcb1521276831649b6f0fd4149325f2e5878821775d5a8b768e51
+Filename: pool/universe/f/fpc/fp-units-net-2.6.2_2.6.2-5_armhf.deb
+Size: 462744
+MD5sum: ee75a2706c1a6a1ac0153b53256384c9
+SHA1: 79645fa0a361bfce3b9c955592fdc4b38430a5f1
+SHA256: cd672cf109293a07ec1e4a032cc6c793c9f7043e217009c66f66e81cd38aca30
 Description: Free Pascal - networking units
 Homepage: http://www.freepascal.org/
 Description-md5: 817164b48d34728d272d528595974deb
@@ -2356,18 +2338,18 @@ Origin: Ubuntu
 Package: fp-units-rtl
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-units-rtl-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-units-rtl_2.6.2-2_armhf.deb
-Size: 2404
-MD5sum: c0623c1b089e69996a8b98753b195bbe
-SHA1: 4c539732bdcb7a6008ad9e598336ac627b2b8770
-SHA256: b08d2c882720ed180d8edbef36cd3a50b59afffcea5526cb0e44338a2fcd27d6
+Version: 2.6.2-5
+Depends: fp-units-rtl-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-units-rtl_2.6.2-5_armhf.deb
+Size: 2406
+MD5sum: 1548ae45043b247850826e496b9d9ae5
+SHA1: 27cbd4048d338c347d5da0445888ad8d8852a919
+SHA256: 016032ad4f2fb2b91dc1ee367a4f5636b8ff48c89306f4946f1e5a9c74735780
 Description: Free Pascal - runtime libraries dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: 19ba7fc0b1618747f892772b63502125
@@ -2382,16 +2364,16 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-units-rtl (<= 2.4.0-3)
 Provides: fp-units-rtl, fpc-abi-2.6.2
-Recommends: fp-compiler-2.6.2 (= 2.6.2-2)
+Recommends: fp-compiler-2.6.2 (= 2.6.2-5)
 Breaks: fp-units-rtl (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-units-rtl-2.6.2_2.6.2-2_armhf.deb
-Size: 1795106
-MD5sum: d118ff91c9f94ab5583f7aa43c4a8526
-SHA1: 7c8908287aa015f8a15cfc79bc7c6795e50f599b
-SHA256: 3ddbd65d6e12ad36a9f8f7902db8d1db2abc8ed22f65e8d5bb32e5a7239d77b4
+Filename: pool/universe/f/fpc/fp-units-rtl-2.6.2_2.6.2-5_armhf.deb
+Size: 1798092
+MD5sum: 4bf8c8d5c8afa502fc3210c46ed72cf8
+SHA1: f083366cb04f4b051be7d170fbcbd463e4268ade
+SHA256: 5a8a252bc79888b33148e11d18c7258d2109c1878106f9aff3d6c8a2d095d130
 Description: Free Pascal - runtime libraries
 Homepage: http://www.freepascal.org/
 Description-md5: 55969a41e7006e4059f6e696dfead87b
@@ -2401,18 +2383,18 @@ Origin: Ubuntu
 Package: fp-utils
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
+Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
-Depends: fp-utils-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fp-utils_2.6.2-2_armhf.deb
-Size: 2618
-MD5sum: a06de07f17cb9fe3a872babd03c8d7e6
-SHA1: fd7d4f486c461fc6dbe27666cdd1e23ea4a46d42
-SHA256: aa0c1cc2b5eab9c86d38dd036f8a2c6d2874874f0edd799c66785505b4223acc
+Version: 2.6.2-5
+Depends: fp-utils-2.6.2 (= 2.6.2-5)
+Filename: pool/universe/f/fpc/fp-utils_2.6.2-5_armhf.deb
+Size: 2624
+MD5sum: 7587765ee68270721697164ab32cf95c
+SHA1: 7fc3258ba3af9175a56966857e7cbdda48093f59
+SHA256: 33d854d4207b67f5d00e94fc85e34cb1a07fed743f5797984fb1094312af46f4
 Description: Free Pascal - utilities dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: 00fc6b3eb34ba1fdf92986ca84a3276e
@@ -2422,46 +2404,25 @@ Origin: Ubuntu
 Package: fp-utils-2.6.2
 Priority: optional
 Section: universe/devel
-Installed-Size: 7067
+Installed-Size: 7073
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
 Architecture: armhf
 Source: fpc
-Version: 2.6.2-2
+Version: 2.6.2-5
 Replaces: fp-compiler (<= 2.4.0-3), fp-utils (<= 2.4.0-3)
 Provides: fp-utils
 Depends: libc6 (>= 2.4)
-Recommends: fp-compiler-2.6.2 (= 2.6.2-2)
+Recommends: fp-compiler-2.6.2 (= 2.6.2-5)
 Breaks: fp-compiler (<= 2.4.0-3), fp-units-gfx (<= 2.4.2-2), fp-units-gfx-2.4.2 (<= 2.4.2-2), fp-utils (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fp-utils-2.6.2_2.6.2-2_armhf.deb
-Size: 2072410
-MD5sum: 1d02ba0a72ec452d54bd770453f0b792
-SHA1: 505b742c6c4de1b409c3e9bc30d9786eb8e7aaf5
-SHA256: 1b0e865bb5d164ee8b882f1f1ac40bdd6946d739e9ee03c7f863d6b9d4bb9219
+Filename: pool/universe/f/fpc/fp-utils-2.6.2_2.6.2-5_armhf.deb
+Size: 2018206
+MD5sum: 3dda137cd81c5ab88285f47225f396b8
+SHA1: 40af66eea9601153a27eec34ce14d52deb814ed0
+SHA256: 463851f1591108643e01c8dcee1da16376ad209841effb40848310da8a703292
 Description: Free Pascal - utilities
 Homepage: http://www.freepascal.org/
 Description-md5: bff84a46907553f97fdee849a7e5a5cf
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: fpc
-Priority: optional
-Section: universe/devel
-Installed-Size: 39
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Carlos Laviola <claviola@debian.org>
-Architecture: all
-Version: 2.6.2-2
-Depends: fpc-2.6.2 (= 2.6.2-2)
-Recommends: fp-utils-2.6.2
-Filename: pool/universe/f/fpc/fpc_2.6.2-2_all.deb
-Size: 2564
-MD5sum: 7fe6ea09575e425e0cc0159cec454350
-SHA1: 926e9dbf59aecf826198a4cd834e8aa4a41a7ed5
-SHA256: 46ef96ee5254073e7083a7c07f51bb8d7550743de0915ad6c0b0e772e6c0376a
-Description: Free Pascal - SDK suite dependency package
-Homepage: http://www.freepascal.org/
-Description-md5: a512a55eb79abd843319a1d1b6eb771d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -2483,32 +2444,6 @@ SHA256: aedd8c1c421ee1599114d24963a87b7c6e9bfb1eb06e93e79633e83a414a955c
 Description: Free Pascal - SDK suite dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: a512a55eb79abd843319a1d1b6eb771d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: fpc-2.6.2
-Priority: optional
-Section: universe/devel
-Installed-Size: 39
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Carlos Laviola <claviola@debian.org>
-Architecture: all
-Source: fpc
-Version: 2.6.2-2
-Replaces: fpc (<= 2.4.0-3)
-Provides: fpc
-Depends: fp-units-rtl-2.6.2 (>= 2.6.2-2), fp-compiler-2.6.2 (>= 2.6.2-2), fp-units-base-2.6.2 (>= 2.6.2-2), fp-ide-2.6.2 (>= 2.6.2-2), fp-units-fcl-2.6.2 (>= 2.6.2-2), fp-units-fv-2.6.2 (>= 2.6.2-2), fp-units-gtk-2.6.2 (>= 2.6.2-2), fp-units-gtk2-2.6.2 (>= 2.6.2-2), fp-units-gnome1-2.6.2 (>= 2.6.2-2), fp-units-db-2.6.2 (>= 2.6.2-2), fp-units-gfx-2.6.2 (>= 2.6.2-2), fp-units-net-2.6.2 (>= 2.6.2-2), fp-units-misc-2.6.2 (>= 2.6.2-2), fp-units-multimedia-2.6.2 (>= 2.6.2-2), fp-units-math-2.6.2 (>= 2.6.2-2)
-Recommends: fp-utils-2.6.2
-Suggests: lazarus, fp-docs-2.6.2 (>= 2.6.2)
-Breaks: fpc (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fpc-2.6.2_2.6.2-2_all.deb
-Size: 5820
-MD5sum: e3377b258bf5b265dd9fda69a85c7017
-SHA1: 05874753ea12506257a8764e9180ef1df681be78
-SHA256: 8f4fc67f1c22c029b7ad22d31c045ca7d23c16749a3fc5ba8aea5ccb18cdc589
-Description: Free Pascal - SDK-2.6.2 suite
-Homepage: http://www.freepascal.org/
-Description-md5: 516d6a21d03d9880f64caf9e84205110
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -2541,27 +2476,6 @@ Origin: Ubuntu
 Package: fpc-source
 Priority: optional
 Section: universe/devel
-Installed-Size: 39
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Carlos Laviola <claviola@debian.org>
-Architecture: all
-Source: fpc
-Version: 2.6.2-2
-Depends: fpc-source-2.6.2 (= 2.6.2-2)
-Filename: pool/universe/f/fpc/fpc-source_2.6.2-2_all.deb
-Size: 2420
-MD5sum: d397692a79b031b37fd777e2951cf99f
-SHA1: 5b9ea0cb83f6a2391845d199e328ed157d52f0fe
-SHA256: f7ff24a46c881d28725d186e75298d078ec5c3e79b1c02b66305d649496a2ff3
-Description: Free Pascal - SDK source code dependency package
-Homepage: http://www.freepascal.org/
-Description-md5: b92de8e5e2b0506af9e3e2d19ff92477
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: fpc-source
-Priority: optional
-Section: universe/devel
 Installed-Size: 40
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Carlos Laviola <claviola@debian.org>
@@ -2577,29 +2491,6 @@ SHA256: 88a3f565df3e3e11e6c9b9b04d295562595cbe0f372f4b6c66aaa75df199fad9
 Description: Free Pascal - SDK source code dependency package
 Homepage: http://www.freepascal.org/
 Description-md5: b92de8e5e2b0506af9e3e2d19ff92477
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: fpc-source-2.6.2
-Priority: optional
-Section: universe/devel
-Installed-Size: 97452
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Carlos Laviola <claviola@debian.org>
-Architecture: all
-Source: fpc
-Version: 2.6.2-2
-Replaces: fpc-source (<= 2.4.0-3)
-Provides: fpc-source
-Breaks: fpc-source (<= 2.4.0-3)
-Filename: pool/universe/f/fpc/fpc-source-2.6.2_2.6.2-2_all.deb
-Size: 14400340
-MD5sum: 8e3a210398c702c32630f6f107bee3cf
-SHA1: 409db57fc33d52d5e4a6044b0bd93fa27549af99
-SHA256: fe3d59cdf22103788b73090c4fed68895d2011f1778ceeaccc70dde613f73d3c
-Description: Free Pascal - SDK source code
-Homepage: http://www.freepascal.org/
-Description-md5: 2ca7ad1302a80136317c534a3c10119d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
