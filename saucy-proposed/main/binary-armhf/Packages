@@ -1057,6 +1057,26 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: gir1.2-lightdm-1
+Priority: optional
+Section: libs
+Installed-Size: 64
+Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
+Architecture: armhf
+Source: lightdm
+Version: 1.7.7-0ubuntu2
+Depends: liblightdm-gobject-1-0 (= 1.7.7-0ubuntu2)
+Filename: pool/main/l/lightdm/gir1.2-lightdm-1_1.7.7-0ubuntu2_armhf.deb
+Size: 5424
+MD5sum: 0396a2bf4082f1c02f3fe691c487ef59
+SHA1: 5862f83a72a67279701dffb3f98c8c41c3d94a31
+SHA256: 2242fccc882f604c9795d47f961505070c4b4e6e239b4d3599fb40e0c3f21dc2
+Description: Typelib file for liblightdm-1
+Homepage: https://launchpad.net/lightdm
+Description-md5: 15edc3a87b41d0dccba5699c5b28aa73
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: gir1.2-telepathyglib-0.12
 Priority: optional
 Section: libs
@@ -6141,6 +6161,48 @@ Description-md5: 87ff14435a28f46ae1486d878912dfa7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: liblightdm-gobject-1-0
+Priority: optional
+Section: x11
+Installed-Size: 102
+Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
+Architecture: armhf
+Source: lightdm
+Version: 1.7.7-0ubuntu2
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3), libx11-6, libxklavier16 (>= 5.0)
+Recommends: lightdm, accountsservice
+Filename: pool/main/l/lightdm/liblightdm-gobject-1-0_1.7.7-0ubuntu2_armhf.deb
+Size: 28000
+MD5sum: 4f6341a075aaeede05d169c500c5f6a0
+SHA1: f8c458f7069abcf3b87aa90e255ce9fcd65240b5
+SHA256: a82c6509930afa2d3c63ab760a3d961c94ff3e26e4c5974eb7a35621620927fd
+Description: LightDM GObject client library
+Homepage: https://launchpad.net/lightdm
+Description-md5: 6c3bad2fb3c13c192ee2080b06f2b9b2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop
+
+Package: liblightdm-gobject-1-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 170
+Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
+Architecture: armhf
+Source: lightdm
+Version: 1.7.7-0ubuntu2
+Depends: liblightdm-gobject-1-0 (= 1.7.7-0ubuntu2), libglib2.0-dev, libdbus-glib-1-dev, libxklavier-dev
+Filename: pool/main/l/lightdm/liblightdm-gobject-1-dev_1.7.7-0ubuntu2_armhf.deb
+Size: 11514
+MD5sum: a5914838cfeecf1475335bda9d33f460
+SHA1: 43f4b7bd806d73da670836bbebcfaa099ae19a56
+SHA256: 25f56bfc2bf3dfb2c939c340c4e2ecbe179bfb506ef27a53a2360fc90a59de02
+Description: LightDM GObject client library (development files)
+Homepage: https://launchpad.net/lightdm
+Description-md5: 7b47429d527a03b25da17dce04d74b8e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: liblightdm-gobject-1-doc
 Priority: optional
 Section: doc
@@ -6157,6 +6219,93 @@ SHA256: 0d81216c535d2b2470de0c5767405c486aff2c7c145892edf0c2fffec967a7f9
 Description: LightDM client library (documentation)
 Homepage: https://launchpad.net/lightdm
 Description-md5: ed7ca117d51a427f54238d598a2c843e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: liblightdm-qt-3-0
+Priority: optional
+Section: x11
+Installed-Size: 124
+Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
+Architecture: armhf
+Source: lightdm
+Version: 1.7.7-0ubuntu2
+Replaces: liblightdm-qt-1-0 (>= 1.1.1)
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), liblightdm-gobject-1-0 (>= 1.4.0), libqt4-dbus (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.3.0)
+Recommends: lightdm
+Conflicts: liblightdm-qt-1-0 (>= 1.1.1)
+Filename: pool/main/l/lightdm/liblightdm-qt-3-0_1.7.7-0ubuntu2_armhf.deb
+Size: 32496
+MD5sum: 6bd4390d3d267e26cdfc7aa8bc18a478
+SHA1: a1c9086f74a493a74cf4945a56d40b8f02a4e1e0
+SHA256: 0f3346e44fc37a5cf99aa251a79d17cd5eb439a03ffa3f659ee4b53329d85b4f
+Description: LightDM Qt client library
+Homepage: https://launchpad.net/lightdm
+Description-md5: e4829922d725966a3547148f5055fe94
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
+Package: liblightdm-qt-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 72
+Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
+Architecture: armhf
+Source: lightdm
+Version: 1.7.7-0ubuntu2
+Replaces: liblightdm-qt-1-dev (>= 1.1.1), liblightdm-qt-3-dev
+Depends: liblightdm-qt-3-0 (= 1.7.7-0ubuntu2), libqt4-dev
+Breaks: liblightdm-qt-1-dev (>= 1.1.1), liblightdm-qt-3-dev
+Filename: pool/main/l/lightdm/liblightdm-qt-dev_1.7.7-0ubuntu2_armhf.deb
+Size: 4360
+MD5sum: 636f13cde030da58dca96208e4b28299
+SHA1: 853356c89498f5ed41727de7f12dc0979f5b7581
+SHA256: 74d4de535aa60b94594f8a80d2d14bbb3b2c0e557af1269f2807dca182df09d8
+Description: LightDM Qt client library (development files)
+Homepage: https://launchpad.net/lightdm
+Description-md5: ff0d940b50715c82bbf4f79a43e4beb8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: liblightdm-qt5-3-0
+Priority: optional
+Section: x11
+Installed-Size: 128
+Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
+Architecture: armhf
+Source: lightdm
+Version: 1.7.7-0ubuntu2
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), liblightdm-gobject-1-0 (>= 1.4.0), libqt5core5 (>= 5.0.2), libqt5dbus5 (>= 5.0.2), libqt5gui5 (>= 5.0.2), libstdc++6 (>= 4.3.0)
+Recommends: lightdm
+Filename: pool/main/l/lightdm/liblightdm-qt5-3-0_1.7.7-0ubuntu2_armhf.deb
+Size: 34046
+MD5sum: f48057e65b6287235a6371cf537b21ae
+SHA1: 9cb490c1952a38781226e37addb5adc1d3709305
+SHA256: 7dbf66f0f74c696b6f2d011ed048bbbf51d0d99631bac1ebe457e930aefd1cd7
+Description: LightDM Qt 5 client library
+Homepage: https://launchpad.net/lightdm
+Description-md5: 14bad12e84d0c8c995dabc65095c9b02
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: liblightdm-qt5-3-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 72
+Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
+Architecture: armhf
+Source: lightdm
+Version: 1.7.7-0ubuntu2
+Depends: liblightdm-qt5-3-0 (= 1.7.7-0ubuntu2), libqt4-dev
+Filename: pool/main/l/lightdm/liblightdm-qt5-3-dev_1.7.7-0ubuntu2_armhf.deb
+Size: 4324
+MD5sum: f43830b359a12d014e83393360b5a96e
+SHA1: a8fe5458cf044a39de223db3b0ed77691cf8c661
+SHA256: 2504025db9a479a63e488603033cef5038cf71c3444653f63f18dbfdb1a27b34
+Description: LightDM Qt 5 client library (development files)
+Homepage: https://launchpad.net/lightdm
+Description-md5: befe4f3f090b62ea12a3d96e66eeecbd
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -8183,6 +8332,30 @@ Homepage: http://mesa3d.sourceforge.net/
 Description-md5: fe0902eeca3a0d7aa29c9e1bb6de29c2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: lightdm
+Priority: optional
+Section: x11
+Installed-Size: 436
+Maintainer: Robert Ancell <robert.ancell@ubuntu.com>
+Architecture: armhf
+Version: 1.7.7-0ubuntu2
+Provides: x-display-manager
+Depends: debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.4), libgcrypt11 (>= 1.4.5), libglib2.0-0 (>= 2.37.3), libpam0g (>= 0.99.7.1), libxcb1, libxdmcp6, libpam-runtime (>= 0.76-14), libpam-modules, adduser, libglib2.0-bin, dbus, plymouth (>= 0.8.8-0ubuntu6.1)
+Pre-Depends: dpkg (>= 1.15.7.2)
+Recommends: xserver-xorg, unity-greeter | lightdm-greeter | lightdm-kde-greeter
+Conflicts: liblightdm-gobject-0-0, liblightdm-qt-0-0
+Filename: pool/main/l/lightdm/lightdm_1.7.7-0ubuntu2_armhf.deb
+Size: 93020
+MD5sum: 70de8308357477c52fc82cda17fc63f3
+SHA1: 0db5542da7376e465777bc6f11af4fbedd9b36e9
+SHA256: 8607cb7fc3ddc4185df7a14e649c01a7ce6e8f7e32f8270d9239b200b31fd648
+Description: Display Manager
+Homepage: https://launchpad.net/lightdm
+Description-md5: a04ec89b09d7becf8ba288295841fad0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop
 
 Package: lintian
 Priority: optional
