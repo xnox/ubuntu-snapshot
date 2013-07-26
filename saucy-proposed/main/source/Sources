@@ -69,54 +69,6 @@ Checksums-Sha256:
  3de65a2fae0ce679027be24cf477935d901038fa8bf7056130ea368e449a9350 1142802 alsa-utils_1.0.27.1.orig.tar.bz2
  1e73b915bbb5518682aeaf77cd997485929bffd677911dc7bf31774c916685a0 51780 alsa-utils_1.0.27.1-1ubuntu1.debian.tar.gz
 
-Package: apache2
-Binary: apache2, apache2-data, apache2-bin, apache2-mpm-worker, apache2-mpm-prefork, apache2-mpm-event, apache2-mpm-itk, apache2.2-bin, libapache2-mod-proxy-html, libapache2-mod-macro, apache2-utils, apache2-suexec, apache2-suexec-pristine, apache2-suexec-custom, apache2-doc, apache2-dev, apache2-dbg
-Version: 2.4.6-2ubuntu1
-Priority: optional
-Section: web
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
-Build-Depends: debhelper (>= 8.9.7~), lsb-release, dpkg-dev (>= 1.16.1~), libaprutil1-dev (>= 1.5.0), libapr1-dev, libpcre3-dev, zlib1g-dev, libssl-dev (>= 0.9.8m), libcap-dev [linux-any], perl, liblua5.2-dev, libxml2-dev, autotools-dev, gawk | awk, hardening-wrapper
-Build-Conflicts: autoconf2.13
-Architecture: any all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/main/a/apache2
-Files:
- fe2af7388447336e610773ca2c4d38a6 3202 apache2_2.4.6-2ubuntu1.dsc
- ea5e361ca37b8d7853404419dd502efe 4949897 apache2_2.4.6.orig.tar.bz2
- f4b2dd9dab2802fe070d365671851ef5 198066 apache2_2.4.6-2ubuntu1.debian.tar.gz
-Uploaders: Stefan Fritsch <sf@debian.org>, Steinar H. Gunderson <sesse@debian.org>, Arno Töll <arno@debian.org>
-Homepage: http://httpd.apache.org/
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-apache/apache2.git
-Vcs-Git: git://anonscm.debian.org/pkg-apache/apache2.git
-Package-List: 
- apache2 deb httpd optional
- apache2-bin deb httpd optional
- apache2-data deb httpd optional
- apache2-dbg deb debug extra
- apache2-dev deb httpd optional
- apache2-doc deb doc optional
- apache2-mpm-event deb oldlibs extra
- apache2-mpm-itk deb oldlibs extra
- apache2-mpm-prefork deb oldlibs extra
- apache2-mpm-worker deb oldlibs extra
- apache2-suexec deb oldlibs extra
- apache2-suexec-custom deb httpd extra
- apache2-suexec-pristine deb httpd optional
- apache2-utils deb httpd optional
- apache2.2-bin deb oldlibs extra
- libapache2-mod-macro deb oldlibs extra
- libapache2-mod-proxy-html deb oldlibs extra
-Checksums-Sha1:
- cb526604dfa8ee59bc14b126880e4644faa20698 3202 apache2_2.4.6-2ubuntu1.dsc
- 16d8ec72535ded65d035122b0d944b0e64eaa2a2 4949897 apache2_2.4.6.orig.tar.bz2
- 02753da5a459ec40470b81255a631055157b0374 198066 apache2_2.4.6-2ubuntu1.debian.tar.gz
-Checksums-Sha256:
- 5d8d7594b9e83c8c82fe0aeb9a9672bba6d7606cd9ccccb2c2524282cf53a955 3202 apache2_2.4.6-2ubuntu1.dsc
- dc9f3625ebc08bea55eeb0d16e71fba656f252e6cd0aa244ee7806dc3b022fea 4949897 apache2_2.4.6.orig.tar.bz2
- 35d4eef416fd92fab4bd1550b6625d2d511dc6103b3293acd773025ab074e90c 198066 apache2_2.4.6-2ubuntu1.debian.tar.gz
-
 Package: augeas
 Binary: augeas-tools, libaugeas-dev, libaugeas0, augeas-dbg, augeas-lenses, augeas-doc
 Version: 1.1.0-0ubuntu1
@@ -191,6 +143,7 @@ Testsuite: autopkgtest
 Package: cloud-init
 Binary: cloud-init, grub-legacy-ec2, ec2-init
 Version: 0.7.3~bzr850-0ubuntu1
+Priority: extra
 Section: admin
 Maintainer: Scott Moser <smoser@ubuntu.com>
 Build-Depends: cdbs, debhelper (>= 5.0.38), po-debconf, pyflakes, pylint, python (>= 2.6.6-3~), python-argparse, python-boto, python-cheetah, python-configobj, python-json-patch, python-mocker, python-nose, python-oauth, python-prettytable, python-setuptools, python-requests, python-yaml
@@ -633,6 +586,77 @@ Checksums-Sha256:
  d37f476e5b934a6e656720179b658178d1ecc997bb07310c87f4aa676d5c583e 926477 jackd2_1.9.9.5+20130622git7de15e7a.orig.tar.gz
  6d6c9d79681ac0962d736d22bb131553e2732c9cc224dc8f39d8fef7b1d007d9 148451 jackd2_1.9.9.5+20130622git7de15e7a-1.debian.tar.gz
 
+Package: kde4libs
+Binary: libkdecore5, libkdeui5, libkpty4, libkdesu5, libkjsapi4, libkjsembed4, libkio5, libkntlm4, libsolid4, libkde3support4, libkfile4, libknewstuff2-4, libknewstuff3-4, libkparts4, libkutils4, libthreadweaver4, libkhtml5, libkimproxy4, libkmediaplayer4, libktexteditor4, libknotifyconfig4, libkdnssd4, libkrosscore4, libkrossui4, libnepomuk4, libnepomukutils4, libnepomukquery4a, libplasma3, libkunitconversion4, libkdewebkit5, libkcmutils4, libkemoticons4, libkidletime4, libkprintutils4, libkdeclarative5, kdelibs-bin, kdelibs5-plugins, kdelibs5-data, kdoctools, kdelibs5-dev, kdelibs5-dbg
+Version: 4:4.10.97-0ubuntu1
+Section: libs
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Build-Depends: debhelper (>= 7.3.16), cmake (>= 2.6.4), pkg-kde-tools (>= 0.14), libdlrestrictions-dev (>= 0.14), shared-mime-info (>= 0.30), dpkg-dev (>= 1.15.5), libphonon-dev (>= 4:4.6.0really4.3.80), libqt4-dev (>= 4:4.7.0), libqt4-opengl-dev (>= 4:4.7.0), libqtwebkit-dev, libpng12-dev, libssl-dev, libsm-dev, flex, bison, libsoprano-dev (>= 2.7.56), libstreamanalyzer-dev (>= 0.6.3), libxml2-dev, libxml2-utils, libxslt1-dev, libgif-dev, libavahi-common-dev, libbz2-dev, libenchant-dev, libjasper-dev, libopenexr-dev, libpcre3-dev, zlib1g-dev, libjpeg-dev, hspell, libacl1-dev, automoc (>= 1.0~version-0.9.88), libutempter-dev, liblzma-dev, libattica-dev (>= 0.4.2), shared-desktop-ontologies (>= 0.10.0), libpolkit-qt-1-dev (>= 0.99.0), libxss-dev, libqca2-dev, libdbusmenu-qt-dev, docbook-xml, docbook-xsl, libxrender-dev, libkrb5-dev, libudev-dev [linux-any], libgrantlee-dev, g++-4.7 [armhf]
+Build-Conflicts: libhupnp-dev, libqtwebkit-dev (<< 2.2.1)
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/k/kde4libs
+Files:
+ 3e2d8ff156eff0083a343a881ffa2619 4341 kde4libs_4.10.97-0ubuntu1.dsc
+ ca3943409d64bdb53e1b1a13b1dd96ad 11799456 kde4libs_4.10.97.orig.tar.xz
+ f568c1cc20ed0f68ab4fc0c6b32e47a7 378891 kde4libs_4.10.97-0ubuntu1.debian.tar.gz
+Uploaders: Sune Vuorela <sune@debian.org>, Fathi Boudra <fabo@debian.org>, Modestas Vainius <modax@debian.org>, George Kiagiadakis <kiagiadakis.george@gmail.com>
+Homepage: http://www.kde.org/
+Vcs-Browser: http://bazaar.launchpad.net/~kubuntu-packagers/kubuntu-packaging/kdelibs
+Vcs-Bzr: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging/kdelibs
+Package-List: 
+ kdelibs-bin deb libs optional
+ kdelibs5-data deb libs optional
+ kdelibs5-dbg deb debug extra
+ kdelibs5-dev deb libdevel optional
+ kdelibs5-plugins deb libs optional
+ kdoctools deb doc optional
+ libkcmutils4 deb libs optional
+ libkde3support4 deb libs optional
+ libkdeclarative5 deb libs optional
+ libkdecore5 deb libs optional
+ libkdesu5 deb libs optional
+ libkdeui5 deb libs optional
+ libkdewebkit5 deb libs optional
+ libkdnssd4 deb libs optional
+ libkemoticons4 deb libs optional
+ libkfile4 deb libs optional
+ libkhtml5 deb libs optional
+ libkidletime4 deb libs optional
+ libkimproxy4 deb libs optional
+ libkio5 deb libs optional
+ libkjsapi4 deb libs optional
+ libkjsembed4 deb libs optional
+ libkmediaplayer4 deb libs optional
+ libknewstuff2-4 deb libs optional
+ libknewstuff3-4 deb libs optional
+ libknotifyconfig4 deb libs optional
+ libkntlm4 deb libs optional
+ libkparts4 deb libs optional
+ libkprintutils4 deb libs optional
+ libkpty4 deb libs optional
+ libkrosscore4 deb libs optional
+ libkrossui4 deb libs optional
+ libktexteditor4 deb libs optional
+ libkunitconversion4 deb libs optional
+ libkutils4 deb libs optional
+ libnepomuk4 deb libs optional
+ libnepomukquery4a deb libs optional
+ libnepomukutils4 deb libs optional
+ libplasma3 deb libs optional
+ libsolid4 deb libs optional
+ libthreadweaver4 deb libs optional
+Checksums-Sha1:
+ 9580fa0e5e210ed464fca01809f1e323e2016f6b 4341 kde4libs_4.10.97-0ubuntu1.dsc
+ 7e178f04c4b277e05c08231fb84fd7e198f8841b 11799456 kde4libs_4.10.97.orig.tar.xz
+ 56e33470b79fac058deea321f1b4890cc984f499 378891 kde4libs_4.10.97-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 98f7f951811f971c4eda48402e92fbc03a41e423391454ae567d838ed6a10a43 4341 kde4libs_4.10.97-0ubuntu1.dsc
+ 7d15ce777a7f0c3ece3746f4259aab30b53fcd4050d4c927ef131f5bb74901b4 11799456 kde4libs_4.10.97.orig.tar.xz
+ 0471d93655ca6860c7eb4e8fdb8d1588e84887c0cc02d2de85e8acbea5dd7322 378891 kde4libs_4.10.97-0ubuntu1.debian.tar.gz
+
 Package: libav
 Binary: libav-tools, ffmpeg, ffmpeg-doc, libav-doc, libavutil51, libavcodec53, libavdevice53, libavformat53, libavfilter2, libpostproc52, libswscale2, libavutil-dev, libavcodec-dev, libavdevice-dev, libavformat-dev, libavfilter-dev, libpostproc-dev, libswscale-dev, libav-source
 Version: 6:0.8.7-1ubuntu1
@@ -946,6 +970,57 @@ Checksums-Sha256:
  0e13c5a3ce984f48062f307f546bae94c51f17173e11285091ed9faef3ae46ea 115072276 linux_3.10.0-6.17.tar.gz
 Testsuite: autopkgtest
 
+Package: linux-meta
+Binary: linux, linux-source, linux-image, linux-crashdump, linux-tools, linux-headers-generic, linux-image-generic, linux-generic, linux-headers-generic-lpae, linux-image-generic-lpae, linux-generic-lpae, linux-headers-generic-pae, linux-image-generic-pae, linux-generic-pae, linux-headers-highbank, linux-image-highbank, linux-highbank, linux-headers-omap, linux-image-omap, linux-omap, linux-headers-server, linux-image-server, linux-server, linux-signed-image-generic, linux-signed-generic, linux-headers-virtual, linux-image-virtual, linux-virtual, linux-image-extra-virtual
+Version: 3.10.0.6.15
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: dpkg (>= 1.13.19), debhelper (>= 5), gawk
+Architecture: i386 amd64 armhf all
+Standards-Version: 3.6.1
+Format: 1.0
+Directory: pool/main/l/linux-meta
+Files:
+ 52c5b6db14383992a418eb4194d29143 3228 linux-meta_3.10.0.6.15.dsc
+ 06b07f5e330dd788499366d64eb7b55f 11925 linux-meta_3.10.0.6.15.tar.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-saucy-meta.git
+Package-List: 
+ linux deb kernel optional
+ linux-crashdump deb devel optional
+ linux-generic deb kernel optional
+ linux-generic-lpae deb kernel optional
+ linux-generic-pae deb kernel optional
+ linux-headers-generic deb kernel optional
+ linux-headers-generic-lpae deb kernel optional
+ linux-headers-generic-pae deb kernel optional
+ linux-headers-highbank deb kernel optional
+ linux-headers-omap deb kernel optional
+ linux-headers-server deb kernel optional
+ linux-headers-virtual deb kernel optional
+ linux-highbank deb kernel optional
+ linux-image deb kernel optional
+ linux-image-extra-virtual deb kernel optional
+ linux-image-generic deb kernel optional
+ linux-image-generic-lpae deb kernel optional
+ linux-image-generic-pae deb kernel optional
+ linux-image-highbank deb kernel optional
+ linux-image-omap deb kernel optional
+ linux-image-server deb kernel optional
+ linux-image-virtual deb kernel optional
+ linux-omap deb kernel optional
+ linux-server deb kernel optional
+ linux-signed-generic deb kernel optional
+ linux-signed-image-generic deb kernel optional
+ linux-source deb devel optional
+ linux-tools deb kernel optional
+ linux-virtual deb kernel optional
+Checksums-Sha1:
+ 444489129ae2e6cd717a9c33190dd33a729bc895 3228 linux-meta_3.10.0.6.15.dsc
+ 52d217cd3c02d4a5b7dc4592b3c92e290ce7e439 11925 linux-meta_3.10.0.6.15.tar.gz
+Checksums-Sha256:
+ 44b9d08957fbb91c145b9497e40c231fab3443cac7395848a76f06d827566026 3228 linux-meta_3.10.0.6.15.dsc
+ e5235f4fd0b6649e0bc0e5f5fe6f6ccf9db1053b0083c0e45a44c82ed407b803 11925 linux-meta_3.10.0.6.15.tar.gz
+
 Package: linux-ppc
 Binary: linux-ppc-source-3.10.0, linux-ppc-doc, linux-ppc-tools-common, linux-ppc-headers-3.10.0-0, linux-ppc-tools-3.10.0-0, linux-image-3.10.0-0-powerpc-e500, linux-image-extra-3.10.0-0-powerpc-e500, linux-headers-3.10.0-0-powerpc-e500, linux-image-3.10.0-0-powerpc-e500-dbgsym, linux-image-3.10.0-0-powerpc-e500mc, linux-image-extra-3.10.0-0-powerpc-e500mc, linux-headers-3.10.0-0-powerpc-e500mc, linux-image-3.10.0-0-powerpc-e500mc-dbgsym, linux-image-3.10.0-0-powerpc-smp, linux-image-extra-3.10.0-0-powerpc-smp, linux-headers-3.10.0-0-powerpc-smp, linux-image-3.10.0-0-powerpc-smp-dbgsym, linux-image-3.10.0-0-powerpc64-smp, linux-image-extra-3.10.0-0-powerpc64-smp, linux-headers-3.10.0-0-powerpc64-smp, linux-image-3.10.0-0-powerpc64-smp-dbgsym, kernel-image-3.10.0-0-powerpc-smp-di, nic-modules-3.10.0-0-powerpc-smp-di, nic-shared-modules-3.10.0-0-powerpc-smp-di, ppp-modules-3.10.0-0-powerpc-smp-di, pata-modules-3.10.0-0-powerpc-smp-di,
  firewire-core-modules-3.10.0-0-powerpc-smp-di, scsi-modules-3.10.0-0-powerpc-smp-di, plip-modules-3.10.0-0-powerpc-smp-di, floppy-modules-3.10.0-0-powerpc-smp-di, fat-modules-3.10.0-0-powerpc-smp-di, nfs-modules-3.10.0-0-powerpc-smp-di, md-modules-3.10.0-0-powerpc-smp-di, multipath-modules-3.10.0-0-powerpc-smp-di, usb-modules-3.10.0-0-powerpc-smp-di, input-modules-3.10.0-0-powerpc-smp-di, mouse-modules-3.10.0-0-powerpc-smp-di, irda-modules-3.10.0-0-powerpc-smp-di, parport-modules-3.10.0-0-powerpc-smp-di, nic-usb-modules-3.10.0-0-powerpc-smp-di, sata-modules-3.10.0-0-powerpc-smp-di, crypto-modules-3.10.0-0-powerpc-smp-di, squashfs-modules-3.10.0-0-powerpc-smp-di, speakup-modules-3.10.0-0-powerpc-smp-di, virtio-modules-3.10.0-0-powerpc-smp-di, fs-core-modules-3.10.0-0-powerpc-smp-di, fs-secondary-modules-3.10.0-0-powerpc-smp-di, storage-core-modules-3.10.0-0-powerpc-smp-di, block-modules-3.10.0-0-powerpc-smp-di, message-modules-3.10.0-0-powerpc-smp-di,
@@ -1124,6 +1199,29 @@ Checksums-Sha256:
  44fc4cb99e531693d625dade2e4d7234cdf6e284e066a4b66b1abaa676befa9a 17446 linux-ppc_3.10.0-0.6.dsc
  384f5cb16ad041abf94d4a1c12de2da1eb5e80b979b8e0db6bfe58477055cf7a 110296798 linux-ppc_3.10.0.orig.tar.gz
  0e99b4bd2ecfc3f09ac3a0d571cb19082508147e22bdb5d166f91ae97b202d11 4367540 linux-ppc_3.10.0-0.6.diff.gz
+
+Package: linux-signed
+Binary: linux-signed-image-3.10.0-6-generic, kernel-signed-image-3.10.0-6-generic-di
+Version: 3.10.0-6.17
+Section: utils
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9), lsb-release, python3, python3-apt, sbsigntool, linux-image-3.10.0-6-generic (>= 3.10.0-6.17)
+Architecture: linux-amd64
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/l/linux-signed
+Files:
+ 4240d4763676d645cee74d9c55bcc649 1713 linux-signed_3.10.0-6.17.dsc
+ 8404d215df870c4e553b5e89d53f9b2d 5963 linux-signed_3.10.0-6.17.tar.gz
+Package-List: 
+ kernel-signed-image-3.10.0-6-generic-di udeb debian-installer extra
+ linux-signed-image-3.10.0-6-generic deb utils optional
+Checksums-Sha1:
+ 5f03edef7d3612de0f90d32445730a7d4cf33b05 1713 linux-signed_3.10.0-6.17.dsc
+ 5950e53c32d6380279d5aa18950944568ba3b1e1 5963 linux-signed_3.10.0-6.17.tar.gz
+Checksums-Sha256:
+ 9c1a2b88d954eb01e289fb2360cd4448776a1cfa89d0429e87b74a961e1cb21a 1713 linux-signed_3.10.0-6.17.dsc
+ 12a47243dbd7db122e693e5801918c2854710a805b1503d20a1f65218ffb8381 5963 linux-signed_3.10.0-6.17.tar.gz
 
 Package: mesa
 Binary: libxatracker1, libxatracker1-dbg, libxatracker-dev, libgbm1, libgbm1-dbg, libgbm-dev, libegl1-mesa, libegl1-mesa-dbg, libegl1-mesa-dev, libegl1-mesa-drivers, libegl1-mesa-drivers-dbg, libopenvg1-mesa, libopenvg1-mesa-dbg, libopenvg1-mesa-dev, libgles1-mesa, libgles1-mesa-dbg, libgles1-mesa-dev, libgles2-mesa, libgles2-mesa-dbg, libgles2-mesa-dev, libglapi-mesa, libglapi-mesa-dbg, libgl1-mesa-glx, libgl1-mesa-glx-dbg, libgl1-mesa-dri, libgl1-mesa-dri-dbg, libgl1-mesa-dri-experimental, libgl1-mesa-dri-experimental-dbg, libgl1-mesa-dev, mesa-common-dev, libosmesa6, libosmesa6-dev
