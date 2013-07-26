@@ -1049,6 +1049,47 @@ Checksums-Sha256:
  384f5cb16ad041abf94d4a1c12de2da1eb5e80b979b8e0db6bfe58477055cf7a 110296798 linux-ppc_3.10.0.orig.tar.gz
  0e99b4bd2ecfc3f09ac3a0d571cb19082508147e22bdb5d166f91ae97b202d11 4367540 linux-ppc_3.10.0-0.6.diff.gz
 
+Package: lvm2
+Binary: lvm2, lvm2-udeb, libdevmapper-dev, libdevmapper1.02.1, libdevmapper1.02.1-udeb, dmsetup, dmsetup-udeb, libdevmapper-event1.02.1, dmeventd, liblvm2app2.2, liblvm2cmd2.02, liblvm2-dev
+Version: 2.02.98-1ubuntu3
+Section: admin
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Build-Depends: dpkg-dev (>= 1.16.1~), debhelper (>= 8.1.3~), automake, libreadline-gplv2-dev, libselinux1-dev, libudev-dev, pkg-config
+Architecture: any
+Standards-Version: 3.9.1
+Format: 3.0 (quilt)
+Directory: pool/main/l/lvm2
+Files:
+ 716cb2176f3712d3748af0fcd6da5dd8 2698 lvm2_2.02.98-1ubuntu3.dsc
+ f8ed4a225ae7c07f07f7081f2971ba1f 1236643 lvm2_2.02.98.orig.tar.gz
+ c3afac92a34c37b919d41a9288bf072e 50197 lvm2_2.02.98-1ubuntu3.debian.tar.gz
+Uploaders: Bastian Blank <waldi@debian.org>
+Homepage: http://sources.redhat.com/lvm2/
+Package-List: 
+ dmeventd deb admin optional
+ dmsetup deb admin optional
+ dmsetup-udeb udeb debian-installer optional
+ libdevmapper-dev deb libdevel optional
+ libdevmapper-event1.02.1 deb libs optional
+ libdevmapper1.02.1 deb libs optional
+ libdevmapper1.02.1-udeb udeb debian-installer optional
+ liblvm2-dev deb libdevel optional
+ liblvm2app2.2 deb libs optional
+ liblvm2cmd2.02 deb libs optional
+ lvm2 deb admin optional
+ lvm2-udeb udeb debian-installer optional
+Checksums-Sha1:
+ 104df9d2017e04616274f8588970468c5782b1ee 2698 lvm2_2.02.98-1ubuntu3.dsc
+ 052f350a1e3bd927dd39cb4a18b049a0a4c7de0d 1236643 lvm2_2.02.98.orig.tar.gz
+ 128f88f55acdbff83c48462d10889fb8c5f17ba4 50197 lvm2_2.02.98-1ubuntu3.debian.tar.gz
+Checksums-Sha256:
+ c39ee26fc583f14afcf328b1ddad649ddbefdf07e8a5cc57ca3367d10d92ec45 2698 lvm2_2.02.98-1ubuntu3.dsc
+ b505a0b4bbbbf5f0ce4d9148295bb7a02f6827e443d3c84f9cbaf54bc92427c7 1236643 lvm2_2.02.98.orig.tar.gz
+ f2b655b2ab22e00d5f9e18d40434ca354a89458d132b91f40bd2ff3e0987d49a 50197 lvm2_2.02.98-1ubuntu3.debian.tar.gz
+Debian-Vcs-Browser: http://svn.debian.org/wsvn/pkg-lvm/lvm2/trunk/
+Debian-Vcs-Svn: svn://svn.debian.org/pkg-lvm/lvm2/trunk/
+
 Package: mesa
 Binary: libxatracker1, libxatracker1-dbg, libxatracker-dev, libgbm1, libgbm1-dbg, libgbm-dev, libegl1-mesa, libegl1-mesa-dbg, libegl1-mesa-dev, libegl1-mesa-drivers, libegl1-mesa-drivers-dbg, libopenvg1-mesa, libopenvg1-mesa-dbg, libopenvg1-mesa-dev, libgles1-mesa, libgles1-mesa-dbg, libgles1-mesa-dev, libgles2-mesa, libgles2-mesa-dbg, libgles2-mesa-dev, libglapi-mesa, libglapi-mesa-dbg, libgl1-mesa-glx, libgl1-mesa-glx-dbg, libgl1-mesa-dri, libgl1-mesa-dri-dbg, libgl1-mesa-dri-experimental, libgl1-mesa-dri-experimental-dbg, libgl1-mesa-dev, mesa-common-dev, libosmesa6, libosmesa6-dev
 Version: 9.1.4-0ubuntu5
@@ -1518,36 +1559,6 @@ Checksums-Sha256:
  e962c27a294f6dd57a32fdc493e32c16d24687035f03f1140c491fb8c12ce170 2987756 squid3_3.3.4.orig.tar.bz2
  1831a16ae96eabcc97604d16d2af11ae58aeec2770b91d04ee4f9e4a5cd19266 41602 squid3_3.3.4-1ubuntu1.debian.tar.gz
 Testsuite: autopkgtest
-
-Package: strace
-Binary: strace, strace64, strace-udeb
-Version: 4.8-1ubuntu1
-Priority: standard
-Section: utils
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Frederik Schüler <fs@debian.org>
-Build-Depends: libc6-dev (>= 2.2.2) [!alpha !ia64], libc6.1-dev (>= 2.2.2) [alpha ia64], gcc-multilib [i386 powerpc s390 sparc], debhelper (>= 7.0.0)
-Architecture: alpha amd64 arm armeb armel armhf hppa i386 ia64 m68k mips mipsel powerpc powerpcspe ppc64 s390 s390x sh4 sparc sparc64
-Standards-Version: 3.8.4
-Format: 3.0 (quilt)
-Directory: pool/main/s/strace
-Files:
- 879f37945df8091da03131026e69213a 1472 strace_4.8-1ubuntu1.dsc
- c575ef43829586801f514fd91bfe7575 441712 strace_4.8.orig.tar.xz
- 049e038b8a6c998495b87a766d18d3c1 12716 strace_4.8-1ubuntu1.debian.tar.gz
-Homepage: http://sourceforge.net/projects/strace/
-Package-List: 
- strace deb utils optional
- strace-udeb udeb debian-installer extra
- strace64 deb utils extra
-Checksums-Sha1:
- a91e6899262c48fe79baa2480cdeea62f71b47c3 1472 strace_4.8-1ubuntu1.dsc
- 88c19b900d9cb2931e6ea4cf36e0ae3838f2f698 441712 strace_4.8.orig.tar.xz
- 64a0c63cd6c1b49fb15fe29fd9ac8e8e8a368ed3 12716 strace_4.8-1ubuntu1.debian.tar.gz
-Checksums-Sha256:
- 2f1b3efc3e7ea587d3f91c49ceab6063a932271eedc7848ee96d13b9ac36559e 1472 strace_4.8-1ubuntu1.dsc
- f492291f07a7c805c07a8395cce1ea054a6401ad414f4cc12185672215e1d7f8 441712 strace_4.8.orig.tar.xz
- 2ee7ba89a46f1717cbdc2f97bcdd824172128badd0ea18634ffd4360ac922636 12716 strace_4.8-1ubuntu1.debian.tar.gz
 
 Package: swig2.0
 Binary: swig, swig2.0, swig-examples, swig2.0-examples, swig-doc, swig2.0-doc
