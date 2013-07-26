@@ -72,30 +72,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: cloud-init
-Priority: extra
-Section: admin
-Installed-Size: 853
-Maintainer: Scott Moser <smoser@ubuntu.com>
-Architecture: all
-Version: 0.7.3~bzr849-0ubuntu2
-Replaces: ec2-init (<< 0.5.3)
-Provides: ec2-init
-Depends: cloud-utils, ifupdown (>= 0.6.10ubuntu5), procps, python (>= 2.7.1-0ubuntu2), python-requests (>= 0.8.2), software-properties-common, debconf (>= 0.5) | debconf-2.0, python (<< 2.8), python-boto, python-cheetah, python-configobj, python-json-patch, python-oauth, python-prettytable, python-yaml
-Conflicts: ec2-init (<< 0.5.3)
-Filename: pool/main/c/cloud-init/cloud-init_0.7.3~bzr849-0ubuntu2_all.deb
-Size: 193702
-MD5sum: 82e7015bc9a8abc9d6ed5e47e3fd0b2a
-SHA1: c503ff0224b6b9ef92ddb822823f0ecbc066399b
-SHA256: 283321600eaddd5013817f55ee2f7da8249611b17f8abe15b8756bdb96251944
-Description: Init scripts for cloud instances
-Python-Version: 2.7
-Description-md5: 8719ef0e4178017b7147590b1fde082e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: cloud-image
-
 Package: compiz
 Priority: optional
 Section: x11
@@ -819,29 +795,6 @@ Description-md5: ef51de6b57526dc4a161944678606486
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-
-Package: grub-legacy-ec2
-Priority: extra
-Section: admin
-Installed-Size: 143
-Maintainer: Scott Moser <smoser@ubuntu.com>
-Architecture: all
-Source: cloud-init
-Version: 0.7.3~bzr849-0ubuntu2
-Depends: debconf (>= 1.5.19) | cdebconf, ucf, util-linux (>= 2.15-1), debconf (>= 0.5) | debconf-2.0
-Suggests: grub-legacy-doc
-Conflicts: grub
-Filename: pool/main/c/cloud-init/grub-legacy-ec2_0.7.3~bzr849-0ubuntu2_all.deb
-Size: 24132
-MD5sum: 2815c8d7b51ef00c370b96c6a4314d2b
-SHA1: 9228936be53f840294b63ad6f3f4482ed80e88a9
-SHA256: a51de1811af7073551c9b5b2205a199882a3f70d089726bd3b618de807273c79
-Description: Handles update-grub for ec2 instances
-Description-md5: e5f8ea347000ef0d0aedb42c000e0b9c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: cloud-image
 
 Package: lib32asan0
 Priority: extra
@@ -4693,6 +4646,49 @@ Description-md5: f874501f774adb114ef9f6f908c91fb9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libwhoopsie-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 49
+Maintainer: Evan Dandrea <ev@ubuntu.com>
+Architecture: amd64
+Source: whoopsie
+Version: 0.2.16
+Depends: libwhoopsie0 (= 0.2.16)
+Filename: pool/main/w/whoopsie/libwhoopsie-dev_0.2.16_amd64.deb
+Size: 2236
+MD5sum: e28239799cde402579eab43e783bcbf5
+SHA1: 3480e58544db11be7467d5646a5255038b4c8b7c
+SHA256: 43ef1072ad0c0f7059381e7c5e9e1ee0b3dbabbe6104089f48f8a7f9030b11f1
+Description: Ubuntu error tracker submission - library development files
+Homepage: http://wiki.ubuntu.com/ErrorTracker
+Description-md5: d0cf33cd90c3c6a94ee823de0a47e4ba
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libwhoopsie0
+Priority: optional
+Section: libs
+Installed-Size: 47
+Maintainer: Evan Dandrea <ev@ubuntu.com>
+Architecture: amd64
+Source: whoopsie
+Version: 0.2.16
+Depends: libc6 (>= 2.4), libgcrypt11 (>= 1.4.5), libglib2.0-0 (>= 2.31.6)
+Filename: pool/main/w/whoopsie/libwhoopsie0_0.2.16_amd64.deb
+Size: 8260
+MD5sum: 6fc284ca8bdc2a8593bccde6bfdc997d
+SHA1: 88eed6e74982b16ca6d8a400560b6e749998c168
+SHA256: d408633591bab0ec2309619aa215f1264a1d574d2a24039445dc45d8a8488188
+Description: Ubuntu error tracker submission - shared library
+Homepage: http://wiki.ubuntu.com/ErrorTracker
+Description-md5: 63cc1807f3740284873e13ddff74db44
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntu-gnome-desktop
+
 Package: libx32asan0
 Priority: extra
 Section: libs
@@ -6071,6 +6067,27 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: whoopsie
+Priority: optional
+Section: utils
+Installed-Size: 111
+Maintainer: Evan Dandrea <ev@ubuntu.com>
+Architecture: amd64
+Version: 0.2.16
+Depends: libc6 (>= 2.14), libcurl3 (>= 7.16.2), libglib2.0-0 (>= 2.31.8), libwhoopsie0 (= 0.2.16), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), adduser
+Filename: pool/main/w/whoopsie/whoopsie_0.2.16_amd64.deb
+Size: 26208
+MD5sum: 6f68fe3f94e692e5585fc23ab02b8262
+SHA1: facfa0984cce902d70a7f17f5bbd90e649ae5704
+SHA256: 1f9d13c4a42de056882d7302dcf67fb224926206a473eadc2fe5672af7db379b
+Description: Ubuntu error tracker submission
+Homepage: http://wiki.ubuntu.com/ErrorTracker
+Description-md5: fa531d23f073cbfda1b0fd75a3ff9d11
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntu-gnome-desktop
 
 Package: xserver-common
 Priority: optional
