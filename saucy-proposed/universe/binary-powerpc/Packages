@@ -6720,6 +6720,30 @@ Description-md5: 30e8762797fdfb911d9ca0665f48c0bc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: liblxc0
+Priority: optional
+Section: universe/admin
+Installed-Size: 337
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: lxc
+Version: 0.9.0-0ubuntu18
+Replaces: lxc (<< 0.9.0~alpha3-0ubuntu1~)
+Depends: libapparmor1 (>= 2.6~devel), libc6 (>= 2.17), libcap2 (>= 2.10)
+Pre-Depends: multiarch-support
+Breaks: lxc (<< 0.9.0~alpha3-0ubuntu1~)
+Filename: pool/universe/l/lxc/liblxc0_0.9.0-0ubuntu18_powerpc.deb
+Size: 102106
+MD5sum: a50ce9f7ead9493594c9fb3141ca53e4
+SHA1: e6b62eceeff590a85ad2762622d90903ddac3cbc
+SHA256: 4dca8f780dd5ea7155075912422d5fbcad4d1ba66bc46b5b9d1b4ba76813c3bd
+Description: Linux Containers userspace tools (library)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: d757397b1a93a5bea5c72032f3ef485d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
 Package: libminc-dev
 Priority: optional
 Section: universe/libdevel
@@ -8488,6 +8512,93 @@ Description-md5: fa0c0f5531d9b0f9865a460f8a19e168
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: lxc
+Priority: optional
+Section: universe/admin
+Installed-Size: 481
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Version: 0.9.0-0ubuntu18
+Depends: adduser, apparmor, bridge-utils, dnsmasq-base, iptables, liblxc0 (= 0.9.0-0ubuntu18), rsync, python3, python3-lxc, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.8)
+Recommends: cgroup-lite | cgroup-bin, libcap2-bin, lxc-templates (>= 0.8.0~rc1-4ubuntu43), openssl
+Suggests: btrfs-tools, lvm2, lxctl
+Filename: pool/universe/l/lxc/lxc_0.9.0-0ubuntu18_powerpc.deb
+Size: 116828
+MD5sum: a179d185836ad6454b30d86334a63a23
+SHA1: 5fe23a4e41d9f814c399b1944998dba41aa4a427
+SHA256: 3842a7ad5891e6bd5fbdea78b75bad5f12bd031243e28fd98fa1d0e0f4269be5
+Description: Linux Containers userspace tools
+Homepage: http://lxc.sourceforge.net/
+Description-md5: 4ece0dffd153c29e95ffdb89f8238dfc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
+Package: lxc-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 578
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: lxc
+Version: 0.9.0-0ubuntu18
+Depends: lxc (= 0.9.0-0ubuntu18), lxc-dev (= 0.9.0-0ubuntu18)
+Filename: pool/universe/l/lxc/lxc-dbg_0.9.0-0ubuntu18_powerpc.deb
+Size: 363250
+MD5sum: f0397241fbc10360be7a7da18031c3e0
+SHA1: 3580d5731e4ca1536161f236566e86aa7f7fba4d
+SHA256: 4b4e903e2de852c6839360d23926583c55c7993a0483b7e3d71d923a9cd00ae8
+Description: Linux Containers userspace tools (debug)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: 9ec9c23e26368a478bce79545cfbb782
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: lxc-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 128
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: lxc
+Version: 0.9.0-0ubuntu18
+Depends: lxc (= 0.9.0-0ubuntu18)
+Filename: pool/universe/l/lxc/lxc-dev_0.9.0-0ubuntu18_powerpc.deb
+Size: 13454
+MD5sum: 158a58e454b34f1c16e772c7e49a0dcc
+SHA1: d8bff406de083957bdfa8a47cb8c58945c3632c4
+SHA256: ba2c0ce4897d3574dc3f76525a7da02bf3b2e40ff4c7a0baa8c2a854cd9b168b
+Description: Linux Containers userspace tools (development)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: c719178b7e79ce1ed39519707c589961
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: lxc-templates
+Priority: optional
+Section: universe/admin
+Installed-Size: 198
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: lxc
+Version: 0.9.0-0ubuntu18
+Replaces: lxc (<< 0.8.0~rc1-4ubuntu43)
+Depends: lxc (>= 0.8.0~rc1-4ubuntu43)
+Recommends: cloud-utils, debootstrap | cdebootstrap, openssl, rsync
+Suggests: qemu-user-static
+Breaks: lxc (<< 0.8.0~rc1-4ubuntu43)
+Filename: pool/universe/l/lxc/lxc-templates_0.9.0-0ubuntu18_all.deb
+Size: 33070
+MD5sum: db7785f2df935b6d5cf5512030297dd9
+SHA1: e46dee521204a03fb3cc7994af113fc6ce108fd8
+SHA256: 2437966b2aa05a237156cf2903064e499fc2fd8652659773369a8d0c9c2f3dc6
+Description: Linux Containers userspace tools (development)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: b7b10bcdeb3296f4cf9e69a256d87261
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
 Package: maxima-doc
 Priority: optional
 Section: universe/math
@@ -9963,6 +10074,28 @@ Homepage: https://launchpad.net/gearman-interface
 Description-md5: d1889bc686d63e610b4893248c4c52bc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: python3-lxc
+Priority: optional
+Section: universe/python
+Installed-Size: 112
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: lxc
+Version: 0.9.0-0ubuntu18
+Depends: liblxc0 (= 0.9.0-0ubuntu18), python3, libc6 (>= 2.4)
+Recommends: lxc-templates (>= 0.8.0~rc1-4ubuntu43)
+Filename: pool/universe/l/lxc/python3-lxc_0.9.0-0ubuntu18_powerpc.deb
+Size: 13074
+MD5sum: a0f552868378496955502f6ff18b881e
+SHA1: 0fa69fede4df847e5f23f09dcb8951b9356f2280
+SHA256: c1629dfb0cab418f52e491979b42b95e8442acf55f05785b9f4362fdf074ada0
+Description: Linux Containers userspace tools (Python 3.x bindings)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: ee623a31db200104a7207d9de42b8f04
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
 
 Package: rainbows
 Priority: optional
