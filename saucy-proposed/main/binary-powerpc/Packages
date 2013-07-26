@@ -1,3 +1,55 @@
+Package: apache2
+Priority: optional
+Section: web
+Installed-Size: 454
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: powerpc
+Version: 2.4.6-2ubuntu1
+Replaces: apache2.2-common
+Depends: lsb-base, procps, perl, mime-support, apache2-bin (= 2.4.6-2ubuntu1), apache2-data (= 2.4.6-2ubuntu1)
+Recommends: ssl-cert
+Suggests: www-browser, apache2-doc, apache2-suexec-pristine | apache2-suexec-custom, ufw, apache2-utils
+Conflicts: apache2.2-common
+Filename: pool/main/a/apache2/apache2_2.4.6-2ubuntu1_powerpc.deb
+Size: 86674
+MD5sum: 00215acb1aae925623d99363234529b0
+SHA1: cf35ecb926d6a9fce5a26a34a9e1b0dbbed276d5
+SHA256: e824b60e41e043995b9844c997fcacb4714ed408506324870f421a1efef6ca58
+Description: Apache HTTP Server
+Homepage: http://httpd.apache.org/
+Description-md5: 2afad91d50cbfeff68d0e3436b9ce235
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: apache2-bin
+Priority: optional
+Section: httpd
+Installed-Size: 3183
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: powerpc
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Replaces: apache2-mpm-event (<< 2.3~), apache2-mpm-itk (<< 2.3~), apache2-mpm-prefork (<< 2.3~), apache2-mpm-worker (<< 2.3~), apache2.2-bin (<< 2.3~), apache2.2-common, libapache2-mod-macro (<< 1:2.4.6-1~), libapache2-mod-proxy-html (<< 1:2.4.4-2~)
+Provides: apache2-api-20120211, httpd, httpd-cgi
+Depends: libapr1 (>= 1.4.2), libaprutil1 (>= 1.5.0), libaprutil1-dbd-sqlite3 | libaprutil1-dbd-mysql | libaprutil1-dbd-odbc | libaprutil1-dbd-pgsql | libaprutil1-dbd-freetds, libaprutil1-ldap, libc6 (>= 2.4), libcap2 (>= 2.10), libldap-2.4-2 (>= 2.4.7), libpcre3 (>= 8.10), libssl1.0.0 (>= 1.0.1), libxml2 (>= 2.7.4), zlib1g (>= 1:1.1.4), perl
+Suggests: www-browser, apache2-doc, apache2-suexec-pristine | apache2-suexec-custom
+Conflicts: apache2.2-bin (<< 2.3~), apache2.2-common
+Breaks: libapache2-mod-macro (<< 1:2.4.6-1~), libapache2-mod-proxy-html (<< 1:2.4.4-2~)
+Filename: pool/main/a/apache2/apache2-bin_2.4.6-2ubuntu1_powerpc.deb
+Size: 720274
+MD5sum: a3c83c8c25803d1d19432d8a8f031b04
+SHA1: f4f859de77640e6c5bc84f8677588f4c8bb95f7e
+SHA256: 7c3cfb568cdcf61da9c9020df2590456e1be08de0e2b039305fb5a5be3cfd3b0
+Description: Apache HTTP Server (binary files and modules)
+Homepage: http://httpd.apache.org/
+Description-md5: 768126d098ab290dd8fd72553414fb1c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
 Package: apache2-data
 Priority: optional
 Section: httpd
@@ -21,6 +73,51 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: apache2-dbg
+Priority: extra
+Section: debug
+Installed-Size: 7427
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: powerpc
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Depends: apache2, apache2-bin (= 2.4.6-2ubuntu1)
+Filename: pool/main/a/apache2/apache2-dbg_2.4.6-2ubuntu1_powerpc.deb
+Size: 1950760
+MD5sum: faef0ba19d0017dae6f40a1013bd798e
+SHA1: 34f77cc3207b82079bd4a24d771411b90ee9f7db
+SHA256: 88d71147a0eda658e212d09b6ff5fc16bb64075196eab3f95d767efd548b7ebc
+Description: Apache debugging symbols
+Homepage: http://httpd.apache.org/
+Description-md5: 9631d879f838030d45d1d561f55abee1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apache2-dev
+Priority: optional
+Section: httpd
+Installed-Size: 908
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: powerpc
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Replaces: apache2-prefork-dev, apache2-threaded-dev
+Provides: apache2-prefork-dev, apache2-threaded-dev, dh-apache2
+Depends: openssl, libapr1-dev, libaprutil1-dev, debhelper (>= 9), perl
+Conflicts: apache2-prefork-dev, apache2-threaded-dev
+Filename: pool/main/a/apache2/apache2-dev_2.4.6-2ubuntu1_powerpc.deb
+Size: 164516
+MD5sum: 683dc47b944f7367f987780311ea5bac
+SHA1: 3710ba8d4f5a768d2335f02bd96dfa32bc68d752
+SHA256: ed7f97e6d40564e918103bd039fba1eeeaadd25e35228f953e196a623cd966d5
+Description: Apache HTTP Server (development headers)
+Homepage: http://httpd.apache.org/
+Description-md5: 33ccaee882001bf3dff7d3a2f1df3b30
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: apache2-doc
 Priority: optional
 Section: doc
@@ -39,6 +136,138 @@ SHA256: 72a0464bdd32b327f0775593e498422912699d966e120be4010b908a79f9b608
 Description: Apache HTTP Server (on-site documentation)
 Homepage: http://httpd.apache.org/
 Description-md5: 35791cd71bc2556ea2bde4e6294a5ad3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apache2-mpm-event
+Priority: optional
+Section: web
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: powerpc
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Depends: apache2 (= 2.4.6-2ubuntu1)
+Filename: pool/main/a/apache2/apache2-mpm-event_2.4.6-2ubuntu1_powerpc.deb
+Size: 1446
+MD5sum: e85f4e9f13a20faafb25d7677d42102a
+SHA1: 5e8cfc252f11e3a107f745c9dbbbc78bf84e4f0a
+SHA256: a6c7fe1606b4c8dcdf87402aad1742f2b40f282e5dff5a69104753e1e38b7b0a
+Description: transitional event MPM package for apache2
+Homepage: http://httpd.apache.org/
+Description-md5: e8836e8c2c34524fb11cc83011803e4e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apache2-mpm-prefork
+Priority: optional
+Section: net
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: powerpc
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Depends: apache2 (= 2.4.6-2ubuntu1)
+Filename: pool/main/a/apache2/apache2-mpm-prefork_2.4.6-2ubuntu1_powerpc.deb
+Size: 1448
+MD5sum: e3b41eb74c38ad9c8fac9c3a32d5ff3f
+SHA1: d6ac938ee2902a4d2efe99569f6ab057a47f9322
+SHA256: a25a6d0f6fdaf67b03d76605413e8b075fdea112afa3fca4ee008bf543f91ac0
+Description: transitional prefork MPM package for apache2
+Homepage: http://httpd.apache.org/
+Description-md5: 2a27f385dd2020da306403c3748102b7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: apache2-mpm-worker
+Priority: optional
+Section: net
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: powerpc
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Depends: apache2 (= 2.4.6-2ubuntu1)
+Filename: pool/main/a/apache2/apache2-mpm-worker_2.4.6-2ubuntu1_powerpc.deb
+Size: 1448
+MD5sum: 695dc0c59d61c8452b154cff92d94ed8
+SHA1: 5e322e006ff056d7567609af04c62fd36d9625ff
+SHA256: 6a7391be6b29029669489fd5b7eff1d02dad8ed4868aad93520b8ee074fad5bc
+Description: transitional worker MPM package for apache2
+Homepage: http://httpd.apache.org/
+Description-md5: 4ed48ca29196089175ff0720834d5528
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apache2-suexec-pristine
+Priority: optional
+Section: httpd
+Installed-Size: 141
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: powerpc
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Replaces: apache2-suexec (<< 2.3~)
+Provides: apache2-suexec
+Depends: libc6 (>= 2.4), apache2-bin
+Breaks: apache2-suexec (<< 2.3~)
+Filename: pool/main/a/apache2/apache2-suexec-pristine_2.4.6-2ubuntu1_powerpc.deb
+Size: 13454
+MD5sum: a3063c5d1b074d5b20a3fb73350a8d66
+SHA1: 5d13676ada489cec6d2abfe4a881035db69cb550
+SHA256: 853339d124f9668ed31dcbed6028e3ccf97226156dd988708ccd8fb5e15614d8
+Description: Apache HTTP Server standard suexec program for mod_suexec
+Homepage: http://httpd.apache.org/
+Description-md5: 86a22eab8bdd72ac81f3d8aab53bf001
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apache2-utils
+Priority: optional
+Section: net
+Installed-Size: 338
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: powerpc
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Depends: libapr1 (>= 1.4.2), libaprutil1 (>= 1.5.0), libc6 (>= 2.4), libssl1.0.0 (>= 1.0.1)
+Filename: pool/main/a/apache2/apache2-utils_2.4.6-2ubuntu1_powerpc.deb
+Size: 83024
+MD5sum: 2123a1412b3038a9a565ff153fa4838e
+SHA1: 5941eb02b33d70ddac4504aefcfb877bb3377fe5
+SHA256: 6f620916ad4845ecf97afbb376e12be6b044ad0fa838c69ea8094c6d41f1344e
+Description: Apache HTTP Server (utility programs for web servers)
+Multi-Arch: foreign
+Homepage: http://httpd.apache.org/
+Description-md5: 3b2c95f65bdd470106fa63104997fa7f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apache2.2-bin
+Priority: optional
+Section: httpd
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: powerpc
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Depends: apache2-bin (>= 2.3~)
+Breaks: gnome-user-share (<< 3.8.0-2~), libapache2-mod-dnssd (<< 0.6-3.1~)
+Filename: pool/main/a/apache2/apache2.2-bin_2.4.6-2ubuntu1_powerpc.deb
+Size: 1472
+MD5sum: f5c016199780e1cd2219764fa6de56d4
+SHA1: 96f3795e3c325f85bbd889ba9907d1b9a29d802f
+SHA256: 4d0728cd34060e78a53a9d5ee08d575e0f53f4f515c36149c63631f5b0a9bae0
+Description: Transitional package for apache2-bin
+Homepage: http://httpd.apache.org/
+Description-md5: 36c293ebb5b77f14b95215fd3ffa7760
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -378,31 +607,6 @@ Homepage: http://gcc.gnu.org/
 Description-md5: 22a9ba311e91d8d744a9e4df2030d2bf
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: dmsetup
-Priority: important
-Section: admin
-Installed-Size: 177
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: powerpc
-Source: lvm2 (2.02.98-1ubuntu3)
-Version: 2:1.02.77-1ubuntu3
-Depends: libc6 (>= 2.4), libdevmapper1.02.1 (>= 2:1.02.77), initramfs-tools, util-linux (>> 2.16), udev (>> 141-2)
-Conflicts: devicekit-disks (<< 009)
-Breaks: udev (<< 138-1)
-Filename: pool/main/l/lvm2/dmsetup_1.02.77-1ubuntu3_powerpc.deb
-Size: 41416
-MD5sum: 7340d9b30abf576fdefe1c440ec66890
-SHA1: 8d84d483455e5b8125979c7b8e5ef909471a0f97
-SHA256: 030086eebff0aad8f2ea9e555858bbe8f1c6b7ea01d8cccfd06eddafd1ab39b9
-Description: Linux Kernel Device Mapper userspace library
-Multi-Arch: foreign
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: 808f3b8b96c64d5f095bd9a6d6d9c928
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: minimal
 
 Package: ffmpeg
 Priority: optional
@@ -1297,6 +1501,48 @@ SHA1: de1cafa97833712d920c05065d5df1b1201f03eb
 SHA256: 345dc3c50a6c496e3f3e294a92bb348993061a6ac76eef76bd10bc09def2ea33
 Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libapache2-mod-macro
+Priority: extra
+Section: web
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: powerpc
+Source: apache2 (2.4.6-2ubuntu1)
+Version: 1:2.4.6-2ubuntu1
+Depends: apache2-bin (>= 2.3~)
+Filename: pool/main/a/apache2/libapache2-mod-macro_2.4.6-2ubuntu1_powerpc.deb
+Size: 1450
+MD5sum: 817fed2ddcee95d4bbfe5411dad3ca9a
+SHA1: 53053af69c0120023c4036c0d9193cbc85f52a45
+SHA256: 7aed0dce737266f0c8643c237833846d06d46abe51c20cdf6747d52c1de916fe
+Description: Transitional package for apache2-bin
+Homepage: http://httpd.apache.org/
+Description-md5: 36c293ebb5b77f14b95215fd3ffa7760
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libapache2-mod-proxy-html
+Priority: extra
+Section: oldlibs
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: powerpc
+Source: apache2 (2.4.6-2ubuntu1)
+Version: 1:2.4.6-2ubuntu1
+Depends: apache2-bin (>= 2.3~)
+Filename: pool/main/a/apache2/libapache2-mod-proxy-html_2.4.6-2ubuntu1_powerpc.deb
+Size: 1460
+MD5sum: 25f221bbd6e83ae42c3cb9e4767d2570
+SHA1: cb901d969747c3dedec8b4f72b567e93448f7735
+SHA256: 52f6a88eab359194b78005bab4974a2e29c7ac5df66b611ef4fce8d669f56a35
+Description: Transitional package for apache2-bin
+Homepage: http://httpd.apache.org/
+Description-md5: 36c293ebb5b77f14b95215fd3ffa7760
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -2298,79 +2544,6 @@ Description: Compiz window decoration library - development files
 Description-md5: 6a66c25de23fa410e973153207110423
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: libdevmapper-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 134
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: powerpc
-Source: lvm2 (2.02.98-1ubuntu3)
-Version: 2:1.02.77-1ubuntu3
-Depends: libdevmapper1.02.1 (= 2:1.02.77-1ubuntu3), libdevmapper-event1.02.1 (= 2:1.02.77-1ubuntu3), libselinux1-dev, libudev-dev
-Filename: pool/main/l/lvm2/libdevmapper-dev_1.02.77-1ubuntu3_powerpc.deb
-Size: 18696
-MD5sum: 543c289f49a73af2878118e78632e1a5
-SHA1: af7a6f892841ed4b30c749f1f4410d3c051cb9eb
-SHA256: b6e21cec8eb3aa32e5811ecf58013b9b9feacdd5f1304a046c4f8368e63b8d1a
-Description: Linux Kernel Device Mapper header files
-Multi-Arch: same
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: cd4f4f9d4fde600f0d1e37da66d54c85
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdevmapper-event1.02.1
-Priority: optional
-Section: libs
-Installed-Size: 85
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: powerpc
-Source: lvm2 (2.02.98-1ubuntu3)
-Version: 2:1.02.77-1ubuntu3
-Depends: libc6 (>= 2.15), libdevmapper1.02.1 (>= 2:1.02.63)
-Pre-Depends: multiarch-support
-Breaks: dmeventd (<< 2.02.95-4ubuntu1)
-Filename: pool/main/l/lvm2/libdevmapper-event1.02.1_1.02.77-1ubuntu3_powerpc.deb
-Size: 11472
-MD5sum: 9187e59f272fed8b8f5616ba182d8b49
-SHA1: a515d9af18c66713e9dc3e8c0329954709578df6
-SHA256: 42c62e0851f9f11d3ebfdcc21d553be2c0c65432e77de3ec18d42f058c7d26d8
-Description: Linux Kernel Device Mapper event support library
-Multi-Arch: same
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: 13d66a8a0057f6e6c6d6c2b25188a38d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-live, ubuntu-usb-live, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-live, edubuntu-desktop-gnome, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-video, ubuntustudio-graphics, ubuntu-gnome-live
-
-Package: libdevmapper1.02.1
-Priority: important
-Section: libs
-Installed-Size: 323
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: powerpc
-Source: lvm2 (2.02.98-1ubuntu3)
-Version: 2:1.02.77-1ubuntu3
-Depends: libc6 (>= 2.4), libselinux1 (>= 1.32), libudev1 (>= 183), dmsetup (>= 2:1.02.77-1ubuntu3)
-Pre-Depends: multiarch-support
-Conflicts: libdevmapper1.02
-Breaks: lvm2 (<< 2.02.66)
-Filename: pool/main/l/lvm2/libdevmapper1.02.1_1.02.77-1ubuntu3_powerpc.deb
-Size: 99216
-MD5sum: 20536cc431850cc66b7e2bba3808eed2
-SHA1: d6433db9ba8632d155b355012c577b9f78d8dacc
-SHA256: ca260d9b3b43328257647bbf31a88d495c05ee1ddcd92176a859efcecef71467
-Description: Linux Kernel Device Mapper userspace library
-Multi-Arch: same
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: f57d8a0a3606e56cb6cc150cb7a19e50
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: minimal
 
 Package: libegl1-mesa
 Priority: optional
@@ -3385,74 +3558,6 @@ SHA256: 6c5bd94e94e9d54d99147f6a0f0fb7b9ffbd09e6f39ccb55bc0cec5d8527a766
 Description: Development file for pacemaker's lrmd library
 Homepage: http://clusterlabs.org/
 Description-md5: 863ba4bcb2d8fb0a246a702bdbb9631e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: liblvm2-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 153
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: powerpc
-Source: lvm2
-Version: 2.02.98-1ubuntu3
-Depends: liblvm2app2.2 (= 2.02.98-1ubuntu3), liblvm2cmd2.02 (= 2.02.98-1ubuntu3), libdevmapper-dev
-Filename: pool/main/l/lvm2/liblvm2-dev_2.02.98-1ubuntu3_powerpc.deb
-Size: 11062
-MD5sum: f0a089b190d93d555f5313c7ed19d9f0
-SHA1: 9c99f98567af1bc3b5d66b6153eeca82836f0c26
-SHA256: fa4d175dd6b4430162ec3c3a0e8a0ab4834bcde9d5398afe12d090cceb545f05
-Description: LVM2 libraries - development files
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: 9355c51a0fa4f1589861097790213f32
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: liblvm2app2.2
-Priority: optional
-Section: libs
-Installed-Size: 816
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: powerpc
-Source: lvm2
-Version: 2.02.98-1ubuntu3
-Depends: libc6 (>= 2.4), libdevmapper-event1.02.1 (>= 2:1.02.74), libdevmapper1.02.1 (>= 2:1.02.77), libudev1 (>= 183)
-Pre-Depends: multiarch-support
-Filename: pool/main/l/lvm2/liblvm2app2.2_2.02.98-1ubuntu3_powerpc.deb
-Size: 288112
-MD5sum: 51e604700ddd594f4f6b2cbc6bb66e99
-SHA1: 12d5be54b1bac90ccd30de9e9cec45aca4c9bf64
-SHA256: 1b594cbdb9496167bb376c1811bad953f259b1e053fbb45afcf4d2f292338323
-Description: LVM2 application library
-Multi-Arch: same
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: 577f83d733f4a66a06fad9f3866d0316
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, ubuntustudio-video, ubuntustudio-graphics
-
-Package: liblvm2cmd2.02
-Priority: optional
-Section: libs
-Installed-Size: 1103
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: powerpc
-Source: lvm2
-Version: 2.02.98-1ubuntu3
-Depends: libc6 (>= 2.4), libdevmapper-event1.02.1 (>= 2:1.02.74), libdevmapper1.02.1 (>= 2:1.02.77), libudev1 (>= 183)
-Pre-Depends: multiarch-support
-Filename: pool/main/l/lvm2/liblvm2cmd2.02_2.02.98-1ubuntu3_powerpc.deb
-Size: 399776
-MD5sum: 54908fe2353ed2824334fb1f4233ad2c
-SHA1: c09f336f5624d7287125f409498a149e71b55da8
-SHA256: 27c9ff351916f2f2b5c1c3be957226eb0423c0b6243b85af86383ef10d53eaf3
-Description: LVM2 command library
-Multi-Arch: same
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: 8f4d76592086bd210b07fd8b6370be43
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -4579,29 +4684,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Build-Essential: yes
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: lvm2
-Priority: optional
-Section: admin
-Installed-Size: 1268
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: powerpc
-Version: 2.02.98-1ubuntu3
-Depends: libc6 (>= 2.4), libdevmapper-event1.02.1 (>= 2:1.02.74), libdevmapper1.02.1 (>= 2:1.02.77), libreadline5 (>= 5.2), libudev1 (>= 183), lsb-base, dmsetup (>> 2:1.02.47), initscripts (>= 2.88dsf-13.3), watershed (>= 2)
-Breaks: initramfs-tools (<< 0.99)
-Filename: pool/main/l/lvm2/lvm2_2.02.98-1ubuntu3_powerpc.deb
-Size: 524968
-MD5sum: 5c6616aa44dbbb0336517de5448b0ea6
-SHA1: f5e2bca9d5f88b8c36a17cdf4cf61cab52e33b2c
-SHA256: 751f458913c352c110a653e2169fffe26868a0116b73ad69cde8a5f16abdd970
-Description: Linux Logical Volume Manager
-Multi-Arch: foreign
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: 9df95d102d2b0aad5aff13603ef0cb3f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
 
 Package: mesa-common-dev
 Priority: optional
