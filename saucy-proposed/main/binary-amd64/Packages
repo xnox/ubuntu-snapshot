@@ -1,3 +1,288 @@
+Package: apache2
+Priority: optional
+Section: web
+Installed-Size: 454
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Version: 2.4.6-2ubuntu1
+Replaces: apache2.2-common
+Depends: lsb-base, procps, perl, mime-support, apache2-bin (= 2.4.6-2ubuntu1), apache2-data (= 2.4.6-2ubuntu1)
+Recommends: ssl-cert
+Suggests: www-browser, apache2-doc, apache2-suexec-pristine | apache2-suexec-custom, ufw, apache2-utils
+Conflicts: apache2.2-common
+Filename: pool/main/a/apache2/apache2_2.4.6-2ubuntu1_amd64.deb
+Size: 86650
+MD5sum: 04e6ecfb2d10610e5cc98d001e53eaa0
+SHA1: b0feb234a3aff3d0cb4cad685b27bd3d0c34e240
+SHA256: edc1fefac3411ca7797dcfea7e23cd1293cc6e5461b21392b752b70cd6e11f0b
+Description: Apache HTTP Server
+Homepage: http://httpd.apache.org/
+Description-md5: 2afad91d50cbfeff68d0e3436b9ce235
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: apache2-bin
+Priority: optional
+Section: httpd
+Installed-Size: 3316
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Replaces: apache2-mpm-event (<< 2.3~), apache2-mpm-itk (<< 2.3~), apache2-mpm-prefork (<< 2.3~), apache2-mpm-worker (<< 2.3~), apache2.2-bin (<< 2.3~), apache2.2-common, libapache2-mod-macro (<< 1:2.4.6-1~), libapache2-mod-proxy-html (<< 1:2.4.4-2~)
+Provides: apache2-api-20120211, httpd, httpd-cgi
+Depends: libapr1 (>= 1.4.2), libaprutil1 (>= 1.5.0), libaprutil1-dbd-sqlite3 | libaprutil1-dbd-mysql | libaprutil1-dbd-odbc | libaprutil1-dbd-pgsql | libaprutil1-dbd-freetds, libaprutil1-ldap, libc6 (>= 2.14), libcap2 (>= 2.10), libldap-2.4-2 (>= 2.4.7), libpcre3 (>= 8.10), libssl1.0.0 (>= 1.0.1), libxml2 (>= 2.7.4), zlib1g (>= 1:1.1.4), perl
+Suggests: www-browser, apache2-doc, apache2-suexec-pristine | apache2-suexec-custom
+Conflicts: apache2.2-bin (<< 2.3~), apache2.2-common
+Breaks: libapache2-mod-macro (<< 1:2.4.6-1~), libapache2-mod-proxy-html (<< 1:2.4.4-2~)
+Filename: pool/main/a/apache2/apache2-bin_2.4.6-2ubuntu1_amd64.deb
+Size: 843636
+MD5sum: 92d312dc2b1557554be2df59b41f527f
+SHA1: 926f33bd98bd400c294357d11f9f9328d33c7c3c
+SHA256: 2198ca12c72102f8490a52f2fcf5ed990a7d876b4bf2c8736d0e5f84653b7a59
+Description: Apache HTTP Server (binary files and modules)
+Homepage: http://httpd.apache.org/
+Description-md5: 768126d098ab290dd8fd72553414fb1c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: apache2-data
+Priority: optional
+Section: httpd
+Installed-Size: 681
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: all
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Replaces: apache2.2-common
+Conflicts: apache2.2-common
+Filename: pool/main/a/apache2/apache2-data_2.4.6-2ubuntu1_all.deb
+Size: 149202
+MD5sum: 41be1eaa039d02e99c833eeaf566de73
+SHA1: 495f8caabce7cc4511a3f69344bb4a36f67cc0f3
+SHA256: 2118ebc0b420d2de9725f7860a0b187e80f40cce3c23344c35e0c0e828509e07
+Description: Apache HTTP Server (common files)
+Homepage: http://httpd.apache.org/
+Description-md5: 43b9030fc3d3460e30654e95c72c1277
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: apache2-dbg
+Priority: extra
+Section: debug
+Installed-Size: 8305
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Depends: apache2, apache2-bin (= 2.4.6-2ubuntu1)
+Filename: pool/main/a/apache2/apache2-dbg_2.4.6-2ubuntu1_amd64.deb
+Size: 1976034
+MD5sum: 53439a655d4a974b54da38f09f796f21
+SHA1: ea6950bd7f31c330e7722b4a3aa5ab1bb06db6f0
+SHA256: 127c4226e4219e0756827fc323b034c33328f1b19368e3cc1c7603aedfb8d811
+Description: Apache debugging symbols
+Homepage: http://httpd.apache.org/
+Description-md5: 9631d879f838030d45d1d561f55abee1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2-dev
+Priority: optional
+Section: httpd
+Installed-Size: 908
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Replaces: apache2-prefork-dev, apache2-threaded-dev
+Provides: apache2-prefork-dev, apache2-threaded-dev, dh-apache2
+Depends: openssl, libapr1-dev, libaprutil1-dev, debhelper (>= 9), perl
+Conflicts: apache2-prefork-dev, apache2-threaded-dev
+Filename: pool/main/a/apache2/apache2-dev_2.4.6-2ubuntu1_amd64.deb
+Size: 164984
+MD5sum: e40e1de032dec2b84ea5b90723f26e5c
+SHA1: a9ebdae705cf45fdc512e3966f2695dcc63e50d5
+SHA256: e7aefd4361b0c7031b177888b78f7e781fd725bf1ef29b0090e2d4aefdba3ec0
+Description: Apache HTTP Server (development headers)
+Homepage: http://httpd.apache.org/
+Description-md5: 33ccaee882001bf3dff7d3a2f1df3b30
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2-doc
+Priority: optional
+Section: doc
+Installed-Size: 19163
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: all
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Recommends: apache2
+Filename: pool/main/a/apache2/apache2-doc_2.4.6-2ubuntu1_all.deb
+Size: 2604374
+MD5sum: 2b5cae683cdb7b708491aaad7a85fdd3
+SHA1: 0d09c5b810865b3445748dcbba8601de85ee4701
+SHA256: 72a0464bdd32b327f0775593e498422912699d966e120be4010b908a79f9b608
+Description: Apache HTTP Server (on-site documentation)
+Homepage: http://httpd.apache.org/
+Description-md5: 35791cd71bc2556ea2bde4e6294a5ad3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2-mpm-event
+Priority: optional
+Section: web
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Depends: apache2 (= 2.4.6-2ubuntu1)
+Filename: pool/main/a/apache2/apache2-mpm-event_2.4.6-2ubuntu1_amd64.deb
+Size: 1438
+MD5sum: 82802ec5acc2d863fa476cdbc257e95e
+SHA1: 88883209aa5d325aa68fd3d0b707ec32b999dda8
+SHA256: dfd2afbb1910bf69b28ea9743207d665a2bc55356fbe668ac07e647a3ef9394b
+Description: transitional event MPM package for apache2
+Homepage: http://httpd.apache.org/
+Description-md5: e8836e8c2c34524fb11cc83011803e4e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2-mpm-prefork
+Priority: optional
+Section: net
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Depends: apache2 (= 2.4.6-2ubuntu1)
+Filename: pool/main/a/apache2/apache2-mpm-prefork_2.4.6-2ubuntu1_amd64.deb
+Size: 1440
+MD5sum: d9c7c38c8295b43f1ac0cad2fc3aeb50
+SHA1: 081d60121ced10b32c97aa405e70fa73acd034ab
+SHA256: dd79c06d13d01698827be1976a0b012c7c0928394d14be2afdc422d4e2ce05cb
+Description: transitional prefork MPM package for apache2
+Homepage: http://httpd.apache.org/
+Description-md5: 2a27f385dd2020da306403c3748102b7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: apache2-mpm-worker
+Priority: optional
+Section: net
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Depends: apache2 (= 2.4.6-2ubuntu1)
+Filename: pool/main/a/apache2/apache2-mpm-worker_2.4.6-2ubuntu1_amd64.deb
+Size: 1440
+MD5sum: 9c4ba32c8295e19713acd2455927588a
+SHA1: 4011c690423d36e9bb756e89554e9e2a95ca67f7
+SHA256: 58200a784550d8f6458dbc4409a54f0fab7fca410da08b32bd4e42317aa0ab2e
+Description: transitional worker MPM package for apache2
+Homepage: http://httpd.apache.org/
+Description-md5: 4ed48ca29196089175ff0720834d5528
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2-suexec-pristine
+Priority: optional
+Section: httpd
+Installed-Size: 145
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Replaces: apache2-suexec (<< 2.3~)
+Provides: apache2-suexec
+Depends: libc6 (>= 2.3.4), apache2-bin
+Breaks: apache2-suexec (<< 2.3~)
+Filename: pool/main/a/apache2/apache2-suexec-pristine_2.4.6-2ubuntu1_amd64.deb
+Size: 13766
+MD5sum: 3c6f89af8dbe8c99af5531ee279cd9d5
+SHA1: d642cde03e76e0de179be4f3b80b0641fa658ace
+SHA256: 3045720b789b9ecc75958280e72a25b535261e47b692a95aced7f6da59051d5c
+Description: Apache HTTP Server standard suexec program for mod_suexec
+Homepage: http://httpd.apache.org/
+Description-md5: 86a22eab8bdd72ac81f3d8aab53bf001
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2-utils
+Priority: optional
+Section: net
+Installed-Size: 335
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Depends: libapr1 (>= 1.4.2), libaprutil1 (>= 1.5.0), libc6 (>= 2.14), libssl1.0.0 (>= 1.0.1)
+Filename: pool/main/a/apache2/apache2-utils_2.4.6-2ubuntu1_amd64.deb
+Size: 83254
+MD5sum: 931a758e3b61ae5f04daecde7dd7f221
+SHA1: 35b5a41b15d8a328c381e05d5a8ab46da53e7f9e
+SHA256: 6aa0e1400f6ab2502cca768270dfaece477da01a4a332785086f93018e43a5e0
+Description: Apache HTTP Server (utility programs for web servers)
+Multi-Arch: foreign
+Homepage: http://httpd.apache.org/
+Description-md5: 3b2c95f65bdd470106fa63104997fa7f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2.2-bin
+Priority: optional
+Section: httpd
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Source: apache2
+Version: 2.4.6-2ubuntu1
+Depends: apache2-bin (>= 2.3~)
+Breaks: gnome-user-share (<< 3.8.0-2~), libapache2-mod-dnssd (<< 0.6-3.1~)
+Filename: pool/main/a/apache2/apache2.2-bin_2.4.6-2ubuntu1_amd64.deb
+Size: 1468
+MD5sum: cd511e805a1ad0b95d6d8da73be1c184
+SHA1: 1905703c4c56a2b0bfe683c103a76c5ba2613c2d
+SHA256: b11f2f0869c1b2ae37888816a12b53f35f02d144683fb169945e5c4101f57a6a
+Description: Transitional package for apache2-bin
+Homepage: http://httpd.apache.org/
+Description-md5: 36c293ebb5b77f14b95215fd3ffa7760
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: binutils
 Priority: optional
 Section: devel
@@ -1372,6 +1657,50 @@ Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libapache2-mod-macro
+Priority: extra
+Section: web
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Source: apache2 (2.4.6-2ubuntu1)
+Version: 1:2.4.6-2ubuntu1
+Depends: apache2-bin (>= 2.3~)
+Filename: pool/main/a/apache2/libapache2-mod-macro_2.4.6-2ubuntu1_amd64.deb
+Size: 1442
+MD5sum: 52aeed376f7e346d7afe3e34392f9272
+SHA1: 215a6c2dcbabb7aecd29d47cf613bc068955cb5d
+SHA256: d9300217cf1ad6c356f5d19568f4a5551479699be5de1abf9f405a1ed74947b5
+Description: Transitional package for apache2-bin
+Homepage: http://httpd.apache.org/
+Description-md5: 36c293ebb5b77f14b95215fd3ffa7760
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libapache2-mod-proxy-html
+Priority: extra
+Section: oldlibs
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: amd64
+Source: apache2 (2.4.6-2ubuntu1)
+Version: 1:2.4.6-2ubuntu1
+Depends: apache2-bin (>= 2.3~)
+Filename: pool/main/a/apache2/libapache2-mod-proxy-html_2.4.6-2ubuntu1_amd64.deb
+Size: 1452
+MD5sum: 76649e94c82f24eb56fc1c31dce1acf7
+SHA1: 2e3817551ebb0a4398c04da3245281b5d2a98fb4
+SHA256: fb5ec373cd8fdb5299c960465a54aa73d7aebb2a473ffb96442eaede3b3f1f82
+Description: Transitional package for apache2-bin
+Homepage: http://httpd.apache.org/
+Description-md5: 36c293ebb5b77f14b95215fd3ffa7760
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: libasan0
 Priority: optional
@@ -5488,32 +5817,6 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
-Package: login
-Essential: yes
-Priority: required
-Section: admin
-Installed-Size: 1184
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Shadow package maintainers <pkg-shadow-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: shadow
-Version: 1:4.1.5.1-1ubuntu6
-Replaces: manpages-de (<< 0.5-3), manpages-tr (<< 1.0.5), manpages-zh (<< 1.5.1-1)
-Pre-Depends: libc6 (>= 2.14), libpam0g (>= 0.99.7.1), libpam-runtime, libpam-modules
-Conflicts: amavisd-new (<< 2.3.3-8), backupninja (<< 0.9.3-5), echolot (<< 2.1.8-4), gnunet (<< 0.7.0c-2), python-4suite (<< 0.99cvs20060405-1)
-Filename: pool/main/s/shadow/login_4.1.5.1-1ubuntu6_amd64.deb
-Size: 329038
-MD5sum: dbb0a3b52df78e31becb8d9a6e26fb80
-SHA1: 0d16431971c11b2b457b1f80050dfbdb9bf33578
-SHA256: 000c07c414fc1a39c1ed466f4554c604f5ab86e68086cf77bce3a568e6895ba1
-Description: system login tools
-Homepage: http://pkg-shadow.alioth.debian.org/
-Description-md5: a9c42fe48288d1e8b7d3d34463d0f485
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: minimal
-
 Package: lvm2
 Priority: optional
 Section: admin
@@ -5853,31 +6156,6 @@ Homepage: http://clusterlabs.org/
 Description-md5: f57f71c6289d2e55d6e516dc2b395677
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: passwd
-Priority: required
-Section: admin
-Installed-Size: 2337
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Shadow package maintainers <pkg-shadow-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: shadow
-Version: 1:4.1.5.1-1ubuntu6
-Replaces: manpages-tr (<< 1.0.5), manpages-zh (<< 1.5.1-1)
-Depends: libc6 (>= 2.14), libpam0g (>= 0.99.7.1), libselinux1 (>= 1.32), libsemanage1 (>= 2.0.3), libpam-modules, debianutils (>= 2.15.2)
-Filename: pool/main/s/shadow/passwd_4.1.5.1-1ubuntu6_amd64.deb
-Size: 1091834
-MD5sum: 397703120eadc02a7cbf462b8a8eed1d
-SHA1: 05bbc8385928d772f2d781e98d0de39ea9b4381d
-SHA256: c23d111c06f838d335ffcbbe0aa2abd85298904cbe77605c69cdca543b634979
-Description: change and administer password and group data
-Multi-Arch: foreign
-Homepage: http://pkg-shadow.alioth.debian.org/
-Description-md5: 5bbd70e421ed3367a8299e53bd7afed4
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: minimal
 
 Package: python-greenlet
 Priority: extra
@@ -6261,28 +6539,6 @@ SHA256: 990e2ec4ad836f658645658c81ff23486387384c2cea832f7539895c4f0cdedb
 Description: Examples for applications of SWIG
 Homepage: http://www.swig.org/
 Description-md5: 3ab5c9257106ba955b283c3165f0b8c9
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: uidmap
-Priority: optional
-Section: admin
-Installed-Size: 338
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Shadow package maintainers <pkg-shadow-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: shadow
-Version: 1:4.1.5.1-1ubuntu6
-Depends: libc6 (>= 2.7), libselinux1 (>= 1.32)
-Filename: pool/main/s/shadow/uidmap_4.1.5.1-1ubuntu6_amd64.deb
-Size: 81164
-MD5sum: bce91b177b355237f7b1f8d4750059c8
-SHA1: b47a5ba8c80576dafbc53acba0e00950dd542137
-SHA256: 20b98c4a8348289c65b2351e85dd12a9405e5f8a1de8f749bf36b1e09757a997
-Description: programs to help use subuids
-Homepage: http://pkg-shadow.alioth.debian.org/
-Description-md5: 5a75630915e85aa203a9f7c82c737da4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
