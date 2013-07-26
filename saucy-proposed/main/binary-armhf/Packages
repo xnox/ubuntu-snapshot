@@ -827,29 +827,77 @@ Description-md5: e0ab64cebecfb2c8f3560d8854956043
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libasound2-plugins
+Package: libasound2
 Priority: optional
 Section: libs
-Installed-Size: 206
+Installed-Size: 771
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
 Architecture: armhf
-Source: alsa-plugins
-Version: 1.0.27-2ubuntu1
-Depends: libasound2 (>= 1.0.25), libc6 (>= 2.15), libjack-jackd2-0 (>= 1.9.5~dfsg-14) | libjack-0.116, libpulse0 (>= 1:0.99.1), libsamplerate0 (>= 0.1.7), libspeexdsp1 (>= 1.2~beta3.2-1)
+Source: alsa-lib
+Version: 1.0.27.2-1ubuntu1
+Depends: libc6 (>= 2.16), libasound2-data (>= 1.0.27.2-1ubuntu1)
 Pre-Depends: multiarch-support
-Filename: pool/main/a/alsa-plugins/libasound2-plugins_1.0.27-2ubuntu1_armhf.deb
-Size: 56820
-MD5sum: 4a65ebcfd810894c151f3d4cc1ccebe2
-SHA1: f89fbda4a38cb9788df9aaf39ff1d957638b3d7e
-SHA256: 6827cb8b104c21521179246adf1ea469626a4ab6ebb32a0835df191e76159f0a
-Description: ALSA library additional plugins
+Suggests: libasound2-plugins (>= 1.0.24)
+Breaks: bluez-alsa (<= 4.94-2), libasound2-plugin-equal (<= 0.6-1), libasound2-plugins (<< 1.0.24)
+Filename: pool/main/a/alsa-lib/libasound2_1.0.27.2-1ubuntu1_armhf.deb
+Size: 341472
+MD5sum: 67ad1c3a9c151e60d9e512b16d5f8b57
+SHA1: 75af4a1ec4615922928192bcb9231e10b3c6e696
+SHA256: 5675d084355be5bc6e22ecf3beb51dc593d0193eef47eb6ffd3a39a7a35f7fa2
+Description: shared library for ALSA applications
 Multi-Arch: same
 Homepage: http://www.alsa-project.org/
-Description-md5: c0d2cf058a71ca3009a28dc5e2fd2801
+Description-md5: f80c24ce80b76f9116fc6c7d1a8aa34b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+Task: virt-host, ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libasound2-dbg
+Priority: extra
+Section: debug
+Installed-Size: 1358
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: alsa-lib
+Version: 1.0.27.2-1ubuntu1
+Depends: libasound2 (= 1.0.27.2-1ubuntu1)
+Filename: pool/main/a/alsa-lib/libasound2-dbg_1.0.27.2-1ubuntu1_armhf.deb
+Size: 1070240
+MD5sum: 8f2d703a296547585afface1a1b214ec
+SHA1: 3a13691764b9f0a71446b9b0b8aaa7b398726c26
+SHA256: 6bc06b8d8fe03e5b114917e50b7f2d9f54a7f078adeb19626c06edd1739bf35b
+Description: debugging symbols for libasound2
+Multi-Arch: same
+Homepage: http://www.alsa-project.org/
+Description-md5: 232fcf589d65c42d570a335193dc6cfd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libasound2-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 467
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: alsa-lib
+Version: 1.0.27.2-1ubuntu1
+Provides: libasound-dev
+Depends: libasound2 (= 1.0.27.2-1ubuntu1)
+Suggests: libasound2-doc
+Filename: pool/main/a/alsa-lib/libasound2-dev_1.0.27.2-1ubuntu1_armhf.deb
+Size: 71790
+MD5sum: 4eab81c674a24d785496e27223006edd
+SHA1: 776b75ff32404c5bfa763d58c28db82e687e065c
+SHA256: 31b2ee9ee0c25e822615b9f1f9628009e5f4905263fbcf646ffc639a87ae96f5
+Description: shared library for ALSA applications -- development files
+Multi-Arch: same
+Homepage: http://www.alsa-project.org/
+Description-md5: 6049c8294e480247b4c02744f09d51fe
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: libatomic1
 Priority: optional
