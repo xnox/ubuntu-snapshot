@@ -142,31 +142,31 @@ Testsuite: autopkgtest
 
 Package: cloud-init
 Binary: cloud-init, grub-legacy-ec2, ec2-init
-Version: 0.7.3~bzr849-0ubuntu1
+Version: 0.7.3~bzr849-0ubuntu2
 Priority: extra
 Section: admin
 Maintainer: Scott Moser <smoser@ubuntu.com>
-Build-Depends: cdbs, debhelper (>= 5.0.38), po-debconf, pyflakes, pylint, python (>= 2.6.6-3~), python-mocker, python-nose, python-setuptools
+Build-Depends: cdbs, debhelper (>= 5.0.38), po-debconf, pyflakes, pylint, python (>= 2.6.6-3~), python-argparse, python-boto, python-cheetah, python-configobj, python-json-patch, python-mocker, python-nose, python-oauth, python-prettytable, python-setuptools, python-requests, python-yaml
 Architecture: all
 Standards-Version: 3.9.4
 Format: 3.0 (quilt)
 Directory: pool/main/c/cloud-init
 Files:
- a1e2977cc2736ef8de0ca202bd126349 1969 cloud-init_0.7.3~bzr849-0ubuntu1.dsc
+ ba08246d8402108e9050e26c577eb2e0 2116 cloud-init_0.7.3~bzr849-0ubuntu2.dsc
  00c26d914fe2af3079dcf4ec2a4c98d8 448633 cloud-init_0.7.3~bzr849.orig.tar.gz
- d17b24b8d6a6bb7f5ceacaa64af5ab55 48657 cloud-init_0.7.3~bzr849-0ubuntu1.debian.tar.gz
+ 90235e446b4b60d67691cc36d0ee4dab 48688 cloud-init_0.7.3~bzr849-0ubuntu2.debian.tar.gz
 Package-List: 
  cloud-init deb admin extra
  ec2-init deb admin extra
  grub-legacy-ec2 deb admin extra
 Checksums-Sha1:
- f78b33648a70e96abede6bc0276f062ee086033c 1969 cloud-init_0.7.3~bzr849-0ubuntu1.dsc
+ 5f0510ec3dc4bc35ab855279e36050ac9cf48183 2116 cloud-init_0.7.3~bzr849-0ubuntu2.dsc
  80b2107f25e433bc92a1dadcb64a5d882ebda988 448633 cloud-init_0.7.3~bzr849.orig.tar.gz
- ff7387cc0d3746d4e4ac391891e1764a28d1e3bb 48657 cloud-init_0.7.3~bzr849-0ubuntu1.debian.tar.gz
+ 36a8f272484761d4978dc89b6ba8a5e89ed3f6f7 48688 cloud-init_0.7.3~bzr849-0ubuntu2.debian.tar.gz
 Checksums-Sha256:
- 5227d85cbf0e3d7a5a32d6fea290cb74c745522e06a8df7d530c55d9f0a9a530 1969 cloud-init_0.7.3~bzr849-0ubuntu1.dsc
+ aaad61f0f1eb079c357e991be20823e9f390e24fcc3c875682c0505e73a9af1a 2116 cloud-init_0.7.3~bzr849-0ubuntu2.dsc
  accc6324302f6f8722a0b3e8a2095a52b676fff70629b1e81501a178d13fe403 448633 cloud-init_0.7.3~bzr849.orig.tar.gz
- a26db127aa2a71665e56d2c0dac12695d1f7eba6b1f23c929e17ea4db85e05b8 48657 cloud-init_0.7.3~bzr849-0ubuntu1.debian.tar.gz
+ a38f869d2ab7e7f02179b735b764a4d5036ff96fbd85fe24549ec674ee09ec30 48688 cloud-init_0.7.3~bzr849-0ubuntu2.debian.tar.gz
 Python-Version: all
 
 Package: compiz
@@ -1470,39 +1470,6 @@ Checksums-Sha256:
  5adc7807019ed3cb36f7338b9461a3ddf4f90493be239e59b919951b1f88f200 1776 swig2.0_2.0.10-0ubuntu2.dsc
  d1eef329e867124ce60838b5ad07c763146b6c8f250dd22a861ead7406f78e63 5302787 swig2.0_2.0.10.orig.tar.gz
  aa02a8ff6c2d97dc88d8f7b92931856b2d5a8fe2d39558e81d0d6c3fcc6fb84d 18057 swig2.0_2.0.10-0ubuntu2.debian.tar.gz
-
-Package: ubiquity-slideshow-ubuntu
-Binary: ubiquity-slideshow-ubuntu, ubiquity-slideshow-kubuntu, ubiquity-slideshow-xubuntu, ubiquity-slideshow-lubuntu, ubiquity-slideshow-edubuntu, ubiquity-slideshow-ubuntustudio, ubiquity-slideshow-ubuntu-gnome, oem-config-slideshow-ubuntu
-Version: 72
-Priority: optional
-Section: x11
-Maintainer: Ubiquity Slideshow Team <ubiquity-slideshow@lists.launchpad.net>
-Build-Depends: cdbs, debhelper (>= 5)
-Build-Depends-Indep: po4a, python-utidylib, python
-Architecture: all
-Standards-Version: 3.9.4
-Format: 3.0 (native)
-Directory: pool/main/u/ubiquity-slideshow-ubuntu
-Files:
- c3a39790e0172b3df84f7a998c598293 1616 ubiquity-slideshow-ubuntu_72.dsc
- 98f181520084894dc788378b94da0e8d 6871538 ubiquity-slideshow-ubuntu_72.tar.bz2
-Homepage: https://launchpad.net/ubiquity-slideshow-ubuntu
-Vcs-Bzr: https://code.launchpad.net/~ubiquity-slideshow/ubiquity-slideshow-ubuntu/html
-Package-List: 
- oem-config-slideshow-ubuntu deb x11 optional
- ubiquity-slideshow-edubuntu deb x11 optional
- ubiquity-slideshow-kubuntu deb x11 optional
- ubiquity-slideshow-lubuntu deb x11 optional
- ubiquity-slideshow-ubuntu deb x11 optional
- ubiquity-slideshow-ubuntu-gnome deb x11 optional
- ubiquity-slideshow-ubuntustudio deb x11 optional
- ubiquity-slideshow-xubuntu deb x11 optional
-Checksums-Sha1:
- e05d175d9f7bf91dcdfc70ae82cabe66359b1d70 1616 ubiquity-slideshow-ubuntu_72.dsc
- fdff04c99271553f646f4f56531cddd999551032 6871538 ubiquity-slideshow-ubuntu_72.tar.bz2
-Checksums-Sha256:
- 96c77cc974f628fc1226f42bde46bb407ca234990c964a6e7f185cb6b8d7e369 1616 ubiquity-slideshow-ubuntu_72.dsc
- 7a77b9d7ae90c4ad79e51592fa7a47b32903997b6a9c0ea83f6fc41e1603aa82 6871538 ubiquity-slideshow-ubuntu_72.tar.bz2
 
 Package: usb-modeswitch-data
 Binary: usb-modeswitch-data
