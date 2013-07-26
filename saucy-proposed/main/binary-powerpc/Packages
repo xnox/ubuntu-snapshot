@@ -94,29 +94,6 @@ Description-md5: 4e89b57caad5a98c31bb85ee97a40e16
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: cloud-init
-Priority: extra
-Section: admin
-Installed-Size: 854
-Maintainer: Scott Moser <smoser@ubuntu.com>
-Architecture: all
-Version: 0.7.3~bzr850-0ubuntu1
-Replaces: ec2-init (<< 0.5.3)
-Provides: ec2-init
-Depends: cloud-utils, ifupdown (>= 0.6.10ubuntu5), procps, python (>= 2.7.1-0ubuntu2), python-requests (>= 0.8.2), software-properties-common, debconf (>= 0.5) | debconf-2.0, python (<< 2.8), python-boto, python-cheetah, python-configobj, python-json-patch, python-oauth, python-prettytable, python-yaml
-Conflicts: ec2-init (<< 0.5.3)
-Filename: pool/main/c/cloud-init/cloud-init_0.7.3~bzr850-0ubuntu1_all.deb
-Size: 193852
-MD5sum: b968c5fdb8a10b92fa94afee65a89a76
-SHA1: e48003706aeb365537c7f108afe8520a9e90492e
-SHA256: c8418a648a898196d52380d16b427a80095df068a2d6c16968753ca1f34c74ca
-Description: Init scripts for cloud instances
-Python-Version: 2.7
-Description-md5: 8719ef0e4178017b7147590b1fde082e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: cloud-image
-
 Package: compiz
 Priority: optional
 Section: x11
@@ -809,28 +786,6 @@ Homepage: http://gcc.gnu.org/
 Description-md5: ef51de6b57526dc4a161944678606486
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: grub-legacy-ec2
-Priority: extra
-Section: admin
-Installed-Size: 143
-Maintainer: Scott Moser <smoser@ubuntu.com>
-Architecture: all
-Source: cloud-init
-Version: 0.7.3~bzr850-0ubuntu1
-Depends: debconf (>= 1.5.19) | cdebconf, ucf, util-linux (>= 2.15-1), debconf (>= 0.5) | debconf-2.0
-Suggests: grub-legacy-doc
-Conflicts: grub
-Filename: pool/main/c/cloud-init/grub-legacy-ec2_0.7.3~bzr850-0ubuntu1_all.deb
-Size: 24142
-MD5sum: 4a44598a69b80455d90a2ad6370467e6
-SHA1: 9f2b70641c8142e75d49141cf9b14cc6300a3b51
-SHA256: 2c141fcc2ab77ce7c8743d1052c884f6ad00bdf89dde8baf7a8457fbe7d12b20
-Description: Handles update-grub for ec2 instances
-Description-md5: e5f8ea347000ef0d0aedb42c000e0b9c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: cloud-image
 
 Package: lib64asan0
 Priority: extra
@@ -4414,6 +4369,25 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Build-Essential: yes
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: linux-source
+Priority: optional
+Section: devel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux-meta
+Version: 3.10.0.6.15
+Depends: linux-source-3.10.0
+Filename: pool/main/l/linux-meta/linux-source_3.10.0.6.15_all.deb
+Size: 2260
+MD5sum: 8fc74c1bd785575544d71a382d221f2b
+SHA1: 97ac85e8676fec3daa775cb2f5867c2387f60843
+SHA256: 3fb64b8f0cedb2d9ea8c3ac92b73e6595c2ce34df57c0f9e44267a334f383702
+Description: Linux kernel source with Ubuntu patches
+Description-md5: 1cac084d2ae18dfd06b96585b4be564d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: mesa-common-dev
 Priority: optional
