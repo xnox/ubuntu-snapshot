@@ -1084,6 +1084,51 @@ Description-md5: 882676390c496a4f303ad530c4fe700c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: lib64ncurses5
+Priority: optional
+Section: libs
+Installed-Size: 355
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: amd64-libs (<= 1.2)
+Depends: lib64tinfo5 (= 5.9+20130608-1ubuntu1), libc6-ppc64 (>= 2.4)
+Filename: pool/main/n/ncurses/lib64ncurses5_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 117482
+MD5sum: 10d7e6163fd5337fd07e418d37ced49d
+SHA1: 3a990ad9f3cc4814dcb5ed5e47ca88914a7af8fb
+SHA256: bbb6522c752fb52880a9c85e1eaf1f95c60211ca94bf4682bd41bee4cffa887f
+Description: shared libraries for terminal handling (64-bit)
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: b8bc33d7762cd795ba47795e882f7c30
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: lib64ncurses5-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 1212
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: amd64-libs-dev (<= 1.2), lib64tinfo5-dev
+Depends: lib64ncurses5 (= 5.9+20130608-1ubuntu1), lib64tinfo5 (= 5.9+20130608-1ubuntu1), libncurses5-dev (= 5.9+20130608-1ubuntu1), lib64c-dev
+Suggests: ncurses-doc
+Filename: pool/main/n/ncurses/lib64ncurses5-dev_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 285308
+MD5sum: 8dc7cb590d53f4993d3e610d4cd8deab
+SHA1: ef2d3a2f8d4aee75bd758a324643190f0d986703
+SHA256: 8218658458cdf04ee100079df5e86ffde1504f4ba2c7ec47fbbb6f958fa0b55d
+Description: developer's libraries for ncurses (64-bit)
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 6bddbac1ee6d7fcd11d85aa04df9fae3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: lib64objc-4.8-dev
 Priority: optional
 Section: libdevel
@@ -1208,6 +1253,29 @@ SHA256: aba8fd2a92761f5edc1b2124ea7d1cc3af3cc587c4485ef93317e3a52cbec5bb
 Description: GNU Standard C++ Library v3 (debugging files)
 Homepage: http://gcc.gnu.org/
 Description-md5: 6d699ea4429a346bc58e56d70e561407
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: lib64tinfo5
+Priority: optional
+Section: libs
+Installed-Size: 492
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: lib64ncurses5 (<< 5.9-3)
+Depends: libc6-ppc64 (>= 2.16)
+Breaks: lib64ncurses5 (<< 5.9-3)
+Filename: pool/main/n/ncurses/lib64tinfo5_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 103186
+MD5sum: dc76571e08b75b0babd2b5b4e2dfeb62
+SHA1: 208a3c6a3d8fc52b60abbc9e9d5d93660cedbf72
+SHA256: 605cd1d184a4b7d078bbc236daa99df445affb32f60f62a95cd708a54a5f5516
+Description: shared low-level terminfo library for terminal handling (64-bit)
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 8149870374b84523eba149791f7dca6d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -3315,6 +3383,147 @@ Description-md5: 2f06b7e1bfdb9f620d92f9696d24fabc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libncurses5
+Priority: required
+Section: libs
+Installed-Size: 300
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libc6 (>= 2.15)
+Pre-Depends: multiarch-support, libtinfo5 (>= 5.9-3)
+Recommends: libgpm2
+Filename: pool/main/n/ncurses/libncurses5_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 105306
+MD5sum: 7a67b17b63379179b83341b19727af32
+SHA1: 34e9c47b2544776bd5ff5b6aba693685c1370126
+SHA256: 725959c72eba1460dfce6a89b590f949b2e1a98b827405e8a3cb4305ee7fb003
+Description: shared libraries for terminal handling
+Multi-Arch: same
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 599cbbcff16d09b3b4643d84f37643fd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: libncurses5-dbg
+Priority: extra
+Section: libdevel
+Installed-Size: 9682
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libncurses5-dev (= 5.9+20130608-1ubuntu1), libtinfo5-dbg (= 5.9+20130608-1ubuntu1), libc6 (>= 2.15), libncurses5 (>= 5.5-5~)
+Filename: pool/main/n/ncurses/libncurses5-dbg_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 3003318
+MD5sum: b9dd6482ba218aeda70fbf71961bf5f9
+SHA1: c7bae18fb3a02d5ebba0b4792852bd108492f79e
+SHA256: e6395e712070c5b3290acd89541929ba73468c777d84d15cf92ddefd555593c4
+Description: debugging/profiling libraries for ncurses
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 5b094421b6dbd5e535ef972eedbde981
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libncurses5-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 872
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: libncurses-dev, ncurses-dev
+Provides: libncurses-dev, ncurses-dev
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libncurses5 (= 5.9+20130608-1ubuntu1), libtinfo-dev (= 5.9+20130608-1ubuntu1), ncurses-bin (= 5.9+20130608-1ubuntu1), libc-dev
+Suggests: ncurses-doc
+Conflicts: libncurses-dev, ncurses-dev
+Filename: pool/main/n/ncurses/libncurses5-dev_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 217326
+MD5sum: b1827bc9dd2a5c23026c9159fba36621
+SHA1: f0d828bec4b6f20592592f594e3837b5841afb09
+SHA256: 458e48c397ae449361141cde5f767d222c102c607d84cba2b72c72524ff3588d
+Description: developer's libraries for ncurses
+Multi-Arch: same
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 38da502b304ea3ed5ff1e12d072d14a8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libncursesw5
+Priority: required
+Section: libs
+Installed-Size: 378
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libc6 (>= 2.15)
+Pre-Depends: multiarch-support
+Recommends: libgpm2
+Filename: pool/main/n/ncurses/libncursesw5_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 138774
+MD5sum: b6fb1c78909cb67c4795ddeba57a797f
+SHA1: b617b38c6edd0c81ab45c091f5cf00df586e919a
+SHA256: a8a3dfab0e81e4bbae50a7b2fbca2bf088e9e0cbe46f3a659870025a97fde554
+Description: shared libraries for terminal handling (wide character support)
+Multi-Arch: same
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 1a69a793355bf1fff9186f00b71dd14a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: libncursesw5-dbg
+Priority: extra
+Section: libdevel
+Installed-Size: 7264
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libtinfo5-dbg (= 5.9+20130608-1ubuntu1), libncursesw5-dev (= 5.9+20130608-1ubuntu1), libc6 (>= 2.15), libncursesw5 (>= 5.6+20071124)
+Filename: pool/main/n/ncurses/libncursesw5-dbg_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 2297216
+MD5sum: cddac1683f95bb6eac04bc17be7b2b01
+SHA1: ca4a9db64938ce0ef0e65ec0c44f73307f981c83
+SHA256: acf75a6ec97628917418ac6cb630cab171a9b6c3774f60ec1873431d5d7b73e7
+Description: debugging/profiling libraries for ncursesw
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: f1a8753e0e826eda9da45ea0701fb764
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libncursesw5-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 993
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libncursesw5 (= 5.9+20130608-1ubuntu1), libtinfo-dev (= 5.9+20130608-1ubuntu1), ncurses-bin (= 5.9+20130608-1ubuntu1), libc-dev
+Suggests: ncurses-doc
+Filename: pool/main/n/ncurses/libncursesw5-dev_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 257012
+MD5sum: a0f9baa99ace973c5ec22147745fcf15
+SHA1: 53b6278363f752446751bd6d5103c5480004dde8
+SHA256: 6e0a5396496ac5bdd91d38f74427f6e8de630d15afc5081fd58f890499d62ca3
+Description: developer's libraries for ncursesw
+Multi-Arch: same
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 7cb791804adf3d6ce56ac2845116e8fd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libobjc-4.8-dev
 Priority: optional
 Section: libdevel
@@ -3843,93 +4052,6 @@ Description-md5: 018ac580935845d9472b83e0f158f58a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libssl-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 4908
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: openssl
-Version: 1.0.1e-3ubuntu1
-Depends: libssl1.0.0 (= 1.0.1e-3ubuntu1), zlib1g-dev
-Recommends: libssl-doc
-Filename: pool/main/o/openssl/libssl-dev_1.0.1e-3ubuntu1_powerpc.deb
-Size: 1437698
-MD5sum: b194bbb1303452a396cb692dc6a88ead
-SHA1: b1e647bd77423fc2987ab77c606cf1fdef211b47
-SHA256: 2805b3c9894240c929b1a75059c99aafddc1e648d6e1c2c79377f6adfc5f2b6e
-Description: SSL development libraries, header files and documentation
-Multi-Arch: same
-Description-md5: 3f77df7ec43dcb3f3b73c312168c730e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libssl-doc
-Priority: optional
-Section: doc
-Installed-Size: 1430
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
-Architecture: all
-Source: openssl
-Version: 1.0.1e-3ubuntu1
-Replaces: libssl-dev (<< 1.0.0)
-Breaks: libssl-dev (<< 1.0.0)
-Filename: pool/main/o/openssl/libssl-doc_1.0.1e-3ubuntu1_all.deb
-Size: 1033150
-MD5sum: e2379a81a974193759a0d865069693c0
-SHA1: 90eb4432d05db62d8e488b47b0b16d05199e7a98
-SHA256: 43b8a45a6a241a4ef835f65aedc16b20aef5f2c63e8ece30616c888a09ea2664
-Description: SSL development documentation documentation
-Description-md5: 59333bc869a0fa9208d500d5cabc20fd
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libssl1.0.0
-Priority: important
-Section: libs
-Installed-Size: 2699
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: openssl
-Version: 1.0.1e-3ubuntu1
-Depends: libc6 (>= 2.17), zlib1g (>= 1:1.1.4), debconf (>= 0.5) | debconf-2.0
-Pre-Depends: multiarch-support
-Filename: pool/main/o/openssl/libssl1.0.0_1.0.1e-3ubuntu1_powerpc.deb
-Size: 967052
-MD5sum: 79a8592b7030c8bba442c4ea0e909ef2
-SHA1: dfdc3bdea9570da16c10b4b75d3c8a4d901f5a1a
-SHA256: 3e7d9cf0f5fe9915a42e602b197bc411bdb079d32ba249263828f0bdd6ccdfb3
-Description: SSL shared libraries
-Multi-Arch: same
-Description-md5: 2e9416e72fb31714d9b26021a3ee7e85
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: minimal
-
-Package: libssl1.0.0-dbg
-Priority: extra
-Section: debug
-Installed-Size: 7850
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: openssl
-Version: 1.0.1e-3ubuntu1
-Depends: libssl1.0.0 (= 1.0.1e-3ubuntu1)
-Filename: pool/main/o/openssl/libssl1.0.0-dbg_1.0.1e-3ubuntu1_powerpc.deb
-Size: 2780250
-MD5sum: cea6d205fde6b03f196d5f16be63c34c
-SHA1: 0de99a84c443fe925e2af3194b956aabe1c43dae
-SHA256: 554a7516182ccb79258c547956b40faedb072305971a57e12a840c816eeae952
-Description: Symbol tables for libssl and libcrypto
-Multi-Arch: same
-Description-md5: fedfa89ced3aa67317f9dac7ba5308da
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: libstdc++-4.8-dev
 Priority: optional
 Section: libdevel
@@ -4121,6 +4243,79 @@ Description-md5: f82c97141b203436bbbde1eed00e5472
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
+
+Package: libtinfo-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 311
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: libncurses5-dev (<< 5.9-3)
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1)
+Breaks: binutils-gold (<< 2.21.53.20110910)
+Filename: pool/main/n/ncurses/libtinfo-dev_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 104970
+MD5sum: 6b3255e9382aaa0f5d81c604ff869679
+SHA1: ac2306426bb43ffdb80838c93a907ecdd62e299a
+SHA256: 41801b67f838a5903d3a64e7ae2716d343fcaffde6df403e77d5ab4e365395ec
+Description: developer's library for the low-level terminfo library
+Multi-Arch: same
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 9b28f3e754af5528e34809ef3110fdc8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libtinfo5
+Priority: required
+Section: libs
+Installed-Size: 446
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: libncurses5 (<< 5.9-3)
+Depends: libc6 (>= 2.15)
+Pre-Depends: multiarch-support
+Breaks: dialog (<< 1.2-20130523)
+Filename: pool/main/n/ncurses/libtinfo5_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 95234
+MD5sum: e014d7ebf464977b9339e1f7ea4933f6
+SHA1: 31232dfe50a2f8c4ce490f4045243e0a6019d8c2
+SHA256: 2dafb734f786914eeaca9cc363d3424d34572e80e4c57fea64638b79eeddf262
+Description: shared low-level terminfo library for terminal handling
+Multi-Arch: same
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: f681846d99e5156a0882bb53c35d3244
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: libtinfo5-dbg
+Priority: extra
+Section: debug
+Installed-Size: 2641
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: libncurses5-dbg (<< 5.9+20130608)
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libtinfo-dev (= 5.9+20130608-1ubuntu1), libc6 (>= 2.15)
+Breaks: libncurses5-dbg (<< 5.9-3)
+Filename: pool/main/n/ncurses/libtinfo5-dbg_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 963276
+MD5sum: 2ad50c0046c42cf6e723ffb8ace50657
+SHA1: 26e1b7fd5d577db5d5ddd8cbb43982843ea63a71
+SHA256: a239d973d599512e795d8f41638e87916d13086a228091d9d36400a35a54d62e
+Description: debugging/profiling library for the low-level terminfo library
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: cca02aa911a3b2e5b29be04f528843e8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: libtotem-pg-dev
 Priority: optional
@@ -4667,6 +4862,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: minimal
 
+Package: ncurses-bin
+Essential: yes
+Priority: required
+Section: utils
+Installed-Size: 501
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Pre-Depends: libc6 (>= 2.4), libtinfo5 (>= 5.9+20130119)
+Filename: pool/main/n/ncurses/ncurses-bin_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 156624
+MD5sum: 5769b53d6abce0db5fc1e98d8ccfe1a4
+SHA1: 4522a238374c24cf9850e6c9d043ccbc42a7a808
+SHA256: c575e890e1dcef35f93bdd554da8c4252f99796800172b2f1b68a894fb0d9ba7
+Description: terminal-related programs and man pages
+Multi-Arch: foreign
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 682ee2624c08c54a53ecaefd778a4d86
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
 Package: ncurses-doc
 Priority: optional
 Section: doc
@@ -4685,6 +4904,27 @@ SHA256: 2f7c912a6fbab23de62e547529b603606a218074b70f8f5ceeef7167de2176b9
 Description: developer's guide and documentation for ncurses
 Homepage: http://invisible-island.net/ncurses/
 Description-md5: 4967594fdf42e5e326a6d1be21322eb0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ncurses-examples
+Priority: optional
+Section: misc
+Installed-Size: 1002
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: powerpc
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libc6 (>= 2.4), libncursesw5 (>= 5.6+20080119), libtinfo5 (>= 5.9+20130119)
+Filename: pool/main/n/ncurses/ncurses-examples_5.9+20130608-1ubuntu1_powerpc.deb
+Size: 240410
+MD5sum: 6fc5846ce4994b6673e734e6396a05f5
+SHA1: bd204c77f4063737b57e634d0f21094256a1e7c2
+SHA256: f7b740118d12cd6718720d225196556eaafa5a9072800150009ca430f2744a39
+Description: test programs and examples for ncurses
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 9636435dbca7946bfd1b9d0a5f71adc9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -4711,27 +4951,6 @@ Description-md5: 4b4085015cb669f69f4316436f2a2f6a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: virt-host, cloud-image, openssh-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
-
-Package: openssl
-Priority: standard
-Section: utils
-Installed-Size: 871
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian OpenSSL Team <pkg-openssl-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Version: 1.0.1e-3ubuntu1
-Depends: libc6 (>= 2.15), libssl1.0.0 (>= 1.0.1)
-Suggests: ca-certificates
-Filename: pool/main/o/openssl/openssl_1.0.1e-3ubuntu1_powerpc.deb
-Size: 521636
-MD5sum: 00091542acfdd38657fa753b4c91ead5
-SHA1: efb6b9882d62dd7dacfaa163a2046c43266b4d20
-SHA256: 9f7ab51df2671e58db57fd353c95bf9230b3ad347cae6ff828664d22a4ab1cbe
-Description: Secure Socket Layer (SSL) binary and related cryptographic tools
-Description-md5: 977022bc5545601176b69704acc5df9b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: pacemaker
 Priority: optional
