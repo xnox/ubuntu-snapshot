@@ -637,6 +637,50 @@ Description-md5: 79307295fad5fe1f0172f7d981ebfbac
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: boinc-client
+Priority: optional
+Section: universe/net
+Installed-Size: 1004
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian BOINC Maintainers <pkg-boinc-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: boinc
+Version: 7.2.7+dfsg-1
+Depends: libboinc7 (= 7.2.7+dfsg-1), libc6 (>= 2.15), libcurl3 (>= 7.16.2), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0), libx11-6, libxext6, libxss1, zlib1g (>= 1:1.2.3.3), debconf (>= 0.5) | debconf-2.0, python, adduser, ca-certificates
+Suggests: boinc-manager, x11-xserver-utils, libcuda1
+Filename: pool/universe/b/boinc/boinc-client_7.2.7+dfsg-1_armhf.deb
+Size: 380196
+MD5sum: 66a18fb65dd67a1014edfeaca60bae12
+SHA1: 9848f78fa2371c931fcd855a6ef91e1ce6dcf991
+SHA256: 1bb1d7b9a7d9d5240f874c64cbe5fcd0e94c34c91be50d722c1ced87b789ae23
+Description: core client for the BOINC distributed computing infrastructure
+Homepage: http://boinc.berkeley.edu/
+Description-md5: 9bd4f63a5f0f805b9edce1e36fefff24
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: boinc-dbg
+Priority: extra
+Section: universe/devel
+Installed-Size: 14244
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian BOINC Maintainers <pkg-boinc-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: boinc
+Version: 7.2.7+dfsg-1
+Depends: boinc-client (= 7.2.7+dfsg-1) | boinc-manager (= 7.2.7+dfsg-1) | libboinc7 (= 7.2.7+dfsg-1) | libboinc-app7 (= 7.2.7+dfsg-1)
+Suggests: libcurl3-dbg, libssl1.0.0-dbg, libwxgtk2.8-dbg
+Filename: pool/universe/b/boinc/boinc-dbg_7.2.7+dfsg-1_armhf.deb
+Size: 13923120
+MD5sum: 3070326b188af4aa5ccabf79f2a874e7
+SHA1: 6895eb816a3c7ac02176c39578b2967600ae4765
+SHA256: e553f1dcba27d81ce9c49b70f71b296262b259fef590cf97be77f844d769394a
+Description: debugging symbols for BOINC binaries
+Homepage: http://boinc.berkeley.edu/
+Description-md5: 3e9b28636550c34ee92c3ca7bf7d88a1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: boinc-dev
 Priority: optional
 Section: universe/devel
@@ -655,6 +699,29 @@ SHA256: 194a3fa8801a9f2dce53ff4f6a4bd8ac297d63a57262b00ac108fc0087bab090
 Description: development files to build applications for BOINC projects
 Homepage: http://boinc.berkeley.edu/
 Description-md5: e4972735285fcfbe74ebb87ad01d2e97
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: boinc-manager
+Priority: optional
+Section: universe/x11
+Installed-Size: 4074
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian BOINC Maintainers <pkg-boinc-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: boinc
+Version: 7.2.7+dfsg-1
+Depends: libboinc7, libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libglib2.0-0 (>= 2.12.0), libgtk2.0-0 (>= 2.10.0), libnotify4 (>= 0.7.0), libsqlite3-0 (>= 3.5.9), libstdc++6 (>= 4.4.0), libwxbase2.8-0 (>= 2.8.12.1), libwxgtk2.8-0 (>= 2.8.12.1), libx11-6
+Recommends: boinc-client
+Suggests: libgl1-mesa-glx, libxt6
+Filename: pool/universe/b/boinc/boinc-manager_7.2.7+dfsg-1_armhf.deb
+Size: 1645866
+MD5sum: 162d2135918613dcc9d0085eaa837d66
+SHA1: e93812bfafba3cd9173128f45c32aa8958b8f4b6
+SHA256: 03ec912486bb5e98b89c696ca50f262cb90f2c977cb0199e1f57a6fdde2f3977
+Description: GUI to control and monitor the BOINC core client
+Homepage: http://boinc.berkeley.edu/
+Description-md5: 18cdf3bcfd01c25a71225cc0291571cd
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -5618,6 +5685,54 @@ SHA256: ac6e75267039138deb6f5ef537c48ccc1c0d02eff03d282e0e766dd580932f86
 Description: development files to build applications for BOINC projects
 Homepage: http://boinc.berkeley.edu/
 Description-md5: 14bf791641e7ac0e849dc1dede8fcd86
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libboinc-app7
+Priority: optional
+Section: universe/libs
+Installed-Size: 168
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian BOINC Maintainers <pkg-boinc-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: boinc
+Version: 7.2.7+dfsg-1
+Replaces: boinc-dev (<= 7.0.28+dfsg-2), libboinc-app (<= 7.0.34+dfsg-1)
+Provides: libboinc-app
+Depends: libc6 (>= 2.11), libgcc1 (>= 1:4.4.0), libjpeg8 (>= 8c), libstdc++6 (>= 4.4.0)
+Breaks: boinc-dev (<= 7.0.28+dfsg-2), libboinc-app (<= 7.0.34+dfsg-1)
+Filename: pool/universe/b/boinc/libboinc-app7_7.2.7+dfsg-1_armhf.deb
+Size: 49396
+MD5sum: 629e92904665cbc33f9d68e707284317
+SHA1: 2cd0d2df88eb175da77535400b450afbb07fd45a
+SHA256: 083f3aeadc7d2da4e3b4de4c72e1375506c4438e972f99a25145594b46edbbab
+Description: libraries for BOINC's scientific applications
+Homepage: http://boinc.berkeley.edu/
+Description-md5: c61445098356f24f852e0a3c9ef219e7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libboinc7
+Priority: optional
+Section: universe/libs
+Installed-Size: 342
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian BOINC Maintainers <pkg-boinc-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: boinc
+Version: 7.2.7+dfsg-1
+Replaces: libboinc (<= 7.0.34+dfsg-1)
+Provides: libboinc
+Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.4.0), libssl1.0.0 (>= 1.0.0), libstdc++6 (>= 4.4.0)
+Breaks: libboinc (<= 7.0.34+dfsg-1)
+Filename: pool/universe/b/boinc/libboinc7_7.2.7+dfsg-1_armhf.deb
+Size: 143822
+MD5sum: de14fea0b4f2b6a8c1b646eb55a808fd
+SHA1: 709e6742f9b6ee6709a18973b652f2cffedd91cd
+SHA256: b16b0914d79fa2268c230b619a053ef421099e2ccf079496377d01cdb3461501
+Description: libraries of BOINC the client depends on
+Homepage: http://boinc.berkeley.edu/
+Description-md5: 11081d0d4ad203dafbfd2b8fc5e1425b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
