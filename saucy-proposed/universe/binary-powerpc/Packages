@@ -4292,6 +4292,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active
 
+Package: kde-workspace
+Priority: optional
+Section: universe/kde
+Installed-Size: 155
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Version: 4:4.10.97-0ubuntu1
+Replaces: kdebase-workspace (<< 4:4.7.2)
+Depends: kde-workspace-bin (>= 4:4.10.97-0ubuntu1), klipper (>= 4:4.10.97-0ubuntu1), ksysguard (>= 4:4.10.97-0ubuntu1), kde-window-manager (>= 4:4.10.97-0ubuntu1), systemsettings (>= 4:4.10.97-0ubuntu1), freespacenotifier (>= 4:4.10.97-0ubuntu1)
+Recommends: lightdm-kde-greeter | kdm (>= 4:4.10.97-0ubuntu1), kinfocenter (>= 4:4.10.97-0ubuntu1), kmenuedit (>= 4:4.10.97-0ubuntu1)
+Breaks: kdebase-workspace (<< 4:4.7.2)
+Filename: pool/universe/k/kde-workspace/kde-workspace_4.10.97-0ubuntu1_all.deb
+Size: 15674
+MD5sum: 55eda4f2e421b4cfac4e3482d98e0dd6
+SHA1: 8e32f25332f3656cd17f2a19dcfdcce0810a962d
+SHA256: 10992bbf24a338195cad5fce391ed48a1f2871574362fee77f4850c7e346ad3f
+Description: KDE Plasma Workspace components
+Homepage: http://www.kde.org/
+Description-md5: f3d3d432e8ffcf4aa271d4a5264c2f18
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full
+
 Package: kde-workspace-bin
 Priority: optional
 Section: universe/kde
@@ -4317,6 +4341,55 @@ Description-md5: 7b07fe10ac3a99a0c9ac7ddcffcdc309
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
+Package: kde-workspace-data
+Priority: optional
+Section: universe/kde
+Installed-Size: 7520
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: kde-workspace
+Version: 4:4.10.97-0ubuntu1
+Replaces: kde-icons-mono (<< 4:4.6.80), kde-workspace-data-extras (<< 4:4.8.80), kdebase-runtime-data (<< 4:4.5), kdebase-workspace-data (<< 4:4.7.2), kdm (<< 4:4.10.80), ksmserver, ksplash, ktip, libplasma1
+Depends: oxygen-cursor-theme
+Suggests: kde-wallpapers
+Breaks: kde-icons-mono (<< 4:4.6.80), kde-workspace-data-extras (<< 4:4.8.80), kdebase-runtime-data (<< 4:4.5), kdebase-workspace-data (<< 4:4.7.2), kdm (<< 4:4.10.80), ksmserver, ksplash, ktip, libplasma1
+Filename: pool/universe/k/kde-workspace/kde-workspace-data_4.10.97-0ubuntu1_all.deb
+Size: 4926402
+MD5sum: f2ee8edf69fa2ba2e02e399c58c9214a
+SHA1: 742680c0239ac90f39631ff41c8ac3c18d9d0cd8
+SHA256: fb3d8ca57632cfcd9d423af6fd70e0f3bcb55d8c374d390eee98a4fd92b3d291
+Description: shared data files for the KDE Plasma Workspace
+Homepage: http://www.kde.org/
+Description-md5: 4b5e4ecbbe7648b228d241215fc8c62f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
+Package: kde-workspace-data-extras
+Priority: optional
+Section: universe/kde
+Installed-Size: 152
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: kde-workspace
+Version: 4:4.10.97-0ubuntu1
+Replaces: ksmserver, ksplash, ktip, libplasma1
+Depends: kde-wallpapers, kde-workspace-data (>= 4:4.10.97-0ubuntu1)
+Breaks: ksmserver, ksplash, ktip, libplasma1
+Filename: pool/universe/k/kde-workspace/kde-workspace-data-extras_4.10.97-0ubuntu1_all.deb
+Size: 13844
+MD5sum: a6259c35a54dcc7005522b76e02b283e
+SHA1: d6e08f03be8bed78086375ed16151d4df7be4796
+SHA256: 800a2e0ee465bb2deea8d9d1a60d72eae12ac405c79e5305cc598e989bce57cd
+Description: transitional package for kde-workspace-data
+Homepage: http://www.kde.org/
+Description-md5: f45d5388a39be915e9f34d9889389e4b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full
 
 Package: kde-workspace-dbg
 Priority: extra
@@ -4455,6 +4528,48 @@ Description-md5: 0367ba448d4852fce6bc8c7eafbfbcae
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: kdebase-workspace
+Priority: optional
+Section: universe/kde
+Installed-Size: 152
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: kde-workspace
+Version: 4:4.10.97-0ubuntu1
+Depends: kde-workspace
+Filename: pool/universe/k/kde-workspace/kdebase-workspace_4.10.97-0ubuntu1_all.deb
+Size: 13826
+MD5sum: c99940180a5327d1ae56c92d581f299f
+SHA1: ca29e9ee1c0a90835765d8095982c479670ea03f
+SHA256: 1eb1f5827e7834e237a63781bc9fcf0cabb92a62518f2ab600d6cf3a2ed60bab
+Description: transitional package for kde-workspace
+Homepage: http://www.kde.org/
+Description-md5: e055109822cb469a62e87ae0279acb06
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: kdebase-workspace-bin
+Priority: optional
+Section: universe/kde
+Installed-Size: 152
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: kde-workspace
+Version: 4:4.10.97-0ubuntu1
+Depends: kde-workspace-bin
+Filename: pool/universe/k/kde-workspace/kdebase-workspace-bin_4.10.97-0ubuntu1_all.deb
+Size: 13848
+MD5sum: 5a7f17d0b32c07118de8686bfa47b129
+SHA1: 1a4135411900c57b26c885734021cf7c178fdef2
+SHA256: 1268494ac3cfe098b2ef483803a050bd9af3331289949532b35e135c603ed303
+Description: transitional package for kde-workspace-bin
+Homepage: http://www.kde.org/
+Description-md5: 92ef4f03071b9ae3472fc8e846b39b64
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: kdebase-workspace-dbg
 Priority: extra
 Section: universe/debug
@@ -4473,6 +4588,27 @@ SHA256: f019dd370acf3f36c929cf651606317c90e279fc4578786e3e612249fc03a1e2
 Description: transitional package for kde-workspace-dbg
 Homepage: http://www.kde.org/
 Description-md5: 755315e14b453e45b8c074da88bf7eb1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: kdebase-workspace-dev
+Priority: optional
+Section: universe/kde
+Installed-Size: 152
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: kde-workspace
+Version: 4:4.10.97-0ubuntu1
+Depends: kde-workspace-dev
+Filename: pool/universe/k/kde-workspace/kdebase-workspace-dev_4.10.97-0ubuntu1_all.deb
+Size: 13848
+MD5sum: 0875fef2c8c4c1df76ed7f0583d7dd66
+SHA1: 399c5b3f571904229bcce651696b1466c2470497
+SHA256: 50f3a118b42f97dcf6fe2c4a3a9e46d8ee81c6fc057d0a51cdb85ed9ba974fd2
+Description: transitional package for kde-workspace-dev
+Homepage: http://www.kde.org/
+Description-md5: 9d0c2afe533a0f03c1477dbd14cebc2d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -13069,6 +13205,50 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, ubuntustudio-video, ubuntustudio-graphics
 
+Package: plasma-scriptengine-python
+Priority: optional
+Section: universe/kde
+Installed-Size: 248
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: kde-workspace
+Version: 4:4.10.97-0ubuntu1
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-kde4 (>= 4:4.6.80), python-qt4-dbus
+Filename: pool/universe/k/kde-workspace/plasma-scriptengine-python_4.10.97-0ubuntu1_all.deb
+Size: 27812
+MD5sum: e1fe75aaad7ca15facf1a2e811bbd4c8
+SHA1: 5eb894e16dae76fe2a6fd12f3278086e53d43d67
+SHA256: 49a05f72c806f30760656eaf0c5ec52b6bb6d0dc84183347d8ba0ba3b97340bd
+Description: Python script engine for Plasma
+Homepage: http://www.kde.org/
+Description-md5: 0af9eac571b99d96049d137db14f245a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
+Package: plasma-scriptengine-ruby
+Priority: optional
+Section: universe/kde
+Installed-Size: 213
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: kde-workspace
+Version: 4:4.10.97-0ubuntu1
+Depends: ruby-plasma
+Filename: pool/universe/k/kde-workspace/plasma-scriptengine-ruby_4.10.97-0ubuntu1_all.deb
+Size: 21828
+MD5sum: 40cc156e440621d46c940ed42d77e9cd
+SHA1: 75b643716be0c1d2ef19bb140752c422fc6ec5e6
+SHA256: cbec5954b11d61222e120f43a2aa0a4727b57c94242bad47f19655c577d93f34
+Description: Ruby script engine for Plasma
+Homepage: http://www.kde.org/
+Description-md5: cdf85a9aed9f3ec8e736c2df0cee1580
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
 Package: plasma-scriptengine-webkit
 Priority: optional
 Section: universe/kde
@@ -13087,6 +13267,30 @@ SHA256: 1de78de47ffee81170ebeee35eb50f4c35ff94039621031fed288bbc52d7405d
 Description: Web and Mac OS X dashboard widget support for Plasma
 Homepage: http://www.kde.org/
 Description-md5: b27e24b4d1139daba3c192e98d1ed705
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
+Package: plasma-scriptengines
+Priority: optional
+Section: universe/kde
+Installed-Size: 152
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: kde-workspace
+Version: 4:4.10.97-0ubuntu1
+Depends: plasma-scriptengine-javascript (>= 4:4.2.95), plasma-scriptengine-ruby (>= 4:4.10.97-0ubuntu1), plasma-scriptengine-python (>= 4:4.10.97-0ubuntu1), plasma-scriptengine-webkit (>= 4:4.10.97-0ubuntu1)
+Recommends: plasma-scriptengine-superkaramba
+Suggests: plasma-scriptengine-kimono
+Filename: pool/universe/k/kde-workspace/plasma-scriptengines_4.10.97-0ubuntu1_all.deb
+Size: 13950
+MD5sum: b83046c004e00d0d68a0d9df45449c90
+SHA1: e55771c214b60ecb61f909035a74b293ec1ebf04
+SHA256: f3f75a89ad00962e266972613e4ca9089bd4a11109eb4f58637291e0586285ee
+Description: metapackage to install all Plasma script engines
+Homepage: http://www.kde.org/
+Description-md5: 33be51b3bc7a4f19e7d3b8711f7de215
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
