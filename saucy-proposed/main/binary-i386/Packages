@@ -1176,6 +1176,53 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: lib64ncurses5
+Priority: optional
+Section: libs
+Installed-Size: 280
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: amd64-libs (<= 1.2)
+Depends: lib64tinfo5 (= 5.9+20130608-1ubuntu1), libc6-amd64 (>= 2.14)
+Filename: pool/main/n/ncurses/lib64ncurses5_5.9+20130608-1ubuntu1_i386.deb
+Size: 112262
+MD5sum: 24f8c5016f100d4311dd6a380909e7a8
+SHA1: df6728a5dd695af0be9e8431d034c732e03c47fd
+SHA256: dd7003d4fae0a28704ec1a7ea7486875e335d8ec988abf9a1118a0719f16a332
+Description: shared libraries for terminal handling (64-bit)
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: b8bc33d7762cd795ba47795e882f7c30
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: lib64ncurses5-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 1085
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: amd64-libs-dev (<= 1.2), lib64tinfo5-dev
+Depends: lib64ncurses5 (= 5.9+20130608-1ubuntu1), lib64tinfo5 (= 5.9+20130608-1ubuntu1), libncurses5-dev (= 5.9+20130608-1ubuntu1), lib64c-dev
+Suggests: ncurses-doc
+Filename: pool/main/n/ncurses/lib64ncurses5-dev_5.9+20130608-1ubuntu1_i386.deb
+Size: 268304
+MD5sum: ef1b928ba106480845ae30378a67af58
+SHA1: a67df2ecaae4820ee6fabad2727fdcb60cf07a03
+SHA256: ecb8f3f521078a9d4765eefd9b9a1501e595bf7e494dba92aab7e1351fcc271d
+Description: developer's libraries for ncurses (64-bit)
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 6bddbac1ee6d7fcd11d85aa04df9fae3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: lib64objc-4.8-dev
 Priority: optional
 Section: libdevel
@@ -1349,6 +1396,30 @@ SHA256: 89e0e6e9bea15b04eec4c312a8d51aa767412f6507a621ac1770aa1264995fc2
 Description: GNU Standard C++ Library v3 (debugging files)
 Homepage: http://gcc.gnu.org/
 Description-md5: 6d699ea4429a346bc58e56d70e561407
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: lib64tinfo5
+Priority: optional
+Section: libs
+Installed-Size: 459
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: lib64ncurses5 (<< 5.9-3)
+Depends: libc6-amd64 (>= 2.16)
+Breaks: lib64ncurses5 (<< 5.9-3)
+Filename: pool/main/n/ncurses/lib64tinfo5_5.9+20130608-1ubuntu1_i386.deb
+Size: 97640
+MD5sum: 30e22fbf9e0457f3bbab7c80a915c67c
+SHA1: 5ea21e1a5137180cd36cdb117ed7e4826005ccd3
+SHA256: 29705d7e47cc1877616d6fd8f59f1cbda40f979326093bd012553e03cd2d82c7
+Description: shared low-level terminfo library for terminal handling (64-bit)
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 8149870374b84523eba149791f7dca6d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -3580,6 +3651,153 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: libncurses5
+Priority: required
+Section: libs
+Installed-Size: 292
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libc6 (>= 2.15)
+Pre-Depends: multiarch-support, libtinfo5 (>= 5.9-3)
+Recommends: libgpm2
+Filename: pool/main/n/ncurses/libncurses5_5.9+20130608-1ubuntu1_i386.deb
+Size: 113840
+MD5sum: dca93975105ff410c7e59397e2e14bf3
+SHA1: 1194b9ee8b127f9cf894a5910969bc398521ac63
+SHA256: a2305e9a3f2842654e1bd37099fd347dce0e0c3bf2f5836f90a533d39b8d0134
+Description: shared libraries for terminal handling
+Multi-Arch: same
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 599cbbcff16d09b3b4643d84f37643fd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: libncurses5-dbg
+Priority: extra
+Section: libdevel
+Installed-Size: 11419
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libncurses5-dev (= 5.9+20130608-1ubuntu1), libtinfo5-dbg (= 5.9+20130608-1ubuntu1), libc6 (>= 2.15), libncurses5 (>= 5.5-5~)
+Filename: pool/main/n/ncurses/libncurses5-dbg_5.9+20130608-1ubuntu1_i386.deb
+Size: 3531624
+MD5sum: 132e223b2f7dcc9ef7606f23f3cb4c7f
+SHA1: a773a917989da2a19c50217b7437bc6412bfe468
+SHA256: 69641af7d2daf6905dabf38aa87c9ba3f2001938cd98aebb05f07120a4ae63d1
+Description: debugging/profiling libraries for ncurses
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 5b094421b6dbd5e535ef972eedbde981
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libncurses5-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 855
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: libncurses-dev, ncurses-dev
+Provides: libncurses-dev, ncurses-dev
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libncurses5 (= 5.9+20130608-1ubuntu1), libtinfo-dev (= 5.9+20130608-1ubuntu1), ncurses-bin (= 5.9+20130608-1ubuntu1), libc-dev
+Suggests: ncurses-doc
+Conflicts: libncurses-dev, ncurses-dev
+Filename: pool/main/n/ncurses/libncurses5-dev_5.9+20130608-1ubuntu1_i386.deb
+Size: 215942
+MD5sum: 88199ea19230d51998e8e7fcb5a9bf8f
+SHA1: e30877d17b91ee94ca57bc81155dc60f298c6771
+SHA256: 01581e9e8fd10accd2456de2026f96dd43155aa328befa02ae6e47325bb3e2fb
+Description: developer's libraries for ncurses
+Multi-Arch: same
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 38da502b304ea3ed5ff1e12d072d14a8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libncursesw5
+Priority: required
+Section: libs
+Installed-Size: 374
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libc6 (>= 2.15)
+Pre-Depends: multiarch-support
+Recommends: libgpm2
+Filename: pool/main/n/ncurses/libncursesw5_5.9+20130608-1ubuntu1_i386.deb
+Size: 150438
+MD5sum: 26fe4aecf6361189247a8c029079aa1d
+SHA1: e1b7ce15c4e692414d94d942f2474a9ba006ade4
+SHA256: e9b77e5b1c28cfa40044fef88fd4e9385ec4b7e206a931e733b110c8cb24f867
+Description: shared libraries for terminal handling (wide character support)
+Multi-Arch: same
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 1a69a793355bf1fff9186f00b71dd14a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: libncursesw5-dbg
+Priority: extra
+Section: libdevel
+Installed-Size: 6335
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libtinfo5-dbg (= 5.9+20130608-1ubuntu1), libncursesw5-dev (= 5.9+20130608-1ubuntu1), libc6 (>= 2.15), libncursesw5 (>= 5.6+20071124)
+Filename: pool/main/n/ncurses/libncursesw5-dbg_5.9+20130608-1ubuntu1_i386.deb
+Size: 2052388
+MD5sum: e32c168eb57f2ce175f28d39918ceee5
+SHA1: 9cdd0a89e7171874809f3048270375bb4ba5925d
+SHA256: 41eb0d88d436a1bf517d0b53bdfcc75e8c4802addd7694634bd523b1ae7cda85
+Description: debugging/profiling libraries for ncursesw
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: f1a8753e0e826eda9da45ea0701fb764
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libncursesw5-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 983
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libncursesw5 (= 5.9+20130608-1ubuntu1), libtinfo-dev (= 5.9+20130608-1ubuntu1), ncurses-bin (= 5.9+20130608-1ubuntu1), libc-dev
+Suggests: ncurses-doc
+Filename: pool/main/n/ncurses/libncursesw5-dev_5.9+20130608-1ubuntu1_i386.deb
+Size: 257976
+MD5sum: 3f5fdbe54293cfd6a97ec91a57bdff90
+SHA1: 217b7fd770264b66670c9891396479e78026ece0
+SHA256: d9c9e3086160f6ad4c50106a8354084d55ad0ccbd79f7999638ca8c6e2ac11c3
+Description: developer's libraries for ncursesw
+Multi-Arch: same
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 7cb791804adf3d6ce56ac2845116e8fd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libobjc-4.8-dev
 Priority: optional
 Section: libdevel
@@ -4487,6 +4705,82 @@ Origin: Ubuntu
 Supported: 9m
 Task: edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
 
+Package: libtinfo-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 294
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: libncurses5-dev (<< 5.9-3)
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1)
+Breaks: binutils-gold (<< 2.21.53.20110910)
+Filename: pool/main/n/ncurses/libtinfo-dev_5.9+20130608-1ubuntu1_i386.deb
+Size: 97288
+MD5sum: c1a4d5ef1fd58fcbeee8bb6f5d83728f
+SHA1: 4e376d22da577379118bbc26dade896c0d5156e0
+SHA256: 366a869c853bb084370e0634151ecd63cb7e5de118bc0bea40687a8a895fbdd4
+Description: developer's library for the low-level terminfo library
+Multi-Arch: same
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 9b28f3e754af5528e34809ef3110fdc8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libtinfo5
+Priority: required
+Section: libs
+Installed-Size: 429
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: libncurses5 (<< 5.9-3)
+Depends: libc6 (>= 2.15)
+Pre-Depends: multiarch-support
+Breaks: dialog (<< 1.2-20130523)
+Filename: pool/main/n/ncurses/libtinfo5_5.9+20130608-1ubuntu1_i386.deb
+Size: 90982
+MD5sum: bcc1db9e495634d0d6a4ec0ec85104f3
+SHA1: 64c7c2ecdeca15a143313f9e7b18df76561afc30
+SHA256: af8cd0c1ff11e9a2334348de9c70ef16d9059894c7a9871244ea31a039c968b9
+Description: shared low-level terminfo library for terminal handling
+Multi-Arch: same
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: f681846d99e5156a0882bb53c35d3244
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: libtinfo5-dbg
+Priority: extra
+Section: debug
+Installed-Size: 2366
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: libncurses5-dbg (<< 5.9+20130608)
+Depends: libtinfo5 (= 5.9+20130608-1ubuntu1), libtinfo-dev (= 5.9+20130608-1ubuntu1), libc6 (>= 2.15)
+Breaks: libncurses5-dbg (<< 5.9-3)
+Filename: pool/main/n/ncurses/libtinfo5-dbg_5.9+20130608-1ubuntu1_i386.deb
+Size: 876014
+MD5sum: ed1a99927e8570ed55531621c45efe0e
+SHA1: afd0585c633a6a7c89f8af5b124d81c2ae458844
+SHA256: 5ec7c03c16dfaa1b2c40af41dac77eabc73b1f74561df5ae0521b57a3dac7306
+Description: debugging/profiling library for the low-level terminfo library
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: cca02aa911a3b2e5b29be04f528843e8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libtotem-pg-dev
 Priority: optional
 Section: libdevel
@@ -5020,6 +5314,96 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: libx32ncurses5
+Priority: optional
+Section: libs
+Installed-Size: 265
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libx32tinfo5 (= 5.9+20130608-1ubuntu1), libc6-x32 (>= 2.16), libtinfo5
+Filename: pool/main/n/ncurses/libx32ncurses5_5.9+20130608-1ubuntu1_i386.deb
+Size: 111170
+MD5sum: 9039e297a8526be68e34600957f272f3
+SHA1: 421c3c2c3d55bcac60493ad44b9c1445d496700f
+SHA256: 827c561b4312534c564a90807b7a76a11489c04a2b1176d7029df4ad11f5d122
+Description: shared libraries for terminal handling (x32)
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: fceb9a289e870db9f0ebc092d5b96499
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libx32ncurses5-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 556
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libx32tinfo5 (= 5.9+20130608-1ubuntu1), libx32ncurses5 (= 5.9+20130608-1ubuntu1), libx32tinfo-dev (= 5.9+20130608-1ubuntu1), libncurses5-dev (= 5.9+20130608-1ubuntu1), libc6-dev-x32, libtinfo5
+Suggests: ncurses-doc
+Filename: pool/main/n/ncurses/libx32ncurses5-dev_5.9+20130608-1ubuntu1_i386.deb
+Size: 156112
+MD5sum: 2c9bf333fbc81318fc96dc15041ad8db
+SHA1: 0304cece005d815bb50eb40b8ae1fe6412ef7b6e
+SHA256: fa8fe257c1b7280d21f77ca705e7818b756586fd4d5c200c0085cbf6bf6ba466
+Description: developer's libraries for ncurses (x32)
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: b4a970837706b4434dc3c622b9db96a0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libx32ncursesw5
+Priority: optional
+Section: libs
+Installed-Size: 343
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libx32tinfo5 (= 5.9+20130608-1ubuntu1), libc6-x32 (>= 2.16), libtinfo5
+Filename: pool/main/n/ncurses/libx32ncursesw5_5.9+20130608-1ubuntu1_i386.deb
+Size: 145056
+MD5sum: 9ce0ebb4c83458466fb6c417af71a33f
+SHA1: 038d1372c654468c8d7a84af6ff013c94682b576
+SHA256: 82177cb5d30fe77844cd4ddac07ed7694800f29d8dd1dec03a2b617d5e88621d
+Description: shared libraries for terminal handling (wide character support) (x32)
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: ded417186d6fc291b9168dbf45fc2904
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libx32ncursesw5-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 663
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libx32tinfo5 (= 5.9+20130608-1ubuntu1), libx32ncursesw5 (= 5.9+20130608-1ubuntu1), libx32tinfo-dev (= 5.9+20130608-1ubuntu1), libncursesw5-dev (= 5.9+20130608-1ubuntu1), libc6-dev-x32, libtinfo5
+Suggests: ncurses-doc
+Filename: pool/main/n/ncurses/libx32ncursesw5-dev_5.9+20130608-1ubuntu1_i386.deb
+Size: 194138
+MD5sum: 462c395d03987a529eb34ccf82bf5c24
+SHA1: b711d0443c400318dd7ac74b9c8a6bf5fe9ce969
+SHA256: 28b679efadf75884b9e2b17e7f255f73df2325277d2d2f5cfacc1fbd0d0b8836
+Description: developer's libraries for ncursesw (x32)
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: e08e46c6b2e6a096698ef5796a340bcd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libx32objc-4.8-dev
 Priority: optional
 Section: libdevel
@@ -5193,6 +5577,50 @@ SHA256: b66b89b9089920fb4624b8df8ed4f0f68eb46ac0836027265205e498416d8ae7
 Description: GNU Standard C++ Library v3 (debugging files)
 Homepage: http://gcc.gnu.org/
 Description-md5: 6d699ea4429a346bc58e56d70e561407
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libx32tinfo-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 298
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libx32tinfo5 (= 5.9+20130608-1ubuntu1), libc6-dev-x32, libtinfo5
+Filename: pool/main/n/ncurses/libx32tinfo-dev_5.9+20130608-1ubuntu1_i386.deb
+Size: 101176
+MD5sum: f4bb975c18dc5b94c4e12906bc9b9044
+SHA1: 6637df258be1a0cc2f1d2d58543ad217c1ed9e76
+SHA256: fbc5b3190400c1d7549b56282ddc30045139e689cdbe9777422fbc02d9c1e5c0
+Description: developer's library for the low-level terminfo library (x32)
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 07504aca713c2109065ae32313771856
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libx32tinfo5
+Priority: optional
+Section: libs
+Installed-Size: 213
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libc6-x32 (>= 2.16), libtinfo5
+Filename: pool/main/n/ncurses/libx32tinfo5_5.9+20130608-1ubuntu1_i386.deb
+Size: 90976
+MD5sum: 8bb51885bf8e2de1c91ff54fcaf73b7d
+SHA1: 04eb73d20ddeb1dce8f1602494671e30890f789a
+SHA256: 3b3b3e1b4477d34b8890c6ae75c4f77200eed103d2584b2f5a63930ea25419a7
+Description: shared low-level terminfo library for terminal handling (x32)
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: aaad1594952fc8f070fce7c9f0e240c7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -6022,6 +6450,127 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: ncurses-base
+Essential: yes
+Priority: required
+Section: utils
+Installed-Size: 364
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: all
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Provides: ncurses-runtime
+Conflicts: ncurses, ncurses-runtime
+Breaks: ncurses-term (<< 5.7+20100313-3)
+Filename: pool/main/n/ncurses/ncurses-base_5.9+20130608-1ubuntu1_all.deb
+Size: 19828
+MD5sum: afbfe160f0e62d80f503611031942efa
+SHA1: 253d03036f151ec01719323c09152f66122c6f9d
+SHA256: d8ffe96fbc9a355a5a108d051fdd38ef2839d16e3ac9a6fd0b09cf9f60c24713
+Description: basic terminal type definitions
+Multi-Arch: foreign
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 2cbef17322c0de7f007682de54ca0d4a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: ncurses-bin
+Essential: yes
+Priority: required
+Section: utils
+Installed-Size: 497
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Pre-Depends: libc6 (>= 2.4), libtinfo5 (>= 5.9+20130119)
+Filename: pool/main/n/ncurses/ncurses-bin_5.9+20130608-1ubuntu1_i386.deb
+Size: 159848
+MD5sum: 099e7a777a2445570d63063858a6d248
+SHA1: 7ce009f655b3921254a98bd6d740de46a3cfd294
+SHA256: 043d9c8df69d9beaef166b2ecd3b53a02f722b0da9405792ff582c8a33b3264a
+Description: terminal-related programs and man pages
+Multi-Arch: foreign
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 682ee2624c08c54a53ecaefd778a4d86
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: ncurses-doc
+Priority: optional
+Section: doc
+Installed-Size: 4364
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: all
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: libncurses5-dev (<< 5.7+20101128)
+Filename: pool/main/n/ncurses/ncurses-doc_5.9+20130608-1ubuntu1_all.deb
+Size: 843210
+MD5sum: 3f903faa32a589ec8ad5f01a24d2659e
+SHA1: 249f306c2ea518f79f8e1cf02b7856a86710bac5
+SHA256: 2f7c912a6fbab23de62e547529b603606a218074b70f8f5ceeef7167de2176b9
+Description: developer's guide and documentation for ncurses
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 4967594fdf42e5e326a6d1be21322eb0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ncurses-examples
+Priority: optional
+Section: misc
+Installed-Size: 998
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: i386
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Depends: libc6 (>= 2.4), libncursesw5 (>= 5.6+20080119), libtinfo5 (>= 5.9+20130119)
+Filename: pool/main/n/ncurses/ncurses-examples_5.9+20130608-1ubuntu1_i386.deb
+Size: 241980
+MD5sum: 8f0c69c3d88202ace1bc08095eaa7530
+SHA1: 187fff5b35b5d75a14b07e4e5c9cd91a6de81430
+SHA256: 1d87be3caa5dfd5631b45e86d61277e652a8d0e8fb0a798cf92a331ffe49f23c
+Description: test programs and examples for ncurses
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 9636435dbca7946bfd1b9d0a5f71adc9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ncurses-term
+Priority: optional
+Section: admin
+Installed-Size: 2146
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Craig Small <csmall@debian.org>
+Architecture: all
+Source: ncurses
+Version: 5.9+20130608-1ubuntu1
+Replaces: bogl-bterm (<< 0.1.18-7), mlterm-common (<< 3.0.2-1), ncurses-base (<< 5.7+20100313-1)
+Breaks: bogl-bterm (<< 0.1.18-7), mlterm-common (<< 3.0.2-1)
+Filename: pool/main/n/ncurses/ncurses-term_5.9+20130608-1ubuntu1_all.deb
+Size: 427230
+MD5sum: 292d80a97e84a5cdbae33137b1e24e3f
+SHA1: c5eb63e17128fa923f9a92187b0402d572b168e4
+SHA256: e17caa114d1415c9c9adbd21be79a1f45f20395d73f0d568519e862483bfb7b7
+Description: additional terminal type definitions
+Multi-Arch: foreign
+Homepage: http://invisible-island.net/ncurses/
+Description-md5: 4b4085015cb669f69f4316436f2a2f6a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: virt-host, cloud-image, openssh-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
 
 Package: openssl
 Priority: standard
