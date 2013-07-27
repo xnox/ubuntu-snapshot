@@ -399,44 +399,36 @@ Checksums-Sha256:
  e4fc6af1994b69c9e633969145fd83d0c84ac67f8e60b4e05bf3697fe2e600af 648276 blackbox_0.70.1.orig.tar.gz
  6a0dfc7e7f47d0e8c175e45721d8450fdba5f650c8f60a53b7eb6c410a7e1a92 22939 blackbox_0.70.1-16.debian.tar.gz
 
-Package: boinc
-Binary: boinc, libboinc7, boinc-nvidia-cuda, boinc-amd-opencl, boinc-client, boinc-manager, boinc-dev, libboinc-app-dev, libboinc-app7, boinc-dbg
-Version: 7.2.7+dfsg-1
-Priority: optional
-Section: universe/net
+Package: boinc-app-seti
+Binary: boinc-app-seti, boinc-app-seti-graphics, boinc-app-seti-dbg
+Version: 7.00~svn1933-1
+Section: universe/science
 Maintainer: Debian BOINC Maintainers <pkg-boinc-devel@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 9), po-debconf, pkg-config, dpkg-dev (>= 1.16.1.1), libtool, autoconf, autotools-dev, automake1.9, gettext, docbook2x, docbook-xml, libxml2-utils, zlib1g-dev, libssl-dev, libcurl4-openssl-dev, libsm-dev, libice-dev, libxmu-dev, libxi-dev, libx11-dev, libnotify-dev (>= 0.7.0), freeglut3-dev, libwxgtk2.8-dev, libgtk2.0-dev, libsqlite3-dev, libmysqlclient-dev, python, libfcgi-dev, libjpeg-dev, libxcb-util0-dev, libxcb-dpms0-dev, libxss-dev, libxext-dev
-Architecture: any all
+Build-Depends: debhelper (>= 9), automake, dpkg-dev (>= 1.16.1.1), boinc-dev (>= 7.1.21+dfsg) | libboinc-app-dev (>= 7.1.21+dfsg), autoconf, libfftw3-dev, libgsl0-dev, freeglut3-dev, libjpeg-dev, libxmu-dev, libxi-dev
+Architecture: any
 Standards-Version: 3.9.4
 Format: 3.0 (quilt)
-Directory: pool/universe/b/boinc
+Directory: pool/universe/b/boinc-app-seti
 Files:
- 13a6793fd7fe3d2cca79e378591789b3 2608 boinc_7.2.7+dfsg-1.dsc
- 72c191c40f3e479a8b74ea6d3166fef5 33179650 boinc_7.2.7+dfsg.orig.tar.gz
- 158fcc485452da45a467e36a877131f4 546612 boinc_7.2.7+dfsg-1.debian.tar.gz
-Uploaders: Steffen Moeller <moeller@debian.org>, Guo Yixuan <culu.gyx@gmail.com>, Rene Mayorga <rmayorga@debian.org>, Daniel Hahler <ubuntu@thequod.de>, Gianfranco Costamagna <costamagnagianfranco@yahoo.it>
-Homepage: http://boinc.berkeley.edu/
-Vcs-Browser: http://git.debian.org/?p=pkg-boinc/boinc.git
-Vcs-Git: git://git.debian.org/git/pkg-boinc/boinc.git
+ eb6846beab2bdcede10e8f66a18f8178 2082 boinc-app-seti_7.00~svn1933-1.dsc
+ 7493025753c3439bfe5834d5b3b075ee 1063558 boinc-app-seti_7.00~svn1933.orig.tar.gz
+ 2489b5beb12cb791d2bea5641456bbc8 17865 boinc-app-seti_7.00~svn1933-1.debian.tar.gz
+Uploaders: Steffen Moeller <moeller@debian.org>, Guo Yixuan <culu.gyx@gmail.com>, Gianfranco Costamagna <costamagnagianfranco@yahoo.it>
+Homepage: http://setiathome.berkeley.edu/
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-boinc/boinc-app-seti.git
+Vcs-Git: git://anonscm.debian.org/pkg-boinc/boinc-app-seti.git
 Package-List: 
- boinc deb net optional
- boinc-amd-opencl deb contrib/net extra
- boinc-client deb net optional
- boinc-dbg deb debug extra
- boinc-dev deb oldlibs extra
- boinc-manager deb x11 optional
- boinc-nvidia-cuda deb contrib/net extra
- libboinc-app-dev deb libdevel optional
- libboinc-app7 deb libs optional
- libboinc7 deb libs optional
+ boinc-app-seti deb science extra
+ boinc-app-seti-dbg deb debug extra
+ boinc-app-seti-graphics deb science extra
 Checksums-Sha1:
- 9af22ff8d7e41ee77f615a800ff5fe0abafb3249 2608 boinc_7.2.7+dfsg-1.dsc
- 8fd1d6d24ef6c875c2a1f635447e53d7eaf89968 33179650 boinc_7.2.7+dfsg.orig.tar.gz
- 4ee8ddb6ef502171ce54134c34add6fc926708ee 546612 boinc_7.2.7+dfsg-1.debian.tar.gz
+ b2400ee5752ac22c9cad0eb8a5cc9a59665a9bdb 2082 boinc-app-seti_7.00~svn1933-1.dsc
+ 66894c3d45c53a35b30ea1e2bf3ebab8366fe03a 1063558 boinc-app-seti_7.00~svn1933.orig.tar.gz
+ 2b888e0b500510fa1a5f242bf736b6a50974667b 17865 boinc-app-seti_7.00~svn1933-1.debian.tar.gz
 Checksums-Sha256:
- 987e9397a889c8ed62e9beed6f687da185fe03d14bf14ea95588bd92d53baeef 2608 boinc_7.2.7+dfsg-1.dsc
- d7770e3b9024c63dc346cce132da651fff3a7da14f30965954c6f9fde8e8f307 33179650 boinc_7.2.7+dfsg.orig.tar.gz
- 3016a0aa63c4a89ea098e93af6259a99eaa9835163e463ce470ea7918a7bbfa7 546612 boinc_7.2.7+dfsg-1.debian.tar.gz
+ 384fe0b9ab94cf7395f4984e638d50092696c9a62d7dfc80414d7747e1304a61 2082 boinc-app-seti_7.00~svn1933-1.dsc
+ 6e5d7d1b01d620eec5f135880e40f872d7f7327800be7b67a7ec7c659127cbd7 1063558 boinc-app-seti_7.00~svn1933.orig.tar.gz
+ ab36a9b58b17c0a74906e62a63c302e49e69889efa51ad24266ba026e8b3a8e7 17865 boinc-app-seti_7.00~svn1933-1.debian.tar.gz
 
 Package: cairo-5c
 Binary: cairo-5c, libcairo5c-0
@@ -3285,87 +3277,6 @@ Checksums-Sha256:
  c008d05697d046546e30655751d2e6586bec21d464b17d4bd207ae148acdc9f2 1762 kdegraphics-thumbnailers_4.10.97-0ubuntu1.dsc
  63beac9d45052f354fea31c7b00d9d3d2a9ad1a5e80e67a535be0550156750b8 41124 kdegraphics-thumbnailers_4.10.97.orig.tar.xz
  3440605bbf953ec691556c71c9106793c7d83a8e2f3fe06fbb0385f997c47c13 3821 kdegraphics-thumbnailers_4.10.97-0ubuntu1.debian.tar.gz
-
-Package: kdepim
-Binary: kdepim, kdepim-mobile, kdepim-dev, kdepim-doc, akregator, kaddressbook, kaddressbook-mobile, kalarm, kdepim-kresources, kleopatra, kmail, kmail-mobile, knode, knotes, notes-mobile, konsolekalendar, kontact, tasks-mobile, korganizer, korganizer-mobile, ktimetracker, libcalendarsupport4, libeventviews4, libincidenceeditorsng4, libpimcommon4, libkdepim4, libkdepimdbusinterfaces4, libkdgantt2-0, libkleo4, libkpgp4, libksieve4, libkmanagesieve4, libksieveui4, libmailcommon4, libmailimporter4, libmessagecomposer4, libmessagecore4, libmessagelist4, libmessageviewer4, libtemplateparser4, libkdepimmobileui4, libcomposereditorng4, libgrammar4, libpimactivity4, kdepim-mobileui-data, kjots, blogilo, akonadiconsole, kde-config-pimactivity, kdepim-dbg
-Version: 4:4.10.97-0ubuntu1
-Priority: optional
-Section: universe/x11
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Build-Depends: kde-sc-dev-latest (>= 4:4.10.2), cmake, debhelper (>= 7.3.16), pkg-kde-tools (>= 0.12), kdepimlibs5-dev (>= 4:4.10.97), libphonon-dev (>= 4:4.6.0really4.3.80), pkg-config, libgpgme11-dev, libboost1.53-dev (>= 1.40.0-2), libboost-graph1.53-dev (>= 1.40.0-2), libsasl2-dev, xsltproc, libxss-dev, libqca2-dev (>= 2.0.0), libassuan-dev, libstreams-dev (>= 0.6.3), libstreamanalyzer-dev (>= 0.6.3), libsearchclient-dev (>= 0.6.3), libstrigihtmlgui-dev (>= 0.6.3), libstrigiqtdbusclient-dev (>= 0.6.3), zlib1g-dev, libakonadi-dev (>= 1.7.2), shared-desktop-ontologies (>= 0.6.50), libgrantlee-dev, libqtwebkit-dev, libqt4-opengl-dev, libprison-dev, nepomuk-core-dev (>= 4:4.10.97), libnepomukwidgets-dev (>= 4:4.10.97), libindicate-qt-dev, libxml2-dev, sharutils, libkactivities-dev (>= 4:4.10.97), liblink-grammar4-dev
-Build-Depends-Indep: dblatex
-Architecture: any all
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/universe/k/kdepim
-Files:
- 62c34a513dfa76685a774ec7706dcb9d 4774 kdepim_4.10.97-0ubuntu1.dsc
- 06d30bb963538e774f89262d12ce5d62 13186144 kdepim_4.10.97.orig.tar.xz
- 7af1c7f83d3402ab4fe6cde61d60d905 67183 kdepim_4.10.97-0ubuntu1.debian.tar.gz
-Uploaders: Sune Vuorela <sune@debian.org>, Fathi Boudra <fabo@debian.org>, Modestas Vainius <modax@debian.org>, Michael Meskes <meskes@debian.org>, George Kiagiadakis <kiagiadakis.george@gmail.com>, Eshat Cakar <info@eshat.de>
-Homepage: http://pim.kde.org/
-Vcs-Browser: http://bazaar.launchpad.net/~kubuntu-packagers/kubuntu-packaging/kdepim
-Vcs-Bzr: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging/kdepim
-Package-List: 
- akonadiconsole deb utils optional
- akregator deb web optional
- blogilo deb web optional
- kaddressbook deb utils optional
- kaddressbook-mobile deb utils optional
- kalarm deb kde optional
- kde-config-pimactivity deb kde optional
- kdepim deb metapackages optional
- kdepim-dbg deb debug extra
- kdepim-dev deb kde optional
- kdepim-doc deb doc optional
- kdepim-kresources deb kde optional
- kdepim-mobile deb metapackages optional
- kdepim-mobileui-data deb libs optional
- kjots deb utils optional
- kleopatra deb net optional
- kmail deb mail optional
- kmail-mobile deb mail optional
- knode deb news optional
- knotes deb kde optional
- konsolekalendar deb kde optional
- kontact deb kde optional
- korganizer deb kde optional
- korganizer-mobile deb kde optional
- ktimetracker deb utils optional
- libcalendarsupport4 deb libs optional
- libcomposereditorng4 deb libs optional
- libeventviews4 deb libs optional
- libgrammar4 deb libs optional
- libincidenceeditorsng4 deb libs optional
- libkdepim4 deb libs optional
- libkdepimdbusinterfaces4 deb libs optional
- libkdepimmobileui4 deb libs optional
- libkdgantt2-0 deb libs optional
- libkleo4 deb libs optional
- libkmanagesieve4 deb libs optional
- libkpgp4 deb libs optional
- libksieve4 deb libs optional
- libksieveui4 deb libs optional
- libmailcommon4 deb libs optional
- libmailimporter4 deb libs optional
- libmessagecomposer4 deb libs optional
- libmessagecore4 deb libs optional
- libmessagelist4 deb libs optional
- libmessageviewer4 deb libs optional
- libpimactivity4 deb libs optional
- libpimcommon4 deb libs optional
- libtemplateparser4 deb libs optional
- notes-mobile deb kde optional
- tasks-mobile deb utils optional
-Checksums-Sha1:
- cf61842f1aa70a7d2576dc592440e28c1791a8c8 4774 kdepim_4.10.97-0ubuntu1.dsc
- 88bdf638db20d46d13d3286612ef4ffacbc92d3a 13186144 kdepim_4.10.97.orig.tar.xz
- b9baa934bbbb07eee906102e6972e5e324c7ad7b 67183 kdepim_4.10.97-0ubuntu1.debian.tar.gz
-Checksums-Sha256:
- e77210bd642f8794bd2f2c30228c1e553fbca06e0407c28e12a1a4bfbf2f0c5e 4774 kdepim_4.10.97-0ubuntu1.dsc
- 862107819835a4d2c121a820b5f67794cb53b6ff9b11a4dded85569fb5229e8d 13186144 kdepim_4.10.97.orig.tar.xz
- c5000657b3954949f38dedc683152df32558bc9145e909bdc55de707602fa82c 67183 kdepim_4.10.97-0ubuntu1.debian.tar.gz
 
 Package: kdepim-runtime
 Binary: kdepim-runtime, kdepim-runtime-dbg, akonadi-facebook
