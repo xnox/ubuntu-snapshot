@@ -1,3 +1,26 @@
+Package: accountsservice
+Priority: standard
+Section: gnome
+Installed-Size: 416
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessio Treglia <alessio@debian.org>
+Architecture: i386
+Version: 0.6.34-0ubuntu3
+Depends: dbus, libaccountsservice0 (= 0.6.34-0ubuntu3), libc6 (>= 2.4), libgcr-base-3-1 (>= 3.8.0), libglib2.0-0 (>= 2.37.3), libpam0g (>= 0.99.7.1), libpolkit-gobject-1-0 (>= 0.99)
+Suggests: gnome-control-center
+Filename: pool/main/a/accountsservice/accountsservice_0.6.34-0ubuntu3_i386.deb
+Size: 76336
+MD5sum: 6cfa2cb445aab69232708190580b8100
+SHA1: bca8dbe9f616d5a61613c6ce1a92db61a9726c34
+SHA256: 0085ec9cc09a14af41e45edfd94e28d63fca26ad53f35a5cc316100058a9b232
+Description: query and manipulate user account information
+Homepage: http://cgit.freedesktop.org/accountsservice/
+Description-md5: 8aeed0a03c7cd494f0c4b8d977483d7e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
+
 Package: binutils
 Priority: optional
 Section: devel
@@ -772,6 +795,31 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: gir1.2-accountsservice-1.0
+Priority: optional
+Section: libs
+Installed-Size: 54
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessio Treglia <alessio@debian.org>
+Architecture: i386
+Source: accountsservice
+Version: 0.6.34-0ubuntu3
+Replaces: gir1.2-accountservice-1.0 (<< 0.6.12-4)
+Depends: gir1.2-glib-2.0, libaccountsservice0 (>= 0.6.34)
+Breaks: gir1.2-accountservice-1.0 (<< 0.6.12-4)
+Filename: pool/main/a/accountsservice/gir1.2-accountsservice-1.0_0.6.34-0ubuntu3_i386.deb
+Size: 5076
+MD5sum: 8bd047cb0e36806994150716eae75cee
+SHA1: 8257454a091f2d91f8af103f625702b25433c621
+SHA256: 246e7dba4213df7488df42ef303724fe9981bfe2919b561abc1efaf20e8859b0
+Description: GObject introspection data for AccountService
+Homepage: http://cgit.freedesktop.org/accountsservice/
+Description-md5: 3e307108d5acfea1c79fd66a238baaf2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-gnome-desktop
+
 Package: gobjc-4.8
 Priority: optional
 Section: devel
@@ -1327,6 +1375,94 @@ Description-md5: 6d699ea4429a346bc58e56d70e561407
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: libaccountsservice-dbg
+Priority: extra
+Section: debug
+Installed-Size: 583
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessio Treglia <alessio@debian.org>
+Architecture: i386
+Source: accountsservice
+Version: 0.6.34-0ubuntu3
+Depends: libaccountsservice0 (= 0.6.34-0ubuntu3)
+Filename: pool/main/a/accountsservice/libaccountsservice-dbg_0.6.34-0ubuntu3_i386.deb
+Size: 190946
+MD5sum: 943ead76e538c9e48433eb2b2745c64c
+SHA1: 300d463a6d990a0e76de0ea762f476cf02a34458
+SHA256: a4e808aff59948883458db2e924c5319bebbc499ce74e47a91ad392c02dd71ec
+Description: query and manipulate user account information - debug
+Homepage: http://cgit.freedesktop.org/accountsservice/
+Description-md5: 67e2c3a1e0dc7dd3b34232ab48d143a8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libaccountsservice-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 156
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessio Treglia <alessio@debian.org>
+Architecture: i386
+Source: accountsservice
+Version: 0.6.34-0ubuntu3
+Depends: libaccountsservice0 (= 0.6.34-0ubuntu3), libgirepository1.0-dev (>= 0.9.12), libglib2.0-dev (>= 2.25.11), libpolkit-gobject-1-dev
+Filename: pool/main/a/accountsservice/libaccountsservice-dev_0.6.34-0ubuntu3_i386.deb
+Size: 11762
+MD5sum: 2905e2f3393c014effbd6cf2f791a411
+SHA1: ae204b91dd63aed8600eb775bddc10c9b39949cd
+SHA256: 5bee14d1709a14a0e4c0bbd152c8de3f22be55e5890580e5e942af5d803dfb59
+Description: query and manipulate user account information - header files
+Homepage: http://cgit.freedesktop.org/accountsservice/
+Description-md5: d0607148cea2974f2cc311a5e0bab4f9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libaccountsservice-doc
+Priority: optional
+Section: doc
+Installed-Size: 239
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessio Treglia <alessio@debian.org>
+Architecture: all
+Source: accountsservice
+Version: 0.6.34-0ubuntu3
+Filename: pool/main/a/accountsservice/libaccountsservice-doc_0.6.34-0ubuntu3_all.deb
+Size: 25160
+MD5sum: a75ba98c58b35ee398b3a0b33ad737bc
+SHA1: 2e049d508ba034f97216718f5301e585c8577a31
+SHA256: 71e510c9f5c22490574dd573c9224d58b2abeeb98fcb7117dc7000f7e3f091c7
+Description: query and manipulate user account information - documentation
+Homepage: http://cgit.freedesktop.org/accountsservice/
+Description-md5: 15ee25a15ef232cbf860503a04604aa7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libaccountsservice0
+Priority: standard
+Section: libs
+Installed-Size: 336
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessio Treglia <alessio@debian.org>
+Architecture: i386
+Source: accountsservice
+Version: 0.6.34-0ubuntu3
+Depends: libc6 (>= 2.3.6-6~), libgcr-base-3-1 (>= 3.8.0), libglib2.0-0 (>= 2.37.3), libsystemd-login0 (>= 186)
+Breaks: accountsservice (<< 0.6.5)
+Filename: pool/main/a/accountsservice/libaccountsservice0_0.6.34-0ubuntu3_i386.deb
+Size: 89610
+MD5sum: 4a47385b6cabe809520be562927db2fb
+SHA1: d73b0dd23e40e653be6caf7147e3f706497eec97
+SHA256: 37bfd8c6a05a4fd8a9bcdcf3e99b1cdac68f2226577b297369c9f45ab72ec03c
+Description: query and manipulate user account information - shared libraries
+Homepage: http://cgit.freedesktop.org/accountsservice/
+Description-md5: d536aa425d73c3ead2f37bd9a771e648
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
