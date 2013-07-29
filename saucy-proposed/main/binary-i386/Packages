@@ -954,6 +954,29 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-gnome-desktop
 
+Package: glibc-doc
+Priority: optional
+Section: doc
+Installed-Size: 2127
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: all
+Source: eglibc
+Version: 2.17-7ubuntu1
+Depends: glibc-doc-reference (>= 2.17)
+Filename: pool/main/e/eglibc/glibc-doc_2.17-7ubuntu1_all.deb
+Size: 21228
+MD5sum: 4b19819c1a9c0abaebcc8a868d4eacf1
+SHA1: 32de17414917e86935760760fd6fc0c36beedb71
+SHA256: 9a4f65f8afd5de870d8445288ff57939e36e57d5fb2338e8d2e96953868db270
+Description: Embedded GNU C Library: Documentation
+Multi-Arch: foreign
+Homepage: http://www.eglibc.org
+Description-md5: 49341b064b2f9185d1eb2c96e4a87c33
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: gobjc-4.8
 Priority: optional
 Section: devel
@@ -2279,6 +2302,309 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
+
+Package: libc-bin
+Essential: yes
+Priority: required
+Section: libs
+Installed-Size: 3309
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Source: eglibc
+Version: 2.17-7ubuntu1
+Replaces: libc0.1, libc0.3, libc6, libc6.1
+Depends: libc6 (>> 2.17), libc6 (<< 2.18), libcap2 (>= 2.10)
+Breaks: libc0.1 (<< 2.10), libc0.3 (<< 2.10), libc6 (<< 2.10), libc6.1 (<< 2.10)
+Filename: pool/main/e/eglibc/libc-bin_2.17-7ubuntu1_i386.deb
+Size: 1128504
+MD5sum: 06e0e40d0a6c07dbb8ab7cd2275f5fe3
+SHA1: 01ec1e0d92b3e87b467a64aaddea17cf8b660980
+SHA256: 177dafe3065a198289096d430d951aeb432f1e5f9167fcf8aa4c725fbd08e5c4
+Description: Embedded GNU C Library: Binaries
+Multi-Arch: foreign
+Homepage: http://www.eglibc.org
+Description-md5: 522a2db5296e3eb124bc283f6680cc58
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: libc-dev-bin
+Priority: optional
+Section: libdevel
+Installed-Size: 348
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Source: eglibc
+Version: 2.17-7ubuntu1
+Replaces: libc0.1-dev, libc0.3-dev, libc6-dev, libc6.1-dev
+Depends: libc6 (>> 2.17), libc6 (<< 2.18)
+Recommends: manpages-dev
+Filename: pool/main/e/eglibc/libc-dev-bin_2.17-7ubuntu1_i386.deb
+Size: 74028
+MD5sum: eda09268761958754f8ed3f003b91b98
+SHA1: 88d6be833ac1ea8c42ab244ac812f7aa48fbd087
+SHA256: 7da76e147702a194d8ebe65238a3bf6b7a62439a45584579285c2993336aea80
+Description: Embedded GNU C Library: Development binaries
+Multi-Arch: foreign
+Homepage: http://www.eglibc.org
+Description-md5: fd5fdd2377062e0827c669a30c97e2dc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libc6
+Priority: required
+Section: libs
+Installed-Size: 9227
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Source: eglibc
+Version: 2.17-7ubuntu1
+Replaces: libc6-i386
+Provides: glibc-2.17-1, libc6-i686
+Depends: libgcc1
+Suggests: glibc-doc, debconf | debconf-2.0, locales
+Conflicts: prelink (<= 0.0.20090311-1), tzdata (<< 2007k-1), tzdata-etch
+Breaks: nscd (<< 2.17)
+Filename: pool/main/e/eglibc/libc6_2.17-7ubuntu1_i386.deb
+Size: 4039998
+MD5sum: 408b38db6a811068be7f4adcd2d4e276
+SHA1: 475ce0b07bceed7f1014fefa048f7cf61a314116
+SHA256: 50f49e8f2af3e034f5f5d3cafee5d7e8a4f6f8fbea66cd2f13e2f0cc59bfb0fb
+Description: Embedded GNU C Library: Shared libraries
+Multi-Arch: same
+Homepage: http://www.eglibc.org
+Description-md5: 5089b4da6684d7432ab618fb5b79cec5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: libc6-amd64
+Priority: optional
+Section: libs
+Installed-Size: 10699
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Source: eglibc
+Version: 2.17-7ubuntu1
+Depends: libc6 (= 2.17-7ubuntu1)
+Conflicts: amd64-libs (<= 1.2)
+Filename: pool/main/e/eglibc/libc6-amd64_2.17-7ubuntu1_i386.deb
+Size: 4733068
+MD5sum: 491a409f69307989d2aa8429c1228378
+SHA1: 95b1ffd9ba2660a01fdc402193b7d38610b03ed5
+SHA256: 6d4ef74d2085a7c3d71ba80c52263717fa09e974fb901286686c2ff38b8ef493
+Description: Embedded GNU C Library: 64bit Shared libraries for AMD64
+Homepage: http://www.eglibc.org
+Description-md5: 5e871a82fe5ae12250669afab6662439
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libc6-dbg
+Priority: extra
+Section: debug
+Installed-Size: 28671
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Source: eglibc
+Version: 2.17-7ubuntu1
+Provides: libc-dbg
+Depends: libc6 (= 2.17-7ubuntu1)
+Filename: pool/main/e/eglibc/libc6-dbg_2.17-7ubuntu1_i386.deb
+Size: 3094054
+MD5sum: 589905f761fd335353dcbbe973ee218c
+SHA1: 53a82d823da76e81a63839a44aad0967a13e6a88
+SHA256: 0308d4bfe602ce36b509b4472af711e9899188cc96e96cdb894d1c1b44aeb8ec
+Description: Embedded GNU C Library: detached debugging symbols
+Multi-Arch: same
+Homepage: http://www.eglibc.org
+Description-md5: 277bfaa2a11e93ce7a8e08b0947e8bd8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libc6-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 20627
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Source: eglibc
+Version: 2.17-7ubuntu1
+Provides: libc-dev
+Depends: libc6 (= 2.17-7ubuntu1), libc-dev-bin (= 2.17-7ubuntu1), linux-libc-dev
+Recommends: gcc | c-compiler
+Suggests: glibc-doc, manpages-dev
+Conflicts: libc0.1-dev, libc0.3-dev, libc6.1-dev
+Breaks: binutils (<< 2.20.1-1), binutils-gold (<< 2.20.1-11), cmake (<< 2.8.4+dfsg.1-5), gcc-4.4 (<< 4.4.6-4), gcc-4.5 (<< 4.5.3-2), gcc-4.6 (<< 4.6.0-12), libhwloc-dev (<< 1.2-3), libjna-java (<< 3.2.7-4), liblouis-dev (<< 2.3.0-2), liblouisxml-dev (<< 2.4.0-2), make (<< 3.81-8.1), pkg-config (<< 0.26-1)
+Filename: pool/main/e/eglibc/libc6-dev_2.17-7ubuntu1_i386.deb
+Size: 5508248
+MD5sum: c6e843ca6cae68e6ccdae7db33fe3d37
+SHA1: c71bb50a67a3da19649857100385b160ac1fadd0
+SHA256: f1980d88783ecf09ade42b431dc726d48f25c4784c5c436552193e5f1ddccf3b
+Description: Embedded GNU C Library: Development Libraries and Header Files
+Multi-Arch: same
+Homepage: http://www.eglibc.org
+Description-md5: 67dac41d6c8268d6a08835d858b160af
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libc6-dev-amd64
+Priority: optional
+Section: libdevel
+Installed-Size: 9324
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Source: eglibc
+Version: 2.17-7ubuntu1
+Replaces: amd64-libs-dev (<= 1.2), libc6-dev (<< 2.13-11)
+Provides: lib64c-dev
+Depends: libc6-amd64 (= 2.17-7ubuntu1), libc6-dev (= 2.17-7ubuntu1)
+Recommends: gcc-multilib
+Conflicts: libc6-dev (<< 2.13-14)
+Filename: pool/main/e/eglibc/libc6-dev-amd64_2.17-7ubuntu1_i386.deb
+Size: 2459402
+MD5sum: 0a02adced8a3b02286cc90beffb9ee8c
+SHA1: c7636f3614f3fb2b0e95e2fc048130a900537709
+SHA256: f4e6e328a0429b8f1ef5efd3ea576b91ec92642924d5bc35e894a64f06b60550
+Description: Embedded GNU C Library: 64bit Development Libraries for AMD64
+Homepage: http://www.eglibc.org
+Description-md5: e56f2cd3094aab960377d26a5ed4ab90
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libc6-dev-x32
+Priority: optional
+Section: libdevel
+Installed-Size: 7347
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Source: eglibc
+Version: 2.17-7ubuntu1
+Depends: libc6-x32 (= 2.17-7ubuntu1), libc6-dev-amd64 (= 2.17-7ubuntu1), libc6-dev (= 2.17-7ubuntu1)
+Filename: pool/main/e/eglibc/libc6-dev-x32_2.17-7ubuntu1_i386.deb
+Size: 2367904
+MD5sum: ff8d16077bf53673089c07e264997545
+SHA1: 9d50986986d6477750fd93549b11d102cc6e9d5a
+SHA256: d1a2a1587e5ec3471770d75f66f844d095807b796632c0e829b1c7f407b2875f
+Description: Embedded GNU C Library: X32 ABI Development Libraries for AMD64
+Homepage: http://www.eglibc.org
+Description-md5: 140597acae786a385454e1181b2fbecb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libc6-pic
+Priority: optional
+Section: libdevel
+Installed-Size: 6392
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Source: eglibc
+Version: 2.17-7ubuntu1
+Provides: glibc-pic, libc-pic
+Depends: libc6 (= 2.17-7ubuntu1)
+Conflicts: libc-pic
+Filename: pool/main/e/eglibc/libc6-pic_2.17-7ubuntu1_i386.deb
+Size: 1115542
+MD5sum: 68522d6f50286bfd5acd323789b1d0d9
+SHA1: dd82fa4cdd9c0c9fb9f07aaa73d0ee636e00c488
+SHA256: 56bbb78d1ee8006e98aa216a887358abec4a51625a8bd93f13a6e68b28f8e956
+Description: Embedded GNU C Library: PIC archive library
+Multi-Arch: same
+Homepage: http://www.eglibc.org
+Description-md5: 85973cd40f4511da29e5fd362e133f28
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libc6-prof
+Priority: extra
+Section: libdevel
+Installed-Size: 6271
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Source: eglibc
+Version: 2.17-7ubuntu1
+Depends: libc6 (= 2.17-7ubuntu1)
+Filename: pool/main/e/eglibc/libc6-prof_2.17-7ubuntu1_i386.deb
+Size: 1151400
+MD5sum: 2f004c3b2fa234df20947fab1a1a28f3
+SHA1: b3c5fc92967e92ad666a7667e0f610c764312d04
+SHA256: 715b0818aeef9fcb2f0a8f9f6104cd930f9f6a09e934d91b6ff64f09be58d3c1
+Description: Embedded GNU C Library: Profiling Libraries
+Multi-Arch: same
+Homepage: http://www.eglibc.org
+Description-md5: 37f174a2430988386de68890169f5224
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libc6-x32
+Priority: optional
+Section: libs
+Installed-Size: 10282
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Source: eglibc
+Version: 2.17-7ubuntu1
+Depends: libc6 (= 2.17-7ubuntu1)
+Filename: pool/main/e/eglibc/libc6-x32_2.17-7ubuntu1_i386.deb
+Size: 4702680
+MD5sum: 4dc46a494b32eb18c856e7965e304672
+SHA1: cd807ce5e2939bd36aba595906fc85616405a151
+SHA256: 608340faaeb281d79c8c5fbe2aa74e61719fd7ba31aa8f45e4612fc1cd3d1f33
+Description: Embedded GNU C Library: X32 ABI Shared libraries for AMD64
+Homepage: http://www.eglibc.org
+Description-md5: f36805e5d41866f6c61e0d5467d9294b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libc6-xen
+Priority: extra
+Section: libs
+Installed-Size: 3215
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Source: eglibc
+Version: 2.17-7ubuntu1
+Pre-Depends: libc6 (= 2.17-7ubuntu1)
+Filename: pool/main/e/eglibc/libc6-xen_2.17-7ubuntu1_i386.deb
+Size: 1310328
+MD5sum: 6c9dc67eb0a875e8a75f003f3077c9c3
+SHA1: 803dcb2b58e40a05884ef142c5ea084a1cc6eaf3
+SHA256: 39c4d58ca1ee34840a89a8043de5cd117ddd5131ea2b71f2adb7b773acbe24ae
+Description: Embedded GNU C Library: Shared libraries [Xen version]
+Multi-Arch: same
+Homepage: http://www.eglibc.org
+Description-md5: 9c83bb34c66439f4c333b8ab96e84d18
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: cloud-image
 
 Package: libcfg-dev
 Priority: optional
@@ -6190,6 +6516,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: kubuntu-full, kubuntu-active-full
+
+Package: multiarch-support
+Priority: required
+Section: libs
+Installed-Size: 192
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
+Architecture: i386
+Source: eglibc
+Version: 2.17-7ubuntu1
+Depends: libc6 (>= 2.13-5)
+Filename: pool/main/e/eglibc/multiarch-support_2.17-7ubuntu1_i386.deb
+Size: 4482
+MD5sum: b3d7e2d757aafca676a4104809b9b8c5
+SHA1: bac5343dc79ec1cdde5d5917897a1f41f5e94778
+SHA256: 905a33396c1c6c0c1ba08ef0077cefce06d5c9016cb7e56efb1c6d9675af638f
+Description: Transitional package to ensure multiarch compatibility
+Multi-Arch: foreign
+Homepage: http://www.eglibc.org
+Description-md5: f70fd4ad370040691119c10d77aec677
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
 
 Package: mysql-client
 Priority: optional
