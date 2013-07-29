@@ -1,3 +1,27 @@
+Package: cloud-init
+Priority: extra
+Section: admin
+Installed-Size: 854
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Version: 0.7.3~bzr851-0ubuntu1
+Replaces: ec2-init (<< 0.5.3)
+Provides: ec2-init
+Depends: cloud-utils, ifupdown (>= 0.6.10ubuntu5), procps, python (>= 2.7.1-0ubuntu2), python-requests (>= 0.8.2), software-properties-common, debconf (>= 0.5) | debconf-2.0, python (<< 2.8), python-boto, python-cheetah, python-configobj, python-json-patch, python-oauth, python-prettytable, python-yaml
+Conflicts: ec2-init (<< 0.5.3)
+Filename: pool/main/c/cloud-init/cloud-init_0.7.3~bzr851-0ubuntu1_all.deb
+Size: 191948
+MD5sum: 1332aae4703cf185c160231d61517fcf
+SHA1: 825ccd61ffa01d8b9b1ca4230314703f1b8c7cd0
+SHA256: ab84c65d49e33efd2bc77ef34006ced071d382591cffeec8df144416e21725a2
+Description: Init scripts for cloud instances
+Python-Version: 2.7
+Description-md5: 8719ef0e4178017b7147590b1fde082e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: cloud-image
+
 Package: compiz
 Priority: optional
 Section: x11
@@ -766,6 +790,29 @@ Description-md5: ef51de6b57526dc4a161944678606486
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: grub-legacy-ec2
+Priority: extra
+Section: admin
+Installed-Size: 143
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Source: cloud-init
+Version: 0.7.3~bzr851-0ubuntu1
+Depends: debconf (>= 1.5.19) | cdebconf, ucf, util-linux (>= 2.15-1), debconf (>= 0.5) | debconf-2.0
+Suggests: grub-legacy-doc
+Conflicts: grub
+Filename: pool/main/c/cloud-init/grub-legacy-ec2_0.7.3~bzr851-0ubuntu1_all.deb
+Size: 24312
+MD5sum: 68e326a75bbcde26c5687e0025585dd4
+SHA1: f74e932b3d17bf03b51ca0630deeb3d205aac100
+SHA256: 9a3197ca8258b3385ba96cbd67c35562a20ab48d5480c7cafdc816b49657d549
+Description: Handles update-grub for ec2 instances
+Description-md5: e5f8ea347000ef0d0aedb42c000e0b9c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: cloud-image
 
 Package: ibus
 Priority: optional
@@ -2764,28 +2811,6 @@ Description-md5: 8e6e17da8d0b42fc976ade7330c11a20
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-
-Package: libglib-perl
-Priority: optional
-Section: perl
-Installed-Size: 868
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Version: 3:1.301-1
-Depends: libc6 (>= 2.14), libglib2.0-0 (>= 2.35.9), perl (>= 5.14.2-21build1), perlapi-5.14.2
-Filename: pool/main/libg/libglib-perl/libglib-perl_1.301-1_amd64.deb
-Size: 378706
-MD5sum: f2f2ca5d7e8e38ecfcdb330fb1b8e684
-SHA1: 9e0c2e31dae31de410055d8735ff69ae57e532c3
-SHA256: 073a0a6ab277319895fd4a67f28578644fbf9f5f24faa454a342297351ae2413
-Description: interface to the GLib and GObject libraries
-Homepage: http://gtk2-perl.sourceforge.net/
-Description-md5: c36548879ce1dd823f59de4579e223db
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libgo4
 Priority: optional

@@ -1,3 +1,26 @@
+Package: cloud-init
+Priority: extra
+Section: admin
+Installed-Size: 854
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Version: 0.7.3~bzr851-0ubuntu1
+Replaces: ec2-init (<< 0.5.3)
+Provides: ec2-init
+Depends: cloud-utils, ifupdown (>= 0.6.10ubuntu5), procps, python (>= 2.7.1-0ubuntu2), python-requests (>= 0.8.2), software-properties-common, debconf (>= 0.5) | debconf-2.0, python (<< 2.8), python-boto, python-cheetah, python-configobj, python-json-patch, python-oauth, python-prettytable, python-yaml
+Conflicts: ec2-init (<< 0.5.3)
+Filename: pool/main/c/cloud-init/cloud-init_0.7.3~bzr851-0ubuntu1_all.deb
+Size: 191948
+MD5sum: 1332aae4703cf185c160231d61517fcf
+SHA1: 825ccd61ffa01d8b9b1ca4230314703f1b8c7cd0
+SHA256: ab84c65d49e33efd2bc77ef34006ced071d382591cffeec8df144416e21725a2
+Description: Init scripts for cloud instances
+Python-Version: 2.7
+Description-md5: 8719ef0e4178017b7147590b1fde082e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: cloud-image
+
 Package: compiz
 Priority: optional
 Section: x11
@@ -698,13 +721,13 @@ Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
 Original-Maintainer: Martin Pitt <mpitt@debian.org>
 Architecture: powerpc
 Source: umockdev
-Version: 0.4-0ubuntu1
-Depends: libumockdev0 (>= 0.4-0ubuntu1), gir1.2-glib-2.0
-Filename: pool/main/u/umockdev/gir1.2-umockdev-1.0_0.4-0ubuntu1_powerpc.deb
-Size: 2682
-MD5sum: a590149f7458a60b77c4f3d9f4143dad
-SHA1: 486fff271646e5f2ef35211a2c693a7adeeb8e77
-SHA256: 41ba664c00369ac2fe661c6fe3a10be3423b009d62436b18be92e632044fb595
+Version: 0.4.1-0ubuntu1
+Depends: libumockdev0 (>= 0.4.1-0ubuntu1), gir1.2-glib-2.0
+Filename: pool/main/u/umockdev/gir1.2-umockdev-1.0_0.4.1-0ubuntu1_powerpc.deb
+Size: 2692
+MD5sum: 837cb0f9157a630a41667bdb4d51adf8
+SHA1: 72ae8ca21e9d613758003d638d2f0c45fadc4061
+SHA256: 1518f63442b9daa1ded74b55f37a65a3ebe17e4c2c4db419f4a625830be3ed6c
 Description: introspection data for umockdev library
 Homepage: https://github.com/martinpitt/umockdev/
 Description-md5: fbb61fba8c934a3abb2dd226ec23d275
@@ -733,6 +756,28 @@ Homepage: http://gcc.gnu.org/
 Description-md5: ef51de6b57526dc4a161944678606486
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: grub-legacy-ec2
+Priority: extra
+Section: admin
+Installed-Size: 143
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Source: cloud-init
+Version: 0.7.3~bzr851-0ubuntu1
+Depends: debconf (>= 1.5.19) | cdebconf, ucf, util-linux (>= 2.15-1), debconf (>= 0.5) | debconf-2.0
+Suggests: grub-legacy-doc
+Conflicts: grub
+Filename: pool/main/c/cloud-init/grub-legacy-ec2_0.7.3~bzr851-0ubuntu1_all.deb
+Size: 24312
+MD5sum: 68e326a75bbcde26c5687e0025585dd4
+SHA1: f74e932b3d17bf03b51ca0630deeb3d205aac100
+SHA256: 9a3197ca8258b3385ba96cbd67c35562a20ab48d5480c7cafdc816b49657d549
+Description: Handles update-grub for ec2 instances
+Description-md5: e5f8ea347000ef0d0aedb42c000e0b9c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: cloud-image
 
 Package: ibus
 Priority: optional
@@ -2576,27 +2621,6 @@ Description-md5: 8e6e17da8d0b42fc976ade7330c11a20
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libglib-perl
-Priority: optional
-Section: perl
-Installed-Size: 882
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
-Architecture: powerpc
-Version: 3:1.301-1
-Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.35.9), perl (>= 5.14.2-21build1), perlapi-5.14.2
-Filename: pool/main/libg/libglib-perl/libglib-perl_1.301-1_powerpc.deb
-Size: 373082
-MD5sum: 5d713c6f632f3fc0a56560b88715603e
-SHA1: 760fec1de6d0cd84f249032c0898dc6f504bfe9b
-SHA256: c87e71269fa335aab213e55254e0055027a92800b6609185daa34392d21f79aa
-Description: interface to the GLib and GObject libraries
-Homepage: http://gtk2-perl.sourceforge.net/
-Description-md5: c36548879ce1dd823f59de4579e223db
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
 Package: libgo4
 Priority: optional
 Section: libs
@@ -3733,13 +3757,13 @@ Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
 Original-Maintainer: Martin Pitt <mpitt@debian.org>
 Architecture: powerpc
 Source: umockdev
-Version: 0.4-0ubuntu1
-Depends: libumockdev0 (= 0.4-0ubuntu1), libglib2.0-dev, gir1.2-umockdev-1.0
-Filename: pool/main/u/umockdev/libumockdev-dev_0.4-0ubuntu1_powerpc.deb
-Size: 21414
-MD5sum: 9cd99a7ebf138adddbf209f315d872b3
-SHA1: b39f1b66f5a931ad9d99befacf64d67300e72e22
-SHA256: 140aa988eeb45480bb65fc5e3f48e32bf83e845dcd84b43367e21d7621b9320a
+Version: 0.4.1-0ubuntu1
+Depends: libumockdev0 (= 0.4.1-0ubuntu1), libglib2.0-dev, gir1.2-umockdev-1.0
+Filename: pool/main/u/umockdev/libumockdev-dev_0.4.1-0ubuntu1_powerpc.deb
+Size: 21438
+MD5sum: 938c4cffe32e36ff061818c9e0cc5297
+SHA1: 0a21bace6aafaf07398c2a714cf11b787d1a80b7
+SHA256: 9a38778f962403acdab7266cceca7fbbef685f4ab1954ba65a4ed31bb40424cf
 Description: development files and documentation for libumockdev
 Homepage: https://github.com/martinpitt/umockdev/
 Description-md5: e20e1fd5f7c452d037e06ca09da31d81
@@ -3754,14 +3778,14 @@ Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
 Original-Maintainer: Martin Pitt <mpitt@debian.org>
 Architecture: powerpc
 Source: umockdev
-Version: 0.4-0ubuntu1
+Version: 0.4.1-0ubuntu1
 Depends: libc6 (>= 2.15), libglib2.0-0 (>= 2.32.0), libudev1 (>= 183)
 Pre-Depends: multiarch-support
-Filename: pool/main/u/umockdev/libumockdev0_0.4-0ubuntu1_powerpc.deb
-Size: 31696
-MD5sum: 579dee4f1eec3686d3518fd77580b30e
-SHA1: dfaae8e73b4f2c43f090a5f4f5453bff94de41ec
-SHA256: b30d190c27d771e882f92c4a028f1a7cbc15c721d4a0a8260135b70ce01fac2e
+Filename: pool/main/u/umockdev/libumockdev0_0.4.1-0ubuntu1_powerpc.deb
+Size: 31728
+MD5sum: c3f6679f9a9ad4486cadfdddf91a3cfd
+SHA1: 66d1b92573872a15e7d1ba1e05a6015f391c2cba
+SHA256: 295ed9dcb1b094328918f9e7d44b816f083ec24b40ab3c07f0b402f292542c97
 Description: hardware mocking testbed for bug reports and regression tests
 Multi-Arch: same
 Homepage: https://github.com/martinpitt/umockdev/
@@ -4760,14 +4784,14 @@ Installed-Size: 121
 Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
 Original-Maintainer: Martin Pitt <mpitt@debian.org>
 Architecture: powerpc
-Version: 0.4-0ubuntu1
+Version: 0.4.1-0ubuntu1
 Depends: libc6 (>= 2.17), libglib2.0-0 (>= 2.32.0), libumockdev0 (>= 0.4)
 Pre-Depends: multiarch-support
-Filename: pool/main/u/umockdev/umockdev_0.4-0ubuntu1_powerpc.deb
-Size: 36028
-MD5sum: 1fa4d8420c9f721369ccb0999f0c8041
-SHA1: 090b0b972abc065d20a36caa508a2e165bfed77e
-SHA256: c7bc4e65a1cac69450c0ed61773a107a4b1304b41a35020f3ce906a82ef101b9
+Filename: pool/main/u/umockdev/umockdev_0.4.1-0ubuntu1_powerpc.deb
+Size: 36508
+MD5sum: c34c3551b25a52309a04f833c4fe543e
+SHA1: 9097970b32e78535de31da1813ab8eb3c19559cd
+SHA256: f4073319b0528ec61a3ea4671d13f09db33c7d9d354ff58facc1e14810280342
 Description: record/mock hardware devices for bug reports and regression tests
 Homepage: https://github.com/martinpitt/umockdev/
 Description-md5: 286db1dc230b4374b7e4132a74169450
