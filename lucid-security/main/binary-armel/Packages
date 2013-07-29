@@ -50251,6 +50251,31 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-doc
+Priority: optional
+Section: doc
+Installed-Size: 27908
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 2.6.32-50.112
+Replaces: linux-doc-2.6
+Conflicts: linux-doc-2.6
+Filename: pool/main/l/linux/linux-doc_2.6.32-50.112_all.deb
+Size: 6792822
+MD5sum: 05d1f0bf1c2a80f748894e4360e258ba
+SHA1: 6ad155956174bc09941adc33f0a24e128b474713
+SHA256: 7d064520607f891043222f4ab4619d657246ce2e54dc3d419301546e14c83df4
+Description: Linux kernel specific documentation for version 2.6.32
+ This package provides the various documents in the 2.6.32 kernel
+ Documentation/ subdirectory.  These document kernel subsystems, APIs, device
+ drivers, and so on.  See
+ /usr/share/doc/linux-doc/00-INDEX for a list of what is
+ contained in each file.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
 Package: linux-dove
 Priority: optional
 Section: metapackages
@@ -50636,6 +50661,31 @@ Size: 6802106
 MD5sum: 1cede04931f0853f950c132599d3579b
 SHA1: 7f91578bf8aad0dc8d85a78f1092305346bbc43c
 SHA256: 881f75e75a9cd50537e3492ac78b36651d734be2ecfa23c3d4ab678d6c6299d6
+Description: Linux kernel specific documentation for version 2.6.32
+ This package provides the various documents in the 2.6.32 kernel
+ Documentation/ subdirectory.  These document kernel subsystems, APIs, device
+ drivers, and so on.  See
+ /usr/share/doc/linux-ec2-doc/00-INDEX for a list of what is
+ contained in each file.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: linux-ec2-doc
+Priority: optional
+Section: doc
+Installed-Size: 27920
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux-ec2
+Version: 2.6.32-355.68
+Replaces: linux-ec2-doc-2.6
+Conflicts: linux-ec2-doc-2.6
+Filename: pool/main/l/linux-ec2/linux-ec2-doc_2.6.32-355.68_all.deb
+Size: 6790360
+MD5sum: 250ea0bac6ca8c10d74ba82697cc3ccd
+SHA1: 7d3e25629d8c1cd3a9ace713f0e55515fd854ddf
+SHA256: 53048295477437601bc62374eb47f2cc344655885fefa1a926974dafaa199a2c
 Description: Linux kernel specific documentation for version 2.6.32
  This package provides the various documents in the 2.6.32 kernel
  Documentation/ subdirectory.  These document kernel subsystems, APIs, device
@@ -51153,6 +51203,41 @@ Size: 69325284
 MD5sum: f32f22d8d0161880023e122986fdf959
 SHA1: 256f595b83caea183cf3e6226b4b739ee87264c7
 SHA256: 2ef58de65d49cacf8bfd51bba590a0f43c5479cd8e3734f795aafc9ea77edcdc
+Description: Linux kernel source for version 2.6.32 with Ubuntu patches
+ This package provides the source code for the Linux kernel version
+ 2.6.32.
+ .
+ This package is mainly meant for other packages to use, in order to build
+ custom flavours.
+ .
+ If you wish to use this package to create a custom Linux kernel, then it
+ is suggested that you investigate the package kernel-package, which has
+ been designed to ease the task of creating kernel image packages.
+ .
+ If you are simply trying to build third-party modules for your kernel,
+ you do not want this package. Install the appropriate linux-headers
+ package instead.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: linux-ec2-source-2.6.32
+Priority: optional
+Section: devel
+Installed-Size: 67856
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux-ec2
+Version: 2.6.32-355.68
+Provides: linux-ec2-source, linux-ec2-source-2.6
+Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
+Recommends: libc-dev, gcc, make
+Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
+Filename: pool/main/l/linux-ec2/linux-ec2-source-2.6.32_2.6.32-355.68_all.deb
+Size: 69407816
+MD5sum: eb0056ce87c06a388530be038678f046
+SHA1: c05005a52f0704c72d33aa2da0c06a67cf72eebf
+SHA256: 8109fd03c9d8058f45566401b4c3c76b6f7c3367d0bbba4a780b6689fd17b94d
 Description: Linux kernel source for version 2.6.32 with Ubuntu patches
  This package provides the source code for the Linux kernel version
  2.6.32.
@@ -52774,6 +52859,27 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-headers-2.6.32-355
+Priority: optional
+Section: devel
+Installed-Size: 75132
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux-ec2
+Version: 2.6.32-355.68
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux-ec2/linux-headers-2.6.32-355_2.6.32-355.68_all.deb
+Size: 10307502
+MD5sum: 1c3712fe2618fdd004fa20f401656293
+SHA1: 2e55b08cca561cb2c28bd7171323a64cf0e30fc7
+SHA256: 84cf35efcacf24214605f03d5d87c183fc89b8fc4f0feae3fc26e4a1afb62b97
+Description: Header files related to Linux kernel version 2.6.32
+ This package provides kernel header files for version 2.6.32, for sites
+ that want the latest kernel headers. Please read
+ /usr/share/doc/linux-headers-2.6.32-355/debian.README.gz for details
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-headers-2.6.32-36
 Priority: optional
 Section: devel
@@ -53429,6 +53535,52 @@ Description: Linux kernel headers for version 2.6.32 on Versatile-based systems
  .
  This is for sites that want the latest kernel headers.  Please read
  /usr/share/doc/linux-headers-2.6.32-49/debian.README.gz for details.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-2.6.32-50
+Priority: optional
+Section: devel
+Installed-Size: 74152
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 2.6.32-50.112
+Provides: linux-headers, linux-headers-2.6
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux/linux-headers-2.6.32-50_2.6.32-50.112_all.deb
+Size: 10174658
+MD5sum: 6982d0058abc515a39c45270228dcb81
+SHA1: 11f52c5995ecab037937124953f985bb0645ae53
+SHA256: 1715fc51746548b860d01949bdea40866ad982456b0f8889ea1a73735e5dc843
+Description: Header files related to Linux kernel version 2.6.32
+ This package provides kernel header files for version 2.6.32, for sites
+ that want the latest kernel headers. Please read
+ /usr/share/doc/linux-headers-2.6.32-50/debian.README.gz for details
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-2.6.32-50-versatile
+Priority: optional
+Section: devel
+Installed-Size: 7340
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: armel
+Source: linux
+Version: 2.6.32-50.112
+Provides: linux-headers, linux-headers-2.6
+Depends: coreutils | fileutils (>= 4.0), linux-headers-2.6.32-50, libc6 (>= 2.8)
+Filename: pool/main/l/linux/linux-headers-2.6.32-50-versatile_2.6.32-50.112_armel.deb
+Size: 784092
+MD5sum: 4cb48f2fce205285925cbf6716369fbe
+SHA1: 458056471cfcda4d25ffcfe3fe5e3fc400b6095b
+SHA256: c83400e9f74feff2235ba2277a0826b0d87d26b97ac3fa5837cab1f9ab32c936
+Description: Linux kernel headers for version 2.6.32 on Versatile-based systems
+ This package provides kernel header files for version 2.6.32 on
+ Versatile-based systems.
+ .
+ This is for sites that want the latest kernel headers.  Please read
+ /usr/share/doc/linux-headers-2.6.32-50/debian.README.gz for details.
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -54208,13 +54360,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armel
 Source: linux-meta
-Version: 2.6.32.49.56
-Depends: linux-headers-2.6.32-49-versatile
-Filename: pool/main/l/linux-meta/linux-headers-versatile_2.6.32.49.56_armel.deb
-Size: 5192
-MD5sum: e88a83578fac5dca9c407ea08c34a922
-SHA1: dc5ce3c21e6f7d0450aa1ef6b4dbde5e965e8d87
-SHA256: 4199d247f010b6c61e4e71b8a7e96f593e411ac43d8f8ea3b6ec95edfa264c86
+Version: 2.6.32.50.57
+Depends: linux-headers-2.6.32-50-versatile
+Filename: pool/main/l/linux-meta/linux-headers-versatile_2.6.32.50.57_armel.deb
+Size: 5206
+MD5sum: 8d0f87cd83c37898914ab1937b248c10
+SHA1: 5f596ab2cb35deeb3a437a5aafaadf22b5a3340d
+SHA256: 9e9ecf0753a652f6e8b10950782abea8bfc97a056ec76334c1c664f43539b53c
 Description: Linux kernel headers for the Versatile architecture.
  This package will always depend on the latest kernel headers available
  for ARM versatile systems.
@@ -55644,6 +55796,43 @@ Description: Linux kernel image for version 2.6.32 on Versatile-based systems
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-image-2.6.32-50-versatile
+Priority: optional
+Section: admin
+Installed-Size: 61140
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: armel
+Source: linux
+Version: 2.6.32-50.112
+Provides: fuse-module, linux-image, linux-image-2.6
+Depends: initramfs-tools (>= 0.36ubuntu6), coreutils | fileutils (>= 4.0), module-init-tools (>= 3.3-pre11-4ubuntu3), wireless-crda
+Pre-Depends: dpkg (>= 1.10.24)
+Suggests: fdutils, linux-doc-2.6.32 | linux-source-2.6.32, linux-tools
+Conflicts: hotplug (<< 0.0.20040105-1)
+Breaks: lvm2 (<< 2.02.54-1ubuntu3)
+Filename: pool/main/l/linux/linux-image-2.6.32-50-versatile_2.6.32-50.112_armel.deb
+Size: 20411580
+MD5sum: 934246db0e4808e593fa32074495702b
+SHA1: 72217460d5fd732636f07ee317901b76953ca820
+SHA256: 5d7247150b6a4992b5f8e0ea2a95f15c4659d8c7374868dac6457c26a56889e1
+Description: Linux kernel image for version 2.6.32 on Versatile-based systems
+ This package contains the Linux kernel image for version 2.6.32 on
+ Versatile-based systems.
+ .
+ Also includes the corresponding System.map file, the modules built by the
+ packager, and scripts that try to ensure that the system is not left in an
+ unbootable state after an update.
+ .
+ Supports Versatile processors.
+ .
+ PB, AB, Qemu, etc.
+ .
+ You likely do not want to install this package directly. Instead, install
+ the linux-versatile meta-package, which will ensure that upgrades work
+ correctly, and that supporting packages are also installed.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-image-2.6.33-501-omap
 Priority: optional
 Section: admin
@@ -55803,13 +55992,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armel
 Source: linux-meta
-Version: 2.6.32.49.56
-Depends: linux-image-2.6.32-49-versatile, linux-firmware
-Filename: pool/main/l/linux-meta/linux-image-versatile_2.6.32.49.56_armel.deb
-Size: 5204
-MD5sum: 4e8fd1e0662ec5745e8e7a745f1a5d5a
-SHA1: 7d76dd38749e1b19f5da0fc5510860d390e79607
-SHA256: 7cd6b2092e608592121fce239277f5d77ac07b28ccb1371bfa01961b93edd0d4
+Version: 2.6.32.50.57
+Depends: linux-image-2.6.32-50-versatile, linux-firmware
+Filename: pool/main/l/linux-meta/linux-image-versatile_2.6.32.50.57_armel.deb
+Size: 5220
+MD5sum: b15ebbd40501d0608b51670ddcb1c21a
+SHA1: 20d87f336cc3f30914651aa2eba927e2b85db9a3
+SHA256: dd714edf678b3acf4a45c0c5e7db62b368d568223d9539dd6ff74e03cca0c66f
 Description: Linux kernel image for the Versatile architecture.
  This package will always depend on the latest kernel image available
  for ARM versatile systems.
@@ -55843,15 +56032,15 @@ Installed-Size: 4104
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armel
 Source: linux
-Version: 2.6.32-49.111
+Version: 2.6.32-50.112
 Replaces: dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), libdrm-dev, linux-kernel-headers
 Provides: linux-kernel-headers
 Conflicts: amd64-libs-dev (<= 1.1), dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), linux-kernel-headers
-Filename: pool/main/l/linux/linux-libc-dev_2.6.32-49.111_armel.deb
-Size: 845058
-MD5sum: a892ebf64f00ac02b6cf569b4abe90ff
-SHA1: fc3cd9eebae03bfa4fef16c52d5d963f68676ce1
-SHA256: 8bfd05d43177add39f53a72a8717277fce1e71394adfd818edb69f7044ecc22a
+Filename: pool/main/l/linux/linux-libc-dev_2.6.32-50.112_armel.deb
+Size: 847924
+MD5sum: 18ed1ecb7e1e2411a3bd2d7cf40d8a09
+SHA1: 28d0146c6bf3b3e4ec612c5d70bd1e07a3fb64d8
+SHA256: f9ee34a9baf020a03b6d1d276f526e5c953a221338c34155643834bf82bf64d3
 Description: Linux Kernel Headers for development
  This package provides headers from the Linux kernel.  These headers
  are used by the installed headers for GNU glibc and other system
@@ -55890,13 +56079,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: all
 Source: linux-meta
-Version: 2.6.32.49.56
+Version: 2.6.32.50.57
 Depends: linux-source-2.6.32
-Filename: pool/main/l/linux-meta/linux-source_2.6.32.49.56_all.deb
-Size: 5160
-MD5sum: a94861b1f4f872889a8e169849296530
-SHA1: 29f61b623fdeb971d093f9114a710797ea6d0922
-SHA256: a8686579c1674f45aa26586f772b0506b46770682f4c0fb9cc9f5ade90e06dc7
+Filename: pool/main/l/linux-meta/linux-source_2.6.32.50.57_all.deb
+Size: 5178
+MD5sum: a64c6998433f5454ce204a51240294e1
+SHA1: 9fcada08a979c99cfc95f71b71457a96de90cd6d
+SHA256: 404302bc961a56f4342e172a52db820a79423e963c88f9bbf5845b77a36b3c09
 Description: Linux kernel source with Ubuntu patches
  This package will always depend on the latest Linux kernel source code
  available. The Ubuntu patches have been applied.
@@ -56464,6 +56653,41 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-source-2.6.32
+Priority: optional
+Section: devel
+Installed-Size: 65668
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 2.6.32-50.112
+Provides: linux-source, linux-source-2.6
+Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
+Recommends: libc-dev, gcc, make
+Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
+Filename: pool/main/l/linux/linux-source-2.6.32_2.6.32-50.112_all.deb
+Size: 67162466
+MD5sum: 8060d730e9b64c1073646c8214fb393a
+SHA1: dfdd8238523cf6e84dc21d2c08c52a02ee8b1e29
+SHA256: 10bf024e5a319d1a6a67d1358cd15155c0086e69b4f5283163d31843028de133
+Description: Linux kernel source for version 2.6.32 with Ubuntu patches
+ This package provides the source code for the Linux kernel version
+ 2.6.32.
+ .
+ This package is mainly meant for other packages to use, in order to build
+ custom flavours.
+ .
+ If you wish to use this package to create a custom Linux kernel, then it
+ is suggested that you investigate the package kernel-package, which has
+ been designed to ease the task of creating kernel image packages.
+ .
+ If you are simply trying to build third-party modules for your kernel,
+ you do not want this package. Install the appropriate linux-headers
+ package instead.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
 Package: linux-st1-5
 Priority: optional
 Section: metapackages
@@ -56813,6 +57037,27 @@ Size: 138134
 MD5sum: 6d12f6cd0c78831ad046c855a5abf0c6
 SHA1: e57baa8183dd7b2c5267651bfdc8c47026918e82
 SHA256: 5a3501380b2cbefcdcf4b597a7f72b276ed2d45a1bfde8c7217549c2efdeb44f
+Description: Linux kernel specific tools for version 2.6.32
+ This package provides the architecture independent parts for kernel
+ version locked tools in the 2.6.32 kernel source.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: linux-tools-common
+Priority: optional
+Section: admin
+Installed-Size: 212
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 2.6.32-50.112
+Replaces: linux-tools (<= 2.6.32-16.25)
+Filename: pool/main/l/linux/linux-tools-common_2.6.32-50.112_all.deb
+Size: 138330
+MD5sum: 3321df85fd7df04e74267cdda52fd46d
+SHA1: e8ef962947aa743dbae606ad6a9224df550c164c
+SHA256: 1fc6c42b7fe865511f4a0645a77694318fe7a764e449dddd844b20b490b6eb5a
 Description: Linux kernel specific tools for version 2.6.32
  This package provides the architecture independent parts for kernel
  version locked tools in the 2.6.32 kernel source.

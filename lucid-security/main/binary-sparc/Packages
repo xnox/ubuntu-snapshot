@@ -46438,13 +46438,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: sparc
 Source: linux-ports-meta
-Version: 2.6.32.49.41
-Depends: linux-image (= 2.6.32.49.41)
-Filename: pool/main/l/linux-ports-meta/linux_2.6.32.49.41_sparc.deb
-Size: 4332
-MD5sum: 35c2889db97d859540ee97a0cbf48b0c
-SHA1: e22cc2f0bfa5ebbb4955ebe0c96d6377c611a394
-SHA256: 8d6eb3844af4df16b35420616009f547d7e5ad78e941088bc836f05b4c982c70
+Version: 2.6.32.50.42
+Depends: linux-image (= 2.6.32.50.42)
+Filename: pool/main/l/linux-ports-meta/linux_2.6.32.50.42_sparc.deb
+Size: 4352
+MD5sum: e19968fb8ed8df19acb99dccfc835e29
+SHA1: 8c8e5444e7fb57103eddaab38d7ad1907ae4a09b
+SHA256: 152f4d920b88108e97a255dccbbc8e48c10f51452c01c712e53cd0b87a0b11fd
 Description: Generic complete Linux kernel.
  This package will always depend on the latest generic complete Linux kernel
  available.
@@ -46835,6 +46835,30 @@ Description: Linux kernel specific documentation for version 2.6.32
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-doc
+Priority: optional
+Section: doc
+Installed-Size: 27908
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 2.6.32-50.112
+Replaces: linux-doc-2.6
+Conflicts: linux-doc-2.6
+Filename: pool/main/l/linux/linux-doc_2.6.32-50.112_all.deb
+Size: 6792822
+MD5sum: 05d1f0bf1c2a80f748894e4360e258ba
+SHA1: 6ad155956174bc09941adc33f0a24e128b474713
+SHA256: 7d064520607f891043222f4ab4619d657246ce2e54dc3d419301546e14c83df4
+Description: Linux kernel specific documentation for version 2.6.32
+ This package provides the various documents in the 2.6.32 kernel
+ Documentation/ subdirectory.  These document kernel subsystems, APIs, device
+ drivers, and so on.  See
+ /usr/share/doc/linux-doc/00-INDEX for a list of what is
+ contained in each file.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-ec2-doc
 Priority: optional
 Section: doc
@@ -47186,6 +47210,30 @@ Size: 6802106
 MD5sum: 1cede04931f0853f950c132599d3579b
 SHA1: 7f91578bf8aad0dc8d85a78f1092305346bbc43c
 SHA256: 881f75e75a9cd50537e3492ac78b36651d734be2ecfa23c3d4ab678d6c6299d6
+Description: Linux kernel specific documentation for version 2.6.32
+ This package provides the various documents in the 2.6.32 kernel
+ Documentation/ subdirectory.  These document kernel subsystems, APIs, device
+ drivers, and so on.  See
+ /usr/share/doc/linux-ec2-doc/00-INDEX for a list of what is
+ contained in each file.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-ec2-doc
+Priority: optional
+Section: doc
+Installed-Size: 27920
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux-ec2
+Version: 2.6.32-355.68
+Replaces: linux-ec2-doc-2.6
+Conflicts: linux-ec2-doc-2.6
+Filename: pool/main/l/linux-ec2/linux-ec2-doc_2.6.32-355.68_all.deb
+Size: 6790360
+MD5sum: 250ea0bac6ca8c10d74ba82697cc3ccd
+SHA1: 7d3e25629d8c1cd3a9ace713f0e55515fd854ddf
+SHA256: 53048295477437601bc62374eb47f2cc344655885fefa1a926974dafaa199a2c
 Description: Linux kernel specific documentation for version 2.6.32
  This package provides the various documents in the 2.6.32 kernel
  Documentation/ subdirectory.  These document kernel subsystems, APIs, device
@@ -47688,6 +47736,40 @@ Size: 69325284
 MD5sum: f32f22d8d0161880023e122986fdf959
 SHA1: 256f595b83caea183cf3e6226b4b739ee87264c7
 SHA256: 2ef58de65d49cacf8bfd51bba590a0f43c5479cd8e3734f795aafc9ea77edcdc
+Description: Linux kernel source for version 2.6.32 with Ubuntu patches
+ This package provides the source code for the Linux kernel version
+ 2.6.32.
+ .
+ This package is mainly meant for other packages to use, in order to build
+ custom flavours.
+ .
+ If you wish to use this package to create a custom Linux kernel, then it
+ is suggested that you investigate the package kernel-package, which has
+ been designed to ease the task of creating kernel image packages.
+ .
+ If you are simply trying to build third-party modules for your kernel,
+ you do not want this package. Install the appropriate linux-headers
+ package instead.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-ec2-source-2.6.32
+Priority: optional
+Section: devel
+Installed-Size: 67856
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux-ec2
+Version: 2.6.32-355.68
+Provides: linux-ec2-source, linux-ec2-source-2.6
+Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
+Recommends: libc-dev, gcc, make
+Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
+Filename: pool/main/l/linux-ec2/linux-ec2-source-2.6.32_2.6.32-355.68_all.deb
+Size: 69407816
+MD5sum: eb0056ce87c06a388530be038678f046
+SHA1: c05005a52f0704c72d33aa2da0c06a67cf72eebf
+SHA256: 8109fd03c9d8058f45566401b4c3c76b6f7c3367d0bbba4a780b6689fd17b94d
 Description: Linux kernel source for version 2.6.32 with Ubuntu patches
  This package provides the source code for the Linux kernel version
  2.6.32.
@@ -49111,6 +49193,27 @@ Description: Header files related to Linux kernel version 2.6.32
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-headers-2.6.32-355
+Priority: optional
+Section: devel
+Installed-Size: 75132
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux-ec2
+Version: 2.6.32-355.68
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux-ec2/linux-headers-2.6.32-355_2.6.32-355.68_all.deb
+Size: 10307502
+MD5sum: 1c3712fe2618fdd004fa20f401656293
+SHA1: 2e55b08cca561cb2c28bd7171323a64cf0e30fc7
+SHA256: 84cf35efcacf24214605f03d5d87c183fc89b8fc4f0feae3fc26e4a1afb62b97
+Description: Header files related to Linux kernel version 2.6.32
+ This package provides kernel header files for version 2.6.32, for sites
+ that want the latest kernel headers. Please read
+ /usr/share/doc/linux-headers-2.6.32-355/debian.README.gz for details
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-headers-2.6.32-36
 Priority: optional
 Section: devel
@@ -50091,6 +50194,76 @@ Description: Linux kernel headers for version 2.6.32 on 64-bit UltraSPARC SMP
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-headers-2.6.32-50
+Priority: optional
+Section: devel
+Installed-Size: 74152
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 2.6.32-50.112
+Provides: linux-headers, linux-headers-2.6
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux/linux-headers-2.6.32-50_2.6.32-50.112_all.deb
+Size: 10174658
+MD5sum: 6982d0058abc515a39c45270228dcb81
+SHA1: 11f52c5995ecab037937124953f985bb0645ae53
+SHA256: 1715fc51746548b860d01949bdea40866ad982456b0f8889ea1a73735e5dc843
+Description: Header files related to Linux kernel version 2.6.32
+ This package provides kernel header files for version 2.6.32, for sites
+ that want the latest kernel headers. Please read
+ /usr/share/doc/linux-headers-2.6.32-50/debian.README.gz for details
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-2.6.32-50-sparc64
+Priority: optional
+Section: devel
+Installed-Size: 6764
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: sparc
+Source: linux
+Version: 2.6.32-50.112
+Provides: linux-headers, linux-headers-2.6
+Depends: coreutils | fileutils (>= 4.0), linux-headers-2.6.32-50, libc6 (>= 2.8)
+Filename: pool/main/l/linux/linux-headers-2.6.32-50-sparc64_2.6.32-50.112_sparc.deb
+Size: 730296
+MD5sum: b79aaf372c430ad878db12ac9d504981
+SHA1: a3ec9716bbcdd89b502d113e6a2ab7504056315e
+SHA256: 3a28820f7f89f49f62241de94721feed4c442142573388d51e4f209ea7c2688e
+Description: Linux kernel headers for version 2.6.32 on 64-bit UltraSPARC
+ This package provides kernel header files for version 2.6.32 on
+ 64-bit UltraSPARC.
+ .
+ This is for sites that want the latest kernel headers.  Please read
+ /usr/share/doc/linux-headers-2.6.32-50/debian.README.gz for details.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-2.6.32-50-sparc64-smp
+Priority: optional
+Section: devel
+Installed-Size: 6804
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: sparc
+Source: linux
+Version: 2.6.32-50.112
+Provides: linux-headers, linux-headers-2.6
+Depends: coreutils | fileutils (>= 4.0), linux-headers-2.6.32-50, libc6 (>= 2.8)
+Filename: pool/main/l/linux/linux-headers-2.6.32-50-sparc64-smp_2.6.32-50.112_sparc.deb
+Size: 730840
+MD5sum: cb4c83e108b4045bcf1416341e8313fe
+SHA1: 1eba7be8a035ed30e918059bd9039ca7c5e1306b
+SHA256: 58623e1484fed29570f3ed42d7b185a58d616366ece6c15f13c4ee01485919d0
+Description: Linux kernel headers for version 2.6.32 on 64-bit UltraSPARC SMP
+ This package provides kernel header files for version 2.6.32 on
+ 64-bit UltraSPARC SMP.
+ .
+ This is for sites that want the latest kernel headers.  Please read
+ /usr/share/doc/linux-headers-2.6.32-50/debian.README.gz for details.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-headers-2.6.35-25
 Priority: optional
 Section: devel
@@ -50670,13 +50843,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: sparc
 Source: linux-ports-meta
-Version: 2.6.32.49.41
-Depends: linux-headers-2.6.32-49-sparc64
-Filename: pool/main/l/linux-ports-meta/linux-headers-sparc64_2.6.32.49.41_sparc.deb
-Size: 4344
-MD5sum: 0a8cfbb2c810a02db14bdba7f9abbbfc
-SHA1: 9b89ab551dc120d751f8345d71e05156a765b889
-SHA256: 1baf5ac58ec2f06bc8d30f57b474a738c0cb43bbb75b369caa36acbc02403d72
+Version: 2.6.32.50.42
+Depends: linux-headers-2.6.32-50-sparc64
+Filename: pool/main/l/linux-ports-meta/linux-headers-sparc64_2.6.32.50.42_sparc.deb
+Size: 4364
+MD5sum: 72790ee57c09f670068000ae2e71da55
+SHA1: 40e619cd88738d0eb1722666ba9aa4988329ab1b
+SHA256: 2d321eec423c510089a0bcbf5cd4ec0e7f659fa30b2454dea0426e9aa4ddf975
 Description: Linux kernel headers on UltraSparc
  This package will always depend on the latest kernel headers available
  for UltraSparc.
@@ -50691,13 +50864,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: sparc
 Source: linux-ports-meta
-Version: 2.6.32.49.41
-Depends: linux-headers-2.6.32-49-sparc64-smp
-Filename: pool/main/l/linux-ports-meta/linux-headers-sparc64-smp_2.6.32.49.41_sparc.deb
-Size: 4354
-MD5sum: 97736009d13b88dbd9ccf41741aff50c
-SHA1: 3f04c02d52a45339a0f2bcf9892751b76928370c
-SHA256: 6395e0c05d24c232ef1e93eece80a2b70c9fc84a67b4d7d53e58cb2f6606092a
+Version: 2.6.32.50.42
+Depends: linux-headers-2.6.32-50-sparc64-smp
+Filename: pool/main/l/linux-ports-meta/linux-headers-sparc64-smp_2.6.32.50.42_sparc.deb
+Size: 4372
+MD5sum: 201d270494d8c57698412faff357faf6
+SHA1: 11dfe94d0e844aa338c0cc5e2380b62f20b9d737
+SHA256: d1016814b540c79851d52e0c4b43abcde1ad926452bfe5bb51ee87802349948b
 Description: Linux kernel headers on UltraSparc (SMP)
  This package will always depend on the latest kernel headers available
  for UltraSparc (SMP).
@@ -50711,13 +50884,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: sparc
 Source: linux-ports-meta
-Version: 2.6.32.49.41
-Depends: linux-image-sparc64 (= 2.6.32.49.41)
-Filename: pool/main/l/linux-ports-meta/linux-image_2.6.32.49.41_sparc.deb
-Size: 4332
-MD5sum: 24c14c7010f059679cc7ef3d3930d954
-SHA1: 8585754c62b7ff6aac738d967c4d5f34d9f9d2cc
-SHA256: 9a9a15b7139abc3b1d95effaf43600fb02b317e04224f88c6e278c2cf609c7b4
+Version: 2.6.32.50.42
+Depends: linux-image-sparc64 (= 2.6.32.50.42)
+Filename: pool/main/l/linux-ports-meta/linux-image_2.6.32.50.42_sparc.deb
+Size: 4350
+MD5sum: c26db9beee1d5f1616919197ab361832
+SHA1: 42e0703a286545de7e9a6524a18836558a522a3a
+SHA256: b1344cc186be76b914119456c62ea4ad76607a33fcc6dc9a1796af89cfeaa2a0
 Description: Generic Linux kernel image.
  This package will always depend on the latest generic Linux kernel image
  available.
@@ -52700,6 +52873,82 @@ Description: Linux kernel image for version 2.6.32 on 64-bit UltraSPARC SMP
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-image-2.6.32-50-sparc64
+Priority: optional
+Section: admin
+Installed-Size: 88492
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: sparc
+Source: linux
+Version: 2.6.32-50.112
+Provides: fuse-module, ivtv-modules, linux-image, linux-image-2.6, redhat-cluster-modules
+Depends: initramfs-tools (>= 0.36ubuntu6), coreutils | fileutils (>= 4.0), module-init-tools (>= 3.3-pre11-4ubuntu3), wireless-crda
+Pre-Depends: dpkg (>= 1.10.24)
+Recommends: silo
+Suggests: fdutils, linux-doc-2.6.32 | linux-source-2.6.32, linux-tools
+Conflicts: hotplug (<< 0.0.20040105-1)
+Breaks: lvm2 (<< 2.02.54-1ubuntu3)
+Filename: pool/main/l/linux/linux-image-2.6.32-50-sparc64_2.6.32-50.112_sparc.deb
+Size: 22336994
+MD5sum: bbeb404dfb79577e0be4399130c86475
+SHA1: 0f9ba643dc9e4aa919b2d6fef014c3258a107872
+SHA256: a95c784665d8ddbf19579dfd6f60129b7fce90982265dc33d2f10eed7ccac4c0
+Description: Linux kernel image for version 2.6.32 on 64-bit UltraSPARC
+ This package contains the Linux kernel image for version 2.6.32 on
+ 64-bit UltraSPARC.
+ .
+ Also includes the corresponding System.map file, the modules built by the
+ packager, and scripts that try to ensure that the system is not left in an
+ unbootable state after an update.
+ .
+ Supports 64-bit UltraSPARC processors.
+ .
+ Geared toward desktop or server systems.
+ .
+ You likely do not want to install this package directly. Instead, install
+ the linux-sparc64 meta-package, which will ensure that upgrades work
+ correctly, and that supporting packages are also installed.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-image-2.6.32-50-sparc64-smp
+Priority: optional
+Section: admin
+Installed-Size: 89776
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: sparc
+Source: linux
+Version: 2.6.32-50.112
+Provides: fuse-module, ivtv-modules, linux-image, linux-image-2.6, redhat-cluster-modules
+Depends: initramfs-tools (>= 0.36ubuntu6), coreutils | fileutils (>= 4.0), module-init-tools (>= 3.3-pre11-4ubuntu3), wireless-crda
+Pre-Depends: dpkg (>= 1.10.24)
+Recommends: silo
+Suggests: fdutils, linux-doc-2.6.32 | linux-source-2.6.32, linux-tools
+Conflicts: hotplug (<< 0.0.20040105-1)
+Breaks: lvm2 (<< 2.02.54-1ubuntu3)
+Filename: pool/main/l/linux/linux-image-2.6.32-50-sparc64-smp_2.6.32-50.112_sparc.deb
+Size: 22744440
+MD5sum: 28e345285c7cb9fc1a0cd637e8bd34e1
+SHA1: 3401b046850e688753ded3db85aef05a2af7920d
+SHA256: 37ccf770c8f3cf1dd46ebe3aa3b9325872adb4e14246ab0cc2b4a8f1ffcc68bc
+Description: Linux kernel image for version 2.6.32 on 64-bit UltraSPARC SMP
+ This package contains the Linux kernel image for version 2.6.32 on
+ 64-bit UltraSPARC SMP.
+ .
+ Also includes the corresponding System.map file, the modules built by the
+ packager, and scripts that try to ensure that the system is not left in an
+ unbootable state after an update.
+ .
+ Supports 64-bit UltraSPARC SMP processors.
+ .
+ Geared toward desktop or server systems.
+ .
+ You likely do not want to install this package directly. Instead, install
+ the linux-sparc64-smp meta-package, which will ensure that upgrades work
+ correctly, and that supporting packages are also installed.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-image-sparc64
 Priority: optional
 Section: metapackages
@@ -52707,13 +52956,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: sparc
 Source: linux-ports-meta
-Version: 2.6.32.49.41
-Depends: linux-image-2.6.32-49-sparc64, linux-firmware
-Filename: pool/main/l/linux-ports-meta/linux-image-sparc64_2.6.32.49.41_sparc.deb
-Size: 4348
-MD5sum: 9052be89f2c8a75dd983a30c9d2ba3d4
-SHA1: 51603fbc2716505055512838582c014046be7b06
-SHA256: 34b2a32bbd9c7097efd37dedf0caee42109918f14282384b3a7309552c7ad126
+Version: 2.6.32.50.42
+Depends: linux-image-2.6.32-50-sparc64, linux-firmware
+Filename: pool/main/l/linux-ports-meta/linux-image-sparc64_2.6.32.50.42_sparc.deb
+Size: 4370
+MD5sum: ff8e93d532358fd1dd54ccaa2892bb75
+SHA1: db2ca1847ed6b764f29d9d4a3429e59caf94bea3
+SHA256: 36f8c46bf94d446ef36f41cf6899fc309a1346752f58f25d7b469ebcf6934a7f
 Description: Linux kernel image on UltraSparc
  This package will always depend on the latest kernel image available
  for UltraSparc.
@@ -52727,13 +52976,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: sparc
 Source: linux-ports-meta
-Version: 2.6.32.49.41
-Depends: linux-image-2.6.32-49-sparc64-smp, linux-firmware
-Filename: pool/main/l/linux-ports-meta/linux-image-sparc64-smp_2.6.32.49.41_sparc.deb
-Size: 4368
-MD5sum: 247b8e163db8e198d80da2a1fefec193
-SHA1: d9d8112facf0a997e82c3ec4f3051fbe2bfc6b80
-SHA256: 66967ac4cc383902d713af9ac09783ea71457f3816e2c842ba97f80b882349fc
+Version: 2.6.32.50.42
+Depends: linux-image-2.6.32-50-sparc64-smp, linux-firmware
+Filename: pool/main/l/linux-ports-meta/linux-image-sparc64-smp_2.6.32.50.42_sparc.deb
+Size: 4382
+MD5sum: da9d348d0e08395b129c248625776dc1
+SHA1: 058b48741206a9ee29741f999d18ee35ecdbb293
+SHA256: cac3bb677f217cb575c8569d9a368b00ce2c2bb91a62581fd77581ef5382e666
 Description: Linux kernel image on UltraSparc (SMP)
  This package will always depend on the latest kernel image available
  for UltraSparc (SMP).
@@ -52747,15 +52996,15 @@ Installed-Size: 4212
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: sparc
 Source: linux
-Version: 2.6.32-49.111
+Version: 2.6.32-50.112
 Replaces: dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), libdrm-dev, linux-kernel-headers
 Provides: linux-kernel-headers
 Conflicts: amd64-libs-dev (<= 1.1), dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), linux-kernel-headers
-Filename: pool/main/l/linux/linux-libc-dev_2.6.32-49.111_sparc.deb
-Size: 848490
-MD5sum: 4685f1f7f2959e49b03172604e9dc25b
-SHA1: 2f8ad8d72939c63a757c653fbc4b7e0b3f1d7f3d
-SHA256: 659d30a39577e63f865b3eb33385606c299841844780711d9e4bb10312a9805d
+Filename: pool/main/l/linux/linux-libc-dev_2.6.32-50.112_sparc.deb
+Size: 848648
+MD5sum: 69ce1ed3807ca07fa92aeeec88da733a
+SHA1: 65ce96aa52af5762631e8791c9f9a8899caeec2d
+SHA256: 19c5724b8ff9c9e51d45d0e7ba1158c4437e73a9e6d9be27279822970864d85f
 Description: Linux Kernel Headers for development
  This package provides headers from the Linux kernel.  These headers
  are used by the installed headers for GNU glibc and other system
@@ -52773,13 +53022,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: all
 Source: linux-meta
-Version: 2.6.32.49.56
+Version: 2.6.32.50.57
 Depends: linux-source-2.6.32
-Filename: pool/main/l/linux-meta/linux-source_2.6.32.49.56_all.deb
-Size: 5160
-MD5sum: a94861b1f4f872889a8e169849296530
-SHA1: 29f61b623fdeb971d093f9114a710797ea6d0922
-SHA256: a8686579c1674f45aa26586f772b0506b46770682f4c0fb9cc9f5ade90e06dc7
+Filename: pool/main/l/linux-meta/linux-source_2.6.32.50.57_all.deb
+Size: 5178
+MD5sum: a64c6998433f5454ce204a51240294e1
+SHA1: 9fcada08a979c99cfc95f71b71457a96de90cd6d
+SHA256: 404302bc961a56f4342e172a52db820a79423e963c88f9bbf5845b77a36b3c09
 Description: Linux kernel source with Ubuntu patches
  This package will always depend on the latest Linux kernel source code
  available. The Ubuntu patches have been applied.
@@ -53330,6 +53579,40 @@ Description: Linux kernel source for version 2.6.32 with Ubuntu patches
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-source-2.6.32
+Priority: optional
+Section: devel
+Installed-Size: 65668
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 2.6.32-50.112
+Provides: linux-source, linux-source-2.6
+Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
+Recommends: libc-dev, gcc, make
+Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
+Filename: pool/main/l/linux/linux-source-2.6.32_2.6.32-50.112_all.deb
+Size: 67162466
+MD5sum: 8060d730e9b64c1073646c8214fb393a
+SHA1: dfdd8238523cf6e84dc21d2c08c52a02ee8b1e29
+SHA256: 10bf024e5a319d1a6a67d1358cd15155c0086e69b4f5283163d31843028de133
+Description: Linux kernel source for version 2.6.32 with Ubuntu patches
+ This package provides the source code for the Linux kernel version
+ 2.6.32.
+ .
+ This package is mainly meant for other packages to use, in order to build
+ custom flavours.
+ .
+ If you wish to use this package to create a custom Linux kernel, then it
+ is suggested that you investigate the package kernel-package, which has
+ been designed to ease the task of creating kernel image packages.
+ .
+ If you are simply trying to build third-party modules for your kernel,
+ you do not want this package. Install the appropriate linux-headers
+ package instead.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-sparc64
 Priority: optional
 Section: metapackages
@@ -53337,13 +53620,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: sparc
 Source: linux-ports-meta
-Version: 2.6.32.49.41
-Depends: linux-image-sparc64 (= 2.6.32.49.41)
-Filename: pool/main/l/linux-ports-meta/linux-sparc64_2.6.32.49.41_sparc.deb
-Size: 4350
-MD5sum: 57f43eff782a09f44dc35acf6583610c
-SHA1: 28db1aa7b38d3d9c5c3167074b4d4dcf850f5ba5
-SHA256: d8bf46025035272f390d95447a33dd67f175b6358cc940092a53df3386bc5a4a
+Version: 2.6.32.50.42
+Depends: linux-image-sparc64 (= 2.6.32.50.42)
+Filename: pool/main/l/linux-ports-meta/linux-sparc64_2.6.32.50.42_sparc.deb
+Size: 4368
+MD5sum: bacba05a996ba0c081a965584a901f7a
+SHA1: 1cda586350a0cc6e3c4a5fd1a8ade5f3e900bdab
+SHA256: 6f11aef1c39db430977747aff42b610ee0a0d0c5f304ae3eee47e733ea2ca730
 Description: Complete Linux kernel on sparc64.
  This package will always depend on the latest complete Linux kernel available
  for the UltraSparc architecture.
@@ -53357,13 +53640,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: sparc
 Source: linux-ports-meta
-Version: 2.6.32.49.41
-Depends: linux-image-sparc64-smp (= 2.6.32.49.41)
-Filename: pool/main/l/linux-ports-meta/linux-sparc64-smp_2.6.32.49.41_sparc.deb
-Size: 4364
-MD5sum: e55ba7452287d93c793c82403c9ac0db
-SHA1: 09b4e2aff4130122638d8217aa866eb73971cdf4
-SHA256: 3a3312518e01bfa5dcd7117befaf9632999976305111cf0f97ba7c25505598e9
+Version: 2.6.32.50.42
+Depends: linux-image-sparc64-smp (= 2.6.32.50.42)
+Filename: pool/main/l/linux-ports-meta/linux-sparc64-smp_2.6.32.50.42_sparc.deb
+Size: 4382
+MD5sum: 01365fb5baa3b632d451c15187f63726
+SHA1: 723bfc633b4d5f4ed0fd0ec971de3fe9214ed03a
+SHA256: 2e73a9eb339cce0565810d9e3d453d1abf9b520f7089d741f8bfb0655ee523d1
 Description: Complete Linux kernel on UltraSparc (SMP)
  This package will always depend on the latest complete Linux kernel available
  for the UltraSparc (SMP) architecture.
@@ -53916,6 +54199,27 @@ Description: Linux kernel tools for version 2.6.32-49
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-tools-2.6.32-50
+Priority: optional
+Section: devel
+Installed-Size: 540
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: sparc
+Source: linux
+Version: 2.6.32-50.112
+Depends: libc6 (>= 2.8), libelf1 (>= 0.131), linux-tools-common
+Filename: pool/main/l/linux/linux-tools-2.6.32-50_2.6.32-50.112_sparc.deb
+Size: 302528
+MD5sum: 066655f72f6f1f680d4ee8a1c329cf45
+SHA1: c8aad9103d628f889830fe805fd5ba91ae57235a
+SHA256: 1b524ee5156c915e516aa6f2cbfbbb305cabc89bace84d8c04e7017635e399aa
+Description: Linux kernel tools for version 2.6.32-50
+ This package provides the architecture dependant parts for kernel
+ version locked tools for version 2.6.32-50 on
+ DESC.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-tools-common
 Priority: optional
 Section: admin
@@ -54230,6 +54534,26 @@ Size: 138134
 MD5sum: 6d12f6cd0c78831ad046c855a5abf0c6
 SHA1: e57baa8183dd7b2c5267651bfdc8c47026918e82
 SHA256: 5a3501380b2cbefcdcf4b597a7f72b276ed2d45a1bfde8c7217549c2efdeb44f
+Description: Linux kernel specific tools for version 2.6.32
+ This package provides the architecture independent parts for kernel
+ version locked tools in the 2.6.32 kernel source.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-tools-common
+Priority: optional
+Section: admin
+Installed-Size: 212
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 2.6.32-50.112
+Replaces: linux-tools (<= 2.6.32-16.25)
+Filename: pool/main/l/linux/linux-tools-common_2.6.32-50.112_all.deb
+Size: 138330
+MD5sum: 3321df85fd7df04e74267cdda52fd46d
+SHA1: e8ef962947aa743dbae606ad6a9224df550c164c
+SHA256: 1fc6c42b7fe865511f4a0645a77694318fe7a764e449dddd844b20b490b6eb5a
 Description: Linux kernel specific tools for version 2.6.32
  This package provides the architecture independent parts for kernel
  version locked tools in the 2.6.32 kernel source.
