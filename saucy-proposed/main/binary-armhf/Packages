@@ -1,3 +1,25 @@
+Package: accountsservice
+Priority: standard
+Section: gnome
+Installed-Size: 352
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessio Treglia <alessio@debian.org>
+Architecture: armhf
+Version: 0.6.34-0ubuntu4
+Depends: dbus, libaccountsservice0 (= 0.6.34-0ubuntu4), libc6 (>= 2.4), libgcr-base-3-1 (>= 3.8.0), libglib2.0-0 (>= 2.37.3), libpam0g (>= 0.99.7.1), libpolkit-gobject-1-0 (>= 0.99)
+Suggests: gnome-control-center
+Filename: pool/main/a/accountsservice/accountsservice_0.6.34-0ubuntu4_armhf.deb
+Size: 64944
+MD5sum: 01a9c13819fb7c07dd619da144b3ef1a
+SHA1: a4aac18ea2251a231c8bd497524f2c55f04aa7aa
+SHA256: 77fc7966d0569bda19b1f379c2d3cde73e83391abe2bee68d336785747a0221f
+Description: query and manipulate user account information
+Homepage: http://cgit.freedesktop.org/accountsservice/
+Description-md5: 8aeed0a03c7cd494f0c4b8d977483d7e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
+
 Package: compiz
 Priority: optional
 Section: x11
@@ -574,6 +596,30 @@ Description-md5: 005da023d3d2e21ed1c3e72be2361917
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: gir1.2-accountsservice-1.0
+Priority: optional
+Section: libs
+Installed-Size: 54
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessio Treglia <alessio@debian.org>
+Architecture: armhf
+Source: accountsservice
+Version: 0.6.34-0ubuntu4
+Replaces: gir1.2-accountservice-1.0 (<< 0.6.12-4)
+Depends: gir1.2-glib-2.0, libaccountsservice0 (>= 0.6.34)
+Breaks: gir1.2-accountservice-1.0 (<< 0.6.12-4)
+Filename: pool/main/a/accountsservice/gir1.2-accountsservice-1.0_0.6.34-0ubuntu4_armhf.deb
+Size: 5066
+MD5sum: b138587bf34e2e397a3af2f9cd184fcd
+SHA1: 2ce14d0a062639a2aada37f96a7e4d3c43054470
+SHA256: 8f7826139dd4a50117a172dea6ee7d69b630c565c1ae5ed8eaa894ffc1ddb36a
+Description: GObject introspection data for AccountService
+Homepage: http://cgit.freedesktop.org/accountsservice/
+Description-md5: 3e307108d5acfea1c79fd66a238baaf2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-gnome-desktop
+
 Package: gir1.2-ibus-1.0
 Priority: optional
 Section: introspection
@@ -616,28 +662,6 @@ Homepage: https://github.com/martinpitt/umockdev/
 Description-md5: fbb61fba8c934a3abb2dd226ec23d275
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: gir1.2-unity-5.0
-Priority: optional
-Section: libs
-Installed-Size: 160
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libunity
-Version: 7.0.9+13.10.20130729-0ubuntu1
-Depends: gir1.2-dbusmenu-glib-0.4, gir1.2-dee-1.0, gir1.2-glib-2.0, libunity9 (>= 7.0.9+13.10.20130723)
-Filename: pool/main/libu/libunity/gir1.2-unity-5.0_7.0.9+13.10.20130729-0ubuntu1_armhf.deb
-Size: 20216
-MD5sum: ba66032b0ea9a08c79249480ee35b8b1
-SHA1: 4b1943033471424bad29541be4123e4abb760814
-SHA256: 381b2ba3b4913c31ac41e3f3444843d45ffbb2d99d2549e4a5e677813453faf9
-Description: GObject introspection data for the Unity library
-Multi-Arch: same
-Homepage: https://launchpad.net/libunity
-Description-md5: 162c569a3952f4e1717dfc2d72f6bb6c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
 Package: gobjc-4.8
 Priority: optional
@@ -919,6 +943,48 @@ Description-md5: 985e023e854ac292f0b39058569a0321
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libaccountsservice-dbg
+Priority: extra
+Section: debug
+Installed-Size: 693
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessio Treglia <alessio@debian.org>
+Architecture: armhf
+Source: accountsservice
+Version: 0.6.34-0ubuntu4
+Depends: libaccountsservice0 (= 0.6.34-0ubuntu4)
+Filename: pool/main/a/accountsservice/libaccountsservice-dbg_0.6.34-0ubuntu4_armhf.deb
+Size: 219210
+MD5sum: 270b178d683c89fc709254818b5905c2
+SHA1: 61687520707f303b9f7d72b666558f3a6eea8e9a
+SHA256: fef7db96533983b8b6e4ab2178b6df8a48ee64c1641a6b264ff1d70a14babb75
+Description: query and manipulate user account information - debug
+Homepage: http://cgit.freedesktop.org/accountsservice/
+Description-md5: 67e2c3a1e0dc7dd3b34232ab48d143a8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libaccountsservice-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 156
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessio Treglia <alessio@debian.org>
+Architecture: armhf
+Source: accountsservice
+Version: 0.6.34-0ubuntu4
+Depends: libaccountsservice0 (= 0.6.34-0ubuntu4), libgirepository1.0-dev (>= 0.9.12), libglib2.0-dev (>= 2.25.11), libpolkit-gobject-1-dev
+Filename: pool/main/a/accountsservice/libaccountsservice-dev_0.6.34-0ubuntu4_armhf.deb
+Size: 12214
+MD5sum: a7cf55e4f2fd13d0f914b16a56d0355f
+SHA1: 974be8c3f01014f52a67d90d31d9554ba449fac2
+SHA256: d2f856a1e823107b9a241a11ac8f79867c28fd5e4a9d6595d3ef4a8a18a0a5c9
+Description: query and manipulate user account information - header files
+Homepage: http://cgit.freedesktop.org/accountsservice/
+Description-md5: d0607148cea2974f2cc311a5e0bab4f9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libaccountsservice-doc
 Priority: optional
 Section: doc
@@ -938,6 +1004,29 @@ Homepage: http://cgit.freedesktop.org/accountsservice/
 Description-md5: 15ee25a15ef232cbf860503a04604aa7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libaccountsservice0
+Priority: standard
+Section: libs
+Installed-Size: 232
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessio Treglia <alessio@debian.org>
+Architecture: armhf
+Source: accountsservice
+Version: 0.6.34-0ubuntu4
+Depends: libc6 (>= 2.4), libgcr-base-3-1 (>= 3.8.0), libglib2.0-0 (>= 2.37.3), libsystemd-login0 (>= 186)
+Breaks: accountsservice (<< 0.6.5)
+Filename: pool/main/a/accountsservice/libaccountsservice0_0.6.34-0ubuntu4_armhf.deb
+Size: 72950
+MD5sum: 284a40a8c8eaa54a4cc215cdc262e544
+SHA1: 2d3dfca8e8322c6d19ec371511681ee50bdfe68f
+SHA256: 4f48c0b3cd59b1f356323b9f52bb50f53b01fc105a5f3e0ad48838d226c92cfb
+Description: query and manipulate user account information - shared libraries
+Homepage: http://cgit.freedesktop.org/accountsservice/
+Description-md5: d536aa425d73c3ead2f37bd9a771e648
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
@@ -3525,162 +3614,6 @@ Description-md5: ebb621f9941ee1cde03190e72e506f3c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libunity-2d-private-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 104
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: unity
-Version: 7.1.0+13.10.20130729-0ubuntu1
-Depends: unity
-Filename: pool/main/u/unity/libunity-2d-private-dev_7.1.0+13.10.20130729-0ubuntu1_all.deb
-Size: 6454
-MD5sum: 29063b1917c521b2cfa5fdbb97ed0af5
-SHA1: a9c4a329cdd53ddfb60d8abb558d0700d7857026
-SHA256: fb2e774305ec2afd122e8a8ece60cc7863d0c3242ed4ac409c26b134621c3fc5
-Description: transitional dummy package
-Homepage: https://launchpad.net/unity
-Description-md5: a06d380855fbe7cc75a9788e2760f757
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libunity-core-6.0-7
-Priority: optional
-Section: libs
-Installed-Size: 1435
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: unity
-Version: 7.1.0+13.10.20130729-0ubuntu1
-Replaces: libunity-core-6.0-6, unity-common
-Provides: unity-common, unity-common-7.0
-Depends: libc6 (>= 2.4), libdee-1.0-4 (>= 0.5.16), libgcc1 (>= 1:4.4.0), libglib2.0-0 (>= 2.35.9), libnux-4.0-0, libsigc++-2.0-0c2a (>= 2.0.2), libstdc++6 (>= 4.8), libunity-protocol-private0 (>= 7.0.9+13.10.20130728), dconf-gsettings-backend | gsettings-backend, unity-services (= 7.1.0+13.10.20130729-0ubuntu1)
-Conflicts: libunity-core-6.0-6, unity-common
-Filename: pool/main/u/unity/libunity-core-6.0-7_7.1.0+13.10.20130729-0ubuntu1_armhf.deb
-Size: 510264
-MD5sum: 865ad58849918533474b2ab136ceb008
-SHA1: f1f2c6369ba24bb36a6d2ebd0bdf9ed0a1a51dc1
-SHA256: a6989e26d3dc7ee8ac2ab50bb9b17e0ca70c5ab2bf6ef405ca069e2e8fb6373e
-Description: Core library for the Unity interface.
-Homepage: https://launchpad.net/unity
-Description-md5: a1403507e83fa60ccf4c94dd93d9337e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: libunity-core-6.0-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 248
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: unity
-Version: 7.1.0+13.10.20130729-0ubuntu1
-Depends: libunity-core-6.0-7 (= 7.1.0+13.10.20130729-0ubuntu1), libglib2.0-dev, libsigc++-2.0-dev, libnux-4.0-dev (>= 4.0.2), libunity-dev (>= 7.0.2~), libdee-dev
-Filename: pool/main/u/unity/libunity-core-6.0-dev_7.1.0+13.10.20130729-0ubuntu1_armhf.deb
-Size: 25306
-MD5sum: 711adf6d53f12e923511dd32863b0d4f
-SHA1: 8c11a7cbc15dad03b90043efae56cae8fa33f714
-SHA256: f78eb4ec475398a82e1570a5d4f1da9d3d979faa187561d25e6e1332164bab52
-Description: Core library for the Unity interface - development files
-Homepage: https://launchpad.net/unity
-Description-md5: 9d4511f2e1fa9f78a3708127328fd86b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libunity-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 513
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libunity
-Version: 7.0.9+13.10.20130729-0ubuntu1
-Replaces: libunity9 (<< 5.90)
-Depends: gir1.2-unity-5.0 (= 7.0.9+13.10.20130729-0ubuntu1), libunity9 (= 7.0.9+13.10.20130729-0ubuntu1), libunity-protocol-private0 (= 7.0.9+13.10.20130729-0ubuntu1), libglib2.0-dev, libdee-dev, libgee-dev, libdbusmenu-glib-dev
-Filename: pool/main/libu/libunity/libunity-dev_7.0.9+13.10.20130729-0ubuntu1_armhf.deb
-Size: 48472
-MD5sum: cad2f44bbba59049a29a9b6a000af5cb
-SHA1: 4884a78643127fbc0d54b77b0e1cdecc482149cd
-SHA256: dd669bced795d2325958c11cea77d73bb7533e7d3a1da051cd878351568015d1
-Description: binding to get places into the launcher - development files
-Homepage: https://launchpad.net/libunity
-Description-md5: 940646542d41ed6501a55676f7cc379f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libunity-protocol-private0
-Priority: optional
-Section: libs
-Installed-Size: 224
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libunity
-Version: 7.0.9+13.10.20130729-0ubuntu1
-Depends: libc6 (>= 2.4), libdee-1.0-4 (>= 1.0.0), libglib2.0-0 (>= 2.37.3)
-Pre-Depends: multiarch-support
-Filename: pool/main/libu/libunity/libunity-protocol-private0_7.0.9+13.10.20130729-0ubuntu1_armhf.deb
-Size: 79092
-MD5sum: 099b13913505ecb8b38f21a0fc6342ca
-SHA1: 7e675bf0d021dad8fe0173cb4032166b1270a091
-SHA256: 5e099df8cdeaff40551c4365ddf7c38b24979538c47f3db34772dfab9b31140c
-Description: binding to get places into the launcher - private library
-Multi-Arch: same
-Homepage: https://launchpad.net/libunity
-Description-md5: de4784aed16d63b7fb02d506575d1fe6
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libunity-scopes-json-def-desktop
-Priority: optional
-Section: gnome
-Installed-Size: 51
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: libunity
-Version: 7.0.9+13.10.20130729-0ubuntu1
-Replaces: libunity-common (<< 7.0.7)
-Provides: libunity-common, unity-scopes-json-def
-Conflicts: libunity-common (<< 7.0.7), unity-scopes-json-def
-Filename: pool/main/libu/libunity/libunity-scopes-json-def-desktop_7.0.9+13.10.20130729-0ubuntu1_all.deb
-Size: 4884
-MD5sum: 0a4d8bf4bd7432653eb21ce415f4ccf5
-SHA1: c3242de4ef98e4cb4508c8377cac65916b590a44
-SHA256: 916f3daf5dcb6aed4d206b901a5cb8456ca56d6864ca90e06e2865712ee89d9e
-Description: binding to get places into the launcher - desktop def file
-Multi-Arch: foreign
-Homepage: https://launchpad.net/libunity
-Description-md5: c272d9c9f1482ba09fbb8b8fdb9cc568
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libunity9
-Priority: optional
-Section: libs
-Installed-Size: 517
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libunity
-Version: 7.0.9+13.10.20130729-0ubuntu1
-Depends: libc6 (>= 2.4), libdbusmenu-glib4 (>= 0.4.2), libdee-1.0-4 (>= 1.2.3~daily13.02.26), libgee2 (>= 0.5.0), libglib2.0-0 (>= 2.37.3), libunity-protocol-private0 (>= 7.0.9+13.10.20130729), dconf-gsettings-backend | gsettings-backend, libunity-scopes-json-def-desktop (>= 7.0.9+13.10.20130729-0ubuntu1) | unity-scopes-json-def
-Pre-Depends: multiarch-support
-Suggests: unity-common (>= 7.0.0)
-Filename: pool/main/libu/libunity/libunity9_7.0.9+13.10.20130729-0ubuntu1_armhf.deb
-Size: 204882
-MD5sum: da58ecdc0a26be75b296216d845480c2
-SHA1: 00d9851c809202b158eb103fed5326160eb00f40
-SHA256: 2dfe029a04487b026414e1610d9678b67061c7b654a1eae559c1ce14340add9b
-Description: binding to get places into the launcher - shared library
-Multi-Arch: same
-Homepage: https://launchpad.net/libunity
-Description-md5: 0bdcbe46903d5a11a88d8cfa7be5f803
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
 Package: libvotequorum-dev
 Priority: optional
 Section: libdevel
@@ -5278,156 +5211,6 @@ Homepage: https://github.com/martinpitt/umockdev/
 Description-md5: 286db1dc230b4374b7e4132a74169450
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: unity
-Priority: optional
-Section: gnome
-Installed-Size: 3304
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Version: 7.1.0+13.10.20130729-0ubuntu1
-Provides: indicator-renderer
-Depends: compiz-core, libatk-bridge2.0-0 (>= 2.5.3), libatk1.0-0 (>= 2.2.0), libbamf3-1 (>= 0.4.0), libc6 (>= 2.17), libcairo2 (>= 1.2.4), libdbusmenu-glib4 (>= 0.4.2), libdee-1.0-4 (>= 0.5.2), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.4.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libgles2-mesa (>= 7.8.1) | libgles2, libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.1.6), libindicator3-7 (>= 0.4.90), libjson-glib-1.0-0 (>= 0.12.0), libnotify4 (>= 0.7.0), libnux-4.0-0, libpango-1.0-0 (>= 1.22.0), libpangocairo-1.0-0 (>= 1.14.0), libsigc++-2.0-0c2a (>= 2.0.2), libstartup-notification0 (>= 0.2), libstdc++6 (>= 4.8), libunity-core-6.0-7 (= 7.1.0+13.10.20130729-0ubuntu1), libunity-misc4 (>= 4.0.2), libunity-protocol-private0 (>= 7.0.9+13.10.20130728), libx11-6 (>= 2:1.2.99.901), libxext6, libxfixes3 (>= 1:5.0.1-1), libxi6 (>= 2:1.7.1.901), libxrender1, libzeitgeist-1.0-1 (>= 0.3.14), session-migration, python, compiz, compiz-core-abiversion-20130125, libnux-abiversion-20130718.0, compiz-plugins-default, libglib2.0-bin, nux-tools, dconf-cli, unity-asset-pool (>= 0.8.18), bamfdaemon
-Recommends: gnome-control-center-unity, unity-scope-guayadeque, unity-scope-openweathermap, unity-scope-musique, unity-scope-colourlovers, unity-scope-zotero, unity-scope-tomboy, unity-scope-gmusicbrowser, unity-scope-deviantart, unity-scope-manpages, unity-lens-music, unity-lens-files, unity-scope-gallica, unity-scope-chromiumbookmarks, unity-scope-yahoostock, unity-scope-googlenews, unity-scope-devhelp, unity-scope-soundcloud, unity-scope-virtualbox, unity-lens-photos, unity-scope-gourmet, unity-scope-video-remote, unity-scope-openclipart, unity-lens-video, unity-scope-clementine, unity-scope-texdoc, unity-scope-yelp, unity-scope-musicstores, unity-scope-audacious, unity-scope-home, unity-lens-friends, unity-scope-calculator, unity-scope-gdrive, unity-lens-applications, unity-scope-github, unity-scope-firefoxbookmarks, indicator-appmenu, indicator-application, indicator-sound, indicator-bluetooth, indicator-datetime, indicator-messages, indicator-printers, indicator-power, indicator-session, indicator-sync, hud
-Breaks: unity-lens-applications (<< 5.12.0-0ubuntu2), unity-lens-files (<< 5.10.0-0ubuntu2), unity-lens-music (<< 6.0.0), unity-lens-video (<< 0.3.6-0ubuntu2)
-Filename: pool/main/u/unity/unity_7.1.0+13.10.20130729-0ubuntu1_armhf.deb
-Size: 1354500
-MD5sum: 1f0e827550983a08177936f51baf186e
-SHA1: 17135f57465fcc9d6accba98dc70ef4bf024d1c9
-SHA256: 3fa6c41a5dc7c00c7f700c815814350a7fe19eba12b9fb840873223f43e4be2a
-Description: Interface designed for efficiency of space and interaction.
-Homepage: https://launchpad.net/unity
-Description-md5: dec4e0049e561b260175a841cf8a6410
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: unity-2d-dbg
-Priority: extra
-Section: debug
-Installed-Size: 104
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: unity
-Version: 7.1.0+13.10.20130729-0ubuntu1
-Depends: unity
-Filename: pool/main/u/unity/unity-2d-dbg_7.1.0+13.10.20130729-0ubuntu1_all.deb
-Size: 6434
-MD5sum: 981fc86c0cc557355f9cc89cbc4906fd
-SHA1: 9972f5014e5a2e68eec8629812e30382767afe35
-SHA256: 28af2342264003e6100331fd23e8bb7da3e4898434b6e616390b3f71b7ea397b
-Description: transitional dummy package
-Homepage: https://launchpad.net/unity
-Description-md5: a06d380855fbe7cc75a9788e2760f757
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: unity-lens-applications
-Priority: optional
-Section: gnome
-Installed-Size: 316
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Version: 7.0.0+13.10.20130729-0ubuntu1
-Depends: libc6 (>= 2.4), libcolumbus0-0 (>= 0.5.0daily13.06.06), libdb5.1, libdee-1.0-4 (>= 1.2.0daily12.12.05), libgcc1 (>= 1:4.4.0), libgee2 (>= 0.5.0), libglib2.0-0 (>= 2.37.3), libgnome-menu-3-0 (>= 3.2.0.1), libstdc++6 (>= 4.5), libunity-protocol-private0 (>= 7.0.9+13.10.20130728), libunity9 (>= 7.0.0daily13.05.31ubuntu.unity.next), libxapian22, libzeitgeist-1.0-1 (>= 0.3.2), dconf-gsettings-backend | gsettings-backend, unity-common-7.0 | unity-common (>= 7.0.0)
-Breaks: unity (<< 6.0.0)
-Filename: pool/main/u/unity-lens-applications/unity-lens-applications_7.0.0+13.10.20130729-0ubuntu1_armhf.deb
-Size: 90662
-MD5sum: 289f93fc60843dacf64ab1842c971fd6
-SHA1: d86c8fb5899978edbdb0c4f1eceb64213b3141d9
-SHA256: f724f36c6db69ecb0045f8868ed51852f46c1e62dcc2589e3451bd9baa3c8c7a
-Description: Application lens for unity
-Homepage: https://launchpad.net/unity-lens-applications
-Description-md5: 64b6580768b60728b82aa6db3048e181
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: unity-scope-home
-Priority: optional
-Section: gnome
-Installed-Size: 218
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Version: 6.8.1+13.10.20130729-0ubuntu1
-Replaces: unity-lens-shopping, unity-scope-asklibreoffice, unity-scope-askubuntu, unity-scope-sumo
-Provides: unity-lens-shopping, unity-scope-asklibreoffice, unity-scope-askubuntu, unity-scope-sumo
-Depends: libc6 (>= 2.7), libdee-1.0-4 (>= 1.2.0daily12.12.05), libgee2 (>= 0.5.0), libglib2.0-0 (>= 2.31.8), libjson-glib-1.0-0 (>= 0.13.2), libsoup-gnome2.4-1 (>= 2.27.4), libsoup2.4-1 (>= 2.24.3), libunity-protocol-private0 (>= 7.0.9+13.10.20130728), libunity9 (>= 7.0.7+13.10.20130702), libuuid1 (>= 2.16), lsb-release, unity-scopes-master-default | unity-scopes-master
-Conflicts: unity-lens-shopping, unity-scope-asklibreoffice, unity-scope-askubuntu, unity-scope-sumo
-Filename: pool/main/u/unity-scope-home/unity-scope-home_6.8.1+13.10.20130729-0ubuntu1_armhf.deb
-Size: 83850
-MD5sum: ae54b06128ce9d34da06081dd3a8740c
-SHA1: e30b46d50522406aa596259285b5b4a04f54c858
-SHA256: b4d264dfa2b9ed7c936fdffc468d756a5b88169d19772503e1040982376fa4c4
-Description: Home scope that aggregates results from multiple scopes
-Homepage: https://launchpad.net/unity-scope-home
-Description-md5: 294a8f7bb2c43ac24034217199d75858
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: unity-scopes-master-default
-Priority: optional
-Section: gnome
-Installed-Size: 51
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: unity-scope-home
-Version: 6.8.1+13.10.20130729-0ubuntu1
-Replaces: unity-scope-home (<< 6.8.1)
-Provides: unity-scopes-master
-Filename: pool/main/u/unity-scope-home/unity-scopes-master-default_6.8.1+13.10.20130729-0ubuntu1_all.deb
-Size: 9878
-MD5sum: 02f977af26c865b82b534f6a710ad682
-SHA1: ae9f862d40b29ba3d54be5998ed1d2bf57905f40
-SHA256: e21a6b216a9e881a86188174fc8d1a11291429288dfa326be8aaf4cf58234f74
-Description: Home scope that aggregates results from multiple scopes
-Homepage: https://launchpad.net/unity-scope-home
-Description-md5: 46030d6e70539b545984910ffe58efe6
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: unity-scopes-runner
-Priority: optional
-Section: gnome
-Installed-Size: 52
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: libunity
-Version: 7.0.9+13.10.20130729-0ubuntu1
-Filename: pool/main/libu/libunity/unity-scopes-runner_7.0.9+13.10.20130729-0ubuntu1_all.deb
-Size: 5332
-MD5sum: dbe4a2dacb024e3fdc823978e209ac2f
-SHA1: e1f21ee426ea92ba98f8c4fbbaa765e64b83b111
-SHA256: 49cff5294f558e4155df8c2fcf4ab32524807f89b7eafd856ac98394de55c369
-Description: desktop runner for misceallenous scopes
-Homepage: https://launchpad.net/libunity
-Description-md5: 08e02b02866b8cee0b5d062879555ad8
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: unity-services
-Priority: optional
-Section: gnome
-Installed-Size: 171
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: unity
-Version: 7.1.0+13.10.20130729-0ubuntu1
-Depends: libatk-bridge2.0-0 (>= 2.5.3), libatk1.0-0 (>= 1.12.4), libc6 (>= 2.7), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.1), libido3-0.1-0 (>= 13.10.0daily13.06.19), libindicator3-7 (>= 0.4.90), libx11-6, upstart
-Filename: pool/main/u/unity/unity-services_7.1.0+13.10.20130729-0ubuntu1_armhf.deb
-Size: 28558
-MD5sum: 763bdbb4f23975f3dcdef8c74ebc4207
-SHA1: 97c3c218464ea15a574e4eaed520f63024054192
-SHA256: 1464f5fc27bae277632e80a2c0c96a5e641c410de3a1c9b52deb5e0cd811f0a1
-Description: Services for the Unity interface
-Homepage: https://launchpad.net/unity
-Description-md5: 45ce7085b0609158dd07fb5896873691
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: unity-webapps-common
 Priority: optional
