@@ -536,6 +536,95 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: bind9
+Priority: optional
+Section: net
+Installed-Size: 998
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Version: 1:9.9.2.dfsg.P1-2ubuntu2.1
+Replaces: apparmor-profiles (<< 2.1+1075-0ubuntu4), bind, dnsutils (<< 1:9.1.0-3)
+Depends: libbind9-90 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libc6 (>= 2.4), libcap2 (>= 2.10), libdns95 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libisc92 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libisccc90 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libisccfg90 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), liblwres90 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libxml2 (>= 2.7.4), debconf (>= 0.5) | debconf-2.0, netbase, adduser, lsb-base (>= 3.2-14), bind9utils (= 1:9.9.2.dfsg.P1-2ubuntu2.1), net-tools
+Suggests: dnsutils, bind9-doc, resolvconf, ufw
+Conflicts: apparmor-profiles (<< 2.1+1075-0ubuntu4), bind
+Filename: pool/main/b/bind9/bind9_9.9.2.dfsg.P1-2ubuntu2.1_powerpc.deb
+Size: 390920
+MD5sum: 9515046353f384cad6e692fd6bd3a992
+SHA1: 719183603466487fd8e38aee0151da8d07ea62cd
+SHA256: ec148220c4cf15581053b8ca96a3e49f852a8427766c1ca4dc2907e75cff3541
+Description: Internet Domain Name Server
+Description-md5: 4d39ed3fc4e2e72497683d779dfdcd38
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: dns-server
+
+Package: bind9-doc
+Priority: optional
+Section: doc
+Installed-Size: 1305
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: all
+Source: bind9
+Version: 1:9.9.2.dfsg.P1-2ubuntu2.1
+Filename: pool/main/b/bind9/bind9-doc_9.9.2.dfsg.P1-2ubuntu2.1_all.deb
+Size: 232938
+MD5sum: 5279711a9954297105e8ded741656bc8
+SHA1: 667e05cb35e671a1d803f02094d11ccfa2cb8bb1
+SHA256: b8f2920e746764f6d33e22ab9515c0e73ea67ce4bd2628e68cded6027fce7504
+Description: Documentation for BIND
+Description-md5: 329b8ef5cf9ad3d51ce47e6d8d13d75e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: dns-server
+
+Package: bind9-host
+Priority: standard
+Section: net
+Installed-Size: 168
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.2.dfsg.P1-2ubuntu2.1
+Replaces: dnsutils (<< 1:9.0.0), host (<< 1:9.7.0)
+Provides: host
+Depends: libbind9-90 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libc6 (>= 2.4), libdns95 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libisc92 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libisccfg90 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), liblwres90 (= 1:9.9.2.dfsg.P1-2ubuntu2.1)
+Conflicts: dnsutils (<< 1:9.0.0), host (<< 1:9.7.0)
+Filename: pool/main/b/bind9/bind9-host_9.9.2.dfsg.P1-2ubuntu2.1_powerpc.deb
+Size: 53270
+MD5sum: d72121a5863dd2be74cff68d0ab8e088
+SHA1: 42e19dedcd8f5490adbd27ab52bb2fdde455773a
+SHA256: da65226d17f432438a9861eeaff38e44af26a19da834bf462b904f2e481901d9
+Description: Version of 'host' bundled with BIND 9.X
+Description-md5: acdae162c721f5d2986f557bdefa1e70
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: bind9utils
+Priority: optional
+Section: net
+Installed-Size: 373
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.2.dfsg.P1-2ubuntu2.1
+Replaces: bind9 (<= 1:9.5.0~b2-1)
+Depends: libbind9-90, libc6 (>= 2.4), libdns95, libisc92, libisccc90, libisccfg90, python, python-argparse
+Filename: pool/main/b/bind9/bind9utils_9.9.2.dfsg.P1-2ubuntu2.1_powerpc.deb
+Size: 145638
+MD5sum: 2202a617ee83cead0206a6961fffbd36
+SHA1: c776e022865be3b0472de4e808be2f2479d95371
+SHA256: 79d351d2eac27eca541b661e502288dac215f2f7173fab7feac4274576b46182
+Description: Utilities for BIND
+Description-md5: 5f6f5621a6edd04ef33a0fe5d2d5bff8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: dns-server
+
 Package: casper
 Priority: extra
 Section: misc
@@ -1410,6 +1499,30 @@ Description-md5: f7fe06a2e0396bbe8c1c7abad056bf48
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: cloud-image, edubuntu-desktop-gnome
+
+Package: dnsutils
+Priority: standard
+Section: net
+Installed-Size: 354
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.2.dfsg.P1-2ubuntu2.1
+Replaces: bind, bind9 (<< 1:9.1.0-3)
+Depends: libbind9-90 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libc6 (>= 2.4), libdns95 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libisc92 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libisccfg90 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libkrb5-3 (>= 1.6.dfsg.2), liblwres90 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), bind9-host | host
+Suggests: rblcheck
+Conflicts: netstd (<< 2.00)
+Filename: pool/main/b/bind9/dnsutils_9.9.2.dfsg.P1-2ubuntu2.1_powerpc.deb
+Size: 142918
+MD5sum: fdd645eaa231e1e675800896b814def3
+SHA1: 48283800d4ab58c0ac63de39f5521428dd75080c
+SHA256: d0a545067af6cf0d0edc66169abff2ff6a1827ec1d18c04795fc0ff718d3202d
+Description: Clients provided with BIND
+Description-md5: 9fac1cb37cd005e52aa0e22df64994e1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
 
 Package: duplicity
 Priority: optional
@@ -4199,6 +4312,51 @@ Description-md5: 73dfd0644e1f116cf7c39ae3f4f19a1f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libbind-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 4426
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.2.dfsg.P1-2ubuntu2.1
+Replaces: bind-dev
+Depends: libdns95 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libisccfg90 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libisc92 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), liblwres90 (= 1:9.9.2.dfsg.P1-2ubuntu2.1), libbind9-90 (= 1:9.9.2.dfsg.P1-2ubuntu2.1)
+Conflicts: bind-dev
+Filename: pool/main/b/bind9/libbind-dev_9.9.2.dfsg.P1-2ubuntu2.1_powerpc.deb
+Size: 1426580
+MD5sum: 8092151c61bff3809eb6463e4bb48a25
+SHA1: c234c6b0a04c7eb2554697471c753332318f08de
+SHA256: 190c2d7a44b3c7f8f98bd144661189667cf1ab3c8f7714f2fc9aed512dd797cb
+Description: Static Libraries and Headers used by BIND
+Description-md5: 2224f8c1f8613ab53bfc2393a6add6a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libbind9-90
+Priority: standard
+Section: libs
+Installed-Size: 101
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.2.dfsg.P1-2ubuntu2.1
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libdns95, libisc92, libisccfg90
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libbind9-90_9.9.2.dfsg.P1-2ubuntu2.1_powerpc.deb
+Size: 25102
+MD5sum: cdfd42b8bc37b095868c937f078ac85a
+SHA1: 8c2dbeab9ee47c631c4d1cd639289a23a656e1db
+SHA256: e1cf23c941ee6623095d6be50befdfd3b46d5f9d3daba4a43c96c2c5630faa4e
+Description: BIND9 Shared Library used by BIND
+Description-md5: 54e2889a8502320ca468efcbd1b48934
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
 Package: libcephfs-dev
 Priority: optional
 Section: libdevel
@@ -4890,6 +5048,29 @@ Multi-Arch: same
 Description-md5: c7776342d319349800d5af565864c2c3
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libdns95
+Priority: standard
+Section: libs
+Installed-Size: 1705
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.2.dfsg.P1-2ubuntu2.1
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libgeoip1 (>= 1.4.8+dfsg), libgssapi-krb5-2 (>= 1.10+dfsg~), libisc92, libkrb5-3 (>= 1.6.dfsg.2), libssl1.0.0 (>= 1.0.0)
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libdns95_9.9.2.dfsg.P1-2ubuntu2.1_powerpc.deb
+Size: 713444
+MD5sum: ed1f3046ea40c92ede423fa2e11a1581
+SHA1: 06c0a704a5d295da34ba698facceb878369de876
+SHA256: bbbafea991d561311366e7411b9b6f999311ca350b93a2f7d6f274a4719be99c
+Description: DNS Shared Library used by BIND
+Description-md5: 08196e0b2c6fd4d0c818845ca28dbe39
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: libdrm-dev
 Priority: optional
@@ -5874,6 +6055,75 @@ Description-md5: 903f84519fd86bd5fb271a04acb09731
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libisc92
+Priority: standard
+Section: libs
+Installed-Size: 418
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.2.dfsg.P1-2ubuntu2.1
+Replaces: libbind0
+Depends: libc6 (>= 2.15), libxml2 (>= 2.7.4)
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libisc92_9.9.2.dfsg.P1-2ubuntu2.1_powerpc.deb
+Size: 156910
+MD5sum: 690d81b005df65739cbd99dec6c45b81
+SHA1: df3b56935ad871dcc8ae7395724b8b51e9c20408
+SHA256: 23a6029b25ac246a6160f86b189f59d12cbce367cbb024e85b119207232bf884
+Description: ISC Shared Library used by BIND
+Description-md5: 6530db41bb53f0f9fc50d6f397950e53
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libisccc90
+Priority: standard
+Section: libs
+Installed-Size: 85
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.2.dfsg.P1-2ubuntu2.1
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libisc92
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libisccc90_9.9.2.dfsg.P1-2ubuntu2.1_powerpc.deb
+Size: 16880
+MD5sum: 563b34aba41486dcc028a484370fbaab
+SHA1: 383602d869edfd1b1ccf533468b15124d5a4a731
+SHA256: 0344c5ba78b196fc4e5ca12a1e4a54568ad9db65d35cee854f29a16f86b0593c
+Description: Command Channel Library used by BIND
+Description-md5: da6a1a2a1fbcd8229f24523ae8ae7b33
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libisccfg90
+Priority: standard
+Section: libs
+Installed-Size: 154
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.2.dfsg.P1-2ubuntu2.1
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libdns95, libisc92, libisccc90
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libisccfg90_9.9.2.dfsg.P1-2ubuntu2.1_powerpc.deb
+Size: 39616
+MD5sum: f64a3743217f76039d6dba8d066235be
+SHA1: 4ee94c9150016a6b8a37e9a1289588fdc83778b3
+SHA256: 96baca9ccee3fdb6ac049762f75fa6c01dcad70b054c0af1d41b7611ac3d36a6
+Description: Config File Handling Library used by BIND
+Description-md5: 3a890bff8c41bd92ac3e542818fb7f79
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
 Package: libkcmutils4
 Priority: optional
 Section: libs
@@ -6782,6 +7032,29 @@ Homepage: https://launchpad.net/lightdm
 Description-md5: befe4f3f090b62ea12a3d96e66eeecbd
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: liblwres90
+Priority: standard
+Section: libs
+Installed-Size: 129
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.2.dfsg.P1-2ubuntu2.1
+Replaces: libbind0
+Depends: libc6 (>= 2.15)
+Conflicts: libbind0
+Filename: pool/main/b/bind9/liblwres90_9.9.2.dfsg.P1-2ubuntu2.1_powerpc.deb
+Size: 37326
+MD5sum: e32e5877ac02b9438d6a0d4501ec32b0
+SHA1: a4906d0187e53d598ad100568634e5ffaa3ef249
+SHA256: 058b486a396e10fed783fb86935a1b2ac1270be943e3e9ba0d5835b777a5bb71
+Description: Lightweight Resolver Library used by BIND
+Description-md5: 73843c094de7b4dfcc9ed1e36cc6d546
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: libmodule-signature-perl
 Priority: optional
