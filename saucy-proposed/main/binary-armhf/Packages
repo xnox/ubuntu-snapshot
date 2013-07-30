@@ -1782,53 +1782,6 @@ Description-md5: 7e2cdd49ce630cb7e2347d7fe5ca5677
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libgpgme11
-Priority: optional
-Section: libs
-Installed-Size: 291
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Jose Carlos Garcia Sogo <jsogo@debian.org>
-Architecture: armhf
-Source: gpgme1.0
-Version: 1.4.2-0.1ubuntu3
-Depends: gnupg (>= 1.4.6-2) | gnupg2 (>> 2.0.4), libassuan0 (>= 2.0.1), libc6 (>= 2.15), libgpg-error0 (>= 1.10)
-Pre-Depends: multiarch-support
-Suggests: gpgsm (>> 1.9.6)
-Filename: pool/main/g/gpgme1.0/libgpgme11_1.4.2-0.1ubuntu3_armhf.deb
-Size: 148992
-MD5sum: bf51a71d5d9c294c7fcc48f5429d3230
-SHA1: 632795e688ce498d7ac955cccc9c5979ff82d21a
-SHA256: f92c9754f493c44918559b2936bda3d2d5c4c4bfd41cd95cc5cfddca973b514a
-Description: GPGME - GnuPG Made Easy (library)
-Multi-Arch: same
-Homepage: http://www.gnupg.org/gpgme.html
-Description-md5: 7305da3bebc903cedb7fa94da8ad1fbf
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, mail-server, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libgpgme11-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 841
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Jose Carlos Garcia Sogo <jsogo@debian.org>
-Architecture: armhf
-Source: gpgme1.0
-Version: 1.4.2-0.1ubuntu3
-Depends: libassuan-dev, libc6-dev, libgpg-error-dev, libgpgme11 (= 1.4.2-0.1ubuntu3), libpth-dev
-Conflicts: libgpgme-dev, libgpgme10-dev
-Filename: pool/main/g/gpgme1.0/libgpgme11-dev_1.4.2-0.1ubuntu3_armhf.deb
-Size: 342208
-MD5sum: 1558e305a5153ebf8417538ea8ce2ed5
-SHA1: b7fd4ba3f35b96d67248e4867a97635cd8b6519c
-SHA256: 40e86c865d6e2d6fb9e617f1fae44f41dcf15d5cdbb6db1d61d9ffc8c16d1456
-Description: GPGME - GnuPG Made Easy (development files)
-Homepage: http://www.gnupg.org/gpgme.html
-Description-md5: 025318585b10ac584c814b2079ede759
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: libgphoto2-2
 Priority: optional
 Section: libs
@@ -3293,6 +3246,47 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: oneconf
+Priority: extra
+Section: python
+Installed-Size: 65
+Maintainer: Didier Roche <didrocks@ubuntu.com>
+Architecture: all
+Version: 0.3.4
+Depends: oneconf-common, python3-oneconf, ubuntu-sso-client
+Recommends: software-center (>= 4.1.21), update-notifier (>= 0.103)
+Filename: pool/main/o/oneconf/oneconf_0.3.4_all.deb
+Size: 5626
+MD5sum: e083eb14430ddfa5bbea0407999d972d
+SHA1: 82cdf5a2531d85237e204dc66328ec64f03f936f
+SHA256: 53ab8942a713ed24bc5cd20ad8082663e05b8df3e2addad89aada4fe849ce682
+Description: synchronize your configuration data over the network
+Description-md5: ded1a62b7ac7e22a6b199ab2ee0402e2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: oneconf-common
+Priority: extra
+Section: python
+Installed-Size: 64
+Maintainer: Didier Roche <didrocks@ubuntu.com>
+Architecture: all
+Source: oneconf
+Version: 0.3.4
+Replaces: oneconf (<< 0.3)
+Depends: python-dbus, python-oauthlib, python-gi, python-apt, python-piston-mini-client, python-httplib2, python-xdg
+Filename: pool/main/o/oneconf/oneconf-common_0.3.4_all.deb
+Size: 6262
+MD5sum: 2f236a69056026a8a3523ab683a76e53
+SHA1: daf23c24dd29df6175ec5b7a147b5a29aa96e320
+SHA256: 2e9536a199176d38f75ee90c0c034e2912f065562c07142eb1dffe4a2527684a
+Description: synchronize your configuration data over the network
+Description-md5: be27004afc69c24c77c56ffb565e7bec
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: pacemaker
 Priority: optional
 Section: admin
@@ -3670,6 +3664,27 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntustudio-audio
 
+Package: python-oneconf
+Priority: extra
+Section: python
+Installed-Size: 163
+Maintainer: Didier Roche <didrocks@ubuntu.com>
+Architecture: all
+Source: oneconf
+Version: 0.3.4
+Replaces: oneconf (<< 0.3)
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), oneconf-common, python-dbus, python-oauthlib, python-gi, python-apt, python-piston-mini-client, python-httplib2, python-xdg
+Filename: pool/main/o/oneconf/python-oneconf_0.3.4_all.deb
+Size: 21782
+MD5sum: 014983739126818f70e00d847a04fcc9
+SHA1: 28c246e131a7d0880e8d6857dec3d48828d05b95
+SHA256: eb1057a6b25461ec1a83d864a95f7f8461feb7724bd6c96864cb8570f591b47c
+Description: synchronize your configuration data over the network (Python 2)
+Description-md5: a3e0bc1087a2070ca2fbe2ee526f3627
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: python3-gi
 Priority: standard
 Section: python
@@ -3784,6 +3799,26 @@ Homepage: http://pypi.python.org/pypi/greenlet
 Description-md5: 3e15f47206a9b1ca5987f3753bfb67cc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: python3-oneconf
+Priority: extra
+Section: python
+Installed-Size: 142
+Maintainer: Didier Roche <didrocks@ubuntu.com>
+Architecture: all
+Source: oneconf
+Version: 0.3.4
+Depends: python3 (>= 3.3), oneconf-common, python3-dbus, python3-oauthlib, python3-gi, python3-apt, python3-piston-mini-client, python3-httplib2, python3-xdg
+Filename: pool/main/o/oneconf/python3-oneconf_0.3.4_all.deb
+Size: 21040
+MD5sum: 72bb27f7a74477208c6ecf0c6925e806
+SHA1: c4e1df4a1dc8379d6c5f6f378e6640ccf4278ba3
+SHA256: f52fab5e1b5f6bdfe5ccd887a7ee0804fdf29a176c50fe54062f47b7f88a059d
+Description: synchronize your configuration data over the network (Python 3)
+Description-md5: 6a6fa52009f245ee2dacf465b84386dd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: signon-plugin-oauth2
 Priority: optional
