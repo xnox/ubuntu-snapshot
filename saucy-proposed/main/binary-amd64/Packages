@@ -250,21 +250,73 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: debian-installer
+Package: evince
 Priority: optional
-Section: devel
-Installed-Size: 1313
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Section: gnome
+Installed-Size: 1157
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: amd64
-Version: 20101020ubuntu255
-Filename: pool/main/d/debian-installer/debian-installer_20101020ubuntu255_amd64.deb
-Size: 653398
-MD5sum: d856411d37969ca045b08f5359514afb
-SHA1: a9e4900ceced9e4b53f68dc5cddadf198867b56c
-SHA256: 890f6bbe12c3928ee3d710d92ded3485fde2ae73bdaf22cf569057c636cffcf2
-Description: Debian installer
-Description-md5: 4971db8ed5ee1de169a33701c5a72c9c
+Version: 3.8.2-0ubuntu5
+Provides: djvu-viewer, pdf-viewer, postscript-viewer
+Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.4), libcairo2 (>= 1.10.0), libevdocument3-4 (= 3.8.2-0ubuntu5), libevview3-3 (= 3.8.2-0ubuntu5), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.7.5), libice6 (>= 1:1.0.0), libnautilus-extension1a (>= 1:2.91), libsecret-1-0 (>= 0.7), libsm6, evince-common (>= 3.8), evince-common (<< 3.9), gnome-icon-theme (>= 2.17.1), shared-mime-info
+Recommends: dbus-x11, gvfs
+Suggests: unrar, poppler-data, nautilus, apparmor
+Conflicts: evince-gtk
+Filename: pool/main/e/evince/evince_3.8.2-0ubuntu5_amd64.deb
+Size: 156210
+MD5sum: 4ef8bc42f0ded07917a4ccd0c3ed49bf
+SHA1: be1a19aee67a4a7ca781451e556b6b203c18be28
+SHA256: 6bba93ecc0431f6f5585acc341da2af7d235051165a9dc7a283abc0a0fbb0625
+Description: Document (PostScript, PDF) viewer
+Homepage: http://www.gnome.org/projects/evince/
+Description-md5: 531974388dc5701b9dbc2f5d96f92ec6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: evince-common
+Priority: optional
+Section: gnome
+Installed-Size: 2656
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: evince
+Version: 3.8.2-0ubuntu5
+Depends: dconf-gsettings-backend | gsettings-backend, gsettings-desktop-schemas
+Filename: pool/main/e/evince/evince-common_3.8.2-0ubuntu5_all.deb
+Size: 425398
+MD5sum: 51e5a594016527099f819aa385e9f9c9
+SHA1: 308be7481eaaadac136699e00972a3b91a734d71
+SHA256: 0443855aeebe9a91d1c378d7d1ccc02f9a03e0c7988a14c66ad5f65d5446183c
+Description: Document (PostScript, PDF) viewer - common files
+Homepage: http://www.gnome.org/projects/evince/
+Description-md5: cbee657abf0923de613d04ab6ccfdd8a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: evince-dbg
+Priority: extra
+Section: gnome
+Installed-Size: 4984
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: evince
+Version: 3.8.2-0ubuntu5
+Depends: evince (= 3.8.2-0ubuntu5), libevdocument3-4 (= 3.8.2-0ubuntu5), libevview3-3 (= 3.8.2-0ubuntu5)
+Filename: pool/main/e/evince/evince-dbg_3.8.2-0ubuntu5_amd64.deb
+Size: 1101730
+MD5sum: 0f8b7d07122f3253143e512f7f790380
+SHA1: 180a202176c63d97094dc071590ff55761118498
+SHA256: 5abc7941dd49a2bde2780e689aa268aa8463fe82f9c43412e0c1ad882bf39336
+Description: Document (PostScript, PDF) viewer - debugging symbols
+Homepage: http://www.gnome.org/projects/evince/
+Description-md5: 7aaf40301b0ad64e9c6e52927fc3e9b0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -2459,6 +2511,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: gir1.2-evince-3.0
+Priority: optional
+Section: libs
+Installed-Size: 658
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: evince
+Version: 3.8.2-0ubuntu5
+Provides: gir1.2-evince-document-3.0, gir1.2-evince-view-3.0
+Depends: gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-gtk-3.0, libevdocument3-4 (>= 3.7.90), libevview3-3 (>= 3.7.4)
+Filename: pool/main/e/evince/gir1.2-evince-3.0_3.8.2-0ubuntu5_amd64.deb
+Size: 24680
+MD5sum: 6160150e033c6a97c8f34665dbb2f5cb
+SHA1: 42a685933a12fe418d5646a7cf564e401c9bcaca
+SHA256: 58177602db17982209711e22e40d5d210b0ffa2420a2edadc51bac973c07c642
+Description: GObject introspection data for the evince libraries
+Homepage: http://www.gnome.org/projects/evince/
+Description-md5: 4dafa58edf36d098ff0274eb48552db5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-gnome-desktop
+
 Package: gir1.2-poppler-0.18
 Priority: optional
 Section: introspection
@@ -4493,6 +4569,78 @@ Description-md5: 6a66c25de23fa410e973153207110423
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: libevdocument3-4
+Priority: optional
+Section: libs
+Installed-Size: 1188
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: evince
+Version: 3.8.2-0ubuntu5
+Replaces: libevince3-3
+Depends: libc6 (>= 2.14), libcairo2 (>= 1.10.0), libdjvulibre21 (>= 3.5.25.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.7.5), libgxps2 (>= 0.2.1), libkpathsea6, libpoppler-glib8 (>= 0.22.1), libspectre1 (>= 0.2.3), libt1-5 (>= 5.1.0), libtiff5 (>> 4.0.0-1~), libxml2 (>= 2.7.4), zlib1g (>= 1:1.1.4)
+Breaks: libevince3-3
+Filename: pool/main/e/evince/libevdocument3-4_3.8.2-0ubuntu5_amd64.deb
+Size: 215760
+MD5sum: 1b65764cea2c7a9d49405d3a2647f428
+SHA1: ed82460d07211ec0a63c8c11a6979ee0b4f8443e
+SHA256: 93f8b4491fbebd5e66bcae714977a153eb8b605e547b80deaa3a2cb7f3dd1366
+Description: Document (PostScript, PDF) rendering library
+Homepage: http://www.gnome.org/projects/evince/
+Description-md5: 956c243a0a4027d023c642ebca2308fb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libevince-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 2699
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: evince
+Version: 3.8.2-0ubuntu5
+Depends: libevdocument3-4 (= 3.8.2-0ubuntu5), libevview3-3 (= 3.8.2-0ubuntu5), gir1.2-evince-3.0 (= 3.8.2-0ubuntu5), libgtk-3-dev (>= 3.4.4), libglib2.0-dev (>= 2.34)
+Filename: pool/main/e/evince/libevince-dev_3.8.2-0ubuntu5_amd64.deb
+Size: 250624
+MD5sum: dff84befab1579554f2f2a5968854a3b
+SHA1: b74950493105fe8ea1950e5c319d5b8309be9a74
+SHA256: f6389f7bc205a976b89adbaf91dd49276e28e84fc0eb57d67d313de56acccffe
+Description: Document (PostScript, PDF) rendering library - development files
+Homepage: http://www.gnome.org/projects/evince/
+Description-md5: 708a823ea6956d2cc85b60391375a7cd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libevview3-3
+Priority: optional
+Section: libs
+Installed-Size: 859
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: evince
+Version: 3.8.2-0ubuntu5
+Replaces: libevince3-3
+Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.2.5), libcairo2 (>= 1.10.0), libevdocument3-4 (>= 3.7.5), libgail-3-0 (>= 3.0.0), libglib2.0-0 (>= 2.37.3), libgrip0, libgtk-3-0 (>= 3.7.10), libpango-1.0-0 (>= 1.14.0)
+Breaks: libevince3-3
+Filename: pool/main/e/evince/libevview3-3_3.8.2-0ubuntu5_amd64.deb
+Size: 93902
+MD5sum: 48aad235de2cd1d65a8648b68db5b0d2
+SHA1: d59eadf28c8fa0c548724fc88f3331057e263231
+SHA256: 0fb8cd8f3cddad154804c8376bf3a8c4008c808a3b9bef0b17687fcfa926ce62
+Description: Document (PostScript, PDF) rendering library - Gtk+ widgets
+Homepage: http://www.gnome.org/projects/evince/
+Description-md5: ecf4f1038683832203c18a4989faaa7b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libgcc-4.8-dev
 Priority: optional
