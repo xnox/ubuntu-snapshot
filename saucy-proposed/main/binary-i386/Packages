@@ -4468,59 +4468,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: liblcms1
-Priority: optional
-Section: libs
-Installed-Size: 256
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Oleksandr Moskalenko <malex@debian.org>
-Architecture: i386
-Source: lcms
-Version: 1.19.dfsg-1.2ubuntu3
-Replaces: liblcms
-Provides: liblcms
-Depends: libc6 (>= 2.7)
-Pre-Depends: multiarch-support
-Suggests: liblcms-utils
-Conflicts: liblcms
-Filename: pool/main/l/lcms/liblcms1_1.19.dfsg-1.2ubuntu3_i386.deb
-Size: 107558
-MD5sum: 1dd09475bfd526ac5c62233e66560b8e
-SHA1: a393a3233fd0a866c1ae24185d7f3500d743f99d
-SHA256: 3a001fde376a24dfc7f97190baec2e351f2e452dc31e4670affd7c93adb92848
-Description: Little CMS color management library
-Multi-Arch: same
-Description-md5: e1c2cff0e9cd8d568f1c459c5f6f5154
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: liblcms1-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 472
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Oleksandr Moskalenko <malex@debian.org>
-Architecture: i386
-Source: lcms
-Version: 1.19.dfsg-1.2ubuntu3
-Replaces: liblcms-dev
-Provides: liblcms-dev
-Depends: liblcms1 (= 1.19.dfsg-1.2ubuntu3)
-Conflicts: liblcms-dev
-Filename: pool/main/l/lcms/liblcms1-dev_1.19.dfsg-1.2ubuntu3_i386.deb
-Size: 184838
-MD5sum: a4f024e259e878f3dc95e3479bd70152
-SHA1: e23eae288c077801685bd9df8517da39ada56638
-SHA256: 700ca15b16411683da8836c011ad5ef1fe188c935f5e70d267c4f06378f6bf3f
-Description: Litle CMS color management library development headers
-Multi-Arch: same
-Description-md5: 327d315008a1c753ac6098740f6e55c8
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: liblrmd1
 Priority: optional
 Section: libs
@@ -6246,6 +6193,71 @@ Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: oem-config
+Priority: extra
+Section: admin
+Installed-Size: 264
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.12
+Replaces: oem-config-gtk (<< 1.54.13), oem-config-kde (<< 1.54.13), oem-config-keyboard, oem-config-locale, oem-config-timezone
+Depends: debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), ubiquity (= 2.15.12), oem-config-frontend-2.15.12
+Conflicts: oem-config-keyboard, oem-config-locale, oem-config-timezone
+Filename: pool/main/u/ubiquity/oem-config_2.15.12_all.deb
+Size: 13892
+MD5sum: f74b6372bdf6d46b6f9c2334ec21889c
+SHA1: 9797db5d0955c5e0907360bb9186055e2afcb7f2
+SHA256: f55c2dd0d55eb8a424651ca3d73fe7a8dc7e88f7221561e93505e23e27de8865
+Description: Perform end-user configuration after initial OEM installation
+Description-md5: 9380d07ec19991f384138c016b142ce0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: oem-config-debconf
+Priority: extra
+Section: admin
+Installed-Size: 184
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.12
+Provides: oem-config-frontend-2.15.12
+Depends: sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), oem-config (= 2.15.12), ubiquity-frontend-debconf (= 2.15.12)
+Filename: pool/main/u/ubiquity/oem-config-debconf_2.15.12_all.deb
+Size: 2968
+MD5sum: ef0fc7be1acaaa270d69bde12777cb5d
+SHA1: 1e9d99fd623441afd5c90c18b2c3f7a6d9d3e875
+SHA256: 6ab5016e43d9953b3fdb77f1677e67bffe72b65b98a201d0b15c4a63cbb9d76b
+Description: debconf frontend for end-user post-OEM-install configuration
+Description-md5: 0b339016cd37fb3df25a4085c60673e9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: oem-config-gtk
+Priority: extra
+Section: admin
+Installed-Size: 196
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.12
+Replaces: oem-config (<< 1.0)
+Provides: oem-config-frontend-2.15.12
+Depends: oem-config (= 2.15.12), ubiquity-frontend-gtk (= 2.15.12), python3-aptdaemon.gtk3widgets, aptdaemon
+Filename: pool/main/u/ubiquity/oem-config-gtk_2.15.12_all.deb
+Size: 4186
+MD5sum: 2a5fd40ca6a96b95e1ebae8290206722
+SHA1: f131db45fef41da23a726de0a66b5baedf737c9a
+SHA256: 838da2ab058a16594ccccfe386cbec26fc4d21a97e1b5225bdb31dd35cf0bf3c
+Description: GTK+ frontend for end-user post-OEM-install configuration
+Description-md5: 8709c78036a09529b74b507a6299fd60
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: pacemaker
 Priority: optional
 Section: admin
@@ -6787,6 +6799,98 @@ Description-md5: 3ab5c9257106ba955b283c3165f0b8c9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: ubiquity
+Priority: optional
+Section: admin
+Installed-Size: 15290
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: i386
+Version: 2.15.12
+Replaces: espresso, espresso-grub, espresso-kbd-chooser, espresso-keyboard-setup, espresso-locale, espresso-timezone, espresso-utils, espresso-yaboot, partman, ubiquity-frontend-gtk (<< 2.3.8), ubuntu-express, user-setup (<< 0.05ubuntu6)
+Depends: libc6 (>= 2.15), libdebconfclient0 (>= 0.145), libdebian-installer4 (>= 0.87ubuntu1), libiw30 (>= 30~pre1), libparted0debian1 (>= 2.2-1), debconf (>= 1.5.43), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python3 (>= 3.2.3-3~), ubiquity-frontend-2.15.12, ubiquity-artwork-2.15.12, laptop-detect, lsb-release, ubiquity-casper, python3-apt (>= 0.7.100.3~), console-setup (>= 1.70ubuntu7), iso-codes, passwd, adduser, os-prober, rdate, ntfs-3g (>= 1:2011.1.15AR.4+2011.4.12-1) | ntfsprogs, ecryptfs-utils, cryptsetup, policykit-1, python3-pyicu (>= 1.0), reiserfsprogs, language-selector-common (>= 0.4.16), archdetect-deb, dpkg-repack, apt-clone, wget, grub-common, dbus-x11
+Recommends: grub-pc | grub | grub-efi, dmraid, btrfs-tools, ubuntu-drivers-common, lvm2
+Conflicts: espresso, espresso-grub, espresso-kbd-chooser, espresso-keyboard-setup, espresso-locale, espresso-timezone, espresso-utils, espresso-yaboot, partman, ubuntu-express, user-setup (<< 0.05ubuntu6)
+Filename: pool/main/u/ubiquity/ubiquity_2.15.12_i386.deb
+Size: 4884054
+MD5sum: 69f139c14793155316fe201faef1e161
+SHA1: 61bde5bca978cea09fed33a48e3af69478b9f353
+SHA256: 5edee37e49b76bd12298a4b470d17206e02542da3c7f3b130bba22f02b23ae90
+Description: Ubuntu live CD installer
+Description-md5: a02e939502ca1f257871281bbc51e7e1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: ubiquity-frontend-debconf
+Priority: optional
+Section: admin
+Installed-Size: 2655
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: i386
+Source: ubiquity
+Version: 2.15.12
+Provides: ubiquity-frontend-2.15.12
+Depends: python3 (>= 3.2.3-3~), ubiquity (= 2.15.12), debconf (>= 1.5.24ubuntu2) | cdebconf, bogl-bterm (>= 0.1.18-2ubuntu4), tasksel
+Filename: pool/main/u/ubiquity/ubiquity-frontend-debconf_2.15.12_i386.deb
+Size: 445194
+MD5sum: 0c87c364a8b041c0558056f5210eb5a8
+SHA1: 15e4404d266d39a4882c303110c49e87993d5015
+SHA256: 320de87c2debfbcefd4653a9ec143b1969f5f1233ef0e1d6886783792c766045
+Description: debconf frontend for the Ubiquity live installer
+Description-md5: fa1dbae8b89fc2e16547475097735858
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ubiquity-frontend-gtk
+Priority: optional
+Section: admin
+Installed-Size: 830
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: i386
+Source: ubiquity
+Version: 2.15.12
+Replaces: espresso-frontend-gtk, ubiquity (<< 2.4.3), ubuntu-express-frontend-gtk
+Provides: indicator-renderer, ubiquity-frontend-2.15.12
+Depends: libc6 (>= 2.1.3), libcairo2 (>= 1.2.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.0.0), libido3-0.1-0 (>= 13.10.0daily13.06.19), libindicator3-7 (>= 0.4.90), libx11-6, python3 (>= 3.2.3-3~), ubiquity (= 2.15.12), python3-dbus, gir1.2-gtk-3.0, gir1.2-soup-2.4, gir1.2-vte-2.90, gir1.2-webkit-3.0, iso-codes, metacity | xfwm4 | matchbox-window-manager | lubuntu-default-settings | openbox, gir1.2-xkl-1.0, gir1.2-timezonemap-1.0, gir1.2-gnomekeyring-1.0, python3-gi, python3-cairo, python3-gi-cairo, gir1.2-appindicator3-0.1, python3-oauthlib, busybox-static | busybox
+Suggests: gnome-control-center | feh
+Conflicts: espresso-frontend-gtk, ubiquity (<< 2.4.3), ubuntu-express-frontend-gtk
+Filename: pool/main/u/ubiquity/ubiquity-frontend-gtk_2.15.12_i386.deb
+Size: 89396
+MD5sum: 54bb7cba0b9e232c26fc893cb32af0b0
+SHA1: 0cc607c225732c2dcc53b63949e3877ba9785359
+SHA256: 3a0a4677cc5d3ec1c3fb5caccdf950403ebf42eee814870088602f9e2374ba58
+Description: GTK+ frontend for Ubiquity live installer
+Description-md5: 44de7bf97742fb6f9f2aaa099078ef33
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, ubuntu-usb-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: ubiquity-ubuntu-artwork
+Priority: optional
+Section: admin
+Installed-Size: 756
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.12
+Replaces: espresso-ubuntu-artwork, espresso-ubuntu-doc, ubiquity (<< 1.13.0), ubiquity-ubuntu-doc, ubuntu-express-ubuntu-artwork, ubuntu-express-ubuntu-doc
+Provides: ubiquity-artwork-2.15.12
+Conflicts: espresso-ubuntu-artwork, espresso-ubuntu-doc, ubiquity-ubuntu-doc, ubuntu-express-ubuntu-artwork, ubuntu-express-ubuntu-doc
+Filename: pool/main/u/ubiquity/ubiquity-ubuntu-artwork_2.15.12_all.deb
+Size: 523158
+MD5sum: 77896216f151ebb384f1df9605eb45cf
+SHA1: f04c8d8349f88270fbb72c9decb159956f3a0508
+SHA256: 06ea1b2ef9387bb7be610eeae54b80c3e0c4beb5bad88862bf26bca2216863ee
+Description: Ubuntu artwork for Ubiquity live installer
+Description-md5: a7bbb2b9a8b2a3fbc7110f5a8d336a36
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
 
 Package: unity-webapps-common
 Priority: optional

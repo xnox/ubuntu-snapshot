@@ -4151,57 +4151,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
-Package: liblcms1
-Priority: optional
-Section: libs
-Installed-Size: 260
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Oleksandr Moskalenko <malex@debian.org>
-Architecture: powerpc
-Source: lcms
-Version: 1.19.dfsg-1.2ubuntu3
-Replaces: liblcms
-Provides: liblcms
-Depends: libc6 (>= 2.7)
-Pre-Depends: multiarch-support
-Suggests: liblcms-utils
-Conflicts: liblcms
-Filename: pool/main/l/lcms/liblcms1_1.19.dfsg-1.2ubuntu3_powerpc.deb
-Size: 109486
-MD5sum: 3435721542eb26642d0faf166a2ce03b
-SHA1: c3e78706cc92c9f33173aefa14b26689a263d98a
-SHA256: 7a4a888dadb30fb80b014c8afd31e4023cb1a46ab1f0f0304e6e86a3093d75d0
-Description: Little CMS color management library
-Multi-Arch: same
-Description-md5: e1c2cff0e9cd8d568f1c459c5f6f5154
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: liblcms1-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 492
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Oleksandr Moskalenko <malex@debian.org>
-Architecture: powerpc
-Source: lcms
-Version: 1.19.dfsg-1.2ubuntu3
-Replaces: liblcms-dev
-Provides: liblcms-dev
-Depends: liblcms1 (= 1.19.dfsg-1.2ubuntu3)
-Conflicts: liblcms-dev
-Filename: pool/main/l/lcms/liblcms1-dev_1.19.dfsg-1.2ubuntu3_powerpc.deb
-Size: 195712
-MD5sum: 58b8fb3afb73ff847893525c763cc0ff
-SHA1: 27bb3d63886a5497cd49bd4415affb87fc35a579
-SHA256: 5f4583a1411fab0c3d07d1182edfb09d53d7680c42a46aece1ffea4d425c7912
-Description: Litle CMS color management library development headers
-Multi-Arch: same
-Description-md5: 327d315008a1c753ac6098740f6e55c8
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: liblrmd1
 Priority: optional
 Section: libs
@@ -5290,6 +5239,68 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: oem-config
+Priority: extra
+Section: admin
+Installed-Size: 264
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.12
+Replaces: oem-config-gtk (<< 1.54.13), oem-config-kde (<< 1.54.13), oem-config-keyboard, oem-config-locale, oem-config-timezone
+Depends: debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), ubiquity (= 2.15.12), oem-config-frontend-2.15.12
+Conflicts: oem-config-keyboard, oem-config-locale, oem-config-timezone
+Filename: pool/main/u/ubiquity/oem-config_2.15.12_all.deb
+Size: 13892
+MD5sum: f74b6372bdf6d46b6f9c2334ec21889c
+SHA1: 9797db5d0955c5e0907360bb9186055e2afcb7f2
+SHA256: f55c2dd0d55eb8a424651ca3d73fe7a8dc7e88f7221561e93505e23e27de8865
+Description: Perform end-user configuration after initial OEM installation
+Description-md5: 9380d07ec19991f384138c016b142ce0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: oem-config-debconf
+Priority: extra
+Section: admin
+Installed-Size: 184
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.12
+Provides: oem-config-frontend-2.15.12
+Depends: sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), oem-config (= 2.15.12), ubiquity-frontend-debconf (= 2.15.12)
+Filename: pool/main/u/ubiquity/oem-config-debconf_2.15.12_all.deb
+Size: 2968
+MD5sum: ef0fc7be1acaaa270d69bde12777cb5d
+SHA1: 1e9d99fd623441afd5c90c18b2c3f7a6d9d3e875
+SHA256: 6ab5016e43d9953b3fdb77f1677e67bffe72b65b98a201d0b15c4a63cbb9d76b
+Description: debconf frontend for end-user post-OEM-install configuration
+Description-md5: 0b339016cd37fb3df25a4085c60673e9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: oem-config-gtk
+Priority: extra
+Section: admin
+Installed-Size: 196
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.12
+Replaces: oem-config (<< 1.0)
+Provides: oem-config-frontend-2.15.12
+Depends: oem-config (= 2.15.12), ubiquity-frontend-gtk (= 2.15.12), python3-aptdaemon.gtk3widgets, aptdaemon
+Filename: pool/main/u/ubiquity/oem-config-gtk_2.15.12_all.deb
+Size: 4186
+MD5sum: 2a5fd40ca6a96b95e1ebae8290206722
+SHA1: f131db45fef41da23a726de0a66b5baedf737c9a
+SHA256: 838da2ab058a16594ccccfe386cbec26fc4d21a97e1b5225bdb31dd35cf0bf3c
+Description: GTK+ frontend for end-user post-OEM-install configuration
+Description-md5: 8709c78036a09529b74b507a6299fd60
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: pacemaker
 Priority: optional
 Section: admin
@@ -5726,6 +5737,28 @@ Homepage: http://www.swig.org/
 Description-md5: 3ab5c9257106ba955b283c3165f0b8c9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: ubiquity-ubuntu-artwork
+Priority: optional
+Section: admin
+Installed-Size: 756
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.12
+Replaces: espresso-ubuntu-artwork, espresso-ubuntu-doc, ubiquity (<< 1.13.0), ubiquity-ubuntu-doc, ubuntu-express-ubuntu-artwork, ubuntu-express-ubuntu-doc
+Provides: ubiquity-artwork-2.15.12
+Conflicts: espresso-ubuntu-artwork, espresso-ubuntu-doc, ubiquity-ubuntu-doc, ubuntu-express-ubuntu-artwork, ubuntu-express-ubuntu-doc
+Filename: pool/main/u/ubiquity/ubiquity-ubuntu-artwork_2.15.12_all.deb
+Size: 523158
+MD5sum: 77896216f151ebb384f1df9605eb45cf
+SHA1: f04c8d8349f88270fbb72c9decb159956f3a0508
+SHA256: 06ea1b2ef9387bb7be610eeae54b80c3e0c4beb5bad88862bf26bca2216863ee
+Description: Ubuntu artwork for Ubiquity live installer
+Description-md5: a7bbb2b9a8b2a3fbc7110f5a8d336a36
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
 
 Package: unity-webapps-common
 Priority: optional
