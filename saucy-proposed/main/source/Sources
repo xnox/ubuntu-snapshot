@@ -1,3 +1,29 @@
+Package: anna
+Binary: anna
+Version: 1.47ubuntu1
+Section: debian-installer
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 9), dpkg-dev (>= 1.15.7), libdebconfclient0-dev (>= 0.46), libdebian-installer4-dev (>= 0.41)
+Architecture: any
+Format: 3.0 (native)
+Directory: pool/main/a/anna
+Files:
+ 83e7bcf26028cf2a020eb83bb50d6184 1904 anna_1.47ubuntu1.dsc
+ 1d8be374355093083322dc65f481dd55 106783 anna_1.47ubuntu1.tar.gz
+Uploaders: Bastian Blank <waldi@debian.org>, Christian Perrier <bubulle@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/anna/ubuntu
+Package-List: 
+ anna udeb debian-installer standard
+Checksums-Sha1:
+ 18098641a77aa2a68f151383a290414ad0a1480e 1904 anna_1.47ubuntu1.dsc
+ f1156fb416c94d7792fbfa023f1900e75e7b8d7b 106783 anna_1.47ubuntu1.tar.gz
+Checksums-Sha256:
+ b9344297bd662566cfc1763177162a5401f2797d872598f0c023a7221b83a118 1904 anna_1.47ubuntu1.dsc
+ 0445bc3b8ca3ecb81cd6d90379835936a35b134b4a28ee83fa71b8507822dea7 106783 anna_1.47ubuntu1.tar.gz
+Debian-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=d-i/anna.git
+Debian-Vcs-Git: git://anonscm.debian.org/d-i/anna.git
+
 Package: augeas
 Binary: augeas-tools, libaugeas-dev, libaugeas0, augeas-dbg, augeas-lenses, augeas-doc
 Version: 1.1.0-0ubuntu1
@@ -1091,6 +1117,43 @@ Checksums-Sha256:
  76a5d755ba4ece0e8b694841b86672554869515e7ffd1b816b0eaf86c02e7fe5 3092 mysql-5.5_5.5.32-0ubuntu1.dsc
  afcdb3d4fa93950b330d934ce3de155e9d4a575c91b5aa3e0a276b9f52e802a2 21604457 mysql-5.5_5.5.32.orig.tar.gz
  fe846ce0d31743c1ed7420b5f613c575669df1c6051175e74ed3b2895f52c4e2 302253 mysql-5.5_5.5.32-0ubuntu1.debian.tar.gz
+Testsuite: autopkgtest
+
+Package: nagios3
+Binary: nagios3-common, nagios3-cgi, nagios3, nagios3-core, nagios3-doc, nagios3-dbg
+Version: 3.4.1-5ubuntu1
+Priority: optional
+Section: net
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
+Build-Depends: autotools-dev, debhelper (>= 7), dpatch (>= 2.0.10), dpkg-dev (>= 1.13.19), hardening-wrapper, libgd2-noxpm-dev (>= 2.0.1) | libgd2-xpm-dev (>= 2.0.1), libperl-dev, libpng-dev, po-debconf
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/n/nagios3
+Files:
+ dd79113cba00e612982ac421fce51384 2520 nagios3_3.4.1-5ubuntu1.dsc
+ 2fa8acfb2a92b1bf8d173a855832de1f 1782817 nagios3_3.4.1.orig.tar.gz
+ 3d04055070d28def30be40287b3b8cdd 47863 nagios3_3.4.1-5ubuntu1.diff.gz
+Uploaders: sean finney <seanius@debian.org>, Alexander Wirt <formorer@debian.org>, Jan Wagner <waja@cyconet.org>
+Homepage: http://www.nagios.org/
+Vcs-Browser: http://git.debian.org/?p=pkg-nagios/pkg-nagios3.git
+Vcs-Git: git://git.debian.org/pkg-nagios/pkg-nagios3.git
+Package-List: 
+ nagios3 deb net optional
+ nagios3-cgi deb net optional
+ nagios3-common deb net optional
+ nagios3-core deb net optional
+ nagios3-dbg deb debug extra
+ nagios3-doc deb doc optional
+Checksums-Sha1:
+ e8fcd170b6ec3707f2f4d995112da16f4a138cd4 2520 nagios3_3.4.1-5ubuntu1.dsc
+ 728d3a7f601cfbc0686afa27cb02a2cb212cc5ac 1782817 nagios3_3.4.1.orig.tar.gz
+ a28f3c4f439e3fe76a7490f82214fcebfaac12a4 47863 nagios3_3.4.1-5ubuntu1.diff.gz
+Checksums-Sha256:
+ 22b1a6cdde3e250f4e275d8a03a6e64920a49134c6825a4ee2f98360f9b610e2 2520 nagios3_3.4.1-5ubuntu1.dsc
+ a5c693f9af22410cc17d6da9c0df9bd65c47d787de3f937b5ccbda934131f8c8 1782817 nagios3_3.4.1.orig.tar.gz
+ 3d9af8483233482eb9a91f08c976542b29a4e5cbf2154f7bab2ce2090077bf7b 47863 nagios3_3.4.1-5ubuntu1.diff.gz
 Testsuite: autopkgtest
 
 Package: oneconf
