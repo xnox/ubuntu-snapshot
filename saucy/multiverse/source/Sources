@@ -6325,42 +6325,67 @@ Checksums-Sha256:
  ec4fb3ae937531eb4b0b46761648409be75fc700fc44ad84fee2858908cffdea 84770 maelstrom_1.4.3-L3.0.6+main-4.diff.gz
 
 Package: mame
-Binary: mame, xmame-sdl, xmame-svga, xmame-x, sdlmame
-Version: 0.146-5
+Binary: mame, mame-tools, mess, mess-data
+Version: 0.149-0ubuntu1
 Priority: optional
 Section: multiverse/games
-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 8), libexpat1-dev, libflac-dev, libgconf2-dev, libgtk2.0-dev, libjpeg8-dev, libsdl1.2-dev, libsdl-ttf2.0-dev, zlib1g-dev
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Cesare Falco <c.falco@ubuntu.com>
+Build-Depends: debhelper (>= 8), gcc-4.6, g++-4.6, libexpat1-dev, libflac-dev, libfontconfig1-dev, libjpeg8-dev, libportmidi-dev, libqt4-dev, libsdl-ttf2.0-dev, libsdl1.2-dev, libxinerama-dev, python-dev, zlib1g-dev
 Architecture: any all
-Standards-Version: 3.9.3
+Standards-Version: 3.9.4
 Format: 3.0 (quilt)
 Directory: pool/multiverse/m/mame
 Files:
- 1695d1a3592d034cba2ea7629c533f65 2636 mame_0.146-5.dsc
- 9f150d468fd3e3e55a8b888d2fb66e79 54164 mame_0.146.orig-nplayers.tar.xz
- 7e40f1d63d2ded7ea3fccf969093e7d6 15159936 mame_0.146.orig.tar.xz
- 4e26fbed5b8b7de567fcf06dabd66318 46172 mame_0.146-5.debian.tar.xz
-Uploaders: Félix Arreola Rodríguez <fgatuno.123@gmail.com>, Cesare Falco <cesare.falco@gmail.com>, Emmanuel Kasper <emmanuel@libera.cc>, Ludovic Lechapt <ludomatic@gmail.com>, Jordi Mallach <jordi@debian.org>
-Dm-Upload-Allowed: yes
+ 7b840141ce4116ccaa19b6a94791ca1a 2245 mame_0.149-0ubuntu1.dsc
+ 81ba2dc75f07664f17b03fe24b6f7528 26064840 mame_0.149.orig.tar.xz
+ 2284c590c2e5910055e7e56f8ffbc699 57589 mame_0.149-0ubuntu1.debian.tar.gz
 Homepage: http://mamedev.org/
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-games/mame.git
 Vcs-Git: git://anonscm.debian.org/pkg-games/mame.git
 Package-List: 
  mame deb non-free/games optional
- sdlmame deb non-free/oldlibs extra
- xmame-sdl deb non-free/oldlibs extra
- xmame-svga deb non-free/oldlibs extra
- xmame-x deb non-free/oldlibs extra
+ mame-tools deb non-free/utils optional
+ mess deb non-free/games optional
+ mess-data deb non-free/games optional
 Checksums-Sha1:
- 23230848c46594209b0d0964ae2ab8b207b1b401 2636 mame_0.146-5.dsc
- e3125e48f68e9d549dde06371eee69eaadf7a178 54164 mame_0.146.orig-nplayers.tar.xz
- 3c4a594339180f6d594c5d2c0a14ef534515e28b 15159936 mame_0.146.orig.tar.xz
- e91772988a18f030ab10ece93078ce26a62df1f1 46172 mame_0.146-5.debian.tar.xz
+ 943e10bf0853b1d909b9b61afed6d06932ef0fab 2245 mame_0.149-0ubuntu1.dsc
+ 63689996b9f4a41b84e9aae19dc804a0738ecff6 26064840 mame_0.149.orig.tar.xz
+ 6804721debe40e0202885fc30eb53a2e6aa75637 57589 mame_0.149-0ubuntu1.debian.tar.gz
 Checksums-Sha256:
- 6ab39c215522b55305ea54f683548df803deed11028d7801f87b82bf42ec3521 2636 mame_0.146-5.dsc
- b4586ef42b0db5c1c5b34758c89ff984ff8d4e9726e712484e3d1e0864ecd362 54164 mame_0.146.orig-nplayers.tar.xz
- 8f285041b5b51c716174173a72a819a2187f81c03ee5fefdfdb655d4b8dc9f30 15159936 mame_0.146.orig.tar.xz
- 696e22b694f80204121fa6ff5589ed1739abccf21a27c7aebb5ec4f39003d483 46172 mame_0.146-5.debian.tar.xz
+ 3545365b99f454993f04c2baaaa4b54d3cd3dd84ecbc8c3f4904bd5fac6152ff 2245 mame_0.149-0ubuntu1.dsc
+ 243e54452340e536324982e6e7d256c44f10e8eb35a4acbf56719c898115e0fb 26064840 mame_0.149.orig.tar.xz
+ 14343f5987bcf9a45047c7cc58e91dd302e102e41847c8b0de92a103ac29601c 57589 mame_0.149-0ubuntu1.debian.tar.gz
+Autobuild: yes
+
+Package: mame-extra
+Binary: mame-extra
+Version: 0.148-1
+Priority: optional
+Section: multiverse/games
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9)
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/multiverse/m/mame-extra
+Files:
+ fffc71894efc99fe3352656af20bb422 1341 mame-extra_0.148-1.dsc
+ 04c8746a07ebd9651bd1116bdf43c33c 2795636 mame-extra_0.148.orig.tar.xz
+ 6c26c738b9c1382615d1caf2c247baec 9811 mame-extra_0.148-1.debian.tar.gz
+Uploaders: Cesare Falco <c.falco@ubuntu.com>, Emmanuel Kasper <emmanuel@libera.cc>, Jordi Mallach <jordi@debian.org>
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-games/mame-extra.git
+Vcs-Git: git://anonscm.debian.org/pkg-games/mame-extra.git
+Package-List: 
+ mame-extra deb non-free/games optional
+Checksums-Sha1:
+ e4d1a58f846f5cf6dc8cf63d50e633e0ace2ec07 1341 mame-extra_0.148-1.dsc
+ f9912466119ea164cf6dd6278f596a285b7ba385 2795636 mame-extra_0.148.orig.tar.xz
+ 00bd073fe62b184b0a4724d789918b53214ffb78 9811 mame-extra_0.148-1.debian.tar.gz
+Checksums-Sha256:
+ cad6b5df93c4bed6222f24c938b284d44c7c9cef04dc840605a745b0001fa925 1341 mame-extra_0.148-1.dsc
+ 7566e3542ae74c719a95e1fb5158f9aa76bd60516751190b602c352227984e01 2795636 mame-extra_0.148.orig.tar.xz
+ 56aa4353a760fa4568aa27072b279a75b602a29213ae1c35b72f186f8c67d38c 9811 mame-extra_0.148-1.debian.tar.gz
 Autobuild: yes
 
 Package: manpages-posix

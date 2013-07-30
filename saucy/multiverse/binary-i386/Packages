@@ -7558,46 +7558,63 @@ Origin: Ubuntu
 Package: mame
 Priority: optional
 Section: multiverse/games
-Installed-Size: 67324
+Installed-Size: 71140
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Original-Maintainer: Cesare Falco <c.falco@ubuntu.com>
 Architecture: i386
-Version: 0.146-5
-Replaces: sdlmame (<< 0.137), xmame-common (<< 0.140), xmame-sdl (<< 0.140), xmame-svga (<< 0.140), xmame-x (<< 0.140)
-Provides: sdlmame, xmame-common, xmame-sdl, xmame-svga, xmame-x
-Depends: gconf-service, libatk1.0-0 (>= 1.12.4), libc6 (>= 2.4), libexpat1 (>= 2.0.1), libflac8 (>= 1.2.1), libfontconfig1 (>= 2.9.0), libgcc1 (>= 1:4.1.1), libgconf-2-4 (>= 2.31.1), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.14.0), libgtk2.0-0 (>= 2.8.0), libjpeg8 (>= 8c), libpango1.0-0 (>= 1.14.0), libsdl-ttf2.0-0, libsdl1.2debian (>= 1.2.11), libstdc++6 (>= 4.6), libx11-6, libxinerama1, zlib1g (>= 1:1.1.4)
-Suggests: mame-tools, gnome-video-arcade
-Breaks: sdlmame (<< 0.137), xmame-common (<< 0.140), xmame-sdl (<< 0.140), xmame-svga (<< 0.140), xmame-x (<< 0.140)
-Filename: pool/multiverse/m/mame/mame_0.146-5_i386.deb
-Size: 20037356
-MD5sum: d86f50d77d463e127ef1d652d00e3c89
-SHA1: 29cdae13dfde64b9ff04f5906c033567b4f97eda
-SHA256: ee334e72ca0f4c16a02cd8e1afb2e80c672569b8312b023667fbd83501f48b99
+Version: 0.149-0ubuntu1
+Depends: libc6 (>= 2.4), libexpat1 (>= 2.0.1), libflac8 (>= 1.3.0), libfontconfig1 (>= 2.9.0), libgcc1 (>= 1:4.1.1), libjpeg8 (>= 8c), libportmidi0, libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libsdl-ttf2.0-0, libsdl1.2debian (>= 1.2.11), libstdc++6 (>= 4.6), libx11-6, libxinerama1, zlib1g (>= 1:1.1.4), mess-data (= 0.149-0ubuntu1)
+Suggests: gnome-video-arcade, mame-extra, mame-tools
+Filename: pool/multiverse/m/mame/mame_0.149-0ubuntu1_i386.deb
+Size: 20001152
+MD5sum: 603c226fdfb5781d46570e860361d3c8
+SHA1: c12a921f4e48a610d22b99e918a0f2089b54c6d6
+SHA256: 4e9ccba73055a7acdb065040965a326f2612d72a47e03f7e729bc850a8180afc
 Description: Multiple Arcade Machine Emulator (MAME)
 Homepage: http://mamedev.org/
 Description-md5: c1a979c3e6a14cb9a8592744c96896b9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: mame-extra
+Priority: optional
+Section: multiverse/games
+Installed-Size: 17703
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: all
+Version: 0.148-1
+Replaces: mame (<< 0.148)
+Depends: mame (>= 0.148)
+Breaks: mame (<< 0.148)
+Filename: pool/multiverse/m/mame-extra/mame-extra_0.148-1_all.deb
+Size: 4341610
+MD5sum: 5d4b7b2a03f6b37fe9e0677893a2dcff
+SHA1: 1d7346d58e1cc664a28e575bf0bb2d977c67ca6f
+SHA256: a58f6681b0734f298ce09fbab70062a76bc9f3071fd68985b2a7754dcf9043bb
+Description: Additional files for the Multiple Arcade Machine Emulator (MAME)
+Description-md5: 35baa04e70a76083d21e320c835f737b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: mame-tools
 Priority: optional
 Section: multiverse/utils
-Installed-Size: 1571
+Installed-Size: 1606
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Original-Maintainer: Cesare Falco <c.falco@ubuntu.com>
 Architecture: i386
-Source: mess
-Version: 0.146-4ubuntu1
-Depends: libc6 (>= 2.4), libflac8 (>= 1.2.1), libgcc1 (>= 1:4.1.1), libsdl1.2debian (>= 1.2.11), libstdc++6 (>= 4.1.1), libx11-6, zlib1g (>= 1:1.1.4)
-Recommends: mame (= 0.146-4ubuntu1)
-Breaks: sdlmame-tools (<< 0.143), xmame-tools (<< 0.140)
-Filename: pool/multiverse/m/mess/mame-tools_0.146-4ubuntu1_i386.deb
-Size: 762298
-MD5sum: b13737cac83f55652f99bfebcf9ee389
-SHA1: 308e45df6f67731d406abdfce6f2c19ade7c7919
-SHA256: da506a33461db2ea87ea15460c68aa05b7fe7a9590646bb2e299e84402249364
+Source: mame
+Version: 0.149-0ubuntu1
+Depends: libc6 (>= 2.4), libflac8 (>= 1.3.0), libgcc1 (>= 1:4.1.1), libsdl1.2debian (>= 1.2.11), libstdc++6 (>= 4.1.1), libx11-6, zlib1g (>= 1:1.1.4)
+Recommends: mame (= 0.149-0ubuntu1)
+Filename: pool/multiverse/m/mame/mame-tools_0.149-0ubuntu1_i386.deb
+Size: 738954
+MD5sum: 9ed72242fc7471acd74fd5d164f35dc1
+SHA1: c8aa75f03c528c122c162d2652edf21d2145f167
+SHA256: 4985d3af3d3a5e2ee1a211c0f0c5b93368f018641e2effe2eecf243cf10bbee9
 Description: Tools for MAME and MESS
-Homepage: http://mess.org/
+Homepage: http://mamedev.org/
 Description-md5: 52eeca214a01129319c08031f0c073db
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
@@ -8470,24 +8487,21 @@ Origin: Ubuntu
 Package: mess
 Priority: optional
 Section: multiverse/games
-Installed-Size: 29522
+Installed-Size: 33890
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Original-Maintainer: Cesare Falco <c.falco@ubuntu.com>
 Architecture: i386
-Version: 0.146-4ubuntu1
-Replaces: xmess-common (<< 0.142), xmess-sdl (<< 0.142), xmess-x (<< 0.142)
-Provides: xmess-common, xmess-sdl, xmess-x
-Depends: gconf-service, libatk1.0-0 (>= 1.12.4), libc6 (>= 2.4), libexpat1 (>= 2.0.1), libflac8 (>= 1.2.1), libfontconfig1 (>= 2.9.0), libgcc1 (>= 1:4.1.1), libgconf-2-4 (>= 2.31.1), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.14.0), libgtk2.0-0 (>= 2.8.0), libpango1.0-0 (>= 1.14.0), libsdl-ttf2.0-0, libsdl1.2debian (>= 1.2.11), libstdc++6 (>= 4.6), libx11-6, libxinerama1, zlib1g (>= 1:1.1.4), mess-data
-Recommends: mess-desktop-entries
-Suggests: mame-tools
-Breaks: xmess-common (<< 0.142), xmess-sdl (<< 0.142), xmess-x (<< 0.142)
-Filename: pool/multiverse/m/mess/mess_0.146-4ubuntu1_i386.deb
-Size: 9213310
-MD5sum: 4c59024f1dc1e38db207d3d47b750f6a
-SHA1: b8c97d34d3c9f36a29e612ff0e4d511b6b84bbba
-SHA256: 652c0c126bade928ab9e4b75e42861329089d95f75c5d336ae6cf9fe4173e7d9
+Source: mame
+Version: 0.149-0ubuntu1
+Depends: libc6 (>= 2.4), libexpat1 (>= 2.0.1), libflac8 (>= 1.3.0), libfontconfig1 (>= 2.9.0), libgcc1 (>= 1:4.1.1), libportmidi0, libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libsdl-ttf2.0-0, libsdl1.2debian (>= 1.2.11), libstdc++6 (>= 4.6), libx11-6, libxinerama1, zlib1g (>= 1:1.1.4), mess-data (= 0.149-0ubuntu1)
+Suggests: mame-tools, mess-desktop-entries
+Filename: pool/multiverse/m/mame/mess_0.149-0ubuntu1_i386.deb
+Size: 9893496
+MD5sum: 79eae918b885a338b909227f18c4d440
+SHA1: 2fe2f961fb14b0f99ba911d01642c45283f47eeb
+SHA256: eb85f4ada58df82915dbd54305734a68c3e8a0032aab2c48389cb3cf38aa705c
 Description: Multi Emulator Super System (MESS)
-Homepage: http://mess.org/
+Homepage: http://mamedev.org/
 Description-md5: 3a6cbe615ad8b8f2f30716fa7e5f97dd
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
@@ -8509,6 +8523,26 @@ SHA256: 9b2cf33a8dac76207bbcb2ae1b7269a0d51ea469700c09b551fa62c06b25624f
 Description: Data files for the Multi Emulator Super System (MESS)
 Homepage: http://mess.org/
 Description-md5: 43ff9f188ece9deceaeb8948774256e2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mess-data
+Priority: optional
+Section: multiverse/games
+Installed-Size: 49963
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Cesare Falco <c.falco@ubuntu.com>
+Architecture: all
+Source: mame
+Version: 0.149-0ubuntu1
+Filename: pool/multiverse/m/mame/mess-data_0.149-0ubuntu1_all.deb
+Size: 7815756
+MD5sum: dc2a59744caf1770bc76a08cecfcc500
+SHA1: 3cdd1da36967d53c3586bb8bba25a52ee56479db
+SHA256: d8c52d21cf44e180e926784bfbcdc4783d13b0032d9cf7d54a09fbed2853b34e
+Description: Data files for the Multi Emulator Super System (MESS)
+Homepage: http://mamedev.org/
+Description-md5: 2e88526d2a0c34bfa7007566f93cc602
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
