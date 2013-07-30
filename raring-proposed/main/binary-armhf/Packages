@@ -2726,6 +2726,26 @@ Description-md5: ce791e5696c1c1aa38d33d35dcd5430d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-doc
+Priority: optional
+Section: doc
+Installed-Size: 27371
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.8.0-28.41
+Replaces: linux-doc-3
+Conflicts: linux-doc-3
+Filename: pool/main/l/linux/linux-doc_3.8.0-28.41_all.deb
+Size: 8723518
+MD5sum: 83701f1e9433e9f6d79c8e7818a06ed7
+SHA1: 04b1faf1eb30ae199eea421333fadd8e289f7500
+SHA256: 6e7d2975bdb9d2781ff4e45b9813526ea5b7bec6eb3728ed06ed18806cd15429
+Description: Linux kernel specific documentation for version 3.8.0
+Description-md5: ce791e5696c1c1aa38d33d35dcd5430d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-generic
 Priority: optional
 Section: kernel
@@ -3096,6 +3116,45 @@ Description-md5: f72fb4de15dbf4d023df888056419d26
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-headers-3.8.0-28
+Priority: optional
+Section: devel
+Installed-Size: 58718
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.8.0-28.41
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux/linux-headers-3.8.0-28_3.8.0-28.41_all.deb
+Size: 12189004
+MD5sum: 2ed91268b1a3d6a3b20ad4c85fbb1a3d
+SHA1: 6e8afb8c31f17a9ea89f8631628b53525a4fa6ee
+SHA256: cf52780f6a4ff5e6edf65430e9e6c0a3ae884cffe0799f4ae63e780d41cd618a
+Description: Header files related to Linux kernel version 3.8.0
+Description-md5: d88bdda151db001f3bcfc04af70d7b16
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-3.8.0-28-generic
+Priority: optional
+Section: devel
+Installed-Size: 9607
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: armhf
+Source: linux
+Version: 3.8.0-28.41
+Provides: linux-headers, linux-headers-3.0
+Depends: linux-headers-3.8.0-28, libc6 (>= 2.11), libgcc1 (>= 1:4.4.0)
+Filename: pool/main/l/linux/linux-headers-3.8.0-28-generic_3.8.0-28.41_armhf.deb
+Size: 987484
+MD5sum: c5c2dc589cd25192529dce0855e96284
+SHA1: 05dba71e4bd76d2a923bd2d97e323964a91b790c
+SHA256: 6238dc9dbd6c392e65ec60a443bfd8870aad19b6089637950de8bc5185a96592
+Description: Linux kernel headers for version 3.8.0 on ARM (hard float) SMP
+Description-md5: 96670989aa49d3be3d7bb60d1b40fdec
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-headers-generic
 Priority: optional
 Section: devel
@@ -3407,6 +3466,30 @@ Description-md5: df6127a9974ef3eb3f02fe9c3d5449ad
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-image-3.8.0-28-generic
+Priority: optional
+Section: kernel
+Installed-Size: 77174
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: armhf
+Source: linux
+Version: 3.8.0-28.41
+Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, linux-image-3.0, redhat-cluster-modules
+Depends: initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3)
+Pre-Depends: dpkg (>= 1.10.24)
+Recommends: flash-kernel
+Suggests: fdutils, linux-doc-3.8.0 | linux-source-3.8.0, linux-tools, linux-headers-3.8.0-28-generic
+Conflicts: hotplug (<< 0.0.20040105-1)
+Filename: pool/main/l/linux/linux-image-3.8.0-28-generic_3.8.0-28.41_armhf.deb
+Size: 25403234
+MD5sum: e512e2403c213b47d9160234d3e12a4f
+SHA1: 88c20fc6e77e301c5ddbe05d2067a78632e2249d
+SHA256: 8e93727d73f23923741c9a3adac103e686e0a986fba5989908082d6a5d418dc0
+Description: Linux kernel image for version 3.8.0 on ARM (hard float) SMP
+Description-md5: df6127a9974ef3eb3f02fe9c3d5449ad
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-image-generic
 Priority: optional
 Section: kernel
@@ -3467,19 +3550,19 @@ Origin: Ubuntu
 Package: linux-libc-dev
 Priority: optional
 Section: devel
-Installed-Size: 3152
+Installed-Size: 3155
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux
-Version: 3.8.0-27.40
+Version: 3.8.0-28.41
 Replaces: dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), libdrm-dev, linux-kernel-headers
 Provides: linux-kernel-headers
 Conflicts: amd64-libs-dev (<= 1.1), dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), linux-kernel-headers
-Filename: pool/main/l/linux/linux-libc-dev_3.8.0-27.40_armhf.deb
-Size: 891650
-MD5sum: 6c75cff9e5f7369d368406fe0f1de153
-SHA1: bd73773e0345492f6d48376d3b7ad65015f31884
-SHA256: d8585d69b8313eced45ed961c9e4e5ec65686d6b0d2d8cdc9261bacadf91b8da
+Filename: pool/main/l/linux/linux-libc-dev_3.8.0-28.41_armhf.deb
+Size: 893916
+MD5sum: 21ec4f8b450cfc3378c21fedd683d8ce
+SHA1: 70bcf65317feae3da5d056c450f4cee481f55049
+SHA256: 659a7c3749f052a614682fe303a7907d34b3bf0760972188e9111d3ef086b57d
 Description: Linux Kernel Headers for development
 Multi-Arch: same
 Description-md5: d5d143e6dffc891f04a85464446f9451
@@ -3724,6 +3807,28 @@ Description-md5: 2cc47389e6a08869c43cb079a77067d0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-source-3.8.0
+Priority: optional
+Section: devel
+Installed-Size: 89475
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.8.0-28.41
+Provides: linux-source, linux-source-3
+Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
+Recommends: libc-dev, gcc, make
+Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
+Filename: pool/main/l/linux/linux-source-3.8.0_3.8.0-28.41_all.deb
+Size: 88194568
+MD5sum: af156ab07d79f4e2b57132ceea42e780
+SHA1: 81eaca52e2b3e9d636640b2234ad49a76f355adc
+SHA256: 1b326bfc594d46102545fa4a0c6bafefa93e581b3ffab263fcfb202ce89d80e5
+Description: Linux kernel source for version 3.8.0 with Ubuntu patches
+Description-md5: 2cc47389e6a08869c43cb079a77067d0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-tools
 Priority: optional
 Section: kernel
@@ -3872,6 +3977,25 @@ SHA1: 2370a3a2fa20b0e8068a30c81ffa0926d0a09221
 SHA256: 7f7e5fd06e080f7ec3ad220718b7b47d8444238b785deef5f6db5b8bfffede7b
 Description: Linux kernel version specific tools for version 3.8.0-27
 Description-md5: 28b64439fc2a61635945a9a88ee9173c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-tools-3.8.0-28
+Priority: optional
+Section: devel
+Installed-Size: 796
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: armhf
+Source: linux
+Version: 3.8.0-28.41
+Depends: libaudit1 (>= 1:2.2.1), libc6 (>= 2.8), libdw1 (>= 0.143), libelf1 (>= 0.131), libgcc1 (>= 1:4.4.0), libnewt0.52, libslang2 (>= 2.2.4), linux-tools-common
+Filename: pool/main/l/linux/linux-tools-3.8.0-28_3.8.0-28.41_armhf.deb
+Size: 403242
+MD5sum: fbea93275a661a91511db90370f77d8e
+SHA1: d6745cff42a5e0b2f7ea3b1438df69e46d6aaae1
+SHA256: f4ec7056147d6ce5f59847065028cd1d843d526f1f770dcfdb2c19daa76db29b
+Description: Linux kernel version specific tools for version 3.8.0-28
+Description-md5: 41533c6d7ac5450983186de3d4362979
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -4041,6 +4165,25 @@ Size: 76384
 MD5sum: 8a3a39888bda70935188d69402b971de
 SHA1: 5fc912dca9de81e1b604ad036f05576032b9d6cf
 SHA256: 7338ea74a1e5dd3ceaa8f8f84ec2da86de25d82da4e6ff207d6de0eac82a3c93
+Description: Linux kernel version specific tools for version 3.8.0
+Description-md5: 82cdbfd960c61ce6ed3a2bc1966d589d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-tools-common
+Priority: optional
+Section: kernel
+Installed-Size: 199
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.8.0-28.41
+Replaces: linux-tools (<= 2.6.32-16.25)
+Filename: pool/main/l/linux/linux-tools-common_3.8.0-28.41_all.deb
+Size: 80202
+MD5sum: 79ebe2128e7c3f418308446dacd93ec1
+SHA1: 56bdbb4b92f5b96a7c6b087c39808b7feeb81a39
+SHA256: 55bdcf858915c915c6fe117902cdd09095342fc86b181830e9947f31f8f4788f
 Description: Linux kernel version specific tools for version 3.8.0
 Description-md5: 82cdbfd960c61ce6ed3a2bc1966d589d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
