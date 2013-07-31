@@ -5273,6 +5273,25 @@ Description-md5: e9b1617d2c59e14b9d4c57e66f9dfb48
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: initramfs-tools-ubuntu-touch
+Priority: optional
+Section: universe/utils
+Installed-Size: 76
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.30
+Depends: initramfs-tools, abootimg, udev (>= 175-0ubuntu29), upstart, coreutils, android-tools-adbd
+Filename: pool/universe/i/initramfs-tools-ubuntu-touch/initramfs-tools-ubuntu-touch_0.30_all.deb
+Size: 6530
+MD5sum: 9b5755ff6f433d17e0d362c7390db756
+SHA1: 8b9fc849f440ad914ca7226ff765e62508c3dde0
+SHA256: bf212557e7da9a7c7410c134db381144492eb749a6cbb3736064f98641b37b9c
+Description: tools for mounting an Ubuntu Touch rootfs
+Multi-Arch: foreign
+Description-md5: 12b771ab0234d5a2b3c27868cdd3dfac
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: kamera
 Priority: optional
 Section: universe/graphics
@@ -16379,6 +16398,126 @@ Homepage: http://freecode.com/projects/wiggle
 Description-md5: c26103566eee74886ea2d2fbbb4fc520
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: wine
+Priority: extra
+Section: universe/otherosfs
+Installed-Size: 21
+Maintainer: Scott Ritchie <scottritchie@ubuntu.com>
+Architecture: i386
+Source: wine1.4
+Version: 1.4.1-0ubuntu7
+Depends: wine1.4
+Filename: pool/universe/w/wine1.4/wine_1.4.1-0ubuntu7_i386.deb
+Size: 914
+MD5sum: 5f0aecec28afe454915f7f3dc59c5ef7
+SHA1: 51ef05528bce25a3e08b9da9313e8aadc6b2f859
+SHA256: 51782502d919972a72d6f2b879f27413135a2758a016346a29c3ad37dcc4706b
+Description: Microsoft Windows Compatibility Layer (meta-package)
+Multi-Arch: foreign
+Homepage: http://www.winehq.org/
+Description-md5: 6474b3e541944944e61aec502ceb28f2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: wine1.4
+Priority: optional
+Section: universe/otherosfs
+Installed-Size: 2923
+Maintainer: Scott Ritchie <scottritchie@ubuntu.com>
+Architecture: i386
+Version: 1.4.1-0ubuntu7
+Replaces: ttf-symbol-replacement, ttf-symbol-replacement-wine1.3, ttf-tahoma-replacement, wine, wine1.0, wine1.2, wine1.3
+Provides: wine
+Depends: debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.11), libgettextpo0, wine1.4-i386 (= 1.4.1-0ubuntu7), binfmt-support (>= 1.1.2), procps
+Pre-Depends: dpkg (>= 1.15.7.2~)
+Recommends: cups-bsd, fonts-droid, fonts-liberation, fonts-horai-umefont, fonts-unfonts-core, gnome-exe-thumbnailer | kde-runtime, ttf-mscorefonts-installer, ttf-wqy-microhei, winbind, winetricks, xdg-utils
+Suggests: dosbox
+Conflicts: wine1.0
+Breaks: ttf-symbol-replacement, ttf-symbol-replacement-wine1.3, ttf-tahoma-replacement, wine (<< 1.2.1), wine1.2 (<< 1.4-0ubuntu1), wine1.3 (<< 1.4-0ubuntu1)
+Filename: pool/universe/w/wine1.4/wine1.4_1.4.1-0ubuntu7_i386.deb
+Size: 1006726
+MD5sum: 18d17803c79ecb2b7c85531dcafc97e9
+SHA1: dc7d1041ed1562cf90a1f3a862d5ba774a0f294a
+SHA256: 06965f852f637eec751385584f5f75a9e940e5f685a115484b6e86ecdb03689b
+Description: Microsoft Windows Compatibility Layer (Binary Emulator and Library)
+Multi-Arch: allowed
+Homepage: http://www.winehq.org/
+Description-md5: 06ea04f761f0f961a93a88bc585f4ba8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: wine1.4-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 14162
+Maintainer: Scott Ritchie <scottritchie@ubuntu.com>
+Architecture: i386
+Source: wine1.4
+Version: 1.4.1-0ubuntu7
+Depends: wine1.4-i386 (= 1.4.1-0ubuntu7)
+Filename: pool/universe/w/wine1.4/wine1.4-dbg_1.4.1-0ubuntu7_i386.deb
+Size: 4230820
+MD5sum: c1b7dd037026d1e6170de6128a233e64
+SHA1: 9a1527f49a5fdfc57abeab0089b6711bd9876142
+SHA256: bbdcfae6e9ecadd6e6570952f0c6c1d338e9eaea938e80d7021a7201174e554c
+Description: Microsoft Windows Compatibility Layer (debugging symbols)
+Multi-Arch: same
+Homepage: http://www.winehq.org/
+Description-md5: ee638a9537e810b6d370f13dc1c2e06f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: wine1.4-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 19261
+Maintainer: Scott Ritchie <scottritchie@ubuntu.com>
+Architecture: i386
+Source: wine1.4
+Version: 1.4.1-0ubuntu7
+Replaces: wine-dev
+Provides: wine-dev
+Depends: libc6-dev, wine1.4-i386 (= 1.4.1-0ubuntu7)
+Pre-Depends: dpkg (>= 1.14.12ubuntu3)
+Conflicts: wine-dev
+Filename: pool/universe/w/wine1.4/wine1.4-dev_1.4.1-0ubuntu7_i386.deb
+Size: 2543438
+MD5sum: d36d017c83fb2e6f254e34153f5ef013
+SHA1: 69f936d12e8af543ca59db05a095e0deb3add61c
+SHA256: b68f794f1ff9cc6da9a471d234b1a42256ed7dd1b6ea2b23fe0eacc7cfad503b
+Description: Microsoft Windows Compatibility Layer (Development files)
+Homepage: http://www.winehq.org/
+Description-md5: 66409c7415601b2f8f59aaa22f86c8fe
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: wine1.4-i386
+Priority: optional
+Section: universe/otherosfs
+Installed-Size: 107172
+Maintainer: Scott Ritchie <scottritchie@ubuntu.com>
+Architecture: i386
+Source: wine1.4
+Version: 1.4.1-0ubuntu7
+Replaces: wine (<< 1.2.1), wine1.2, wine1.3
+Provides: wine-i386
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.9), libgl1-mesa-glx | libgl1, libglib2.0-0 (>= 2.24.0), libglu1-mesa | libglu1, libgphoto2-6 (>= 2.4.10.1), libgphoto2-port10 (>= 2.5.2), libgstreamer-plugins-base0.10-0 (>= 0.10.22), libgstreamer0.10-0 (>= 0.10.26), liblcms1 (>= 1.15-1), libldap-2.4-2 (>= 2.4.7), libmpg123-0 (>= 1.13.7), libopenal1 (>= 1:1.13), libsm6, libx11-6, libxext6, libxml2 (>= 2.7.4), zlib1g (>= 1:1.1.4), wine1.4:any (= 1.4.1-0ubuntu7), libncurses5
+Pre-Depends: dpkg (>= 1.14.12ubuntu3), multiarch-support
+Recommends: libasound2-plugins, libcapi20-3, libcups2, libdbus-1-3, libfontconfig1 | libfontconfig, libfreetype6, libgif4, libgnutls26, libjpeg8, libp11-kit-gnome-keyring, libpng12-0, libsane, libssl1.0.0, libtiff5, libv4l-0, libxcomposite1, libxcursor1, libxi6, libxinerama1, libxrandr2, libxrender1, libxslt1.1, libxt6, libxxf86vm1, unixodbc, wine-gecko1.4
+Breaks: wine (<< 1.2.1), wine1.2 (<< 1.4-0ubuntu1), wine1.3 (<< 1.4-0ubuntu1)
+Filename: pool/universe/w/wine1.4/wine1.4-i386_1.4.1-0ubuntu7_i386.deb
+Size: 20566728
+MD5sum: db428940deafcb05a7e610280bd85014
+SHA1: e4f8e7119ae869d1d3bceb1b5779b393b5b8a36c
+SHA256: 71522ea7e3ffd72d0cd583c37faab4cdbfa4cab53e00de261cb014c6295b905f
+Description: Microsoft Windows Compatibility Layer (32-bit support)
+Multi-Arch: foreign
+Homepage: http://www.winehq.org/
+Description-md5: d9df3b2d45c641ec7fcddc422c97778e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntustudio-audio
 
 Package: xdmx
 Priority: optional
