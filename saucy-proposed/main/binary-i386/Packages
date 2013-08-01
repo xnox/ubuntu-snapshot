@@ -1518,6 +1518,53 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: libplymouth-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 498
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: plymouth
+Version: 0.8.8-0ubuntu8
+Replaces: plymouth (<< 0.7.0+git20090207-0ubuntu0.1~ppa4)
+Depends: libplymouth2 (= 0.8.8-0ubuntu8)
+Filename: pool/main/p/plymouth/libplymouth-dev_0.8.8-0ubuntu8_i386.deb
+Size: 111286
+MD5sum: bef29a473837796d1112e0c09754e800
+SHA1: 7ede4b3970cb351e63902a2a6b752bcada3dba56
+SHA256: 3fd11c3d6ead99ec9bddb5537442e8d51d62dc433fe4727d9a82edf5be1d15d3
+Description: graphical boot animation and logger - development files
+Multi-Arch: same
+Description-md5: 2788897f3e5c5b2f91c898358099697e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libplymouth2
+Priority: required
+Section: libs
+Installed-Size: 297
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: plymouth
+Version: 0.8.8-0ubuntu8
+Replaces: plymouth (<< 0.7.0+git20090207-0ubuntu0.1~ppa4)
+Depends: libc6 (>= 2.8), libpng12-0 (>= 1.2.13-4)
+Pre-Depends: multiarch-support
+Breaks: casper (= 1.227), mountall (<< 2.8)
+Filename: pool/main/p/plymouth/libplymouth2_0.8.8-0ubuntu8_i386.deb
+Size: 96848
+MD5sum: 1f53a25de63806fde16094cc8f53ac45
+SHA1: f3fee707606bae7a90bf9931c93b46661f22bc11
+SHA256: dbbabadc3b1892c4a4d695a793980b5df7515d8ef31c5a36522f9946a98494ca
+Description: graphical boot animation and logger - shared libraries
+Multi-Arch: same
+Description-md5: 29e2ed45f3e127c38b58dae52061cc33
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
 Package: libpoppler-cpp-dev
 Priority: optional
 Section: libdevel
@@ -2385,6 +2432,97 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: plymouth
+Priority: required
+Section: x11
+Installed-Size: 439
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Version: 0.8.8-0ubuntu8
+Depends: libc6 (>= 2.8), libdbus-1-3 (>= 1.1.1), libdrm2 (>= 2.4.25), libplymouth2 (= 0.8.8-0ubuntu8), libtinfo5, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), udev (>= 166-0ubuntu4), mountall (>= 2.0), initramfs-tools
+Recommends: plymouth-theme-ubuntu-text | plymouth-theme
+Conflicts: usplash
+Breaks: gdm (<< 3.0.4-0ubuntu11), kdm (<< 4:4.7.1-0ubuntu3), lightdm (<< 0.9.7-0ubuntu2), lubuntu-plymouth-theme (<= 0.4), lxdm (<< 0.4.1-0ubuntu2), ubuntustudio-plymouth-theme (<= 0.38), xubuntu-plymouth-theme (<< 10.04.4)
+Filename: pool/main/p/plymouth/plymouth_0.8.8-0ubuntu8_i386.deb
+Size: 126266
+MD5sum: dfad5997c9622ee651e31b000f8e8532
+SHA1: e58442896c29531ca575980aed7b38d20704511b
+SHA256: 00a00e692ca23a6ad05916ed3ad7f418e7ecd6f74a1c745f2d7da37de9032626
+Description: graphical boot animation and logger - main package
+Description-md5: 36dd6c0b2d2e2968eb795981d2b48521
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: plymouth-label
+Priority: optional
+Section: x11
+Installed-Size: 64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: plymouth
+Version: 0.8.8-0ubuntu8
+Replaces: plymouth (<< 0.8.1-4)
+Depends: libc6 (>= 2.3.6-6~), libcairo2 (>= 1.2.4), libglib2.0-0 (>= 2.12.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libplymouth2 (= 0.8.8-0ubuntu8), plymouth (= 0.8.8-0ubuntu8), ttf-dejavu-core
+Filename: pool/main/p/plymouth/plymouth-label_0.8.8-0ubuntu8_i386.deb
+Size: 5846
+MD5sum: 9ad0da72af6caf20977e086beb1663b6
+SHA1: 7bcd0ba92bfa058f98aa1a37d5797e041d8bbe92
+SHA256: f43938680c6ccb56800c0eada84b17291a9964238fe8e261b2fa67f14d070d87
+Description: graphical boot animation and logger - label control
+Description-md5: 5811f727790d0292c01a69a6fb2044fe
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: plymouth-theme-ubuntu-logo
+Priority: optional
+Section: x11
+Installed-Size: 107
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: plymouth
+Version: 0.8.8-0ubuntu8
+Replaces: plymouth (<< 0.8.1-1~)
+Provides: plymouth-theme
+Depends: plymouth, plymouth-label
+Filename: pool/main/p/plymouth/plymouth-theme-ubuntu-logo_0.8.8-0ubuntu8_i386.deb
+Size: 20202
+MD5sum: 9c5ecafd3244720918fe8aec3cf8066d
+SHA1: 3010e7cefd77b51f435915c65d656330f554552d
+SHA256: 808f05fcf7dba04092a2506f403ed25169e5335f745302e357dd013d7015961c
+Description: graphical boot animation and logger - ubuntu-logo theme
+Description-md5: 8d874d448c1e27d2eef5a053231911ed
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: plymouth-theme-ubuntu-text
+Priority: standard
+Section: x11
+Installed-Size: 82
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: plymouth
+Version: 0.8.8-0ubuntu8
+Replaces: plymouth (<< 0.8.1-1~)
+Provides: plymouth-theme
+Depends: libc6 (>= 2.1.3), libplymouth2 (>= 0.8.0~-13~ppa1), plymouth
+Filename: pool/main/p/plymouth/plymouth-theme-ubuntu-text_0.8.8-0ubuntu8_i386.deb
+Size: 8926
+MD5sum: 15396e4481c186e369038f3c9ab08fd7
+SHA1: fa543036ea154a4b0cf0034af8d31d83d31541de
+SHA256: 6dafea1af05098c72e030c7b4d42cea5b623ce59c4825efb714cd50ff295048d
+Description: graphical boot animation and logger - ubuntu-logo theme
+Description-md5: e64a5fbd685fee7e5864ea3986a54164
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active
 
 Package: poppler-dbg
 Priority: extra
