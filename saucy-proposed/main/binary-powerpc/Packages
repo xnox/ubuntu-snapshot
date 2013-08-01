@@ -1,3 +1,89 @@
+Package: apt
+Priority: important
+Section: admin
+Installed-Size: 3399
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Version: 0.9.9.1~ubuntu2
+Replaces: manpages-it, manpages-pl (<< 20060617-3~)
+Depends: libapt-pkg4.12 (>= 0.9.9.1~ubuntu2), libc6 (>= 2.15), libgcc1 (>= 1:4.2.1), libstdc++6 (>= 4.6), ubuntu-keyring, gnupg
+Suggests: aptitude | synaptic | wajig, dpkg-dev, apt-doc, xz-utils, python-apt
+Conflicts: python-apt (<< 0.7.93.2~)
+Filename: pool/main/a/apt/apt_0.9.9.1~ubuntu2_powerpc.deb
+Size: 1250036
+MD5sum: cedac073653160dda9c9c045ad436060
+SHA1: 1bd8411e5f52654b60044c0f3eb766407fb129a6
+SHA256: f1b144f193f837375857a1178ff939d00cd6761ed290ba48c821243bb088d872
+Description: commandline package manager
+Description-md5: 9fb97a88cb7383934ef963352b53b4a7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: minimal
+
+Package: apt-doc
+Priority: optional
+Section: doc
+Installed-Size: 662
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: all
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Filename: pool/main/a/apt/apt-doc_0.9.9.1~ubuntu2_all.deb
+Size: 201330
+MD5sum: 199f88d7786a933592e18ec475a99f36
+SHA1: 6e1a446ce3f8b03da19b32e6376b05002a7c5af3
+SHA256: 4cf8a19ca0b61fbd69a3f982fa2723eb4593e2932495040a486e003dec5f3f53
+Description: documentation for APT
+Description-md5: bc2b838ed28e60af95d78926380a3300
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apt-transport-https
+Priority: standard
+Section: admin
+Installed-Size: 186
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.4), libcurl3-gnutls (>= 7.16.2), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Filename: pool/main/a/apt/apt-transport-https_0.9.9.1~ubuntu2_powerpc.deb
+Size: 16592
+MD5sum: 1db5b9ab1d7f37ccfff6d07f3be539c8
+SHA1: 39bf8a4c0f8ce222be6a19a71d88c6701e5bf358
+SHA256: 2be64609b78efc9f4ac2f8e50a23f6a87d46c7794530d5e9d3af9078c9f8ce0b
+Description: https download transport for APT
+Description-md5: 3365a6b50bd0e4eef6e176a80c735f43
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
+
+Package: apt-utils
+Priority: important
+Section: admin
+Installed-Size: 660
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libapt-inst1.5 (>= 0.8.0), libapt-pkg4.12 (>= 0.9.9.1~ubuntu2), libc6 (>= 2.4), libdb5.1, libgcc1 (>= 1:4.2.1), libstdc++6 (>= 4.4.0)
+Suggests: xz-utils
+Filename: pool/main/a/apt/apt-utils_0.9.9.1~ubuntu2_powerpc.deb
+Size: 202010
+MD5sum: 0ae57e7991e371f75d63a6c700f31b55
+SHA1: 0270a0940d0211e060f7ce7622086a363d61583e
+SHA256: 316b73dd16ed27336ccfade2db4f3d6f7183e87f5e67c1a159492eb485e7e015
+Description: package managment related utility programs
+Description-md5: 578941ab78e4cbae72c741e56d175708
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
 Package: compiz
 Priority: optional
 Section: x11
@@ -1922,6 +2008,94 @@ Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libapt-inst1.5
+Priority: important
+Section: admin
+Installed-Size: 719
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/a/apt/libapt-inst1.5_0.9.9.1~ubuntu2_powerpc.deb
+Size: 73600
+MD5sum: fec9ceec6e19ef6ab426212401df7889
+SHA1: 7ab150be5e59148e979eebaeeccc65487b640a6c
+SHA256: 08dcca8115cfdf708c4af960f8de1979676d400f7a13fe868b1362b010aab2fe
+Description: deb package format runtime library
+Multi-Arch: same
+Description-md5: 5df05e67cb17e91ac56a732061d88850
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: libapt-pkg-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 502
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libapt-pkg4.12 (= 0.9.9.1~ubuntu2), libapt-inst1.5 (= 0.9.9.1~ubuntu2), zlib1g-dev
+Filename: pool/main/a/apt/libapt-pkg-dev_0.9.9.1~ubuntu2_powerpc.deb
+Size: 94396
+MD5sum: 08696d1a5af57a3d90651a1154528aaa
+SHA1: c50f71da5fc75cd86e452489ddc39bd4ade7c9f5
+SHA256: 055fcc2320096073ac516d295d93eb90575f5c5d0b1f67b62a71245fe895e0da
+Description: development files for APT's libapt-pkg and libapt-inst
+Multi-Arch: same
+Description-md5: 8e463f77664788b23a47f5ac592f4595
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libapt-pkg-doc
+Priority: optional
+Section: doc
+Installed-Size: 6907
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: all
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Filename: pool/main/a/apt/libapt-pkg-doc_0.9.9.1~ubuntu2_all.deb
+Size: 895858
+MD5sum: df64ac733f0d61d30caf9f0bf646be41
+SHA1: 7b7b9590cca74ecc415ad37e8d9bd147225fcb65
+SHA256: aefe60d9e58a7de1198cd3d9eda08a8a7fab1dcb64fdce2234dcdb66f8855149
+Description: documentation for APT development
+Description-md5: decce989b471f196cddabf52bee63592
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libapt-pkg4.12
+Priority: important
+Section: admin
+Installed-Size: 2904
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libbz2-1.0, libc6 (>= 2.15), libgcc1 (>= 1:4.2.1), libstdc++6 (>= 4.6), zlib1g (>= 1:1.2.3.4)
+Pre-Depends: multiarch-support
+Breaks: apt (<< 0.9.4~)
+Filename: pool/main/a/apt/libapt-pkg4.12_0.9.9.1~ubuntu2_powerpc.deb
+Size: 841236
+MD5sum: f7cfd57407230345f934eae2aa0627b1
+SHA1: cdb3ac77d5a490d8b70a38281517ce9a1d517d74
+SHA256: 2b59570ee048b54f9e0ffd6496c4d254f9df4f61debc50b9e36e09b092539e2e
+Description: package managment runtime library
+Multi-Arch: same
+Description-md5: c7584b884ab52c1972b8736fef25ad35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: minimal
 
 Package: libav-doc
 Priority: optional

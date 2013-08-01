@@ -1,3 +1,93 @@
+Package: apt
+Priority: important
+Section: admin
+Installed-Size: 3341
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: i386
+Version: 0.9.9.1~ubuntu2
+Replaces: manpages-it, manpages-pl (<< 20060617-3~)
+Depends: libapt-pkg4.12 (>= 0.9.9.1~ubuntu2), libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6), ubuntu-keyring, gnupg
+Suggests: aptitude | synaptic | wajig, dpkg-dev, apt-doc, xz-utils, python-apt
+Conflicts: python-apt (<< 0.7.93.2~)
+Filename: pool/main/a/apt/apt_0.9.9.1~ubuntu2_i386.deb
+Size: 1238878
+MD5sum: bbe1fc1abbef8d93437d411951a558bf
+SHA1: 74d78ad128598b38826aebca88b15f77160ff2b0
+SHA256: 053fffffd7e795710956433a4c7f54d59a75bb08f0fd3296c078c0c4519133f4
+Description: commandline package manager
+Description-md5: 9fb97a88cb7383934ef963352b53b4a7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: apt-doc
+Priority: optional
+Section: doc
+Installed-Size: 662
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: all
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Filename: pool/main/a/apt/apt-doc_0.9.9.1~ubuntu2_all.deb
+Size: 201330
+MD5sum: 199f88d7786a933592e18ec475a99f36
+SHA1: 6e1a446ce3f8b03da19b32e6376b05002a7c5af3
+SHA256: 4cf8a19ca0b61fbd69a3f982fa2723eb4593e2932495040a486e003dec5f3f53
+Description: documentation for APT
+Description-md5: bc2b838ed28e60af95d78926380a3300
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apt-transport-https
+Priority: standard
+Section: admin
+Installed-Size: 182
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: i386
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.4), libcurl3-gnutls (>= 7.16.2), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Filename: pool/main/a/apt/apt-transport-https_0.9.9.1~ubuntu2_i386.deb
+Size: 16574
+MD5sum: 7c60a69d4b4fe9e8aedcbfc70fe5a293
+SHA1: 011973f3b58726269418bb46d3fba84580b83842
+SHA256: a4d3d51b6f8797bdf7a5b43e831e9023c81f3c788f2bb3238abdd3b707d2e967
+Description: https download transport for APT
+Description-md5: 3365a6b50bd0e4eef6e176a80c735f43
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active
+
+Package: apt-utils
+Priority: important
+Section: admin
+Installed-Size: 644
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: i386
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libapt-inst1.5 (>= 0.8.0), libapt-pkg4.12 (>= 0.9.9.1~ubuntu2), libc6 (>= 2.4), libdb5.1, libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Suggests: xz-utils
+Filename: pool/main/a/apt/apt-utils_0.9.9.1~ubuntu2_i386.deb
+Size: 195008
+MD5sum: cc800c9d991122a66710b67840b20448
+SHA1: bd0570fa940f7829fa36c584b67db08f48c10209
+SHA256: e77d4c20109906c957a536d77196c882abde043db74d3ad56f63187e48c01ee0
+Description: package managment related utility programs
+Description-md5: 578941ab78e4cbae72c741e56d175708
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
 Package: compiz
 Priority: optional
 Section: x11
@@ -2016,6 +2106,98 @@ Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libapt-inst1.5
+Priority: important
+Section: admin
+Installed-Size: 715
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: i386
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/a/apt/libapt-inst1.5_0.9.9.1~ubuntu2_i386.deb
+Size: 72648
+MD5sum: 0fcff2f7ee47ef26c91716df24daf8c1
+SHA1: ec76e497c634bd579f59cabab9ec0241e65695ce
+SHA256: 34798017775ce8e809a5ee6066dec08360713723148e3444d1d1bfeb65e5577e
+Description: deb package format runtime library
+Multi-Arch: same
+Description-md5: 5df05e67cb17e91ac56a732061d88850
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: libapt-pkg-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 502
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: i386
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libapt-pkg4.12 (= 0.9.9.1~ubuntu2), libapt-inst1.5 (= 0.9.9.1~ubuntu2), zlib1g-dev
+Filename: pool/main/a/apt/libapt-pkg-dev_0.9.9.1~ubuntu2_i386.deb
+Size: 94634
+MD5sum: 3a1479a54efe2814862b5d86f777b729
+SHA1: 1b89ebc2d7499b50da2cec1c5e67ae4160dd63b3
+SHA256: c962f9b4b4e41d0b38b034531a4567616c07afcc93cecb897cd4dcd1da9fab26
+Description: development files for APT's libapt-pkg and libapt-inst
+Multi-Arch: same
+Description-md5: 8e463f77664788b23a47f5ac592f4595
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libapt-pkg-doc
+Priority: optional
+Section: doc
+Installed-Size: 6907
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: all
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Filename: pool/main/a/apt/libapt-pkg-doc_0.9.9.1~ubuntu2_all.deb
+Size: 895858
+MD5sum: df64ac733f0d61d30caf9f0bf646be41
+SHA1: 7b7b9590cca74ecc415ad37e8d9bd147225fcb65
+SHA256: aefe60d9e58a7de1198cd3d9eda08a8a7fab1dcb64fdce2234dcdb66f8855149
+Description: documentation for APT development
+Description-md5: decce989b471f196cddabf52bee63592
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libapt-pkg4.12
+Priority: important
+Section: admin
+Installed-Size: 2771
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: i386
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libbz2-1.0, libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6), zlib1g (>= 1:1.2.3.4)
+Pre-Depends: multiarch-support
+Breaks: apt (<< 0.9.4~)
+Filename: pool/main/a/apt/libapt-pkg4.12_0.9.9.1~ubuntu2_i386.deb
+Size: 826404
+MD5sum: 1778ade00303babd2e9ad86758268c5b
+SHA1: 52769169a3d4983471e0bcb6633a835e391169f9
+SHA256: 8f20980e1a8caf40e09445ca4adb0ffa0a9e704e21b67997f5a9fc67a38d4c7b
+Description: package managment runtime library
+Multi-Arch: same
+Description-md5: c7584b884ab52c1972b8736fef25ad35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
 
 Package: libav-doc
 Priority: optional
