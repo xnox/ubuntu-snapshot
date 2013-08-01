@@ -1,3 +1,27 @@
+Package: apt
+Priority: important
+Section: admin
+Installed-Size: 3178
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: armhf
+Version: 0.9.9.1~ubuntu2
+Replaces: manpages-it, manpages-pl (<< 20060617-3~)
+Depends: libapt-pkg4.12 (>= 0.9.9.1~ubuntu2), libc6 (>= 2.15), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.6), ubuntu-keyring, gnupg
+Suggests: aptitude | synaptic | wajig, dpkg-dev, apt-doc, xz-utils, python-apt
+Conflicts: python-apt (<< 0.7.93.2~)
+Filename: pool/main/a/apt/apt_0.9.9.1~ubuntu2_armhf.deb
+Size: 1194774
+MD5sum: 9096348160f0100fcfa6727b443e9c0c
+SHA1: 347fbb988a906e1730cbcf775ca87b6d425631aa
+SHA256: f0e164b604625649011272e0987610b8a289a1021930b287bfd798207045be4d
+Description: commandline package manager
+Description-md5: 9fb97a88cb7383934ef963352b53b4a7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: minimal
+
 Package: apt-doc
 Priority: optional
 Section: doc
@@ -16,6 +40,49 @@ Description: documentation for APT
 Description-md5: bc2b838ed28e60af95d78926380a3300
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: apt-transport-https
+Priority: standard
+Section: admin
+Installed-Size: 178
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: armhf
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.4), libcurl3-gnutls (>= 7.16.2), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0)
+Filename: pool/main/a/apt/apt-transport-https_0.9.9.1~ubuntu2_armhf.deb
+Size: 15396
+MD5sum: f281d157b569bbbf70c4c65fe2a6e968
+SHA1: f1e205a608db7461dd1c87d0c61251a4bc94c548
+SHA256: 3e6c1d94dfb9a9f1a5d2a60dbbc80aa98e147a7c1e393b0945f5a72d0c02b5c6
+Description: https download transport for APT
+Description-md5: 3365a6b50bd0e4eef6e176a80c735f43
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
+
+Package: apt-utils
+Priority: important
+Section: admin
+Installed-Size: 572
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: armhf
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libapt-inst1.5 (>= 0.8.0), libapt-pkg4.12 (>= 0.9.9.1~ubuntu2), libc6 (>= 2.4), libdb5.1, libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0)
+Suggests: xz-utils
+Filename: pool/main/a/apt/apt-utils_0.9.9.1~ubuntu2_armhf.deb
+Size: 180982
+MD5sum: 7be9e5d6aa5defa14038fa80ec35454e
+SHA1: dc1691768706e82d25de2fb44f7d283b4892b6ab
+SHA256: 5d5a07bb81bf7251ea01759ca5758df6fa921d1df4254d5a3b7c0241788962c2
+Description: package managment related utility programs
+Description-md5: 578941ab78e4cbae72c741e56d175708
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
 
 Package: compiz
 Priority: optional
@@ -189,6 +256,50 @@ Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libapt-inst1.5
+Priority: important
+Section: admin
+Installed-Size: 699
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: armhf
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/a/apt/libapt-inst1.5_0.9.9.1~ubuntu2_armhf.deb
+Size: 68468
+MD5sum: 5975a684c78820c9462e6d229fdf3ba9
+SHA1: e913c8ce235949cf1faf0a2cdd49e6470864c0ea
+SHA256: 231a225e433ff07330faa26f9e01556bf991c1ae618189b5d9475c5d761ec506
+Description: deb package format runtime library
+Multi-Arch: same
+Description-md5: 5df05e67cb17e91ac56a732061d88850
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: libapt-pkg-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 502
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: armhf
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libapt-pkg4.12 (= 0.9.9.1~ubuntu2), libapt-inst1.5 (= 0.9.9.1~ubuntu2), zlib1g-dev
+Filename: pool/main/a/apt/libapt-pkg-dev_0.9.9.1~ubuntu2_armhf.deb
+Size: 94644
+MD5sum: 87d1eb8b89e1ae21946d881fced270d9
+SHA1: 453898646bc2fc4f6c13516213f8139bd47600ae
+SHA256: d9a0ec7555d3802bc1a96ca006bebe2e543f5ed474ae8ef2af550cf301bc21ea
+Description: development files for APT's libapt-pkg and libapt-inst
+Multi-Arch: same
+Description-md5: 8e463f77664788b23a47f5ac592f4595
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libapt-pkg-doc
 Priority: optional
 Section: doc
@@ -207,6 +318,31 @@ Description: documentation for APT development
 Description-md5: decce989b471f196cddabf52bee63592
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libapt-pkg4.12
+Priority: important
+Section: admin
+Installed-Size: 2389
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: armhf
+Source: apt
+Version: 0.9.9.1~ubuntu2
+Depends: libbz2-1.0, libc6 (>= 2.15), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.6), zlib1g (>= 1:1.2.3.4)
+Pre-Depends: multiarch-support
+Breaks: apt (<< 0.9.4~)
+Filename: pool/main/a/apt/libapt-pkg4.12_0.9.9.1~ubuntu2_armhf.deb
+Size: 769654
+MD5sum: 1d137b64703ae4ad850bdfd2f3652ca8
+SHA1: 56878af74d627437ad03c5ddcaa29cf99cdd205a
+SHA256: 56e08bf57d2ca6522ec765a9b7d7bcd34aeffe917f76d24ce250e898ce1a57d3
+Description: package managment runtime library
+Multi-Arch: same
+Description-md5: c7584b884ab52c1972b8736fef25ad35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: minimal
 
 Package: libav-doc
 Priority: optional
@@ -735,6 +871,51 @@ Description-md5: aa070f52bfbf0d9e220aa40da4b4ced1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libgphoto2-dev-doc
+Priority: optional
+Section: doc
+Installed-Size: 6471
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Architecture: all
+Source: libgphoto2
+Version: 2.5.2-0ubuntu2
+Depends: libjs-jquery
+Filename: pool/main/libg/libgphoto2/libgphoto2-dev-doc_2.5.2-0ubuntu2_all.deb
+Size: 3165906
+MD5sum: d823119c921bfb9e8722d6d14357273a
+SHA1: 08365a71022e1bba90d312dce8e6b68b5ac86f1a
+SHA256: 6d938b02b85cb62d3eace126fed979759a2d59c41233064b1af64297e816c7b8
+Description: gphoto2 digital camera library (development documentation)
+Homepage: http://www.gphoto.org/proj/libgphoto2/
+Description-md5: 80bdc5b1f735d5956b63d68eeabdaa75
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgphoto2-l10n
+Priority: optional
+Section: localization
+Installed-Size: 64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PhotoTools Maintainers <pkg-phototools-devel@lists.alioth.debian.org>
+Architecture: all
+Source: libgphoto2
+Version: 2.5.2-0ubuntu2
+Replaces: libgphoto2-2 (<= 2.4.10.1-4)
+Breaks: libgphoto2-2 (<= 2.4.10.1-4)
+Filename: pool/main/libg/libgphoto2/libgphoto2-l10n_2.5.2-0ubuntu2_all.deb
+Size: 7364
+MD5sum: 9aca7b421b8266eabe3ddd95215bf897
+SHA1: a538c4da3a0fbf2069ea23cb9889895be668871f
+SHA256: 6690d2159258d9fb081f73b16dd10295f037c6c1ba2b53a16f17a50f8850b8de
+Description: gphoto2 digital camera library - localized messages
+Multi-Arch: foreign
+Homepage: http://www.gphoto.org/proj/libgphoto2/
+Description-md5: ab44a2500d46c48e4f7f5c712df346d2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libkpathsea-dev
 Priority: optional
