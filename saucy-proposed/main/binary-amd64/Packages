@@ -3242,6 +3242,50 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: libservlet3.0-java
+Priority: optional
+Section: java
+Installed-Size: 461
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: tomcat7
+Version: 7.0.42-1
+Filename: pool/main/t/tomcat7/libservlet3.0-java_7.0.42-1_all.deb
+Size: 296220
+MD5sum: b6efe3f2ec89a9169e641ca20305b373
+SHA1: 693ce0a77b114625383fac632421ac7f891aa8a6
+SHA256: e7755e28d679de05d7a88d0188668c2d267b7c947529ec739f1c01737f2437f3
+Description: Servlet 3.0 and JSP 2.2 Java API classes
+Homepage: http://tomcat.apache.org
+Description-md5: 53f7075916141a8eb225df97286c9451
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: tomcat-server
+
+Package: libservlet3.0-java-doc
+Priority: optional
+Section: doc
+Installed-Size: 2943
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: tomcat7
+Version: 7.0.42-1
+Suggests: libservlet3.0-java (>= 7.0.42-1)
+Filename: pool/main/t/tomcat7/libservlet3.0-java-doc_7.0.42-1_all.deb
+Size: 313420
+MD5sum: 16aea374ce1067d334ed302f1b9b8852
+SHA1: c0cb286fdad6c6b09bb7b121854ce183181b43af
+SHA256: a8e26bdccf6f56f53a5b820645e2ce30e3aa584bc63d36c0c6ca7e511f2748be
+Description: Servlet 3.0 and JSP 2.2 Java API documentation
+Homepage: http://tomcat.apache.org
+Description-md5: 105d3349377c356c2f157766657d4639
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libswscale-dev
 Priority: optional
 Section: libdevel
@@ -3290,6 +3334,31 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
+
+Package: libtomcat7-java
+Priority: optional
+Section: java
+Installed-Size: 4099
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: tomcat7
+Version: 7.0.42-1
+Depends: libecj-java, libcommons-pool-java, libcommons-dbcp-java, libservlet3.0-java (>= 7.0.42-1)
+Suggests: tomcat7 (>= 7.0.42-1)
+Conflicts: libtomcat6-java
+Filename: pool/main/t/tomcat7/libtomcat7-java_7.0.42-1_all.deb
+Size: 3664596
+MD5sum: 864ef052c484a49575fb05b1e2f73efc
+SHA1: 6c4cc9c3c694787633af33f6d91029f2c6501f6d
+SHA256: 72fa1a3ed19ed3dc7294434fa353cad43dbe3e47d5eae1ad26e0606861b094dc
+Description: Servlet and JSP engine -- core libraries
+Homepage: http://tomcat.apache.org
+Description-md5: 7a2563c1a7c79379004bc6464d285af0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: tomcat-server
 
 Package: multiarch-support
 Priority: required
@@ -3958,6 +4027,122 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: edubuntu-desktop-gnome, ubuntustudio-font-meta
+
+Package: tomcat7
+Priority: optional
+Section: java
+Installed-Size: 364
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Version: 7.0.42-1
+Depends: tomcat7-common (>= 7.0.42-1), ucf, adduser, debconf (>= 0.5) | debconf-2.0
+Recommends: authbind
+Suggests: tomcat7-docs (>= 7.0.42-1), tomcat7-admin (>= 7.0.42-1), tomcat7-examples (>= 7.0.42-1), tomcat7-user (>= 7.0.42-1), libtcnative-1 (>= 1.1.24)
+Filename: pool/main/t/tomcat7/tomcat7_7.0.42-1_all.deb
+Size: 38760
+MD5sum: 68f2cc8c60f602dc63eb481a40d99fe1
+SHA1: 5b1076872a4f719ebd3b16588b633cb0c68f5bd2
+SHA256: f998906ff0f3c20617ae45a5731b05a49bbb4866b61bc57da68878d262362de9
+Description: Servlet and JSP engine
+Homepage: http://tomcat.apache.org
+Description-md5: 71d2a54f759941814ab4cf7873094b26
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: tomcat-server
+
+Package: tomcat7-admin
+Priority: optional
+Section: java
+Installed-Size: 188
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: tomcat7
+Version: 7.0.42-1
+Depends: tomcat7-common (>= 7.0.42-1)
+Filename: pool/main/t/tomcat7/tomcat7-admin_7.0.42-1_all.deb
+Size: 41352
+MD5sum: 080293ac6f5325bf07f9fe06277e2888
+SHA1: ea31a49554180ba366b3f6893feed4ddf9e917c7
+SHA256: f417f80758e31cd587f56824c1c2c6630b660d06d489b160942365400178a655
+Description: Servlet and JSP engine -- admin web applications
+Homepage: http://tomcat.apache.org
+Description-md5: 07b3738a38d2448ee2c0b77d4dbd745d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: tomcat-server
+
+Package: tomcat7-common
+Priority: optional
+Section: java
+Installed-Size: 138
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: tomcat7
+Version: 7.0.42-1
+Depends: libtomcat7-java (>= 7.0.42-1), default-jre-headless | java6-runtime-headless | java6-runtime | java-6-runtime
+Filename: pool/main/t/tomcat7/tomcat7-common_7.0.42-1_all.deb
+Size: 49834
+MD5sum: 84b27501b6e7b7caafa52b20dfa38b50
+SHA1: fc5c7a0f7503069ef24874b7b9b4e6ea793df4c1
+SHA256: c320b82e96d3acccbca12651c075f2d1b8b8d150c6243e27efc034518d0ecbc1
+Description: Servlet and JSP engine -- common files
+Homepage: http://tomcat.apache.org
+Description-md5: f1b8817985b6e745bfe6216aa2086c4b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: tomcat-server
+
+Package: tomcat7-docs
+Priority: optional
+Section: doc
+Installed-Size: 3898
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: tomcat7
+Version: 7.0.42-1
+Depends: tomcat7-common (>= 7.0.42-1)
+Filename: pool/main/t/tomcat7/tomcat7-docs_7.0.42-1_all.deb
+Size: 751908
+MD5sum: 39dac8e9fe2442dec4a8c01310797001
+SHA1: 8fb1cea48dab61091b28623689fd668f8d006fbb
+SHA256: cd38603757790dd62244cc86e0cc26fd36f8082d1b7b8cda29bf151b45fe2d47
+Description: Servlet and JSP engine -- documentation
+Homepage: http://tomcat.apache.org
+Description-md5: 523c216160e93c3df0c2e38305883e9c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: tomcat-server
+
+Package: tomcat7-examples
+Priority: optional
+Section: java
+Installed-Size: 1079
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: tomcat7
+Version: 7.0.42-1
+Depends: tomcat7-common (>= 7.0.42-1), libjstl1.1-java, libjakarta-taglibs-standard-java
+Filename: pool/main/t/tomcat7/tomcat7-examples_7.0.42-1_all.deb
+Size: 192364
+MD5sum: 20d33429390192c12173583e153da7a8
+SHA1: 08707fcecd5acfd68880a317eb4c6fe81846f3fa
+SHA256: 2ccff050e8dfb7dda28f017869c8d03d3b570c72d0e6abc6f72030da6ec99a67
+Description: Servlet and JSP engine -- example web applications
+Homepage: http://tomcat.apache.org
+Description-md5: 3fd8302e7ffe454afd9ba42730f7a01a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: tomcat-server
 
 Package: unity-webapps-common
 Priority: optional
