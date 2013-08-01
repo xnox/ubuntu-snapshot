@@ -32,6 +32,35 @@ Checksums-Sha256:
  9d81e4228329e2d5cccb018ab06bc8b734fb2dede2c4d9b5c02303d4a690b76b 1940928 augeas_1.1.0.orig.tar.gz
  45c6484a3636ec838a508db600f731bfee8bf2164d8f622981757a95f29157c2 8730 augeas_1.1.0-0ubuntu1.debian.tar.gz
 
+Package: btrfs-tools
+Binary: btrfs-tools, btrfs-tools-udeb, btrfs-tools-dbg
+Version: 0.19+20130315-5
+Priority: optional
+Section: admin
+Maintainer: Dmitrijs Ledkovs <xnox@debian.org>
+Build-Depends: debhelper (>= 9), e2fslibs-dev, libacl1-dev, libblkid-dev, liblzo2-dev, uuid-dev, zlib1g-dev
+Architecture: linux-any
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/b/btrfs-tools
+Files:
+ 955c5f0fb1876d132ca0d272c1eb3df1 1986 btrfs-tools_0.19+20130315-5.dsc
+ fad014ef28308cd42e1c4f0022490cef 204576 btrfs-tools_0.19+20130315.orig.tar.xz
+ c6b6c87a985f45013e196ce9812879a2 10548 btrfs-tools_0.19+20130315-5.debian.tar.xz
+Homepage: http://btrfs.wiki.kernel.org/
+Package-List: 
+ btrfs-tools deb admin optional
+ btrfs-tools-dbg deb debug extra
+ btrfs-tools-udeb udeb debian-installer optional
+Checksums-Sha1:
+ 8a12c3575c8463a773c49e0d65c740372ea0f254 1986 btrfs-tools_0.19+20130315-5.dsc
+ 60b78639d0b64a0d7d738d492e7f3a58395d071f 204576 btrfs-tools_0.19+20130315.orig.tar.xz
+ 7e731ff99b3c39c80531456a45b3e70b0d4cb726 10548 btrfs-tools_0.19+20130315-5.debian.tar.xz
+Checksums-Sha256:
+ 6fa18b2629fa1fd44a95759aac2338c8e510cc57de7e843a272ea0b938496a06 1986 btrfs-tools_0.19+20130315-5.dsc
+ 95a9de93c3785a8a2d7750fce4196c6574f6cbe9b54c28c2b42219857388d855 204576 btrfs-tools_0.19+20130315.orig.tar.xz
+ 099a5f1aec97163a61dd661b55a16a6d8b756c235740e30a83663fd5145ace01 10548 btrfs-tools_0.19+20130315-5.debian.tar.xz
+
 Package: compiz
 Binary: compiz, compiz-core, compiz-dev, compiz-gnome, compiz-plugins-default, compiz-plugins, libdecoration0, libdecoration0-dev, libcompizconfig0, libcompizconfig0-dev, python-compizconfig, compizconfig-settings-manager, compiz-plugins-main, compiz-plugins-main-default, compiz-plugins-main-dev, compiz-plugins-extra, compizconfig-backend-gconf
 Version: 1:0.9.9~daily13.04.18.1~13.04-0ubuntu2
@@ -655,6 +684,44 @@ Checksums-Sha256:
  afcdb3d4fa93950b330d934ce3de155e9d4a575c91b5aa3e0a276b9f52e802a2 21604457 mysql-5.5_5.5.32.orig.tar.gz
  fe846ce0d31743c1ed7420b5f613c575669df1c6051175e74ed3b2895f52c4e2 302253 mysql-5.5_5.5.32-0ubuntu1.debian.tar.gz
 Testsuite: autopkgtest
+
+Package: plymouth
+Binary: plymouth, plymouth-x11, plymouth-label, libplymouth2, libplymouth-dev, plymouth-theme-fade-in, plymouth-theme-glow, plymouth-theme-script, plymouth-theme-solar, plymouth-theme-spinfinity, plymouth-theme-ubuntu-logo, plymouth-theme-text, plymouth-theme-ubuntu-text
+Version: 0.8.8-0ubuntu8
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9), dh-exec (>= 0.3), libpng12-dev, libcairo2-dev, libgtk2.0-dev, libpango1.0-dev, autotools-dev, libdrm-dev, libdbus-1-dev, libncursesw5-dev, dpkg-dev (>= 1.16.0~ubuntu4)
+Architecture: any
+Standards-Version: 3.8.3.0
+Format: 3.0 (quilt)
+Directory: pool/main/p/plymouth
+Files:
+ dce79edae0544b706114b5c6c6689345 2641 plymouth_0.8.8-0ubuntu8.dsc
+ 38f5e613e5ab17806b950cee2d0d0d4e 1143549 plymouth_0.8.8.orig.tar.bz2
+ 6d6718c65e6dcf8b176837c9ca3b9618 110450 plymouth_0.8.8-0ubuntu8.debian.tar.gz
+Vcs-Bzr: lp:ubuntu/plymouth
+Package-List: 
+ libplymouth-dev deb libdevel optional
+ libplymouth2 deb libs optional
+ plymouth deb x11 optional
+ plymouth-label deb x11 optional
+ plymouth-theme-fade-in deb x11 optional
+ plymouth-theme-glow deb x11 optional
+ plymouth-theme-script deb x11 optional
+ plymouth-theme-solar deb x11 optional
+ plymouth-theme-spinfinity deb x11 optional
+ plymouth-theme-text deb x11 optional
+ plymouth-theme-ubuntu-logo deb x11 optional
+ plymouth-theme-ubuntu-text deb x11 optional
+ plymouth-x11 deb x11 optional
+Checksums-Sha1:
+ a7c5c1bdf42c9c605177f84d5077ce950e84edb1 2641 plymouth_0.8.8-0ubuntu8.dsc
+ 7b009c41074514dcb304d78f45a030e909907e3e 1143549 plymouth_0.8.8.orig.tar.bz2
+ 3553fffb9ff86cb9d8813a887035c026c0d0940e 110450 plymouth_0.8.8-0ubuntu8.debian.tar.gz
+Checksums-Sha256:
+ 036a86dbb5d77a548d83f92d359a6bf917500832cca529ec161ccc36081ab456 2641 plymouth_0.8.8-0ubuntu8.dsc
+ 1bada4e1d3a31a5a99adc2db83f5452d9818839cda51a6e430f044f6281d759b 1143549 plymouth_0.8.8.orig.tar.bz2
+ 95283b20c6382981d1b6488e5802573ce92c6d5a1eebe6c483b69a73e4ed5e30 110450 plymouth_0.8.8-0ubuntu8.debian.tar.gz
 
 Package: poppler
 Binary: libpoppler43, libpoppler-dev, libpoppler-private-dev, libpoppler-glib8, libpoppler-glib-dev, gir1.2-poppler-0.18, libpoppler-qt4-4, libpoppler-qt4-dev, libpoppler-qt5-1, libpoppler-qt5-dev, libpoppler-cpp0, libpoppler-cpp-dev, poppler-utils, poppler-dbg
