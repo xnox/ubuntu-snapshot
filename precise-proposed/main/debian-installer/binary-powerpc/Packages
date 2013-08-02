@@ -1,19 +1,3 @@
-Package: base-installer
-Priority: required
-Section: debian-installer
-Installed-Size: 170
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: all
-Version: 1.122ubuntu7.3
-Depends: cdebconf-udeb, di-utils-mapdevfs, di-utils (>= 1.68), rootskel (>= 1.19)
-Filename: pool/main/b/base-installer/base-installer_1.122ubuntu7.3_all.udeb
-Size: 46284
-MD5sum: c1c4c8deb41b39261517442a3e98080b
-SHA1: 1c9c943a17f9a110e24a5c638717abb66ed5a71d
-SHA256: 4a5fa474a92fe11c04e5e863df8b1a6a138d974574077d74e6a27a7aa433aad8
-Description: base system installation framework
-
 Package: block-modules-3.2.0-38-powerpc-smp-di
 Priority: standard
 Section: debian-installer
@@ -573,25 +557,6 @@ Description: Block storage devices
  This package contains the block storage devices, including DAC960 and
  paraide.
 Kernel-Version: 3.2.0-52-powerpc64-smp
-
-Package: bootstrap-base
-Priority: required
-Section: debian-installer
-Installed-Size: 666
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: powerpc
-Source: base-installer
-Version: 1.122ubuntu7.3
-Provides: installed-base, kernel-installer
-Depends: libc6-udeb (>= 2.15), libdebconfclient0-udeb, libdebian-installer4-udeb (>= 0.79ubuntu2.1), mounted-partitions, created-fstab, base-installer, debootstrap-udeb (>= 1.0.7), gpgv-udeb, ubuntu-keyring-udeb, archdetect
-Filename: pool/main/b/base-installer/bootstrap-base_1.122ubuntu7.3_powerpc.udeb
-Size: 186588
-MD5sum: adc5135e57c8adb773287dfa7655cb99
-SHA1: 88452f0f8c5971a68ea7998893e86ed9fb3816ca
-SHA256: c771831dc47e39c5ba9d7cd8d5f8d7aff9142a3efffd414895a82504175e8654
-Description: Install the base system
-Installer-Menu-Item: 6500
 
 Package: crypto-modules-3.2.0-38-powerpc-smp-di
 Priority: extra
@@ -3764,41 +3729,6 @@ Description: Extra filesystem modules
  This includes support for Windows NTFS and MacOS HFS/HFSPlus
 Kernel-Version: 3.2.0-52-powerpc64-smp
 
-Package: grub-installer
-Priority: standard
-Section: debian-installer
-Installed-Size: 545
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: powerpc
-Version: 1.68ubuntu5.2
-Provides: bootable-system
-Depends: cdebconf-udeb, kernel-installer, created-fstab, di-utils (>= 1.15), di-utils-mapdevfs, os-prober, partman-utils
-Filename: pool/main/g/grub-installer/grub-installer_1.68ubuntu5.2_powerpc.udeb
-Size: 176160
-MD5sum: 861c8752021fad616b4cd67793f90acd
-SHA1: ecbd0007403ca14fbabd8e7c3a6f4f901cd524d2
-SHA256: dff44b1b85449f0f40f947123be00c284f3655a5c976f898a378e33be817d689
-Description: Install GRUB on a hard disk
-Installer-Menu-Item: 7400
-
-Package: grub-mount-udeb
-Priority: extra
-Section: debian-installer
-Installed-Size: 747
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: grub2
-Version: 1.99-21ubuntu3.10
-Depends: libc6-udeb (>= 2.15), libdevmapper1.02.1-udeb (>= 2:1.02.48), libfuse2-udeb (>= 2.8.1)
-Filename: pool/main/g/grub2/grub-mount-udeb_1.99-21ubuntu3.10_powerpc.udeb
-Size: 355526
-MD5sum: 9c9fd10a8b05d9da924faa14e6a7072f
-SHA1: 56f3ae1e36060ac65165a641aa0a00ba10696bfa
-SHA256: 2525e43ead1992de3d27a76f299f93f874491bbadd1347ed9e17cfbf4e4a8c36
-Description: export GRUB filesystems using FUSE
-
 Package: input-modules-3.2.0-38-powerpc-smp-di
 Priority: standard
 Section: debian-installer
@@ -5896,22 +5826,6 @@ Description: GLib library of C routines - minimal runtime
  This package contains the minimal runtime library needed by the Debian
  installer.
 
-Package: libudev0-udeb
-Priority: important
-Section: debian-installer
-Installed-Size: 66
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: powerpc
-Source: udev
-Version: 175-0ubuntu9.4
-Depends: libc6-udeb (>= 2.15)
-Filename: pool/main/u/udev/libudev0-udeb_175-0ubuntu9.4_powerpc.udeb
-Size: 24298
-MD5sum: 84ef7ea9cebaaafc3154d2056108c65a
-SHA1: 448252408f4c7598a8dfee9df4ec0d89c650c28c
-SHA256: 704a4c679ec000b11f7544576d3928a17dc109888682410eb84fc4b5759ccb04
-Description: udev library
-
 Package: md-modules-3.2.0-38-powerpc-smp-di
 Priority: standard
 Section: debian-installer
@@ -6415,27 +6329,6 @@ SHA1: 9640150636b8f157180f75da2880a91a6df87779
 SHA256: aff510ae005169ccd322906a927a2609ab218193a3e0e52342af4ae6fc17362c
 Description: Multi-device support (raid, device-mapper, lvm)
 Kernel-Version: 3.2.0-52-powerpc64-smp
-
-Package: mdadm-udeb
-Priority: optional
-Section: debian-installer
-Installed-Size: 422
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian mdadm maintainers <pkg-mdadm-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: mdadm
-Version: 3.2.5-1ubuntu0.3
-Depends: libc6-udeb (>= 2.15)
-Filename: pool/main/m/mdadm/mdadm-udeb_3.2.5-1ubuntu0.3_powerpc.udeb
-Size: 196872
-MD5sum: dee90973811a315b464a50543394bfd5
-SHA1: 3f6d7d488a6ef86ec799a420f6243dc49aa28866
-SHA256: 94c2a6de8f613135f40cb2a066e6fd26778dd20551ca4736cf56997235f53906
-Description: tool to administer Linux MD arrays (software RAID)
- The mdadm utility can be used to create, manage, and monitor MD
- (multi-disk) arrays for software RAID or multipath I/O.
- .
- This is a minimal package used by the debian-installer.
 
 Package: message-modules-3.2.0-38-powerpc-smp-di
 Priority: standard
@@ -10643,39 +10536,6 @@ SHA256: ab52c13965880e8f322077841d2d0227caf08d1aa9f04885361bac52b9a64ebf
 Description: USB network interface support
 Kernel-Version: 3.2.0-52-powerpc64-smp
 
-Package: oem-config-check
-Priority: standard
-Section: debian-installer
-Installed-Size: 25
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Architecture: all
-Source: ubiquity
-Version: 2.10.26
-Depends: cdebconf-udeb (>= 0.75), main-menu (>= 1.03)
-Filename: pool/main/u/ubiquity/oem-config-check_2.10.26_all.udeb
-Size: 3046
-MD5sum: ef4edc3ec4638f5bba35eadb6ce088e7
-SHA1: a8d3a7336bc1fac04b1a04b931f592f30464c3e0
-SHA256: 3d2abc03d8994da0b0c30de78adc0dc330c7f9cc837ff7550ff5403d60e78597
-Description: enter OEM mode if requested
-
-Package: oem-config-udeb
-Priority: extra
-Section: debian-installer
-Installed-Size: 71
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Architecture: all
-Source: ubiquity
-Version: 2.10.26
-Depends: oem-config-check, cdebconf-udeb
-Filename: pool/main/u/ubiquity/oem-config-udeb_2.10.26_all.udeb
-Size: 20340
-MD5sum: 96194cc96f92fdbc62ad1bab432e02c6
-SHA1: e7b4234204eb7a65a81dd2c1a522d48720d04966
-SHA256: ab6ecd2e48e7b3095bb8bed5872ce04f729f2fab816be7ae24964aeb40808a7e
-Description: Prepare for OEM configuration
-Installer-Menu-Item: 2350
-
 Package: parport-modules-3.2.0-38-powerpc-smp-di
 Priority: standard
 Section: debian-installer
@@ -11179,22 +11039,6 @@ SHA1: da6a67ad22241266abbefa062880fa78b5204cea
 SHA256: d497e24a87ec084e132428895992e0d525b915f82f9c19991aadd9db0a2538fe
 Description: Parallel port support
 Kernel-Version: 3.2.0-52-powerpc64-smp
-
-Package: partman-auto-lvm
-Priority: standard
-Section: debian-installer
-Installed-Size: 310
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: all
-Version: 42ubuntu2.3
-Depends: cdebconf-udeb, partman-base (>= 125), partman-auto (>= 84), partman-lvm (>= 72), di-utils (>= 1.66)
-Filename: pool/main/p/partman-auto-lvm/partman-auto-lvm_42ubuntu2.3_all.udeb
-Size: 99394
-MD5sum: 5b249617121756b35ecce6b6832ac1f7
-SHA1: 17e897c88566f93c356ba9644663050a17cd5aee
-SHA256: 27a204c3b8d3949bea230a0f02b2b57341fc8c32c27d79fd4253146b896a2285
-Description: Automatically partition storage devices using LVM
 
 Package: partman-basicfilesystems
 Priority: standard
@@ -16884,22 +16728,6 @@ Description: Core storage support
  Includes core SCSI, LibATA, USB-Storage. Also includes related block
  devices for CD, Disk and Tape medium (and IDE Floppy).
 Kernel-Version: 3.2.0-52-powerpc64-smp
-
-Package: udev-udeb
-Priority: extra
-Section: debian-installer
-Installed-Size: 504
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: powerpc
-Source: udev
-Version: 175-0ubuntu9.4
-Depends: libc6-udeb (>= 2.15)
-Filename: pool/main/u/udev/udev-udeb_175-0ubuntu9.4_powerpc.udeb
-Size: 187224
-MD5sum: 900fee463c322a1176ac3ad303c69071
-SHA1: c47c8e6c9533ac26d4e8e7967c0b4323fe505d67
-SHA256: 35062320c324fe7650565f1bc56be9eab07edbdb49233f287c8b8d9070497506
-Description: rule-based device node and kernel event manager
 
 Package: usb-modules-3.2.0-38-powerpc-smp-di
 Priority: standard

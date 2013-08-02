@@ -1,19 +1,3 @@
-Package: base-installer
-Priority: required
-Section: debian-installer
-Installed-Size: 170
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: all
-Version: 1.122ubuntu7.3
-Depends: cdebconf-udeb, di-utils-mapdevfs, di-utils (>= 1.68), rootskel (>= 1.19)
-Filename: pool/main/b/base-installer/base-installer_1.122ubuntu7.3_all.udeb
-Size: 46284
-MD5sum: c1c4c8deb41b39261517442a3e98080b
-SHA1: 1c9c943a17f9a110e24a5c638717abb66ed5a71d
-SHA256: 4a5fa474a92fe11c04e5e863df8b1a6a138d974574077d74e6a27a7aa433aad8
-Description: base system installation framework
-
 Package: block-modules-3.2.0-1426-omap4-di
 Priority: standard
 Section: debian-installer
@@ -1013,25 +997,6 @@ Description: Block storage devices
  This package contains the block storage devices, including DAC960 and
  paraide.
 Kernel-Version: 3.8.0-28-generic
-
-Package: bootstrap-base
-Priority: required
-Section: debian-installer
-Installed-Size: 662
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: armhf
-Source: base-installer
-Version: 1.122ubuntu7.3
-Provides: installed-base, kernel-installer
-Depends: libc6-udeb (>= 2.15), libdebconfclient0-udeb, libdebian-installer4-udeb (>= 0.79ubuntu2.1), mounted-partitions, created-fstab, base-installer, debootstrap-udeb (>= 1.0.7), gpgv-udeb, ubuntu-keyring-udeb, archdetect
-Filename: pool/main/b/base-installer/bootstrap-base_1.122ubuntu7.3_armhf.udeb
-Size: 185184
-MD5sum: d4901dfd6a8086893f169f0b7e746462
-SHA1: dc34eec4555505f6fab160652858b7c968167404
-SHA256: c8abe6e24bc077524e151d2774023f33cb702e1d1f88321afa13e49df259a13d
-Description: Install the base system
-Installer-Menu-Item: 6500
 
 Package: crypto-modules-3.2.0-1426-omap4-di
 Priority: extra
@@ -7772,22 +7737,6 @@ Description: GLib library of C routines - minimal runtime
  This package contains the minimal runtime library needed by the Debian
  installer.
 
-Package: libudev0-udeb
-Priority: important
-Section: debian-installer
-Installed-Size: 50
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: udev
-Version: 175-0ubuntu9.4
-Depends: libc6-udeb (>= 2.15), libgcc1
-Filename: pool/main/u/udev/libudev0-udeb_175-0ubuntu9.4_armhf.udeb
-Size: 21252
-MD5sum: 8fc7c88f3ac52bfae41d827875c558e2
-SHA1: 47923d5f68921ea20ca048b75fd7ba4e20ee0287
-SHA256: e5fe41e7009909a7a2fa5ede3d98d9673db2be5528460bc23e5969a1c7be8a02
-Description: udev library
-
 Package: md-modules-3.2.0-1426-omap4-di
 Priority: standard
 Section: debian-installer
@@ -8687,27 +8636,6 @@ SHA1: fe2b8d290aa7bf099d95709073df5e8f18845669
 SHA256: 11a71a4778583f221925458c3643438073749e3397ccd8902579e8a22968e177
 Description: Multi-device support (raid, device-mapper, lvm)
 Kernel-Version: 3.8.0-28-generic
-
-Package: mdadm-udeb
-Priority: optional
-Section: debian-installer
-Installed-Size: 310
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian mdadm maintainers <pkg-mdadm-devel@lists.alioth.debian.org>
-Architecture: armhf
-Source: mdadm
-Version: 3.2.5-1ubuntu0.3
-Depends: libc6-udeb (>= 2.15), libgcc1
-Filename: pool/main/m/mdadm/mdadm-udeb_3.2.5-1ubuntu0.3_armhf.udeb
-Size: 175372
-MD5sum: 047c5ceb95d4065c0b79e3f6d37e18ba
-SHA1: 3d41c91539dae8952715df03a6d29aaecdc87c2e
-SHA256: 8c67381f2f86bfb23ff0acbd5f453c3be83a1a4b28051ab1de10d18a5e77007c
-Description: tool to administer Linux MD arrays (software RAID)
- The mdadm utility can be used to create, manage, and monitor MD
- (multi-disk) arrays for software RAID or multipath I/O.
- .
- This is a minimal package used by the debian-installer.
 
 Package: mouse-modules-3.2.0-1426-omap4-di
 Priority: extra
@@ -13317,39 +13245,6 @@ SHA256: 7f2717a3ef3a02bf60935990d20315e15029c7e0a2390ba5544a520ddea38b40
 Description: USB network interface support
 Kernel-Version: 3.8.0-28-generic
 
-Package: oem-config-check
-Priority: standard
-Section: debian-installer
-Installed-Size: 25
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Architecture: all
-Source: ubiquity
-Version: 2.10.26
-Depends: cdebconf-udeb (>= 0.75), main-menu (>= 1.03)
-Filename: pool/main/u/ubiquity/oem-config-check_2.10.26_all.udeb
-Size: 3046
-MD5sum: ef4edc3ec4638f5bba35eadb6ce088e7
-SHA1: a8d3a7336bc1fac04b1a04b931f592f30464c3e0
-SHA256: 3d2abc03d8994da0b0c30de78adc0dc330c7f9cc837ff7550ff5403d60e78597
-Description: enter OEM mode if requested
-
-Package: oem-config-udeb
-Priority: extra
-Section: debian-installer
-Installed-Size: 71
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Architecture: all
-Source: ubiquity
-Version: 2.10.26
-Depends: oem-config-check, cdebconf-udeb
-Filename: pool/main/u/ubiquity/oem-config-udeb_2.10.26_all.udeb
-Size: 20340
-MD5sum: 96194cc96f92fdbc62ad1bab432e02c6
-SHA1: e7b4234204eb7a65a81dd2c1a522d48720d04966
-SHA256: ab6ecd2e48e7b3095bb8bed5872ce04f729f2fab816be7ae24964aeb40808a7e
-Description: Prepare for OEM configuration
-Installer-Menu-Item: 2350
-
 Package: parport-modules-3.2.0-1426-omap4-di
 Priority: standard
 Section: debian-installer
@@ -14249,22 +14144,6 @@ SHA1: d956306755a6b3650a4caaa630d76d95c4627e32
 SHA256: 2e99f68bf5f7cf258a304f57a591d77529661e3d30c7b4b1852bb038cf60d257
 Description: Parallel port support
 Kernel-Version: 3.8.0-28-generic
-
-Package: partman-auto-lvm
-Priority: standard
-Section: debian-installer
-Installed-Size: 310
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: all
-Version: 42ubuntu2.3
-Depends: cdebconf-udeb, partman-base (>= 125), partman-auto (>= 84), partman-lvm (>= 72), di-utils (>= 1.66)
-Filename: pool/main/p/partman-auto-lvm/partman-auto-lvm_42ubuntu2.3_all.udeb
-Size: 99394
-MD5sum: 5b249617121756b35ecce6b6832ac1f7
-SHA1: 17e897c88566f93c356ba9644663050a17cd5aee
-SHA256: 27a204c3b8d3949bea230a0f02b2b57341fc8c32c27d79fd4253146b896a2285
-Description: Automatically partition storage devices using LVM
 
 Package: partman-basicfilesystems
 Priority: standard
@@ -19968,22 +19847,6 @@ Description: Core storage support
  Includes core SCSI, LibATA, USB-Storage. Also includes related block
  devices for CD, Disk and Tape medium (and IDE Floppy).
 Kernel-Version: 3.8.0-28-generic
-
-Package: udev-udeb
-Priority: extra
-Section: debian-installer
-Installed-Size: 396
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: udev
-Version: 175-0ubuntu9.4
-Depends: libc6-udeb (>= 2.15), libgcc1
-Filename: pool/main/u/udev/udev-udeb_175-0ubuntu9.4_armhf.udeb
-Size: 171356
-MD5sum: 1b51cd4007544f0c5718fe08d1a956a9
-SHA1: 2f50e9e4c472c039f3a8415fdf92b4f6e20582b0
-SHA256: c7ba6e5bfbfe1736fbde0f9a0af2aa644e7f84d603610b3afbebcce626ebe6ef
-Description: rule-based device node and kernel event manager
 
 Package: usb-modules-3.2.0-1426-omap4-di
 Priority: standard
