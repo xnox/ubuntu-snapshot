@@ -65,6 +65,40 @@ Description: Embedded GNU C Library: NSS helper for files - udeb
  This package contains the files NSS helper needed for the Debian installer.
  Do not install it on a normal system.
 
+Package: lowmem
+Priority: optional
+Section: debian-installer
+Installed-Size: 22
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Version: 1.40ubuntu1
+Depends: cdebconf-udeb
+Filename: pool/main/l/lowmem/lowmem_1.40ubuntu1_all.udeb
+Size: 1526
+MD5sum: d33c7cba5e2bfdf23924f8557236fcf8
+SHA1: 9fb890ecd122a396eadacf4297d289370cf3f448
+SHA256: 808ad7a23659baca4c7da842a1f05978e4474a6d72c26fd69c3f6433b88a1f8f
+Description: free memory for lowmem install
+Installer-Menu-Item: 2500
+
+Package: lowmemcheck
+Priority: optional
+Section: debian-installer
+Installed-Size: 35
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: powerpc
+Source: lowmem
+Version: 1.40ubuntu1
+Depends: libc6-udeb (>= 2.17), cdebconf-udeb (>= 0.75), main-menu (>= 1.03)
+Filename: pool/main/l/lowmem/lowmemcheck_1.40ubuntu1_powerpc.udeb
+Size: 5436
+MD5sum: 6b5f1c2a37792467c8c0cbd9641651a7
+SHA1: b8c2d93f5c1c808ec056c2f7e7cb160ee63febfe
+SHA256: 1298de7ea3f1e8c6b6a947cd6d722b1ccafbda762e4a7192fe92c98fe6265943
+Description: detect low-memory systems and enter lowmem mode
+
 Package: oem-config-check
 Priority: standard
 Section: debian-installer
@@ -97,4 +131,53 @@ SHA1: 0d39a266f7bf3fefce5ea2bd0e52a3ec42e858df
 SHA256: dde30c55fdb1aa6d6f4bc41f971b8fa6f029f279550cf36403de29d345034818
 Description: Prepare for OEM configuration
 Installer-Menu-Item: 2350
+
+Package: partman-crypto
+Priority: optional
+Section: debian-installer
+Installed-Size: 932
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: powerpc
+Version: 60ubuntu1
+Depends: partman-base (>= 134), partman-lvm (>= 62), cdebconf-udeb (>= 0.133), di-utils (>= 1.68), libc6-udeb (>= 2.17)
+Filename: pool/main/p/partman-crypto/partman-crypto_60ubuntu1_powerpc.udeb
+Size: 291794
+MD5sum: 1d27789dbb17eef292629c89c99cc570
+SHA1: 3f455aebb03019b89940b13031eb88c93ed0b1b0
+SHA256: 843e3e84e6ff9926a5f91c49d412250c43b91f1d7b935bcb5827b457084d7b2a
+Description: Add to partman support for block device encryption
+
+Package: partman-crypto-dm
+Priority: standard
+Section: debian-installer
+Installed-Size: 41
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Source: partman-crypto
+Version: 60ubuntu1
+Depends: partman-crypto, crypto-modules, crypto-dm-modules, cryptsetup-udeb
+Filename: pool/main/p/partman-crypto/partman-crypto-dm_60ubuntu1_all.udeb
+Size: 1364
+MD5sum: 4081afe52b5116dce79eba4e7e6f7171
+SHA1: 6b2ba2e4072e4693a4631993589b299e6b0cb8ef
+SHA256: 5855ca149a663594e2206d218c1ee73965272364a6ddc2395231acfa8a04f2ba
+Description: Add to partman support for dm-crypt encryption
+
+Package: partman-lvm
+Priority: optional
+Section: debian-installer
+Installed-Size: 1029
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Version: 85
+Depends: cdebconf-udeb (>= 0.133), partman-base (>= 134), di-utils (>= 1.14), md-modules, lvm2-udeb
+Filename: pool/main/p/partman-lvm/partman-lvm_85_all.udeb
+Size: 308918
+MD5sum: 4fa801f57a8adad2c4c7b966dec87c0d
+SHA1: 8912257eff0b6be376ec1e4d897a4695ede6f6f7
+SHA256: 63dcbafa9d933950ecb2ccc70d254ab00a5de44a74b56cab04d8da9d958cee30
+Description: Adds support for LVM to partman
 
