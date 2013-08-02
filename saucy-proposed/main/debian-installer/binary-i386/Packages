@@ -1,20 +1,26 @@
-Package: download-installer
+Package: gpgv-udeb
 Priority: extra
 Section: debian-installer
-Installed-Size: 14
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: all
-Source: net-retriever
-Version: 1.34ubuntu1
-Depends: cdebconf-udeb, net-retriever, anna (>= 1.07)
-Filename: pool/main/n/net-retriever/download-installer_1.34ubuntu1_all.udeb
-Size: 3408
-MD5sum: 4b21712092ff0c24d23825ccbbd6ec29
-SHA1: a8afbdb0bfb67c9cc7a5e6fe3bf3c10a60e7adc7
-SHA256: ac36b396c486a20d2277b372161b2a894ffa2817d955b2d463b93c6f14c1ab7f
-Description: Download installer components
-Installer-Menu-Item: 2300
+Installed-Size: 295
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuPG-Maintainers <pkg-gnupg-maint@lists.alioth.debian.org>
+Architecture: i386
+Source: gnupg
+Version: 1.4.14-1ubuntu1
+Depends: libc6-udeb (>= 2.17), zlib1g-udeb (>= 1:1.2.3.3.dfsg-1)
+Filename: pool/main/g/gnupg/gpgv-udeb_1.4.14-1ubuntu1_i386.udeb
+Size: 126378
+MD5sum: 28a5894efeeb345819fe3d87b651b3ea
+SHA1: 5a30a7363070c98876602cdf1718498a860cf521
+SHA256: 576a3701e3722a87d8c8cd782caf03a859ecebce74721a6294328dfe8cdcefcf
+Description: minimal signature verification tool
+ GnuPG is GNU's tool for secure communication and data storage.
+ It can be used to encrypt data and to create digital signatures.
+ It includes an advanced key management facility and is compliant
+ with the proposed OpenPGP Internet standard as described in RFC 4880.
+ .
+ This is GnuPG's signature verification tool, gpgv, packaged in minimal
+ form for use in debian-installer.
 
 Package: libc6-udeb
 Priority: extra
@@ -38,24 +44,6 @@ Description: Embedded GNU C Library: Shared libraries - udeb
  .
  This package contains a minimal set of libraries needed for the Debian
  installer.  Do not install it on a normal system.
-
-Package: libdrm2-udeb
-Priority: optional
-Section: debian-installer
-Installed-Size: 66
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
-Architecture: i386
-Source: libdrm
-Version: 2.4.46-0ubuntu1
-Depends: libc6-udeb (>= 2.17)
-Filename: pool/main/libd/libdrm/libdrm2-udeb_2.4.46-0ubuntu1_i386.udeb
-Size: 18464
-MD5sum: 5b6b536a3cfd83560c25ae4591085344
-SHA1: d76b270871d5d471536f75d56d94ad9044c227af
-SHA256: e70b0f8551905b6e0a941f1db8397a7b955a0f255fd6d727004fd5f39c3529ba
-Description: Userspace interface to kernel DRM services -- runtime
- This is a udeb, or a microdeb, for the debian-installer.
 
 Package: libnss-dns-udeb
 Priority: extra
@@ -101,41 +89,23 @@ Description: Embedded GNU C Library: NSS helper for files - udeb
  This package contains the files NSS helper needed for the Debian installer.
  Do not install it on a normal system.
 
-Package: lilo-installer
-Priority: standard
-Section: debian-installer
-Installed-Size: 251
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: i386
-Version: 1.43ubuntu1
-Provides: bootable-system
-Depends: cdebconf-udeb, kernel-installer, di-utils (>= 1.15), di-utils-mapdevfs, fdisk-udeb, os-prober
-Filename: pool/main/l/lilo-installer/lilo-installer_1.43ubuntu1_i386.udeb
-Size: 85230
-MD5sum: 0f5918ec6cf3b7235318c585e054a77a
-SHA1: 032ac903c59852dc719d9d2d33c6a76f3169170e
-SHA256: 432c0657062d22ac46ad893a094a0fc6974b3130749c456985bda86e8cfa955d
-Description: Install LILO on a hard disk
-Installer-Menu-Item: 7500
-
-Package: net-retriever
+Package: live-installer
 Priority: optional
 Section: debian-installer
-Installed-Size: 81
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Installed-Size: 133
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Architecture: i386
-Version: 1.34ubuntu1
-Provides: retriever
-Depends: libc6-udeb (>= 2.17), libdebian-installer4-udeb (>= 0.87ubuntu1), cdebconf-udeb, choose-mirror, configured-network, di-utils (>= 1.58), gpgv-udeb, ubuntu-keyring-udeb
-Filename: pool/main/n/net-retriever/net-retriever_1.34ubuntu1_i386.udeb
-Size: 21722
-MD5sum: 9d19a2d8ebd685767920fb56f7dcbd15
-SHA1: c16bb2be0e95421f395bf52bdcffd5e2cbcc3527
-SHA256: f8ff4b85b44235fe54aa3cb47eca01776f3776cba7295ac7cda2add14a451398
-Description: Fetch modules from the Internet
- This is a retriever that uses wget to fetch files over http or ftp.
+Version: 42ubuntu1
+Provides: installed-base, kernel-installer
+Depends: libc6-udeb (>= 2.17), archdetect, base-installer (>= 1.105), busybox-udeb (>= 1:1.13.3), cdebconf-udeb, created-fstab, mounted-partitions
+Filename: pool/main/l/live-installer/live-installer_42ubuntu1_i386.udeb
+Size: 32366
+MD5sum: 5b078b5253f87cf001c648580fdd568d
+SHA1: e19a9fb9137092f5169f29a4c80312f1e755bd6d
+SHA256: 82be5a6e7df49a442e036204e27f38b04eeed73828690b1ed8c5d5bf18fb4405
+Description: Install the system
+Installer-Menu-Item: 6490
 
 Package: oem-config-check
 Priority: standard
@@ -169,20 +139,4 @@ SHA1: 0d39a266f7bf3fefce5ea2bd0e52a3ec42e858df
 SHA256: dde30c55fdb1aa6d6f4bc41f971b8fa6f029f279550cf36403de29d345034818
 Description: Prepare for OEM configuration
 Installer-Menu-Item: 2350
-
-Package: partman-auto-lvm
-Priority: standard
-Section: debian-installer
-Installed-Size: 312
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: all
-Version: 50ubuntu1
-Depends: cdebconf-udeb, partman-base (>= 125), partman-auto (>= 84), partman-lvm (>= 72), di-utils (>= 1.66)
-Filename: pool/main/p/partman-auto-lvm/partman-auto-lvm_50ubuntu1_all.udeb
-Size: 100092
-MD5sum: 535381980d6e6309952ba39a19765758
-SHA1: 89fa73ef7f015238020dd1b9d99cf94d99ab3268
-SHA256: 893d57e863b249b5624334cfca7d7c434ef8cb4769c67477a8feebb1f3e9bf19
-Description: Automatically partition storage devices using LVM
 
