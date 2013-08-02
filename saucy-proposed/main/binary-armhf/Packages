@@ -1739,27 +1739,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
 
-Package: light-themes
-Priority: optional
-Section: gnome
-Installed-Size: 923
-Maintainer: Ubuntu Artwork Team <ubuntu-art@lists.ubuntu.com>
-Architecture: all
-Source: ubuntu-themes
-Version: 13.04+13.10.20130802-0ubuntu1
-Depends: gtk2-engines-murrine (>= 0.90.3+git20100810), gtk3-engines-unico (>= 1.0.1-0ubuntu2), humanity-icon-theme, ubuntu-mono
-Filename: pool/main/u/ubuntu-themes/light-themes_13.04+13.10.20130802-0ubuntu1_all.deb
-Size: 295300
-MD5sum: 25c7fd5c5c91d04c261670d9f9b3b6c4
-SHA1: 9857cec6546d569ff6f36a7c6bf93fc5ac33938a
-SHA256: bcb98ea74f6762e45d2388c6244ac02e857ff1729089ed05b84e7079e275b1d1
-Description: Light Themes (Ambiance and Radiance)
-Homepage: https://launchpad.net/ubuntu-themes
-Description-md5: 66093fe5a19671849351e8d6fad66909
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
 Package: multiarch-support
 Priority: required
 Section: libs
@@ -2596,6 +2575,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb, tomcat-server, kubuntu-dvd-live, kubuntu-active-dvd-live, edubuntu-usb
 
+Package: ubiquity
+Priority: optional
+Section: admin
+Installed-Size: 14297
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: armhf
+Version: 2.15.13
+Replaces: espresso, espresso-grub, espresso-kbd-chooser, espresso-keyboard-setup, espresso-locale, espresso-timezone, espresso-utils, espresso-yaboot, partman, ubiquity-frontend-gtk (<< 2.3.8), ubuntu-express, user-setup (<< 0.05ubuntu6)
+Depends: libc6 (>= 2.15), libdebconfclient0 (>= 0.145), libdebian-installer4 (>= 0.87ubuntu1), libiw30 (>= 30~pre1), libparted0debian1 (>= 2.2-1), debconf (>= 1.5.43), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python3 (>= 3.2.3-3~), ubiquity-frontend-2.15.13, ubiquity-artwork-2.15.13, laptop-detect, lsb-release, ubiquity-casper, python3-apt (>= 0.7.100.3~), console-setup (>= 1.70ubuntu7), iso-codes, passwd, adduser, os-prober, rdate, ecryptfs-utils, cryptsetup, policykit-1, python3-pyicu (>= 1.0), reiserfsprogs, language-selector-common (>= 0.4.16), archdetect-deb, dpkg-repack, apt-clone, wget, dbus-x11
+Recommends: flash-kernel, u-boot-tools, dmraid, btrfs-tools, ubuntu-drivers-common, lvm2
+Conflicts: espresso, espresso-grub, espresso-kbd-chooser, espresso-keyboard-setup, espresso-locale, espresso-timezone, espresso-utils, espresso-yaboot, partman, ubuntu-express, user-setup (<< 0.05ubuntu6)
+Filename: pool/main/u/ubiquity/ubiquity_2.15.13_armhf.deb
+Size: 4568444
+MD5sum: b96763a2b370f86f2ace0de942000c0f
+SHA1: aa29c098343c1d6de7fd2c25fc06fae81abec81a
+SHA256: 94595da161f19c4a2482db1a8bf742209ba0c0a867328537b5737aec92800194
+Description: Ubuntu live CD installer
+Description-md5: a02e939502ca1f257871281bbc51e7e1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
 Package: ubiquity-casper
 Priority: optional
 Section: misc
@@ -2620,6 +2621,50 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
 
+Package: ubiquity-frontend-debconf
+Priority: optional
+Section: admin
+Installed-Size: 2655
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: armhf
+Source: ubiquity
+Version: 2.15.13
+Provides: ubiquity-frontend-2.15.13
+Depends: python3 (>= 3.2.3-3~), ubiquity (= 2.15.13), debconf (>= 1.5.24ubuntu2) | cdebconf, bogl-bterm (>= 0.1.18-2ubuntu4), tasksel
+Filename: pool/main/u/ubiquity/ubiquity-frontend-debconf_2.15.13_armhf.deb
+Size: 445182
+MD5sum: c1afd0097831f7dd1925ece7115aaac4
+SHA1: 37cdc12a83903ffdc0098f77e769906936c003af
+SHA256: 9bfd3f0521cbf09a09a52a12bdcd2dd9017873e69536b3ce38bc93418ffe9002
+Description: debconf frontend for the Ubiquity live installer
+Description-md5: fa1dbae8b89fc2e16547475097735858
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ubiquity-frontend-gtk
+Priority: optional
+Section: admin
+Installed-Size: 842
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: armhf
+Source: ubiquity
+Version: 2.15.13
+Replaces: espresso-frontend-gtk, ubiquity (<< 2.4.3), ubuntu-express-frontend-gtk
+Provides: indicator-renderer, ubiquity-frontend-2.15.13
+Depends: libc6 (>= 2.4), libcairo2 (>= 1.2.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.0.0), libido3-0.1-0 (>= 13.10.0daily13.06.19), libindicator3-7 (>= 0.4.90), libx11-6, python3 (>= 3.2.3-3~), ubiquity (= 2.15.13), python3-dbus, gir1.2-gtk-3.0, gir1.2-soup-2.4, gir1.2-vte-2.90, gir1.2-webkit-3.0, iso-codes, metacity | xfwm4 | matchbox-window-manager | lubuntu-default-settings | openbox, gir1.2-xkl-1.0, gir1.2-timezonemap-1.0, gir1.2-gnomekeyring-1.0, python3-gi, python3-cairo, python3-gi-cairo, gir1.2-appindicator3-0.1, python3-oauthlib, busybox-static | busybox
+Suggests: gnome-control-center | feh
+Conflicts: espresso-frontend-gtk, ubiquity (<< 2.4.3), ubuntu-express-frontend-gtk
+Filename: pool/main/u/ubiquity/ubiquity-frontend-gtk_2.15.13_armhf.deb
+Size: 91302
+MD5sum: 2f6501f46751e1b1e9de607cbf93ad89
+SHA1: 4e0e08b5490c1a43adcc919a74286cce85809a71
+SHA256: e3a43520a6e7728ddc69155c79cb8dcf08a642437ffd91960328bcfc7a7388e9
+Description: GTK+ frontend for Ubiquity live installer
+Description-md5: 44de7bf97742fb6f9f2aaa099078ef33
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-live, ubuntu-usb-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
 Package: ubiquity-ubuntu-artwork
 Priority: optional
 Section: admin
@@ -2641,48 +2686,6 @@ Description-md5: a7bbb2b9a8b2a3fbc7110f5a8d336a36
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
-
-Package: ubuntu-artwork
-Priority: optional
-Section: gnome
-Installed-Size: 68
-Maintainer: Ubuntu Artwork Team <ubuntu-art@lists.ubuntu.com>
-Architecture: all
-Source: ubuntu-themes (13.04+13.10.20130802-0ubuntu1)
-Version: 1:13.04+13.10.20130802-0ubuntu1
-Depends: adium-theme-ubuntu, light-themes, ubuntu-mono, ubuntu-wallpapers
-Filename: pool/main/u/ubuntu-themes/ubuntu-artwork_13.04+13.10.20130802-0ubuntu1_all.deb
-Size: 8284
-MD5sum: bc933765039399c58a8fd14db7ea3cb0
-SHA1: eade73ec3563a5e4ac6e5aafe851bf049ce2618c
-SHA256: ee537f55ce92cf67ec90586f01000e2265bc483092605c20075cda3adea5c571
-Description: Ubuntu themes and artwork
-Homepage: https://launchpad.net/ubuntu-themes
-Description-md5: 0170465a4767bae89e6586555a311676
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: ubuntu-mono
-Priority: optional
-Section: gnome
-Installed-Size: 4127
-Maintainer: Ubuntu Artwork Team <ubuntu-art@lists.ubuntu.com>
-Architecture: all
-Source: ubuntu-themes
-Version: 13.04+13.10.20130802-0ubuntu1
-Depends: gnome-icon-theme, hicolor-icon-theme, humanity-icon-theme
-Filename: pool/main/u/ubuntu-themes/ubuntu-mono_13.04+13.10.20130802-0ubuntu1_all.deb
-Size: 442578
-MD5sum: e202273e0fc8027ddce5353d32b08f14
-SHA1: 28be46333e6a9a9968e60cb8d489186b5c7cfab6
-SHA256: 5074ab2f4e81b49df400e115368a35d71e99a4a148fb82f6eaf69ad3657692d6
-Description: Ubuntu Mono Icon theme
-Homepage: https://launchpad.net/ubuntu-themes
-Description-md5: 66d920db5c91b0cc1657a52014f604b8
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: unity-webapps-common
 Priority: optional
