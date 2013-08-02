@@ -15,6 +15,57 @@ SHA256: e4806f8e428396c948aff364e83356854597391f5440ea4c657ba93f813befff
 Description: set up clock
 Installer-Menu-Item: 2600
 
+Package: env-preseed
+Priority: extra
+Section: debian-installer
+Installed-Size: 39
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Source: preseed
+Version: 1.60ubuntu1
+Filename: pool/main/p/preseed/env-preseed_1.60ubuntu1_all.udeb
+Size: 1786
+MD5sum: b21ebe75bef0198d246a0f87e47085b9
+SHA1: 4b2243f7b92f28ae6ebc8e38e355290114d3ccb8
+SHA256: 17ae20d44a76e91fdd68dc5422302a3f0b1d21905a44fea2941e9f20d9e8e782
+Description: debconf preseeding via environment variables
+
+Package: file-preseed
+Priority: optional
+Section: debian-installer
+Installed-Size: 15
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Source: preseed
+Version: 1.60ubuntu1
+Depends: cdebconf-udeb, di-utils, preseed-common
+Filename: pool/main/p/preseed/file-preseed_1.60ubuntu1_all.udeb
+Size: 4096
+MD5sum: c133774c35a164170199a9705e9b28b0
+SHA1: 04fc989c089ac5055a05bcebe76b0bdf1eb28215
+SHA256: 4a9b04e0743ce55f81abc1d0c63cd5f61869177c5535cc3814159a347914f801
+Description: load debconf preseed file
+Installer-Menu-Item: 1400
+
+Package: initrd-preseed
+Priority: extra
+Section: debian-installer
+Installed-Size: 17
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Source: preseed
+Version: 1.60ubuntu1
+Depends: preseed-common
+Filename: pool/main/p/preseed/initrd-preseed_1.60ubuntu1_all.udeb
+Size: 916
+MD5sum: ddccec749c33516a12104c2634109c2d
+SHA1: 9f41d9f462a4b0b6bdaa2926f77f54949cd8042e
+SHA256: 3fce7bde65587a2592010cdab740cd8c0420f1df1d5a186cbc30023f481472fa
+Description: load debconf preseed file from /preseed.cfg on the initrd
+
 Package: libc6-udeb
 Priority: extra
 Section: debian-installer
@@ -37,6 +88,24 @@ Description: Embedded GNU C Library: Shared libraries - udeb
  .
  This package contains a minimal set of libraries needed for the Debian
  installer.  Do not install it on a normal system.
+
+Package: libdrm2-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 67
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: libdrm
+Version: 2.4.46-0ubuntu1
+Depends: libc6-udeb (>= 2.17)
+Filename: pool/main/libd/libdrm/libdrm2-udeb_2.4.46-0ubuntu1_amd64.udeb
+Size: 18016
+MD5sum: 527618cc1357a67082f9f2a891f02e11
+SHA1: 23c71c001ff65200b50104d553ffdb27c8e96724
+SHA256: 18ecad3a1589b909c94a194ee050eefe4ff60e150d4544e1ec3988a4c3d75896
+Description: Userspace interface to kernel DRM services -- runtime
+ This is a udeb, or a microdeb, for the debian-installer.
 
 Package: libnss-dns-udeb
 Priority: extra
@@ -82,39 +151,23 @@ Description: Embedded GNU C Library: NSS helper for files - udeb
  This package contains the files NSS helper needed for the Debian installer.
  Do not install it on a normal system.
 
-Package: lowmem
-Priority: optional
+Package: network-preseed
+Priority: standard
 Section: debian-installer
-Installed-Size: 22
+Installed-Size: 102
 Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
 Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Architecture: all
-Version: 1.40ubuntu1
-Depends: cdebconf-udeb
-Filename: pool/main/l/lowmem/lowmem_1.40ubuntu1_all.udeb
-Size: 1526
-MD5sum: d33c7cba5e2bfdf23924f8557236fcf8
-SHA1: 9fb890ecd122a396eadacf4297d289370cf3f448
-SHA256: 808ad7a23659baca4c7da842a1f05978e4474a6d72c26fd69c3f6433b88a1f8f
-Description: free memory for lowmem install
-Installer-Menu-Item: 2500
-
-Package: lowmemcheck
-Priority: optional
-Section: debian-installer
-Installed-Size: 40
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: amd64
-Source: lowmem
-Version: 1.40ubuntu1
-Depends: libc6-udeb (>= 2.17), cdebconf-udeb (>= 0.75), main-menu (>= 1.03)
-Filename: pool/main/l/lowmem/lowmemcheck_1.40ubuntu1_amd64.udeb
-Size: 5390
-MD5sum: 2e5d54d05b735c532d26c1ec259c9ba8
-SHA1: 3dc6690028f765febe95aba12ae2447033e6cd2e
-SHA256: b9e98b7becb3e1d8cd0e863b9be58ae60c9c89e435687f5d050fbfe3db887c12
-Description: detect low-memory systems and enter lowmem mode
+Source: preseed
+Version: 1.60ubuntu1
+Depends: cdebconf-udeb, configured-network, preseed-common
+Filename: pool/main/p/preseed/network-preseed_1.60ubuntu1_all.udeb
+Size: 30352
+MD5sum: 8ee194bebc7da2e62102d9e8661f7623
+SHA1: c65ccee98f24f2dfec30d194db63feeb52e5b453
+SHA256: 55101fed1eac527459f2a1b87c53aff54e30b0f9c60be521077609ad50d209bd
+Description: download debconf preseed file
+Installer-Menu-Item: 2100
 
 Package: oem-config-check
 Priority: standard
@@ -166,39 +219,6 @@ SHA1: 1ceba9b6575c0027f17ca1bb1d3b93e84410f6d1
 SHA256: e90039e2b44b425615e644ecab48dc97cf121b94c2226d076578e228bb4003b2
 Description: Add to partman support for btrfs
 
-Package: partman-crypto
-Priority: optional
-Section: debian-installer
-Installed-Size: 933
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: amd64
-Version: 60ubuntu1
-Depends: partman-base (>= 134), partman-lvm (>= 62), cdebconf-udeb (>= 0.133), di-utils (>= 1.68), libc6-udeb (>= 2.17)
-Filename: pool/main/p/partman-crypto/partman-crypto_60ubuntu1_amd64.udeb
-Size: 291098
-MD5sum: 0a42413b6c2d4929e3f1203274a6cc0e
-SHA1: 0a18cf3f4ce82344361760809bb514c122c53664
-SHA256: c52cda546a2938e50d0e00a1961afaa63c6075e1c592c401b0491466240cf022
-Description: Add to partman support for block device encryption
-
-Package: partman-crypto-dm
-Priority: standard
-Section: debian-installer
-Installed-Size: 41
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: all
-Source: partman-crypto
-Version: 60ubuntu1
-Depends: partman-crypto, crypto-modules, crypto-dm-modules, cryptsetup-udeb
-Filename: pool/main/p/partman-crypto/partman-crypto-dm_60ubuntu1_all.udeb
-Size: 1364
-MD5sum: 4081afe52b5116dce79eba4e7e6f7171
-SHA1: 6b2ba2e4072e4693a4631993589b299e6b0cb8ef
-SHA256: 5855ca149a663594e2206d218c1ee73965272364a6ddc2395231acfa8a04f2ba
-Description: Add to partman support for dm-crypt encryption
-
 Package: partman-ext3
 Priority: standard
 Section: debian-installer
@@ -216,19 +236,20 @@ SHA1: b725280206f2f9cf1d1387c40a39cb7faef873c6
 SHA256: 0b9a4b76e6bdb98e4bd7e5404523e6e6b7de17fee3d9f3ecd062e36117c2f351
 Description: Add to partman support for ext3 and ext4
 
-Package: partman-lvm
-Priority: optional
+Package: preseed-common
+Priority: standard
 Section: debian-installer
-Installed-Size: 1029
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 115
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
 Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Architecture: all
-Version: 85
-Depends: cdebconf-udeb (>= 0.133), partman-base (>= 134), di-utils (>= 1.14), md-modules, lvm2-udeb
-Filename: pool/main/p/partman-lvm/partman-lvm_85_all.udeb
-Size: 308918
-MD5sum: 4fa801f57a8adad2c4c7b966dec87c0d
-SHA1: 8912257eff0b6be376ec1e4d897a4695ede6f6f7
-SHA256: 63dcbafa9d933950ecb2ccc70d254ab00a5de44a74b56cab04d8da9d958cee30
-Description: Adds support for LVM to partman
+Source: preseed
+Version: 1.60ubuntu1
+Depends: cdebconf-udeb, di-utils (>= 1.58)
+Filename: pool/main/p/preseed/preseed-common_1.60ubuntu1_all.udeb
+Size: 21350
+MD5sum: 8f33a8ca1a5ed5b2acd135ccb76408e3
+SHA1: 1a83bb12cb73800eebff2917de4e7f6793fa1bb7
+SHA256: ee62b679b6f3346cc99e397f26accc57ff948271881f6b665a43a844a8d8ab23
+Description: common files for preseeding
 
