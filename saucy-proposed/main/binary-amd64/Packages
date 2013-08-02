@@ -68,6 +68,55 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: busybox-initramfs
+Priority: required
+Section: shells
+Installed-Size: 400
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: amd64
+Source: busybox
+Version: 1:1.20.0-8.1ubuntu1
+Replaces: busybox-cvs-initramfs
+Depends: libc6 (>= 2.14)
+Conflicts: busybox-cvs-initramfs
+Filename: pool/main/b/busybox/busybox-initramfs_1.20.0-8.1ubuntu1_amd64.deb
+Size: 202636
+MD5sum: b0692c68865be9cae3b8187c5c4ae06d
+SHA1: ab369e0e2740cea6affd58259138eb37fdb39f72
+SHA256: 52bb74a2399dd254a9875bca0a0d71a194886e316a88f4a7b7604e4d2cb6f747
+Description: Standalone shell setup for initramfs
+Homepage: http://www.busybox.net
+Description-md5: 07bc91bcf5e1da8f300c48c3d990ca10
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: busybox-static
+Priority: standard
+Section: shells
+Installed-Size: 2059
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: amd64
+Source: busybox
+Version: 1:1.20.0-8.1ubuntu1
+Replaces: busybox
+Conflicts: busybox
+Filename: pool/main/b/busybox/busybox-static_1.20.0-8.1ubuntu1_amd64.deb
+Size: 1023768
+MD5sum: 5b8305d11f3a98eaf569fef14d0ff06e
+SHA1: 33ae35516825b7f70bb182ac0d82cbe30ac808af
+SHA256: 113c2e1bac3334bc489786b8abb3a0dae39e0e139d4f15f9c63055cd6dec4b3b
+Description: Standalone rescue shell with tons of builtin utilities
+Homepage: http://www.busybox.net
+Description-md5: 1ccce12e08e4aa13a2e6bdd5ffb85b65
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-live
+
 Package: compiz
 Priority: optional
 Section: x11
@@ -445,93 +494,28 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-usb, edubuntu-desktop-gnome, edubuntu-usb, ubuntustudio-video, ubuntustudio-graphics
 
-Package: language-pack-gnome-it
-Priority: optional
-Section: translations
-Installed-Size: 779
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Package: iso-codes
+Priority: standard
+Section: libs
+Installed-Size: 14888
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tobias Quathamer <toddy@debian.org>
 Architecture: all
-Version: 1:13.10+20130801
-Replaces: language-pack-gnome-it (<< 1:13.10+20130801), language-pack-gnome-it-base, language-pack-it (<< 1:13.10+20130801), language-pack-it-base (<< 1:13.10+20130801), language-pack-kde-it (<< 1:13.10+20130801), language-pack-kde-it-base (<< 1:13.10+20130801)
-Depends: language-pack-gnome-it-base (>= 1:13.10+20130723), language-pack-it
-Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-gnome-it/language-pack-gnome-it_13.10+20130801_all.deb
-Size: 245072
-MD5sum: aa46c39d147b7868fd75a9eb5fced663
-SHA1: d42040f164253673377cd42d2654e6569176db9d
-SHA256: 64d3087a22db6cde58bd43807b1e4afc07969e96e2d7d5d43f37c422e7963a90
-Description: GNOME translation updates for language Italian
-Description-md5: 32f81303de09a8b4c153e2c9f933756e
+Version: 3.45-1
+Suggests: isoquery
+Filename: pool/main/i/iso-codes/iso-codes_3.45-1_all.deb
+Size: 2057230
+MD5sum: 9b06908be8e5d08fc0de45d15776f069
+SHA1: 7af7698a8e80db39b62d16f022714a5678c17246
+SHA256: b7900c0758e3dbe6a07b8e4db051217f4bd205c7216e002552610c1ed0498642
+Description: ISO language, territory, currency, script codes and their translations
+Multi-Arch: foreign
+Homepage: http://pkg-isocodes.alioth.debian.org/
+Description-md5: 9196a6f0933c66e45a8e54907bb21657
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-Task: ubuntu-usb-live, edubuntu-usb-live, lubuntu-live
-
-Package: language-pack-gnome-ja
-Priority: optional
-Section: translations
-Installed-Size: 931
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Architecture: all
-Version: 1:13.10+20130801
-Replaces: language-pack-gnome-ja (<< 1:13.10+20130801), language-pack-gnome-ja-base, language-pack-ja (<< 1:13.10+20130801), language-pack-ja-base (<< 1:13.10+20130801), language-pack-kde-ja (<< 1:13.10+20130801), language-pack-kde-ja-base (<< 1:13.10+20130801)
-Depends: language-pack-gnome-ja-base (>= 1:13.10+20130723), language-pack-ja
-Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-gnome-ja/language-pack-gnome-ja_13.10+20130801_all.deb
-Size: 263316
-MD5sum: b5e5cf6026e621918c847c11f4c3c0c8
-SHA1: 54192bd1335e5b9f64ed3874579efcecc292984f
-SHA256: 9605264ac85af26e827f26b0f74bc57a8206e95208ce87ed0e16dc046c34a193
-Description: GNOME translation updates for language Japanese
-Description-md5: 4a04c4a4bd51eccfcc200fe3c710ee1c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-usb-live, edubuntu-usb-live, xubuntu-live, lubuntu-live
-
-Package: language-pack-gnome-ko
-Priority: optional
-Section: translations
-Installed-Size: 714
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Architecture: all
-Version: 1:13.10+20130801
-Replaces: language-pack-gnome-ko (<< 1:13.10+20130801), language-pack-gnome-ko-base, language-pack-kde-ko (<< 1:13.10+20130801), language-pack-kde-ko-base (<< 1:13.10+20130801), language-pack-ko (<< 1:13.10+20130801), language-pack-ko-base (<< 1:13.10+20130801)
-Depends: language-pack-gnome-ko-base (>= 1:13.10+20130723), language-pack-ko
-Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-gnome-ko/language-pack-gnome-ko_13.10+20130801_all.deb
-Size: 219910
-MD5sum: 29ca7f744f1786711203db91cd6adbad
-SHA1: 34831d7b22d7857ad9096e60c68d621b4e7b90ce
-SHA256: 887c1c04777e3624238e159ede235b67159768ead860bc1f42452c6e81a61b13
-Description: GNOME translation updates for language Korean
-Description-md5: 4828e180b1e2aa3b76474b717ec1111f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-usb-live, edubuntu-usb-live
-
-Package: language-pack-gnome-ku
-Priority: optional
-Section: translations
-Installed-Size: 74
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Architecture: all
-Version: 1:13.10+20130801
-Replaces: language-pack-gnome-ku (<< 1:13.10+20130801), language-pack-gnome-ku-base, language-pack-kde-ku (<< 1:13.10+20130801), language-pack-kde-ku-base (<< 1:13.10+20130801), language-pack-ku (<< 1:13.10+20130801), language-pack-ku-base (<< 1:13.10+20130801)
-Depends: language-pack-gnome-ku-base (>= 1:13.10+20130723), language-pack-ku
-Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-gnome-ku/language-pack-gnome-ku_13.10+20130801_all.deb
-Size: 16488
-MD5sum: b3df62e18429c15c0864f21919081854
-SHA1: 45ef06a0f4a8cfa27c7a3c19cf7e434659b925fd
-SHA256: 6117d5544bf774db9d50ac1b561dca7139bf370205a2e45920f7fb0562fb7c11
-Description: GNOME translation updates for language Kurdish
-Description-md5: 533d53605921556aaeeabfb009c47e40
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-usb-live, edubuntu-usb-live
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: language-pack-gnome-lo
 Priority: optional
@@ -621,94 +605,6 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-usb-live, edubuntu-usb-live
 
-Package: language-pack-it
-Priority: optional
-Section: translations
-Installed-Size: 988
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Architecture: all
-Version: 1:13.10+20130801
-Replaces: language-pack-gnome-it (<< 1:13.10+20130801), language-pack-gnome-it-base (<< 1:13.10+20130801), language-pack-it (<< 1:13.10+20130801), language-pack-it-base, language-pack-kde-it (<< 1:13.10+20130801), language-pack-kde-it-base (<< 1:13.10+20130801)
-Depends: language-pack-it-base (>= 1:13.10+20130723)
-Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-it/language-pack-it_13.10+20130801_all.deb
-Size: 329348
-MD5sum: 4e6c0e6a93faffc4a1a745a9e51b65ee
-SHA1: 9d3819ba204003027cc444f9df4eeab60cc83306
-SHA256: daedd03e9f570f29acc95207bcf46b7483e1c3b2f205ac26e26fa4b2215d7fa3
-Description: translation updates for language Italian
-Description-md5: e120dba4eaa0911d53e8c96b72adf578
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-usb-live, kubuntu-active-live, kubuntu-active-live, edubuntu-usb-live, lubuntu-live
-
-Package: language-pack-ja
-Priority: optional
-Section: translations
-Installed-Size: 514
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Architecture: all
-Version: 1:13.10+20130801
-Replaces: language-pack-gnome-ja (<< 1:13.10+20130801), language-pack-gnome-ja-base (<< 1:13.10+20130801), language-pack-ja (<< 1:13.10+20130801), language-pack-ja-base, language-pack-kde-ja (<< 1:13.10+20130801), language-pack-kde-ja-base (<< 1:13.10+20130801)
-Depends: language-pack-ja-base (>= 1:13.10+20130723)
-Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-ja/language-pack-ja_13.10+20130801_all.deb
-Size: 144490
-MD5sum: f306493641f336a05c38530e55d9ec22
-SHA1: 4ea404a05144289f96ea389d40adaaa4151a9ac7
-SHA256: 67d4e34298c73a005672d7e90e0803ba4903927e67525fb6871bf35143152ac3
-Description: translation updates for language Japanese
-Description-md5: 7afb2a563f87356ed6329dc527a32e94
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-usb-live, kubuntu-active-live, kubuntu-active-live, edubuntu-usb-live, xubuntu-live, lubuntu-live
-
-Package: language-pack-ko
-Priority: optional
-Section: translations
-Installed-Size: 227
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Architecture: all
-Version: 1:13.10+20130801
-Replaces: language-pack-gnome-ko (<< 1:13.10+20130801), language-pack-gnome-ko-base (<< 1:13.10+20130801), language-pack-kde-ko (<< 1:13.10+20130801), language-pack-kde-ko-base (<< 1:13.10+20130801), language-pack-ko (<< 1:13.10+20130801), language-pack-ko-base
-Depends: language-pack-ko-base (>= 1:13.10+20130723)
-Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-ko/language-pack-ko_13.10+20130801_all.deb
-Size: 61936
-MD5sum: 49852a6f1da398f75a6ced6f752809b1
-SHA1: 721c2aa804d426b6e1db4327c14a39f5512db1d3
-SHA256: e6e2b78e539340651fe1ae31871c2d702b62bed0dead714461b89b1c5c8380d2
-Description: translation updates for language Korean
-Description-md5: 771f757939a95209894f9aa91be69bdf
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-usb-live, edubuntu-usb-live
-
-Package: language-pack-ku
-Priority: optional
-Section: translations
-Installed-Size: 46
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Architecture: all
-Version: 1:13.10+20130801
-Replaces: language-pack-gnome-ku (<< 1:13.10+20130801), language-pack-gnome-ku-base (<< 1:13.10+20130801), language-pack-kde-ku (<< 1:13.10+20130801), language-pack-kde-ku-base (<< 1:13.10+20130801), language-pack-ku (<< 1:13.10+20130801), language-pack-ku-base
-Depends: language-pack-ku-base (>= 1:13.10+20130723)
-Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-ku/language-pack-ku_13.10+20130801_all.deb
-Size: 5928
-MD5sum: 55f4ec022244896ab5c09504a86fa760
-SHA1: 94777883ef0bbb3cc00893fec2c4c1ddcf670f6d
-SHA256: 049a6d5a4bc3b9094cc5751b3e0082d3e4dd924a2c448dc09ec02c3faaed5506
-Description: translation updates for language Kurdish
-Description-md5: 3592b9815f5e61a1a402749bd9a44ccd
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-usb-live, edubuntu-usb-live
-
 Package: language-pack-mk
 Priority: optional
 Section: translations
@@ -748,6 +644,28 @@ SHA1: 8f6c984b4598e2e60fc59c87f46abe8d18965175
 SHA256: a28b009fc6e1954f5a031e7662bf539f1a9fb5faf40b759e937e23b62b608cda
 Description: translation updates for language Malay
 Description-md5: 6fac81122e8e9c5fc177bd018d9c2d5c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-nb
+Priority: optional
+Section: translations
+Installed-Size: 201
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130801
+Replaces: language-pack-gnome-nb (<< 1:13.10+20130801), language-pack-gnome-nb-base (<< 1:13.10+20130801), language-pack-kde-nb (<< 1:13.10+20130801), language-pack-kde-nb-base (<< 1:13.10+20130801), language-pack-nb (<< 1:13.10+20130801), language-pack-nb-base
+Depends: language-pack-nb-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-nb/language-pack-nb_13.10+20130801_all.deb
+Size: 60754
+MD5sum: 6f5c01ca84e93af8a92135d879315d25
+SHA1: 184870aa9e7e75514e8fc85d6d9ef07e4eeb78e2
+SHA256: 6a9dd7815dc0e3360cd83dfc636bbb2e82368225f849638a4d2c6baa09ccafd4
+Description: translation updates for language Bokmål, Norwegian; Norwegian Bokmål
+Description-md5: e5a81539419b99b61d7ff8c5a7b0985b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -2338,6 +2256,51 @@ Origin: Ubuntu
 Supported: 9m
 Task: edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
 
+Package: libvigraimpex-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 6151
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Source: libvigraimpex
+Version: 1.9.0+dfsg-6ubuntu1
+Depends: python, libvigraimpex4 (= 1.9.0+dfsg-6ubuntu1), libfftw3-dev, libpng12-dev, libjpeg-dev, libtiff5-dev
+Suggests: libvigraimpex-doc
+Filename: pool/main/libv/libvigraimpex/libvigraimpex-dev_1.9.0+dfsg-6ubuntu1_amd64.deb
+Size: 1934758
+MD5sum: c6efac443ac1e5cadbbfc4ebea6095c0
+SHA1: 107e4b971c906e37e3bece77160715043c3100fe
+SHA256: fb22f98105230d2ff795ded87f7b166c2c2368b565036c187472bcaab432d527
+Description: development files for the C++ computer vision library
+Homepage: http://hci.iwr.uni-heidelberg.de/vigra/
+Description-md5: 06bc1a091777909e5e2ab17ebcd92db0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libvigraimpex4
+Priority: optional
+Section: libs
+Installed-Size: 451
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: amd64
+Source: libvigraimpex
+Version: 1.9.0+dfsg-6ubuntu1
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libilmbase6 (>= 1.0.1), libjpeg8 (>= 8c), libopenexr6 (>= 1.6.1), libpng12-0 (>= 1.2.13-4), libstdc++6 (>= 4.4.0), libtiff5 (>> 4.0.0-1~)
+Filename: pool/main/libv/libvigraimpex/libvigraimpex4_1.9.0+dfsg-6ubuntu1_amd64.deb
+Size: 163630
+MD5sum: d8a27798382d5fe3c9bdf6a7aac908a5
+SHA1: b5d2094bda68b98630ee071d4f7a7a1e32e3995a
+SHA256: cc050c4d8d3ccf8eb70f4c673f4716353d54fe50f546e0f64693347cdd22c18d
+Description: C++ computer vision library
+Homepage: http://hci.iwr.uni-heidelberg.de/vigra/
+Description-md5: 4e10b79b88242227a01907ad6c456723
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: ltspfs
 Priority: optional
 Section: misc
@@ -3262,6 +3225,29 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: sysstat
+Priority: optional
+Section: admin
+Installed-Size: 968
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Robert Luberda <robert@debian.org>
+Architecture: amd64
+Version: 10.1.6-2
+Depends: bzip2, lsb-base (>= 3.0-6), ucf (>= 2.003), debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.14), libsensors4 (>= 1:3.0.0)
+Recommends: cron
+Suggests: isag
+Filename: pool/main/s/sysstat/sysstat_10.1.6-2_amd64.deb
+Size: 324926
+MD5sum: 63f7c0e43c52c02cfaf85e1a999af046
+SHA1: d0f1b6bded8256506f7443bb66624f187e0f89de
+SHA256: d08fedf34dc6f28e15fde88feca12d4bdabe3be51374bbea00744b5b57a67776
+Description: system performance tools for Linux
+Homepage: http://pagesperso-orange.fr/sebastien.godard/
+Description-md5: 53969a0c693353fe5d132e483e9ab770
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: texlive-binaries
 Priority: optional
 Section: tex
@@ -3430,6 +3416,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: udhcpc
+Priority: optional
+Section: net
+Installed-Size: 69
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: amd64
+Source: busybox
+Version: 1:1.20.0-8.1ubuntu1
+Depends: busybox (>> 1:1.20.0) | busybox-static (>> 1:1.20.0)
+Filename: pool/main/b/busybox/udhcpc_1.20.0-8.1ubuntu1_amd64.deb
+Size: 2528
+MD5sum: e61a892638ed660c374770ff79dbb40f
+SHA1: a4bb60ef4dfda588498a0696de210a56f66b6667
+SHA256: f24d56d23b7ab95174f4b5e5dc13c018454c5c9ecd6c8d75a27203ada1deb315
+Description: Provides the busybox DHCP client implementation
+Homepage: http://www.busybox.net
+Description-md5: a69addd7be337317bf7e51287410c758
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: unity-webapps-common
 Priority: optional
