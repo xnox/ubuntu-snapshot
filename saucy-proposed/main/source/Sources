@@ -1,6 +1,6 @@
 Package: apport
 Binary: apport, python-problem-report, python3-problem-report, python-apport, python3-apport, apport-retrace, apport-valgrind, apport-gtk, apport-kde, dh-apport
-Version: 2.12-0ubuntu1
+Version: 2.12-0ubuntu2
 Priority: optional
 Section: utils
 Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
@@ -11,9 +11,9 @@ Standards-Version: 3.9.4
 Format: 1.0
 Directory: pool/main/a/apport
 Files:
- 97df76aff5842559fcfbc18d5daf1a6d 2750 apport_2.12-0ubuntu1.dsc
+ 438711345af4d02a170afcc41fc32d93 2750 apport_2.12-0ubuntu2.dsc
  c59521e5f7f2ffcf0fdfff0d7bd05cfb 885032 apport_2.12.orig.tar.gz
- 946e934ed619934f59d81efdc4e3c3dd 130176 apport_2.12-0ubuntu1.diff.gz
+ 223bc81dac9e2b4fe5be4316c61c04db 131120 apport_2.12-0ubuntu2.diff.gz
 Homepage: https://wiki.ubuntu.com/Apport
 Vcs-Bzr: https://code.launchpad.net/~ubuntu-core-dev/ubuntu/saucy/apport/ubuntu
 Package-List: 
@@ -28,13 +28,13 @@ Package-List:
  python3-apport deb python optional
  python3-problem-report deb python optional
 Checksums-Sha1:
- 0b3d8de2b9f5349c70f584514b4dfac94043798d 2750 apport_2.12-0ubuntu1.dsc
+ 55f130b02191a9c186a1324cff99ef2bdf0d9db6 2750 apport_2.12-0ubuntu2.dsc
  1d1c2e2591e236efcb63885f71b1b1506eff330e 885032 apport_2.12.orig.tar.gz
- 64463cf131d71eca0166f3817f1213b238ad17ef 130176 apport_2.12-0ubuntu1.diff.gz
+ 1a9e31d7d9652a8d2ac359c24dc1ab23bda6e34d 131120 apport_2.12-0ubuntu2.diff.gz
 Checksums-Sha256:
- f4736a74c2315fe7e98654b851672e85511a151244b4f4ab9118a143a3055237 2750 apport_2.12-0ubuntu1.dsc
+ 3b90d11be945d769db024ba3b07dc16e42b16855052064957458bacf63cabad5 2750 apport_2.12-0ubuntu2.dsc
  a7aaa15e97c35a84eea8248ec712ef375641c836a61a55662855cdfe9bd0d5a6 885032 apport_2.12.orig.tar.gz
- 9e1fb3d7529e916ce1c035297e8eaddbcf6d01c8336582e10d5e6c9b0708bcec 130176 apport_2.12-0ubuntu1.diff.gz
+ e2ae6a91fd24a7f36fd2f39ff0928726e764651bd8257c0b99750d74b747a79a 131120 apport_2.12-0ubuntu2.diff.gz
 Testsuite: autopkgtest
 
 Package: augeas
@@ -478,33 +478,10 @@ Checksums-Sha256:
  d8875b8687a332254f06982bb3635d8ca48eed27c26e55be9fbe9c5369ef1b04 884 language-pack-af_13.10+20130801.dsc
  8e65f81869e2a98abb88f926db4d5f5c2d87ad979084203d3dadb19ab9bad9e9 21078 language-pack-af_13.10+20130801.tar.gz
 
-Package: language-pack-am
-Binary: language-pack-am
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-am
-Files:
- 96ca45cfc946af8b045d55a2f598a0c7 884 language-pack-am_13.10+20130801.dsc
- 821522164a8ce19e48fb0a2f35869d53 15283 language-pack-am_13.10+20130801.tar.gz
-Package-List: 
- language-pack-am deb translations optional
-Checksums-Sha1:
- f987da232698ced06562d44c959db3f165869549 884 language-pack-am_13.10+20130801.dsc
- 721dce6d526a81124e57072bcd4d9eba65abbb87 15283 language-pack-am_13.10+20130801.tar.gz
-Checksums-Sha256:
- 38684541f31800b0df18cc86a5f70db6ecf242e87d7b26e85c5e59ea951cc36f 884 language-pack-am_13.10+20130801.dsc
- 6e3224b4f48e1a86061929c81d47cc006ef4948a55fa544fa433eb2f4977af94 15283 language-pack-am_13.10+20130801.tar.gz
-
 Package: language-pack-an
 Binary: language-pack-an
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -528,6 +505,7 @@ Checksums-Sha256:
 Package: language-pack-az
 Binary: language-pack-az
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -574,6 +552,7 @@ Checksums-Sha256:
 Package: language-pack-csb
 Binary: language-pack-csb
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -616,30 +595,6 @@ Checksums-Sha1:
 Checksums-Sha256:
  e70f5cf4b75a1f644149e4cbd4aa2b44c4f2921e7b5b967c56e67e3b48b0d045 884 language-pack-cy_13.10+20130801.dsc
  62e4dd88c26b8f94e4ce9039e84451fade0b934c8e71aed2262d968532582b9a 13384 language-pack-cy_13.10+20130801.tar.gz
-
-Package: language-pack-en
-Binary: language-pack-en
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-en
-Files:
- 9ac15aca2d3b69a5c67c6f0c828541e7 887 language-pack-en_13.10+20130801.dsc
- 7f89beac3e84b68275ed483ab1a4cdb3 287548 language-pack-en_13.10+20130801.tar.gz
-Package-List: 
- language-pack-en deb translations optional
-Checksums-Sha1:
- c76bfa60762fecc6f37c40613bf6093a7bdd5ff0 887 language-pack-en_13.10+20130801.dsc
- 30424633be13dee77eacecc607ee46ad4a2f7fa1 287548 language-pack-en_13.10+20130801.tar.gz
-Checksums-Sha256:
- 50a0e585c3b9b91856b09f76ef4d99fb9d7460bd75e1a5c2e1794b65ae12c3fd 887 language-pack-en_13.10+20130801.dsc
- 4f1b1f1476760134f2d29f6fa55254271867d95d47d878f23956ed53ddcc67c1 287548 language-pack-en_13.10+20130801.tar.gz
 
 Package: language-pack-eo
 Binary: language-pack-eo
@@ -739,6 +694,7 @@ Checksums-Sha256:
 Package: language-pack-fo
 Binary: language-pack-fo
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -762,6 +718,7 @@ Checksums-Sha256:
 Package: language-pack-fur
 Binary: language-pack-fur
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -785,6 +742,7 @@ Checksums-Sha256:
 Package: language-pack-fy
 Binary: language-pack-fy
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -832,6 +790,7 @@ Checksums-Sha256:
 Package: language-pack-gd
 Binary: language-pack-gd
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -876,30 +835,6 @@ Checksums-Sha256:
  9f8d2ebd161b81d50630c7dfc731e4d8aa84cba6df3b215f8887822de0e7389e 920 language-pack-gnome-af_13.10+20130801.dsc
  5f01e4668994bf0840ee44f90dcf3a2b36dc5c57a5cfc71e3a18d2ddf35e2b5d 56818 language-pack-gnome-af_13.10+20130801.tar.gz
 
-Package: language-pack-gnome-am
-Binary: language-pack-gnome-am
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-am
-Files:
- ec58b89c459df4d1036ae6aade1cddec 923 language-pack-gnome-am_13.10+20130801.dsc
- 068b650cf3830889b19b5ea2728788a3 138247 language-pack-gnome-am_13.10+20130801.tar.gz
-Package-List: 
- language-pack-gnome-am deb translations optional
-Checksums-Sha1:
- 28f8b918fcbccd6ba2a8737f8e2e8f11cc8e05b5 923 language-pack-gnome-am_13.10+20130801.dsc
- cbb7595218024d3eb1feed29880bed61510c17a3 138247 language-pack-gnome-am_13.10+20130801.tar.gz
-Checksums-Sha256:
- 77a51f4252904ece5cc7c613cc0ca1aa2beb9b86f7b91d21edb7c9f66e391cb1 923 language-pack-gnome-am_13.10+20130801.dsc
- c05645220e1efc81c87bf6cd25d289c8c4c6ed8bd2997bc96458edf74df6d07f 138247 language-pack-gnome-am_13.10+20130801.tar.gz
-
 Package: language-pack-gnome-an
 Binary: language-pack-gnome-an
 Version: 1:13.10+20130801
@@ -927,6 +862,7 @@ Checksums-Sha256:
 Package: language-pack-gnome-as
 Binary: language-pack-gnome-as
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -950,6 +886,7 @@ Checksums-Sha256:
 Package: language-pack-gnome-az
 Binary: language-pack-gnome-az
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -996,6 +933,7 @@ Checksums-Sha256:
 Package: language-pack-gnome-crh
 Binary: language-pack-gnome-crh
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -1019,6 +957,7 @@ Checksums-Sha256:
 Package: language-pack-gnome-csb
 Binary: language-pack-gnome-csb
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -1065,6 +1004,7 @@ Checksums-Sha256:
 Package: language-pack-gnome-dv
 Binary: language-pack-gnome-dv
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -1088,6 +1028,7 @@ Checksums-Sha256:
 Package: language-pack-gnome-dz
 Binary: language-pack-gnome-dz
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -1107,30 +1048,6 @@ Checksums-Sha1:
 Checksums-Sha256:
  365d59095f58a41db2de342d916f39f8542bd58ca25a6e7840aa72faa2f37dd8 923 language-pack-gnome-dz_13.10+20130801.dsc
  c5bbb6b66130b3b643da2b6fc30dc32f3fe8c209a82dc30cebd08334983f6317 236835 language-pack-gnome-dz_13.10+20130801.tar.gz
-
-Package: language-pack-gnome-en
-Binary: language-pack-gnome-en
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-en
-Files:
- 2bd1facbb2c10e9b7f87c8ad64bda1d7 923 language-pack-gnome-en_13.10+20130801.dsc
- a3ca003b9a08ab86f10a5722665d0bc7 391869 language-pack-gnome-en_13.10+20130801.tar.gz
-Package-List: 
- language-pack-gnome-en deb translations optional
-Checksums-Sha1:
- 75bb18b6b14f5307dae4bba9c72adb36dc965453 923 language-pack-gnome-en_13.10+20130801.dsc
- b8c153616ec51d79c87781842cfcfa1a4fbdf6ea 391869 language-pack-gnome-en_13.10+20130801.tar.gz
-Checksums-Sha256:
- 48a2255bf5701f1aabe914fe01ae0d916133ca57f4fe10812edde5154d4188d2 923 language-pack-gnome-en_13.10+20130801.dsc
- 6103647e9a6c920b9153c5282026da073c86eb81aec592bb3e5c9aab87d60f8e 391869 language-pack-gnome-en_13.10+20130801.tar.gz
 
 Package: language-pack-gnome-eo
 Binary: language-pack-gnome-eo
@@ -1230,6 +1147,7 @@ Checksums-Sha256:
 Package: language-pack-gnome-fo
 Binary: language-pack-gnome-fo
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -1253,6 +1171,7 @@ Checksums-Sha256:
 Package: language-pack-gnome-fur
 Binary: language-pack-gnome-fur
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -1276,6 +1195,7 @@ Checksums-Sha256:
 Package: language-pack-gnome-fy
 Binary: language-pack-gnome-fy
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -1323,6 +1243,7 @@ Checksums-Sha256:
 Package: language-pack-gnome-gd
 Binary: language-pack-gnome-gd
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -1856,6 +1777,7 @@ Checksums-Sha256:
 Package: language-pack-gnome-my
 Binary: language-pack-gnome-my
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -1990,30 +1912,6 @@ Checksums-Sha1:
 Checksums-Sha256:
  64c9be401df04e4b5bc4e6fab1786ccd2efc4e5bb703d2d86778dcfb45a822fe 923 language-pack-gnome-pa_13.10+20130801.dsc
  86a3f947d81f8c0b1db50b41786987c043ec5bb9cd6afea4359721d074107b78 259775 language-pack-gnome-pa_13.10+20130801.tar.gz
-
-Package: language-pack-gnome-rw
-Binary: language-pack-gnome-rw
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-rw
-Files:
- f3c0773dda3afbb1b27a42682c3583ae 923 language-pack-gnome-rw_13.10+20130801.dsc
- 11abe2365b2047aa52db86592545e76b 175156 language-pack-gnome-rw_13.10+20130801.tar.gz
-Package-List: 
- language-pack-gnome-rw deb translations optional
-Checksums-Sha1:
- 91d3fe535071c080d743a1671cc462c9df0b22f9 923 language-pack-gnome-rw_13.10+20130801.dsc
- e69d87b1ecf4d63c82d9d2282e62d68886e4be6b 175156 language-pack-gnome-rw_13.10+20130801.tar.gz
-Checksums-Sha256:
- bd9369e168d6145a0eedccee720e4b2325df96482c1876246cbd8931c1fdb13d 923 language-pack-gnome-rw_13.10+20130801.dsc
- e62c941a69751390f0c2716724f433bd4eca2d7ab800af8364218fbcd800fa05 175156 language-pack-gnome-rw_13.10+20130801.tar.gz
 
 Package: language-pack-gnome-sa
 Binary: language-pack-gnome-sa
@@ -2269,54 +2167,6 @@ Checksums-Sha256:
  03abec25c78e05ed5473cb4e3315140d8d8ad37daf672adf124b843510308a86 917 language-pack-gnome-tt_13.10+20130801.dsc
  c16f321214700a1d8d7bbbdd23159912f4fd911cb1d6ab1ba4cd0e402b8554fa 9091 language-pack-gnome-tt_13.10+20130801.tar.gz
 
-Package: language-pack-gnome-uk
-Binary: language-pack-gnome-uk
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-uk
-Files:
- 61bddd6368d6968ef17798029de7a3d0 923 language-pack-gnome-uk_13.10+20130801.dsc
- 631c01616d50e4c7d40af9c814803a11 373540 language-pack-gnome-uk_13.10+20130801.tar.gz
-Package-List: 
- language-pack-gnome-uk deb translations optional
-Checksums-Sha1:
- d9207092a07d5e7015260994d95f603553de966a 923 language-pack-gnome-uk_13.10+20130801.dsc
- 42a609a8f394f6e53986352f5e2e999ff65502ef 373540 language-pack-gnome-uk_13.10+20130801.tar.gz
-Checksums-Sha256:
- f5465921d7d47f8a5b892fa5c27b17c52b8b26ca2846ba7a4723e9479c505a12 923 language-pack-gnome-uk_13.10+20130801.dsc
- a0230764a3abea591b77666965b7c328aaf9ba356341e3958849b9ce5c2b327b 373540 language-pack-gnome-uk_13.10+20130801.tar.gz
-
-Package: language-pack-gnome-ur
-Binary: language-pack-gnome-ur
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-ur
-Files:
- e27f28bded5dc3cb054f90eed2a56185 917 language-pack-gnome-ur_13.10+20130801.dsc
- 9116162f6c8490d4c0f676e6e231cfbb 9026 language-pack-gnome-ur_13.10+20130801.tar.gz
-Package-List: 
- language-pack-gnome-ur deb translations optional
-Checksums-Sha1:
- b893075e56c55880040d00b1af11b5cafea2e403 917 language-pack-gnome-ur_13.10+20130801.dsc
- ab98466c8e87858dabc7b94bc654553d9d4e0252 9026 language-pack-gnome-ur_13.10+20130801.tar.gz
-Checksums-Sha256:
- c1ea4d5e3733e78f8321cef27be39c9cc4bc7bd7a17975b77c79cb9a54456633 917 language-pack-gnome-ur_13.10+20130801.dsc
- 2c96a3839dcd90cdf88c290664d1fbd6ad4aef2d0f16dfbbca69f5dcec0ff5a3 9026 language-pack-gnome-ur_13.10+20130801.tar.gz
-
 Package: language-pack-gnome-uz
 Binary: language-pack-gnome-uz
 Version: 1:13.10+20130801
@@ -2339,30 +2189,6 @@ Checksums-Sha1:
 Checksums-Sha256:
  0808b59c00c93ae50ce04e472275bf870c6aef67c5f614528ee35407117ffb61 920 language-pack-gnome-uz_13.10+20130801.dsc
  d29f6b4f8c7aa4014064f9fb87699198ed0b26c037d7006a406a550827157496 42397 language-pack-gnome-uz_13.10+20130801.tar.gz
-
-Package: language-pack-gnome-vi
-Binary: language-pack-gnome-vi
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-vi
-Files:
- 1aa933c1884f482abc7ae9ccc71f3d25 923 language-pack-gnome-vi_13.10+20130801.dsc
- 3808c0766f629ecda1769b94d0a54642 336605 language-pack-gnome-vi_13.10+20130801.tar.gz
-Package-List: 
- language-pack-gnome-vi deb translations optional
-Checksums-Sha1:
- b621861181f31af5662aaa4867120c56c19b920a 923 language-pack-gnome-vi_13.10+20130801.dsc
- a56b87c4026e38d15860342f1f8550668977e234 336605 language-pack-gnome-vi_13.10+20130801.tar.gz
-Checksums-Sha256:
- f7277eef257306cd7cabe899897cbf85f8fa7415a9ab90a64c32ab8bd9e86c78 923 language-pack-gnome-vi_13.10+20130801.dsc
- bd9dd7c9474fb8523364ad7ec881780fe818cd4550e8ed70a25d7b7af9a62493 336605 language-pack-gnome-vi_13.10+20130801.tar.gz
 
 Package: language-pack-gnome-wa
 Binary: language-pack-gnome-wa
@@ -2409,54 +2235,6 @@ Checksums-Sha1:
 Checksums-Sha256:
  53dcf2d79aa4daa3777e058f0720fc5976cc4bfc3f83cc833ed4d08771cd4514 917 language-pack-gnome-xh_13.10+20130801.dsc
  8c1da14b4df0bd8f6e5fbfc545dccb9a3178e4e1eea2874e890c2c5aad6f86cb 9085 language-pack-gnome-xh_13.10+20130801.tar.gz
-
-Package: language-pack-gnome-zh-hans
-Binary: language-pack-gnome-zh-hans
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-zh-hans
-Files:
- d1ef40e3df1298bc677a7ee6079038c2 953 language-pack-gnome-zh-hans_13.10+20130801.dsc
- 3436e23e9e0c35e5681a542c1da54f21 331700 language-pack-gnome-zh-hans_13.10+20130801.tar.gz
-Package-List: 
- language-pack-gnome-zh-hans deb translations optional
-Checksums-Sha1:
- fff1c65a7801a0c531920b48ad2010d5deb8f7fd 953 language-pack-gnome-zh-hans_13.10+20130801.dsc
- c5f6495756e108aaa4e43fa9e9e4a20a5e13e01e 331700 language-pack-gnome-zh-hans_13.10+20130801.tar.gz
-Checksums-Sha256:
- 8fcb3a9ecfbf0331cc83de871250f4332e1295f1ee6eca5d7539ce4d50d541fd 953 language-pack-gnome-zh-hans_13.10+20130801.dsc
- 820ea4d7eb26cb0f4e60d02d38707988f9f71889547a400cfb22044a6594293a 331700 language-pack-gnome-zh-hans_13.10+20130801.tar.gz
-
-Package: language-pack-gnome-zh-hant
-Binary: language-pack-gnome-zh-hant
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-zh-hant
-Files:
- 0e2666f7a8d1abc9721d3727a7d07412 953 language-pack-gnome-zh-hant_13.10+20130801.dsc
- fdb5a834e2bf079968f988e81ce22846 660994 language-pack-gnome-zh-hant_13.10+20130801.tar.gz
-Package-List: 
- language-pack-gnome-zh-hant deb translations optional
-Checksums-Sha1:
- ed56b64a791cdd3a33b000317e7d8e64b07736e6 953 language-pack-gnome-zh-hant_13.10+20130801.dsc
- a657d8018150ce4a2166e263686713948c6b17a2 660994 language-pack-gnome-zh-hant_13.10+20130801.tar.gz
-Checksums-Sha256:
- 746ac0d7e8372c35ee49915d4b4438fd7ce48ca22d525faf1428ef3de7e41957 953 language-pack-gnome-zh-hant_13.10+20130801.dsc
- 0b482cb002bc9a3578ff3bf464091ddeff5c153c9e984406301c767383ec3228 660994 language-pack-gnome-zh-hant_13.10+20130801.tar.gz
 
 Package: language-pack-gnome-zu
 Binary: language-pack-gnome-zu
@@ -2878,6 +2656,7 @@ Checksums-Sha256:
 Package: language-pack-my
 Binary: language-pack-my
 Version: 1:13.10+20130801
+Priority: optional
 Section: translations
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Build-Depends: debhelper (>= 8)
@@ -2989,30 +2768,6 @@ Checksums-Sha1:
 Checksums-Sha256:
  90ae931fad56d158b8c424d40d2a3fe260332ba82f2dee3daaf99dc1c03dd8cb 884 language-pack-pa_13.10+20130801.dsc
  02d2ef42f5ddea02896916f9bf6efa67afcf74e3aea45ebf7c4a11b6b6b6763e 19626 language-pack-pa_13.10+20130801.tar.gz
-
-Package: language-pack-rw
-Binary: language-pack-rw
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-rw
-Files:
- ade01a19d6cff9256bfb7d0918d0bb44 884 language-pack-rw_13.10+20130801.dsc
- 23f5a2c20a081feb09ae671e12486358 46687 language-pack-rw_13.10+20130801.tar.gz
-Package-List: 
- language-pack-rw deb translations optional
-Checksums-Sha1:
- b848adfea8c4d7990fad55c66531ae195dcf307b 884 language-pack-rw_13.10+20130801.dsc
- 3b00c45fc85b7bd50906a518e83e192ca2997e74 46687 language-pack-rw_13.10+20130801.tar.gz
-Checksums-Sha256:
- 02ccd7f56654241326e06fd1a85ce0d533cf88c21bf17cdb2f12a0f3ed22952b 884 language-pack-rw_13.10+20130801.dsc
- 450b14fcbaeb8aa7e2a60df03ed5a38330da87d40c8f467f47fb3f303d54da1d 46687 language-pack-rw_13.10+20130801.tar.gz
 
 Package: language-pack-sc
 Binary: language-pack-sc
@@ -3199,78 +2954,6 @@ Checksums-Sha256:
  0df152164c7ce453f12618078d261240c0aa324c29255fa7bd3af82f570bab64 884 language-pack-tl_13.10+20130801.dsc
  c630130658b9b5adec3dde8ff1ba12eccc714837b6bed812da405c5f734a0819 14674 language-pack-tl_13.10+20130801.tar.gz
 
-Package: language-pack-ug
-Binary: language-pack-ug
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-ug
-Files:
- a10dd547ae986449ca10a50e49a81f3b 887 language-pack-ug_13.10+20130801.dsc
- b272895fb97859bd78dc0c30c881040a 168887 language-pack-ug_13.10+20130801.tar.gz
-Package-List: 
- language-pack-ug deb translations optional
-Checksums-Sha1:
- 6aecf2dbd806bb33562e9782c08b52ef5751c8f3 887 language-pack-ug_13.10+20130801.dsc
- 02e92d171711f6adda446ae60d75b5eb5606a814 168887 language-pack-ug_13.10+20130801.tar.gz
-Checksums-Sha256:
- 3d480090ba0e437d049ff6646c004913f57c813a7043e8357219a165e859b63a 887 language-pack-ug_13.10+20130801.dsc
- a4fb81e95df61ce8f4b53ce418342ef529b5df9d93203fba3fdeb6e2640087b2 168887 language-pack-ug_13.10+20130801.tar.gz
-
-Package: language-pack-uk
-Binary: language-pack-uk
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-uk
-Files:
- 53c584d16da62f3019994c0cd8c0db30 887 language-pack-uk_13.10+20130801.dsc
- 26bb1759f98f6e035944f451845af514 709999 language-pack-uk_13.10+20130801.tar.gz
-Package-List: 
- language-pack-uk deb translations optional
-Checksums-Sha1:
- df641f7f2b675ca2d869e51c523341c6faf9ed81 887 language-pack-uk_13.10+20130801.dsc
- df73b6d0df8e2bf4e33f08dd3e466d2f88bf164b 709999 language-pack-uk_13.10+20130801.tar.gz
-Checksums-Sha256:
- 4d99d5e8fe832e03c239557fdc6e7ed64afd2ebef76f07821a00c7ede45992fa 887 language-pack-uk_13.10+20130801.dsc
- eaae85c171296148cb1129aee9decfa0ee6915d4af5febfbf8e0a98c49d01de1 709999 language-pack-uk_13.10+20130801.tar.gz
-
-Package: language-pack-ur
-Binary: language-pack-ur
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-ur
-Files:
- 5bd126221aebe863935646585d431817 884 language-pack-ur_13.10+20130801.dsc
- 7e3303bac6a144711a57b07b73b3e337 13238 language-pack-ur_13.10+20130801.tar.gz
-Package-List: 
- language-pack-ur deb translations optional
-Checksums-Sha1:
- d5c303546fe8afc7c165b8ccc5b0200f635f5a9d 884 language-pack-ur_13.10+20130801.dsc
- aeb25efc408c2a6d27dcad4069133cd60fe5b6ce 13238 language-pack-ur_13.10+20130801.tar.gz
-Checksums-Sha256:
- 8865fd14db9e86e54ee1f01f65c83509a4df541b48b58f640930f509d94092d2 884 language-pack-ur_13.10+20130801.dsc
- e296f031b4fb0506f17961ff74d85aa4d3f468eba7b89acef7bf252dbee4ee36 13238 language-pack-ur_13.10+20130801.tar.gz
-
 Package: language-pack-uz
 Binary: language-pack-uz
 Version: 1:13.10+20130801
@@ -3293,30 +2976,6 @@ Checksums-Sha1:
 Checksums-Sha256:
  15cb1ccc5fe9a591a758fe106570be3de3ec3ea6c798cacf466fbb2b478f6427 884 language-pack-uz_13.10+20130801.dsc
  4d5a9219506f3fb20cdbf51b62c8878703991b4557d893cbb782f1ade79868e2 16216 language-pack-uz_13.10+20130801.tar.gz
-
-Package: language-pack-vi
-Binary: language-pack-vi
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-vi
-Files:
- c11e76e413e11c72ee602d2a9a7b7476 887 language-pack-vi_13.10+20130801.dsc
- 6ba43d06290ff4abd7faf0424520662b 191497 language-pack-vi_13.10+20130801.tar.gz
-Package-List: 
- language-pack-vi deb translations optional
-Checksums-Sha1:
- 2b185478bf9a83f092ed20f0bca2321e687f3940 887 language-pack-vi_13.10+20130801.dsc
- 38ab1d08e6f677fb9b3278ffc93451a125664dc8 191497 language-pack-vi_13.10+20130801.tar.gz
-Checksums-Sha256:
- d76b3fc82d0a4e9aa1014c4938e4a3586837477b0a0c7a7b64e2cbedc896afed 887 language-pack-vi_13.10+20130801.dsc
- d03776d8499bde5db35e98814239064858657e4e890603bcf250fab1d7e7eca0 191497 language-pack-vi_13.10+20130801.tar.gz
 
 Package: language-pack-wae
 Binary: language-pack-wae
@@ -3363,54 +3022,6 @@ Checksums-Sha1:
 Checksums-Sha256:
  cbef82322a1c6449d9769cc4914305b15bbed94356690a5e74e723f1733164a3 884 language-pack-xh_13.10+20130801.dsc
  c35778f557764a2affafce18f3f8d3ebd272ac83b79079dfa6f53a29b10e592b 13112 language-pack-xh_13.10+20130801.tar.gz
-
-Package: language-pack-zh-hans
-Binary: language-pack-zh-hans
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-zh-hans
-Files:
- aaa6e564c78bbcf31775404a07015f79 917 language-pack-zh-hans_13.10+20130801.dsc
- 9d294d5683149c5814b6ee83c5d9595c 607956 language-pack-zh-hans_13.10+20130801.tar.gz
-Package-List: 
- language-pack-zh-hans deb translations optional
-Checksums-Sha1:
- d525d83ed9f594149782fc1be877c32c55bb71dd 917 language-pack-zh-hans_13.10+20130801.dsc
- eaaa9468b2648789f097e8cae3471760ce8a57a0 607956 language-pack-zh-hans_13.10+20130801.tar.gz
-Checksums-Sha256:
- 5b07500fe6c9b77e13c103cfcaee7e9132b51fd165961adff437379df97ee4f5 917 language-pack-zh-hans_13.10+20130801.dsc
- c661371793d3888f625106712e2ddb369505e95e8c60d4879d41399136f4654b 607956 language-pack-zh-hans_13.10+20130801.tar.gz
-
-Package: language-pack-zh-hant
-Binary: language-pack-zh-hant
-Version: 1:13.10+20130801
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-zh-hant
-Files:
- 67dd23bc4455bcd971604aa8b5583ca8 917 language-pack-zh-hant_13.10+20130801.dsc
- 181707aaa970aa220adf4e8561f89283 203416 language-pack-zh-hant_13.10+20130801.tar.gz
-Package-List: 
- language-pack-zh-hant deb translations optional
-Checksums-Sha1:
- 3f49cb0771684ae034a83926e1ac0c874d713b79 917 language-pack-zh-hant_13.10+20130801.dsc
- 516e097825a1326a5411f6e11b1a16aa63da46d6 203416 language-pack-zh-hant_13.10+20130801.tar.gz
-Checksums-Sha256:
- d940b3b2c19dce6461291a143fbe715b7e847135c2d6fbaf920dc4fd1d3782e1 917 language-pack-zh-hant_13.10+20130801.dsc
- 11d79c6653d428cda3493f5f736969ce17d98cf6b9eb48c4b52cd3eb9a0f487a 203416 language-pack-zh-hant_13.10+20130801.tar.gz
 
 Package: libav
 Binary: libav-tools, ffmpeg, ffmpeg-doc, libav-doc, libavutil51, libavcodec53, libavdevice53, libavformat53, libavfilter2, libpostproc52, libswscale2, libavutil-dev, libavcodec-dev, libavdevice-dev, libavformat-dev, libavfilter-dev, libpostproc-dev, libswscale-dev, libav-source
