@@ -207,6 +207,48 @@ Origin: Ubuntu
 Supported: 9m
 Task: cloud-image
 
+Package: command-not-found
+Priority: standard
+Section: admin
+Installed-Size: 52
+Maintainer: Michael Vogt <michael.vogt@ubuntu.com>
+Original-Maintainer: Zygmunt Krynicki <zkrynicki@gmail.com>
+Architecture: all
+Version: 0.3ubuntu7.1
+Depends: python3-commandnotfound (>= 0.3ubuntu7)
+Filename: pool/main/c/command-not-found/command-not-found_0.3ubuntu7.1_all.deb
+Size: 3610
+MD5sum: 07cc15a92a617efca6e2e84d00ac6d47
+SHA1: 381fca31172a83e59d71697834cf73367183c78c
+SHA256: b49c49129fb4d60003c8ca1b0813d210a09bb16be4cc2b2163ec46d424bd422e
+Description: Suggest installation of packages in interactive bash sessions
+Description-md5: add5e86211cf27a4446f18bd0c777aa8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active
+
+Package: command-not-found-data
+Priority: standard
+Section: admin
+Installed-Size: 2568
+Maintainer: Michael Vogt <michael.vogt@ubuntu.com>
+Original-Maintainer: Zygmunt Krynicki <zkrynicki@gmail.com>
+Architecture: i386
+Source: command-not-found
+Version: 0.3ubuntu7.1
+Filename: pool/main/c/command-not-found/command-not-found-data_0.3ubuntu7.1_i386.deb
+Size: 1035826
+MD5sum: 21b0321459246cccac0dcc1fa7e7f10d
+SHA1: 737710d57b590e95706f18bde1e2655e78dd25e1
+SHA256: 6f20d92090d18f132220e8e278bca2a4124464781f266cc310383c71d7ec6e3a
+Description: Set of data files for command-not-found.
+Description-md5: 730a06588855602fe72d37b151efeed2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active
+
 Package: cups
 Priority: optional
 Section: net
@@ -2107,6 +2149,53 @@ Description-md5: 9b1d7a0b3e6a2ea021f4443f42dcff4f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: libplymouth-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 497
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: plymouth
+Version: 0.8.8-0ubuntu6.2
+Replaces: plymouth (<< 0.7.0+git20090207-0ubuntu0.1~ppa4)
+Depends: libplymouth2 (= 0.8.8-0ubuntu6.2)
+Filename: pool/main/p/plymouth/libplymouth-dev_0.8.8-0ubuntu6.2_i386.deb
+Size: 112088
+MD5sum: fc299589ed2b26c6dfca202dc3ad7848
+SHA1: c8cf40143166405121f560a297c9f91efb779739
+SHA256: d475c4c32e69ec1c957b98da0751ffaf77f3f7b54f5e975496cadea72e10a8e0
+Description: graphical boot animation and logger - development files
+Multi-Arch: same
+Description-md5: 2788897f3e5c5b2f91c898358099697e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libplymouth2
+Priority: required
+Section: libs
+Installed-Size: 301
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: plymouth
+Version: 0.8.8-0ubuntu6.2
+Replaces: plymouth (<< 0.7.0+git20090207-0ubuntu0.1~ppa4)
+Depends: libc6 (>= 2.8), libpng12-0 (>= 1.2.13-4)
+Pre-Depends: multiarch-support
+Breaks: casper (= 1.227), mountall (<< 2.8)
+Filename: pool/main/p/plymouth/libplymouth2_0.8.8-0ubuntu6.2_i386.deb
+Size: 100494
+MD5sum: ea628046b67989821c93da0a9b77345e
+SHA1: 44ba732819b59a84174c5f380d8dfd482fa7b268
+SHA256: 8ed2e973b132cb17364105ed577d01e8bcb13d7157d95e7470d684ca85335927
+Description: graphical boot animation and logger - shared libraries
+Multi-Arch: same
+Description-md5: 29e2ed45f3e127c38b58dae52061cc33
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
 
 Package: libpython2.7
 Priority: optional
@@ -5237,6 +5326,97 @@ Origin: Ubuntu
 Supported: 9m
 Task: minimal
 
+Package: plymouth
+Priority: required
+Section: x11
+Installed-Size: 444
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Version: 0.8.8-0ubuntu6.2
+Depends: libc6 (>= 2.8), libdbus-1-3 (>= 1.1.1), libdrm2 (>= 2.4.25), libplymouth2 (= 0.8.8-0ubuntu6.2), libtinfo5, upstart-job, udev (>= 166-0ubuntu4), mountall (>= 2.0), initramfs-tools
+Recommends: plymouth-theme-ubuntu-text | plymouth-theme
+Conflicts: usplash
+Breaks: gdm (<< 3.0.4-0ubuntu11), kdm (<< 4:4.7.1-0ubuntu3), lightdm (<< 0.9.7-0ubuntu2), lubuntu-plymouth-theme (<= 0.4), lxdm (<< 0.4.1-0ubuntu2), ubuntustudio-plymouth-theme (<= 0.38), xubuntu-plymouth-theme (<< 10.04.4)
+Filename: pool/main/p/plymouth/plymouth_0.8.8-0ubuntu6.2_i386.deb
+Size: 127326
+MD5sum: 7ca9fa5e1fcfd680566ab53cf0191075
+SHA1: 3ec8802dbaa5db4f080554710d8b495c9c4bc41e
+SHA256: 92779260a85fef4aff90c7488b7e426786e5f306f352aeaca5d104e120b6fa88
+Description: graphical boot animation and logger - main package
+Description-md5: 36dd6c0b2d2e2968eb795981d2b48521
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: plymouth-label
+Priority: optional
+Section: x11
+Installed-Size: 64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: plymouth
+Version: 0.8.8-0ubuntu6.2
+Replaces: plymouth (<< 0.8.1-4)
+Depends: libc6 (>= 2.3.6-6~), libcairo2 (>= 1.2.4), libglib2.0-0 (>= 2.12.0), libpango1.0-0 (>= 1.14.0), libplymouth2 (= 0.8.8-0ubuntu6.2), plymouth (= 0.8.8-0ubuntu6.2), ttf-dejavu-core
+Filename: pool/main/p/plymouth/plymouth-label_0.8.8-0ubuntu6.2_i386.deb
+Size: 5886
+MD5sum: 312e2eee409f5c17130c66bd50673001
+SHA1: 1138dc9c574ab1c731e5ccaa507c5874618eb2c0
+SHA256: 9387b964b159853cc99e01fbfc6eaa262481a3f396f06b9015e935e52c041583
+Description: graphical boot animation and logger - label control
+Description-md5: 5811f727790d0292c01a69a6fb2044fe
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: plymouth-theme-ubuntu-logo
+Priority: optional
+Section: x11
+Installed-Size: 106
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: plymouth
+Version: 0.8.8-0ubuntu6.2
+Replaces: plymouth (<< 0.8.1-1~)
+Provides: plymouth-theme
+Depends: plymouth, plymouth-label
+Filename: pool/main/p/plymouth/plymouth-theme-ubuntu-logo_0.8.8-0ubuntu6.2_i386.deb
+Size: 19910
+MD5sum: 35278d8fda122d663ffb0186771b2d02
+SHA1: 4701d9218f328c499fba6d80f3b2f4f081cc1586
+SHA256: 24e9b9fab836c4d32fcb25a52826fa0596d97b7ee13fa3f94f42d45203085c03
+Description: graphical boot animation and logger - ubuntu-logo theme
+Description-md5: 8d874d448c1e27d2eef5a053231911ed
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: plymouth-theme-ubuntu-text
+Priority: standard
+Section: x11
+Installed-Size: 81
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: plymouth
+Version: 0.8.8-0ubuntu6.2
+Replaces: plymouth (<< 0.8.1-1~)
+Provides: plymouth-theme
+Depends: libc6 (>= 2.1.3), libplymouth2 (>= 0.8.0~-13~ppa1), plymouth
+Filename: pool/main/p/plymouth/plymouth-theme-ubuntu-text_0.8.8-0ubuntu6.2_i386.deb
+Size: 9112
+MD5sum: 4aa46cb0d63510344bc1869937fc5e7d
+SHA1: 2efbd1e03b2952ce8b61f7e3bc2a21af5edc9c0a
+SHA256: 97216d9621656aace7dd42b57b42015d290ca9d12a1abbcd96177948d042691b
+Description: graphical boot animation and logger - ubuntu-logo theme
+Description-md5: e64a5fbd685fee7e5864ea3986a54164
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active
+
 Package: python-apport
 Priority: optional
 Section: python
@@ -5633,6 +5813,29 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: python3-commandnotfound
+Priority: standard
+Section: python
+Installed-Size: 61
+Maintainer: Michael Vogt <michael.vogt@ubuntu.com>
+Original-Maintainer: Zygmunt Krynicki <zkrynicki@gmail.com>
+Architecture: all
+Source: command-not-found
+Version: 0.3ubuntu7.1
+Replaces: command-not-found (<< 0.3ubuntu7)
+Depends: command-not-found-data, lsb-release, python3-apt, python3-gdbm, python3 (>= 3.2.3-3~)
+Filename: pool/main/c/command-not-found/python3-commandnotfound_0.3ubuntu7.1_all.deb
+Size: 5734
+MD5sum: d1c8ea32f803abe81be7f9ef853d40df
+SHA1: 07de4321fe4c62353f010feac92a498044632f14
+SHA256: 8d33bfddb6c134925277c28f8c7283a71c2bee69f391760e8ded0580b007791c
+Description: Python 3 bindings for command-not-found.
+Description-md5: 4dcdbcb28916025709b3793075a2eae5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active
 
 Package: python3-gi
 Priority: standard
