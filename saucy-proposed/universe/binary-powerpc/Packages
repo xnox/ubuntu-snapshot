@@ -1252,28 +1252,6 @@ Description-md5: 7dd3852802393d6f919ced58e5537628
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: eglibc-source
-Priority: optional
-Section: universe/devel
-Installed-Size: 23922
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
-Architecture: all
-Source: eglibc
-Version: 2.17-91ubuntu1
-Recommends: xz-utils
-Filename: pool/universe/e/eglibc/eglibc-source_2.17-91ubuntu1_all.deb
-Size: 14087312
-MD5sum: e1d480cf44fc4d6e347000379b37c4f8
-SHA1: a344ef4da07c029db5367561e66199f16e8c1de8
-SHA256: 0de5e13e1703aa05fa68241223bfc1feb8bf77864faf3e52060dcec2e3c43140
-Description: Embedded GNU C Library: sources
-Multi-Arch: foreign
-Homepage: http://www.eglibc.org
-Description-md5: e4d1c2960e50de66688b8a889117873c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: emscripten
 Priority: extra
 Section: universe/devel
@@ -1334,6 +1312,742 @@ SHA256: caa040c7ffd510ebe90ddc8c95af05c9e15c3d5334f465c6d4e57cd1986c7f71
 Description: collection of tools for reading and writing EWF files
 Homepage: http://code.google.com/p/libewf/
 Description-md5: 25b25cbc27f90b45552ddd81ceec8b64
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx
+Priority: optional
+Section: universe/utils
+Installed-Size: 57
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: all
+Version: 1:4.2.8.1-2
+Depends: fcitx-bin, fcitx-data, fcitx-modules
+Recommends: fcitx-config-gtk | kde-config-fcitx, fcitx-frontend-all | fcitx-frontend-fbterm, fcitx-ui-classic | fcitx-ui-light, im-config (>= 0.5) | im-switch
+Suggests: fcitx-tools, fcitx-m17n
+Filename: pool/universe/f/fcitx/fcitx_4.2.8.1-2_all.deb
+Size: 5696
+MD5sum: 15c2e7ebc5397ba797c641cc163335b5
+SHA1: 998b8f6c6a276f7ce0e90c7f224b71c61f313e4b
+SHA256: c858fb3c099a767881d8e39cbdd8bba2ba077c88e70ca2033d29533c0721c575
+Description: Flexible Input Method Framework
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: bb21ec6d5296fba56418f43e299b26e5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-bin
+Priority: optional
+Section: universe/utils
+Installed-Size: 213
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7)
+Depends: fcitx-libs (>= 4.2.8.1), libc6 (>= 2.15), libdbus-1-3 (>= 1.1.1), libgettextpo0
+Recommends: fcitx-data, fcitx-modules
+Suggests: fcitx (>= 1:4.2.7)
+Breaks: fcitx (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-bin_4.2.8.1-2_powerpc.deb
+Size: 47050
+MD5sum: c42d1acf6114221a0b86124ed612d057
+SHA1: 8b81d405cf42cc3f28a1f2d1f617ca92a0874161
+SHA256: bd79c438b12d3e8ed0d8a301c90edeec8ebd1661bd0d16c798754535888f00d2
+Description: Flexible Input Method Framework - essential binaries
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: a70b7cf7a11ff0928fcaaa9fc46e0098
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-data
+Priority: optional
+Section: universe/utils
+Installed-Size: 652
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: all
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7)
+Recommends: fcitx-bin
+Suggests: fcitx (>= 1:4.2.7)
+Breaks: fcitx (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-data_4.2.8.1-2_all.deb
+Size: 187332
+MD5sum: 6661948993def1eebf95003a122cc257
+SHA1: da2faf4c849bbb3e3511ff0af9df3521accb3cf4
+SHA256: 535dcd378b2047d11c081594b3f7ddc4ba8d363bebd4a43fc9705460f1b3c859
+Description: Flexible Input Method Framework - essential data files
+Multi-Arch: foreign
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 5866031a848bd1d3ef4f96752c196085
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 5569
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7)
+Depends: fcitx-libs (= 1:4.2.8.1-2)
+Breaks: fcitx (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-dbg_4.2.8.1-2_powerpc.deb
+Size: 4834586
+MD5sum: 8ac62192e643f8cd2fb8da2e42477503
+SHA1: 8557139cf947fccdee336ef91b18663dc40e8fe8
+SHA256: 3a4f4bff4842980f7e7729f0062f03ec8244e5b0fb8c549f693a60fac2c39f19
+Description: Flexible Input Method Framework - debugging symbols
+Multi-Arch: same
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 09a11a4484d200983fa09e5ccb70d6c4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-frontend-all
+Priority: optional
+Section: universe/utils
+Installed-Size: 39
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: all
+Source: fcitx
+Version: 1:4.2.8.1-2
+Recommends: fcitx-frontend-gtk2, fcitx-frontend-gtk3, fcitx-frontend-qt4
+Filename: pool/universe/f/fcitx/fcitx-frontend-all_4.2.8.1-2_all.deb
+Size: 5718
+MD5sum: 8f1657a356d468001350f31e1b9d3ad5
+SHA1: eb2c28dd06df898c2f2ccc255bcc382d866a6b32
+SHA256: 86db6609d49f327fc2cc5abefd433fdeba07f81d73a2a99e166ce0eb62981ff0
+Description: Flexible Input Method Framework - frontends metapackage
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 0dd5f1c0b7fc022f618442d2bee3f8a4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-frontend-gtk2
+Priority: optional
+Section: universe/utils
+Installed-Size: 89
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: fcitx-libs (>= 4.2.7), fcitx-libs-gclient (>= 4.2.7), libc6 (>= 2.4), libglib2.0-0 (>= 2.16.0), libgtk2.0-0 (>= 2.24.0), libpango-1.0-0 (>= 1.14.0), fcitx-module-dbus
+Recommends: fcitx-frontend-gtk3
+Filename: pool/universe/f/fcitx/fcitx-frontend-gtk2_4.2.8.1-2_powerpc.deb
+Size: 15672
+MD5sum: 54644778645ca472f046f10c22315224
+SHA1: b78d706dad50ff70e2dd1dbd2d585de8f114fe91
+SHA256: e142c1683b32c7b6b3a23a9a56da5566493e783ef760f1cce2e8dce9f0d59c73
+Description: Flexible Input Method Framework - GTK+ 2 IM Module frontend
+Multi-Arch: same
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 123d789a32b826bcc6abfc6bb9f30da7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-frontend-gtk3
+Priority: optional
+Section: universe/utils
+Installed-Size: 89
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: fcitx-libs (>= 4.2.7), fcitx-libs-gclient (>= 4.2.7), libc6 (>= 2.4), libglib2.0-0 (>= 2.16.0), libgtk-3-0 (>= 3.0.0), libpango-1.0-0 (>= 1.14.0), fcitx-module-dbus
+Recommends: fcitx-frontend-gtk2
+Filename: pool/universe/f/fcitx/fcitx-frontend-gtk3_4.2.8.1-2_powerpc.deb
+Size: 16206
+MD5sum: 8c06b8ebc93a0df01d01b7b70d48a164
+SHA1: 4055feb8e7f1a4681d783de781333ffa74786436
+SHA256: d9b76a9c2336c903053c29f77df2a8d8b1358e5b0f364bbad7cfd0a069614a5c
+Description: Flexible Input Method Framework - GTK+ 3 IM Module frontend
+Multi-Arch: same
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 99d489b3075659ea74c48fb0b8629f64
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-frontend-qt4
+Priority: optional
+Section: universe/utils
+Installed-Size: 197
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: fcitx-libs (>= 4.2.7), fcitx-libs-qt (>= 4.2.7), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libqt4-dbus (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.6.1), libstdc++6 (>= 4.1.1), libx11-6, fcitx-module-dbus
+Filename: pool/universe/f/fcitx/fcitx-frontend-qt4_4.2.8.1-2_powerpc.deb
+Size: 56668
+MD5sum: 460d5dfce2deaea1920dcbfff1d2a03c
+SHA1: bdf481f3e49efe34a53ccb6f906ab2ff62c9e72f
+SHA256: 073e5fd20b54192aaee478a852947da8e762506c04a681e0ca9556fa712a2066
+Description: Flexible Input Method Framework - Qt4 IM Module frontend
+Multi-Arch: same
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: bd280cd2d806321018ef377c4507c758
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-libs
+Priority: optional
+Section: universe/libs
+Installed-Size: 376
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7)
+Depends: libc6 (>= 2.15)
+Pre-Depends: multiarch-support
+Recommends: fcitx-libs-gclient, fcitx-libs-qt
+Suggests: fcitx (>= 1:4.2.7)
+Breaks: fcitx (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-libs_4.2.8.1-2_powerpc.deb
+Size: 128470
+MD5sum: 711a6636fe1801dbbd7131a09b9ea111
+SHA1: f41c0eed37dd7c53ed94f9e80fadf535231c79b3
+SHA256: d1b0535cf1c7fe3e1e24c37a492099173c2727150b3e6294fdc28ea32a3ab9b7
+Description: Flexible Input Method Framework - library files
+Multi-Arch: same
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: f976c7ad2b54a41abc4bb113deca5ca1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-libs-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 1313
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7)
+Depends: fcitx-libs (= 1:4.2.8.1-2), fcitx-libs-gclient (= 1:4.2.8.1-2), fcitx-libs-qt (= 1:4.2.8.1-2)
+Breaks: fcitx (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-libs-dev_4.2.8.1-2_powerpc.deb
+Size: 294484
+MD5sum: e31c01e09c31cd733bf5fe7436865adc
+SHA1: 8304933cc3b76d02000f004e58b3cf798b92aac7
+SHA256: e91e71f04170d702e5dccbfbd1b36f7001c7a3d409d526b2be3f4580ed55d382
+Description: Flexible Input Method Framework - library development files
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 32a2bced689bdb1ae9dfa96f00be301e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-libs-gclient
+Priority: optional
+Section: universe/libs
+Installed-Size: 107
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7), fcitx-libs (<< 1:4.2.7)
+Depends: fcitx-libs (>= 4.2.7), libc6 (>= 2.4), libdbus-1-3 (>= 1.0.2), libglib2.0-0 (>= 2.37.3)
+Pre-Depends: multiarch-support
+Suggests: fcitx (>= 1:4.2.7)
+Breaks: fcitx (<< 1:4.2.7), fcitx-libs (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-libs-gclient_4.2.8.1-2_powerpc.deb
+Size: 20814
+MD5sum: 68d2dd75e985a4a2cddc45263e325a90
+SHA1: 930239d8cd683d2f658c4194ac80c64ba138bca0
+SHA256: 4df16fdca5c6a7cd96ef5a74de423d5438f13c19c6b8f326c1811ffdc6f0ed9f
+Description: Flexible Input Method Framework - D-Bus client library for Glib
+Multi-Arch: same
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: e407881bed4f91733ef76d3b4b9703bb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-libs-qt
+Priority: optional
+Section: universe/libs
+Installed-Size: 323
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7)
+Depends: fcitx-libs (>= 4.2.7), libc6 (>= 2.8), libgcc1 (>= 1:4.1.1), libqt4-dbus (>= 4:4.8.0), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.6.1), libstdc++6 (>= 4.1.1), libx11-6
+Pre-Depends: multiarch-support
+Suggests: fcitx (>= 1:4.2.7)
+Breaks: fcitx (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-libs-qt_4.2.8.1-2_powerpc.deb
+Size: 100860
+MD5sum: a676f5d516470ea109aa5dbc2a875083
+SHA1: 031fff3c19f4cc4bb0403c36fd157de2a94476a2
+SHA256: a8ce63152449c961f3a9931e5848f0211e1992ecfeb1545b1cd6f597da1e49f1
+Description: Flexible Input Method Framework - D-Bus client library for Qt
+Multi-Arch: same
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 84c1d5b61baa22b80a3278c1e7fe683b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-module-dbus
+Priority: optional
+Section: universe/utils
+Installed-Size: 140
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: libc6 (>= 2.17), libdbus-1-3 (>= 1.1.1), fcitx-modules
+Filename: pool/universe/f/fcitx/fcitx-module-dbus_4.2.8.1-2_powerpc.deb
+Size: 32972
+MD5sum: edf767a99c13681428998937eef8397d
+SHA1: 0e2eb5c76c252efeebc11e28b9557de8b267e026
+SHA256: 60dfb01d7cffa2f02c785b086f038d37590c276a8541490e2cde71c53ed6cadc
+Description: Flexible Input Method Framework - D-Bus module and IPC frontend
+Multi-Arch: foreign
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: bd95610607337c75517a78684d7a07f3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-module-kimpanel
+Priority: optional
+Section: universe/utils
+Installed-Size: 97
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7), fcitx-ui-kimpanel
+Provides: fcitx-ui-kimpanel
+Depends: libc6 (>= 2.8), libdbus-1-3 (>= 1.0.2), fcitx-module-dbus
+Suggests: kdebase-bin, plasma-widgets-kimpanel
+Breaks: fcitx (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-module-kimpanel_4.2.8.1-2_powerpc.deb
+Size: 18952
+MD5sum: b8a6661688047988e48211a239d0ff88
+SHA1: cecdc87ae9149ba60340f2bfaa94b13c0135f969
+SHA256: 1daf7b5a3c45b46965fd9a802fb095e8947675536ef889775b0a2373640b8551
+Description: Flexible Input Method Framework - KIMPanel protocol module
+Multi-Arch: foreign
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 31e429d746d5a24fb6a9d41b66a63bc6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-module-lua
+Priority: optional
+Section: universe/utils
+Installed-Size: 93
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: libc6 (>= 2.1.3), liblua5.2-0, fcitx-modules
+Filename: pool/universe/f/fcitx/fcitx-module-lua_4.2.8.1-2_powerpc.deb
+Size: 19556
+MD5sum: 11f2fc462118a32e7d7a5e49f9562ad5
+SHA1: 4b273b79fcc2ad8aace80d8cf07fc2054a6c6450
+SHA256: 2cd5147bb5d345966ead099d3784b8d978883010631a55a89a855d4a769c7279
+Description: Flexible Input Method Framework - Lua module
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 099dd096d1a81f47d0b3a0ab5d0b7b4c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-module-quickphrase-editor
+Priority: optional
+Section: universe/utils
+Installed-Size: 219
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7)
+Depends: fcitx-libs (>= 4.2.8.1), fcitx-libs-qt (>= 4.2.7), libc6 (>= 2.1.3), libgcc1 (>= 1:4.1.1), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.6.1), libstdc++6 (>= 4.1.1)
+Suggests: fcitx-config-gtk | fcitx-config-gtk2 | kde-config-fcitx
+Breaks: fcitx (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-module-quickphrase-editor_4.2.8.1-2_powerpc.deb
+Size: 56664
+MD5sum: 49bc33f5cd3b79be18b191a8db894701
+SHA1: f0a707bac8c620976d8ff65c572435e720950552
+SHA256: 471cf8e76dc5760eb151113ac371353161b56a8010bc3eed42daf88056a0f419
+Description: Flexible Input Method Framework - Quick Phrase editor module
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 904bff434c4575ade0fb970485de52df
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-module-x11
+Priority: optional
+Section: universe/utils
+Installed-Size: 298
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: libc6 (>= 2.15), libcairo2 (>= 1.2.4), libdbus-1-3 (>= 1.0.2), libglib2.0-0 (>= 2.12.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.22.0), libx11-6, libxfixes3, libxinerama1, libxkbfile1, libxml2 (>= 2.7.4), libxrender1, fcitx-modules
+Filename: pool/universe/f/fcitx/fcitx-module-x11_4.2.8.1-2_powerpc.deb
+Size: 96622
+MD5sum: ec467f1ad6a6caf3f1db4efc46899d94
+SHA1: 431b505c52a662b8f05a515b69c0cbba2086ee16
+SHA256: f086981bd194f64c8abc5cb7d25ec0aa4fbe95471c05be33475a431cb4a8f340
+Description: Flexible Input Method Framework - X11 module and XIM frontend
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 53b24b5c95ccb85c9b71c7c9d3fc164c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-modules
+Priority: optional
+Section: universe/utils
+Installed-Size: 4689
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7), fcitx-keyboard, fcitx-modules-x11 (<< 1:4.2.7)
+Provides: fcitx-keyboard
+Depends: libc6 (>= 2.15), libicu48 (>= 4.8-1), libxml2 (>= 2.7.4)
+Recommends: fcitx, fcitx-module-dbus, fcitx-module-kimpanel, fcitx-module-lua, fcitx-module-x11
+Breaks: fcitx (<< 1:4.2.7), fcitx-keyboard, fcitx-modules-x11 (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-modules_4.2.8.1-2_powerpc.deb
+Size: 1767796
+MD5sum: 4d937cbdccd1bddfb377db833756e763
+SHA1: 679b609df9c9126f14cab5906c6162bd2d104f30
+SHA256: 9ca73995005f0a3559471a84f951bba5747180c71983ea456e8aa2bf0f336af3
+Description: Flexible Input Method Framework - core modules
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 9c062954d1d719af85566fd5c1e102f3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-pinyin
+Priority: optional
+Section: universe/utils
+Installed-Size: 7251
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7)
+Depends: libc6 (>= 2.7), fcitx-bin, fcitx-data (>= 1:4.2.7), fcitx-modules
+Recommends: fcitx
+Breaks: fcitx (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-pinyin_4.2.8.1-2_powerpc.deb
+Size: 2882064
+MD5sum: 0ca2ea2c101ddd9dc1971eb474fd7ba7
+SHA1: 37fe12a6299f864719f443aa7119b0eb28f5a668
+SHA256: d1b21efb1d25b5f7dda61885a182deebf7a0c400ad43985d68715420024eaa00
+Description: Flexible Input Method Framework - classic Pinyin engine
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 660819bec9c13b4f822265b9061af89e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-qw
+Priority: optional
+Section: universe/utils
+Installed-Size: 73
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7)
+Depends: libc6 (>= 2.1.3), fcitx-bin, fcitx-data (>= 1:4.2.7), fcitx-modules
+Recommends: fcitx
+Breaks: fcitx (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-qw_4.2.8.1-2_powerpc.deb
+Size: 8394
+MD5sum: 638f8cf9cf46d633cfc81c6683d54d75
+SHA1: 02691a2c56cde424762a2fa22e910528612013d4
+SHA256: 08400c29911102f41441e857e8992050e0cb594f16397dfe5a68400d983b3b5c
+Description: Flexible Input Method Framework - QuWei engine
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 8b85421bc06fc3d6029731f78a4039fc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-table
+Priority: optional
+Section: universe/utils
+Installed-Size: 369
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7)
+Depends: libc6 (>= 2.7), fcitx-bin, fcitx-data (>= 1:4.2.7), fcitx-modules
+Recommends: fcitx, fcitx-pinyin (>= 1:4.2.7)
+Suggests: fcitx-table-all
+Breaks: fcitx (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-table_4.2.8.1-2_powerpc.deb
+Size: 151098
+MD5sum: e3985f29a9f774dbf585c969d6411210
+SHA1: 4323d1d72faafb324745c72d444c5d45688d2942
+SHA256: fc3642dc9e2d3fda9ba0884b4f54716032f1121adf345cf954bef535fd75aedc
+Description: Flexible Input Method Framework - table engine
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 4c9f2b422b4cfb8d5b4da67476c7e28a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-table-all
+Priority: optional
+Section: universe/utils
+Installed-Size: 39
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: all
+Source: fcitx
+Version: 1:4.2.8.1-2
+Recommends: fcitx-table-bingchan, fcitx-table-cangjie, fcitx-table-dianbaoma, fcitx-table-erbi, fcitx-table-wanfeng, fcitx-table-wbpy, fcitx-table-wubi, fcitx-table-ziranma
+Filename: pool/universe/f/fcitx/fcitx-table-all_4.2.8.1-2_all.deb
+Size: 5766
+MD5sum: 9ad173e06f7b9e3718f06aa1b9ba86ec
+SHA1: a327ff352001d722cf88db9fc3316f440f5dcfdd
+SHA256: c1629d0d5a8789304b1251f34d69147f068121cc10e1e3c5957ce219faa0bc42
+Description: Flexible Input Method Framework - tables metapackage
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: a902c2449fa9e21b92aa145bb597a385
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-table-bingchan
+Priority: optional
+Section: universe/utils
+Installed-Size: 561
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: fcitx-table
+Filename: pool/universe/f/fcitx/fcitx-table-bingchan_4.2.8.1-2_powerpc.deb
+Size: 152124
+MD5sum: 8b594e1e0131b1ff017310a5479c0ff8
+SHA1: 3b74d65c7ccc4349afdf1541ff968cd2de3ddd90
+SHA256: 1dfcdde6cabbae73c79f4f08804592229b9325f2e31760201182e060a7693937
+Description: Flexible Input Method Framework - Bingchan table
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 38770265bec1f5177c114bf2565b3e03
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-table-cangjie
+Priority: optional
+Section: universe/utils
+Installed-Size: 205
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: fcitx-table
+Filename: pool/universe/f/fcitx/fcitx-table-cangjie_4.2.8.1-2_powerpc.deb
+Size: 45348
+MD5sum: c5c8536b2b4592151bb218100dec1c2a
+SHA1: 1dec15898ab7446c71c347912397f2fadd436d5e
+SHA256: 469fcb2cb17c3178f86a8ee05d4c57a4520c20a5d4fe3fb0641908241948a8ee
+Description: Flexible Input Method Framework - Cangjie table
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 9eba2c2e9ce2c7f0c1559861a211148c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-table-dianbaoma
+Priority: optional
+Section: universe/utils
+Installed-Size: 191
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: fcitx-table
+Filename: pool/universe/f/fcitx/fcitx-table-dianbaoma_4.2.8.1-2_powerpc.deb
+Size: 37670
+MD5sum: c4ccd1acd219555d454093261a3537f7
+SHA1: e9f817078c0a2269811d1739bfcd9653d3d797c9
+SHA256: bc973e94dc2ee45f7af78bacd37dacae550968949c164a4ebaaa8bb43e557b4f
+Description: Flexible Input Method Framework - Dianbaoma table
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 321dd12059bc0fbd227b18fdb379602c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-table-erbi
+Priority: optional
+Section: universe/utils
+Installed-Size: 1989
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: fcitx-table
+Filename: pool/universe/f/fcitx/fcitx-table-erbi_4.2.8.1-2_powerpc.deb
+Size: 526462
+MD5sum: db5ca7073616a07aba5e17682e5fcb9d
+SHA1: 219d58cca626b93348b793205af545ffac9bde09
+SHA256: 9168b2a8bfb1614921ff7d22b6dd4075ea891331b3fb9e1c167a67f06cc19861
+Description: Flexible Input Method Framework - Erbi table
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 25bb36440cd01234c41a79d27c64ca61
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-table-wanfeng
+Priority: optional
+Section: universe/utils
+Installed-Size: 2511
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: fcitx-table
+Filename: pool/universe/f/fcitx/fcitx-table-wanfeng_4.2.8.1-2_powerpc.deb
+Size: 670010
+MD5sum: ea88203b47929421a26836611730f783
+SHA1: cdb2746e5c9f872bb1d0d2910d310d7f0e5a17e6
+SHA256: 3dea1575e966995882d99d7cbb1b63f3bfd906569837c7acd134c8cf76ce1af8
+Description: Flexible Input Method Framework - Wanfeng table
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: b05e5b4cb07ff789ce39fecb5b5b2540
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-table-wbpy
+Priority: optional
+Section: universe/utils
+Installed-Size: 10293
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: fcitx-table
+Filename: pool/universe/f/fcitx/fcitx-table-wbpy_4.2.8.1-2_powerpc.deb
+Size: 2273208
+MD5sum: 34a2ce91e6b2b7b7787ea02bef63eba1
+SHA1: 87396ecf0ba1c41cd02e38d92a43837d5f93dbe8
+SHA256: 626661d5c8abeb1f1224b286bd44be1550e15ff47824efd54b3a28d72cc71f8c
+Description: Flexible Input Method Framework - WubiPinyin table
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 1460bdc3b51b4a0eba08bb4827b694a8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-table-wubi
+Priority: optional
+Section: universe/utils
+Installed-Size: 2505
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: fcitx-table
+Filename: pool/universe/f/fcitx/fcitx-table-wubi_4.2.8.1-2_powerpc.deb
+Size: 690038
+MD5sum: ce6a4fd40c004406deb9c3c82e52f4f8
+SHA1: 8a82cffad8850c93e7e5bd2c3f203290dcbd8698
+SHA256: 841e3874a8796c47dbff0cafd883d594a0f52fe8d406aee8ea3dd3efe1342c26
+Description: Flexible Input Method Framework - Wubi table
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 49a87b3f76e798c2c83079f425d3d3f8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-table-ziranma
+Priority: optional
+Section: universe/utils
+Installed-Size: 1514
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Depends: fcitx-table
+Filename: pool/universe/f/fcitx/fcitx-table-ziranma_4.2.8.1-2_powerpc.deb
+Size: 412782
+MD5sum: ba63893d0aac02eee46088d753eded25
+SHA1: d86c9594300c0a8c67afa58a92aabacab4fe7f95
+SHA256: e38a52cb0c4ae1eae66e7ec6880de66baa7d745cc07bb4d145ec7bedff4055ae
+Description: Flexible Input Method Framework - Ziranma table
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 41746669c75bee913dce8ac6c6bbd96c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-tools
+Priority: optional
+Section: universe/utils
+Installed-Size: 267
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7)
+Depends: fcitx-libs (>= 4.2.7), libc6 (>= 2.7)
+Suggests: fcitx
+Breaks: fcitx (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/fcitx-tools_4.2.8.1-2_powerpc.deb
+Size: 95648
+MD5sum: 703769b7404a7ef5cb948fd0670694cc
+SHA1: 0e941806c20bb8620f99dd5207b96e086d9a7d71
+SHA256: 0d15acbfeeb0cc03531480067aa8624e459fdf384d2343d76b2667fc704237be
+Description: Flexible Input Method Framework - various tools
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 7b1008dde7050f5a61ca4951210c4e42
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fcitx-ui-classic
+Priority: optional
+Section: universe/utils
+Installed-Size: 284
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7), fcitx-unikey (<< 0.2.0)
+Depends: libc6 (>= 2.8), libcairo2 (>= 1.2.4), libdbus-1-3 (>= 1.0.2), libglib2.0-0 (>= 2.12.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.22.0), libx11-6, libxext6, fcitx-module-x11
+Recommends: fcitx (>= 1:4.2.7), zenity
+Breaks: fcitx (<< 1:4.2.7), fcitx-unikey (<< 0.2.0)
+Filename: pool/universe/f/fcitx/fcitx-ui-classic_4.2.8.1-2_powerpc.deb
+Size: 111258
+MD5sum: 4586339c1c32738bffce7ffd631e37a3
+SHA1: 7e4d05e29e7dc0ae560c7ed99de3327ed848ebef
+SHA256: 106cf0959ec2c79c61f81f9af6f100238110f31ffb8e1cdec94f9cf7988a5388
+Description: Flexible Input Method Framework - Classic user interface
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 495295404af30f38f4e4e22158e6809b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -2878,6 +3592,30 @@ SHA256: 689579941ad8bbf09e6d1d1818e2116bd4be18f84a0403eec78646a22512acf9
 Description: the GeoTIFF library -- tools
 Homepage: http://geotiff.osgeo.org/
 Description-md5: b9e1f5d9923d8e8d458216579965761a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gir1.2-fcitx-1.0
+Priority: optional
+Section: universe/libs
+Installed-Size: 105
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: fcitx
+Version: 1:4.2.8.1-2
+Replaces: fcitx (<< 1:4.2.7)
+Depends: fcitx-libs-gclient (>= 4.2.7), gir1.2-glib-2.0
+Suggests: fcitx (>= 1:4.2.7)
+Breaks: fcitx (<< 1:4.2.7)
+Filename: pool/universe/f/fcitx/gir1.2-fcitx-1.0_4.2.8.1-2_powerpc.deb
+Size: 10610
+MD5sum: bca74a9346ac1394b0ce5f12eee72cca
+SHA1: 3f75b1bd82f7fb6358ac1068575ba1506a010ec4
+SHA256: 3ebb2f000e39a3f6ef4f8c3b110098636344f7dfacf9f0ae4b7631fb04d18888
+Description: Flexible Input Method Framework - GObject introspection
+Homepage: http://code.google.com/p/fcitx/
+Description-md5: 81c861fe695031dc250177db067b4d03
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -8839,28 +9577,6 @@ Description-md5: 29c5f7005b3cf23a19cb69fdf63a2cf6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: nscd
-Priority: optional
-Section: universe/admin
-Installed-Size: 377
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GNU Libc Maintainers <debian-glibc@lists.debian.org>
-Architecture: powerpc
-Source: eglibc
-Version: 2.17-91ubuntu1
-Depends: libaudit1 (>= 1:2.2.1), libc6 (>> 2.17), libc6 (<< 2.18), libcap2 (>= 2.10), libselinux1 (>= 1.32)
-Filename: pool/universe/e/eglibc/nscd_2.17-91ubuntu1_powerpc.deb
-Size: 78076
-MD5sum: 59d94ee9df84161f9b2af59df220e18d
-SHA1: f10890cdcf7587606c22c5bbb10f9346bcc59413
-SHA256: 65f40b5040aa1d011ab7e91c59fbb3085ba1eba7503cafdd201e1cde05c2aac6
-Description: Embedded GNU C Library: Name Service Cache Daemon
-Multi-Arch: foreign
-Homepage: http://www.eglibc.org
-Description-md5: bd699c5307bf07a56a6eb9cf27ef3073
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: ocaml-batteries-included
 Priority: optional
 Section: universe/ocaml
@@ -9122,6 +9838,91 @@ SHA256: 7431e5e3d6f407e86bdc138ed399bb75196128572f2961dd531d4ab6cf0a88f6
 Description: Metapackage to install all of Openstack services at once
 Homepage: http://openstack.alioth.debian.org/
 Description-md5: 4c7c3936b37c71d3941c324bf58172c3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openvswitch-datapath-dkms
+Priority: extra
+Section: universe/net
+Installed-Size: 15007
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Architecture: all
+Source: openvswitch
+Version: 1.10.1+git20130627-0ubuntu2
+Depends: dkms (>= 1.95), make, libc6-dev
+Filename: pool/universe/o/openvswitch/openvswitch-datapath-dkms_1.10.1+git20130627-0ubuntu2_all.deb
+Size: 2384758
+MD5sum: de1b3b5e814966ec11bec6f64001bac4
+SHA1: fb5d183b8107e80899d70de8e31843e4fde0976e
+SHA256: 4cdc9c9b6a2cf1b23a0f0e3892a284ee0b212d18d14da02cf470f69f3bba018a
+Description: Open vSwitch datapath module source - DKMS version
+Homepage: http://openvswitch.org/
+Description-md5: 1c175cf2cb1282f4a52570c21d1029b2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openvswitch-datapath-source
+Priority: extra
+Section: universe/net
+Installed-Size: 2436
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Architecture: all
+Source: openvswitch
+Version: 1.10.1+git20130627-0ubuntu2
+Depends: module-assistant, bzip2, debhelper (>= 5.0.37)
+Suggests: openvswitch-switch
+Filename: pool/universe/o/openvswitch/openvswitch-datapath-source_1.10.1+git20130627-0ubuntu2_all.deb
+Size: 2457690
+MD5sum: 7b175a41632c16efcb857f0ecd5ef278
+SHA1: 9e2a14543c193202876e1e93a6c6712d56267cd1
+SHA256: a2754d63e267bf38da6f2bd9b133ac80ff2e8aa66c7dc5ab7bb188e8175e59ca
+Description: Open vSwitch datapath module source - module-assistant version
+Homepage: http://openvswitch.org/
+Description-md5: afe9054101bf27f371da78dac01a72c2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openvswitch-test
+Priority: extra
+Section: universe/net
+Installed-Size: 180
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Architecture: all
+Source: openvswitch
+Version: 1.10.1+git20130627-0ubuntu2
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-twisted-web
+Filename: pool/universe/o/openvswitch/openvswitch-test_1.10.1+git20130627-0ubuntu2_all.deb
+Size: 35982
+MD5sum: e7f36f7c74937339e46e0027408d434c
+SHA1: 2bd0bcabf5c43c12b3c914f89983ba48eb5a3f12
+SHA256: 002d46ce81f7430eaca290352eb0fe83d0da0dfcc648c7e145e32caabd5a70b9
+Description: Open vSwitch test package
+Homepage: http://openvswitch.org/
+Description-md5: 6a14159ef2a1781c1884f29cecdc4c02
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ovsdbmonitor
+Priority: extra
+Section: universe/utils
+Installed-Size: 210
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Architecture: all
+Source: openvswitch
+Version: 1.10.1+git20130627-0ubuntu2
+Depends: python (>= 2.7.1-0ubuntu2), python-openvswitch, python-twisted-conch
+Filename: pool/universe/o/openvswitch/ovsdbmonitor_1.10.1+git20130627-0ubuntu2_all.deb
+Size: 38096
+MD5sum: cee4de1790f6fd73b31636f726aa64d7
+SHA1: 80ed14d3ae8f093009939f45ba67671f5b829a4b
+SHA256: ac5a90791e5a577cdb5b35706ad13d90b6ce12cc09e939a4bc6db5961b7491bc
+Description: Open vSwitch graphical monitoring tool
+Homepage: http://openvswitch.org/
+Description-md5: 7763b44a976684bb4eeb22fb0f83a60d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
