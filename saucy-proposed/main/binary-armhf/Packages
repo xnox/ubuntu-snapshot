@@ -156,6 +156,77 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb, edubuntu-live, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: ghostscript
+Priority: optional
+Section: text
+Installed-Size: 227
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Version: 9.07~dfsg2-0ubuntu5
+Provides: postscript-viewer
+Depends: libc6 (>= 2.4), libgs9 (= 9.07~dfsg2-0ubuntu5), gsfonts (>= 6.0-1), debconf | debconf-2.0, debianutils (>= 1.6)
+Suggests: ghostscript-cups, ghostscript-x, hpijs
+Breaks: ghostscript-x (<< 8.64~dfsg-8)
+Filename: pool/main/g/ghostscript/ghostscript_9.07~dfsg2-0ubuntu5_armhf.deb
+Size: 45350
+MD5sum: 5ba1173dad2f0e522a2065b5ceaca6c7
+SHA1: 7dea47211f5a44ab0ace6dfc68fc235fa16224a6
+SHA256: 240c8c01a37112a2b4ac8d2e275ba33d75cabb5b6a746c6094c4e9e6f81221b9
+Description: interpreter for the PostScript language and for PDF
+Multi-Arch: foreign
+Homepage: http://www.ghostscript.com/
+Description-md5: 3b69f5ec8191e8f0d88dd3e30e7b1b69
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: ghostscript-cups
+Priority: optional
+Section: text
+Installed-Size: 198
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: ghostscript
+Version: 9.07~dfsg2-0ubuntu5
+Replaces: ghostscript (<< 8.64~dfsg-8)
+Depends: libc6 (>= 2.4), libcups2 (>= 1.4.0), libcupsimage2 (>= 1.4.0), libdbus-1-3 (>= 1.0.2), ghostscript (>= 8.64~dfsg-8)
+Recommends: cups, colord
+Conflicts: ghostscript (<< 8.64~dfsg-8)
+Filename: pool/main/g/ghostscript/ghostscript-cups_9.07~dfsg2-0ubuntu5_armhf.deb
+Size: 24620
+MD5sum: 08464e2c698f840134fc763cd3956e9e
+SHA1: 5cb8800e9ef75f9ae6b0e8c8813eab65903950fb
+SHA256: c5add344e81ca9a6c52a4cbf9b679729fde6359bae58a1e9707cec336809768d
+Description: interpreter for the PostScript language and for PDF - CUPS filters
+Homepage: http://www.ghostscript.com/
+Description-md5: a8abc81a6ab23fdfe6afd241b86c4eb1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: ghostscript-dbg
+Priority: extra
+Section: debug
+Installed-Size: 22882
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: ghostscript
+Version: 9.07~dfsg2-0ubuntu5
+Depends: libgs9 (= 9.07~dfsg2-0ubuntu5) | ghostscript (= 9.07~dfsg2-0ubuntu5) | ghostcript-cups (= 9.07~dfsg2-0ubuntu5) | ghostcript-x (= 9.07~dfsg2-0ubuntu5)
+Filename: pool/main/g/ghostscript/ghostscript-dbg_9.07~dfsg2-0ubuntu5_armhf.deb
+Size: 9930998
+MD5sum: d3c4e9c82a93bc9edd1bc9f772a590a2
+SHA1: c2fd1a978e86764639eb365d47945f67d289cd8e
+SHA256: 1bec49574c839c0d0342997898821afe86c8860b0f2c2c55cdcfa7476a6db95d
+Description: interpreter for the PostScript language and for PDF - Debug symbols
+Homepage: http://www.ghostscript.com/
+Description-md5: b88404b3189bdd4e7a7b79221e98739c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: ghostscript-doc
 Priority: optional
 Section: text
@@ -176,6 +247,28 @@ Homepage: http://www.ghostscript.com/
 Description-md5: 772951004a1a824bee59da206fba24e2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: ghostscript-x
+Priority: optional
+Section: text
+Installed-Size: 187
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: ghostscript
+Version: 9.07~dfsg2-0ubuntu5
+Depends: libc6 (>= 2.7), libx11-6, libxt6, ghostscript (= 9.07~dfsg2-0ubuntu5)
+Filename: pool/main/g/ghostscript/ghostscript-x_9.07~dfsg2-0ubuntu5_armhf.deb
+Size: 35590
+MD5sum: 3f6c0e48a24d03085c40d7bd255bb730
+SHA1: 3d850a19dd6b22c02cb3ce6161d45712b7a592bf
+SHA256: 25b4b76c41599440c9c017fa3f9e721f3925caafa51033e9a71595cbc0c9d69b
+Description: interpreter for the PostScript language and for PDF - X11 support
+Homepage: http://www.ghostscript.com/
+Description-md5: 5f6f4265cecdf5f91c519e5f197328b3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: gir1.2-gudev-1.0
 Priority: optional
@@ -704,6 +797,49 @@ Homepage: http://www.gtk.org/
 Description-md5: 82b0cc78ae040a44793411b60fb12902
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libgs-dev
+Priority: optional
+Section: text
+Installed-Size: 9913
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: ghostscript
+Version: 9.07~dfsg2-0ubuntu5
+Depends: libgs9 (= 9.07~dfsg2-0ubuntu5), libc6-dev, libcups2-dev, libcupsimage2-dev, libfontconfig1-dev, libidn11-dev, libijs-dev, libjbig2dec0-dev, libjpeg-dev, libpaper-dev, libpng12-0-dev, libtiff5-dev, zlib1g-dev
+Filename: pool/main/g/ghostscript/libgs-dev_9.07~dfsg2-0ubuntu5_armhf.deb
+Size: 2708146
+MD5sum: 79e4fcf44740231fdc443d548fb54584
+SHA1: 6bff6424ef2eedd20d1cb3cb9aef251586d67166
+SHA256: 2eaf738b0f2e025a8d128ba6b3024b8ea04b316d243a8140b227045a2e444eaa
+Description: interpreter for the PostScript language and for PDF - Development Files
+Homepage: http://www.ghostscript.com/
+Description-md5: f4c1713297a6c688a87d0b2876caf1fa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgs9
+Priority: optional
+Section: libs
+Installed-Size: 7777
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: ghostscript
+Version: 9.07~dfsg2-0ubuntu5
+Depends: libc6 (>= 2.11), libcups2 (>= 1.4.0), libcupsimage2 (>= 1.4.0), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.2.1), libidn11 (>= 1.13), libijs-0.35 (>= 0.35), libjbig2dec0 (>= 0.11), libjpeg8 (>= 8c), libpaper1, libpng12-0 (>= 1.2.13-4), libtiff5 (>> 4.0.0-1~), zlib1g (>= 1:1.1.4), poppler-data (>= 0.4.5-3~) | gs-cjk-resource, libgs9-common (>= 9.07~dfsg2)
+Filename: pool/main/g/ghostscript/libgs9_9.07~dfsg2-0ubuntu5_armhf.deb
+Size: 2100640
+MD5sum: 50887189dd0b1e05afc63a8bbcda89b1
+SHA1: eb373b5369ca7392725027455684751a47b9402f
+SHA256: ad12ed277c8c2c231bdecabb5bce684c5479909c7d8fd923b902d23b77d4d2ec
+Description: interpreter for the PostScript language and for PDF - Library
+Homepage: http://www.ghostscript.com/
+Description-md5: 77d0d233cd004663a71b1ef44e87d3f1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libgs9-common
 Priority: optional
