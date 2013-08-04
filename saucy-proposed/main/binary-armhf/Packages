@@ -225,6 +225,29 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: gir1.2-gupnp-1.0
+Priority: optional
+Section: libs
+Installed-Size: 70
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ross Burton <ross@debian.org>
+Architecture: armhf
+Source: gupnp
+Version: 0.20.4-1
+Replaces: gir1.0-gupnp-1.0
+Depends: gir1.2-freedesktop, gir1.2-glib-2.0, gir1.2-gssdp-1.0, gir1.2-soup-2.4, libgupnp-1.0-4 (>= 0.20.4)
+Conflicts: gir1.0-gupnp-1.0
+Filename: pool/main/g/gupnp/gir1.2-gupnp-1.0_0.20.4-1_armhf.deb
+Size: 9080
+MD5sum: fe6d7a05d0c52fdbf3e31c153944319b
+SHA1: 2c790e93a79822289a8d0aa2560277131176d019
+SHA256: 5c1e27fe5fa52e7ab7a12b2745a92d83f296230f5c7eb3658767fb4732b0362b
+Description: GObject introspection data for the GUPnP library
+Homepage: http://live.gnome.org/GObjectIntrospection
+Description-md5: 6a38bcbf4d96abcee783c7db0dbffa8f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: gir1.2-poppler-0.18
 Priority: optional
 Section: introspection
@@ -728,6 +751,75 @@ SHA256: 1b209f203f8e0335e7d5295f10dc3f98028dd7a21fb9fefd36720ef80cf0e73e
 Description: libgudev-1.0 development files
 Homepage: http://www.freedesktop.org/wiki/Software/systemd
 Description-md5: 903f84519fd86bd5fb271a04acb09731
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgupnp-1.0-4
+Priority: optional
+Section: libs
+Installed-Size: 144
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ross Burton <ross@debian.org>
+Architecture: armhf
+Source: gupnp
+Version: 0.20.4-1
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3), libgssdp-1.0-3 (>= 0.14.0), libsoup2.4-1 (>= 2.34.0-1~), libuuid1 (>= 2.16), libxml2 (>= 2.7.4), shared-mime-info
+Filename: pool/main/g/gupnp/libgupnp-1.0-4_0.20.4-1_armhf.deb
+Size: 62988
+MD5sum: 39755483edb3109ca12fa28dc4085149
+SHA1: fa72057c621cabb3ea467eadd0810b2237b97529
+SHA256: 56334337bb999605de07d421653051afdaa7e78e2dcae757d1fae24f71bc7199
+Description: GObject-based library for UPnP
+Homepage: http://www.gupnp.org
+Description-md5: 0cf65a702f3453c4d3e7c4b3a7dc9341
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntu-gnome-desktop
+
+Package: libgupnp-1.0-dbg
+Priority: optional
+Section: libdevel
+Installed-Size: 290
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ross Burton <ross@debian.org>
+Architecture: armhf
+Source: gupnp
+Version: 0.20.4-1
+Depends: libgupnp-1.0-4 (= 0.20.4-1)
+Recommends: libgssdp-1.0-dbg, libglib2.0-0-dbg
+Filename: pool/main/g/gupnp/libgupnp-1.0-dbg_0.20.4-1_armhf.deb
+Size: 202376
+MD5sum: 65c8e79cda65285f223296edc1da94c1
+SHA1: 1fe4df2e816e0abfed589b31eca6ea99fdc36580
+SHA256: 8b5904f6b76cf5d876a14c67825f52801aa95b57225fd22dc819b194e780ad2e
+Description: GObject-based library for UPnP (debug symbols)
+Homepage: http://www.gupnp.org
+Description-md5: 2696751c17a04f25b712cbedaee4b251
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgupnp-1.0-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 598
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ross Burton <ross@debian.org>
+Architecture: armhf
+Source: gupnp
+Version: 0.20.4-1
+Replaces: gir-repository-dev (<= 0.6.5-5), gupnp-vala (<< 0.10.5)
+Depends: libgupnp-1.0-4 (= 0.20.4-1), gir1.2-gupnp-1.0 (= 0.20.4-1), libgssdp-1.0-dev (>= 0.6.1), libsoup2.4-dev, libxml2-dev
+Recommends: python
+Suggests: libgupnp-doc
+Breaks: gir-repository-dev (<= 0.6.5-5), gupnp-vala (<< 0.10.5)
+Filename: pool/main/g/gupnp/libgupnp-1.0-dev_0.20.4-1_armhf.deb
+Size: 120238
+MD5sum: c67a4f4ad5a63add74d4b0975311cfc7
+SHA1: 2b11326e525f23994738adc1fbcb2e572c912f6f
+SHA256: 45a32105ba3a5c6b851453dc09cfb0c184473f4b0b61617d1287fdd103e0fcd8
+Description: GObject-based library for UPnP (development files)
+Homepage: http://www.gupnp.org
+Description-md5: 9c718c86c32a941db80bc691b1180e2f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
