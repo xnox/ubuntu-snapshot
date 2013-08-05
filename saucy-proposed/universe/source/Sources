@@ -4606,6 +4606,34 @@ Checksums-Sha256:
  05ba81223e9378c3bce8d33080213b9925af49bd9623cd9004eb3dd22ca9d2a0 11458586 linphone_3.6.1.orig.tar.gz
  567ca19f444ee08fd538177e97d9c3b837e897a79acd5774fd83eeeaa839e5dd 35531 linphone_3.6.1-1.debian.tar.gz
 
+Package: linux-grouper
+Binary: linux-grouper-headers-3.1.10-6, linux-grouper-tools-common, linux-grouper-tools-3.1.10-6, linux-image-3.1.10-6-grouper, linux-headers-3.1.10-6-grouper, linux-image-3.1.10-6-grouper-dbgsym
+Version: 3.1.10-6.21
+Section: universe/devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 5), cpio, module-init-tools, kernel-wedge (>= 2.24ubuntu1), libelf-dev, binutils-dev, rsync, libdw-dev, gcc-4.6, python-dev, xmlto, docbook-utils, ghostscript, transfig, bzip2, sharutils, asciidoc
+Architecture: armhf
+Standards-Version: 3.8.4.0
+Format: 1.0
+Directory: pool/universe/l/linux-grouper
+Files:
+ 9d5d00e6a19da2fd11c576ef0d12b37f 2171 linux-grouper_3.1.10-6.21.dsc
+ a8a59536eae0c0b79f00e92595a45f41 104134242 linux-grouper_3.1.10-6.21.tar.gz
+Vcs-Git: git://kernel.ubuntu.com/ubuntu/ubuntu-saucy.git grouper
+Package-List: 
+ linux-grouper-headers-3.1.10-6 deb devel optional
+ linux-grouper-tools-3.1.10-6 deb devel optional
+ linux-grouper-tools-common deb kernel optional
+ linux-headers-3.1.10-6-grouper deb devel optional
+ linux-image-3.1.10-6-grouper deb admin optional
+ linux-image-3.1.10-6-grouper-dbgsym deb devel optional
+Checksums-Sha1:
+ 62eca7a436f31d70673121f519668d52d8e5060d 2171 linux-grouper_3.1.10-6.21.dsc
+ 29996ed0674b98fa606c7e35cb188c5af800efda 104134242 linux-grouper_3.1.10-6.21.tar.gz
+Checksums-Sha256:
+ c5ecf4e7eac4cab9b8e91e0238a90adf29429b161d8eaf47cc2bc9be1155bce6 2171 linux-grouper_3.1.10-6.21.dsc
+ 869b49199443a9d6697e96fe5d88840f9f17559267e98be2d7a99056858c0896 104134242 linux-grouper_3.1.10-6.21.tar.gz
+
 Package: live-images
 Binary: live-images, live-image-gnome-desktop, live-image-kde-desktop, live-image-lxde-desktop, live-image-rescue, live-image-standard, live-image-xfce-desktop
 Version: 4.0~a17-1
@@ -6181,36 +6209,6 @@ Checksums-Sha256:
  75476b924314aa92239e8c696ce8f26bd2e168d145a968b47613f4c987c0f00b 47376 ratpoints_2.1.3+dfsg.orig.tar.gz
  67d15d18f9900c39c043d9527a52e0a82b93dfee7a6afd797b87b06c4e9027fa 7486 ratpoints_2.1.3+dfsg-2.debian.tar.gz
 
-Package: rt-tests
-Binary: rt-tests, backfire-dkms
-Version: 0.85-0ubuntu2
-Priority: extra
-Section: universe/misc
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Uwe Kleine-König <u.kleine-koenig@pengutronix.de>
-Build-Depends: debhelper (>= 8.1.0), libnuma-dev (>= 2.0.3) [amd64 i386 ia64 mips mipsel powerpc], dkms (>= 2.1.0.0)
-Architecture: linux-any all
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/universe/r/rt-tests
-Files:
- f00171f1451fcda52cb146c5d2ad20bb 2028 rt-tests_0.85-0ubuntu2.dsc
- 4a0a21934174f58e8c1f9ee1227f2eaa 121060 rt-tests_0.85.orig.tar.gz
- 2dd13e729c20d15c4199200821957578 9843 rt-tests_0.85-0ubuntu2.debian.tar.gz
-Vcs-Browser: http://git.pengutronix.de/?p=ukl/rt-tests.git;
-Vcs-Git: git://git.pengutronix.de/git/ukl/rt-tests.git
-Package-List: 
- backfire-dkms deb misc extra
- rt-tests deb misc extra
-Checksums-Sha1:
- 9bd7ef47e3f3708260c4e81ab77922b0fbc6b61e 2028 rt-tests_0.85-0ubuntu2.dsc
- db4ea54370635a74c8ae6d98e73da4f3e1ffe5e1 121060 rt-tests_0.85.orig.tar.gz
- 405ad1a97a533d602e5c556390a654d44803975a 9843 rt-tests_0.85-0ubuntu2.debian.tar.gz
-Checksums-Sha256:
- 2bb0cf7021f574605cedd53d4e9854f2d0dd47b9518eeab1b55c6481a814be19 2028 rt-tests_0.85-0ubuntu2.dsc
- e56302c57008c084b90c4e621179edaeb660f54567ce8371aebef021b2e73a37 121060 rt-tests_0.85.orig.tar.gz
- 6142ab579e39eaea72d914b9e67e2a319d9609bb3284057f2d85f17944a16f83 9843 rt-tests_0.85-0ubuntu2.debian.tar.gz
-
 Package: ruby-factory-girl
 Binary: ruby-factory-girl
 Version: 4.2.0-1
@@ -7450,39 +7448,6 @@ Checksums-Sha256:
  23cab70e530d0806382310bfb19051e5b5ab17b81c3d88083651f6ebe538a0d6 1976 tntnet_2.2-3.dsc
  9bc09b0ea4e31b4cc6318ba6ada5bae5deadcfad3d9c0ad9466d8586cdc728f4 1126784 tntnet_2.2.orig.tar.gz
  f57d1383d42a23297ca26feee47a19883444a36f808a823aabbceed8011ed59a 45680 tntnet_2.2-3.debian.tar.gz
-
-Package: tokyotyrant
-Binary: tokyotyrant, tokyotyrant-dbg, libtokyotyrant3, libtokyotyrant-dev, tokyotyrant-doc, tokyotyrant-utils
-Version: 1.1.40-4.2
-Priority: optional
-Section: universe/misc
-Maintainer: Örjan Persson <orange@fobie.net>
-Build-Depends: debhelper (>= 7.0.50), automake, autotools-dev, gawk, pkg-config, libtokyocabinet-dev (>> 1.4), liblua5.1-0-dev, lua5.1
-Architecture: any all
-Standards-Version: 3.8.4
-Format: 3.0 (quilt)
-Directory: pool/universe/t/tokyotyrant
-Files:
- 7e6a3702e940a68457431266c1021cb9 2167 tokyotyrant_1.1.40-4.2.dsc
- 79a962a451e1e251268c4b48eddeb507 188594 tokyotyrant_1.1.40.orig.tar.gz
- c22e79b4e1c84e3558e9edf4c61b15ab 12346 tokyotyrant_1.1.40-4.2.debian.tar.gz
-Uploaders: Andreas Schuldei <andreas@debian.org>
-Homepage: http://1978th.net/tokyotyrant/
-Package-List: 
- libtokyotyrant-dev deb libdevel extra
- libtokyotyrant3 deb libs extra
- tokyotyrant deb misc optional
- tokyotyrant-dbg deb debug extra
- tokyotyrant-doc deb doc optional
- tokyotyrant-utils deb utils optional
-Checksums-Sha1:
- 4a31fa7bc701a1b3c32ff01c4df6be36e1ef8826 2167 tokyotyrant_1.1.40-4.2.dsc
- 81aacf39cfa0cee915d17fe958742a2a1ec89da8 188594 tokyotyrant_1.1.40.orig.tar.gz
- b8b28460a0c089d4b0703d07cd498911776262af 12346 tokyotyrant_1.1.40-4.2.debian.tar.gz
-Checksums-Sha256:
- b34e1c57ffa1895cb371a5fb0b1cff6c3a9f0866eeabe01599b8c9f5f93cd45d 2167 tokyotyrant_1.1.40-4.2.dsc
- 1eb6d2c664a7227a769154dc814a8df12ff49a1f06f6f7b1b790b1a2949af124 188594 tokyotyrant_1.1.40.orig.tar.gz
- 1cfb84832d1f2e0e1e124ab21db6b080988097a67d1112053e3a34c26a5f8570 12346 tokyotyrant_1.1.40-4.2.debian.tar.gz
 
 Package: trac
 Binary: trac
