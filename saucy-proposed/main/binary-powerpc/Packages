@@ -845,6 +845,33 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: ntp
+Priority: optional
+Section: net
+Installed-Size: 1432
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian NTP Team <pkg-ntp-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Version: 1:4.2.6.p5+dfsg-2ubuntu3
+Replaces: apparmor (<< 2.3.1+1403-0ubuntu10), apparmor-profiles (<< 2.3.1+1403-0ubuntu10)
+Depends: adduser, lsb-base (>= 3.2-13), netbase, libc6 (>= 2.17), libcap2 (>= 2.10), libedit2 (>= 2.11-20080614-1), libopts25 (>= 1:5.18)
+Pre-Depends: dpkg (>= 1.15.7.2)
+Recommends: perl
+Suggests: ntp-doc, apparmor (>= 2.1+1075-0ubuntu6)
+Conflicts: apparmor (<< 2.3.1+1403-0ubuntu10), apparmor-profiles (<< 2.3.1+1403-0ubuntu10)
+Breaks: dhcp3-client (<< 4.1.0-1)
+Filename: pool/main/n/ntp/ntp_4.2.6.p5+dfsg-2ubuntu3_powerpc.deb
+Size: 576910
+MD5sum: 34d8609a2278a1d5ce6fe4c1d6b91340
+SHA1: 2e3587b07b82dbcf33ddf02d319b44653850b6ad
+SHA256: c2c9485753667bebef1b207a17ecaa34e4ec2f9d37100031ad44a85c12c81ecb
+Description: Network Time Protocol daemon and utility programs
+Homepage: http://support.ntp.org/
+Description-md5: 220487bd9eceed70fec6b929cb922fd3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop
+
 Package: ntp-doc
 Priority: optional
 Section: doc
@@ -864,6 +891,31 @@ Homepage: http://support.ntp.org/
 Description-md5: f5c14d8cbc640d49a5c8a0eeaadac851
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: ntpdate
+Priority: important
+Section: net
+Installed-Size: 248
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian NTP Team <pkg-ntp-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: ntp
+Version: 1:4.2.6.p5+dfsg-2ubuntu3
+Depends: netbase, libc6 (>= 2.17)
+Pre-Depends: dpkg (>= 1.15.7.2)
+Recommends: lockfile-progs
+Breaks: dhcp3-client (<< 4.1.0-1)
+Filename: pool/main/n/ntp/ntpdate_4.2.6.p5+dfsg-2ubuntu3_powerpc.deb
+Size: 65412
+MD5sum: 0045b4dd55f45f2700acc4b6711686a7
+SHA1: deeb01a7ca66ce3a42766964866f93944615b76f
+SHA256: fc1fdee469a9a0af0c990fbbbdd9e62521bae94bd7c76ef600b435f4c8046572
+Description: client for setting system time from NTP servers
+Homepage: http://support.ntp.org/
+Description-md5: bab945a5e62017056d52dca74ed20cda
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
 
 Package: openvswitch-common
 Priority: extra
