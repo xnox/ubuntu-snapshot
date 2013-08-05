@@ -1318,6 +1318,75 @@ Description-md5: 1d1638e3af600d887880ba4bb7ce1e20
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: gpsd
+Priority: optional
+Section: universe/misc
+Installed-Size: 228
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
+Architecture: powerpc
+Version: 3.9-2
+Depends: netbase | systemd-sysv, lsb-base (>= 3.2-13), libc6 (>= 2.15), libdbus-1-3 (>= 1.0.2), libgps20 (>= 3.3), debconf (>= 0.5) | debconf-2.0, init-system-helpers (>= 1.5)
+Recommends: udev, python
+Suggests: gpsd-clients, dbus
+Conflicts: fso-gpsd
+Breaks: udev (<< 136-1)
+Filename: pool/universe/g/gpsd/gpsd_3.9-2_powerpc.deb
+Size: 74624
+MD5sum: f193c5972b6ad946c28bf75f73ef8e60
+SHA1: 6e5c1c3352c632d1028c146edf828cfada25eb3b
+SHA256: 7cc86cbb334230c6582a97eecd951d210a54bc271ef3c6d90a50adf2a188c54c
+Description: Global Positioning System - daemon
+Multi-Arch: foreign
+Homepage: http://www.catb.org/gpsd/
+Description-md5: c27e4861a82769d7dbf1f60e97926430
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gpsd-clients
+Priority: optional
+Section: universe/misc
+Installed-Size: 319
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
+Architecture: powerpc
+Source: gpsd
+Version: 3.9-2
+Depends: libbluetooth3 (>= 4.91), libc6 (>= 2.15), libgps20 (>= 3.3), libncurses5 (>= 5.5-5~), libtinfo5, python-gps, python-gtk2, python-cairo, python
+Suggests: gpsd
+Conflicts: gps
+Filename: pool/universe/g/gpsd/gpsd-clients_3.9-2_powerpc.deb
+Size: 105914
+MD5sum: bc495e0bed85446b533272e26fc595bc
+SHA1: 89e13d390763f44ff46bdeb10eae72acd6daa789
+SHA256: f8c91fe9cb3ebdfc3aa1d10c7a1d91d8327de742988deec6bbd2b4a4781786e2
+Description: Global Positioning System - clients
+Homepage: http://www.catb.org/gpsd/
+Description-md5: 82a6a897230e9aec640eba7efba8a15d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gpsd-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 1535
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
+Architecture: powerpc
+Source: gpsd
+Version: 3.9-2
+Depends: libc6 (>= 2.4), python-dbg (>= 2.7), python-dbg (<< 2.8), libgps20 (= 3.9-2) | gpsd (= 3.9-2) | gpsd-clients (= 3.9-2) | python-gps (= 3.9-2)
+Filename: pool/universe/g/gpsd/gpsd-dbg_3.9-2_powerpc.deb
+Size: 1218120
+MD5sum: c598c21898d2312bdbc522ab7d3cca19
+SHA1: 93cf6e316c3a5451c1acd85f611217c6240856f8
+SHA256: 0df649c139fc6851abb130d89d220be3fcbc0a9c9d48f764abbb5a61473ab5da
+Description: Global Positioning System - debugging symbols
+Homepage: http://www.catb.org/gpsd/
+Description-md5: 041f80b15ed62343d04f254237bed350
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: gringotts
 Priority: optional
 Section: universe/admin
@@ -5471,6 +5540,54 @@ Description-md5: 31f36d1bcb449794d1ba4044cd4e1e39
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libgps-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 310
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
+Architecture: powerpc
+Source: gpsd
+Version: 3.9-2
+Depends: libgps20 (= 3.9-2), pkg-config
+Conflicts: gpsd (<< 2.34.dfsg-1)
+Filename: pool/universe/g/gpsd/libgps-dev_3.9-2_powerpc.deb
+Size: 101502
+MD5sum: 1ee3509dbcf31da13645e182d88387f7
+SHA1: e5ab6d081990d7ceda62ded9e6905f80f8fce336
+SHA256: 0216967fe42d798504557470320b9f1357d1d8b5a7633074f00908843d9d111b
+Description: Global Positioning System - development files
+Homepage: http://www.catb.org/gpsd/
+Description-md5: 134afa388f50f3672fe1aadaffd3e556
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgps20
+Priority: optional
+Section: universe/libs
+Installed-Size: 518
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
+Architecture: powerpc
+Source: gpsd
+Version: 3.9-2
+Depends: libbluetooth3 (>= 4.91), libc6 (>= 2.15), libdbus-1-3 (>= 1.0.2), libstdc++6 (>= 4.1.1), libusb-1.0-0 (>= 2:1.0.8)
+Pre-Depends: multiarch-support
+Suggests: gpsd
+Conflicts: fso-gpsd
+Filename: pool/universe/g/gpsd/libgps20_3.9-2_powerpc.deb
+Size: 210032
+MD5sum: 2400ed38390f14da3ab42e8b5abcc4e6
+SHA1: 47b556e88277c449c8f2c0a4d89befa79bb53194
+SHA256: 04b1ded39c04a5bc7e0f0854df6866121cb0390883569d66993d92f217946044
+Description: Global Positioning System - library
+Multi-Arch: same
+Homepage: http://www.catb.org/gpsd/
+Description-md5: dc7f47fc942723b517c23aead9afc361
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome
+
 Package: libgsm0710mux3
 Priority: extra
 Section: universe/libs
@@ -6448,6 +6565,50 @@ SHA256: 810ba80af4009765e927704c8340cd489a3c494e89e3a9747164892e9193cfa9
 Description: Geographic objects support for PostgreSQL -- JDBC support
 Homepage: http://postgis.refractions.net/
 Description-md5: 9a0091420d5a2bf380ec2f5dff0a1246
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libqgpsmm-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 87
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
+Architecture: powerpc
+Source: gpsd
+Version: 3.9-2
+Depends: pkg-config, libqgpsmm20 (>= 3.9), libqgpsmm20 (<< 3.9+1~), libgps-dev (>= 3.9), libgps-dev (<< 3.9+1~)
+Filename: pool/universe/g/gpsd/libqgpsmm-dev_3.9-2_powerpc.deb
+Size: 4274
+MD5sum: 3049bb8f5e1ad12563f3c19c3d7813fe
+SHA1: 1c3f2f2abdbef85ccb46e74d1ca32f62e21b3018
+SHA256: a6eb261cd975dd1e1830a453d3c1082a57edf37984064b7703ac980643cd9f60
+Description: Global Positioning System - Qt wrapper for libgps (development)
+Homepage: http://www.catb.org/gpsd/
+Description-md5: 58dc95e31af1e8f60364cd6d73c81b45
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libqgpsmm20
+Priority: optional
+Section: universe/libs
+Installed-Size: 183
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
+Architecture: powerpc
+Source: gpsd
+Version: 3.9-2
+Depends: libc6 (>= 2.4), libdbus-1-3 (>= 1.0.2), libgcc1 (>= 1:4.1.1), libqt4-network (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libstdc++6 (>= 4.1.1)
+Pre-Depends: multiarch-support
+Filename: pool/universe/g/gpsd/libqgpsmm20_3.9-2_powerpc.deb
+Size: 61870
+MD5sum: 0615d145c19f04184f669dfc9a0d3b87
+SHA1: 0f955c36788ecfa8f6abd4f37baeed8f012cc278
+SHA256: 82bf31c10df00ef265f0d8b297dcb7eee9974337d096e9993621c9e9de1bed54
+Description: Global Positioning System - Qt wrapper for libgps
+Multi-Arch: same
+Homepage: http://www.catb.org/gpsd/
+Description-md5: c10285f0d14c1d7f263002160056c2c5
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -8874,6 +9035,31 @@ Description: Three-dimensional finite element mesh generator. Python wrapper
 Multi-Arch: foreign
 Homepage: http://www.geuz.org/gmsh/
 Description-md5: 2a584e13263153b63ff46fcd5fe49c6e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-gps
+Priority: optional
+Section: universe/python
+Installed-Size: 263
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
+Architecture: powerpc
+Source: gpsd
+Version: 3.9-2
+Replaces: gpsd-clients (<< 2.34.dfsg-1)
+Provides: python2.7-gps
+Depends: libc6 (>= 2.4), python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Recommends: gpsd
+Conflicts: python-json
+Filename: pool/universe/g/gpsd/python-gps_3.9-2_powerpc.deb
+Size: 65820
+MD5sum: 6cd8690ed83520be6e1f6613470c4018
+SHA1: 1452d70cd5aea3c294b47e95dccaad74db74ae1c
+SHA256: e71a5e6f2cdc0d8c880c043b3b41333e1d732cd2b76ead859cf690af0ff5752b
+Description: Global Positioning System - Python libraries
+Homepage: http://www.catb.org/gpsd/
+Description-md5: aa660a07e5137c29eea0851e706c8966
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
