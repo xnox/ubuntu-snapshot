@@ -4722,6 +4722,34 @@ Checksums-Sha256:
  b96013545d7107230d68aa8ad46bc26bb39a1b967977d65e94cc3be9b3d89833 2119 linux-mako_3.4.0-3.18.dsc
  3e37fc4e70f9c5a03464e5d213df8123eb8ba51467fe13733c5763fcb30b637e 116069922 linux-mako_3.4.0-3.18.tar.gz
 
+Package: linux-manta
+Binary: linux-manta-headers-3.4.0-4, linux-manta-tools-common, linux-manta-tools-3.4.0-4, linux-image-3.4.0-4-manta, linux-headers-3.4.0-4-manta, linux-image-3.4.0-4-manta-dbgsym
+Version: 3.4.0-4.16
+Section: universe/devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 5), cpio, module-init-tools, kernel-wedge (>= 2.24ubuntu1), libelf-dev, binutils-dev, rsync, libdw-dev, python-dev, gcc-4.6, xmlto, docbook-utils, ghostscript, transfig, bzip2, sharutils, asciidoc, flex, bison
+Architecture: armhf
+Standards-Version: 3.8.4.0
+Format: 1.0
+Directory: pool/universe/l/linux-manta
+Files:
+ b9bf034129534caa0210a74d33a7abf5 2136 linux-manta_3.4.0-4.16.dsc
+ 79cc0a595263f516f346fa2494d75ebf 107082523 linux-manta_3.4.0-4.16.tar.gz
+Vcs-Git: git://kernel.ubuntu.com/ubuntu/ubuntu-saucy.git manta
+Package-List: 
+ linux-headers-3.4.0-4-manta deb devel optional
+ linux-image-3.4.0-4-manta deb admin optional
+ linux-image-3.4.0-4-manta-dbgsym deb devel optional
+ linux-manta-headers-3.4.0-4 deb devel optional
+ linux-manta-tools-3.4.0-4 deb devel optional
+ linux-manta-tools-common deb kernel optional
+Checksums-Sha1:
+ 74832399acbd5987d3a7cc599ac49eccbea100de 2136 linux-manta_3.4.0-4.16.dsc
+ fc96b1531479693f37db63a5cd6da321920dff54 107082523 linux-manta_3.4.0-4.16.tar.gz
+Checksums-Sha256:
+ 287c9947e742c0a9f89d78bb74b4e0f5d60618b00a316b1ec7bf491896e2c0f8 2136 linux-manta_3.4.0-4.16.dsc
+ d1a37fb776572537c77070ec1a856b8ead47afa8757ff012b61985bf966b8c3b 107082523 linux-manta_3.4.0-4.16.tar.gz
+
 Package: live-images
 Binary: live-images, live-image-gnome-desktop, live-image-kde-desktop, live-image-lxde-desktop, live-image-rescue, live-image-standard, live-image-xfce-desktop
 Version: 4.0~a17-1
@@ -6070,6 +6098,29 @@ Checksums-Sha256:
  c607d0ef6425cc37579ba247a4dff83d2fe49391aa1d07f2188c249e65cb50a1 2954285 python-csb_1.1.1+dfsg.orig.tar.gz
  8d5ca9fe3583a7c9f90dbb209ee868958c52c96bda41dae7a5639e684558df6f 2941 python-csb_1.1.1+dfsg-1.1.debian.tar.gz
 Testsuite: autopkgtest
+
+Package: python-dvdvideo
+Binary: python3-dvdvideo
+Version: 0.20130117+nmu1
+Priority: extra
+Section: universe/misc
+Maintainer: Bastian Blank <waldi@debian.org>
+Build-Depends: debhelper (>= 9.0.0), python3
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/universe/p/python-dvdvideo
+Files:
+ d91ec276459815a2b7f1ac9e7f955533 845 python-dvdvideo_0.20130117+nmu1.dsc
+ 8a3333f4240a60bd52f1ec04e649f719 21083 python-dvdvideo_0.20130117+nmu1.tar.gz
+Package-List: 
+ python3-dvdvideo deb python extra
+Checksums-Sha1:
+ d91f44a3275ccc7f7b7a3c5f756ce7038128a630 845 python-dvdvideo_0.20130117+nmu1.dsc
+ 75c15c5b171b8671d6b56c92f61935c093498e92 21083 python-dvdvideo_0.20130117+nmu1.tar.gz
+Checksums-Sha256:
+ c5079175aeaad032c8d0fa627115b6aeae75b9a7924e2c0d14a5fe02b9383650 845 python-dvdvideo_0.20130117+nmu1.dsc
+ 2a0983f0cdd96a55087dc75b2eed784b2f423fa0eca03cafe75f58462a149c6f 21083 python-dvdvideo_0.20130117+nmu1.tar.gz
 
 Package: python-regex
 Binary: python-regex, python-regex-dbg, python3-regex, python3-regex-dbg
@@ -7734,60 +7785,28 @@ Checksums-Sha256:
  de0412dcfff3e83dbdd1df2cb10d3efed7f96323a696127de37f05d6c1b6b95e 7966 unicorn_4.6.2-2.debian.tar.gz
 Ruby-Versions: all
 
-Package: unity8
-Binary: indicators-client, unity8, unity8-autopilot, unity8-fake-env, unity8-private
-Version: 7.81.3+13.10.20130805-0ubuntu1
-Priority: optional
-Section: universe/x11
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: cmake, debhelper (>= 9), libdee-qt5-dev (>= 3.2), libgl1-mesa-dev [!armhf] | libgl-dev [!armhf], libgl1-mesa-dri, libgles2-mesa-dev [armhf], libhud-client2-dev, libjson-perl, libnm-glib-dev, libnm-util-dev, libpulse-dev, libqmenumodel-dev, libqt5v8-5-private-dev, libunity-api-dev (>= 7.80.3), libunity-core-6.0-dev (<< 7.80), libunity-dev (>= 7.0.3), libunity-scopes-json-def-phone, libusermetricsoutput1-dev, libxcb1-dev, pkg-config, python (>= 2.7), python-setuptools, python3, qt5-default, qtbase5-dev, qtbase5-private-dev, qtdeclarative5-dev, qtdeclarative5-dev-tools, qtdeclarative5-private-dev, qtdeclarative5-qtquick2-plugin, qtdeclarative5-test-plugin, qtdeclarative5-ubuntu-ui-toolkit-plugin, qtdeclarative5-xmllistmodel-plugin, ttf-ubuntu-font-family
-Architecture: any all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/universe/u/unity8
-Files:
- 8c42206548c33a26ac9713a565474f43 2886 unity8_7.81.3+13.10.20130805-0ubuntu1.dsc
- f06314c52d15b48e31c0ba001f94d52a 6120379 unity8_7.81.3+13.10.20130805.orig.tar.gz
- 25dd9efe35e31170749c5926b65a0c85 14874 unity8_7.81.3+13.10.20130805-0ubuntu1.diff.gz
-Homepage: http://launchpad.net/unity
-Vcs-Browser: https://bazaar.launchpad.net/~unity-team/unity8/trunk
-Vcs-Bzr: https://code.launchpad.net/unity8
-Package-List: 
- indicators-client deb x11 optional
- unity8 deb x11 optional
- unity8-autopilot deb x11 optional
- unity8-fake-env deb x11 optional
- unity8-private deb x11 optional
-Checksums-Sha1:
- 3f8486043ffc86f296d726116517bae042ebf02d 2886 unity8_7.81.3+13.10.20130805-0ubuntu1.dsc
- 0ec1b37325dc268be096a24ed359fd4f7ee077fd 6120379 unity8_7.81.3+13.10.20130805.orig.tar.gz
- 021665793556c81a6ef5d8dd8197156fc4f7b678 14874 unity8_7.81.3+13.10.20130805-0ubuntu1.diff.gz
-Checksums-Sha256:
- a21ee7fda05b72e7367ae6468094109d026e2a524b840d8d4d07f56571577693 2886 unity8_7.81.3+13.10.20130805-0ubuntu1.dsc
- 7e8382c6be5b42f70e33939e52222d1ed122c05f8ac8e2276a20f09a9178fcdf 6120379 unity8_7.81.3+13.10.20130805.orig.tar.gz
- e88a68f6070a52b87a157c640b1e68f435787a9b9da41ee895a2b57cfe690742 14874 unity8_7.81.3+13.10.20130805-0ubuntu1.diff.gz
-
 Package: uucp-lmtp
 Binary: uucp-lmtp
-Version: 0.20130117
+Version: 0.20130117+nmu1
+Priority: extra
 Section: universe/misc
 Maintainer: Bastian Blank <waldi@debian.org>
-Build-Depends: debhelper (>= 9.0.0), python3, python3.2
+Build-Depends: debhelper (>= 9.0.0), python3
 Architecture: all
 Standards-Version: 3.9.4
 Format: 3.0 (native)
 Directory: pool/universe/u/uucp-lmtp
 Files:
- 196c4e849dcb1fd970ccec41a3db0c9b 798 uucp-lmtp_0.20130117.dsc
- 89c21e551dfce6e1210af31bdb31edd3 23542 uucp-lmtp_0.20130117.tar.gz
+ 7ae28a1c1ca596b154484d98853f481a 807 uucp-lmtp_0.20130117+nmu1.dsc
+ 6a5f9119cf7a391ffe7ad065c0987413 23944 uucp-lmtp_0.20130117+nmu1.tar.gz
 Package-List: 
  uucp-lmtp deb python extra
 Checksums-Sha1:
- fd6ab66a588fefcd39eb65883e74c37facccd569 798 uucp-lmtp_0.20130117.dsc
- 2a6d0e4888d7e88b7a39274555083a487ac1a932 23542 uucp-lmtp_0.20130117.tar.gz
+ ce0ed69f6c613da314e7717e8c12cdbb0f6689ec 807 uucp-lmtp_0.20130117+nmu1.dsc
+ fd270f1410e4796fc3c44e007f170ea6041f5e1d 23944 uucp-lmtp_0.20130117+nmu1.tar.gz
 Checksums-Sha256:
- e8eed4f4c3e7ea08ef50c55fbbad37f90e098308de92b2b50a32181e7d8a9b9d 798 uucp-lmtp_0.20130117.dsc
- 9c8f9a3fcaf5c3188f133f7c8ad9380003af6031a60778cb6a346d0e72bcb5d3 23542 uucp-lmtp_0.20130117.tar.gz
+ 75cee985bf445c29744e7d83e720fad2be0a29bf633ed3bb11203f72c3b464bd 807 uucp-lmtp_0.20130117+nmu1.dsc
+ 5d4b1ed27fd6c7227321c77b8533302e466d1f2d8c149f68b5cde6b3f99c5d33 23944 uucp-lmtp_0.20130117+nmu1.tar.gz
 
 Package: varconf
 Binary: libvarconf-1.0-8, libvarconf-dev, libvarconf-1.0-8-dbg
