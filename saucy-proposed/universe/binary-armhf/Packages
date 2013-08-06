@@ -5633,6 +5633,74 @@ Description-md5: 97f7c30b6b948deb4f4764672b21bea8
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libpfm4
+Priority: extra
+Section: universe/libs
+Installed-Size: 113
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Vincent Danjean <vdanjean@debian.org>
+Architecture: armhf
+Version: 4.4.0-0ubuntu1
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Filename: pool/universe/libp/libpfm4/libpfm4_4.4.0-0ubuntu1_armhf.deb
+Size: 32356
+MD5sum: e567fc753f40b9ab35e5ce5754aea53b
+SHA1: e49ce36192775b548b98edcb946667cb04f1ee29
+SHA256: 3e4a2736745b345f45f48ef5feceb59601bf489da1d5a085bf470516d99a6e15
+Description: Library to program the performance monitoring events
+Multi-Arch: same
+Homepage: http://perfmon2.sourceforge.net/
+Description-md5: 0bcc80034d18de9750e5f9ac06aedd9b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpfm4-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 271
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Vincent Danjean <vdanjean@debian.org>
+Architecture: armhf
+Source: libpfm4
+Version: 4.4.0-0ubuntu1
+Depends: libpfm4 (= 4.4.0-0ubuntu1)
+Filename: pool/universe/libp/libpfm4/libpfm4-dbg_4.4.0-0ubuntu1_armhf.deb
+Size: 188712
+MD5sum: 86a64e36a5b26d416a569de28d6b2909
+SHA1: 8a273126551a942f3861ce94906ce2946f5f6e34
+SHA256: 1200c672ba90295889f4836deafa2ab72457f354ea5be2ad472a3a4df0294e39
+Description: Debug symbols for the libpfm4 library
+Multi-Arch: same
+Homepage: http://perfmon2.sourceforge.net/
+Description-md5: 84a7b61abb515d1276d72114b059fcf4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpfm4-dev
+Priority: extra
+Section: universe/libdevel
+Installed-Size: 215
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Vincent Danjean <vdanjean@debian.org>
+Architecture: armhf
+Source: libpfm4
+Version: 4.4.0-0ubuntu1
+Replaces: libpfm3-3.2-dev
+Depends: libpfm4 (= 4.4.0-0ubuntu1)
+Conflicts: libpfm3-3.2-dev
+Filename: pool/universe/libp/libpfm4/libpfm4-dev_4.4.0-0ubuntu1_armhf.deb
+Size: 90600
+MD5sum: 28a747f712f724fd8325337d4123a8dd
+SHA1: aacdecf3f203fc80bcc7dfb044ff79d8e0d74ae3
+SHA256: 4f8f461e5e15cc5dd71ec5d73771dedde05aa1ca3f87c1451b8ee11c2ff90143
+Description: Development files for the libpfm4 library
+Multi-Arch: same
+Homepage: http://perfmon2.sourceforge.net/
+Description-md5: 3872a46e131fdb997e3bbc1d835eaf29
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libpgocaml-ocaml
 Priority: optional
 Section: universe/ocaml
@@ -8134,6 +8202,29 @@ Description-md5: e4d5556b61c4fca7372aee160ff69300
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-libpfm4
+Priority: extra
+Section: universe/python
+Installed-Size: 281
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Vincent Danjean <vdanjean@debian.org>
+Architecture: armhf
+Source: libpfm4
+Version: 4.4.0-0ubuntu1
+Provides: python2.7-libpfm4
+Depends: libpfm4 (= 4.4.0-0ubuntu1), libc6 (>= 2.4), python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Filename: pool/universe/libp/libpfm4/python-libpfm4_4.4.0-0ubuntu1_armhf.deb
+Size: 51612
+MD5sum: 3d7a2ea8363556988bbe9a17d7f3e805
+SHA1: e23f97ebdb2b750bf190ad2359aad2d7e209bb24
+SHA256: de8179c8fa86f79c258e5bd98b38ddf00def3e14ab57754fccb588f5a075d022
+Description: Python bindings for libpfm4
+Homepage: http://perfmon2.sourceforge.net/
+Python-Version: 2.7
+Description-md5: e1d4e08b6d558a174154f526a060fbfa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-regex
 Priority: optional
 Section: universe/python
@@ -9311,28 +9402,6 @@ Homepage: http://trac.edgewall.com
 Description-md5: 2cccb18baaf0a79bddc72153a6b2f521
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: ubuntu-release-upgrader-qt
-Priority: optional
-Section: universe/admin
-Installed-Size: 127
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: ubuntu-release-upgrader
-Version: 1:0.199
-Replaces: update-manager-kde (<< 1:0.165)
-Depends: ubuntu-release-upgrader-core (= 1:0.199), python3-pykde4, kdesudo, psmisc
-Breaks: update-manager-kde (<< 1:0.165)
-Filename: pool/universe/u/ubuntu-release-upgrader/ubuntu-release-upgrader-qt_0.199_all.deb
-Size: 6110
-MD5sum: 0e5cdb81c9da4fd233483aca80fff97c
-SHA1: df29e6f1a482297a0162eba7ce74b06a5caa6cd6
-SHA256: 5d8bc28091de6cf869c8d355fc415053d3416270559e18acef0b57df56534405
-Description: manage release upgrades
-Description-md5: 1a5354b00256cd2e8841649e89979f00
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
 
 Package: ucommon-doc
 Priority: optional
