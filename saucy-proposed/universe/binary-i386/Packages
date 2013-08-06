@@ -1479,75 +1479,6 @@ Description-md5: 1d1638e3af600d887880ba4bb7ce1e20
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: gpsd
-Priority: optional
-Section: universe/misc
-Installed-Size: 228
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
-Architecture: i386
-Version: 3.9-2
-Depends: netbase | systemd-sysv, lsb-base (>= 3.2-13), libc6 (>= 2.15), libdbus-1-3 (>= 1.0.2), libgps20 (>= 3.3), debconf (>= 0.5) | debconf-2.0, init-system-helpers (>= 1.5)
-Recommends: udev, python
-Suggests: gpsd-clients, dbus
-Conflicts: fso-gpsd
-Breaks: udev (<< 136-1)
-Filename: pool/universe/g/gpsd/gpsd_3.9-2_i386.deb
-Size: 74000
-MD5sum: 0dbcda05c80cd51955ed48b9f922eb9a
-SHA1: e202d427228610ed6e77e1b7bf4dfdde6575b541
-SHA256: faa693d49e689350d0331dae9a9fcfac679606d75c8c2cd421f14cd44afd68cd
-Description: Global Positioning System - daemon
-Multi-Arch: foreign
-Homepage: http://www.catb.org/gpsd/
-Description-md5: c27e4861a82769d7dbf1f60e97926430
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: gpsd-clients
-Priority: optional
-Section: universe/misc
-Installed-Size: 330
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
-Architecture: i386
-Source: gpsd
-Version: 3.9-2
-Depends: libbluetooth3 (>= 4.91), libc6 (>= 2.15), libgps20 (>= 3.3), libncurses5 (>= 5.5-5~), libtinfo5, python-gps, python-gtk2, python-cairo, python
-Suggests: gpsd
-Conflicts: gps
-Filename: pool/universe/g/gpsd/gpsd-clients_3.9-2_i386.deb
-Size: 102542
-MD5sum: 85b37e5f7b3551b4d28d8e1f741adf90
-SHA1: 0112bf6c593b01a81f679c04b327773facfe5a4d
-SHA256: e3627efdc678986c9cc748c445c4f268f60961def5af54dfbcdf6944e0e263d5
-Description: Global Positioning System - clients
-Homepage: http://www.catb.org/gpsd/
-Description-md5: 82a6a897230e9aec640eba7efba8a15d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: gpsd-dbg
-Priority: extra
-Section: universe/debug
-Installed-Size: 1457
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
-Architecture: i386
-Source: gpsd
-Version: 3.9-2
-Depends: libc6 (>= 2.4), python-dbg (>= 2.7), python-dbg (<< 2.8), libgps20 (= 3.9-2) | gpsd (= 3.9-2) | gpsd-clients (= 3.9-2) | python-gps (= 3.9-2)
-Filename: pool/universe/g/gpsd/gpsd-dbg_3.9-2_i386.deb
-Size: 1167732
-MD5sum: f9bbd3f4961694230011e4f56ebf17d0
-SHA1: 5f1bd2f31fcf3eafc56c7696ab227e4abe7c6c5b
-SHA256: 0e3c0992a7602ff7525f2b038f4604711d056182c8cb9dc0e0d2fe4a66434f7a
-Description: Global Positioning System - debugging symbols
-Homepage: http://www.catb.org/gpsd/
-Description-md5: 041f80b15ed62343d04f254237bed350
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: gringotts
 Priority: optional
 Section: universe/admin
@@ -7299,54 +7230,6 @@ Description-md5: 9616ee202dd6005d248e161f674db4c6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libgps-dev
-Priority: optional
-Section: universe/libdevel
-Installed-Size: 339
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
-Architecture: i386
-Source: gpsd
-Version: 3.9-2
-Depends: libgps20 (= 3.9-2), pkg-config
-Conflicts: gpsd (<< 2.34.dfsg-1)
-Filename: pool/universe/g/gpsd/libgps-dev_3.9-2_i386.deb
-Size: 105634
-MD5sum: 60d7a9153cc8285efc39d520898efcf8
-SHA1: 46be2dbf5d07f8a1a691078800cddc5a227d110f
-SHA256: ff494372918ad6ff12e7b6fa1db320795727bd3e1872593b55de73b4b7fc60c3
-Description: Global Positioning System - development files
-Homepage: http://www.catb.org/gpsd/
-Description-md5: 134afa388f50f3672fe1aadaffd3e556
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libgps20
-Priority: optional
-Section: universe/libs
-Installed-Size: 518
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
-Architecture: i386
-Source: gpsd
-Version: 3.9-2
-Depends: libbluetooth3 (>= 4.91), libc6 (>= 2.15), libdbus-1-3 (>= 1.0.2), libstdc++6 (>= 4.1.1), libusb-1.0-0 (>= 2:1.0.8)
-Pre-Depends: multiarch-support
-Suggests: gpsd
-Conflicts: fso-gpsd
-Filename: pool/universe/g/gpsd/libgps20_3.9-2_i386.deb
-Size: 195312
-MD5sum: b3c6b2ec20bc30952fa82165444820b6
-SHA1: 87faee97294f6d800043078fc98161219e4bd907
-SHA256: 5194a9b1b98f7cb1c3b33ac16e3129442e4a672e58e7e6e750cbe99d83e08213
-Description: Global Positioning System - library
-Multi-Arch: same
-Homepage: http://www.catb.org/gpsd/
-Description-md5: dc7f47fc942723b517c23aead9afc361
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome
-
 Package: libgruel3.6.4.1
 Priority: optional
 Section: universe/libs
@@ -7971,13 +7854,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: i386
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu1
-Depends: libmysqlclient-dev (>= 5.5.32-0ubuntu1)
-Filename: pool/universe/m/mysql-5.5/libmysqld-pic_5.5.32-0ubuntu1_i386.deb
-Size: 4592902
-MD5sum: 03bd4c185b52fef8731f8073069b866c
-SHA1: de809e1e65b6378c7f6f2be035337671b4b43a26
-SHA256: 3db8025aa2a78fcf661ca66a73416519f7a8309c3ebfe65c8d1a16832af029a8
+Version: 5.5.32-0ubuntu2
+Depends: libmysqlclient-dev (>= 5.5.32-0ubuntu2)
+Filename: pool/universe/m/mysql-5.5/libmysqld-pic_5.5.32-0ubuntu2_i386.deb
+Size: 4592912
+MD5sum: 76a60a9ffb765c16832c9c408b374b29
+SHA1: e06cde69ccb99ce6bd0c6b98b9bae4808113dac5
+SHA256: 58b934288c4cedbdc7749a46b248b10be4e2c9626ec77e3c2a995b0519f13998
 Description: MySQL database development files
 Homepage: http://dev.mysql.com/
 Description-md5: a6e7a6d26021d6ef468e70ec4ac81167
@@ -8428,6 +8311,46 @@ Description-md5: 8ce3441ca051da9d82af3217ad79aac9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libplatform-api1-hybris
+Priority: optional
+Section: universe/oldlibs
+Installed-Size: 30
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: platform-api
+Version: 0.18.3+13.10.20130806-0ubuntu1
+Depends: libubuntu-application-api1
+Filename: pool/universe/p/platform-api/libplatform-api1-hybris_0.18.3+13.10.20130806-0ubuntu1_all.deb
+Size: 1454
+MD5sum: 876e827993b62551aae02b8f3b03d3ce
+SHA1: 4219eade05e86c56aa61cd684b7f4a2a05e1e7b4
+SHA256: 60ef9df9b69e068d38aff2a333f5e121fbd1385de0e5f04c24fec4a3074e2746
+Description: dummy transitional package for libplatform-api1-hybris
+Homepage: https://launchpad.net/platform-api
+Description-md5: eadfb5c2f51dc8fbf32651387ca957b3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libplatform-hardware-api1-hybris
+Priority: optional
+Section: universe/oldlibs
+Installed-Size: 30
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: platform-api
+Version: 0.18.3+13.10.20130806-0ubuntu1
+Depends: libubuntu-platform-hardware-api1
+Filename: pool/universe/p/platform-api/libplatform-hardware-api1-hybris_0.18.3+13.10.20130806-0ubuntu1_all.deb
+Size: 1458
+MD5sum: 70a9f876545e4e8358a0f78b746d061b
+SHA1: 3da7c33a238ad75f79a9ac2cfa3ec2061ee68814
+SHA256: 075624c4ed3427086f27d9e41e18e2647f078f9393417717c1f7a05509a96df7
+Description: dummy transitional package for libplatform-hardware-api1-hybris
+Homepage: https://launchpad.net/platform-api
+Description-md5: a00c22ad1680c8bba1184f44b5814299
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libpostgis-java
 Priority: optional
 Section: universe/libs
@@ -8449,50 +8372,6 @@ SHA256: 810ba80af4009765e927704c8340cd489a3c494e89e3a9747164892e9193cfa9
 Description: Geographic objects support for PostgreSQL -- JDBC support
 Homepage: http://postgis.refractions.net/
 Description-md5: 9a0091420d5a2bf380ec2f5dff0a1246
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libqgpsmm-dev
-Priority: optional
-Section: universe/libdevel
-Installed-Size: 87
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
-Architecture: i386
-Source: gpsd
-Version: 3.9-2
-Depends: pkg-config, libqgpsmm20 (>= 3.9), libqgpsmm20 (<< 3.9+1~), libgps-dev (>= 3.9), libgps-dev (<< 3.9+1~)
-Filename: pool/universe/g/gpsd/libqgpsmm-dev_3.9-2_i386.deb
-Size: 4248
-MD5sum: 865dc0ed107743af68b4429c04714d58
-SHA1: a3fc1f15c4e79650fd4c34218dbe7e7e9de17308
-SHA256: 24af24e118cb963331906801091615c96bcfcae8cb55f57b0588d07b0d75219c
-Description: Global Positioning System - Qt wrapper for libgps (development)
-Homepage: http://www.catb.org/gpsd/
-Description-md5: 58dc95e31af1e8f60364cd6d73c81b45
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libqgpsmm20
-Priority: optional
-Section: universe/libs
-Installed-Size: 183
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
-Architecture: i386
-Source: gpsd
-Version: 3.9-2
-Depends: libc6 (>= 2.4), libdbus-1-3 (>= 1.0.2), libgcc1 (>= 1:4.1.1), libqt4-network (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libstdc++6 (>= 4.1.1)
-Pre-Depends: multiarch-support
-Filename: pool/universe/g/gpsd/libqgpsmm20_3.9-2_i386.deb
-Size: 56804
-MD5sum: 394a3453a5d564496d72da861950e451
-SHA1: 07f540c4b509394986d987958392c159492c2e4b
-SHA256: 1ac38a3fd816c5559cd62927399c5ad022fbffc1ebed46f4cfc5b853f789571e
-Description: Global Positioning System - Qt wrapper for libgps
-Multi-Arch: same
-Homepage: http://www.catb.org/gpsd/
-Description-md5: c10285f0d14c1d7f263002160056c2c5
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -9946,17 +9825,17 @@ Origin: Ubuntu
 Package: mysql-source-5.5
 Priority: optional
 Section: universe/database
-Installed-Size: 22156
+Installed-Size: 22155
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: i386
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu1
-Filename: pool/universe/m/mysql-5.5/mysql-source-5.5_5.5.32-0ubuntu1_i386.deb
-Size: 21720868
-MD5sum: 65a434c2cf85248befb9c2411e8a4b5f
-SHA1: cba4175561fc070454c838c71e185fc77a79f11e
-SHA256: b174ff2541e0c7018b3ada07a6ff2bbb684516a91b14db1530dbfe9f5e5990e2
+Version: 5.5.32-0ubuntu2
+Filename: pool/universe/m/mysql-5.5/mysql-source-5.5_5.5.32-0ubuntu2_i386.deb
+Size: 21719432
+MD5sum: 8049674eabf4ad40e3167a48831c6f02
+SHA1: 694e907d64c9c5ab76bfcff8a77816def7e26ad6
+SHA256: a0a41b75f2d24cb49cbc8990fb5f6bd3b4212a7de54d50e607d6b80000576618
 Description: MySQL source
 Homepage: http://dev.mysql.com/
 Description-md5: 9bacc0267862ea6c169da6cfe76d3aef
@@ -9971,13 +9850,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: all
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu1
+Version: 5.5.32-0ubuntu2
 Depends: mysql-testsuite-5.5
-Filename: pool/universe/m/mysql-5.5/mysql-testsuite_5.5.32-0ubuntu1_all.deb
-Size: 11392
-MD5sum: d6f0363c1c3b28aaaa8967e8e2d11bd2
-SHA1: 6446bb21bff6aed202474ad72f753527efe069b6
-SHA256: 4e4c28442d008272212a9ef49ca563abe53399086150e9add3cfcc8bbf4c7049
+Filename: pool/universe/m/mysql-5.5/mysql-testsuite_5.5.32-0ubuntu2_all.deb
+Size: 11198
+MD5sum: 67dcc5ba9ad4772749562a1d0c7fc066
+SHA1: ec3465935f9ade8b8e36b4841199889f116946cf
+SHA256: a6ae0a71c9eb2ba9ce1cc3449f9918bb61a5255609b7a636ab81668a09035a5c
 Description: MySQL testsuite
 Homepage: http://dev.mysql.com/
 Description-md5: a3c0fd28b808fa1a0d62a5bfb5ba8923
@@ -9992,14 +9871,14 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: i386
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu1
+Version: 5.5.32-0ubuntu2
 Depends: mysql-server, mysql-client, libc6 (>= 2.3.6-6~), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
-Conflicts: mysql-testsuite (<< 5.5.32-0ubuntu1)
-Filename: pool/universe/m/mysql-5.5/mysql-testsuite-5.5_5.5.32-0ubuntu1_i386.deb
-Size: 8726324
-MD5sum: a0216d2aec0f394dd503e194dabc5333
-SHA1: c766d1a8d5f7ff5cd3e8efc1ce96e50e5cee38f4
-SHA256: 3076af8edbe5b6635b9d04b3c091f78642392c323deb944d941fbb68e921064c
+Conflicts: mysql-testsuite (<< 5.5.32-0ubuntu2)
+Filename: pool/universe/m/mysql-5.5/mysql-testsuite-5.5_5.5.32-0ubuntu2_i386.deb
+Size: 8726242
+MD5sum: 3c537fc4627223b06222d8e346097c8a
+SHA1: 6bf38fbb2ceb339e0f423df58c00b2b5199a5c92
+SHA256: 9395e202d44ce21c292ea0c071ce58047b52288aa4b5080ea105cf5a38692a96
 Description: MySQL testsuite
 Homepage: http://dev.mysql.com/
 Description-md5: 3e88fc28903eb44dd0b2a0eb9f813181
@@ -10697,6 +10576,26 @@ Description-md5: 7f992f8ebbd49e497b86c7acbe51cc1d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: powerd
+Priority: optional
+Section: universe/admin
+Installed-Size: 160
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Version: 0.13+13.10.20130806-0ubuntu1
+Depends: dconf-gsettings-backend | gsettings-backend, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.7), libglib2.0-0 (>= 2.37.3), libhybris, libubuntu-application-api1 (>= 0.18.1daily13.06.21), libudev1 (>= 199), libupower-glib1 (>= 0.9.0), libuuid1 (>= 2.16), upower
+Recommends: ofono
+Filename: pool/universe/p/powerd/powerd_0.13+13.10.20130806-0ubuntu1_i386.deb
+Size: 45686
+MD5sum: ea6511fc720995546c4aee9f0686237e
+SHA1: c96dc87c143d3123bb86e42a14a48edaca5e86f4
+SHA256: fdda4fddc4d376fc5cbaef437d29361b7bcc8be5846a9029b78285270f8a523e
+Description: Power daemon to monitor and control system and display power state
+Homepage: https://launchpad.net/powerd
+Description-md5: a6b163672902faf59462bbea694e9887
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: proftpd-basic
 Priority: optional
 Section: universe/net
@@ -11155,31 +11054,6 @@ Description: Three-dimensional finite element mesh generator. Python wrapper
 Multi-Arch: foreign
 Homepage: http://www.geuz.org/gmsh/
 Description-md5: 2a584e13263153b63ff46fcd5fe49c6e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: python-gps
-Priority: optional
-Section: universe/python
-Installed-Size: 259
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Bernd Zeimetz <bzed@debian.org>
-Architecture: i386
-Source: gpsd
-Version: 3.9-2
-Replaces: gpsd-clients (<< 2.34.dfsg-1)
-Provides: python2.7-gps
-Depends: libc6 (>= 2.4), python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Recommends: gpsd
-Conflicts: python-json
-Filename: pool/universe/g/gpsd/python-gps_3.9-2_i386.deb
-Size: 65714
-MD5sum: d90c6607bdcdfb19b1686c2b7868d4cb
-SHA1: 4c9b892e9fc53566a69e6497578917ed7244e218
-SHA256: 7aaf7688c03d8ee6894e821fd2d72bb09ae0488432bc4b4cd7a64c5642ebbd23
-Description: Global Positioning System - Python libraries
-Homepage: http://www.catb.org/gpsd/
-Description-md5: aa660a07e5137c29eea0851e706c8966
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
