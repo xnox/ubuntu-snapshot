@@ -8724,6 +8724,30 @@ Description-md5: e72f28ca8278601cd715c1b9899ba337
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: liblxc0
+Priority: optional
+Section: universe/admin
+Installed-Size: 312
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: lxc
+Version: 0.9.0-0ubuntu19
+Replaces: lxc (<< 0.9.0~alpha3-0ubuntu1~)
+Depends: libapparmor1 (>= 2.6~devel), libc6 (>= 2.17), libcap2 (>= 2.10), libseccomp1 (>= 0.0.0~20120605)
+Pre-Depends: multiarch-support
+Breaks: lxc (<< 0.9.0~alpha3-0ubuntu1~)
+Filename: pool/universe/l/lxc/liblxc0_0.9.0-0ubuntu19_amd64.deb
+Size: 99244
+MD5sum: 09f33085a63daca427b62f9ca534afcf
+SHA1: 4f59d0f9d0d717c9bb55d189ddf4f93e5a58fa57
+SHA256: a4483c9403ddec4a902346ba3e93b14ddc03d48a901d4a1b9d064ae01bc2a04f
+Description: Linux Containers userspace tools (library)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: d757397b1a93a5bea5c72032f3ef485d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
 Package: libmediastreamer-base3
 Priority: optional
 Section: universe/libs
@@ -10805,6 +10829,93 @@ Description-md5: fa0c0f5531d9b0f9865a460f8a19e168
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: lxc
+Priority: optional
+Section: universe/admin
+Installed-Size: 507
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 0.9.0-0ubuntu19
+Depends: adduser, apparmor, bridge-utils, dnsmasq-base, iptables, liblxc0 (= 0.9.0-0ubuntu19), rsync, python3, python3-lxc, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.8)
+Recommends: cgroup-lite | cgroup-bin, libcap2-bin, lxc-templates (>= 0.8.0~rc1-4ubuntu43), openssl
+Suggests: btrfs-tools, lvm2, lxctl
+Filename: pool/universe/l/lxc/lxc_0.9.0-0ubuntu19_amd64.deb
+Size: 121528
+MD5sum: e05eac712b3bd6c433260540dbcf157c
+SHA1: 8095f819bc86ef3c95717a7b6a268f85d9aa23c6
+SHA256: a7fa0fae3bce832d48fdff3c4c20be80ae2341f0e495c7335269bc581679855c
+Description: Linux Containers userspace tools
+Homepage: http://lxc.sourceforge.net/
+Description-md5: 4ece0dffd153c29e95ffdb89f8238dfc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
+Package: lxc-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 609
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: lxc
+Version: 0.9.0-0ubuntu19
+Depends: lxc (= 0.9.0-0ubuntu19), lxc-dev (= 0.9.0-0ubuntu19)
+Filename: pool/universe/l/lxc/lxc-dbg_0.9.0-0ubuntu19_amd64.deb
+Size: 360378
+MD5sum: 9a36d764559c31c53f06120454fe29b1
+SHA1: bbf3f2c271e0c14eae6617edd363453fa21b2f0d
+SHA256: 80a2e2f1a458c724e7ae4ecbcedf26f4e85a97806570a40939c8e15f92ce7d2f
+Description: Linux Containers userspace tools (debug)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: 9ec9c23e26368a478bce79545cfbb782
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: lxc-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 128
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: lxc
+Version: 0.9.0-0ubuntu19
+Depends: lxc (= 0.9.0-0ubuntu19)
+Filename: pool/universe/l/lxc/lxc-dev_0.9.0-0ubuntu19_amd64.deb
+Size: 13588
+MD5sum: 89562e323bca366916d503c4109c400e
+SHA1: 9aed358b4f6b6d03f564d2f6968363f68c0381bf
+SHA256: 78468760b9d942411af7e8ece8af75b961e9e19f99ce99c351bf68472efe8fad
+Description: Linux Containers userspace tools (development)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: c719178b7e79ce1ed39519707c589961
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: lxc-templates
+Priority: optional
+Section: universe/admin
+Installed-Size: 199
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: lxc
+Version: 0.9.0-0ubuntu19
+Replaces: lxc (<< 0.8.0~rc1-4ubuntu43)
+Depends: lxc (>= 0.8.0~rc1-4ubuntu43)
+Recommends: cloud-utils, debootstrap | cdebootstrap, openssl, rsync
+Suggests: qemu-user-static
+Breaks: lxc (<< 0.8.0~rc1-4ubuntu43)
+Filename: pool/universe/l/lxc/lxc-templates_0.9.0-0ubuntu19_all.deb
+Size: 33802
+MD5sum: be32ebb5c72ef1d599c6bfa67f092eb6
+SHA1: 53a09e866b0950fddec79336d32f54d8e45ce73c
+SHA256: 43c3bc318d51aabe2037489a8bfb29ef23cea7fe34d48da30f037f14877a9046
+Description: Linux Containers userspace tools (development)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: b7b10bcdeb3296f4cf9e69a256d87261
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
 Package: minc-tools
 Priority: optional
 Section: universe/science
@@ -12319,6 +12430,28 @@ Homepage: https://launchpad.net/gearman-interface
 Description-md5: d1889bc686d63e610b4893248c4c52bc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: python3-lxc
+Priority: optional
+Section: universe/python
+Installed-Size: 113
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: lxc
+Version: 0.9.0-0ubuntu19
+Depends: liblxc0 (= 0.9.0-0ubuntu19), python3, libc6 (>= 2.3.4)
+Recommends: lxc-templates (>= 0.8.0~rc1-4ubuntu43)
+Filename: pool/universe/l/lxc/python3-lxc_0.9.0-0ubuntu19_amd64.deb
+Size: 13990
+MD5sum: e2594abcb3ab40087918186c0c8cddd3
+SHA1: bc9142f5a04a60c14687022db6e2d13cc406cbe6
+SHA256: b344024b1f372ae23adeceaff0bd16745299221119a13a4e9818e5754ac4764d
+Description: Linux Containers userspace tools (Python 3.x bindings)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: ee623a31db200104a7207d9de42b8f04
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
 
 Package: python3-pbr
 Priority: optional
