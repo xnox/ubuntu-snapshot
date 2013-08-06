@@ -1519,48 +1519,6 @@ Description-md5: e9b1617d2c59e14b9d4c57e66f9dfb48
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: key-mon
-Priority: optional
-Section: universe/utils
-Installed-Size: 2335
-Maintainer: Andrea Colangelo <warp10@ubuntu.com>
-Architecture: all
-Version: 1.16-1ubuntu1
-Replaces: keymon (<< 1.9)
-Provides: keymon
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-xlib, python-gtk2
-Breaks: keymon (<< 1.9)
-Filename: pool/universe/k/key-mon/key-mon_1.16-1ubuntu1_all.deb
-Size: 177556
-MD5sum: 44795e49d5aabfc3561ea969c0faf692
-SHA1: b70e027a9add206aa93ea441599edf9950215ad4
-SHA256: 551277a9ace32109abf7615b3e7fb8fbf8e530e0f78c1260f000f61118b8f063
-Description: Utility to show live keyboard and mouse status
-Homepage: https://code.google.com/p/key-mon
-Description-md5: d1953e81377cf5fe604a458db50750f5
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: keymon
-Priority: optional
-Section: universe/utils
-Installed-Size: 29
-Maintainer: Andrea Colangelo <warp10@ubuntu.com>
-Architecture: all
-Source: key-mon
-Version: 1.16-1ubuntu1
-Depends: key-mon
-Filename: pool/universe/k/key-mon/keymon_1.16-1ubuntu1_all.deb
-Size: 2664
-MD5sum: 36adc8d6c2e1178e42d3b73fc6694070
-SHA1: d5d4814f930e1e6ade7a19053b67b152179b1b61
-SHA256: 371b65fce030bc7256a19fb7496f7e5b15de79a0414cd03093e0cdb281ab298a
-Description: Transitional package for key-mon
-Homepage: https://code.google.com/p/key-mon
-Description-md5: 89b00f6003df863feebcc8a672a39e61
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: kopete
 Priority: optional
 Section: universe/kde
@@ -9354,44 +9312,27 @@ Description-md5: 2cccb18baaf0a79bddc72153a6b2f521
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: ubuntu-sdk
+Package: ubuntu-release-upgrader-qt
 Priority: optional
-Section: universe/devel
-Installed-Size: 28
+Section: universe/admin
+Installed-Size: 127
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: ubuntu-touch-meta
-Version: 1.045
-Depends: libqt5qml-graphicaleffects, libqt5sql5-sqlite, libqt5svg5-dev, libqt5v8-5-dev, libqt5webkit5-dev, libqt5xmlpatterns5-dev, qmlscene, qt3d5-dev, qt5-default, qtbase5-dev, qtbase5-doc, qtcreator, qtcreator-doc, qtcreator-plugin-ubuntu, qtdeclarative5-dev, qtdeclarative5-dev-tools, qtdeclarative5-ubuntu-ui-toolkit-plugin, qtgraphicaleffects5-doc, qtlocation5-dev, qtmultimedia5-dev, qtmultimedia5-doc, qtscript5-dev, qtscript5-doc, qtsensors5-dev, qtsvg5-doc, qttools5-dev, qttools5-dev-tools, qttools5-doc, ubuntu-ui-toolkit-doc, ubuntu-ui-toolkit-examples, ubuntu-ui-toolkit-theme
-Recommends: libqt5webkit5-qmlwebkitplugin, qtdeclarative5-accounts-plugin, qtdeclarative5-folderlistmodel-plugin, qtdeclarative5-friends-plugin, qtdeclarative5-localstorage-plugin, qtdeclarative5-particles-plugin, qtdeclarative5-qtaudioengine-plugin, qtdeclarative5-qtmultimedia-plugin, qtdeclarative5-qtquick2-plugin, qtdeclarative5-qtsensors-plugin, qtdeclarative5-window-plugin, qtdeclarative5-xmllistmodel-plugin
-Filename: pool/universe/u/ubuntu-touch-meta/ubuntu-sdk_1.045_armhf.deb
-Size: 2390
-MD5sum: 00988d84e9a5514756b6e3845acac117
-SHA1: 96adb444b48dd064ef8479337747ab6ecd7c7fe3
-SHA256: 9bf40081851adc339e0722790bf30fcc48023356923adaedc2fdbf5cfdac54a3
-Description: Ubuntu SDK
-Description-md5: f01859ed2f33e7583fda11e255da6ccc
+Architecture: all
+Source: ubuntu-release-upgrader
+Version: 1:0.199
+Replaces: update-manager-kde (<< 1:0.165)
+Depends: ubuntu-release-upgrader-core (= 1:0.199), python3-pykde4, kdesudo, psmisc
+Breaks: update-manager-kde (<< 1:0.165)
+Filename: pool/universe/u/ubuntu-release-upgrader/ubuntu-release-upgrader-qt_0.199_all.deb
+Size: 6110
+MD5sum: 0e5cdb81c9da4fd233483aca80fff97c
+SHA1: df29e6f1a482297a0162eba7ce74b06a5caa6cd6
+SHA256: 5d8bc28091de6cf869c8d355fc415053d3416270559e18acef0b57df56534405
+Description: manage release upgrades
+Description-md5: 1a5354b00256cd2e8841649e89979f00
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: ubuntu-touch
-Priority: optional
-Section: universe/metapackages
-Installed-Size: 28
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: ubuntu-touch-meta
-Version: 1.045
-Depends: account-plugin-facebook, account-plugin-tools, account-plugin-twitter, address-book-app, alsa-base, alsa-utils, android-tools-adbd, apport, apport-noui, autopilot-touch, bluez, ca-certificates, calendar-app, camera-app, chewie, click, click-apparmor, dbus-x11, demo-assets-music, demo-assets-scopes, demo-assets-shell, demo-assets-videos, dropping-letters, fonts-dejavu-extra, fonts-freefont-ttf, friends, friends-app, friends-facebook, friends-twitter, gallery-app, gir1.2-accounts-1.0, hud, indicator-battery, indicator-messages, indicator-time, initramfs-tools-ubuntu-touch, language-pack-en, libandroid-audiosystem-asound2, libhybris, libhybris-test, libhybris-utils, libmessaging-menu0, libqtfolks1, lxc-android-config, maliit-framework, maliit-keyboard, maliit-keyboard-data, mediaplayer-app, mobile-broadband-provider-info, music-app, nano, network-manager, notes-app, ofono-scripts, packagekit-plugin-click, phone-app, powerd, python3-gi, python3-oauthlib, python3-pkg-resources, qtchooser, qtdeclarative5-ubuntu-ui-toolkit-plugin, qtubuntu-android, qtubuntu-media, share-app, signon-plugin-oauth2, software-properties-common, stock-ticker-mobile-app, sudoku-app, syncevolution, system-image-cli, telepathy-gabble, ttf-ubuntu-font-family, ubuntu-calculator-app, ubuntu-clock-app, ubuntu-filemanager-app, ubuntu-mobile-icons, ubuntu-rssreader-app, ubuntu-system-settings, ubuntu-system-settings-online-accounts, ubuntu-terminal-app, ubuntu-touch-generic-initrd, ubuntu-touch-session, ubuntu-weather-app, ufw, unity-lens-applications, unity-scope-click, unity-scope-home, unity8, webapps-demo, webbrowser-app, wget, whoopsie, wireless-tools
-Filename: pool/universe/u/ubuntu-touch-meta/ubuntu-touch_1.045_armhf.deb
-Size: 2842
-MD5sum: a553d4051c74b1204107ba60863b7a05
-SHA1: a6fc106de4277c4511484cc7f20ae5e61902bc9d
-SHA256: 6cd1f4e961d684ad1294f9ae15b8ec4f4a80f9d21a8f47afcfb48df9f5a0dd35
-Description: Ubuntu touch system
-Description-md5: a3d2bde244db1d4276926a028b7c047a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
 
 Package: ucommon-doc
 Priority: optional

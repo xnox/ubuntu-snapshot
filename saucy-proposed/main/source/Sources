@@ -843,9 +843,39 @@ Checksums-Sha256:
  d1eef329e867124ce60838b5ad07c763146b6c8f250dd22a861ead7406f78e63 5302787 swig2.0_2.0.10.orig.tar.gz
  aa02a8ff6c2d97dc88d8f7b92931856b2d5a8fe2d39558e81d0d6c3fcc6fb84d 18057 swig2.0_2.0.10-0ubuntu2.debian.tar.gz
 
+Package: ubuntu-release-upgrader
+Binary: ubuntu-release-upgrader-core, python3-distupgrade, ubuntu-release-upgrader-gtk, ubuntu-release-upgrader-qt
+Version: 1:0.199
+Priority: standard
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9), python3-all, python3-distutils-extra, python3-apt (>= 0.8.5~), lsb-release, ubuntu-drivers-common (>= 1:0.2.55) [i386 amd64], python3-update-manager, apt-clone (>= 0.2.3~ubuntu2)
+Build-Depends-Indep: libxml-parser-perl, scrollkeeper, intltool
+Architecture: all
+Standards-Version: 3.9.3
+Format: 3.0 (native)
+Directory: pool/main/u/ubuntu-release-upgrader
+Files:
+ a2c89414b5587c2a6c9b66ddca2c32aa 1448 ubuntu-release-upgrader_0.199.dsc
+ e9955a6f645a824482e3fb6b1bb23772 1932681 ubuntu-release-upgrader_0.199.tar.gz
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/ubuntu-release-upgrader/trunk
+Package-List: 
+ python3-distupgrade deb python optional
+ ubuntu-release-upgrader-core deb admin optional
+ ubuntu-release-upgrader-gtk deb admin optional
+ ubuntu-release-upgrader-qt deb admin optional
+Checksums-Sha1:
+ 3ebd47c0d9376847a613229155c9fe58991c8f4a 1448 ubuntu-release-upgrader_0.199.dsc
+ 954d6a347dc1af790356872dfca1aef4503b7c4a 1932681 ubuntu-release-upgrader_0.199.tar.gz
+Checksums-Sha256:
+ 3f8493eb9c9d9c5c3402ab185ddb7045ff9a361f17362977c589636e0b544e98 1448 ubuntu-release-upgrader_0.199.dsc
+ e47e8944040853a2a0178f6edd2893d77af8cc2b9093d77b02714b91a3f92dd4 1932681 ubuntu-release-upgrader_0.199.tar.gz
+Testsuite: autopkgtest
+
 Package: ubuntu-sso-client
 Binary: ubuntu-sso-client, python-ubuntu-sso-client, ubuntu-sso-client-qt, python-ubuntu-sso-client.tests
 Version: 13.08-0ubuntu1
+Priority: extra
 Section: python
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Build-Depends: apache2-utils, dbus, debhelper (>= 7.0.50), dh-translations, gir1.2-soup-2.4, libglib2.0-bin, pep8, pyflakes, pyqt4-dev-tools, python-all (>= 2.6.6-3), python-dbus, python-dirspec, python-distutils-extra (>= 2.26), python-gi | python-gobject (>= 2.90), python-httplib2 (>= 0.7.2), python-imaging, python-keyring, python-mocker, python-oauthlib (>= 0.3.5), python-openssl, python-qt4, python-qt4-dbus, python-twisted-core, python-twisted-web, squid3 | squid, ubuntuone-dev-tools (>= 2.99.3), xvfb
