@@ -69,6 +69,50 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: db5.1-doc
+Priority: optional
+Section: doc
+Installed-Size: 41679
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: all
+Source: db
+Version: 5.1.29-5ubuntu10
+Filename: pool/main/d/db/db5.1-doc_5.1.29-5ubuntu10_all.deb
+Size: 17311604
+MD5sum: 91f0e3abe239648744d1307e05b2b26b
+SHA1: 16abe3d53e99688aef42102f2af2f5dd82e15756
+SHA256: 62ee84885e770cdddd6737efbafd62cf4efedc16d880591400527b4894f66409
+Description: Berkeley v5.1 Database Documentation [html]
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: 018c282ef6b21560f5591ecbfcb265aa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: db5.1-util
+Priority: optional
+Section: utils
+Installed-Size: 257
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libc6 (>= 2.14), libdb5.1
+Filename: pool/main/d/db/db5.1-util_5.1.29-5ubuntu10_amd64.deb
+Size: 82098
+MD5sum: 0f0d31a534c60b2e1981cdaf7c777399
+SHA1: fc2e4b46d491a4a47c844b463a7391673a2fea75
+SHA256: fd6ef88adfaf41c14930cbf451212a2625758678fd84acf81db9022ef32b92c9
+Description: Berkeley v5.1 Database Utilities
+Multi-Arch: foreign
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: efc373711f970fc5af4a6a391cbe0ced
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: ffmpeg
 Priority: optional
 Section: graphics
@@ -566,6 +610,312 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: libdb5.1
+Priority: required
+Section: libs
+Installed-Size: 1537
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libc6 (>= 2.17)
+Pre-Depends: multiarch-support
+Filename: pool/main/d/db/libdb5.1_5.1.29-5ubuntu10_amd64.deb
+Size: 702748
+MD5sum: 6cafe392f17bf619aab9ee56c99f2eb5
+SHA1: 1a004a360847859aeaf5522d8b6c8448cc6decd6
+SHA256: fdb4a2154a53ed206ea4b9689f16f5044166b7d43af4b8933893a35655211ea1
+Description: Berkeley v5.1 Database Libraries [runtime]
+Multi-Arch: same
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: f5b074174f649d2f1c6db221bf221e15
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: libdb5.1++
+Priority: optional
+Section: libs
+Installed-Size: 1648
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libc6 (>= 2.17), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.2.1), libdb5.1
+Pre-Depends: multiarch-support
+Filename: pool/main/d/db/libdb5.1++_5.1.29-5ubuntu10_amd64.deb
+Size: 736432
+MD5sum: 046eec3127474a38b67161c2fa3ec0eb
+SHA1: e0705ecaf015c44b3c44376fc6aba29adffce63a
+SHA256: d5cd0d995f043b835eb444bf96ce5e1c19f94f88b0e565f6b3b8a4b1412961d2
+Description: Berkeley v5.1 Database Libraries for C++ [runtime]
+Multi-Arch: same
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: 08813edfa39505b90917cbd2312d7d6a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libdb5.1++-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 5470
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libdb5.1++ (= 5.1.29-5ubuntu10), libdb5.1-dev (= 5.1.29-5ubuntu10), libdb5.1
+Conflicts: libdb4.6++-dev, libdb4.7++-dev, libdb4.8++-dev
+Filename: pool/main/d/db/libdb5.1++-dev_5.1.29-5ubuntu10_amd64.deb
+Size: 1785486
+MD5sum: 055e465545105cfc0af4d5bf6482d83c
+SHA1: 260fee9df76f9288586ad55c7c4b74a715cb71ac
+SHA256: 71af3ed701df2592d90fa5ede8381c2cff888b1d2461c14086625f5ea29b4314
+Description: Berkeley v5.1 Database Libraries for C++ [development]
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: b97c67d590d2c134869a560473035b61
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libdb5.1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 31307
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libdb5.1 (= 5.1.29-5ubuntu10)
+Filename: pool/main/d/db/libdb5.1-dbg_5.1.29-5ubuntu10_amd64.deb
+Size: 29770590
+MD5sum: 06f2ccc2c64c70f53daabe2bc498113c
+SHA1: 26a84f90870544bcab6a6f092c0108c4da2798ad
+SHA256: 13f062e7415a9503045af00b36133fd86d524e09906d03c25505a180260f97c7
+Description: Berkeley v5.1 Database Libraries [debug]
+Multi-Arch: same
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: 6c319fd94b2e4cfddcf4f0a1f000f9d7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libdb5.1-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 2640
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libdb5.1 (= 5.1.29-5ubuntu10)
+Suggests: db5.1-doc
+Conflicts: libdb4.6-dev, libdb4.7-dev, libdb4.8-dev
+Filename: pool/main/d/db/libdb5.1-dev_5.1.29-5ubuntu10_amd64.deb
+Size: 873034
+MD5sum: 0a7f2395889bfb96911dd6d7b62f116d
+SHA1: e7cb2ea894000a1434632d6efbf03d6676fc5e98
+SHA256: 46e2e10616eb64120ee5d42e988bceaf19ecb0e63849e59e52afa557d5c630ad
+Description: Berkeley v5.1 Database Libraries [development]
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: 29d8427aaab66716b2ad13d433136408
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libdb5.1-java
+Priority: optional
+Section: java
+Installed-Size: 561
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: all
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libdb5.1-java-jni (>= 5.1.29-5ubuntu10), libdb5.1
+Suggests: libdb5.1-java-gcj
+Filename: pool/main/d/db/libdb5.1-java_5.1.29-5ubuntu10_all.deb
+Size: 500742
+MD5sum: 94db0921dbb0be2c64aa73057b9939dd
+SHA1: a0bc2916eb41b37c764b32265dbb0d395724be60
+SHA256: 0ee4021986b1c72804e14c48483308e84fdb24eda853ceb9ea9a57c485337ca7
+Description: Berkeley v5.1 Database Libraries for Java
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: bdd162bb20ccfa71462ae57ae40085bf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libdb5.1-java-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 2771
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libdb5.1-java (= 5.1.29-5ubuntu10), libdb5.1
+Conflicts: libdb4.6-java-dev, libdb4.7-java-dev, libdb4.8-java-dev
+Filename: pool/main/d/db/libdb5.1-java-dev_5.1.29-5ubuntu10_amd64.deb
+Size: 895562
+MD5sum: bd093093fb29b08241b83d07ec8be8bb
+SHA1: e5511d1a240f92f3be8504c08954a2f16799fb90
+SHA256: aa52a4359e4b6d79b71d2e938eaa9f0cc54161f858b533330014a2f0857b1f6c
+Description: Berkeley v5.1 Database Libraries for Java [development]
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: 2b22fbf07fe7cfa09635b5e396f4e07d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libdb5.1-java-gcj
+Priority: optional
+Section: java
+Installed-Size: 3155
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libdb5.1-java (= 5.1.29-5ubuntu10), libgcc1 (>= 1:4.1.1), libgcj-bc (>= 4.8.1-1~), libdb5.1, libgcj-common (>> 1:4.1.1-13)
+Filename: pool/main/d/db/libdb5.1-java-gcj_5.1.29-5ubuntu10_amd64.deb
+Size: 787932
+MD5sum: 10c24cbed090b1df54587de755f884cf
+SHA1: 819dee14e198a284c63733b1a5e4705c1bd99989
+SHA256: 0e273a6442960ca90890a924957fdde6abaa1771b75603884ff1334acf262c4b
+Description: Berkeley v5.1 Database Libraries for Java (native code)
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: c77b910119be95a921178ea37e73d541
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libdb5.1-java-jni
+Priority: optional
+Section: java
+Installed-Size: 1700
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libc6 (>= 2.17), libdb5.1
+Pre-Depends: multiarch-support
+Breaks: libdb5.1-java (<< 5.1.29-5ubuntu10)
+Filename: pool/main/d/db/libdb5.1-java-jni_5.1.29-5ubuntu10_amd64.deb
+Size: 746254
+MD5sum: eb90435c49a3f8378bd25e48d9e4c46d
+SHA1: e9f1b2af88248c70ea72a93b06406dcf101cda2a
+SHA256: 47998ea4a17cbebfbf60718e2cbbc5f329f3f1adb6074e1339f7775db91595b3
+Description: Berkeley v5.1 Database Libraries for Java
+Multi-Arch: same
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: bdd162bb20ccfa71462ae57ae40085bf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libdb5.1-sql
+Priority: extra
+Section: libs
+Installed-Size: 1985
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libc6 (>= 2.17), libdb5.1
+Pre-Depends: multiarch-support
+Filename: pool/main/d/db/libdb5.1-sql_5.1.29-5ubuntu10_amd64.deb
+Size: 944286
+MD5sum: c0e05708b9af8d928ad0b943dc4d847c
+SHA1: 407cb24adde47259e49d66c43986de72631a5b58
+SHA256: 085c474ddad89e821d53e22d30d6019dc96fea05d4e580848dfe5f1956f260fe
+Description: Berkeley v5.1 Database Libraries [SQL runtime]
+Multi-Arch: same
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: 86e81b1baf21339cb378a0f4232da1b9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libdb5.1-sql-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 6554
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libdb5.1-sql (= 5.1.29-5ubuntu10), libdb5.1
+Suggests: db5.1-doc
+Filename: pool/main/d/db/libdb5.1-sql-dev_5.1.29-5ubuntu10_amd64.deb
+Size: 2293390
+MD5sum: 55b343a18e577ec639c0099c8c1afd04
+SHA1: 1214b35a77de0bd2a82182800e6d148157e798ed
+SHA256: bd6b5a78b5050716246ab55d768bb4358f3d57c4f2cd34d34347632e30de3bbd
+Description: Berkeley v5.1 Database Libraries [SQL development]
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: 7cbe2217ec63095360505f5de4d7bda4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libdb5.1-stl
+Priority: extra
+Section: libs
+Installed-Size: 1733
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libc6 (>= 2.17), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.2.1), libdb5.1
+Pre-Depends: multiarch-support
+Filename: pool/main/d/db/libdb5.1-stl_5.1.29-5ubuntu10_amd64.deb
+Size: 765046
+MD5sum: 4a2ec6f4a691d0902516e74de8b6ac88
+SHA1: 3078d14fa665e3b779928eeab5b9766d82ecd7ae
+SHA256: 8aa4752328b46c197322b21ca170a51e3c4e5e9ef926f55f9fb1433581d3b029
+Description: Berkeley v5.1 Database Libraries [STL runtime]
+Multi-Arch: same
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: b0c8e3721afc5ad8848908864c7d2650
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libdb5.1-stl-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 6194
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: db
+Version: 5.1.29-5ubuntu10
+Depends: libdb5.1-stl (= 5.1.29-5ubuntu10), libdb5.1
+Suggests: db5.1-doc
+Filename: pool/main/d/db/libdb5.1-stl-dev_5.1.29-5ubuntu10_amd64.deb
+Size: 1944802
+MD5sum: f9e2cb67528418cd5b65d9c0721318a7
+SHA1: dd6161f0c9d111725c7f3f5e19d7804fa6347db8
+SHA256: fbca79f9486c3c41ac2e4daf54780e67234b385da9e621a0a0939d3e3c7377b7
+Description: Berkeley v5.1 Database Libraries [STL development]
+Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
+Description-md5: cf494a0701cc2ddf3849140cd2e9ecd1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libdbi-perl
 Priority: optional
 Section: perl
@@ -590,147 +940,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
-Package: libmirclient-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 81
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: amd64
-Source: mir
-Version: 0.0.8+13.10.20130807.1-0ubuntu1
-Depends: libmirclient1 (= 0.0.8+13.10.20130807.1-0ubuntu1), libmirprotobuf-dev (= 0.0.8+13.10.20130807.1-0ubuntu1), mircommon-dev (= 0.0.8+13.10.20130807.1-0ubuntu1)
-Filename: pool/main/m/mir/libmirclient-dev_0.0.8+13.10.20130807.1-0ubuntu1_amd64.deb
-Size: 6948
-MD5sum: b67612ef4bb13fc73f3efca39cba8271
-SHA1: b83a4210d6a04ecd8f6bbd995895e219757b54c0
-SHA256: 0f6ce29ca0736653ad2fe39fde5a3f214c66c75f9f3cf6f6423a522bbbf673f8
-Description: Display server for Ubuntu - development headers
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: bad81f957875312d57ff2d16afca10de
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libmirclient1
-Priority: optional
-Section: libs
-Installed-Size: 529
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: amd64
-Source: mir
-Version: 0.0.8+13.10.20130807.1-0ubuntu1
-Depends: libboost-system1.53.0, libc6 (>= 2.14), libdrm2 (>= 2.4.38), libgcc1 (>= 1:4.1.1), libmirprotobuf0 (>= 0.0.8+13.10.20130807.1), libprotobuf7, libstdc++6 (>= 4.8), libxkbcommon0 (>= 0.2.0)
-Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirclient1_0.0.8+13.10.20130807.1-0ubuntu1_amd64.deb
-Size: 161058
-MD5sum: b0a884ed52fdc407ca97d8a9fe3d9c71
-SHA1: 6f8c14fc673d42b272cf0251f9d36baad2cf8c1a
-SHA256: 89b4ae1823895ab7b8004e58b3ea8287f1c5019ebc20697a57c81cef990bc921
-Description: Display server for Ubuntu - client library
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: 833ddf930ef3c3df05aca4213ced851d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libmirprotobuf-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 61
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: amd64
-Source: mir
-Version: 0.0.8+13.10.20130807.1-0ubuntu1
-Depends: libmirprotobuf0 (= 0.0.8+13.10.20130807.1-0ubuntu1), libprotobuf-dev
-Filename: pool/main/m/mir/libmirprotobuf-dev_0.0.8+13.10.20130807.1-0ubuntu1_amd64.deb
-Size: 4412
-MD5sum: 52e749f3c9054edb5ef1556b7932873b
-SHA1: b83686f0a84a4a4d77574db60eb30c631409de9d
-SHA256: e1504ac381f804a815509522e3fd5b06cc72defc0b1478e10a35fc124c6e1f6e
-Description: Display server for Ubuntu - protocol definition
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: dafcf3520428a348b335759e46da047f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libmirprotobuf0
-Priority: optional
-Section: libs
-Installed-Size: 251
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: amd64
-Source: mir
-Version: 0.0.8+13.10.20130807.1-0ubuntu1
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libprotobuf7, libstdc++6 (>= 4.4.0)
-Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirprotobuf0_0.0.8+13.10.20130807.1-0ubuntu1_amd64.deb
-Size: 75328
-MD5sum: 617b99b39e9e7ea8257ab6f1d6400b60
-SHA1: 681e8dcd5f9d4b94410752489f223763df2a1d13
-SHA256: 969c95ee06cfdb8d81ab274511c73283510b02fe0981a9f1f27890e65309b7cd
-Description: Display server for Ubuntu - protocol implementation
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: c619d91f67bba57f73bf198297f21d7d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libmirserver-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 303
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: amd64
-Source: mir
-Version: 0.0.8+13.10.20130807.1-0ubuntu1
-Depends: libmirserver0 (= 0.0.8+13.10.20130807.1-0ubuntu1), libmirprotobuf-dev (= 0.0.8+13.10.20130807.1-0ubuntu1), mircommon-dev (= 0.0.8+13.10.20130807.1-0ubuntu1), libglm-dev, libboost-program-options-dev
-Filename: pool/main/m/mir/libmirserver-dev_0.0.8+13.10.20130807.1-0ubuntu1_amd64.deb
-Size: 33592
-MD5sum: 9640a1235f10f196cf543203818adbdc
-SHA1: 50c2488c772286a1416104c4715b67f92a8f7150
-SHA256: a63f17c93a9b0f27049d2e253e244cab210e276dd40a2550bf3033f29222e07e
-Description: Display server for Ubuntu - development headers
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: 98260f2d94306b61ba8e99360b379f43
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libmirserver0
-Priority: optional
-Section: libs
-Installed-Size: 2121
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: amd64
-Source: mir
-Version: 0.0.8+13.10.20130807.1-0ubuntu1
-Depends: libboost-program-options1.53.0, libboost-system1.53.0, libc6 (>= 2.15), libdrm2 (>= 2.4.38), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgbm1 (>= 8.1~0), libgcc1 (>= 1:4.1.1), libgflags2, libgles2-mesa (>= 7.8.1) | libgles2, libgoogle-glog0, libmirclient1 (>= 0.0.8+13.10.20130807.1), libmirprotobuf0 (>= 0.0.8+13.10.20130807.1), libprotobuf7, libstdc++6 (>= 4.8.1), libudev1 (>= 183), libxkbcommon0 (>= 0.2.0)
-Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirserver0_0.0.8+13.10.20130807.1-0ubuntu1_amd64.deb
-Size: 650874
-MD5sum: c708cedb11b965be0922510e9fe3635b
-SHA1: 5f0fb4a258da74ee3773910a2d6a10334257197d
-SHA256: d3c3bf267bc5a9a50dddc8923661e0cfc0ac8724ac78a28d72bfeefd561f1cb9
-Description: Display server for Ubuntu - server library
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: ec9e31363965aaba264f7029d7781e84
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
 
 Package: libmysqlclient-dev
 Priority: optional
@@ -1534,98 +1743,6 @@ SHA1: e157758b9b9f846c2c7f03bfed0729927b5666ac
 SHA256: cc32c0b20f519b1905861dde7fc5652614aee8b67f92322cc992e53bc97b4bf8
 Description: Linux kernel version specific tools for version 3.11.0
 Description-md5: 5e947646628710d552f512bf911d233f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: mir-demos
-Priority: optional
-Section: x11
-Installed-Size: 689
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: amd64
-Source: mir
-Version: 0.0.8+13.10.20130807.1-0ubuntu1
-Depends: libboost-program-options1.53.0, libc6 (>= 2.14), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.1.1), libgles2-mesa (>= 7.8.1) | libgles2, libmirclient1 (>= 0.0.8+13.10.20130807.1), libmirserver0 (= 0.0.8+13.10.20130807.1-0ubuntu1), libstdc++6 (>= 4.8.1)
-Recommends: mir-doc
-Filename: pool/main/m/mir/mir-demos_0.0.8+13.10.20130807.1-0ubuntu1_amd64.deb
-Size: 231462
-MD5sum: baa9039973a96bde22f63554b0da18a8
-SHA1: 2b1c793b85deb4c49fe515a4e0158955f2887f24
-SHA256: a7148f654425bceda8261e91ab335608f25e78d77410293a31bd9096fd9779e3
-Description: Display server for Ubuntu - demonstration programs
-Homepage: https://launchpad.net/mir
-Description-md5: 75fa5acf7d892374aa25e17fc2492966
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: mir-doc
-Priority: optional
-Section: doc
-Installed-Size: 66394
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: all
-Source: mir
-Version: 0.0.8+13.10.20130807.1-0ubuntu1
-Depends: libmirclient-dev, libmirserver-dev
-Filename: pool/main/m/mir/mir-doc_0.0.8+13.10.20130807.1-0ubuntu1_all.deb
-Size: 37259736
-MD5sum: ba38b0d092cf2b0a61771041128dcf6e
-SHA1: 5010e553a1ee67589b93baa1da0ed6246cb2c2d5
-SHA256: 1a71953886bd762b936b455eb96b462e2ca91dc203d177daf3479395c0f8cbc4
-Description: API documentation for mir
-Homepage: https://launchpad.net/mir
-Description-md5: 628500f58a32ea2c0fc1cb782e6f260f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: mir-test-tools
-Priority: optional
-Section: x11
-Installed-Size: 167
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: amd64
-Source: mir
-Version: 0.0.8+13.10.20130807.1-0ubuntu1
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), liblttng-ust0, libmirclient1 (>= 0.0.8+13.10.20130807.1), libstdc++6 (>= 4.8.1), liburcu1 (>= 0.6.7)
-Pre-Depends: multiarch-support
-Recommends: mir-demos
-Filename: pool/main/m/mir/mir-test-tools_0.0.8+13.10.20130807.1-0ubuntu1_amd64.deb
-Size: 29630
-MD5sum: 46765bc8fa626c23ec91f2173051a3c8
-SHA1: cd7d5db70e784da8e4933cf3db1c1f39366059ff
-SHA256: c4779eafb9a97a30bfbe18bb955b36764deb5cde6a16ea3860c294ab7b858403
-Description: Display Server for Ubuntu - stress tests and other test tools
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: 42fdcf71453ed4c8e6f4c09dba656cc0
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: mircommon-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 162
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: amd64
-Source: mir
-Version: 0.0.8+13.10.20130807.1-0ubuntu1
-Filename: pool/main/m/mir/mircommon-dev_0.0.8+13.10.20130807.1-0ubuntu1_amd64.deb
-Size: 23428
-MD5sum: 414c4735ef52423afe9e92d86b81a32c
-SHA1: c104f612b31389f98bea181c0ca54d8b38306014
-SHA256: 592e2470960c5d88797099778d5edc09101b8dad9e2ce32e6525e0ef8ff3f4d7
-Description: Display server for Ubuntu - development headers
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: afceda22de73c8f8ef2fe0642ae4e906
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
