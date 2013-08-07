@@ -1591,6 +1591,63 @@ Description-md5: 8e988b646b88eb9eff673ed58b24fcf9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: fwts
+Priority: optional
+Section: universe/devel
+Installed-Size: 867
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: amd64
+Version: 13.08.00-0ubuntu1
+Depends: libfwtsiasl1 (= 13.08.00-0ubuntu1), libfwtsacpica1 (= 13.08.00-0ubuntu1), libfwts1 (= 13.08.00-0ubuntu1), fwts-efi-runtime-dkms (= 13.08.00-0ubuntu1), libc6 (>= 2.14), libjson-c2 (>= 0.10), pciutils
+Suggests: dmidecode, net-tools, wireless-tools, bluez, xinput, pulseaudio-utils
+Filename: pool/universe/f/fwts/fwts_13.08.00-0ubuntu1_amd64.deb
+Size: 242252
+MD5sum: b495918f5b728125a6cfbd7f1c5ed295
+SHA1: 54432b7cb7a89ef989a03b4ade5aead8250a953d
+SHA256: c72cec4d8174af0c1ee32fac740cff3012e65c2bac147f2b6b32cee34e43c827
+Description: FirmWare Test Suite
+Description-md5: d6b6141d7ca394b5197f5a8e24578b35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fwts-efi-runtime-dkms
+Priority: optional
+Section: universe/devel
+Installed-Size: 80
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: amd64
+Source: fwts
+Version: 13.08.00-0ubuntu1
+Depends: dkms (>= 2.1.0.0), linux-headers-generic | linux-headers | linux-headers-generic-lts-quantal | linux-headers-generic-lts-raring
+Filename: pool/universe/f/fwts/fwts-efi-runtime-dkms_13.08.00-0ubuntu1_amd64.deb
+Size: 18390
+MD5sum: e5aa842c0956448e6bf509d396e8b4ef
+SHA1: fddaaeaf614c0ba810f4197234fa9afb47018463
+SHA256: dd06e3588adee9401b80c7474509f7fb937c553bf3b19c7c9789bfeb6a684ec7
+Description: Firmware Test Suite UEFI Runtime Service kernel driver
+Description-md5: 872c3fa1034eabae1745eeec37ab3e38
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fwts-frontend
+Priority: optional
+Section: universe/devel
+Installed-Size: 82
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: all
+Source: fwts
+Version: 13.08.00-0ubuntu1
+Depends: dialog, fwts
+Filename: pool/universe/f/fwts/fwts-frontend_13.08.00-0ubuntu1_all.deb
+Size: 8556
+MD5sum: 987dd21a5f14f8da0bb619c9e9e098a1
+SHA1: 0b0ef43a17fd79a04bff7cc6579689d0d87c9c8f
+SHA256: 87e07b4b790c60a83d994ebc62d9359d5a59671b74a44cfaf910d82efaefdaa5
+Description: Firmware Test Suite frontend interface
+Description-md5: fc98ee1ccd80b6332c879648cc78e424
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: gearman
 Priority: optional
 Section: universe/web
@@ -4273,6 +4330,63 @@ Description: freesmartphone.org transport library
 Multi-Arch: same
 Homepage: http://freesmartphone.org/
 Description-md5: 43293b31a3122ea119db75aa96fb00cf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libfwts1
+Priority: optional
+Section: universe/devel
+Installed-Size: 225
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: amd64
+Source: fwts
+Version: 13.08.00-0ubuntu1
+Depends: libc6 (>= 2.15), libfwtsiasl1, libjson-c2 (>= 0.10), libpcre3 (>= 8.10)
+Filename: pool/universe/f/fwts/libfwts1_13.08.00-0ubuntu1_amd64.deb
+Size: 73184
+MD5sum: 4e4568dc41025019fcdb1c3cd2fd89f8
+SHA1: df26321e63547e012312a70ed9ba45a79e9f9bfa
+SHA256: a2254cba1093087d1e44716db31eb992f04e61c66121d49253a6e4575faa182c
+Description: FirmWare Test Suite core support library
+Description-md5: 52ff91e0d92988cc3e64dca37e83ded3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libfwtsacpica1
+Priority: optional
+Section: universe/devel
+Installed-Size: 677
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: amd64
+Source: fwts
+Version: 13.08.00-0ubuntu1
+Depends: libc6 (>= 2.14), libfwts1
+Filename: pool/universe/f/fwts/libfwtsacpica1_13.08.00-0ubuntu1_amd64.deb
+Size: 272704
+MD5sum: 102370ca05ab9ac559962d3b728edc7a
+SHA1: e29aadfe0fabd6cfd113acddf823662cfa465112
+SHA256: 633fc9f5f24289d84b470819ba86e07c6d53d3e101457538899a9c7cc9ced671
+Description: FirmWare Test Suite ACPICA core built for acpiexec functionality
+Description-md5: a5000d353030a31da5111f9694fad744
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libfwtsiasl1
+Priority: optional
+Section: universe/devel
+Installed-Size: 924
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: amd64
+Source: fwts
+Version: 13.08.00-0ubuntu1
+Depends: libc6 (>= 2.14)
+Filename: pool/universe/f/fwts/libfwtsiasl1_13.08.00-0ubuntu1_amd64.deb
+Size: 342028
+MD5sum: fd4ad4b7d3d4f6aeff8591ab2f22f466
+SHA1: 9436bb41070bb9cdf029fe350c775f213cdcb2ae
+SHA256: 6db35fae25bdb1db554209ec124190dd27d5f943a6b4a5b8aa94d97a34f1a164
+Description: FirmWare Test Suite ACPICA core built for iasl functionality
+Description-md5: 0fdb8bb43f21085e686e7b8bb3529034
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -8326,6 +8440,49 @@ Description-md5: 774fad68871b31c92b564945a58c181f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libgsettings-qt-dev
+Priority: extra
+Section: universe/libdevel
+Installed-Size: 54
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: amd64
+Source: gsettings-qt
+Version: 0.0+13.10.20130807-0ubuntu1
+Depends: libgsettings-qt1 (= 0.0+13.10.20130807-0ubuntu1)
+Pre-Depends: dpkg (>= 1.15.6~)
+Filename: pool/universe/g/gsettings-qt/libgsettings-qt-dev_0.0+13.10.20130807-0ubuntu1_amd64.deb
+Size: 2978
+MD5sum: 05487284aca59f737815dd843d7321c2
+SHA1: 9820ada38e4852512e21b897d8da5891692996a9
+SHA256: 257612e08d5c8eed077d796b102a0ead4bc8c10a396415ea010ca8ea4b16304e
+Description: Library to access GSettings from Qt - devel
+Homepage: https://launchpad.net/gsettings-qt
+Description-md5: 29fccfd290f8e58d776ea7334c5a9685
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgsettings-qt1
+Priority: extra
+Section: universe/libs
+Installed-Size: 66
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: amd64
+Source: gsettings-qt
+Version: 0.0+13.10.20130807-0ubuntu1
+Depends: libc6 (>= 2.2.5), libgcc1 (>= 1:4.1.1), libglib2.0-0 (>= 2.28.0), libqt5core5 (>= 5.0.2), libstdc++6 (>= 4.1.1)
+Pre-Depends: multiarch-support
+Filename: pool/universe/g/gsettings-qt/libgsettings-qt1_0.0+13.10.20130807-0ubuntu1_amd64.deb
+Size: 15556
+MD5sum: be806aeafa5e3272508c3d0406143ea4
+SHA1: d79d5d87c16f7da1bbbd59829b7f3fcb33f4976d
+SHA256: 78aadabcba3fb599daccaf672289a5d9a150e6fcd97ae4561d9a4bb97806e4b0
+Description: Library to access GSettings from Qt
+Multi-Arch: same
+Homepage: https://launchpad.net/gsettings-qt
+Description-md5: a693c4a56022026ccf2efeacdaa6887a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libgsm0710mux3
 Priority: extra
 Section: universe/libs
@@ -10046,6 +10203,50 @@ SHA256: a2de13888bada0b2f2878c5266d800c2c50e90c54712340ae0e358230e7cdc4a
 Description: secure peer-to-peer SIP VoIP server - debug symbols
 Homepage: http://www.gnu.org/software/sipwitch/
 Description-md5: 79f6a18a7d2b7529ac7b89a238d4c4c3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsystemsettings-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 57
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: amd64
+Source: ubuntu-system-settings
+Version: 0.1+13.10.20130807-0ubuntu1
+Depends: libsystemsettings1 (= 0.1+13.10.20130807-0ubuntu1)
+Pre-Depends: dpkg (>= 1.15.6~)
+Filename: pool/universe/u/ubuntu-system-settings/libsystemsettings-dev_0.1+13.10.20130807-0ubuntu1_amd64.deb
+Size: 3178
+MD5sum: 45b958fb8d99163ae5171ded05229db1
+SHA1: 5e7c9f5b6dbf13f358d2f9bb3bb079de701169e6
+SHA256: 080d7225f0e7b9618a0391fa12f70cff61fb8a6e3567127c4804b7ab8b4a23de
+Description: System Settings for Ubuntu Touch - development files
+Multi-Arch: same
+Homepage: https://launchpad.net/ubuntu-system-settings
+Description-md5: 5cce76c1ef499489e45201e8237cd468
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsystemsettings1
+Priority: optional
+Section: universe/libs
+Installed-Size: 59
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: amd64
+Source: ubuntu-system-settings
+Version: 0.1+13.10.20130807-0ubuntu1
+Depends: libc6 (>= 2.2.5), libqt5core5 (>= 5.0.2), libstdc++6 (>= 4.1.1)
+Pre-Depends: dpkg (>= 1.15.6~), multiarch-support
+Filename: pool/universe/u/ubuntu-system-settings/libsystemsettings1_0.1+13.10.20130807-0ubuntu1_amd64.deb
+Size: 9566
+MD5sum: 56b23416f8e3d524c827431d46262d80
+SHA1: 64085eb792aa5c2de39a776d7102423233ccb232
+SHA256: d55214f6b63373b566ea9cc27d38de88546199ffe3c1eb0aff318fa5717033e4
+Description: System Settings Library for Ubuntu Touch
+Multi-Arch: same
+Homepage: https://launchpad.net/ubuntu-system-settings
+Description-md5: 6c2ce72d00cd0cf9ff441d3169dee680
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -12696,6 +12897,26 @@ Description-md5: 14ef3bef8d384a1c54a131ca11e90cfc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: qtdeclarative5-gsettings1.0
+Priority: extra
+Section: universe/libs
+Installed-Size: 91
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: amd64
+Source: gsettings-qt
+Version: 0.0+13.10.20130807-0ubuntu1
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libgsettings-qt1, libqt5core5 (>= 5.0.2), libqt5qml5, libstdc++6 (>= 4.1.1)
+Filename: pool/universe/g/gsettings-qt/qtdeclarative5-gsettings1.0_0.0+13.10.20130807-0ubuntu1_amd64.deb
+Size: 17758
+MD5sum: dbfa9e5fe089b0af52f5e6f1f97c0c02
+SHA1: 8685fc6e0b0c23f2b990766de3fcbe8b6544d83c
+SHA256: e7f73eef903ed1c107dd48fa0a574e8bc3abb01ad08889d9c7087774433331cb
+Description: QML Bindings for GSettings
+Homepage: https://launchpad.net/gsettings-qt
+Description-md5: 7aff63daa58338732b9ecd8281e6ead3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: qtdeclarative5-hud1.0
 Priority: extra
 Section: universe/libs
@@ -13849,6 +14070,27 @@ SHA256: c7d7e738194f6582eb6bb8ec7ad8585671e28e398a3650c2277fac67ec2ea617
 Description: Enhanced wiki and issue tracking system for software development projects
 Homepage: http://trac.edgewall.com
 Description-md5: 2cccb18baaf0a79bddc72153a6b2f521
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ubuntu-system-settings
+Priority: optional
+Section: universe/gnome
+Installed-Size: 1607
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: amd64
+Version: 0.1+13.10.20130807-0ubuntu1
+Depends: dconf-gsettings-backend | gsettings-backend, libaccountsservice0 (>= 0.6.8), libandroid-properties1, libc6 (>= 2.14), libglib2.0-0 (>= 2.16.0), libofono-qt1, libqt5core5 (>= 5.0.2), libqt5dbus5 (>= 5.0.2), libqt5gui5 (>= 5.0.2), libqt5qml5, libqt5quick5, libstdc++6 (>= 4.1.1), libsystemsettings1 (= 0.1+13.10.20130807-0ubuntu1), libtimezonemap1, accountsservice, gsettings-desktop-schemas, gsettings-ubuntu-touch-schemas (>= 0.0.1+13.10.20130730), qtdeclarative5-qtmultimedia-plugin, qtdeclarative5-gsettings1.0 (>= 0.0+13.10.20130717), qtdeclarative5-systeminfo-plugin, qtdeclarative5-ubuntu-ui-toolkit-plugin (>= 0.1.46+13.10.20130710), whoopsie-preferences (>= 0.9), system-image-dbus (>= 0.9)
+Recommends: ubuntu-mobile-icons, ubuntu-system-settings-online-accounts
+Conflicts: ubuntu-system-settings-example
+Filename: pool/universe/u/ubuntu-system-settings/ubuntu-system-settings_0.1+13.10.20130807-0ubuntu1_amd64.deb
+Size: 677584
+MD5sum: c54e568707578afa6936fd542767edfa
+SHA1: 16390474c57c648c8c49a11064d55b1764419742
+SHA256: 11d8d6f118f509bb138b79814dc17fe0c5bbab9197f0438825c24bd8a0b69a20
+Description: System Settings application for Ubuntu Touch
+Homepage: https://launchpad.net/ubuntu-system-settings
+Description-md5: 329c006f01837ae51c30e696ae9b6f5e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
