@@ -155,40 +155,39 @@ Checksums-Sha256:
  a060997c1c0259de39f0ce663a6fb86fc1756a8121b79bc7d8bbe1e659fbf633 344813 atlas-cpp_0.6.2.orig.tar.bz2
  dfe1210bac5709f4dbd41d1f9ec66653ee9bffe66ef8c956991fa23cb5430c5c 29022 atlas-cpp_0.6.2-4.debian.tar.gz
 
-Package: axiom
-Binary: axiom, axiom-source, axiom-test, axiom-doc, axiom-databases, axiom-tex, axiom-graphics, axiom-graphics-data, axiom-hypertex, axiom-hypertex-data
-Version: 20120501-8
+Package: autopilot
+Binary: python-autopilot, python-autopilot-trace, autopilot-touch, autopilot-desktop, python-autopilot-vis, python-autopilot-tests
+Version: 1.3.1+13.10.20130808-0ubuntu1
 Priority: optional
-Section: universe/math
-Maintainer: Camm Maguire <camm@debian.org>
-Build-Depends: debhelper (>= 5), gcl (>= 2.6.7+dfsga-37), libgmp3-dev, libreadline-dev, libx11-dev, libxt-dev, x11proto-core-dev, libxpm-dev, x11-common, texlive-latex-base, gawk, sharutils, ghostscript, gsfonts, libxmu-dev, libxaw7-dev, zlib1g-dev, texlive-pstricks, tex-common
+Section: universe/python
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomi Richards <thomi.richards@canonical.com>
+Build-Depends: debhelper (>= 9.0.0), gir1.2-ibus-1.0, gir1.2-gconf-2.0, gir1.2-gtk-3.0, python (>= 2.6), python-dbus, python-dev, python-debian, python-mock, python-setuptools, python-sphinx, python-testtools, python-testscenarios, python-xlib, python-zeitgeist, liblttng-ust-dev
 Architecture: any all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/a/axiom
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/universe/a/autopilot
 Files:
- e02607a1d9b42fb624b98b549620e8dd 1718 axiom_20120501-8.dsc
- ebabcfba27c23492ac5d27175cc1515a 146554405 axiom_20120501.orig.tar.gz
- 3367765ff0b864f8fbdf825d746e4f5f 1155160 axiom_20120501-8.debian.tar.gz
+ 827153f78b5d9cf5e3ee0c3c4874761c 2559 autopilot_1.3.1+13.10.20130808-0ubuntu1.dsc
+ efc8981aec1d06932ab7213fe0e02c35 275460 autopilot_1.3.1+13.10.20130808.orig.tar.gz
+ d4a9ab9fcad3f5eafdec8868bb186feb 9880 autopilot_1.3.1+13.10.20130808-0ubuntu1.diff.gz
+Homepage: https://launchpad.net/autopilot
+Vcs-Bzr: https://code.launchpad.net/+branch/ubuntu/autopilot
 Package-List: 
- axiom deb math optional
- axiom-databases deb math optional
- axiom-doc deb doc optional
- axiom-graphics deb math optional
- axiom-graphics-data deb math optional
- axiom-hypertex deb math optional
- axiom-hypertex-data deb math optional
- axiom-source deb math optional
- axiom-test deb math optional
- axiom-tex deb math optional
+ autopilot-desktop deb metapackages optional
+ autopilot-touch deb metapackages optional
+ python-autopilot deb python optional
+ python-autopilot-tests deb python optional
+ python-autopilot-trace deb python optional
+ python-autopilot-vis deb python optional
 Checksums-Sha1:
- 8aa656005bd3a10ccf267b9d0540f570c4a285d0 1718 axiom_20120501-8.dsc
- 164fbebff27a982d5b5e0dc7f83e90c9111daded 146554405 axiom_20120501.orig.tar.gz
- edd4192684e0ad0a7d5a94abf3a96353788663cc 1155160 axiom_20120501-8.debian.tar.gz
+ 5c8bdd3c1f8328b9c7e316efbb2ed84becd68cf6 2559 autopilot_1.3.1+13.10.20130808-0ubuntu1.dsc
+ cfe6867ca8e92f93fbbdc3cd60f54ac979fa5efd 275460 autopilot_1.3.1+13.10.20130808.orig.tar.gz
+ d0079f8f5c385029f609336288553985d2f8dcc2 9880 autopilot_1.3.1+13.10.20130808-0ubuntu1.diff.gz
 Checksums-Sha256:
- c31a94323af848dd37111912c28ee24467ee3babd29bdf125b8116c8762ae9c5 1718 axiom_20120501-8.dsc
- 2369252debf12a925da4ac95d409fa4509a45a0f18cfc912e8203d3c97716251 146554405 axiom_20120501.orig.tar.gz
- 267735a0971d96e307499ad7a6b0cf4fc2591a6f863461dc07e079722b2a0ef3 1155160 axiom_20120501-8.debian.tar.gz
+ e63db87c94b6127f2751b9769c2b12822683a8ed430abb883908d4e0aa240bd1 2559 autopilot_1.3.1+13.10.20130808-0ubuntu1.dsc
+ 58a440f237a9347da7c933c3520e3bc18797f38d10dfcac509a1c1e3c6ec7aaf 275460 autopilot_1.3.1+13.10.20130808.orig.tar.gz
+ 2583ac18c40b3ce9ecf0db135701a0f91cf98e0a33adb52f797693175faff61f 9880 autopilot_1.3.1+13.10.20130808-0ubuntu1.diff.gz
 
 Package: ball
 Binary: libball1.4-data, libball1.4, libball1.4-dev, libballview1.4, libballview1.4-dev, python-ball, python-ballview, ballview, libball1.4-doc, ballview-dbg
@@ -1533,6 +1532,34 @@ Checksums-Sha256:
  b6606e6a14b48d8a70de19440fa836d2ddb5bfc66662ca17e1e639d7403198c9 1112 fsvs_1.2.5-1.dsc
  0c3618963dddf6b2e58c814aa91d141e758aeedd7071320a45b8ffaedb3adf78 603755 fsvs_1.2.5.orig.tar.gz
  1895c69a3b28dcbe6be0ac5f3769a391420b736b05ae5a4b4e22de472fe4d6ab 3952 fsvs_1.2.5-1.debian.tar.gz
+
+Package: gcstar
+Binary: gcstar
+Version: 1.7.0-0ubuntu1
+Section: universe/x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alexander Wirt <formorer@debian.org>
+Build-Depends: debhelper (>= 7)
+Build-Depends-Indep: libgtk2-perl, libwww-perl, libxml-parser-perl, libxml-simple-perl, libmp3-tag-perl, libogg-vorbis-header-pureperl-perl
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/g/gcstar
+Files:
+ 42e80e27c91b8e9bbe1add455da7a9de 1929 gcstar_1.7.0-0ubuntu1.dsc
+ 94d0c4d6acc912b4b4d3a72d934cc16d 4506937 gcstar_1.7.0.orig.tar.gz
+ 0b30cf267386764d1a9db837cb6f59ee 13175 gcstar_1.7.0-0ubuntu1.debian.tar.gz
+Homepage: http://www.gcstar.org/
+Package-List: 
+ gcstar deb x11 optional
+Checksums-Sha1:
+ c8c92689958729194ed3fe1f309c455f54d553fd 1929 gcstar_1.7.0-0ubuntu1.dsc
+ 8ab3d685471ae262df0a4172d33ad7f5beccc3b3 4506937 gcstar_1.7.0.orig.tar.gz
+ 2b8deb2ba9dab7ed846ac4ae15674a73dd43a1b4 13175 gcstar_1.7.0-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ a5d5bf7b530f3ee1d285d930481093ce9e98d3222d6fd51e0c6c1fc16d8aaa29 1929 gcstar_1.7.0-0ubuntu1.dsc
+ 3cd76231c5410653b241c5aa37dc8120f4f94c3bccb3290f97ac0347acad7039 4506937 gcstar_1.7.0.orig.tar.gz
+ 77e7b4cc72d55f6d56d13e87203d11b5f775d46ed5a6c703e2de430ab9f97a09 13175 gcstar_1.7.0-0ubuntu1.debian.tar.gz
 
 Package: gearman-interface
 Binary: python-gearman.libgearman, python3-gearman.libgearman
