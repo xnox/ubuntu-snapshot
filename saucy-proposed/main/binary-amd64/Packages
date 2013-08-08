@@ -1898,6 +1898,29 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: gir1.2-gudev-1.0
+Priority: optional
+Section: libs
+Installed-Size: 53
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Depends: gir1.2-glib-2.0, libgudev-1.0-0 (>= 165)
+Filename: pool/main/s/systemd/gir1.2-gudev-1.0_204-0ubuntu9_amd64.deb
+Size: 3618
+MD5sum: 51e152127621283fd8bd30135ba3244a
+SHA1: 774fff394d199b871a384426884b1ad3383af98b
+SHA256: 6d32c74e59feea2d5c65bedca58ac349a54db2fe2919d620ad705762e1f35d8f
+Description: libgudev-1.0 introspection data
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 17b4f1d7865f064cde612f6abf30b636
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: google-mock
 Priority: optional
 Section: devel
@@ -2353,75 +2376,52 @@ Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
-Package: libedit-dev
+Package: libgudev-1.0-0
+Priority: optional
+Section: libs
+Installed-Size: 86
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd (204-0ubuntu9)
+Version: 1:204-0ubuntu9
+Depends: libc6 (>= 2.2.5), libglib2.0-0 (>= 2.37.3), libudev1 (>= 183)
+Pre-Depends: multiarch-support
+Filename: pool/main/s/systemd/libgudev-1.0-0_204-0ubuntu9_amd64.deb
+Size: 14730
+MD5sum: 225e5a807bd8f9332448d8a806f78e81
+SHA1: a5d01fbf650b51a0e584a5aa5fd42da944c70564
+SHA256: 073bb4712b2607b01e5499cc5012d0638e729d7fa862ea2b5477866a6766647c
+Description: GObject-based wrapper library for libudev
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 69c67b853f66d1327190cab12680738c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgudev-1.0-dev
 Priority: optional
 Section: libdevel
-Installed-Size: 374
+Installed-Size: 353
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
 Architecture: amd64
-Source: libedit
-Version: 3.1-20130712-1~exp2
-Depends: libedit2 (= 3.1-20130712-1~exp2), libbsd-dev (>= 0.1.3), libtinfo-dev
-Filename: pool/main/libe/libedit/libedit-dev_3.1-20130712-1~exp2_amd64.deb
-Size: 107990
-MD5sum: 28ec6b633f163bef6066857e735f1ffb
-SHA1: ef49725f9234521b639fd661444b923d90561038
-SHA256: 06b198ccf38ddf335a587d2b37382c787c93c308f03b921d4b0cd8fcaac52ec5
-Description: BSD editline and history libraries (development files)
-Multi-Arch: same
-Homepage: http://www.thrysoee.dk/editline/
-Description-md5: 54bb892c6aa0a1d35b93b92b02a75cbc
+Source: systemd (204-0ubuntu9)
+Version: 1:204-0ubuntu9
+Depends: libgudev-1.0-0 (= 1:204-0ubuntu9), gir1.2-gudev-1.0, libglib2.0-dev, pkg-config
+Filename: pool/main/s/systemd/libgudev-1.0-dev_204-0ubuntu9_amd64.deb
+Size: 31004
+MD5sum: 524a2755ee49eb2a5301f9361f24b581
+SHA1: a67a361510e3c20e012bd6e05a2ce8e425860cd6
+SHA256: e0adecd15abb26741481221d8d62051e1705703ffb311553e2a6991f529b151c
+Description: libgudev-1.0 development files
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 903f84519fd86bd5fb271a04acb09731
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-
-Package: libedit2
-Priority: standard
-Section: libs
-Installed-Size: 236
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
-Architecture: amd64
-Source: libedit
-Version: 3.1-20130712-1~exp2
-Depends: libc6 (>= 2.17), libtinfo5
-Pre-Depends: multiarch-support
-Filename: pool/main/libe/libedit/libedit2_3.1-20130712-1~exp2_amd64.deb
-Size: 86554
-MD5sum: 2224fb73a6ae3c725c8a356f35cee191
-SHA1: c96eff89d064134a123cf808f62e71882b2f512b
-SHA256: 3856b2ab6c92698dc871a1bf638e3b7db34de38ee24bca2788abea68cf9ea78b
-Description: BSD editline and history libraries
-Multi-Arch: same
-Homepage: http://www.thrysoee.dk/editline/
-Description-md5: a6f790fcede07b70d3e02dd525b33082
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
-Package: libedit2-dbg
-Priority: extra
-Section: debug
-Installed-Size: 225
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
-Architecture: amd64
-Source: libedit
-Version: 3.1-20130712-1~exp2
-Depends: libedit2 (= 3.1-20130712-1~exp2)
-Filename: pool/main/libe/libedit/libedit2-dbg_3.1-20130712-1~exp2_amd64.deb
-Size: 162420
-MD5sum: 5f65cb290e049399aeb3fbce78fd7bcd
-SHA1: b505d2593389e5c23e3376ee3c038f163426bfba
-SHA256: 15d54554f10f0017ab02a481c71f34575749395f23e6a1503796d034780d98a2
-Description: BSD editline and history libraries (debug package)
-Multi-Arch: same
-Homepage: http://www.thrysoee.dk/editline/
-Description-md5: b43859a00f9b459ff0bf594bd0cbfbdb
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
 
 Package: libmysqlclient-dev
 Priority: optional
@@ -2494,6 +2494,35 @@ Description-md5: 2f06b7e1bfdb9f620d92f9696d24fabc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: libpam-systemd
+Priority: standard
+Section: admin
+Installed-Size: 117
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Replaces: libpam-xdg-support, systemd-services (<< 198-0ubuntu7)
+Provides: libpam-xdg-support
+Depends: systemd-services (= 204-0ubuntu9), libc6 (>= 2.14), libcap2 (>= 2.10), libdbus-1-3 (>= 1.0.2), libpam0g (>= 0.99.7.1), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
+Pre-Depends: multiarch-support
+Conflicts: libpam-xdg-support
+Breaks: systemd-services (<< 198-0ubuntu7)
+Filename: pool/main/s/systemd/libpam-systemd_204-0ubuntu9_amd64.deb
+Size: 26038
+MD5sum: 504bda3ff3fa2efc8f6fd1011ce8f954
+SHA1: 454c44336db1e3af4dfa5b8e134ed89979df47e7
+SHA256: 692afd9da9007e3710f535ddcd1b6466789420927ffd195ef07dd2de6b1fbb7e
+Description: system and service manager - PAM module
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: edcf62758ab0554992770cd6ee003898
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: libpostproc-dev
 Priority: optional
@@ -2665,6 +2694,240 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
+
+Package: libsystemd-daemon-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 73
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Depends: libsystemd-daemon0 (= 204-0ubuntu9)
+Filename: pool/main/s/systemd/libsystemd-daemon-dev_204-0ubuntu9_amd64.deb
+Size: 7244
+MD5sum: 1ed2d61f5a58d905733841ebc9dc2ec1
+SHA1: d2a11964bc61dc8397086beb5fb0c778f89984ff
+SHA256: 5d4ab03272a23e8ec9c6440351c32d4badd9889397adcdc79fca8801160ed11d
+Description: systemd utility library - development files
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 15fdb9eeef9f47e6b4ff92785bbb9d88
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libsystemd-daemon0
+Priority: standard
+Section: libs
+Installed-Size: 61
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Depends: libc6 (>= 2.8)
+Pre-Depends: multiarch-support
+Filename: pool/main/s/systemd/libsystemd-daemon0_204-0ubuntu9_amd64.deb
+Size: 9024
+MD5sum: 3a2e69d3c0114a3cc0f97f72ebb05408
+SHA1: 5d507131e44d0b3012736002ad90928d520f49c6
+SHA256: f396077545bea62dbb2f195f57d9441eda675c6c3e8ef24ae09e96abe6bdf6e3
+Description: systemd utility library
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 56515555df42a10999b8edaaa40373ce
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libsystemd-id128-0
+Priority: extra
+Section: libs
+Installed-Size: 64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Depends: libc6 (>= 2.7)
+Pre-Depends: multiarch-support
+Filename: pool/main/s/systemd/libsystemd-id128-0_204-0ubuntu9_amd64.deb
+Size: 13292
+MD5sum: c488314e3eb34962a3ab2359488372f7
+SHA1: 1c0dd40f5411c9d7dfdc210940e9ca120f5566ad
+SHA256: 41c1e2e12ea1bc99c8406d94d019b8a281122863ca9401b3f2d0fde3a99b90ef
+Description: systemd 128 bit ID utility library
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: f1e829bb4ba3cea00c4172d21882434f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libsystemd-id128-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Depends: libsystemd-id128-0 (= 204-0ubuntu9)
+Filename: pool/main/s/systemd/libsystemd-id128-dev_204-0ubuntu9_amd64.deb
+Size: 3140
+MD5sum: e80f028ac31a34082f3b2cb13415127e
+SHA1: 79c17620b64a53d28f6f16e6550d0d463d1a382f
+SHA256: fe339186bf29367927ed0383af667eedb9d7294d6f74b5cd86d2129de9477e6f
+Description: systemd 128 bit ID utility library - development files
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: a0489c042528c7c04fd2a6520c578975
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libsystemd-journal-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 69
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Depends: libsystemd-journal0 (= 204-0ubuntu9), libsystemd-id128-dev
+Filename: pool/main/s/systemd/libsystemd-journal-dev_204-0ubuntu9_amd64.deb
+Size: 4946
+MD5sum: 64316c5fe072f44442a0132fa2c8596f
+SHA1: 0820f5ff8619874022bd33f92e6d4e32ced8af8c
+SHA256: 1fb5a7cca0b98061d9ee9f63f2c74c0e603a92eba8dd6b0cb8a768baabaf3812
+Description: systemd journal utility library - development files
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: e80c34da97e3cfda38731839be115201
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libsystemd-journal0
+Priority: extra
+Section: libs
+Installed-Size: 155
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Depends: libc6 (>= 2.14), libgcrypt11 (>= 1.4.5), liblzma5 (>= 5.1.1alpha+20120614), libselinux1 (>= 1.32)
+Pre-Depends: multiarch-support
+Filename: pool/main/s/systemd/libsystemd-journal0_204-0ubuntu9_amd64.deb
+Size: 55498
+MD5sum: adddcbaca88f1060760f31cf5870fec6
+SHA1: fcee1f97e1757cb38dea851e5eb40607d1c432ba
+SHA256: e01bc9904118cd5a605738e6538c139a4b5e182391996be5c02f885f2993c3bc
+Description: systemd journal utility library
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 954612493a4438c396bb24b45a566df6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libsystemd-login-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 65
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Depends: libsystemd-login0 (= 204-0ubuntu9)
+Filename: pool/main/s/systemd/libsystemd-login-dev_204-0ubuntu9_amd64.deb
+Size: 3962
+MD5sum: a125e552a2f924ccd9abcbb6c9e16e2a
+SHA1: f0955f5aad4c5eab638b134061747fc762a68c3d
+SHA256: 54afe215b71bb5af67b1bced31ee15d5a9f30131665652453407133cf0e0c5a8
+Description: systemd login utility library - development files
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 134f5d47241710892d4b4dbcc9f39609
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libsystemd-login0
+Priority: standard
+Section: libs
+Installed-Size: 98
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Depends: libc6 (>= 2.14)
+Pre-Depends: multiarch-support
+Filename: pool/main/s/systemd/libsystemd-login0_204-0ubuntu9_amd64.deb
+Size: 27822
+MD5sum: e3a826406837ee887104054410109b0e
+SHA1: 8731af6b2425f29c444f8ab8d2b6de12c5225a6c
+SHA256: c7e7433abc6a115d7cbbc7214aba941c6b84ebef6d98275d5124d7f0784edafd
+Description: systemd login utility library
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 2a0d17f149cad5d96dc1de7cde14133b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libudev-dev
+Priority: optional
+Section: admin
+Installed-Size: 298
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Depends: libudev1 (= 204-0ubuntu9)
+Filename: pool/main/s/systemd/libudev-dev_204-0ubuntu9_amd64.deb
+Size: 27732
+MD5sum: 7809056c383b946a7973099ef69ce970
+SHA1: b67469f31305b30d927da6e472951d4a4bc06075
+SHA256: cfab22d1b8eaca71a61c4f36454d7ad2316551c8116d025e5ed1bc5b2f07975b
+Description: libudev development files
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 4085049214953c1e2cf5d9aee1c32173
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libudev1
+Priority: required
+Section: libs
+Installed-Size: 116
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Depends: libc6 (>= 2.17)
+Pre-Depends: multiarch-support
+Filename: pool/main/s/systemd/libudev1_204-0ubuntu9_amd64.deb
+Size: 36182
+MD5sum: 1fcbc1bf2eefd91d4acea8622fda44ae
+SHA1: 1871307dbd25bd059a9d8f8881e4e9cc38af34e3
+SHA256: f13b21e1a4d7ad6d7c1a7196dea19b5d7b275f27b4491a5e400ddfb520dd7179
+Description: libudev shared library
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: ace5b83d7b48187416c90173a93255b6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
 
 Package: linux
 Priority: optional
@@ -3833,28 +4096,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: python-pbr
-Priority: extra
-Section: python
-Installed-Size: 198
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: PKG OpenStack <openstack-devel@lists.alioth.debian.org>
-Architecture: all
-Version: 0.5.21-0ubuntu1
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-pip
-Pre-Depends: dpkg (>= 1.15.6~)
-Filename: pool/main/p/python-pbr/python-pbr_0.5.21-0ubuntu1_all.deb
-Size: 29824
-MD5sum: d245200003a9f587c0d36eb8d2bbcf22
-SHA1: ee5b33d9204156aaf73f0b97ab8399ec2c149988
-SHA256: 2bacc0722a216bd7d61fcdb147d677f8517cca97479040bc8b115bf9cbd2010f
-Description: inject useful and sensible default behaviors into setuptools - Python 2.x
-Homepage: http://pypi.python.org/pypi/pbr
-Description-md5: 2b43552f188c95fde6c276335374d852
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: python3-greenlet
 Priority: extra
 Section: python
@@ -4102,6 +4343,61 @@ Description-md5: 3ab5c9257106ba955b283c3165f0b8c9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: systemd-services
+Priority: standard
+Section: admin
+Installed-Size: 903
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Replaces: logind, systemd (<< 198-1), ubuntu-system-service
+Provides: logind
+Depends: libacl1 (>= 2.2.51-8), libc6 (>= 2.17), libcap2 (>= 2.10), libdbus-1-3 (>= 1.1.1), libselinux1 (>= 2.0.65), libsystemd-daemon0 (>= 31), libudev1 (>= 183), udev (>= 175-0ubuntu23), dbus
+Recommends: systemd | systemd-shim (>= 3)
+Conflicts: logind
+Breaks: systemd (<< 198-1)
+Filename: pool/main/s/systemd/systemd-services_204-0ubuntu9_amd64.deb
+Size: 337078
+MD5sum: fb1fd33424d420d4b4310728470e5337
+SHA1: a0d18c8768a1001e5b12391de26d0d14bedb7d2b
+SHA256: af123e04afb7477a5f1f84e526747c6c3aeb839ef4994a55d6fc96e7276d46d1
+Description: systemd runtime services
+Multi-Arch: foreign
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 2b01627856e6c435a0ff31af7419b02e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: udev
+Priority: required
+Section: admin
+Installed-Size: 5091
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Replaces: systemd-services (<< 202-0ubuntu6)
+Depends: libacl1 (>= 2.2.51-8), libblkid1 (>= 2.19.1), libc6 (>= 2.17), libkmod2 (>= 5~), libselinux1 (>= 2.0.65), libudev1 (= 204-0ubuntu9), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), lsb-base (>= 3.0-6), util-linux (>= 2.16)
+Recommends: usbutils, pciutils
+Filename: pool/main/s/systemd/udev_204-0ubuntu9_amd64.deb
+Size: 1048160
+MD5sum: 33d8ae233d8c7348b5ee76c4d445201c
+SHA1: 1243c667740dc73fc671119b08265029638d41b4
+SHA256: d80e155d39aaae86666bda885fcfb2f77b5f390df95e3912d516ac93c5e081ab
+Description: /dev/ and hotplug management daemon
+Multi-Arch: foreign
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: e875ddb09f46f1f7672af537f0c875ca
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
 
 Package: unity-webapps-common
 Priority: optional

@@ -222,6 +222,26 @@ Description: Linux kernel binary image for the Debian installer
  Debian system.
 Kernel-Version: 3.11.0-0-generic
 
+Package: libudev1-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 83
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Depends: libc6-udeb (>= 2.17)
+Filename: pool/main/s/systemd/libudev1-udeb_204-0ubuntu9_amd64.udeb
+Size: 27712
+MD5sum: f215388f5887093276d44d72a744cb91
+SHA1: b10b01441267faf909b95385ce52168bee4f11bf
+SHA256: 758029024716bff8a2e9a181d63e387f3ba304cfa7ffcd91bbcceae9c9264311
+Description: libudev shared library
+ This library provides access to udev device information.
+ .
+ This is a minimal version, only for use in the installation system.
+
 Package: linux-udebs-generic
 Priority: optional
 Section: debian-installer
@@ -626,6 +646,27 @@ Description: Core storage support
  Includes core SCSI, LibATA, USB-Storage. Also includes related block
  devices for CD, Disk and Tape medium (and IDE Floppy).
 Kernel-Version: 3.11.0-0-generic
+
+Package: udev-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 438
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: amd64
+Source: systemd
+Version: 204-0ubuntu9
+Depends: libblkid1-udeb (>= 2.16), libc6-udeb (>= 2.17), libkmod2-udeb, util-linux-udeb
+Filename: pool/main/s/systemd/udev-udeb_204-0ubuntu9_amd64.udeb
+Size: 112540
+MD5sum: d8ecef78ec2da8b31883deaefac388af
+SHA1: 87f729872f0ca1cb967a51a6805b8033876ded8a
+SHA256: 7abb22401deb1021443a16c6838754494d2d7d8c8e5dfb4f54e9c390818ad498
+Description: /dev/ and hotplug management daemon
+ udev is a daemon which dynamically creates and removes device nodes from
+ /dev/, handles hotplug events and loads drivers at boot time.
+ .
+ This is a minimal version, only for use in the installation system.
 
 Package: usb-modules-3.11.0-0-generic-di
 Priority: standard

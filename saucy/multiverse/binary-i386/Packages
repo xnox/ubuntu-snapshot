@@ -11629,42 +11629,64 @@ Origin: Ubuntu
 Package: python-pyopencl
 Priority: optional
 Section: multiverse/python
-Installed-Size: 1444
+Installed-Size: 1684
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Tomasz Rybak <tomasz.rybak@post.pl>
 Architecture: i386
 Source: pyopencl
-Version: 2012.1-1ubuntu5
-Depends: libboost-python1.53.0, libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libopencl1, libstdc++6 (>= 4.4.0), python-numpy (>= 1:1.7-0~b1), python-numpy-abi9, python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-pytools (>= 2011.5), python-decorator, python-pyopencl-headers (= 2012.1-1ubuntu5)
+Version: 2013.1~git20130613-1
+Replaces: python-pyopencl-headers
+Depends: libboost-python1.53.0, libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libopencl1, libstdc++6 (>= 4.4.0), python-numpy (>= 1:1.7-0~b1), python-numpy-abi9, python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-pytools (>= 2011.5), python-decorator, opencl-icd
 Recommends: python-pyopencl-doc, python-opengl, python-mako
-Suggests: python-imaging-tk, python-pytest, python-matplotlib
-Filename: pool/multiverse/p/pyopencl/python-pyopencl_2012.1-1ubuntu5_i386.deb
-Size: 361980
-MD5sum: 64cf56703a637e11ab17ac1ee92d2ee2
-SHA1: 3e3af82457068b421ebfee701f1a6aa7558c6623
-SHA256: 58c49927c88d26b62b967705141561d04ae8a8f4e2d8a9889d9d9fccc9eec627
+Suggests: python-imaging-tk, python-pytest, python-matplotlib, python-pyopencl-dbg
+Filename: pool/multiverse/p/pyopencl/python-pyopencl_2013.1~git20130613-1_i386.deb
+Size: 423662
+MD5sum: 033d93745063d30d2e887db0c57e5514
+SHA1: 876e6cb791930056830b0334c7604ce2533aa08a
+SHA256: 6cc693577a2accd1b7699923f2d2970bbdc295c72aa94ed3a479f1a6ef16b001
 Description: Python module to access OpenCL parallel computation API
 Homepage: http://mathema.tician.de/software/pyopencl
 Description-md5: 2518acfbf350bd58788cf5f83141b61c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-pyopencl-dbg
+Priority: extra
+Section: multiverse/debug
+Installed-Size: 20090
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tomasz Rybak <tomasz.rybak@post.pl>
+Architecture: i386
+Source: pyopencl
+Version: 2013.1~git20130613-1
+Depends: python-pyopencl (= 2013.1~git20130613-1), python-dbg (>= 2.7), libboost-python1.53.0, libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libopencl1, libstdc++6 (>= 4.4.0), python-numpy (>= 1:1.7-0~b1), python-numpy-abi9, python-dbg (<< 2.8)
+Filename: pool/multiverse/p/pyopencl/python-pyopencl-dbg_2013.1~git20130613-1_i386.deb
+Size: 5440968
+MD5sum: 71d29aecf17dd117ccd1d464bee959b6
+SHA1: 447f077bfda81ffe20a408b9bd49bc90565a0018
+SHA256: 8d6e8d728178d4d15c41a87e8a901b945706e1f428402ea29d4ab5ca776adba5
+Description: Python module to access OpenCL API (debug extensions)
+Homepage: http://mathema.tician.de/software/pyopencl
+Description-md5: a2c8b834705b64dd4b6235ab9caa0a72
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-pyopencl-doc
 Priority: optional
 Section: multiverse/doc
-Installed-Size: 740
+Installed-Size: 792
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Tomasz Rybak <tomasz.rybak@post.pl>
 Architecture: all
 Source: pyopencl
-Version: 2012.1-1ubuntu5
+Version: 2013.1~git20130613-1
 Depends: libjs-sphinxdoc (>= 1.0)
 Recommends: python-pyopencl, python3-pyopencl
-Filename: pool/multiverse/p/pyopencl/python-pyopencl-doc_2012.1-1ubuntu5_all.deb
-Size: 132108
-MD5sum: 17dfa191d173194242b709e24852a091
-SHA1: 14b361dd656fa3bf6f221e0376991ed0e6b56b23
-SHA256: 98d1cbb470d5369064938d47e0efffc9ca999d7026141872e12971aa555fbfa0
+Filename: pool/multiverse/p/pyopencl/python-pyopencl-doc_2013.1~git20130613-1_all.deb
+Size: 139870
+MD5sum: dc90030344f252c02814fa43e785bd18
+SHA1: 036a4e529019c063ff6f757d6c4e00f9cabbf1af
+SHA256: d7ce2e07a310ba6c16038f68c800e204300806545c99b74e1bfd17693758a677
 Description: module to access OpenCL parallel computation API (documentation)
 Homepage: http://mathema.tician.de/software/pyopencl
 Description-md5: 0b1f9cb9c27d466dca495ad8192d962e
@@ -11739,23 +11761,45 @@ Origin: Ubuntu
 Package: python3-pyopencl
 Priority: optional
 Section: multiverse/python
-Installed-Size: 1451
+Installed-Size: 1682
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Tomasz Rybak <tomasz.rybak@post.pl>
 Architecture: i386
 Source: pyopencl
-Version: 2012.1-1ubuntu5
-Depends: libboost-python1.53.0, libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libopencl1, libstdc++6 (>= 4.4.0), python3-numpy (>= 1:1.7-0~b1), python3-numpy-abi9, python3 (>= 3.3), python3 (<< 3.4), python3-pytools (>= 2011.5), python3-decorator, python-pyopencl-headers (= 2012.1-1ubuntu5)
+Version: 2013.1~git20130613-1
+Replaces: python-pyopencl-headers
+Depends: libboost-python1.53.0, libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libopencl1, libstdc++6 (>= 4.4.0), python3-numpy (>= 1:1.7-0~b1), python3-numpy-abi9, python3 (>= 3.3), python3 (<< 3.4), python3-pytools (>= 2011.5), python3-decorator, opencl-icd
 Recommends: python-pyopencl-doc, python3-mako
-Suggests: python3-imaging-tk, python3-opengl, python3-pytest, python3-matplotlib
-Filename: pool/multiverse/p/pyopencl/python3-pyopencl_2012.1-1ubuntu5_i386.deb
-Size: 366382
-MD5sum: cfdd9a3979bc4516ab98a05515aed091
-SHA1: da49c79dccdb2a31199ecae211bfdf3253f43900
-SHA256: da0a54c0bbc86561abfebe6bebc0af4909485e7db324ab0e60dd1a4f09846dcd
+Suggests: python3-imaging-tk, python3-opengl, python3-pytest, python3-matplotlib, python3-pyopencl-dbg
+Filename: pool/multiverse/p/pyopencl/python3-pyopencl_2013.1~git20130613-1_i386.deb
+Size: 428200
+MD5sum: 941a54734285f5aad194cd5c3a7bcaea
+SHA1: db7fe11c9dbb67112b528eb475e262f85f981350
+SHA256: fbd46c70772779e088c9a3bf77a5581af0808904a5a776ccd85dcc5cdfe45f2c
 Description: Python 3 module to access OpenCL parallel computation API
 Homepage: http://mathema.tician.de/software/pyopencl
 Description-md5: 7a31e9ce8f06c38705703f009d69b248
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-pyopencl-dbg
+Priority: extra
+Section: multiverse/debug
+Installed-Size: 20178
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tomasz Rybak <tomasz.rybak@post.pl>
+Architecture: i386
+Source: pyopencl
+Version: 2013.1~git20130613-1
+Depends: python3-pyopencl (= 2013.1~git20130613-1), python3-dbg (>= 3.3), libboost-python1.53.0, libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libopencl1, libstdc++6 (>= 4.4.0), python3-numpy (>= 1:1.7-0~b1), python3-numpy-abi9, python3-dbg (<< 3.4)
+Filename: pool/multiverse/p/pyopencl/python3-pyopencl-dbg_2013.1~git20130613-1_i386.deb
+Size: 5512734
+MD5sum: 2b4a3bed66187b273744b3d91ebc9995
+SHA1: 817603d92cc23694caa471a40ecc140afcd4395e
+SHA256: b83b5ac35a5fa0ddd54723c0fc3c1dbbc8a3524643521fda2be738b983ab7965
+Description: Python 3 module to access OpenCL API (debug extensions)
+Homepage: http://mathema.tician.de/software/pyopencl
+Description-md5: 1009adecb5b5f3ca80c07b297d970458
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
