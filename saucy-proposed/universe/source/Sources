@@ -779,6 +779,32 @@ Checksums-Sha256:
  7418829c693f38fb8e709ddef371890ec8a8e757b2f92c9512361e928d2d8c89 819220 cxxtools_2.2.orig.tar.gz
  d836df186700b1cb3a79e1544a1c989c399237a6e09c4ac2f05579686352ff66 6561 cxxtools_2.2-1.debian.tar.gz
 
+Package: debsums
+Binary: debsums
+Version: 2.0.52+nmu1
+Priority: optional
+Section: universe/admin
+Maintainer: Ryan Niebur <ryan@debian.org>
+Build-Depends: debhelper (>= 8), po-debconf, po4a
+Architecture: all
+Standards-Version: 3.9.3
+Format: 3.0 (native)
+Directory: pool/universe/d/debsums
+Files:
+ a39de7bb5d4e50a3cd09144b6f382357 959 debsums_2.0.52+nmu1.dsc
+ 58df249a01451fa96c9017674129693f 58753 debsums_2.0.52+nmu1.tar.gz
+Uploaders: Anders Kaseorg <andersk@mit.edu>
+Vcs-Browser: http://git.debian.org/?p=collab-maint/debsums.git;a=summary
+Vcs-Git: git://git.debian.org/git/collab-maint/debsums.git
+Package-List: 
+ debsums deb admin optional
+Checksums-Sha1:
+ cd8aae2b85660776d4f8c4293e6ff17c2e7d78dd 959 debsums_2.0.52+nmu1.dsc
+ c3bfd41bae005a596eb4a0cad54ad3228f63f522 58753 debsums_2.0.52+nmu1.tar.gz
+Checksums-Sha256:
+ ab61c6b4e37e70c952e768e971a4cf65ec4670eb84c6d6393307298fae3061e8 959 debsums_2.0.52+nmu1.dsc
+ 08568962fa1f087c028ffc79bb536d00ba0abd6e9406c0fce317c1bf0150e785 58753 debsums_2.0.52+nmu1.tar.gz
+
 Package: dff
 Binary: dff
 Version: 1.3.0+dfsg.1-1
@@ -805,6 +831,33 @@ Checksums-Sha256:
  9f249317b78d817f7af1c14a2d71a4484429ece5532c2f5f9305f7a2835f38a3 1680 dff_1.3.0+dfsg.1-1.dsc
  633ead3e446eed552c70da0df358aaaa70d96333a031810cf89fc6611c91c451 3528347 dff_1.3.0+dfsg.1.orig.tar.gz
  1458abc7b75a63d77d10fff77b517d9fa714b62bd6a800026c792431b83ec4bd 4788 dff_1.3.0+dfsg.1-1.debian.tar.gz
+
+Package: dirmngr
+Binary: dirmngr
+Version: 1.1.1-1.1
+Priority: optional
+Section: universe/utils
+Maintainer: Peter Eisentraut <petere@debian.org>
+Build-Depends: autotools-dev, debhelper (>= 8), gettext, libassuan-dev (>= 2.0.0), libgcrypt11-dev (>= 1.4.0), libgpg-error-dev (>= 1.4), libksba-dev (>= 1.0.2), libldap2-dev, libpth-dev (>= 1.3.7)
+Architecture: any
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/d/dirmngr
+Files:
+ 8e6a45b5cbac012e1cc141b6b29dc21f 1869 dirmngr_1.1.1-1.1.dsc
+ f5a40e93bcf07a94522579bfd58a2c96 566929 dirmngr_1.1.1.orig.tar.bz2
+ e2660504eeaaa253ee9594a9d55d7903 7184 dirmngr_1.1.1-1.1.debian.tar.gz
+Homepage: http://www.gnupg.org/aegypten/
+Package-List: 
+ dirmngr deb utils optional
+Checksums-Sha1:
+ d0868499af82e3f73d768ded36dae50c7f0b53a3 1869 dirmngr_1.1.1-1.1.dsc
+ e708d4aa5ce852f4de3f4b58f4e4f221f5e5c690 566929 dirmngr_1.1.1.orig.tar.bz2
+ 551f77c27afe819b3ad5007a5120dcc90d32d195 7184 dirmngr_1.1.1-1.1.debian.tar.gz
+Checksums-Sha256:
+ 8e5c59fc5f19cede9fe69f9d7d26c87c5ed0591c9f29ae3a749e1cc9c4a3f027 1869 dirmngr_1.1.1-1.1.dsc
+ d2280b8c314db80cdaf101211a47826734443436f5c3545cc1b614c50eaae6ff 566929 dirmngr_1.1.1.orig.tar.bz2
+ 3ddd1c26bf822c90cc968e0f119cd925022234b1fe70499a43e040d96c3f814c 7184 dirmngr_1.1.1-1.1.debian.tar.gz
 
 Package: doctrine
 Binary: doctrine
@@ -5906,40 +5959,6 @@ Checksums-Sha256:
  cc3be3a8dfeeaf002eb94e6a8edcbf6864cdb40879451170e302148b86a9a85a 1989 pynac_0.2.6-1.dsc
  f5edae83ec54b4445e5f6bdde2e91086a46f0494037547fb719de5105cdb3cd4 635018 pynac_0.2.6.orig.tar.gz
  47c91a3060f86adf05a883bb3be11d7a13622e56f122517dfbaed8fcfaaa8883 2685 pynac_0.2.6-1.debian.tar.gz
-
-Package: pypy
-Binary: pypy, python-pypy.sandbox, pypy-lib, pypy-doc, pypy-dev
-Version: 2.0.2+dfsg-4
-Priority: extra
-Section: universe/python
-Maintainer: Stefano Rivera <stefanor@debian.org>
-Build-Depends: debhelper (>= 8.9.7~), execstack [linux-any], libbz2-dev, libexpat1-dev, libffi-dev, libncurses-dev, libsqlite3-dev, libssl-dev, netbase, pkg-config, procps, python (>= 2.6.6-11~), python-docutils, python-sphinx (>= 1.0.7+dfsg), python2.7-dev, valgrind [amd64 armel armhf i386 mips mipsel powerpc ppc64 s390x], zlib1g-dev
-Build-Depends-Indep: graphviz
-Architecture: kfreebsd-any linux-any all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/p/pypy
-Files:
- 057bb8f956908654d20a7eeced7e02ee 2348 pypy_2.0.2+dfsg-4.dsc
- 63eb638ab46e1ab727342ade1ad2d640 11413288 pypy_2.0.2+dfsg.orig.tar.xz
- f00d889f064786f054eb888ba8e7a595 71086 pypy_2.0.2+dfsg-4.debian.tar.gz
-Homepage: http://pypy.org/
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/pypy.git
-Vcs-Git: git://anonscm.debian.org/collab-maint/pypy.git
-Package-List: 
- pypy deb python extra
- pypy-dev deb python extra
- pypy-doc deb doc extra
- pypy-lib deb python extra
- python-pypy.sandbox deb python extra
-Checksums-Sha1:
- 540f642fe9a0c7b44aa1284c32e671c2ad1f947e 2348 pypy_2.0.2+dfsg-4.dsc
- 5d7f095c55c2ae75240531e04f6191047a118ae0 11413288 pypy_2.0.2+dfsg.orig.tar.xz
- 73c3ac444be3b0bc892f57214fe94cbc5983ab96 71086 pypy_2.0.2+dfsg-4.debian.tar.gz
-Checksums-Sha256:
- 1717917c3b56978680935c71f3d7f712086609c9565b2a26a624a51581f9be68 2348 pypy_2.0.2+dfsg-4.dsc
- 23a8563956501010357e06b0198ba4d6efa428dad902707199ab6b70c00d19bd 11413288 pypy_2.0.2+dfsg.orig.tar.xz
- 29b2f5ca8f8d647b9915ab7bb89146b9efbfea46dca0ce3a88adf678f622088a 71086 pypy_2.0.2+dfsg-4.debian.tar.gz
 
 Package: python-csb
 Binary: python-csb, python3-csb, python-csb-doc
