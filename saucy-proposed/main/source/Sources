@@ -789,44 +789,6 @@ Checksums-Sha256:
  1fdb5d2297c005cd5a9602c0dd8cafa4cbb27abb33c9dd6e8072a860455435b2 305231 mysql-5.5_5.5.32-0ubuntu2.debian.tar.gz
 Testsuite: autopkgtest
 
-Package: openldap
-Binary: slapd, slapd-smbk5pwd, ldap-utils, libldap-2.4-2, libldap-2.4-2-dbg, libldap2-dev, slapd-dbg
-Version: 2.4.31-1+nmu2ubuntu2
-Priority: standard
-Section: net
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 8.9.0~), dpkg-dev (>= 1.16.1), libdb5.1-dev, libgcrypt-dev, libgnutls-dev (>= 1.7), unixodbc-dev, libncurses5-dev, libperl-dev (>= 5.8.0), libsasl2-dev, libslp-dev, libltdl-dev | libltdl3-dev (>= 1.4.3), libwrap0-dev, perl, debconf-utils, po-debconf, quilt (>= 0.46-7), groff-base, time, heimdal-dev, hardening-wrapper, dh-autoreconf, dh-apparmor, lsb-release
-Build-Conflicts: autoconf2.13, bind-dev, libbind-dev, libicu-dev
-Architecture: any
-Standards-Version: 3.9.1
-Format: 1.0
-Directory: pool/main/o/openldap
-Files:
- 985650aea6b74ef866ca3a9638c90033 2899 openldap_2.4.31-1+nmu2ubuntu2.dsc
- a8631b2202d8099143edb57e36b33dea 4720612 openldap_2.4.31.orig.tar.gz
- c6b1108d211b823f93d982a48ed5db30 171561 openldap_2.4.31-1+nmu2ubuntu2.diff.gz
-Uploaders: Roland Bauerschmidt <rb@debian.org>, Stephen Frost <sfrost@debian.org>, Steve Langasek <vorlon@debian.org>, Torsten Landschoff <torsten@debian.org>, Matthijs Möhlmann <matthijs@cacholong.nl>, Russ Allbery <rra@debian.org>
-Homepage: http://www.openldap.org/
-Vcs-Browser: http://svn.debian.org/wsvn/pkg-openldap/openldap/trunk
-Vcs-Svn: svn://svn.debian.org/pkg-openldap/openldap/trunk
-Package-List: 
- ldap-utils deb net optional
- libldap-2.4-2 deb libs standard
- libldap-2.4-2-dbg deb debug extra
- libldap2-dev deb libdevel extra
- slapd deb net optional
- slapd-dbg deb debug extra
- slapd-smbk5pwd deb net extra
-Checksums-Sha1:
- adb4a798cf8f4d3ec44fc6ee3df7b0be4650d121 2899 openldap_2.4.31-1+nmu2ubuntu2.dsc
- 864e7b6ba54cc00ef5b834fd5b5739a7900dd6e3 4720612 openldap_2.4.31.orig.tar.gz
- 9305cc0f9478eaee943561c11d33c53830a5e838 171561 openldap_2.4.31-1+nmu2ubuntu2.diff.gz
-Checksums-Sha256:
- 98f78ead390b83ccd0694d2c7a81a466f04222207ba54c41c0b287d68f1dd552 2899 openldap_2.4.31-1+nmu2ubuntu2.dsc
- dff60c1044021217ab97a7bdda5a7016015f042db0fbfd566d52abb266d19239 4720612 openldap_2.4.31.orig.tar.gz
- fc6386b21c68db809b8dcbddada9e56ee7826856e0704f4155732a9da1aba54e 171561 openldap_2.4.31-1+nmu2ubuntu2.diff.gz
-
 Package: openvswitch
 Binary: openvswitch-datapath-source, openvswitch-datapath-dkms, openvswitch-common, openvswitch-switch, openvswitch-ipsec, openvswitch-pki, openvswitch-controller, openvswitch-dbg, python-openvswitch, ovsdbmonitor, openvswitch-test
 Version: 1.10.1+git20130627-0ubuntu2
@@ -897,66 +859,6 @@ Checksums-Sha256:
  3c36fbfa327874a53e8a00f996f61b9d9b31ea4de43e21d4ebe52e5f712f5bc0 1511 python-greenlet_0.4.1-0ubuntu1.dsc
  16ce8f70cb81cb2ebd5beb8fc41cb2b87836a8369e3bf8d3650540c9f1cdb837 53684 python-greenlet_0.4.1.orig.tar.gz
  4c24df0ddc8ec664b75149ebaef62ec2844dae710ce3ce1087b07a2587a7c99f 4588 python-greenlet_0.4.1-0ubuntu1.debian.tar.gz
-
-Package: qtbase-opensource-src
-Binary: libqt5core5, libqt5gui5, libqt5network5, libqt5opengl5, libqt5sql5, libqt5sql5-mysql, libqt5sql5-odbc, libqt5sql5-psql, libqt5sql5-sqlite, libqt5sql5-tds, libqt5xml5, libqt5dbus5, libqt5test5, libqt5concurrent5, libqt5widgets5, libqt5printsupport5, qtbase5-dev, qtbase5-private-dev, libqt5opengl5-dev, qtbase5-dev-tools, qt5-qmake, qtbase5-examples, qtbase5-dbg, qtbase5-dev-tools-dbg, qtbase5-examples-dbg, qt5-default, qtbase5-doc, qtbase5-doc-html
-Version: 5.0.2+dfsg1-7ubuntu7
-Priority: optional
-Section: libs
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Build-Depends: debhelper (>= 9), dpkg-dev (>= 1.16.1), freetds-dev, gdb, libasound2-dev, libatspi2.0-dev, libcups2-dev, libdbus-1-dev, libfontconfig1-dev, libfreetype6-dev, libgbm-dev [linux-any], libgl1-mesa-dev | libgl-dev, libgles2-mesa-dev [linux-any] | libgles2-dev [linux-any], libglib2.0-dev, libglu1-mesa-dev | libglu-dev, libgstreamer-plugins-base0.10-dev, libgstreamer0.10-dev, libgtk2.0-dev, libicu-dev, libjpeg-dev, libmysqlclient-dev, libopenvg1-mesa-dev [!arm64], libpng-dev, libpq-dev, libpulse-dev [!arm64], libsqlite3-dev, libssl-dev, libudev-dev [linux-any], libx11-dev, libx11-xcb-dev, libxcb-icccm4-dev, libxcb-image0-dev, libxcb-keysyms1-dev, libxcb-randr0-dev, libxcb-render-util0-dev, libxcb-render0-dev, libxcb-shape0-dev, libxcb-shm0-dev, libxcb-sync0-dev, libxcb-xfixes0-dev, libxcb1-dev, libxi-dev, libxkbcommon-dev, libxrender-dev, pkg-kde-tools (>= 0.14.2), unixodbc-dev, zlib1g-dev
-Build-Depends-Indep: libqt5sql5-sqlite, qttools5-dev-tools (>= 5.0.2~)
-Architecture: any all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/main/q/qtbase-opensource-src
-Files:
- f86d27ea1f092b054fffc40c25fac857 4124 qtbase-opensource-src_5.0.2+dfsg1-7ubuntu7.dsc
- 70b779fd5ecece0f54036fb29972d5f6 46267968 qtbase-opensource-src_5.0.2+dfsg1.orig.tar.xz
- 824a9bbe7a2820fcce2a7b0daf3bd920 266424 qtbase-opensource-src_5.0.2+dfsg1-7ubuntu7.debian.tar.gz
-Uploaders: Fathi Boudra <fabo@debian.org>, Modestas Vainius <modax@debian.org>, Sune Vuorela <debian@pusling.com>, Pino Toscano <pino@debian.org>, Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>, Timo Jyrinki <timo@debian.org>
-Homepage: http://qt-project.org/
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/qt/qtbase.git;a=summary
-Vcs-Bzr: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging/qtbase-opensource-src
-Vcs-Git: git://anonscm.debian.org/pkg-kde/qt/qtbase.git
-Package-List: 
- libqt5concurrent5 deb libs optional
- libqt5core5 deb libs optional
- libqt5dbus5 deb libs optional
- libqt5gui5 deb libs optional
- libqt5network5 deb libs optional
- libqt5opengl5 deb libs optional
- libqt5opengl5-dev deb libdevel optional
- libqt5printsupport5 deb libs optional
- libqt5sql5 deb libs optional
- libqt5sql5-mysql deb libs optional
- libqt5sql5-odbc deb libs optional
- libqt5sql5-psql deb libs optional
- libqt5sql5-sqlite deb libs optional
- libqt5sql5-tds deb libs optional
- libqt5test5 deb libs optional
- libqt5widgets5 deb libs optional
- libqt5xml5 deb libs optional
- qt5-default deb libs optional
- qt5-qmake deb devel optional
- qtbase5-dbg deb debug extra
- qtbase5-dev deb libdevel optional
- qtbase5-dev-tools deb devel optional
- qtbase5-dev-tools-dbg deb debug extra
- qtbase5-doc deb doc extra
- qtbase5-doc-html deb doc extra
- qtbase5-examples deb x11 optional
- qtbase5-examples-dbg deb debug extra
- qtbase5-private-dev deb libdevel optional
-Checksums-Sha1:
- c70255d2de339500db02cbf5053cd5469cf4b548 4124 qtbase-opensource-src_5.0.2+dfsg1-7ubuntu7.dsc
- f5166dc90cd28e1cdbb08d8d7583b15e7069aa5b 46267968 qtbase-opensource-src_5.0.2+dfsg1.orig.tar.xz
- c4213dbdcf9cc6e1410817da584709408fb13d1f 266424 qtbase-opensource-src_5.0.2+dfsg1-7ubuntu7.debian.tar.gz
-Checksums-Sha256:
- c05f2cec065703b091ac21e28a4a9ee63d3afa757c4ecc0d935228930ab15998 4124 qtbase-opensource-src_5.0.2+dfsg1-7ubuntu7.dsc
- 0b4372b79b63b9273820362e1a26b08b326fcb629684b27db170c43a91aec7f4 46267968 qtbase-opensource-src_5.0.2+dfsg1.orig.tar.xz
- 0f5d7f92729261f80a7183e7b3b820bf1253e4e8055273f600f0095b72c9cd1a 266424 qtbase-opensource-src_5.0.2+dfsg1-7ubuntu7.debian.tar.gz
 
 Package: qtwebkit-source
 Binary: libqtwebkit-dev, libqtwebkit4, libqtwebkit-qmlwebkitplugin, libqtwebkit4-dbg
