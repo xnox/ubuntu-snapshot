@@ -525,6 +525,29 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: gir1.2-gnomebluetooth-1.0
+Priority: optional
+Section: gnome
+Installed-Size: 199
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: gnome-bluetooth
+Version: 3.2.2-0ubuntu5.1
+Depends: gir1.2-atk-1.0, gir1.2-freedesktop, gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-pango-1.0, libgnome-bluetooth8 (>= 3.1.3)
+Filename: pool/main/g/gnome-bluetooth/gir1.2-gnomebluetooth-1.0_3.2.2-0ubuntu5.1_amd64.deb
+Size: 5746
+MD5sum: 31fe38c5afc79906c01606c4aef06372
+SHA1: 11e149f89d7490b76c6a4cce68dc70e32068b67a
+SHA256: 5b02aa501be350b4af173f0a9b87b7684cecf1ea5926cc9f8b637c724e2807eb
+Description: Introspection data for GnomeBluetooth
+Homepage: http://live.gnome.org/GnomeBluetooth
+Description-md5: eaf5b6e0a4c10828824d324c8ac01ee5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
 Package: gir1.2-networkmanager-1.0
 Priority: optional
 Section: libs
@@ -546,6 +569,33 @@ Description-md5: 1a7cb995cf66551c57433bbaf46aee25
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
+
+Package: gnome-bluetooth
+Priority: optional
+Section: gnome
+Installed-Size: 1440
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Version: 3.2.2-0ubuntu5.1
+Replaces: nautilus-sendto (<< 2.28.4-2)
+Depends: libappindicator3-1 (>= 0.4.90), libc6 (>= 2.2.5), libdbus-glib-1-2 (>= 0.88), libglib2.0-0 (>= 2.28.0), libgnome-bluetooth8 (>= 3.2.1), libgtk-3-0 (>= 3.0.0), libnotify4 (>= 0.7.0), dconf-gsettings-backend | gsettings-backend, gir1.2-atk-1.0, gir1.2-freedesktop, gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-gnomebluetooth-1.0 (= 3.2.2-0ubuntu5.1), gir1.2-gtk-3.0, gir1.2-pango-1.0, bluez (>= 4.36), obexd-client, udev (>= 154), consolekit, obex-data-server
+Recommends: gvfs-backends, gnome-user-share, gnome-control-center
+Suggests: nautilus-sendto
+Conflicts: bluez-gnome
+Breaks: gnome-phone-manager (<< 0.67), nautilus-sendto (<< 3.0), network-manager-gnome (<< 0.9.0-3)
+Filename: pool/main/g/gnome-bluetooth/gnome-bluetooth_3.2.2-0ubuntu5.1_amd64.deb
+Size: 272522
+MD5sum: 8f9a03395a3aff5f4bf6194137c35635
+SHA1: 6a7d673e0e68e1e077fc71a1f6123f26f454d985
+SHA256: 7e6861895cfbcd6f3d2eba8572aefe51842f665a0d99983e3192c1ad56a1106e
+Description: GNOME Bluetooth tools
+Homepage: http://live.gnome.org/GnomeBluetooth
+Description-md5: 8a12c9e4bfc6922e61abb655aec6a01b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: gnome-control-center
 Priority: optional
@@ -1425,6 +1475,53 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
 Task: ubuntu-usb, edubuntu-usb
+
+Package: libgnome-bluetooth-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 428
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: gnome-bluetooth
+Version: 3.2.2-0ubuntu5.1
+Provides: libgnome-bluetooth8-dev
+Depends: libgnome-bluetooth8 (= 3.2.2-0ubuntu5.1), gir1.2-gnomebluetooth-1.0 (= 3.2.2-0ubuntu5.1), libgtk-3-dev, libdbus-glib-1-dev
+Suggests: pkg-config
+Filename: pool/main/g/gnome-bluetooth/libgnome-bluetooth-dev_3.2.2-0ubuntu5.1_amd64.deb
+Size: 31026
+MD5sum: 33f5ec88dd38570faef8c418b3b7e4ad
+SHA1: 8c695063f0105cb4e9a6c0d89c1517803871694b
+SHA256: 375f85c1cd665e49b3fca341500f3df85d90ed75186887b75c88f80c69568f86
+Description: GNOME Bluetooth tools - support library development files
+Homepage: http://live.gnome.org/GnomeBluetooth
+Description-md5: d4a23fcbf8644791fc9f3efc1e86671d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libgnome-bluetooth8
+Priority: optional
+Section: libs
+Installed-Size: 300
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: gnome-bluetooth
+Version: 3.2.2-0ubuntu5.1
+Depends: libc6 (>= 2.2.5), libdbus-glib-1-2 (>= 0.88), libglib2.0-0 (>= 2.26.0), libgtk-3-0 (>= 3.0.0)
+Filename: pool/main/g/gnome-bluetooth/libgnome-bluetooth8_3.2.2-0ubuntu5.1_amd64.deb
+Size: 55512
+MD5sum: 0f27715ea77a342e88916c5b938193da
+SHA1: 95584877fca73bcb1eef2345b3074474dd93a565
+SHA256: 8dac0af2e46d2859dc40b59b896b7c6e14fee97b0693e15b73291ee92594ddd1
+Description: GNOME Bluetooth tools - support library
+Homepage: http://live.gnome.org/GnomeBluetooth
+Description-md5: db93bef1e8554f50b96803fc7eb52b75
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop
 
 Package: libgnome-control-center-dev
 Priority: optional
