@@ -1818,6 +1818,57 @@ Origin: Ubuntu
 Supported: 5y
 Task: ubuntu-desktop, print-server, ubuntu-usb, kubuntu-desktop, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop
 
+Package: libpam-smbpass
+Priority: extra
+Section: admin
+Installed-Size: 2176
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: samba
+Version: 2:3.6.3-2ubuntu2.7
+Depends: libc6 (>= 2.15), libcap2 (>= 2.10), libldap-2.4-2 (>= 2.4.7), libpam0g (>= 0.99.7.1), libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101214), libwbclient0 (>= 2:3.6.0~pre3), samba-common (= 2:3.6.3-2ubuntu2.7), libpam-runtime (>= 1.0.1-6)
+Suggests: samba
+Filename: pool/main/s/samba/libpam-smbpass_3.6.3-2ubuntu2.7_amd64.deb
+Size: 759902
+MD5sum: e2a850dea6a51bc1996cd864b6b86485
+SHA1: 60588442b7b972c187a6c1ba274cd6bc7afd6418
+SHA256: 101c969447d4bdc013ec5dd1e3710b6518010e62276e65bc64419f73c59df2ee
+Description: pluggable authentication module for Samba
+Multi-Arch: same
+Homepage: http://www.samba.org
+Description-md5: 99a52e9b231c8359c64eb7bde1bc1cb1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: samba-server
+
+Package: libpam-winbind
+Priority: optional
+Section: net
+Installed-Size: 1818
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: samba
+Version: 2:3.6.3-2ubuntu2.7
+Replaces: samba (<= 2.2.3-2), winbind (<< 2:3.5.11~dfsg-3)
+Depends: libc6 (>= 2.15), libcap2 (>= 2.10), libldap-2.4-2 (>= 2.4.7), libpam0g (>= 1.1.3-2~), libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101214), libwbclient0 (= 2:3.6.3-2ubuntu2.7), winbind (= 2:3.6.3-2ubuntu2.7), samba-common (= 2:3.6.3-2ubuntu2.7), libpam-runtime (>= 1.0.1-6)
+Breaks: winbind (<< 2:3.5.11~dfsg-3)
+Filename: pool/main/s/samba/libpam-winbind_3.6.3-2ubuntu2.7_amd64.deb
+Size: 626160
+MD5sum: 7ad589977a60f18ad30ef9714dc57035
+SHA1: 25bcd064a484db407b1ffd346eb7e8a942f3f9eb
+SHA256: e4f45f14e65e585434992037136ff92e0cb0f740f83ff8cbba9b37a0484eb9e6
+Description: Samba nameservice and authentication integration plugins
+Multi-Arch: same
+Homepage: http://www.samba.org
+Description-md5: 25e1f17ffb3edbcb193bf93c87653916
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: samba-server
+
 Package: libpython2.7
 Priority: optional
 Section: libs
@@ -2000,6 +2051,103 @@ Description-md5: c2958f0a844ec375af9b40fae17c7280
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
+
+Package: libsmbclient
+Priority: extra
+Section: libs
+Installed-Size: 6715
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: samba
+Version: 2:3.6.3-2ubuntu2.7
+Depends: libc6 (>= 2.15), libcap2 (>= 2.10), libcomerr2 (>= 1.01), libgssapi-krb5-2 (>= 1.10+dfsg~), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.10+dfsg~), libldap-2.4-2 (>= 2.4.7), libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101214), libwbclient0 (>= 2:3.6.0~pre3), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Filename: pool/main/s/samba/libsmbclient_3.6.3-2ubuntu2.7_amd64.deb
+Size: 2158434
+MD5sum: e854a1bf1b184db50033660d943de329
+SHA1: 7cd1c598aab7bac72d7359db10f71657eb80ba2f
+SHA256: b6664126ccb8f0dfc2f0fefbd25b18b94fba126133d668a70ba89385b39cdb15
+Description: shared library for communication with SMB/CIFS servers
+Multi-Arch: same
+Homepage: http://www.samba.org
+Description-md5: 483547748179a567c24665e99ab5439e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, edubuntu-desktop-kde, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop
+
+Package: libsmbclient-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 12645
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: samba
+Version: 2:3.6.3-2ubuntu2.7
+Depends: libsmbclient (= 2:3.6.3-2ubuntu2.7)
+Filename: pool/main/s/samba/libsmbclient-dev_3.6.3-2ubuntu2.7_amd64.deb
+Size: 2863958
+MD5sum: b2efaa32fb45cde1bc0e593fb45148d2
+SHA1: 12ad5c8164c552692dd436b8cadd5bbc1c1afca3
+SHA256: 1c36d1eb94550734e80c5fa73ace9e9e41261b2ea0f78b8358ed289034eb745f
+Description: development files for libsmbclient
+Multi-Arch: same
+Homepage: http://www.samba.org
+Description-md5: d6338d0aed68408023b999dd547aaecf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libwbclient-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 162
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: samba
+Version: 2:3.6.3-2ubuntu2.7
+Depends: libwbclient0 (= 2:3.6.3-2ubuntu2.7)
+Filename: pool/main/s/samba/libwbclient-dev_3.6.3-2ubuntu2.7_amd64.deb
+Size: 10244
+MD5sum: ab77e6afeb72c53c99b7a43826244c0f
+SHA1: f925f7c7a2a3d2f39b7e63061d83287c56728ef3
+SHA256: a770aef00b9bae472a8d6c736f06ea276b4bce4a3849fe03e85da453e5db7230
+Description: Samba winbind client library - development files
+Multi-Arch: same
+Homepage: http://www.samba.org
+Description-md5: 2fd42f0ef62fe1cc8cfee6fb03d4b884
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libwbclient0
+Priority: optional
+Section: libs
+Installed-Size: 175
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: samba
+Version: 2:3.6.3-2ubuntu2.7
+Depends: libc6 (>= 2.14)
+Pre-Depends: multiarch-support
+Breaks: libpam-smbpass (<< 2:3.4.1), libsmbclient (<< 2:3.4.1), samba (<< 2:3.4.1), samba-common (<< 2:3.4.1), samba-tools (<< 2:3.4.1), smbclient (<< 2:3.4.1), smbfs (<< 2:3.4.1), swat (<< 2:3.4.1), winbind (<< 2:3.4.1)
+Filename: pool/main/s/samba/libwbclient0_3.6.3-2ubuntu2.7_amd64.deb
+Size: 30274
+MD5sum: 1baf8ac9c0bb99f478ac7e65ebb29848
+SHA1: 2f08886f217c6ce13e49c75b928fb94051730f75
+SHA256: 0c371274c012dad1dc396729520e6051383a3057c7e3d06d1731a19f6aeee7a8
+Description: Samba winbind client library
+Multi-Arch: same
+Homepage: http://www.samba.org
+Description-md5: 16c935b1d482f634b3879c2495e04db8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-desktop, print-server, samba-server, ubuntu-usb, kubuntu-desktop, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop
 
 Package: linux
 Priority: optional
@@ -14183,6 +14331,32 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
 
+Package: samba
+Priority: optional
+Section: net
+Installed-Size: 22863
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Version: 2:3.6.3-2ubuntu2.7
+Replaces: samba-common (<= 2.0.5a-2)
+Depends: samba-common (= 2:3.6.3-2ubuntu2.7), libwbclient0 (= 2:3.6.3-2ubuntu2.7), libacl1 (>= 2.2.51-5), libattr1 (>= 1:2.4.46-5), libc6 (>= 2.15), libcap2 (>= 2.10), libcomerr2 (>= 1.01), libcups2 (>= 1.4.0), libgssapi-krb5-2 (>= 1.10+dfsg~), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.10+dfsg~), libldap-2.4-2 (>= 2.4.7), libpam0g (>= 0.99.7.1), libpopt0 (>= 1.14), libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101214), zlib1g (>= 1:1.1.4), debconf (>= 0.5) | debconf-2.0, upstart-job, libpam-runtime (>= 1.0.1-11), libpam-modules, lsb-base (>= 3.2-13), procps, update-inetd, adduser, samba-common-bin
+Recommends: logrotate, tdb-tools
+Suggests: openbsd-inetd | inet-superserver, smbldap-tools, ldb-tools, ctdb, ufw
+Conflicts: samba4 (<< 4.0.0~alpha6-2)
+Filename: pool/main/s/samba/samba_3.6.3-2ubuntu2.7_amd64.deb
+Size: 8048832
+MD5sum: 991f56d8d433dcd2d9129b65fe55b3d1
+SHA1: 4cc27b72afe304b185dc530c6d5e86187193a875
+SHA256: 03b2a83d36624212f04e42c35615befba4a0cece588daa5b931010209186607e
+Description: SMB/CIFS file, print, and login server for Unix
+Homepage: http://www.samba.org
+Description-md5: 0122ac62ef5f4ae21eb2e195eb45ad1d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: samba-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
+
 Package: samba-common
 Priority: optional
 Section: net
@@ -14209,6 +14383,53 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
 Task: ubuntu-desktop, print-server, samba-server, ubuntu-usb, kubuntu-desktop, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop
+
+Package: samba-common-bin
+Priority: optional
+Section: net
+Installed-Size: 17887
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: samba
+Version: 2:3.6.3-2ubuntu2.7
+Replaces: samba (<< 3.0.20b-1), samba-common (<< 2:3.4.0~pre1-2)
+Depends: libc6 (>= 2.15), libcap2 (>= 2.10), libcomerr2 (>= 1.01), libgssapi-krb5-2 (>= 1.10+dfsg~), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.10+dfsg~), libldap-2.4-2 (>= 2.4.7), libpopt0 (>= 1.14), libreadline6 (>= 6.0), libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101214), libuuid1 (>= 2.16), libwbclient0 (>= 2:3.6.0~pre3), zlib1g (>= 1:1.1.4), samba-common (>= 2:3.4.0~pre1-2)
+Filename: pool/main/s/samba/samba-common-bin_3.6.3-2ubuntu2.7_amd64.deb
+Size: 6174658
+MD5sum: 2bdd9e43b7cf7b0cf253f6cc199355b4
+SHA1: 2721b9c9978943534bda40659f30784ef8c0fffe
+SHA256: 0f276325750546f0b6aa7b42204ab090e2d26dbbe2024697f4f466cc8d4034c1
+Description: common files used by both the Samba server and client
+Multi-Arch: foreign
+Homepage: http://www.samba.org
+Description-md5: f6d2f3a0378208af8c75ede3922e3b9b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-desktop, print-server, samba-server, ubuntu-usb, kubuntu-desktop, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop
+
+Package: samba-dbg
+Priority: extra
+Section: devel
+Installed-Size: 62196
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: samba
+Version: 2:3.6.3-2ubuntu2.7
+Depends: samba (= 2:3.6.3-2ubuntu2.7)
+Filename: pool/main/s/samba/samba-dbg_3.6.3-2ubuntu2.7_amd64.deb
+Size: 55261816
+MD5sum: 76b8d41e822fa11e6b2ee7ceb136c986
+SHA1: 784902809f753484390845364342fce4f940b569
+SHA256: eeca088ba838b858a2353a373af12ea1ba93463c81ccca675b741ddebfd4453a
+Description: Samba debugging symbols
+Homepage: http://www.samba.org
+Description-md5: f3ad98b58579564228dc9b95ecaca46a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
 
 Package: samba-doc
 Priority: optional
@@ -14279,6 +14500,33 @@ Origin: Ubuntu
 Supported: 5y
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop
 
+Package: smbclient
+Priority: optional
+Section: net
+Installed-Size: 41309
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: samba
+Version: 2:3.6.3-2ubuntu2.7
+Replaces: samba (<< 2.999+3.0.alpha21-4), smbget
+Provides: samba-client
+Depends: samba-common (= 2:3.6.3-2ubuntu2.7), libc6 (>= 2.15), libcap2 (>= 2.10), libcomerr2 (>= 1.01), libgssapi-krb5-2 (>= 1.10+dfsg~), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.10+dfsg~), libldap-2.4-2 (>= 2.4.7), libpopt0 (>= 1.14), libreadline6 (>= 6.0), libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101214), libwbclient0 (>= 2:3.6.0~pre3), zlib1g (>= 1:1.1.4)
+Suggests: cifs-utils
+Conflicts: samba4-clients
+Filename: pool/main/s/samba/smbclient_3.6.3-2ubuntu2.7_amd64.deb
+Size: 14106212
+MD5sum: 573da83c72b5cefad532ecc60123478a
+SHA1: 2f912842ac63cd75058abe6553a3950ae3bb59a9
+SHA256: bb1b0fdad6b8aa874bebb44230da8c2da18e0ea3533d97c3cbcdbc5b4f703ea7
+Description: command-line SMB/CIFS clients for Unix
+Homepage: http://www.samba.org
+Description-md5: 476018eed30b7f1e76b02afe22aaf008
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-desktop, print-server, samba-server, ubuntu-usb, kubuntu-desktop, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop
+
 Package: whoopsie
 Priority: optional
 Section: utils
@@ -14301,6 +14549,32 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
 Task: ubuntu-desktop, cloud-image, ubuntu-usb, server, edubuntu-desktop, edubuntu-usb
+
+Package: winbind
+Priority: optional
+Section: net
+Installed-Size: 12762
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: samba
+Version: 2:3.6.3-2ubuntu2.7
+Replaces: samba (<= 2.2.3-2)
+Depends: libc6 (>= 2.15), libcap2 (>= 2.10), libcomerr2 (>= 1.01), libgssapi-krb5-2 (>= 1.10+dfsg~), libk5crypto3 (>= 1.6.dfsg.2), libkrb5-3 (>= 1.10+dfsg~), libldap-2.4-2 (>= 2.4.7), libpam0g (>= 0.99.7.1), libpopt0 (>= 1.14), libtalloc2 (>= 2.0.4~git20101213), libtdb1 (>= 1.2.7+git20101214), libwbclient0 (= 2:3.6.3-2ubuntu2.7), zlib1g (>= 1:1.1.4), samba-common (= 2:3.6.3-2ubuntu2.7), lsb-base (>= 3.0-6), adduser
+Recommends: libpam-winbind
+Filename: pool/main/s/samba/winbind_3.6.3-2ubuntu2.7_amd64.deb
+Size: 4423164
+MD5sum: dae06ed1f8c4c0208502102beaa6a770
+SHA1: e1d228b6dff65e752130104cceb80893a982a636
+SHA256: 139ac91ae1a162c32fd12426771823be210c7b738860f8f3bce433d542aecfe8
+Description: Samba nameservice integration server
+Multi-Arch: foreign
+Homepage: http://www.samba.org
+Description-md5: ca26c09ac54f5d99a4360c9255a36729
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: samba-server
 
 Package: wpasupplicant
 Priority: optional
