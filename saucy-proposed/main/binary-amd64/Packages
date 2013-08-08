@@ -1879,6 +1879,33 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: ldap-utils
+Priority: optional
+Section: net
+Installed-Size: 679
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: openldap
+Version: 2.4.31-1+nmu2ubuntu2
+Replaces: openldap-utils, openldapd, slapd (<< 2.2.23-0.pre6)
+Provides: ldap-client, openldap-utils
+Depends: libc6 (>= 2.14), libldap-2.4-2 (= 2.4.31-1+nmu2ubuntu2), libsasl2-2 (>= 2.1.24)
+Recommends: libsasl2-modules
+Conflicts: ldap-client, openldap-utils, umich-ldap-utils
+Filename: pool/main/o/openldap/ldap-utils_2.4.31-1+nmu2ubuntu2_amd64.deb
+Size: 282498
+MD5sum: c1008a2e6f70b2b3afea50d76ef81259
+SHA1: 35fa8b46e2f58876f0c1c4d922db8d95ffb63856
+SHA256: c56942216ecbc48454b9013e79f3db947040c9a896f58d7c995551f74e8697bb
+Description: OpenLDAP utilities
+Homepage: http://www.openldap.org/
+Description-md5: f5d300156245ae8fa5972cf30bf60206
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: edubuntu-dvd-live
+
 Package: libapache2-mod-auth-mysql
 Priority: optional
 Section: web
@@ -2354,6 +2381,82 @@ Homepage: http://libimobiledevice.org/
 Description-md5: d22def284c479ea2fe12faed1fe6c756
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libldap-2.4-2
+Priority: standard
+Section: libs
+Installed-Size: 507
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: openldap
+Version: 2.4.31-1+nmu2ubuntu2
+Replaces: libldap-2.3-0, libldap2
+Depends: libc6 (>= 2.14), libgcrypt11 (>= 1.4.5), libgnutls26 (>= 2.12.17-0), libgssapi3-heimdal (>= 1.4.0+git20110226), libsasl2-2 (>= 2.1.24)
+Pre-Depends: multiarch-support
+Conflicts: ldap-utils (<= 2.1.23-1)
+Filename: pool/main/o/openldap/libldap-2.4-2_2.4.31-1+nmu2ubuntu2_amd64.deb
+Size: 185726
+MD5sum: fe69189a6fe09483a3e663f52fe92703
+SHA1: e9d6df1d50a834e1bddd09ef4ba18124f3075a8e
+SHA256: bdc93ddfa08a194843a5f3cc54e714f24d3ad8d0fc3d37ac0428e7a4f7cc4fe4
+Description: OpenLDAP libraries
+Multi-Arch: same
+Homepage: http://www.openldap.org/
+Description-md5: 198db781f85a21d6d3c302c304d6e0fb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libldap-2.4-2-dbg
+Priority: extra
+Section: libdevel
+Installed-Size: 565
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: openldap
+Version: 2.4.31-1+nmu2ubuntu2
+Depends: libldap-2.4-2 (= 2.4.31-1+nmu2ubuntu2)
+Filename: pool/main/o/openldap/libldap-2.4-2-dbg_2.4.31-1+nmu2ubuntu2_amd64.deb
+Size: 410018
+MD5sum: e50d355b0a146a63fde83f1aa5419931
+SHA1: 1299a058fcfb383f7da7e3404c140847db3acb84
+SHA256: 842fcb1bdbe763cc6db3472fc6022988562f5243f1be946864c15be7a9935ff8
+Description: Debugging information for OpenLDAP libraries
+Multi-Arch: same
+Homepage: http://www.openldap.org/
+Description-md5: ccc0a2bad42dae2cfbcee6c60d947e72
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libldap2-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 1369
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: openldap
+Version: 2.4.31-1+nmu2ubuntu2
+Replaces: libopenldap-dev
+Provides: libldap-dev
+Depends: libldap-2.4-2 (= 2.4.31-1+nmu2ubuntu2)
+Conflicts: libldap-dev, libopenldap-dev
+Filename: pool/main/o/openldap/libldap2-dev_2.4.31-1+nmu2ubuntu2_amd64.deb
+Size: 506778
+MD5sum: 217a45fda06b8666387f415bded6749c
+SHA1: 4c11c2301988e9cb694eee427b8cbe62c3d290a5
+SHA256: d8369e78d77854067391b6c6b3bc4bde012bb1e1b5ee0bed21dd4e029ae42001
+Description: OpenLDAP development libraries
+Multi-Arch: same
+Homepage: http://www.openldap.org/
+Description-md5: 2359036e8e1bd2b4b5d49233c1509ecf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: libmysqlclient-dev
 Priority: optional
@@ -4724,6 +4827,56 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: slapd
+Priority: optional
+Section: net
+Installed-Size: 4101
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: openldap
+Version: 2.4.31-1+nmu2ubuntu2
+Replaces: ldap-utils (<< 2.2.23-3), libldap2
+Provides: ldap-server, libslapi-2.4-2
+Depends: libc6 (>= 2.15), libdb5.1, libldap-2.4-2 (= 2.4.31-1+nmu2ubuntu2), libltdl7 (>= 2.4.2), libodbc1 (>= 2.2.11) | unixodbc (>= 2.2.11), libperl5.14 (>= 5.14.2), libsasl2-2 (>= 2.1.24), libslp1, libwrap0 (>= 7.6-4~), coreutils (>= 4.5.1-1), psmisc, perl (>> 5.8.0) | libmime-base64-perl, adduser, lsb-base (>= 3.2-13)
+Pre-Depends: debconf (>= 0.5) | debconf-2.0, multiarch-support
+Recommends: libsasl2-modules
+Suggests: ldap-utils, ufw
+Conflicts: ldap-server, libltdl3 (= 1.5.4-1), umich-ldapd
+Filename: pool/main/o/openldap/slapd_2.4.31-1+nmu2ubuntu2_amd64.deb
+Size: 1734822
+MD5sum: 72f4c5d4d245de5623f2bde4c206b010
+SHA1: 27c7b4743219a981613930da4d16dc8173c1e099
+SHA256: 757b0397b32ea136cd5247da565c96840e189322f5b26732a4e09a1e128f34bd
+Description: OpenLDAP server (slapd)
+Homepage: http://www.openldap.org/
+Description-md5: dd977840e276b3f03520c0ab1d050cf8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: slapd-dbg
+Priority: extra
+Section: net
+Installed-Size: 6006
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: openldap
+Version: 2.4.31-1+nmu2ubuntu2
+Depends: slapd (= 2.4.31-1+nmu2ubuntu2)
+Filename: pool/main/o/openldap/slapd-dbg_2.4.31-1+nmu2ubuntu2_amd64.deb
+Size: 5384764
+MD5sum: 8f6f093ee1cec3ba612ee56cac9d334a
+SHA1: bb9aa4b01dc9025fd09827eba196161674b6d9d2
+SHA256: bf98746af4320504909df62a9cf33d0245a1ddd6756329ca1ffc69f7c1d9f179
+Description: Debugging information for the OpenLDAP server (slapd)
+Homepage: http://www.openldap.org/
+Description-md5: 60adf5b076ecd11243c2b33f25815a47
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: swig
 Priority: optional
