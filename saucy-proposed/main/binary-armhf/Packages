@@ -1790,6 +1790,32 @@ Description-md5: 95d9b26f75a8f8f8a93fbe8e13d5b0e9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: ldap-utils
+Priority: optional
+Section: net
+Installed-Size: 538
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: openldap
+Version: 2.4.31-1+nmu2ubuntu2
+Replaces: openldap-utils, openldapd, slapd (<< 2.2.23-0.pre6)
+Provides: ldap-client, openldap-utils
+Depends: libc6 (>= 2.4), libldap-2.4-2 (= 2.4.31-1+nmu2ubuntu2), libsasl2-2 (>= 2.1.24)
+Recommends: libsasl2-modules
+Conflicts: ldap-client, openldap-utils, umich-ldap-utils
+Filename: pool/main/o/openldap/ldap-utils_2.4.31-1+nmu2ubuntu2_armhf.deb
+Size: 255306
+MD5sum: 342d8b50aad0e472d2f8c806c726dc88
+SHA1: a91beb462bbb57613414cc8151bdda7df7f3dce9
+SHA256: d9541384a031b6b09b29f8270cdadf71e28058b6668bdfe7635320ca1ed492c0
+Description: OpenLDAP utilities
+Homepage: http://www.openldap.org/
+Description-md5: f5d300156245ae8fa5972cf30bf60206
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-dvd-live
+
 Package: libapache2-mod-auth-mysql
 Priority: optional
 Section: web
@@ -2432,142 +2458,76 @@ Description-md5: d22def284c479ea2fe12faed1fe6c756
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libmirclient-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 81
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: armhf
-Source: mir
-Version: 0.0.8+13.10.20130808.2-0ubuntu1
-Depends: libmirclient1 (= 0.0.8+13.10.20130808.2-0ubuntu1), libmirprotobuf-dev (= 0.0.8+13.10.20130808.2-0ubuntu1), mircommon-dev (= 0.0.8+13.10.20130808.2-0ubuntu1)
-Filename: pool/main/m/mir/libmirclient-dev_0.0.8+13.10.20130808.2-0ubuntu1_armhf.deb
-Size: 6954
-MD5sum: 01fa98e34ce6cef07c1730f655902677
-SHA1: ed06e2fe1469c0a2d0c0ea9eb24205d391dc08ba
-SHA256: 563747bc5434e90210f0cf3244aa95222037e895265d772ff1f0ce715a2c9a53
-Description: Display server for Ubuntu - development headers
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: bad81f957875312d57ff2d16afca10de
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
-
-Package: libmirclient1
-Priority: optional
+Package: libldap-2.4-2
+Priority: standard
 Section: libs
-Installed-Size: 401
+Installed-Size: 361
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
 Architecture: armhf
-Source: mir
-Version: 0.0.8+13.10.20130808.2-0ubuntu1
-Depends: libboost-system1.53.0, libc6 (>= 2.9), libgcc1 (>= 1:4.4.0), libhardware2, libmirprotobuf0 (>= 0.0.8+13.10.20130808.2), libprotobuf7, libstdc++6 (>= 4.8), libxkbcommon0 (>= 0.2.0)
+Source: openldap
+Version: 2.4.31-1+nmu2ubuntu2
+Replaces: libldap-2.3-0, libldap2
+Depends: libc6 (>= 2.12), libgcrypt11 (>= 1.4.5), libgnutls26 (>= 2.12.17-0), libgssapi3-heimdal (>= 1.4.0+git20110226), libsasl2-2 (>= 2.1.24)
 Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirclient1_0.0.8+13.10.20130808.2-0ubuntu1_armhf.deb
-Size: 141094
-MD5sum: db90bb9c82912f6b478b15accdb444a5
-SHA1: 6029f5578b4876cb1ab3e79049195a182338bd43
-SHA256: 28afad96132c5b098188c8365ac1e3e709d37719c58146c3736a9b53ad5334db
-Description: Display server for Ubuntu - client library
+Conflicts: ldap-utils (<= 2.1.23-1)
+Filename: pool/main/o/openldap/libldap-2.4-2_2.4.31-1+nmu2ubuntu2_armhf.deb
+Size: 153786
+MD5sum: b4abb7d3123c2fa0696e1feee47be6f5
+SHA1: 6e2cae6a2ff0c480735f20282fe6dba8b6e750c5
+SHA256: 495ac0f20cd4ea3c7965cf7ca30cb6b40c23ceb6e9666d18127535466a7dbea9
+Description: OpenLDAP libraries
 Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: 833ddf930ef3c3df05aca4213ced851d
+Homepage: http://www.openldap.org/
+Description-md5: 198db781f85a21d6d3c302c304d6e0fb
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
-Package: libmirprotobuf-dev
-Priority: optional
+Package: libldap-2.4-2-dbg
+Priority: extra
 Section: libdevel
-Installed-Size: 62
+Installed-Size: 549
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
 Architecture: armhf
-Source: mir
-Version: 0.0.8+13.10.20130808.2-0ubuntu1
-Depends: libmirprotobuf0 (= 0.0.8+13.10.20130808.2-0ubuntu1), libprotobuf-dev
-Filename: pool/main/m/mir/libmirprotobuf-dev_0.0.8+13.10.20130808.2-0ubuntu1_armhf.deb
-Size: 4420
-MD5sum: 6c46286500b996039aa0fe8c0010775e
-SHA1: 2265e36e4fa61ab741199a7a0ef264236ee13177
-SHA256: 7bed540413cafff0e595f559fa31e1aae63cbfcc917d298adb26dc557fcc455f
-Description: Display server for Ubuntu - protocol definition
+Source: openldap
+Version: 2.4.31-1+nmu2ubuntu2
+Depends: libldap-2.4-2 (= 2.4.31-1+nmu2ubuntu2)
+Filename: pool/main/o/openldap/libldap-2.4-2-dbg_2.4.31-1+nmu2ubuntu2_armhf.deb
+Size: 392148
+MD5sum: ad8467f338ed4c04b975df670b3ab59a
+SHA1: f1a5414c621854fb89034a4efc83bdea49ee520f
+SHA256: 36b5648e4947100247cfddf6b16b7f4f928c6df9130d5c6239e0282a892384d7
+Description: Debugging information for OpenLDAP libraries
 Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: dafcf3520428a348b335759e46da047f
+Homepage: http://www.openldap.org/
+Description-md5: ccc0a2bad42dae2cfbcee6c60d947e72
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
 
-Package: libmirprotobuf0
-Priority: optional
-Section: libs
-Installed-Size: 183
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: armhf
-Source: mir
-Version: 0.0.8+13.10.20130808.2-0ubuntu1
-Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libprotobuf7, libstdc++6 (>= 4.4.0)
-Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirprotobuf0_0.0.8+13.10.20130808.2-0ubuntu1_armhf.deb
-Size: 59210
-MD5sum: 95af42c359d158ebad284e2f35aa5792
-SHA1: 848a296b0cfa48e137bee295553945f60efaef24
-SHA256: 75e517bfd2080cc881268f0955ca3796220cacc122aa4c4ef863004cd07bb8a9
-Description: Display server for Ubuntu - protocol implementation
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: c619d91f67bba57f73bf198297f21d7d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
-
-Package: libmirserver-dev
-Priority: optional
+Package: libldap2-dev
+Priority: extra
 Section: libdevel
-Installed-Size: 367
+Installed-Size: 1062
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
 Architecture: armhf
-Source: mir
-Version: 0.0.8+13.10.20130808.2-0ubuntu1
-Depends: libmirserver0 (= 0.0.8+13.10.20130808.2-0ubuntu1), libmirprotobuf-dev (= 0.0.8+13.10.20130808.2-0ubuntu1), mircommon-dev (= 0.0.8+13.10.20130808.2-0ubuntu1), libglm-dev, libboost-program-options-dev
-Filename: pool/main/m/mir/libmirserver-dev_0.0.8+13.10.20130808.2-0ubuntu1_armhf.deb
-Size: 41046
-MD5sum: 5bed4cff95d607360d848341c074d943
-SHA1: 5e91b6a89e7da2813d58d3a68aef9ca308c51be2
-SHA256: 19a51a004178e084203752efe8a0f49c29bd748baf4aa5d60cee5e93056456af
-Description: Display server for Ubuntu - development headers
+Source: openldap
+Version: 2.4.31-1+nmu2ubuntu2
+Replaces: libopenldap-dev
+Provides: libldap-dev
+Depends: libldap-2.4-2 (= 2.4.31-1+nmu2ubuntu2)
+Conflicts: libldap-dev, libopenldap-dev
+Filename: pool/main/o/openldap/libldap2-dev_2.4.31-1+nmu2ubuntu2_armhf.deb
+Size: 462172
+MD5sum: 89d1cd247d4e8efa27e394f22b066860
+SHA1: 14591637ad3277ee1618e36cb381fec549aa067c
+SHA256: 5dec793fe2334b357ecaecd44d0a956ca2c2a93cda72310e22d241efeeabb219
+Description: OpenLDAP development libraries
 Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: 98260f2d94306b61ba8e99360b379f43
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libmirserver0
-Priority: optional
-Section: libs
-Installed-Size: 1459
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: armhf
-Source: mir
-Version: 0.0.8+13.10.20130808.2-0ubuntu1
-Depends: libboost-program-options1.53.0, libboost-system1.53.0, libc6 (>= 2.9), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.4.0), libgflags2, libgles2-mesa (>= 7.8.1) | libgles2, libgoogle-glog0, libhardware2, libmirclient1 (>= 0.0.8+13.10.20130808.2), libmirprotobuf0 (>= 0.0.8+13.10.20130808.2), libprotobuf7, libstdc++6 (>= 4.8.1), libxkbcommon0 (>= 0.2.0)
-Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirserver0_0.0.8+13.10.20130808.2-0ubuntu1_armhf.deb
-Size: 537792
-MD5sum: 74ab9d55a29ac4605fd91f6e85651706
-SHA1: 44bead278f2acb8d5905da6691864d70f7fc0e60
-SHA256: a2ca2688aa1cee6eda4f16d568a0f9fb82ebf0969526f20457c741c223a9b523
-Description: Display server for Ubuntu - server library
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: ec9e31363965aaba264f7029d7781e84
+Homepage: http://www.openldap.org/
+Description-md5: 2359036e8e1bd2b4b5d49233c1509ecf
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -3917,95 +3877,6 @@ Description-md5: 5e947646628710d552f512bf911d233f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: mir-demos
-Priority: optional
-Section: x11
-Installed-Size: 521
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: armhf
-Source: mir
-Version: 0.0.8+13.10.20130808.2-0ubuntu1
-Depends: libboost-program-options1.53.0, libc6 (>= 2.4), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.4.0), libgles2-mesa (>= 7.8.1) | libgles2, libmirclient1 (>= 0.0.8+13.10.20130808.2), libmirserver0 (= 0.0.8+13.10.20130808.2-0ubuntu1), libstdc++6 (>= 4.8.1)
-Recommends: mir-doc
-Filename: pool/main/m/mir/mir-demos_0.0.8+13.10.20130808.2-0ubuntu1_armhf.deb
-Size: 210566
-MD5sum: 154acdaa60f03cd1085a8438ce0d49e9
-SHA1: eeef186d3ca7b307b596c278af0f2ff44a9c99be
-SHA256: acbfca9a010561d7a2add5994d88f5510a65d749cba753e883eb1736926afb00
-Description: Display server for Ubuntu - demonstration programs
-Homepage: https://launchpad.net/mir
-Description-md5: 75fa5acf7d892374aa25e17fc2492966
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: mir-doc
-Priority: optional
-Section: doc
-Installed-Size: 66911
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: all
-Source: mir
-Version: 0.0.8+13.10.20130808.2-0ubuntu1
-Depends: libmirclient-dev, libmirserver-dev
-Filename: pool/main/m/mir/mir-doc_0.0.8+13.10.20130808.2-0ubuntu1_all.deb
-Size: 37497578
-MD5sum: 8b36953b1b04ed3145e494242f5102df
-SHA1: 1720845dc109af4a027ee0bb9e153997f28cf655
-SHA256: 883a97fa0f5a63e53fa4a034682d1dd0b3044f4fe3a9df489f1c30bd86a82987
-Description: API documentation for mir
-Homepage: https://launchpad.net/mir
-Description-md5: 628500f58a32ea2c0fc1cb782e6f260f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: mir-test-tools
-Priority: optional
-Section: x11
-Installed-Size: 145
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: armhf
-Source: mir
-Version: 0.0.8+13.10.20130808.2-0ubuntu1
-Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), liblttng-ust0, libmirclient1 (>= 0.0.8+13.10.20130808.2), libstdc++6 (>= 4.8.1), liburcu1 (>= 0.6.7)
-Pre-Depends: multiarch-support
-Recommends: mir-demos
-Filename: pool/main/m/mir/mir-test-tools_0.0.8+13.10.20130808.2-0ubuntu1_armhf.deb
-Size: 27976
-MD5sum: 2ee3be9948771d622188ccbf5d344ebb
-SHA1: 5ecaeeb4a85e96768b548619995b4c5e60358ad6
-SHA256: 8c7581b161c2c50f7ef6c506de8c032f650dc48a8769297e02cd4e03970caa94
-Description: Display Server for Ubuntu - stress tests and other test tools
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: 42fdcf71453ed4c8e6f4c09dba656cc0
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: mircommon-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 163
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: armhf
-Source: mir
-Version: 0.0.8+13.10.20130808.2-0ubuntu1
-Filename: pool/main/m/mir/mircommon-dev_0.0.8+13.10.20130808.2-0ubuntu1_armhf.deb
-Size: 19042
-MD5sum: ab55c5010209693f2850350d0f134298
-SHA1: 50c8eb1e719630db49467a3607a1ebe18f2a112c
-SHA256: d542deb016556b8b233b044d01f7f1149d946cba3bce7f5147f1fc09e4904233
-Description: Display server for Ubuntu - development headers
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: afceda22de73c8f8ef2fe0642ae4e906
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
-
 Package: mysql-client
 Priority: optional
 Section: database
@@ -4912,6 +4783,54 @@ Description-md5: c3261de338d126dcdc430c8beedea103
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: slapd
+Priority: optional
+Section: net
+Installed-Size: 3126
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: openldap
+Version: 2.4.31-1+nmu2ubuntu2
+Replaces: ldap-utils (<< 2.2.23-3), libldap2
+Provides: ldap-server, libslapi-2.4-2
+Depends: libc6 (>= 2.15), libdb5.1, libldap-2.4-2 (= 2.4.31-1+nmu2ubuntu2), libltdl7 (>= 2.4.2), libodbc1 (>= 2.2.11) | unixodbc (>= 2.2.11), libperl5.14 (>= 5.14.2), libsasl2-2 (>= 2.1.24), libslp1, libwrap0 (>= 7.6-4~), coreutils (>= 4.5.1-1), psmisc, perl (>> 5.8.0) | libmime-base64-perl, adduser, lsb-base (>= 3.2-13)
+Pre-Depends: debconf (>= 0.5) | debconf-2.0, multiarch-support
+Recommends: libsasl2-modules
+Suggests: ldap-utils, ufw
+Conflicts: ldap-server, libltdl3 (= 1.5.4-1), umich-ldapd
+Filename: pool/main/o/openldap/slapd_2.4.31-1+nmu2ubuntu2_armhf.deb
+Size: 1593768
+MD5sum: 8137d838dd8a7c4e148f0a4bf005562e
+SHA1: 293984b1e3af47acf482f39ae6de045e6dee5e16
+SHA256: f43ac374edbc680bec6d3f82a9ec7a08a3c37885a05c75556c41508535ed70a5
+Description: OpenLDAP server (slapd)
+Homepage: http://www.openldap.org/
+Description-md5: dd977840e276b3f03520c0ab1d050cf8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: slapd-dbg
+Priority: extra
+Section: net
+Installed-Size: 5945
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: openldap
+Version: 2.4.31-1+nmu2ubuntu2
+Depends: slapd (= 2.4.31-1+nmu2ubuntu2)
+Filename: pool/main/o/openldap/slapd-dbg_2.4.31-1+nmu2ubuntu2_armhf.deb
+Size: 5339666
+MD5sum: fdec80f5f75b26eff108f326e6c12f67
+SHA1: 9168bcbb22ab2f3b9fce39e99ebcbe0612700179
+SHA256: 86b9435ec06ec91545b8f068b181b3a33c213380a1cc2360d88ea6e5ae5a4d24
+Description: Debugging information for the OpenLDAP server (slapd)
+Homepage: http://www.openldap.org/
+Description-md5: 60adf5b076ecd11243c2b33f25815a47
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: swig
 Priority: optional
