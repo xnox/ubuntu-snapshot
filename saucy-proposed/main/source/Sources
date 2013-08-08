@@ -541,7 +541,7 @@ Package: linux
 Binary: linux-source-3.11.0, linux-doc, linux-tools-common, linux-headers-3.11.0-0, linux-libc-dev, linux-tools-3.11.0-0, linux-image-3.11.0-0-generic, linux-image-extra-3.11.0-0-generic, linux-headers-3.11.0-0-generic, linux-image-3.11.0-0-generic-dbgsym, linux-udebs-generic, linux-image-3.11.0-0-generic-lpae, linux-image-extra-3.11.0-0-generic-lpae, linux-headers-3.11.0-0-generic-lpae, linux-image-3.11.0-0-generic-lpae-dbgsym, linux-udebs-generic-lpae, kernel-image-3.11.0-0-generic-di, nic-modules-3.11.0-0-generic-di, nic-shared-modules-3.11.0-0-generic-di, serial-modules-3.11.0-0-generic-di, ppp-modules-3.11.0-0-generic-di, pata-modules-3.11.0-0-generic-di, firewire-core-modules-3.11.0-0-generic-di, scsi-modules-3.11.0-0-generic-di, plip-modules-3.11.0-0-generic-di, floppy-modules-3.11.0-0-generic-di, fat-modules-3.11.0-0-generic-di, nfs-modules-3.11.0-0-generic-di, md-modules-3.11.0-0-generic-di, multipath-modules-3.11.0-0-generic-di, usb-modules-3.11.0-0-generic-di,
  pcmcia-storage-modules-3.11.0-0-generic-di, fb-modules-3.11.0-0-generic-di, input-modules-3.11.0-0-generic-di, mouse-modules-3.11.0-0-generic-di, irda-modules-3.11.0-0-generic-di, parport-modules-3.11.0-0-generic-di, nic-pcmcia-modules-3.11.0-0-generic-di, pcmcia-modules-3.11.0-0-generic-di, nic-usb-modules-3.11.0-0-generic-di, sata-modules-3.11.0-0-generic-di, crypto-modules-3.11.0-0-generic-di, squashfs-modules-3.11.0-0-generic-di, speakup-modules-3.11.0-0-generic-di, virtio-modules-3.11.0-0-generic-di, fs-core-modules-3.11.0-0-generic-di, fs-secondary-modules-3.11.0-0-generic-di, storage-core-modules-3.11.0-0-generic-di, block-modules-3.11.0-0-generic-di, message-modules-3.11.0-0-generic-di, vlan-modules-3.11.0-0-generic-di,
  ipmi-modules-3.11.0-0-generic-di
-Version: 3.11.0-0.2
+Version: 3.11.0-0.3
 Priority: optional
 Section: devel
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
@@ -552,8 +552,8 @@ Standards-Version: 3.9.4.0
 Format: 1.0
 Directory: pool/main/l/linux
 Files:
- 462c6ecdc04742c4c8be6bfe5bca766a 6797 linux_3.11.0-0.2.dsc
- d2239ef7354e3086db18cde88df227dd 118019804 linux_3.11.0-0.2.tar.gz
+ f916b1b62e92ac2ea52e4a6f5cef8c64 6797 linux_3.11.0-0.3.dsc
+ 0be27a6b670b7f819cd30f3875dbad1e 118017524 linux_3.11.0-0.3.tar.gz
 Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-saucy.git
 Package-List: 
  block-modules-3.11.0-0-generic-di udeb debian-installer standard
@@ -609,35 +609,86 @@ Package-List:
  virtio-modules-3.11.0-0-generic-di udeb debian-installer standard
  vlan-modules-3.11.0-0-generic-di udeb debian-installer extra
 Checksums-Sha1:
- 6b9ef868703aacc2b6b482368f4a3725b6ee842a 6797 linux_3.11.0-0.2.dsc
- 364e2fde95345e0fdb56f6efb0234945074b5373 118019804 linux_3.11.0-0.2.tar.gz
+ aad5b7427b44116ce1c3a7163926f7364f3f803d 6797 linux_3.11.0-0.3.dsc
+ 1e02410d4f617152498f9cd0ad845568e92a0321 118017524 linux_3.11.0-0.3.tar.gz
 Checksums-Sha256:
- c1bce8c0997f19bcd620367001d0a589d1829d01832b006e50a6325d7059ad5f 6797 linux_3.11.0-0.2.dsc
- f11722033f3a19b2c84fd84b94dec5c648a6a7c8ca4793d872998b7651e14c52 118019804 linux_3.11.0-0.2.tar.gz
+ 68a669703d0d4c15268c39645273060bc79d4f475b2bdb34b4ab388fd86154f7 6797 linux_3.11.0-0.3.dsc
+ 403c24a58ef2494f2e8d2e9b3517b5d29cfcdc0906da6fbb1097450cca91b473 118017524 linux_3.11.0-0.3.tar.gz
 Testsuite: autopkgtest
+
+Package: linux-meta
+Binary: linux, linux-source, linux-image, linux-crashdump, linux-tools, linux-headers-generic, linux-image-generic, linux-generic, linux-headers-generic-lpae, linux-image-generic-lpae, linux-generic-lpae, linux-headers-generic-pae, linux-image-generic-pae, linux-generic-pae, linux-headers-highbank, linux-image-highbank, linux-highbank, linux-headers-omap, linux-image-omap, linux-omap, linux-headers-server, linux-image-server, linux-server, linux-signed-image-generic, linux-signed-generic, linux-headers-virtual, linux-image-virtual, linux-virtual, linux-image-extra-virtual
+Version: 3.11.0.0.1
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: dpkg (>= 1.13.19), debhelper (>= 5), gawk
+Architecture: i386 amd64 armhf all
+Standards-Version: 3.6.1
+Format: 1.0
+Directory: pool/main/l/linux-meta
+Files:
+ bcffcf0da0908f36b52271b7b836cc4a 3224 linux-meta_3.11.0.0.1.dsc
+ 0f05bcae7b722248a3c46433c3e28459 11954 linux-meta_3.11.0.0.1.tar.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-saucy-meta.git
+Package-List: 
+ linux deb kernel optional
+ linux-crashdump deb devel optional
+ linux-generic deb kernel optional
+ linux-generic-lpae deb kernel optional
+ linux-generic-pae deb kernel optional
+ linux-headers-generic deb kernel optional
+ linux-headers-generic-lpae deb kernel optional
+ linux-headers-generic-pae deb kernel optional
+ linux-headers-highbank deb kernel optional
+ linux-headers-omap deb kernel optional
+ linux-headers-server deb kernel optional
+ linux-headers-virtual deb kernel optional
+ linux-highbank deb kernel optional
+ linux-image deb kernel optional
+ linux-image-extra-virtual deb kernel optional
+ linux-image-generic deb kernel optional
+ linux-image-generic-lpae deb kernel optional
+ linux-image-generic-pae deb kernel optional
+ linux-image-highbank deb kernel optional
+ linux-image-omap deb kernel optional
+ linux-image-server deb kernel optional
+ linux-image-virtual deb kernel optional
+ linux-omap deb kernel optional
+ linux-server deb kernel optional
+ linux-signed-generic deb kernel optional
+ linux-signed-image-generic deb kernel optional
+ linux-source deb devel optional
+ linux-tools deb kernel optional
+ linux-virtual deb kernel optional
+Checksums-Sha1:
+ b822d15287e3f54217bd2fad6c8e5b2ba904a82c 3224 linux-meta_3.11.0.0.1.dsc
+ d1652e8744c6dd9b2222119611113a4602625e8e 11954 linux-meta_3.11.0.0.1.tar.gz
+Checksums-Sha256:
+ 570bdeb1e29c223d90e6ef6bd859332e346c3da1b842412247966a5491b33493 3224 linux-meta_3.11.0.0.1.dsc
+ a91e104394c2ae66ceec546142791ab57eb62b71753c3a2d4e2f5e8363e6f47b 11954 linux-meta_3.11.0.0.1.tar.gz
 
 Package: linux-signed
 Binary: linux-signed-image-3.11.0-0-generic, kernel-signed-image-3.11.0-0-generic-di
-Version: 3.11.0-0.2
+Version: 3.11.0-0.3
 Section: utils
 Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
-Build-Depends: debhelper (>= 9), lsb-release, python3, python3-apt, sbsigntool, linux-image-3.11.0-0-generic (>= 3.11.0-0.2)
+Build-Depends: debhelper (>= 9), lsb-release, python3, python3-apt, sbsigntool, linux-image-3.11.0-0-generic (>= 3.11.0-0.3)
 Architecture: linux-amd64
 Standards-Version: 3.9.4
 Format: 3.0 (native)
 Directory: pool/main/l/linux-signed
 Files:
- 406cb6ce0d1f5dc72e5feeaa3c6b8e09 1708 linux-signed_3.11.0-0.2.dsc
- c0b402514de4b01673512da3ab89d218 6026 linux-signed_3.11.0-0.2.tar.gz
+ 8c99fa07875a962ee893b8c9d3f210bd 1708 linux-signed_3.11.0-0.3.dsc
+ 8aa66a6273d7b488971b43ebf4e1c05e 6012 linux-signed_3.11.0-0.3.tar.gz
 Package-List: 
  kernel-signed-image-3.11.0-0-generic-di udeb debian-installer extra
  linux-signed-image-3.11.0-0-generic deb utils optional
 Checksums-Sha1:
- 50283d4e3c6f9ae81205ef1bb1cc86f5f72ddd84 1708 linux-signed_3.11.0-0.2.dsc
- ddaf151d5f6ad2c1ae74025509b290a5fb90968f 6026 linux-signed_3.11.0-0.2.tar.gz
+ 9a1d480432d9b3823433f2e887f2f2b5c61bd84c 1708 linux-signed_3.11.0-0.3.dsc
+ 6f66ae0c90bc839336a71a7a4b693482cd1a0c55 6012 linux-signed_3.11.0-0.3.tar.gz
 Checksums-Sha256:
- 5cdf30afaf66f635e3e00f6effd91c577f47f0cf2aa9686fe260540dce41d573 1708 linux-signed_3.11.0-0.2.dsc
- f5285b34cd9928c1a07b63c0c3df504a01dcff8af3818d419d9cfa341af42ad5 6026 linux-signed_3.11.0-0.2.tar.gz
+ 32fefee5c32881a8ed58cbde464d387bb4e8045a4fe827390744e6d56f4db121 1708 linux-signed_3.11.0-0.3.dsc
+ 1edfd6fc716d2d18d263f765506824b7b3680cdac879aa70e4180a1aef2469fe 6012 linux-signed_3.11.0-0.3.tar.gz
 
 Package: mod-auth-mysql
 Binary: libapache2-mod-auth-mysql
