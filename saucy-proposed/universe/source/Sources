@@ -4657,19 +4657,19 @@ Checksums-Sha256:
 
 Package: lxc
 Binary: lxc, lxc-dbg, lxc-dev, lxc-templates, liblxc0, python3-lxc
-Version: 0.9.0-0ubuntu19
+Version: 0.9.0-0ubuntu20
 Priority: optional
 Section: universe/admin
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: autotools-dev, debhelper (>= 9), dh-apparmor, dh-autoreconf, docbook2x, libapparmor-dev, libcap-dev, libseccomp-dev [i386 amd64], linux-libc-dev, python3-dev (>= 3.2.3), pkg-config
+Build-Depends: autotools-dev, debhelper (>= 9), dh-apparmor, dh-autoreconf, docbook2x, hardening-wrapper, libapparmor-dev, libcap-dev, libseccomp-dev [i386 amd64], linux-libc-dev, pkg-config, python3-dev (>= 3.2.3)
 Architecture: any all
 Standards-Version: 3.9.4
 Format: 3.0 (quilt)
 Directory: pool/universe/l/lxc
 Files:
- ca546645d613266224bb9636375cd80b 1761 lxc_0.9.0-0ubuntu19.dsc
+ b624a39e32742db312bc1dfcdbb8dbe7 2128 lxc_0.9.0-0ubuntu20.dsc
  8552a4479090616f4bc04d8473765fc9 421677 lxc_0.9.0.orig.tar.gz
- 533c073bc7045de2687c533cad16a089 63802 lxc_0.9.0-0ubuntu19.debian.tar.gz
+ 106199a2d79fb28361c0e759ceb46954 64035 lxc_0.9.0-0ubuntu20.debian.tar.gz
 Homepage: http://lxc.sourceforge.net/
 Package-List: 
  liblxc0 deb admin optional
@@ -4679,13 +4679,13 @@ Package-List:
  lxc-templates deb admin optional
  python3-lxc deb python optional
 Checksums-Sha1:
- 82a945a6de560f9ae957ed32e7921a810f738f76 1761 lxc_0.9.0-0ubuntu19.dsc
+ 6b44d5365f2967a9c980e7271298270cecb557c9 2128 lxc_0.9.0-0ubuntu20.dsc
  863f6375e4b113cb895ca8c252f4da779ee98df7 421677 lxc_0.9.0.orig.tar.gz
- d1087530007aa3f3f13d47a13bbb19c3946ccab8 63802 lxc_0.9.0-0ubuntu19.debian.tar.gz
+ 7ff5e4b600fd2ee9bd02c960daa1a07957669438 64035 lxc_0.9.0-0ubuntu20.debian.tar.gz
 Checksums-Sha256:
- b62e641b8ad1b825eeacfbb09b9c54603ee07366118f8dcd2b40ff03376178c6 1761 lxc_0.9.0-0ubuntu19.dsc
+ 4e20e5f08d20aac6184ca96aa25b089bf91ca075db19980af40ac7133c38f656 2128 lxc_0.9.0-0ubuntu20.dsc
  1e1767eae6cc5fbf892c0e193d25da420ba19f2db203716c38f7cdea3b654120 421677 lxc_0.9.0.orig.tar.gz
- 54a4849693822fc6faa5fb7c967e88c0a0ed16229d5e01f12d34947f4f22d1ad 63802 lxc_0.9.0-0ubuntu19.debian.tar.gz
+ 7db84dd77661eb106b09d86ac57f94735d0f4b87fcb5c86c7710ab6f189c7d2f 64035 lxc_0.9.0-0ubuntu20.debian.tar.gz
 Testsuite: autopkgtest
 
 Package: mercator
@@ -5655,6 +5655,35 @@ Checksums-Sha256:
  7aded5c2e42b4abe9e5ce933b60348c006c42c404087194fc7ea5f60146994a4 2256 pgocaml_1.7.1-2.dsc
  f7c843032455f83c8d1f15de9a7012441ab28e5ec6d06deabb2526859a4afb55 79890 pgocaml_1.7.1.orig.tar.gz
  0c2b20a911c95e2ae5d4dbaa0c06f6af81206b2ebe2c0e3329942dcd99b7732e 4066 pgocaml_1.7.1-2.debian.tar.gz
+
+Package: phablet-tools
+Binary: phablet-tools
+Version: 1.0+13.10.20130809-0ubuntu1
+Priority: extra
+Section: universe/admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Sergio Schvezov <sergio.schvezov@canonical.com>
+Build-Depends: debhelper (>= 9.0.0), python (>= 2.7), python-configobj, python-mock, python-requests, python-setuptools, python-testscenarios, python-testtools, python-xdg
+Architecture: all
+Standards-Version: 3.9.4
+Format: 1.0
+Directory: pool/universe/p/phablet-tools
+Files:
+ 4e1de62dc256eeb34bd398fbda01dc33 2175 phablet-tools_1.0+13.10.20130809-0ubuntu1.dsc
+ 241cf3e0431352b9ccc7cff2ad629717 33192 phablet-tools_1.0+13.10.20130809.orig.tar.gz
+ 0cf06de496da288698800543ce126494 6094 phablet-tools_1.0+13.10.20130809-0ubuntu1.diff.gz
+Vcs-Browser: https://bazaar.launchpad.net/~phablet-team/phablet-tools/trunk/files
+Vcs-Bzr: https://code.launchpad.net/~phablet-team/phablet-tools/trunk
+Package-List: 
+ phablet-tools deb admin extra
+Checksums-Sha1:
+ ffbc63b5854f60d5f3b098969f3bda26f2d2d509 2175 phablet-tools_1.0+13.10.20130809-0ubuntu1.dsc
+ 73d4ed56eb71618edcd09dedb2225a65bf021344 33192 phablet-tools_1.0+13.10.20130809.orig.tar.gz
+ 3c4a447ee401733be83d63ac52d3ccf5cb6ae570 6094 phablet-tools_1.0+13.10.20130809-0ubuntu1.diff.gz
+Checksums-Sha256:
+ 8eefaae07819b8652d98edd08c1d442c55b042c3fa16fcb712edd0901ddf8dc0 2175 phablet-tools_1.0+13.10.20130809-0ubuntu1.dsc
+ 2ae7e8caa43b8218a8d72d3f71a95e74d593f5ab0e26c0e48a54331eac1e4d76 33192 phablet-tools_1.0+13.10.20130809.orig.tar.gz
+ 85919762d4329730038f4a29dcf798135fb236b0f269e1a30c3103e32b0b9d9b 6094 phablet-tools_1.0+13.10.20130809-0ubuntu1.diff.gz
 
 Package: php-getid3
 Binary: php-getid3
