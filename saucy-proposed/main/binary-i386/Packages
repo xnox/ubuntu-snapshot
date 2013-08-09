@@ -47,6 +47,193 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: ceph
+Priority: optional
+Section: admin
+Installed-Size: 98958
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Version: 0.67~rc3-0ubuntu1
+Depends: binutils, ceph-common, cryptsetup-bin | cryptsetup, gdisk, hdparm | sdparm, parted, python, python-argparse, uuid-runtime, xfsprogs, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libaio1 (>= 0.3.93), libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.16), libgcc1 (>= 1:4.1.1), libgoogle-perftools4, libleveldb1, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Recommends: libcephfs1, librados2, librbd1
+Filename: pool/main/c/ceph/ceph_0.67~rc3-0ubuntu1_i386.deb
+Size: 21408494
+MD5sum: 13b58cde3d7a2f924b2b4d07a4b852c2
+SHA1: bf1e0dfdf476e50eba49fc168382fad0f6b463ac
+SHA256: 588e739e34f959a94322ff813ac694ce68a518ff357029bbf14194f0569bf1bd
+Description: distributed storage and file system
+Homepage: http://ceph.com/
+Description-md5: 8076f05fe2327940c1772acbf6f471cf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-common
+Priority: optional
+Section: admin
+Installed-Size: 17971
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Replaces: ceph-client-tools
+Depends: librbd1 (= 0.67~rc3-0ubuntu1), python, python-ceph (= 0.67~rc3-0ubuntu1), libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.16), libgcc1 (>= 1:4.1.1), libkeyutils1, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), librados2, libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Suggests: ceph, ceph-mds
+Conflicts: ceph-client-tools
+Filename: pool/main/c/ceph/ceph-common_0.67~rc3-0ubuntu1_i386.deb
+Size: 5876142
+MD5sum: 9ebc997b8b2de4ba1b43ed2c3531d673
+SHA1: 432bbda879dc9c9765b2e9d0712d5dd2c8300dd6
+SHA256: ffe93a19bc6ba4fd3b936421a38fbd10cd35a53646fb9c9dc74fcdd0206b4219
+Description: common utilities to mount and interact with a ceph storage cluster
+Homepage: http://ceph.com/
+Description-md5: e302e645c41e2c6148fcff41573e283b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-common-dbg
+Priority: extra
+Section: debug
+Installed-Size: 214186
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Replaces: ceph-client-tools-dbg
+Depends: ceph-common (= 0.67~rc3-0ubuntu1)
+Conflicts: ceph-client-tools-dbg
+Filename: pool/main/c/ceph/ceph-common-dbg_0.67~rc3-0ubuntu1_i386.deb
+Size: 65430786
+MD5sum: 22aba9c977bdc3309506f5fc957597af
+SHA1: 83680de3dbdcaf52e4d661ebba008ad53745b77f
+SHA256: 7af6b887a267af4c923acaef0e995c9010ab9440bf8a878e284eed099db02b5f
+Description: debugging symbols for ceph-common
+Homepage: http://ceph.com/
+Description-md5: 4e090d4d7aa07af441f4e2ba271159ef
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-dbg
+Priority: extra
+Section: debug
+Installed-Size: 238087
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Depends: ceph (= 0.67~rc3-0ubuntu1)
+Filename: pool/main/c/ceph/ceph-dbg_0.67~rc3-0ubuntu1_i386.deb
+Size: 65533598
+MD5sum: e591bf58a883a11cc8c7609a46d84dce
+SHA1: 3d3f67513d98b01ec4f02c1e0d1cc7909ff84bba
+SHA256: c2604e53342518c0a9ee3e10891f2d388afbe045aa315cdecac56ecf35308a32
+Description: debugging symbols for ceph
+Homepage: http://ceph.com/
+Description-md5: 43fb0fb4a4a9eb4d08ff4a0f12738692
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-fs-common
+Priority: optional
+Section: admin
+Installed-Size: 100
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Replaces: ceph-client-tools
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libkeyutils1, libstdc++6 (>= 4.4.0)
+Suggests: ceph-mds
+Conflicts: ceph-client-tools
+Filename: pool/main/c/ceph/ceph-fs-common_0.67~rc3-0ubuntu1_i386.deb
+Size: 27268
+MD5sum: 65d0ffc5983340b1c1dcc616e52550ab
+SHA1: 2beb3458bf5d3965ba1b10d7a772b5950ea13916
+SHA256: 4ab257dc60959a1ae727f007b04f28ef16b1ac837bd8464dcc312bb31171e58e
+Description: common utilities to mount and interact with a ceph file system
+Homepage: http://ceph.com/
+Description-md5: b2714a5dd73de6b9a1f8478ea36a611a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-fs-common-dbg
+Priority: extra
+Section: debug
+Installed-Size: 203
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Replaces: ceph-client-tools-dbg
+Depends: ceph-fs-common (= 0.67~rc3-0ubuntu1)
+Conflicts: ceph-client-tools-dbg
+Filename: pool/main/c/ceph/ceph-fs-common-dbg_0.67~rc3-0ubuntu1_i386.deb
+Size: 65506
+MD5sum: 442b9ee447cb58ff5bae010914285e22
+SHA1: c4fe6374083e34584f028d989cd489de3b8155cd
+SHA256: dc1b5eea4c9821bc539ad8ac9660f98f5857a34a3f65832c0a06c747e65ac072
+Description: debugging symbols for ceph-fs-common
+Homepage: http://ceph.com/
+Description-md5: aa04d5e291a121b5512a5c379fed4f57
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-mds
+Priority: optional
+Section: admin
+Installed-Size: 7349
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Depends: ceph, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.16), libgcc1 (>= 1:4.1.1), libgoogle-perftools4, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Recommends: ceph-fs-common, ceph-fuse, libcephfs1
+Filename: pool/main/c/ceph/ceph-mds_0.67~rc3-0ubuntu1_i386.deb
+Size: 2651544
+MD5sum: 5138e510e0aec13734a1731a806d45cc
+SHA1: 7594908c40a9ce6348c7e90eb5ff69d8ebb2c97f
+SHA256: b94a8bd11234ef2fd18a03fa8f49d57fb644e3e2d95c6da6d1ccb0be9749142e
+Description: metadata server for the ceph distributed file system
+Homepage: http://ceph.com/
+Description-md5: d37d51a4735a093f21799c80f707168f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-mds-dbg
+Priority: extra
+Section: debug
+Installed-Size: 98791
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Depends: ceph-mds (= 0.67~rc3-0ubuntu1)
+Filename: pool/main/c/ceph/ceph-mds-dbg_0.67~rc3-0ubuntu1_i386.deb
+Size: 33002578
+MD5sum: 3cde0e7ec226371c16c25e8ef6739eb4
+SHA1: 907f5235e87e5abcedcbc532c658b3de5af8ac9b
+SHA256: 6194a4b24e24eddcc9be04cfc86cc357c6c1f27c17ade2f7a4c951c8b15db976
+Description: debugging symbols for ceph-mds
+Homepage: http://ceph.com/
+Description-md5: 4bccb890723e465eee1809af0c5a17ed
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: cmake
 Priority: optional
 Section: devel
@@ -1975,93 +2162,313 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: language-pack-gnome-ro
+Package: language-pack-es
 Priority: optional
 Section: translations
-Installed-Size: 878
+Installed-Size: 4469
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130808
-Replaces: language-pack-gnome-ro (<< 1:13.10+20130808), language-pack-gnome-ro-base, language-pack-kde-ro (<< 1:13.10+20130808), language-pack-kde-ro-base (<< 1:13.10+20130808), language-pack-ro (<< 1:13.10+20130808), language-pack-ro-base (<< 1:13.10+20130808)
-Depends: language-pack-gnome-ro-base (>= 1:13.10+20130723), language-pack-ro
+Replaces: language-pack-es (<< 1:13.10+20130808), language-pack-es-base, language-pack-gnome-es (<< 1:13.10+20130808), language-pack-gnome-es-base (<< 1:13.10+20130808), language-pack-kde-es (<< 1:13.10+20130808), language-pack-kde-es-base (<< 1:13.10+20130808)
+Depends: language-pack-es-base (>= 1:13.10+20130723)
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-gnome-ro/language-pack-gnome-ro_13.10+20130808_all.deb
-Size: 267814
-MD5sum: 5d6c1cc3c5bfc0cb1a7840e862f15fdf
-SHA1: 287b6d106698fc2223c5ab187fe52dc42761d761
-SHA256: 419f32126d9ac839374170f26b539a7fc6cbcf97d281febacac8da5221f720ac
-Description: GNOME translation updates for language Romanian
-Description-md5: 3540af51111fa5be98432a3342d524b1
+Filename: pool/main/l/language-pack-es/language-pack-es_13.10+20130808_all.deb
+Size: 1334326
+MD5sum: b0e7b9473a13d4ae2018a9ff059ee389
+SHA1: 43bb12c2bcaa9fca0361f82f080f4205ba14477c
+SHA256: c0666ff79a8f6f7251d33f097df0ddf434ffa74ee9e86d2e3166f51882f6b908
+Description: translation updates for language Spanish; Castilian
+Description-md5: 7a373fb17da933b78cbebcb492badd03
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-active-live, kubuntu-active-live, edubuntu-usb-live, xubuntu-live, lubuntu-live, ubuntu-gnome-live
+
+Package: language-pack-gnome-es
+Priority: optional
+Section: translations
+Installed-Size: 1672
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-es (<< 1:13.10+20130808), language-pack-es-base (<< 1:13.10+20130808), language-pack-gnome-es (<< 1:13.10+20130808), language-pack-gnome-es-base, language-pack-kde-es (<< 1:13.10+20130808), language-pack-kde-es-base (<< 1:13.10+20130808)
+Depends: language-pack-gnome-es-base (>= 1:13.10+20130723), language-pack-es
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-es/language-pack-gnome-es_13.10+20130808_all.deb
+Size: 518022
+MD5sum: 85afa949b809de02224f60f81648a51c
+SHA1: b5c4bb4cde22be136f29d0e51d43fb22034a7ff8
+SHA256: fa901069cf2fdcc0a5e79adb296a7af41ebc493e7bf2408da60d7174284b1376
+Description: GNOME translation updates for language Spanish; Castilian
+Description-md5: 7a7b33095707884163c9cbe9ae7373b0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, ubuntu-usb-live, edubuntu-usb-live, xubuntu-live, lubuntu-live, ubuntu-gnome-live
+
+Package: language-pack-gnome-hr
+Priority: optional
+Section: translations
+Installed-Size: 597
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-gnome-hr (<< 1:13.10+20130808), language-pack-gnome-hr-base, language-pack-hr (<< 1:13.10+20130808), language-pack-hr-base (<< 1:13.10+20130808), language-pack-kde-hr (<< 1:13.10+20130808), language-pack-kde-hr-base (<< 1:13.10+20130808)
+Depends: language-pack-gnome-hr-base (>= 1:13.10+20130723), language-pack-hr
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-hr/language-pack-gnome-hr_13.10+20130808_all.deb
+Size: 183634
+MD5sum: 1ed7089ee0aa1146ca71cbad5d8c2ca1
+SHA1: 3a51a447b3874935a9aeb122718e535fd70c9567
+SHA256: 29117302558c78f7980c27f1f2a0b9deeb49dea0d9c1cdffd3431b9e3f5b8609
+Description: GNOME translation updates for language Croatian
+Description-md5: 044892d57458d04841f2ae46766bbe68
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-usb-live, edubuntu-usb-live
 
-Package: language-pack-ps
+Package: language-pack-gnome-ru
 Priority: optional
 Section: translations
-Installed-Size: 38
+Installed-Size: 1656
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130808
-Replaces: language-pack-gnome-ps (<< 1:13.10+20130808), language-pack-gnome-ps-base (<< 1:13.10+20130808), language-pack-kde-ps (<< 1:13.10+20130808), language-pack-kde-ps-base (<< 1:13.10+20130808), language-pack-ps (<< 1:13.10+20130808), language-pack-ps-base
-Depends: language-pack-ps-base (>= 1:13.10+20130723)
+Replaces: language-pack-gnome-ru (<< 1:13.10+20130808), language-pack-gnome-ru-base, language-pack-kde-ru (<< 1:13.10+20130808), language-pack-kde-ru-base (<< 1:13.10+20130808), language-pack-ru (<< 1:13.10+20130808), language-pack-ru-base (<< 1:13.10+20130808)
+Depends: language-pack-gnome-ru-base (>= 1:13.10+20130723), language-pack-ru
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-ps/language-pack-ps_13.10+20130808_all.deb
-Size: 2568
-MD5sum: 11a3b4e8b1aefedd836d106ae1241001
-SHA1: e3fb83848c3518f020070dae4d5fb64e83fc06b9
-SHA256: 019fc30517f9a07e7fec043cd7a59bbe3188ad1d7d6beabd995729689172bf63
-Description: translation updates for language Pushto; Pashto
-Description-md5: b448169ed995af6518c3dc0822eb318a
+Filename: pool/main/l/language-pack-gnome-ru/language-pack-gnome-ru_13.10+20130808_all.deb
+Size: 408312
+MD5sum: 4a24551b7acdb6173c36027521ea1fd9
+SHA1: 916a256e08577644720413de06ef9429d637f6fa
+SHA256: 797b63809d33437c367bf6c827a9b7c55f8cd5b0dfe65469ef64a21c41228bf6
+Description: GNOME translation updates for language Russian
+Description-md5: ba49f5482199ce5fcccb32e707e43111
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live, lubuntu-live
+
+Package: language-pack-gnome-sk
+Priority: optional
+Section: translations
+Installed-Size: 1120
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-gnome-sk (<< 1:13.10+20130808), language-pack-gnome-sk-base, language-pack-kde-sk (<< 1:13.10+20130808), language-pack-kde-sk-base (<< 1:13.10+20130808), language-pack-sk (<< 1:13.10+20130808), language-pack-sk-base (<< 1:13.10+20130808)
+Depends: language-pack-gnome-sk-base (>= 1:13.10+20130723), language-pack-sk
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-sk/language-pack-gnome-sk_13.10+20130808_all.deb
+Size: 356296
+MD5sum: f00bbc5d7819d3f3e7a45d0f06144e55
+SHA1: 45a6477a5c4a55c4634dd5353b55fdbcfad8a858
+SHA256: a8a2374f75561f04064f9a3cbf00ceb167e4dfca49123e99be219aebcefc5690
+Description: GNOME translation updates for language Slovak
+Description-md5: 7f1bb07378a0d7c8013f9aeaebdef863
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-usb-live, edubuntu-usb-live
 
-Package: language-pack-ro
+Package: language-pack-gnome-sl
 Priority: optional
 Section: translations
-Installed-Size: 851
+Installed-Size: 1213
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130808
-Replaces: language-pack-gnome-ro (<< 1:13.10+20130808), language-pack-gnome-ro-base (<< 1:13.10+20130808), language-pack-kde-ro (<< 1:13.10+20130808), language-pack-kde-ro-base (<< 1:13.10+20130808), language-pack-ro (<< 1:13.10+20130808), language-pack-ro-base
-Depends: language-pack-ro-base (>= 1:13.10+20130723)
+Replaces: language-pack-gnome-sl (<< 1:13.10+20130808), language-pack-gnome-sl-base, language-pack-kde-sl (<< 1:13.10+20130808), language-pack-kde-sl-base (<< 1:13.10+20130808), language-pack-sl (<< 1:13.10+20130808), language-pack-sl-base (<< 1:13.10+20130808)
+Depends: language-pack-gnome-sl-base (>= 1:13.10+20130723), language-pack-sl
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-ro/language-pack-ro_13.10+20130808_all.deb
-Size: 246334
-MD5sum: fc870bddf66703a16f56600da66b50aa
-SHA1: a5b7ca66a01be5cb668466887a42fb8552b9c063
-SHA256: 4f5dd0361b2cd7cef3c5de49b047dcc7298cca1b7589386c3afc8cc27f457cce
-Description: translation updates for language Romanian
-Description-md5: e446108efaa2fbd79747c4078a6fecd0
+Filename: pool/main/l/language-pack-gnome-sl/language-pack-gnome-sl_13.10+20130808_all.deb
+Size: 390604
+MD5sum: efe2684ff39dc5b33e0896581ea9affb
+SHA1: 71870cb9bf5add7214dc0d04934373cd9371af68
+SHA256: 4a15a194227c01c61e1b855d5741dfe66a95c8c47e17a0b428c0b7a24258c471
+Description: GNOME translation updates for language Slovenian
+Description-md5: 9ff05ef79f08a9edbbf7d641dada217c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-usb-live, edubuntu-usb-live
 
-Package: language-pack-ru
+Package: language-pack-gnome-sr
 Priority: optional
 Section: translations
-Installed-Size: 2822
+Installed-Size: 2243
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130808
-Replaces: language-pack-gnome-ru (<< 1:13.10+20130808), language-pack-gnome-ru-base (<< 1:13.10+20130808), language-pack-kde-ru (<< 1:13.10+20130808), language-pack-kde-ru-base (<< 1:13.10+20130808), language-pack-ru (<< 1:13.10+20130808), language-pack-ru-base
-Depends: language-pack-ru-base (>= 1:13.10+20130723)
+Replaces: language-pack-gnome-sr (<< 1:13.10+20130808), language-pack-gnome-sr-base, language-pack-kde-sr (<< 1:13.10+20130808), language-pack-kde-sr-base (<< 1:13.10+20130808), language-pack-sr (<< 1:13.10+20130808), language-pack-sr-base (<< 1:13.10+20130808)
+Depends: language-pack-gnome-sr-base (>= 1:13.10+20130723), language-pack-sr
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-ru/language-pack-ru_13.10+20130808_all.deb
-Size: 711130
-MD5sum: d698982faa6b754ace1a4070ff933bb6
-SHA1: a8faaee79a00c1444df8600ebc694eeb9e0e1a88
-SHA256: fe107bfa02cacb132b1234e2b6c6c1e9a951b63464c3839f114ced5d421b83e7
-Description: translation updates for language Russian
-Description-md5: cd093e2891d1268b4a62b984f94669b5
+Filename: pool/main/l/language-pack-gnome-sr/language-pack-gnome-sr_13.10+20130808_all.deb
+Size: 630260
+MD5sum: e67b0d623e4b4b9221483eaf169074e4
+SHA1: 3b1b430d5803d7658ae7b3c41dd196f8b40a766e
+SHA256: 2617015ec6a64f75ce03c1a5088e5f500f708b586937c1a8a5d5b9c946b1e23c
+Description: GNOME translation updates for language Serbian
+Description-md5: 45acfa8d4ee7923177892692b5119e1e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-Task: ubuntu-usb-live, kubuntu-active-live, kubuntu-active-live, edubuntu-usb-live, lubuntu-live
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-sv
+Priority: optional
+Section: translations
+Installed-Size: 940
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-gnome-sv (<< 1:13.10+20130808), language-pack-gnome-sv-base, language-pack-kde-sv (<< 1:13.10+20130808), language-pack-kde-sv-base (<< 1:13.10+20130808), language-pack-sv (<< 1:13.10+20130808), language-pack-sv-base (<< 1:13.10+20130808)
+Depends: language-pack-gnome-sv-base (>= 1:13.10+20130723), language-pack-sv
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-sv/language-pack-gnome-sv_13.10+20130808_all.deb
+Size: 291014
+MD5sum: e73ae3ca5e1279bc0c8eabe740f2b607
+SHA1: ccbd713f4e72ac6c13cde6fed7b40aa53c18e078
+SHA256: f4d7e7cd82527085a33c1ff744aca4c4c08205e0fd92b0907553a83fcd0ff824
+Description: GNOME translation updates for language Swedish
+Description-md5: bb1d72d15af6affc7a4b16c6e635c08f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-ta
+Priority: optional
+Section: translations
+Installed-Size: 902
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-gnome-ta (<< 1:13.10+20130808), language-pack-gnome-ta-base, language-pack-kde-ta (<< 1:13.10+20130808), language-pack-kde-ta-base (<< 1:13.10+20130808), language-pack-ta (<< 1:13.10+20130808), language-pack-ta-base (<< 1:13.10+20130808)
+Depends: language-pack-gnome-ta-base (>= 1:13.10+20130723), language-pack-ta
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-ta/language-pack-gnome-ta_13.10+20130808_all.deb
+Size: 179530
+MD5sum: e109679c6a7b38e563f122ea0cab78bd
+SHA1: 05629531fcda6ff10f02926acfe15621929f35fd
+SHA256: 143cd43364ed6d5afb88ef192d80aee6bbdad2127f1bca1986d6e4180b328e51
+Description: GNOME translation updates for language Tamil
+Description-md5: 1f87e19e829b55bdf13e56bd13043076
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-hr
+Priority: optional
+Section: translations
+Installed-Size: 503
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-gnome-hr (<< 1:13.10+20130808), language-pack-gnome-hr-base (<< 1:13.10+20130808), language-pack-hr (<< 1:13.10+20130808), language-pack-hr-base, language-pack-kde-hr (<< 1:13.10+20130808), language-pack-kde-hr-base (<< 1:13.10+20130808)
+Depends: language-pack-hr-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-hr/language-pack-hr_13.10+20130808_all.deb
+Size: 154456
+MD5sum: e8812d00c6cfdf8e3bca789aff943f65
+SHA1: ea529cd5269a7d619ce204c4699a4026600f052e
+SHA256: 7457a00dcabbdc55f510cc49227f8aabf80c126fe60197188b66cabfc4f4d506
+Description: translation updates for language Croatian
+Description-md5: 34c162e587e1cdea815ca5ed6f077313
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-sk
+Priority: optional
+Section: translations
+Installed-Size: 857
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-gnome-sk (<< 1:13.10+20130808), language-pack-gnome-sk-base (<< 1:13.10+20130808), language-pack-kde-sk (<< 1:13.10+20130808), language-pack-kde-sk-base (<< 1:13.10+20130808), language-pack-sk (<< 1:13.10+20130808), language-pack-sk-base
+Depends: language-pack-sk-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-sk/language-pack-sk_13.10+20130808_all.deb
+Size: 257444
+MD5sum: df2a64dfe650f5fd9d5afde5694ae6aa
+SHA1: 06e87c589487186db459d7d983c50f113900c984
+SHA256: aa31dfa0ec61d30b2ace8f5633177d9be3d12340444cb0b5a118e6480ea28e73
+Description: translation updates for language Slovak
+Description-md5: a1e721be17e337b689ba82909703eb86
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-sl
+Priority: optional
+Section: translations
+Installed-Size: 985
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-gnome-sl (<< 1:13.10+20130808), language-pack-gnome-sl-base (<< 1:13.10+20130808), language-pack-kde-sl (<< 1:13.10+20130808), language-pack-kde-sl-base (<< 1:13.10+20130808), language-pack-sl (<< 1:13.10+20130808), language-pack-sl-base
+Depends: language-pack-sl-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-sl/language-pack-sl_13.10+20130808_all.deb
+Size: 308736
+MD5sum: 0a47f3a82d53ca2bae62e6347f9ca548
+SHA1: 385930220423a00734c7f03a2366df3ab1f77d30
+SHA256: 8c1c975e835e737c2596bc643e5681eedf34978d6c216123aae695ce4cf82c0e
+Description: translation updates for language Slovenian
+Description-md5: b1747d91b5340c785a6855fc4dea8bdf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-sr
+Priority: optional
+Section: translations
+Installed-Size: 744
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-gnome-sr (<< 1:13.10+20130808), language-pack-gnome-sr-base (<< 1:13.10+20130808), language-pack-kde-sr (<< 1:13.10+20130808), language-pack-kde-sr-base (<< 1:13.10+20130808), language-pack-sr (<< 1:13.10+20130808), language-pack-sr-base
+Depends: language-pack-sr-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-sr/language-pack-sr_13.10+20130808_all.deb
+Size: 182564
+MD5sum: 949dd9f01e9356beb6468e36a5a1ef11
+SHA1: b366da93f7e2f61e759c3db07987f1cd8f7cd761
+SHA256: 727676f8a0ebda42e742dfe4851d0fc3e8ecd43ad0931cadcb0b872bd7793016
+Description: translation updates for language Serbian
+Description-md5: b8fd6921a9a342c76ce0490ba7305e76
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-sv
+Priority: optional
+Section: translations
+Installed-Size: 1074
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-gnome-sv (<< 1:13.10+20130808), language-pack-gnome-sv-base (<< 1:13.10+20130808), language-pack-kde-sv (<< 1:13.10+20130808), language-pack-kde-sv-base (<< 1:13.10+20130808), language-pack-sv (<< 1:13.10+20130808), language-pack-sv-base
+Depends: language-pack-sv-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-sv/language-pack-sv_13.10+20130808_all.deb
+Size: 332676
+MD5sum: 8d7ccb37e1bc1c6d2b5c9c79c34abd17
+SHA1: c7a5a5b169200afe498bfbb8300ed562b3d5a828
+SHA256: 2c8c59608b8907c0732b9e623c4a8b4274adcbdf446e2865841c88d1caf3e4d9
+Description: translation updates for language Swedish
+Description-md5: 4dbf209ddea3cc582301e63976d4b356
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, kubuntu-active-live, kubuntu-active-live, edubuntu-usb-live
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
@@ -2378,6 +2785,122 @@ Origin: Ubuntu
 Supported: 9m
 Task: kubuntu-active, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
 
+Package: libcephfs-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 124962
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Replaces: libceph-dev, libceph1-dev, libcephfs1-dev
+Depends: libcephfs1 (= 0.67~rc3-0ubuntu1)
+Conflicts: libceph-dev, libceph1-dev, libcephfs1-dev
+Filename: pool/main/c/ceph/libcephfs-dev_0.67~rc3-0ubuntu1_i386.deb
+Size: 31247312
+MD5sum: e0596f6894b9789bbdd7346fc2b63c62
+SHA1: 607067207711b7be832ea95d15b1c2c4ef367400
+SHA256: 817f2ef648c0169d8dace412efe29fdbb1cbb34ef4b71f7b8cacd98dfbea918a
+Description: Ceph distributed file system client library (development files)
+Homepage: http://ceph.com/
+Description-md5: 6b03c162d6b2cd6497a86ae380717147
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libcephfs-jni
+Priority: optional
+Section: libs
+Installed-Size: 151
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Depends: libcephfs1 (= 0.67~rc3-0ubuntu1), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6)
+Filename: pool/main/c/ceph/libcephfs-jni_0.67~rc3-0ubuntu1_i386.deb
+Size: 37162
+MD5sum: 93fab535742b124559ef2af2cf0863a7
+SHA1: 8876702e6386e556e75b3de10001a40b956d44c9
+SHA256: c641f42342c7413e545c45cd728ddf69c17c313b59042f583a394756cb469f8a
+Description: Java Native Interface library for CephFS Java bindings
+Homepage: http://ceph.com/
+Description-md5: eeccae7ad4653bc059b325a5ec4ddd58
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libcephfs-jni-dbg
+Priority: extra
+Section: debug
+Installed-Size: 712
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Depends: libcephfs-jni (= 0.67~rc3-0ubuntu1)
+Filename: pool/main/c/ceph/libcephfs-jni-dbg_0.67~rc3-0ubuntu1_i386.deb
+Size: 231272
+MD5sum: 8fc8ff779935bd046eaf4f01f6b4cb23
+SHA1: 79e684b061641317809bb86d7bd3542d830b3cea
+SHA256: 783f357c7332f504fdc8e6dc05f76c69a3e49aa7ae63916d14470d59be47f2e2
+Description: Debugging symbols for libcephfs-jni
+Homepage: http://ceph.com/
+Description-md5: b463ee0275120595e8db9a2d2d079cf8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libcephfs1
+Priority: optional
+Section: libs
+Installed-Size: 5311
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Replaces: libceph, libceph1, libcephfs
+Depends: libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.9), libgcc1 (>= 1:4.1.1), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Conflicts: libceph, libceph1, libcephfs
+Filename: pool/main/c/ceph/libcephfs1_0.67~rc3-0ubuntu1_i386.deb
+Size: 1736572
+MD5sum: 77f4ecb01b08857c180aa11552e2eb18
+SHA1: 749749e17c77d9c7ac32dd31a0a76f67e94186a8
+SHA256: dac216e72a279a4fd7205bc9ecc9096b79d4bcf4f6035af363fec916861e57b0
+Description: Ceph distributed file system client library
+Homepage: http://ceph.com/
+Description-md5: 02d5e7983127037e5b5e5e07dea2a6e4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libcephfs1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 64914
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Replaces: libceph1-dbg
+Depends: libcephfs1 (= 0.67~rc3-0ubuntu1)
+Conflicts: libceph1-dbg
+Filename: pool/main/c/ceph/libcephfs1-dbg_0.67~rc3-0ubuntu1_i386.deb
+Size: 18784898
+MD5sum: f5c4d5c58ec6dca49c4b1a0ace940d91
+SHA1: 388d8961600d5f37f4f96c6735a0eed004ee3ea8
+SHA256: 3226ff05e2fd34b2877de2e705dd875e9b0ce2dcdf178565ba8241ebe2129b1d
+Description: debugging symbols for libcephfs1
+Homepage: http://ceph.com/
+Description-md5: ef23abe3fb9706def734dae7e4f8e64f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libdbi-perl
 Priority: optional
 Section: perl
@@ -2669,6 +3192,148 @@ SHA256: 51cdd5f5275f129272fe694a620142a3c82e9dcf312b857d3d9699561f1c8dcc
 Description: Web content engine library for Qt - debugging symbols
 Homepage: http://trac.webkit.org/wiki/QtWebKit
 Description-md5: 2b35e7ad9905f44038a180fc098adcca
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: librados-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 10110
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Replaces: librados1-dev, librados2-dev
+Depends: librados2 (= 0.67~rc3-0ubuntu1), libc6 (>= 2.16), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.2.1)
+Conflicts: librados1-dev, librados2-dev
+Filename: pool/main/c/ceph/librados-dev_0.67~rc3-0ubuntu1_i386.deb
+Size: 2370296
+MD5sum: 154b435b318d702b5184e80009a62b45
+SHA1: a59cb77f565427a68c08f196e1d5e9b31d81be58
+SHA256: e3173e04abb10686ca87850fe48e7284ecb27b3c4d490d9063d05b75a9700d07
+Description: RADOS distributed object store client library (development files)
+Homepage: http://ceph.com/
+Description-md5: 45a1795729f9041b2c4d34b965fbaee2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: librados2
+Priority: optional
+Section: libs
+Installed-Size: 4847
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Replaces: librados, librados1
+Depends: libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.9), libgcc1 (>= 1:4.1.1), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Conflicts: librados, librados1
+Filename: pool/main/c/ceph/librados2_0.67~rc3-0ubuntu1_i386.deb
+Size: 1541128
+MD5sum: d03c65efd33d7cea7063607d14190a5b
+SHA1: 763b549d0697bf1f51383f7f93ef8ef285227bf5
+SHA256: e56104f61f7687382be65e05b264d6c865f10f4b1ca5dbba5d70ba9ed7f3e799
+Description: RADOS distributed object store client library
+Homepage: http://ceph.com/
+Description-md5: 42d0f393b45b7f226597be77c6f81917
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: virt-host
+
+Package: librados2-dbg
+Priority: extra
+Section: debug
+Installed-Size: 59595
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Replaces: librados1-dbg
+Depends: librados2 (= 0.67~rc3-0ubuntu1)
+Conflicts: librados1-dbg
+Filename: pool/main/c/ceph/librados2-dbg_0.67~rc3-0ubuntu1_i386.deb
+Size: 16573178
+MD5sum: 566b8c6e49e748b04181dfbc73c500dc
+SHA1: d07193a23d1e0b355071a1c064817c4e5ef84e58
+SHA256: 11a7845c091d9c14276ed2d1c3076976c9f1fb1677b1dd59745db45ef5a754ad
+Description: debugging symbols for librados2
+Homepage: http://ceph.com/
+Description-md5: 5fed3bffffed20ba3eae296a5cd8e215
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: librbd-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 24545
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Replaces: librbd1-dev
+Depends: librados-dev, librbd1 (= 0.67~rc3-0ubuntu1)
+Conflicts: librbd1-dev
+Filename: pool/main/c/ceph/librbd-dev_0.67~rc3-0ubuntu1_i386.deb
+Size: 6745840
+MD5sum: 3c040b8b0e962ffa10df46647801f806
+SHA1: 8e114c8b99cdf72d64e6178d838f0e9edf980fb1
+SHA256: 614a00b02f482b0640f68a9bf97f7e550b3d2be1d61edc21a6af7de466283df8
+Description: RADOS block device client library (development files)
+Homepage: http://ceph.com/
+Description-md5: 5a3f9d05f90eae572a3f0c323daf1cab
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: librbd1
+Priority: optional
+Section: libs
+Installed-Size: 729
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Depends: librados2 (= 0.67~rc3-0ubuntu1), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6)
+Filename: pool/main/c/ceph/librbd1_0.67~rc3-0ubuntu1_i386.deb
+Size: 275880
+MD5sum: f645ed8944b5da441ceef36e5cc7ab9c
+SHA1: 381001bfad9679657c0c8fea74301a9a016745d5
+SHA256: 2f87bf6a639f80e4a68887465629dfcfd3dc63d8193c9720bae870b651b3d991
+Description: RADOS block device client library
+Homepage: http://ceph.com/
+Description-md5: 3b39955e1c12f7ad8d4c44efcc8ec188
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: virt-host
+
+Package: librbd1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 10114
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Depends: librbd1 (= 0.67~rc3-0ubuntu1)
+Filename: pool/main/c/ceph/librbd1-dbg_0.67~rc3-0ubuntu1_i386.deb
+Size: 3968978
+MD5sum: 479e0d015f2ef839c319e3df207fee8c
+SHA1: 3a0cafab429017aff110efa653f8809471ae1cc4
+SHA256: 478142ba9fda368aa97d255360fda6b85bcc969793cfd258c42afbe64d8e1c3e
+Description: debugging symbols for librbd1
+Homepage: http://ceph.com/
+Description-md5: 0479c6b8befcd3b46093c4fdfaef7ca4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -4062,94 +4727,24 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: python-greenlet
-Priority: extra
+Package: python-ceph
+Priority: optional
 Section: python
-Installed-Size: 83
+Installed-Size: 201
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
 Architecture: i386
-Version: 0.4.1-0ubuntu2
-Depends: libc6 (>= 2.3.6-6~), python (>= 2.7), python (<< 2.8)
-Suggests: python-greenlet-doc, python-greenlet-dev, python-greenlet-dbg
-Conflicts: python-codespeak-lib (<< 1.0)
-Filename: pool/main/p/python-greenlet/python-greenlet_0.4.1-0ubuntu2_i386.deb
-Size: 18270
-MD5sum: a4bbcd89a8511faaa5deb0df5c45afad
-SHA1: 02f84d7aab218678dd1279b982c483dbeddf98d4
-SHA256: 6ccba5493ba4b708f3c55450ea93021cd5512da10808184a2ff86ecebae97744
-Description: Lightweight in-process concurrent programming
-Homepage: http://pypi.python.org/pypi/greenlet
-Description-md5: b225620244dd2583ddd491a478322fb8
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: edubuntu-desktop-gnome
-
-Package: python-greenlet-dbg
-Priority: extra
-Section: debug
-Installed-Size: 64
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: i386
-Source: python-greenlet
-Version: 0.4.1-0ubuntu2
-Depends: libc6 (>= 2.3.6-6~), python-greenlet (= 0.4.1-0ubuntu2)
-Recommends: python-dbg
-Filename: pool/main/p/python-greenlet/python-greenlet-dbg_0.4.1-0ubuntu2_i386.deb
-Size: 14324
-MD5sum: 12b41b4fe9bb6331ea750f09be439687
-SHA1: e7e12238aa82b5bb07152e888fd5bf14276aea2b
-SHA256: 4ab7db059e3f2c885fa53ffda440ac9d7139b309cd0dc909155045c1559f79b7
-Description: Lightweight in-process concurrent programming - debugging symbols
-Homepage: http://pypi.python.org/pypi/greenlet
-Description-md5: 61fac8d92d90d8b78c7a0d99db0dc978
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: python-greenlet-dev
-Priority: extra
-Section: python
-Installed-Size: 48
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: i386
-Source: python-greenlet
-Version: 0.4.1-0ubuntu2
-Depends: python-greenlet, python-greenlet (= 0.4.1-0ubuntu2) | python3-greenlet (= 0.4.1-0ubuntu2)
-Filename: pool/main/p/python-greenlet/python-greenlet-dev_0.4.1-0ubuntu2_i386.deb
-Size: 2550
-MD5sum: ac912bbec518a229e1dca51236adf8d5
-SHA1: 2fbf8c2199a25fd42b4180a7de44d35cb022b639
-SHA256: 45190ee92d7917f7bd331f8fe8c17bb8621e365c6f369e34ea74d4aa7ca325eb
-Description: Lightweight in-process concurrent programming - development files
-Homepage: http://pypi.python.org/pypi/greenlet
-Description-md5: 732237700918b05962305d8ea440ee79
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: python-greenlet-doc
-Priority: extra
-Section: doc
-Installed-Size: 226
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: all
-Source: python-greenlet
-Version: 0.4.1-0ubuntu2
-Depends: libjs-jquery, libjs-underscore
-Suggests: python-greenlet, python-greenlet-dev
-Filename: pool/main/p/python-greenlet/python-greenlet-doc_0.4.1-0ubuntu2_all.deb
-Size: 54412
-MD5sum: 9ffed5d760da5ae57aed2dc45dc2cccb
-SHA1: e5ac943850cc167d4b25b73e9cf8664a0962ecac
-SHA256: 21ee544320c269ffcf0a469a0d918bcdd3b4c838ca3a3d0e7cb9bfb6ec46e5cb
-Description: Lightweight in-process concurrent programming - documentation
-Homepage: http://pypi.python.org/pypi/greenlet
-Description-md5: 38b38ebd2f1d82dff433fbfa8e243dc0
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Depends: librados2, librbd1, python-flask, python-requests, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Filename: pool/main/c/ceph/python-ceph_0.67~rc3-0ubuntu1_i386.deb
+Size: 35856
+MD5sum: 833487e30e06d7df93e370985d76f9c6
+SHA1: 34c8eb58df87b7b57b26ca09b018c1628ebc66ce
+SHA256: db0aeb0ccef803b87d67a9aa299e79de69d0859eb1cac917bf0c67cb9d0ec5b8
+Description: Python libraries for the Ceph distributed filesystem
+Homepage: http://ceph.com/
+Description-md5: 0a80206bd610ad5550e3d80267effede
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -4199,50 +4794,94 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: python3-greenlet
-Priority: extra
-Section: python
-Installed-Size: 60
+Package: radosgw
+Priority: optional
+Section: admin
+Installed-Size: 3344
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
 Architecture: i386
-Source: python-greenlet
-Version: 0.4.1-0ubuntu2
-Depends: libc6 (>= 2.3.6-6~), python-greenlet, python3 (>= 3.3), python3 (<< 3.4)
-Suggests: python-greenlet-doc, python-greenlet-dev, python3-greenlet-dbg
-Conflicts: python-codespeak-lib (<< 1.0)
-Filename: pool/main/p/python-greenlet/python3-greenlet_0.4.1-0ubuntu2_i386.deb
-Size: 13312
-MD5sum: 020c50d9e36559cb2717027dc4df2ccd
-SHA1: 40e8dbec65cf65b744be27e7aef1f99eb1313ec8
-SHA256: 73bf866e713af276d9818071c56241d2de212e5278f5ff9075a383ff37cfb7d5
-Description: Lightweight in-process concurrent programming (python3)
-Homepage: http://pypi.python.org/pypi/greenlet
-Description-md5: fd0da65355789a7bc7ca48e434caf8ec
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Depends: ceph-common (= 0.67~rc3-0ubuntu1), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.16), libcurl3-gnutls (>= 7.28.0), libexpat1 (>= 2.0.1), libfcgi0ldbl, libgcc1 (>= 1:4.1.1), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), librados2, libstdc++6 (>= 4.6)
+Filename: pool/main/c/ceph/radosgw_0.67~rc3-0ubuntu1_i386.deb
+Size: 1317174
+MD5sum: 5a1139774b4bc6142420881bf9ff60d1
+SHA1: cc4b61ab612b8e7416d6c9cc48edbf60e127d369
+SHA256: 77dae19e3a09a3a9bc6547f1acf7c638fed192ddefbc9060981cc6d4ebdf9c3a
+Description: REST gateway for RADOS distributed object store
+Homepage: http://ceph.com/
+Description-md5: fa947d9328112c7b2e6719d10f788061
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Supported: 9m
 
-Package: python3-greenlet-dbg
+Package: radosgw-dbg
 Priority: extra
 Section: debug
+Installed-Size: 41017
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Depends: radosgw (= 0.67~rc3-0ubuntu1)
+Filename: pool/main/c/ceph/radosgw-dbg_0.67~rc3-0ubuntu1_i386.deb
+Size: 15762586
+MD5sum: 38e214186421e2063c54cdbc2568ee6b
+SHA1: 43cbc0398efa38cfc3473a394212f9439481a8af
+SHA256: fd0ac6e300b6c6087ffd55bdc36b7f358aef8e60a855f499d270f6f7ce5f3e65
+Description: debugging symbols for radosgw
+Homepage: http://ceph.com/
+Description-md5: b21018ad5ddfda350f7a8d6ec0e73923
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: rbd-fuse
+Priority: optional
+Section: admin
 Installed-Size: 64
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
 Architecture: i386
-Source: python-greenlet
-Version: 0.4.1-0ubuntu2
-Depends: libc6 (>= 2.3.6-6~), python-greenlet, python3-greenlet (= 0.4.1-0ubuntu2)
-Recommends: python-dbg
-Filename: pool/main/p/python-greenlet/python3-greenlet-dbg_0.4.1-0ubuntu2_i386.deb
-Size: 14338
-MD5sum: 8ec28b5daaf2de696f52c48c355bfcd9
-SHA1: 76f94313dba8c51ae93bbedb3e0b294e9fa0ac6e
-SHA256: 44095a69062520af3afce2b257dfed7e4908f49650ea0b4716ca4b8acd5b4906
-Description: Lightweight in-process concurrent programming - debugging symbols (python3)
-Homepage: http://pypi.python.org/pypi/greenlet
-Description-md5: 3e15f47206a9b1ca5987f3753bfb67cc
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Depends: libc6 (>= 2.4), libfuse2 (>= 2.8.1), librados2, librbd1
+Recommends: fuse
+Filename: pool/main/c/ceph/rbd-fuse_0.67~rc3-0ubuntu1_i386.deb
+Size: 12012
+MD5sum: b883fc786db68a2601c5869f51890207
+SHA1: 610ad94c737155b68cb551961ec2b2326e05219a
+SHA256: 19f73099c5037fdf7c885b2bbf7e5055af1e3d5f5dedd9f2adcaac6ef3b93247
+Description: FUSE-based rbd client for the Ceph distributed file system
+Homepage: http://ceph.com/
+Description-md5: fca395d7d420f9ee7c9d4be9e208b26a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Supported: 9m
+
+Package: rbd-fuse-dbg
+Priority: extra
+Section: debug
+Installed-Size: 79
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: i386
+Source: ceph
+Version: 0.67~rc3-0ubuntu1
+Depends: rbd-fuse (= 0.67~rc3-0ubuntu1)
+Filename: pool/main/c/ceph/rbd-fuse-dbg_0.67~rc3-0ubuntu1_i386.deb
+Size: 17202
+MD5sum: fdb16be8698f7214f4cc93b12fff4473
+SHA1: 29280ef950e85a04a62db4a46669c51dc31bb2d6
+SHA256: ed6f6713fc950cbca5738f0c30bf619d5494fc1057e84acac3e289c8d597b0a0
+Description: debugging symbols for rbd-fuse
+Homepage: http://ceph.com/
+Description-md5: 987d7c5ba369f3c877ccf7f5d48fb86f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: signon-plugin-oauth2
 Priority: optional
