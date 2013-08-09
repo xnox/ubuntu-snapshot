@@ -1,3 +1,288 @@
+Package: apache2
+Priority: optional
+Section: web
+Installed-Size: 454
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Version: 2.4.6-2ubuntu2
+Replaces: apache2.2-common
+Depends: lsb-base, procps, perl, mime-support, apache2-bin (= 2.4.6-2ubuntu2), apache2-data (= 2.4.6-2ubuntu2)
+Recommends: ssl-cert
+Suggests: www-browser, apache2-doc, apache2-suexec-pristine | apache2-suexec-custom, ufw, apache2-utils
+Conflicts: apache2.2-common
+Filename: pool/main/a/apache2/apache2_2.4.6-2ubuntu2_i386.deb
+Size: 86816
+MD5sum: 4b1c7d25fa8a26cbcef84834de86f9bc
+SHA1: a7858d7a406bdd1c88736b306a7e3bbdb817d6a4
+SHA256: 1c3891f1b910530bae1f1c792962a1ce8e5d1fb6bcea3a4bd6d33ad33cdeeffc
+Description: Apache HTTP Server
+Homepage: http://httpd.apache.org/
+Description-md5: 2afad91d50cbfeff68d0e3436b9ce235
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: apache2-bin
+Priority: optional
+Section: httpd
+Installed-Size: 3045
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2
+Version: 2.4.6-2ubuntu2
+Replaces: apache2-mpm-event (<< 2.3~), apache2-mpm-itk (<< 2.3~), apache2-mpm-prefork (<< 2.3~), apache2-mpm-worker (<< 2.3~), apache2.2-bin (<< 2.3~), apache2.2-common, libapache2-mod-macro (<< 1:2.4.6-1~), libapache2-mod-proxy-html (<< 1:2.4.4-2~)
+Provides: apache2-api-20120211, httpd, httpd-cgi
+Depends: libapr1 (>= 1.4.2), libaprutil1 (>= 1.5.0), libaprutil1-dbd-sqlite3 | libaprutil1-dbd-mysql | libaprutil1-dbd-odbc | libaprutil1-dbd-pgsql | libaprutil1-dbd-freetds, libaprutil1-ldap, libc6 (>= 2.4), libcap2 (>= 2.10), libldap-2.4-2 (>= 2.4.7), libpcre3 (>= 8.10), libssl1.0.0 (>= 1.0.1), libxml2 (>= 2.7.4), zlib1g (>= 1:1.1.4), perl
+Suggests: www-browser, apache2-doc, apache2-suexec-pristine | apache2-suexec-custom
+Conflicts: apache2.2-bin (<< 2.3~), apache2.2-common
+Breaks: libapache2-mod-macro (<< 1:2.4.6-1~), libapache2-mod-proxy-html (<< 1:2.4.4-2~)
+Filename: pool/main/a/apache2/apache2-bin_2.4.6-2ubuntu2_i386.deb
+Size: 819818
+MD5sum: bd78bd709f3af55f14de3fd8fac68839
+SHA1: e81ba4e95984cbcbd33270e8e4b7cd5fbdca1ebd
+SHA256: 78b13a0621de7f9b015e06577858c5b15f42eca0a2cc1236c19ca9f154deb40c
+Description: Apache HTTP Server (binary files and modules)
+Homepage: http://httpd.apache.org/
+Description-md5: 768126d098ab290dd8fd72553414fb1c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: apache2-data
+Priority: optional
+Section: httpd
+Installed-Size: 681
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: all
+Source: apache2
+Version: 2.4.6-2ubuntu2
+Replaces: apache2.2-common
+Conflicts: apache2.2-common
+Filename: pool/main/a/apache2/apache2-data_2.4.6-2ubuntu2_all.deb
+Size: 149188
+MD5sum: 2dfadf947908bb2bc1242e228ed05b26
+SHA1: 74a9958aa21c3b4551ece691da2a257ef3f408fb
+SHA256: c6033582df14b33cdb7087bf48c00ba9a0731cece67b0d16d89c200d43e45234
+Description: Apache HTTP Server (common files)
+Homepage: http://httpd.apache.org/
+Description-md5: 43b9030fc3d3460e30654e95c72c1277
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: apache2-dbg
+Priority: extra
+Section: debug
+Installed-Size: 6564
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2
+Version: 2.4.6-2ubuntu2
+Depends: apache2, apache2-bin (= 2.4.6-2ubuntu2)
+Filename: pool/main/a/apache2/apache2-dbg_2.4.6-2ubuntu2_i386.deb
+Size: 1868438
+MD5sum: 2b2e934318d3e0ef86b26a0b4b6dd41a
+SHA1: 9a20d5fb17a0454828bb4faf99739ad366376fa1
+SHA256: 1857ca43b30ac91ab9ab714f955b2b021866ea45c6af8e9d413010f42af22ac0
+Description: Apache debugging symbols
+Homepage: http://httpd.apache.org/
+Description-md5: 9631d879f838030d45d1d561f55abee1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2-dev
+Priority: optional
+Section: httpd
+Installed-Size: 908
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2
+Version: 2.4.6-2ubuntu2
+Replaces: apache2-prefork-dev, apache2-threaded-dev
+Provides: apache2-prefork-dev, apache2-threaded-dev, dh-apache2
+Depends: openssl, libapr1-dev, libaprutil1-dev, debhelper (>= 9), perl
+Conflicts: apache2-prefork-dev, apache2-threaded-dev
+Filename: pool/main/a/apache2/apache2-dev_2.4.6-2ubuntu2_i386.deb
+Size: 164648
+MD5sum: b73c5bccb7caffd45812fe82a6bebd0d
+SHA1: fa313ead697710576ced1ee212e96045d4252738
+SHA256: df1005c36778b1af831b8557493c7cd9d0fe40230b6c9cd165c370099a8efcc2
+Description: Apache HTTP Server (development headers)
+Homepage: http://httpd.apache.org/
+Description-md5: 33ccaee882001bf3dff7d3a2f1df3b30
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2-doc
+Priority: optional
+Section: doc
+Installed-Size: 19163
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: all
+Source: apache2
+Version: 2.4.6-2ubuntu2
+Recommends: apache2
+Filename: pool/main/a/apache2/apache2-doc_2.4.6-2ubuntu2_all.deb
+Size: 2604338
+MD5sum: 59915df8d5a605497b92401b5de621f9
+SHA1: 4bf52f00ac053625e9ebe0708ab5699db4bb9ae5
+SHA256: b211f0da594bd1c62f1e57ec2f2487354b146a70f05a6cc0a94466dccbfb3b43
+Description: Apache HTTP Server (on-site documentation)
+Homepage: http://httpd.apache.org/
+Description-md5: 35791cd71bc2556ea2bde4e6294a5ad3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2-mpm-event
+Priority: optional
+Section: web
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2
+Version: 2.4.6-2ubuntu2
+Depends: apache2 (= 2.4.6-2ubuntu2)
+Filename: pool/main/a/apache2/apache2-mpm-event_2.4.6-2ubuntu2_i386.deb
+Size: 1440
+MD5sum: bc21f025d476c6a5f0dc39666a2c3327
+SHA1: 72ebbd098df02c698f7525707c17abadf9ff794f
+SHA256: ed445b30e72a3bef8d776189c8e190852814458dc9bbce11a08797c9293083d1
+Description: transitional event MPM package for apache2
+Homepage: http://httpd.apache.org/
+Description-md5: e8836e8c2c34524fb11cc83011803e4e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2-mpm-prefork
+Priority: optional
+Section: net
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2
+Version: 2.4.6-2ubuntu2
+Depends: apache2 (= 2.4.6-2ubuntu2)
+Filename: pool/main/a/apache2/apache2-mpm-prefork_2.4.6-2ubuntu2_i386.deb
+Size: 1442
+MD5sum: d7b6cc32e1b1655fe19a41168420cc27
+SHA1: da503ca1529aad48885d368b83ccb61bcfddbcd2
+SHA256: 1aeae41c485b9eedf3335b555a29b9c7e28c8e43c7106a6b8c8cea80827ecece
+Description: transitional prefork MPM package for apache2
+Homepage: http://httpd.apache.org/
+Description-md5: 2a27f385dd2020da306403c3748102b7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: apache2-mpm-worker
+Priority: optional
+Section: net
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2
+Version: 2.4.6-2ubuntu2
+Depends: apache2 (= 2.4.6-2ubuntu2)
+Filename: pool/main/a/apache2/apache2-mpm-worker_2.4.6-2ubuntu2_i386.deb
+Size: 1442
+MD5sum: 4afeb23a705726971b5b41197081e2b3
+SHA1: d34ef6d921ef3171be34f7b7c12bd82a543ff526
+SHA256: 5522d894412cfe388386ba05780b9c25ed00de260b9bd43f4c19aa21233099ca
+Description: transitional worker MPM package for apache2
+Homepage: http://httpd.apache.org/
+Description-md5: 4ed48ca29196089175ff0720834d5528
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2-suexec-pristine
+Priority: optional
+Section: httpd
+Installed-Size: 141
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2
+Version: 2.4.6-2ubuntu2
+Replaces: apache2-suexec (<< 2.3~)
+Provides: apache2-suexec
+Depends: libc6 (>= 2.3.6-6~), apache2-bin
+Breaks: apache2-suexec (<< 2.3~)
+Filename: pool/main/a/apache2/apache2-suexec-pristine_2.4.6-2ubuntu2_i386.deb
+Size: 13588
+MD5sum: b444eebc8046c72c5196539e35fdee73
+SHA1: 27079ef4c99fd657335f6b9b0d4aeaa92b26bb71
+SHA256: f04912e60f4771927773a434b5cd651f7af0933435c89843342d5ad3943e0b57
+Description: Apache HTTP Server standard suexec program for mod_suexec
+Homepage: http://httpd.apache.org/
+Description-md5: 86a22eab8bdd72ac81f3d8aab53bf001
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2-utils
+Priority: optional
+Section: net
+Installed-Size: 325
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2
+Version: 2.4.6-2ubuntu2
+Depends: libapr1 (>= 1.4.2), libaprutil1 (>= 1.5.0), libc6 (>= 2.4), libssl1.0.0 (>= 1.0.1)
+Filename: pool/main/a/apache2/apache2-utils_2.4.6-2ubuntu2_i386.deb
+Size: 83668
+MD5sum: e0c0928978a9108632c5f9a8a4dbc658
+SHA1: c163029fe98e6bee79b9b2e2fcb601f13406ade5
+SHA256: 8ae2d8d082722cba93602fe471fc0035cf12725c3256618bc88917ebb17aa2e3
+Description: Apache HTTP Server (utility programs for web servers)
+Multi-Arch: foreign
+Homepage: http://httpd.apache.org/
+Description-md5: 3b2c95f65bdd470106fa63104997fa7f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apache2.2-bin
+Priority: optional
+Section: httpd
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2
+Version: 2.4.6-2ubuntu2
+Depends: apache2-bin (>= 2.3~)
+Breaks: gnome-user-share (<< 3.8.0-2~), libapache2-mod-dnssd (<< 0.6-3.1~)
+Filename: pool/main/a/apache2/apache2.2-bin_2.4.6-2ubuntu2_i386.deb
+Size: 1474
+MD5sum: 29614511b3c9f454a17df57317aeacbf
+SHA1: 3cff44496d60f66a25e51563d776162a5fe53cc3
+SHA256: 395ad3a8fffe872e04eeb2d5b9dd2fa152cf5500dcbe9ae5a2a61a1095908571
+Description: Transitional package for apache2-bin
+Homepage: http://httpd.apache.org/
+Description-md5: 36c293ebb5b77f14b95215fd3ffa7760
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: automake
 Priority: optional
 Section: devel
@@ -2069,6 +2354,29 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: gir1.2-unity-5.0
+Priority: optional
+Section: libs
+Installed-Size: 162
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libunity
+Version: 7.0.10+13.10.20130809.1-0ubuntu1
+Depends: gir1.2-dbusmenu-glib-0.4, gir1.2-dee-1.0, gir1.2-glib-2.0, libunity9 (>= 7.0.10+13.10.20130806)
+Filename: pool/main/libu/libunity/gir1.2-unity-5.0_7.0.10+13.10.20130809.1-0ubuntu1_i386.deb
+Size: 20478
+MD5sum: d230678237f46e537910adcc3cf94d3c
+SHA1: 18876fbd1de56de88b1ac681d3042d197e496473
+SHA256: 3bc5c0e9b6eb20103b5d323a1b5438e4606042f3510c2179b495477dcd938910
+Description: GObject introspection data for the Unity library
+Multi-Arch: same
+Homepage: https://launchpad.net/libunity
+Description-md5: 162c569a3952f4e1717dfc2d72f6bb6c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: google-mock
 Priority: optional
 Section: devel
@@ -2091,6 +2399,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: language-pack-af
+Priority: optional
+Section: translations
+Installed-Size: 110
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-af (<< 1:13.10+20130808), language-pack-af-base, language-pack-gnome-af (<< 1:13.10+20130808), language-pack-gnome-af-base (<< 1:13.10+20130808), language-pack-kde-af (<< 1:13.10+20130808), language-pack-kde-af-base (<< 1:13.10+20130808)
+Depends: language-pack-af-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-af/language-pack-af_13.10+20130808_all.deb
+Size: 28284
+MD5sum: d805358057384eac8fd7420efd917d62
+SHA1: d580fb4c47952ba07a3479b00a273f896061860b
+SHA256: f4892e60dbcf43859d4c8e6d20f7a97dae1c3cc2e1b126777bd62ffa62c618a3
+Description: translation updates for language Afrikaans
+Description-md5: d2d9e90761f53e2a13002b27ce8f5d64
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
 Package: language-pack-am
 Priority: optional
 Section: translations
@@ -2108,6 +2438,116 @@ SHA1: 9c737a279cb7560cf3effefd0d71cf1d60b31949
 SHA256: d9e4a5dd26d5c9ad85dffc40d51ff85255389149ce52ea69067e414f70202f4c
 Description: translation updates for language Amharic
 Description-md5: b1e3cb56c9a6998181138cf208c5317c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-an
+Priority: optional
+Section: translations
+Installed-Size: 61
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-an (<< 1:13.10+20130808), language-pack-an-base, language-pack-gnome-an (<< 1:13.10+20130808), language-pack-gnome-an-base (<< 1:13.10+20130808), language-pack-kde-an (<< 1:13.10+20130808), language-pack-kde-an-base (<< 1:13.10+20130808)
+Depends: language-pack-an-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-an/language-pack-an_13.10+20130808_all.deb
+Size: 11744
+MD5sum: d9ec71e7983833b5c3cc48f05f0fbac2
+SHA1: f0d80c13d39c2bcf6fe44abddc246bf4b34b3245
+SHA256: d6912aa67dbafeccb304c6c7db80a186665d9dfa465c68fba733120761d18d30
+Description: translation updates for language Aragonese
+Description-md5: e2a096d70c7c7fec5b3ec7bbe59a0267
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-as
+Priority: optional
+Section: translations
+Installed-Size: 90
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-as (<< 1:13.10+20130808), language-pack-as-base, language-pack-gnome-as (<< 1:13.10+20130808), language-pack-gnome-as-base (<< 1:13.10+20130808), language-pack-kde-as (<< 1:13.10+20130808), language-pack-kde-as-base (<< 1:13.10+20130808)
+Depends: language-pack-as-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-as/language-pack-as_13.10+20130808_all.deb
+Size: 15410
+MD5sum: 164373da6bad4313884aeb755c6e368f
+SHA1: abbc1e79d7f1718c578c7630bb96a8432409187d
+SHA256: 49090ee71e20ec5a7bf74a2e7d6258dc2ec318aabae886971a7b2b9a75e1bd55
+Description: translation updates for language Assamese
+Description-md5: b579abb9f9b0b339e949f69fd53f77ba
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-az
+Priority: optional
+Section: translations
+Installed-Size: 62
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-az (<< 1:13.10+20130808), language-pack-az-base, language-pack-gnome-az (<< 1:13.10+20130808), language-pack-gnome-az-base (<< 1:13.10+20130808), language-pack-kde-az (<< 1:13.10+20130808), language-pack-kde-az-base (<< 1:13.10+20130808)
+Depends: language-pack-az-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-az/language-pack-az_13.10+20130808_all.deb
+Size: 12454
+MD5sum: 1c3f9c5818d0bbaa40c2c0d3f6eecc61
+SHA1: 11ffd016438fe81051b92ed644dff69c75fd40c3
+SHA256: a19f871f9927c1128a747cb066612c6c4cf32333384d21b40c47801eb8a29243
+Description: translation updates for language Azerbaijani
+Description-md5: df7b32eca79a0fba5010572dd26a64e7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-crh
+Priority: optional
+Section: translations
+Installed-Size: 49
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-crh (<< 1:13.10+20130808), language-pack-crh-base, language-pack-gnome-crh (<< 1:13.10+20130808), language-pack-gnome-crh-base (<< 1:13.10+20130808), language-pack-kde-crh (<< 1:13.10+20130808), language-pack-kde-crh-base (<< 1:13.10+20130808)
+Depends: language-pack-crh-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-crh/language-pack-crh_13.10+20130808_all.deb
+Size: 7256
+MD5sum: 00a52dab5df56ac2ab3d0edd1bd943e8
+SHA1: 7f7a4f54fd9b76cc822728ea759d0aa50616fe1e
+SHA256: 5850b5ae0dd02a003b183a41a0dc862c9cbce1e6875d07e62bdd62a27a858830
+Description: translation updates for language Tatar, Crimean
+Description-md5: 3f01f6112f372d4eff9acacca078b7ca
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-csb
+Priority: optional
+Section: translations
+Installed-Size: 56
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-csb (<< 1:13.10+20130808), language-pack-csb-base, language-pack-gnome-csb (<< 1:13.10+20130808), language-pack-gnome-csb-base (<< 1:13.10+20130808), language-pack-kde-csb (<< 1:13.10+20130808), language-pack-kde-csb-base (<< 1:13.10+20130808)
+Depends: language-pack-csb-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-csb/language-pack-csb_13.10+20130808_all.deb
+Size: 9898
+MD5sum: a3a7750456f9c6e48e9b51c08ddd945d
+SHA1: c0fcdb04195e268719570333320ceb175e3332b8
+SHA256: 0ab428b747c69e7f85d7912364580c066c43dee5228435ac993ad797437c250d
+Description: translation updates for language Kashubian
+Description-md5: 01def04713c70bae615f4bb1ed72b8bb
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -2262,6 +2702,116 @@ SHA1: ac76e8e0abce6904708d5c9b5004bc4ed6fcb9ac
 SHA256: 1765071ee5f325e26ebbff840dfce515d335aed4c137594e50903e68b1890bb5
 Description: GNOME translation updates for language Amharic
 Description-md5: 6a0f6906d5e65f8d586a550508d05fb0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-an
+Priority: optional
+Section: translations
+Installed-Size: 154
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-an (<< 1:13.10+20130808), language-pack-an-base (<< 1:13.10+20130808), language-pack-gnome-an (<< 1:13.10+20130808), language-pack-gnome-an-base, language-pack-kde-an (<< 1:13.10+20130808), language-pack-kde-an-base (<< 1:13.10+20130808)
+Depends: language-pack-gnome-an-base (>= 1:13.10+20130723), language-pack-an
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-an/language-pack-gnome-an_13.10+20130808_all.deb
+Size: 44884
+MD5sum: 6234f6f504dec624637b09f7bf269a46
+SHA1: 632999475077f5dfac49613fdd48a758117a5dd0
+SHA256: 6bcf328c968d6730bb0f2b561945d9e43d112537662ff07bd92b50034944f615
+Description: GNOME translation updates for language Aragonese
+Description-md5: 0aac3e51000a31708c6f4462b77eafbc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-as
+Priority: optional
+Section: translations
+Installed-Size: 652
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-as (<< 1:13.10+20130808), language-pack-as-base (<< 1:13.10+20130808), language-pack-gnome-as (<< 1:13.10+20130808), language-pack-gnome-as-base, language-pack-kde-as (<< 1:13.10+20130808), language-pack-kde-as-base (<< 1:13.10+20130808)
+Depends: language-pack-gnome-as-base (>= 1:13.10+20130723), language-pack-as
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-as/language-pack-gnome-as_13.10+20130808_all.deb
+Size: 138672
+MD5sum: c85952ef3ec1b3e375e36c995c503f6e
+SHA1: 2bc98160c3121fcfba0b3b2d7e611f6290b05f26
+SHA256: fa3c8f9f7827cfd37abfa38f675c5bc2c88fc1578bba15da166764e36a5f7c34
+Description: GNOME translation updates for language Assamese
+Description-md5: 44e6111f833f0bca06a9339dc76a1fa4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-az
+Priority: optional
+Section: translations
+Installed-Size: 150
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-az (<< 1:13.10+20130808), language-pack-az-base (<< 1:13.10+20130808), language-pack-gnome-az (<< 1:13.10+20130808), language-pack-gnome-az-base, language-pack-kde-az (<< 1:13.10+20130808), language-pack-kde-az-base (<< 1:13.10+20130808)
+Depends: language-pack-gnome-az-base (>= 1:13.10+20130723), language-pack-az
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-az/language-pack-gnome-az_13.10+20130808_all.deb
+Size: 41596
+MD5sum: f0a67607c36fb8e80bb5aa31c8be4c9a
+SHA1: 46aa40f306792ae3ae3a2d2f69e82f2a767d6a45
+SHA256: ecef80ca92f48f87fa12fefb6ffb20d0f9689d6569e94cd891fd0f4170933107
+Description: GNOME translation updates for language Azerbaijani
+Description-md5: 0586b807626a158d1c297704e9693094
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-crh
+Priority: optional
+Section: translations
+Installed-Size: 294
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-crh (<< 1:13.10+20130808), language-pack-crh-base (<< 1:13.10+20130808), language-pack-gnome-crh (<< 1:13.10+20130808), language-pack-gnome-crh-base, language-pack-kde-crh (<< 1:13.10+20130808), language-pack-kde-crh-base (<< 1:13.10+20130808)
+Depends: language-pack-gnome-crh-base (>= 1:13.10+20130723), language-pack-crh
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-crh/language-pack-gnome-crh_13.10+20130808_all.deb
+Size: 87652
+MD5sum: b93bfa107b0e144e2967e3ee69b68f61
+SHA1: 284e932c9ab3becdc99f83377c493d4bf15b05cb
+SHA256: 0b65cdfff4a1bb8b582bce6dd321c185a8a9c5c475b8f0e23d066aa20d91b72e
+Description: GNOME translation updates for language Tatar, Crimean
+Description-md5: 34ec837b5f9517fa4cb242bc2911d9be
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-csb
+Priority: optional
+Section: translations
+Installed-Size: 71
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130808
+Replaces: language-pack-csb (<< 1:13.10+20130808), language-pack-csb-base (<< 1:13.10+20130808), language-pack-gnome-csb (<< 1:13.10+20130808), language-pack-gnome-csb-base, language-pack-kde-csb (<< 1:13.10+20130808), language-pack-kde-csb-base (<< 1:13.10+20130808)
+Depends: language-pack-gnome-csb-base (>= 1:13.10+20130723), language-pack-csb
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-csb/language-pack-gnome-csb_13.10+20130808_all.deb
+Size: 14898
+MD5sum: 62f44f0b68b5a60e7fe43ccf5f4068be
+SHA1: 8c51f7ec766c4800bd9b816ed51acbf36aa2d46b
+SHA256: fc98e7c2a762051cc42cfb68040f7d7c6ab146445140c9bc785f6976fd3bdacd
+Description: GNOME translation updates for language Kashubian
+Description-md5: a68275ab880925493c02fb7b617163ac
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -2924,6 +3474,50 @@ Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libapache2-mod-macro
+Priority: extra
+Section: web
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2 (2.4.6-2ubuntu2)
+Version: 1:2.4.6-2ubuntu2
+Depends: apache2-bin (>= 2.3~)
+Filename: pool/main/a/apache2/libapache2-mod-macro_2.4.6-2ubuntu2_i386.deb
+Size: 1446
+MD5sum: 05519bd6e66e637cc075762d79ef54e2
+SHA1: 4f6913613f0b69e2c6a91dcb774be9d509555cdd
+SHA256: d20325be7f071e4d54c4fffe74274820969229bc60f97e895da542b32721e60c
+Description: Transitional package for apache2-bin
+Homepage: http://httpd.apache.org/
+Description-md5: 36c293ebb5b77f14b95215fd3ffa7760
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libapache2-mod-proxy-html
+Priority: extra
+Section: oldlibs
+Installed-Size: 22
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: i386
+Source: apache2 (2.4.6-2ubuntu2)
+Version: 1:2.4.6-2ubuntu2
+Depends: apache2-bin (>= 2.3~)
+Filename: pool/main/a/apache2/libapache2-mod-proxy-html_2.4.6-2ubuntu2_i386.deb
+Size: 1460
+MD5sum: 994ea938a5383f82743e3354171c69d0
+SHA1: f48bca4c1b019f093b2e39c98db3bb0f271e6c2b
+SHA256: c2bcf5bcdf3e3f42c0c38ee8e7c9e4c336bd12925c08b6e2638817a827ab4fc2
+Description: Transitional package for apache2-bin
+Homepage: http://httpd.apache.org/
+Description-md5: 36c293ebb5b77f14b95215fd3ffa7760
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: libav-doc
 Priority: optional
@@ -4055,6 +4649,169 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: minimal
+
+Package: libunity-2d-private-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 105
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: unity
+Version: 7.1.0+13.10.20130809.1-0ubuntu1
+Depends: unity
+Filename: pool/main/u/unity/libunity-2d-private-dev_7.1.0+13.10.20130809.1-0ubuntu1_all.deb
+Size: 6290
+MD5sum: 77ee6d2a32a7b7673382de963b5055fa
+SHA1: 018906d612b2dba69d80666c95a705fa5ca286c0
+SHA256: 910e2b9d15cc5306d73f3e96e6fb5783e242e3540f6e281dc643080e1c795445
+Description: transitional dummy package
+Homepage: https://launchpad.net/unity
+Description-md5: a06d380855fbe7cc75a9788e2760f757
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libunity-core-6.0-7
+Priority: optional
+Section: libs
+Installed-Size: 1740
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: unity
+Version: 7.1.0+13.10.20130809.1-0ubuntu1
+Replaces: libunity-core-6.0-6, unity-common
+Provides: unity-common, unity-common-7.0
+Depends: libc6 (>= 2.4), libdee-1.0-4 (>= 0.5.16), libgcc1 (>= 1:4.1.1), libglib2.0-0 (>= 2.35.9), libnux-4.0-0, libsigc++-2.0-0c2a (>= 2.0.2), libstdc++6 (>= 4.8), libunity-protocol-private0 (>= 7.0.10+13.10.20130809), dconf-gsettings-backend | gsettings-backend, unity-services (= 7.1.0+13.10.20130809.1-0ubuntu1)
+Conflicts: libunity-core-6.0-6, unity-common
+Filename: pool/main/u/unity/libunity-core-6.0-7_7.1.0+13.10.20130809.1-0ubuntu1_i386.deb
+Size: 561658
+MD5sum: 014dab52eaa1dc979c789e4ae0e072da
+SHA1: 8b43be255e8ccefd800dc7bce844f0741d271d56
+SHA256: 0aae04dc50a78d4ceca75823fba8e83f439d1dd58db24344eec41d653210b75f
+Description: Core library for the Unity interface.
+Homepage: https://launchpad.net/unity
+Description-md5: a1403507e83fa60ccf4c94dd93d9337e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: libunity-core-6.0-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 248
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: unity
+Version: 7.1.0+13.10.20130809.1-0ubuntu1
+Depends: libunity-core-6.0-7 (= 7.1.0+13.10.20130809.1-0ubuntu1), libglib2.0-dev, libsigc++-2.0-dev, libnux-4.0-dev (>= 4.0.2), libunity-dev (>= 7.0.2~), libdee-dev
+Filename: pool/main/u/unity/libunity-core-6.0-dev_7.1.0+13.10.20130809.1-0ubuntu1_i386.deb
+Size: 25520
+MD5sum: fa730280480754a2cc371af5d99abeac
+SHA1: 4b648d8b6d5c6a81250cd2339d7457d342265685
+SHA256: de5e8a5fa149fa8144c8c13e9d22c28a216ea83f6be76ca4fe024082b762d264
+Description: Core library for the Unity interface - development files
+Homepage: https://launchpad.net/unity
+Description-md5: 9d4511f2e1fa9f78a3708127328fd86b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libunity-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 521
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libunity
+Version: 7.0.10+13.10.20130809.1-0ubuntu1
+Replaces: libunity9 (<< 5.90)
+Depends: gir1.2-unity-5.0 (= 7.0.10+13.10.20130809.1-0ubuntu1), libunity9 (= 7.0.10+13.10.20130809.1-0ubuntu1), libunity-protocol-private0 (= 7.0.10+13.10.20130809.1-0ubuntu1), libglib2.0-dev, libdee-dev, libgee-dev, libdbusmenu-glib-dev
+Filename: pool/main/libu/libunity/libunity-dev_7.0.10+13.10.20130809.1-0ubuntu1_i386.deb
+Size: 49330
+MD5sum: 9b5b82eb76059cc57276c4bd0692a55e
+SHA1: 71c1631fb153918283973117ff7cbf844ed56f10
+SHA256: 44457c9564e003ff01fc61c9529d0c4f2a0f78f893b4a565921b79a2de6d5f42
+Description: binding to get places into the launcher - development files
+Homepage: https://launchpad.net/libunity
+Description-md5: 940646542d41ed6501a55676f7cc379f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libunity-protocol-private0
+Priority: optional
+Section: libs
+Installed-Size: 340
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libunity
+Version: 7.0.10+13.10.20130809.1-0ubuntu1
+Depends: libc6 (>= 2.3.6-6~), libdee-1.0-4 (>= 1.0.0), libglib2.0-0 (>= 2.37.3)
+Pre-Depends: multiarch-support
+Filename: pool/main/libu/libunity/libunity-protocol-private0_7.0.10+13.10.20130809.1-0ubuntu1_i386.deb
+Size: 97082
+MD5sum: 30fa07c92c9243f7e117111865e057e7
+SHA1: 0957ab55c14c73efea707e6fca26e6bc7da6b372
+SHA256: e2bc4ef5311ffbcc88750952b8273f72fbc1725da739d59866499e251fc89327
+Description: binding to get places into the launcher - private library
+Multi-Arch: same
+Homepage: https://launchpad.net/libunity
+Description-md5: de4784aed16d63b7fb02d506575d1fe6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libunity-scopes-json-def-desktop
+Priority: optional
+Section: gnome
+Installed-Size: 51
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: libunity
+Version: 7.0.10+13.10.20130809.1-0ubuntu1
+Replaces: libunity-common (<< 7.0.7)
+Provides: libunity-common, unity-scopes-json-def
+Conflicts: libunity-common (<< 7.0.7), unity-scopes-json-def
+Filename: pool/main/libu/libunity/libunity-scopes-json-def-desktop_7.0.10+13.10.20130809.1-0ubuntu1_all.deb
+Size: 4648
+MD5sum: 6e9250a93f090351cdef56b32f05c3fe
+SHA1: 14ed4ba70c25df1811a9c1efd6b040cb81256641
+SHA256: a10f79cd864a71ec616f4465355652a983e1d0c3fdf8824296c42db0c9c38432
+Description: binding to get places into the launcher - desktop def file
+Multi-Arch: foreign
+Homepage: https://launchpad.net/libunity
+Description-md5: c272d9c9f1482ba09fbb8b8fdb9cc568
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libunity9
+Priority: optional
+Section: libs
+Installed-Size: 813
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libunity
+Version: 7.0.10+13.10.20130809.1-0ubuntu1
+Depends: libc6 (>= 2.3.6-6~), libdbusmenu-glib4 (>= 0.4.2), libdee-1.0-4 (>= 1.2.3~daily13.02.26), libgee2 (>= 0.5.0), libglib2.0-0 (>= 2.37.3), libunity-protocol-private0 (>= 7.0.10+13.10.20130809.1), dconf-gsettings-backend | gsettings-backend, libunity-scopes-json-def-desktop (>= 7.0.10+13.10.20130809.1-0ubuntu1) | unity-scopes-json-def
+Pre-Depends: multiarch-support
+Suggests: unity-common (>= 7.0.0)
+Filename: pool/main/libu/libunity/libunity9_7.0.10+13.10.20130809.1-0ubuntu1_i386.deb
+Size: 254850
+MD5sum: 4267e774709e9fe2985f5e51839f09e0
+SHA1: e91358b09a7a5ce58751f8aec066dabe2a8e514d
+SHA256: bdcee08b0847d215724b1c88d68970f0fc866f118d6922ee35bc78f4829c9d39
+Description: binding to get places into the launcher - shared library
+Multi-Arch: same
+Homepage: https://launchpad.net/libunity
+Description-md5: 0bdcbe46903d5a11a88d8cfa7be5f803
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: linux
 Priority: optional
@@ -5662,6 +6419,207 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: minimal
+
+Package: unity
+Priority: optional
+Section: gnome
+Installed-Size: 4848
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Version: 7.1.0+13.10.20130809.1-0ubuntu1
+Provides: indicator-renderer
+Depends: compiz-core, libatk-bridge2.0-0 (>= 2.5.3), libatk1.0-0 (>= 2.2.0), libbamf3-1 (>= 0.4.0), libc6 (>= 2.17), libcairo2 (>= 1.2.4), libdbusmenu-glib4 (>= 0.4.2), libdee-1.0-4 (>= 0.5.2), libgcc1 (>= 1:4.1.1), libgdk-pixbuf2.0-0 (>= 2.22.0), libgl1-mesa-glx | libgl1, libglew1.8 (>= 1.8.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.1.6), libindicator3-7 (>= 0.4.90), libjson-glib-1.0-0 (>= 0.12.0), libnotify4 (>= 0.7.0), libnux-4.0-0, libpango-1.0-0 (>= 1.22.0), libpangocairo-1.0-0 (>= 1.14.0), libsigc++-2.0-0c2a (>= 2.0.2), libstartup-notification0 (>= 0.2), libstdc++6 (>= 4.8), libunity-core-6.0-7 (= 7.1.0+13.10.20130809.1-0ubuntu1), libunity-misc4 (>= 4.0.2), libunity-protocol-private0 (>= 7.0.10+13.10.20130809), libx11-6 (>= 2:1.2.99.901), libxext6, libxfixes3 (>= 1:5.0.1-1), libxi6 (>= 2:1.7.1.901), libxrender1, libzeitgeist-1.0-1 (>= 0.3.14), session-migration, python, compiz, compiz-core-abiversion-20130125, libnux-abiversion-20130718.0, compiz-plugins-default, libglib2.0-bin, nux-tools, dconf-cli, unity-asset-pool (>= 0.8.18), bamfdaemon
+Recommends: gnome-control-center-unity, unity-scope-guayadeque, unity-scope-openweathermap, unity-scope-musique, unity-scope-colourlovers, unity-scope-zotero, unity-scope-tomboy, unity-scope-gmusicbrowser, unity-scope-deviantart, unity-scope-manpages, unity-lens-music, unity-lens-files, unity-scope-gallica, unity-scope-chromiumbookmarks, unity-scope-yahoostock, unity-scope-googlenews, unity-scope-devhelp, unity-scope-soundcloud, unity-scope-virtualbox, unity-lens-photos, unity-scope-gourmet, unity-scope-video-remote, unity-scope-openclipart, unity-lens-video, unity-scope-clementine, unity-scope-texdoc, unity-scope-yelp, unity-scope-musicstores, unity-scope-audacious, unity-scope-home, unity-lens-friends, unity-scope-calculator, unity-scope-gdrive, unity-lens-applications, unity-scope-github, unity-scope-firefoxbookmarks, indicator-appmenu, indicator-application, indicator-sound, indicator-bluetooth, indicator-datetime, indicator-messages, indicator-printers, indicator-power, indicator-session, indicator-sync, hud
+Breaks: unity-lens-applications (<< 5.12.0-0ubuntu2), unity-lens-files (<< 5.10.0-0ubuntu2), unity-lens-music (<< 6.0.0), unity-lens-video (<< 0.3.6-0ubuntu2)
+Filename: pool/main/u/unity/unity_7.1.0+13.10.20130809.1-0ubuntu1_i386.deb
+Size: 1566190
+MD5sum: 65eb0a1a7485a4b3b214bc3e4e2ba0dd
+SHA1: 19c3c87d322b59ba5e0721eeb86567cdcdf5b80a
+SHA256: 6dc8a8331219f5b63fca24ae9341acc78fd362c5f7fbd16225426f20ae4e9fb7
+Description: Interface designed for efficiency of space and interaction.
+Homepage: https://launchpad.net/unity
+Description-md5: dec4e0049e561b260175a841cf8a6410
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: unity-2d-dbg
+Priority: extra
+Section: debug
+Installed-Size: 105
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: unity
+Version: 7.1.0+13.10.20130809.1-0ubuntu1
+Depends: unity
+Filename: pool/main/u/unity/unity-2d-dbg_7.1.0+13.10.20130809.1-0ubuntu1_all.deb
+Size: 6268
+MD5sum: c4773f8956bc57f0f7324971919a5b48
+SHA1: b9035808f9b535550a46943783e8ac088a92673e
+SHA256: 30459a909699be66bea24910bef6a9ce704c99ade59f926f0e1b31fcab81cfe5
+Description: transitional dummy package
+Homepage: https://launchpad.net/unity
+Description-md5: a06d380855fbe7cc75a9788e2760f757
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: unity-lens-applications
+Priority: optional
+Section: gnome
+Installed-Size: 468
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Version: 7.1.0+13.10.20130809.1-0ubuntu1
+Depends: libc6 (>= 2.2), libcolumbus0-0 (>= 0.5.0daily13.06.06), libdb5.1, libdee-1.0-4 (>= 1.0.2), libgcc1 (>= 1:4.1.1), libgee2 (>= 0.5.0), libglib2.0-0 (>= 2.37.3), libgnome-menu-3-0 (>= 3.2.0.1), libstdc++6 (>= 4.2.1), libunity-protocol-private0 (>= 7.0.10+13.10.20130809), libunity9 (>= 7.0.9+13.10.20130723), libxapian22, libzeitgeist-1.0-1 (>= 0.3.2), dconf-gsettings-backend | gsettings-backend, unity-common-7.0 | unity-common (>= 7.0.0)
+Breaks: unity (<< 6.0.0)
+Filename: pool/main/u/unity-lens-applications/unity-lens-applications_7.1.0+13.10.20130809.1-0ubuntu1_i386.deb
+Size: 125370
+MD5sum: 9392a347f4019c3edc75134bf331d423
+SHA1: 9106ada827966744ba14ba287d5559d72f4f22db
+SHA256: 377a405ff8230812b72c471abbcf399189f12678c46b95099481885b34fe2ca9
+Description: Application lens for unity
+Homepage: https://launchpad.net/unity-lens-applications
+Description-md5: 64b6580768b60728b82aa6db3048e181
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: unity-scope-devhelp
+Priority: optional
+Section: gnome
+Installed-Size: 78
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Mark Tully <markjtully@gmail.com>
+Architecture: all
+Version: 0.1+13.10.20130809.1-0ubuntu1
+Depends: python3, python3-gi, python3-lxml, gir1.2-unity-5.0 (>= 7), gir1.2-dee-1.0 (>= 1.2.5), unity-scopes-runner, gir1.2-glib-2.0
+Filename: pool/main/u/unity-scope-devhelp/unity-scope-devhelp_0.1+13.10.20130809.1-0ubuntu1_all.deb
+Size: 6662
+MD5sum: 1cad5c5a56fe6c02c88f5d2594083000
+SHA1: 236768c78e7638fbe1e73773bc0e2bfd5901953c
+SHA256: df366c3febb7d1a9a98197c5286a1e1d4a4f6cfcf4344a15739c82ffb9377b27
+Description: devhelp scope for Unity
+Homepage: https://launchpad.net/unity-scope-devhelp
+Description-md5: f4e7d29616d262cd36bcf50c7350d5e0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: unity-scope-firefoxbookmarks
+Priority: optional
+Section: gnome
+Installed-Size: 76
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Mark Tully <markjtully@gmail.com>
+Architecture: all
+Version: 0.1+13.10.20130809.1-0ubuntu1
+Depends: python3, python3-gi, gir1.2-unity-5.0 (>= 7), gir1.2-dee-1.0 (>= 1.2.5), unity-scopes-runner, gir1.2-glib-2.0
+Filename: pool/main/u/unity-scope-firefoxbookmarks/unity-scope-firefoxbookmarks_0.1+13.10.20130809.1-0ubuntu1_all.deb
+Size: 6540
+MD5sum: 8e7f0a2273163aba1ad4781b21e2f46e
+SHA1: 59aedf7f0724e2bdf0aa4cc5dcf59b1083f6d8b5
+SHA256: a58f337bf9d13a0ea039bf180c89a9900342067197643606edc47bf11ae7fd09
+Description: Firefox bookmarks scope for Unity
+Homepage: https://launchpad.net/unity-scope-firefoxbookmarks
+Description-md5: 0918b28dd49c38eae5c6af3ba66662e5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: unity-scope-home
+Priority: optional
+Section: gnome
+Installed-Size: 314
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Version: 6.8.1+13.10.20130809.1-0ubuntu1
+Replaces: unity-lens-shopping, unity-scope-asklibreoffice, unity-scope-askubuntu, unity-scope-sumo
+Provides: unity-lens-shopping, unity-scope-asklibreoffice, unity-scope-askubuntu, unity-scope-sumo
+Depends: libc6 (>= 2.7), libdee-1.0-4 (>= 1.2.0daily12.12.05), libgee2 (>= 0.5.0), libglib2.0-0 (>= 2.31.8), libjson-glib-1.0-0 (>= 0.13.2), libsoup-gnome2.4-1 (>= 2.27.4), libsoup2.4-1 (>= 2.24.3), libunity-protocol-private0 (>= 7.0.10+13.10.20130809), libunity9 (>= 7.0.7+13.10.20130702), libuuid1 (>= 2.16), lsb-release, unity-scopes-master-default | unity-scopes-master
+Conflicts: unity-lens-shopping, unity-scope-asklibreoffice, unity-scope-askubuntu, unity-scope-sumo
+Filename: pool/main/u/unity-scope-home/unity-scope-home_6.8.1+13.10.20130809.1-0ubuntu1_i386.deb
+Size: 98658
+MD5sum: 1535239bb4b925d85f40f7430948cbca
+SHA1: bb4978a71565d50564721d499bd26eb18f0f5a11
+SHA256: 42d3fb8c55a253937fdd61b6c96b74e9eb26cbbf894c22b4f39d9b299a9923ba
+Description: Home scope that aggregates results from multiple scopes
+Homepage: https://launchpad.net/unity-scope-home
+Description-md5: 294a8f7bb2c43ac24034217199d75858
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: unity-scopes-master-default
+Priority: optional
+Section: gnome
+Installed-Size: 51
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: unity-scope-home
+Version: 6.8.1+13.10.20130809.1-0ubuntu1
+Replaces: unity-scope-home (<< 6.8.1)
+Provides: unity-scopes-master
+Filename: pool/main/u/unity-scope-home/unity-scopes-master-default_6.8.1+13.10.20130809.1-0ubuntu1_all.deb
+Size: 6112
+MD5sum: f04cb5cef0f03fb755a6b32e3c66604d
+SHA1: 48845e03051d5ee9711f696b7bdea17c4e314540
+SHA256: f9c0740f4f5a74f3544638eaba0d860312f4fcff1348d863cdc240709ce601fc
+Description: Home scope that aggregates results from multiple scopes
+Homepage: https://launchpad.net/unity-scope-home
+Description-md5: 46030d6e70539b545984910ffe58efe6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: unity-scopes-runner
+Priority: optional
+Section: gnome
+Installed-Size: 52
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: libunity
+Version: 7.0.10+13.10.20130809.1-0ubuntu1
+Filename: pool/main/libu/libunity/unity-scopes-runner_7.0.10+13.10.20130809.1-0ubuntu1_all.deb
+Size: 5100
+MD5sum: 504cca310cd48b8b2962dc86dc0bdf89
+SHA1: 35f128f5ce7fe2995f0f26072c2aac282a7ee39f
+SHA256: 8fae8a91d0d9ab7f893dc43d9ce089046c65e59488bc610523fe606fbff9bbfc
+Description: desktop runner for misceallenous scopes
+Homepage: https://launchpad.net/libunity
+Description-md5: 08e02b02866b8cee0b5d062879555ad8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: unity-services
+Priority: optional
+Section: gnome
+Installed-Size: 188
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: unity
+Version: 7.1.0+13.10.20130809.1-0ubuntu1
+Depends: libatk-bridge2.0-0 (>= 2.5.3), libatk1.0-0 (>= 1.12.4), libc6 (>= 2.7), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.1), libido3-0.1-0 (>= 13.10.0daily13.06.19), libindicator3-7 (>= 0.4.90), libx11-6, upstart
+Filename: pool/main/u/unity/unity-services_7.1.0+13.10.20130809.1-0ubuntu1_i386.deb
+Size: 31820
+MD5sum: a4d2dff7728bffecc873b2fc9370a931
+SHA1: 78370fb73de3e8d1d5301d4eba071f9ec17df5b6
+SHA256: c05d1b596d982954e1dcc590496199f47590bc2cec826e3121850c4cb5dd6bc5
+Description: Services for the Unity interface
+Homepage: https://launchpad.net/unity
+Description-md5: 45ce7085b0609158dd07fb5896873691
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: unity-webapps-common
 Priority: optional
