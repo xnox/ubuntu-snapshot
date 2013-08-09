@@ -7215,19 +7215,19 @@ Origin: Ubuntu
 Package: ofono
 Priority: optional
 Section: universe/admin
-Installed-Size: 1022
+Installed-Size: 1023
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
 Architecture: armhf
-Version: 1.12-0ubuntu5
+Version: 1.12-0ubuntu6
 Depends: libbluetooth3 (>= 4.91), libc6 (>= 2.17), libdbus-1-3 (>= 1.1.1), libglib2.0-0 (>= 2.30.0), libudev1 (>= 183), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), dbus
 Recommends: udev
 Conflicts: modemmanager
-Filename: pool/universe/o/ofono/ofono_1.12-0ubuntu5_armhf.deb
-Size: 520372
-MD5sum: 1b75ea73556da7cb0339a6e693734f3b
-SHA1: 29e92979997035ddce810e4af101320270c0671c
-SHA256: c10447e53410d140ffac14d98accdb7c7a76b72d5d230b3657fae8c26fa6979f
+Filename: pool/universe/o/ofono/ofono_1.12-0ubuntu6_armhf.deb
+Size: 520656
+MD5sum: 58f0ba069adf8003e0e2d4bac38c2ae2
+SHA1: 9d5664b25849e8a7299137099c3b68b7ca307a90
+SHA256: 19dc154de0fbe9b0330be8fa99542196ddc3b6407d75fe15bb4892af3e1fa940
 Description: Mobile telephony stack (daemon)
 Homepage: http://www.ofono.org/
 Description-md5: 424c82f98ad60ebfb090dca93af81717
@@ -7242,16 +7242,58 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
 Architecture: armhf
 Source: ofono
-Version: 1.12-0ubuntu5
-Depends: ofono (= 1.12-0ubuntu5)
-Filename: pool/universe/o/ofono/ofono-dbg_1.12-0ubuntu5_armhf.deb
+Version: 1.12-0ubuntu6
+Depends: ofono (= 1.12-0ubuntu6)
+Filename: pool/universe/o/ofono/ofono-dbg_1.12-0ubuntu6_armhf.deb
 Size: 2066
-MD5sum: 525e6f57e8886c24b6e49168650acdcc
-SHA1: 1ed387477591a71aa64a70fb00c9ee612652db55
-SHA256: 19bfa3a04d0550e3a7ef08017239c22c3607175594b0b06c32d760ff26d8c913
+MD5sum: b9bf5993cfa9fcd270a60f409d78aa7c
+SHA1: bd26932f2c9859a6b395a26c28d523a6c6a85efa
+SHA256: 4a0af6c38aaa8195e4bc88a4c40e43c1ecd4e42c1e5b762c14945c0988273cf0
 Description: Mobile telephony stack (debugging files)
 Homepage: http://www.ofono.org/
 Description-md5: b3e7fab61c961077919a333c417e2efd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ofono-dev
+Priority: optional
+Section: universe/admin
+Installed-Size: 161
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: ofono
+Version: 1.12-0ubuntu6
+Depends: libc6-dev | libc-dev
+Filename: pool/universe/o/ofono/ofono-dev_1.12-0ubuntu6_all.deb
+Size: 24072
+MD5sum: 7059658b997c01dca53254049fb4e2cd
+SHA1: dbeed6cfbe06d3a761daad9f5d33c5a0af89a0c9
+SHA256: d6e8c0535eab321f1c1e918af44380121f1fe12329cb34f7c18a603efb04fc0b
+Description: Mobile telephony stack (development files)
+Homepage: http://www.ofono.org/
+Description-md5: 144644b11747a939d416d7c282e0e0e5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ofono-scripts
+Priority: optional
+Section: universe/admin
+Installed-Size: 137
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Telepathy maintainers <pkg-telepathy-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: ofono
+Version: 1.12-0ubuntu6
+Depends: python, ofono (>= 1.12-0ubuntu6), python-dbus, python-gobject-2
+Filename: pool/universe/o/ofono/ofono-scripts_1.12-0ubuntu6_all.deb
+Size: 23884
+MD5sum: 4492ba5d549e866a23c8b70eebc1ab02
+SHA1: 6c5176ede14f4a2453cfd2d7610892a44ac69c83
+SHA256: c3de18b8422adea7ac22c2d63fd2e3b660f748380825685d6bf224a4ed82f633
+Description: Mobile telephony stack (test and maintenance script files)
+Homepage: http://www.ofono.org/
+Description-md5: 277aef1d813c6ac0a723a9b785d7d80d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -7903,6 +7945,28 @@ Description-md5: c6f03fae3a91ee312b2d15395c1a0d3c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-hunspell
+Priority: optional
+Section: universe/python
+Installed-Size: 60
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Benjamin Drung <bdrung@debian.org>
+Architecture: armhf
+Source: pyhunspell
+Version: 0.1-1
+Provides: python2.7-hunspell
+Depends: python (>= 2.7), python (<< 2.8), libc6 (>= 2.4), libhunspell-1.3-0
+Filename: pool/universe/p/pyhunspell/python-hunspell_0.1-1_armhf.deb
+Size: 5282
+MD5sum: f177d8b6a9949815e048a0e9180d96a0
+SHA1: acd13ab7b361a0a2008d891cd7f707e2fc9c96cf
+SHA256: f63438d403e60f1f8bb5659c36640870442b8a7398f0a92ead8ead1954c216b9
+Description: Python 2 binding for Hunspell
+Homepage: https://code.google.com/p/pyhunspell/
+Description-md5: 5ec989192e0f66e9a5921bf463a650c7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-regex
 Priority: optional
 Section: universe/python
@@ -8007,6 +8071,28 @@ SHA256: 12199a75d6d24d86f57b2204c0e18b4b02fe72e5fc033469bd86d0389e3aa784
 Description: Python 3 wrapper of libgearman
 Homepage: https://launchpad.net/gearman-interface
 Description-md5: d1889bc686d63e610b4893248c4c52bc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-hunspell
+Priority: optional
+Section: universe/python
+Installed-Size: 48
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Benjamin Drung <bdrung@debian.org>
+Architecture: armhf
+Source: pyhunspell
+Version: 0.1-1
+Provides: python3.3-hunspell
+Depends: python3 (>= 3.3), python3 (<< 3.4), libc6 (>= 2.4), libhunspell-1.3-0
+Filename: pool/universe/p/pyhunspell/python3-hunspell_0.1-1_armhf.deb
+Size: 5154
+MD5sum: 402c3a12b4b9bfa55baaba8b1fc8a080
+SHA1: 044f9c316e135c32a2ff1d36235fb95cf4ff9c10
+SHA256: 2df57c6d4d1f1aa6d206a274533989baa0028a6b01671c1df29b7fe2852d7a05
+Description: Python 3 binding for Hunspell
+Homepage: https://code.google.com/p/pyhunspell/
+Description-md5: 5e70c52a57655e12a70e4a8a91f5fabf
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
