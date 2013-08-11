@@ -314,43 +314,35 @@ Checksums-Sha256:
  1d4d0ff1ef0430b815a405eaeb61ed5b026ad4725ce9f18b402b88319b91fa39 934 cairo-5c_1.8.1.dsc
  d95984566a51183db2f0cae73d86e822c54007e80b292ca16afbe5b4afa9ff82 636040 cairo-5c_1.8.1.tar.gz
 
-Package: camitk
-Binary: libcamitk3, libcamitk3-dev, libcamitk3-data, libcamitk3-doc, camitk-imp, camitk-actionstatemachine, libqtpropertybrowser3, libqtpropertybrowser3-dev
-Version: 3.2.2-1
-Priority: optional
-Section: universe/science
-Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 9), cmake (>= 2.6), libvtk5-dev (>= 5.8), libqt4-dev (>= 4.7), libvtk5-qt4-dev (>= 5.8), xsdcxx (>= 3.2), libinsighttoolkit3-dev (>= 3.20), libxerces-c-dev (>= 3.1), libxml2-dev (>= 2.7), libgdcm2-dev (>= 2.0), libfftw3-dev, libqtwebkit-dev | libqt4-dev (<< 4.7), libvtkgdcm2-dev (>= 2.0)
-Build-Depends-Indep: doxygen, graphviz
-Architecture: any all
+Package: calf
+Binary: calf-plugins
+Version: 0.0.19-2
+Priority: extra
+Section: universe/sound
+Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Build-Depends: cdbs (>= 0.4.106~), autotools-dev, devscripts, autoconf, debhelper, dh-buildinfo, libglib2.0-dev, libgtk2.0-dev, libreadline-dev, libexpat1-dev, libjack-dev, libfftw3-dev, libfluidsynth-dev, libcairo2-dev, libasound2-dev [linux-any], lv2-dev, libtool
+Architecture: any
 Standards-Version: 3.9.4
 Format: 3.0 (quilt)
-Directory: pool/universe/c/camitk
+Directory: pool/universe/c/calf
 Files:
- a9043136f731e01ee8f1c97d5056a58a 2080 camitk_3.2.2-1.dsc
- 4440d8ee1c84623bcca2f26448fae614 167869789 camitk_3.2.2.orig.tar.gz
- edd17eb2a6a7704b5b49afeb2766e9d8 8468 camitk_3.2.2-1.debian.tar.gz
-Uploaders: Andreas Tille <tille@debian.org>, Emmanuel Promayon <Emmanuel.Promayon@imag.fr>
-Homepage: http://camitk.imag.fr/
-Vcs-Browser: http://svn.debian.org/wsvn/debian-med/trunk/packages/camitk/trunk/
-Vcs-Svn: svn://svn.debian.org/debian-med/trunk/packages/camitk/trunk/
+ 576b3b950fc510c1729f3ef3652ea767 2227 calf_0.0.19-2.dsc
+ 9570cb742522218a11b2dbefdb3aabc9 14960133 calf_0.0.19.orig.tar.gz
+ 17a963e8f38a97a6f515501b7a1ca5e7 8333 calf_0.0.19-2.debian.tar.gz
+Uploaders: Adrian Knoth <adi@drcomp.erfurt.thur.de>, Jonas Smedegaard <dr@jones.dk>, Tiago Bortoletto Vaz <tiago@debian.org>
+Homepage: http://calf.sourceforge.net/
+Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/calf.git;a=summary
+Vcs-Git: git://git.debian.org/git/pkg-multimedia/calf.git
 Package-List: 
- camitk-actionstatemachine deb science optional
- camitk-imp deb science optional
- libcamitk3 deb science optional
- libcamitk3-data deb doc optional
- libcamitk3-dev deb libdevel optional
- libcamitk3-doc deb doc optional
- libqtpropertybrowser3 deb science optional
- libqtpropertybrowser3-dev deb libdevel optional
+ calf-plugins deb sound extra
 Checksums-Sha1:
- 736df9342561b6ca60263d4c163e0f661a43e11a 2080 camitk_3.2.2-1.dsc
- 8398330660bf42bc8b2e28471426d240e69dbf29 167869789 camitk_3.2.2.orig.tar.gz
- 586edf4605a12650ab5c4cef4c3a6923733735f0 8468 camitk_3.2.2-1.debian.tar.gz
+ b1721214bd0341a9c41870f542712a2d4f522306 2227 calf_0.0.19-2.dsc
+ e08846957165a637d3c59e84dde438d478bb8814 14960133 calf_0.0.19.orig.tar.gz
+ fd5c7165d0ea402294584555bf12ff5328206346 8333 calf_0.0.19-2.debian.tar.gz
 Checksums-Sha256:
- a3f796b7ce4ed6e0baed7ee0b6cbe6a7efd679bfa21752038bcdb9d6c8732183 2080 camitk_3.2.2-1.dsc
- 423545255861af057d7bbe73ee5c0eebc10ad6aa12a945c819979682eb0feb62 167869789 camitk_3.2.2.orig.tar.gz
- 9b446016ca3b555fd182f0591519c1562eb56d5799de6f2b0a1ca7ff93bab5b8 8468 camitk_3.2.2-1.debian.tar.gz
+ c024c3a1cdec9776a9d408ea9292e7152ca08baf8fcf94a768d4f4510503941e 2227 calf_0.0.19-2.dsc
+ 1106e7e27bcd18d47fc58c952a4dbf6c7a763272e13b2b94cee6f1b2fb922cec 14960133 calf_0.0.19.orig.tar.gz
+ 65942416d115f18ab34f3ea0ff050855bd456391989047565009b62993723c33 8333 calf_0.0.19-2.debian.tar.gz
 
 Package: cddlib
 Binary: libcdd-dev, libcdd0d, libcdd-test, libcdd0d-dbg
@@ -540,63 +532,6 @@ Checksums-Sha256:
  3301a20bb2552e8e34c6750c5ffb1d1948e13698b21ac549a111ce0bb3d4831d 2094 clhep_2.1.3.1-1.dsc
  2cc76a8f5004778d0d16ab9ed4c8104ace0eeec7d5a43bc85f193091d8d3296b 1859117 clhep_2.1.3.1.orig.tar.gz
  6154f66cceb7a47944fd3b9d8d6dc652c9dd19545de50fd33ede9b250c242732 4598 clhep_2.1.3.1-1.debian.tar.gz
-
-Package: concordance
-Binary: concordance, libconcord3, libconcord-dev, python-libconcord, concordance-common
-Version: 1.0-1
-Section: universe/misc
-Maintainer: Mathieu Trudel-Lapierre <mathieu.tl@gmail.com>
-Build-Depends: debhelper (>= 9), libusb-dev, python-all-dev (>= 2.6.6-3~), libzzip-dev
-Architecture: any all
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/universe/c/concordance
-Files:
- 6c797f6fc94e1c5ea37b883bd1e20b8d 2020 concordance_1.0-1.dsc
- e805c92222b620ae65ed1ce963d7cd48 1119091 concordance_1.0.orig.tar.bz2
- 0a730b5345318fa592a2d723b218c03a 6263 concordance_1.0-1.debian.tar.gz
-Homepage: http://sourceforge.net/projects/concordance
-Package-List: 
- concordance deb utils optional
- concordance-common deb utils optional
- libconcord-dev deb libdevel optional
- libconcord3 deb libs optional
- python-libconcord deb python optional
-Checksums-Sha1:
- fc1d3e319b035d23ea50bca9e4e8ca6675d18c43 2020 concordance_1.0-1.dsc
- 8e51d5d9b2019df84326c480b793cc769e68908d 1119091 concordance_1.0.orig.tar.bz2
- 19a7bb1392b4ca21b6616e7228b3916018edd6ca 6263 concordance_1.0-1.debian.tar.gz
-Checksums-Sha256:
- 155fe841a183d52644e8b93490c58355763bb38bda810855e90a242b0a2d0dc5 2020 concordance_1.0-1.dsc
- f6f449e5cdf33207372d0e229e622b6107f227bfb476587abddc0b27c31eb65a 1119091 concordance_1.0.orig.tar.bz2
- c1d216bf1f9222d07a044b310f3e7e4f30333321ff834931e12f9ecc70c25bd1 6263 concordance_1.0-1.debian.tar.gz
-
-Package: congruity
-Binary: congruity
-Version: 17-1
-Priority: optional
-Section: universe/utils
-Maintainer: Mathieu Trudel-Lapierre <mathieu.tl@gmail.com>
-Build-Depends: debhelper (>= 9)
-Architecture: all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/c/congruity
-Files:
- 3ff213815826475d5d4ab9520d2c3723 1717 congruity_17-1.dsc
- 71fb7f68701ab4b7b3c62218ced14783 175425 congruity_17.orig.tar.bz2
- 8eda0d60fdfc6064b30ffc9ea3a4d10f 2482 congruity_17-1.debian.tar.gz
-Homepage: http://sourceforge.net/projects/congruity/
-Package-List: 
- congruity deb utils optional
-Checksums-Sha1:
- 375f9ea9c47ae3b5dfb8a7bd79d7ebe90654fab1 1717 congruity_17-1.dsc
- 4f67819e7901bfe567bfc1b2961e17afdd359546 175425 congruity_17.orig.tar.bz2
- 273d473667583e5d3fc398cbe7821524c543420e 2482 congruity_17-1.debian.tar.gz
-Checksums-Sha256:
- 87696157783643c32c18595decbbd192e56c41e4c90b3f881752cf957521679e 1717 congruity_17-1.dsc
- a4cff576245f86141eb371cafcee11af37c096c463ca147e9f3eac0debb19b63 175425 congruity_17.orig.tar.bz2
- 2d2f4af2b30dafd5e6861a0f8645f6ea0eb8cb87fd9ef36838fa86fc800544aa 2482 congruity_17-1.debian.tar.gz
 
 Package: coquelicot
 Binary: coquelicot
@@ -1217,42 +1152,6 @@ Checksums-Sha256:
  b7850d1f1438ba58b780320d37522bf2e9e81339ebc6b660ad9cb3ea81f6c253 10011943 elementary_1.7.7.orig.tar.gz
  d5f9bb80ac31c862d257ed26e9e6a6c3c4510edb5a4908a20f2fe0b84a59023e 12916 elementary_1.7.7-0ubuntu1.debian.tar.gz
 
-Package: elmerfem
-Binary: elmer, elmer-dbg, elmer-common, libelmersolver-6.1, libelmersolver-dbg, libelmer-dev
-Version: 6.1.0.svn.5396.dfsg2-3
-Priority: extra
-Section: universe/science
-Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 5), quilt, po-debconf, autoconf, automake, gfortran, libblas-dev | libblas.so, liblapack-dev | liblapack-3.so, mpi-default-dev, mpi-default-bin, libhypre-dev, libsuitesparse-dev, libarpack2-dev, libparpack2-dev, libmumps-scotch-dev, libreadline-dev, libncurses5-dev, libx11-dev, tk8.5-dev, tcl8.5-dev, libfreetype6-dev, libftgl-dev, libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev, libscotchmetis-dev, r-base-core
-Build-Conflicts: gcc-multilib, libatlas-base-dev, libatlas3-base, matlab-support
-Architecture: any all
-Standards-Version: 3.9.2
-Format: 3.0 (quilt)
-Directory: pool/universe/e/elmerfem
-Files:
- 9d5ff95236eb25ae49e67d3e0ae58881 2827 elmerfem_6.1.0.svn.5396.dfsg2-3.dsc
- 787e3d235efadd23710451a8d2ca0f73 24542681 elmerfem_6.1.0.svn.5396.dfsg2.orig.tar.gz
- 2fe762f31d7d89d02f1c263db09e98ca 15549 elmerfem_6.1.0.svn.5396.dfsg2-3.debian.tar.gz
-Uploaders: "Adam C. Powell, IV" <hazelsct@debian.org>, Boris Pek <tehnick@debian.org>
-Homepage: http://www.csc.fi/elmer/
-Vcs-Browser: http://git.debian.org/?p=debian-science/packages/elmerfem.git
-Vcs-Git: git://git.debian.org/git/debian-science/packages/elmerfem.git
-Package-List: 
- elmer deb science extra
- elmer-common deb science extra
- elmer-dbg deb debug extra
- libelmer-dev deb libdevel extra
- libelmersolver-6.1 deb libs extra
- libelmersolver-dbg deb debug extra
-Checksums-Sha1:
- 23cb6536d36042f49bf76641934994f112b19d8e 2827 elmerfem_6.1.0.svn.5396.dfsg2-3.dsc
- 72af1fb6a0acc254e84d7bead7927ea8870514d3 24542681 elmerfem_6.1.0.svn.5396.dfsg2.orig.tar.gz
- eeb91540506f87669633384f5d67264058ab6438 15549 elmerfem_6.1.0.svn.5396.dfsg2-3.debian.tar.gz
-Checksums-Sha256:
- b0287f773ac24e8bd484c8d310f9e491d887693d57b37a2df5558ea7b8562e15 2827 elmerfem_6.1.0.svn.5396.dfsg2-3.dsc
- 8989a11ae8315c457ccf1d8151a3604111f985babc144849c89532ad0bf193f2 24542681 elmerfem_6.1.0.svn.5396.dfsg2.orig.tar.gz
- 731cb069e77c0662653b09ca3839697bb0b036c9697497a1d016fdb0fcc01095 15549 elmerfem_6.1.0.svn.5396.dfsg2-3.debian.tar.gz
-
 Package: ember
 Binary: ember
 Version: 0.6.2+dfsg-2build1
@@ -1312,33 +1211,6 @@ Checksums-Sha256:
  3d3766c6bf57226db877157d0fef60a6b197b6dcd4b7e7597e2faf7443c3de56 1482 emscripten_1.4.9~20130620~0ad8724-1.dsc
  f1d0569a05719df0d7417e19930981051f13be52a869c9abf97c6df6187e6b27 29609445 emscripten_1.4.9~20130620~0ad8724.orig.tar.bz2
  b8c89feb0ef6436ca44bda4cebb02f9f777ffa1150086c7ec6e2f24958842965 52409 emscripten_1.4.9~20130620~0ad8724-1.debian.tar.gz
-
-Package: epix
-Binary: epix
-Version: 1.2.11-2
-Priority: optional
-Section: universe/tex
-Maintainer: Julian Gilbey <jdg@debian.org>
-Build-Depends: debhelper (>= 9.0.0), automake, texlive-base-bin, texlive-latex-extra, latex-xcolor, texlive-pstricks, ghostscript, texinfo
-Build-Conflicts: autoconf2.13, automake1.4
-Architecture: any
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/universe/e/epix
-Files:
- 4a7912aae2c3603361ed7b4cf99bab72 1136 epix_1.2.11-2.dsc
- 2af40c22984d53a41ce85adbe1a4ccc8 631408 epix_1.2.11.orig.tar.gz
- d800cb61cac0045b19cf811b3d819ad0 6296 epix_1.2.11-2.debian.tar.gz
-Package-List: 
- epix deb tex optional
-Checksums-Sha1:
- 63ccfee4a5753e9067a47104e4fbf71ec7809b04 1136 epix_1.2.11-2.dsc
- d3334c2b7981c53b8c24ef70026f266ea5af9797 631408 epix_1.2.11.orig.tar.gz
- 8e4d2be5d0965f0919a29038e4de2715e7a4f029 6296 epix_1.2.11-2.debian.tar.gz
-Checksums-Sha256:
- 0723d2b94a2614ad743e912a86c841cf4ffb36c0e239a63d5855c7c19f20fcb6 1136 epix_1.2.11-2.dsc
- 60e835823e03255df9e92ecf03c8cd172bc87661afcc42435f5fa909ab62e504 631408 epix_1.2.11.orig.tar.gz
- e5f768b1c33119c6ef54bbcfb9ffc58a9eef1723fe95dd31d43f129382d69419 6296 epix_1.2.11-2.debian.tar.gz
 
 Package: feel++
 Binary: libfeel++1, libfeel++-dev, libfeel++-dbg, feel++-apps, feel++-doc
@@ -1434,7 +1306,8 @@ Checksums-Sha256:
 
 Package: freecad
 Binary: freecad, freecad-dev, freecad-doc
-Version: 0.13.1830-dfsg-2build1
+Version: 0.13.1830-dfsg-3
+Priority: extra
 Section: universe/science
 Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
 Build-Depends: debhelper (>= 9), libtool, cmake, libboost-dev, libboost-date-time-dev, libboost-filesystem-dev, libboost-graph-dev, libboost-iostreams-dev, libboost-program-options-dev, libboost-regex-dev, libboost-serialization-dev, libboost-signals-dev, libboost-python-dev, libboost-thread-dev, python-dev, python-support, libqt4-dev, libxt-dev, libxext-dev, libxmu-dev, libxi-dev, libx11-dev, libcoin80-dev, libsoqt4-dev (>= 1.5.0-2.1), libeigen3-dev, libgts-bin, libgts-dev, libcv-dev, zlib1g-dev, libxerces-c2-dev, liboce-foundation-dev, liboce-modeling-dev, liboce-ocaf-dev, libfltk1.3-dev, oce-draw, libf2c2-dev, liboce-visualization-dev, python-cxx-dev, libswscale-dev, libzipios++-dev, swig, gfortran, libqtwebkit-dev, libode-dev, libspnav-dev
@@ -1443,25 +1316,25 @@ Standards-Version: 3.9.4
 Format: 3.0 (quilt)
 Directory: pool/universe/f/freecad
 Files:
- 6e3d96d68cb03bcdc54d90070611448f 2958 freecad_0.13.1830-dfsg-2build1.dsc
+ c48f3e52f48da9a1175de570ca96caed 2887 freecad_0.13.1830-dfsg-3.dsc
  304de3f94d043f3d19531c8291857a55 62529741 freecad_0.13.1830-dfsg.orig.tar.gz
- 84ea120c219b7fef3376da341218611b 25249 freecad_0.13.1830-dfsg-2build1.debian.tar.gz
+ 37319ecf9b4325db7eda9ae10f938e43 24592 freecad_0.13.1830-dfsg-3.debian.tar.gz
 Uploaders: Teemu Ikonen <tpikonen@gmail.com>, "Adam C. Powell, IV" <hazelsct@debian.org>, Anton Gladky <gladk@debian.org>
 Homepage: http://freecadweb.org/
-Vcs-Browser: http://git.debian.org/?p=debian-science/packages/freecad.git
-Vcs-Git: git://git.debian.org/git/debian-science/packages/freecad.git
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debian-science/packages/freecad.git
+Vcs-Git: git://anonscm.debian.org/debian-science/packages/freecad.git
 Package-List: 
  freecad deb science extra
  freecad-dev deb libdevel extra
  freecad-doc deb doc extra
 Checksums-Sha1:
- 7372c02f8205fce841d662ccc3ad257dbf621d37 2958 freecad_0.13.1830-dfsg-2build1.dsc
+ 75bd136f6eabc09808f17b220e410ff5be975f2e 2887 freecad_0.13.1830-dfsg-3.dsc
  8020b9123a690b245ffcf80b434930960759c72d 62529741 freecad_0.13.1830-dfsg.orig.tar.gz
- bbd08968f4bd81c313228889abecea07c5bcd4b5 25249 freecad_0.13.1830-dfsg-2build1.debian.tar.gz
+ 4270fc3819f75d177322c71257bbe10e4ad82ecd 24592 freecad_0.13.1830-dfsg-3.debian.tar.gz
 Checksums-Sha256:
- 148b7133039517bbdf7c20da0152c69de8c4f87cc584065f6c9a28ba16ab40ea 2958 freecad_0.13.1830-dfsg-2build1.dsc
+ 2493d74be3d55351d994ab9da00756f641f2c708d6598f92847b1f28a60ec990 2887 freecad_0.13.1830-dfsg-3.dsc
  dd81c8323660e552c5614abf68f132d87ec21b37cec48a017b7f84010734f1a3 62529741 freecad_0.13.1830-dfsg.orig.tar.gz
- 7da24e04742d3365d35af04c9eb02e3a0b6d039b31df8f5dd285d5523a1db8d6 25249 freecad_0.13.1830-dfsg-2build1.debian.tar.gz
+ c038a0be6ac3ce7f20a07ade0ac693337998702f1b22a66df74efccb61a767fc 24592 freecad_0.13.1830-dfsg-3.debian.tar.gz
 
 Package: fso-datad
 Binary: fso-datad, fso-datad-dbg
@@ -1778,36 +1651,6 @@ Checksums-Sha256:
  ff84c90d1e49880b4e688acaed7e7ab4ebd3b6b4676c291b1cb007235033d7de 1982 gimp-gap_2.6.0+dfsg-4.dsc
  6c52f68317e574c1e2b46bc8b2d7a4e03f22b1bfd0fc66dc6f10c237d85d5ed5 4070418 gimp-gap_2.6.0+dfsg.orig.tar.gz
  ca89dd47717d17b60d5a3884d7cb7938bf5c4485986ee28ee989992b1237ae24 6876 gimp-gap_2.6.0+dfsg-4.debian.tar.gz
-
-Package: ginkgocadx
-Binary: ginkgocadx
-Version: 3.4.0.928.29+dfsg-1
-Priority: optional
-Section: universe/science
-Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 9), chrpath, cmake, libcairo2-dev, libcurl4-gnutls-dev, libdcmtk2-dev, libfftw3-dev, libfreetype6-dev, libgdcm2-dev, libgtk2.0-dev, libinsighttoolkit3-dev (>= 3.20.0), libjsoncpp-dev, libmysqlclient-dev (>= 5.1.57), libsqlite3-dev, libssl-dev, libvtk5-dev (>= 5.6.0), libwrap0, libwrap0-dev, libwxgtk2.8-dev, libxml2-dev
-Architecture: any
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/g/ginkgocadx
-Files:
- 5fc7dc4277a328a8b78bfa117a144a06 2445 ginkgocadx_3.4.0.928.29+dfsg-1.dsc
- 3657f9f9de052e6f2e50fcd9d287a78d 3828428 ginkgocadx_3.4.0.928.29+dfsg.orig.tar.xz
- 13c229baf8993897020943171dcdd09b 9868 ginkgocadx_3.4.0.928.29+dfsg-1.debian.tar.xz
-Uploaders: Andreas Tille <tille@debian.org> ,Thorsten Alteholz <debian@alteholz.de> ,Dmitry Smirnov <onlyjob@debian.org>
-Homepage: http://ginkgo-cadx.com/
-Vcs-Browser: http://anonscm.debian.org/viewvc/debian-med/trunk/packages/ginkgocadx/trunk/
-Vcs-Svn: svn://anonscm.debian.org/debian-med/trunk/packages/ginkgocadx/trunk/
-Package-List: 
- ginkgocadx deb science optional
-Checksums-Sha1:
- bd75d6ee6873c6542a3f88bd4ed336a7cc9491da 2445 ginkgocadx_3.4.0.928.29+dfsg-1.dsc
- 42813a969790e4d046504ec97837c948644086ed 3828428 ginkgocadx_3.4.0.928.29+dfsg.orig.tar.xz
- bea0aed50c8b0131f00a4cdb20f9e75ea9318854 9868 ginkgocadx_3.4.0.928.29+dfsg-1.debian.tar.xz
-Checksums-Sha256:
- 62f387ebedb52cae2c3c32daf67888360252d90da30c860fdaa9aba629a59f2d 2445 ginkgocadx_3.4.0.928.29+dfsg-1.dsc
- aa9ca8c6ab2d35114f00c1b095a051753928d72e30d0a29161481fb13fe49c2e 3828428 ginkgocadx_3.4.0.928.29+dfsg.orig.tar.xz
- 0d603f2cdc8d6364f2cbe4a1e3c5f9bfdd9180544425035cefd724e1ce0a7422 9868 ginkgocadx_3.4.0.928.29+dfsg-1.debian.tar.xz
 
 Package: git-annex
 Binary: git-annex
@@ -3288,35 +3131,6 @@ Checksums-Sha256:
  a399c5ba27dee460d02b8016e5724b97d254aef5782ead9c7f67270368bbf5ad 1011494 hyperestraier_1.4.13.orig.tar.gz
  a9517f138441a3b4cd962b1a771ad7e996f349a2d9ca46fbc75ad102f600fa16 23895 hyperestraier_1.4.13-10ubuntu1.debian.tar.gz
 
-Package: ifrit
-Binary: ifrit
-Version: 3.4.2-1
-Priority: optional
-Section: universe/science
-Maintainer: Debian QA Group <packages@qa.debian.org>
-Build-Depends: debhelper (>= 9), libvtk5-dev, libqt4-dev, libqt4-opengl-dev, cmake, libncurses5-dev, libtiff-dev, chrpath
-Architecture: any
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/i/ifrit
-Files:
- 275a47d7ed1ac34dbc6464e9c06dd838 1258 ifrit_3.4.2-1.dsc
- d88b54baf252432a566130076abb7863 6998969 ifrit_3.4.2.orig.tar.gz
- 2e4c2ae522d8ad3b29fd841aba181ce6 7544 ifrit_3.4.2-1.debian.tar.gz
-Homepage: http://sites.google.com/site/ifrithome/
-Vcs-Browser: http://git.debian.org/git/users/mhy/ifrit.git
-Vcs-Git: git://anonscm.debian.org/users/mhy/ifrit.git
-Package-List: 
- ifrit deb science optional
-Checksums-Sha1:
- ba3d4578a31e76c045902ee26a7a5e5e681b4d0d 1258 ifrit_3.4.2-1.dsc
- 03109fca21acd78fc399bcd1568c76cd73d85bbb 6998969 ifrit_3.4.2.orig.tar.gz
- 6eeac6e094e25063fea6ab1bf1e5d4451cbd314e 7544 ifrit_3.4.2-1.debian.tar.gz
-Checksums-Sha256:
- d4807942ba396d4b1d5e333951551b95a31975d870be79bfe8bf806fbd0eea4e 1258 ifrit_3.4.2-1.dsc
- 222eb7d49b82b6b037ba1f53ced06900a2969beaa0cf97b6558275eeb18fee59 6998969 ifrit_3.4.2.orig.tar.gz
- 12b569bc713d2da28f07189f1d9ba35a494a91d354b1232a9f60a3d6fec5b195 7544 ifrit_3.4.2-1.debian.tar.gz
-
 Package: indicators-client
 Binary: indicators-client, indicators-client-plugin-network, indicators-client-plugin-sound, indicators-client-plugin-messaging, indicators-client-plugin-power, indicators-client-plugin-datetime, indicators-client-examples, indicators-client-autopilot
 Version: 0.31+13.10.20130703-0ubuntu1
@@ -4410,6 +4224,41 @@ Checksums-Sha256:
  0e302700f022ec3c86121ded1ce2467453bb5f58da5dceb1bd195d8cbf6e5350 2504 libtest-lwp-useragent-perl_0.18-1.dsc
  109becafcd67cadb031387e1c8745ac1b5906660268e2214807b2efc791769b3 31807 libtest-lwp-useragent-perl_0.18.orig.tar.gz
  514ee331fe50f39e49ff8caa1e6a5ae812eb8ae8059db273ed97fb537d711b4b 1762 libtest-lwp-useragent-perl_0.18-1.debian.tar.gz
+
+Package: libtorrent-rasterbar
+Binary: libtorrent-rasterbar7, libtorrent-rasterbar-dev, libtorrent-rasterbar-dbg, libtorrent-rasterbar-doc, python-libtorrent, python-libtorrent-dbg, python3-libtorrent, python3-libtorrent-dbg
+Version: 0.16.10-3.1
+Section: universe/libs
+Maintainer: Cristian Greco <cristian@debian.org>
+Build-Depends: debhelper (>= 7.4.10), dpkg-dev (>= 1.16.1~), libboost-system1.53-dev | libboost-system-dev, libboost-python1.53-dev | libboost-python-dev, libssl-dev, libgeoip-dev, pkg-config, python-all-dev (>= 2.6.6-3~), python-all-dbg, python-docutils, python3-all-dev, python3-all-dbg, python3-docutils
+Architecture: any all
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/universe/libt/libtorrent-rasterbar
+Files:
+ 4f5a73eeecdbc380e2cd9b9d4676650e 2119 libtorrent-rasterbar_0.16.10-3.1.dsc
+ 78d41bf20b99b99240b2ad39a01a32e9 2985640 libtorrent-rasterbar_0.16.10.orig.tar.gz
+ 18524d182b56d6c67839cd478c9bea31 14441 libtorrent-rasterbar_0.16.10-3.1.debian.tar.gz
+Homepage: http://www.rasterbar.com/products/libtorrent/index.html
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/libtorrent-rasterbar.git
+Vcs-Git: git://anonscm.debian.org/collab-maint/libtorrent-rasterbar.git
+Package-List: 
+ libtorrent-rasterbar-dbg deb debug extra
+ libtorrent-rasterbar-dev deb libdevel optional
+ libtorrent-rasterbar-doc deb doc optional
+ libtorrent-rasterbar7 deb libs optional
+ python-libtorrent deb python optional
+ python-libtorrent-dbg deb debug extra
+ python3-libtorrent deb python optional
+ python3-libtorrent-dbg deb debug extra
+Checksums-Sha1:
+ 1f0f64ec34429f3fbc65b02b2be4529a26b18aba 2119 libtorrent-rasterbar_0.16.10-3.1.dsc
+ 8b24442132e52f8765c79b20ffdea8b33bc5aa42 2985640 libtorrent-rasterbar_0.16.10.orig.tar.gz
+ 00926d36f264ae1fced860a5b3240351d15bcf21 14441 libtorrent-rasterbar_0.16.10-3.1.debian.tar.gz
+Checksums-Sha256:
+ 80986cc15022f4e0b7e010b3531e917594ea75c0a17fff5c0be08dffc9dba976 2119 libtorrent-rasterbar_0.16.10-3.1.dsc
+ 4c0d78b28af8051ff8a19a3a3e10a5edfec50945b8f3c9a76612111c47d671bc 2985640 libtorrent-rasterbar_0.16.10.orig.tar.gz
+ f4519aede07e437c6da3648795eb1da94b0c949ba2f80c159ad8aa528eceb4b4 14441 libtorrent-rasterbar_0.16.10-3.1.debian.tar.gz
 
 Package: libxmpcore-java
 Binary: libxmpcore-java
@@ -5877,6 +5726,36 @@ Checksums-Sha256:
  f5edae83ec54b4445e5f6bdde2e91086a46f0494037547fb719de5105cdb3cd4 635018 pynac_0.2.6.orig.tar.gz
  47c91a3060f86adf05a883bb3be11d7a13622e56f122517dfbaed8fcfaaa8883 2685 pynac_0.2.6-1.debian.tar.gz
 
+Package: python-apsw
+Binary: python-apsw, python-apsw-dbg, python3-apsw, python3-apsw-dbg, python-apsw-doc
+Version: 3.7.17-r1-1.1
+Priority: optional
+Section: universe/python
+Maintainer: Joel Rosdahl <joel@debian.org>
+Build-Depends: debhelper (>= 8), python-all-dev (>= 2.6.6-3~), python-all-dbg, python3-all-dev, python3-all-dbg, libsqlite3-dev (>= 3.7.17), dpkg-dev (>= 1.16.1~)
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/p/python-apsw
+Files:
+ a696366de04f1d4238bcafe3895f67cb 1420 python-apsw_3.7.17-r1-1.1.dsc
+ cb62a9d7539174d0398bc9cbcbd77497 440816 python-apsw_3.7.17-r1.orig.tar.bz2
+ 05809460a460b38acfe1c9795482fcb4 5025 python-apsw_3.7.17-r1-1.1.debian.tar.gz
+Package-List: 
+ python-apsw deb python optional
+ python-apsw-dbg deb debug extra
+ python-apsw-doc deb doc optional
+ python3-apsw deb python optional
+ python3-apsw-dbg deb debug extra
+Checksums-Sha1:
+ 43b3de1c8ac6f14f343d80a7cec7e5010ab31b93 1420 python-apsw_3.7.17-r1-1.1.dsc
+ 5fa380f6e90fbfe38b6b0352229b3dc4bdd01dc5 440816 python-apsw_3.7.17-r1.orig.tar.bz2
+ 2b4f79b2860c8e75f0ce89c4b197f852ac71f13c 5025 python-apsw_3.7.17-r1-1.1.debian.tar.gz
+Checksums-Sha256:
+ aa2c3bebd0e96ec62202522e0d75ac7b0856298c051d123ea8a2f6ed50a7016b 1420 python-apsw_3.7.17-r1-1.1.dsc
+ 6548f39d118ad5c89519c1092cefbb6c18774cd032e033582f5bcac9571264e8 440816 python-apsw_3.7.17-r1.orig.tar.bz2
+ 6fe04f1dbcce370111a7b09d33aef39380537a2451591522be8818c58fe6d618 5025 python-apsw_3.7.17-r1-1.1.debian.tar.gz
+
 Package: python-csb
 Binary: python-csb, python3-csb, python-csb-doc
 Version: 1.1.1+dfsg-1.1
@@ -6523,36 +6402,6 @@ Checksums-Sha256:
  8403384005005e9979259d0c05554700d11a3b69a67217e6e174c6133071a209 2371 ruby-strong-parameters_0.2.1-1.debian.tar.gz
 Ruby-Versions: all
 
-Package: ruby-typhoeus
-Binary: ruby-typhoeus
-Version: 0.6.3-1
-Section: universe/misc
-Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.3.1~), ruby-ethon, ruby-faraday, rake, ruby-rspec, ruby-rack, ruby-json, ruby-sinatra
-Architecture: all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/r/ruby-typhoeus
-Files:
- 2e864401009c29e0ddd3129c8b81412b 2142 ruby-typhoeus_0.6.3-1.dsc
- dcbd1a31bb55a32baac1b367c1368f05 37550 ruby-typhoeus_0.6.3.orig.tar.gz
- b273a0f5d2a5dced7c81ba7ec9cda184 2559 ruby-typhoeus_0.6.3-1.debian.tar.gz
-Uploaders: Praveen Arimbrathodiyil <praveen@debian.org>
-Homepage: https://github.com/typhoeus/typhoeus
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-ruby-extras/ruby-typhoeus.git;a=summary
-Vcs-Git: git://anonscm.debian.org/pkg-ruby-extras/ruby-typhoeus.git
-Package-List: 
- ruby-typhoeus deb ruby optional
-Checksums-Sha1:
- 0ad3873a9352da2db35e40ec4309010904eaeb71 2142 ruby-typhoeus_0.6.3-1.dsc
- 42b6eacf6fa17949c379a5618b9cdef303702969 37550 ruby-typhoeus_0.6.3.orig.tar.gz
- 115ab3b83aeb9958d69c5ee7db11750a4fdc9a45 2559 ruby-typhoeus_0.6.3-1.debian.tar.gz
-Checksums-Sha256:
- 6a64b610244a42ba75ccdadee0fe8cec8b5dd2d73efbbfc0f335bd4d6a7a1fe8 2142 ruby-typhoeus_0.6.3-1.dsc
- 177dd52b031eaf746d3fd7481700fe716de9cd67e88e6e037f5f9c4a12598896 37550 ruby-typhoeus_0.6.3.orig.tar.gz
- 8d54bcb64d79dec037735459a8c47aa07dfe557b44c43d98422943b9d7e9fb5b 2559 ruby-typhoeus_0.6.3-1.debian.tar.gz
-Ruby-Versions: all
-
 Package: ruby-upr
 Binary: ruby-upr
 Version: 0.2.0-2
@@ -6647,39 +6496,6 @@ Checksums-Sha256:
  414eaa0d6d4c1db0ad1661268a058d666756e59d8915fa30e013a3b077bf577f 1477 rubyluabridge_0.7.0-2ubuntu1.dsc
  d0dc88fff36e34d7295ee0cc5114021425e5895106b9650b7cfb6d408af93e1e 24637 rubyluabridge_0.7.0.orig.tar.gz
  3a76c2206125455b9c07052d28d34c0d0dc3a83381971d225dfe3a9b93db68dd 7221 rubyluabridge_0.7.0-2ubuntu1.debian.tar.gz
-
-Package: saga
-Binary: saga, libsaga-dev, libsaga, python-saga
-Version: 2.0.8+dfsg-4
-Priority: optional
-Section: universe/science
-Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
-Build-Depends: libwxgtk2.8-dev, wx-common, libgdal-dev, libexpat-dev, libogdi3.2-dev, libproj-dev, libgrib2c-dev, debhelper (>= 8), swig, libqhull-dev, libhpdf-dev, python-dev, liblas-dev
-Architecture: any
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/universe/s/saga
-Files:
- 4cc633cafd15ff26db1623fa4bb3e4e6 1589 saga_2.0.8+dfsg-4.dsc
- 2027b66cedb9380dde36e2bba1a271e4 3139135 saga_2.0.8+dfsg.orig.tar.gz
- f60675335c0aea74fca09ab4f91c5651 207469 saga_2.0.8+dfsg-4.debian.tar.gz
-Uploaders: Johan Van de Wauw <johan.vandewauw@gmail.com>, Francesco Paolo Lovergine <frankie@debian.org>
-Homepage: http://www.saga-gis.org/
-Vcs-Browser: http://git.debian.org/?p=pkg-grass/saga.git
-Vcs-Git: git://git.debian.org/pkg-grass/saga.git
-Package-List: 
- libsaga deb libs optional
- libsaga-dev deb libdevel optional
- python-saga deb python optional
- saga deb science optional
-Checksums-Sha1:
- 6169b906940addba58d21a5d6c9b820b739a16ee 1589 saga_2.0.8+dfsg-4.dsc
- 5ff1689f9174ed54471cf5253da63ac21957de19 3139135 saga_2.0.8+dfsg.orig.tar.gz
- 510751f7d6fc00454e82cb93eb45388cfb4626c1 207469 saga_2.0.8+dfsg-4.debian.tar.gz
-Checksums-Sha256:
- 70cf7833033453e71c3a2527eb79a7f848fd961e598755787bfd0501567367bc 1589 saga_2.0.8+dfsg-4.dsc
- 43835fd03b725bb634670506a838864c88d2c22044651a88a25ee247c3bb9c8f 3139135 saga_2.0.8+dfsg.orig.tar.gz
- 78307560396a1e3cfe8a85fc60de319c38357bbb108d667c19531221d312bae8 207469 saga_2.0.8+dfsg-4.debian.tar.gz
 
 Package: salome-kernel
 Binary: salome-kernel, salome-kernel-dev, salome-kernel-doc, salome-kernel-dbg
@@ -7215,6 +7031,36 @@ Checksums-Sha256:
  1f3375bae736b6d73872c63dcd95676642fc06aa9fbbfca06c818e2d5ca4bf00 5854644 texstudio_2.6.0+debian.orig.tar.xz
  311e9aac0bcd43579f4fd342a2333f27d9e79daebd181255b19c9b0e181d034b 6928 texstudio_2.6.0+debian-1.debian.tar.xz
 
+Package: tiff3
+Binary: libtiff4, libtiffxx0c2, libtiff4-dev
+Version: 3.9.7-1ubuntu1
+Priority: optional
+Section: universe/oldlibs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jay Berkenbilt <qjb@debian.org>
+Build-Depends: cdbs (>= 0.4.90ubuntu9), debhelper (>= 8.1.2ubuntu2), autotools-dev, zlib1g-dev, libjpeg-dev, libxmu-dev, libglu1-mesa-dev, freeglut3-dev, libxi-dev, libjbig-dev, hardening-wrapper
+Architecture: any
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/universe/t/tiff3
+Files:
+ ca72cf321a25ba23c4a607a8f32dda94 1705 tiff3_3.9.7-1ubuntu1.dsc
+ 26cead1c4471630b12588aa187405934 1476025 tiff3_3.9.7.orig.tar.gz
+ 45dbcaeacc1d65d8496563ca166da3b1 14860 tiff3_3.9.7-1ubuntu1.debian.tar.gz
+Homepage: http://libtiff.maptools.org
+Package-List: 
+ libtiff4 deb oldlibs optional
+ libtiff4-dev deb libdevel optional
+ libtiffxx0c2 deb oldlibs optional
+Checksums-Sha1:
+ 4f130e54f42e2ae43d0dbfc2308e8a830e64cd0b 1705 tiff3_3.9.7-1ubuntu1.dsc
+ ee065ada5854c4f69f20cda1fbe76175de82c520 1476025 tiff3_3.9.7.orig.tar.gz
+ 8a8e9874f1c39989be0fc547bfb70540d5ed978f 14860 tiff3_3.9.7-1ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ f93a9bf7f65296b35f6a6ae9ca7b9805eb5473a62a33a0be50150810b8f67104 1705 tiff3_3.9.7-1ubuntu1.dsc
+ 5b6ef0056e1146f7e00a46f3f0a55632d877ba576fa81c6275e7dd50b6fc8385 1476025 tiff3_3.9.7.orig.tar.gz
+ 6016eb70cf851972676e178645f7ba8b4ffc9e8fa9691f809dabb67d2d1233ea 14860 tiff3_3.9.7-1ubuntu1.debian.tar.gz
+
 Package: tntdb
 Binary: libtntdb4, tntdb-mysql4, tntdb-postgresql4, tntdb-sqlite4, libtntdb-dev
 Version: 1.3-2
@@ -7656,34 +7502,33 @@ Checksums-Sha256:
  f15f8382104443319a5883eafce5f52f4143b526c7f1cd88d19c1f63fc06d750 5499811 yap_6.2.2.orig.tar.gz
  3bf0671f22e3ec9ee66fe3e3812d0401485d27b43481f0282771a6935bda65c0 8059 yap_6.2.2-1.debian.tar.gz
 
-Package: zeroinstall-injector
-Binary: zeroinstall-injector
-Version: 2.3.2-1
-Priority: optional
-Section: universe/admin
-Maintainer: Thomas Leonard <talex5@gmail.com>
-Build-Depends: debhelper (>= 7), python (>= 2.6), python-gobject (>= 2.12), python3 (>= 3.2), python3-gi, ocaml-nox, dh-ocaml, ocaml-findlib, libyojson-ocaml-dev, libxmlm-ocaml-dev, camlp4-extra
-Architecture: any
+Package: zeitgeist-explorer
+Binary: zeitgeist-explorer
+Version: 0.2-1
+Priority: extra
+Section: universe/misc
+Maintainer: Manish Sinha <manishsinha@ubuntu.com>
+Build-Depends: debhelper (>= 9.2), python-distutils-extra, python (>= 2.6.6-3)
+Architecture: all
 Standards-Version: 3.9.4
 Format: 3.0 (quilt)
-Directory: pool/universe/z/zeroinstall-injector
+Directory: pool/universe/z/zeitgeist-explorer
 Files:
- b290ed88ebf21003fcdcf8b3ee0d933b 1436 zeroinstall-injector_2.3.2-1.dsc
- 14e735c0761afd1fdf4c954a1e37eaaf 447193 zeroinstall-injector_2.3.2.orig.tar.bz2
- 60150a7c4750ef2d8a541a66f59d84b5 4612 zeroinstall-injector_2.3.2-1.debian.tar.gz
-Homepage: http://0install.net/
-Vcs-Browser: https://github.com/0install/0install-debian
-Vcs-Git: https://github.com/0install/0install-debian.git
+ cbaa4d367679274c3b1ea2d547384e5b 1920 zeitgeist-explorer_0.2-1.dsc
+ 8521b2c8ecc3f0d425e6806dcb2fde59 25503 zeitgeist-explorer_0.2.orig.tar.gz
+ c21ae3200888321bda40b9d7f7cb9080 2107 zeitgeist-explorer_0.2-1.debian.tar.gz
+Homepage: https://launchpad.net/zeitgeist-explorer/
+Vcs-Bzr: https://code.launchpad.net/~zeitgeist/zeitgeist-explorer/debian-sid-packaging
 Package-List: 
- zeroinstall-injector deb admin extra
+ zeitgeist-explorer deb devel extra
 Checksums-Sha1:
- 9f39293a084bce128b6240cd3c13332a31e75257 1436 zeroinstall-injector_2.3.2-1.dsc
- 00b8bea04e5fe2a9dcb3b0196df7dc713f31dd9f 447193 zeroinstall-injector_2.3.2.orig.tar.bz2
- 387d665ef327e34c0152e73d8ced8314285500dc 4612 zeroinstall-injector_2.3.2-1.debian.tar.gz
+ 3ee917f05a3e36238cbe2968ec6d6ade27dff202 1920 zeitgeist-explorer_0.2-1.dsc
+ 08d83975fe7197f5156a81c166f1660d98d8912a 25503 zeitgeist-explorer_0.2.orig.tar.gz
+ b0c1a37600eeb35a64e5d157b383fa3e6cd57937 2107 zeitgeist-explorer_0.2-1.debian.tar.gz
 Checksums-Sha256:
- 671d164081588b4909bf9206f3ee2e582eb330793910f74c3abb57f7d740dced 1436 zeroinstall-injector_2.3.2-1.dsc
- e1f9245458aebe3a01a06f67fa2884d8ec3074502164b35556c48bce1a634072 447193 zeroinstall-injector_2.3.2.orig.tar.bz2
- 29dbe460622242a24e53aea18ec37783078f0268c5850eec8162ea9fd73c3035 4612 zeroinstall-injector_2.3.2-1.debian.tar.gz
+ 13d42b61911b9b3ff85b481e75447fa164259c00c0990a606ac0d97cdfaa3c9c 1920 zeitgeist-explorer_0.2-1.dsc
+ ac12e520713e86606f15335a182b5b5d3fbf6b132a0137940505e0af62153423 25503 zeitgeist-explorer_0.2.orig.tar.gz
+ 25e7f208b1ec2c872500d7b6ab345b4ec8129458fcba1b477309d8e2904e3ae8 2107 zeitgeist-explorer_0.2-1.debian.tar.gz
 
 Package: zotero-standalone-build
 Binary: zotero-standalone, libreoffice-zotero-integration, zotero-libreoffice-integration
