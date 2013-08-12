@@ -15688,6 +15688,223 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: minimal
 
+Package: lsb
+Priority: extra
+Section: misc
+Installed-Size: 44
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chris Lawrence <lawrencc@debian.org>
+Architecture: all
+Version: 4.0-0ubuntu27.1
+Depends: lsb-core, lsb-graphics, lsb-cxx, lsb-desktop, lsb-printing
+Suggests: lsb-multimedia, lsb-languages
+Filename: pool/main/l/lsb/lsb_4.0-0ubuntu27.1_all.deb
+Size: 4168
+MD5sum: 0ce15fd9a98008c3eb58df0e49800504
+SHA1: 868d3ba0daa4c707eee43219900297c5b4ce69e3
+SHA256: 4741d19c1f015bbfc54620926ee682b04447bbbe43b3bbd39f678a2ee3b55388
+Description: Linux Standard Base 4.0 support package
+Homepage: http://www.linux-foundation.org/en/LSB
+Description-md5: 0c59357906ff55e3d508408eaafb089d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Phased-Update-Percentage: 10
+
+Package: lsb-base
+Priority: required
+Section: misc
+Installed-Size: 76
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chris Lawrence <lawrencc@debian.org>
+Architecture: all
+Source: lsb
+Version: 4.0-0ubuntu27.1
+Replaces: lsb (<< 2.0-6), lsb-core (<< 2.0-6)
+Depends: sed, ncurses-bin
+Conflicts: lsb (<< 2.0-6), lsb-core (<< 2.0-6)
+Filename: pool/main/l/lsb/lsb-base_4.0-0ubuntu27.1_all.deb
+Size: 10364
+MD5sum: 6fb99cbbf7974728f9a907cd4cdce0be
+SHA1: e7eafbe5f73c48e3604d29e0b4758ba4a5c3886d
+SHA256: cfca93dc5e5497efd821257520b42458ff56f49be4c29f69640a1116512d6bc9
+Description: Linux Standard Base 4.0 init script functionality
+Multi-Arch: foreign
+Homepage: http://www.linux-foundation.org/en/LSB
+Description-md5: 7fdfe57dd9f54e59f584ff71384235e9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Phased-Update-Percentage: 10
+Task: minimal
+
+Package: lsb-core
+Priority: extra
+Section: misc
+Installed-Size: 132
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chris Lawrence <lawrencc@debian.org>
+Architecture: powerpc
+Source: lsb
+Version: 4.0-0ubuntu27.1
+Replaces: lsb (<< 2.0-2)
+Provides: lsb-core-noarch, lsb-core-ppc32
+Depends: lsb-release, libc6 (>> 2.3.5), libz1, libncurses5, libpam0g, lsb-invalid-mta | mail-transport-agent, at, bc, binutils, bsdmainutils, bsdutils, cpio, cron, ed, file, libc6-dev | libc-dev, locales, cups-bsd | lpr, lprng | cups-client, m4, mailx | mailutils, make, man-db, mawk | gawk, ncurses-term, passwd, patch, pax, procps, psmisc, rsync, alien (>= 8.36), python3, debconf (>= 0.5) | debconf-2.0, lsb-base, time
+Conflicts: lsb (<< 2.0-2)
+Filename: pool/main/l/lsb/lsb-core_4.0-0ubuntu27.1_powerpc.deb
+Size: 27174
+MD5sum: c2ffcfb32b2f4b95b6300f8032c50966
+SHA1: 757efa01c312ed56a59bbdccdddd529cb27af39e
+SHA256: cbecdf953b960f41bd50db22c0d5f3637b81fc99501fb397826aa01a3e35c6a1
+Description: Linux Standard Base 4.0 core support package
+Multi-Arch: foreign
+Homepage: http://www.linux-foundation.org/en/LSB
+Description-md5: 3ca85d7714bd123784221df40d1fd818
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Phased-Update-Percentage: 10
+
+Package: lsb-cxx
+Priority: extra
+Section: misc
+Installed-Size: 44
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chris Lawrence <lawrencc@debian.org>
+Architecture: powerpc
+Source: lsb
+Version: 4.0-0ubuntu27.1
+Provides: lsb-cxx-noarch, lsb-cxx-ppc32
+Depends: lsb-core, libstdc++6
+Filename: pool/main/l/lsb/lsb-cxx_4.0-0ubuntu27.1_powerpc.deb
+Size: 2630
+MD5sum: ec3d296560c75f0d5d796b34432ca626
+SHA1: 443ea5830f21d75465f4001aca7a264f9195a3be
+SHA256: 47ba95597fdd1ffbf131abffa750a472b2d543e1969d6940240231aa55e08db4
+Description: Linux Standard Base 4.0 C++ support package
+Homepage: http://www.linux-foundation.org/en/LSB
+Description-md5: 82f53bf509a8b6ae930a1e2003dc28c8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Phased-Update-Percentage: 10
+
+Package: lsb-desktop
+Priority: extra
+Section: misc
+Installed-Size: 45
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chris Lawrence <lawrencc@debian.org>
+Architecture: powerpc
+Source: lsb
+Version: 4.0-0ubuntu27.1
+Provides: lsb-desktop-noarch, lsb-desktop-ppc32, lsb-qt4, lsb-qt4-noarch, lsb-qt4-ppc32
+Depends: lsb-graphics, fontconfig (>= 2.3.0), libfontconfig1 (>= 2.3.0), libpng12-0, libjpeg62, libglib2.0-0 (>= 2.8), libatk1.0-0 (>= 1.9.0), libpango1.0-0 (>= 1.8.0), libgtk2.0-0 (>= 2.8), libcairo2, libqt4-gui (>= 4.3), libxml2, libfreetype6, libxrender1, libxtst6, libxft2, xdg-utils, libnss3-1d, libqt4-sql-sqlite
+Filename: pool/main/l/lsb/lsb-desktop_4.0-0ubuntu27.1_powerpc.deb
+Size: 3372
+MD5sum: 7100307cefd9b124d7defaaa20a535b0
+SHA1: a0f4a22a4936297e390200f40ee9f01c71e1a213
+SHA256: 1e5b990c22bbcc768264d94ceaaa588022ec93f6457d4878c69874992793d56c
+Description: Linux Standard Base 4.0 Desktop support package
+Homepage: http://www.linux-foundation.org/en/LSB
+Description-md5: 4b54b2698c6bfebbe42c3f200775e013
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Phased-Update-Percentage: 10
+
+Package: lsb-graphics
+Priority: extra
+Section: misc
+Installed-Size: 44
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chris Lawrence <lawrencc@debian.org>
+Architecture: powerpc
+Source: lsb
+Version: 4.0-0ubuntu27.1
+Provides: lsb-graphics-noarch, lsb-graphics-ppc32
+Depends: lsb-core, libgl1-mesa-glx | libgl1, libglu1-mesa | libglu1, libx11-6 | xlibs
+Conflicts: libutahglx1
+Filename: pool/main/l/lsb/lsb-graphics_4.0-0ubuntu27.1_powerpc.deb
+Size: 2670
+MD5sum: 83e1b772913b05df84f574aac365144f
+SHA1: 4000d8d61662c03780df38cf75de9aeaa93e527e
+SHA256: 9eb1feadc3dae4fa013bb894ace9aa0a380035b07b1863bd57051e45ac44da89
+Description: Linux Standard Base 4.0 graphics support package
+Homepage: http://www.linux-foundation.org/en/LSB
+Description-md5: 57ea8dae5c44a20cf88c729cb78684ad
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Phased-Update-Percentage: 10
+
+Package: lsb-invalid-mta
+Priority: extra
+Section: misc
+Installed-Size: 49
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chris Lawrence <lawrencc@debian.org>
+Architecture: all
+Source: lsb
+Version: 4.0-0ubuntu27.1
+Provides: mail-transport-agent
+Suggests: lsb
+Conflicts: mail-transport-agent
+Filename: pool/main/l/lsb/lsb-invalid-mta_4.0-0ubuntu27.1_all.deb
+Size: 4548
+MD5sum: 1fd180f04d4e6de4ce410cbb5b5b759b
+SHA1: dbcbb95658bb65f75d4386e01481252daf32e015
+SHA256: e033c60e125937258f2c1aba8ed154c9d825eb803666547862fba86d66f86881
+Description: Linux Standard Base sendmail dummy
+Homepage: http://www.linux-foundation.org/en/LSB
+Description-md5: 0762ff4b414a40b4c2d1f9a1daf89fc3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Phased-Update-Percentage: 10
+
+Package: lsb-printing
+Priority: extra
+Section: misc
+Installed-Size: 44
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chris Lawrence <lawrencc@debian.org>
+Architecture: powerpc
+Source: lsb
+Version: 4.0-0ubuntu27.1
+Provides: lsb-printing-noarch, lsb-printing-ppc32
+Depends: lsb-core (>= 4.0), libcups2, libcupsimage2, foomatic-filters, ghostscript, ghostscript-cups
+Filename: pool/main/l/lsb/lsb-printing_4.0-0ubuntu27.1_powerpc.deb
+Size: 2662
+MD5sum: d28eb1d60145160f8709276ac802daaa
+SHA1: 1c1cfac6d895fa6aec04ae36ecf14bbfd81137f1
+SHA256: d111ef55861afb44d99ca7d1777091df6f99d0ed278c925224e8b63d95a482cf
+Description: Linux Standard Base 4.0 Printing package
+Homepage: http://www.linux-foundation.org/en/LSB
+Description-md5: ef04508d838d4c8a298f72355efbf92b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Phased-Update-Percentage: 10
+
+Package: lsb-release
+Priority: important
+Section: misc
+Installed-Size: 113
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chris Lawrence <lawrencc@debian.org>
+Architecture: all
+Source: lsb
+Version: 4.0-0ubuntu27.1
+Depends: python3 (>= 3.2.3-3~)
+Recommends: apt
+Suggests: lsb
+Filename: pool/main/l/lsb/lsb-release_4.0-0ubuntu27.1_all.deb
+Size: 10888
+MD5sum: 70bbf419434400daac49ac134bdc501f
+SHA1: 5c03304452ef33b88558240c93d827abb67e71a0
+SHA256: ea81b7a77545f9daf552f5f56e0926f1ccb75c88eb11cc8f7d1d3d0a747500a1
+Description: Linux Standard Base version reporting utility
+Multi-Arch: foreign
+Homepage: http://www.linux-foundation.org/en/LSB
+Description-md5: 65ec3e346c054b77b914b6a1d4e5fb15
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Phased-Update-Percentage: 10
+Task: minimal
+
 Package: maas
 Priority: optional
 Section: net
