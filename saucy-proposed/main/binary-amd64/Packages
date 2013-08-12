@@ -1,21 +1,3 @@
-Package: apparmor-easyprof-ubuntu
-Priority: optional
-Section: admin
-Installed-Size: 70
-Maintainer: Jamie Strandboge <jamie@ubuntu.com>
-Architecture: all
-Version: 1.0.14
-Filename: pool/main/a/apparmor-easyprof-ubuntu/apparmor-easyprof-ubuntu_1.0.14_all.deb
-Size: 7960
-MD5sum: 38060d41325aed3633d7867112520001
-SHA1: d31e049d46008f243932e1c01b71da7f5482e810
-SHA256: 85b52ef0081933b2b60d1e17e4d291e9bc49911361e2ec3af0eeb0197ab41947
-Description: AppArmor easyprof templates for Ubuntu
-Description-md5: 7e6a2e2f170348400aa571f1e2095040
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: bzr
 Priority: optional
 Section: devel
@@ -3782,6 +3764,126 @@ SHA256: 990e2ec4ad836f658645658c81ff23486387384c2cea832f7539895c4f0cdedb
 Description: Examples for applications of SWIG
 Homepage: http://www.swig.org/
 Description-md5: 3ab5c9257106ba955b283c3165f0b8c9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: transmission-cli
+Priority: optional
+Section: net
+Installed-Size: 2469
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Leo Costela <costela@debian.org>
+Architecture: amd64
+Source: transmission
+Version: 2.82-0ubuntu1
+Replaces: transmission-daemon (<< 1.50-1)
+Depends: libc6 (>= 2.14), libcurl3-gnutls (>= 7.18.0), libevent-2.0-5 (>= 2.0.10-stable), libminiupnpc8 (>= 1.6), libnatpmp1 (>= 20101211), libssl1.0.0 (>= 1.0.0), zlib1g (>= 1:1.1.4), transmission-common (= 2.82-0ubuntu1)
+Suggests: transmission-daemon (= 2.82-0ubuntu1), transmission-gtk (= 2.82-0ubuntu1)
+Breaks: transmission-daemon (<< 1.50-1)
+Filename: pool/main/t/transmission/transmission-cli_2.82-0ubuntu1_amd64.deb
+Size: 1193856
+MD5sum: af3468a7db7a5886b51ed11ec0041e6d
+SHA1: ff1b2a86b32436f7d81dc972c4b59c4f09afb5e0
+SHA256: f52c336912026fb0af8f38c1775deac09d0312c7247c7ba58f11f2a38047fb2b
+Description: lightweight BitTorrent client (command line programs)
+Homepage: http://www.transmissionbt.com/
+Description-md5: 2bb621d0d95ecd3582f524eb28dbf71e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: transmission-daemon
+Priority: optional
+Section: net
+Installed-Size: 588
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Leo Costela <costela@debian.org>
+Architecture: amd64
+Source: transmission
+Version: 2.82-0ubuntu1
+Replaces: transmission-cli (<< 1.40-1)
+Depends: libc6 (>= 2.15), libcurl3-gnutls (>= 7.18.0), libevent-2.0-5 (>= 2.0.10-stable), libminiupnpc8 (>= 1.6), libnatpmp1 (>= 20101211), libssl1.0.0 (>= 1.0.0), zlib1g (>= 1:1.1.4), transmission-common (= 2.82-0ubuntu1), lsb-base (>= 3.0), init-system-helpers (>= 1.5), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
+Pre-Depends: adduser
+Recommends: transmission-cli (>= 1.50-1)
+Breaks: transmission-cli (<< 1.40-1)
+Filename: pool/main/t/transmission/transmission-daemon_2.82-0ubuntu1_amd64.deb
+Size: 243916
+MD5sum: 028b9422c70e92b9f435ba396614d1b8
+SHA1: 971eefb53ec32d6fe28714f6fc6751a58334b3f1
+SHA256: 315f06ad974292ae5bd6b924e9bfc710785f97cbbb4b7cd023cfb531b3636ff1
+Description: lightweight BitTorrent client (daemon)
+Homepage: http://www.transmissionbt.com/
+Description-md5: c5796eb91f75285b9af0fb5f16136e5d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: transmission-dbg
+Priority: extra
+Section: debug
+Installed-Size: 37513
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Leo Costela <costela@debian.org>
+Architecture: amd64
+Source: transmission
+Version: 2.82-0ubuntu1
+Depends: transmission-cli, transmission-gtk, transmission-qt, transmission-daemon, transmission-common
+Filename: pool/main/t/transmission/transmission-dbg_2.82-0ubuntu1_amd64.deb
+Size: 13801812
+MD5sum: 58201b9859f49d75540256e35797e47e
+SHA1: 30b51dc9df9c0dd448043b5c8c745ff68f1b6cfe
+SHA256: 8d030af94f394a6f2d2ed2b423d3eba79c17f7dd9aa3962b6e673f30748f0fee
+Description: lightweight BitTorrent client (debug symbols)
+Homepage: http://www.transmissionbt.com/
+Description-md5: b093bc257efd8163683cc280c88fb97d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: transmission-gtk
+Priority: optional
+Section: net
+Installed-Size: 916
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Leo Costela <costela@debian.org>
+Architecture: amd64
+Source: transmission
+Version: 2.82-0ubuntu1
+Depends: libappindicator3-1 (>= 0.4.90), libc6 (>= 2.14), libcurl3-gnutls (>= 7.18.0), libevent-2.0-5 (>= 2.0.10-stable), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.3.16), libminiupnpc8 (>= 1.6), libnatpmp1 (>= 20101211), libpango-1.0-0 (>= 1.14.0), libssl1.0.0 (>= 1.0.0), zlib1g (>= 1:1.1.4), transmission-common (= 2.82-0ubuntu1), gconf2 (>= 2.28.1-2)
+Recommends: xdg-utils
+Filename: pool/main/t/transmission/transmission-gtk_2.82-0ubuntu1_amd64.deb
+Size: 367758
+MD5sum: c0657afdb3e649790092ce639058d43c
+SHA1: 222f2b253be42437f939d74e208b6590b973e038
+SHA256: 8fabd504ae4ca71eb696ca810c212ed94604f039754cbc5ce108b7770fe9d3fc
+Description: lightweight BitTorrent client (GTK interface)
+Homepage: http://www.transmissionbt.com/
+Description-md5: 52423a3999c0f65dec056093ec8c8539
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: transmission-qt
+Priority: optional
+Section: net
+Installed-Size: 1888
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Leo Costela <costela@debian.org>
+Architecture: amd64
+Source: transmission
+Version: 2.82-0ubuntu1
+Depends: libc6 (>= 2.14), libcurl3-gnutls (>= 7.18.0), libevent-2.0-5 (>= 2.0.10-stable), libgcc1 (>= 1:4.1.1), libminiupnpc8 (>= 1.6), libnatpmp1 (>= 20101211), libqt5core5 (>= 5.0.2), libqt5dbus5 (>= 5.0.2), libqt5gui5 (>= 5.0.2), libqt5network5 (>= 5.0.2), libqt5widgets5 (>= 5.0.2), libssl1.0.0 (>= 1.0.0), libstdc++6 (>= 4.4.0), zlib1g (>= 1:1.1.4), transmission-common (= 2.82-0ubuntu1)
+Recommends: xdg-utils
+Filename: pool/main/t/transmission/transmission-qt_2.82-0ubuntu1_amd64.deb
+Size: 773832
+MD5sum: ec64b9405db72d4ee0d6c733ea6bf4b1
+SHA1: 271a4bba30a16fb0bffaf014c0e54a5cc79f60a5
+SHA256: 55b55c025cbc599086d511137caf80c584ff36f8df3fbe1eac31bb18b04a6469
+Description: lightweight BitTorrent client (Qt interface)
+Homepage: http://www.transmissionbt.com/
+Description-md5: 55875b4734dfba52b8c3483949c1215e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
