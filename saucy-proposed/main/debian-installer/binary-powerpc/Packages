@@ -23,3 +23,44 @@ Description: GLib library of C routines - minimal runtime
  This package contains the minimal runtime library needed by the Debian
  installer.
 
+Package: libparted0-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 388
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: parted
+Version: 2.3-14
+Depends: libblkid1-udeb (>= 2.16), libc6-udeb (>= 2.17), libdevmapper1.02.1-udeb (>= 2:1.02.77), libuuid1-udeb (>= 2.16)
+Filename: pool/main/p/parted/libparted0-udeb_2.3-14_powerpc.udeb
+Size: 131668
+MD5sum: c196c2337e969e6bcdd6a7ffb2648bab
+SHA1: ba94ded74790ac453fb8381227c40e3bf2057bad
+SHA256: 533cf0a1203cbc89cf7ae68ce01dfbdbb9bab34c5a6014ac28dbf2226f80c865
+Description: disk partition manipulator - library udeb
+ GNU Parted is a program that allows you to create, destroy, resize,
+ move, and copy disk partitions. This is useful for creating space
+ for new operating systems, reorganizing disk usage, and copying data
+ to new hard disks.
+ .
+ This is a cut-down library package for use in debian-installer.
+
+Package: parted-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 79
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: parted
+Version: 2.3-14
+Depends: libc6-udeb (>= 2.17), libparted0-udeb (>= 2.2-1)
+Filename: pool/main/p/parted/parted-udeb_2.3-14_powerpc.udeb
+Size: 24702
+MD5sum: a007a3c9f77cc436e6ca9d99fd5dad7a
+SHA1: 9b880d79802130f547ed0baef016d1a8b000b85e
+SHA256: dff9d9eae61095a6c5a3712e07cd00526e762fdad5d53088a5d9843ec7b4c959
+Description: Manually partition a hard drive (parted)
+Installer-Menu-Item: 99999
+
