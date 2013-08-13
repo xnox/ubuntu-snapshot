@@ -45,6 +45,56 @@ Description-md5: 6948801c3d791b1c318acb50a89989c6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: cups-browsed
+Priority: optional
+Section: net
+Installed-Size: 124
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups-filters
+Version: 1.0.36-0ubuntu1
+Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libavahi-glib1 (>= 0.6.16), libc6 (>= 2.4), libcups2 (>= 1.6.0), libglib2.0-0 (>= 2.14.0), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), avahi-daemon
+Filename: pool/main/c/cups-filters/cups-browsed_1.0.36-0ubuntu1_armhf.deb
+Size: 42518
+MD5sum: 18d0a23099327a0d58a95cd09c80200f
+SHA1: 313d946aa604521ce9c86f5e7d21852e3f940e5f
+SHA256: 18520dc904465f5421a6ceeda6112a2610bc7adb984660002aff16a0268c9dbc
+Description: OpenPrinting CUPS Filters - cups-browsed
+Enhances: cups
+Homepage: http://www.openprinting.org/
+Description-md5: 6841b0cfd74741276406b0948b8f9867
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: cups-filters
+Priority: optional
+Section: net
+Installed-Size: 789
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Version: 1.0.36-0ubuntu1
+Replaces: cups (<< 1.5.0-16), cups-common (<< 1.5.0-16), ghostscript-cups
+Provides: ghostscript-cups
+Depends: libc6 (>= 2.15), libcups2 (>= 1.4.0), libcupsfilters1 (>= 1.0~b1), libcupsimage2 (>= 1.4.0), libfontconfig1 (>= 2.9.0), libfontembed1 (>= 1.0.31), libgcc1 (>= 1:4.4.0), libijs-0.35 (>= 0.35), liblcms2-2 (>= 2.2+git20110628), libpoppler43 (>= 0.24.0), libqpdf10 (>> 4.2.0~), libstdc++6 (>= 4.4.0), bc, ghostscript (>= 9.02~), fonts-freefont-ttf | fonts-liberation | ttf-dejavu
+Recommends: colord, foomatic-filters (>= 4.0), ghostscript-cups (>= 9.02~)
+Suggests: foomatic-db-compressed-ppds | foomatic-db
+Conflicts: ghostscript-cups
+Breaks: cups (<< 1.5.0-16), cups-common (<< 1.5.0-16), ghostscript-cups (<< 9.02~)
+Filename: pool/main/c/cups-filters/cups-filters_1.0.36-0ubuntu1_armhf.deb
+Size: 312512
+MD5sum: b5e058cd72d3f57980b11b7f7f4103ed
+SHA1: cc0659913d7427aec1b3d52fcf8656d38012e4d1
+SHA256: 4078b3077e3df019d9521abb44cfba9d81fb89acd2bdb7346efb7d774d30e243
+Description: OpenPrinting CUPS Filters
+Homepage: http://www.openprinting.org/
+Description-md5: 9de806ff7f92c0d1b5ade85f00716d2d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: debian-installer
 Priority: optional
 Section: devel
@@ -432,6 +482,51 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-active, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
 
+Package: libcupsfilters-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 209
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups-filters
+Version: 1.0.36-0ubuntu1
+Depends: libcupsfilters1 (= 1.0.36-0ubuntu1)
+Filename: pool/main/c/cups-filters/libcupsfilters-dev_1.0.36-0ubuntu1_armhf.deb
+Size: 58114
+MD5sum: 742a17a2553a4a77be1cbaea66cb0711
+SHA1: 8787228813b68c55797bf6da93bb3d29f2d73ef8
+SHA256: ba92c8d6f5b2ed417e319f0d7d68bfd98f2142453d474afdfa44fe3936f84552
+Description: OpenPrinting CUPS Filters - Development files for the library
+Homepage: http://www.openprinting.org/
+Description-md5: b9e86d6395fb70bb943d64a4a7cfaa29
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcupsfilters1
+Priority: optional
+Section: libs
+Installed-Size: 145
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups-filters
+Version: 1.0.36-0ubuntu1
+Depends: libc6 (>= 2.7), libcups2 (>= 1.4.0), libjpeg8 (>= 8c), libpng12-0 (>= 1.2.13-4), libtiff5 (>> 4.0.0-1~)
+Pre-Depends: multiarch-support
+Filename: pool/main/c/cups-filters/libcupsfilters1_1.0.36-0ubuntu1_armhf.deb
+Size: 69556
+MD5sum: e4cf457e7e4a0ce40695b9089bb7b3b7
+SHA1: b4a06d4a0a11321a67510291694ac3a9f2f07420
+SHA256: b367f01567f2ec5c81020b887faae03c857e4c952e7f613d4d11bb1b36201904
+Description: OpenPrinting CUPS Filters - Shared library
+Multi-Arch: same
+Homepage: http://www.openprinting.org/
+Description-md5: b891bc072c10210e109ee7d9699a32a3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: libdbi-perl
 Priority: optional
 Section: perl
@@ -455,6 +550,51 @@ Description-md5: aa070f52bfbf0d9e220aa40da4b4ced1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libfontembed-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 150
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups-filters
+Version: 1.0.36-0ubuntu1
+Depends: libfontembed1 (= 1.0.36-0ubuntu1)
+Filename: pool/main/c/cups-filters/libfontembed-dev_1.0.36-0ubuntu1_armhf.deb
+Size: 32792
+MD5sum: 486203f673a1ed235df2b8b38eb107cb
+SHA1: b9f97dd87e141efc035de376598c3e458146af13
+SHA256: 7a09c6708fbf7ed3fc4e75baf9e3d2e7f4bf4a04cae50e904b50051af664f5dd
+Description: OpenPrinting CUPS Filters - Development files for font embed library
+Homepage: http://www.openprinting.org/
+Description-md5: c4c7345ca8b55eb3517e71b0b8ae9ac4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libfontembed1
+Priority: optional
+Section: libs
+Installed-Size: 108
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups-filters
+Version: 1.0.36-0ubuntu1
+Depends: libc6 (>= 2.7)
+Pre-Depends: multiarch-support
+Filename: pool/main/c/cups-filters/libfontembed1_1.0.36-0ubuntu1_armhf.deb
+Size: 46340
+MD5sum: 6c945edf2aab4124d17720aa326886e4
+SHA1: 018bef46e2badfa6b60686fd3e8eaf91f161860c
+SHA256: f73d9176ffe26d17caf8fff525a533f72542be90ee0ae97a331dcda165090dc2
+Description: OpenPrinting CUPS Filters - Font Embed Shared library
+Multi-Arch: same
+Homepage: http://www.openprinting.org/
+Description-md5: 8224b9ef51388c11e00f94a6367092f3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libgcrypt11
 Priority: standard
