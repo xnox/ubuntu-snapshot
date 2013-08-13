@@ -171,6 +171,90 @@ Description-md5: bd82b4e0688ff1a5c7879b1f834a361b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: bogofilter
+Priority: optional
+Section: universe/mail
+Installed-Size: 21
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Serafeim Zanikolas <sez@debian.org>
+Architecture: all
+Version: 1.2.4+dfsg1-2
+Depends: bogofilter-common, bogofilter-bdb | bogofilter-db
+Filename: pool/universe/b/bogofilter/bogofilter_1.2.4+dfsg1-2_all.deb
+Size: 1002
+MD5sum: 1405bcf170853d02fcac81c61c6faffc
+SHA1: bed1c33760dbee52b9808ffb886784b82d9795db
+SHA256: 172375cdf68759b8c4070477f224b4b4e97803df5e9aac8c7b9c799a46af0265
+Description: fast Bayesian spam filter (dummy package)
+Description-md5: 968ec277af1658df73a6620e1ea6c7f7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: bogofilter-bdb
+Priority: optional
+Section: universe/mail
+Installed-Size: 675
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Serafeim Zanikolas <sez@debian.org>
+Architecture: amd64
+Source: bogofilter
+Version: 1.2.4+dfsg1-2
+Replaces: bogofilter (<< 0.94.14-1)
+Provides: bogofilter-db
+Depends: libc6 (>= 2.14), libdb5.1, libgsl0ldbl (>= 1.9), bogofilter-common
+Suggests: db5.1-util
+Filename: pool/universe/b/bogofilter/bogofilter-bdb_1.2.4+dfsg1-2_amd64.deb
+Size: 281922
+MD5sum: 9342cfd3f0c7ac7aee915c3a4d95d4af
+SHA1: e63783d8191094c89ab9e352b6360d93e5bed50b
+SHA256: 81dd4bc570de0ea39928b15e0808ccf8dcf3194f39a4ea187a54bc27d59d1af8
+Description: fast Bayesian spam filter (Berkeley DB)
+Description-md5: e83a0090bafdc792b6c35c6bc88649e4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: bogofilter-common
+Priority: optional
+Section: universe/mail
+Installed-Size: 613
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Serafeim Zanikolas <sez@debian.org>
+Architecture: all
+Source: bogofilter
+Version: 1.2.4+dfsg1-2
+Replaces: bogofilter (<< 0.94.14-1)
+Suggests: doc-base
+Filename: pool/universe/b/bogofilter/bogofilter-common_1.2.4+dfsg1-2_all.deb
+Size: 215124
+MD5sum: b617b206acd62080760226ef4eb3cf28
+SHA1: 52f2e8d2ff6e594544349e8403af63944e0eb529
+SHA256: bc248769266ce4290f67d62ac8205d3dd17694ea57e88d63bfe6483425e218c8
+Description: fast Bayesian spam filter (common files)
+Description-md5: 2e806a17661e5d96bbb0a0121098a1e3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: bogofilter-sqlite
+Priority: optional
+Section: universe/mail
+Installed-Size: 607
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Serafeim Zanikolas <sez@debian.org>
+Architecture: amd64
+Source: bogofilter
+Version: 1.2.4+dfsg1-2
+Provides: bogofilter-db
+Depends: libc6 (>= 2.14), libgsl0ldbl (>= 1.9), libsqlite3-0 (>= 3.5.9), bogofilter-common
+Filename: pool/universe/b/bogofilter/bogofilter-sqlite_1.2.4+dfsg1-2_amd64.deb
+Size: 241998
+MD5sum: 3c267fc4f93766bd22abacd5f3f2a50d
+SHA1: 1a046005b35238fbb4b01a2b7071a65947d1ff2c
+SHA256: f46289de159f377b5ca0d1e94716f0916ed6fe550678756ee049d40cd873572c
+Description: fast Bayesian spam filter (sqlite)
+Description-md5: 6eb04a1cda23db8196381fcabb2bc183
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: cdo
 Priority: optional
 Section: universe/utils
@@ -6289,23 +6373,23 @@ Origin: Ubuntu
 Package: libghc-yesod-test-dev
 Priority: extra
 Section: universe/haskell
-Installed-Size: 1333
+Installed-Size: 1348
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Source: haskell-yesod-test
-Version: 0.3.5-2build2
-Provides: libghc-yesod-test-dev-0.3.5-012c8
-Depends: libc6 (>= 2.15), libghc-hunit-dev-1.2.5.2-6e02e, libghc-attoparsec-dev-0.10.4.0-d9fd9, libghc-base-dev-4.6.0.1-8aa5d, libghc-blaze-builder-dev-0.3.1.0-6603d, libghc-blaze-html-dev-0.6.1.1-9c6e5, libghc-blaze-markup-dev-0.5.1.5-f13d0, libghc-bytestring-dev-0.10.0.2-4f932, libghc-case-insensitive-dev-1.0.0.1-833d4, libghc-containers-dev-0.5.0.0-ab1da, libghc-cookie-dev-0.4.0.1-4760d, libghc-hspec-dev-1.4.4-2a12f, libghc-html-conduit-dev-1.1.0-8a009, libghc-http-types-dev-0.8.0-cb364, libghc-monad-control-dev-0.3.1.4-82c4d, libghc-network-dev-2.4.1.2-040ce, libghc-persistent-dev-1.2.2.0-ced49, libghc-pool-conduit-dev-0.1.2-234c4, libghc-text-dev-0.11.3.1-e3885, libghc-time-dev-1.4.0.1-10dc4, libghc-transformers-dev-0.3.0.0-ff2bb, libghc-wai-dev-1.4.0-09ba4, libghc-wai-test-dev-1.3.0.5-4abd2, libghc-xml-conduit-dev-1.1.0.3-fcc6c, libghc-xml-types-dev-0.3.3-64063
+Version: 1.2.0-2
+Provides: libghc-yesod-test-dev-1.2.0-19721
+Depends: libc6 (>= 2.15), libghc-hunit-dev-1.2.5.2-6e02e, libghc-attoparsec-dev-0.10.4.0-d9fd9, libghc-base-dev-4.6.0.1-8aa5d, libghc-blaze-builder-dev-0.3.1.0-6603d, libghc-blaze-html-dev-0.6.1.1-9c6e5, libghc-blaze-markup-dev-0.5.1.5-f13d0, libghc-bytestring-dev-0.10.0.2-4f932, libghc-case-insensitive-dev-1.0.0.1-833d4, libghc-containers-dev-0.5.0.0-ab1da, libghc-cookie-dev-0.4.0.1-4760d, libghc-hspec-dev-1.4.4-2a12f, libghc-html-conduit-dev-1.1.0-8a009, libghc-http-types-dev-0.8.0-cb364, libghc-monad-control-dev-0.3.1.4-82c4d, libghc-network-dev-2.4.1.2-040ce, libghc-persistent-dev-1.2.2.0-ced49, libghc-pool-conduit-dev-0.1.2-234c4, libghc-text-dev-0.11.3.1-e3885, libghc-time-dev-1.4.0.1-10dc4, libghc-transformers-dev-0.3.0.0-ff2bb, libghc-wai-dev-1.4.0-09ba4, libghc-wai-test-dev-1.3.0.5-4abd2, libghc-xml-conduit-dev-1.1.0.3-fcc6c, libghc-xml-types-dev-0.3.3-64063, libghc-yesod-core-dev-1.2.3-ab2b4
 Suggests: libghc-yesod-test-doc, libghc-yesod-test-prof
-Filename: pool/universe/h/haskell-yesod-test/libghc-yesod-test-dev_0.3.5-2build2_amd64.deb
-Size: 232400
-MD5sum: 82d7f1be828e6ac197f5c486db481c85
-SHA1: 8152b085c4e7dd9881242333cc83c2d1f4b9abc4
-SHA256: 8902a7b3ff6fd824e1131373b725586fc7f5c3c409e46bb76e6651a620ec16dd
+Filename: pool/universe/h/haskell-yesod-test/libghc-yesod-test-dev_1.2.0-2_amd64.deb
+Size: 231128
+MD5sum: e71231581828749804a119b0289f3911
+SHA1: bae6108a13addbe7f432e54361eae10a448b4ed7
+SHA256: d012a0161e519efe4df83fe1fa1ff7ed6eb7cdff4d78d2a6167e3978a4cc53f8
 Description: integration testing for WAI/Yesod applications
 Homepage: http://hackage.haskell.org/package/yesod-test
-Ghc-Package: yesod-test-0.3.5-012c8aa93f1ac28d2057dbd156a46901
+Ghc-Package: yesod-test-1.2.0-197214d77e09b91e9025a347659eb5b5
 Description-md5: 7e7f4a4f5a20c321a1064d2dc8a24638
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
@@ -6313,19 +6397,19 @@ Origin: Ubuntu
 Package: libghc-yesod-test-doc
 Priority: extra
 Section: universe/doc
-Installed-Size: 332
+Installed-Size: 339
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
 Architecture: all
 Source: haskell-yesod-test
-Version: 0.3.5-2build2
+Version: 1.2.0-2
 Depends: haddock-interface-22
-Recommends: ghc-doc, libghc-case-insensitive-doc, libghc-http-types-doc, libghc-monad-control-doc, libghc-pool-conduit-doc, libghc-text-doc, libghc-transformers-doc, libghc-wai-doc, libghc-wai-test-doc, libghc-xml-conduit-doc, libghc-yesod-test-dev
-Filename: pool/universe/h/haskell-yesod-test/libghc-yesod-test-doc_0.3.5-2build2_all.deb
-Size: 43886
-MD5sum: afb200a59ead7c434de4765d669f37de
-SHA1: 0daec6bce4ae42cfce30e54576f8bf4876c1dc1f
-SHA256: c03330512167556bfd753725a8ebdf3e79fa0fca05111e5f650e05941fa2a245
+Recommends: ghc-doc, libghc-case-insensitive-doc, libghc-hspec-doc, libghc-http-types-doc, libghc-text-doc, libghc-transformers-doc, libghc-wai-doc, libghc-wai-test-doc, libghc-xml-conduit-doc, libghc-yesod-core-doc, libghc-yesod-test-dev
+Filename: pool/universe/h/haskell-yesod-test/libghc-yesod-test-doc_1.2.0-2_all.deb
+Size: 43570
+MD5sum: 551e5716e46e5c48a045e11b20bf8827
+SHA1: 4f67cf83f76045df333fbcd17ded7c8681c5cde9
+SHA256: f2f972d430cff5a4569bef282e42340a645c44f5fd66790b309d19163bdb94cc
 Description: integration testing for WAI/Yesod applications; documentation
 Homepage: http://hackage.haskell.org/package/yesod-test
 Description-md5: 759b19a853f6eef1ccba29e9c4daa483
@@ -6335,19 +6419,19 @@ Origin: Ubuntu
 Package: libghc-yesod-test-prof
 Priority: extra
 Section: universe/haskell
-Installed-Size: 1263
+Installed-Size: 1295
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
 Architecture: amd64
 Source: haskell-yesod-test
-Version: 0.3.5-2build2
-Provides: libghc-yesod-test-prof-0.3.5-012c8
-Depends: libghc-yesod-test-dev (= 0.3.5-2build2), libghc-hunit-prof-1.2.5.2-6e02e, libghc-attoparsec-prof-0.10.4.0-d9fd9, libghc-base-prof-4.6.0.1-8aa5d, libghc-blaze-builder-prof-0.3.1.0-6603d, libghc-blaze-html-prof-0.6.1.1-9c6e5, libghc-blaze-markup-prof-0.5.1.5-f13d0, libghc-bytestring-prof-0.10.0.2-4f932, libghc-case-insensitive-prof-1.0.0.1-833d4, libghc-containers-prof-0.5.0.0-ab1da, libghc-cookie-prof-0.4.0.1-4760d, libghc-hspec-prof-1.4.4-2a12f, libghc-html-conduit-prof-1.1.0-8a009, libghc-http-types-prof-0.8.0-cb364, libghc-monad-control-prof-0.3.1.4-82c4d, libghc-network-prof-2.4.1.2-040ce, libghc-persistent-prof-1.2.2.0-ced49, libghc-pool-conduit-prof-0.1.2-234c4, libghc-text-prof-0.11.3.1-e3885, libghc-time-prof-1.4.0.1-10dc4, libghc-transformers-prof-0.3.0.0-ff2bb, libghc-wai-prof-1.4.0-09ba4, libghc-wai-test-prof-1.3.0.5-4abd2, libghc-xml-conduit-prof-1.1.0.3-fcc6c, libghc-xml-types-prof-0.3.3-64063
-Filename: pool/universe/h/haskell-yesod-test/libghc-yesod-test-prof_0.3.5-2build2_amd64.deb
-Size: 210660
-MD5sum: eeef7f818736c450ccd61ae260b2f1a5
-SHA1: a701475c5bd009ccb5568c64e4ebc4a5e5e1a10b
-SHA256: 2ce914bdc18f58958b4514ec564949ccd7cb4f8bc28b7983ddfe582e89257ab8
+Version: 1.2.0-2
+Provides: libghc-yesod-test-prof-1.2.0-19721
+Depends: libghc-yesod-test-dev (= 1.2.0-2), libghc-hunit-prof-1.2.5.2-6e02e, libghc-attoparsec-prof-0.10.4.0-d9fd9, libghc-base-prof-4.6.0.1-8aa5d, libghc-blaze-builder-prof-0.3.1.0-6603d, libghc-blaze-html-prof-0.6.1.1-9c6e5, libghc-blaze-markup-prof-0.5.1.5-f13d0, libghc-bytestring-prof-0.10.0.2-4f932, libghc-case-insensitive-prof-1.0.0.1-833d4, libghc-containers-prof-0.5.0.0-ab1da, libghc-cookie-prof-0.4.0.1-4760d, libghc-hspec-prof-1.4.4-2a12f, libghc-html-conduit-prof-1.1.0-8a009, libghc-http-types-prof-0.8.0-cb364, libghc-monad-control-prof-0.3.1.4-82c4d, libghc-network-prof-2.4.1.2-040ce, libghc-persistent-prof-1.2.2.0-ced49, libghc-pool-conduit-prof-0.1.2-234c4, libghc-text-prof-0.11.3.1-e3885, libghc-time-prof-1.4.0.1-10dc4, libghc-transformers-prof-0.3.0.0-ff2bb, libghc-wai-prof-1.4.0-09ba4, libghc-wai-test-prof-1.3.0.5-4abd2, libghc-xml-conduit-prof-1.1.0.3-fcc6c, libghc-xml-types-prof-0.3.3-64063, libghc-yesod-core-prof-1.2.3-ab2b4
+Filename: pool/universe/h/haskell-yesod-test/libghc-yesod-test-prof_1.2.0-2_amd64.deb
+Size: 215392
+MD5sum: ccf5866b3f186779428cecde7050998a
+SHA1: e160b7b45410854bcab2058e4a7c22b12a34754e
+SHA256: 195736aea3e5845211ca6e4ca1c7e8cd93975821323b84db2b554833b7583b18
 Description: integration testing for WAI/Yesod applications; profiling libraries
 Homepage: http://hackage.haskell.org/package/yesod-test
 Description-md5: 9a165bcc6d02054ec0cb82e4c0bcfe8d

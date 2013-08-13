@@ -149,6 +149,90 @@ Description-md5: bd82b4e0688ff1a5c7879b1f834a361b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: bogofilter
+Priority: optional
+Section: universe/mail
+Installed-Size: 21
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Serafeim Zanikolas <sez@debian.org>
+Architecture: all
+Version: 1.2.4+dfsg1-2
+Depends: bogofilter-common, bogofilter-bdb | bogofilter-db
+Filename: pool/universe/b/bogofilter/bogofilter_1.2.4+dfsg1-2_all.deb
+Size: 1002
+MD5sum: 1405bcf170853d02fcac81c61c6faffc
+SHA1: bed1c33760dbee52b9808ffb886784b82d9795db
+SHA256: 172375cdf68759b8c4070477f224b4b4e97803df5e9aac8c7b9c799a46af0265
+Description: fast Bayesian spam filter (dummy package)
+Description-md5: 968ec277af1658df73a6620e1ea6c7f7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: bogofilter-bdb
+Priority: optional
+Section: universe/mail
+Installed-Size: 543
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Serafeim Zanikolas <sez@debian.org>
+Architecture: armhf
+Source: bogofilter
+Version: 1.2.4+dfsg1-2
+Replaces: bogofilter (<< 0.94.14-1)
+Provides: bogofilter-db
+Depends: libc6 (>= 2.4), libdb5.1, libgsl0ldbl (>= 1.9), bogofilter-common
+Suggests: db5.1-util
+Filename: pool/universe/b/bogofilter/bogofilter-bdb_1.2.4+dfsg1-2_armhf.deb
+Size: 243456
+MD5sum: b4ee884864948a45afd946d1cf0d7623
+SHA1: 7336741d9cc8b58dd89c2076cb7999d1f69bb5ec
+SHA256: fc626865a350048783dc1ab166958ab9c3da32e06c26f75ff48ed2227df38560
+Description: fast Bayesian spam filter (Berkeley DB)
+Description-md5: e83a0090bafdc792b6c35c6bc88649e4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: bogofilter-common
+Priority: optional
+Section: universe/mail
+Installed-Size: 613
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Serafeim Zanikolas <sez@debian.org>
+Architecture: all
+Source: bogofilter
+Version: 1.2.4+dfsg1-2
+Replaces: bogofilter (<< 0.94.14-1)
+Suggests: doc-base
+Filename: pool/universe/b/bogofilter/bogofilter-common_1.2.4+dfsg1-2_all.deb
+Size: 215124
+MD5sum: b617b206acd62080760226ef4eb3cf28
+SHA1: 52f2e8d2ff6e594544349e8403af63944e0eb529
+SHA256: bc248769266ce4290f67d62ac8205d3dd17694ea57e88d63bfe6483425e218c8
+Description: fast Bayesian spam filter (common files)
+Description-md5: 2e806a17661e5d96bbb0a0121098a1e3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: bogofilter-sqlite
+Priority: optional
+Section: universe/mail
+Installed-Size: 487
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Serafeim Zanikolas <sez@debian.org>
+Architecture: armhf
+Source: bogofilter
+Version: 1.2.4+dfsg1-2
+Provides: bogofilter-db
+Depends: libc6 (>= 2.4), libgsl0ldbl (>= 1.9), libsqlite3-0 (>= 3.5.9), bogofilter-common
+Filename: pool/universe/b/bogofilter/bogofilter-sqlite_1.2.4+dfsg1-2_armhf.deb
+Size: 205900
+MD5sum: 8f493b132f3eec2c0704f376a373e5e1
+SHA1: 2917abe1182fe8611f2d8749d60325062849c2ef
+SHA256: 99ed4bda11fe11931f5ba88268afd4bc230d54d3fafeb92d402307a07338737c
+Description: fast Bayesian spam filter (sqlite)
+Description-md5: 6eb04a1cda23db8196381fcabb2bc183
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: cdo
 Priority: optional
 Section: universe/utils
@@ -4066,19 +4150,19 @@ Origin: Ubuntu
 Package: libghc-yesod-test-doc
 Priority: extra
 Section: universe/doc
-Installed-Size: 332
+Installed-Size: 339
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
 Architecture: all
 Source: haskell-yesod-test
-Version: 0.3.5-2build2
+Version: 1.2.0-2
 Depends: haddock-interface-22
-Recommends: ghc-doc, libghc-case-insensitive-doc, libghc-http-types-doc, libghc-monad-control-doc, libghc-pool-conduit-doc, libghc-text-doc, libghc-transformers-doc, libghc-wai-doc, libghc-wai-test-doc, libghc-xml-conduit-doc, libghc-yesod-test-dev
-Filename: pool/universe/h/haskell-yesod-test/libghc-yesod-test-doc_0.3.5-2build2_all.deb
-Size: 43886
-MD5sum: afb200a59ead7c434de4765d669f37de
-SHA1: 0daec6bce4ae42cfce30e54576f8bf4876c1dc1f
-SHA256: c03330512167556bfd753725a8ebdf3e79fa0fca05111e5f650e05941fa2a245
+Recommends: ghc-doc, libghc-case-insensitive-doc, libghc-hspec-doc, libghc-http-types-doc, libghc-text-doc, libghc-transformers-doc, libghc-wai-doc, libghc-wai-test-doc, libghc-xml-conduit-doc, libghc-yesod-core-doc, libghc-yesod-test-dev
+Filename: pool/universe/h/haskell-yesod-test/libghc-yesod-test-doc_1.2.0-2_all.deb
+Size: 43570
+MD5sum: 551e5716e46e5c48a045e11b20bf8827
+SHA1: 4f67cf83f76045df333fbcd17ded7c8681c5cde9
+SHA256: f2f972d430cff5a4569bef282e42340a645c44f5fd66790b309d19163bdb94cc
 Description: integration testing for WAI/Yesod applications; documentation
 Homepage: http://hackage.haskell.org/package/yesod-test
 Description-md5: 759b19a853f6eef1ccba29e9c4daa483
