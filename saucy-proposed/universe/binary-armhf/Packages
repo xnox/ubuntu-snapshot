@@ -169,24 +169,6 @@ Description-md5: a3706a835a1fd31e6223c556a174dc28
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: click-apparmor
-Priority: optional
-Section: universe/admin
-Installed-Size: 60
-Maintainer: Steve Beattie <steve.beattie@canonical.com>
-Architecture: all
-Version: 0.1.1
-Depends: python3 (>= 3.3), apparmor-easyprof, click, python3-apparmor-click (= 0.1.1)
-Filename: pool/universe/c/click-apparmor/click-apparmor_0.1.1_all.deb
-Size: 3586
-MD5sum: b2c19ecfd03de83b34dd79bbcd6e22e0
-SHA1: 2f9c1cd3ccde842a7c65441f0e0fb2cd303e165f
-SHA256: dabe3e21989a09679620f41e8be2521183a04df388100459c185434976853280
-Description: Click manifest to AppArmor easyprof conversion tools
-Description-md5: 2f38f52265e23d1e53ff74e49c902daa
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: coquelicot
 Priority: optional
 Section: universe/web
@@ -4103,6 +4085,51 @@ Description-md5: 759b19a853f6eef1ccba29e9c4daa483
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libgl1-mesa-dri-experimental
+Priority: optional
+Section: universe/libs
+Installed-Size: 81
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: mesa
+Version: 9.1.6-2ubuntu1
+Depends: libgl1-mesa-dri (>= 7.11.1)
+Breaks: libgl1-mesa-glx (<< 7.11.1), libgl1-mesa-glx-no-multiarch, xserver-xorg-core (<< 2:1.10.2-2), xserver-xorg-core-no-multiarch
+Filename: pool/universe/m/mesa/libgl1-mesa-dri-experimental_9.1.6-2ubuntu1_armhf.deb
+Size: 6252
+MD5sum: a63818de41f2138935e41918789f5853
+SHA1: 6549ff17ee19f220a00ee1a67f5bff8da8bb7693
+SHA256: 93bc2eb17cba9ddbcf5495bd30efa39b216bab18a22063db2b5360254579e8af
+Description: free implementation of the OpenGL API -- Extra DRI modules
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: f8b3ece44551927dfcce4afcc27c1792
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgl1-mesa-dri-experimental-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 73
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: mesa
+Version: 9.1.6-2ubuntu1
+Depends: libgl1-mesa-dri-experimental (= 9.1.6-2ubuntu1)
+Filename: pool/universe/m/mesa/libgl1-mesa-dri-experimental-dbg_9.1.6-2ubuntu1_armhf.deb
+Size: 6034
+MD5sum: d123ec1b6772c7b740fe140eef98eeca
+SHA1: 2fbd92b91c4a38d9477521bcdb1dacc7e7f900de
+SHA256: f01bef652190aa03870c2c9a04fe66de0cafc38818dddab466fdba26e2a0be00
+Description: Debugging symbols for the experimental Mesa DRI modules
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 24f835b4e24097fb9c67cbdde6d6e9d2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libglib-object-introspection-perl
 Priority: optional
 Section: universe/perl
@@ -6600,6 +6627,48 @@ Description-md5: f84feef2a136febf4a7937f507d39926
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: pictor
+Priority: optional
+Section: universe/web
+Installed-Size: 112
+Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
+Architecture: all
+Version: 2.24-0ubuntu1
+Depends: debconf (>= 0.5) | debconf-2.0, apache2, libapache2-mod-php5, php5-imagick, famfamfam-silk
+Recommends: pictor-unload
+Filename: pool/universe/p/pictor/pictor_2.24-0ubuntu1_all.deb
+Size: 15704
+MD5sum: 68101359b875c7816187b92ae7b5a3b2
+SHA1: b07d2706f5643985c676c5635caa2d036e4e79e6
+SHA256: f4296248b2614f90273215bf1ce9f0d43f5c0ccae59b302af55b84a300312209
+Description: web application for browsing your pictures
+Homepage: http://launchpad.net/pictor
+Description-md5: 5e3668b8575065960615c37db449c530
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: pictor-unload
+Priority: optional
+Section: universe/web
+Installed-Size: 47
+Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
+Architecture: all
+Source: pictor
+Version: 2.24-0ubuntu1
+Replaces: pictor (<< 2.10)
+Depends: fdupes, libimage-exiftool-perl
+Breaks: pictor (<< 2.10)
+Filename: pool/universe/p/pictor/pictor-unload_2.24-0ubuntu1_all.deb
+Size: 6626
+MD5sum: d6f1476fbb37946e275e6bd299f9edeb
+SHA1: 95237b58131c5807a42330bb390ee20b33b9107f
+SHA256: 0a35a8e464fad52ad3e0f892813d594a667f9f3c59f9604efca1f837bbda22c5
+Description: tool for unloading and renaming pictures from flash media
+Homepage: http://launchpad.net/pictor
+Description-md5: 248ad4da6c61187be8e3d48507589505
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: postgis-doc
 Priority: optional
 Section: universe/doc
@@ -7008,25 +7077,6 @@ SHA256: 97368b960f4de64615a4034468dab5045c75f711b2b95d48b37200a7013bbdc9
 Description: alternative regular expression module (debug extension)
 Homepage: https://code.google.com/p/mrab-regex-hg/
 Description-md5: eef99ef9ce9ddfb760f116c5c3a374c1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: python3-apparmor-click
-Priority: optional
-Section: universe/admin
-Installed-Size: 64
-Maintainer: Steve Beattie <steve.beattie@canonical.com>
-Architecture: all
-Source: click-apparmor
-Version: 0.1.1
-Depends: python3 (>= 3.3), apparmor-easyprof, click
-Filename: pool/universe/c/click-apparmor/python3-apparmor-click_0.1.1_all.deb
-Size: 8206
-MD5sum: aa47d782473f01f8ef5fd990b044133a
-SHA1: a7e04d3bb66533c7d4c72f51546d9a57d846ab96
-SHA256: f22f5a786a3ca29c1e253a8933ca38e78e761b163bd4a932d3113b051f382110
-Description: Click manifest to AppArmor easyprof conversion tools
-Description-md5: 753c20b93f7c33ee3e7c64c06bf058bc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
