@@ -68,6 +68,68 @@ Checksums-Sha256:
  bf6b9780d1395a358465bb3677dca11998ca3aa9f3c91755e8224d5ed4ff0571 45457 bzr_2.6.0-1ubuntu1.debian.tar.gz
 Testsuite: autopkgtest
 
+Package: ceph
+Binary: ceph, ceph-dbg, ceph-mds, ceph-mds-dbg, ceph-fuse, ceph-fuse-dbg, rbd-fuse, rbd-fuse-dbg, ceph-common, ceph-common-dbg, ceph-fs-common, ceph-fs-common-dbg, ceph-resource-agents, librados2, librados2-dbg, librados-dev, librbd1, librbd1-dbg, librbd-dev, libcephfs1, libcephfs1-dbg, libcephfs-dev, radosgw, radosgw-dbg, rest-bench, rest-bench-dbg, ceph-test, ceph-test-dbg, python-ceph, libcephfs-java, libcephfs-jni, libcephfs-jni-dbg
+Version: 0.67-0ubuntu1
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Build-Depends: autoconf, automake, autotools-dev, debhelper (>= 8~), default-jdk, dpkg-dev (>= 1.16.1~), javahelper, junit4, libaio-dev, libatomic-ops-dev, libboost-dev (>= 1.42), libboost-program-options-dev (>= 1.42), libboost-system-dev (>= 1.42), libboost-thread-dev (>= 1.42), libcurl4-gnutls-dev, libedit-dev, libexpat1-dev, libfcgi-dev, libfuse-dev, libgoogle-perftools-dev, libkeyutils-dev, libleveldb-dev, libnss3-dev, libs3-dev, libsnappy-dev, libtool, libxml2-dev, pkg-config, python-all (>= 2.6.6-3~), uuid-dev
+Architecture: linux-any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/c/ceph
+Files:
+ dc8f65fbec8692ee921b8cf43af235d9 3822 ceph_0.67-0ubuntu1.dsc
+ 74da9d681dbcbbff7930f8c100dd4116 3305744 ceph_0.67.orig.tar.bz2
+ 21bf84e91bcf4902cda1b241d2161344 15119 ceph_0.67-0ubuntu1.debian.tar.gz
+Uploaders: Sage Weil <sage@newdream.net>
+Homepage: http://ceph.com/
+Vcs-Browser: https://github.com/ceph/ceph
+Vcs-Git: git://github.com/ceph/ceph.git
+Package-List: 
+ ceph deb admin optional
+ ceph-common deb admin optional
+ ceph-common-dbg deb debug extra
+ ceph-dbg deb debug extra
+ ceph-fs-common deb admin optional
+ ceph-fs-common-dbg deb debug extra
+ ceph-fuse deb admin optional
+ ceph-fuse-dbg deb debug extra
+ ceph-mds deb admin optional
+ ceph-mds-dbg deb debug extra
+ ceph-resource-agents deb admin extra
+ ceph-test deb admin optional
+ ceph-test-dbg deb debug extra
+ libcephfs-dev deb libdevel optional
+ libcephfs-java deb java optional
+ libcephfs-jni deb libs optional
+ libcephfs-jni-dbg deb debug extra
+ libcephfs1 deb libs optional
+ libcephfs1-dbg deb debug extra
+ librados-dev deb libdevel optional
+ librados2 deb libs optional
+ librados2-dbg deb debug extra
+ librbd-dev deb libdevel optional
+ librbd1 deb libs optional
+ librbd1-dbg deb debug extra
+ python-ceph deb python optional
+ radosgw deb admin optional
+ radosgw-dbg deb debug extra
+ rbd-fuse deb admin optional
+ rbd-fuse-dbg deb debug extra
+ rest-bench deb admin optional
+ rest-bench-dbg deb debug extra
+Checksums-Sha1:
+ 5caef58566c8a0a4c354b36250b3df965f6aa181 3822 ceph_0.67-0ubuntu1.dsc
+ 57eabbd48b246c218f3b7e06e2000ab4e748ca6a 3305744 ceph_0.67.orig.tar.bz2
+ 3e296be7c94ffbefcecee36dd2443888a58c0b3f 15119 ceph_0.67-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 32ef5c3bf0c9f0af58351af91fc6f3db83c63ceadd05b7d1b0a76178bf6a2f4c 3822 ceph_0.67-0ubuntu1.dsc
+ 0e568d591fcfc290fe015cc6cb819af0ad75358715c2835cdebce1ce145b8817 3305744 ceph_0.67.orig.tar.bz2
+ 27d790589818ea34ffdb0e126b3a6cddb1c8cd4558a394f279a82260dd2a0595 15119 ceph_0.67-0ubuntu1.debian.tar.gz
+Testsuite: autopkgtest
+
 Package: fontforge
 Binary: fontforge, fontforge-nox, fontforge-common, libfontforge-dev, libfontforge1, libgdraw4, python-fontforge, fontforge-dbg
 Version: 20120731.b-3
@@ -344,30 +406,6 @@ Checksums-Sha256:
  fc1710854d26d527087dbbefb110193650d9aae1876f90cb64b8d5c0a8dd95a4 390454 libnetfilter-conntrack_1.0.3.orig.tar.bz2
  adc65b532bdf665b1f235e3ce9d2731c4d4607aec874e4ed226c828d47c969b0 2694 libnetfilter-conntrack_1.0.3-1.debian.tar.gz
 
-Package: livecd-rootfs
-Binary: livecd-rootfs
-Version: 2.173
-Priority: optional
-Section: devel
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: debhelper (>= 7)
-Architecture: all
-Standards-Version: 3.6.1.0
-Format: 3.0 (native)
-Directory: pool/main/l/livecd-rootfs
-Files:
- abd0cc3d7f22c6b15108f660c220d5d8 881 livecd-rootfs_2.173.dsc
- 2b405e8c45bf98d7cad8d5e82bb194af 47088 livecd-rootfs_2.173.tar.gz
-Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/livecd-rootfs/trunk
-Package-List: 
- livecd-rootfs deb devel optional
-Checksums-Sha1:
- dd05752c2a2150bb811bcb1c2709319d3814d26b 881 livecd-rootfs_2.173.dsc
- 33022470d17fcdecab5aba885e0591292683d7c3 47088 livecd-rootfs_2.173.tar.gz
-Checksums-Sha256:
- 83a2f3b2ad70879a16465e371e6f621f34e1688253f13e986b7489ec4ae8aa45 881 livecd-rootfs_2.173.dsc
- e8a5ada26d6b9ee751522e8ac44e3f1b521e2b31190642424b479027900a19ce 47088 livecd-rootfs_2.173.tar.gz
-
 Package: mod-auth-mysql
 Binary: libapache2-mod-auth-mysql
 Version: 4.3.9-13.1ubuntu1
@@ -512,6 +550,7 @@ Testsuite: autopkgtest
 Package: qtbase-opensource-src
 Binary: libqt5core5, libqt5gui5, libqt5network5, libqt5opengl5, libqt5sql5, libqt5sql5-mysql, libqt5sql5-odbc, libqt5sql5-psql, libqt5sql5-sqlite, libqt5sql5-tds, libqt5xml5, libqt5dbus5, libqt5test5, libqt5concurrent5, libqt5widgets5, libqt5printsupport5, qtbase5-dev, qtbase5-private-dev, libqt5opengl5-dev, qtbase5-dev-tools, qt5-qmake, qtbase5-examples, qtbase5-dbg, qtbase5-dev-tools-dbg, qtbase5-examples-dbg, qt5-default, qtbase5-doc, qtbase5-doc-html
 Version: 5.0.2+dfsg1-7ubuntu8
+Priority: optional
 Section: libs
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>

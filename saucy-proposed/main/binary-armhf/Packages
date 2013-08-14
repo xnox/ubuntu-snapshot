@@ -622,26 +622,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
-Package: livecd-rootfs
-Priority: optional
-Section: devel
-Installed-Size: 128
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Version: 2.173
-Depends: debootstrap, rsync, python-minimal | python, procps, squashfs-tools (>= 1:3.3-1), grep-dctrl, fdupes, lsb-release, lzma, e2fsprogs, germinate (>= 1.25.1), apt-utils, gnupg, live-build (>= 3.0~a55-1), android-tools-fsutils
-Suggests: partimage
-Breaks: ubuntu-defaults-builder (<< 0.32)
-Filename: pool/main/l/livecd-rootfs/livecd-rootfs_2.173_all.deb
-Size: 18730
-MD5sum: 24c8929041bf2a0b1a8025ece198ec6f
-SHA1: 110b46a7d978de1aa13862f17f89bb7924ec7c39
-SHA256: 4c8f9c02fcd0e0a3f9dd3f0c51acae8dbeeda711d5289740b4aa6771b690c5b1
-Description: construction script for the livecd rootfs
-Description-md5: 7b59fd93401bd0efd37505de924d874f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: mysql-client
 Priority: optional
 Section: database
@@ -1429,6 +1409,70 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: xdmx
+Priority: optional
+Section: x11
+Installed-Size: 1295
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu1
+Depends: xserver-common (>= 2:1.14.2.901-2ubuntu1), libaudit1 (>= 1:2.2.1), libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libpixman-1-0 (>= 0.30.0), libselinux1 (>= 2.0.82), libx11-6 (>= 2:1.4.99.1), libxau6, libxdmcp6, libxext6, libxfixes3, libxfont1 (>= 1:1.4.2), libxi6, libxmuu1, libxrender1
+Filename: pool/main/x/xorg-server/xdmx_1.14.2.901-2ubuntu1_armhf.deb
+Size: 737338
+MD5sum: 88b2eb78f91ca96d835e01fab69ee97a
+SHA1: 76097aded1bd00d5b09aad9eb885e2936bf21dc9
+SHA256: a39bf64faa03299140de10e7a2da4f465f30b98847ff99c73614fd26b51af413
+Description: distributed multihead X server
+Description-md5: d52dd645b5fa9daf3052065e2345991f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: xdmx-tools
+Priority: optional
+Section: x11
+Installed-Size: 356
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu1
+Replaces: xdmx (<= 2:1.1.1-10)
+Depends: xdmx, libc6 (>= 2.4), libdmx1, libx11-6, libxaw7, libxt6
+Filename: pool/main/x/xorg-server/xdmx-tools_1.14.2.901-2ubuntu1_armhf.deb
+Size: 69688
+MD5sum: 7a6b665ba7a49cbc45930d27fc882285
+SHA1: cb9e41022236a9fb753f10122b42665a9690ca87
+SHA256: 7533738273e0e219ac823e3186ca7c4ac9fa508dcb3787830a58317afcad2bfc
+Description: Distributed Multihead X tools
+Description-md5: d19e4657677c5d6dc4d36c168f58a7f4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: xnest
+Priority: optional
+Section: x11
+Installed-Size: 1052
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu1
+Provides: xserver
+Depends: xserver-common (>= 2:1.14.2.901-2ubuntu1), libaudit1 (>= 1:2.2.1), libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libpixman-1-0 (>= 0.13.2), libselinux1 (>= 2.0.82), libx11-6, libxau6, libxdmcp6, libxext6, libxfont1 (>= 1:1.4.2)
+Recommends: libgl1-mesa-dri (>= 7.1~rc1)
+Filename: pool/main/x/xorg-server/xnest_1.14.2.901-2ubuntu1_armhf.deb
+Size: 584830
+MD5sum: 5df8d25ffbeb53f58f8e34d0d5bec33e
+SHA1: 71b62307eefd62418b13d4789dec55d59734d133
+SHA256: 1fbb4906be038e4fcd2345c671af0f75076e348f579a81295809a03cf37d90b5
+Description: Nested X server
+Description-md5: 48a07c59b44bacd1e2bed508f80542b4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full
+
 Package: xserver-common
 Priority: optional
 Section: x11
@@ -1451,4 +1495,157 @@ Description-md5: be03943b6955ee9fae7163ad516c772f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: xserver-xephyr
+Priority: optional
+Section: x11
+Installed-Size: 1429
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu1
+Provides: xserver
+Depends: xserver-common (>= 2:1.14.2.901-2ubuntu1), libaudit1 (>= 1:2.2.1), libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libgl1-mesa-glx | libgl1, libpixman-1-0 (>= 0.30.0), libselinux1 (>= 2.0.82), libx11-6 (>= 2:1.4.99.1), libxau6, libxdmcp6, libxext6, libxfont1 (>= 1:1.4.2), libxv1
+Recommends: libgl1-mesa-dri (>= 7.1~rc1)
+Filename: pool/main/x/xorg-server/xserver-xephyr_1.14.2.901-2ubuntu1_armhf.deb
+Size: 809246
+MD5sum: 1b99d048fc7a83704f8982856131d865
+SHA1: e6101a31ec760eba98f38ca0c973690a080ae3f1
+SHA256: 57880d7eef69fc7ab80bc935c9b1760eb60fd2f4a72bbe5514c7e3c3d3b688bc
+Description: nested X server
+Description-md5: 516dc4b8b7e15f13bc99547d4869e159
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-gnome-desktop
+
+Package: xserver-xfbdev
+Priority: optional
+Section: x11
+Installed-Size: 1179
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu1
+Provides: xserver
+Depends: xserver-common (>= 2:1.14.2.901-2ubuntu1), libaudit1 (>= 1:2.2.1), libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libpixman-1-0 (>= 0.30.0), libselinux1 (>= 2.0.82), libxau6, libxdmcp6, libxfont1 (>= 1:1.4.2)
+Filename: pool/main/x/xorg-server/xserver-xfbdev_1.14.2.901-2ubuntu1_armhf.deb
+Size: 682530
+MD5sum: 2d319c87b23d34983cc6c3b697055aaa
+SHA1: 36d23592f01cd580fc9acfa51f0ccda02ea8426d
+SHA256: 1ee6368062ccf895f2428c9d11612ec84e370e19e27dca5b9a32a9ee0f4a4c46
+Description: Linux framebuffer device tiny X server
+Description-md5: 952ef27a58e5dee1c023edecc5e03fb8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: xserver-xorg-core
+Priority: optional
+Section: x11
+Installed-Size: 2405
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu1
+Provides: xorg-input-abi-19, xorg-video-abi-14
+Depends: xserver-common (>= 2:1.14.2.901-2ubuntu1), keyboard-configuration, udev (>= 149), libaudit1 (>= 1:2.2.1), libc6 (>= 2.17), libdrm2 (>= 2.3.1), libgcrypt11 (>= 1.4.5), libpciaccess0 (>= 0.12.902), libpixman-1-0 (>= 0.30.0), libselinux1 (>= 2.0.82), libudev1 (>= 183), libxau6, libxdmcp6, libxfont1 (>= 1:1.4.2)
+Recommends: libgl1-mesa-dri (>= 7.10.2-4)
+Suggests: xfonts-100dpi | xfonts-75dpi, xfonts-scalable
+Conflicts: xserver-xorg-input-evtouch
+Breaks: libgl1-mesa-dri (<< 7.10.2-4), libgl1-mesa-dri-experimental (<< 7.10.2-4), libxfixes3 (<< 1:5.0.1), libxi6 (<< 2:1.7.1.901), qt4-x11 (<< 4:4.8.0-1ubuntu2), unity (<< 7.0.2), utouch-frame (<< 2.1.0), utouch-geis (<< 2.2.3), xserver-xorg-input, xserver-xorg-input-2, xserver-xorg-input-2.1, xserver-xorg-input-4, xserver-xorg-input-7, xserver-xorg-input-joystick (<= 1:1.5.0-3), xserver-xorg-input-synaptics (<= 1.2.2-1ubuntu4), xserver-xorg-input-tslib (<= 0.0.6-3), xserver-xorg-input-vmmouse (<= 1:12.6.5-4ubuntu2), xserver-xorg-input-wacom (<= 0.10.5+20100415-1), xserver-xorg-video, xserver-xorg-video-1.0, xserver-xorg-video-1.9, xserver-xorg-video-2, xserver-xorg-video-4, xserver-xorg-video-5, xserver-xorg-video-6, xserver-xorg-video-cyrix (<= 1:1.1.0-8), xserver-xorg-video-i810 (<< 2:2.4), xserver-xorg-video-imstt (<= 1:1.1.0-7), xserver-xorg-video-nsc (<= 1:2.8.3-4), xserver-xorg-video-sunbw2 (<= 1:1.1.0-5), xserver-xorg-video-v4l (<< 1:0.2.0), xserver-xorg-video-vga (<= 1:4.1.0-8)
+Filename: pool/main/x/xorg-server/xserver-xorg-core_1.14.2.901-2ubuntu1_armhf.deb
+Size: 1283810
+MD5sum: cd950ff9eab93bcd31de9faa093581aa
+SHA1: d98ec7996e3fe893eaf0efb42265a7e38a86c0be
+SHA256: 58fcbf7cefeb7cd8e4bcfaf2f731a2df50b637fd3c2987384a8a30a07e3ebf62
+Description: Xorg X server - core server
+Description-md5: e3826a765918b79dee4b90ec97f9302c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: xserver-xorg-core-dbg
+Priority: extra
+Section: x11
+Installed-Size: 15107
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu1
+Depends: xserver-xorg-core (= 2:1.14.2.901-2ubuntu1)
+Filename: pool/main/x/xorg-server/xserver-xorg-core-dbg_1.14.2.901-2ubuntu1_armhf.deb
+Size: 6312400
+MD5sum: a9a43fa18c301d80216bf10ec3ae6ae9
+SHA1: f9802487bf7ce844f9ff27472bfeaaed4b90a6a6
+SHA256: 23161c244b9129be9e5cded83ae6534cc866b8ae1cfeb7976638fce0d1f54f71
+Description: Xorg - the X.Org X server (debugging symbols)
+Description-md5: 748963cc445faabee033c53886a8a0cf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: xserver-xorg-dev
+Priority: optional
+Section: x11
+Installed-Size: 1434
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu1
+Depends: libpixman-1-dev (>= 0.27.2), x11proto-core-dev (>= 7.0.22), x11proto-input-dev (>= 2.3), x11proto-xext-dev (>= 7.1.99), x11proto-video-dev, x11proto-randr-dev (>= 1.4.0), x11proto-render-dev (>= 2:0.11), x11proto-dri2-dev (>= 2.8), x11proto-gl-dev (>= 1.4.16), x11proto-fonts-dev, x11proto-xinerama-dev, x11proto-kb-dev, x11proto-xf86dri-dev, x11proto-resource-dev (>= 1.2.0), x11proto-scrnsaver-dev, libxkbfile-dev, libpciaccess-dev, mesa-common-dev, libmirclient-dev
+Filename: pool/main/x/xorg-server/xserver-xorg-dev_1.14.2.901-2ubuntu1_armhf.deb
+Size: 276774
+MD5sum: 0cc8f318f161874030ce39ab1fb2f9f7
+SHA1: a63bcc3c783481c5dc9d0dcf7d7443f95d37ab92
+SHA256: 7e5105f4399d76191f298b3dca5dee56d8ed313af72183d713e694238c371ec1
+Description: Xorg X server - development files
+Description-md5: 241552d78aca8911808aea0707649843
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: xserver-xorg-xmir
+Priority: optional
+Section: x11
+Installed-Size: 224
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu1
+Depends: libc6 (>= 2.15), libdrm2 (>= 2.3.1), libmirclient1 (>= 0.0.9+13.10.20130813), xserver-xorg-core (= 2:1.14.2.901-2ubuntu1)
+Filename: pool/main/x/xorg-server/xserver-xorg-xmir_1.14.2.901-2ubuntu1_armhf.deb
+Size: 17490
+MD5sum: 89028eb383d7125eac952ab527d07255
+SHA1: 85cdd9f35cb0070bc96c9c14180a97472d01e664
+SHA256: 6e8c0843badd13fbc0c9e01ef35bc00104c5d9a495e8d4abf8ac180a704f961c
+Description: Xorg - the X.Org X server (module for running nested in Mir)
+Description-md5: decc48ff1c766010304a7b5070025b17
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: xvfb
+Priority: optional
+Section: x11
+Installed-Size: 1331
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu1
+Provides: xserver
+Depends: xserver-common (>= 2:1.14.2.901-2ubuntu1), libaudit1 (>= 1:2.2.1), libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libpixman-1-0 (>= 0.30.0), libselinux1 (>= 2.0.82), libxau6, libxdmcp6, libxfont1 (>= 1:1.4.2), xauth, x11-xkb-utils
+Recommends: libgl1-mesa-dri
+Filename: pool/main/x/xorg-server/xvfb_1.14.2.901-2ubuntu1_armhf.deb
+Size: 739280
+MD5sum: 368756eb3a8f68e1e437793346de7fab
+SHA1: 84810f67dd9fd2763a195b4007b3b13e8aa0cde6
+SHA256: 49aab43a4e3c8e6cf9a108d744c03ad1945387410b9d51d84839d9031fb4a3f3
+Description: Virtual Framebuffer 'fake' X server
+Multi-Arch: foreign
+Description-md5: ff95e4399e5ec034de6998347673eb73
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
