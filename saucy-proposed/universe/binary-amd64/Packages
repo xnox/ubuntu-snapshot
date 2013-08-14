@@ -109,68 +109,6 @@ Description-md5: 8059068d01bfb939336097d2add7f12f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: anerd
-Priority: optional
-Section: universe/admin
-Installed-Size: 30
-Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
-Architecture: amd64
-Version: 2.4-0ubuntu2
-Depends: anerd-server, anerd-client
-Filename: pool/universe/a/anerd/anerd_2.4-0ubuntu2_amd64.deb
-Size: 1588
-MD5sum: bc79c8585f90e3db00e78ee7fd8f494e
-SHA1: 61033df6d5b64efa9f057061f7ce5bbff4e5b501
-SHA256: 259a0ffa26d0b57460d3992a37f5e708ee3090ba5183462cc9b4b2ee4a00d39a
-Description: client and server of a network exchanged randomness daemon
-Homepage: http://launchpad.net/anerd
-Description-md5: 39b87df9cd2d419195297dee5fcb5197
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: anerd-client
-Priority: optional
-Section: universe/admin
-Installed-Size: 62
-Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
-Architecture: all
-Source: anerd
-Version: 2.4-0ubuntu2
-Depends: run-one, curl
-Suggests: anerd-server, ent, socat
-Filename: pool/universe/a/anerd/anerd-client_2.4-0ubuntu2_all.deb
-Size: 9552
-MD5sum: 572501e677d46bec61c8bf96081d758b
-SHA1: 31cbd1bc3d6adaf40ae94990af7818157ca8f7c1
-SHA256: fb2d3b60b41dec688833ed70804d7c8236656ccb3308475c73c69301812acf23
-Description: client package of a network exchanged randomness daemon
-Homepage: http://launchpad.net/anerd
-Description-md5: 9729bc1ce231b5df1e0b3d9d1a7b13e7
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: anerd-server
-Priority: optional
-Section: universe/admin
-Installed-Size: 77
-Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
-Architecture: amd64
-Source: anerd
-Version: 2.4-0ubuntu2
-Depends: sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.4), golang-go
-Recommends: haveged
-Suggests: anerd-client
-Filename: pool/universe/a/anerd/anerd-server_2.4-0ubuntu2_amd64.deb
-Size: 13478
-MD5sum: 4e6df594593d44a7aa0138df84af6d34
-SHA1: 0ed31c838387fc3cda3d4e3f6950feb07f651c48
-SHA256: 3a64b1648ae23fc848ff21f9d523c3b56c499035350610eb5d33484267e820b0
-Description: server package of a network exchanged randomness daemon
-Homepage: http://launchpad.net/anerd
-Description-md5: 2fcf783f6353640c7d49210ec14b2058
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: beets
 Priority: optional
 Section: universe/sound
@@ -714,6 +652,51 @@ SHA256: 6b32c2944c511c51300febe291e87698e514c49c57353eebcc320004acdbcded
 Description: GCC plugin that uses LLVM for optimization and code generation
 Homepage: http://dragonegg.llvm.org/
 Description-md5: e42ffdd87c8fbca185308b370ee6b18c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: dragonplayer
+Priority: optional
+Section: universe/kde
+Installed-Size: 923
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Source: dragon
+Version: 4:4.11.0-0ubuntu1
+Depends: kde-runtime, libc6 (>= 2.14), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libkparts4 (>= 4:4.11.0), libphonon4 (>= 4:4.7.0really4.5.0), libqt4-dbus (>= 4:4.5.3), libqtcore4 (>= 4:4.8.0), libqtgui4 (>= 4:4.5.3), libsolid4 (>= 4:4.11.0), libstdc++6 (>= 4.1.1), phonon
+Filename: pool/universe/d/dragon/dragonplayer_4.11.0-0ubuntu1_amd64.deb
+Size: 416768
+MD5sum: 2a336234a064803d250d064920311464
+SHA1: 44721b216414c5e48fa1411b151af612e60978b6
+SHA256: 1865443b0b15ee8d03be3fd3fa6d1dd911c86665373def5f2acd1e3061814919
+Description: simple video player
+Homepage: http://www.kde.org/
+Description-md5: d10eadc3b04b3fb22f80e721527a2853
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
+Package: dragonplayer-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 6009
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Source: dragon
+Version: 4:4.11.0-0ubuntu1
+Replaces: kdemultimedia-dbg
+Depends: dragonplayer (= 4:4.11.0-0ubuntu1), kde-runtime-dbg
+Breaks: kdemultimedia-dbg
+Filename: pool/universe/d/dragon/dragonplayer-dbg_4.11.0-0ubuntu1_amd64.deb
+Size: 1276362
+MD5sum: 255d996c7620517e9a95ec22655c5290
+SHA1: 2780240b34897cfd16bd7e59f97c5dd37b00275e
+SHA256: 69bbb4d89720d8dc2f94e11bdc8160270e68a6f112172b5b65f3a1f9094f2300
+Description: debugging symbols for dragonplayer
+Homepage: http://www.kde.org/
+Description-md5: f4c75eb47fb35bbcd82d3a188e2a1836
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1334,6 +1317,47 @@ Homepage: http://code.google.com/p/libewf/
 Description-md5: 25b25cbc27f90b45552ddd81ceec8b64
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: ffmpegthumbs
+Priority: optional
+Section: universe/kde
+Installed-Size: 93
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Version: 4:4.11.0-0ubuntu1
+Depends: libavcodec53 (>= 6:0.8.3-1~) | libavcodec-extra-53 (>= 6:0.8.7), libavformat53 (>= 6:0.8.3-1~) | libavformat-extra-53 (>= 6:0.8.7), libavutil51 (>= 6:0.8.3-1~) | libavutil-extra-51 (>= 6:0.8.7), libc6 (>= 2.14), libkdecore5 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libqtcore4 (>= 4:4.5.3), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.1.1), libswscale2 (>= 6:0.8.3-1~) | libswscale-extra-2 (>= 6:0.8.7)
+Filename: pool/universe/f/ffmpegthumbs/ffmpegthumbs_4.11.0-0ubuntu1_amd64.deb
+Size: 15176
+MD5sum: 23d7464a8b2ef67e1d88a64b5c104e25
+SHA1: 3e2f0c46945cd96da57af8745a0c9ac407f9bc6c
+SHA256: a279141d5e30e208d78d7d8cb402ded44dbf61be3ede3a2d268645824a52a83b
+Description: video thumbnail generator using ffmpeg
+Homepage: http://www.kde.org/
+Description-md5: d10a9a3ae792f8e16e85968fe0168029
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: filelight
+Priority: optional
+Section: universe/kde
+Installed-Size: 645
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Version: 4:4.11.0-0ubuntu1
+Depends: kde-runtime, libc6 (>= 2.14), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libkfile4 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libkparts4 (>= 4:4.11.0), libqtcore4 (>= 4:4.8.0), libqtgui4 (>= 4:4.5.3), libsolid4 (>= 4:4.11.0), libstdc++6 (>= 4.1.1)
+Filename: pool/universe/f/filelight/filelight_4.11.0-0ubuntu1_amd64.deb
+Size: 301146
+MD5sum: 0d4b4d331efbf2d166a6ea23cf08ae4b
+SHA1: fb53a4852603e211cd3c7ac08109b325e04db7af
+SHA256: 9a7839737138085b8c0e5dc66800e921ee9ed802d794679480870c3593bdc914
+Description: show where your diskspace is being used
+Homepage: http://www.kde.org/
+Description-md5: 397ff9a469e07a772f22460c66b66875
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full
 
 Package: flatzinc
 Priority: optional
@@ -1979,6 +2003,28 @@ Description-md5: 587e4061b448b3402eee796ba880221d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: granatier
+Priority: optional
+Section: universe/games
+Installed-Size: 3539
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Version: 4:4.11.0-0ubuntu1
+Depends: kde-runtime, libc6 (>= 2.14), libkdecore5 (>= 4:4.11.0), libkdegames6 (>= 4:4.8.80), libkdeui5 (>= 4:4.11.0), libknewstuff3-4 (>= 4:4.11.0), libqt4-svg (>= 4:4.5.3), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.6.2), libstdc++6 (>= 4.1.1)
+Recommends: khelpcenter4
+Filename: pool/universe/g/granatier/granatier_4.11.0-0ubuntu1_amd64.deb
+Size: 1423518
+MD5sum: 4c0cba23914e7042b59bed223eb4cd21
+SHA1: 74ecf64e531a1f508a6dd70e5d416e8a0ae2b395
+SHA256: e3d6b32730d6da8d64faec62090d7d4ce7118dde5b4d9d77d158ca9a909f945e
+Description: Bomberman clone
+Homepage: http://games.kde.org/
+Description-md5: 9c1cc3a6aa86ca29a9daa93e6c56892a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full
+
 Package: gringotts
 Priority: optional
 Section: universe/admin
@@ -2237,6 +2283,122 @@ Description-md5: e9b1617d2c59e14b9d4c57e66f9dfb48
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: jovie
+Priority: optional
+Section: universe/utils
+Installed-Size: 1133
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Version: 4:4.11.0-0ubuntu1
+Replaces: kmouth (<< 4:4.8), kttsd (<< 4:4.6)
+Provides: kttsd
+Depends: kde-runtime, libc6 (>= 2.14), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libqt4-dbus (>= 4:4.5.3), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libspeechd2 (>= 0.7.1), libstdc++6 (>= 4.1.1), speech-dispatcher
+Recommends: speech-dispatcher-festival | espeak | flite, kmouth
+Breaks: kttsd (<< 4:4.6)
+Filename: pool/universe/j/jovie/jovie_4.11.0-0ubuntu1_amd64.deb
+Size: 406112
+MD5sum: e80be0658b5d6f6deb10d417ce9a9ff9
+SHA1: d48831f9a2367853b6bf22ac2b7f0dd8374dce01
+SHA256: 193c53e69f2f251260361681506cff855b5c194c7ecf1a6ca38b9d742e8c10f6
+Description: text-to-speech system
+Homepage: http://accessibility.kde.org/developer/kttsd
+Description-md5: 6a6dcb711454fc7ba3895f205f2b7fb5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full
+
+Package: jovie-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 5746
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Source: jovie
+Version: 4:4.11.0-0ubuntu1
+Replaces: kdeaccessibility-dbg (<< 4:4.8)
+Depends: jovie (= 4:4.11.0-0ubuntu1)
+Breaks: kdeaccessibility-dbg (<< 4:4.8)
+Filename: pool/universe/j/jovie/jovie-dbg_4.11.0-0ubuntu1_amd64.deb
+Size: 1279968
+MD5sum: 9ad8f555409538d75d09eb4186586683
+SHA1: b5ff80909396f90da85a2fc2a39c82545860ea72
+SHA256: 90fbdd5f6fdeb455ebc5621d1222ffa7bc7cb7597bd6fff28daf16ef70983159
+Description: debugging symbols for jovie
+Homepage: http://accessibility.kde.org/developer/kttsd
+Description-md5: 49e175afa9a99d17f07890e5165198d5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: juk
+Priority: optional
+Section: universe/kde
+Installed-Size: 1701
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Version: 4:4.11.0-0ubuntu1
+Replaces: kdemultimedia-dev (<< 4:4.10)
+Depends: kde-runtime, libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libkde3support4 (>= 4:4.11.0), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libphonon4 (>= 4:4.2.0), libqt4-dbus (>= 4:4.5.3), libqt4-network (>= 4:4.5.3), libqt4-qt3support (>= 4:4.5.3), libqt4-svg (>= 4:4.5.3), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.6), libtag1c2a (>= 1.6.1), phonon
+Suggests: k3b
+Breaks: kdemultimedia-dev (<< 4:4.10)
+Filename: pool/universe/j/juk/juk_4.11.0-0ubuntu1_amd64.deb
+Size: 658120
+MD5sum: 7d0f78290241e0ebb1bbf5dfd28abf9a
+SHA1: 831ba1241f741fa130b00d225593eac824b85188
+SHA256: 137be22ad7e2f1e66c4ebc5f2cfaac4182a23636d627857ea6a84b47198880b8
+Description: music jukebox / music player
+Homepage: http://www.kde.org/
+Description-md5: 79abb73f33494c5f81d84ee96a4badd4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full
+
+Package: kaccessible
+Priority: optional
+Section: universe/utils
+Installed-Size: 164
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Version: 4:4.11.0-0ubuntu1
+Depends: kde-runtime, libc6 (>= 2.14), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libqt4-dbus (>= 4:4.5.3), libqtcore4 (>= 4:4.8.0), libqtgui4 (>= 4:4.5.3), libspeechd2 (>= 0.7.1), libstdc++6 (>= 4.1.1)
+Filename: pool/universe/k/kaccessible/kaccessible_4.11.0-0ubuntu1_amd64.deb
+Size: 34310
+MD5sum: 5eb38b5339df2b165dc61af802fc7359
+SHA1: 3ecccbe33228d6d24eaad28bf4a6e33a083508a1
+SHA256: 4fed9d6b3e1e42320db0d2b9a8ebc8ca2271e2bfb8ca21de11508b24f4e32be5
+Description: accessibility services for Qt applications
+Homepage: http://www.kde.org
+Description-md5: 97620e996ab1483391472ef3c1c95340
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full
+
+Package: kaccessible-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 439
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Source: kaccessible
+Version: 4:4.11.0-0ubuntu1
+Replaces: kdeaccessibility-dbg (<< 4:4.8)
+Depends: kaccessible (= 4:4.11.0-0ubuntu1)
+Breaks: kdeaccessibility-dbg (<< 4:4.8)
+Filename: pool/universe/k/kaccessible/kaccessible-dbg_4.11.0-0ubuntu1_amd64.deb
+Size: 368506
+MD5sum: 2d6a769ae867117a5b6a17fef3e4cbb9
+SHA1: 1a963dd0d6d0d6233cc5490f2f59bc8a0b663eb9
+SHA256: 6ff238c28a9fa1b8aa21218f522d9a63270b7f80bf7b7975fe3b0db22be34380
+Description: debugging symbols for kaccessible
+Homepage: http://www.kde.org
+Description-md5: 0998d2cc7857340dfb2007051896db29
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: kaddressbook
 Priority: optional
 Section: universe/utils
@@ -2307,6 +2469,97 @@ Description-md5: 9ab6dc514fd38fce2fd701631bd7f820
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-full, kubuntu-active-full
+
+Package: kalgebra
+Priority: optional
+Section: universe/kde
+Installed-Size: 410
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Version: 4:4.11.0-0ubuntu1
+Depends: kde-runtime, libanalitza5 (>= 4:4.10.80), libanalitzagui5 (>= 4:4.10.80), libanalitzaplot5 (>= 4:4.10.80), libc6 (>= 2.14), libgl1-mesa-glx | libgl1, libglu1-mesa | libglu1, libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libkhtml5 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libkparts4 (>= 4:4.11.0), libqt4-opengl (>= 4:4.5.3), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.6.1), libstdc++6 (>= 4.1.1), kalgebra-common (= 4:4.11.0-0ubuntu1)
+Breaks: kalgebramobile (<< 4:4.7.2)
+Filename: pool/universe/k/kalgebra/kalgebra_4.11.0-0ubuntu1_amd64.deb
+Size: 97910
+MD5sum: ea550f0449c715156bc5f0a459a7df51
+SHA1: 6974b9d425aba5ea513862bbe7246cc83797290c
+SHA256: 0b8ff74cac84ab7689a3f695b84859a95cd6f510f2f9442446f4a8ccbb42ff71
+Description: algebraic graphing calculator
+Homepage: http://edu.kde.org/
+Description-md5: 3839e1dbb198fa22a1952a06364f0c27
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full, edubuntu-desktop-gnome
+
+Package: kalgebra-common
+Priority: optional
+Section: universe/math
+Installed-Size: 424
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Source: kalgebra
+Version: 4:4.11.0-0ubuntu1
+Replaces: kalgebra (<< 4:4.7.2)
+Depends: libanalitza5 (>= 4:4.10.80), libc6 (>= 2.2.5), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libplasma3 (>= 4:4.11.0), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.1.1)
+Breaks: kalgebra (<< 4:4.7.2)
+Filename: pool/universe/k/kalgebra/kalgebra-common_4.11.0-0ubuntu1_amd64.deb
+Size: 226096
+MD5sum: 66a0bdfb61c5d134a1766308cbaf7643
+SHA1: 96c3674f5631336161026f689f570290b7a37c74
+SHA256: 34a0df5c3701ee9b2461f54ff41115dd0a068f271182f4f7ed06f878f5d9d087
+Description: contains files common for kalgebra and kalgebramobile
+Homepage: http://edu.kde.org/
+Description-md5: 05e8b587fee89b27c5fbe3cf789c85c8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full, edubuntu-desktop-gnome
+
+Package: kalgebra-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 4955
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Source: kalgebra
+Version: 4:4.11.0-0ubuntu1
+Replaces: kdeedu-dbg (<< 4:4.6.80)
+Depends: kalgebra (= 4:4.11.0-0ubuntu1) | kalgebramobile (= 4:4.11.0-0ubuntu1)
+Recommends: libanalitza-dbg
+Breaks: kdeedu-dbg (<< 4:4.6.80)
+Filename: pool/universe/k/kalgebra/kalgebra-dbg_4.11.0-0ubuntu1_amd64.deb
+Size: 1189404
+MD5sum: 9411eaddd9c0ab3072e55e7f0bb960a3
+SHA1: 745575a120c34947adab589bf5f6343f24d206b7
+SHA256: 9f3e9a549aee6b40610945df34c45bdf995e53cd3c83d64f0cf04de153be32e5
+Description: debugging symbols for the KDE education module
+Homepage: http://edu.kde.org/
+Description-md5: 7eaae92de59bec39efb3b9494d0bbbf9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: kalgebramobile
+Priority: optional
+Section: universe/math
+Installed-Size: 277
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Source: kalgebra
+Version: 4:4.11.0-0ubuntu1
+Depends: libanalitza5 (>= 4:4.10.80), libanalitzagui5 (>= 4:4.10.80), libanalitzaplot5 (>= 4:4.10.80), libc6 (>= 2.14), libkdeclarative5 (>= 4:4.7.0), libkdecore5 (>= 4:4.11.0), libqt4-declarative (>= 4:4.7.0~rc1), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.6.1), libstdc++6 (>= 4.1.1), kalgebra-common (= 4:4.11.0-0ubuntu1)
+Filename: pool/universe/k/kalgebra/kalgebramobile_4.11.0-0ubuntu1_amd64.deb
+Size: 63648
+MD5sum: 40069907cd490415a7af59f4330c457f
+SHA1: 9309b2802e29437c483bd9ea92b8e01c0a27d00f
+SHA256: 75e21cea1485c51cd84271c3c1b5983a9ecc2127066180a95fff5b07c0c213c3
+Description: algebraic graphing calculator for small touch based interfaces
+Homepage: http://edu.kde.org/
+Description-md5: b8e44274db8c55312477e9004b0a4adf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: kde-config-cddb
 Priority: optional
@@ -2448,17 +2701,17 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: kde4libs
-Version: 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1
+Version: 4:4.11.0-0ubuntu1
 Replaces: kdelibs5-data (<< 4:4.6.3-3~), kdelibs5-dev (<< 4:4.6.2)
-Depends: libacl1 (>= 2.2.51-8), libc6 (>= 2.15), libenchant1c2a (>= 1.6.0), libgcc1 (>= 1:4.1.1), libgssapi-krb5-2 (>= 1.10+dfsg~), libilmbase6 (>= 1.0.1), libjasper1, libkde3support4 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libkdecore5 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libkdeui5 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libkdewebkit5 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libkemoticons4 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libkfile4 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libkhtml5 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libkio5 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libkjsapi4 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libkjsembed4 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libkntlm4 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libkparts4 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libkrosscore4 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libopenexr6 (>= 1.6.1), libphonon4 (>= 4:4.6.0really4.3.80), libpolkit-qt-1-1 (>= 0.99.0), libqt4-dbus (>= 4:4.7.0), libqt4-network (>= 4:4.7.0), libqt4-qt3support (>= 4:4.7.0), libqt4-script (>= 4:4.7.0), libqt4-xml (>= 4:4.7.0), libqtcore4 (>= 4:4.8.0), libqtgui4 (>= 4:4.7.0), libsolid4 (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), libstdc++6 (>= 4.4.0), libx11-6, zlib1g (>= 1:1.1.4), perl, kdelibs5-data (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), kdoctools (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), kdelibs-bin (= 4:4.11.0-0ubuntu1~ubuntu13.10~ppa1), katepart, dbus-x11, shared-mime-info (>= 0.30), xdg-utils
+Depends: libacl1 (>= 2.2.51-8), libc6 (>= 2.15), libenchant1c2a (>= 1.6.0), libgcc1 (>= 1:4.1.1), libgssapi-krb5-2 (>= 1.10+dfsg~), libilmbase6 (>= 1.0.1), libjasper1, libkde3support4 (= 4:4.11.0-0ubuntu1), libkdecore5 (= 4:4.11.0-0ubuntu1), libkdeui5 (= 4:4.11.0-0ubuntu1), libkdewebkit5 (= 4:4.11.0-0ubuntu1), libkemoticons4 (= 4:4.11.0-0ubuntu1), libkfile4 (= 4:4.11.0-0ubuntu1), libkhtml5 (= 4:4.11.0-0ubuntu1), libkio5 (= 4:4.11.0-0ubuntu1), libkjsapi4 (= 4:4.11.0-0ubuntu1), libkjsembed4 (= 4:4.11.0-0ubuntu1), libkntlm4 (= 4:4.11.0-0ubuntu1), libkparts4 (= 4:4.11.0-0ubuntu1), libkrosscore4 (= 4:4.11.0-0ubuntu1), libopenexr6 (>= 1.6.1), libphonon4 (>= 4:4.6.0really4.3.80), libpolkit-qt-1-1 (>= 0.99.0), libqt4-dbus (>= 4:4.7.0), libqt4-network (>= 4:4.7.0), libqt4-qt3support (>= 4:4.7.0), libqt4-script (>= 4:4.7.0), libqt4-xml (>= 4:4.7.0), libqtcore4 (>= 4:4.8.0), libqtgui4 (>= 4:4.7.0), libsolid4 (= 4:4.11.0-0ubuntu1), libstdc++6 (>= 4.4.0), libx11-6, zlib1g (>= 1:1.1.4), perl, kdelibs5-data (= 4:4.11.0-0ubuntu1), kdoctools (= 4:4.11.0-0ubuntu1), kdelibs-bin (= 4:4.11.0-0ubuntu1), katepart, dbus-x11, shared-mime-info (>= 0.30), xdg-utils
 Recommends: ttf-dejavu-core
 Suggests: kde-runtime
 Breaks: kdelibs5-data (<< 4:4.6.3-3~), kdelibs5-dev (<< 4:4.6.2), kdevelop (<< 4:4.2)
-Filename: pool/universe/k/kde4libs/kdelibs5-plugins_4.11.0-0ubuntu1~ubuntu13.10~ppa1_amd64.deb
-Size: 924100
-MD5sum: 0af8c37febb915f1ebf71e21b7251082
-SHA1: eceb21772fa51c50a57da503f74a33c28e19399c
-SHA256: 4c4354e46ebf02fb89485c3a8057b5cdfa232a78463c07c7396bed785266eec9
+Filename: pool/universe/k/kde4libs/kdelibs5-plugins_4.11.0-0ubuntu1_amd64.deb
+Size: 924092
+MD5sum: 0d9a9d8fdac0df362b7e56b39f4e6dce
+SHA1: a48495161e0790ec4d97b65d2b4428324dc914a0
+SHA256: 26dec4cff122e530630b4bc11a3777b671db41123eaba749a3c2cd532ad89961
 Description: core plugins for KDE Applications
 Homepage: http://www.kde.org/
 Description-md5: 47c4a19af28fe26f79c1626027f99953
@@ -3002,6 +3255,27 @@ Description-md5: 82ff65498b352023fb4e0bdb13fd5f8e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-full, kubuntu-active-full
+
+Package: kttsd
+Priority: optional
+Section: universe/utils
+Installed-Size: 29
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: jovie
+Version: 4:4.11.0-0ubuntu1
+Depends: jovie
+Filename: pool/universe/j/jovie/kttsd_4.11.0-0ubuntu1_all.deb
+Size: 2576
+MD5sum: ad6881a9475fb9c435d3015ef35c2f4f
+SHA1: 93d4d59a6ff1e66427d6a3d0d0305aafe69e8581
+SHA256: e03013b88e2983b9abd261fcbd61ba4e9807d57422853c6543a9f91d4317536d
+Description: transitional package for jovie
+Homepage: http://accessibility.kde.org/developer/kttsd
+Description-md5: d2290d92e71eba166d35bb9193923b24
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: language-pack-kde-en
 Priority: optional
@@ -9266,6 +9540,119 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, ubuntustudio-graphics
 
+Package: libkactivities-bin
+Priority: optional
+Section: universe/kde
+Installed-Size: 754
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Source: kactivities
+Version: 4:4.11.0-0ubuntu1
+Replaces: kde-runtime (<< 4:4.8), kde-runtime-data (<< 4:4.8), kdebase-runtime (<< 4:4.8), kdebase-runtime-data (<< 4:4.8)
+Depends: libc6 (>= 2.14), libkactivities-models1 (>= 4:4.9.80), libkactivities6 (>= 4:4.8.80), libkcmutils4 (>= 4:4.11.0), libkdeclarative5 (>= 4:4.7.0), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libnepomukcore4abi1 (>= 4:4.9.80), libplasma3 (>= 4:4.11.0), libqt4-dbus (>= 4:4.6.1), libqt4-declarative (>= 4:4.7.0~rc1), libqt4-sql (>= 4:4.5.3), libqtcore4 (>= 4:4.8.0), libqtgui4 (>= 4:4.6.1), libsoprano4 (>= 2.2.69), libstdc++6 (>= 4.1.1)
+Breaks: kde-runtime (<< 4:4.8), kde-runtime-data (<< 4:4.8), kdebase-runtime (<< 4:4.8), kdebase-runtime-data (<< 4:4.8)
+Filename: pool/universe/k/kactivities/libkactivities-bin_4.11.0-0ubuntu1_amd64.deb
+Size: 145366
+MD5sum: 922ccd47efaa5b71030381c34bd35d2d
+SHA1: 0f0aecc37bcafab7b5e6896523fa7bb93abfa9c3
+SHA256: 176be1c29f2a175056722d39a6502380715c2f237cf385c815c60576e6d9e6b1
+Description: executables for the KDE Activities
+Homepage: http://www.kde.org/
+Description-md5: 72b6a9927ef9cc864839299b13dd564e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, ubuntustudio-video, ubuntustudio-graphics
+
+Package: libkactivities-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 15001
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Source: kactivities
+Version: 4:4.11.0-0ubuntu1
+Replaces: kde-runtime-dbg (<< 4:4.8), kdebase-runtime-dbg (<< 4:4.8)
+Depends: libkactivities-bin (= 4:4.11.0-0ubuntu1), libkactivities6 (= 4:4.11.0-0ubuntu1), libkactivities-models1 (= 4:4.11.0-0ubuntu1)
+Breaks: kde-runtime-dbg (<< 4:4.8), kdebase-runtime-dbg (<< 4:4.8)
+Filename: pool/universe/k/kactivities/libkactivities-dbg_4.11.0-0ubuntu1_amd64.deb
+Size: 2965338
+MD5sum: c41cd696073f69cde0411b1ce79ed0ea
+SHA1: 7d345c2e8ea4529757574ef9d024282c8aed4060
+SHA256: e4280409162e7f031802ea4a017a1227f8879584071b042e02580740e8bcf58c
+Description: debugging symbols for libkactivities
+Homepage: http://www.kde.org/
+Description-md5: dbf82923ce64b8b0f8898b80d07e9ed6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libkactivities-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 122
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Source: kactivities
+Version: 4:4.11.0-0ubuntu1
+Depends: libkactivities-bin (= 4:4.11.0-0ubuntu1), libkactivities6 (= 4:4.11.0-0ubuntu1), libkactivities-models1 (= 4:4.11.0-0ubuntu1), kdelibs5-dev (>= 4:4.11.0)
+Filename: pool/universe/k/kactivities/libkactivities-dev_4.11.0-0ubuntu1_amd64.deb
+Size: 12310
+MD5sum: dbaf3d25fc62314dc1eeaa0dc93857a5
+SHA1: c8f63830f9545e27b3ecb56fda5aeec744f18060
+SHA256: 63e8aafea819bb101b7e49180de731a08d2d74045d0c0c3fc2716c4068110aa1
+Description: development files for the KDE Activities libraries
+Homepage: http://www.kde.org/
+Description-md5: ed722dddc138cd57eb9a63e4aa9d0d2a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libkactivities-models1
+Priority: optional
+Section: universe/libs
+Installed-Size: 137
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Source: kactivities
+Version: 4:4.11.0-0ubuntu1
+Depends: libc6 (>= 2.14), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libnepomukcore4abi1 (>= 4:4.9.0), libqt4-dbus (>= 4:4.6.1), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libsoprano4 (>= 2.2.69), libstdc++6 (>= 4.1.1)
+Filename: pool/universe/k/kactivities/libkactivities-models1_4.11.0-0ubuntu1_amd64.deb
+Size: 32498
+MD5sum: 0ac6ab145faa7248a335688d43e94e7a
+SHA1: e30cb4db850944ec6d80ae0e2d2f646d590f3d60
+SHA256: 40aba14105e2f67a54c9d4c32d78ab77fdd2bfe2ce9eb5895837bd6e8aa93d68
+Description: Activities models library
+Homepage: http://www.kde.org/
+Description-md5: b8e5b073c312126f7c0e5f3d4474d542
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, ubuntustudio-video, ubuntustudio-graphics
+
+Package: libkactivities6
+Priority: optional
+Section: universe/kde
+Installed-Size: 147
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: amd64
+Source: kactivities
+Version: 4:4.11.0-0ubuntu1
+Depends: libc6 (>= 2.14), libkdecore5 (>= 4:4.11.0), libqt4-dbus (>= 4:4.6.1), libqtcore4 (>= 4:4.7.0~beta1), libstdc++6 (>= 4.1.1)
+Recommends: libkactivities-bin (= 4:4.11.0-0ubuntu1)
+Filename: pool/universe/k/kactivities/libkactivities6_4.11.0-0ubuntu1_amd64.deb
+Size: 34122
+MD5sum: 7aae7cc8f0127462d212d46e4bfe5e11
+SHA1: 4b906917820a64465fac23c91fa1f0ad0e7fdb7e
+SHA256: e17eefe03e5cb936c5d31f75e9290aed36391c80434de6052905198a08a2374d
+Description: Activities library
+Homepage: http://www.kde.org/
+Description-md5: 50fd677fc2fc38864f1e95bd09cc2b20
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, ubuntustudio-video, ubuntustudio-graphics
+
 Package: libkalarmcal2
 Priority: optional
 Section: universe/libs
@@ -13737,51 +14124,6 @@ SHA256: ac5a90791e5a577cdb5b35706ad13d90b6ce12cc09e939a4bc6db5961b7491bc
 Description: Open vSwitch graphical monitoring tool
 Homepage: http://openvswitch.org/
 Description-md5: 7763b44a976684bb4eeb22fb0f83a60d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: oxygen-icon-theme
-Priority: optional
-Section: universe/x11
-Installed-Size: 30398
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Architecture: all
-Source: oxygen-icons
-Version: 4:4.11.0-0ubuntu1
-Replaces: oxygen-icon-theme-complete (<< 4:4.8.80)
-Depends: hicolor-icon-theme
-Breaks: oxygen-icon-theme-complete (<< 4:4.8.80)
-Filename: pool/universe/o/oxygen-icons/oxygen-icon-theme_4.11.0-0ubuntu1_all.deb
-Size: 28856008
-MD5sum: da173c45d282a775c661917e2106b6ff
-SHA1: a7d0064d33f1ca6b052f6137dea8e36492c53eec
-SHA256: 41a949137b253b5af5d448859d033975ed3d430375524b97789a4d7cdda14e39
-Description: Oxygen icon theme
-Homepage: http://www.kde.org/
-Description-md5: 1c9ecb27b72c298d63cfbecaaa57c213
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, ubuntustudio-video, ubuntustudio-graphics
-
-Package: oxygen-icon-theme-complete
-Priority: optional
-Section: universe/x11
-Installed-Size: 31
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Architecture: all
-Source: oxygen-icons
-Version: 4:4.11.0-0ubuntu1
-Depends: oxygen-icon-theme
-Filename: pool/universe/o/oxygen-icons/oxygen-icon-theme-complete_4.11.0-0ubuntu1_all.deb
-Size: 2316
-MD5sum: fb919c854037df2de856a7ff071e8cd4
-SHA1: 1d85fd24f1e27407cf0134576402177b188d3292
-SHA256: 50ea4417c2ad92937e35ee23ea2479bc7bdd2a373ddac550a872974ff332e5fe
-Description: Oxygen icon theme - transitional package
-Homepage: http://www.kde.org/
-Description-md5: efa20623dd6453fd2f8c7c59a6c106c6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
