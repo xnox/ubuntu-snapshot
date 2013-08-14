@@ -45,6 +45,85 @@ Description-md5: 6948801c3d791b1c318acb50a89989c6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: cups
+Priority: optional
+Section: net
+Installed-Size: 756
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Version: 1.6.3-1ubuntu2
+Replaces: ghostscript-cups (<< 9.02~)
+Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.16), libcups2 (= 1.6.3-1ubuntu2), libcupscgi1 (>= 1.4.2), libcupsimage2 (>= 1.4.0), libcupsmime1 (>= 1.4.0), libcupsppdc1 (>= 1.4.0), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.3.0), libusb-1.0-0 (>= 2:1.0.8), debconf (>= 1.2.9) | debconf-2.0, libc-bin (>= 2.13), cups-daemon (>= 1.6.3-1ubuntu2), poppler-utils (>= 0.12), procps, ghostscript (>= 9.02~), lsb-base (>= 3), cups-common (>= 1.6.3-1ubuntu2), cups-server-common (>= 1.6.3-1ubuntu2), cups-client (>= 1.6.3-1ubuntu2), cups-ppdc, cups-filters (>= 1.0.24-3~)
+Recommends: avahi-daemon, colord, foomatic-filters (>= 4.0), printer-driver-gutenprint
+Suggests: cups-bsd, foomatic-db-compressed-ppds | foomatic-db, printer-driver-hpcups, hplip, cups-pdf, udev, smbclient
+Breaks: foomatic-filters (<< 4.0), ghostscript-cups (<< 9.02~)
+Filename: pool/main/c/cups/cups_1.6.3-1ubuntu2_armhf.deb
+Size: 241254
+MD5sum: ae377de6a165ec7073c97d758c27d84e
+SHA1: 12a14dbfd2578e0a11fda725f4bd3cf71f00bef0
+SHA256: 13857244d3ccf8e9e608695319e22d9d19f86247c48aafb6709392c264d83ba3
+Description: Common UNIX Printing System(tm) - server
+Multi-Arch: foreign
+Homepage: http://www.cups.org
+Description-md5: 7cf9b10ad02d144fb419f77e49b87556
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: cups-bsd
+Priority: extra
+Section: net
+Installed-Size: 102
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Replaces: lpr
+Provides: lpr
+Depends: libc6 (>= 2.4), libcups2 (>= 1.6.2), debconf (>= 0.5) | debconf-2.0, cups-client (= 1.6.3-1ubuntu2), update-inetd, cups-common (>= 1.6.3-1ubuntu2)
+Suggests: cups
+Conflicts: lpr, lprng
+Filename: pool/main/c/cups/cups-bsd_1.6.3-1ubuntu2_armhf.deb
+Size: 28026
+MD5sum: 4172dc3bbec2411fce7282ae293226c5
+SHA1: 72b2e733bcc56bca873ea2083fdbcb95e2370b78
+SHA256: f2e961e0f568a8f503541b040d5cbde08b7d3b8fe67392feb84a9a7f2fff287f
+Description: Common UNIX Printing System(tm) - BSD commands
+Multi-Arch: foreign
+Homepage: http://www.cups.org
+Description-md5: 8ca999eda442e2096dafa2745e4db8de
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: cups-client
+Priority: optional
+Section: net
+Installed-Size: 613
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Depends: libc6 (>= 2.4), libcups2 (= 1.6.3-1ubuntu2), libcupsimage2 (>= 1.4.0), cups-common (>= 1.6.3-1ubuntu2), adduser
+Recommends: smbclient
+Suggests: cups, xpp, cups-bsd
+Conflicts: lprng
+Filename: pool/main/c/cups/cups-client_1.6.3-1ubuntu2_armhf.deb
+Size: 193428
+MD5sum: 36d0bf5110ed2cb8ff1d99e407b2c8e9
+SHA1: 75ec46c155d6f65f40875d9442712a4e765873bf
+SHA256: 67185383725dc569f4a810283b2583ab748f1c1296cc40a01dc294d3154d54b0
+Description: Common UNIX Printing System(tm) - client programs (SysV)
+Multi-Arch: foreign
+Homepage: http://www.cups.org
+Description-md5: 49064ce8151bc5cfbb65936322a4e2ce
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: cups-common
 Priority: optional
 Section: net
@@ -63,6 +142,78 @@ Description: Common UNIX Printing System(tm) - common files
 Multi-Arch: foreign
 Homepage: http://www.cups.org
 Description-md5: ae28e55960aa62a85c88769b70d73eaa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: cups-daemon
+Priority: optional
+Section: net
+Installed-Size: 800
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Replaces: cups (<< 1.6.1-1~)
+Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.15), libcups2 (= 1.6.3-1ubuntu2), libcupsmime1 (>= 1.5.0), libdbus-1-3 (>= 1.0.2), libgnutls26 (>= 2.12.17-0), libgssapi-krb5-2 (>= 1.10+dfsg~), libpam0g (>= 0.99.7.1), libpaper1, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), procps, lsb-base (>= 3), ssl-cert (>= 1.0.11), adduser, bc, avahi-daemon
+Pre-Depends: dpkg (>= 1.15.7.2)
+Recommends: colord, cups-browsed
+Suggests: cups, cups-bsd, cups-common (>= 1.6.3-1ubuntu2), cups-server-common (>= 1.6.3-1ubuntu2), cups-client (>= 1.6.3-1ubuntu2), cups-ppdc, cups-filters, poppler-utils (>= 0.12), ghostscript (>= 9.02~), foomatic-filters (>= 4.0), foomatic-db-compressed-ppds | foomatic-db, printer-driver-gutenprint, printer-driver-hpcups, hplip, cups-pdf, udev, smbclient
+Breaks: cups (<< 1.6.1-1~)
+Filename: pool/main/c/cups/cups-daemon_1.6.3-1ubuntu2_armhf.deb
+Size: 308452
+MD5sum: 2b4c7901160a5dfa0e5a249224824971
+SHA1: f2e7fc3df26810f3712d17f9d31a3ee9975d1188
+SHA256: a48c31af6ebc57bc45956b81a82aa82e79c74088c9d78bc8180e5cd2d642cb63
+Description: Common UNIX Printing System(tm) - daemon
+Multi-Arch: foreign
+Homepage: http://www.cups.org
+Description-md5: 559bf8b849cd67e4ad13a2a638aea615
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: cups-dbg
+Priority: extra
+Section: libdevel
+Installed-Size: 2655
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Depends: cups-daemon (= 1.6.3-1ubuntu2)
+Filename: pool/main/c/cups/cups-dbg_1.6.3-1ubuntu2_armhf.deb
+Size: 1956262
+MD5sum: 6595090c6cd5daac22c7f991cc1873e1
+SHA1: 695c2d0565fd963505aef82ffb988f14b713ae9b
+SHA256: 284e9586704273a918c04a29b1f613a389e0653380f167e94deedfe3475e11c7
+Description: Common UNIX Printing System(tm) - debugging symbols
+Homepage: http://www.cups.org
+Description-md5: 45781fd5891c0e6a36e3f989431c7203
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: cups-ppdc
+Priority: optional
+Section: net
+Installed-Size: 215
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Depends: libc6 (>= 2.4), libcups2 (>= 1.6.2), libcupsppdc1 (>= 1.4.0), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.3.0), cups-common (>= 1.6.3-1ubuntu2)
+Filename: pool/main/c/cups/cups-ppdc_1.6.3-1ubuntu2_armhf.deb
+Size: 28684
+MD5sum: 4d34dc6ec445d6a7acdf23a30818870c
+SHA1: 62ac4da22e857d5f2c5901f40001573870d76e60
+SHA256: 76e39764e90ae899f907283e9d4660f2b1305522fe850930d2106c1ce3c157fc
+Description: Common UNIX Printing System(tm) - PPD manipulation utilities
+Multi-Arch: foreign
+Homepage: http://www.cups.org
+Description-md5: ba3fa27bc468a14b73280f189057f4e7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
@@ -459,6 +610,234 @@ Description-md5: 5474c0d7634f2c2a9b642ce3c78d1c79
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-active, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
+
+Package: libcups2
+Priority: optional
+Section: libs
+Installed-Size: 388
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.4), libgnutls26 (>= 2.12.17-0), libgssapi-krb5-2 (>= 1.10+dfsg~), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Suggests: cups-common
+Breaks: cups (<< 1.5.0)
+Filename: pool/main/c/cups/libcups2_1.6.3-1ubuntu2_armhf.deb
+Size: 162286
+MD5sum: 2fbcb8b314db939164b523e69c4bdd7b
+SHA1: 30240c3e867e5babbb99e43c15dbe0235d00d272
+SHA256: 4431897c03b27e0f383e15c6e3970d5df3ca8d8b11e4a37b5ba449d08ea8fd13
+Description: Common UNIX Printing System(tm) - Core library
+Multi-Arch: same
+Homepage: http://www.cups.org
+Description-md5: cce9961cb86712146cb19e1b4636f79d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: virt-host, ubuntu-desktop, ubuntu-usb, print-server, tomcat-server, samba-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libcups2-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 687
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Depends: libcups2 (= 1.6.3-1ubuntu2), libgnutls-dev, libkrb5-dev
+Filename: pool/main/c/cups/libcups2-dev_1.6.3-1ubuntu2_armhf.deb
+Size: 229756
+MD5sum: 25737cbe0e6b6217154074fa519769b7
+SHA1: 30a91b3ad998d8868143ea2fd8a80f0e3d6d1f51
+SHA256: 293c8e376bf90467372756c59a985e8c43469e70cbb4bad94cba1ba66d3fe6e5
+Description: Common UNIX Printing System(tm) - Development files CUPS library
+Homepage: http://www.cups.org
+Description-md5: bf3f385e98251c2563c3f58554d2adce
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcupscgi1
+Priority: optional
+Section: libs
+Installed-Size: 163
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Depends: libc6 (>= 2.4), libcups2 (= 1.6.3-1ubuntu2)
+Pre-Depends: multiarch-support
+Filename: pool/main/c/cups/libcupscgi1_1.6.3-1ubuntu2_armhf.deb
+Size: 26362
+MD5sum: 28379a06800a214d2b8f396c1cfa5ae8
+SHA1: a39fa054cd86e044f0440d1ea5216a639bc71cba
+SHA256: e1d836a01d295a8777da05ca0df319361a2c7574735bfd5167417d63c9b5172c
+Description: Common UNIX Printing System(tm) - CGI library
+Multi-Arch: same
+Homepage: http://www.cups.org
+Description-md5: 3660b0ffb79cde60a9580ea571ecfbcb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libcupscgi1-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 197
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Depends: libcupscgi1 (= 1.6.3-1ubuntu2), libcups2-dev (= 1.6.3-1ubuntu2)
+Filename: pool/main/c/cups/libcupscgi1-dev_1.6.3-1ubuntu2_armhf.deb
+Size: 33648
+MD5sum: f4e7267da9ef14a4dce97c91df5943df
+SHA1: 7613c2e1ddd78f498ee94c6ef96c4e783707d950
+SHA256: f705252a9646ddb3deaca6ab690716ae8e14fd4b730f17771325bcca9e648085
+Description: Common UNIX Printing System(tm) - Development files for CGI library
+Homepage: http://www.cups.org
+Description-md5: 433b937ac75daeec3873b3445bb48090
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcupsimage2
+Priority: optional
+Section: libs
+Installed-Size: 146
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Depends: libc6 (>= 2.4), libcups2 (= 1.6.3-1ubuntu2), libcupsfilters1 (>= 1.0~b1)
+Pre-Depends: multiarch-support
+Filename: pool/main/c/cups/libcupsimage2_1.6.3-1ubuntu2_armhf.deb
+Size: 15104
+MD5sum: a0dd8e08c6061a09b7b22ce08484cdef
+SHA1: 77e9e4c0c4070784b6dea5ad91e1bab861c82e28
+SHA256: 537e99ea60d6b06dde52357893238e0db67d2eeddb56f1776db38224c3946ff3
+Description: Common UNIX Printing System(tm) - Raster image library
+Multi-Arch: same
+Homepage: http://www.cups.org
+Description-md5: f4451fb5498322724719d7d3a8635bf4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libcupsimage2-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 78
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Depends: libcupsimage2 (= 1.6.3-1ubuntu2), libcups2-dev (= 1.6.3-1ubuntu2), libcupsfilters-dev (>= 1.0~b1), libpng-dev, libtiff-dev, libjpeg8-dev | libjpeg-dev, zlib1g-dev
+Filename: pool/main/c/cups/libcupsimage2-dev_1.6.3-1ubuntu2_armhf.deb
+Size: 18220
+MD5sum: e984b025436de6cc95365a291d468c96
+SHA1: 7c5833c97a75ebf46af97bd09e36da44882b7853
+SHA256: a592142a87fa83de625209c9822d4415c0859645237acb024f5fb77a23e6e53d
+Description: Common UNIX Printing System(tm) - Development files CUPS image library
+Homepage: http://www.cups.org
+Description-md5: 419c750b3360d0933e0bbc9e17913244
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcupsmime1
+Priority: optional
+Section: libs
+Installed-Size: 142
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Depends: libc6 (>= 2.4), libcups2 (= 1.6.3-1ubuntu2)
+Pre-Depends: multiarch-support
+Breaks: cups (<< 1.5.0)
+Filename: pool/main/c/cups/libcupsmime1_1.6.3-1ubuntu2_armhf.deb
+Size: 11360
+MD5sum: f22d21a5d99c98d348c498e617b8e6c2
+SHA1: 0f1b1fffd84b23b532494d5fbc673e0889204588
+SHA256: e4fe3c0a169afd49c59a17ecc26e2595d88cd249de7f4857b723e5d9285c0c4a
+Description: Common UNIX Printing System(tm) - MIME library
+Multi-Arch: same
+Homepage: http://www.cups.org
+Description-md5: 3c738d1cd62835670ace55e8d83b4f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libcupsmime1-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 153
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Depends: libcupsmime1 (= 1.6.3-1ubuntu2), libcups2-dev (= 1.6.3-1ubuntu2)
+Filename: pool/main/c/cups/libcupsmime1-dev_1.6.3-1ubuntu2_armhf.deb
+Size: 12784
+MD5sum: c5180beae4272857ace3b81c40f6a031
+SHA1: 09ce678a09d395faeea5288ff1c810f709c1d5a6
+SHA256: fb972bd138e6e0b8a0754c08f435a9577a1d5a40d138ee03ccfbb4a258303317
+Description: Common UNIX Printing System(tm) - Development files MIME library
+Homepage: http://www.cups.org
+Description-md5: ee515191b340413216668249b8b6097b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcupsppdc1
+Priority: optional
+Section: libs
+Installed-Size: 214
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Depends: libc6 (>= 2.4), libcups2 (= 1.6.3-1ubuntu2), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.3.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/c/cups/libcupsppdc1_1.6.3-1ubuntu2_armhf.deb
+Size: 48228
+MD5sum: acb5dcc7d4d36904c44e05bc458154fa
+SHA1: 7acb58d02bcad4a3d8a8f23aa49c35b8b22b4259
+SHA256: d3a5d833b8b6e2965078f34f72e2c595ccc095cdcbe89857c29fdb028846a185
+Description: Common UNIX Printing System(tm) - PPD manipulation library
+Multi-Arch: same
+Homepage: http://www.cups.org
+Description-md5: a2ce16897499bbac7df75d4d297b1713
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libcupsppdc1-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 310
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: armhf
+Source: cups
+Version: 1.6.3-1ubuntu2
+Depends: libcupsppdc1 (= 1.6.3-1ubuntu2), libcups2-dev (= 1.6.3-1ubuntu2)
+Filename: pool/main/c/cups/libcupsppdc1-dev_1.6.3-1ubuntu2_armhf.deb
+Size: 66160
+MD5sum: 82ba77a964511f619ad9d02e5c9cb6f8
+SHA1: 195396d6d27c2044d66faccf9224e4ff5bbc053e
+SHA256: 1b6b24af7a22e2b399fc6282b021802755179a0a2d9a6f057b3c450d393781ad
+Description: Common UNIX Printing System(tm) - Development files PPD library
+Homepage: http://www.cups.org
+Description-md5: f1c111d7276de209cb50ebccbc551f69
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: libdbi-perl
 Priority: optional
