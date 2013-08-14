@@ -622,6 +622,26 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
+Package: livecd-rootfs
+Priority: optional
+Section: devel
+Installed-Size: 128
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 2.173
+Depends: debootstrap, rsync, python-minimal | python, procps, squashfs-tools (>= 1:3.3-1), grep-dctrl, fdupes, lsb-release, lzma, e2fsprogs, germinate (>= 1.25.1), apt-utils, gnupg, live-build (>= 3.0~a55-1), android-tools-fsutils
+Suggests: partimage
+Breaks: ubuntu-defaults-builder (<< 0.32)
+Filename: pool/main/l/livecd-rootfs/livecd-rootfs_2.173_all.deb
+Size: 18730
+MD5sum: 24c8929041bf2a0b1a8025ece198ec6f
+SHA1: 110b46a7d978de1aa13862f17f89bb7924ec7c39
+SHA256: 4c8f9c02fcd0e0a3f9dd3f0c51acae8dbeeda711d5289740b4aa6771b690c5b1
+Description: construction script for the livecd rootfs
+Description-md5: 7b59fd93401bd0efd37505de924d874f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: mysql-client
 Priority: optional
 Section: database
@@ -1103,18 +1123,18 @@ Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 Package: squid-purge
 Priority: optional
 Section: web
-Installed-Size: 170
+Installed-Size: 171
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Luigi Gangitano <luigi@debian.org>
 Architecture: armhf
 Source: squid3
-Version: 3.3.4-1ubuntu1
+Version: 3.3.8-1ubuntu1
 Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0)
-Filename: pool/main/s/squid3/squid-purge_3.3.4-1ubuntu1_armhf.deb
-Size: 25724
-MD5sum: e0b1d8a97616209cd744e6f0b5f07a10
-SHA1: 6bcae99a832a5a84bee9b0d1a893699d4eb0849a
-SHA256: 325fea182c8ff1d75e46bcf76db36267c650081a63053c7f9015aa86cc72597b
+Filename: pool/main/s/squid3/squid-purge_3.3.8-1ubuntu1_armhf.deb
+Size: 26456
+MD5sum: 27d94296a7ab8e27096b273d50853edc
+SHA1: 5d7746b2e3f9bb9672d4ee20c649cfe502289a47
+SHA256: 42f84ab5e42020bb1307fc7d78b955026753813e2a25200e1e286a0a5579538a
 Description: Full featured Web Proxy cache (HTTP proxy) - control utility
 Homepage: http://www.squid-cache.org
 Description-md5: 1f0ac66043729b3fb7702aa802ebdf9b
@@ -1124,42 +1144,21 @@ Origin: Ubuntu
 Package: squid3
 Priority: optional
 Section: web
-Installed-Size: 4321
+Installed-Size: 4327
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Luigi Gangitano <luigi@debian.org>
 Architecture: armhf
-Version: 3.3.4-1ubuntu1
-Depends: libc6 (>= 2.15), libcap2 (>= 2.10), libcomerr2 (>= 1.01), libdb5.1, libecap2, libexpat1 (>= 2.0.1), libgcc1 (>= 1:4.4.0), libgssapi-krb5-2 (>= 1.10+dfsg~), libkrb5-3 (>= 1.6.dfsg.2), libldap-2.4-2 (>= 2.4.7), libltdl7 (>= 2.4.2), libnetfilter-conntrack3, libpam0g (>= 0.99.7.1), libsasl2-2 (>= 2.1.24), libstdc++6 (>= 4.6), libxml2 (>= 2.7.4), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), netbase, adduser, logrotate (>= 3.5.4-1), squid3-common (= 3.3.4-1ubuntu1), lsb-base, ssl-cert (>= 1.0-11ubuntu1)
+Version: 3.3.8-1ubuntu1
+Depends: libc6 (>= 2.15), libcap2 (>= 2.10), libcomerr2 (>= 1.01), libdb5.1, libecap2, libexpat1 (>= 2.0.1), libgcc1 (>= 1:4.4.0), libgssapi-krb5-2 (>= 1.10+dfsg~), libkrb5-3 (>= 1.6.dfsg.2), libldap-2.4-2 (>= 2.4.7), libltdl7 (>= 2.4.2), libnetfilter-conntrack3, libpam0g (>= 0.99.7.1), libsasl2-2 (>= 2.1.24), libstdc++6 (>= 4.6), libxml2 (>= 2.7.4), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), netbase, adduser, logrotate (>= 3.5.4-1), squid3-common (= 3.3.8-1ubuntu1), lsb-base, ssl-cert (>= 1.0-11ubuntu1)
 Suggests: squidclient, squid-cgi, squid-purge, resolvconf (>= 0.40), smbclient, ufw, winbindd, apparmor (>= 2.3)
-Filename: pool/main/s/squid3/squid3_3.3.4-1ubuntu1_armhf.deb
-Size: 2123034
-MD5sum: 75ac71b1f8972fb55dfda1245fdf43e3
-SHA1: 47ed6709bdfbb39de6936b4773bc0fbc5a35bc6b
-SHA256: c4e0e300daa488afa0329af123b142bb522f697e0244d1fe401e185f01c49f1f
+Filename: pool/main/s/squid3/squid3_3.3.8-1ubuntu1_armhf.deb
+Size: 2126992
+MD5sum: 7cfa91122a982f3538ccde2b02090d4f
+SHA1: 9a2d9ca1d05ec3b7c9673ca46bd8c235dfa92e72
+SHA256: 680af749230515c5667ae71ae0abcbe054e2df378412c3f574a4be479c78469b
 Description: Full featured Web Proxy cache (HTTP proxy)
 Homepage: http://www.squid-cache.org
 Description-md5: 03beec2567a9d8411e86109a53d6316a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: squid3-common
-Priority: optional
-Section: web
-Installed-Size: 342
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Luigi Gangitano <luigi@debian.org>
-Architecture: all
-Source: squid3
-Version: 3.3.4-1ubuntu1
-Depends: squid-langpack (>= 20110214-1)
-Filename: pool/main/s/squid3/squid3-common_3.3.4-1ubuntu1_all.deb
-Size: 157802
-MD5sum: 81df4471ea5760b667bea6daa747ce0b
-SHA1: 362ee1e70a1942867abba1fddbb6554307179839
-SHA256: bf97b489e1da2a43ef8227c38bb42c93d1a488675d9645bc3296bddc9f54dda1
-Description: Full featured Web Proxy cache (HTTP proxy) - common files
-Homepage: http://www.squid-cache.org
-Description-md5: 3e901946e35992c109fbb47e7164ec67
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1187,18 +1186,18 @@ Origin: Ubuntu
 Package: squid3-dbg
 Priority: extra
 Section: debug
-Installed-Size: 36100
+Installed-Size: 36136
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Luigi Gangitano <luigi@debian.org>
 Architecture: armhf
 Source: squid3
-Version: 3.3.4-1ubuntu1
-Depends: squid3 (= 3.3.4-1ubuntu1)
-Filename: pool/main/s/squid3/squid3-dbg_3.3.4-1ubuntu1_armhf.deb
-Size: 14552828
-MD5sum: 1b91e4597b69475b81a42b7eeb73c802
-SHA1: 539caf7e6526f9db3576db51ceac56e95537a844
-SHA256: 1df4e7fbc48a52c76dd0e1feb0bd670b022a7b4765fe76ec4a1ba9a1547e23c5
+Version: 3.3.8-1ubuntu1
+Depends: squid3 (= 3.3.8-1ubuntu1)
+Filename: pool/main/s/squid3/squid3-dbg_3.3.8-1ubuntu1_armhf.deb
+Size: 14569358
+MD5sum: 29fc4d8a7a33042df13a11278c484ddb
+SHA1: 6388a719247b28917d9e02ba12000043b53369dd
+SHA256: bd7cc2be002ed95743a2e321a36d2eb88835f8ccb9b51735dd8e74b0fe398918
 Description: Full featured Web Proxy cache (HTTP proxy) - Debug symbols
 Homepage: http://www.squid-cache.org
 Description-md5: 19d07746abc740ae906d1c40fe4fb3a7
