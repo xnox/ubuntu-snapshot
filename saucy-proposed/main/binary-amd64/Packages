@@ -47,6 +47,58 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: cups-browsed
+Priority: optional
+Section: net
+Installed-Size: 133
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: amd64
+Source: cups-filters
+Version: 1.0.36-0ubuntu2
+Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libavahi-glib1 (>= 0.6.16), libc6 (>= 2.4), libcups2 (>= 1.6.0), libglib2.0-0 (>= 2.14.0), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), avahi-daemon
+Filename: pool/main/c/cups-filters/cups-browsed_1.0.36-0ubuntu2_amd64.deb
+Size: 44386
+MD5sum: 97fa49424ea817b605c0843a54f5f1c7
+SHA1: 82fa10464ba9d33cd9aa54767ed155cb9547008c
+SHA256: 2eea8601a7f2718e9852db01d25ac731cca731b17ff32beb0184b317e66944b2
+Description: OpenPrinting CUPS Filters - cups-browsed
+Enhances: cups
+Homepage: http://www.openprinting.org/
+Description-md5: 6841b0cfd74741276406b0948b8f9867
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: cups-filters
+Priority: optional
+Section: net
+Installed-Size: 975
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: amd64
+Version: 1.0.36-0ubuntu2
+Replaces: cups (<< 1.5.0-16), cups-common (<< 1.5.0-16), ghostscript-cups
+Provides: ghostscript-cups
+Depends: libc6 (>= 2.15), libcups2 (>= 1.4.0), libcupsfilters1 (>= 1.0~b1), libcupsimage2 (>= 1.4.0), libfontconfig1 (>= 2.9.0), libfontembed1 (>= 1.0.31), libgcc1 (>= 1:4.1.1), libijs-0.35 (>= 0.35), liblcms2-2 (>= 2.2+git20110628), libpoppler43 (>= 0.24.0), libqpdf10 (>> 4.2.0~), libstdc++6 (>= 4.4.0), bc, ghostscript (>= 9.02~), fonts-freefont-ttf | fonts-liberation | ttf-dejavu
+Recommends: colord, foomatic-filters (>= 4.0)
+Suggests: foomatic-db-compressed-ppds | foomatic-db
+Conflicts: ghostscript-cups
+Breaks: cups (<< 1.5.0-16), cups-common (<< 1.5.0-16)
+Filename: pool/main/c/cups-filters/cups-filters_1.0.36-0ubuntu2_amd64.deb
+Size: 343490
+MD5sum: 79519f16ac6569127a93a9ecf3405ad0
+SHA1: 4b2eaac6fc802432fc3a8005f21e5e3ab561f2df
+SHA256: 803eded7153333e84ef8f9b5ed451586cc78a9f8bf2483a9414b653182e9494a
+Description: OpenPrinting CUPS Filters
+Homepage: http://www.openprinting.org/
+Description-md5: 9de806ff7f92c0d1b5ade85f00716d2d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: ffmpeg
 Priority: optional
 Section: graphics
@@ -431,6 +483,53 @@ Origin: Ubuntu
 Supported: 9m
 Task: kubuntu-active, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
 
+Package: libcupsfilters-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 281
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: amd64
+Source: cups-filters
+Version: 1.0.36-0ubuntu2
+Depends: libcupsfilters1 (= 1.0.36-0ubuntu2)
+Filename: pool/main/c/cups-filters/libcupsfilters-dev_1.0.36-0ubuntu2_amd64.deb
+Size: 66426
+MD5sum: 1a338c2e838b82cb5badb32fbba74cc3
+SHA1: fcff2daaa64f95bc06ffb1cb21e5800771ad460b
+SHA256: 812ac4e2d1c62d72c70dbc1ac9b94d5e606448cbbc1bdc02f60a55c9097024ce
+Description: OpenPrinting CUPS Filters - Development files for the library
+Homepage: http://www.openprinting.org/
+Description-md5: b9e86d6395fb70bb943d64a4a7cfaa29
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libcupsfilters1
+Priority: optional
+Section: libs
+Installed-Size: 178
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: amd64
+Source: cups-filters
+Version: 1.0.36-0ubuntu2
+Depends: libc6 (>= 2.14), libcups2 (>= 1.4.0), libjpeg8 (>= 8c), libpng12-0 (>= 1.2.13-4), libtiff5 (>> 4.0.0-1~)
+Pre-Depends: multiarch-support
+Filename: pool/main/c/cups-filters/libcupsfilters1_1.0.36-0ubuntu2_amd64.deb
+Size: 75518
+MD5sum: 611e17b9a8fdea432dcdf7d96573a759
+SHA1: 75cd893685f719c304769a199e2be13ed6cbe55a
+SHA256: ac2aa7c212d496333907fc2752cf175a5b6600ce2117b16665722524d1e927e3
+Description: OpenPrinting CUPS Filters - Shared library
+Multi-Arch: same
+Homepage: http://www.openprinting.org/
+Description-md5: b891bc072c10210e109ee7d9699a32a3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: libdbi-perl
 Priority: optional
 Section: perl
@@ -455,6 +554,124 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libfontembed-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 178
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: amd64
+Source: cups-filters
+Version: 1.0.36-0ubuntu2
+Depends: libfontembed1 (= 1.0.36-0ubuntu2)
+Filename: pool/main/c/cups-filters/libfontembed-dev_1.0.36-0ubuntu2_amd64.deb
+Size: 34452
+MD5sum: b461153d02174bc477fca498672a9e19
+SHA1: a94fead6655defeab37ddb7a8e36ab9971399f16
+SHA256: 11a66dc6623a0b76a7bf4a3cd49cea4e62c19aebb4f1950bb65eb82d54c5a891
+Description: OpenPrinting CUPS Filters - Development files for font embed library
+Homepage: http://www.openprinting.org/
+Description-md5: c4c7345ca8b55eb3517e71b0b8ae9ac4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libfontembed1
+Priority: optional
+Section: libs
+Installed-Size: 125
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: amd64
+Source: cups-filters
+Version: 1.0.36-0ubuntu2
+Depends: libc6 (>= 2.14)
+Pre-Depends: multiarch-support
+Filename: pool/main/c/cups-filters/libfontembed1_1.0.36-0ubuntu2_amd64.deb
+Size: 49472
+MD5sum: e7f74f2ec68dca6fb78213b50703b9e7
+SHA1: 05f85cf5bf4c4b1fdbdf3ede51698dc1600c32cf
+SHA256: 58b096b5b4ee002c2e2700bf10a9aae0276f93290657c180360bb3f1076e6e9c
+Description: OpenPrinting CUPS Filters - Font Embed Shared library
+Multi-Arch: same
+Homepage: http://www.openprinting.org/
+Description-md5: 8224b9ef51388c11e00f94a6367092f3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libimobiledevice-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 305
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: gtkpod Maintainers <pkg-gtkpod-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: libimobiledevice
+Version: 1.1.5-0ubuntu2
+Depends: libimobiledevice4 (= 1.1.5-0ubuntu2), libglib2.0-dev, libplist-dev, libusbmuxd-dev, libgnutls-dev, libtasn1-3-dev
+Filename: pool/main/libi/libimobiledevice/libimobiledevice-dev_1.1.5-0ubuntu2_amd64.deb
+Size: 62900
+MD5sum: 0fa4ee90b2513fe451e2b29e96747d22
+SHA1: dedbc6c471d24b98cfbe37d8d074c7b047e96c86
+SHA256: 4b054acec5127254e15bc3e7d257f21db1fc9ee22dd6e29b129b30de4d820204
+Description: Library for communicating with iPhone and iPod Touch devices
+Homepage: http://libimobiledevice.org/
+Description-md5: fd9a20c2b440f01ec4b9eb965aa42e9a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libimobiledevice4
+Priority: optional
+Section: libs
+Installed-Size: 160
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: gtkpod Maintainers <pkg-gtkpod-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: libimobiledevice
+Version: 1.1.5-0ubuntu2
+Replaces: libimobiledevice0, libimobiledevice1, libiphone0
+Depends: libc6 (>= 2.14), libgnutls26 (>= 2.12.17-0), libplist1 (>= 0.16), libtasn1-3 (>= 2.14-0), libusbmuxd2 (>= 1.0.8), usbmuxd
+Conflicts: libiphone0
+Filename: pool/main/libi/libimobiledevice/libimobiledevice4_1.1.5-0ubuntu2_amd64.deb
+Size: 55538
+MD5sum: 9d938b7b22bb81690fd58b0e9779cae1
+SHA1: ed656d1653a12f6ca3e042b3e1b65fab7a06ac2c
+SHA256: 9c8b1bf280fb2b28a7fe1abedf515539d0cfc73736275917d903506f34921924
+Description: Library for communicating with the iPhone and iPod Touch
+Homepage: http://libimobiledevice.org/
+Description-md5: b63dfdd75baa933b181ba059d3cb96a2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libimobiledevice4-dbg
+Priority: extra
+Section: debug
+Installed-Size: 2399
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: gtkpod Maintainers <pkg-gtkpod-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: libimobiledevice
+Version: 1.1.5-0ubuntu2
+Replaces: libimobiledevice0-dbg, libimobiledevice1-dbg, libimobiledevice3-dbg
+Depends: libimobiledevice4 (= 1.1.5-0ubuntu2)
+Conflicts: libimobiledevice0-dbg, libimobiledevice1-dbg, libimobiledevice3-dbg
+Filename: pool/main/libi/libimobiledevice/libimobiledevice4-dbg_1.1.5-0ubuntu2_amd64.deb
+Size: 672258
+MD5sum: 3a0085fcb86e352e18dc49de048c7563
+SHA1: 574f9dd2771db0292962d680f43feff79f6dfe7a
+SHA256: 2b9c1653609c6c3e3ebb52e64e6bca2086cdddae9c3b71251befcb20ecab860a
+Description: Library for communicating with iPhone and iPod Touch devices
+Homepage: http://libimobiledevice.org/
+Description-md5: d22def284c479ea2fe12faed1fe6c756
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: libmysqlclient-dev
 Priority: optional
