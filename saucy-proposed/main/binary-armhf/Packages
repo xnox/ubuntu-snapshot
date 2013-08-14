@@ -1402,6 +1402,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-audio
 
+Package: libsmokebase3
+Priority: optional
+Section: libs
+Installed-Size: 46
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: armhf
+Source: smokegen
+Version: 4:4.11.0-0ubuntu1
+Depends: libstdc++6 (>= 4.4.0)
+Filename: pool/main/s/smokegen/libsmokebase3_4.11.0-0ubuntu1_armhf.deb
+Size: 7464
+MD5sum: 11b37263b8733ddb55ec972a781c2d66
+SHA1: eb623e0240963510572b8b9c63e6dd5df97f493a
+SHA256: c270a9a068461e56e9de79465a4e1f3653df4c0709199e4596a00b493c63645e
+Description: SMOKE base library
+Homepage: http://projects.kde.org/projects/kde/kdebindings/smoke/smokegen
+Description-md5: 3abf79834be5642bddc4ac3096bfdb53
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
 Package: libsolid4
 Priority: optional
 Section: libs
@@ -1995,6 +2017,53 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
+Package: smoke-dev-tools
+Priority: optional
+Section: devel
+Installed-Size: 822
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: armhf
+Source: smokegen
+Version: 4:4.11.0-0ubuntu1
+Replaces: libsmokeqt4-dev (<< 4:4.7.0)
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.8.0), libsmokebase3 (= 4:4.11.0-0ubuntu1), libstdc++6 (>= 4.4.0)
+Breaks: libsmokeqt4-dev (<< 4:4.7.0)
+Filename: pool/main/s/smokegen/smoke-dev-tools_4.11.0-0ubuntu1_armhf.deb
+Size: 366788
+MD5sum: e585265b64f0a7bc13f26ddca2fb9e66
+SHA1: 0f68357f69bff9aa08d6b76811eec580d3d77ab0
+SHA256: 3db898959b6ab5258ba590a1412a86248b31536a11394affd861d382e9f1de56
+Description: SMOKE development tools
+Homepage: http://projects.kde.org/projects/kde/kdebindings/smoke/smokegen
+Description-md5: 4a9c152821a22749c41dfb3c59991f20
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: smokegen-dbg
+Priority: extra
+Section: debug
+Installed-Size: 3227
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: armhf
+Source: smokegen
+Version: 4:4.11.0-0ubuntu1
+Replaces: kdebindings-dbg
+Depends: libsmokebase3 (= 4:4.11.0-0ubuntu1)
+Recommends: smoke-dev-tools (= 4:4.11.0-0ubuntu1), libqt4-dbg
+Breaks: kdebindings-dbg
+Filename: pool/main/s/smokegen/smokegen-dbg_4.11.0-0ubuntu1_armhf.deb
+Size: 3073542
+MD5sum: 5ba3c7846c6f217b9105f44b380b766e
+SHA1: 572c5641c60f2f816b2e7ab43cfe32e562ddba47
+SHA256: f8c57cebb11e13679f1a52b8c63ba92ae9818585c81279a652b13ca7fa2f235c
+Description: SMOKE development tools -- debug symbols
+Homepage: http://projects.kde.org/projects/kde/kdebindings/smoke/smokegen
+Description-md5: 94e89920bb40cf8e7799c29a5b366383
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: squid-purge
 Priority: optional
 Section: web
@@ -2251,6 +2320,29 @@ SHA256: ad6ee25137487a0120575de51d172af6df7ccd9545c45bb4e4f5295ba77cf619
 Description: Ubuntu Mono Icon theme
 Homepage: https://launchpad.net/ubuntu-themes
 Description-md5: 66d920db5c91b0cc1657a52014f604b8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: unity-greeter
+Priority: optional
+Section: x11
+Installed-Size: 388
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: armhf
+Version: 13.10.2-0ubuntu1
+Provides: lightdm-greeter
+Depends: dconf-gsettings-backend | gsettings-backend, libatk1.0-0 (>= 1.12.4), libc6 (>= 2.4), libcairo2 (>= 1.2.4), libcanberra0 (>= 0.2), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.2.1), libido3-0.1-0 (>= 13.10.0daily13.06.19), libindicator3-7 (>= 0.4.90), liblightdm-gobject-1-0 (>= 1.4.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libx11-6
+Recommends: gnome-settings-daemon, indicator-application, indicator-datetime, indicator-power, indicator-session, indicator-sound, lightdm, lightdm-remote-session-freerdp, lightdm-remote-session-uccsconfigure, network-manager-gnome, remote-login-service
+Breaks: edubuntu-artwork (<< 12.01.1~)
+Filename: pool/main/u/unity-greeter/unity-greeter_13.10.2-0ubuntu1_armhf.deb
+Size: 119252
+MD5sum: 25373ee4251de61cc03b5f962b372540
+SHA1: 7fb10bc9df9bf13ee0fd9325d4ae5088ba26b7d0
+SHA256: ccc267b94d16f73757f89df56b0c4c3601981e9ec5dc6e73a235390498698dba
+Description: Unity Greeter
+Homepage: https://launchpad.net/unity-greeter
+Description-md5: 9877c73111a0ce6340336dbc65020a9e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
