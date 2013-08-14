@@ -290,6 +290,90 @@ Description-md5: 95d9b26f75a8f8f8a93fbe8e13d5b0e9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: landscape-client
+Priority: optional
+Section: admin
+Installed-Size: 113
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Landscape Team <landscape-team@canonical.com>
+Architecture: armhf
+Version: 13.07.1-0ubuntu2
+Depends: python, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.4), python-twisted-web, python-twisted-names, python-pycurl, landscape-common (= 13.07.1-0ubuntu2)
+Filename: pool/main/l/landscape-client/landscape-client_13.07.1-0ubuntu2_armhf.deb
+Size: 20052
+MD5sum: a6e3bfda135b632de01f98912e1027ee
+SHA1: 138f5e5fe97b3885538905a81bfe58db8d854ad2
+SHA256: a482af79628040eb60cb37104003187cb0d41ca292c593380b53efa553120e63
+Description: The Landscape administration system client
+Description-md5: 3b6c233c041e3a732a8f320ae24c6a60
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: landscape-client-ui
+Priority: optional
+Section: admin
+Installed-Size: 90
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Landscape Team <landscape-team@canonical.com>
+Architecture: armhf
+Source: landscape-client
+Version: 13.07.1-0ubuntu2
+Replaces: landscape-client (<< 13.05.1+bzr682)
+Depends: python, landscape-client (= 13.07.1-0ubuntu2), landscape-client-ui-install (= 13.07.1-0ubuntu2), python-gi, python-dbus, policykit-1, gir1.2-notify-0.7, gir1.2-gtk-3.0
+Filename: pool/main/l/landscape-client/landscape-client-ui_13.07.1-0ubuntu2_armhf.deb
+Size: 4218
+MD5sum: ac8d392d81dea932532419465977dc1a
+SHA1: 9c394b5d7bb9d696b2d37091146faf5ff00273ef
+SHA256: 1cb4a30526224653b40c3bee25131c5b8168e5ef7f78683f8ead994a8691d91e
+Description: The Landscape administration system client - UI configuration
+Description-md5: 492e934962914cbe7430f25c3860cdec
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: landscape-client-ui-install
+Priority: optional
+Section: admin
+Installed-Size: 92
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Landscape Team <landscape-team@canonical.com>
+Architecture: armhf
+Source: landscape-client
+Version: 13.07.1-0ubuntu2
+Depends: python, python-gi, python-dbus, policykit-1, gir1.2-gtk-3.0, python-aptdaemon.gtk3widgets
+Filename: pool/main/l/landscape-client/landscape-client-ui-install_13.07.1-0ubuntu2_armhf.deb
+Size: 7702
+MD5sum: 29207ee52848f447870e2d3a64e4157f
+SHA1: c06b018bc15df3082a7c6e9301d537c6e578f604
+SHA256: 02c2657a01821b69e9a6cf094af3ce5bfb3a988dddca46fa45c17cf18aebde20
+Description: The Landscape administration system client - UI installer
+Description-md5: 3d4cc26e92f97555be860321697a84bb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: landscape-common
+Priority: optional
+Section: admin
+Installed-Size: 1013
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Landscape Team <landscape-team@canonical.com>
+Architecture: armhf
+Source: landscape-client
+Version: 13.07.1-0ubuntu2
+Replaces: landscape-client (<< 12.09+bzr582)
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), debconf (>= 0.5) | debconf-2.0, python-twisted-core, python-apt, ca-certificates, python-gdbm, lsb-release, lsb-base, adduser, bc, lshw, libpam-modules
+Filename: pool/main/l/landscape-client/landscape-common_13.07.1-0ubuntu2_armhf.deb
+Size: 204370
+MD5sum: c656350b27d805337e48e647899c0821
+SHA1: be32fbf38c6d3a21c479b68759ad23d4ceaeab46
+SHA256: b9dfb4e69c02a34617bce62b7cfc720bc6cd0b82c0b1c906d408c74311d6b298
+Description: The Landscape administration system client - Common files
+Python-Version: 2.7
+Description-md5: 835e5462d72cec2787f651391834f9a8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: cloud-image, server
+
 Package: language-pack-fo
 Priority: optional
 Section: translations
@@ -433,6 +517,27 @@ SHA1: fb5ed68931145a34ce6305cd0f62c922222690af
 SHA256: b7702026b20935cd44d60d266713cfe68f8546a48176131eedd55b70d4f5d48a
 Description: GNOME translation updates for language Azerbaijani
 Description-md5: 0586b807626a158d1c297704e9693094
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-fil
+Priority: optional
+Section: translations
+Installed-Size: 69
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-fil (<< 1:13.10+20130813), language-pack-fil-base (<< 1:13.10+20130813), language-pack-gnome-fil (<< 1:13.10+20130813), language-pack-gnome-fil-base, language-pack-kde-fil (<< 1:13.10+20130813), language-pack-kde-fil-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-fil-base (>= 1:13.10+20130723), language-pack-fil
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-fil/language-pack-gnome-fil_13.10+20130813_all.deb
+Size: 14080
+MD5sum: ee18265c5019773b71eee5ce11ce5ebf
+SHA1: 81a4e1819c33cc6daa2fd99a675ad5a1021b7b6c
+SHA256: 94912eda60cb33dda3f931bb0b1118135d0af3f2847f7f03f3fbdde122985e7d
+Description: GNOME translation updates for language Filipino
+Description-md5: 994e6f9bb26ea7f5b18a544330dea20f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
@@ -584,6 +689,48 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live, xubuntu-live
 
+Package: language-pack-gnome-hy
+Priority: optional
+Section: translations
+Installed-Size: 383
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-hy (<< 1:13.10+20130813), language-pack-gnome-hy-base, language-pack-hy (<< 1:13.10+20130813), language-pack-hy-base (<< 1:13.10+20130813), language-pack-kde-hy (<< 1:13.10+20130813), language-pack-kde-hy-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-hy-base (>= 1:13.10+20130723), language-pack-hy
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-hy/language-pack-gnome-hy_13.10+20130813_all.deb
+Size: 90372
+MD5sum: 2911f83435907cbd71c700ccdf04cbea
+SHA1: f5039ef416a78b277df50c35ff887bd6e45ac6b8
+SHA256: d6f619cb40a1ea3c5c762a5f87175a4c08b35e4aef697fccce9d31405e7c5765
+Description: GNOME translation updates for language Armenian
+Description-md5: 7662e0ac8d9a861b610f915339625f38
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-ia
+Priority: optional
+Section: translations
+Installed-Size: 108
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-ia (<< 1:13.10+20130813), language-pack-gnome-ia-base, language-pack-ia (<< 1:13.10+20130813), language-pack-ia-base (<< 1:13.10+20130813), language-pack-kde-ia (<< 1:13.10+20130813), language-pack-kde-ia-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-ia-base (>= 1:13.10+20130723), language-pack-ia
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-ia/language-pack-gnome-ia_13.10+20130813_all.deb
+Size: 28010
+MD5sum: f1ad629bb4ba99feb2d389c74b1c9c97
+SHA1: 55a7419d5ddc7baa3becfe08e8aa0edc9c866846
+SHA256: f3b9e0eac78b019c01749e9068acb65c4e8b2186ac2359603bfe799493adabb3
+Description: GNOME translation updates for language Interlingua (International Auxiliary Language Association)
+Description-md5: de3fb08a7b5ad1827191893cd6ad11cf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
 Package: language-pack-gnome-kk
 Priority: optional
 Section: translations
@@ -727,6 +874,27 @@ SHA1: 6c5ec2d738ebd2286cbde019d0d657f063322fe7
 SHA256: d24d1bab9e231d53c97dac52c35b85eabb00b3c3c98950c208d240101ddf6c82
 Description: GNOME translation updates for language Mongolian
 Description-md5: 0cd528d078542e079e14cd1c1abb2d88
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-mt
+Priority: optional
+Section: translations
+Installed-Size: 39
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-mt (<< 1:13.10+20130813), language-pack-gnome-mt-base, language-pack-kde-mt (<< 1:13.10+20130813), language-pack-kde-mt-base (<< 1:13.10+20130813), language-pack-mt (<< 1:13.10+20130813), language-pack-mt-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-mt-base (>= 1:13.10+20130723), language-pack-mt
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-mt/language-pack-gnome-mt_13.10+20130813_all.deb
+Size: 2992
+MD5sum: 2edffed204e37c44ab2cf3f9b9833492
+SHA1: 9f225ada11e39b03f5459e5fe69ee2563c311499
+SHA256: 4ee73054ffc18b573554dcc9bb3ea096161414dfe072d56210a0c1428bf0186a
+Description: GNOME translation updates for language Maltese
+Description-md5: 507ae9329767e80851c2a048aed7c686
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
@@ -895,6 +1063,111 @@ SHA1: 8fc9e905d92ff09943e13810a5234121734c3e39
 SHA256: b527ba8c5bb3cf4a2181d38e269d9d8e984efdad45bbec4a9adad823372904f5
 Description: GNOME translation updates for language Tatar
 Description-md5: c88474b65f3b6d3f1e5ec95ad2ecab2a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-uz
+Priority: optional
+Section: translations
+Installed-Size: 197
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-uz (<< 1:13.10+20130813), language-pack-gnome-uz-base, language-pack-kde-uz (<< 1:13.10+20130813), language-pack-kde-uz-base (<< 1:13.10+20130813), language-pack-uz (<< 1:13.10+20130813), language-pack-uz-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-uz-base (>= 1:13.10+20130723), language-pack-uz
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-uz/language-pack-gnome-uz_13.10+20130813_all.deb
+Size: 50626
+MD5sum: 06d83edd239e029031044bf6575887f0
+SHA1: b41bc6e3f92e5248d75aa9a9e2a0fefd4aa32fc3
+SHA256: c3de327b9310f6de0a8895173309b12edc997c54455ebddcc3e63ba1f1a7aca1
+Description: GNOME translation updates for language Uzbek
+Description-md5: 1c1ee1a05a45a5ec9d01942bd00dbb3b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-wa
+Priority: optional
+Section: translations
+Installed-Size: 94
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-wa (<< 1:13.10+20130813), language-pack-gnome-wa-base, language-pack-kde-wa (<< 1:13.10+20130813), language-pack-kde-wa-base (<< 1:13.10+20130813), language-pack-wa (<< 1:13.10+20130813), language-pack-wa-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-wa-base (>= 1:13.10+20130723), language-pack-wa
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-wa/language-pack-gnome-wa_13.10+20130813_all.deb
+Size: 23400
+MD5sum: c81bb9ea29e126ae2e5aff11ff767c69
+SHA1: 4d59874354e2c8e7ce0dce39adf7696f870020a2
+SHA256: d035a9ef051fda4ffc74651f341fc7026fa4c95da12ab680b038680e3d5bfab6
+Description: GNOME translation updates for language Walloon
+Description-md5: cf5374429f2ac83519e28b491731e8d4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-wo
+Priority: optional
+Section: translations
+Installed-Size: 46
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-wo (<< 1:13.10+20130813), language-pack-gnome-wo-base, language-pack-kde-wo (<< 1:13.10+20130813), language-pack-kde-wo-base (<< 1:13.10+20130813), language-pack-wo (<< 1:13.10+20130813), language-pack-wo-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-wo-base (>= 1:13.10+20130723), language-pack-wo
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-wo/language-pack-gnome-wo_13.10+20130813_all.deb
+Size: 5914
+MD5sum: ff91ac57181ca79ac10b43372621d210
+SHA1: 6e5d0b381bc7286ad83fdc398d89c182f7a95c29
+SHA256: 19bac2f013e65fca8fa49d39fdafa225f3a85a51a2025f276d394d53b855db45
+Description: GNOME translation updates for language Wolof
+Description-md5: 6470a3fd200b3b12b8a70ca898998757
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-xh
+Priority: optional
+Section: translations
+Installed-Size: 164
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-xh (<< 1:13.10+20130813), language-pack-gnome-xh-base, language-pack-kde-xh (<< 1:13.10+20130813), language-pack-kde-xh-base (<< 1:13.10+20130813), language-pack-xh (<< 1:13.10+20130813), language-pack-xh-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-xh-base (>= 1:13.10+20130723), language-pack-xh
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-xh/language-pack-gnome-xh_13.10+20130813_all.deb
+Size: 44624
+MD5sum: 4efbd61e4213126e96f22a4733165b2c
+SHA1: ab59da4f6094afc6c23f744654c8c47a0ca5692e
+SHA256: e333d04843fe98c59296c27a8ce1efafa084b7b538d29f81387424672a673132
+Description: GNOME translation updates for language Xhosa
+Description-md5: 2dba3fa9542517d2f2567cb4556b3f6c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live, xubuntu-live, lubuntu-live
+
+Package: language-pack-gnome-yi
+Priority: optional
+Section: translations
+Installed-Size: 136
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-yi (<< 1:13.10+20130813), language-pack-gnome-yi-base, language-pack-kde-yi (<< 1:13.10+20130813), language-pack-kde-yi-base (<< 1:13.10+20130813), language-pack-yi (<< 1:13.10+20130813), language-pack-yi-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-yi-base (>= 1:13.10+20130723), language-pack-yi
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-yi/language-pack-gnome-yi_13.10+20130813_all.deb
+Size: 28284
+MD5sum: f836da75e5a3c1cef8b10611b3564db6
+SHA1: d9c5c548be4c4ba3072472a2ed19228884912e15
+SHA256: 9a5ffeaaab1fd973bd672d60210cddea93650dda250a71b277ff5157b8259dfc
+Description: GNOME translation updates for language Yiddish
+Description-md5: cc8f1518846242780629f49e8673724f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live

@@ -45,6 +45,185 @@ Description-md5: 6948801c3d791b1c318acb50a89989c6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: ceph
+Priority: optional
+Section: admin
+Installed-Size: 104518
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Version: 0.67-0ubuntu1
+Depends: binutils, ceph-common, cryptsetup-bin | cryptsetup, gdisk, hdparm | sdparm, parted, python, python-argparse, uuid-runtime, xfsprogs, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libaio1 (>= 0.3.93), libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.16), libgcc1 (>= 1:4.2.1), libgoogle-perftools4, libleveldb1, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Recommends: libcephfs1, librados2, librbd1
+Filename: pool/main/c/ceph/ceph_0.67-0ubuntu1_powerpc.deb
+Size: 22864614
+MD5sum: 19695dfd23187e0a2ba0e83893645cdb
+SHA1: 029ca7ea6b480a7d00e1a6784cf1821c92c1f67f
+SHA256: 07405eebedb53564a966c112d343de69e3249a6567891f3766fd4b703990a4bd
+Description: distributed storage and file system
+Homepage: http://ceph.com/
+Description-md5: 8076f05fe2327940c1772acbf6f471cf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-common
+Priority: optional
+Section: admin
+Installed-Size: 18101
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Replaces: ceph-client-tools
+Depends: librbd1 (= 0.67-0ubuntu1), python, python-ceph (= 0.67-0ubuntu1), libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.16), libgcc1 (>= 1:4.2.1), libkeyutils1, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), librados2, libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Suggests: ceph, ceph-mds
+Conflicts: ceph-client-tools
+Filename: pool/main/c/ceph/ceph-common_0.67-0ubuntu1_powerpc.deb
+Size: 6034642
+MD5sum: 4e54f5e3ddde542127a1ac0dbe01170b
+SHA1: e8cfc2681dd8c05af5cd842c531312aef35286e4
+SHA256: eeb5eeb0559426bd17aa53142a5b933316812b950c881260df22ead10bda2d64
+Description: common utilities to mount and interact with a ceph storage cluster
+Homepage: http://ceph.com/
+Description-md5: e302e645c41e2c6148fcff41573e283b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-common-dbg
+Priority: extra
+Section: debug
+Installed-Size: 218304
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Replaces: ceph-client-tools-dbg
+Depends: ceph-common (= 0.67-0ubuntu1)
+Conflicts: ceph-client-tools-dbg
+Filename: pool/main/c/ceph/ceph-common-dbg_0.67-0ubuntu1_powerpc.deb
+Size: 69051324
+MD5sum: cf4b3db400ce57adabed4f8b634e9fae
+SHA1: 484674c0b7a82f36da60ea84900f361ca065fab1
+SHA256: d56aff67eabf513d7bf29fe35ff52914ac477fa70ff419e4006faab5cfb37f1c
+Description: debugging symbols for ceph-common
+Homepage: http://ceph.com/
+Description-md5: 4e090d4d7aa07af441f4e2ba271159ef
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-dbg
+Priority: extra
+Section: debug
+Installed-Size: 243663
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Depends: ceph (= 0.67-0ubuntu1)
+Filename: pool/main/c/ceph/ceph-dbg_0.67-0ubuntu1_powerpc.deb
+Size: 69397760
+MD5sum: 18839d147d9fb0ab114b70c657227fb0
+SHA1: d4f38527caafa18e3f02e92afc8010a1d8fe28ca
+SHA256: 9fb8563ac8fc700eaf8fd8896f95436aee0482cb18a41f50b0e6ec87b2e9c3a7
+Description: debugging symbols for ceph
+Homepage: http://ceph.com/
+Description-md5: 43fb0fb4a4a9eb4d08ff4a0f12738692
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-fs-common
+Priority: optional
+Section: admin
+Installed-Size: 100
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Replaces: ceph-client-tools
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libkeyutils1, libstdc++6 (>= 4.4.0)
+Suggests: ceph-mds
+Conflicts: ceph-client-tools
+Filename: pool/main/c/ceph/ceph-fs-common_0.67-0ubuntu1_powerpc.deb
+Size: 28370
+MD5sum: a6919cc5bb9f79ca16efa04bdfe123ef
+SHA1: 9ad82f3ada9b754c8c683b58b14c70c80f73083d
+SHA256: 73acb26bb1283bd843766fb9adfac64aa5e26080a8b67c7ad96bcb3acd10093c
+Description: common utilities to mount and interact with a ceph file system
+Homepage: http://ceph.com/
+Description-md5: b2714a5dd73de6b9a1f8478ea36a611a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-fs-common-dbg
+Priority: extra
+Section: debug
+Installed-Size: 217
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Replaces: ceph-client-tools-dbg
+Depends: ceph-fs-common (= 0.67-0ubuntu1)
+Conflicts: ceph-client-tools-dbg
+Filename: pool/main/c/ceph/ceph-fs-common-dbg_0.67-0ubuntu1_powerpc.deb
+Size: 69812
+MD5sum: 16b6c876ea7b2990aac05e1de0c410bc
+SHA1: d3a9b6a74da5d27cd5319a11d3e68078fb7c4904
+SHA256: f168fbafede06e30cbf0c2733655fa7a1eef714d65fe7ce3bb61dc1a4dbb3b7b
+Description: debugging symbols for ceph-fs-common
+Homepage: http://ceph.com/
+Description-md5: aa04d5e291a121b5512a5c379fed4f57
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-mds
+Priority: optional
+Section: admin
+Installed-Size: 7182
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Depends: ceph, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.16), libgcc1 (>= 1:4.2.1), libgoogle-perftools4, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Recommends: ceph-fs-common, ceph-fuse, libcephfs1
+Filename: pool/main/c/ceph/ceph-mds_0.67-0ubuntu1_powerpc.deb
+Size: 2688662
+MD5sum: 094c2bf449d0b18d624554acb1dd52cd
+SHA1: e68630e480782f4703003cd4916eea7c7327649b
+SHA256: 64212e38156de0b2e925eabc0639064c411d81d048778a327fd0e820df5f8dd6
+Description: metadata server for the ceph distributed file system
+Homepage: http://ceph.com/
+Description-md5: d37d51a4735a093f21799c80f707168f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-mds-dbg
+Priority: extra
+Section: debug
+Installed-Size: 100158
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Depends: ceph-mds (= 0.67-0ubuntu1)
+Filename: pool/main/c/ceph/ceph-mds-dbg_0.67-0ubuntu1_powerpc.deb
+Size: 34557784
+MD5sum: 607cd5a9295b88f9c4c1c1bd7dc037fe
+SHA1: 08f215aebc5cb4183ecf4925d86230ab615168d4
+SHA256: 8f685417edd0024aa59a803907e5292b13b76f02643fad1a02aeda064d1b6a12
+Description: debugging symbols for ceph-mds
+Homepage: http://ceph.com/
+Description-md5: 4bccb890723e465eee1809af0c5a17ed
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: ffmpeg
 Priority: optional
 Section: graphics
@@ -110,6 +289,90 @@ Homepage: http://code.google.com/p/googlemock/
 Description-md5: 95d9b26f75a8f8f8a93fbe8e13d5b0e9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: landscape-client
+Priority: optional
+Section: admin
+Installed-Size: 117
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Landscape Team <landscape-team@canonical.com>
+Architecture: powerpc
+Version: 13.07.1-0ubuntu2
+Depends: python, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.4), python-twisted-web, python-twisted-names, python-pycurl, landscape-common (= 13.07.1-0ubuntu2)
+Filename: pool/main/l/landscape-client/landscape-client_13.07.1-0ubuntu2_powerpc.deb
+Size: 20352
+MD5sum: 45e110aafcc0d98f89c8b8e20b8b43db
+SHA1: 2cbdd653a5b4f00763929aeee9da5f62d6f97f6e
+SHA256: 1dc0bec69ed8dc93cd12a5f74bbb3168aa8581c30b8eeee415be3c5a5b8967d9
+Description: The Landscape administration system client
+Description-md5: 3b6c233c041e3a732a8f320ae24c6a60
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: landscape-client-ui
+Priority: optional
+Section: admin
+Installed-Size: 90
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Landscape Team <landscape-team@canonical.com>
+Architecture: powerpc
+Source: landscape-client
+Version: 13.07.1-0ubuntu2
+Replaces: landscape-client (<< 13.05.1+bzr682)
+Depends: python, landscape-client (= 13.07.1-0ubuntu2), landscape-client-ui-install (= 13.07.1-0ubuntu2), python-gi, python-dbus, policykit-1, gir1.2-notify-0.7, gir1.2-gtk-3.0
+Filename: pool/main/l/landscape-client/landscape-client-ui_13.07.1-0ubuntu2_powerpc.deb
+Size: 4212
+MD5sum: ced12078c40f91783cbce5307f314e59
+SHA1: 5f83dc884740db495586143a7cb1a247606231b2
+SHA256: 81f9db900f74e2ee854182166aeaba255017fc7951e848a379d7244be1c6015c
+Description: The Landscape administration system client - UI configuration
+Description-md5: 492e934962914cbe7430f25c3860cdec
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: landscape-client-ui-install
+Priority: optional
+Section: admin
+Installed-Size: 92
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Landscape Team <landscape-team@canonical.com>
+Architecture: powerpc
+Source: landscape-client
+Version: 13.07.1-0ubuntu2
+Depends: python, python-gi, python-dbus, policykit-1, gir1.2-gtk-3.0, python-aptdaemon.gtk3widgets
+Filename: pool/main/l/landscape-client/landscape-client-ui-install_13.07.1-0ubuntu2_powerpc.deb
+Size: 7708
+MD5sum: a79a2886f1ec81164c97717bea754ad4
+SHA1: d580783528889d32602e00278fc121270f58ff8e
+SHA256: eace8c8c349c2ce32701e613636e9008c92aabbfa966d3028fcf47d52937d0b1
+Description: The Landscape administration system client - UI installer
+Description-md5: 3d4cc26e92f97555be860321697a84bb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: landscape-common
+Priority: optional
+Section: admin
+Installed-Size: 1013
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Landscape Team <landscape-team@canonical.com>
+Architecture: powerpc
+Source: landscape-client
+Version: 13.07.1-0ubuntu2
+Replaces: landscape-client (<< 12.09+bzr582)
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), debconf (>= 0.5) | debconf-2.0, python-twisted-core, python-apt, ca-certificates, python-gdbm, lsb-release, lsb-base, adduser, bc, lshw, libpam-modules
+Filename: pool/main/l/landscape-client/landscape-common_13.07.1-0ubuntu2_powerpc.deb
+Size: 204304
+MD5sum: 7b6bf995974027a311fec41699390fec
+SHA1: 656f6d2289427859f8cea9bc7670c42e5002acb8
+SHA256: c85f7cb4e8069b8f327ca455bbf048b71a2f9b1b06dc6a04b5341016479f07f4
+Description: The Landscape administration system client - Common files
+Python-Version: 2.7
+Description-md5: 835e5462d72cec2787f651391834f9a8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: cloud-image, server
 
 Package: language-pack-fo
 Priority: optional
@@ -254,6 +517,27 @@ SHA1: fb5ed68931145a34ce6305cd0f62c922222690af
 SHA256: b7702026b20935cd44d60d266713cfe68f8546a48176131eedd55b70d4f5d48a
 Description: GNOME translation updates for language Azerbaijani
 Description-md5: 0586b807626a158d1c297704e9693094
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-fil
+Priority: optional
+Section: translations
+Installed-Size: 69
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-fil (<< 1:13.10+20130813), language-pack-fil-base (<< 1:13.10+20130813), language-pack-gnome-fil (<< 1:13.10+20130813), language-pack-gnome-fil-base, language-pack-kde-fil (<< 1:13.10+20130813), language-pack-kde-fil-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-fil-base (>= 1:13.10+20130723), language-pack-fil
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-fil/language-pack-gnome-fil_13.10+20130813_all.deb
+Size: 14080
+MD5sum: ee18265c5019773b71eee5ce11ce5ebf
+SHA1: 81a4e1819c33cc6daa2fd99a675ad5a1021b7b6c
+SHA256: 94912eda60cb33dda3f931bb0b1118135d0af3f2847f7f03f3fbdde122985e7d
+Description: GNOME translation updates for language Filipino
+Description-md5: 994e6f9bb26ea7f5b18a544330dea20f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
@@ -405,6 +689,48 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
 
+Package: language-pack-gnome-hy
+Priority: optional
+Section: translations
+Installed-Size: 383
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-hy (<< 1:13.10+20130813), language-pack-gnome-hy-base, language-pack-hy (<< 1:13.10+20130813), language-pack-hy-base (<< 1:13.10+20130813), language-pack-kde-hy (<< 1:13.10+20130813), language-pack-kde-hy-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-hy-base (>= 1:13.10+20130723), language-pack-hy
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-hy/language-pack-gnome-hy_13.10+20130813_all.deb
+Size: 90372
+MD5sum: 2911f83435907cbd71c700ccdf04cbea
+SHA1: f5039ef416a78b277df50c35ff887bd6e45ac6b8
+SHA256: d6f619cb40a1ea3c5c762a5f87175a4c08b35e4aef697fccce9d31405e7c5765
+Description: GNOME translation updates for language Armenian
+Description-md5: 7662e0ac8d9a861b610f915339625f38
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-ia
+Priority: optional
+Section: translations
+Installed-Size: 108
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-ia (<< 1:13.10+20130813), language-pack-gnome-ia-base, language-pack-ia (<< 1:13.10+20130813), language-pack-ia-base (<< 1:13.10+20130813), language-pack-kde-ia (<< 1:13.10+20130813), language-pack-kde-ia-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-ia-base (>= 1:13.10+20130723), language-pack-ia
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-ia/language-pack-gnome-ia_13.10+20130813_all.deb
+Size: 28010
+MD5sum: f1ad629bb4ba99feb2d389c74b1c9c97
+SHA1: 55a7419d5ddc7baa3becfe08e8aa0edc9c866846
+SHA256: f3b9e0eac78b019c01749e9068acb65c4e8b2186ac2359603bfe799493adabb3
+Description: GNOME translation updates for language Interlingua (International Auxiliary Language Association)
+Description-md5: de3fb08a7b5ad1827191893cd6ad11cf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
 Package: language-pack-gnome-kk
 Priority: optional
 Section: translations
@@ -548,6 +874,27 @@ SHA1: 6c5ec2d738ebd2286cbde019d0d657f063322fe7
 SHA256: d24d1bab9e231d53c97dac52c35b85eabb00b3c3c98950c208d240101ddf6c82
 Description: GNOME translation updates for language Mongolian
 Description-md5: 0cd528d078542e079e14cd1c1abb2d88
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-mt
+Priority: optional
+Section: translations
+Installed-Size: 39
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-mt (<< 1:13.10+20130813), language-pack-gnome-mt-base, language-pack-kde-mt (<< 1:13.10+20130813), language-pack-kde-mt-base (<< 1:13.10+20130813), language-pack-mt (<< 1:13.10+20130813), language-pack-mt-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-mt-base (>= 1:13.10+20130723), language-pack-mt
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-mt/language-pack-gnome-mt_13.10+20130813_all.deb
+Size: 2992
+MD5sum: 2edffed204e37c44ab2cf3f9b9833492
+SHA1: 9f225ada11e39b03f5459e5fe69ee2563c311499
+SHA256: 4ee73054ffc18b573554dcc9bb3ea096161414dfe072d56210a0c1428bf0186a
+Description: GNOME translation updates for language Maltese
+Description-md5: 507ae9329767e80851c2a048aed7c686
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
@@ -716,6 +1063,111 @@ SHA1: 8fc9e905d92ff09943e13810a5234121734c3e39
 SHA256: b527ba8c5bb3cf4a2181d38e269d9d8e984efdad45bbec4a9adad823372904f5
 Description: GNOME translation updates for language Tatar
 Description-md5: c88474b65f3b6d3f1e5ec95ad2ecab2a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-uz
+Priority: optional
+Section: translations
+Installed-Size: 197
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-uz (<< 1:13.10+20130813), language-pack-gnome-uz-base, language-pack-kde-uz (<< 1:13.10+20130813), language-pack-kde-uz-base (<< 1:13.10+20130813), language-pack-uz (<< 1:13.10+20130813), language-pack-uz-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-uz-base (>= 1:13.10+20130723), language-pack-uz
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-uz/language-pack-gnome-uz_13.10+20130813_all.deb
+Size: 50626
+MD5sum: 06d83edd239e029031044bf6575887f0
+SHA1: b41bc6e3f92e5248d75aa9a9e2a0fefd4aa32fc3
+SHA256: c3de327b9310f6de0a8895173309b12edc997c54455ebddcc3e63ba1f1a7aca1
+Description: GNOME translation updates for language Uzbek
+Description-md5: 1c1ee1a05a45a5ec9d01942bd00dbb3b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-wa
+Priority: optional
+Section: translations
+Installed-Size: 94
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-wa (<< 1:13.10+20130813), language-pack-gnome-wa-base, language-pack-kde-wa (<< 1:13.10+20130813), language-pack-kde-wa-base (<< 1:13.10+20130813), language-pack-wa (<< 1:13.10+20130813), language-pack-wa-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-wa-base (>= 1:13.10+20130723), language-pack-wa
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-wa/language-pack-gnome-wa_13.10+20130813_all.deb
+Size: 23400
+MD5sum: c81bb9ea29e126ae2e5aff11ff767c69
+SHA1: 4d59874354e2c8e7ce0dce39adf7696f870020a2
+SHA256: d035a9ef051fda4ffc74651f341fc7026fa4c95da12ab680b038680e3d5bfab6
+Description: GNOME translation updates for language Walloon
+Description-md5: cf5374429f2ac83519e28b491731e8d4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-wo
+Priority: optional
+Section: translations
+Installed-Size: 46
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-wo (<< 1:13.10+20130813), language-pack-gnome-wo-base, language-pack-kde-wo (<< 1:13.10+20130813), language-pack-kde-wo-base (<< 1:13.10+20130813), language-pack-wo (<< 1:13.10+20130813), language-pack-wo-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-wo-base (>= 1:13.10+20130723), language-pack-wo
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-wo/language-pack-gnome-wo_13.10+20130813_all.deb
+Size: 5914
+MD5sum: ff91ac57181ca79ac10b43372621d210
+SHA1: 6e5d0b381bc7286ad83fdc398d89c182f7a95c29
+SHA256: 19bac2f013e65fca8fa49d39fdafa225f3a85a51a2025f276d394d53b855db45
+Description: GNOME translation updates for language Wolof
+Description-md5: 6470a3fd200b3b12b8a70ca898998757
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-xh
+Priority: optional
+Section: translations
+Installed-Size: 164
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-xh (<< 1:13.10+20130813), language-pack-gnome-xh-base, language-pack-kde-xh (<< 1:13.10+20130813), language-pack-kde-xh-base (<< 1:13.10+20130813), language-pack-xh (<< 1:13.10+20130813), language-pack-xh-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-xh-base (>= 1:13.10+20130723), language-pack-xh
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-xh/language-pack-gnome-xh_13.10+20130813_all.deb
+Size: 44624
+MD5sum: 4efbd61e4213126e96f22a4733165b2c
+SHA1: ab59da4f6094afc6c23f744654c8c47a0ca5692e
+SHA256: e333d04843fe98c59296c27a8ce1efafa084b7b538d29f81387424672a673132
+Description: GNOME translation updates for language Xhosa
+Description-md5: 2dba3fa9542517d2f2567cb4556b3f6c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-yi
+Priority: optional
+Section: translations
+Installed-Size: 136
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130813
+Replaces: language-pack-gnome-yi (<< 1:13.10+20130813), language-pack-gnome-yi-base, language-pack-kde-yi (<< 1:13.10+20130813), language-pack-kde-yi-base (<< 1:13.10+20130813), language-pack-yi (<< 1:13.10+20130813), language-pack-yi-base (<< 1:13.10+20130813)
+Depends: language-pack-gnome-yi-base (>= 1:13.10+20130723), language-pack-yi
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-yi/language-pack-gnome-yi_13.10+20130813_all.deb
+Size: 28284
+MD5sum: f836da75e5a3c1cef8b10611b3564db6
+SHA1: d9c5c548be4c4ba3072472a2ed19228884912e15
+SHA256: 9a5ffeaaab1fd973bd672d60210cddea93650dda250a71b277ff5157b8259dfc
+Description: GNOME translation updates for language Yiddish
+Description-md5: cc8f1518846242780629f49e8673724f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
@@ -1023,6 +1475,117 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-active, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop
 
+Package: libcephfs-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 145742
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Replaces: libceph-dev, libceph1-dev, libcephfs1-dev
+Depends: libcephfs1 (= 0.67-0ubuntu1)
+Conflicts: libceph-dev, libceph1-dev, libcephfs1-dev
+Filename: pool/main/c/ceph/libcephfs-dev_0.67-0ubuntu1_powerpc.deb
+Size: 36391680
+MD5sum: 152157ad7d114185c04e90f0608b7879
+SHA1: 43fad00722597b223e60d898fac5d09b61d0556a
+SHA256: 76829881b3eb6e9748f083276f127eb39267af0daf34a8967f90c1c4e5d61679
+Description: Ceph distributed file system client library (development files)
+Homepage: http://ceph.com/
+Description-md5: 6b03c162d6b2cd6497a86ae380717147
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcephfs-jni
+Priority: optional
+Section: libs
+Installed-Size: 151
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Depends: libcephfs1 (= 0.67-0ubuntu1), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6)
+Filename: pool/main/c/ceph/libcephfs-jni_0.67-0ubuntu1_powerpc.deb
+Size: 38264
+MD5sum: cdac1a273782c21fbb68ae807e8a4a88
+SHA1: 77ac923ac0bc300b68665c198b2153695bbb3980
+SHA256: 14f84a1fa91acbf3acff08ae8ae46bcdcad83e9e0dfe8af6b9b6d45577b909a1
+Description: Java Native Interface library for CephFS Java bindings
+Homepage: http://ceph.com/
+Description-md5: eeccae7ad4653bc059b325a5ec4ddd58
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcephfs-jni-dbg
+Priority: extra
+Section: debug
+Installed-Size: 806
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Depends: libcephfs-jni (= 0.67-0ubuntu1)
+Filename: pool/main/c/ceph/libcephfs-jni-dbg_0.67-0ubuntu1_powerpc.deb
+Size: 255816
+MD5sum: 0d52f68f0fe48644e8e12231dc1613c5
+SHA1: b085c22779142dfeb7542be411d9e18526946307
+SHA256: 09baf410135848b4baf0e60f8fbd33e96ae49f9118eb01ef5eacb621b49c90b6
+Description: Debugging symbols for libcephfs-jni
+Homepage: http://ceph.com/
+Description-md5: b463ee0275120595e8db9a2d2d079cf8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcephfs1
+Priority: optional
+Section: libs
+Installed-Size: 5345
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Replaces: libceph, libceph1, libcephfs
+Depends: libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.9), libgcc1 (>= 1:4.2.1), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Conflicts: libceph, libceph1, libcephfs
+Filename: pool/main/c/ceph/libcephfs1_0.67-0ubuntu1_powerpc.deb
+Size: 1778742
+MD5sum: d698a4937c3e05b794d8cd2c70834ec2
+SHA1: c40b0f0c8b7f6c8ff2bf7b8ec1d405661548fc8a
+SHA256: 1b517d00e92831317f6beed3cb0232c7890b94757263f42a9409008117bde404
+Description: Ceph distributed file system client library
+Homepage: http://ceph.com/
+Description-md5: 02d5e7983127037e5b5e5e07dea2a6e4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcephfs1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 66253
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Replaces: libceph1-dbg
+Depends: libcephfs1 (= 0.67-0ubuntu1)
+Conflicts: libceph1-dbg
+Filename: pool/main/c/ceph/libcephfs1-dbg_0.67-0ubuntu1_powerpc.deb
+Size: 19878378
+MD5sum: d624028145b4d2d9645f0cbc955a5447
+SHA1: e916a4b43b10a0f0c8867e6ef898a6e9e66c96ae
+SHA256: 9bba062887a57f07f5fcfa82932e02d878f9e2081b54a813cb71eb807db1c609
+Description: debugging symbols for libcephfs1
+Homepage: http://ceph.com/
+Description-md5: ef23abe3fb9706def734dae7e4f8e64f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libdbi-perl
 Priority: optional
 Section: perl
@@ -1230,6 +1793,142 @@ SHA256: 516817c2e860c725c827958f0ab87a77a18c5fd1035e655a2fc4216aedc74988
 Description: Web content engine library for Qt - debugging symbols
 Homepage: http://trac.webkit.org/wiki/QtWebKit
 Description-md5: 2b35e7ad9905f44038a180fc098adcca
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: librados-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 10266
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Replaces: librados1-dev, librados2-dev
+Depends: librados2 (= 0.67-0ubuntu1), libc6 (>= 2.16), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.2.1)
+Conflicts: librados1-dev, librados2-dev
+Filename: pool/main/c/ceph/librados-dev_0.67-0ubuntu1_powerpc.deb
+Size: 2373738
+MD5sum: 89897d49f4a704d6200d0193717958e1
+SHA1: de95e822ecb2c98ab7147378064b35c90df3f3e9
+SHA256: afa96602304e4fbbb9cf378d69ba9ee099284fe5fe9b262e984774b8a145aa28
+Description: RADOS distributed object store client library (development files)
+Homepage: http://ceph.com/
+Description-md5: 45a1795729f9041b2c4d34b965fbaee2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: librados2
+Priority: optional
+Section: libs
+Installed-Size: 4937
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Replaces: librados, librados1
+Depends: libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.9), libgcc1 (>= 1:4.2.1), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Conflicts: librados, librados1
+Filename: pool/main/c/ceph/librados2_0.67-0ubuntu1_powerpc.deb
+Size: 1584162
+MD5sum: 9ea2bcf8c198af12cad00a9a1bc85e05
+SHA1: aab730bcb801f3b99e1e759122401990992cfed1
+SHA256: ce6b07b38f4b12bfe85a0ae02aa51fff711803189ce51f85b2187b0678330834
+Description: RADOS distributed object store client library
+Homepage: http://ceph.com/
+Description-md5: 42d0f393b45b7f226597be77c6f81917
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: virt-host
+
+Package: librados2-dbg
+Priority: extra
+Section: debug
+Installed-Size: 60792
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Replaces: librados1-dbg
+Depends: librados2 (= 0.67-0ubuntu1)
+Conflicts: librados1-dbg
+Filename: pool/main/c/ceph/librados2-dbg_0.67-0ubuntu1_powerpc.deb
+Size: 17547804
+MD5sum: db28d2600ea2787da5bbeeb851b9f428
+SHA1: 37e1674d0f611b9452973eeba75c57d1b838d28d
+SHA256: 5d1f6faabd7d60a94146da53d1318b91cd09a837ca78a450e440e505a034668a
+Description: debugging symbols for librados2
+Homepage: http://ceph.com/
+Description-md5: 5fed3bffffed20ba3eae296a5cd8e215
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: librbd-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 27927
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Replaces: librbd1-dev
+Depends: librados-dev, librbd1 (= 0.67-0ubuntu1)
+Conflicts: librbd1-dev
+Filename: pool/main/c/ceph/librbd-dev_0.67-0ubuntu1_powerpc.deb
+Size: 7799346
+MD5sum: 1deee5454c2ebea7daff0eaf5d5cbbdc
+SHA1: f38f29fa5f47343273144fe49922fbc046591a3f
+SHA256: 6946692fcd2c5103e457801b5e7831c0c682a45ab8f97c4aca943a0a79ab169e
+Description: RADOS block device client library (development files)
+Homepage: http://ceph.com/
+Description-md5: 5a3f9d05f90eae572a3f0c323daf1cab
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: librbd1
+Priority: optional
+Section: libs
+Installed-Size: 709
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Depends: librados2 (= 0.67-0ubuntu1), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6)
+Filename: pool/main/c/ceph/librbd1_0.67-0ubuntu1_powerpc.deb
+Size: 280718
+MD5sum: d9da6919d506ed29e877e90638ac3c0a
+SHA1: 3d229424983caac0e2526f698e45a0d5ba6a07e5
+SHA256: 2074c422b45d318835f196515b58ff30f0e5f5f1f6a026f1cfd02a3387c98431
+Description: RADOS block device client library
+Homepage: http://ceph.com/
+Description-md5: 3b39955e1c12f7ad8d4c44efcc8ec188
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: virt-host
+
+Package: librbd1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 10355
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Depends: librbd1 (= 0.67-0ubuntu1)
+Filename: pool/main/c/ceph/librbd1-dbg_0.67-0ubuntu1_powerpc.deb
+Size: 4180990
+MD5sum: db961d64199ba858f70cac14b480ab7d
+SHA1: d99ee53e9fca2614684a91ed3b165b2083516686
+SHA256: 997f0e09c6b5536be3360c74b3c5759f2e79f721fc2aea0cdac513da24f64026
+Description: debugging symbols for librbd1
+Homepage: http://ceph.com/
+Description-md5: 0479c6b8befcd3b46093c4fdfaef7ca4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1655,6 +2354,27 @@ Description-md5: 6a061202c9118fa07cacafd938b725f0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-ceph
+Priority: optional
+Section: python
+Installed-Size: 203
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Depends: librados2, librbd1, python-flask, python-requests, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Filename: pool/main/c/ceph/python-ceph_0.67-0ubuntu1_powerpc.deb
+Size: 37362
+MD5sum: 91989cdeb1bcbaf95c84841271dae0dd
+SHA1: d22fccd106b18533beea1fe2fff6d340d7276a5d
+SHA256: 626fcd1c9e502d774bd506920795da69505054fbfd186d53025c7db2f7c3afbe
+Description: Python libraries for the Ceph distributed filesystem
+Homepage: http://ceph.com/
+Description-md5: 0a80206bd610ad5550e3d80267effede
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-mutagen
 Priority: optional
 Section: python
@@ -1695,6 +2415,91 @@ SHA256: 471bfb9fd2cebd154711bb1861990a10a44f37afad565a84e86eddb9fd45ce5a
 Description: Python bindings for Open vSwitch
 Homepage: http://openvswitch.org/
 Description-md5: 4d35f951a751492a379125d6622051e2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: radosgw
+Priority: optional
+Section: admin
+Installed-Size: 3401
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Depends: ceph-common (= 0.67-0ubuntu1), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.16), libcurl3-gnutls (>= 7.28.0), libexpat1 (>= 2.0.1), libfcgi0ldbl, libgcc1 (>= 1:4.1.1), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), librados2, libstdc++6 (>= 4.6)
+Filename: pool/main/c/ceph/radosgw_0.67-0ubuntu1_powerpc.deb
+Size: 1362342
+MD5sum: 27651339d222c37f38eb5683a0b855e1
+SHA1: 5043abc7c22a26def1c34be78c06eec7826a6320
+SHA256: 1cfbb7b087254a98739855855299bc02b6b415b178e4b87d1f39fe9f580bfc2a
+Description: REST gateway for RADOS distributed object store
+Homepage: http://ceph.com/
+Description-md5: fa947d9328112c7b2e6719d10f788061
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: radosgw-dbg
+Priority: extra
+Section: debug
+Installed-Size: 42558
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Depends: radosgw (= 0.67-0ubuntu1)
+Filename: pool/main/c/ceph/radosgw-dbg_0.67-0ubuntu1_powerpc.deb
+Size: 16855436
+MD5sum: 0c94fcc60dc79ffbcb8074c01942ddee
+SHA1: 071fce2c8ca42d52615c9114161c80542f557830
+SHA256: cf943526e8297eb2bc4bc3bc96ae347581399ec6d21f61f85cc9d75eb2e289e3
+Description: debugging symbols for radosgw
+Homepage: http://ceph.com/
+Description-md5: b21018ad5ddfda350f7a8d6ec0e73923
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: rbd-fuse
+Priority: optional
+Section: admin
+Installed-Size: 65
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Depends: libc6 (>= 2.4), libfuse2 (>= 2.8.1), librados2, librbd1
+Recommends: fuse
+Filename: pool/main/c/ceph/rbd-fuse_0.67-0ubuntu1_powerpc.deb
+Size: 11788
+MD5sum: 2c8e185fbe190a1ef30cb9876be053a3
+SHA1: d1010be13ecad5be266b5aa092d69ddcf97a692a
+SHA256: 5cc48ef20a7e410a682f3ab53bfeb03eb6509090e10c699dacdf3c47f9ed8149
+Description: FUSE-based rbd client for the Ceph distributed file system
+Homepage: http://ceph.com/
+Description-md5: fca395d7d420f9ee7c9d4be9e208b26a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: rbd-fuse-dbg
+Priority: extra
+Section: debug
+Installed-Size: 86
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: powerpc
+Source: ceph
+Version: 0.67-0ubuntu1
+Depends: rbd-fuse (= 0.67-0ubuntu1)
+Filename: pool/main/c/ceph/rbd-fuse-dbg_0.67-0ubuntu1_powerpc.deb
+Size: 19642
+MD5sum: 8ebc4a429f94785aa80a60fc580dc3fb
+SHA1: 5c6f7e2d002663a5e3d16a54b5df6b3f89f41c4e
+SHA256: 4328ea8a4053acb2fac6bc99d656de79eaa023e18bf82e23c60f694305c3d630
+Description: debugging symbols for rbd-fuse
+Homepage: http://ceph.com/
+Description-md5: 987d7c5ba369f3c877ccf7f5d48fb86f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
