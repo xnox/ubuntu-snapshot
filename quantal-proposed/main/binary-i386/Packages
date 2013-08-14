@@ -3447,6 +3447,27 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-doc
+Priority: optional
+Section: doc
+Installed-Size: 26324
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.5.0-39.60
+Replaces: linux-doc-3
+Conflicts: linux-doc-3
+Filename: pool/main/l/linux/linux-doc_3.5.0-39.60_all.deb
+Size: 8370694
+MD5sum: 89999d807b924c000c1265b8b736e568
+SHA1: 7df397e44cee79d1549e16cd794a0c115a47d631
+SHA256: 5a478c8e189eeff85400ed76690b6ac42f9c597156d591a0d30a2b94e6296d72
+Description: Linux kernel specific documentation for version 3.5.0
+Description-md5: 656c36c4accf2887e4c8a5ed6787f7aa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
 Package: linux-firmware
 Priority: optional
 Section: misc
@@ -4088,6 +4109,46 @@ SHA1: 68abae83c4b4d5a2478b0228db018a80b15adb45
 SHA256: 4813225431d06ecebfdfe95c39516fb821ae0fa279020f0ca3710cf53f7ab659
 Description: Linux kernel headers for version 3.5.0 on 32 bit x86 SMP
 Description-md5: 4c257fe9f77a23774ae62d01e618c1df
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-3.5.0-39
+Priority: optional
+Section: devel
+Installed-Size: 57451
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.5.0-39.60
+Provides: linux-headers, linux-headers-3
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux/linux-headers-3.5.0-39_3.5.0-39.60_all.deb
+Size: 12112110
+MD5sum: b31b9b899e8a71329ff1565f2a0cf8e2
+SHA1: ff8d5f2437c79bacef34ac4843bb3b02d5587cd3
+SHA256: 3f81b7ee8ab06e84c5818186340d159333839cdf3e366fbe9a37faaff34d6d84
+Description: Header files related to Linux kernel version 3.5.0
+Description-md5: 9e56aad21f22bc63b11083ffbbab8de5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-3.5.0-39-generic
+Priority: optional
+Section: devel
+Installed-Size: 11000
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux
+Version: 3.5.0-39.60
+Provides: linux-headers, linux-headers-3.0
+Depends: linux-headers-3.5.0-39, libc6 (>= 2.11)
+Filename: pool/main/l/linux/linux-headers-3.5.0-39-generic_3.5.0-39.60_i386.deb
+Size: 954290
+MD5sum: 6ff9dabe5b203382f37234c211bcfca3
+SHA1: 846915ea8fb86423a76a2a5dabd0b1d143388a7f
+SHA256: 7cd30af1e0bc05f7cfa0a8ed88ee7dc1a50e42b68ebcd79fc81287bf4f815034
+Description: Linux kernel headers for version 3.5.0 on 32 bit x86 SMP
+Description-md5: c906b6822e6f4b1a23092eab7266f59a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -4830,6 +4891,30 @@ Description-md5: eeaa119f302f70c1a8950e18fdeea032
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-image-3.5.0-39-generic
+Priority: optional
+Section: kernel
+Installed-Size: 25556
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux
+Version: 3.5.0-39.60
+Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, linux-image-3.0, redhat-cluster-modules
+Depends: initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3)
+Pre-Depends: dpkg (>= 1.10.24)
+Recommends: grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo (>= 19.1)
+Suggests: fdutils, linux-doc-3.5.0 | linux-source-3.5.0, linux-tools
+Conflicts: hotplug (<< 0.0.20040105-1)
+Filename: pool/main/l/linux/linux-image-3.5.0-39-generic_3.5.0-39.60_i386.deb
+Size: 11851816
+MD5sum: f09eb7fd329ab1f41954b89829eed03a
+SHA1: 4132fce76a75745f7c68e8d898be0c806ffa671f
+SHA256: f031b104cc6f121d37f176b81c21ae956fa0df23e93de30b32e1115fc12c2028
+Description: Linux kernel image for version 3.5.0 on 32 bit x86 SMP
+Description-md5: eeaa119f302f70c1a8950e18fdeea032
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-image-extra-3.5.0-24-generic
 Priority: optional
 Section: kernel
@@ -5107,6 +5192,25 @@ Description-md5: eeaa119f302f70c1a8950e18fdeea032
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-image-extra-3.5.0-39-generic
+Priority: optional
+Section: kernel
+Installed-Size: 88070
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux
+Version: 3.5.0-39.60
+Depends: linux-image-3.5.0-39-generic, crda (>= 1.1.1-1ubuntu2) | wireless-crda
+Filename: pool/main/l/linux/linux-image-extra-3.5.0-39-generic_3.5.0-39.60_i386.deb
+Size: 27463632
+MD5sum: 7f3758f69c236f75daedcd658cc8b7c5
+SHA1: aef7a6521a677949aaf1ebc2552e7058b3b177a0
+SHA256: 48061824e9e723454356d09c2f77cbf60659d32751d429a5ba7e75ce2b2cfd83
+Description: Linux kernel image for version 3.5.0 on 32 bit x86 SMP
+Description-md5: eeaa119f302f70c1a8950e18fdeea032
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-image-extra-virtual
 Priority: optional
 Section: kernel
@@ -5214,15 +5318,15 @@ Installed-Size: 3172
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: i386
 Source: linux
-Version: 3.5.0-38.59
+Version: 3.5.0-39.60
 Replaces: dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), libdrm-dev, linux-kernel-headers
 Provides: linux-kernel-headers
 Conflicts: amd64-libs-dev (<= 1.1), dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), linux-kernel-headers
-Filename: pool/main/l/linux/linux-libc-dev_3.5.0-38.59_i386.deb
-Size: 891466
-MD5sum: ca8a73ab476cb9c8fa9ef5aec322b2af
-SHA1: 764ad20121a8fa67e91b9999790042ff65c7f403
-SHA256: 3f7b9519f4510479edb562c9ec7ae0e42316798d7ad64b435861f540a702c65d
+Filename: pool/main/l/linux/linux-libc-dev_3.5.0-39.60_i386.deb
+Size: 887538
+MD5sum: 243342f9070f24ddff30dd7a21ffe792
+SHA1: 33eaf1fd191caf6cea8bf2a462b73a0524b4565b
+SHA256: 9257518e0c3f4df3bef42af4380a3c214b0161738b4523f0b33593db9bdf5a01
 Description: Linux Kernel Headers for development
 Multi-Arch: same
 Description-md5: d5d143e6dffc891f04a85464446f9451
@@ -5594,6 +5698,29 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-source-3.5.0
+Priority: optional
+Section: devel
+Installed-Size: 89200
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.5.0-39.60
+Provides: linux-source, linux-source-3
+Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
+Recommends: libc-dev, gcc, make
+Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
+Filename: pool/main/l/linux/linux-source-3.5.0_3.5.0-39.60_all.deb
+Size: 85464710
+MD5sum: 83d5b3e70f5aa32250d7b09265c95e5a
+SHA1: cfdba96f2bdbe29fa2654c03050454e509081b9b
+SHA256: b76f97c456e371e9bee433b0bcd5332e0a632d47e63c7e3f016783e8563c83c5
+Description: Linux kernel source for version 3.5.0 with Ubuntu patches
+Description-md5: 1a4f23531bb42603992e0020198aada6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
 Package: linux-tools
 Priority: optional
 Section: kernel
@@ -5891,6 +6018,25 @@ Description-md5: f36c3d4e9a9551949cdf6c09dd1d6256
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-tools-3.5.0-39
+Priority: optional
+Section: devel
+Installed-Size: 1041
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux
+Version: 3.5.0-39.60
+Depends: libc6 (>= 2.8), libdw1 (>= 0.143), libelf1 (>= 0.131), libnewt0.52, libslang2 (>= 2.2.4), linux-tools-common
+Filename: pool/main/l/linux/linux-tools-3.5.0-39_3.5.0-39.60_i386.deb
+Size: 399868
+MD5sum: a212a25aba974f0831fe2985f9e68791
+SHA1: 23c8f355b95395c06a97bca76fbe2e26b43f60a4
+SHA256: 43468209ea7965c02f061a80ae538361b19ce3c3a1109c6631d2c624eb8f01ac
+Description: Linux kernel version specific tools for version 3.5.0-39
+Description-md5: f05afc1223185854aaea4fbf498e3bfd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-tools-common
 Priority: optional
 Section: kernel
@@ -6165,6 +6311,26 @@ Size: 74460
 MD5sum: c602c0e1cc8440c77285fc1aaaf4f2e5
 SHA1: 588ce1185d7b1695411d854e2d71efea8599c68b
 SHA256: 1300643f86b583aee67606f9a37e779f56e6612798a86f7fdab108eda7196e4a
+Description: Linux kernel version specific tools for version 3.5.0
+Description-md5: 226de1ba87e7416591658659b1486d0c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: linux-tools-common
+Priority: optional
+Section: kernel
+Installed-Size: 234
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.5.0-39.60
+Replaces: linux-tools (<= 2.6.32-16.25)
+Filename: pool/main/l/linux/linux-tools-common_3.5.0-39.60_all.deb
+Size: 70184
+MD5sum: 0e7862ec7a040cfc6d473065185947ee
+SHA1: 91a6665345f6ba4a7d35c64bc50a875b575ff5a1
+SHA256: 8eb6ac20ad78b15f68a4f16f2791106dd6171bd3e4688cae9d468c4d68b974a3
 Description: Linux kernel version specific tools for version 3.5.0
 Description-md5: 226de1ba87e7416591658659b1486d0c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
