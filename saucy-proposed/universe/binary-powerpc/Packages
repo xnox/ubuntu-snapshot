@@ -1557,30 +1557,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-full, kubuntu-active-full
 
-Package: kde-dev-utils-dbg
-Priority: extra
-Section: universe/debug
-Installed-Size: 1056
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Architecture: powerpc
-Source: kde-dev-utils
-Version: 4:4.11.0-0ubuntu1
-Replaces: kdesdk-dbg (<< 4:4.10.80), kdeutils-dbg (<< 4:4.6)
-Depends: kde-runtime-dbg
-Recommends: kate-dbg
-Suggests: kmtrace (= 4:4.11.0-0ubuntu1) | kpartloader (= 4:4.11.0-0ubuntu1) | kdesdk-misc (= 4:4.11.0-0ubuntu1) | kuiviewer (= 4:4.11.0-0ubuntu1)
-Breaks: kdesdk-dbg (<< 4:4.10.80), kdeutils-dbg (<< 4:4.6)
-Filename: pool/universe/k/kde-dev-utils/kde-dev-utils-dbg_4.11.0-0ubuntu1_powerpc.deb
-Size: 911574
-MD5sum: ef02a5e5ed97a8bb23e6d7ab1c7297ea
-SHA1: db9364df79ee9c8f8d8611710780506ee2a7d855
-SHA256: 35773e7b9a197d157de65dafe50d81abdb09b38df56f8e90d865133df60207ad
-Description: debugging symbols for kde-dev-utils
-Homepage: http://www.kde.org
-Description-md5: c6cff3762db9226b036fe4510addd2a6
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: kde-runtime-data
 Priority: optional
 Section: universe/kde
@@ -1605,51 +1581,48 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, ubuntustudio-video, ubuntustudio-graphics
 
-Package: kde-wallpapers
-Priority: optional
+Package: kde-zeroconf
+Priority: extra
 Section: universe/kde
-Installed-Size: 87681
+Installed-Size: 142
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Architecture: all
+Architecture: powerpc
+Source: kdnssd
 Version: 4:4.11.0-0ubuntu1
-Replaces: kde-wallpapers-default (<< 4:4.10.2-2~), kdebase-workspace-data (<< 4:4.6.80), kdm (<< 4:4.6.0)
-Depends: kde-wallpapers-default (>= 4:4.11.0-0ubuntu1)
-Breaks: kde-wallpapers-default (<< 4:4.10.2-2~), kdebase-workspace-data (<< 4:4.6.80), kdm (<< 4:4.6.0)
-Filename: pool/universe/k/kde-wallpapers/kde-wallpapers_4.11.0-0ubuntu1_all.deb
-Size: 84898208
-MD5sum: 1862cc503a5b2dd6cc929914d85ecabf
-SHA1: 84c35da050428827e05e4f490dc4a31080063c0e
-SHA256: 4554d27ead5b09df770497d58bb5bd552e13e8a6add29719bb126885aa3eed4e
-Description: set of wallpapers for the KDE Plasma Workspaces
+Depends: libc6 (>= 2.1.3), libkdecore5 (>= 4:4.11.0), libkdnssd4 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libqt4-dbus (>= 4:4.5.3), libqtcore4 (>= 4:4.8.0), libstdc++6 (>= 4.1.1)
+Filename: pool/universe/k/kdnssd/kde-zeroconf_4.11.0-0ubuntu1_powerpc.deb
+Size: 22472
+MD5sum: b8df7c60e8b3539fdd1fd28010c492cd
+SHA1: 4dcd77bee9f9a796b7dfb5e8945016815dbf5ee8
+SHA256: 967b94417576a7bf88f16838f13ceceb6f0de3ed1fc136ee2c41bb7ca831ab0f
+Description: zeroconf plugins and kio slaves for KDE
 Homepage: http://www.kde.org/
-Description-md5: c44abc1d0e5d1bfe5b934f0514a9b483
+Description-md5: b20dc98160f5661050652e288f0963a5
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
 
-Package: kde-wallpapers-default
-Priority: optional
-Section: universe/kde
-Installed-Size: 1586
+Package: kde-zeroconf-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 988
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Architecture: all
-Source: kde-wallpapers
+Architecture: powerpc
+Source: kdnssd
 Version: 4:4.11.0-0ubuntu1
-Replaces: kde-wallpapers (<< 4:4.10.2-2~), kdebase-workspace-data (<< 4:4.6.80)
-Breaks: kde-wallpapers (<< 4:4.10.2-2~), kdebase-workspace-data (<< 4:4.6.80)
-Filename: pool/universe/k/kde-wallpapers/kde-wallpapers-default_4.11.0-0ubuntu1_all.deb
-Size: 1275250
-MD5sum: 9b0de0a9fda0588673c5d456053944dd
-SHA1: 6a8d67d7a75766fbd52ad9a8fdd4e538dac10e82
-SHA256: b1bc67058499e6b67afdb147dc07eb68508983e8f52ef842a90fcbacd982b2b8
-Description: default wallpaper for the Plasma workspace
+Replaces: kdenetwork-dbg
+Depends: kde-runtime-dbg, kde-zeroconf (= 4:4.11.0-0ubuntu1)
+Breaks: kdenetwork-dbg
+Filename: pool/universe/k/kdnssd/kde-zeroconf-dbg_4.11.0-0ubuntu1_powerpc.deb
+Size: 238870
+MD5sum: 9151c007d1f43efce932ffffffbc983d
+SHA1: 3641649788a6dc77c0c4ee044f08107e4096c637
+SHA256: bb1fcc0255158ce53198d7d21b4439ad6524a467a15fa4e93d0bdfa4c93b8898
+Description: debug symbols for kde-zeroconf
 Homepage: http://www.kde.org/
-Description-md5: bb896122fb9ca7bca82da28c351d59bf
+Description-md5: a3ba195a5d1e700f5f7bb994a504f3f0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full
 
 Package: kdebase-runtime
 Priority: optional
@@ -1780,29 +1753,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome
 
-Package: kdegraphics-strigi-analyzer
-Priority: optional
-Section: universe/kde
-Installed-Size: 69
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Architecture: powerpc
-Version: 4:4.11.0-0ubuntu1
-Replaces: kdegraphics-strigi-plugins (<< 4:4.6.90)
-Depends: libc6 (>= 2.4), libstdc++6 (>= 4.6), libstreamanalyzer0 (>= 0.7.7), libtiff4 (>> 3.9.5-3~)
-Breaks: kdegraphics-strigi-plugins (<< 4:4.6.90)
-Filename: pool/universe/k/kdegraphics-strigi-analyzer/kdegraphics-strigi-analyzer_4.11.0-0ubuntu1_powerpc.deb
-Size: 9434
-MD5sum: 1f90f2c617f7018477ca1084627b9096
-SHA1: 2f55f6cfd5d3d33cacfcd39fd3ba7b06e83e5490
-SHA256: 07df474eedb4d962c86d86055c3ab3a11eb52390c6f7da8d91c72e5b873246d8
-Description: graphics file format plugins for Strigi Desktop Search
-Homepage: http://www.kde.org/
-Description-md5: f8fa8dba8aac159bb28977010bed2679
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full
-
 Package: kdegraphics-thumbnailers
 Priority: optional
 Section: universe/kde
@@ -1826,179 +1776,49 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-full, kubuntu-active-full
 
-Package: kdenetwork-filesharing
-Priority: optional
-Section: universe/net
-Installed-Size: 104
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Architecture: powerpc
-Version: 4:4.11.0-0ubuntu1
-Depends: libc6 (>= 2.2), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.1.1)
-Filename: pool/universe/k/kdenetwork-filesharing/kdenetwork-filesharing_4.11.0-0ubuntu1_powerpc.deb
-Size: 20860
-MD5sum: 498c3399dccf993fecce783eb5cd9a9c
-SHA1: 80ec65122cfe6ceafc8407270e8f2d1e7fb51444
-SHA256: 86b3e3632cf730b11f14f4838c3e7dc2fa3bc80055b1218e5a95420d115b0f24
-Description: network filesharing configuration module
-Homepage: http://www.kde.org/
-Description-md5: 91bae062c39ce012d7dd68e9bb8529a5
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
-
-Package: kdenetwork-filesharing-dbg
-Priority: extra
-Section: universe/debug
-Installed-Size: 755
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Architecture: powerpc
-Source: kdenetwork-filesharing
-Version: 4:4.11.0-0ubuntu1
-Replaces: kdenetwork-dbg
-Depends: kde-runtime-dbg
-Recommends: kde-workspace-dbg
-Suggests: kdenetwork-filesharing (= 4:4.11.0-0ubuntu1)
-Breaks: kdenetwork-dbg
-Filename: pool/universe/k/kdenetwork-filesharing/kdenetwork-filesharing-dbg_4.11.0-0ubuntu1_powerpc.deb
-Size: 199034
-MD5sum: 0301c664b19efb65992af5022ba0172e
-SHA1: a44a07908e1420c3bf34bef0a677d1947fb525ae
-SHA256: 1f5f4a547d5f2d5d4acb3fe10dfc35ba2c59e010975178988c8e3f58437b68ce
-Description: debugging symbols for kdenetwork-filesharing
-Homepage: http://www.kde.org/
-Description-md5: 07d9ffb114831d5b2deddb0ea8e798f7
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: kdenetwork-strigi-analyzers
-Priority: optional
-Section: universe/net
-Installed-Size: 88
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Architecture: powerpc
-Version: 4:4.11.0-0ubuntu1
-Depends: libc6 (>= 2.1.3), libgcc1 (>= 1:4.1.1), libqtcore4 (>= 4:4.7.0~beta1), libstdc++6 (>= 4.6), libstreamanalyzer0 (>= 0.7.7)
-Filename: pool/universe/k/kdenetwork-strigi-analyzers/kdenetwork-strigi-analyzers_4.11.0-0ubuntu1_powerpc.deb
-Size: 17724
-MD5sum: 822bb6bf583c9d944c920188dfc2b175
-SHA1: cef48785467b89b7028e9834625e3147c91bb1fe
-SHA256: a1dd926824acc371dd2581cd10ab18ba9bdd40abb494218d4b6d5e6cabe0d91c
-Description: torrent plusin for strigi
-Homepage: http://www.kde.org/
-Description-md5: 638e37c837809bf95d77bbe3d4ea044e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
-
-Package: kdesdk-kio-plugins
+Package: kdesdk-thumbnailers
 Priority: optional
 Section: universe/devel
-Installed-Size: 763
+Installed-Size: 75
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Architecture: powerpc
-Source: kdesdk-kioslaves
 Version: 4:4.11.0-0ubuntu1
-Depends: kde-runtime, libapr1 (>= 1.2.7), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libqt4-dbus (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.1.1), libsvn1 (>= 1.4), perl, subversion
-Suggests: perl-doc
-Filename: pool/universe/k/kdesdk-kioslaves/kdesdk-kio-plugins_4.11.0-0ubuntu1_powerpc.deb
-Size: 380948
-MD5sum: ee02b1c3b06f48676a87bfb11604df95
-SHA1: 6290a4779e73443b4480220f3981eae69b62eea9
-SHA256: 508a3a1b7bf1081097c1eca53bb78c40487600f87fd6aeefd4a330b4c8bf4174
-Description: transparent Subversion access and Perl documentation KIO slaves
+Replaces: kdesdk-misc (<< 4:4.10.80), kdesdk-thumbnailers-misc (<< 4:4.10.3-0ubuntu1)
+Depends: libc6 (>= 2.1.3), libgettextpo0, libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libqtcore4 (>= 4:4.5.3), libqtgui4 (>= 4:4.8.0), libstdc++6 (>= 4.1.1)
+Breaks: kdesdk-misc (<< 4:4.10.80), kdesdk-thumbnailers-misc (<< 4:4.10.3-0ubuntu1)
+Filename: pool/universe/k/kdesdk-thumbnailers/kdesdk-thumbnailers_4.11.0-0ubuntu1_powerpc.deb
+Size: 10702
+MD5sum: 029e65ac34ebb2150e2e35794759364d
+SHA1: d9f5ada024418691d3ba864f6c79ca7dd03fe677
+SHA256: d67f74855cd678c10736e845a201d264f913aad925a62e04e7949caf2417d47a
+Description: file format thumbnailers for KDE
 Homepage: http://www.kde.org
-Description-md5: 11d9f324a4e6e5c7275b60d94db762c1
+Description-md5: 53975918347968d77be524c91be7226c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-full, kubuntu-active-full
 
-Package: kdesdk-kioslaves-dbg
+Package: kdesdk-thumbnailers-dbg
 Priority: extra
 Section: universe/debug
-Installed-Size: 958
+Installed-Size: 225
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Architecture: powerpc
-Source: kdesdk-kioslaves
+Source: kdesdk-thumbnailers
 Version: 4:4.11.0-0ubuntu1
 Replaces: kdesdk-dbg, kdeutils-dbg (<< 4:4.6)
-Depends: kdesdk-kio-plugins (= 4:4.11.0-0ubuntu1), kde-runtime-dbg, kate-dbg
+Depends: kdesdk-thumbnailers (= 4:4.11.0-0ubuntu1), kde-runtime-dbg, kate-dbg
 Breaks: kdesdk-dbg, kdeutils-dbg (<< 4:4.6)
-Filename: pool/universe/k/kdesdk-kioslaves/kdesdk-kioslaves-dbg_4.11.0-0ubuntu1_powerpc.deb
-Size: 846280
-MD5sum: c0d3cb8420f14ceb711056d6f69f73f7
-SHA1: eacbbe3a792c261a3f72331522de3a295804d30d
-SHA256: 2b896df6d244cf3b903733b732a21683f465507bc3c75221a69f43f577f9e689
-Description: debugging symbols for kdesdk-kio-plugins
+Filename: pool/universe/k/kdesdk-thumbnailers/kdesdk-thumbnailers-dbg_4.11.0-0ubuntu1_powerpc.deb
+Size: 176862
+MD5sum: 836af22b8199c68808880ba0e4c4b23d
+SHA1: 3c8e8c43951874a534b61c3245974dbd93d754ba
+SHA256: 0ce22b6468f75161aabc8677a8a6b98134b5639c5e31b046e30dfa29ae7f8cfd
+Description: debugging symbols for kdesdk-thumbnailers
 Homepage: http://www.kde.org
-Description-md5: e22b2520827588e9d6588c7f5e894e3a
+Description-md5: 54a48e5a5772eea266c3c5f45933cd41
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: kdesdk-misc
-Priority: optional
-Section: universe/devel
-Installed-Size: 71
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Architecture: powerpc
-Source: kde-dev-utils
-Version: 4:4.11.0-0ubuntu1
-Depends: kde-runtime, libc6 (>= 2.4), libkdecore5 (>= 4:4.11.0), libqtcore4 (>= 4:4.8.0)
-Suggests: libqt4-dev, gimp, inkscape, xpaint
-Filename: pool/universe/k/kde-dev-utils/kdesdk-misc_4.11.0-0ubuntu1_powerpc.deb
-Size: 9760
-MD5sum: 75698715bea7f33828dc56ac18a7823d
-SHA1: ee7d339d9cb45a68da9326bb967c3740cd9f5385
-SHA256: b3609e3d83c439f327715357fd1530fad362209b3916f9980e326d35bd90caac
-Description: miscellaneous tools from the KDE Software Development Kit
-Homepage: http://www.kde.org
-Description-md5: f4811ab7515957374a06ceebb5e229eb
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
-
-Package: kdesdk-strigi-analyzers-dbg
-Priority: extra
-Section: universe/debug
-Installed-Size: 328
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Architecture: powerpc
-Source: kdesdk-strigi-analyzers
-Version: 4:4.11.0-0ubuntu1
-Replaces: kdesdk-dbg, kdeutils-dbg (<< 4:4.6)
-Depends: kde-runtime-dbg, kate-dbg
-Suggests: kdesdk-strigi-plugins (= 4:4.11.0-0ubuntu1)
-Breaks: kdesdk-dbg, kdeutils-dbg (<< 4:4.6)
-Filename: pool/universe/k/kdesdk-strigi-analyzers/kdesdk-strigi-analyzers-dbg_4.11.0-0ubuntu1_powerpc.deb
-Size: 248390
-MD5sum: 6d9f6ce07a549e6c2cfe080eb6cd840e
-SHA1: 826764eac091224618b0d4af216e1d0d52064b3d
-SHA256: 578a37db778d01c63e69e7e2ff85c6120827e620687905fd0c891c8cbc7c92e7
-Description: debugging symbols for the KDE Software Development Kit module
-Homepage: http://www.kde.org
-Description-md5: e8b7aa91d0dcf7d6a171a8f02fd9a40d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: kdesdk-strigi-plugins
-Priority: optional
-Section: universe/kde
-Installed-Size: 107
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Architecture: powerpc
-Source: kdesdk-strigi-analyzers
-Version: 4:4.11.0-0ubuntu1
-Depends: libc6 (>= 2.1.3), libkdecore5 (>= 4:4.11.0), libqtcore4 (>= 4:4.5.3), libstdc++6 (>= 4.6), libstreamanalyzer0 (>= 0.7.7)
-Filename: pool/universe/k/kdesdk-strigi-analyzers/kdesdk-strigi-plugins_4.11.0-0ubuntu1_powerpc.deb
-Size: 16052
-MD5sum: 505d09618a9b376b2153daed1bb9ff10
-SHA1: fa0df2bb06f1d215615efa6a9fc36b6aca9fefeb
-SHA256: 12d6d11a073648c5c8bf0b1255a7df58c8e1d2af8f1e2292932e1a6c5c32b39e
-Description: software development file format plugins for Strigi Desktop Search
-Homepage: http://www.kde.org
-Description-md5: 162506a43bf9317383d92fb648f45626
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
 
 Package: kdewebdev
 Priority: optional
@@ -2020,69 +1840,198 @@ Description-md5: 1335f2383a57d68af5cf35cc2f4e09ee
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: kmtrace
+Package: kdf
 Priority: optional
-Section: universe/devel
-Installed-Size: 303
+Section: universe/utils
+Installed-Size: 776
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: powerpc
-Source: kde-dev-utils
 Version: 4:4.11.0-0ubuntu1
-Depends: kde-runtime, libc6 (>= 2.7), libkdecore5 (>= 4:4.11.0), libqt4-qt3support (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libstdc++6 (>= 4.1.1), less
-Filename: pool/universe/k/kde-dev-utils/kmtrace_4.11.0-0ubuntu1_powerpc.deb
-Size: 57822
-MD5sum: 809b76353f7271d3f1211d3007966fa8
-SHA1: 65b706f877699b006dfd1abe8f1887f9c09a4016
-SHA256: 04e747c737f6b30148aa61f118ad5bea263c5a133576651b208efcce15bf8e84
-Description: memory leak tracer
-Homepage: http://www.kde.org
-Description-md5: 39e0c9b375adbfa1018278c5859cf9cf
+Depends: kde-runtime, libc6 (>= 2.1.3), libgcc1 (>= 1:4.2.1), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.8.0), libstdc++6 (>= 4.1.1)
+Filename: pool/universe/k/kdf/kdf_4.11.0-0ubuntu1_powerpc.deb
+Size: 199930
+MD5sum: dc2b6a0649b8200e1c34758d08922fc1
+SHA1: ec6a9465cac7d95b0efe315194712177d6afd440
+SHA256: 511468fe24cc804b9312e14d42b24104b33da1d33dc29f11b9def93e855fc3de
+Description: disk information utility
+Homepage: http://www.kde.org/
+Description-md5: 10fb70f114cce645324b2253bb8e9818
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-full, kubuntu-active-full
 
-Package: kpartloader
-Priority: optional
-Section: universe/devel
-Installed-Size: 72
+Package: kdiamond
+Priority: extra
+Section: universe/games
+Installed-Size: 4357
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: powerpc
-Source: kde-dev-utils
 Version: 4:4.11.0-0ubuntu1
-Depends: kde-runtime, libc6 (>= 2.4), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libkparts4 (>= 4:4.11.0), libqtcore4 (>= 4:4.5.3), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.1.1)
-Filename: pool/universe/k/kde-dev-utils/kpartloader_4.11.0-0ubuntu1_powerpc.deb
-Size: 11396
-MD5sum: 3406c52fe147e032e76fb3e1e46d1f80
-SHA1: 2afad079136ea040c8cb8444b55b57b6f94959d5
-SHA256: 4264c1ad708db8389b2b743a373888f8e9e117b9d47b1a9c07d66502db276aae
-Description: test tool for KParts
-Homepage: http://www.kde.org
-Description-md5: 2547d789aa1b42e8729eaf160e012011
+Depends: kde-runtime, libc6 (>= 2.1.3), libkdecore5 (>= 4:4.11.0), libkdegames6 (>= 4:4.8.80), libkdeui5 (>= 4:4.11.0), libknotifyconfig4 (>= 4:4.11.0), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.6.1), libstdc++6 (>= 4.1.1)
+Recommends: khelpcenter4
+Filename: pool/universe/k/kdiamond/kdiamond_4.11.0-0ubuntu1_powerpc.deb
+Size: 4183494
+MD5sum: 691b9121d9691bb97359ddfbf0c4b023
+SHA1: 78afa32f3efe9277815240ad6a22448a5bc43580
+SHA256: a9aa6018051fe8135936275d9371856ac50ffd361a4b21717ce93497e666c96d
+Description: three-in-a-row game
+Homepage: http://games.kde.org/
+Description-md5: a7a7c9895d468dee49b6d55654cc85d7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-full, kubuntu-active-full
 
-Package: kuiviewer
+Package: kfloppy
 Priority: optional
-Section: universe/devel
-Installed-Size: 205
+Section: universe/utils
+Installed-Size: 243
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: powerpc
-Source: kde-dev-utils
 Version: 4:4.11.0-0ubuntu1
-Depends: kde-runtime, libc6 (>= 2.1.3), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libkparts4 (>= 4:4.11.0), libqt4-designer (>= 4:4.5.3), libqtcore4 (>= 4:4.5.3), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.1.1)
-Suggests: qt4-designer
-Filename: pool/universe/k/kde-dev-utils/kuiviewer_4.11.0-0ubuntu1_powerpc.deb
-Size: 33092
-MD5sum: bed07cef788d0c80b940eb76b7fead33
-SHA1: 40bf55efa68ef22009e70843308df12612a1e5d5
-SHA256: fb7d0122138796a679e359ddddf9e995a33553f12c71b7fe39939c8faf47850b
-Description: viewer for Qt Designer user interface files
+Depends: kde-runtime, libc6 (>= 2.1.3), libkde3support4 (>= 4:4.11.0), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libqt4-dbus (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.1.1)
+Filename: pool/universe/k/kfloppy/kfloppy_4.11.0-0ubuntu1_powerpc.deb
+Size: 62484
+MD5sum: 4738733aaf4beabf9cdf704cc0d4115a
+SHA1: 4260ab2798974e729e83b344e65dcf61fc26bcb9
+SHA256: 7e1e2c8c81286f0f37bf49d47a26a9e0733c9c8ba17cc79a0ccf1d6a8085cbb1
+Description: floppy formatter
 Homepage: http://www.kde.org
-Description-md5: c553d555e774eba5b20037169089058e
+Description-md5: 0e3cddb000fedbfb30c9e1d251e0346a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: kfourinline
+Priority: extra
+Section: universe/games
+Installed-Size: 5165
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: powerpc
+Version: 4:4.11.0-0ubuntu1
+Depends: kde-runtime, libc6 (>= 2.4), libkdecore5 (>= 4:4.11.0), libkdegames6 (>= 4:4.10.80), libkdeui5 (>= 4:4.11.0), libkdnssd4 (>= 4:4.11.0), libkio5 (>= 4:4.11.0), libqt4-svg (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.8.0), libstdc++6 (>= 4.1.1)
+Recommends: khelpcenter4
+Filename: pool/universe/k/kfourinline/kfourinline_4.11.0-0ubuntu1_powerpc.deb
+Size: 299216
+MD5sum: 25874755e398d89440e94bb95a50a97c
+SHA1: ee43683a730aedd47978a16209deb595d20c3ef8
+SHA256: 6c7867fa5fc5c8e16cb919d8db9851d35c0caf4be160c30d98c5a1d9b7a8930f
+Description: Connect Four game
+Homepage: http://games.kde.org/
+Description-md5: 04930c4bdd44e4bfc231be2688c1cb82
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-full, kubuntu-active-full
+
+Package: kgamma
+Priority: optional
+Section: universe/graphics
+Installed-Size: 198
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: powerpc
+Version: 4:4.11.0-0ubuntu1
+Depends: libc6 (>= 2.4), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.2.1), libx11-6, libxxf86vm1
+Suggests: khelpcenter4
+Filename: pool/universe/k/kgamma/kgamma_4.11.0-0ubuntu1_powerpc.deb
+Size: 38584
+MD5sum: afe20aa349dc8e767cfc4f5c43b15e78
+SHA1: a45bc27a92a6494659a71a85a644688e01409348
+SHA256: f10385492a050f2e96a0e043fb035775e4229a7c9f98a61d160e9b6a38962b0e
+Description: monitor calibration panel for KDE
+Homepage: http://www.kde.org/
+Description-md5: 52f51251bde2686bfd5831ef04be041d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full
+
+Package: kgeography
+Priority: optional
+Section: universe/kde
+Installed-Size: 243
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: powerpc
+Version: 4:4.11.0-0ubuntu1
+Depends: kde-runtime, libc6 (>= 2.1.3), libkdecore5 (>= 4:4.11.0), libkdeui5 (>= 4:4.11.0), libqt4-xml (>= 4:4.5.3), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.1.1), kgeography-data (>= 4:4.11.0-0ubuntu1)
+Suggests: khelpcenter4
+Filename: pool/universe/k/kgeography/kgeography_4.11.0-0ubuntu1_powerpc.deb
+Size: 57362
+MD5sum: 14386defcb4e7a29a0c76efa5aa06928
+SHA1: aec303316f7e0a1e2c456043a9692a0bb505aa76
+SHA256: 130acc230dc019fd01a2a9ae5ca455457a82255e5f9cf06a8491291b4adb67ec
+Description: geography learning aid for KDE
+Homepage: http://edu.kde.org/
+Description-md5: ab96915329fb5430070bb65ac11089d2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full, edubuntu-desktop-gnome
+
+Package: kgeography-data
+Priority: optional
+Section: universe/kde
+Installed-Size: 6909
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: kgeography
+Version: 4:4.11.0-0ubuntu1
+Filename: pool/universe/k/kgeography/kgeography-data_4.11.0-0ubuntu1_all.deb
+Size: 5792984
+MD5sum: 218acbd7155f7dd1aa950199ea16cd4f
+SHA1: 00ba3575230c6b8766c3bbb66d3365d8180d49f1
+SHA256: 889f34da65b7f8736d22064ccaa00b4a75afef58b508e95e7ed600f9023ea9e9
+Description: data files for KGeography
+Homepage: http://edu.kde.org/
+Description-md5: a26284dc4f2086494f9ea360b04b5078
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full, edubuntu-desktop-gnome
+
+Package: kgoldrunner
+Priority: optional
+Section: universe/games
+Installed-Size: 5300
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: powerpc
+Version: 4:4.11.0-0ubuntu1
+Depends: kde-runtime, libc6 (>= 2.4), libkdecore5 (>= 4:4.11.0), libkdegames6 (>= 4:4.8.80), libkdeui5 (>= 4:4.11.0), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libstdc++6 (>= 4.1.1)
+Recommends: khelpcenter4
+Filename: pool/universe/k/kgoldrunner/kgoldrunner_4.11.0-0ubuntu1_powerpc.deb
+Size: 2075046
+MD5sum: efd3ce37d0a3e00f94a130049f608138
+SHA1: ea50b4f52be7639df1a7a1cd258e4c6ea8ead4ce
+SHA256: 103403fe74391ee82e519c377745d1854cf0901cc8f10d34166338f68df8abeb
+Description: Lode Runner arcade game
+Homepage: http://games.kde.org/
+Description-md5: 33626a4b0e5279fceb3606df145ea2da
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full
+
+Package: klettres-data
+Priority: optional
+Section: universe/kde
+Installed-Size: 3627
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Architecture: all
+Source: klettres
+Version: 4:4.11.0-0ubuntu1
+Filename: pool/universe/k/klettres/klettres-data_4.11.0-0ubuntu1_all.deb
+Size: 2581982
+MD5sum: c3e7df47ec48a9259b0e7635047043c1
+SHA1: 413334cfd3a18a0f470688d65cb0956613ee24e0
+SHA256: 5d890d7e072aa47f24b7346f9924530f0b07466c571e6320f6389058788dd111
+Description: data files for KLettres foreign alphabet tutor
+Homepage: http://edu.kde.org/
+Description-md5: de3963ca2a75ca8b88c681b5626efdf7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full, edubuntu-desktop-gnome
 
 Package: language-pack-kde-en
 Priority: optional
