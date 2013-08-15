@@ -68,35 +68,6 @@ Checksums-Sha256:
  bf6b9780d1395a358465bb3677dca11998ca3aa9f3c91755e8224d5ed4ff0571 45457 bzr_2.6.0-1ubuntu1.debian.tar.gz
 Testsuite: autopkgtest
 
-Package: cloud-init
-Binary: cloud-init, grub-legacy-ec2, ec2-init
-Version: 0.7.3~bzr860-0ubuntu1
-Priority: extra
-Section: admin
-Maintainer: Scott Moser <smoser@ubuntu.com>
-Build-Depends: cdbs, debhelper (>= 5.0.38), po-debconf, pyflakes, pylint, python (>= 2.6.6-3~), python-argparse, python-boto, python-cheetah, python-configobj, python-json-patch, python-mocker, python-nose, python-oauth, python-prettytable, python-setuptools, python-requests, python-yaml
-Architecture: all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/main/c/cloud-init
-Files:
- 81fd1edbc383321e338e6eff75edab80 2116 cloud-init_0.7.3~bzr860-0ubuntu1.dsc
- 6a4978eabcbdff4fb455b6ac8b00c4d7 449927 cloud-init_0.7.3~bzr860.orig.tar.gz
- db320e1d163137944a3e182a8cd5fe5d 49082 cloud-init_0.7.3~bzr860-0ubuntu1.debian.tar.gz
-Package-List: 
- cloud-init deb admin extra
- ec2-init deb admin extra
- grub-legacy-ec2 deb admin extra
-Checksums-Sha1:
- 79565dbefcf07149c62cd8442a4d998b4ceddd4f 2116 cloud-init_0.7.3~bzr860-0ubuntu1.dsc
- 0c41a26dbbb3b8f972425d665e77d2beb1e49365 449927 cloud-init_0.7.3~bzr860.orig.tar.gz
- c4429aa41e6934526b7aae401a5f0489725e00fa 49082 cloud-init_0.7.3~bzr860-0ubuntu1.debian.tar.gz
-Checksums-Sha256:
- 53492565fb38a605443a894fded11f3dc4bc0c54cf1c570a2646bc37736c7a23 2116 cloud-init_0.7.3~bzr860-0ubuntu1.dsc
- ef02b2067f294668425891f819a77396a48b28c79b7ca98d2bfb2b3a0e423d98 449927 cloud-init_0.7.3~bzr860.orig.tar.gz
- 0b0a9814b4331370929560c14d2232774c59da6e362b9bccaf7b5ef053997b65 49082 cloud-init_0.7.3~bzr860-0ubuntu1.debian.tar.gz
-Python-Version: all
-
 Package: fontforge
 Binary: fontforge, fontforge-nox, fontforge-common, libfontforge-dev, libfontforge1, libgdraw4, python-fontforge, fontforge-dbg
 Version: 20120731.b-3
@@ -728,41 +699,38 @@ Checksums-Sha256:
  fc1710854d26d527087dbbefb110193650d9aae1876f90cb64b8d5c0a8dd95a4 390454 libnetfilter-conntrack_1.0.3.orig.tar.bz2
  adc65b532bdf665b1f235e3ce9d2731c4d4607aec874e4ed226c828d47c969b0 2694 libnetfilter-conntrack_1.0.3-1.debian.tar.gz
 
-Package: maas
-Binary: maas, maas-common, maas-region-controller, python-maas-provisioningserver, maas-cli, python-maas-client, maas-cluster-controller, python-django-maas, maas-dhcp, maas-dns
-Version: 1.4+bzr1548+dfsg-0ubuntu1
+Package: lxc
+Binary: lxc, lxc-dbg, lxc-dev, lxc-templates, liblxc0, python3-lxc
+Version: 0.9.0-0ubuntu22
 Priority: optional
-Section: net
+Section: admin
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: debhelper (>= 8.1.0~), dh-apport, po-debconf, python (>= 2.7), python-distribute, python-django
-Architecture: all
+Build-Depends: autotools-dev, debhelper (>= 9), dh-apparmor, dh-autoreconf, docbook2x, hardening-wrapper, libapparmor-dev, libcap-dev, libseccomp-dev [i386 amd64], linux-libc-dev, pkg-config, python3-dev (>= 3.2.3)
+Architecture: any all
 Standards-Version: 3.9.4
 Format: 3.0 (quilt)
-Directory: pool/main/m/maas
+Directory: pool/main/l/lxc
 Files:
- c170c805f5c46e95c19296c87bcbd447 2365 maas_1.4+bzr1548+dfsg-0ubuntu1.dsc
- e8bc35b1fa1898129d44d823eb612764 2000274 maas_1.4+bzr1548+dfsg.orig.tar.gz
- 7ac3a8989358637384c09d602e6d20b1 26357 maas_1.4+bzr1548+dfsg-0ubuntu1.debian.tar.gz
-Homepage: https://launchpad.net/maas
+ dc64bae553012c8b3df622e8645ad1ed 1780 lxc_0.9.0-0ubuntu22.dsc
+ 8552a4479090616f4bc04d8473765fc9 421677 lxc_0.9.0.orig.tar.gz
+ c3c8acca1518675132571b01b750ab3e 64409 lxc_0.9.0-0ubuntu22.debian.tar.gz
+Homepage: http://lxc.sourceforge.net/
 Package-List: 
- maas deb net optional
- maas-cli deb net optional
- maas-cluster-controller deb net optional
- maas-common deb net optional
- maas-dhcp deb net optional
- maas-dns deb net optional
- maas-region-controller deb net optional
- python-django-maas deb python optional
- python-maas-client deb python optional
- python-maas-provisioningserver deb python optional
+ liblxc0 deb admin optional
+ lxc deb admin optional
+ lxc-dbg deb debug extra
+ lxc-dev deb libdevel optional
+ lxc-templates deb admin optional
+ python3-lxc deb python optional
 Checksums-Sha1:
- 327966d29c966c6df116251cd583c1954bf15b3b 2365 maas_1.4+bzr1548+dfsg-0ubuntu1.dsc
- 435c05e347ad53289ae45f345a59eddca180510c 2000274 maas_1.4+bzr1548+dfsg.orig.tar.gz
- 91158ee6d5415494bd438ff9787da5e4ea2d5551 26357 maas_1.4+bzr1548+dfsg-0ubuntu1.debian.tar.gz
+ 55d89e6f3acfd9ab4e874dcc6a88c5f1fc9029b2 1780 lxc_0.9.0-0ubuntu22.dsc
+ 863f6375e4b113cb895ca8c252f4da779ee98df7 421677 lxc_0.9.0.orig.tar.gz
+ 7cb2b65d131480f688da2760319ab1d02890404c 64409 lxc_0.9.0-0ubuntu22.debian.tar.gz
 Checksums-Sha256:
- bd735322c05c6da121a0a8014c9e9a1d2ff1ecea55b4778d2feae53c28898aa3 2365 maas_1.4+bzr1548+dfsg-0ubuntu1.dsc
- 444ccde816e214e1d7a7c1c1fa2bad71865bace71e8b8e9ae32bb6dbf28940d6 2000274 maas_1.4+bzr1548+dfsg.orig.tar.gz
- acd45ec3a22e3ffcdc14a0cc2a366b6dfbd50904322c45178378f2590b1ff2f4 26357 maas_1.4+bzr1548+dfsg-0ubuntu1.debian.tar.gz
+ cb66eecc34eb1b5777e54ae5f0831a0bb6d6115eeaa444db66110473f1ef90b6 1780 lxc_0.9.0-0ubuntu22.dsc
+ 1e1767eae6cc5fbf892c0e193d25da420ba19f2db203716c38f7cdea3b654120 421677 lxc_0.9.0.orig.tar.gz
+ 9db171cc640d53c34f75f45cad40d2cb972ff6d996b17a18c64d93e93c0b7e70 64409 lxc_0.9.0-0ubuntu22.debian.tar.gz
+Testsuite: autopkgtest
 
 Package: mod-auth-mysql
 Binary: libapache2-mod-auth-mysql

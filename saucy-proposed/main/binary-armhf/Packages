@@ -45,28 +45,30 @@ Description-md5: 6948801c3d791b1c318acb50a89989c6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: cloud-init
-Priority: extra
-Section: admin
-Installed-Size: 855
-Maintainer: Scott Moser <smoser@ubuntu.com>
-Architecture: all
-Version: 0.7.3~bzr860-0ubuntu1
-Replaces: ec2-init (<< 0.5.3)
-Provides: ec2-init
-Depends: cloud-utils, ifupdown (>= 0.6.10ubuntu5), procps, python (>= 2.7.1-0ubuntu2), python-requests (>= 0.8.2), software-properties-common, debconf (>= 0.5) | debconf-2.0, python (<< 2.8), python-boto, python-cheetah, python-configobj, python-json-patch, python-oauth, python-prettytable, python-serial, python-yaml
-Conflicts: ec2-init (<< 0.5.3)
-Filename: pool/main/c/cloud-init/cloud-init_0.7.3~bzr860-0ubuntu1_all.deb
-Size: 194320
-MD5sum: 503429641424c0c981bace398e57f503
-SHA1: f6af06991f5044a0462aef0fc0a7636bf475820b
-SHA256: afffd0e7c03eb19e0d4ec16d9ee4fae104db6af4747eba615a453f7467fc7762
-Description: Init scripts for cloud instances
-Python-Version: 2.7
-Description-md5: 8719ef0e4178017b7147590b1fde082e
+Package: cpp-4.8
+Priority: optional
+Section: interpreters
+Installed-Size: 9955
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Replaces: gcc-4.6 (<< 4.6.1-9)
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6 (>= 2.11), libcloog-isl4 (>= 0.17), libgmp10, libisl10 (>= 0.10), libmpc3, libmpfr4 (>= 3.1.1), zlib1g (>= 1:1.1.4)
+Suggests: gcc-4.8-locales (>= 4.8)
+Filename: pool/main/g/gcc-4.8/cpp-4.8_4.8.1-9ubuntu1_armhf.deb
+Size: 5182612
+MD5sum: 4a7a13fcfd52a197f7f13218fd88c8f8
+SHA1: 988a274d822264875ab82a15f0372b1be2842820
+SHA256: 0ed8bf2b869c39b608e72a161e9cb0401534c019bbe9f0082f6b274462bbb552
+Description: GNU C preprocessor
+Homepage: http://gcc.gnu.org/
+Description-md5: 93a75b5e1f4b43c36eba0239b6fab6a3
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
 Origin: Ubuntu
-Task: cloud-image
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: cpp-4.8-doc
 Priority: optional
@@ -134,6 +136,100 @@ Description-md5: dd379f264f44fe4bc772202ed6f8218f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: g++-4.8
+Priority: optional
+Section: devel
+Installed-Size: 11459
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: c++-compiler, c++abi2-dev
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), gcc-4.8 (= 4.8.1-9ubuntu1), libstdc++-4.8-dev (= 4.8.1-9ubuntu1), libc6 (>= 2.11), libcloog-isl4 (>= 0.17), libgmp10, libisl10 (>= 0.10), libmpc3, libmpfr4 (>= 3.1.1), zlib1g (>= 1:1.1.4)
+Suggests: g++-4.8-multilib, gcc-4.8-doc (>= 4.8), libstdc++6-4.8-dbg (>= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/g++-4.8_4.8.1-9ubuntu1_armhf.deb
+Size: 6370236
+MD5sum: 52b55cd41d0d4808e385f4607080d9d0
+SHA1: 3f8db2357473b47de4e9b5239fe5acc479edd2c8
+SHA256: 1561a803673a17b1e02d6361a753559a1eb010cb6fbf08bb8b448e1e5db92d4f
+Description: GNU C++ compiler
+Homepage: http://gcc.gnu.org/
+Description-md5: 0a3fad3367cb994bd16c61b0e16a8b9c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+
+Package: g++-4.8-multilib
+Priority: optional
+Section: devel
+Installed-Size: 21
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), g++-4.8 (= 4.8.1-9ubuntu1), gcc-4.8-multilib (= 4.8.1-9ubuntu1), libsfstdc++-4.8-dev (= 4.8.1-9ubuntu1) | libsfstdc++-4.8-dev
+Suggests: libsfstdc++6-4.8-dbg (>= 4.8.1-9ubuntu1) | libsfstdc++6-4.8-dbg
+Filename: pool/main/g/gcc-4.8/g++-4.8-multilib_4.8.1-9ubuntu1_armhf.deb
+Size: 936
+MD5sum: 5a54f7b50e929436c9da655297eb6cb6
+SHA1: 8a21c03e3cf9cdec356340346827d62bc41f2ef7
+SHA256: 9b034b19119456b0f672194ce7e165079b3cf627fb61400e1f1cb28546984efc
+Description: GNU C++ compiler (multilib files)
+Homepage: http://gcc.gnu.org/
+Description-md5: 0a4963e8755de4e48202cd72696d3556
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gcc-4.8
+Priority: optional
+Section: devel
+Installed-Size: 10854
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Version: 4.8.1-9ubuntu1
+Provides: c-compiler
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), cpp-4.8 (= 4.8.1-9ubuntu1), binutils (>= 2.23.52.20130727), libgcc-4.8-dev (= 4.8.1-9ubuntu1), libc6 (>= 2.11), libcloog-isl4 (>= 0.17), libgmp10, libisl10 (>= 0.10), libmpc3, libmpfr4 (>= 3.1.1), zlib1g (>= 1:1.1.4)
+Recommends: libc6-dev (>= 2.13-0ubuntu6)
+Suggests: gcc-4.8-multilib, libmudflap0-4.8-dev (= 4.8.1-9ubuntu1), gcc-4.8-doc (>= 4.8), gcc-4.8-locales (>= 4.8), libgcc1-dbg (>= 1:4.8.1-9ubuntu1), libgomp1-dbg (>= 4.8.1-9ubuntu1), libitm1-dbg (>= 4.8.1-9ubuntu1), libatomic1-dbg (>= 4.8.1-9ubuntu1), libasan0-dbg (>= 4.8.1-9ubuntu1), libtsan0-dbg (>= 4.8.1-9ubuntu1), libbacktrace1-dbg (>= 4.8.1-9ubuntu1), libquadmath-dbg (>= 4.8.1-9ubuntu1), libmudflap0-dbg (>= 4.8.1-9ubuntu1), binutils-gold (>= 2.23.52.20130727)
+Filename: pool/main/g/gcc-4.8/gcc-4.8_4.8.1-9ubuntu1_armhf.deb
+Size: 5906782
+MD5sum: 86150bd91fbf4e67242e1b1d3eab62b5
+SHA1: 41b1df072e75a387d5c63e994e6582088255cc1c
+SHA256: acdd8e339be772ca07f73efd91dac4014b43bef6a8ae1ff0a2df29af1540cc2d
+Description: GNU C compiler
+Homepage: http://gcc.gnu.org/
+Description-md5: 394374e688b1afb3af5f419895d29698
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gcc-4.8-base
+Priority: required
+Section: libs
+Installed-Size: 207
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Breaks: dehydra (<= 0.9.hg20110609-2), gcj-4.4-base (<< 4.4.6-9~), gcj-4.6-base (<< 4.6.1-4~), gnat-4.4-base (<< 4.4.6-3~), gnat-4.6 (<< 4.6.1-5~)
+Filename: pool/main/g/gcc-4.8/gcc-4.8-base_4.8.1-9ubuntu1_armhf.deb
+Size: 15942
+MD5sum: 331c773d19b881132ab6d2ee8071bd72
+SHA1: d71e598658eea138ac15e6ff075708a5891422a9
+SHA256: 86d760c903df1c0699730c5867bb8c7595251a49432121ddae924ff1640fb4e9
+Description: GCC, the GNU Compiler Collection (base package)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: b6e93638a6d08ea7a18929d7cf078e5d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
 Package: gcc-4.8-doc
 Priority: optional
 Section: doc
@@ -154,6 +250,49 @@ SHA256: 8f05fb2e94aa73a8a5e85975f5ddb27881d8195a825e162725ff6326070a55ff
 Description: Documentation for the GNU compilers (gcc, gobjc, g++)
 Homepage: http://gcc.gnu.org/
 Description-md5: bf320d6d806b62ff03b567626d36b1fb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gcc-4.8-multilib
+Priority: optional
+Section: devel
+Installed-Size: 21
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), gcc-4.8 (= 4.8.1-9ubuntu1), libc6-dev-armel (>= 2.11) | libc6-dev-armel, libsfgcc-4.8-dev (= 4.8.1-9ubuntu1) | libsfgcc-4.8-dev
+Suggests: libsfmudflap0 (>= 4.8.1-9ubuntu1) | libsfmudflap0
+Filename: pool/main/g/gcc-4.8/gcc-4.8-multilib_4.8.1-9ubuntu1_armhf.deb
+Size: 940
+MD5sum: b67250ce9d323f0e172743b1fb98e8a3
+SHA1: 02bf0ff1a9e1f2138e538061ae97008867a0fa43
+SHA256: dc6d8699e7db135a795099299b6e12041147998e7d7ab23d1a332a06e2455e87
+Description: GNU C compiler (multilib files)
+Homepage: http://gcc.gnu.org/
+Description-md5: f1f416f51fd3f11d562e86a79da6216a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gcc-4.8-plugin-dev
+Priority: optional
+Section: devel
+Installed-Size: 4871
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), gcc-4.8 (= 4.8.1-9ubuntu1), libgmp-dev (>= 2:5.0.1~), libc6 (>= 2.8)
+Filename: pool/main/g/gcc-4.8/gcc-4.8-plugin-dev_4.8.1-9ubuntu1_armhf.deb
+Size: 1004880
+MD5sum: 0db9b2e8138cfd88b4736c73b6d5f729
+SHA1: c5a0f1241684318760f89e4fee11e43889a298ed
+SHA256: 9d39e99ddcccdfcda0c157dbad5d55f65ae2f3e12daf236c94f108549b17e45f
+Description: Files for GNU GCC plugin development.
+Homepage: http://gcc.gnu.org/
+Description-md5: f04e3fe2e4b62ffb72f0dc5ae683f155
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -199,6 +338,102 @@ Description-md5: 76326180b2469131aa9547f46e5b3105
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: gcj-4.8
+Priority: optional
+Section: java
+Installed-Size: 9692
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Replaces: gcj-4.8-jdk (<< 4.8.1-4), libgcj11 (<< 4.5-20100101-1)
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), g++-4.8 (>= 4.8), libc6-dev (>= 2.13-0ubuntu6), ecj-gcj, libecj-java-gcj (>= 3.5.1), ecj1, libc6 (>= 2.11), libcloog-isl4 (>= 0.17), libgmp10, libisl10 (>= 0.10), libmpc3, libmpfr4 (>= 3.1.1), zlib1g (>= 1:1.1.4), dpkg (>= 1.15.4) | install-info
+Conflicts: cpp-4.1 (<< 4.1.1), gcc-4.1 (<< 4.1.1), gcj-4.4
+Filename: pool/main/g/gcc-4.8/gcj-4.8_4.8.1-9ubuntu1_armhf.deb
+Size: 5078994
+MD5sum: f4031bd00a2e862c942a5eefc6c015f9
+SHA1: 93f991083515dc51af91232f94958df9f07a04fe
+SHA256: b81b1e49aa1fdfa72d71e4fe50274dd7e6cc5bfb1becec0408050972e3ef02db
+Description: GCJ byte code and native compiler for Java(TM)
+Homepage: http://gcc.gnu.org/
+Description-md5: 8753e734cc2a7f934f8620bd89d6afe5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gcj-4.8-jdk
+Priority: optional
+Section: java
+Installed-Size: 990
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Replaces: libgcj11 (<< 4.5-20100101-1)
+Provides: java-compiler, java-sdk, java2-sdk, java5-sdk
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), g++-4.8 (>= 4.8), libc6-dev (>= 2.13-0ubuntu6), gcj-4.8 (= 4.8.1-9ubuntu1), gcj-4.8-jre (= 4.8.1-9ubuntu1), libgcj14-dev (= 4.8.1-9ubuntu1), fastjar, libgcj-bc, java-common, libantlr-java, libc6 (>= 2.8), libgcj14 (>= 4.8), zlib1g (>= 1:1.1.4), dpkg (>= 1.15.4) | install-info
+Recommends: libecj-java-gcj
+Suggests: gcj-4.8-source (>= 4.8), libgcj14-dbg (>= 4.8.1-9ubuntu1)
+Conflicts: cpp-4.1 (<< 4.1.1), gcc-4.1 (<< 4.1.1), gcj-4.4
+Filename: pool/main/g/gcc-4.8/gcj-4.8-jdk_4.8.1-9ubuntu1_armhf.deb
+Size: 541318
+MD5sum: a5b762d79dbd7b5cf89405e6efeda62d
+SHA1: 55a35b89de05f7392566b7b60cb0579c134a18b9
+SHA256: 4f2c3a38021b088911fc55ed80d5afa79fa3668906cb02a784939c8ee0b2537a
+Description: GCJ and Classpath development tools for Java(TM)
+Homepage: http://gcc.gnu.org/
+Description-md5: 4dd080bc432002fe5f9359aef3f3f988
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gcj-4.8-jre
+Priority: optional
+Section: java
+Installed-Size: 21
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: java-runtime, java1-runtime, java2-runtime, java5-runtime
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), gcj-4.8-jre-headless (= 4.8.1-9ubuntu1), libgcj14-awt (= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/gcj-4.8-jre_4.8.1-9ubuntu1_armhf.deb
+Size: 1064
+MD5sum: 2f4f333dc601602c9dd0c994bc98f5c3
+SHA1: 784c9fc8c1c6f4cd7555d7241874df067dc6f111
+SHA256: fdf15abb50ec90fa0d873fa1ee995f554aa119f8a4c9d80afeff4c13022f77c4
+Description: Java runtime environment using GIJ/Classpath
+Homepage: http://gcc.gnu.org/
+Description-md5: 33bb6e364710093f6308dbe21c570d27
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gcj-4.8-jre-headless
+Priority: optional
+Section: java
+Installed-Size: 264
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Replaces: gcj-4.8-jre-lib (<< 4.8-20121219-0)
+Provides: java-runtime-headless, java1-runtime-headless, java2-runtime-headless, java5-runtime-headless
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), gcj-4.8-jre-lib (>= 4.8), libgcj14 (= 4.8.1-9ubuntu1), libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.8)
+Suggests: fastjar, gcj-4.8-jdk (= 4.8.1-9ubuntu1), libgcj14-awt (= 4.8.1-9ubuntu1)
+Conflicts: gij-4.4, java-gcj-compat (<< 1.0.76-4)
+Filename: pool/main/g/gcc-4.8/gcj-4.8-jre-headless_4.8.1-9ubuntu1_armhf.deb
+Size: 67434
+MD5sum: e3edbe323536447daf2a630cf4cad238
+SHA1: b2a6c3bbb4793959fcd8b639e7b577791a9fe925
+SHA256: f07e3576e5a4c3623a9b09ee665aedb66fe26e611de29fd56ad905d1752aa3cd
+Description: Java runtime environment using GIJ/Classpath (headless version)
+Homepage: http://gcc.gnu.org/
+Description-md5: b8134c13a4a7d7c52148d94bce341fa5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: gcj-4.8-jre-lib
 Priority: optional
 Section: java
@@ -217,6 +452,29 @@ SHA256: fecc3a14b6b635d10a72740b80310c0c40e67ca7c2aedb9b5007df8c0ee7a210
 Description: Java runtime library for use with gcj (jar files)
 Homepage: http://gcc.gnu.org/
 Description-md5: c6c8d4fc017cdac424e562b583372f96
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gfortran-4.8
+Priority: optional
+Section: devel
+Installed-Size: 10428
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: fortran95-compiler, gfortran-mod-10
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), gcc-4.8 (= 4.8.1-9ubuntu1), libgfortran-4.8-dev (= 4.8.1-9ubuntu1), libc6-dev (>= 2.13-0ubuntu6), libc6 (>= 2.11), libcloog-isl4 (>= 0.17), libgmp10, libisl10 (>= 0.10), libmpc3, libmpfr4 (>= 3.1.1), zlib1g (>= 1:1.1.4)
+Suggests: gfortran-4.8-multilib, gfortran-4.8-doc, libgfortran3-dbg (>= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/gfortran-4.8_4.8.1-9ubuntu1_armhf.deb
+Size: 5476786
+MD5sum: fcf53fc9c6f8719b734ba17500e5013d
+SHA1: 70c4ddecda4e105a4abbe02a961834cf4ed1656d
+SHA256: 98d6db43feec028e3e33a99d06d803b9546de6ed42503505017d0d089a655e00
+Description: GNU Fortran compiler
+Homepage: http://gcc.gnu.org/
+Description-md5: 5dd93c5d21d0717205bc5a3b538b0ca2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -241,6 +499,50 @@ Description-md5: 17a01a9ada93e104865a01e6615e2401
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: gfortran-4.8-multilib
+Priority: optional
+Section: devel
+Installed-Size: 21
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), gfortran-4.8 (= 4.8.1-9ubuntu1), gcc-4.8-multilib (= 4.8.1-9ubuntu1), libsfgfortran-4.8-dev (= 4.8.1-9ubuntu1) | libsfgfortran-4.8-dev
+Filename: pool/main/g/gcc-4.8/gfortran-4.8-multilib_4.8.1-9ubuntu1_armhf.deb
+Size: 926
+MD5sum: a2ff7765430d0c544e083ccac963622d
+SHA1: 4de798d0a83227e6a6c409fc427131ac41bd4fce
+SHA256: a740e29a72c8d0fc61f0910558aa6cdbb755f15e0a56e63121ff173dcb5fe628
+Description: GNU Fortran compiler (multilib files)
+Homepage: http://gcc.gnu.org/
+Description-md5: 005da023d3d2e21ed1c3e72be2361917
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gobjc-4.8
+Priority: optional
+Section: devel
+Installed-Size: 9557
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: objc-compiler
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), gcc-4.8 (= 4.8.1-9ubuntu1), libc6-dev (>= 2.13-0ubuntu6), libc6 (>= 2.8), libcloog-isl4 (>= 0.17), libgmp10, libisl10 (>= 0.10), libmpc3, libmpfr4 (>= 3.1.1), zlib1g (>= 1:1.1.4), libobjc-4.8-dev (= 4.8.1-9ubuntu1)
+Suggests: gobjc-4.8-multilib, gcc-4.8-doc (>= 4.8), libobjc4-dbg (>= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/gobjc-4.8_4.8.1-9ubuntu1_armhf.deb
+Size: 5005536
+MD5sum: 4ed4e36ec23f0044556fb311b5ac0ee6
+SHA1: b6a02ed97974ac2c1d23c4090d9b76340288611a
+SHA256: 78edfbd163ff1f5e7610857d49a0c4bf13f2bbcaf35ca15a9614383e14217fda
+Description: GNU Objective-C compiler
+Homepage: http://gcc.gnu.org/
+Description-md5: ef51de6b57526dc4a161944678606486
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: google-mock
 Priority: optional
 Section: devel
@@ -262,28 +564,6 @@ Description-md5: 95d9b26f75a8f8f8a93fbe8e13d5b0e9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: grub-legacy-ec2
-Priority: extra
-Section: admin
-Installed-Size: 143
-Maintainer: Scott Moser <smoser@ubuntu.com>
-Architecture: all
-Source: cloud-init
-Version: 0.7.3~bzr860-0ubuntu1
-Depends: debconf (>= 1.5.19) | cdebconf, ucf, util-linux (>= 2.15-1), debconf (>= 0.5) | debconf-2.0
-Suggests: grub-legacy-doc
-Conflicts: grub
-Filename: pool/main/c/cloud-init/grub-legacy-ec2_0.7.3~bzr860-0ubuntu1_all.deb
-Size: 24116
-MD5sum: 25d94ee56c677b60a3f5e1801b96cc86
-SHA1: 37ce2c533798b80ab1b2a8f106ee63ac8653cf69
-SHA256: cf80fcfe08b4c4705fd989c6a8b69b6bdbe797cda41acb196f770097689e2472
-Description: Handles update-grub for ec2 instances
-Description-md5: e5f8ea347000ef0d0aedb42c000e0b9c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: cloud-image
-
 Package: libapache2-mod-auth-mysql
 Priority: optional
 Section: web
@@ -301,6 +581,104 @@ SHA1: 0af8925afdf6f2eeb1570daea9fb4ab6f6c052df
 SHA256: e8df88e2d28f55abbaa1840fa99a90e95214f755b5178f217b73380615030d3d
 Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libasan0
+Priority: optional
+Section: libs
+Installed-Size: 153
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libasan0-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6 (>= 2.4), libgcc1 (>= 1:4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/g/gcc-4.8/libasan0_4.8.1-9ubuntu1_armhf.deb
+Size: 67404
+MD5sum: d0d3c33f2e0a56b57b4e6fd0affe9861
+SHA1: c180c970cb4dfa4332c98be468d795e354548808
+SHA256: 34e6dc3dfd6749df807a7a193bcff94c5be33ec1b94193911a60d2b88af096f5
+Description: AddressSanitizer -- a fast memory error detector
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 04e20d522e263c6563c2ea719c87026f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libasan0-dbg
+Priority: extra
+Section: debug
+Installed-Size: 848
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libasan0-dbg-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libasan0 (= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libasan0-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 299742
+MD5sum: 3cd8ac2a1cecab7229d68e34fa7f219a
+SHA1: 593ea069b98e0911c1197d81895a577beeda3da2
+SHA256: 785392e58618e19c0eff3c6b236da63159c276ed6403609fc8ece0e54040a0d7
+Description: AddressSanitizer -- a fast memory error detector (debug symbols)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: e0ab64cebecfb2c8f3560d8854956043
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libatomic1
+Priority: optional
+Section: libs
+Installed-Size: 45
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libatomic1-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Filename: pool/main/g/gcc-4.8/libatomic1_4.8.1-9ubuntu1_armhf.deb
+Size: 6764
+MD5sum: 62caf09591d0171ec7dea14393c7ae47
+SHA1: 1f642ed9520710e241cf63d67b645cdff3b738dc
+SHA256: 0776e48725bf06c8cafb02b1af4f174139b5a704a738b7d9df9c550de994590a
+Description: support library providing __atomic built-in functions
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 16938852526fc26bdbcb46c18435ed08
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libatomic1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 105
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libatomic1-dbg-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libatomic1 (= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libatomic1-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 16820
+MD5sum: 97b09a92f953f190e2ad9d9084ebd824
+SHA1: f1578965de7f92ba23e2e8e114133995d8004221
+SHA256: 312276feae9bd2202ecbfa853b32d3f4b92ebce8ca05e398cdc5dc91217e245c
+Description: support library providing __atomic built-in functions (debug symbols)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 26d76486cdd4f1973b721c8f322e9e61
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -611,6 +989,80 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: libgcc-4.8-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 2639
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libgcc1 (>= 1:4.8.1-9ubuntu1), libgomp1 (>= 4.8.1-9ubuntu1), libatomic1 (>= 4.8.1-9ubuntu1), libasan0 (>= 4.8.1-9ubuntu1)
+Recommends: libc6-dev (>= 2.13-0ubuntu6)
+Filename: pool/main/g/gcc-4.8/libgcc-4.8-dev_4.8.1-9ubuntu1_armhf.deb
+Size: 303306
+MD5sum: 3f6b7118e4f816a9965722322366ba3f
+SHA1: 5df560b875548b7ed99114521f52d7c94eb9d8f4
+SHA256: e5174cdc66f5979283d8d44d61c44c9efe0590e78e730d660493d33aed5fa9c3
+Description: GCC support library (development files)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 4ab7cb439b47e1d0796fbaf8447229ac
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgcc1
+Priority: required
+Section: libs
+Installed-Size: 179
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8 (4.8.1-9ubuntu1)
+Version: 1:4.8.1-9ubuntu1
+Provides: libgcc1-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Breaks: gcc-4.1, gcc-4.3 (<< 4.3.6-1), gcc-4.4 (<< 4.4.6-4), gcc-4.5 (<< 4.5.3-2)
+Filename: pool/main/g/gcc-4.8/libgcc1_4.8.1-9ubuntu1_armhf.deb
+Size: 48934
+MD5sum: e7cc8d2d91cd5a290890b0d33e4c6965
+SHA1: be19e86732a758142a3e60fa2a9f83da91f6c69f
+SHA256: 7b31b6ec047568a2a199713b21b1932e487dc0606a9ceea543e2d29a0c7589ad
+Description: GCC support library
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: bbd60d723e97d8e06c04228ee4c76f10
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: libgcc1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 1462
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8 (4.8.1-9ubuntu1)
+Version: 1:4.8.1-9ubuntu1
+Provides: libgcc1-dbg-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libgcc1 (= 1:4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libgcc1-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 163006
+MD5sum: a1c8ec8c5d13bf797927791d95dc66a9
+SHA1: 274b4b6847b3fbe9c9d49e2e9494a7fb7692e7ef
+SHA256: f7fa842efc41be3ed4ec28926e7d2de2c72bb3a40e9d0f7754135fd88f308f91
+Description: GCC support library (debug symbols)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: d2281f8d5a2b7dae7c362df43affcb03
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libgcj-doc
 Priority: optional
 Section: doc
@@ -631,6 +1083,271 @@ Description: libgcj API documentation and example programs
 Enhances: libgcj14-dev
 Homepage: http://gcc.gnu.org/
 Description-md5: f5a770b1765898ba56a3f1f8c749ab2d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgcj14
+Priority: optional
+Section: libs
+Installed-Size: 36165
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Replaces: gij-4.4 (<< 4.4.0-1)
+Depends: gcc-4.8-base (>= 4.8), libgcj-common (>= 1:4.1.1-21), libc6 (>= 2.15), libgcc1 (>= 1:4.4.0), libgmp10, libstdc++6 (>= 4.8), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Recommends: gcj-4.8-jre-lib (>= 4.8)
+Suggests: libgcj14-dbg (>= 4.8.1-9ubuntu1), libgcj14-awt (= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libgcj14_4.8.1-9ubuntu1_armhf.deb
+Size: 11239616
+MD5sum: b6471b5575b471aafafb4807bd56cdce
+SHA1: d524787e85a0e754576bfdfe812b425373580672
+SHA256: fe4c38375bcdf2e5e8b7df5cce53eb80b77f211465b367766e51808610311af4
+Description: Java runtime library for use with gcj
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 7f6bc4eae7de535afdc86e015c966562
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgcj14-awt
+Priority: optional
+Section: libs
+Installed-Size: 193
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (>= 4.8), libgcj14 (= 4.8.1-9ubuntu1), libc6 (>= 2.4), libcairo2 (>= 1.2.4), libfreetype6 (>= 2.2.1), libgcc1 (>= 1:4.4.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.24.0), libgtk2.0-0 (>= 2.24.0), libpango-1.0-0 (>= 1.22.0), libpangoft2-1.0-0 (>= 1.14.0), libxrandr2 (>= 4.3), libxrender1, libxtst6
+Pre-Depends: multiarch-support
+Filename: pool/main/g/gcc-4.8/libgcj14-awt_4.8.1-9ubuntu1_armhf.deb
+Size: 66478
+MD5sum: 0f961a7f5bbc4250809d2d3c78a7feb4
+SHA1: 427be5f70b852f3182ff7c26e103adfaaeece6b4
+SHA256: 2bc992416288fef795f0313f8ecc4f6d94d622f16543775eb2d06f2624f5774d
+Description: AWT peer runtime libraries for use with gcj
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 62c9d0df7d6fb42f9efbc0d8df5ad545
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgcj14-dbg
+Priority: extra
+Section: debug
+Installed-Size: 95540
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libgcj14 (= 4.8.1-9ubuntu1)
+Pre-Depends: multiarch-support
+Recommends: binutils, libc6-dbg | libc-dbg
+Filename: pool/main/g/gcc-4.8/libgcj14-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 26074640
+MD5sum: 708a3cf7e7bee7155b36b6434e500100
+SHA1: b078bcd4b3364ec2c15032eacda237fddf50d86d
+SHA256: b7a7675c251b0a2d3d3f79749b883c1647a6b61ac3799fec12c69ca720e07f25
+Description: Debugging symbols for libraries provided in libgcj14-dev
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: f7fe8a6b64bcf70fe0281e03d761a5bd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgcj14-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 6674
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), gcj-4.8-jdk (= 4.8.1-9ubuntu1), gcj-4.8-jre-lib (>= 4.8), libgcj14-awt (= 4.8.1-9ubuntu1), libgcj-bc, zlib1g-dev
+Suggests: libgcj-doc
+Filename: pool/main/g/gcc-4.8/libgcj14-dev_4.8.1-9ubuntu1_armhf.deb
+Size: 768314
+MD5sum: 01b2bc9d844d90fbaa613fedd29f5e2e
+SHA1: 320e96f523ff8617ab38842957da98645d92df30
+SHA256: 6558ad9658751cd1ad04a3bfe339ff8f57d54cefb249272079f256267e1f4fbe
+Description: Java development headers for use with gcj
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 7161f4f8afb8f0860b930120a5520479
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgfortran-4.8-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 1374
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libgcc-4.8-dev (= 4.8.1-9ubuntu1), libgfortran3 (>= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libgfortran-4.8-dev_4.8.1-9ubuntu1_armhf.deb
+Size: 286086
+MD5sum: 8d9d4540de83a0befe5e0178bd18df53
+SHA1: 112c388f95d708e1d799c74418e541ee187ccc53
+SHA256: 2ec3d9ad7ae537f9f813012e67fd22d3195e150355f46545dfe9839732574405
+Description: Runtime library for GNU Fortran applications (development files)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 146f5739f84c8211389d84c7aa5bf949
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgfortran3
+Priority: optional
+Section: libs
+Installed-Size: 516
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libgfortran3-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6 (>= 2.17), libgcc1 (>= 1:4.4.0)
+Pre-Depends: multiarch-support
+Breaks: gcc-4.1, gcc-4.3 (<< 4.3.6-1), gcc-4.4 (<< 4.4.6-4), gcc-4.5 (<< 4.5.3-2)
+Filename: pool/main/g/gcc-4.8/libgfortran3_4.8.1-9ubuntu1_armhf.deb
+Size: 209004
+MD5sum: 931c90a0f46e5053e9cb2cdc3b1ff11c
+SHA1: a00f784acd63ca786d80be15a68dbe831e2d43c3
+SHA256: 8699a2b147b5c11fcc7ce6bd444c6c30b9880b43d9a3e95c649dd5f3b67a8e3e
+Description: Runtime library for GNU Fortran applications
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: bb4b9e7dbbaa67e95441936718b11f39
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb, edubuntu-desktop-gnome, edubuntu-usb, ubuntustudio-video, ubuntustudio-publishing, ubuntustudio-photography, ubuntustudio-graphics
+
+Package: libgfortran3-dbg
+Priority: extra
+Section: debug
+Installed-Size: 2587
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libgfortran3-dbg-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libgfortran3 (= 4.8.1-9ubuntu1), libgcc1-dbg (>= 1:4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libgfortran3-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 628888
+MD5sum: 382a8251d42c316ee0e3db4c4b4aac7f
+SHA1: bf06d0daa0b4e18145ad5f2455d9164842ba74a3
+SHA256: 3bed5ca8a8c0e8e5a67f5b233979a72047f3506a318c620dc076af929a30b2c1
+Description: Runtime library for GNU Fortran applications (debug symbols)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 8e6e17da8d0b42fc976ade7330c11a20
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgo4
+Priority: optional
+Section: libs
+Installed-Size: 8934
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Replaces: libgo3
+Provides: libgo4-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6 (>= 2.13-31), libgcc1 (>= 1:4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/g/gcc-4.8/libgo4_4.8.1-9ubuntu1_armhf.deb
+Size: 2806004
+MD5sum: d493fbee617005a16f59ff7bd4ce2a19
+SHA1: 39732dae5714cca898e9f239d6d5cfc4119d8961
+SHA256: b2cc788a495c542769866440fe3cfceed310f8ca010c87e091fa1188672e9fb4
+Description: Runtime library for GNU Go applications
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 9dac71a6885be90d89c8d4e0ae4b9f2c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgo4-dbg
+Priority: extra
+Section: debug
+Installed-Size: 10873
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libgo4-dbg-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libgo4 (= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libgo4-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 3754452
+MD5sum: b9d8a5eb80e7509d6d958e63536246b2
+SHA1: ea59777c468e82d049b9d08769245aa8a9ab33e2
+SHA256: 28e752523287e5a343eb679b68ff4d92f8c59f2e3b3c6a8cc12f1c0294d7b690
+Description: Runtime library for GNU Go applications (debug symbols)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 8e5db8ab219adb4818e0e98ececdb3ab
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgomp1
+Priority: optional
+Section: libs
+Installed-Size: 76
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libgomp1-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6 (>= 2.17)
+Pre-Depends: multiarch-support
+Breaks: gcc-4.1, gcc-4.3 (<< 4.3.6-1), gcc-4.4 (<< 4.4.6-4), gcc-4.5 (<< 4.5.3-2)
+Filename: pool/main/g/gcc-4.8/libgomp1_4.8.1-9ubuntu1_armhf.deb
+Size: 25072
+MD5sum: 739387f239cef9047cb6425c15fe4d66
+SHA1: 0f86556cc2edeeba3c068ff3de8f8ad16b133c32
+SHA256: b42667f312fa8917498b57dea99839e4de6c9eb332c1c6df8f03dbaa692737d5
+Description: GCC OpenMP (GOMP) support library
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 9651123458dd1bf3c162dfb6a6292ff4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgomp1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 265
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libgomp1-dbg-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libgomp1 (= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libgomp1-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 82328
+MD5sum: 191746639dde75cee299be1d07db7713
+SHA1: ac9ea08da921506736e72916ae9d4328bc25785c
+SHA256: ed6eaa56e59237d148db95203e8a34dfd94c7d573419553097169f05bef4fb42
+Description: GCC OpenMP (GOMP) support library (debug symbols)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 7e2cdd49ce630cb7e2347d7fe5ca5677
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -703,6 +1420,75 @@ Description-md5: 2f06b7e1bfdb9f620d92f9696d24fabc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libobjc-4.8-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 1875
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libgcc-4.8-dev (= 4.8.1-9ubuntu1), libobjc4 (>= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libobjc-4.8-dev_4.8.1-9ubuntu1_armhf.deb
+Size: 690614
+MD5sum: 3ff3bcc3bd9857f0dbdbb4d4ebdf7f51
+SHA1: 7eed70240fe7281b3e2a636a672dd0267944bfa6
+SHA256: 129277b20cee115464fceaf011d725588d39b70f392b8d0f1f56a71dedf38411
+Description: Runtime library for GNU Objective-C applications (development files)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 7ff3333ac4ef3f78ec469fae5e05bf5d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libobjc4
+Priority: optional
+Section: libs
+Installed-Size: 289
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libobjc4-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6 (>= 2.11), libgcc1 (>= 1:4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/g/gcc-4.8/libobjc4_4.8.1-9ubuntu1_armhf.deb
+Size: 128254
+MD5sum: 1135a832d500245f1a35bb17c36a79bb
+SHA1: 85e74dbc0c3ad4e073a619595d5f36185aae0139
+SHA256: 09acef9ee62f72b75f06dc38ffe605c675741daddc986a90cefa90188c7d4943
+Description: Runtime library for GNU Objective-C applications
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 30a0a695b3f5d643272b0bb547f0578c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libobjc4-dbg
+Priority: extra
+Section: debug
+Installed-Size: 882
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libobjc4-dbg-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libobjc4 (= 4.8.1-9ubuntu1), libgcc1-dbg (>= 1:4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libobjc4-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 334034
+MD5sum: ab3de4bc804c415d1ca3053256820813
+SHA1: 3ac3bcad972dd3073f78f0c377ee1c217e4ac13c
+SHA256: 46799ac8ddaed50a7e253ee504974cf6fde35cdcb82a09502099783f0279556c
+Description: Runtime library for GNU Objective-C applications (debug symbols)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: b444a22ecf71ec41ec6388bbebb0e347
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libpostproc-dev
 Priority: optional
 Section: misc
@@ -750,6 +1536,421 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-audio
 
+Package: libsfasan0
+Priority: extra
+Section: libs
+Installed-Size: 147
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6-armel (>= 2.11) | libc6-armel, libc6 (>= 2.17), libgcc1 (>= 1:4.4.0)
+Filename: pool/main/g/gcc-4.8/libsfasan0_4.8.1-9ubuntu1_armhf.deb
+Size: 66356
+MD5sum: 6a749782f2b012a12709f057a3e78d8a
+SHA1: 0d2c6e1aa1b1d5cda2f4ea42084619ce62cf47b2
+SHA256: ed242dd1b2e113e7b6bc8bad3f042e798a50b8ea58b205664f5cdf6528da00ab
+Description: AddressSanitizer -- a fast memory error detector (soft float ABI)
+Homepage: http://gcc.gnu.org/
+Description-md5: 77c217b098bf047a48eb517165c699da
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfasan0-dbg
+Priority: extra
+Section: debug
+Installed-Size: 849
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libsfasan0 (= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libsfasan0-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 300004
+MD5sum: 4b1b42abd9ae199ebfbba359894e2894
+SHA1: 4c6ebf0d15ffa5e1ba915a691aeb7703f3bd4ece
+SHA256: b2240be7a22f7286a27936395b1f298fa28d4e3764758406d515bf32bacff1bd
+Description: AddressSanitizer -- a fast memory error detector (soft float ABI debug symbols)
+Homepage: http://gcc.gnu.org/
+Description-md5: 77d4a6eea0f5c253a472f571d3194a80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfatomic1
+Priority: optional
+Section: libs
+Installed-Size: 42
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6-armel (>= 2.11) | libc6-armel, libc6 (>= 2.17)
+Filename: pool/main/g/gcc-4.8/libsfatomic1_4.8.1-9ubuntu1_armhf.deb
+Size: 6392
+MD5sum: da1f832416ab9e74a3d8adfccac6e0a1
+SHA1: 347eae0764c10ff97149bdd4185c79acb23a6e17
+SHA256: 48cf6d9e7f22b1466e64e0969862d09aef2fca05d0a69cf66a7c3fa8998d56ef
+Description: support library providing __atomic built-in functions (soft float ABI)
+Homepage: http://gcc.gnu.org/
+Description-md5: 5c3acc5a21acb172bca714a7ede8c293
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfatomic1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 105
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libsfatomic1 (= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libsfatomic1-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 16876
+MD5sum: fce8155eca41e78e5df0a494e1d36f6e
+SHA1: f5218ac7e0cec6f737a565eb1a47af6862fbe50a
+SHA256: 651219b17467fedf09b03c1c5406b3c4b9e058d8a9e5b9aea7b8b92868d2ff6a
+Description: support library providing __atomic built-in functions (soft float ABI debug symbols)
+Homepage: http://gcc.gnu.org/
+Description-md5: 947fef41ee58a45dc42280242611aaa4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfgcc-4.8-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 2117
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libsfgcc1 (>= 1:4.8.1-9ubuntu1) | libsfgcc1, libsfgomp1 (>= 4.8.1-9ubuntu1) | libsfgomp1, libsfatomic1 (>= 4.8.1-9ubuntu1) | libsfatomic1, libsfasan0 (>= 4.8.1-9ubuntu1) | libsfasan0
+Recommends: libc6-dev (>= 2.13-0ubuntu6)
+Filename: pool/main/g/gcc-4.8/libsfgcc-4.8-dev_4.8.1-9ubuntu1_armhf.deb
+Size: 251734
+MD5sum: f258f679dad1bb78a89b47337057dce6
+SHA1: aec2df9449ab5e6338f3e1a4324ed9d088f552fc
+SHA256: 053a8e42e23cce6909a0a8b21690e8000e2bfeb8c10158f00a7a0e4247a57753
+Description: GCC support library (soft float ABI development files)
+Homepage: http://gcc.gnu.org/
+Description-md5: 0a946370cc1bda3e49c72e1e875c6da8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfgcc1
+Priority: optional
+Section: libs
+Installed-Size: 134
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8 (4.8.1-9ubuntu1)
+Version: 1:4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6-armel (>= 2.11) | libc6-armel
+Conflicts: libgcc1-armel
+Filename: pool/main/g/gcc-4.8/libsfgcc1_4.8.1-9ubuntu1_armhf.deb
+Size: 46776
+MD5sum: 21c6a4c842f02e235235e50acfbdce2b
+SHA1: 62688b232b7facfdd1e37a76c123982489a3ae5f
+SHA256: c767835595f2c13e2d50f7d5ad635ea8c9b108e125a41c8da2f4c06b3b8a4808
+Description: GCC support library (soft float ABI)
+Homepage: http://gcc.gnu.org/
+Description-md5: 43ea4db117a79058f36e527188657f5b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfgcc1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 1444
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8 (4.8.1-9ubuntu1)
+Version: 1:4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libsfgcc1 (= 1:4.8.1-9ubuntu1)
+Conflicts: libgcc1-dbg-armel
+Filename: pool/main/g/gcc-4.8/libsfgcc1-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 163038
+MD5sum: 4d42b7a69705824872da10451e1fb6c1
+SHA1: 2af29565d2506551ebb3a6d22bbc0c4b2316edab
+SHA256: a0c9a98bc7a73dfdbb8abfc8184f2d0fbfdadf5f03bedb8927766cc8be6ea47a
+Description: GCC support library (debug symbols)
+Homepage: http://gcc.gnu.org/
+Description-md5: d2281f8d5a2b7dae7c362df43affcb03
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfgfortran-4.8-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 1394
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libsfgcc-4.8-dev (= 4.8.1-9ubuntu1), libsfgfortran3 (>= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libsfgfortran-4.8-dev_4.8.1-9ubuntu1_armhf.deb
+Size: 304938
+MD5sum: 96f46c712f7b9e5177125d8c434abccb
+SHA1: 5c00cea082a6ac1970d1844dbfc30044c16819d3
+SHA256: 65d6fd2b6816b5f6f84f6b24f9e827f6e5f3bd971b19daf46cb9e234ea25276c
+Description: Runtime library for GNU Fortran applications (soft float ABI development files)
+Homepage: http://gcc.gnu.org/
+Description-md5: 74ea81c9f0670b35ce8cd3205d466b98
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfgfortran3
+Priority: optional
+Section: libs
+Installed-Size: 492
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6-armel (>= 2.11) | libc6-armel, libc6 (>= 2.17), libgcc1 (>= 1:4.4.0)
+Conflicts: libgfortran3-armel
+Filename: pool/main/g/gcc-4.8/libsfgfortran3_4.8.1-9ubuntu1_armhf.deb
+Size: 219088
+MD5sum: 36962912a2f84a93712c847492dbb2fd
+SHA1: 039b5b1ec9c94524f1ba564051f8a69ae5a39bff
+SHA256: 656558eb30204f748f49458d6520a3f5b85ef1344f779e6e9f7a8450bd957100
+Description: Runtime library for GNU Fortran applications (soft float ABI)
+Homepage: http://gcc.gnu.org/
+Description-md5: 1f1e920680dffda67addfa653d51a350
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfgfortran3-dbg
+Priority: extra
+Section: debug
+Installed-Size: 2580
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libsfgfortran3 (= 4.8.1-9ubuntu1)
+Conflicts: libgfortran3-dbg-armel
+Filename: pool/main/g/gcc-4.8/libsfgfortran3-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 634194
+MD5sum: fd242af9241165ced5ef6f2706369934
+SHA1: ff4070b55f46bd79243658d908a200a73cce9af0
+SHA256: ab669c223bb2e096dc94457b4ca475127b9048384fc44d7eca8d9bbeb16ec801
+Description: Runtime library for GNU Fortran applications (hard float ABI debug symbols)
+Homepage: http://gcc.gnu.org/
+Description-md5: 4adc4cf259b09ccf4ae311047068c96a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfgomp1
+Priority: optional
+Section: libs
+Installed-Size: 74
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6-armel (>= 2.11) | libc6-armel, libc6 (>= 2.17)
+Conflicts: libgomp1-armel
+Filename: pool/main/g/gcc-4.8/libsfgomp1_4.8.1-9ubuntu1_armhf.deb
+Size: 25868
+MD5sum: 54aedf0ff572486a1366efa50f6df384
+SHA1: 546a9780b68f92ea37a1a9ebc3707b323365cd7a
+SHA256: 23e197acceff92ab9e057ac4e8c463794b23509d9126758ecf45c636dceb9ed9
+Description: GCC OpenMP (GOMP) support library (soft float ABI)
+Homepage: http://gcc.gnu.org/
+Description-md5: 86f6cc73df5b807fdb91c11e7ccae5e9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfgomp1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 267
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libsfgomp1 (= 4.8.1-9ubuntu1)
+Conflicts: libgomp1-dbg-armel
+Filename: pool/main/g/gcc-4.8/libsfgomp1-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 83108
+MD5sum: c7b6b0a6b818be6feadbd97355baebb1
+SHA1: fbc4258ddb92974c1fb7c7dda32b58a4783724f2
+SHA256: 430cae94e59ce8260e34574a06810cb3cc67fcd459d2cabfba633a369ef153ae
+Description: GCC OpenMP (GOMP) support library (soft float ABI debug symbols)
+Homepage: http://gcc.gnu.org/
+Description-md5: 27f08005d51439e95a0fd196e94b5783
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfobjc-4.8-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 1776
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libsfgcc-4.8-dev (= 4.8.1-9ubuntu1), libsfobjc4 (>= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libsfobjc-4.8-dev_4.8.1-9ubuntu1_armhf.deb
+Size: 667260
+MD5sum: 7ad3319b9e408906e10ef3ba95c946ad
+SHA1: 5042865f70d7c11e1a001acb75e6929f5dcb0f11
+SHA256: 00acfb52a58cf083d250d1d0b397e003027192fd4513a17536da2d42ca6cae5e
+Description: Runtime library for GNU Objective-C applications (soft float development files)
+Homepage: http://gcc.gnu.org/
+Description-md5: a463892c3f00f5e00d2e6faa0c1a8f90
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfobjc4
+Priority: optional
+Section: libs
+Installed-Size: 254
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6-armel (>= 2.11) | libc6-armel, libc6 (>= 2.17), libgcc1 (>= 1:4.4.0)
+Conflicts: libobjc4-armel
+Filename: pool/main/g/gcc-4.8/libsfobjc4_4.8.1-9ubuntu1_armhf.deb
+Size: 122758
+MD5sum: 5f2435262c45540f6cb7c6aab1500dce
+SHA1: 1be3023dcb9de296993f0dea66aee54c45053af2
+SHA256: 364235a968ca480cb5e96b0af3e2cf26ded980907da51b960c46ddb2dac0763e
+Description: Runtime library for GNU Objective-C applications (soft float ABI)
+Homepage: http://gcc.gnu.org/
+Description-md5: 1979cb3a9b63cfab420a1d89e03104a3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfobjc4-dbg
+Priority: extra
+Section: debug
+Installed-Size: 881
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libsfobjc4 (= 4.8.1-9ubuntu1), libsfgcc1-dbg (>= 1:4.8.1-9ubuntu1)
+Conflicts: libobjc4-dbg-armel
+Filename: pool/main/g/gcc-4.8/libsfobjc4-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 333904
+MD5sum: 626b8ac698d2c15df9c753d264cb6eb6
+SHA1: 7643f10f8b4ff71aa2d92f02c2537992bcca652a
+SHA256: 8bd196b0d5e9d9c66377ac2d2efd048428473120b0a9adbc7337b0549d7d67ff
+Description: Runtime library for GNU Objective-C applications (soft float ABI debug symbols)
+Homepage: http://gcc.gnu.org/
+Description-md5: 3897aa5d229ac2295aee1c8bec095781
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfstdc++-4.8-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 5795
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libsfgcc-4.8-dev (= 4.8.1-9ubuntu1), libsfstdc++6 (>= 4.8.1-9ubuntu1), libstdc++-4.8-dev (= 4.8.1-9ubuntu1)
+Filename: pool/main/g/gcc-4.8/libsfstdc++-4.8-dev_4.8.1-9ubuntu1_armhf.deb
+Size: 1223990
+MD5sum: 325ca93f2e1f9eec373c5104b6c769c7
+SHA1: 3fc54d30a21b5801853d8c08a5cb5dc38ff2cd8f
+SHA256: bfeec95c2ee50cb82271662a36cf62a49cb1e4dbc27bbb417f6df979d39dbbcf
+Description: GNU Standard C++ Library v3 (development files)
+Homepage: http://gcc.gnu.org/
+Description-md5: a197f2aec835e5fc6f8f76039d8a7c4e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfstdc++6
+Priority: optional
+Section: libs
+Installed-Size: 655
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libsfgcc1 (>= 4.8.1-9ubuntu1), libc6 (>= 2.17), libgcc1 (>= 1:4.4.0)
+Conflicts: libstdc++6-armel
+Filename: pool/main/g/gcc-4.8/libsfstdc++6_4.8.1-9ubuntu1_armhf.deb
+Size: 258332
+MD5sum: b851611fe8d4add98a6f927cf756279c
+SHA1: 69ab5d01cfebc49f56db6e5fa3f664130a3e9a4a
+SHA256: 23e90f1ba5a5861be8b8cdd811f0acf910797243064a515b91bd567a312025cf
+Description: GNU Standard C++ Library v3 (soft float ABI)
+Homepage: http://gcc.gnu.org/
+Description-md5: 6e0045ee59c603d55d11c46ef5091159
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsfstdc++6-4.8-dbg
+Priority: extra
+Section: debug
+Installed-Size: 22564
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libsfstdc++6 (>= 4.8.1-9ubuntu1), libstdc++-4.8-dev (= 4.8.1-9ubuntu1), libsfgcc1-dbg (>= 1:4.8.1-9ubuntu1), libc6 (>= 2.17), libgcc1 (>= 1:4.4.0)
+Conflicts: libsfstdc++6-4.3-dbg, libsfstdc++6-4.4-dbg, libsfstdc++6-4.5-dbg, libsfstdc++6-4.6-dbg, libsfstdc++6-4.7-dbg, libsfstdc++6-dbg, libstdc++6-armel
+Filename: pool/main/g/gcc-4.8/libsfstdc++6-4.8-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 7379958
+MD5sum: 9d86efcb3b607622fd3c4d5b2b98ea5b
+SHA1: a49223f283b04908106c27b8e299129970b2746e
+SHA256: 388ebedafcf89ca06481d55c095058636ef053d8d491e69f3b4945f43a4f0e13
+Description: GNU Standard C++ Library v3 (debugging files)
+Homepage: http://gcc.gnu.org/
+Description-md5: 6d699ea4429a346bc58e56d70e561407
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libstdc++-4.8-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 10701
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libstdc++-dev
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libgcc-4.8-dev (= 4.8.1-9ubuntu1), libstdc++6 (>= 4.8.1-9ubuntu1), libc6-dev (>= 2.13-0ubuntu6)
+Suggests: libstdc++-4.8-doc
+Conflicts: libg++2.8-dev, libg++27-dev, libg++272-dev (<< 2.7.2.8-1), libstdc++2.10-dev (<< 1:2.95.3-2), libstdc++2.8-dev, libstdc++2.9-dev, libstdc++2.9-glibc2.1-dev, libstdc++3.0-dev
+Filename: pool/main/g/gcc-4.8/libstdc++-4.8-dev_4.8.1-9ubuntu1_armhf.deb
+Size: 1807452
+MD5sum: 18769fff62ae7d446a676e50aa4e07c8
+SHA1: 5d9ab2d5d6381838ad589a321c6dd79b2eb81b5b
+SHA256: 7c317d4717cf1669ff7ee115c29609313c3065a04e0895a24d7f77b17c79cdf8
+Description: GNU Standard C++ Library v3 (development files)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: a197f2aec835e5fc6f8f76039d8a7c4e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+
 Package: libstdc++-4.8-doc
 Priority: optional
 Section: doc
@@ -769,6 +1970,59 @@ SHA256: 91ea396d0de5bd600ae24cc8a6f100dfd3a6a84f46a243b3145f15c684fb73ef
 Description: GNU Standard C++ Library v3 (documentation files)
 Homepage: http://gcc.gnu.org/
 Description-md5: 1a4b88b8d9f96dfb2ac2be1049b4db01
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libstdc++6
+Priority: important
+Section: libs
+Installed-Size: 879
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libstdc++6-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libc6 (>= 2.17), libgcc1 (>= 1:4.4.0)
+Pre-Depends: multiarch-support
+Conflicts: scim (<< 1.4.2-1)
+Breaks: gcc-4.1, gcc-4.3 (<< 4.3.6-1), gcc-4.4 (<< 4.4.6-4), gcc-4.5 (<< 4.5.3-2)
+Filename: pool/main/g/gcc-4.8/libstdc++6_4.8.1-9ubuntu1_armhf.deb
+Size: 278730
+MD5sum: 28c4937061feffc057f2ba80fb227b1d
+SHA1: 80bc412b5b150938500e4f2138ba24af3b3b9d0b
+SHA256: 979862621a26c1209978cf4e1714b1ec94a39a26a4bf9c3686f082699f683ed3
+Description: GNU Standard C++ Library v3
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 724ab84919e0e220afb960e36463914d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: minimal
+
+Package: libstdc++6-4.8-dbg
+Priority: extra
+Section: debug
+Installed-Size: 12418
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: armhf
+Source: gcc-4.8
+Version: 4.8.1-9ubuntu1
+Provides: libstdc++6-4.8-dbg-armhf
+Depends: gcc-4.8-base (= 4.8.1-9ubuntu1), libstdc++6 (>= 4.8.1-9ubuntu1), libgcc1-dbg (>= 1:4.8.1-9ubuntu1), libc6 (>= 2.17), libgcc1 (>= 1:4.4.0)
+Recommends: libstdc++-4.8-dev (= 4.8.1-9ubuntu1)
+Conflicts: libstdc++5-3.3-dbg, libstdc++5-dbg, libstdc++6-4.0-dbg, libstdc++6-4.1-dbg, libstdc++6-4.2-dbg, libstdc++6-4.3-dbg, libstdc++6-4.4-dbg, libstdc++6-4.5-dbg, libstdc++6-4.6-dbg, libstdc++6-4.7-dbg, libstdc++6-dbg
+Filename: pool/main/g/gcc-4.8/libstdc++6-4.8-dbg_4.8.1-9ubuntu1_armhf.deb
+Size: 3683696
+MD5sum: 507bf9c401ed16bbc9bb0705df5b5dac
+SHA1: db4344d27a2a8aae843d9a2f880059540298e6b2
+SHA256: 2b49ef5df8dd66f470b601a713e1209a1caa151e65af8d155efdd99ac46ffa2d
+Description: GNU Standard C++ Library v3 (debugging files)
+Multi-Arch: same
+Homepage: http://gcc.gnu.org/
+Description-md5: 6d699ea4429a346bc58e56d70e561407
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -819,113 +2073,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-active, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-audio
 
-Package: maas
+Package: lxc-templates
 Priority: optional
-Section: net
-Installed-Size: 36
+Section: admin
+Installed-Size: 199
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: all
-Version: 1.4+bzr1548+dfsg-0ubuntu1
-Depends: maas-cluster-controller, maas-region-controller, python-django-maas
-Filename: pool/main/m/maas/maas_1.4+bzr1548+dfsg-0ubuntu1_all.deb
-Size: 1908
-MD5sum: 826001065fc9d4c3a75af3b394438c23
-SHA1: 9ca03fc9e327f99aa63953df78801122b325f91f
-SHA256: b6466ac5ab36d9d3f54dbc45a19e8837e16ce771bb0e33e305215bac90a1ae89
-Description: Ubuntu MAAS Server
-Homepage: https://launchpad.net/maas
-Description-md5: 61bb9135ef18acaff6eb8c13e1efc46a
+Source: lxc
+Version: 0.9.0-0ubuntu22
+Replaces: lxc (<< 0.8.0~rc1-4ubuntu43)
+Depends: lxc (>= 0.8.0~rc1-4ubuntu43)
+Recommends: cloud-utils, debootstrap | cdebootstrap, openssl, rsync
+Suggests: qemu-user-static
+Breaks: lxc (<< 0.8.0~rc1-4ubuntu43)
+Filename: pool/main/l/lxc/lxc-templates_0.9.0-0ubuntu22_all.deb
+Size: 33488
+MD5sum: 8226cb5ad1f8eef193a4a254504f30b5
+SHA1: 6da36c295a93482667e19ee8fa0ed00a8a72e056
+SHA256: 585d185e68b6af2a2406a1a4fc0ea9526bfe391daac5ee1ec6b3011f19fd022a
+Description: Linux Containers userspace tools (development)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: b7b10bcdeb3296f4cf9e69a256d87261
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: maas-cli
-Priority: optional
-Section: net
-Installed-Size: 102
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: maas
-Version: 1.4+bzr1548+dfsg-0ubuntu1
-Depends: python-bzrlib, python-httplib2, python-maas-client (= 1.4+bzr1548+dfsg-0ubuntu1), python-oauth, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Filename: pool/main/m/maas/maas-cli_1.4+bzr1548+dfsg-0ubuntu1_all.deb
-Size: 12086
-MD5sum: 0cfdf6438f588c21157141f06d74250f
-SHA1: 5dba4928ad66e7143c4196e869bffa5f2be45271
-SHA256: 0d6b11ade56d6e39d9ffe8870065c043eb7c1c8fd36b43eaea4d877e55ffee33
-Description: Ubuntu MAAS Client Tool
-Homepage: https://launchpad.net/maas
-Description-md5: 814b9f5858d62e085e69aea0f840e274
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: maas-cluster-controller
-Priority: optional
-Section: net
-Installed-Size: 178
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: maas
-Version: 1.4+bzr1548+dfsg-0ubuntu1
-Replaces: maas (<= 0.1+bzr1048+dfsg-0ubuntu1), maas-region-controller (<= 0.1+bzr1314+dfsg-0ubuntu1)
-Depends: apache2, bind9utils, distro-info, freeipmi-tools, maas-cli (= 1.4+bzr1548+dfsg-0ubuntu1), maas-common (= 1.4+bzr1548+dfsg-0ubuntu1), python-celery, python-httplib2, python-lockfile, python-maas-provisioningserver (= 1.4+bzr1548+dfsg-0ubuntu1), python-netaddr, python-oauth, python-tempita, python-twisted, python-zope.interface, rsyslog, syslinux-common, tgt, uuid-runtime, wget, debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Suggests: maas-dhcp (= 1.4+bzr1548+dfsg-0ubuntu1)
-Conflicts: tftpd-hpa
-Breaks: maas (<= 0.1+bzr1048+dfsg-0ubuntu1), maas-region-controller (<= 0.1+bzr1314+dfsg-0ubuntu1)
-Filename: pool/main/m/maas/maas-cluster-controller_1.4+bzr1548+dfsg-0ubuntu1_all.deb
-Size: 20088
-MD5sum: ac16638733b62075a11839d2d638ce18
-SHA1: c4e3d330fae38147282482e29cf2b9619b6eeee3
-SHA256: b69bad968b907319ceea4a3fbe91d079e8aba6fc91c3c363be88e9be8ad99f01
-Description: Ubuntu MAAS Cluster Controller
-Homepage: https://launchpad.net/maas
-Description-md5: c10b2ea1c3afc31c6a18490951702ac4
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: maas-common
-Priority: optional
-Section: net
-Installed-Size: 41
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: maas
-Version: 1.4+bzr1548+dfsg-0ubuntu1
-Replaces: maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
-Breaks: maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
-Filename: pool/main/m/maas/maas-common_1.4+bzr1548+dfsg-0ubuntu1_all.deb
-Size: 7104
-MD5sum: d14345d7bb22afb9caaa551a939f2d47
-SHA1: cacb66bac80811a51dabe937980001bd7647dc91
-SHA256: 8400c534120739baa99dec4d3bedf20abc790c15f20c45a163063d5629e3085a
-Description: Ubuntu MAAS Server
-Homepage: https://launchpad.net/maas
-Description-md5: 0f08f38d6abc6023bae9225f98d0d50c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: maas-region-controller
-Priority: optional
-Section: net
-Installed-Size: 462
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: maas
-Version: 1.4+bzr1548+dfsg-0ubuntu1
-Replaces: maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
-Depends: apache2, avahi-daemon, bind9utils, dbconfig-common, iproute, libapache2-mod-wsgi, libjs-raphael, libjs-yui3-full, libjs-yui3-min, maas-common (= 1.4+bzr1548+dfsg-0ubuntu1), postgresql-9.1, pwgen, python-django, python-django-maas (= 1.4+bzr1548+dfsg-0ubuntu1), python-django-piston, python-django-south, python-maas-provisioningserver (= 1.4+bzr1548+dfsg-0ubuntu1), rabbitmq-server, rsyslog, squid-deb-proxy, debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
-Recommends: openssh-server
-Suggests: maas-dns
-Breaks: maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
-Filename: pool/main/m/maas/maas-region-controller_1.4+bzr1548+dfsg-0ubuntu1_all.deb
-Size: 93030
-MD5sum: cee945a8ad5bd46cddc7e63e049a7ac4
-SHA1: ab6131495e7ad925b91bd2ea693c2aa325e01fbd
-SHA256: 39d2cbc4ae5bfecb7f9c41c1629958a865bed5f11b5a9e54a4872a2ef8457165
-Description: Ubuntu MAAS Server
-Homepage: https://launchpad.net/maas
-Description-md5: af957353fce4c07ff6cc2df04c26a3e3
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
+Task: edubuntu-desktop-gnome
 
 Package: mysql-client
 Priority: optional
@@ -1299,70 +2470,6 @@ SHA256: 0ce76f5c67599e34da96068f38539f8234d830577f828be1806d62f404471a89
 Description: distributed version control system - testsuite
 Homepage: http://bazaar-vcs.org
 Description-md5: 6a061202c9118fa07cacafd938b725f0
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: python-django-maas
-Priority: optional
-Section: net
-Installed-Size: 1585
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: maas
-Version: 1.4+bzr1548+dfsg-0ubuntu1
-Depends: python-avahi, python-celery, python-convoy, python-dbus, python-lockfile, python-lxml, python-maas-client (= 1.4+bzr1548+dfsg-0ubuntu1), python-netaddr, python-oops, python-oops-amqp, python-oops-datedir-repo, python-oops-twisted, python-oops-wsgi, python-psycopg2, python-sphinx, python-tempita, python-twisted, python-txamqp, python-txlongpoll, python-zope.interface, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Filename: pool/main/m/maas/python-django-maas_1.4+bzr1548+dfsg-0ubuntu1_all.deb
-Size: 183278
-MD5sum: 666af7da06455a5ac71c8aa2ee32a694
-SHA1: 9291bbedc6230c4d505c4344c98339b1f8070ab1
-SHA256: f1cb5d7f22681734d3790c57bc87213f94c9e0243c85692c59d19587438a21e2
-Description: Ubuntu MAAS Server - (django files)
-Homepage: https://launchpad.net/maas
-Description-md5: 87625774b1d9493b5a765a3b5549c5de
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: python-maas-client
-Priority: optional
-Section: net
-Installed-Size: 76
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: maas
-Version: 1.4+bzr1548+dfsg-0ubuntu1
-Replaces: maas (<= 0.1+bzr971+dfsg-0ubuntu2)
-Depends: python-oauth, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Breaks: maas (<= 0.1+bzr971+dfsg-0ubuntu2)
-Filename: pool/main/m/maas/python-maas-client_1.4+bzr1548+dfsg-0ubuntu1_all.deb
-Size: 11938
-MD5sum: eb1c533423b0c65a4d269d2c1e772f61
-SHA1: 23e243d5e37039030c8a6b33811eef8cbb727e97
-SHA256: c2128eee86e739b97e467bc9677b7867a2bd85bae6f47ba9ec7f1778271cde37
-Description: Ubuntu MAAS API Client - (python files)
-Homepage: https://launchpad.net/maas
-Description-md5: 20735e9fca3a578f82aae12168c594a7
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: python-maas-provisioningserver
-Priority: optional
-Section: net
-Installed-Size: 291
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: maas
-Version: 1.4+bzr1548+dfsg-0ubuntu1
-Replaces: maas-cluster-controller (<= 0.1+bzr1243+dfsg-0ubuntu3), python-django-maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
-Depends: python-celery, python-formencode, python-lockfile, python-lxml, python-maas-client, python-netifaces, python-oops, python-oops-amqp, python-oops-datedir-repo, python-oops-twisted, python-pyparsing, python-tempita, python-twisted-core, python-twisted-web, python-txamqp, python-txtftp, python-yaml, python-zope.interface, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Breaks: maas-cluster-controller (<= 0.1+bzr1243+dfsg-0ubuntu3), python-django-maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
-Filename: pool/main/m/maas/python-maas-provisioningserver_1.4+bzr1548+dfsg-0ubuntu1_all.deb
-Size: 50956
-MD5sum: dc2373f3dcef3291e98722c06b9e2281
-SHA1: 4edb16d23c75d8f91ea6b86d39dfa78b40cf4cfe
-SHA256: 0165970cec3f8f4b8798b097d17313106ba843c25c6b26105c121660c0b03d67
-Description: Ubuntu MAAS Server
-Homepage: https://launchpad.net/maas
-Description-md5: 4f5c7749b5a2c54ca28e3e8e5170dd4e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
