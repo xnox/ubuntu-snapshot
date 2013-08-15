@@ -681,6 +681,28 @@ Origin: Ubuntu
 Supported: 5y
 Task: kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-kde
 
+Package: kvm
+Priority: optional
+Section: metapackages
+Installed-Size: 61
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: qemu-kvm (1.0+noroms-0ubuntu14.11)
+Version: 1:84+dfsg-0ubuntu16+1.0+noroms+0ubuntu14.11
+Depends: qemu-kvm
+Filename: pool/main/q/qemu-kvm/kvm_84+dfsg-0ubuntu16+1.0+noroms+0ubuntu14.11_amd64.deb
+Size: 3220
+MD5sum: 5b2786c5c869c794315bbb1f4d04b100
+SHA1: 4e82ad1054f8fa5a46a3c057e253a4cede086a66
+SHA256: 366dcc696b41a2f27c5d377274eac51ddb2569a3440d8852274558b42fca2a43
+Description: dummy transitional package from kvm to qemu-kvm
+Homepage: http://www.linux-kvm.org
+Description-md5: 770c6f1f7fe6d217706484c7e54ec5d9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: virt-host
+
 Package: libapache2-mod-apparmor
 Priority: extra
 Section: web
@@ -13041,6 +13063,49 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
 
+Package: lupin-casper
+Priority: extra
+Section: misc
+Installed-Size: 59
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Agostino Russo <agostino.russo@gmail.com>
+Architecture: all
+Source: lupin
+Version: 0.51ubuntu1.1
+Depends: initramfs-tools (>= 0.40ubuntu11), casper (>= 0.98)
+Filename: pool/main/l/lupin/lupin-casper_0.51ubuntu1.1_all.deb
+Size: 6062
+MD5sum: b81f31bbaaf1deb10f64b705f7411182
+SHA1: 1a124bed64b64f1b14ea6ab9086545cc03621f87
+SHA256: 153c1347a3aec36352668a4cd18cc7e5b0c4343197b86456bb980817b987c3fb
+Description: Add support for loop-mount installations to casper
+Description-md5: 788e4fe72890ead4f26e1e29cce0021d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+
+Package: lupin-support
+Priority: extra
+Section: misc
+Installed-Size: 106
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Agostino Russo <agostino.russo@gmail.com>
+Architecture: amd64
+Source: lupin
+Version: 0.51ubuntu1.1
+Depends: libc6 (>= 2.4), procps, lsb-base (>= 3.0-6), user-setup
+Breaks: grub-pc (<< 1.99~20101122-1)
+Filename: pool/main/l/lupin/lupin-support_0.51ubuntu1.1_amd64.deb
+Size: 13264
+MD5sum: 21a23ef50bdf6a836df4ab94dcddba58
+SHA1: 7fca43276f7db1433fbdd70ae4c0bd237ce6655f
+SHA256: 0754af8438ba3ea2e985243807dfcbeaf40f8eeb221b326fddfff53fe410a74b
+Description: Support files for loop-mount installations
+Description-md5: c45752cdd48323ac6e75a77024671003
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+
 Package: network-manager
 Priority: optional
 Section: net
@@ -13797,6 +13862,81 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
 Task: ubuntustudio-video, ubuntustudio-graphics
+
+Package: qemu-common
+Priority: optional
+Section: misc
+Installed-Size: 165
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: qemu-kvm
+Version: 1.0+noroms-0ubuntu14.11
+Replaces: qemu-kvm (<< 0.12.3+noroms-0ubuntu1)
+Depends: bridge-utils, seabios, vgabios (>= 0.6c-2ubuntu2)
+Recommends: cpu-checker, kvm-ipxe
+Suggests: mol-drivers-macosx, openbios-sparc, ubuntu-vm-builder, uml-utilities
+Filename: pool/main/q/qemu-kvm/qemu-common_1.0+noroms-0ubuntu14.11_all.deb
+Size: 22170
+MD5sum: fdd463c5067a108acdee2721d313c8dc
+SHA1: 07049aa36bebbf9a83a22b390efed9cfeb3f7edc
+SHA256: 3b248cac41d97193d378da4b2c53d241aab4343d424caf9f308d8aa679f7df46
+Description: qemu common functionality (bios, documentation, etc)
+Homepage: http://www.linux-kvm.org
+Description-md5: 04ad157b26c0de00e4e4757a6e6cde78
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: virt-host
+
+Package: qemu-kvm
+Priority: optional
+Section: misc
+Installed-Size: 12939
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 1.0+noroms-0ubuntu14.11
+Replaces: kvm (<< 1:84+dfsg-0ubuntu16+0.11.0), kvm-data, qemu
+Provides: kvm, qemu
+Depends: acl, iproute, python, qemu-common (>= 1.0+noroms-0ubuntu14.11), qemu-utils (>= 1.0+noroms-0ubuntu14.11), udev, upstart-job, libaio1 (>= 0.3.93), libasound2 (>= 1.0.23), libc6 (>= 2.15), libcurl3-gnutls (>= 7.16.2-1), libglib2.0-0 (>= 2.24.0), libgnutls26 (>= 2.12.6.1-0), libncurses5 (>= 5.5-5~), libpng12-0 (>= 1.2.13-4), libpulse0 (>= 1:0.99.1), librados2, librbd1, libsasl2-2 (>= 2.1.24), libsdl1.2debian (>= 1.2.10-1), libtinfo5, libuuid1 (>= 2.16), libx11-6, zlib1g (>= 1:1.1.4)
+Pre-Depends: adduser
+Conflicts: kvm (<< 1:84+dfsg-0ubuntu16+0.11.0), kvm-data, qemu (<< 0.11.0-0ubuntu5)
+Breaks: udev (<< 136-1)
+Filename: pool/main/q/qemu-kvm/qemu-kvm_1.0+noroms-0ubuntu14.11_amd64.deb
+Size: 3516884
+MD5sum: 96e88cc46a22abdb29b3979bdc498439
+SHA1: 6497846a4fef02d8a0da935390b3e23e50815d67
+SHA256: a2c68b382092874d8b4cbec3517cd4b12e8141774fa9f003f94f419890c13567
+Description: Full virtualization on i386 and amd64 hardware
+Homepage: http://www.linux-kvm.org
+Description-md5: 64f156c9ea236bf0fb1ab34df5169342
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: virt-host
+
+Package: qemu-utils
+Priority: optional
+Section: misc
+Installed-Size: 800
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: qemu-kvm
+Version: 1.0+noroms-0ubuntu14.11
+Replaces: qemu-kvm (<< 0.15.0+noroms-0ubuntu6)
+Depends: libaio1 (>= 0.3.93), libc6 (>= 2.15), libcurl3-gnutls (>= 7.16.2-1), libglib2.0-0 (>= 2.12.0), librados2, librbd1, libuuid1 (>= 2.16), zlib1g (>= 1:1.1.4)
+Breaks: qemu-kvm (<< 0.15.0+noroms-0ubuntu6)
+Filename: pool/main/q/qemu-kvm/qemu-utils_1.0+noroms-0ubuntu14.11_amd64.deb
+Size: 353104
+MD5sum: ace62d9fd7d1ac165ccb5d85376af21d
+SHA1: 476c89ce3688fcfae1a8e969804eb27feb9b30ea
+SHA256: a0bc61bee28db1334a2204b4c69f712bf9ce4bb23d4536d23f601dfeeb712e9b
+Description: qemu utilities
+Homepage: http://www.linux-kvm.org
+Description-md5: fdb21de9f7ab9aec2110fad0e89308dd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: virt-host
 
 Package: rhythmbox-ubuntuone
 Priority: extra
