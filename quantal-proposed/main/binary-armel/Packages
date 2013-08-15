@@ -1079,6 +1079,29 @@ Origin: Ubuntu
 Supported: 18m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
+Package: kvm
+Priority: optional
+Section: metapackages
+Installed-Size: 48
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michael Tokarev <mjt@tls.msk.ru>
+Architecture: armel
+Source: qemu-kvm (1.2.0+noroms-0ubuntu2.12.10.5)
+Version: 1:84+dfsg-0ubuntu16+1.2.0+noroms+0ubuntu2.12.10.5
+Depends: qemu-kvm
+Filename: pool/main/q/qemu-kvm/kvm_84+dfsg-0ubuntu16+1.2.0+noroms+0ubuntu2.12.10.5_armel.deb
+Size: 2568
+MD5sum: c1ab07f2ca4bf3fc22ba560b5b6665e3
+SHA1: 6e8c279764588186a3b5e443b8764889979bcfe2
+SHA256: 96156eaf27bd0dec8a8444dba63a62a7c080a6c99bf8244110dd3ebea7a708aa
+Description: dummy transitional package from kvm to qemu-kvm
+Homepage: http://www.linux-kvm.org/
+Description-md5: 770c6f1f7fe6d217706484c7e54ec5d9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: virt-host
+
 Package: libaccount-plugin-1.0-0
 Priority: optional
 Section: libs
@@ -5590,6 +5613,60 @@ SHA256: 82a6f3694c04ca43924be57c69a0714e16adad37b45123536bd5d056ed117750
 Description: qemu common functionality (bios, documentation, etc)
 Homepage: http://www.linux-kvm.org/
 Description-md5: 04ad157b26c0de00e4e4757a6e6cde78
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: virt-host
+
+Package: qemu-kvm
+Priority: optional
+Section: misc
+Installed-Size: 10565
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michael Tokarev <mjt@tls.msk.ru>
+Architecture: armel
+Version: 1.2.0+noroms-0ubuntu2.12.10.5
+Replaces: kvm (<< 1:0), kvm-data (<= 66+dfsg-1.1)
+Provides: kvm, qemu
+Depends: libaio1 (>= 0.3.93), libasound2 (>= 1.0.16), libbluetooth3 (>= 4.91), libbrlapi0.5, libc6 (>= 2.15), libcap2 (>= 2.10), libcurl3-gnutls (>= 7.16.2), libgcc1 (>= 1:4.4.0), libglib2.0-0 (>= 2.24.0), libgnutls26 (>= 2.12.6.1-0), libjpeg8 (>= 8c), libncurses5 (>= 5.5-5~), libpng12-0 (>= 1.2.13-4), libpulse0 (>= 1:0.99.1), librados2, librbd1, libsasl2-2 (>= 2.1.24), libsdl1.2debian (>= 1.2.11), libtinfo5, libuuid1 (>= 2.16), libx11-6, zlib1g (>= 1:1.1.4), upstart-job, acl, python, seabios (>> 1.7.0~), udev, vgabios (>= 0.6c-3~), qemu-utils (>= 1.2.0+noroms-0ubuntu2.12.10.5), qemu-common (>= 1.2.0+noroms-0ubuntu2.12.10.5)
+Pre-Depends: adduser
+Recommends: bridge-utils, iproute
+Suggests: debootstrap, samba
+Conflicts: kvm (<< 1:0), kvm-data (<= 66+dfsg-1.1), kvm-source (<= 18-1)
+Breaks: libvirt0 (<< 0.9.8-2~)
+Filename: pool/main/q/qemu-kvm/qemu-kvm_1.2.0+noroms-0ubuntu2.12.10.5_armel.deb
+Size: 4116922
+MD5sum: 10e9aed0178627a5958e9d664d058a61
+SHA1: 04bfda36ffbee278f5fbf9d4db9d92d937411be1
+SHA256: f47e02e707514dd842aac266fbf0c71a0eda8d0fc1d61ec66dc2d2271cbb7268
+Description: Full virtualization on supported hardware
+Homepage: http://www.linux-kvm.org/
+Description-md5: c1f81b3835740f922c051cfd3544deee
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: virt-host
+
+Package: qemu-utils
+Priority: optional
+Section: misc
+Installed-Size: 807
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michael Tokarev <mjt@tls.msk.ru>
+Architecture: armel
+Source: qemu-kvm
+Version: 1.2.0+noroms-0ubuntu2.12.10.5
+Replaces: qemu-kvm (<< 0.15.0+noroms-0ubuntu6)
+Depends: libaio1 (>= 0.3.93), libc6 (>= 2.15), libcurl3-gnutls (>= 7.16.2), libgcc1 (>= 1:4.4.0), libglib2.0-0 (>= 2.24.0), librados2, librbd1, libuuid1 (>= 2.16), zlib1g (>= 1:1.1.4)
+Breaks: qemu-kvm (<< 0.15.0+noroms-0ubuntu6)
+Filename: pool/main/q/qemu-kvm/qemu-utils_1.2.0+noroms-0ubuntu2.12.10.5_armel.deb
+Size: 394024
+MD5sum: 706daf1bae7e26960d0ea680f9194663
+SHA1: 48f82841571a625cdce1f76a50ccdb500120d03d
+SHA256: e9b4817d6c7efeaa93fb87e470b5e9ee5e790eed232ae79e9dd815bcf91397de
+Description: qemu utilities
+Homepage: http://www.linux-kvm.org/
+Description-md5: fdb21de9f7ab9aec2110fad0e89308dd
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
