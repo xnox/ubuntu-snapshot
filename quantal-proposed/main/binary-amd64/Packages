@@ -666,6 +666,52 @@ Origin: Ubuntu
 Supported: 18m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntustudio-desktop
 
+Package: gnutls-bin
+Priority: optional
+Section: net
+Installed-Size: 744
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: gnutls26 (2.12.14-5ubuntu4.4)
+Version: 3.0.11+really2.12.14-5ubuntu4.4
+Depends: libc6 (>= 2.15), libgnutls26 (>= 2.12.6.1-0)
+Filename: pool/main/g/gnutls26/gnutls-bin_3.0.11+really2.12.14-5ubuntu4.4_amd64.deb
+Size: 190276
+MD5sum: 98bc3b6eaaf2d3d7746663023cc10eef
+SHA1: cc5f18da4f01d512b6dbd0dbb60b036c3d46408a
+SHA256: c3fc4d81d9b2ed69ef797aec134fce2336846a67ca2c8ba46636294eeed60a0c
+Description: GNU TLS library - commandline utilities
+Multi-Arch: foreign
+Homepage: http://www.gnutls.org/
+Description-md5: 33f669c0eda9ac17638870658371c713
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: gnutls-doc
+Priority: optional
+Section: doc
+Installed-Size: 6986
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: all
+Source: gnutls26 (2.12.14-5ubuntu4.4)
+Version: 3.0.11+really2.12.14-5ubuntu4.4
+Depends: dpkg (>= 1.15.4) | install-info
+Filename: pool/main/g/gnutls26/gnutls-doc_3.0.11+really2.12.14-5ubuntu4.4_all.deb
+Size: 3347976
+MD5sum: 45ae167a71aadc89612340d0347d9a63
+SHA1: 1b08c38e0542a409dc737c032e122dd4c200147f
+SHA256: 10ef3fbe7b094423b691a33f4db066f598726e42dbbcf54d819dfa586d725e1f
+Description: GNU TLS library - documentation and examples
+Multi-Arch: foreign
+Homepage: http://www.gnutls.org/
+Description-md5: 0cf5a8771cafcd619336f37af75b9a7c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
 Package: gparted
 Priority: optional
 Section: gnome
@@ -1077,6 +1123,29 @@ Origin: Ubuntu
 Supported: 18m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
+Package: kvm
+Priority: optional
+Section: metapackages
+Installed-Size: 48
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michael Tokarev <mjt@tls.msk.ru>
+Architecture: amd64
+Source: qemu-kvm (1.2.0+noroms-0ubuntu2.12.10.5)
+Version: 1:84+dfsg-0ubuntu16+1.2.0+noroms+0ubuntu2.12.10.5
+Depends: qemu-kvm
+Filename: pool/main/q/qemu-kvm/kvm_84+dfsg-0ubuntu16+1.2.0+noroms+0ubuntu2.12.10.5_amd64.deb
+Size: 2560
+MD5sum: 176c31aee48f1bcb92f6a3d53ca81282
+SHA1: 286d0c0cffc7bd4f48402845fc394f31b4b5e31d
+SHA256: 9b43ae90a99bd8ac07319be3c0d918a08710a8ed222da1c580b8e6f8885f11b5
+Description: dummy transitional package from kvm to qemu-kvm
+Homepage: http://www.linux-kvm.org/
+Description-md5: 770c6f1f7fe6d217706484c7e54ec5d9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: virt-host
+
 Package: libaccount-plugin-1.0-0
 Priority: optional
 Section: libs
@@ -1321,6 +1390,132 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop
+
+Package: libgnutls-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 2301
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: gnutls26
+Version: 2.12.14-5ubuntu4.4
+Replaces: gnutls-dev
+Provides: gnutls-dev
+Depends: libgnutls26 (= 2.12.14-5ubuntu4.4), libgnutlsxx27 (= 2.12.14-5ubuntu4.4), libgnutls-openssl27 (= 2.12.14-5ubuntu4.4), libgcrypt11-dev (>= 1.4.0), libc6-dev | libc-dev, zlib1g-dev, libtasn1-3-dev (>= 0.3.4), libp11-kit-dev (>= 0.4)
+Suggests: gnutls-doc, gnutls-bin
+Conflicts: gnutls-dev
+Filename: pool/main/g/gnutls26/libgnutls-dev_2.12.14-5ubuntu4.4_amd64.deb
+Size: 548056
+MD5sum: 34aead15a42ca58e050aaa1f5fc129af
+SHA1: 110344d1437a04e4a5677d71f570b0736a811809
+SHA256: e720969e1da40a4a958a9865df77cd621a2c5d82c08fa8d4969c2093414665ed
+Description: GNU TLS library - development files
+Homepage: http://www.gnutls.org/
+Description-md5: e2a3e8bac6f6874ae5a4bc8e489881a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libgnutls-openssl27
+Priority: optional
+Section: libs
+Installed-Size: 273
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: gnutls26
+Version: 2.12.14-5ubuntu4.4
+Depends: libgnutls26 (= 2.12.14-5ubuntu4.4), libc6 (>= 2.14), libtasn1-3 (>= 1.6-0)
+Pre-Depends: multiarch-support
+Filename: pool/main/g/gnutls26/libgnutls-openssl27_2.12.14-5ubuntu4.4_amd64.deb
+Size: 21708
+MD5sum: 0598af143e4410b77e6da5ae7efd38f4
+SHA1: c546b3f12c544fdad642de2fa88063e20a37605c
+SHA256: 2ad59c8789fa7f6b23ff17fe635823a65bcdde11b1303cfc1cf1086c6a5e603f
+Description: GNU TLS library - OpenSSL wrapper
+Multi-Arch: same
+Homepage: http://www.gnutls.org/
+Description-md5: ed7bc845df883f3776627eaef9179481
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libgnutls26
+Priority: standard
+Section: libs
+Installed-Size: 1064
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: gnutls26
+Version: 2.12.14-5ubuntu4.4
+Replaces: gnutls0, gnutls0.4, gnutls3
+Depends: libc6 (>= 2.14), libgcrypt11 (>= 1.4.5), libp11-kit0 (>= 0.11), libtasn1-3 (>= 1.6-0), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Suggests: gnutls-bin
+Conflicts: gnutls0, gnutls0.4
+Breaks: ccbuild (<= 2.0.1-1), csync2 (<= 1.34-2.2), freewheeling (<= 0.6-1.1), gkrellm (<= 2.3.4-1), libsoup2.4-1 (= 2.31.2-1), libsoup2.4-1 (<= 2.30.1-1), macopix-gtk2 (<= 1.7.4-3), pokerth (<= 0.8.3-3+b1), pokerth-server (<= 0.8.3-3+b1), sipsak (<= 0.9.6-2.1), slrn (<= 1.0.0~pre18-1.1), slrnpull (<= 1.0.0~pre18-1.1), snowdrop (<= 0.02b-9), ssmtp (<= 2.64-4), tf5 (<= 5.0beta8-4), wput (<= 0.6.2-2), zoneminder (<= 1.24.4-1)
+Filename: pool/main/g/gnutls26/libgnutls26_2.12.14-5ubuntu4.4_amd64.deb
+Size: 459528
+MD5sum: f62cb2de9a63daf7ea1902e5573f8d86
+SHA1: 55240907f9021961aad09136a720ec7a70a91831
+SHA256: ca6d1d06690cea08c19f48ba310ab3ae1bd947c6469555f6661a2035fbbf926e
+Description: GNU TLS library - runtime library
+Multi-Arch: same
+Homepage: http://www.gnutls.org/
+Description-md5: 07e0914117156d2b3fcf0d63e9ef8ac2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: standard, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libgnutls26-dbg
+Priority: extra
+Section: devel
+Installed-Size: 5159
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: gnutls26
+Version: 2.12.14-5ubuntu4.4
+Depends: libgnutls26 (= 2.12.14-5ubuntu4.4)
+Conflicts: libgnutls13-dbg, libgnutls28-dbg
+Filename: pool/main/g/gnutls26/libgnutls26-dbg_2.12.14-5ubuntu4.4_amd64.deb
+Size: 1573224
+MD5sum: 2676a31902fa3765b227273f89987086
+SHA1: 81235c147a4ad579c774f61d2bd73ae608cd5e2a
+SHA256: fd1a9bcca630c69d7110d2874b62519aab2d379a476060fa462e3b58526f3f6d
+Description: GNU TLS library - debugger symbols
+Homepage: http://www.gnutls.org/
+Description-md5: 49ef95a26f6727eeaa8d2c979d728b2d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libgnutlsxx27
+Priority: extra
+Section: libs
+Installed-Size: 294
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: amd64
+Source: gnutls26
+Version: 2.12.14-5ubuntu4.4
+Depends: libgnutls26 (= 2.12.14-5ubuntu4.4), libc6 (>= 2.2.5), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Pre-Depends: multiarch-support
+Filename: pool/main/g/gnutls26/libgnutlsxx27_2.12.14-5ubuntu4.4_amd64.deb
+Size: 22570
+MD5sum: 580bcff4dcf0414effa68b1e3bfb7ac1
+SHA1: 75f9e13de8ae53f21813c891e027c5bfac0167b1
+SHA256: 92f2f512ec9360fcfdb977268bd9d70a2b9919aeec42a81de7f0eba3c2c5cdaf
+Description: GNU TLS library - C++ runtime library
+Multi-Arch: same
+Homepage: http://www.gnutls.org/
+Description-md5: afe5e834531764319ee8050592126f1d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
 
 Package: libgtkhtml-4.0-0
 Priority: optional
@@ -7419,6 +7614,60 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 Task: minimal
+
+Package: qemu-kvm
+Priority: optional
+Section: misc
+Installed-Size: 15407
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michael Tokarev <mjt@tls.msk.ru>
+Architecture: amd64
+Version: 1.2.0+noroms-0ubuntu2.12.10.5
+Replaces: kvm (<< 1:0), kvm-data (<= 66+dfsg-1.1)
+Provides: kvm, qemu
+Depends: libaio1 (>= 0.3.93), libasound2 (>= 1.0.16), libbluetooth3 (>= 4.91), libbrlapi0.5, libc6 (>= 2.15), libcap2 (>= 2.10), libcurl3-gnutls (>= 7.16.2), libglib2.0-0 (>= 2.24.0), libgnutls26 (>= 2.12.6.1-0), libjpeg8 (>= 8c), libncurses5 (>= 5.5-5~), libpng12-0 (>= 1.2.13-4), libpulse0 (>= 1:0.99.1), librados2, librbd1, libsasl2-2 (>= 2.1.24), libsdl1.2debian (>= 1.2.11), libtinfo5, libuuid1 (>= 2.16), libx11-6, zlib1g (>= 1:1.1.4), upstart-job, acl, python, seabios (>> 1.7.0~), udev, vgabios (>= 0.6c-3~), qemu-utils (>= 1.2.0+noroms-0ubuntu2.12.10.5), qemu-common (>= 1.2.0+noroms-0ubuntu2.12.10.5)
+Pre-Depends: adduser
+Recommends: bridge-utils, iproute
+Suggests: debootstrap, samba
+Conflicts: kvm (<< 1:0), kvm-data (<= 66+dfsg-1.1), kvm-source (<= 18-1)
+Breaks: libvirt0 (<< 0.9.8-2~)
+Filename: pool/main/q/qemu-kvm/qemu-kvm_1.2.0+noroms-0ubuntu2.12.10.5_amd64.deb
+Size: 4339772
+MD5sum: 399bb45a3ce6e679e4793dfdb0514aae
+SHA1: ec4b976f08d9bed928dbecc9f0b256790731aa80
+SHA256: 0ae24e698c6ac8aa159ad158f2d39789bbc1975c072b900f34ee890f7ce4978f
+Description: Full virtualization on supported hardware
+Homepage: http://www.linux-kvm.org/
+Description-md5: c1f81b3835740f922c051cfd3544deee
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: virt-host
+
+Package: qemu-utils
+Priority: optional
+Section: misc
+Installed-Size: 962
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Michael Tokarev <mjt@tls.msk.ru>
+Architecture: amd64
+Source: qemu-kvm
+Version: 1.2.0+noroms-0ubuntu2.12.10.5
+Replaces: qemu-kvm (<< 0.15.0+noroms-0ubuntu6)
+Depends: libaio1 (>= 0.3.93), libc6 (>= 2.15), libcurl3-gnutls (>= 7.16.2), libglib2.0-0 (>= 2.24.0), librados2, librbd1, libuuid1 (>= 2.16), zlib1g (>= 1:1.1.4)
+Breaks: qemu-kvm (<< 0.15.0+noroms-0ubuntu6)
+Filename: pool/main/q/qemu-kvm/qemu-utils_1.2.0+noroms-0ubuntu2.12.10.5_amd64.deb
+Size: 413002
+MD5sum: bf58b967338893c433439c084b851861
+SHA1: 7bbb648d4b2a260e7cf059ce4f10aba28251ef0c
+SHA256: 5f3afda3680736a85bdb66d4693464f2415f88de093e2688b80c9a16a03b4ecf
+Description: qemu utilities
+Homepage: http://www.linux-kvm.org/
+Description-md5: fdb21de9f7ab9aec2110fad0e89308dd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: virt-host
 
 Package: samba
 Priority: optional
