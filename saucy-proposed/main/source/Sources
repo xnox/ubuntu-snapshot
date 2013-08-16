@@ -114,51 +114,32 @@ Checksums-Sha256:
  a943cb4920e62df71de1069ddca486d408f6d7a09ddbbb5637afe7a229389182 32188074 db_5.1.29.orig.tar.gz
  ec8352d3c82c77251ab533d0b9102138162bed38a02985c98a0320f5124b0007 29346 db_5.1.29-7.debian.tar.gz
 
-Package: db5.3
-Binary: db5.3-doc, libdb5.3-dev, libdb5.3, db5.3-util, db5.3-sql-util, libdb5.3++, libdb5.3++-dev, libdb5.3-tcl, libdb5.3-dbg, libdb5.3-java-jni, libdb5.3-java, libdb5.3-java-gcj, libdb5.3-java-dev, libdb5.3-sql-dev, libdb5.3-sql, libdb5.3-stl-dev, libdb5.3-stl
-Version: 5.3.21-2
+Package: devscripts
+Binary: devscripts
+Version: 2.13.3
 Priority: optional
-Section: libs
-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 9), autotools-dev (>= 20100122.1), tcl-dev, procps [!hurd-i386], javahelper, default-jdk, gcj-native-helper
-Architecture: any all
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/main/d/db5.3
+Section: devel
+Maintainer: Devscripts Devel Team <devscripts-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), docbook-xsl, libdistro-info-perl, libfile-desktopentry-perl, libjson-perl, libparse-debcontrol-perl, libterm-size-perl, libtimedate-perl, liburi-perl, libwww-perl, lsb-release, perl, po4a (>= 0.40), pylint, python3-all, python3-debian (>= 0.1.15), python3-magic, python3-setuptools, shunit2 (>= 2.1.6), wdiff, xsltproc
+Architecture: any
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/d/devscripts
 Files:
- 6133f96a33fead1c8d9bcc5a8eb0e530 2847 db5.3_5.3.21-2.dsc
- 3fda0b004acdaa6fa350bfc41a3b95ca 35062469 db5.3_5.3.21.orig.tar.gz
- 83fc8449abc26b1c81b0a213fba72705 29488 db5.3_5.3.21-2.debian.tar.gz
-Uploaders: Ondřej Surý <ondrej@debian.org>, Dmitrijs Ledkovs <xnox@debian.org>
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Vcs-Browser: http://git.debian.org/?p=pkg-db/db5.3.git
-Vcs-Git: git://git.debian.org/pkg-db/db5.3.git
+ d98029fd3966299e01baa2bbed63cffc 1483 devscripts_2.13.3.dsc
+ 1273a87daf9ff4d47f079687c2262a8c 573368 devscripts_2.13.3.tar.xz
+Uploaders: James McCoy <jamessan@debian.org>, Martin Zobel-Helas <zobel@debian.org>, Patrick Schoenfeld <schoenfeld@debian.org>, Ryan Niebur <ryanryan52@gmail.com>, Benjamin Drung <bdrung@debian.org>
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/devscripts.git
+Vcs-Git: git://anonscm.debian.org/collab-maint/devscripts.git
 Package-List: 
- db5.3-doc deb doc optional
- db5.3-sql-util deb database extra
- db5.3-util deb database optional
- libdb5.3 deb libs standard
- libdb5.3++ deb libs optional
- libdb5.3++-dev deb libdevel extra
- libdb5.3-dbg deb debug extra
- libdb5.3-dev deb libdevel extra
- libdb5.3-java deb java optional
- libdb5.3-java-dev deb libdevel optional
- libdb5.3-java-gcj deb java optional
- libdb5.3-java-jni deb java optional
- libdb5.3-sql deb libs extra
- libdb5.3-sql-dev deb libdevel extra
- libdb5.3-stl deb libs extra
- libdb5.3-stl-dev deb libdevel extra
- libdb5.3-tcl deb interpreters extra
+ devscripts deb devel optional
 Checksums-Sha1:
- 31228e49f209ea0879d3bc133081b70915ebab3a 2847 db5.3_5.3.21-2.dsc
- 32e43c4898c8996750c958a90c174bd116fcba83 35062469 db5.3_5.3.21.orig.tar.gz
- 0ecd25c2a619b242115c6e187c0245f041bb2605 29488 db5.3_5.3.21-2.debian.tar.gz
+ 516c5bb5496f1ec7e0aa143ac7310121a9802f2f 1483 devscripts_2.13.3.dsc
+ f2bb5d52f08a0b03583187bf7fb1e9f868966369 573368 devscripts_2.13.3.tar.xz
 Checksums-Sha256:
- 2beb184a8d3eb2c846cc1d3ae64783531f6f19f7cde3fe4618e89acd6b262887 2847 db5.3_5.3.21-2.dsc
- ddd92a930317df92021054c03992392db9ea5cddba43bef8920d392a82114fb8 35062469 db5.3_5.3.21.orig.tar.gz
- 33413510ac07568dc5559f8bcab9212335d0f7188db48912c735dd6d77217de9 29488 db5.3_5.3.21-2.debian.tar.gz
+ e334049b8edf531756ad7b408dcec5f51e6e6df5f4720c02ca7ac9a93371a2fc 1483 devscripts_2.13.3.dsc
+ 216a8a63e0a6e4d5f677ceb52e6330aa90851471fe337e87f3d053a2c1538556 573368 devscripts_2.13.3.tar.xz
+Testsuite: autopkgtest
 
 Package: fontforge
 Binary: fontforge, fontforge-nox, fontforge-common, libfontforge-dev, libfontforge1, libgdraw4, python-fontforge, fontforge-dbg
@@ -964,6 +945,34 @@ Checksums-Sha256:
  011e7b193f9229608b1679b8705cb72b4418923c8ce3b1ca8141ccb639ab5743 4090 pacemaker_1.1.10+git20130802-1ubuntu1.dsc
  34b9a9deecd6a2b214a8dd95e701bc42105344aa286032043bc2f0b0ba5c0c92 10184304 pacemaker_1.1.10+git20130802.orig.tar.gz
  d77117ae66bfed7b08d57efca5f031f7046980959b47683114e816ef062adcb2 28542 pacemaker_1.1.10+git20130802-1ubuntu1.debian.tar.gz
+
+Package: pbuilder
+Binary: pbuilder, pbuilder-uml
+Version: 0.215ubuntu1
+Section: devel
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian pbuilder maintenance team <pbuilder-maint@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 7), docbook-xsl, ldp-docbook-xsl (>= 0.0.20040321-0.1), xsltproc, dpkg-dev (>= 1.13.19), dblatex, debconf | debconf-2.0, po-debconf, po4a
+Architecture: all i386 amd64
+Standards-Version: 3.9.1
+Format: 1.0
+Directory: pool/main/p/pbuilder
+Files:
+ e8567c3df11510225942fc9381e9a08a 1339 pbuilder_0.215ubuntu1.dsc
+ e1e41d18ee317e99c6ad32e3198ae016 952373 pbuilder_0.215ubuntu1.tar.gz
+Uploaders: Junichi Uekawa <dancer@debian.org>, Loïc Minier <lool@dooz.org>, Matt Kraai <kraai@debian.org>
+Package-List: 
+ pbuilder deb devel extra
+ pbuilder-uml deb devel extra
+Checksums-Sha1:
+ 23004f90cff89ceb5300b4abfc409969da30f2a5 1339 pbuilder_0.215ubuntu1.dsc
+ 1a01e29abc0ee9d663531a4e0e29f8351c65348e 952373 pbuilder_0.215ubuntu1.tar.gz
+Checksums-Sha256:
+ 81973b8a6f2db85654f6aedded1010ca4f8f34925c05b4c56a168a9c229de3d7 1339 pbuilder_0.215ubuntu1.dsc
+ 44b113b729f6c90009a31608340c783b8341c7133f2b3d6d336676e42fade421 952373 pbuilder_0.215ubuntu1.tar.gz
+Debian-Vcs-Browser: http://git.debian.org/?p=pbuilder/pbuilder.git
+Debian-Vcs-Git: git://git.debian.org/git/pbuilder/pbuilder.git
+Testsuite: autopkgtest
 
 Package: pixman
 Binary: libpixman-1-0, libpixman-1-0-udeb, libpixman-1-0-dbg, libpixman-1-dev

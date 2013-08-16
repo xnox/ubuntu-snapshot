@@ -133,23 +133,27 @@ Description-md5: efc373711f970fc5af4a6a391cbe0ced
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: db5.3-doc
+Package: devscripts
 Priority: optional
-Section: doc
-Installed-Size: 75281
+Section: devel
+Installed-Size: 1726
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: all
-Source: db5.3
-Version: 5.3.21-2
-Filename: pool/main/d/db5.3/db5.3-doc_5.3.21-2_all.deb
-Size: 22936124
-MD5sum: 285bf66808436f83c772978a548d897c
-SHA1: df1041577de9b831fd1138eddc53cb99d46a78b2
-SHA256: 6604738f5a2d373f700718adb4fdae9c02ab21ba302382ad9f3d748ea48abffc
-Description: Berkeley v5.3 Database Documentation [html]
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: 2826975d4a00b1b8491b8c516aaecf66
+Original-Maintainer: Devscripts Devel Team <devscripts-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Version: 2.13.3
+Replaces: ubuntu-dev-tools (<< 0.124~)
+Depends: dpkg-dev (>= 1.16.4), perl, python3 (>= 3.2.3-3~), libc6 (>= 2.4)
+Recommends: at, dctrl-tools, dput | dupload, fakeroot, gnupg, libdistro-info-perl, libencode-locale-perl, libjson-perl, libparse-debcontrol-perl, liburi-perl, libwww-perl, lintian, man-db, patch, patchutils, python3-debian (>= 0.1.15), python3-magic, sensible-utils, strace, unzip, wdiff, wget | curl, xz-utils
+Suggests: bsd-mailx | mailx, build-essential, cvs-buildpackage, devscripts-el, gnuplot, gpgv, libauthen-sasl-perl, libfile-desktopentry-perl, libnet-smtp-ssl-perl, libterm-size-perl, libtimedate-perl, libyaml-syck-perl, mutt, ssh-client, svn-buildpackage, w3m, debian-keyring, equivs, libcrypt-ssleay-perl, libsoap-lite-perl
+Breaks: ubuntu-dev-tools (<< 0.147~)
+Filename: pool/main/d/devscripts/devscripts_2.13.3_powerpc.deb
+Size: 846952
+MD5sum: 41cb9c847fb944b264ff714db3e0c68a
+SHA1: 880aabb362c692962523be9680d69b0897344d51
+SHA256: 2eeb77a8b5774fa3af42c9c9432ebb30d12870b0db02dff2ce640da2b7e76eb2
+Description: scripts to make the life of a Debian Package maintainer easier
+Multi-Arch: foreign
+Description-md5: 742d8aa958e1d3556fcb9f22b4a7fe83
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1782,302 +1786,6 @@ SHA256: fb3aaa5fee7ebaf6512868c6d67e04b06f2727cccce943bcfe9b3af690cacfe5
 Description: Berkeley v5.1 Database Libraries [STL development]
 Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
 Description-md5: cf494a0701cc2ddf3849140cd2e9ecd1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdb5.3
-Priority: optional
-Section: libs
-Installed-Size: 1756
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: db5.3
-Version: 5.3.21-2
-Depends: libc6 (>= 2.17)
-Pre-Depends: multiarch-support
-Filename: pool/main/d/db5.3/libdb5.3_5.3.21-2_powerpc.deb
-Size: 798314
-MD5sum: 8fff17570fecee626c5e79955f4715fe
-SHA1: 2ba4c9cf2716295d871fd4ae489c8174b37d78a3
-SHA256: ddefe0dd1931df3356f565a91e08e2f92a9f3c41a0b52368b3feb036d14cc628
-Description: Berkeley v5.3 Database Libraries [runtime]
-Multi-Arch: same
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: 6cef0d1fc062f09a5c2c1209dc807be1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdb5.3++
-Priority: optional
-Section: libs
-Installed-Size: 1915
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: db5.3
-Version: 5.3.21-2
-Depends: libc6 (>= 2.17), libgcc1 (>= 1:4.2.1), libstdc++6 (>= 4.2.1), libdb5.3
-Pre-Depends: multiarch-support
-Filename: pool/main/d/db5.3/libdb5.3++_5.3.21-2_powerpc.deb
-Size: 842418
-MD5sum: db8536d7aae8a6461de37479f8182af4
-SHA1: a36ffbbe9c0c65d18c0c6d5fbf3c00cb45be6a62
-SHA256: f2545fb3839d17f137d78d6f881338c4c9ddcdbdfff9e36a6e93584b3082116b
-Description: Berkeley v5.3 Database Libraries for C++ [runtime]
-Multi-Arch: same
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: fa02dd6e6118cdb8ba3a2bb75d0e2ce3
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdb5.3++-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 5136
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: db5.3
-Version: 5.3.21-2
-Depends: libdb5.3++ (= 5.3.21-2), libdb5.3-dev (= 5.3.21-2), libdb5.3
-Conflicts: libdb4.6++-dev, libdb4.7++-dev, libdb4.8++-dev, libdb5.1++-dev, libdb5.2++-dev
-Filename: pool/main/d/db5.3/libdb5.3++-dev_5.3.21-2_powerpc.deb
-Size: 1957674
-MD5sum: 7fda622660b4ede780e90a92103b42e8
-SHA1: 3c57b50dea60efaf08f873e4cb02746e245c2bdb
-SHA256: 00a705e4e7501458d7ff8679dac96fa0329a9881219fd3db5e9e44146e351969
-Description: Berkeley v5.3 Database Libraries for C++ [development]
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: a7a998f0313107491f90e490e2ad171f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdb5.3-dbg
-Priority: extra
-Section: debug
-Installed-Size: 39894
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: db5.3
-Version: 5.3.21-2
-Depends: libdb5.3 (= 5.3.21-2)
-Filename: pool/main/d/db5.3/libdb5.3-dbg_5.3.21-2_powerpc.deb
-Size: 39197898
-MD5sum: c54383c955b8b4bf4b21fb6caf3c71f7
-SHA1: 44e3685bc76523034954c426b74c6a82c3ca26da
-SHA256: 4091db7cda83bc2244faea535acbdad0e0a8851b2bc9454c0442e4d223ea10f1
-Description: Berkeley v5.3 Database Libraries [debug]
-Multi-Arch: same
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: b6795af6080c8d7c57c3e3f9c05328ed
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdb5.3-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 2463
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: db5.3
-Version: 5.3.21-2
-Depends: libdb5.3 (= 5.3.21-2)
-Suggests: db5.3-doc
-Conflicts: libdb4.6-dev, libdb4.7-dev, libdb4.8-dev, libdb5.1-dev, libdb5.2-dev
-Filename: pool/main/d/db5.3/libdb5.3-dev_5.3.21-2_powerpc.deb
-Size: 954536
-MD5sum: fc301ce3730586f1e4aad09199efe375
-SHA1: f4ed1b7761a31944accc07071560975e3cd9bd52
-SHA256: b6d08ee8c8e529a718ef7c76d5d3a2f26b0395ae3a5f8ec8b7005908700d5b70
-Description: Berkeley v5.3 Database Libraries [development]
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: a8fcb954a01494ec75806217ea263fd3
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdb5.3-java
-Priority: optional
-Section: java
-Installed-Size: 613
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: all
-Source: db5.3
-Version: 5.3.21-2
-Depends: libdb5.3-java-jni (>= 5.3.21-2), libdb5.3
-Suggests: libdb5.3-java-gcj
-Filename: pool/main/d/db5.3/libdb5.3-java_5.3.21-2_all.deb
-Size: 551802
-MD5sum: 0d3c041fc97ba46ae06ea54e76c10292
-SHA1: 268eb1396d7f2774b169b20c6a8e856bd9a74ad7
-SHA256: f7407e95c5adc3f4fe6b87d6dbf2eba58c33068a15cbe242d179aaa4b0c12d2e
-Description: Berkeley v5.3 Database Libraries for Java
-Multi-Arch: foreign
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: 7fe5662ba085d6fe249eb0a22491cd95
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdb5.3-java-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 2569
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: db5.3
-Version: 5.3.21-2
-Depends: libdb5.3-java (= 5.3.21-2), libdb5.3
-Conflicts: libdb4.6-java-dev, libdb4.7-java-dev, libdb4.8-java-dev, libdb5.1-java-dev, libdb5.2-java-dev
-Filename: pool/main/d/db5.3/libdb5.3-java-dev_5.3.21-2_powerpc.deb
-Size: 976666
-MD5sum: a537c4b86ec59ba906a754f011ee9e32
-SHA1: 4d58d93f69bb101625554c65e63b8f55a43ddd8d
-SHA256: 8e3e882285bc0aa4d6ae1c56bb61a65d845a733104edb5cf5a5d6f2f9e784751
-Description: Berkeley v5.3 Database Libraries for Java [development]
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: 10357cd4b2e7bc530ef77abbf53eea71
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdb5.3-java-gcj
-Priority: optional
-Section: java
-Installed-Size: 2856
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: db5.3
-Version: 5.3.21-2
-Depends: libdb5.3-java (= 5.3.21-2), libgcc1 (>= 1:4.1.1), libgcj-bc (>= 4.8.1-1~), libdb5.3, libgcj-common (>> 1:4.1.1-13)
-Filename: pool/main/d/db5.3/libdb5.3-java-gcj_5.3.21-2_powerpc.deb
-Size: 808754
-MD5sum: 93bacfffef21b1acbdae0672d51bea58
-SHA1: c7f33d55028ef6d05863a38e4186e4008deb0700
-SHA256: dce63b4262ac72080c57a48ca27a16e8df10f3d2fcf1a03fc7ceeb7187d10726
-Description: Berkeley v5.3 Database Libraries for Java (native code)
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: 0603fab127b8432390749d24581d70a6
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdb5.3-java-jni
-Priority: optional
-Section: java
-Installed-Size: 1935
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: db5.3
-Version: 5.3.21-2
-Depends: libc6 (>= 2.17), libdb5.3
-Pre-Depends: multiarch-support
-Conflicts: libdb5.1-java, libdb5.2-java
-Breaks: libdb5.3-java (<< 5.3.21-2)
-Filename: pool/main/d/db5.3/libdb5.3-java-jni_5.3.21-2_powerpc.deb
-Size: 841898
-MD5sum: 4def4d6e694109cec437d1e95eec5cb6
-SHA1: 3a004f3ef558dc987cca973abdbe3912b4271d5a
-SHA256: 0745a1fced2b5b1efd7b4b12a81129f14a1b394e99479361ec5fb2514b9c1f51
-Description: Berkeley v5.3 Database Libraries for Java
-Multi-Arch: same
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: 7fe5662ba085d6fe249eb0a22491cd95
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdb5.3-sql
-Priority: extra
-Section: libs
-Installed-Size: 2266
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: db5.3
-Version: 5.3.21-2
-Depends: libc6 (>= 2.17), libdb5.3
-Pre-Depends: multiarch-support
-Filename: pool/main/d/db5.3/libdb5.3-sql_5.3.21-2_powerpc.deb
-Size: 1059288
-MD5sum: 3bead5e10c68f8b06419e5dd2ac5b36b
-SHA1: c961104e4e911eea020c68a0c2058da065591a2c
-SHA256: 570f8bb005623908462354083bd96f20171c814eb541a72c69fadeae39a5514d
-Description: Berkeley v5.3 Database Libraries [SQL runtime]
-Multi-Arch: same
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: 71e39b5f9b4bfe07a3a092747c1d6bc1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdb5.3-sql-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 6176
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: db5.3
-Version: 5.3.21-2
-Depends: libdb5.3-sql (= 5.3.21-2), libdb5.3
-Suggests: db5.3-doc
-Conflicts: libdb5.1-sql-dev, libdb5.2-sql-dev
-Filename: pool/main/d/db5.3/libdb5.3-sql-dev_5.3.21-2_powerpc.deb
-Size: 2510048
-MD5sum: d68a60e75ba81ea7c7f693a62fbba37f
-SHA1: cb7ea79e0db1469510fd81efc7007a6337b2a120
-SHA256: c4c9347cd2f959ad86a7f63249355589fd9628a6bd3f550ec34c7e3a3d5f387e
-Description: Berkeley v5.3 Database Libraries [SQL development]
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: 75785db09c2db2de461c5e9b1296e888
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdb5.3-stl
-Priority: extra
-Section: libs
-Installed-Size: 2007
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: db5.3
-Version: 5.3.21-2
-Depends: libc6 (>= 2.17), libgcc1 (>= 1:4.2.1), libstdc++6 (>= 4.2.1), libdb5.3
-Pre-Depends: multiarch-support
-Filename: pool/main/d/db5.3/libdb5.3-stl_5.3.21-2_powerpc.deb
-Size: 872666
-MD5sum: e5d4a11d252fe04ba48f8f1cd6739707
-SHA1: 94388681cd9b921109039d7d9ed98443e17ec48d
-SHA256: 0b64333a78169d2342d9d683d87bac599f3359a940041e370f3c4b854f12c4b7
-Description: Berkeley v5.3 Database Libraries [STL runtime]
-Multi-Arch: same
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: a4333c095837e70b0d0d67c82a44ba80
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libdb5.3-stl-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 5792
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Berkeley DB Group <pkg-db-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: db5.3
-Version: 5.3.21-2
-Depends: libdb5.3-stl (= 5.3.21-2), libdb5.3
-Suggests: db5.3-doc
-Conflicts: libdb5.1-stl-dev, libdb5.2-stl-dev
-Filename: pool/main/d/db5.3/libdb5.3-stl-dev_5.3.21-2_powerpc.deb
-Size: 2119100
-MD5sum: 89f6bfa9bc4bbc9b1e3a8f972503d625
-SHA1: e93922a3170af624d5a3a3bce01f1aaff1fcd077
-SHA256: f45633e80e5570b40e4e460da2a682856a0ff2447c4836c77e987b6a45686047
-Description: Berkeley v5.3 Database Libraries [STL development]
-Homepage: http://www.oracle.com/technology/software/products/berkeley-db/index.html
-Description-md5: edbeff150a3779fb5554f4b8c92bea16
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
