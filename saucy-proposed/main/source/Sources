@@ -505,6 +505,41 @@ Checksums-Sha256:
  d37f476e5b934a6e656720179b658178d1ecc997bb07310c87f4aa676d5c583e 926477 jackd2_1.9.9.5+20130622git7de15e7a.orig.tar.gz
  6d6c9d79681ac0962d736d22bb131553e2732c9cc224dc8f39d8fef7b1d007d9 148451 jackd2_1.9.9.5+20130622git7de15e7a-1.debian.tar.gz
 
+Package: klibc
+Binary: libklibc-dev, libklibc, klibc-utils, klibc-utils-udeb, klibc-utils-floppy-udeb, libklibc-udeb
+Version: 2.0.1-3.1ubuntu2
+Priority: required
+Section: libs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: maximilian attems <maks@debian.org>
+Build-Depends: debhelper (>= 7.0.50), linux-libc-dev, bison, m4
+Architecture: any
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/k/klibc
+Files:
+ 259d162e05933b17215910dccbcb174c 1636 klibc_2.0.1-3.1ubuntu2.dsc
+ 6c1a78f0da49133be46dee4d4ff3c454 620107 klibc_2.0.1.orig.tar.gz
+ eeaaaed7b47f7cfc36f2d84dfd29126c 31174 klibc_2.0.1-3.1ubuntu2.debian.tar.gz
+Homepage: http://git.kernel.org/?p=libs/klibc/klibc.git;a=summary
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=kernel/klibc.git
+Vcs-Git: git://anonscm.debian.org/kernel/klibc.git
+Package-List: 
+ klibc-utils deb libs optional
+ klibc-utils-floppy-udeb udeb debian-installer optional
+ klibc-utils-udeb udeb debian-installer optional
+ libklibc deb libs optional
+ libklibc-dev deb libdevel optional
+ libklibc-udeb udeb debian-installer optional
+Checksums-Sha1:
+ 9096bfd3328d5955b0dd8046083f001bac0661d5 1636 klibc_2.0.1-3.1ubuntu2.dsc
+ 9419355cf5b0113ac9a01678aaa2ae8cccd4a8bd 620107 klibc_2.0.1.orig.tar.gz
+ 8ed3350d0957567bf193f8d4ed42eea88d595375 31174 klibc_2.0.1-3.1ubuntu2.debian.tar.gz
+Checksums-Sha256:
+ 4c107fece796d87a4b53879777e9959d7cbbe8bed41e26bf52a77a04877d378d 1636 klibc_2.0.1-3.1ubuntu2.dsc
+ 6317699c9fb0f33ca91c6483848a0dc116756847b3d31b70fc14828d15303212 620107 klibc_2.0.1.orig.tar.gz
+ 9de258b019c60baf96b4801eabbd03d2533a4aebaa86d247a9d95932b417cd68 31174 klibc_2.0.1-3.1ubuntu2.debian.tar.gz
+
 Package: libav
 Binary: libav-tools, ffmpeg, ffmpeg-doc, libav-doc, libavutil51, libavcodec53, libavdevice53, libavformat53, libavfilter2, libpostproc52, libswscale2, libavutil-dev, libavcodec-dev, libavdevice-dev, libavformat-dev, libavfilter-dev, libpostproc-dev, libswscale-dev, libav-source
 Version: 6:0.8.7-1ubuntu1
@@ -677,6 +712,32 @@ Checksums-Sha256:
  a8a2ac59d79d332074877ffb8bd0bb4ec4969d0279194ec39f6fd0df75e8e8b4 1583 libnetfilter-conntrack_1.0.3-1.dsc
  fc1710854d26d527087dbbefb110193650d9aae1876f90cb64b8d5c0a8dd95a4 390454 libnetfilter-conntrack_1.0.3.orig.tar.bz2
  adc65b532bdf665b1f235e3ce9d2731c4d4607aec874e4ed226c828d47c969b0 2694 libnetfilter-conntrack_1.0.3-1.debian.tar.gz
+
+Package: libtirpc
+Binary: libtirpc-dev, libtirpc1
+Version: 0.2.2-5ubuntu1
+Section: libs
+Maintainer: Steinar H. Gunderson <sesse@debian.org>
+Build-Depends: debhelper (>= 8.1.3), autotools-dev, libtool, libgssglue-dev, pkg-config
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/libt/libtirpc
+Files:
+ 5f8ba4e00f87bcbbb8b44ca74ccc56e7 1164 libtirpc_0.2.2-5ubuntu1.dsc
+ 74c41c15c2909f7d11d9c7bfa7db6273 464094 libtirpc_0.2.2.orig.tar.bz2
+ a8d6feb9c479d9b6c6e6da90eaa75ec1 27798 libtirpc_0.2.2-5ubuntu1.debian.tar.gz
+Package-List: 
+ libtirpc-dev deb libdevel extra
+ libtirpc1 deb libs standard
+Checksums-Sha1:
+ b6866408ce89c7560f3709b0d3a8fad97ae273bc 1164 libtirpc_0.2.2-5ubuntu1.dsc
+ 576c8826a91110580b60c973c672836559d2805a 464094 libtirpc_0.2.2.orig.tar.bz2
+ 9a94fd6d9923ffc008703f5ac2a8a9b62cf76e8f 27798 libtirpc_0.2.2-5ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ eedd9f1a561f3ce3b77daba43182ea748f8c577a3e46ce83a54f32209944a092 1164 libtirpc_0.2.2-5ubuntu1.dsc
+ f05eb17c85d62423858b8f74512cfe66a9ae1cedf93f03c2a0a32e04f0a33705 464094 libtirpc_0.2.2.orig.tar.bz2
+ d5df82c36ea377ef56da7546d4f72cc934ad4d44334b87fe77eacbb276324656 27798 libtirpc_0.2.2-5ubuntu1.debian.tar.gz
 
 Package: linux-meta-ppc
 Binary: linux-ppc-source, linux-headers-powerpc-e500, linux-image-powerpc-e500, linux-powerpc-e500, linux-headers-powerpc-e500mc, linux-image-powerpc-e500mc, linux-powerpc-e500mc, linux-headers-powerpc-smp, linux-image-powerpc-smp, linux-powerpc-smp, linux-headers-powerpc64-smp, linux-image-powerpc64-smp, linux-powerpc64-smp
@@ -1122,7 +1183,7 @@ Checksums-Sha256:
 
 Package: ruby-nokogiri
 Binary: ruby-nokogiri
-Version: 1.5.9-1
+Version: 1.5.9-2
 Section: ruby
 Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
 Build-Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.3.0~), libxml2-dev, libxslt-dev, ruby-minitest
@@ -1131,9 +1192,9 @@ Standards-Version: 3.9.4
 Format: 3.0 (quilt)
 Directory: pool/main/r/ruby-nokogiri
 Files:
- 1e76776560df0dd83794d86bf1033c05 2111 ruby-nokogiri_1.5.9-1.dsc
+ cc17178133687e5c15fd070bfe0749e4 2111 ruby-nokogiri_1.5.9-2.dsc
  fe2898aa9c60e94c256dfcdf12ddec63 224157 ruby-nokogiri_1.5.9.orig.tar.gz
- 18a476a5d45025bb8ccc9c8e0d338cd0 5559 ruby-nokogiri_1.5.9-1.debian.tar.gz
+ e0fe5be4a196ee169388ca1a48a878d6 6460 ruby-nokogiri_1.5.9-2.debian.tar.gz
 Uploaders: Lucas Nussbaum <lucas@debian.org>, Cédric Boutillier <boutil@debian.org>
 Homepage: http://nokogiri.org
 Vcs-Browser: http://anonscm.debian.org/?p=pkg-ruby-extras/ruby-nokogiri.git;a=summary
@@ -1141,13 +1202,13 @@ Vcs-Git: git://anonscm.debian.org/pkg-ruby-extras/ruby-nokogiri.git
 Package-List: 
  ruby-nokogiri deb ruby optional
 Checksums-Sha1:
- c05784e3d86ccd0335f473c7085f68d4ea250f4c 2111 ruby-nokogiri_1.5.9-1.dsc
+ a555041758cea5a060a15c5de8dc2da3d562b11a 2111 ruby-nokogiri_1.5.9-2.dsc
  ea78121974eaa6a4c890e4126b198a39f73b7e01 224157 ruby-nokogiri_1.5.9.orig.tar.gz
- fc9df8103fa59542f7f1d3229e53e950df2e218c 5559 ruby-nokogiri_1.5.9-1.debian.tar.gz
+ 97750f9829d80ada9d5f21b4a9bc5f023d3694d3 6460 ruby-nokogiri_1.5.9-2.debian.tar.gz
 Checksums-Sha256:
- 7f0dc0ceee3bc83b4b93605f313284774d12449924a93098b4221830fa76f2ba 2111 ruby-nokogiri_1.5.9-1.dsc
+ 4484ab18be2423a4b719b2fe0fc51289f60c26dc19fce8a6c854ab8987fcb091 2111 ruby-nokogiri_1.5.9-2.dsc
  4f31fabf606912de4723b4b995de6fc01592eeb6b29ca4c4afd89135107be84f 224157 ruby-nokogiri_1.5.9.orig.tar.gz
- 8d6b0573d396cc8a4a531c2851e2662fc7099284861aa007c5938ff8429bb119 5559 ruby-nokogiri_1.5.9-1.debian.tar.gz
+ 7526ef651c85c03492d8c38acf5565027a738bb37e5c07de44c9e4a5ac05daec 6460 ruby-nokogiri_1.5.9-2.debian.tar.gz
 Ruby-Versions: all
 
 Package: signon-plugin-oauth2
