@@ -1,49 +1,3 @@
-Package: klibc-utils-floppy-udeb
-Priority: optional
-Section: universe/debian-installer
-Installed-Size: 73
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: maximilian attems <maks@debian.org>
-Architecture: amd64
-Source: klibc
-Version: 2.0.1-3.1ubuntu2
-Depends: libklibc-udeb (= 2.0.1-3.1ubuntu2)
-Filename: pool/universe/k/klibc/klibc-utils-floppy-udeb_2.0.1-3.1ubuntu2_amd64.udeb
-Size: 23686
-MD5sum: fb2b8281ec1014449665298252e85758
-SHA1: 03705b6d9340c20d138937176a578467613dd3dc
-SHA256: 20ea4372feb8fa2aea905af6a0813db382a9e8d809051b8f492ff8b0e9b2a053
-Description: small utilities built with klibc for the boot floppy
- This package contains a small collection of programs that are linked
- against klibc. These duplicate some of the functionality of a
- regular Linux toolset, but are typically much smaller than their
- full-function counterparts.  They are intended for inclusion in
- boot floppies.
-
-Package: klibc-utils-udeb
-Priority: optional
-Section: universe/debian-installer
-Installed-Size: 371
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: maximilian attems <maks@debian.org>
-Architecture: amd64
-Source: klibc
-Version: 2.0.1-3.1ubuntu2
-Depends: libklibc-udeb (= 2.0.1-3.1ubuntu2)
-Filename: pool/universe/k/klibc/klibc-utils-udeb_2.0.1-3.1ubuntu2_amd64.udeb
-Size: 105986
-MD5sum: eef6b899022d4a1753b2706e671bd552
-SHA1: 219127f99eae4af3a2a49bda3833e5e63b1b2e85
-SHA256: 3cffaa70ff4f5110739cf730cd0969b852d7c36909f106fa4f0a34df3bc65d53
-Description: small utilities built with klibc for early boot (d-i)
- This package contains a collection of programs that are linked
- against klibc. These duplicate some of the functionality of a
- regular Linux toolset, but are typically much smaller than their
- full-function counterparts.  They are intended for inclusion in
- initramfs images and embedded systems.
- .
- This is the package for the Debian Installer.
-
 Package: libgtk-3-0-udeb
 Priority: extra
 Section: universe/debian-installer
@@ -71,25 +25,29 @@ Description: GTK+ graphical user interface library - minimal runtime
  This package contains the minimal runtime library using X11 needed
  by the Debian installer.
 
-Package: libklibc-udeb
+Package: libxml2-udeb
 Priority: optional
 Section: universe/debian-installer
-Installed-Size: 82
+Installed-Size: 1444
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: maximilian attems <maks@debian.org>
+Original-Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
 Architecture: amd64
-Source: klibc
-Version: 2.0.1-3.1ubuntu2
-Filename: pool/universe/k/klibc/libklibc-udeb_2.0.1-3.1ubuntu2_amd64.udeb
-Size: 33262
-MD5sum: 6b83cef8e46efd36fe7c42dc6f178542
-SHA1: 76df0795de3b2c787e22c0047bd6bd9e9bc05001
-SHA256: 7d31e389296ba11ef85d232b5bbb5b512f4e5f3587582177fa881d23f61a87d6
-Description: minimal libc subset for use with initramfs (d-i)
- klibc is intended to be a minimalistic libc subset for use with
- initramfs.  It is deliberately written for small size, minimal
- entanglement, and portability, not speed.  It is definitely a work in
- progress, and a lot of things are still missing.
+Source: libxml2
+Version: 2.9.1+dfsg1-3ubuntu1
+Depends: libc6-udeb (>= 2.17), liblzma5, zlib1g-udeb (>= 1:1.2.3.3.dfsg-1)
+Filename: pool/universe/libx/libxml2/libxml2-udeb_2.9.1+dfsg1-3ubuntu1_amd64.udeb
+Size: 519652
+MD5sum: 42c25dd1a6a6bf935b86c09eaccd5ae2
+SHA1: 028d484a6ce4f579e952d8e8b0e91f3c6af08210
+SHA256: 8488c0974d3a45124a3fd744326fc9a13d8be20ae70ae63c43c1aa38134ad91e
+Description: GNOME XML library - minimal runtime
+ XML is a metalanguage to let you design your own markup language.
+ A regular markup language defines a way to describe information in
+ a certain class of documents (eg HTML). XML lets you define your
+ own customized markup languages for many classes of document. It
+ can do this because it's written in SGML, the international standard
+ metalanguage for markup languages.
  .
- This is the package for the Debian Installer.
+ This is a minimal package for use in debian-installer that yields a
+ library providing an extensive API to handle such XML data files.
 

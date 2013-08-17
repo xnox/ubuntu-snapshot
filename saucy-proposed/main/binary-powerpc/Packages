@@ -609,29 +609,6 @@ Description-md5: 20d01ceb8b030c4e6e1bcf1ff939c8a6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: klibc-utils
-Priority: required
-Section: libs
-Installed-Size: 414
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: maximilian attems <maks@debian.org>
-Architecture: powerpc
-Source: klibc
-Version: 2.0.1-3.1ubuntu2
-Depends: libklibc (= 2.0.1-3.1ubuntu2)
-Breaks: initramfs-tools (<< 0.103)
-Filename: pool/main/k/klibc/klibc-utils_2.0.1-3.1ubuntu2_powerpc.deb
-Size: 196902
-MD5sum: d4441f060fe36ac18f1c1d9d6efbd7fa
-SHA1: 063aafb73939035491fd20c1364785d8d9fc175e
-SHA256: 3f43611504464de8515cb7dc714916106017b47f10c1ee9eaaf2d91fb2c260b3
-Description: small utilities built with klibc for early boot
-Homepage: http://git.kernel.org/?p=libs/klibc/klibc.git;a=summary
-Description-md5: c3467a84f84cfb54cfe339be01214b23
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: minimal
-
 Package: lib64asan0
 Priority: extra
 Section: libs
@@ -2067,48 +2044,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb, edubuntu-usb
 
-Package: libklibc
-Priority: required
-Section: libs
-Installed-Size: 139
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: maximilian attems <maks@debian.org>
-Architecture: powerpc
-Source: klibc
-Version: 2.0.1-3.1ubuntu2
-Filename: pool/main/k/klibc/libklibc_2.0.1-3.1ubuntu2_powerpc.deb
-Size: 48898
-MD5sum: f2156030cc8e982128d7ce072a4abdf0
-SHA1: 1210a95a3b58c21000f696b0cc5ee808641082c1
-SHA256: aa25097d41044c1016635e1384c1c7fd49804f74d91863f144fe4f408b6b146c
-Description: minimal libc subset for use with initramfs
-Homepage: http://git.kernel.org/?p=libs/klibc/klibc.git;a=summary
-Description-md5: c02e596a4e5bef99d28f7ec64ab27758
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: minimal
-
-Package: libklibc-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 1103
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: maximilian attems <maks@debian.org>
-Architecture: powerpc
-Source: klibc
-Version: 2.0.1-3.1ubuntu2
-Depends: libklibc (= 2.0.1-3.1ubuntu2), linux-libc-dev
-Filename: pool/main/k/klibc/libklibc-dev_2.0.1-3.1ubuntu2_powerpc.deb
-Size: 243390
-MD5sum: 824f3adf820d63f86eb7043995b6b63f
-SHA1: 9b3d0ee72bfce887ac5c8c75708647553ed20a09
-SHA256: 61bebabb195dd8116ce291c801fc54caa92b2650d07cf96f7afc20c5243a6b25
-Description: kernel headers used during the build of klibc
-Homepage: http://git.kernel.org/?p=libs/klibc/klibc.git;a=summary
-Description-md5: 30c8838ae54b41f0da91eb0d0c35f700
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: libmysqlclient-dev
 Priority: optional
 Section: libdevel
@@ -2621,45 +2556,25 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-active, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-audio
 
-Package: libtirpc-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 547
+Package: libxml2-doc
+Priority: optional
+Section: doc
+Installed-Size: 8511
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Steinar H. Gunderson <sesse@debian.org>
-Architecture: powerpc
-Source: libtirpc
-Version: 0.2.2-5ubuntu1
-Depends: libtirpc1 (= 0.2.2-5ubuntu1)
-Filename: pool/main/libt/libtirpc/libtirpc-dev_0.2.2-5ubuntu1_powerpc.deb
-Size: 171002
-MD5sum: f9a28863cb2c049b74d6cdd7dfceede4
-SHA1: 80148c438084261b2044da1c2b0c9a190b9c04b9
-SHA256: 688850a03c723de6e22d1e4945b3785ca3852cb84c8e709a3337846fba2894df
-Description: transport-independent RPC library - development files
-Description-md5: 1e138bf6ab465b80331064d038e39cf1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libtirpc1
-Priority: extra
-Section: libs
-Installed-Size: 246
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Steinar H. Gunderson <sesse@debian.org>
-Architecture: powerpc
-Source: libtirpc
-Version: 0.2.2-5ubuntu1
-Depends: libc6 (>= 2.16), libgssglue1
-Pre-Depends: multiarch-support
-Filename: pool/main/libt/libtirpc/libtirpc1_0.2.2-5ubuntu1_powerpc.deb
-Size: 81696
-MD5sum: 2b4031aff982a187f0b5fffc1f71c243
-SHA1: b8c9ff0764d0ddb47755fafa208ee82d04fc8901
-SHA256: d5f4cab7a54692cd26c16d711c749df08328e3772441b2b88cc64802186b83ac
-Description: transport-independent RPC library
-Multi-Arch: same
-Description-md5: 604bfb6c9b5f2aed27c76dfa111bffcf
+Original-Maintainer: Debian XML/SGML Group <debian-xml-sgml-pkgs@lists.alioth.debian.org>
+Architecture: all
+Source: libxml2
+Version: 2.9.1+dfsg1-3ubuntu1
+Suggests: devhelp
+Filename: pool/main/libx/libxml2/libxml2-doc_2.9.1+dfsg1-3ubuntu1_all.deb
+Size: 1387832
+MD5sum: cce7187747b055d9d5a7b0921ca89e2c
+SHA1: 9178d8dd34eaf59535877342dcc11bfba077dd02
+SHA256: b914b7e175b91d7fa2c753f9033a6aae96b3a39abd7489ba50377beb450bfd2a
+Description: Documentation for the GNOME XML library
+Multi-Arch: foreign
+Homepage: http://xmlsoft.org/
+Description-md5: 5a090ab419791c5777762dc26465ac3b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
