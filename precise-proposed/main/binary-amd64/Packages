@@ -161,6 +161,31 @@ Origin: Ubuntu
 Supported: 5y
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, edubuntu-desktop, edubuntu-usb, edubuntu-desktop-kde
 
+Package: base-files
+Essential: yes
+Priority: required
+Section: admin
+Installed-Size: 419
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Santiago Vila <sanvila@debian.org>
+Architecture: amd64
+Version: 6.5ubuntu6.6
+Replaces: base, dpkg (<= 1.15.0), lsb-release (<< 3.0-8), miscutils
+Provides: base
+Pre-Depends: awk
+Breaks: initscripts (<< 2.88dsf-13.3)
+Filename: pool/main/b/base-files/base-files_6.5ubuntu6.6_amd64.deb
+Size: 61544
+MD5sum: ad7a7ff0017cf476281fd9949952bd20
+SHA1: c2b4465aabcf38c902796440e5a1b4be30e78f44
+SHA256: f294cdb0884a93c1b0da3e388327052bf10a0000ee01939880e273619c068717
+Description: Debian base system miscellaneous files
+Description-md5: ccc7d4700eb56c8b814b1f4a8b9a556f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: minimal
+
 Package: cloud-init
 Priority: extra
 Section: admin
@@ -773,6 +798,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
 Task: kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-kde
+
+Package: kpartx
+Priority: extra
+Section: admin
+Installed-Size: 111
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: multipath-tools
+Version: 0.4.9-3ubuntu5.1
+Replaces: multipath-tools (<< 0.4.7-3)
+Depends: libc6 (>= 2.4), libdevmapper1.02.1 (>= 2:1.02.36), udev (>> 136-1), dmsetup (>= 2:1.02.24)
+Filename: pool/main/m/multipath-tools/kpartx_0.4.9-3ubuntu5.1_amd64.deb
+Size: 25254
+MD5sum: 57ec3ea1337b5b4e429c8014b70ed9ce
+SHA1: 52475665f6f004b53a43231c01affb6a1518f6fd
+SHA256: 540007772987b49e6fa1c9e20ca3e40122263451d455b22b1c5388ee3a9da8b5
+Description: create device mappings for partitions
+Homepage: http://christophe.varoqui.free.fr/
+Description-md5: 5edc0d8999e24d591b49f95449a8741f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live
 
 Package: kvm
 Priority: optional
@@ -1755,6 +1804,59 @@ Origin: Ubuntu
 Supported: 5y
 Task: samba-server
 
+Package: libpci-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 236
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: amd64
+Source: pciutils
+Version: 1:3.1.8-2ubuntu6
+Replaces: pciutils-dev
+Provides: pciutils-dev
+Depends: zlib1g-dev, libpci3 (= 1:3.1.8-2ubuntu6)
+Conflicts: pciutils-dev
+Filename: pool/main/p/pciutils/libpci-dev_3.1.8-2ubuntu6_amd64.deb
+Size: 43460
+MD5sum: ac39204c42e9f6bc8de0d05449f1b6b3
+SHA1: f0789501e1495a491d766632962851267c88416d
+SHA256: df9e6421847e1532cab4c963e97877c3a3fbe571578c23a3eba243e0e50442e6
+Description: Linux PCI Utilities (development files)
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+Description-md5: fce92e421e497830481519e908a4e6a2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libpci3
+Priority: standard
+Section: libs
+Installed-Size: 110
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: amd64
+Source: pciutils
+Version: 1:3.1.8-2ubuntu6
+Replaces: libpci2
+Provides: libpci2
+Depends: libc6 (>= 2.14), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Conflicts: libpci2
+Filename: pool/main/p/pciutils/libpci3_3.1.8-2ubuntu6_amd64.deb
+Size: 25948
+MD5sum: 183ae96e4e9a74f06f68c834c36dd8df
+SHA1: 365575d541e0947a28f126c32002be974ad1d022
+SHA256: fd64ad705677a9f475f5dba16c8cd13e9f9e0376f1610a7b53d38b963f952d14
+Description: Linux PCI Utilities (shared library)
+Multi-Arch: same
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+Description-md5: 67ffa1d7d0b8a6cad1437318cee6c16e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: standard, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
+
 Package: libpython2.7
 Priority: optional
 Section: libs
@@ -1897,6 +1999,188 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
 Task: ubuntu-desktop, print-server, samba-server, ubuntu-usb, kubuntu-desktop, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop
+
+Package: libx11-6
+Priority: standard
+Section: libs
+Installed-Size: 1480
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: libx11
+Version: 2:1.4.99.1-0ubuntu2.2
+Depends: libc6 (>= 2.15), libxcb1 (>= 1.2), libx11-data
+Pre-Depends: multiarch-support
+Filename: pool/main/libx/libx11/libx11-6_1.4.99.1-0ubuntu2.2_amd64.deb
+Size: 763154
+MD5sum: 64a7483c55437d030991f557f6b8b7b2
+SHA1: ed86b47a5a31ca00e672fc24930853956fd175d9
+SHA256: 4b5936a06caf78c68e2f4745d1a56b3090a0bfe04c32043194b9bfe45e300582
+Description: X11 client-side library
+Multi-Arch: same
+Description-md5: d75c895abf6eca234f7480813aaa95ec
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: standard, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libx11-6-dbg
+Priority: extra
+Section: libdevel
+Installed-Size: 11466
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: libx11
+Version: 2:1.4.99.1-0ubuntu2.2
+Depends: libx11-6 (= 2:1.4.99.1-0ubuntu2.2)
+Filename: pool/main/libx/libx11/libx11-6-dbg_1.4.99.1-0ubuntu2.2_amd64.deb
+Size: 3075534
+MD5sum: f0d2eef9b0677979572e94403cb62782
+SHA1: ec46d87beea81e295896ce097aebbf7de9ab07df
+SHA256: 5643913f89615c336b4dc62ab35a9ecd2a00b7709513b510b2059805bc2ba363
+Description: X11 client-side library (debug package)
+Multi-Arch: same
+Description-md5: aba9421d3cbaf726029435b7f064a21f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libx11-data
+Priority: standard
+Section: x11
+Installed-Size: 1525
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: all
+Source: libx11
+Version: 2:1.4.99.1-0ubuntu2.2
+Breaks: libx11-6 (<< 2:1.4.1)
+Filename: pool/main/libx/libx11/libx11-data_1.4.99.1-0ubuntu2.2_all.deb
+Size: 171652
+MD5sum: 448241b493dccca7c5a06ef18c6fbe1e
+SHA1: 404241135b61a18034c5d758cbd2b95bc9261fe6
+SHA256: 72b7291c6e48fa9a8c0ff6236f684543a7cd5ede542c21923a71883677c96850
+Description: X11 client-side library
+Multi-Arch: foreign
+Description-md5: 6c325636dc71729675cb0107afb6ecf0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: standard, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libx11-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 2575
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: libx11
+Version: 2:1.4.99.1-0ubuntu2.2
+Depends: libx11-6 (= 2:1.4.99.1-0ubuntu2.2), libxau-dev (>= 1:1.0.0-1), libxdmcp-dev (>= 1:1.0.0-1), x11proto-core-dev (>= 6.8.99.8-1), x11proto-input-dev, x11proto-kb-dev, xtrans-dev, libxcb1-dev
+Recommends: libx11-doc
+Filename: pool/main/libx/libx11/libx11-dev_1.4.99.1-0ubuntu2.2_amd64.deb
+Size: 911680
+MD5sum: d45b0c937152137717c362dbfc5b209e
+SHA1: a1a1da4416961f15337077c9cb22303e735bebf2
+SHA256: 249860f0f679e333abad253a5a30b3cb0f65e7d62ca64d4ad8881c23fbc37d4c
+Description: X11 client-side library (development headers)
+Multi-Arch: same
+Description-md5: d15ee011f0b76dcc1f36f3a309df4a93
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+
+Package: libx11-doc
+Priority: optional
+Section: libdevel
+Installed-Size: 9196
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: all
+Source: libx11
+Version: 2:1.4.99.1-0ubuntu2.2
+Replaces: libx11-dev (<< 2:1.4.4-3)
+Depends: xorg-sgml-doctools (>= 1:1.5)
+Filename: pool/main/libx/libx11/libx11-doc_1.4.99.1-0ubuntu2.2_all.deb
+Size: 2434652
+MD5sum: 3a6209ba541969a87d4dfafb44b922bc
+SHA1: f8f8a052aa03c086fa72f02127a6616c331a9247
+SHA256: cc18fbf604de3aa2d63f7e452725046fda31c4319efe054d581bf4171c8344d8
+Description: X11 client-side library (development documentation)
+Multi-Arch: foreign
+Description-md5: b3f98cb9df5727061e55dc69bf459fb2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+
+Package: libx11-xcb-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 224
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: libx11
+Version: 2:1.4.99.1-0ubuntu2.2
+Depends: libx11-xcb1 (= 2:1.4.99.1-0ubuntu2.2), libxcb1-dev (>= 0.9.92), libx11-dev
+Filename: pool/main/libx/libx11/libx11-xcb-dev_1.4.99.1-0ubuntu2.2_amd64.deb
+Size: 11116
+MD5sum: 4b66ce53f55073e76b9743ee955fbebe
+SHA1: f78d764c42a022941a0c6ee6408f126a76ccd9d8
+SHA256: 5f0f7f340941175812c6b7ede2536d7a27855358985196610c3b975316d80458
+Description: Xlib/XCB interface library (development headers)
+Description-md5: ee46e7a5a5a4162c9e382ed7112759eb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libx11-xcb1
+Priority: optional
+Section: libs
+Installed-Size: 206
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: libx11
+Version: 2:1.4.99.1-0ubuntu2.2
+Depends: libc6 (>= 2.2.5)
+Pre-Depends: multiarch-support
+Filename: pool/main/libx/libx11/libx11-xcb1_1.4.99.1-0ubuntu2.2_amd64.deb
+Size: 10472
+MD5sum: 65748fe94f64429eda73ab69a15c49af
+SHA1: b144b3d9c6990924ed8d8aad3654fe18b5f7592b
+SHA256: abc2487ed3cfe83bd107392360299b17d8e3cf07f9a6934269b160337a515592
+Description: Xlib/XCB interface library
+Multi-Arch: same
+Description-md5: 8904e1c2cc3cadffdce355234a23f6c3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop
+
+Package: libx11-xcb1-dbg
+Priority: extra
+Section: libdevel
+Installed-Size: 247
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: libx11
+Version: 2:1.4.99.1-0ubuntu2.2
+Depends: libx11-xcb1 (= 2:1.4.99.1-0ubuntu2.2)
+Filename: pool/main/libx/libx11/libx11-xcb1-dbg_1.4.99.1-0ubuntu2.2_amd64.deb
+Size: 22880
+MD5sum: 660ef432b566f8e9a752c8c8002a89b6
+SHA1: 4ccd787f6f2869bdcfa803337ab0ab381ae6effd
+SHA256: 44ac918025c32018678596b510c5c8633e730fc7a43016e8316637fc395122e3
+Description: Xlib/XCB interface library (debug package)
+Multi-Arch: same
+Description-md5: e1bdd7a7a9d36bb39443201e274af2ba
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
 
 Package: linux
 Priority: optional
@@ -13438,6 +13722,51 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: multipath-tools
+Priority: extra
+Section: admin
+Installed-Size: 637
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Version: 0.4.9-3ubuntu5.1
+Depends: libaio1 (>= 0.3.106-8), libc6 (>= 2.14), libdevmapper1.02.1 (>= 2:1.02.36), libreadline6 (>= 6.0), udev (>> 136-1), initscripts (>= 2.85-16), kpartx (>= 0.4.9-3ubuntu5.1), lsb-base (>= 3)
+Suggests: multipath-tools-boot
+Conflicts: multipath-tools-boot (<= 0.4.8+git0.761c66f-2~), multipath-tools-initramfs (<= 1.0.1)
+Filename: pool/main/m/multipath-tools/multipath-tools_0.4.9-3ubuntu5.1_amd64.deb
+Size: 166442
+MD5sum: d1e9c259ee5e115629cea22f58e8b3b5
+SHA1: deced22dcd541e7c42e9862f75aaab63fd5b9eec
+SHA256: b71f8623e73d527a79b4127644d5bda8e140d094fe6b0dc5549af45325af7a51
+Description: maintain multipath block device access
+Homepage: http://christophe.varoqui.free.fr/
+Description-md5: d2b50f6d45021a3e6697180f992bb365
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+
+Package: multipath-tools-dbg
+Priority: extra
+Section: debug
+Installed-Size: 681
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: multipath-tools
+Version: 0.4.9-3ubuntu5.1
+Depends: multipath-tools (= 0.4.9-3ubuntu5.1), kpartx (= 0.4.9-3ubuntu5.1)
+Filename: pool/main/m/multipath-tools/multipath-tools-dbg_0.4.9-3ubuntu5.1_amd64.deb
+Size: 212020
+MD5sum: af9eaa97860fbffa2a3c3dcbfc14f8c8
+SHA1: 8ef81421fe3f2672d43ae97e8ec18dc5a862d3ab
+SHA256: 5f595a22840452e2b4dafa9c69b1a9e2b85ad54156ea47c5df82eb18c994aae7
+Description: maintain multipath block device access - debugging symbols
+Homepage: http://christophe.varoqui.free.fr/
+Description-md5: 734365732126c3c2cd4a7d36a903a6cc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
 Package: network-manager
 Priority: optional
 Section: net
@@ -13717,6 +14046,30 @@ Description-md5: f1bce74f17cf8134a7e34133c42f1da7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
+
+Package: pciutils
+Priority: standard
+Section: admin
+Installed-Size: 1042
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: amd64
+Version: 1:3.1.8-2ubuntu6
+Depends: libc6 (>= 2.14), libpci3 (= 1:3.1.8-2ubuntu6)
+Suggests: bzip2, wget | curl | lynx
+Filename: pool/main/p/pciutils/pciutils_3.1.8-2ubuntu6_amd64.deb
+Size: 258842
+MD5sum: 201ca1de6afb17850d45ce65d9a338db
+SHA1: 5d1b4dfb214c6eb7feaf36477184471df0afe0ea
+SHA256: 25c3ab49dd5f68e92863751a64a5e6af449fe644fb336f5feee38c046962c148
+Description: Linux PCI Utilities
+Multi-Arch: foreign
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+Description-md5: 4f7355c69571e79c2e4a6b4c231912e6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: standard, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
 
 Package: phonon-backend-gstreamer
 Priority: optional

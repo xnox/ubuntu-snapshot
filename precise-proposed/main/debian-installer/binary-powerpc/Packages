@@ -5783,6 +5783,27 @@ Description: Linux kernel binary image for the Debian installer
  Debian system.
 Kernel-Version: 3.2.0-52-powerpc64-smp
 
+Package: kpartx-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 62
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: multipath-tools
+Version: 0.4.9-3ubuntu5.1
+Depends: libc6-udeb (>= 2.15), libdevmapper1.02.1-udeb (>= 2:1.02.48)
+Filename: pool/main/m/multipath-tools/kpartx-udeb_0.4.9-3ubuntu5.1_powerpc.udeb
+Size: 19500
+MD5sum: cc0356d94071a990198a2be16eafe887
+SHA1: 7c47ec8d8dc6e22311e46e9ddd20af374c35813d
+SHA256: 34ffc3f599dde6f6609b05cfca4def065ceb1811aac55c93cae822c2124e5271
+Description: create device mappings for partitions - udeb package
+ This is a udeb, or a microdeb, for the debian-installer.
+ .
+ Kpartx can be used to set up device mappings for the partitions of any
+ partitioned block device. It is part of the Linux multipath-tools.
+
 Package: libglib2.0-udeb
 Priority: optional
 Section: debian-installer
@@ -5807,6 +5828,45 @@ Description: GLib library of C routines - minimal runtime
  .
  This package contains the minimal runtime library needed by the Debian
  installer.
+
+Package: libpci3-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 58
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: powerpc
+Source: pciutils
+Version: 1:3.1.8-2ubuntu6
+Depends: libc6-udeb (>= 2.15), zlib1g-udeb (>= 1:1.2.3.3.dfsg-1)
+Filename: pool/main/p/pciutils/libpci3-udeb_3.1.8-2ubuntu6_powerpc.udeb
+Size: 20970
+MD5sum: 862132bc7e3dd5610ae7b6812391d199
+SHA1: 04421c1ab7e56f450f76b7f80c388988b624934c
+SHA256: a2f9101601131a7c2fcd693cea3365a4c0b61e58e69dca88e6f5e674e62b7061
+Description: Linux PCI Utilities (shared library)
+ This package contains the libpci shared library files.
+ .
+ The libpci library provides portable access to configuration
+ registers of devices connected to the PCI bus.
+ .
+ This is a minimal version for use in debian-installer.
+
+Package: lsb-release-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 13
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Santiago Vila <sanvila@debian.org>
+Architecture: all
+Source: base-files
+Version: 6.5ubuntu6.6
+Filename: pool/main/b/base-files/lsb-release-udeb_6.5ubuntu6.6_all.udeb
+Size: 782
+MD5sum: 2247d2006d89fba575ce2755a1f207fe
+SHA1: e197f371407dac24f023f9c0fa5b27ca8085b581
+SHA256: c98bca1d9f01606d58cd2dae71cd35fd97340803d169c9abc1428628782080b3
+Description: LSB release information
 
 Package: md-modules-3.2.0-38-powerpc-smp-di
 Priority: standard
@@ -7907,6 +7967,27 @@ SHA256: 17be6d0866424cc60793e7f0dfd20896e22318387b5c17058e088f30f0499456
 Description: DM-Multipath support
   This package contains modules for device-mapper multipath support.
 Kernel-Version: 3.2.0-52-powerpc64-smp
+
+Package: multipath-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 487
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: multipath-tools
+Version: 0.4.9-3ubuntu5.1
+Depends: libaio1-udeb, libc6-udeb (>= 2.15), libdevmapper1.02.1-udeb (>= 2:1.02.48), multipath-modules, kpartx-udeb
+Filename: pool/main/m/multipath-tools/multipath-udeb_0.4.9-3ubuntu5.1_powerpc.udeb
+Size: 116600
+MD5sum: eaac5bcbc0977fe57e3bd608cd57ad16
+SHA1: 0029f74a874aa6b1960e925e928c41c35d76fa78
+SHA256: 00354ad6f850aec5882525dfe30127a422f0f2716afedb90fde3f14e56a17ee3
+Description: maintain multipath block device access - udeb package
+ This is a udeb, or a microdeb, for the debian-installer.
+ .
+ These tools are in charge of maintaining the disk multipath device maps and
+ react to path and map events.
 
 Package: nfs-modules-3.2.0-38-powerpc-smp-di
 Priority: standard
@@ -11524,6 +11605,27 @@ SHA1: fad070e4aa32ee4c6a52ec3ec0070bf4148a324e
 SHA256: 7821679cf3a8312f9298bb6c47a030167a1a467eb7009f93e21c6784ea8f389b
 Description: PATA support modules
 Kernel-Version: 3.2.0-52-powerpc64-smp
+
+Package: pciutils-udeb
+Priority: standard
+Section: debian-installer
+Installed-Size: 241
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: powerpc
+Source: pciutils
+Version: 1:3.1.8-2ubuntu6
+Depends: libc6-udeb (>= 2.15), zlib1g-udeb (>= 1:1.2.3.3.dfsg-1)
+Filename: pool/main/p/pciutils/pciutils-udeb_3.1.8-2ubuntu6_powerpc.udeb
+Size: 169334
+MD5sum: 3b040691448cdf223ff75b75fc76df15
+SHA1: 87a6a7cffc9a51b5f1c98286f4b5fcbeac0c232f
+SHA256: 221ac81409d7f2b86446e244360fa961c7f6f168abbee67ab8492d6b1256cf7b
+Description: Linux PCI Utilities (udeb)
+ This package contains various utilities for inspecting and setting of
+ devices connected to the PCI bus.
+ .
+ This is a minimal version for use in debian-installer.
 
 Package: pcmcia-modules-3.2.0-38-powerpc-smp-di
 Priority: standard

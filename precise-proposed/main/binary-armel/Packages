@@ -161,6 +161,31 @@ Origin: Ubuntu
 Supported: 18m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, edubuntu-desktop, edubuntu-usb, edubuntu-desktop-kde
 
+Package: base-files
+Essential: yes
+Priority: required
+Section: admin
+Installed-Size: 419
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Santiago Vila <sanvila@debian.org>
+Architecture: armel
+Version: 6.5ubuntu6.6
+Replaces: base, dpkg (<= 1.15.0), lsb-release (<< 3.0-8), miscutils
+Provides: base
+Pre-Depends: awk
+Breaks: initscripts (<< 2.88dsf-13.3)
+Filename: pool/main/b/base-files/base-files_6.5ubuntu6.6_armel.deb
+Size: 66648
+MD5sum: d31c60db88556e621e79162d2b1c2652
+SHA1: 50348bbe4aec850208f0cd845810ecb9823720fd
+SHA256: 4b81371c3c6dc148549e7fc5be746ba8d6dbdf6c51e63062dd9c3b7cd0a8b8a2
+Description: Debian base system miscellaneous files
+Description-md5: ccc7d4700eb56c8b814b1f4a8b9a556f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: minimal
+
 Package: cloud-init
 Priority: extra
 Section: admin
@@ -1734,6 +1759,59 @@ Origin: Ubuntu
 Supported: 18m
 Task: samba-server
 
+Package: libpci-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 198
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: armel
+Source: pciutils
+Version: 1:3.1.8-2ubuntu6
+Replaces: pciutils-dev
+Provides: pciutils-dev
+Depends: zlib1g-dev, libpci3 (= 1:3.1.8-2ubuntu6)
+Conflicts: pciutils-dev
+Filename: pool/main/p/pciutils/libpci-dev_3.1.8-2ubuntu6_armel.deb
+Size: 39410
+MD5sum: 92ea2eb9e24c8d5dd67fbfbdff0d30c6
+SHA1: 939e78fd1f25fe75ad846851b5d26dbcf4fae426
+SHA256: e07a6da933dcc05a634cd0444830e0529c4f720fd3044c4c29eb992120c18fb5
+Description: Linux PCI Utilities (development files)
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+Description-md5: fce92e421e497830481519e908a4e6a2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libpci3
+Priority: standard
+Section: libs
+Installed-Size: 89
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: armel
+Source: pciutils
+Version: 1:3.1.8-2ubuntu6
+Replaces: libpci2
+Provides: libpci2
+Depends: libc6 (>= 2.7), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Conflicts: libpci2
+Filename: pool/main/p/pciutils/libpci3_3.1.8-2ubuntu6_armel.deb
+Size: 19988
+MD5sum: 6de74ea38a39313c92f3d9f9d9719ed2
+SHA1: 3abd5b7259f79973f6496cbb1e8c4344197a33ed
+SHA256: a0e2498f12c6c59bea423f69123a3e3debe4a0e2e48e9c5f40a00f7ff0a9e666
+Description: Linux PCI Utilities (shared library)
+Multi-Arch: same
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+Description-md5: 67ffa1d7d0b8a6cad1437318cee6c16e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: standard, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
+
 Package: libpython2.7
 Priority: optional
 Section: libs
@@ -1876,6 +1954,52 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 Task: ubuntu-desktop, print-server, samba-server, ubuntu-usb, kubuntu-desktop, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop
+
+Package: libx11-data
+Priority: standard
+Section: x11
+Installed-Size: 1525
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: all
+Source: libx11
+Version: 2:1.4.99.1-0ubuntu2.2
+Breaks: libx11-6 (<< 2:1.4.1)
+Filename: pool/main/libx/libx11/libx11-data_1.4.99.1-0ubuntu2.2_all.deb
+Size: 171652
+MD5sum: 448241b493dccca7c5a06ef18c6fbe1e
+SHA1: 404241135b61a18034c5d758cbd2b95bc9261fe6
+SHA256: 72b7291c6e48fa9a8c0ff6236f684543a7cd5ede542c21923a71883677c96850
+Description: X11 client-side library
+Multi-Arch: foreign
+Description-md5: 6c325636dc71729675cb0107afb6ecf0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: standard, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libx11-doc
+Priority: optional
+Section: libdevel
+Installed-Size: 9196
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: all
+Source: libx11
+Version: 2:1.4.99.1-0ubuntu2.2
+Replaces: libx11-dev (<< 2:1.4.4-3)
+Depends: xorg-sgml-doctools (>= 1:1.5)
+Filename: pool/main/libx/libx11/libx11-doc_1.4.99.1-0ubuntu2.2_all.deb
+Size: 2434652
+MD5sum: 3a6209ba541969a87d4dfafb44b922bc
+SHA1: f8f8a052aa03c086fa72f02127a6616c331a9247
+SHA256: cc18fbf604de3aa2d63f7e452725046fda31c4319efe054d581bf4171c8344d8
+Description: X11 client-side library (development documentation)
+Multi-Arch: foreign
+Description-md5: b3f98cb9df5727061e55dc69bf459fb2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
 
 Package: linux-doc
 Priority: optional
@@ -5809,6 +5933,30 @@ Description: Tools to enable NVIDIA's Prime
 Description-md5: 398e4a566cef42e9b12f88c78ffad0c2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: pciutils
+Priority: standard
+Section: admin
+Installed-Size: 1011
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: armel
+Version: 1:3.1.8-2ubuntu6
+Depends: libc6 (>= 2.7), libpci3 (= 1:3.1.8-2ubuntu6)
+Suggests: bzip2, wget | curl | lynx
+Filename: pool/main/p/pciutils/pciutils_3.1.8-2ubuntu6_armel.deb
+Size: 254992
+MD5sum: af132eee23e3d62cdd471e29635c6b8f
+SHA1: f77c9e9f25ed1618b1a46763311554929da2095e
+SHA256: 9b6e678993e6a66243063e07ae8d035d48983df02ac40120f1db7c389ce99cac
+Description: Linux PCI Utilities
+Multi-Arch: foreign
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+Description-md5: 4f7355c69571e79c2e4a6b4c231912e6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: standard, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
 
 Package: phonon-backend-gstreamer
 Priority: optional

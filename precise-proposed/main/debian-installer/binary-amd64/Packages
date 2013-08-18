@@ -11849,6 +11849,27 @@ Description: Signed kernel image generic for the Debian installer
  Canonical's UEFI signing key.  It is intended for the Debian installer,
  it does _not_ provide a usable kernel for your full Debian system.
 
+Package: kpartx-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 55
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: multipath-tools
+Version: 0.4.9-3ubuntu5.1
+Depends: libc6-udeb (>= 2.15), libdevmapper1.02.1-udeb (>= 2:1.02.48)
+Filename: pool/main/m/multipath-tools/kpartx-udeb_0.4.9-3ubuntu5.1_amd64.udeb
+Size: 17494
+MD5sum: 206bb6fee5fbd4d41b83f7944b9ada15
+SHA1: 86f61741424c24dd52c396c0e41639215a6252dc
+SHA256: e8754fe33a80dddc3b257576187ece278fcf8736a23b72b5dd5802598ff84a81
+Description: create device mappings for partitions - udeb package
+ This is a udeb, or a microdeb, for the debian-installer.
+ .
+ Kpartx can be used to set up device mappings for the partitions of any
+ partitioned block device. It is part of the Linux multipath-tools.
+
 Package: libglib2.0-udeb
 Priority: optional
 Section: debian-installer
@@ -11873,6 +11894,63 @@ Description: GLib library of C routines - minimal runtime
  .
  This package contains the minimal runtime library needed by the Debian
  installer.
+
+Package: libpci3-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 60
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: amd64
+Source: pciutils
+Version: 1:3.1.8-2ubuntu6
+Depends: libc6-udeb (>= 2.15), zlib1g-udeb (>= 1:1.2.3.3.dfsg-1)
+Filename: pool/main/p/pciutils/libpci3-udeb_3.1.8-2ubuntu6_amd64.udeb
+Size: 23296
+MD5sum: b8c9d993f1c6e48c75b42fe2b35d0f5b
+SHA1: 18544dcc48af58a2a4890a6c2879ed896247684c
+SHA256: 163f3574dbe526e1c274eece1302be75c029c076818eca414fecf6aec9c1314d
+Description: Linux PCI Utilities (shared library)
+ This package contains the libpci shared library files.
+ .
+ The libpci library provides portable access to configuration
+ registers of devices connected to the PCI bus.
+ .
+ This is a minimal version for use in debian-installer.
+
+Package: libx11-6-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 1300
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: libx11
+Version: 2:1.4.99.1-0ubuntu2.2
+Depends: libc6-udeb (>= 2.15), libxcb1-udeb
+Filename: pool/main/libx/libx11/libx11-6-udeb_1.4.99.1-0ubuntu2.2_amd64.udeb
+Size: 753290
+MD5sum: 6effd36bee60db9bb86173f06178fcb6
+SHA1: a71486f00cb0eb5b9d1b618e7847857522c6ba49
+SHA256: e751e431a23776083b48aa9baba876a9af3af860fde58877b8b1e0e6e6d2135e
+Description: X11 client-side library
+ This is a udeb, or a microdeb, for the debian-installer.
+
+Package: lsb-release-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 13
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Santiago Vila <sanvila@debian.org>
+Architecture: all
+Source: base-files
+Version: 6.5ubuntu6.6
+Filename: pool/main/b/base-files/lsb-release-udeb_6.5ubuntu6.6_all.udeb
+Size: 782
+MD5sum: 2247d2006d89fba575ce2755a1f207fe
+SHA1: e197f371407dac24f023f9c0fa5b27ca8085b581
+SHA256: c98bca1d9f01606d58cd2dae71cd35fd97340803d169c9abc1428628782080b3
+Description: LSB release information
 
 Package: md-modules-3.2.0-38-generic-di
 Priority: standard
@@ -15923,6 +16001,27 @@ SHA256: 85b16af27d8807ac96131e8e7d9d662b12d68a4db3014723ac4dea22ab54ec2b
 Description: DM-Multipath support
   This package contains modules for device-mapper multipath support.
 Kernel-Version: 3.8.0-29-generic
+
+Package: multipath-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 476
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: multipath-tools
+Version: 0.4.9-3ubuntu5.1
+Depends: libaio1-udeb, libc6-udeb (>= 2.15), libdevmapper1.02.1-udeb (>= 2:1.02.48), multipath-modules, kpartx-udeb
+Filename: pool/main/m/multipath-tools/multipath-udeb_0.4.9-3ubuntu5.1_amd64.udeb
+Size: 124314
+MD5sum: 7cfc392fdeb8ed2ec8ddf44bc77ec59c
+SHA1: a89c89cb3f640fb3d200ecceb666231e7eaafae0
+SHA256: 4ef125d1a5f0ec7fd3a1755653a39358f38d767d873db423815d2826fb11056b
+Description: maintain multipath block device access - udeb package
+ This is a udeb, or a microdeb, for the debian-installer.
+ .
+ These tools are in charge of maintaining the disk multipath device maps and
+ react to path and map events.
 
 Package: nfs-modules-3.2.0-38-generic-di
 Priority: standard
@@ -21862,6 +21961,27 @@ SHA1: 3c1065a331ade0949934168d8b7a1df1266db6a2
 SHA256: 30c08b9d0efdb11f801e45e32c3c0a8bead8c1517e629bf6a49225d288be1c2c
 Description: PATA support modules
 Kernel-Version: 3.8.0-29-generic
+
+Package: pciutils-udeb
+Priority: standard
+Section: debian-installer
+Installed-Size: 246
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: amd64
+Source: pciutils
+Version: 1:3.1.8-2ubuntu6
+Depends: libc6-udeb (>= 2.15), zlib1g-udeb (>= 1:1.2.3.3.dfsg-1)
+Filename: pool/main/p/pciutils/pciutils-udeb_3.1.8-2ubuntu6_amd64.udeb
+Size: 172202
+MD5sum: 50f9c80244b0869621467d2ef55d06c8
+SHA1: 753f0cd5b90e3cb91fa0f3d98805e5bdda70de98
+SHA256: c759806ce9b5fdf0928dd5bf5c515aabb37c425f4d61987bc478c31035dd49fd
+Description: Linux PCI Utilities (udeb)
+ This package contains various utilities for inspecting and setting of
+ devices connected to the PCI bus.
+ .
+ This is a minimal version for use in debian-installer.
 
 Package: pcmcia-modules-3.2.0-38-generic-di
 Priority: standard
