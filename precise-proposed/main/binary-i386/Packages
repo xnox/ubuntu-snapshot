@@ -799,6 +799,53 @@ Origin: Ubuntu
 Supported: 5y
 Task: kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-kde
 
+Package: kpartx
+Priority: extra
+Section: admin
+Installed-Size: 110
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: multipath-tools
+Version: 0.4.9-3ubuntu5.1
+Replaces: multipath-tools (<< 0.4.7-3)
+Depends: libc6 (>= 2.4), libdevmapper1.02.1 (>= 2:1.02.36), udev (>> 136-1), dmsetup (>= 2:1.02.24)
+Filename: pool/main/m/multipath-tools/kpartx_0.4.9-3ubuntu5.1_i386.deb
+Size: 26156
+MD5sum: 79914ca8e12e20ebfaea7c5cf19f1d91
+SHA1: b7dc41c4fbb83bc95daa6cc6f2182bf2357d8910
+SHA256: f00a8a808029e64efb45b975b8e611a66515dea2a994b59d43a5d24dfec5f5a6
+Description: create device mappings for partitions
+Homepage: http://christophe.varoqui.free.fr/
+Description-md5: 5edc0d8999e24d591b49f95449a8741f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live
+
+Package: kpartx-boot
+Priority: extra
+Section: admin
+Installed-Size: 47
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: multipath-tools
+Version: 0.4.9-3ubuntu5.1
+Depends: initramfs-tools, kpartx (>= 0.4.9-3ubuntu5.1), kpartx (<< 0.4.9-3ubuntu5.1.1~)
+Filename: pool/main/m/multipath-tools/kpartx-boot_0.4.9-3ubuntu5.1_all.deb
+Size: 2074
+MD5sum: 7e7be2a08179fe1be76e621fcb19dedc
+SHA1: 7aa9a9d9f520a5c339028f488050efaaf0f6381d
+SHA256: 63d7d0adc8e0a35430617dbbb0a3fa98f40b3301939eea90b228f447ecea76d3
+Description: Provides kpartx during boot
+Homepage: http://christophe.varoqui.free.fr/
+Description-md5: 10329bba552304246c0935379a51e55f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live
+
 Package: kvm
 Priority: optional
 Section: metapackages
@@ -16248,6 +16295,75 @@ SHA256: b3b2f8bf5e49355600031685a1b644cfe3bebe83e424242863c1327af196510a
 Description: Ubuntu MAAS Server
 Homepage: https://launchpad.net/maas
 Description-md5: af957353fce4c07ff6cc2df04c26a3e3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: multipath-tools
+Priority: extra
+Section: admin
+Installed-Size: 559
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Version: 0.4.9-3ubuntu5.1
+Depends: libaio1 (>= 0.3.106-8), libc6 (>= 2.7), libdevmapper1.02.1 (>= 2:1.02.36), libreadline6 (>= 6.0), udev (>> 136-1), initscripts (>= 2.85-16), kpartx (>= 0.4.9-3ubuntu5.1), lsb-base (>= 3)
+Suggests: multipath-tools-boot
+Conflicts: multipath-tools-boot (<= 0.4.8+git0.761c66f-2~), multipath-tools-initramfs (<= 1.0.1)
+Filename: pool/main/m/multipath-tools/multipath-tools_0.4.9-3ubuntu5.1_i386.deb
+Size: 160056
+MD5sum: 66f499b79d6024dc43a40f41ed9a16c1
+SHA1: 35fcf4bb10ec313139aa2db78971aebbce54ac4c
+SHA256: b216edc9a6ad36db8d2d1ca2ef617cedcad3446efe4e1304826fdbcdd5143d13
+Description: maintain multipath block device access
+Homepage: http://christophe.varoqui.free.fr/
+Description-md5: d2b50f6d45021a3e6697180f992bb365
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+
+Package: multipath-tools-boot
+Priority: extra
+Section: admin
+Installed-Size: 71
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: multipath-tools
+Version: 0.4.9-3ubuntu5.1
+Replaces: multipath-tools-initramfs (<< 1.0.1+nmu1)
+Depends: debconf (>= 0.5) | debconf-2.0, initramfs-tools, multipath-tools (>= 0.4.9-3ubuntu5.1), multipath-tools (<< 0.4.9-3ubuntu5.1.1~), kpartx-boot (= 0.4.9-3ubuntu5.1)
+Conflicts: multipath-tools-initramfs (<< 1.0.1+nmu1)
+Filename: pool/main/m/multipath-tools/multipath-tools-boot_0.4.9-3ubuntu5.1_all.deb
+Size: 6062
+MD5sum: 4af3fc9c2a9fb9614bdf82fcd6d9dd8c
+SHA1: 0f9555ec8d0aa7dc3d28c197e23b1a85116bf0a5
+SHA256: c57a39d4a72a44ea5f2d70b98ca2e80fe74a30e5482e4d40220b39633907a21f
+Description: Support booting from multipath devices
+Homepage: http://christophe.varoqui.free.fr/
+Description-md5: 24b848655cff6a3dd257c2afda6cf91f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+
+Package: multipath-tools-dbg
+Priority: extra
+Section: debug
+Installed-Size: 599
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: multipath-tools
+Version: 0.4.9-3ubuntu5.1
+Depends: multipath-tools (= 0.4.9-3ubuntu5.1), kpartx (= 0.4.9-3ubuntu5.1)
+Filename: pool/main/m/multipath-tools/multipath-tools-dbg_0.4.9-3ubuntu5.1_i386.deb
+Size: 207432
+MD5sum: c013c593ff6af85568b2cb74c3497ede
+SHA1: f7daebabac494a2456c58746e58ac63f3e79eb97
+SHA256: b12bbc0de4d4f95988eeade1339a6aa11ba06e078c5255851f9f383fc37b2c62
+Description: maintain multipath block device access - debugging symbols
+Homepage: http://christophe.varoqui.free.fr/
+Description-md5: 734365732126c3c2cd4a7d36a903a6cc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m

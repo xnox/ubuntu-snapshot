@@ -14491,6 +14491,27 @@ Description: Linux kernel binary image for the Debian installer
  Debian system.
 Kernel-Version: 3.8.0-29-generic
 
+Package: kpartx-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 54
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: multipath-tools
+Version: 0.4.9-3ubuntu5.1
+Depends: libc6-udeb (>= 2.15), libdevmapper1.02.1-udeb (>= 2:1.02.48)
+Filename: pool/main/m/multipath-tools/kpartx-udeb_0.4.9-3ubuntu5.1_i386.udeb
+Size: 18402
+MD5sum: a2fac429fe5a6b4abc184ba046c8b2be
+SHA1: f8ba551300169b373b8cd08b5ee30f3a7b80afe2
+SHA256: e73e90f463993cb27b3bf5cb5696e5671d05ccf36dcb0f0117670f54df0a6937
+Description: create device mappings for partitions - udeb package
+ This is a udeb, or a microdeb, for the debian-installer.
+ .
+ Kpartx can be used to set up device mappings for the partitions of any
+ partitioned block device. It is part of the Linux multipath-tools.
+
 Package: libglib2.0-udeb
 Priority: optional
 Section: debian-installer
@@ -19672,6 +19693,27 @@ SHA256: f26ebe0ae6cccbc22ad027e5904a19d0ef0c29f0d3ed58169a8d67af48e60d4a
 Description: DM-Multipath support
   This package contains modules for device-mapper multipath support.
 Kernel-Version: 3.8.0-29-generic
+
+Package: multipath-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 407
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: multipath-tools
+Version: 0.4.9-3ubuntu5.1
+Depends: libaio1-udeb, libc6-udeb (>= 2.15), libdevmapper1.02.1-udeb (>= 2:1.02.48), multipath-modules, kpartx-udeb
+Filename: pool/main/m/multipath-tools/multipath-udeb_0.4.9-3ubuntu5.1_i386.udeb
+Size: 118100
+MD5sum: 2b82ebbc3230f83bf99aa8c52ca931c7
+SHA1: a752370cedfb3fa649ddc1daedde7f9f171667cf
+SHA256: 08fbb7469ce812ac7a7caabf281bc33fc66a4bd7c3a0df0ff250df40b0d50c59
+Description: maintain multipath block device access - udeb package
+ This is a udeb, or a microdeb, for the debian-installer.
+ .
+ These tools are in charge of maintaining the disk multipath device maps and
+ react to path and map events.
 
 Package: nfs-modules-3.2.0-38-generic-di
 Priority: standard
