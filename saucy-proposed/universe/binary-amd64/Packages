@@ -19,23 +19,45 @@ Description-md5: 8059068d01bfb939336097d2add7f12f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: archivemount
+Package: apport-kde
 Priority: optional
-Section: universe/utils
-Installed-Size: 95
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Nanakos Chrysostomos <nanakos@wired-net.gr>
-Architecture: amd64
-Version: 0.8.1-1
-Depends: libarchive13, libc6 (>= 2.4), libfuse2 (>= 2.8.1), fuse (>= 2.8.5-2)
-Filename: pool/universe/a/archivemount/archivemount_0.8.1-1_amd64.deb
-Size: 26520
-MD5sum: b1abeda186c5c515cb307db670a1c2ad
-SHA1: 675f0fefdaae66161c5def49b981e75d65ea0c73
-SHA256: 5632fa3c2814f64eb4ac7a59897e37c17c614ac1a147a03dc4c06a0a23388b0d
-Description: mounts an archive for access as a file system
-Homepage: http://www.cybernoia.de/software/archivemount/
-Description-md5: d6302be9f06a91afa32326ab175e2086
+Section: universe/kde
+Installed-Size: 204
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.1-0ubuntu2
+Depends: python3, python3-apport (>= 2.12.1-0ubuntu2), python3-pykde4, apport (>= 0.41), procps, x-terminal-emulator
+Recommends: kubuntu-notification-helper, gdb | gdb-minimal
+Filename: pool/universe/a/apport/apport-kde_2.12.1-0ubuntu2_all.deb
+Size: 20692
+MD5sum: d1c1f46311ecfe7814163ca25443ceb6
+SHA1: 4c715e1cc0ccf005cd9c94476ef8af91f2dfa35e
+SHA256: a245b08d7defecb01491fd06ddce146a51b4566527da419cb06b69fd274b43db
+Description: KDE frontend for the apport crash report system
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: c8fd570a74a013e8fc3c502dd64152ce
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
+Package: apport-valgrind
+Priority: optional
+Section: universe/devel
+Installed-Size: 153
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.1-0ubuntu2
+Depends: python3, python3-apport (>= 2.12.1-0ubuntu2), apt, binutils, valgrind (>= 3.8.1-1ubuntu1~), dpkg-dev, libc6-dbg | libc6-dbgsym | libc-dbg
+Filename: pool/universe/a/apport/apport-valgrind_2.12.1-0ubuntu2_all.deb
+Size: 5342
+MD5sum: 1afaf90fe4c680161a5de1f395028a9c
+SHA1: 7ba021afbf4739cd364b577561713c0437369fb3
+SHA256: 336a26fbc8a41cc198d00e52b3b06619ca369f69d1376ae61de17fd6b31c844a
+Description: valgrind wrapper that first downloads debug symbols
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 21b17902929fcb9d5f6a9bcc53f2af83
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 

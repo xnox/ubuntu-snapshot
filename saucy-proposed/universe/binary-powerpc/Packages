@@ -19,23 +19,45 @@ Description-md5: 8059068d01bfb939336097d2add7f12f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: archivemount
+Package: apport-kde
 Priority: optional
-Section: universe/utils
-Installed-Size: 94
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Nanakos Chrysostomos <nanakos@wired-net.gr>
-Architecture: powerpc
-Version: 0.8.1-1
-Depends: libarchive13, libc6 (>= 2.4), libfuse2 (>= 2.8.1), fuse (>= 2.8.5-2)
-Filename: pool/universe/a/archivemount/archivemount_0.8.1-1_powerpc.deb
-Size: 25958
-MD5sum: b29de3e47fa832a9cdd2f912247b412c
-SHA1: 6a1fd7f9e41092c0373697b935a9f7447fe213a2
-SHA256: e96aa82b94be7fe0df2d17ad7ea5f64b774ce12c98d1ac2e938ed7f159ed1493
-Description: mounts an archive for access as a file system
-Homepage: http://www.cybernoia.de/software/archivemount/
-Description-md5: d6302be9f06a91afa32326ab175e2086
+Section: universe/kde
+Installed-Size: 204
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.1-0ubuntu2
+Depends: python3, python3-apport (>= 2.12.1-0ubuntu2), python3-pykde4, apport (>= 0.41), procps, x-terminal-emulator
+Recommends: kubuntu-notification-helper, gdb | gdb-minimal
+Filename: pool/universe/a/apport/apport-kde_2.12.1-0ubuntu2_all.deb
+Size: 20692
+MD5sum: d1c1f46311ecfe7814163ca25443ceb6
+SHA1: 4c715e1cc0ccf005cd9c94476ef8af91f2dfa35e
+SHA256: a245b08d7defecb01491fd06ddce146a51b4566527da419cb06b69fd274b43db
+Description: KDE frontend for the apport crash report system
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: c8fd570a74a013e8fc3c502dd64152ce
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
+Package: apport-valgrind
+Priority: optional
+Section: universe/devel
+Installed-Size: 153
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.1-0ubuntu2
+Depends: python3, python3-apport (>= 2.12.1-0ubuntu2), apt, binutils, valgrind (>= 3.8.1-1ubuntu1~), dpkg-dev, libc6-dbg | libc6-dbgsym | libc-dbg
+Filename: pool/universe/a/apport/apport-valgrind_2.12.1-0ubuntu2_all.deb
+Size: 5342
+MD5sum: 1afaf90fe4c680161a5de1f395028a9c
+SHA1: 7ba021afbf4739cd364b577561713c0437369fb3
+SHA256: 336a26fbc8a41cc198d00e52b3b06619ca369f69d1376ae61de17fd6b31c844a
+Description: valgrind wrapper that first downloads debug symbols
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 21b17902929fcb9d5f6a9bcc53f2af83
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -6175,6 +6197,27 @@ Description-md5: b27f2d4918792b35e6871a08a544fafa
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: psensor
+Priority: optional
+Section: universe/utils
+Installed-Size: 403
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jean-Philippe Orsini <jeanfi@gmail.com>
+Architecture: powerpc
+Version: 0.8.0.3-1ubuntu1
+Depends: psensor-common (= 0.8.0.3-1ubuntu1), gconf2 (>= 2.28.1-2), gconf-service, libappindicator3-1 (>= 0.2.92), libatasmart4 (>= 0.13), libc6 (>= 2.4), libcairo2 (>= 1.2.4), libcurl3-gnutls (>= 7.16.2), libgconf-2-4 (>= 2.31.1), libglib2.0-0 (>= 2.31.8), libgtk-3-0 (>= 3.3.16), libgtop2-7 (>= 2.22.3), libjson-c2 (>= 0.10), libnotify4 (>= 0.7.0), libsensors4 (>= 1:3.0.0), libunity9 (>= 3.4.6)
+Recommends: hddtemp
+Filename: pool/universe/p/psensor/psensor_0.8.0.3-1ubuntu1_powerpc.deb
+Size: 59536
+MD5sum: 73a68951e638659a9e29de744ac1c5ee
+SHA1: 2ec9695b9cb75ad910a790ab17ba712f0d36e2a4
+SHA256: 3b51ddde850f27a75ecfaabc632e8e7546e3b2d98126e435a76ff2f15c84c9b0
+Description: display graphs for monitoring hardware temperature
+Homepage: http://wpitchoune.net/psensor
+Description-md5: 67710028e6001d967a9b3107c525d220
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: psensor-common
 Priority: optional
 Section: universe/utils
@@ -6192,6 +6235,28 @@ SHA256: a0934d37888f9416133a04201216a299e330f8642898ac615eefac38ac289f21
 Description: common files for Psensor and Psensor server
 Homepage: http://wpitchoune.net/psensor
 Description-md5: e89731205f525976ba29ab06050a45de
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: psensor-server
+Priority: optional
+Section: universe/utils
+Installed-Size: 267
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jean-Philippe Orsini <jeanfi@gmail.com>
+Architecture: powerpc
+Source: psensor
+Version: 0.8.0.3-1ubuntu1
+Depends: libjs-jquery, psensor-common (= 0.8.0.3-1ubuntu1), libatasmart4 (>= 0.13), libc6 (>= 2.4), libglib2.0-0 (>= 2.12.0), libgtop2-7 (>= 2.22.3), libjson-c2 (>= 0.10), libmicrohttpd10 (>= 0.9.20), libsensors4 (>= 1:3.0.0)
+Recommends: hddtemp
+Filename: pool/universe/p/psensor/psensor-server_0.8.0.3-1ubuntu1_powerpc.deb
+Size: 70898
+MD5sum: 05762a672526fbbe44d31ae40ae89450
+SHA1: 5882eb665fdeaaf1c48de7185d07b5d2cfbfcea5
+SHA256: 36bd84e9596a4f948f6c8e634121728fd3b1ed69dbcf69aa03050fe51816426b
+Description: Psensor server for monitoring hardware sensors remotely
+Homepage: http://wpitchoune.net/psensor
+Description-md5: a3ebec3cb4d1c81f2f24364cafc52706
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
