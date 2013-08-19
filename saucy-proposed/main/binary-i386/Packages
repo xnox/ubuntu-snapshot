@@ -792,6 +792,27 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: linux-doc
+Priority: optional
+Section: doc
+Installed-Size: 28715
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.11.0-3.6
+Replaces: linux-doc-3
+Conflicts: linux-doc-3
+Filename: pool/main/l/linux/linux-doc_3.11.0-3.6_all.deb
+Size: 9043578
+MD5sum: a04cd31bf1cfaf3a1a8f8ef829d3ea21
+SHA1: 9b660446cb12bd26ff65ebdb1da863991cf16d3f
+SHA256: 23d1aca153849409f61b36b463c75b453e73bfce42e83eef6e3752d5008ff18d
+Description: Linux kernel specific documentation for version 3.11.0
+Description-md5: 0a37fb386e5cb54f02b758d24333bb91
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: linux-generic
 Priority: optional
 Section: kernel
@@ -831,6 +852,45 @@ Description-md5: b239583bb598a7b339303e3f0513dc63
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: linux-headers-3.11.0-3
+Priority: optional
+Section: devel
+Installed-Size: 60664
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.11.0-3.6
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux/linux-headers-3.11.0-3_3.11.0-3.6_all.deb
+Size: 12619090
+MD5sum: eb4f3258923498eec23a01933a842155
+SHA1: c9d45f7efda9b8f695c76fd075f04ffbc94e499b
+SHA256: 4c8451fe5d037942450c6f8511135357600cd0a6b5bd2c5f70d10771158458ae
+Description: Header files related to Linux kernel version 3.11.0
+Description-md5: 45dd2bfdf3476e6feeac0767d850d833
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-3.11.0-3-generic
+Priority: optional
+Section: devel
+Installed-Size: 12334
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux
+Version: 3.11.0-3.6
+Provides: linux-headers, linux-headers-3.0
+Depends: linux-headers-3.11.0-3, libc6 (>= 2.11)
+Filename: pool/main/l/linux/linux-headers-3.11.0-3-generic_3.11.0-3.6_i386.deb
+Size: 1042556
+MD5sum: 0e839a0b081d403674cf0351579db4ac
+SHA1: fa675c89b7f14bf8ccb0d11feeb5ea8464202852
+SHA256: a419a40d4f6a8cfa8313060d4a53fa8097c49fe89be7c8eb1b843dddfb073925
+Description: Linux kernel headers for version 3.11.0 on 32 bit x86 SMP
+Description-md5: f7dfe17267836ca33d88d8182402f0f6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: linux-headers-generic
 Priority: optional
@@ -932,6 +992,49 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: linux-image-3.11.0-3-generic
+Priority: optional
+Section: kernel
+Installed-Size: 29654
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux
+Version: 3.11.0-3.6
+Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, linux-image-3.0, redhat-cluster-modules
+Depends: initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3)
+Pre-Depends: dpkg (>= 1.10.24)
+Recommends: grub-pc | grub-efi-ia32 | grub | lilo (>= 19.1)
+Suggests: fdutils, linux-doc-3.11.0 | linux-source-3.11.0, linux-tools, linux-headers-3.11.0-3-generic
+Conflicts: hotplug (<< 0.0.20040105-1)
+Filename: pool/main/l/linux/linux-image-3.11.0-3-generic_3.11.0-3.6_i386.deb
+Size: 13566960
+MD5sum: 7865d0f476eac2ff8111e3cbb94f3a11
+SHA1: 822722a4a47135ee181c28ec50beb15824688791
+SHA256: f6ba4a9fee37dbb4d7b037ff8eefe1d933e5fe740f5afb5683fbbd90069efa3f
+Description: Linux kernel image for version 3.11.0 on 32 bit x86 SMP
+Description-md5: 7425b801e328533c9e2d3753f7bfc874
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-image-extra-3.11.0-3-generic
+Priority: optional
+Section: kernel
+Installed-Size: 102612
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux
+Version: 3.11.0-3.6
+Depends: linux-image-3.11.0-3-generic, crda (>= 1.1.1-1ubuntu2) | wireless-crda
+Filename: pool/main/l/linux/linux-image-extra-3.11.0-3-generic_3.11.0-3.6_i386.deb
+Size: 33483010
+MD5sum: 52836706ff4c6490aba9ce6c9e1b57b6
+SHA1: f08e061708c414f1ba6624ca17dfdeb0045e665c
+SHA256: 36abffca35ac0c8ed2772ebdd5978d730a7005062a9ee0d928d8366fe01c449c
+Description: Linux kernel extra modules for version 3.11.0 on 32 bit x86 SMP
+Description-md5: 57b3f89deb17e825dc8fd75da10f7ffa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-image-extra-virtual
 Priority: optional
 Section: kernel
@@ -1032,6 +1135,31 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: linux-libc-dev
+Priority: optional
+Section: devel
+Installed-Size: 3344
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux
+Version: 3.11.0-3.6
+Replaces: dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), libdrm-dev, linux-kernel-headers
+Provides: linux-kernel-headers
+Conflicts: amd64-libs-dev (<= 1.1), dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), linux-kernel-headers
+Filename: pool/main/l/linux/linux-libc-dev_3.11.0-3.6_i386.deb
+Size: 936046
+MD5sum: 9ef978f8e9e4e537b230f0f48e61f778
+SHA1: 97c10b11799f91db911890e7379cde3af3384581
+SHA256: e88e0e200f0fd8d6f75c1b340f5bd074bd8106826c09a7b7c552ce4f171dc15a
+Description: Linux Kernel Headers for development
+Multi-Arch: same
+Description-md5: d5d143e6dffc891f04a85464446f9451
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: linux-server
 Priority: optional
 Section: kernel
@@ -1072,6 +1200,29 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: linux-source-3.11.0
+Priority: optional
+Section: devel
+Installed-Size: 94019
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.11.0-3.6
+Provides: linux-source, linux-source-3
+Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
+Recommends: libc-dev, gcc, make
+Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
+Filename: pool/main/l/linux/linux-source-3.11.0_3.11.0-3.6_all.deb
+Size: 92045894
+MD5sum: ad119e76504059285f8b571f4f3f7e2f
+SHA1: 05b954b70c52b1b59407940fcdad229f2cd61fea
+SHA256: f1644814db1ccb8533c97171276730096cd5ffc15a73639a04c3a4079cad47ec
+Description: Linux kernel source for version 3.11.0 with Ubuntu patches
+Description-md5: cfbabb19ee426a281302c702699c2590
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: linux-tools
 Priority: optional
 Section: kernel
@@ -1088,6 +1239,45 @@ SHA1: a18e1f954193a286d45a48494558b1bd7b821e99
 SHA256: 22ee4d48b1cdd6b0edb31aaf17ec32a6584627ebff1b0f42a5820e4af6dacd04
 Description: Linux kernel versioned Tools
 Description-md5: ea15db5fd6e3e3cff13446d5e28af7c8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-tools-3.11.0-3
+Priority: optional
+Section: devel
+Installed-Size: 1273
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux
+Version: 3.11.0-3.6
+Depends: libaudit1 (>= 1:2.2.1), libc6 (>= 2.8), libdw1 (>= 0.143), libelf1 (>= 0.131), libpci3 (>= 1:3.1.9-2), libslang2 (>= 2.2.4), libunwind8, linux-tools-common
+Filename: pool/main/l/linux/linux-tools-3.11.0-3_3.11.0-3.6_i386.deb
+Size: 508502
+MD5sum: 36c7b725f60104b989e0e49ec4b57dee
+SHA1: 48e1d50d987e0e105bef642e901cedf16d85db6c
+SHA256: d864e262a57a6609a6576749806c3569b8fcfc572f4ca56a94862fc39d876ec5
+Description: Linux kernel version specific tools for version 3.11.0-3
+Description-md5: e1a301f5979a6d18eed83adf78709964
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-tools-common
+Priority: optional
+Section: kernel
+Installed-Size: 185
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.11.0-3.6
+Replaces: linux-tools (<= 2.6.32-16.25)
+Filename: pool/main/l/linux/linux-tools-common_3.11.0-3.6_all.deb
+Size: 72672
+MD5sum: 2229577e1c9f6d354577562c4188851b
+SHA1: f3fe0507ec7d04bed97df65288c88c02750c8143
+SHA256: 945fa67113ce239c50cb5b350f12c88681936d3707fccbbe72d277ed5c810816
+Description: Linux kernel version specific tools for version 3.11.0
+Description-md5: 5e947646628710d552f512bf911d233f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
