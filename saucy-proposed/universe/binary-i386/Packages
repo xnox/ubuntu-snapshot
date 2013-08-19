@@ -1031,6 +1031,72 @@ Description-md5: 9f1eab673f4e062db58a9fd564f8a8c1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: dragonegg
+Priority: optional
+Section: universe/devel
+Installed-Size: 33
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Version: 3.3-1
+Depends: dragonegg-4.7
+Filename: pool/universe/d/dragonegg/dragonegg_3.3-1_i386.deb
+Size: 1612
+MD5sum: 2102309a903ef285a9a6e04f58101767
+SHA1: f46ffeb9d90a13c38e40fa1de72f107d0de04e40
+SHA256: 286906d21d0786c5709e7b764732ea0efd8a1eda937a0cbdfd2e1b97cc10ebc4
+Description: GCC plugin that uses LLVM for optimization and code generation
+Homepage: http://dragonegg.llvm.org/
+Description-md5: 7ef967452c773041562d158661f2517f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: dragonegg-4.7
+Priority: optional
+Section: universe/devel
+Installed-Size: 581
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Source: dragonegg
+Version: 3.3-1
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libllvm3.3, libstdc++6 (>= 4.1.1)
+Recommends: gcc-4.7 | g++-4.7
+Filename: pool/universe/d/dragonegg/dragonegg-4.7_3.3-1_i386.deb
+Size: 239696
+MD5sum: 10d784550e0bbce539bfb80ba8fa1d1c
+SHA1: 94b6358e776da74b40093520a5e1e000676699d7
+SHA256: 24e76bba59610751dadad81b422de73670b29c9edadb04e870db8e7132b0b473
+Description: GCC plugin that uses LLVM for optimization and code generation
+Homepage: http://dragonegg.llvm.org/
+Description-md5: 3eb5c16c52b471bfb761185a18017440
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: dragonegg-4.8
+Priority: optional
+Section: universe/devel
+Installed-Size: 557
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Source: dragonegg
+Version: 3.3-1
+Replaces: dragonegg (<< 3.3)
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libllvm3.3, libstdc++6 (>= 4.1.1)
+Recommends: gcc-4.8 | g++-4.8
+Breaks: dragonegg (<< 3.3)
+Filename: pool/universe/d/dragonegg/dragonegg-4.8_3.3-1_i386.deb
+Size: 226848
+MD5sum: f5ff18e4c4f55b7f2a1055c21802f833
+SHA1: 0e8b9b3bf7aefd0f963a55c56f9564838f930d1c
+SHA256: 3cf367a3f0b0714478359a55a3895d46858e8a98b050d8b0a7ba77deb6d3de79
+Description: GCC plugin that uses LLVM for optimization and code generation
+Homepage: http://dragonegg.llvm.org/
+Description-md5: e42ffdd87c8fbca185308b370ee6b18c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: eclipse-cdt
 Priority: optional
 Section: universe/java
@@ -6822,6 +6888,53 @@ SHA256: 82133b15c32f2e558b166214dbbc77b4c386df6c242eabc1023a505b7c26400e
 Description: live-build configurations (metapackage)
 Homepage: http://live-systems.org/devel/live-images/
 Description-md5: 0b79642fe78735156da71225d79c1d80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: llvm-gcc-4.7
+Priority: optional
+Section: universe/devel
+Installed-Size: 38
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Source: dragonegg
+Version: 3.3-1
+Replaces: llvm-gcc-4.6
+Depends: dragonegg-4.7, gcc-4.7, g++-4.7
+Breaks: llvm-gcc-4.6
+Filename: pool/universe/d/dragonegg/llvm-gcc-4.7_3.3-1_i386.deb
+Size: 1862
+MD5sum: ba590489100b120b6ca91748245876d2
+SHA1: 40899df5c5e25a51b9e25cd66032eba193092012
+SHA256: 57c838a8d9571775fbed8b51c31a6a769c4c708393f4c541cec4634920cb051f
+Description: C front end for LLVM C/C++ compiler
+Homepage: http://dragonegg.llvm.org/
+Description-md5: 6eea023073af47469398c4a35d1d3687
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: llvm-gcc-4.8
+Priority: optional
+Section: universe/devel
+Installed-Size: 38
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Architecture: i386
+Source: dragonegg
+Version: 3.3-1
+Replaces: llvm-gcc-4.5
+Provides: llvm-gcc
+Depends: dragonegg-4.8, gcc-4.8, g++-4.8
+Conflicts: llvm-gcc, llvm-gcc-4.5
+Filename: pool/universe/d/dragonegg/llvm-gcc-4.8_3.3-1_i386.deb
+Size: 1872
+MD5sum: 959bc21685ddd426d7886fb983739e96
+SHA1: 0f6a1b17b5ecda18f81ae8362a725963a52092a6
+SHA256: e04f97c05f3f4ca433ad7aa148f84a098172525476de58f505e7503a5baa60ec
+Description: C front end for LLVM C/C++ compiler
+Homepage: http://dragonegg.llvm.org/
+Description-md5: 6eea023073af47469398c4a35d1d3687
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
