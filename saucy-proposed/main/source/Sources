@@ -208,6 +208,70 @@ Checksums-Sha256:
  696b78c03a2ef6de1b016a7982d2440ea21b527d9e031d1f4249a8b6707d2810 762244 google-mock_1.6.0+svn437.orig.tar.gz
  8924ebebb57fd6156a658acade853eb7c6d51047279902b474009322a0a2487d 5964 google-mock_1.6.0+svn437-0ubuntu3.debian.tar.gz
 
+Package: installation-report
+Binary: save-logs, installation-report
+Version: 2.51ubuntu1
+Priority: optional
+Section: misc
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: po-debconf (>= 0.5.0), dpkg-dev (>= 1.9)
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/i/installation-report
+Files:
+ 3fbae352ef8172005ca110b9127cca77 1967 installation-report_2.51ubuntu1.dsc
+ 2e71586e3735ce214d982ecdc08c2f76 97334 installation-report_2.51ubuntu1.tar.gz
+Uploaders: Christian Perrier <bubulle@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/installation-report/ubuntu
+Package-List: 
+ installation-report deb misc optional
+ save-logs udeb debian-installer standard
+Checksums-Sha1:
+ 79e9b9a1e244edeeece056d308e5e37b2f7e9ea6 1967 installation-report_2.51ubuntu1.dsc
+ b083bbe31c8838c1f781995cdcff7de28edfd265 97334 installation-report_2.51ubuntu1.tar.gz
+Checksums-Sha256:
+ 8aff837baef3f9f3d272ade38012c590c3d14f39019d38d400ec120f6207f5fd 1967 installation-report_2.51ubuntu1.dsc
+ 5af004ce9da78691504662f54ef20b2264fd8dd72ddb7c7e7f8d56c586a07b52 97334 installation-report_2.51ubuntu1.tar.gz
+Debian-Vcs-Browser: http://git.debian.org/?p=d-i/installation-report.git
+Debian-Vcs-Git: git://git.debian.org/d-i/installation-report.git
+
+Package: iproute2
+Binary: iproute2, iproute2-doc, iproute, iproute-doc
+Version: 3.10.0-1ubuntu1
+Priority: required
+Section: misc
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian iproute2 Maintainers <ah-iproute@debian.org>
+Build-Depends: texlive-latex-base, texlive-latex-recommended, iptables-dev, libatm1-dev, libdb-dev, linuxdoc-tools, linux-libc-dev, debhelper (>= 8), lynx | lynx-cur, pkg-config, bison, flex
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/i/iproute2
+Files:
+ 1456f5b96a6f04f579c8a44fdda77532 2363 iproute2_3.10.0-1ubuntu1.dsc
+ 45fb5427fc723a0001c72b92c931ba02 419320 iproute2_3.10.0.orig.tar.xz
+ f9d64ff78dd83988cea5914ab1c1af55 29398 iproute2_3.10.0-1ubuntu1.debian.tar.gz
+Uploaders: Andreas Henriksson <andreas@fatal.se>, Alexander Wirt <formorer@debian.org>
+Homepage: http://www.linux-foundation.org/en/Net:Iproute2
+Vcs-Browser: http://git.debian.org/?p=collab-maint/pkg-iproute.git
+Vcs-Git: git://git.debian.org/git/collab-maint/pkg-iproute.git
+Package-List: 
+ iproute deb oldlibs optional
+ iproute-doc deb oldlibs optional
+ iproute2 deb net important
+ iproute2-doc deb doc optional
+Checksums-Sha1:
+ d88c43421868bba835b0b56e938726a96a6f7a66 2363 iproute2_3.10.0-1ubuntu1.dsc
+ e94b5dc9dc586006b272f67134ec07f6fbc81bd7 419320 iproute2_3.10.0.orig.tar.xz
+ 75f90ff2dd57844b108b6de80ef319b1aa86e321 29398 iproute2_3.10.0-1ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ bbb1984469d76fe8b073c47d7b7c72f3f8ca8d6283ea7b2d3854f01ddb544a1b 2363 iproute2_3.10.0-1ubuntu1.dsc
+ c4023d8d722a1ed673474ca0e5a2d61ebd747cc7001a91321757422d9074c97e 419320 iproute2_3.10.0.orig.tar.xz
+ f27b5f0ee25076b31d6b6d3d168764ac879d4ab850c8f393d50da471938d31f6 29398 iproute2_3.10.0-1ubuntu1.debian.tar.gz
+
 Package: jackd2
 Binary: jackd2, libjack-jackd2-0, jackd2-firewire, libjack-jackd2-dev
 Version: 1.9.9.5+20130622git7de15e7a-1
@@ -413,6 +477,158 @@ Checksums-Sha256:
  fc1710854d26d527087dbbefb110193650d9aae1876f90cb64b8d5c0a8dd95a4 390454 libnetfilter-conntrack_1.0.3.orig.tar.bz2
  adc65b532bdf665b1f235e3ce9d2731c4d4607aec874e4ed226c828d47c969b0 2694 libnetfilter-conntrack_1.0.3-1.debian.tar.gz
 
+Package: linux
+Binary: linux-source-3.11.0, linux-doc, linux-tools-common, linux-headers-3.11.0-3, linux-libc-dev, linux-tools-3.11.0-3, linux-image-3.11.0-3-generic, linux-image-extra-3.11.0-3-generic, linux-headers-3.11.0-3-generic, linux-image-3.11.0-3-generic-dbgsym, linux-udebs-generic, linux-image-3.11.0-3-generic-lpae, linux-image-extra-3.11.0-3-generic-lpae, linux-headers-3.11.0-3-generic-lpae, linux-image-3.11.0-3-generic-lpae-dbgsym, linux-udebs-generic-lpae, kernel-image-3.11.0-3-generic-di, nic-modules-3.11.0-3-generic-di, nic-shared-modules-3.11.0-3-generic-di, serial-modules-3.11.0-3-generic-di, ppp-modules-3.11.0-3-generic-di, pata-modules-3.11.0-3-generic-di, firewire-core-modules-3.11.0-3-generic-di, scsi-modules-3.11.0-3-generic-di, plip-modules-3.11.0-3-generic-di, floppy-modules-3.11.0-3-generic-di, fat-modules-3.11.0-3-generic-di, nfs-modules-3.11.0-3-generic-di, md-modules-3.11.0-3-generic-di, multipath-modules-3.11.0-3-generic-di, usb-modules-3.11.0-3-generic-di,
+ pcmcia-storage-modules-3.11.0-3-generic-di, fb-modules-3.11.0-3-generic-di, input-modules-3.11.0-3-generic-di, mouse-modules-3.11.0-3-generic-di, irda-modules-3.11.0-3-generic-di, parport-modules-3.11.0-3-generic-di, nic-pcmcia-modules-3.11.0-3-generic-di, pcmcia-modules-3.11.0-3-generic-di, nic-usb-modules-3.11.0-3-generic-di, sata-modules-3.11.0-3-generic-di, crypto-modules-3.11.0-3-generic-di, squashfs-modules-3.11.0-3-generic-di, speakup-modules-3.11.0-3-generic-di, virtio-modules-3.11.0-3-generic-di, fs-core-modules-3.11.0-3-generic-di, fs-secondary-modules-3.11.0-3-generic-di, storage-core-modules-3.11.0-3-generic-di, block-modules-3.11.0-3-generic-di, message-modules-3.11.0-3-generic-di, vlan-modules-3.11.0-3-generic-di,
+ ipmi-modules-3.11.0-3-generic-di
+Version: 3.11.0-3.6
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 5), cpio, module-init-tools, kernel-wedge (>= 2.24ubuntu1), makedumpfile [amd64 i386], libelf-dev, libnewt-dev, binutils-dev, rsync, libdw-dev, libpci-dev, dpkg (>= 1.16.0~ubuntu4), pkg-config, flex, bison, libunwind8-dev, openssl, libaudit-dev, bc, python-dev, gcc-4.7 [armhf], gawk
+Build-Depends-Indep: xmlto, docbook-utils, ghostscript, transfig, bzip2, sharutils, asciidoc
+Architecture: all i386 amd64 armhf arm64 x32 powerpc
+Standards-Version: 3.9.4.0
+Format: 1.0
+Directory: pool/main/l/linux
+Files:
+ 933266fac76e3466ae6bc56a8391372b 6809 linux_3.11.0-3.6.dsc
+ 0750c94c11f7b07ff43480ccf229d0b3 118235215 linux_3.11.0-3.6.tar.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-saucy.git
+Package-List: 
+ block-modules-3.11.0-3-generic-di udeb debian-installer standard
+ crypto-modules-3.11.0-3-generic-di udeb debian-installer extra
+ fat-modules-3.11.0-3-generic-di udeb debian-installer standard
+ fb-modules-3.11.0-3-generic-di udeb debian-installer standard
+ firewire-core-modules-3.11.0-3-generic-di udeb debian-installer standard
+ floppy-modules-3.11.0-3-generic-di udeb debian-installer standard
+ fs-core-modules-3.11.0-3-generic-di udeb debian-installer standard
+ fs-secondary-modules-3.11.0-3-generic-di udeb debian-installer standard
+ input-modules-3.11.0-3-generic-di udeb debian-installer standard
+ ipmi-modules-3.11.0-3-generic-di udeb debian-installer standard
+ irda-modules-3.11.0-3-generic-di udeb debian-installer standard
+ kernel-image-3.11.0-3-generic-di udeb debian-installer extra
+ linux-doc deb doc optional
+ linux-headers-3.11.0-3 deb devel optional
+ linux-headers-3.11.0-3-generic deb devel optional
+ linux-headers-3.11.0-3-generic-lpae deb devel optional
+ linux-image-3.11.0-3-generic deb kernel optional
+ linux-image-3.11.0-3-generic-dbgsym deb devel optional
+ linux-image-3.11.0-3-generic-lpae deb kernel optional
+ linux-image-3.11.0-3-generic-lpae-dbgsym deb devel optional
+ linux-image-extra-3.11.0-3-generic deb kernel optional
+ linux-image-extra-3.11.0-3-generic-lpae deb kernel optional
+ linux-libc-dev deb devel optional
+ linux-source-3.11.0 deb devel optional
+ linux-tools-3.11.0-3 deb devel optional
+ linux-tools-common deb kernel optional
+ linux-udebs-generic udeb debian-installer optional
+ linux-udebs-generic-lpae udeb debian-installer optional
+ md-modules-3.11.0-3-generic-di udeb debian-installer standard
+ message-modules-3.11.0-3-generic-di udeb debian-installer standard
+ mouse-modules-3.11.0-3-generic-di udeb debian-installer extra
+ multipath-modules-3.11.0-3-generic-di udeb debian-installer extra
+ nfs-modules-3.11.0-3-generic-di udeb debian-installer standard
+ nic-modules-3.11.0-3-generic-di udeb debian-installer standard
+ nic-pcmcia-modules-3.11.0-3-generic-di udeb debian-installer standard
+ nic-shared-modules-3.11.0-3-generic-di udeb debian-installer standard
+ nic-usb-modules-3.11.0-3-generic-di udeb debian-installer standard
+ parport-modules-3.11.0-3-generic-di udeb debian-installer standard
+ pata-modules-3.11.0-3-generic-di udeb debian-installer standard
+ pcmcia-modules-3.11.0-3-generic-di udeb debian-installer standard
+ pcmcia-storage-modules-3.11.0-3-generic-di udeb debian-installer standard
+ plip-modules-3.11.0-3-generic-di udeb debian-installer standard
+ ppp-modules-3.11.0-3-generic-di udeb debian-installer standard
+ sata-modules-3.11.0-3-generic-di udeb debian-installer standard
+ scsi-modules-3.11.0-3-generic-di udeb debian-installer standard
+ serial-modules-3.11.0-3-generic-di udeb debian-installer standard
+ speakup-modules-3.11.0-3-generic-di udeb debian-installer extra
+ squashfs-modules-3.11.0-3-generic-di udeb debian-installer extra
+ storage-core-modules-3.11.0-3-generic-di udeb debian-installer standard
+ usb-modules-3.11.0-3-generic-di udeb debian-installer standard
+ virtio-modules-3.11.0-3-generic-di udeb debian-installer standard
+ vlan-modules-3.11.0-3-generic-di udeb debian-installer extra
+Checksums-Sha1:
+ 887198c719f5b98d581d1c5ee3d48d299c5bbef4 6809 linux_3.11.0-3.6.dsc
+ df370291e3e846c6021c945f7c7f1db1ece18be2 118235215 linux_3.11.0-3.6.tar.gz
+Checksums-Sha256:
+ 7a12c5c110f12756ae621388987e5a897f01afd313c33f303d0661e3ab6c92d7 6809 linux_3.11.0-3.6.dsc
+ af22ac6becb57df078e18cb6afc9e8f1b3e482a2791557be4e53e17fe254e5c7 118235215 linux_3.11.0-3.6.tar.gz
+Testsuite: autopkgtest
+
+Package: linux-meta
+Binary: linux, linux-source, linux-image, linux-crashdump, linux-tools, linux-headers-generic, linux-image-generic, linux-generic, linux-headers-generic-lpae, linux-image-generic-lpae, linux-generic-lpae, linux-headers-generic-pae, linux-image-generic-pae, linux-generic-pae, linux-headers-highbank, linux-image-highbank, linux-highbank, linux-headers-omap, linux-image-omap, linux-omap, linux-headers-server, linux-image-server, linux-server, linux-signed-image-generic, linux-signed-generic, linux-headers-virtual, linux-image-virtual, linux-virtual, linux-image-extra-virtual
+Version: 3.11.0.3.4
+Section: devel
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: dpkg (>= 1.13.19), debhelper (>= 5), gawk
+Architecture: i386 amd64 armhf all
+Standards-Version: 3.6.1
+Format: 1.0
+Directory: pool/main/l/linux-meta
+Files:
+ 32f433feff4aa8562aed9f13007bab2c 3224 linux-meta_3.11.0.3.4.dsc
+ d9115c9790de72a7c73d88bf0fea3458 11977 linux-meta_3.11.0.3.4.tar.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-saucy-meta.git
+Package-List: 
+ linux deb kernel optional
+ linux-crashdump deb devel optional
+ linux-generic deb kernel optional
+ linux-generic-lpae deb kernel optional
+ linux-generic-pae deb kernel optional
+ linux-headers-generic deb kernel optional
+ linux-headers-generic-lpae deb kernel optional
+ linux-headers-generic-pae deb kernel optional
+ linux-headers-highbank deb kernel optional
+ linux-headers-omap deb kernel optional
+ linux-headers-server deb kernel optional
+ linux-headers-virtual deb kernel optional
+ linux-highbank deb kernel optional
+ linux-image deb kernel optional
+ linux-image-extra-virtual deb kernel optional
+ linux-image-generic deb kernel optional
+ linux-image-generic-lpae deb kernel optional
+ linux-image-generic-pae deb kernel optional
+ linux-image-highbank deb kernel optional
+ linux-image-omap deb kernel optional
+ linux-image-server deb kernel optional
+ linux-image-virtual deb kernel optional
+ linux-omap deb kernel optional
+ linux-server deb kernel optional
+ linux-signed-generic deb kernel optional
+ linux-signed-image-generic deb kernel optional
+ linux-source deb devel optional
+ linux-tools deb kernel optional
+ linux-virtual deb kernel optional
+Checksums-Sha1:
+ 430a8c7c11c89374ba80ea6e0e9f47808875bdf0 3224 linux-meta_3.11.0.3.4.dsc
+ 3cb28f53f9131afff4b3fa1f4acebda59134b356 11977 linux-meta_3.11.0.3.4.tar.gz
+Checksums-Sha256:
+ 7e180afdabcf6909e812ad505217dfe45878cd974fde6acfd836d9dad5f9f89b 3224 linux-meta_3.11.0.3.4.dsc
+ db57983d001da22b3bba133fd1687f5f0a23aa3276b01dfdc0395aaa38854ec7 11977 linux-meta_3.11.0.3.4.tar.gz
+
+Package: linux-signed
+Binary: linux-signed-image-3.11.0-3-generic, kernel-signed-image-3.11.0-3-generic-di
+Version: 3.11.0-3.6
+Section: utils
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9), lsb-release, python3, python3-apt, sbsigntool, linux-image-3.11.0-3-generic (>= 3.11.0-3.6)
+Architecture: linux-amd64
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/l/linux-signed
+Files:
+ 862414236ce3483fe7f17edf192e83e0 1708 linux-signed_3.11.0-3.6.dsc
+ 3f5845512eb73958093e7f5fba3f482a 6064 linux-signed_3.11.0-3.6.tar.gz
+Package-List: 
+ kernel-signed-image-3.11.0-3-generic-di udeb debian-installer extra
+ linux-signed-image-3.11.0-3-generic deb utils optional
+Checksums-Sha1:
+ 38a67b12a1195ad4840f24bd64625a9719935dca 1708 linux-signed_3.11.0-3.6.dsc
+ 6a62d258353c33a87c54edb8d425aea10e65b4d9 6064 linux-signed_3.11.0-3.6.tar.gz
+Checksums-Sha256:
+ 2afe08d8ccc2309da49bed33c859e110877d3b19d55fcb5e788615dd62efe144 1708 linux-signed_3.11.0-3.6.dsc
+ 7a92c2db11981ba2fc20d5d8fd36989e625255202a010f13e927dbf88545295d 6064 linux-signed_3.11.0-3.6.tar.gz
+
 Package: mod-auth-mysql
 Binary: libapache2-mod-auth-mysql
 Version: 4.3.9-13.1ubuntu1
@@ -513,6 +729,32 @@ Checksums-Sha256:
  afcdb3d4fa93950b330d934ce3de155e9d4a575c91b5aa3e0a276b9f52e802a2 21604457 mysql-5.5_5.5.32.orig.tar.gz
  1fdb5d2297c005cd5a9602c0dd8cafa4cbb27abb33c9dd6e8072a860455435b2 305231 mysql-5.5_5.5.32-0ubuntu2.debian.tar.gz
 Testsuite: autopkgtest
+
+Package: partman-iscsi
+Binary: partman-iscsi
+Version: 21ubuntu1
+Section: debian-installer
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 9), dh-di, po-debconf (>= 0.5.0)
+Architecture: all
+Format: 3.0 (native)
+Directory: pool/main/p/partman-iscsi
+Files:
+ 6e3c9d06271971e0abf457e3c0f53a98 1859 partman-iscsi_21ubuntu1.dsc
+ 6a5b9536d6a661fe616ab55a4d8379ce 15095 partman-iscsi_21ubuntu1.tar.gz
+Uploaders: Colin Watson <cjwatson@debian.org>, Christian Perrier <bubulle@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/partman-iscsi/ubuntu
+Package-List: 
+ partman-iscsi udeb debian-installer standard
+Checksums-Sha1:
+ 28d8beafbfc63d971ccc79145caa3a3c1f32b9ca 1859 partman-iscsi_21ubuntu1.dsc
+ 4254f37dedb41c3a3f68cb7ee05f01d03cc07f98 15095 partman-iscsi_21ubuntu1.tar.gz
+Checksums-Sha256:
+ 9baa688f1080057fa7d2e46554fd4e06b6af82ad0797d089bcd3b377c8eb34bc 1859 partman-iscsi_21ubuntu1.dsc
+ 7fcd8b13a14db4a223bbeea02f94bb6fa05be844aa8e1881e454d0096c1c3a0b 15095 partman-iscsi_21ubuntu1.tar.gz
+Debian-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=d-i/partman-iscsi.git
+Debian-Vcs-Git: git://anonscm.debian.org/d-i/partman-iscsi.git
 
 Package: procps
 Binary: procps, libprocps0, libprocps0-dev
