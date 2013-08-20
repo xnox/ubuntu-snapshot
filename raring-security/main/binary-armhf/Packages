@@ -9414,13 +9414,13 @@ Installed-Size: 33
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux-meta
-Version: 3.8.0.27.45
+Version: 3.8.0.29.47
 Depends: linux-generic
-Filename: pool/main/l/linux-meta/linux_3.8.0.27.45_armhf.deb
+Filename: pool/main/l/linux-meta/linux_3.8.0.29.47_armhf.deb
 Size: 1686
-MD5sum: 6c3816b8ff4a3e114219cc11159148df
-SHA1: 080c7c84328101d2ceab3c82f9595254e4fb2b3d
-SHA256: d1c76d0da3fb2a6667d64e30cec0bee6ff49ceec4d945e3bf906e5ce7b9265ea
+MD5sum: 970e750c31af470af5839fc272c26f16
+SHA1: b2d2c92016f6768c3b863827062d789668ab83f7
+SHA256: 8dca598ee9d110ad0a4e315122ba11b8bcfee83110f5737e549d2ef6f4a023fc
 Description: Generic complete Linux kernel.
 Description-md5: e1f3af50c53d3b40815e9810a03f60ee
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -9526,6 +9526,26 @@ Description-md5: ce791e5696c1c1aa38d33d35dcd5430d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-doc
+Priority: optional
+Section: doc
+Installed-Size: 27372
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.8.0-29.42
+Replaces: linux-doc-3
+Conflicts: linux-doc-3
+Filename: pool/main/l/linux/linux-doc_3.8.0-29.42_all.deb
+Size: 8720398
+MD5sum: b51915c0f77931ebf17ccd4f2353c4c5
+SHA1: a86d54efe59a8948a29d4e496dbbf62e781c2132
+SHA256: 3dee1331b159ed63b8e780ea8136607cd5394c6c1e7f3346ff6dce873c045c7c
+Description: Linux kernel specific documentation for version 3.8.0
+Description-md5: ce791e5696c1c1aa38d33d35dcd5430d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-generic
 Priority: optional
 Section: kernel
@@ -9533,13 +9553,13 @@ Installed-Size: 33
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux-meta
-Version: 3.8.0.27.45
-Depends: linux-image-generic (= 3.8.0.27.45), linux-headers-generic (= 3.8.0.27.45)
-Filename: pool/main/l/linux-meta/linux-generic_3.8.0.27.45_armhf.deb
+Version: 3.8.0.29.47
+Depends: linux-image-generic (= 3.8.0.29.47), linux-headers-generic (= 3.8.0.29.47)
+Filename: pool/main/l/linux-meta/linux-generic_3.8.0.29.47_armhf.deb
 Size: 1724
-MD5sum: c4b0492a2d9b38a52c8a02fe4760a8de
-SHA1: 417290a7204facb46f683eb2483d922c9ba6f60b
-SHA256: 9330786670f3ddeea303840c112c118f5be167f8eefcd63d3ef7c1201f2e8161
+MD5sum: 4abcee97548b1f1a3e7453ef61922b38
+SHA1: ef744e9044c7ab538b4093980840114ba7ed49a7
+SHA256: 49a6ab644ddf7198553276d3d4d4236f086bd2f1beddea8286c8ecde87e499cf
 Description: Complete Generic Linux kernel and headers
 Description-md5: 000d0a6187a93215f75bba542cc6df27
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -9860,6 +9880,45 @@ Description-md5: f72fb4de15dbf4d023df888056419d26
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-headers-3.8.0-29
+Priority: optional
+Section: devel
+Installed-Size: 58718
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.8.0-29.42
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux/linux-headers-3.8.0-29_3.8.0-29.42_all.deb
+Size: 12176342
+MD5sum: b4496e1bb11de4e7952373c77e420af5
+SHA1: 243d86f0156188b55fb44b98c7a52e18e74e3a90
+SHA256: bb4522ab7f5f9b894acb4695c58b606e25d3525c4b0b39c0fb8fa0761139ace3
+Description: Header files related to Linux kernel version 3.8.0
+Description-md5: c14c6aec898c01e4b0845e6418d92ddf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-3.8.0-29-generic
+Priority: optional
+Section: devel
+Installed-Size: 9611
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: armhf
+Source: linux
+Version: 3.8.0-29.42
+Provides: linux-headers, linux-headers-3.0
+Depends: linux-headers-3.8.0-29, libc6 (>= 2.11), libgcc1 (>= 1:4.4.0)
+Filename: pool/main/l/linux/linux-headers-3.8.0-29-generic_3.8.0-29.42_armhf.deb
+Size: 983906
+MD5sum: 4e99af10de381058f4da48b4e2b13a1a
+SHA1: 81ffa703e192ebaf53c9d5ed46b5baf1dbafaa88
+SHA256: 4f37007c279c1704433951066c1ea1c28897d2a57f6fe7f53465646bb29993e8
+Description: Linux kernel headers for version 3.8.0 on ARM (hard float) SMP
+Description-md5: b42ce1fc5011d49e3e053398d5504cc9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-headers-generic
 Priority: optional
 Section: devel
@@ -9867,13 +9926,13 @@ Installed-Size: 33
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux-meta
-Version: 3.8.0.27.45
-Depends: linux-headers-3.8.0-27-generic
-Filename: pool/main/l/linux-meta/linux-headers-generic_3.8.0.27.45_armhf.deb
-Size: 2316
-MD5sum: 9c93a76dfc0b65612532bf90fe5f6302
-SHA1: 94c8a2796eb34ffb4b171d71d49413e28229c1f5
-SHA256: 7fb452a3619c474c515b38af9e0f3970572e1f739ebd28f92879cf679ed1d249
+Version: 3.8.0.29.47
+Depends: linux-headers-3.8.0-29-generic
+Filename: pool/main/l/linux-meta/linux-headers-generic_3.8.0.29.47_armhf.deb
+Size: 2286
+MD5sum: 436a6a93bd0bfe9c2a557824afe95bda
+SHA1: 24a85c466e9024b7965788089e46c7a923413a4f
+SHA256: 06fee02f8c09ec42e90ddfdda1bdea599026e2a4d59f7809b6622d75ce2ccf1a
 Description: Generic Linux kernel headers
 Description-md5: 9c9742ab9c289b1e900fab477bc0070d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -9886,13 +9945,13 @@ Installed-Size: 33
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux-meta
-Version: 3.8.0.27.45
-Depends: linux-headers-generic (= 3.8.0.27.45)
-Filename: pool/main/l/linux-meta/linux-headers-highbank_3.8.0.27.45_armhf.deb
+Version: 3.8.0.29.47
+Depends: linux-headers-generic (= 3.8.0.29.47)
+Filename: pool/main/l/linux-meta/linux-headers-highbank_3.8.0.29.47_armhf.deb
 Size: 1734
-MD5sum: 034a5792921d31b00b4729a4b422040a
-SHA1: e0e0b11ab5700327e7babe6c78868503da78b510
-SHA256: 2d963181bc8789b262ff48333bc56d28bc312d1d6f9fce2854d10b48ca07a530
+MD5sum: df16c2316f3cac7bcf300f052c6c297b
+SHA1: f1d9b66724b6bc397ac595f9ad4e54081a0e5e75
+SHA256: f1d9ed8a626d4e2d729fd94d365f51e7ba74ce3bce6a9fb5449300a6a4a51386
 Description: Linux kernel headers for the armhf architecture.
 Description-md5: 79b4095c175f4559a0ceec11c2392865
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -9905,13 +9964,13 @@ Installed-Size: 33
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux-meta
-Version: 3.8.0.27.45
+Version: 3.8.0.29.47
 Depends: linux-headers-generic
-Filename: pool/main/l/linux-meta/linux-headers-omap_3.8.0.27.45_armhf.deb
+Filename: pool/main/l/linux-meta/linux-headers-omap_3.8.0.29.47_armhf.deb
 Size: 1718
-MD5sum: 4c9accd1d183824c00d5e94ca41ee27a
-SHA1: 0abe3e7673bdb0c37512a088ab890fb030e8818c
-SHA256: 44d9ca752255d115f9ee006e2414a56cd84bb12df9ab5eb1d0a45b7ded6d83f8
+MD5sum: 568cc7fb2833e5ee7cd426b0bff690da
+SHA1: bd12ab45f5c65a67802736722cf44fa883b66e4a
+SHA256: 76e88b5a650cef5dd9c23ce9e12937f9eacd62ac92aa012310374274d05b013e
 Description: Linux kernel headers for the armhf architecture.
 Description-md5: 79b4095c175f4559a0ceec11c2392865
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -9943,13 +10002,13 @@ Installed-Size: 33
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux-meta
-Version: 3.8.0.27.45
-Depends: linux-generic (= 3.8.0.27.45)
-Filename: pool/main/l/linux-meta/linux-highbank_3.8.0.27.45_armhf.deb
-Size: 1742
-MD5sum: e03cdcf776a04340e502f6b1e5b6c192
-SHA1: 68bb03b5d1e7ad7a9b80ba128cc9ec2ed148ca9c
-SHA256: bd6d0617aeba4e24bdba7488238949aa19cffcb341779128239ea8e07e2eec33
+Version: 3.8.0.29.47
+Depends: linux-generic (= 3.8.0.29.47)
+Filename: pool/main/l/linux-meta/linux-highbank_3.8.0.29.47_armhf.deb
+Size: 1736
+MD5sum: 0297a7f015ae1d9184e97e32b655be42
+SHA1: 9829f33060b729678227d19e4817aa2056b6d942
+SHA256: ee88253e487d48f05fdf29ea73a701c69e531f865234b6fb61280eb93efc91da
 Description: Complete Linux kernel and headers for the armhf architecture.
 Description-md5: 2bafa94132c23c74110879b3bbf5778c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -9962,13 +10021,13 @@ Installed-Size: 33
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux-meta
-Version: 3.8.0.27.45
+Version: 3.8.0.29.47
 Depends: linux-image-generic
-Filename: pool/main/l/linux-meta/linux-image_3.8.0.27.45_armhf.deb
-Size: 1704
-MD5sum: fba05360f92548a136c6312022b35508
-SHA1: 2164dec7024e9f72d78eb37157c6e8323e23ab3f
-SHA256: 66c0426836450899ec35d428280b7f85d8876279f504c6d48444f9cab164299a
+Filename: pool/main/l/linux-meta/linux-image_3.8.0.29.47_armhf.deb
+Size: 1700
+MD5sum: 9baaf87bddb39d36370d0f75fa174b0f
+SHA1: 40168662776a007676ffffbf9f53375d7cf79bff
+SHA256: ad07f958e73703aedb1dfb052e3a429ecdad440ab441324e515e322f425911c4
 Description: Generic Linux kernel image.
 Description-md5: 4b85eb2dcba23bfb3b8a88b27af1d539
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -10166,6 +10225,30 @@ Description-md5: df6127a9974ef3eb3f02fe9c3d5449ad
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-image-3.8.0-29-generic
+Priority: optional
+Section: kernel
+Installed-Size: 77174
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: armhf
+Source: linux
+Version: 3.8.0-29.42
+Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, linux-image-3.0, redhat-cluster-modules
+Depends: initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3)
+Pre-Depends: dpkg (>= 1.10.24)
+Recommends: flash-kernel
+Suggests: fdutils, linux-doc-3.8.0 | linux-source-3.8.0, linux-tools, linux-headers-3.8.0-29-generic
+Conflicts: hotplug (<< 0.0.20040105-1)
+Filename: pool/main/l/linux/linux-image-3.8.0-29-generic_3.8.0-29.42_armhf.deb
+Size: 25453262
+MD5sum: cf34f8cbffc3163b68f3cdead97baeef
+SHA1: 4a6b6fb1ea469007f89da12a1862ecc5d9779750
+SHA256: 98ed21f0ff76307f32b750b4b85765bced0531de4073c7844ca2465f426d82dd
+Description: Linux kernel image for version 3.8.0 on ARM (hard float) SMP
+Description-md5: df6127a9974ef3eb3f02fe9c3d5449ad
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-image-generic
 Priority: optional
 Section: kernel
@@ -10173,13 +10256,13 @@ Installed-Size: 33
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux-meta
-Version: 3.8.0.27.45
-Depends: linux-image-3.8.0-27-generic, linux-firmware
-Filename: pool/main/l/linux-meta/linux-image-generic_3.8.0.27.45_armhf.deb
-Size: 2320
-MD5sum: 819539ec2d941a9325ffa121e6c5b064
-SHA1: f9894d5e56877f49fab6871d08c9508a00964aa7
-SHA256: c12f0ae90ee59bef77e8a520f66f3eaa03e372723467cd820d46653ca4fddbf8
+Version: 3.8.0.29.47
+Depends: linux-image-3.8.0-29-generic, linux-firmware
+Filename: pool/main/l/linux-meta/linux-image-generic_3.8.0.29.47_armhf.deb
+Size: 2290
+MD5sum: 3e51f2c8ecce32a6c20527553b967832
+SHA1: 53bc9cddb1c9b54ba263e08b027de28132c0aa65
+SHA256: ec3f68455c98c912a101379d52517460f4ffc8d2e5bc94283bc0b4b9b2ca3fab
 Description: Generic Linux kernel image
 Description-md5: 6d632579c673704f44b290b16e7dbfd1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -10192,13 +10275,13 @@ Installed-Size: 33
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux-meta
-Version: 3.8.0.27.45
-Depends: linux-image-generic (= 3.8.0.27.45)
-Filename: pool/main/l/linux-meta/linux-image-highbank_3.8.0.27.45_armhf.deb
+Version: 3.8.0.29.47
+Depends: linux-image-generic (= 3.8.0.29.47)
+Filename: pool/main/l/linux-meta/linux-image-highbank_3.8.0.29.47_armhf.deb
 Size: 1732
-MD5sum: 3332464aba8e0e69fff24934d92ba9be
-SHA1: 256ab48367ef4868ae44c9b1eaeda56ab1a32c48
-SHA256: 93468f3df2a71870e74c49b3f39a50e25beda749088bfaaa6d7f3da7ea7f1a62
+MD5sum: 4a58ad6d0b51fa79c53c0336fe9d779f
+SHA1: 9062cce5a31266b80c119f4012fd71aab62a68fe
+SHA256: a1623ddce9b60203a35bd0b39ec148db91dfb3ef365b13587a93c94dbdd27053
 Description: Linux kernel image for the armhf architecture.
 Description-md5: 78b71b6daff1931d7d08eda2d7fc4cdb
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -10211,13 +10294,13 @@ Installed-Size: 33
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux-meta
-Version: 3.8.0.27.45
+Version: 3.8.0.29.47
 Depends: linux-image-generic, linux-firmware
-Filename: pool/main/l/linux-meta/linux-image-omap_3.8.0.27.45_armhf.deb
-Size: 1726
-MD5sum: a6b430a56127ffd54afb58b4882d9240
-SHA1: d42f27cce6469ec065e9541482070ea2b825b079
-SHA256: b7142e841bf819470b00c49b1d3a631b1af1fae46ac8b073a8819917dd6cce0d
+Filename: pool/main/l/linux-meta/linux-image-omap_3.8.0.29.47_armhf.deb
+Size: 1732
+MD5sum: 64f7c247a3de478503d4b305ec20b7f6
+SHA1: 712e6047d0494e892aa38d1a0dea954dc5a56b5c
+SHA256: 18d48655abf392cb6799662eb411a0a409b35b22073ca37a69678d85747feabd
 Description: Linux kernel image for the armhf architecture.
 Description-md5: 78b71b6daff1931d7d08eda2d7fc4cdb
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -10245,19 +10328,19 @@ Origin: Ubuntu
 Package: linux-libc-dev
 Priority: optional
 Section: devel
-Installed-Size: 3152
+Installed-Size: 3156
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux
-Version: 3.8.0-27.40
+Version: 3.8.0-29.42
 Replaces: dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), libdrm-dev, linux-kernel-headers
 Provides: linux-kernel-headers
 Conflicts: amd64-libs-dev (<= 1.1), dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), linux-kernel-headers
-Filename: pool/main/l/linux/linux-libc-dev_3.8.0-27.40_armhf.deb
-Size: 891650
-MD5sum: 6c75cff9e5f7369d368406fe0f1de153
-SHA1: bd73773e0345492f6d48376d3b7ad65015f31884
-SHA256: d8585d69b8313eced45ed961c9e4e5ec65686d6b0d2d8cdc9261bacadf91b8da
+Filename: pool/main/l/linux/linux-libc-dev_3.8.0-29.42_armhf.deb
+Size: 893134
+MD5sum: 2b1dfa3cd40fe8830b3a23bc36abc760
+SHA1: 0ef76349c766c434c67532d41b64b63517d2e5b9
+SHA256: e584c8bd9ad7c48c1a678ee5077d80da6fce41257c5a553a3b06a4541aacdc58
 Description: Linux Kernel Headers for development
 Multi-Arch: same
 Description-md5: d5d143e6dffc891f04a85464446f9451
@@ -10273,13 +10356,13 @@ Installed-Size: 33
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux-meta
-Version: 3.8.0.27.45
-Depends: linux-image-generic (= 3.8.0.27.45), linux-headers-generic (= 3.8.0.27.45)
-Filename: pool/main/l/linux-meta/linux-omap_3.8.0.27.45_armhf.deb
+Version: 3.8.0.29.47
+Depends: linux-image-generic (= 3.8.0.29.47), linux-headers-generic (= 3.8.0.29.47)
+Filename: pool/main/l/linux-meta/linux-omap_3.8.0.29.47_armhf.deb
 Size: 1750
-MD5sum: 556441993cd046fb20fe0986ef46d0bc
-SHA1: de1fbb9b8819192af9afebdec43271a2e6502641
-SHA256: a4850e135098bcdb25f78a93f3821ef762522b1294d5145230a1d677cda0c685
+MD5sum: bb2d007b62c2df770016edf0688790e5
+SHA1: 5fc7e742398a793407c4017080a0525c081c5c47
+SHA256: f1f6bb11d54a5c7ce7eecd93d5b0bde342a6900edf4258fcdd2bd78afd351940
 Description: Complete Linux kernel and headers for the armhf architecture.
 Description-md5: 2bafa94132c23c74110879b3bbf5778c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -10311,13 +10394,13 @@ Installed-Size: 33
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: all
 Source: linux-meta
-Version: 3.8.0.27.45
+Version: 3.8.0.29.47
 Depends: linux-source-3.8.0
-Filename: pool/main/l/linux-meta/linux-source_3.8.0.27.45_all.deb
-Size: 2302
-MD5sum: 2dc85597b71a32d7171acb11f9250c41
-SHA1: f34d7982294151783d620cdf8e58ce62e5921168
-SHA256: d15e916ec8e0eac1777ebfcbffdeb09ed18a672f00265023b0fe0f6149a77fda
+Filename: pool/main/l/linux-meta/linux-source_3.8.0.29.47_all.deb
+Size: 2270
+MD5sum: 88ae1cf3a4670d840049cf7e005cfe54
+SHA1: d14066a5bb228d3d2f5125ad6c203de81cb7fd79
+SHA256: 4d3a1b3c58dd2cea52bf60a1acaca0b4544932616fd97c47518a9599d0fac114
 Description: Linux kernel source with Ubuntu patches
 Description-md5: 1cac084d2ae18dfd06b96585b4be564d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -10433,6 +10516,28 @@ Description-md5: 2cc47389e6a08869c43cb079a77067d0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-source-3.8.0
+Priority: optional
+Section: devel
+Installed-Size: 89490
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.8.0-29.42
+Provides: linux-source, linux-source-3
+Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
+Recommends: libc-dev, gcc, make
+Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
+Filename: pool/main/l/linux/linux-source-3.8.0_3.8.0-29.42_all.deb
+Size: 88203900
+MD5sum: 0cd79d9e4b8f866ec04d653c1c44a285
+SHA1: fc53f553dc15199da8fd434e24c348826d58f93c
+SHA256: 13bd7b618ee9290bb2f68656f5a7290bbd912b1d2ad0f6ff078f2dbc3456442d
+Description: Linux kernel source for version 3.8.0 with Ubuntu patches
+Description-md5: 2cc47389e6a08869c43cb079a77067d0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-ti-omap4-tools-3.5.0-226
 Priority: optional
 Section: devel
@@ -10497,12 +10602,12 @@ Installed-Size: 33
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux-meta
-Version: 3.8.0.27.45
-Filename: pool/main/l/linux-meta/linux-tools_3.8.0.27.45_armhf.deb
-Size: 2294
-MD5sum: 0720d02787e631a3ddc7433c85b2b268
-SHA1: 5d3342dcb5cdab12312118aaea9b5e346e4eea72
-SHA256: 7213195c60982edfe3bdde910ac0f90edac8c2ba5b4c755ce9f78033f0f0e85f
+Version: 3.8.0.29.47
+Filename: pool/main/l/linux-meta/linux-tools_3.8.0.29.47_armhf.deb
+Size: 2274
+MD5sum: a0c27b3c2d9609805664e0564638c206
+SHA1: f2aef6cfd9f6abeae77c787a72c489d03506ae26
+SHA256: 9c18de8406c4ac851d27e402dd45106088c8ecabef2066eaa0d8aeafd181440d
 Description: Linux kernel versioned Tools
 Description-md5: ea15db5fd6e3e3cff13446d5e28af7c8
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -10562,6 +10667,25 @@ SHA1: 2370a3a2fa20b0e8068a30c81ffa0926d0a09221
 SHA256: 7f7e5fd06e080f7ec3ad220718b7b47d8444238b785deef5f6db5b8bfffede7b
 Description: Linux kernel version specific tools for version 3.8.0-27
 Description-md5: 28b64439fc2a61635945a9a88ee9173c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-tools-3.8.0-29
+Priority: optional
+Section: devel
+Installed-Size: 796
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: armhf
+Source: linux
+Version: 3.8.0-29.42
+Depends: libaudit1 (>= 1:2.2.1), libc6 (>= 2.8), libdw1 (>= 0.143), libelf1 (>= 0.131), libgcc1 (>= 1:4.4.0), libnewt0.52, libslang2 (>= 2.2.4), linux-tools-common
+Filename: pool/main/l/linux/linux-tools-3.8.0-29_3.8.0-29.42_armhf.deb
+Size: 401546
+MD5sum: db6e6bc3c53e20577e642106f198528d
+SHA1: 0fd5bdfc36dc27021502ad54186d28d44110f0ae
+SHA256: 753e63fbd0ede0af4f1714f127f3d615de0047cca48bee0df614bcbe5e3e1213
+Description: Linux kernel version specific tools for version 3.8.0-29
+Description-md5: d5a8ab6c6a68b06e013e20893d1d79a3
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -10655,6 +10779,25 @@ Size: 76384
 MD5sum: 8a3a39888bda70935188d69402b971de
 SHA1: 5fc912dca9de81e1b604ad036f05576032b9d6cf
 SHA256: 7338ea74a1e5dd3ceaa8f8f84ec2da86de25d82da4e6ff207d6de0eac82a3c93
+Description: Linux kernel version specific tools for version 3.8.0
+Description-md5: 82cdbfd960c61ce6ed3a2bc1966d589d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-tools-common
+Priority: optional
+Section: kernel
+Installed-Size: 199
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.8.0-29.42
+Replaces: linux-tools (<= 2.6.32-16.25)
+Filename: pool/main/l/linux/linux-tools-common_3.8.0-29.42_all.deb
+Size: 78064
+MD5sum: e3b2aa5d5f0aea3e148c27d0a65dce37
+SHA1: 62592116ac4239f62381e3d03dca718a7d252689
+SHA256: 4d4c64ce4550b0782d51a23e5f5c1ee7d7e32bf84b6f23fd6f5b8b944e362006
 Description: Linux kernel version specific tools for version 3.8.0
 Description-md5: 82cdbfd960c61ce6ed3a2bc1966d589d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
