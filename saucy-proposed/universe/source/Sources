@@ -167,33 +167,6 @@ Checksums-Sha256:
  d7bbc1be8d578176954181ab175844ba87636190c066dc3796be682184850a01 6575 beets_1.2.1-1.debian.tar.gz
 Testsuite: autopkgtest
 
-Package: bikeshed
-Binary: bikeshed
-Version: 1.34-0ubuntu1
-Priority: extra
-Section: universe/misc
-Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
-Build-Depends: debhelper (>= 7)
-Architecture: all
-Standards-Version: 3.9.3
-Format: 1.0
-Directory: pool/universe/b/bikeshed
-Files:
- 16a107adf580cf6ac7a6699ff28fe4b2 1692 bikeshed_1.34-0ubuntu1.dsc
- 4397824837daff6d446901790c1ffdff 56737 bikeshed_1.34.orig.tar.gz
- 376f6f4b15d0542367fec9954c51d45e 5278 bikeshed_1.34-0ubuntu1.diff.gz
-Homepage: http://launchpad.net/bikeshed
-Package-List: 
- bikeshed deb misc extra
-Checksums-Sha1:
- d5b81b2f10c438445ec664541277d820e1048a7d 1692 bikeshed_1.34-0ubuntu1.dsc
- b096fd1e915616dca9d3b92d379fc36cc2551d7f 56737 bikeshed_1.34.orig.tar.gz
- 446976415b4da61309794ade3134badd9648446d 5278 bikeshed_1.34-0ubuntu1.diff.gz
-Checksums-Sha256:
- 41c33ff83a8e1ee293b5cae397cb154d4658d0535c50ff85aa4111feb9372921 1692 bikeshed_1.34-0ubuntu1.dsc
- f097097876a1e4fbf325816f8f16491d0345f9ce06f57234881a5ebffd2fa61f 56737 bikeshed_1.34.orig.tar.gz
- cbe49e532ff3fb2ebb0794a401768d9d147c2695f7986e26a959d64c1545c7e4 5278 bikeshed_1.34-0ubuntu1.diff.gz
-
 Package: blackbox
 Binary: blackbox, libbt-dev, libbt0
 Version: 0.70.1-16
@@ -744,34 +717,6 @@ Checksums-Sha256:
  a83ffd07817adb575295ef40fbf759892512e5a63059c520f9062d9ab8fb42fc 242712 ctpp2_2.8.3.orig.tar.gz
  5053f7adc40f87bd900fc97a7afd8bb770deaa48c7494f2c4bdad10ee55116dd 19303 ctpp2_2.8.3-3.debian.tar.gz
 
-Package: cxxtools
-Binary: libcxxtools9, libcxxtools-dev
-Version: 2.2-1
-Priority: optional
-Section: universe/libs
-Maintainer: Kari Pahula <kaol@debian.org>
-Build-Depends: libtool, libltdl-dev, dh-autoreconf, cdbs, debhelper (>= 9), gettext
-Architecture: any
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/c/cxxtools
-Files:
- cc55b4088b257c049e40d57d40e7a072 1163 cxxtools_2.2-1.dsc
- 9364b1221098c20f32fedf1338a56e56 819220 cxxtools_2.2.orig.tar.gz
- 9ee238fb41275a5d21174e80fe68a06a 6561 cxxtools_2.2-1.debian.tar.gz
-Homepage: http://www.tntnet.org/cxxtools.html
-Package-List: 
- libcxxtools-dev deb libdevel optional
- libcxxtools9 deb libs optional
-Checksums-Sha1:
- d17027a0d72b35e189c4cda9ee4656e994f1687b 1163 cxxtools_2.2-1.dsc
- ce68029bf64d6449868ac9f33b75fc2a02b42edc 819220 cxxtools_2.2.orig.tar.gz
- b7504addab13ff827a8a30bd66f250dbf5695f1c 6561 cxxtools_2.2-1.debian.tar.gz
-Checksums-Sha256:
- 253ef8923c90da36c84672ca34da852527bab3c8c35074b15b1ebd9e1cf9be7e 1163 cxxtools_2.2-1.dsc
- 7418829c693f38fb8e709ddef371890ec8a8e757b2f92c9512361e928d2d8c89 819220 cxxtools_2.2.orig.tar.gz
- d836df186700b1cb3a79e1544a1c989c399237a6e09c4ac2f05579686352ff66 6561 cxxtools_2.2-1.debian.tar.gz
-
 Package: dff
 Binary: dff
 Version: 1.3.0+dfsg.1-1
@@ -857,6 +802,42 @@ Checksums-Sha256:
  96de37fead3d5775f22cc27a2195f1ebdecea4d645216319eccd33a4708423cd 1866 docvert_4.0-7.dsc
  162d3e63eb682e32a3b768bfc945b77f84d2390f6f9d39d6d56fda1f5fb09418 1172849 docvert_4.0.orig.tar.gz
  9a177057eaed4692dd539f354033428a90713470a7562f53896d3d3fa7f43b53 10801 docvert_4.0-7.debian.tar.gz
+
+Package: dolfin
+Binary: libdolfin1.2-dev, dolfin-dev, libdolfin1.2, libdolfin1.2-dbg, python-dolfin, python-dolfin-dbg, dolfin-doc, dolfin-bin
+Version: 1.2.0+dfsg-1
+Section: universe/math
+Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), python-dev, cmake (>= 2.8.0), swig2.0, python-numpy, pkg-config, libxml2-dev, libboost-dev, libboost-program-options-dev, libboost-filesystem-dev, libboost-serialization-dev, libboost-thread-dev, libboost-iostreams-dev, libboost-mpi-dev, libboost-math-dev, libboost-timer-dev, libboost-chrono-dev, libsuitesparse-dev, ufc (>= 2.2.0), python-ufc (>= 2.2.0), libptscotch-dev, libpetsc3.2-dev [!armel !kfreebsd-amd64 !kfreebsd-i386], libslepc3.2-dev [!armel !kfreebsd-amd64 !kfreebsd-i386], libarmadillo-dev, libcgal-dev [!armel], libhdf5-mpi-dev, libvtk5-dev, libvtk5-qt4-dev, libqt4-dev
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/d/dolfin
+Files:
+ 23e4bfdbe5eaad7c59361d43aa9d399e 2309 dolfin_1.2.0+dfsg-1.dsc
+ 2efc215febc77f25fe24f0adb627e4cf 10144756 dolfin_1.2.0+dfsg.orig.tar.gz
+ df11f53dd30e5368a414dcafe6bf64cc 138736 dolfin_1.2.0+dfsg-1.debian.tar.gz
+Uploaders: Christophe Prud'homme <prudhomm@debian.org>, Johannes Ring <johannr@simula.no>
+Homepage: http://fenicsproject.org
+Vcs-Browser: http://anonscm.debian.org/viewvc/debian-science/packages/fenics/dolfin/trunk/
+Vcs-Svn: svn://anonscm.debian.org/debian-science/packages/fenics/dolfin/trunk
+Package-List: 
+ dolfin-bin deb math extra
+ dolfin-dev deb libdevel extra
+ dolfin-doc deb doc extra
+ libdolfin1.2 deb libs extra
+ libdolfin1.2-dbg deb debug extra
+ libdolfin1.2-dev deb libdevel extra
+ python-dolfin deb python extra
+ python-dolfin-dbg deb debug extra
+Checksums-Sha1:
+ 4f6224e192fc86578514570cef686eb5a1dac0d6 2309 dolfin_1.2.0+dfsg-1.dsc
+ bd2be4b18dcd5ef96eb01ef6996c40e32ee03b47 10144756 dolfin_1.2.0+dfsg.orig.tar.gz
+ 52fc367d7cb8c07424385cc15b79210129d769d7 138736 dolfin_1.2.0+dfsg-1.debian.tar.gz
+Checksums-Sha256:
+ fa8b95cdaa0024091d9ac64763bf0e28dd1c5adc89c9f99f5754f717529ccf98 2309 dolfin_1.2.0+dfsg-1.dsc
+ 7f833802f88b2bbe95adbdc164a9f3bf76818e53401a25929d7db8b7237b9930 10144756 dolfin_1.2.0+dfsg.orig.tar.gz
+ 210e2ad0c14796c3cf5ff095c3c83147932ed112412c3175a6a938f75163ab10 138736 dolfin_1.2.0+dfsg-1.debian.tar.gz
 
 Package: dragonegg
 Binary: dragonegg, dragonegg-4.7, dragonegg-4.8, llvm-gcc-4.7, llvm-gcc-4.8
@@ -5492,70 +5473,6 @@ Checksums-Sha256:
  aaa98146049e55f6ac969298340eeb49df61395403fcc1480824a4ecd0d46192 2167860 tbb_4.0+r233+update5.orig.tar.gz
  6a36cef2f77779b6e44d878992b9f80aaac8583c10a7f7f8770804e0a987dfcd 10142 tbb_4.0+r233+update5-0.2.debian.tar.gz
 
-Package: tntdb
-Binary: libtntdb4, tntdb-mysql4, tntdb-postgresql4, tntdb-sqlite4, libtntdb-dev
-Version: 1.3-2
-Priority: optional
-Section: universe/libs
-Maintainer: Kari Pahula <kaol@debian.org>
-Build-Depends: cdbs, debhelper (>= 9), libcxxtools-dev (>= 2.2), libsqlite3-dev, libmysqlclient-dev, libpq-dev, libltdl-dev, doxygen, dh-autoreconf, sqlite3
-Build-Conflicts: libtntdb-dev, libtntdb3
-Architecture: any
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/t/tntdb
-Files:
- e2df268b870f3303c096a8cb9e82d9e7 2031 tntdb_1.3-2.dsc
- 31d16243566fe226119e40e194119b44 623849 tntdb_1.3.orig.tar.gz
- c6fe7c585725d87b66e1a9559ee55740 3767 tntdb_1.3-2.debian.tar.gz
-Homepage: http://www.tntnet.org/tntdb.html
-Package-List: 
- libtntdb-dev deb libdevel optional
- libtntdb4 deb libs optional
- tntdb-mysql4 deb libs optional
- tntdb-postgresql4 deb libs optional
- tntdb-sqlite4 deb libs optional
-Checksums-Sha1:
- c6e1465413454f3c46eb3cd9fc1de50315aea309 2031 tntdb_1.3-2.dsc
- 33d119a9ee9f54b30226da995fb74443df2f65a1 623849 tntdb_1.3.orig.tar.gz
- 5a01f58858827515c0fa752fe85988ee45121621 3767 tntdb_1.3-2.debian.tar.gz
-Checksums-Sha256:
- 7c9ef8ba5a386c540d0cbed828e8316dd9108e16b685542f221decb9f4fb4144 2031 tntdb_1.3-2.dsc
- 093ab2694bc66bc05ae0a5c8a505d75ae84d4c35c2ddc0ff0283c5b9574b474b 623849 tntdb_1.3.orig.tar.gz
- 6b10d9ae2121f05747d59de959b45febfd632e89c194e97a3ba768693cff1327 3767 tntdb_1.3-2.debian.tar.gz
-
-Package: tntnet
-Binary: tntnet, tntnet-doc, tntnet-demos, libtntnet11, libtntnet-dev, tntnet-runtime
-Version: 2.2-3
-Priority: extra
-Section: universe/web
-Maintainer: Kari Pahula <kaol@debian.org>
-Build-Depends: cdbs, debhelper (>= 9), libcxxtools-dev (>= 2.2), libltdl-dev, zip, pkg-config, dh-autoreconf, libtool, libssl-dev
-Architecture: any all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/t/tntnet
-Files:
- a1bdde03e28e18d05ecb94d4edf5d222 1976 tntnet_2.2-3.dsc
- 6cf773f8b0ce5db98a2a4fb7a8fa7eaa 1126784 tntnet_2.2.orig.tar.gz
- 91c382d00d614fc7db1207aa6f16d557 45680 tntnet_2.2-3.debian.tar.gz
-Homepage: http://www.tntnet.org/
-Package-List: 
- libtntnet-dev deb libdevel extra
- libtntnet11 deb libs extra
- tntnet deb web extra
- tntnet-demos deb doc extra
- tntnet-doc deb doc extra
- tntnet-runtime deb web extra
-Checksums-Sha1:
- 3cfc73f918654aacc749c14d4268104fcfdf5d24 1976 tntnet_2.2-3.dsc
- f06ae179844026d8a62a2b7b4250603dcc8c8e7e 1126784 tntnet_2.2.orig.tar.gz
- 161ce580f31769232f7c1714b8f3479c3512857e 45680 tntnet_2.2-3.debian.tar.gz
-Checksums-Sha256:
- 23cab70e530d0806382310bfb19051e5b5ab17b81c3d88083651f6ebe538a0d6 1976 tntnet_2.2-3.dsc
- 9bc09b0ea4e31b4cc6318ba6ada5bae5deadcfad3d9c0ad9466d8586cdc728f4 1126784 tntnet_2.2.orig.tar.gz
- f57d1383d42a23297ca26feee47a19883444a36f808a823aabbceed8011ed59a 45680 tntnet_2.2-3.debian.tar.gz
-
 Package: trac
 Binary: trac
 Version: 1.0.1-2
@@ -5864,39 +5781,6 @@ Checksums-Sha256:
  db5f4be81d55f6d094dec3e1aab53809890b2f4ea66e6991cc3087728ffc2247 1834 wiggle_0.9.1-1.dsc
  9ff8a16851cce0db2ae0b57a7919cb12de98639d1cef08aff228641a2d711588 751789 wiggle_0.9.1.orig.tar.gz
  238034af8a21b2bbb6ec961345bdaece0cb7469279cc50950d42c9e26b292344 4631 wiggle_0.9.1-1.debian.tar.gz
-
-Package: wxsvg
-Binary: libwxsvg0, libwxsvg-dev, libwxsvg-dbg
-Version: 2:1.1.15~dfsg0-0ubuntu1
-Priority: optional
-Section: universe/libs
-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
-Build-Depends: autotools-dev, debhelper (>= 9), libavcodec-dev, libavformat-dev, libavutil-dev, libexpat-dev, libpango1.0-dev (>= 1.20.2), libswscale-dev, libtool, libwxbase2.8-dev, libwxgtk2.8-dev, pkg-config, python-scour
-Build-Conflicts: libwxbase2.6-dev
-Architecture: any
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/w/wxsvg
-Files:
- 18f4473a7a8f496cd9d82f55649c8aba 2167 wxsvg_1.1.15~dfsg0-0ubuntu1.dsc
- 5990b33bc7a15d1bb7e6741f39d6a08b 450111 wxsvg_1.1.15~dfsg0.orig.tar.bz2
- 44599846600cd509d19c3ae50d3a9598 4217 wxsvg_1.1.15~dfsg0-0ubuntu1.debian.tar.gz
-Uploaders:  Alessio Treglia <alessio@debian.org>, Fabrice Coutadeur <coutadeurf@gmail.com>
-Homepage: http://wxsvg.sourceforge.net/
-Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/wxsvg.git
-Vcs-Git: git://git.debian.org/pkg-multimedia/wxsvg.git
-Package-List: 
- libwxsvg-dbg deb debug extra
- libwxsvg-dev deb libdevel optional
- libwxsvg0 deb libs optional
-Checksums-Sha1:
- df93610905651177480b8622dcd4d0ef2e3c82c4 2167 wxsvg_1.1.15~dfsg0-0ubuntu1.dsc
- c431dcc26b4c0a367d0dd7fb57f85d107b666aaa 450111 wxsvg_1.1.15~dfsg0.orig.tar.bz2
- ea3982e9012238656ee373670a2a4f17be9a0c56 4217 wxsvg_1.1.15~dfsg0-0ubuntu1.debian.tar.gz
-Checksums-Sha256:
- 041dda70dabb85bee62125f421a703180736040819b32c6b334f6c7f87a8d6a4 2167 wxsvg_1.1.15~dfsg0-0ubuntu1.dsc
- 0b4ae427ae359d9264109908814dd5efcb615d3d970b96ad407f23da3e43260e 450111 wxsvg_1.1.15~dfsg0.orig.tar.bz2
- 4225ba2cc2302ea47af9ff76b213c3b2d1fb7106a458b53c4dc8ac512b6a0b1f 4217 wxsvg_1.1.15~dfsg0-0ubuntu1.debian.tar.gz
 
 Package: xmount
 Binary: xmount
