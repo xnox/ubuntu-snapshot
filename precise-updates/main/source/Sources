@@ -2370,6 +2370,36 @@ Checksums-Sha256:
  7977d2fecc0307e7edcacd70f78daff497c85ca2f0bb2ec4d2eb14686ee5cb07 480077 dnsmasq_2.59.orig.tar.gz
  83c9af40d5a3d77bc4304785456d77b6187646f8d31921024ec867064620761c 19360 dnsmasq_2.59-4ubuntu0.1.diff.gz
 
+Package: dosfstools
+Binary: dosfstools, dosfstools-dbg, dosfstools-udeb
+Version: 3.0.12-1ubuntu1.1
+Priority: standard
+Section: otherosfs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Daniel Baumann <daniel.baumann@progress-technologies.net>
+Build-Depends: debhelper (>= 8)
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/d/dosfstools
+Files:
+ 28fb6e290467f31380f20d95f313d432 2054 dosfstools_3.0.12-1ubuntu1.1.dsc
+ 4c1f1e72b82371704f93ebdd3c7b6259 82117 dosfstools_3.0.12.orig.tar.gz
+ 034691d5ae6c861b6236c3e107251800 9729 dosfstools_3.0.12-1ubuntu1.1.debian.tar.gz
+Homepage: http://www.daniel-baumann.ch/software/dosfstools/
+Package-List: 
+ dosfstools deb otherosfs optional
+ dosfstools-dbg deb debug extra
+ dosfstools-udeb udeb debian-installer optional
+Checksums-Sha1:
+ ff7c9443eb5692070db22182ca120087662cc082 2054 dosfstools_3.0.12-1ubuntu1.1.dsc
+ bb68ba1378285048313ffd3f4764dfe126b5fadd 82117 dosfstools_3.0.12.orig.tar.gz
+ eb049f81902e0c96c05dc0cbd28a27b978288f7f 9729 dosfstools_3.0.12-1ubuntu1.1.debian.tar.gz
+Checksums-Sha256:
+ 835fab9b806763b5fa385348f5cdf63bcadc3620376e37703aa0102084f4917f 2054 dosfstools_3.0.12-1ubuntu1.1.dsc
+ 7c8e572f9d0cc60c1390c35cc2846d957c939f5ff9a3da54fa4bdc034faf6dea 82117 dosfstools_3.0.12.orig.tar.gz
+ 1d6868bf1092086cf0c2b19d11c168408ca036ac3c4f9b24a2b11503bdddc93d 9729 dosfstools_3.0.12-1ubuntu1.1.debian.tar.gz
+
 Package: dovecot
 Binary: dovecot-common, dovecot-core, dovecot-dev, dovecot-imapd, dovecot-pop3d, dovecot-lmtpd, dovecot-managesieved, dovecot-pgsql, dovecot-mysql, dovecot-sqlite, dovecot-ldap, dovecot-gssapi, dovecot-sieve, dovecot-solr, dovecot-dbg, mail-stack-delivery, dovecot-postfix
 Version: 1:2.0.19-0ubuntu2
@@ -34722,6 +34752,59 @@ Checksums-Sha256:
  faa9edc31d4ce6196ab670f375942d5a7b31c84278c20033b5ef073d8ff00c8b 219313 partman-base_153ubuntu5.tar.gz
 Debian-Vcs-Browser: http://git.debian.org/?p=d-i/partman-base.git
 Debian-Vcs-Git: git://git.debian.org/d-i/partman-base.git
+
+Package: partman-basicfilesystems
+Binary: partman-basicfilesystems
+Version: 71ubuntu3.1
+Section: debian-installer
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 7.0.8), dh-di, po-debconf (>= 0.5.0)
+Architecture: all
+Format: 1.0
+Directory: pool/main/p/partman-basicfilesystems
+Files:
+ 45c43637555b29a5630f88a9108dbb05 2003 partman-basicfilesystems_71ubuntu3.1.dsc
+ 116a1f6f4d73b85ef6e689aed6adbec9 186299 partman-basicfilesystems_71ubuntu3.1.tar.gz
+Uploaders: Anton Zinoviev <zinoviev@debian.org>, Colin Watson <cjwatson@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/partman-basicfilesystems/ubuntu
+Package-List: 
+ partman-basicfilesystems udeb debian-installer standard
+Checksums-Sha1:
+ 221b9ef3871e70801b6f30b1d59629cc9bb12e71 2003 partman-basicfilesystems_71ubuntu3.1.dsc
+ 28128700ac3b0cdd88f65b10186f31831927a482 186299 partman-basicfilesystems_71ubuntu3.1.tar.gz
+Checksums-Sha256:
+ 6eb3988eb6219d009a267325e775c8fc806b4632c4ee72e7432c97efb5996c5b 2003 partman-basicfilesystems_71ubuntu3.1.dsc
+ b43d23a9b65d89d872b2bd608adcb4b13ed99c48c969b2c9cd44089acc343bf4 186299 partman-basicfilesystems_71ubuntu3.1.tar.gz
+Debian-Vcs-Browser: http://git.debian.org/?p=d-i/partman-basicfilesystems.git
+Debian-Vcs-Git: git://git.debian.org/d-i/partman-basicfilesystems.git
+
+Package: partman-efi
+Binary: partman-efi
+Version: 25ubuntu1.1
+Section: debian-installer
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 7.0.8), dh-di, po-debconf (>= 0.5.0)
+Architecture: i386 ia64 amd64
+Standards-Version: 3.8.1
+Format: 1.0
+Directory: pool/main/p/partman-efi
+Files:
+ ee7c962dd125a0e7a70334e20b92b07c 1919 partman-efi_25ubuntu1.1.dsc
+ 49c7009db606bb0da49963024c71371d 53275 partman-efi_25ubuntu1.1.tar.gz
+Uploaders: dann frazier <dannf@debian.org>, Christian Perrier <bubulle@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/partman-efi/ubuntu
+Package-List: 
+ partman-efi udeb debian-installer standard
+Checksums-Sha1:
+ 9b6874f3759f86af6eede61d1290caa9d661fb80 1919 partman-efi_25ubuntu1.1.dsc
+ 2d30e44fa664ff787863188f632cd547b48d6f9e 53275 partman-efi_25ubuntu1.1.tar.gz
+Checksums-Sha256:
+ 9f168088d17676ca85008f59cb81ba1e8660f1ddffb363ccc0d5c50a47ab6e30 1919 partman-efi_25ubuntu1.1.dsc
+ b2896f039d529f0b870b22ab6f119dca626b2c923348b1fa856f654ea1234abe 53275 partman-efi_25ubuntu1.1.tar.gz
+Debian-Vcs-Browser: http://git.debian.org/?p=d-i/partman-efi.git
+Debian-Vcs-Git: git://git.debian.org/d-i/partman-efi.git
 
 Package: partman-target
 Binary: partman-target

@@ -755,6 +755,23 @@ Description: Linux Kernel Device Mapper userspace library
  .
  This package contains a utility for modifying device mappings.
 
+Package: dosfstools-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 90
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Daniel Baumann <daniel.baumann@progress-technologies.net>
+Architecture: amd64
+Source: dosfstools
+Version: 3.0.13-1ubuntu0.1
+Depends: libc6-udeb (>= 2.15)
+Filename: pool/main/d/dosfstools/dosfstools-udeb_3.0.13-1ubuntu0.1_amd64.udeb
+Size: 33032
+MD5sum: d07d651f83ae402c24b867e44b92085c
+SHA1: 51241b0f84b1b4e8850a258a5185b54b29cc50ee
+SHA256: 647ba6d1c553506338e03695d4d5a025ab1f0ba1c372634137a42c351b1bf96d
+Description: utilities for making and checking MS-DOS FAT filesystems
+
 Package: fat-modules-3.5.0-18-generic-di
 Priority: standard
 Section: debian-installer
@@ -7930,6 +7947,39 @@ SHA1: 0f1808714916004034c6da9d853fb602fef322ba
 SHA256: 463ec8fd8a8fd67334db76ddd679d236f1b01aa37d977638ff336208f3e9dc07
 Description: Parallel port support
 Kernel-Version: 3.5.0-39-generic
+
+Package: partman-basicfilesystems
+Priority: standard
+Section: debian-installer
+Installed-Size: 660
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Version: 74ubuntu1.1
+Provides: partman-filesystem
+Depends: cdebconf-udeb, dosfstools-udeb, e2fsprogs-udeb, ext2-modules, fat-modules, partconf-mkfstab (>= 1.09)
+Filename: pool/main/p/partman-basicfilesystems/partman-basicfilesystems_74ubuntu1.1_all.udeb
+Size: 165732
+MD5sum: 71d33d5a31c346feab6aaf012bb305b5
+SHA1: 2cbe388766b11d1792428b97c8a46c8b75cf5471
+SHA256: d8e415e1cb2aacba58082e499fc70d1e4e108c0b655279a034114eb1ec726611
+Description: Add to partman support for ext2, linux-swap, fat16, fat32 and ntfs
+
+Package: partman-efi
+Priority: standard
+Section: debian-installer
+Installed-Size: 125
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: amd64
+Version: 25ubuntu2.1
+Depends: partman-base (>= 129), dosfstools-udeb, cdebconf-udeb
+Filename: pool/main/p/partman-efi/partman-efi_25ubuntu2.1_amd64.udeb
+Size: 27296
+MD5sum: fd6e8fe9ed93c77041f133f70e0043e6
+SHA1: f04f7bea8e0be979e0158ba1effb014aaf8ee28d
+SHA256: b06be021ff25a266620d5e5e447b2636264f2c1ea230d26f6fee37a27fcc8024
+Description: Add to partman support for EFI boot partitions
 
 Package: pata-modules-3.5.0-18-generic-di
 Priority: standard
