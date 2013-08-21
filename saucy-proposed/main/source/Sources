@@ -240,38 +240,6 @@ Checksums-Sha256:
  696b78c03a2ef6de1b016a7982d2440ea21b527d9e031d1f4249a8b6707d2810 762244 google-mock_1.6.0+svn437.orig.tar.gz
  8924ebebb57fd6156a658acade853eb7c6d51047279902b474009322a0a2487d 5964 google-mock_1.6.0+svn437-0ubuntu3.debian.tar.gz
 
-Package: horizon
-Binary: python-django-horizon, openstack-dashboard, python-django-openstack, openstack-dashboard-ubuntu-theme
-Version: 1:2013.2~b2-0ubuntu3
-Priority: extra
-Section: net
-Maintainer: Chuck Short <zulcss@ubuntu.com>
-Build-Depends: debhelper (>= 8.0.0), python-pbr, python-d2to1, pylint, python-all (>= 2.6.6-3~), python-django-nose, python-mox, python-netaddr, python-nose, python-setuptools, python-sphinx
-Architecture: all
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/main/h/horizon
-Files:
- d3d470738e1879ad4c4666def8030cb9 1653 horizon_2013.2~b2-0ubuntu3.dsc
- 5da3751e5f5dd03e566063db506c9407 1856873 horizon_2013.2~b2.orig.tar.gz
- 25d96c5f79218aa98cc8c1e270e13c8b 203605 horizon_2013.2~b2-0ubuntu3.debian.tar.gz
-Homepage: http://launchpad.net/horizon
-Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/horizon/havana/files
-Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/horizon/havana
-Package-List: 
- openstack-dashboard deb net extra
- openstack-dashboard-ubuntu-theme deb net extra
- python-django-horizon deb python extra
- python-django-openstack deb net extra
-Checksums-Sha1:
- 488b7ed62b4495849d3105bc79998547db908258 1653 horizon_2013.2~b2-0ubuntu3.dsc
- 8aac4d31ff141bed7b49138b95a5c4b573b075aa 1856873 horizon_2013.2~b2.orig.tar.gz
- 33a821f8619263a592a08e3479bddec4e0dc50a7 203605 horizon_2013.2~b2-0ubuntu3.debian.tar.gz
-Checksums-Sha256:
- c1ca0bb94ebfb94c257267d704335e73c6f3dd6d26fe09b61f169517aad7f941 1653 horizon_2013.2~b2-0ubuntu3.dsc
- d70f33b2fe000ad0d2d46aa66d09ee1803081c36fda4134a37f71ee3590d7b0b 1856873 horizon_2013.2~b2.orig.tar.gz
- 2268345cb9a82413e77d1af6a5f824ff7c1fc40dcc559e036ac439dbb400bbee 203605 horizon_2013.2~b2-0ubuntu3.debian.tar.gz
-
 Package: icu
 Binary: libicu48, libicu48-dbg, libicu-dev, icu-tools, icu-doc
 Version: 4.8.1.1-12ubuntu1
@@ -699,6 +667,53 @@ Checksums-Sha256:
  8d759a6a3e50f0c12c07e555bcdafa10f7c74a2008af13a67dd640bf86108a88 2081 qtwebkit-source_2.3.2-0ubuntu1.dsc
  858d0d7b073c8c3b3d77ab344b5c67faf80041e30d2f9a91d259f92224906397 51649959 qtwebkit-source_2.3.2.orig.tar.gz
  0f95e06b3eb802e3f7df23e9f013bcbdda547173f2c984f04a39d68f29177d53 80539 qtwebkit-source_2.3.2-0ubuntu1.debian.tar.gz
+
+Package: samba
+Binary: samba, samba-common-bin, samba-common, samba-tools, smbclient, swat, samba-doc, samba-doc-pdf, libpam-smbpass, libsmbclient, libsmbclient-dev, winbind, libpam-winbind, libnss-winbind, samba-dbg, libwbclient0, libwbclient-dev
+Version: 2:3.6.18-1ubuntu1
+Section: net
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Samba Maintainers <pkg-samba-maint@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9~), libpam0g-dev, libreadline-dev, libcups2-dev, libacl1-dev [linux-any], libkrb5-dev (>= 1.10+dfsg~), libldap2-dev, po-debconf, libpopt-dev, uuid-dev, libtalloc-dev (>= 2.0.1-1~bpo50+1), libtdb-dev (>= 1.2.6~), libtevent-dev (>= 0.9.11~), libcap-dev [linux-any], libkeyutils-dev [linux-any], pkg-config
+Build-Conflicts: libfam-dev, python-ldb, python-ldb-dev
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/s/samba
+Files:
+ f0c8252ca171e98f18166a45810845fd 3169 samba_3.6.18-1ubuntu1.dsc
+ 3983bed6ce2dbed9ff7c7c1b4a45a9b1 26226096 samba_3.6.18.orig.tar.xz
+ 5b62f40104e5c571ad6207cd70e012c4 385192 samba_3.6.18-1ubuntu1.debian.tar.gz
+Uploaders: Steve Langasek <vorlon@debian.org>, Christian Perrier <bubulle@debian.org>, Noèl Köthe <noel@debian.org>, Jelmer Vernooij <jelmer@debian.org>
+Homepage: http://www.samba.org
+Vcs-Browser: http://git.debian.org/?p=pkg-samba/samba.git
+Vcs-Git: git://git.debian.org/git/pkg-samba/samba.git
+Package-List: 
+ libnss-winbind deb net optional
+ libpam-smbpass deb admin extra
+ libpam-winbind deb net optional
+ libsmbclient deb libs optional
+ libsmbclient-dev deb libdevel extra
+ libwbclient-dev deb libdevel optional
+ libwbclient0 deb libs optional
+ samba deb net optional
+ samba-common deb net optional
+ samba-common-bin deb net optional
+ samba-dbg deb debug extra
+ samba-doc deb doc optional
+ samba-doc-pdf deb doc optional
+ samba-tools deb net optional
+ smbclient deb net optional
+ swat deb net optional
+ winbind deb net optional
+Checksums-Sha1:
+ 97718f8e622c897d1bdd5e39c79e322b0cf2c675 3169 samba_3.6.18-1ubuntu1.dsc
+ 822af4a907b2d3bc396c40d8f92de616e24f446b 26226096 samba_3.6.18.orig.tar.xz
+ ce42e5e451bd0423973a6962f2aee76ee9e94efa 385192 samba_3.6.18-1ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 1d89563f8fcddba8b9a5f554baa5c074c846449ed341140a4060141e85a12e12 3169 samba_3.6.18-1ubuntu1.dsc
+ 23f6401d40979a219b9429933662417c9b80f10174170dc64638341bbee6a3f9 26226096 samba_3.6.18.orig.tar.xz
+ 0dca6c29a78360d96721002be0760098667e099daf5559e59a205e402530862d 385192 samba_3.6.18-1ubuntu1.debian.tar.gz
 
 Package: swig2.0
 Binary: swig, swig2.0, swig-examples, swig2.0-examples, swig-doc, swig2.0-doc
