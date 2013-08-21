@@ -177,6 +177,55 @@ Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: libhdate-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 229
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Hebrew Packaging Team <debian-hebrew-package@lists.alioth.debian.org>
+Architecture: amd64
+Source: libhdate
+Version: 1.6-1ubuntu2
+Depends: libhdate1 (= 1.6-1ubuntu2)
+Filename: pool/main/libh/libhdate/libhdate-dev_1.6-1ubuntu2_amd64.deb
+Size: 87740
+MD5sum: c9fd384abf4c5760b2061b49ec6d368d
+SHA1: 5f8ffea53e28148f73d73cef1a40f12dc8a54f05
+SHA256: 60a06cfad69b6b61efe8f4d9387dc38593510cee0481439ab4b38ceb1def218f
+Description: Provides a library that help use hebrew dates (development files)
+Multi-Arch: same
+Homepage: http://libhdate.sourceforge.net/
+Description-md5: 5a62335224b360f9d5a386f8a3d7eead
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libhdate1
+Priority: optional
+Section: libs
+Installed-Size: 116
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Hebrew Packaging Team <debian-hebrew-package@lists.alioth.debian.org>
+Architecture: amd64
+Source: libhdate
+Version: 1.6-1ubuntu2
+Replaces: libhdate0
+Depends: libc6 (>= 2.2.5)
+Pre-Depends: multiarch-support
+Conflicts: libhdate0
+Filename: pool/main/libh/libhdate/libhdate1_1.6-1ubuntu2_amd64.deb
+Size: 17526
+MD5sum: d9f257caca5cbebc4ba39b7f916b2226
+SHA1: 0e03091414a67f58240a55fb2d46e147eb1d2ebe
+SHA256: c155b205d625191df0d3aaf3dcd5ac96eed7c1c448d203fd8f8ea286bd549c54
+Description: Provides a library that help use hebrew dates
+Multi-Arch: same
+Homepage: http://libhdate.sourceforge.net/
+Description-md5: 0d005a41fc26bfcf767a9bf6c50c7d76
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libmirclient-dev
 Priority: optional
 Section: libdevel
@@ -935,6 +984,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: python-hdate
+Priority: optional
+Section: python
+Installed-Size: 140
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Hebrew Packaging Team <debian-hebrew-package@lists.alioth.debian.org>
+Architecture: amd64
+Source: libhdate
+Version: 1.6-1ubuntu2
+Provides: python2.7-hdate
+Depends: libhdate1 (= 1.6-1ubuntu2), python (>= 2.7.1-0ubuntu2), python (<< 2.8), libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Filename: pool/main/libh/libhdate/python-hdate_1.6-1ubuntu2_amd64.deb
+Size: 27272
+MD5sum: cae9f88fab1270373af4141636f5d3ec
+SHA1: a5a1ca2a1dd3969433ee6d09d6488f00601113a4
+SHA256: adf883d8a4f04494657dd75369ff8eaec6d6ebad2569f10cbaaf41a628b38c99
+Description: Provides a library that help use hebrew dates (python bindings)
+Multi-Arch: foreign
+Homepage: http://libhdate.sourceforge.net/
+Description-md5: efabe79e2bb30bfdfa484557fe89a79a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: python-mutagen
 Priority: optional
 Section: python
@@ -999,27 +1072,6 @@ Description-md5: cb100153cb4349bf80a9ff6012a3b6fa
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-
-Package: signon-ui
-Priority: optional
-Section: gnome
-Installed-Size: 425
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: amd64
-Version: 0.15daily13.06.25-0ubuntu1
-Depends: libaccounts-qt5-1, libc6 (>= 2.14), libglib2.0-0 (>= 2.12.0), libnotify4 (>= 0.7.0), libproxy1 (>= 0.4.7), libqt5core5 (>= 5.0.2), libqt5dbus5 (>= 5.0.2), libqt5gui5 (>= 5.0.2+dfsg1-4ubuntu1), libqt5network5 (>= 5.0.2), libqt5qml5, libqt5quick5, libqt5test5 (>= 5.0.2), libqt5webkit5, libqt5widgets5 (>= 5.0.2), libsignon-qt5-1, libstdc++6 (>= 4.1.1)
-Filename: pool/main/s/signon-ui/signon-ui_0.15daily13.06.25-0ubuntu1_amd64.deb
-Size: 145902
-MD5sum: 9577bf9dbc801d83f49dacb5d9f9e48a
-SHA1: 6152ff1e00b39222906508f18e32cb8890a888b1
-SHA256: eb7d13628401689b2e71377796fe45d1a56f1d2fcc734eae910d4d651973bfe1
-Description: Single Sign-on UI
-Homepage: https://launchpad.net/signon-ui
-Description-md5: c3261de338d126dcdc430c8beedea103
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: swig
 Priority: optional
