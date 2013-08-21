@@ -1,3 +1,47 @@
+Package: autoconf
+Priority: optional
+Section: devel
+Installed-Size: 1888
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ben Pfaff <pfaffben@debian.org>
+Architecture: all
+Version: 2.69-1.1
+Depends: perl (>> 5.005), m4 (>= 1.4.13), debianutils (>= 1.8)
+Recommends: automake | automaken
+Suggests: autoconf2.13, autoconf-archive, gnu-standards, autoconf-doc, libtool, gettext
+Breaks: autoconf2.13 (<< 2.13-47), gettext (<< 0.10.39), pkg-config (<< 0.25-1.1)
+Filename: pool/main/a/autoconf/autoconf_2.69-1.1_all.deb
+Size: 572778
+MD5sum: 2d4ce6fa21767741cb1d08c5e7d826d0
+SHA1: 703b5817d86c0087326959d451d39f4b9b61e2b4
+SHA256: 18ae636f1bc8bdce9017d8bfa87f94b7436b900ae0a97663e324e9cb868da0a8
+Description: automatic configure script builder
+Homepage: http://www.gnu.org/software/autoconf/
+Description-md5: 4ce0439e1f4ccd6c825471aa546f1611
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: autoconf-doc
+Priority: optional
+Section: doc
+Installed-Size: 4343
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ben Pfaff <pfaffben@debian.org>
+Architecture: all
+Source: autoconf
+Version: 2.69-1.1
+Depends: gnu-standards
+Filename: pool/main/a/autoconf/autoconf-doc_2.69-1.1_all.deb
+Size: 2908446
+MD5sum: cf5aa1b7a293e57337529d3aacbd1e69
+SHA1: ccacbbe05b149d1f9fc43b640712435bbb0165db
+SHA256: 5e8819b118b42b72e9b45270402da40e395b39973777170567d087a0af923876
+Description: automatic configure script builder documentation
+Homepage: http://www.gnu.org/software/autoconf/
+Description-md5: c941bf6d49c8e26e328c69ddd7cb39c1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: bzr
 Priority: optional
 Section: devel
@@ -66,6 +110,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: gir1.2-gstreamer-1.0
+Priority: optional
+Section: introspection
+Installed-Size: 1003
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: gstreamer1.0
+Version: 1.0.9-1
+Depends: gir1.2-glib-2.0
+Filename: pool/main/g/gstreamer1.0/gir1.2-gstreamer-1.0_1.0.9-1_armhf.deb
+Size: 85390
+MD5sum: 37242b73f5b7753f4b0a3afb4fa86a76
+SHA1: 5846956042a963d56a12302ff0f6fc915ea1c195
+SHA256: 8b0d6b625e706beffdf93b0082b8f7461a39350f7df80519f8be8d4a34c545b0
+Description: Description: GObject introspection data for the GStreamer library
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: 77a6d9cb5ff0c6e1dc81858155a05394
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: google-mock
 Priority: optional
 Section: devel
@@ -86,6 +152,72 @@ Homepage: http://code.google.com/p/googlemock/
 Description-md5: 95d9b26f75a8f8f8a93fbe8e13d5b0e9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: gstreamer1.0-doc
+Priority: optional
+Section: doc
+Installed-Size: 7674
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: gstreamer1.0
+Version: 1.0.9-1
+Depends: libglib2.0-doc
+Recommends: libgstreamer1.0-dev (= 1.0.9-1)
+Filename: pool/main/g/gstreamer1.0/gstreamer1.0-doc_1.0.9-1_all.deb
+Size: 706998
+MD5sum: d430489d71fd5292996e284afe01fa17
+SHA1: 57321d51a13db73bf73e917a9b2c1ddde05f914b
+SHA256: b2985cd2fb160470de40f1f8981922900e8e490aa7dc551a35e3f3d44ff035b4
+Description: GStreamer core documentation and manuals
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: 2274936f9039765c43e33252ae21527d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gstreamer1.0-plugins-base-doc
+Priority: optional
+Section: doc
+Installed-Size: 4972
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: gst-plugins-base1.0
+Version: 1.0.9-1
+Depends: libglib2.0-doc, gstreamer1.0-doc
+Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-plugins-base-doc_1.0.9-1_all.deb
+Size: 310258
+MD5sum: c2709be46449be3e5e9ebe0491c6a923
+SHA1: 7d3e149c6df06d082519ba031c9e004219e25d8c
+SHA256: ab347ca540ca691f03b5a5fe6c10ac738c24cdec60657b09f1586cb1b38ded8b
+Description: GStreamer documentation for plugins from the "base" set
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: aaf86bd34d894dca484623ae59419aad
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gstreamer1.0-tools
+Priority: optional
+Section: utils
+Installed-Size: 851
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: gstreamer1.0
+Version: 1.0.9-1
+Depends: libc6 (>= 2.7), libglib2.0-0 (>= 2.32), pkg-config, libgstreamer1.0-0 (>= 0.11.94)
+Suggests: gstreamer1.0-plugins-base
+Filename: pool/main/g/gstreamer1.0/gstreamer1.0-tools_1.0.9-1_armhf.deb
+Size: 42700
+MD5sum: 5c862a58bf9bf616dbd980b0a258a758
+SHA1: 822ae6d089dcb5ba8ef3507e4315144366552287
+SHA256: bbd9413c0cef020ac40e586726514cfd69aa3729b06fdc72fe97092663253472
+Description: Tools for use with GStreamer
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: 909df9df4ba32a53040e4e54751c1cfa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
@@ -194,6 +326,76 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: libgstreamer1.0-0
+Priority: optional
+Section: libs
+Installed-Size: 2128
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: gstreamer1.0
+Version: 1.0.9-1
+Depends: libc6 (>= 2.17), libglib2.0-0 (>= 2.37.3)
+Pre-Depends: multiarch-support
+Suggests: gstreamer1.0-tools, gstreamer1.0-plugins-base
+Filename: pool/main/g/gstreamer1.0/libgstreamer1.0-0_1.0.9-1_armhf.deb
+Size: 689366
+MD5sum: a56ab51293a2403ef83facc05374189f
+SHA1: c102f29ab23526c714f159cdf200f10ac3e8c375
+SHA256: 84c748d9e71e31568300a3fca4bec842359ff3c65edefa875d70256c92257d1c
+Description: Core GStreamer libraries and elements
+Multi-Arch: same
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: f08b5d59945781d0a8d4897e45d5a847
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-active-live, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgstreamer1.0-0-dbg
+Priority: extra
+Section: debug
+Installed-Size: 2930
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: gstreamer1.0
+Version: 1.0.9-1
+Depends: libgstreamer1.0-0 (= 1.0.9-1)
+Filename: pool/main/g/gstreamer1.0/libgstreamer1.0-0-dbg_1.0.9-1_armhf.deb
+Size: 1837320
+MD5sum: 4e40f2711ba93372fba9989c33de7de4
+SHA1: 378b7fd7944606fe482315b9a12394179dc3c877
+SHA256: 507b5af7e8f98846f3cc6da4fdafddd673d6f24ed03f5f2833c2a4f3f1635b81
+Description: Core GStreamer libraries and elements
+Multi-Arch: same
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: eca1cd2ce224cc45fde385a4110da4ae
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgstreamer1.0-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 3814
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: gstreamer1.0
+Version: 1.0.9-1
+Depends: libgstreamer1.0-0 (= 1.0.9-1), libc6-dev | libc-dev, pkg-config, libglib2.0-dev, libc6 (>= 2.4), libglib2.0-0 (>= 2.32), gir1.2-gstreamer-1.0 (= 1.0.9-1)
+Recommends: debhelper
+Suggests: gstreamer1.0-doc
+Filename: pool/main/g/gstreamer1.0/libgstreamer1.0-dev_1.0.9-1_armhf.deb
+Size: 427972
+MD5sum: be17c9d1641558a3986ce13b92cc78c3
+SHA1: 836b5c01396c36eedb23babbe2286164b115f05b
+SHA256: bda7981fbc19769ea4e49011583bb5ef1a30ec752e20ce3a7f8651086d235cac
+Description: GStreamer core development files
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: de1692260510350a48f76ec91eae40a9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libharfbuzz-dev
 Priority: optional
 Section: libdevel
@@ -263,53 +465,6 @@ Description-md5: c01a2a5a6349f465ee349884ac4d8667
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: virt-host, ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libhdate-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 209
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Hebrew Packaging Team <debian-hebrew-package@lists.alioth.debian.org>
-Architecture: armhf
-Source: libhdate
-Version: 1.6-1ubuntu2
-Depends: libhdate1 (= 1.6-1ubuntu2)
-Filename: pool/main/libh/libhdate/libhdate-dev_1.6-1ubuntu2_armhf.deb
-Size: 85786
-MD5sum: 412e60974aaf2c59a5440fd1526fd691
-SHA1: cd60e36b6250ad1f25ceb82e84d7d24280147bf7
-SHA256: 111736980043881e20ff4242e1455ad7c2c8d9f319964e29a5a296c44ec2d8fa
-Description: Provides a library that help use hebrew dates (development files)
-Multi-Arch: same
-Homepage: http://libhdate.sourceforge.net/
-Description-md5: 5a62335224b360f9d5a386f8a3d7eead
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libhdate1
-Priority: optional
-Section: libs
-Installed-Size: 100
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Hebrew Packaging Team <debian-hebrew-package@lists.alioth.debian.org>
-Architecture: armhf
-Source: libhdate
-Version: 1.6-1ubuntu2
-Replaces: libhdate0
-Depends: libc6 (>= 2.4)
-Pre-Depends: multiarch-support
-Conflicts: libhdate0
-Filename: pool/main/libh/libhdate/libhdate1_1.6-1ubuntu2_armhf.deb
-Size: 14562
-MD5sum: 6a8e078ff7b0ccf935e5121f6dd6f1a2
-SHA1: 5727f13e02ded95b64de69249ded96b1243cdadb
-SHA256: 98652f4da13c35020f7dd79c03e3735b8cf0aa276e9e84885a5b10c87e3ec281
-Description: Provides a library that help use hebrew dates
-Multi-Arch: same
-Homepage: http://libhdate.sourceforge.net/
-Description-md5: 0d005a41fc26bfcf767a9bf6c50c7d76
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
 
 Package: libmirclient-dev
 Priority: optional
@@ -993,29 +1148,6 @@ SHA256: 483fd3d7b5ae38497d95b029293963c1900a801e90f655f919ea00f6be2eeda5
 Description: Client library for Openstack ceilometer server.
 Homepage: http://launchpad.net/ceilometer
 Description-md5: 8360711c53b0232a05d62ddd46e3d049
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: python-hdate
-Priority: optional
-Section: python
-Installed-Size: 118
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Hebrew Packaging Team <debian-hebrew-package@lists.alioth.debian.org>
-Architecture: armhf
-Source: libhdate
-Version: 1.6-1ubuntu2
-Provides: python2.7-hdate
-Depends: libhdate1 (= 1.6-1ubuntu2), python (>= 2.7.1-0ubuntu2), python (<< 2.8), libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.3.0)
-Filename: pool/main/libh/libhdate/python-hdate_1.6-1ubuntu2_armhf.deb
-Size: 23294
-MD5sum: cc0252fb6d5ef0745dc659bc4478b725
-SHA1: 73c7343beb298d384e8943c0a270ccedcc97e13b
-SHA256: 64fab99641f2d46f1a8942b35a8b1c97843a183dda72e5e9df43f37c4fd98727
-Description: Provides a library that help use hebrew dates (python bindings)
-Multi-Arch: foreign
-Homepage: http://libhdate.sourceforge.net/
-Description-md5: efabe79e2bb30bfdfa484557fe89a79a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
