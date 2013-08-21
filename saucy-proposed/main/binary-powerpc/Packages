@@ -132,6 +132,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
+Package: gir1.2-unity-5.0
+Priority: optional
+Section: libs
+Installed-Size: 162
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: libunity
+Version: 7.0.12+13.10.20130821-0ubuntu1
+Depends: gir1.2-dbusmenu-glib-0.4, gir1.2-dee-1.0, gir1.2-glib-2.0, libunity9 (>= 7.0.11+13.10.20130816.2)
+Filename: pool/main/libu/libunity/gir1.2-unity-5.0_7.0.12+13.10.20130821-0ubuntu1_powerpc.deb
+Size: 21134
+MD5sum: 29b20fbfe4bcd6f16f628a6b4bab61a8
+SHA1: d0001e42847d40a5a63601b1a2b3d77f773031d1
+SHA256: c098fb00eadbf0a30435f7fee1a9cc64e978822325bf852abfb392067485fd5d
+Description: GObject introspection data for the Unity library
+Multi-Arch: same
+Homepage: https://launchpad.net/libunity
+Description-md5: 162c569a3952f4e1717dfc2d72f6bb6c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
 Package: google-mock
 Priority: optional
 Section: devel
@@ -551,6 +573,26 @@ Description-md5: 2f06b7e1bfdb9f620d92f9696d24fabc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libplatform-api1-doc
+Priority: optional
+Section: doc
+Installed-Size: 3971
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: platform-api
+Version: 0.18.3+13.10.20130821-0ubuntu1
+Depends: libplatform-api1-dev
+Filename: pool/main/p/platform-api/libplatform-api1-doc_0.18.3+13.10.20130821-0ubuntu1_all.deb
+Size: 1482996
+MD5sum: 3de0ce0511a9cf1778f89611eaedc7bc
+SHA1: b8cd27c409ec55630a3d1952103cd9b77e76d8e5
+SHA256: 416a5f5b5dd0cb39db774a1f3bdcbb3028795c5f84659560423bb8b9a68b3ff2
+Description: Platform API for system level capabilities (development)
+Homepage: https://launchpad.net/platform-api
+Description-md5: 91dba5b6aae30b22730a6ddbabdb540f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libprocps0
 Priority: required
 Section: admin
@@ -780,6 +822,118 @@ Homepage: http://trac.webkit.org/wiki/QtWebKit
 Description-md5: 2b35e7ad9905f44038a180fc098adcca
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libubuntu-platform-api1-dev
+Priority: optional
+Section: oldlibs
+Installed-Size: 31
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: platform-api
+Version: 0.18.3+13.10.20130821-0ubuntu1
+Depends: libplatform-api1-dev (= 0.18.3+13.10.20130821-0ubuntu1)
+Filename: pool/main/p/platform-api/libubuntu-platform-api1-dev_0.18.3+13.10.20130821-0ubuntu1_all.deb
+Size: 1482
+MD5sum: cd0ffa090608e43d5d8502c6904bf47a
+SHA1: 5d8e2e17e83d423dbf5df678628aba84585f8dc8
+SHA256: 8947e3d3792f65e1e07d3d0546c187f38c47fdab49ead2dbce9d4e4cb1f6923b
+Description: dummy transitional package for libplatform-api1-dev
+Homepage: https://launchpad.net/platform-api
+Description-md5: de56e227a9689823f5b844fcd76d0d40
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libunity-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 522
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: libunity
+Version: 7.0.12+13.10.20130821-0ubuntu1
+Replaces: libunity9 (<< 5.90)
+Depends: gir1.2-unity-5.0 (= 7.0.12+13.10.20130821-0ubuntu1), libunity9 (= 7.0.12+13.10.20130821-0ubuntu1), libunity-protocol-private0 (= 7.0.12+13.10.20130821-0ubuntu1), libglib2.0-dev, libdee-dev, libgee-dev, libdbusmenu-glib-dev
+Filename: pool/main/libu/libunity/libunity-dev_7.0.12+13.10.20130821-0ubuntu1_powerpc.deb
+Size: 49852
+MD5sum: ac603378904ce5aab03133a1e53a04ec
+SHA1: ea177bcaa833d9c8820029927510d8dab9a4793e
+SHA256: 27038da177c8e3b2ec6701121df6e06fc3ac5fe184c57cb1fb0857bc280d96b6
+Description: binding to get places into the launcher - development files
+Homepage: https://launchpad.net/libunity
+Description-md5: 940646542d41ed6501a55676f7cc379f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libunity-protocol-private0
+Priority: optional
+Section: libs
+Installed-Size: 340
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: libunity
+Version: 7.0.12+13.10.20130821-0ubuntu1
+Depends: libc6 (>= 2.3.5), libdee-1.0-4 (>= 1.0.0), libglib2.0-0 (>= 2.37.3)
+Pre-Depends: multiarch-support
+Filename: pool/main/libu/libunity/libunity-protocol-private0_7.0.12+13.10.20130821-0ubuntu1_powerpc.deb
+Size: 90038
+MD5sum: 1136c8835fe178668eae6fd150872744
+SHA1: d4f701fd7e06ba6d5c289116b1685236d581dc13
+SHA256: 69a2cd92db8e395ae86222f2d32633207e08862f9f358a8f02d2ae0ba084df1a
+Description: binding to get places into the launcher - private library
+Multi-Arch: same
+Homepage: https://launchpad.net/libunity
+Description-md5: de4784aed16d63b7fb02d506575d1fe6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libunity-scopes-json-def-desktop
+Priority: optional
+Section: gnome
+Installed-Size: 51
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: libunity
+Version: 7.0.12+13.10.20130821-0ubuntu1
+Replaces: libunity-common (<< 7.0.7)
+Provides: libunity-common, unity-scopes-json-def
+Conflicts: libunity-common (<< 7.0.7), unity-scopes-json-def
+Filename: pool/main/libu/libunity/libunity-scopes-json-def-desktop_7.0.12+13.10.20130821-0ubuntu1_all.deb
+Size: 4434
+MD5sum: 41ea43b6bd98da702421e661a01ea0a8
+SHA1: c635f132c1859b6cd3cfb3d907c815accc9b3060
+SHA256: 7059bd81b58cfb0dfdb2ac1052fda3b8b38508e34aa2af55b69ac7d869e5e254
+Description: binding to get places into the launcher - desktop def file
+Multi-Arch: foreign
+Homepage: https://launchpad.net/libunity
+Description-md5: c272d9c9f1482ba09fbb8b8fdb9cc568
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libunity9
+Priority: optional
+Section: libs
+Installed-Size: 834
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: libunity
+Version: 7.0.12+13.10.20130821-0ubuntu1
+Depends: libc6 (>= 2.3.5), libdbusmenu-glib4 (>= 0.4.2), libdee-1.0-4 (>= 1.2.3~daily13.02.26), libgee2 (>= 0.5.0), libglib2.0-0 (>= 2.37.3), libunity-protocol-private0 (>= 7.0.12+13.10.20130821), dconf-gsettings-backend | gsettings-backend, libunity-scopes-json-def-desktop (>= 7.0.12+13.10.20130821-0ubuntu1) | unity-scopes-json-def
+Pre-Depends: multiarch-support
+Suggests: unity-common (>= 7.0.0)
+Filename: pool/main/libu/libunity/libunity9_7.0.12+13.10.20130821-0ubuntu1_powerpc.deb
+Size: 241978
+MD5sum: ac365a24fba94082e98ece1899a79904
+SHA1: 150e46805cd747d8528252bd537904ee54fde638
+SHA256: 1ee36f9a1d5546556de050b71e5d433a2c5585c3582acbe177537cd2b6bb4e34
+Description: binding to get places into the launcher - shared library
+Multi-Arch: same
+Homepage: https://launchpad.net/libunity
+Description-md5: 0bdcbe46903d5a11a88d8cfa7be5f803
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libwayland-client0
 Priority: optional
@@ -1279,6 +1433,32 @@ Description-md5: 36aea35250eb42eb8dfe870c124f95c3
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-apt
+Priority: optional
+Section: python
+Installed-Size: 706
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Version: 0.8.9.1ubuntu1
+Provides: python2.7-apt
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), libapt-inst1.5 (>= 0.8.11), libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0), python-apt-common
+Recommends: lsb-release, iso-codes, xz-utils
+Suggests: python-apt-dbg, python-gtk2, python-vte, python-apt-doc
+Breaks: apt-forktracer (<< 0.3), apt-listchanges (<< 2.85), apt-p2p (<< 0.1.6), apt-xapian-index (<< 0.25), aptdaemon (<< 0.11+bzr343-1~), aptoncd (<< 0.1.98+bzr117), bcfg2 (<< 1.0.1), bzr-builddeb (<< 2.4), computer-janitor (<< 1.14.1-1+), debdelta (<< 0.41+), debpartial-mirror (<< 0.2.98), debsecan (<< 0.4.15), gdebi (<< 0.6.1), germinate (<< 1.21), gnome-codec-install (<< 0.4.5), mini-dinstall (<< 0.6.28), packagekit-backend-apt (<= 0.4.8-0ubuntu4), python-cdd (<< 0.0.10), python-dogtail (<< 0.6.1-3.1+), python-software-properties (<< 0.70.debian-1+), rebuildd (<< 0.3.9), software-center (<< 1.1.21debian2), tla-buildpackage (<< 0.9.14), ubuntu-dev-tools (<< 0.93debian1), unattended-upgrades (<< 0.42debian2), update-manager (<< 0.200.2-1), update-notifier (<< 0.99.3debian9), wajig (<< 2.0.46)
+Filename: pool/main/p/python-apt/python-apt_0.8.9.1ubuntu1_powerpc.deb
+Size: 181880
+MD5sum: d81e77800c8fb6f616b952582a3ff282
+SHA1: 2471f1c2d918c153f85d8c16504a99a4a4aed00e
+SHA256: 4dca3c5a5faf789c2655514d0a07b129af48ebbe797a885c244956f7cdb1294d
+Description: Python interface to libapt-pkg
+Multi-Arch: allowed
+Python-Version: 2.7
+Description-md5: 2b295efc7c4e39a13486f5a6990ce22b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: python-apt-common
 Priority: standard
 Section: python
@@ -1302,6 +1482,28 @@ Description-md5: 9486cdd426b423b724eaae43fef5dcd7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: python-apt-dbg
+Priority: extra
+Section: python
+Installed-Size: 5506
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: python-apt
+Version: 0.8.9.1ubuntu1
+Depends: python-dbg, python-apt (= 0.8.9.1ubuntu1), libapt-inst1.5 (>= 0.8.11), libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Filename: pool/main/p/python-apt/python-apt-dbg_0.8.9.1ubuntu1_powerpc.deb
+Size: 2291606
+MD5sum: 8648764d63e7ce71ff758d86e94370b0
+SHA1: dcdd043cf3c3529e3b14d5d0c873cc9170366049
+SHA256: f59ddcbb76eb05743f7a40885a1215f52b0227fb5bfb447d664076a73c1c10d3
+Description: Python interface to libapt-pkg (debug extension)
+Multi-Arch: allowed
+Python-Version: 2.7
+Description-md5: c794a1d7769c7ce363f782474b040101
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: python-apt-dev
 Priority: optional
@@ -1578,6 +1780,56 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntustudio-audio
 
+Package: python3-apt
+Priority: standard
+Section: python
+Installed-Size: 675
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: python-apt
+Version: 0.8.9.1ubuntu1
+Replaces: python-apt (<< 0.7.98+nmu1)
+Provides: python3.3-apt
+Depends: python3 (>= 3.3), python3 (<< 3.4), libapt-inst1.5 (>= 0.8.11), libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0), python-apt-common
+Recommends: lsb-release, iso-codes
+Suggests: python3-apt-dbg, python-apt-doc
+Breaks: python-apt (<< 0.7.98+nmu1)
+Filename: pool/main/p/python-apt/python3-apt_0.8.9.1ubuntu1_powerpc.deb
+Size: 179974
+MD5sum: 0f97d0bef48b1b15ab61aec897677645
+SHA1: 7aeab3745993e1992c99eb3029b0c75cf8eab3c6
+SHA256: 755ea7b8056dc9f3382eeb7044e5beb004bc37603dc5a09136cdd0a163803b9a
+Description: Python 3 interface to libapt-pkg
+Multi-Arch: allowed
+Description-md5: 4e7bf010b1b89e36309ea2f4b7005936
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: python3-apt-dbg
+Priority: extra
+Section: debug
+Installed-Size: 5491
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: python-apt
+Version: 0.8.9.1ubuntu1
+Replaces: python-apt (<< 0.7.98+nmu1)
+Depends: python3-dbg, python3-apt (= 0.8.9.1ubuntu1), libapt-inst1.5 (>= 0.8.11), libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Breaks: python-apt (<< 0.7.98+nmu1)
+Filename: pool/main/p/python-apt/python3-apt-dbg_0.8.9.1ubuntu1_powerpc.deb
+Size: 2287348
+MD5sum: e877a11eb31a19a97e0df70d0e7dfa53
+SHA1: ed06784582f0ca138609ad2fd118e77cb40d3b51
+SHA256: 328fc7bf4b3626e4ba2b48cce4378e8be6dae4826643b5d0ba970ec3eece6dda
+Description: Python 3 interface to libapt-pkg (debug extension)
+Multi-Arch: allowed
+Description-md5: 9d43d2b6dae33ea4f6ee571da79dbd51
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: swig
 Priority: optional
 Section: interpreters
@@ -1712,6 +1964,26 @@ Description-md5: 3ab5c9257106ba955b283c3165f0b8c9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: unity-scopes-runner
+Priority: optional
+Section: gnome
+Installed-Size: 52
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: libunity
+Version: 7.0.12+13.10.20130821-0ubuntu1
+Filename: pool/main/libu/libunity/unity-scopes-runner_7.0.12+13.10.20130821-0ubuntu1_all.deb
+Size: 4946
+MD5sum: 3c864157ce7e3a8de0507865f0d423cb
+SHA1: 6c756698ba19fed5b0eff2a1aeb15144b8e2d36f
+SHA256: d3f37642f086ff73ef7bad5c07a21b317a338b6b02d7370318f0ede964e09a92
+Description: desktop runner for misceallenous scopes
+Homepage: https://launchpad.net/libunity
+Description-md5: 08e02b02866b8cee0b5d062879555ad8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
 Package: unity-webapps-common
 Priority: optional
 Section: gnome
@@ -1760,4 +2032,27 @@ Description-md5: 83f8894d390ffa31e34c89e43fc95bb1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: xinetd
+Priority: extra
+Section: net
+Installed-Size: 314
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Salvo 'LtWorf' Tomaselli <tiposchi@tiscali.it>
+Architecture: powerpc
+Version: 1:2.3.15-1ubuntu1
+Provides: inet-superserver
+Depends: libc6 (>= 2.15), libwrap0 (>= 7.6-4~), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), netbase, update-inetd
+Recommends: rsyslog | system-log-daemon, logrotate
+Conflicts: inet-superserver
+Filename: pool/main/x/xinetd/xinetd_2.3.15-1ubuntu1_powerpc.deb
+Size: 122314
+MD5sum: 014d03bc791c49f283cf6701e9d9d2cb
+SHA1: 6ff01322de56650382cdcd7f79eb818a708afa29
+SHA256: 170e028f13f07c05972827ad9accc4f0569b58e0a82b3d8486197a07f2f4e92b
+Description: replacement for inetd with many enhancements
+Homepage: http://www.xinetd.org
+Description-md5: dc305c474ff901c52b71c07c0ec109d0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
