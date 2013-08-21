@@ -795,6 +795,44 @@ Checksums-Sha256:
  23f6401d40979a219b9429933662417c9b80f10174170dc64638341bbee6a3f9 26226096 samba_3.6.18.orig.tar.xz
  0dca6c29a78360d96721002be0760098667e099daf5559e59a205e402530862d 385192 samba_3.6.18-1ubuntu1.debian.tar.gz
 
+Package: sendmail
+Binary: sendmail-bin, rmail, sensible-mda, libmilter1.0.1, libmilter1.0.1-dbg, libmilter-dev, sendmail-doc, sendmail, sendmail-base, sendmail-cf
+Version: 8.14.4-2.1ubuntu3
+Section: mail
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Richard A Nelson (Rick) <cowboy@debian.org>
+Build-Depends: make (>> 3.79.1-14), m4, cdbs, quilt, patchutils, dh-buildinfo, debhelper (>= 5), linux-libc-dev (>= 2.6.21-3) [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], groff, bsdmainutils, libdb-dev, libldap2-dev, libwrap0-dev, liblockfile-dev, libsasl2-dev, libssl-dev
+Build-Depends-Indep: groff, bsdmainutils
+Build-Conflicts: bind-dev, fakeroot (<< 0.4.5), libbind-dev
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/s/sendmail
+Files:
+ 5b78ff4bdd85890c4a11663a8bf1b584 2583 sendmail_8.14.4-2.1ubuntu3.dsc
+ 55701f352bb8285e4de14ad6f3d48e35 2072180 sendmail_8.14.4.orig.tar.gz
+ a89317b235725f6467574a72af8eed5e 487406 sendmail_8.14.4-2.1ubuntu3.diff.gz
+Homepage: http://www.sendmail.org
+Package-List: 
+ libmilter-dev deb libdevel extra
+ libmilter1.0.1 deb libs extra
+ libmilter1.0.1-dbg deb libs extra
+ rmail deb mail extra
+ sendmail deb mail extra
+ sendmail-base deb mail extra
+ sendmail-bin deb mail extra
+ sendmail-cf deb mail extra
+ sendmail-doc deb doc extra
+ sensible-mda deb mail extra
+Checksums-Sha1:
+ 0e821cd2e1699630478589923b53e96d30972982 2583 sendmail_8.14.4-2.1ubuntu3.dsc
+ 401096475f2e89f68ca5edc1456eb13269f950ad 2072180 sendmail_8.14.4.orig.tar.gz
+ c060f6246e16199dc0444f58f0b3a178cbe0d1b7 487406 sendmail_8.14.4-2.1ubuntu3.diff.gz
+Checksums-Sha256:
+ 41006892d3e1093ddbd765d019dbcf8c8c979b9ad25ca049506e12bc8527fbcf 2583 sendmail_8.14.4-2.1ubuntu3.dsc
+ 40246cd35e99c40f22f4e88d328ff0084ef925257f2b0708a62ee6588725c7a3 2072180 sendmail_8.14.4.orig.tar.gz
+ f8215b71cc6987e18ecea6d0c9fda5a494ba5122e09ece7fbda0dd0c2dc582ad 487406 sendmail_8.14.4-2.1ubuntu3.diff.gz
+
 Package: swig2.0
 Binary: swig, swig2.0, swig-examples, swig2.0-examples, swig-doc, swig2.0-doc
 Version: 2.0.10-0ubuntu2
@@ -866,39 +904,6 @@ Checksums-Sha256:
  9dee336175cc965d523595fe742be77960f662300ea56534e542a612c14df675 3282 ubiquity_2.15.14.dsc
  ffa66c1028bdfbf33cc5e9ddc39a51e8c99cb1aed215cbd858ed6b0b138ad578 6822620 ubiquity_2.15.14.tar.xz
 Testsuite: autopkgtest
-
-Package: ubiquity-slideshow-ubuntu
-Binary: ubiquity-slideshow-ubuntu, ubiquity-slideshow-kubuntu, ubiquity-slideshow-xubuntu, ubiquity-slideshow-lubuntu, ubiquity-slideshow-edubuntu, ubiquity-slideshow-ubuntustudio, ubiquity-slideshow-ubuntu-gnome, oem-config-slideshow-ubuntu
-Version: 73
-Priority: optional
-Section: x11
-Maintainer: Ubiquity Slideshow Team <ubiquity-slideshow@lists.launchpad.net>
-Build-Depends: cdbs, debhelper (>= 5)
-Build-Depends-Indep: po4a, python-utidylib, python
-Architecture: all
-Standards-Version: 3.9.4
-Format: 3.0 (native)
-Directory: pool/main/u/ubiquity-slideshow-ubuntu
-Files:
- 7989caeacb5d18c1fc8d08c29839cf5e 2256 ubiquity-slideshow-ubuntu_73.dsc
- 80a096b85caf5f1a8d3d159de37ff069 6903982 ubiquity-slideshow-ubuntu_73.tar.bz2
-Homepage: https://launchpad.net/ubiquity-slideshow-ubuntu
-Vcs-Bzr: https://code.launchpad.net/~ubiquity-slideshow/ubiquity-slideshow-ubuntu/html
-Package-List: 
- oem-config-slideshow-ubuntu deb x11 optional
- ubiquity-slideshow-edubuntu deb x11 optional
- ubiquity-slideshow-kubuntu deb x11 optional
- ubiquity-slideshow-lubuntu deb x11 optional
- ubiquity-slideshow-ubuntu deb x11 optional
- ubiquity-slideshow-ubuntu-gnome deb x11 optional
- ubiquity-slideshow-ubuntustudio deb x11 optional
- ubiquity-slideshow-xubuntu deb x11 optional
-Checksums-Sha1:
- 164a64a510719b50ef89511fdc08e263e007db84 2256 ubiquity-slideshow-ubuntu_73.dsc
- 3a14e01f47b2284fd5614381e6e7fd2f756bf03d 6903982 ubiquity-slideshow-ubuntu_73.tar.bz2
-Checksums-Sha256:
- 3ccfa8e1ba97cab62d537e2e987eea1fd13d30b808376ee638a449b9e5b70d7c 2256 ubiquity-slideshow-ubuntu_73.dsc
- 22134d264319d73a05a63901c3c423cfe0867a4fc79281e452fd9996272184d0 6903982 ubiquity-slideshow-ubuntu_73.tar.bz2
 
 Package: usb-modeswitch-data
 Binary: usb-modeswitch-data
