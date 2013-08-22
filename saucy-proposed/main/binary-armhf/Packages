@@ -1964,6 +1964,28 @@ Description-md5: 26c0b1367c90a234ef963ea672b0ecc9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python3-distupgrade
+Priority: standard
+Section: python
+Installed-Size: 664
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: ubuntu-release-upgrader
+Version: 1:0.200
+Replaces: python3-update-manager (<< 1:0.165)
+Depends: python3 (>= 3.2.3-3~), python3-update-manager, python3-apt (>= 0.8.5~), lsb-release
+Breaks: python3-update-manager (<< 1:0.165)
+Filename: pool/main/u/ubuntu-release-upgrader/python3-distupgrade_0.200_all.deb
+Size: 143736
+MD5sum: 0476347349b393ae30330521357d1129
+SHA1: e833cf57b3d863d7ae64a05e4a9f15f954ed9d0e
+SHA256: d9d9d0938b708b32d71cfc672760336f9bd755109856bf6310bbe9c68c23702c
+Description: manage release upgrades
+Description-md5: f6e22affea82016bac7bf2c9371af261
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
 Package: python3-pyqt4
 Priority: optional
 Section: python
@@ -2335,6 +2357,49 @@ Description-md5: a7bbb2b9a8b2a3fbc7110f5a8d336a36
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: ubuntu-release-upgrader-core
+Priority: standard
+Section: admin
+Installed-Size: 312
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: ubuntu-release-upgrader
+Version: 1:0.200
+Replaces: update-manager (<< 1:0.165), update-manager-core (<< 1:0.165)
+Depends: python3 (>= 3.2), python3-distupgrade (= 1:0.200)
+Recommends: libpam-modules (>= 1.0.1-9ubuntu3)
+Breaks: software-properties (<< 0.9.27), update-manager (<< 1:0.165), update-manager-core (<< 1:0.165)
+Filename: pool/main/u/ubuntu-release-upgrader/ubuntu-release-upgrader-core_0.200_all.deb
+Size: 23878
+MD5sum: 663c63e8bed85c0ad7cc0c6e3b5371be
+SHA1: f98000462cd52d37784786fc2ad72456193dc885
+SHA256: d05c77fa02b5b72712c45d386c453741e9b9bda5b3c2c58acca11f8cbfd38c23
+Description: manage release upgrades
+Description-md5: 9b6ae3ba71aff05989e4c93c17227206
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: ubuntu-release-upgrader-gtk
+Priority: optional
+Section: admin
+Installed-Size: 218
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: ubuntu-release-upgrader
+Version: 1:0.200
+Depends: ubuntu-release-upgrader-core (= 1:0.200), update-manager, python3-distupgrade (= 1:0.200), python3-dbus, python3-gi (>= 3.8), gir1.2-vte-2.90, gir1.2-gtk-3.0, gir1.2-webkit-3.0
+Filename: pool/main/u/ubuntu-release-upgrader/ubuntu-release-upgrader-gtk_0.200_all.deb
+Size: 10720
+MD5sum: 90a20a7d5aeb95b67f30779d80c2754b
+SHA1: da42c7f8c2c66ef94b3e4ab7b6f2ea2c261cae7d
+SHA256: c4c636ef20674a4f468d6c882d97c9dbb8964ba2d6bc2d54496cbd0ae1c30b9e
+Description: manage release upgrades
+Description-md5: 0f775b1b3e524ee71526ea41b76d44cb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: unity-webapps-common
 Priority: optional
