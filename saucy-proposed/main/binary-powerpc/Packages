@@ -763,6 +763,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: liblxc0
+Priority: optional
+Section: admin
+Installed-Size: 337
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: lxc
+Version: 0.9.0-0ubuntu23
+Replaces: lxc (<< 0.9.0~alpha3-0ubuntu1~)
+Depends: libapparmor1 (>= 2.6~devel), libc6 (>= 2.17), libcap2 (>= 2.10)
+Pre-Depends: multiarch-support
+Breaks: lxc (<< 0.9.0~alpha3-0ubuntu1~)
+Filename: pool/main/l/lxc/liblxc0_0.9.0-0ubuntu23_powerpc.deb
+Size: 102164
+MD5sum: f7ad0625499f0469d7dc5a719843df77
+SHA1: b6a95be6127648da34482dfdc72515de13c56a20
+SHA256: 6432294e02578264a8c9c35e92c9dc1905b1a14f58b366779318d7b2c7ee5d37
+Description: Linux Containers userspace tools (library)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: d757397b1a93a5bea5c72032f3ef485d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
 Package: libmysqlclient-dev
 Priority: optional
 Section: libdevel
@@ -942,6 +966,45 @@ Description-md5: de56e227a9689823f5b844fcd76d0d40
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-doc
+Priority: optional
+Section: doc
+Installed-Size: 28711
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.11.0-3.8
+Replaces: linux-doc-3
+Conflicts: linux-doc-3
+Filename: pool/main/l/linux/linux-doc_3.11.0-3.8_all.deb
+Size: 9049258
+MD5sum: 0c0339331408bbacbc494b0754b87f20
+SHA1: f096cd4a1032d71520514cfac5d66f4a10183ea2
+SHA256: 9c258290ad84c3c682fe969e5e78fd0b66ab1fa30517ca734af81d9e2e235f06
+Description: Linux kernel specific documentation for version 3.11.0
+Description-md5: 0a37fb386e5cb54f02b758d24333bb91
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-3.11.0-3
+Priority: optional
+Section: devel
+Installed-Size: 60664
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.11.0-3.8
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux/linux-headers-3.11.0-3_3.11.0-3.8_all.deb
+Size: 12622644
+MD5sum: 501195f49c296c858b8cf35516b7bcf7
+SHA1: 598c830a0375b16d210c2ba58718a99dc4a5d2b7
+SHA256: dd55c7e7bd9bbf51cadf46b0061ff7b7cde9728e2681a7bfb2fe49730c45df50
+Description: Header files related to Linux kernel version 3.11.0
+Description-md5: 45dd2bfdf3476e6feeac0767d850d833
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-libc-dev
 Priority: optional
 Section: devel
@@ -965,6 +1028,134 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Build-Essential: yes
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: linux-source-3.11.0
+Priority: optional
+Section: devel
+Installed-Size: 94002
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.11.0-3.8
+Provides: linux-source, linux-source-3
+Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
+Recommends: libc-dev, gcc, make
+Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
+Filename: pool/main/l/linux/linux-source-3.11.0_3.11.0-3.8_all.deb
+Size: 92024246
+MD5sum: 8e36827d630a7f88db51bed3872742e8
+SHA1: 0471f7befac5c654c11757fd9abaaf0243226c25
+SHA256: 4323759b40eb5cf2829749cd3de7bd4ae19a190abaf0fca27af7e352743d9c68
+Description: Linux kernel source for version 3.11.0 with Ubuntu patches
+Description-md5: cfbabb19ee426a281302c702699c2590
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-tools-common
+Priority: optional
+Section: kernel
+Installed-Size: 185
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.11.0-3.8
+Replaces: linux-tools (<= 2.6.32-16.25)
+Filename: pool/main/l/linux/linux-tools-common_3.11.0-3.8_all.deb
+Size: 72270
+MD5sum: 26ffd792e354606ca36c01a4ffdb7eac
+SHA1: 7164fc6bfe0296b23787eb8f75850b03e81a79e3
+SHA256: 2cc0049288b15d87dc9705084e5a3c6b982b66632ffbb59ce4da0245f4eecfa3
+Description: Linux kernel version specific tools for version 3.11.0
+Description-md5: 5e947646628710d552f512bf911d233f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: lxc
+Priority: optional
+Section: admin
+Installed-Size: 494
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Version: 0.9.0-0ubuntu23
+Depends: adduser, apparmor, bridge-utils, dnsmasq-base, iptables, liblxc0 (= 0.9.0-0ubuntu23), python3, python3-lxc, rsync, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.8)
+Recommends: cgroup-lite | cgroup-bin, libcap2-bin, lxc-templates (>= 0.8.0~rc1-4ubuntu43), openssl
+Suggests: btrfs-tools, lvm2, lxctl
+Filename: pool/main/l/lxc/lxc_0.9.0-0ubuntu23_powerpc.deb
+Size: 121458
+MD5sum: 0aca10b284e8b8a692250b0f52c3d7ff
+SHA1: 6c6058ad1de6bbba60713f43f12e5360f69fafd7
+SHA256: bfa2ff9b107289f72b4cb6092dcbb4f5d24edd7d6aab8c26a0f6c44ccf5120f7
+Description: Linux Containers userspace tools
+Homepage: http://lxc.sourceforge.net/
+Description-md5: 4ece0dffd153c29e95ffdb89f8238dfc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
+Package: lxc-dbg
+Priority: extra
+Section: debug
+Installed-Size: 611
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: lxc
+Version: 0.9.0-0ubuntu23
+Depends: lxc (= 0.9.0-0ubuntu23), lxc-dev (= 0.9.0-0ubuntu23)
+Filename: pool/main/l/lxc/lxc-dbg_0.9.0-0ubuntu23_powerpc.deb
+Size: 368488
+MD5sum: eed633c2777e15d335ec5328f2093e59
+SHA1: 9d09951f2c3e8c63be1eb43406d3cf93def17aba
+SHA256: ca14030f9280960660c85aab2e9d2e7328341fd83152f12f0ea228431fa78350
+Description: Linux Containers userspace tools (debug)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: 9ec9c23e26368a478bce79545cfbb782
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: lxc-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 128
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: lxc
+Version: 0.9.0-0ubuntu23
+Depends: lxc (= 0.9.0-0ubuntu23)
+Filename: pool/main/l/lxc/lxc-dev_0.9.0-0ubuntu23_powerpc.deb
+Size: 13454
+MD5sum: ec9925add0e0a08b812c92aa20587d62
+SHA1: 230112d4bbfe2a0c143e151aaff93065fbc84fdf
+SHA256: 09b066f559adbe28ed29521c5e3069baa596e9e47898242bce59651f1a31f69e
+Description: Linux Containers userspace tools (development)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: c719178b7e79ce1ed39519707c589961
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: lxc-templates
+Priority: optional
+Section: admin
+Installed-Size: 199
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: lxc
+Version: 0.9.0-0ubuntu23
+Replaces: lxc (<< 0.8.0~rc1-4ubuntu43)
+Depends: lxc (>= 0.8.0~rc1-4ubuntu43)
+Recommends: cloud-utils, debootstrap | cdebootstrap, openssl, rsync
+Suggests: qemu-user-static
+Breaks: lxc (<< 0.8.0~rc1-4ubuntu43)
+Filename: pool/main/l/lxc/lxc-templates_0.9.0-0ubuntu23_all.deb
+Size: 33354
+MD5sum: 988c0def9ae587af57b0c9dd0566bc67
+SHA1: a666c226f283e2fef25539151632a94ffdb3d76a
+SHA256: 09903d0aa820cda9aaf0c4b76de92286b35f78327667b638aab8756b041cd34f
+Description: Linux Containers userspace tools (development)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: b7b10bcdeb3296f4cf9e69a256d87261
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
 
 Package: mir-doc
 Priority: optional
@@ -1382,6 +1573,28 @@ Homepage: http://openvswitch.org/
 Description-md5: 4d35f951a751492a379125d6622051e2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: python3-lxc
+Priority: optional
+Section: python
+Installed-Size: 112
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: lxc
+Version: 0.9.0-0ubuntu23
+Depends: liblxc0 (= 0.9.0-0ubuntu23), python3, libc6 (>= 2.4)
+Recommends: lxc-templates (>= 0.8.0~rc1-4ubuntu43)
+Filename: pool/main/l/lxc/python3-lxc_0.9.0-0ubuntu23_powerpc.deb
+Size: 13088
+MD5sum: d7eb82bf4c57a4ef381c259230036d74
+SHA1: cc29d0cfb7f83292a7ba1d23ce095397e82a2cbb
+SHA256: 69cc200622e4ec09f5f213fd830c5dd93b8980db2a62cf5900f9841ba32b6487
+Description: Linux Containers userspace tools (Python 3.x bindings)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: ee623a31db200104a7207d9de42b8f04
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
 
 Package: usb-modeswitch-data
 Priority: extra
