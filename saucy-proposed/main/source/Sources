@@ -499,6 +499,46 @@ Checksums-Sha256:
  1fdb5d2297c005cd5a9602c0dd8cafa4cbb27abb33c9dd6e8072a860455435b2 305231 mysql-5.5_5.5.32-0ubuntu2.debian.tar.gz
 Testsuite: autopkgtest
 
+Package: openvswitch
+Binary: openvswitch-datapath-source, openvswitch-datapath-dkms, openvswitch-common, openvswitch-switch, openvswitch-ipsec, openvswitch-pki, openvswitch-controller, openvswitch-dbg, python-openvswitch, ovsdbmonitor, openvswitch-test
+Version: 1.10.1+git20130823-0ubuntu1
+Priority: extra
+Section: net
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Build-Depends: debhelper (>= 8), autoconf (>= 2.64), automake (>= 1.10) | automake1.10, libssl-dev, pkg-config (>= 0.21), bzip2, openssl, python-all (>= 2.6.6-3~), procps, python-qt4, python-zopeinterface, python-twisted-conch, hardening-wrapper, libtool
+Architecture: linux-any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/o/openvswitch
+Files:
+ 07a55203b127be304513311f1f30945e 2835 openvswitch_1.10.1+git20130823-0ubuntu1.dsc
+ b0b1e0ea2b16bdc756fa1fa59aab9c89 1836182 openvswitch_1.10.1+git20130823.orig.tar.gz
+ 6d38072651fd16395f07bf328fac425f 68603 openvswitch_1.10.1+git20130823-0ubuntu1.debian.tar.gz
+Uploaders: Ben Pfaff <pfaffben@debian.org>, Simon Horman <horms@debian.org>
+Homepage: http://openvswitch.org/
+Package-List: 
+ openvswitch-common deb net extra
+ openvswitch-controller deb net extra
+ openvswitch-datapath-dkms deb net extra
+ openvswitch-datapath-source deb net extra
+ openvswitch-dbg deb debug extra
+ openvswitch-ipsec deb net extra
+ openvswitch-pki deb net extra
+ openvswitch-switch deb net extra
+ openvswitch-test deb net extra
+ ovsdbmonitor deb utils extra
+ python-openvswitch deb python extra
+Checksums-Sha1:
+ 5113f177b3a18b618b1f5bc6ab055f216bab918e 2835 openvswitch_1.10.1+git20130823-0ubuntu1.dsc
+ 0c0cd184d3a9d4fd756d9c5ffdefd56f985b7318 1836182 openvswitch_1.10.1+git20130823.orig.tar.gz
+ 1aa1f0a1b40d27e71c259b0e1a2ffb3f0ef1c9ea 68603 openvswitch_1.10.1+git20130823-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 295481de70ed94b1c6c6d694ec38d3543b1800ab15497013a4f3fd0b0cde391c 2835 openvswitch_1.10.1+git20130823-0ubuntu1.dsc
+ f9bc341e022bdf35d7eae83df247f072791fd670e32a8beac0f8602ff1e315ac 1836182 openvswitch_1.10.1+git20130823.orig.tar.gz
+ f7a020706e416542e413105c20253fdeae1f673cedcdb844a245e8ea3907035b 68603 openvswitch_1.10.1+git20130823-0ubuntu1.debian.tar.gz
+Testsuite: autopkgtest
+
 Package: platform-api
 Binary: libplatform-api-headers, libplatform-hardware-api-headers, libplatform-api1-dev, libubuntu-application-api-mirserver1, libubuntu-application-api-mirclient1, libplatform-hardware-api1-dev, libplatform-api1-doc, libubuntu-platform-hardware-api1, libubuntu-application-api1, libplatform-api1-hybris-tests, libubuntu-platform-api1-dev, libplatform-api1-hybris, libplatform-hardware-api1-hybris
 Version: 0.18.3+13.10.20130823-0ubuntu1
@@ -581,37 +621,6 @@ Checksums-Sha1:
 Checksums-Sha256:
  ef222b069456381f62cd27f7b11c8118fe03855f6395ea3ed428d9709036f169 2572 python-defaults_2.7.5-4ubuntu1.dsc
  a192f939bb899f2a7799b63254523b113618e7c505bfaf97920ad2ea94df1a23 166846 python-defaults_2.7.5-4ubuntu1.tar.gz
-
-Package: python-mysqldb
-Binary: python-mysqldb, python-mysqldb-dbg
-Version: 1.2.3-2
-Priority: optional
-Section: python
-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 6.0.0), python-all-dev (>= 2.6.6-3~), python-all-dbg, libmysqlclient-dev, zlib1g-dev, python-setuptools
-Architecture: any
-Standards-Version: 3.9.2
-Format: 3.0 (quilt)
-Directory: pool/main/p/python-mysqldb
-Files:
- ba3bee3941b7a0ee9e4ac6fcec138595 2197 python-mysqldb_1.2.3-2.dsc
- 215eddb6d853f6f4be5b4afc4154292f 70305 python-mysqldb_1.2.3.orig.tar.gz
- 8adf3ad24f0d98c627e43354c2d2d016 9998 python-mysqldb_1.2.3-2.debian.tar.gz
-Uploaders: Jonas Meurer <mejo@debian.org>, Monty Taylor <monty@inaugust.com>
-Homepage: http://mysql-python.sourceforge.net/
-Vcs-Browser: http://svn.debian.org/viewsvn/python-modules/packages/python-mysqldb/trunk/
-Vcs-Svn: svn://svn.debian.org/python-modules/packages/python-mysqldb/trunk/
-Package-List: 
- python-mysqldb deb python optional
- python-mysqldb-dbg deb debug extra
-Checksums-Sha1:
- 63fe890f61224613cabab5659245c338d78b447c 2197 python-mysqldb_1.2.3-2.dsc
- 3511bb8c57c6016eeafa531d5c3ea4b548915e3c 70305 python-mysqldb_1.2.3.orig.tar.gz
- 5d6de58c0f0bc1fd57414c83b1f0e281b2767241 9998 python-mysqldb_1.2.3-2.debian.tar.gz
-Checksums-Sha256:
- 502aabe7ad05dfbe67ccc414a48b7cf908cafd7faf2859dc25acc71a7788f181 2197 python-mysqldb_1.2.3-2.dsc
- 7de66fbbf923634e7c965aeaefa74642ba75ae20ee1cefcefc3009595b7a7e6e 70305 python-mysqldb_1.2.3.orig.tar.gz
- 3c97ba98ed9aa7b4f58d8600d85bd3799adf7f60cc93a577c1a2a78d10a0806c 9998 python-mysqldb_1.2.3-2.debian.tar.gz
 
 Package: qtwebkit-source
 Binary: libqtwebkit-dev, libqtwebkit4, libqtwebkit-qmlwebkitplugin, libqtwebkit4-dbg
