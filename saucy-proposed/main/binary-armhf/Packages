@@ -224,6 +224,66 @@ Description-md5: 4bccb890723e465eee1809af0c5a17ed
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: corosync
+Priority: optional
+Section: admin
+Installed-Size: 821
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Version: 2.3.0-1ubuntu3
+Depends: libc6 (>= 2.4), libcfg6 (= 2.3.0-1ubuntu3), libcmap4 (= 2.3.0-1ubuntu3), libcorosync-common4 (= 2.3.0-1ubuntu3), libcpg4 (= 2.3.0-1ubuntu3), libdbus-1-3 (>= 1.0.2), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libqb0, libquorum5 (= 2.3.0-1ubuntu3), libsam4 (= 2.3.0-1ubuntu3), libstatgrab6, libtotem-pg5 (= 2.3.0-1ubuntu3), libvotequorum6 (= 2.3.0-1ubuntu3), lsb-base (>= 3.0-6), adduser
+Conflicts: openais (<< 0.85), openais-legacy (<< 1.0.0)
+Filename: pool/main/c/corosync/corosync_2.3.0-1ubuntu3_armhf.deb
+Size: 247284
+MD5sum: 197f330cb18e323d0fdb7f076f91de03
+SHA1: 03223ef0d0c70fa8d3eeaa73d0757240f0c5a1e6
+SHA256: eef97631805d11ad72fc6e91f17e84b9d829bf8a465a5959cea561559b3bf87f
+Description: Standards-based cluster framework (daemon and modules)
+Description-md5: 6919b701a49bdb9b99ff093ba8f8a84f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: corosync-dbg
+Priority: extra
+Section: debug
+Installed-Size: 3946
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Depends: libcfg6 (= 2.3.0-1ubuntu3), libcmap4 (= 2.3.0-1ubuntu3), libcorosync-common4 (= 2.3.0-1ubuntu3), libcpg4 (= 2.3.0-1ubuntu3), libquorum5 (= 2.3.0-1ubuntu3), libsam4 (= 2.3.0-1ubuntu3), libtotem-pg5 (= 2.3.0-1ubuntu3), libvotequorum6 (= 2.3.0-1ubuntu3)
+Filename: pool/main/c/corosync/corosync-dbg_2.3.0-1ubuntu3_armhf.deb
+Size: 1537626
+MD5sum: 4f41bcf8ab3008b0cdc61c98b5f604ff
+SHA1: 61d8cf89de0fc5d2b7eee1a9ad4d998cf9397f34
+SHA256: 5a8e9d2ebbe9cc513bf3c9d94401cd33499501b50a4791f68481c99685cbf9fb
+Description: Standards-based cluster framework (debugging symbols)
+Description-md5: fd4a4e8fd33ddf4706a49a3a324162ce
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: corosync-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 196
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Depends: libcorosync-common-dev (= 2.3.0-1ubuntu3)
+Filename: pool/main/c/corosync/corosync-dev_2.3.0-1ubuntu3_armhf.deb
+Size: 3242
+MD5sum: 1fbb6a22cab73b431a24d9e2ccbdfb64
+SHA1: 02c0e6d2c0d396ef0a6149738896d497a46cca86
+SHA256: 918e1d7dd32bfb72548955d71c57f88b69b76b719e48123fe42b8bb37795b95c
+Description: Standards-based cluster framework (transitional package)
+Description-md5: 7b075c5ac6dc0b847b60b2f60289a719
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: cups
 Priority: optional
 Section: net
@@ -594,6 +654,94 @@ Description-md5: ef23abe3fb9706def734dae7e4f8e64f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libcfg-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 223
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Depends: libcfg6 (= 2.3.0-1ubuntu3)
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libcfg-dev_2.3.0-1ubuntu3_armhf.deb
+Size: 8252
+MD5sum: 9b564e592c2dbe6fe61d9b276c3b8a46
+SHA1: a92fee5b487e6f0be5b34f5dc3d738b053916e17
+SHA256: 23a36150279f2662cb5a79ed63bcc29f25b879e7b2be54366c0c6f5bda334bf8
+Description: Standards-based cluster framework, Cfg devel files
+Description-md5: 8368430935fc23defcffcc2f2784d781
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcfg6
+Priority: optional
+Section: libs
+Installed-Size: 209
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Depends: libc6 (>= 2.4), libcorosync-common4 (>= 2.3.0), libqb0
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libcfg6_2.3.0-1ubuntu3_armhf.deb
+Size: 7912
+MD5sum: ed2182a85a88ea6b1308bec9efda70ff
+SHA1: 70bf3ac270d3e7d38d90e0674aaa0130ec469f39
+SHA256: 51810e5dc15a572f5ae28cc4be09a996b4b73d522a61ddfc5947444f547dd387
+Description: Standards-based cluster framework, Cfg library
+Description-md5: d2e0d05de0acab0cdc443672b08301eb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcmap-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 359
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Depends: libcmap4 (= 2.3.0-1ubuntu3)
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libcmap-dev_2.3.0-1ubuntu3_armhf.deb
+Size: 52890
+MD5sum: be9420a8fbcab42dd1ff6943b2420a54
+SHA1: 5748de9746da461fc46b224cf230834aeb8cc8bd
+SHA256: aa81a7d62dd400c56096a270f3e99fb602caea8269767998b3722a7281f242e5
+Description: Standards-based cluster framework, Cmap devel files
+Description-md5: 6adabd0c7b46a5a4a23096bfd28a34a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcmap4
+Priority: optional
+Section: libs
+Installed-Size: 213
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Depends: libc6 (>= 2.4), libcorosync-common4 (>= 2.3.0), libqb0
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libcmap4_2.3.0-1ubuntu3_armhf.deb
+Size: 9930
+MD5sum: 812bcbc70f1bec07e87723a6e5d64eb6
+SHA1: 00c3388d474268880f60fae7d5d2612e426399b1
+SHA256: ce5c4220f7dad7ed194624934c32aa0b6d2f1ad9f388cc13c79e370eb4e27b34
+Description: Standards-based cluster framework, Cmap library
+Description-md5: f1c1a1df18465bf3a5d1bd58b0c1c807
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libcolumbus1
 Priority: optional
 Section: libs
@@ -654,6 +802,115 @@ Description: error tolerant matching engine - development files
 Multi-Arch: same
 Homepage: https://launchpad.net/libcolombus
 Description-md5: c297587e723b1f50e5f866cbfb42b63d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcorosync-common-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 227
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Depends: libcorosync-common4 (= 2.3.0-1ubuntu3), libqb-dev
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libcorosync-common-dev_2.3.0-1ubuntu3_armhf.deb
+Size: 7460
+MD5sum: 117ce57c22991f662222cce506e9ea8b
+SHA1: dd63d27d2e70bc1893c9a44baf855dce51381745
+SHA256: 70219b18c0498478d73457ccf81dfb5b7c32bf31893f1cfc5e782e489b175faf
+Description: Standards-based cluster framework, common devel files
+Description-md5: 9f69c5d4e0e003621503cdd3322c20a3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcorosync-common4
+Priority: optional
+Section: libs
+Installed-Size: 205
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Depends: libc6 (>= 2.4)
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libcorosync-common4_2.3.0-1ubuntu3_armhf.deb
+Size: 7172
+MD5sum: 758cc0e97045d388c9f652c739ae114e
+SHA1: 0bbc59293b449add0f37938a3f8f9cad39874319
+SHA256: 661a023559f93647cf4b79d19adccb26c49b3f2e13fef50fa8a218fd88cc7b9c
+Description: Standards-based cluster framework, common library
+Description-md5: e2510e42f361d7ebd6029fbbba636768
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcorosync-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 196
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Depends: libcfg-dev, libcmap-dev, libcorosync-common-dev, libcpg-dev, libquorum-dev, libsam-dev, libtotem-pg-dev, libvotequorum-dev
+Conflicts: libopenais-dev (<< 0.85), libopenais-legacy-dev (<< 1.0.0)
+Filename: pool/main/c/corosync/libcorosync-dev_2.3.0-1ubuntu3_all.deb
+Size: 3288
+MD5sum: 189031906a5065aa27126f14e7f1e765
+SHA1: dc5463b694eed6cf06bbe69ecaa56a02c10af251
+SHA256: 8ae8ce82f2c8648219058cc351410cc79711a02262bc7fa104a055ed59d8e381
+Description: Standards-based cluster framework (transitional package)
+Description-md5: 6e6d0431e37192faa27fa9bcdcf6fa08
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcpg-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 356
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Depends: libcpg4 (= 2.3.0-1ubuntu3)
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libcpg-dev_2.3.0-1ubuntu3_armhf.deb
+Size: 57388
+MD5sum: 2ad8c5fb90e2846aaba5b81d2c485a6d
+SHA1: bdef50384665e50bb5ab34c764e725b6355b028c
+SHA256: 8786134810809137e7a1450bc1a7f6ccc26483e2aa5f063c1d573ab7019048ce
+Description: Standards-based cluster framework, Cpg devel files
+Description-md5: 5fa5451460cbdcc4cc8217f081b6f257
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcpg4
+Priority: optional
+Section: libs
+Installed-Size: 213
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Depends: libc6 (>= 2.4), libcorosync-common4 (>= 2.3.0), libqb0
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libcpg4_2.3.0-1ubuntu3_armhf.deb
+Size: 10314
+MD5sum: f87acae9604d4741154810dcf24fd015
+SHA1: b0aa3e09b48eb9c7406707b2a86e9b9c9254703c
+SHA256: 84879a2a0922339c60ddafe27dc50300be343ea7a27b96daf62cc21efc633923
+Description: Standards-based cluster framework, Cpg library
+Description-md5: 9b778c6c94d6c27e4761b03ab11317f0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1315,6 +1572,50 @@ Description-md5: 0aa12ab7a84a04b9fc839f7c620dfee2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libquorum-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 284
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Depends: libquorum5 (= 2.3.0-1ubuntu3)
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libquorum-dev_2.3.0-1ubuntu3_armhf.deb
+Size: 27142
+MD5sum: 4f646b2880089c36db129a144467f95e
+SHA1: 6fe2c7f3c812744425579e38af0b9b7eea9ba41d
+SHA256: 8aa90e07fe85966ecd79c4505a4bfd821a5c7bffa7b87b48ad6939a0c9c6b0c8
+Description: Standards-based cluster framework, Quorum devel files
+Description-md5: e0dd52c4ea971e49f43d9f2e4d5d1012
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libquorum5
+Priority: optional
+Section: libs
+Installed-Size: 209
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Depends: libc6 (>= 2.4), libcorosync-common4 (>= 2.3.0), libqb0
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libquorum5_2.3.0-1ubuntu3_armhf.deb
+Size: 6778
+MD5sum: 6530cddcb0c026f99a4b666350a1736f
+SHA1: 3775150f29647b99cc788cd7732ac6c08d51d80e
+SHA256: 39c4d9f2b8766a7bbd2c5b7112072a18877134c6eb9c382bd4f121c891d02340
+Description: Standards-based cluster framework, Quorum library
+Description-md5: 14651db8b8b8dd1ca0078ccb3f57d650
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: librados-dev
 Priority: optional
 Section: libdevel
@@ -1451,6 +1752,50 @@ Description-md5: 0479c6b8befcd3b46093c4fdfaef7ca4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libsam-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 324
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Depends: libsam4 (= 2.3.0-1ubuntu3)
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libsam-dev_2.3.0-1ubuntu3_armhf.deb
+Size: 44304
+MD5sum: fc28b0ee9726b3c8e39b03f28c8ad2c6
+SHA1: 75c47fee55293eb62629e35a907bf21f48cac583
+SHA256: 162951c85857651d4840662eed4ef954bdde9a89a45a571cbe9ba134633dfde5
+Description: Standards-based cluster framework, Sam devel files
+Description-md5: 9c6178809ce7e8ec665882456002cb5e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsam4
+Priority: optional
+Section: libs
+Installed-Size: 213
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Depends: libc6 (>= 2.16), libcmap4 (>= 2.3.0), libquorum5 (>= 2.3.0)
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libsam4_2.3.0-1ubuntu3_armhf.deb
+Size: 10708
+MD5sum: 3e2389da594f5e070b6939c3e8cbc511
+SHA1: 705c0640e970dba0fe146395b9438e753af239bf
+SHA256: 58d5c58c1d9c2546bfce89603bf838bf7d27de1a996784aae578c5c3c5fca61d
+Description: Standards-based cluster framework, Sam library
+Description-md5: 018ac580935845d9472b83e0f158f58a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libsmbclient
 Priority: extra
 Section: libs
@@ -1495,6 +1840,50 @@ Description: development files for libsmbclient
 Multi-Arch: same
 Homepage: http://www.samba.org
 Description-md5: d6338d0aed68408023b999dd547aaecf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libtotem-pg-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 379
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Depends: libtotem-pg5 (= 2.3.0-1ubuntu3)
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libtotem-pg-dev_2.3.0-1ubuntu3_armhf.deb
+Size: 77510
+MD5sum: 9b2fdef7a21de44e9541dd4438f3eb49
+SHA1: 32dc10f0c18cd4ec7f1e8969dc867d1ba4909d4b
+SHA256: afa85c306c68275b6219bfe0c1cf43a0b1a476eb06d55e51205ee2305c8e7dd9
+Description: Standards-based cluster framework, Totem devel files
+Description-md5: 303ee8a5d1a40db305e6def922eb8f3c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libtotem-pg5
+Priority: optional
+Section: libs
+Installed-Size: 302
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Depends: libc6 (>= 2.4), libibverbs1 (>= 1.1.2), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libqb0, librdmacm1 (>= 1.0.16)
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libtotem-pg5_2.3.0-1ubuntu3_armhf.deb
+Size: 65202
+MD5sum: e4fdfd9e26abbe197a512437b66ca63d
+SHA1: 7116d23e59bfbefc7cf65dd031fea9eee3c20ab7
+SHA256: e59f23155c6f4ac18d2e5fa05ecce45aefad304c39ddb798b6d3929f45dea0cf
+Description: Standards-based cluster framework, Totem library
+Description-md5: 164ea2308745ca8156991d1e7b39c4bd
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1608,6 +1997,50 @@ Description: Hybris implementation of the hw-access parts of the Platform API (r
 Multi-Arch: same
 Homepage: https://launchpad.net/platform-api
 Description-md5: d9c7c5dff3893ffc9571a67f240b3e83
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libvotequorum-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 318
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Depends: libvotequorum6 (= 2.3.0-1ubuntu3)
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync-dev (<= 1.4.2-1)
+Filename: pool/main/c/corosync/libvotequorum-dev_2.3.0-1ubuntu3_armhf.deb
+Size: 38286
+MD5sum: 6a8dac02d3d41ef55d50af48f744e130
+SHA1: 6ae84f9c0b9464c56ca9e0d38af1b91451657b0d
+SHA256: b2df0da1344c138efd638cab5ae22b3f5ede85f0b105adde644aaa5bf2cbe607
+Description: Standards-based cluster framework, VoteQuorum devel files
+Description-md5: 655dd47a75c0132274ee08450ae0223c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libvotequorum6
+Priority: optional
+Section: libs
+Installed-Size: 209
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HA Maintainers <debian-ha-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: corosync
+Version: 2.3.0-1ubuntu3
+Replaces: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1), libvotequorum5
+Depends: libc6 (>= 2.4), libcorosync-common4 (>= 2.3.0), libqb0
+Conflicts: corosync (<< 1.99.9-1), corosync-dev (<< 1.99.9-1), libcorosync4 (<= 1.4.2-1), libvotequorum5
+Filename: pool/main/c/corosync/libvotequorum6_2.3.0-1ubuntu3_armhf.deb
+Size: 7860
+MD5sum: bfac8d26dba06034cc43615bfd10e1bf
+SHA1: bb114ea535c84d8659897860fd16ed48fdca19e0
+SHA256: a3f47a226cb13a1556bfba4c4367c85a6bfe483d1d276a167a9052409e453992
+Description: Standards-based cluster framework, Votequorum library
+Description-md5: f874501f774adb114ef9f6f908c91fb9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
