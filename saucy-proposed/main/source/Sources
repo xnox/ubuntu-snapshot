@@ -107,6 +107,34 @@ Checksums-Sha256:
  bf6b9780d1395a358465bb3677dca11998ca3aa9f3c91755e8224d5ed4ff0571 45457 bzr_2.6.0-1ubuntu1.debian.tar.gz
 Testsuite: autopkgtest
 
+Package: debian-installer
+Binary: debian-installer, debian-installer-udebs
+Version: 20101020ubuntu260
+Section: devel
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 7.0.0), apt, apt-utils, gnupg, ubuntu-keyring, dctrl-tools, wget, bc, debiandoc-sgml, xsltproc, docbook-xml, docbook-xsl, libbogl-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], lsb-release, glibc-pic, libslang2-pic (>= 2.0.6-4), libnewt-pic (>= 0.52.2-11.3) [!mipsel], libnewt-dev (>= 0.52.2-11.3) [mipsel], libgcc1 [i386 amd64], cramfsprogs [powerpc ia64 mips mipsel armeb armel], genext2fs (>= 1.3-7.1), e2fsprogs, mklibs (>= 0.1.25), genisoimage (>= 9:1.1.10-1ubuntu2) [!s390 !s390x], genromfs [sparc sparc64], hfsutils [powerpc], dosfstools (>= 3.0.9-1ubuntu2) [i386 ia64 m68k amd64 armel armhf], cpio, devio [armeb armel], parted [armel armhf], slugimage (>= 0.10+r58-6) [armeb armel], u-boot-tools [armel armhf], syslinux (>= 2:4.02) [i386 amd64], palo [hppa], elilo [ia64], yaboot [powerpc], aboot (>= 0.9b-2) [alpha], silo [sparc], sparc-utils [sparc sparc64], genisovh [mips], tip22 [mips], colo [mipsel], sibyl [mips mipsel], atari-bootstrap [m68k], vmelilo [m68k], m68k-vme-tftplilo [m68k], amiboot [m68k], emile [m68k], emile-bootblocks [m68k], u-boot-linaro-omap3-beagle [armel armhf], u-boot-linaro-omap4-panda [armel armhf], shim-signed [amd64], tofrodos [i386 amd64 kfreebsd-i386 kfreebsd-amd64], mtools [i386 ia64 m68k amd64 kfreebsd-i386 kfreebsd-amd64 hurd-i386 armel armhf], po4a [i386 amd64], python3 (>= 3.1) [i386 amd64], module-init-tools [i386 armeb armel armhf amd64 alpha hppa ia64 m68k mips mipsel powerpc s390 sh4 sparc sparc64], bf-utf-source [!s390 !s390x], mkvmlinuz [powerpc], openssl [armel], makefs [kfreebsd-i386 kfreebsd-amd64], grub-pc (>= 1.98~20100101-1) [kfreebsd-i386 kfreebsd-amd64 hurd-i386], xorriso [kfreebsd-i386 kfreebsd-amd64 hurd-i386], grub-efi-amd64-bin (>= 2.00) [amd64], grub-common [amd64], debian-ports-archive-keyring [sh4 sparc64]
+Build-Conflicts: libnewt-pic [mipsel]
+Architecture: any
+Standards-Version: 3.8.3
+Format: 1.0
+Directory: pool/main/d/debian-installer
+Files:
+ 15c6eba8fce1d7ab59a9e73fe3e5660c 3062 debian-installer_20101020ubuntu260.dsc
+ ef0f4ecdb5b71db43664ed3cc8516284 1966353 debian-installer_20101020ubuntu260.tar.gz
+Uploaders: Frans Pop <fjp@debian.org>, Otavio Salvador <otavio@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/debian-installer/ubuntu
+Package-List: 
+ debian-installer deb devel optional
+ debian-installer-udebs udeb debian-installer optional
+Checksums-Sha1:
+ a16382cd8b9b5c3352e40f1b1d0664784ab2b24e 3062 debian-installer_20101020ubuntu260.dsc
+ a687da53ddc40a67f3467dca6d1d2e43d5e2fe3f 1966353 debian-installer_20101020ubuntu260.tar.gz
+Checksums-Sha256:
+ ddfdedd21adb885c401ac16b696aafb58b2cb510ab96a167306ad9037fe82563 3062 debian-installer_20101020ubuntu260.dsc
+ d83155af9791a9cea0bca9122cf358ba0ca072aeef6c59945394df54528c64aa 1966353 debian-installer_20101020ubuntu260.tar.gz
+Debian-Vcs-Svn: svn://svn.debian.org/d-i/trunk/installer
+
 Package: fontforge
 Binary: fontforge, fontforge-nox, fontforge-common, libfontforge-dev, libfontforge1, libgdraw4, python-fontforge, fontforge-dbg
 Version: 20120731.b-3
@@ -302,45 +330,6 @@ Checksums-Sha1:
 Checksums-Sha256:
  c067dfc72b6276247fe17b48768c64d2f5577e22158f58892731f01654c0ee1a 1692 ifupdown_0.7.44ubuntu1.dsc
  6e98971b5a82bfcf321fd59258aadc3d6e582da3547bc8cde4e7cbd3737562a4 114413 ifupdown_0.7.44ubuntu1.tar.gz
-
-Package: isc-dhcp
-Binary: isc-dhcp-server, isc-dhcp-server-dbg, isc-dhcp-server-ldap, isc-dhcp-common, isc-dhcp-dev, isc-dhcp-client, isc-dhcp-client-dbg, isc-dhcp-client-udeb, isc-dhcp-relay, isc-dhcp-relay-dbg
-Version: 4.2.4-7ubuntu5
-Priority: important
-Section: net
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 7.4.20ubuntu6), dpkg-dev (>= 1.13.2), groff, quilt, autoconf, automake, autotools-dev, pkg-config, po-debconf, libssl-dev, libldap2-dev, hardening-wrapper, libcap-dev, dh-apport, dh-apparmor
-Architecture: any
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/main/i/isc-dhcp
-Files:
- ac1022ec2e14e7eb454e3b15a3d5eedc 2725 isc-dhcp_4.2.4-7ubuntu5.dsc
- c244cefe663d43100af757d8ff625a1f 8063457 isc-dhcp_4.2.4.orig.tar.gz
- 015f84a0864e56411054912e33abb611 126383 isc-dhcp_4.2.4-7ubuntu5.debian.tar.gz
-Uploaders: Andrew Pollock <apollock@debian.org>, Michael Gilbert <mgilbert@debian.org>
-Vcs-Browser: http://git.debian.org/?p=pkg-dhcp/isc-dhcp.git;a=summary
-Vcs-Git: git://git.debian.org/pkg-dhcp/isc-dhcp.git
-Package-List: 
- isc-dhcp-client deb net important
- isc-dhcp-client-dbg deb debug extra
- isc-dhcp-client-udeb udeb debian-installer extra
- isc-dhcp-common deb net important
- isc-dhcp-dev deb devel optional
- isc-dhcp-relay deb net optional
- isc-dhcp-relay-dbg deb debug extra
- isc-dhcp-server deb net optional
- isc-dhcp-server-dbg deb debug extra
- isc-dhcp-server-ldap deb net optional
-Checksums-Sha1:
- ad55c0e4e6a6b27e0e07a4d64da30b0fef7b9d36 2725 isc-dhcp_4.2.4-7ubuntu5.dsc
- ba877b6af5f21df84831f698187814668432e8fe 8063457 isc-dhcp_4.2.4.orig.tar.gz
- d6dbb7a5f7f5f666767769d052227252fc2067e3 126383 isc-dhcp_4.2.4-7ubuntu5.debian.tar.gz
-Checksums-Sha256:
- 74859e2763ca93e0db11922f1c2fc1a3b0e67e342d2aca2b91ba87217a28e253 2725 isc-dhcp_4.2.4-7ubuntu5.dsc
- a9f77eb26372ada936ec39d843e0fe8c898b7e6980341e76c8cda694748fbf9a 8063457 isc-dhcp_4.2.4.orig.tar.gz
- a19f648bf1769ac5de7fcc21d60fdb21ef8499e9abb5cc07a07f7f210bf61938 126383 isc-dhcp_4.2.4-7ubuntu5.debian.tar.gz
 
 Package: jackd2
 Binary: jackd2, libjack-jackd2-0, jackd2-firewire, libjack-jackd2-dev
@@ -908,31 +897,6 @@ Checksums-Sha256:
  8d759a6a3e50f0c12c07e555bcdafa10f7c74a2008af13a67dd640bf86108a88 2081 qtwebkit-source_2.3.2-0ubuntu1.dsc
  858d0d7b073c8c3b3d77ab344b5c67faf80041e30d2f9a91d259f92224906397 51649959 qtwebkit-source_2.3.2.orig.tar.gz
  0f95e06b3eb802e3f7df23e9f013bcbdda547173f2c984f04a39d68f29177d53 80539 qtwebkit-source_2.3.2-0ubuntu1.debian.tar.gz
-
-Package: ubuntu-meta
-Binary: ubuntu-minimal, ubuntu-standard, ubuntu-desktop
-Version: 1.304
-Priority: important
-Section: metapackages
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: debhelper (>= 7.0.8), germinate (>= 1.18)
-Architecture: any
-Standards-Version: 3.9.2
-Format: 3.0 (native)
-Directory: pool/main/u/ubuntu-meta
-Files:
- 26658448d8228d8b748848b948528e4a 1589 ubuntu-meta_1.304.dsc
- 20b82b3d9926fef7ed25878a4007ae1a 47038 ubuntu-meta_1.304.tar.gz
-Package-List: 
- ubuntu-desktop deb metapackages optional
- ubuntu-minimal deb metapackages optional
- ubuntu-standard deb metapackages optional
-Checksums-Sha1:
- 61b1dc0f0d60910e83e4a5c66109e3425c306d09 1589 ubuntu-meta_1.304.dsc
- a256aa3abbb4d2c087b1a15aa98aed539e7ae065 47038 ubuntu-meta_1.304.tar.gz
-Checksums-Sha256:
- 20cef01ec7ff6e5927bab247a6404cca476f976c0027d96c80e5d2ff44795d72 1589 ubuntu-meta_1.304.dsc
- db6973dbd9248c28c84f93a89f6f7fc9e7da830bdca4f22cda587ee4c3686082 47038 ubuntu-meta_1.304.tar.gz
 
 Package: usb-modeswitch-data
 Binary: usb-modeswitch-data
