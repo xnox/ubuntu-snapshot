@@ -45,404 +45,6 @@ Description-md5: 6948801c3d791b1c318acb50a89989c6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: ceph
-Priority: optional
-Section: admin
-Installed-Size: 93462
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Version: 0.67.2-0ubuntu1
-Depends: binutils, ceph-common, cryptsetup-bin | cryptsetup, gdisk, hdparm | sdparm, parted, python, python-argparse, uuid-runtime, xfsprogs, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libaio1 (>= 0.3.93), libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.16), libgcc1 (>= 1:4.4.0), libgoogle-perftools4, libleveldb1, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
-Recommends: libcephfs1, librados2, librbd1
-Filename: pool/main/c/ceph/ceph_0.67.2-0ubuntu1_armhf.deb
-Size: 20507224
-MD5sum: 93debafedd1679edbd3880f7c8d76897
-SHA1: b8abd48ef553078d04d158fe7274dc9fccb8aab8
-SHA256: bcd2264b64c7135f3532e69ae8c4920700ba18d880df822911ded895d90068ec
-Description: distributed storage and file system
-Homepage: http://ceph.com/
-Description-md5: 8076f05fe2327940c1772acbf6f471cf
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ceph-common
-Priority: optional
-Section: admin
-Installed-Size: 12452
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Replaces: ceph-client-tools
-Depends: librbd1 (= 0.67.2-0ubuntu1), python, python-ceph (= 0.67.2-0ubuntu1), libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.16), libgcc1 (>= 1:4.4.0), libkeyutils1, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), librados2, libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
-Suggests: ceph, ceph-mds
-Conflicts: ceph-client-tools
-Filename: pool/main/c/ceph/ceph-common_0.67.2-0ubuntu1_armhf.deb
-Size: 5130472
-MD5sum: 628d3cc5ef4767a35822e426455b289b
-SHA1: cf0ab570d41bfb74503cf97d9521c1ecb1aaaf35
-SHA256: 007a5bcb2997a39a1893c2ad44a33884a54559871ac0606aca2a2a54859eb84c
-Description: common utilities to mount and interact with a ceph storage cluster
-Homepage: http://ceph.com/
-Description-md5: e302e645c41e2c6148fcff41573e283b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ceph-common-dbg
-Priority: extra
-Section: debug
-Installed-Size: 218666
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Replaces: ceph-client-tools-dbg
-Depends: ceph-common (= 0.67.2-0ubuntu1)
-Conflicts: ceph-client-tools-dbg
-Filename: pool/main/c/ceph/ceph-common-dbg_0.67.2-0ubuntu1_armhf.deb
-Size: 66978532
-MD5sum: 995cb45fb197e796158cc067d9cac295
-SHA1: c619cf323698449f3a7ec78047cf045ba5d5df60
-SHA256: 62fea647c9fa3240009ee916a121fc3fcecaff92b05d0604d19f1e6a3a2a0564
-Description: debugging symbols for ceph-common
-Homepage: http://ceph.com/
-Description-md5: 4e090d4d7aa07af441f4e2ba271159ef
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ceph-dbg
-Priority: extra
-Section: debug
-Installed-Size: 243215
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Depends: ceph (= 0.67.2-0ubuntu1)
-Filename: pool/main/c/ceph/ceph-dbg_0.67.2-0ubuntu1_armhf.deb
-Size: 67373940
-MD5sum: 941237103c6606683aa2e17037ce62f3
-SHA1: baa29266287a3c3a59d1fbfba4bbc9216c8bed74
-SHA256: 31f7e59928d726efac72efdfbf9aa9386a2f18a4bdf569cdb6517b42fa67fc3e
-Description: debugging symbols for ceph
-Homepage: http://ceph.com/
-Description-md5: 43fb0fb4a4a9eb4d08ff4a0f12738692
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ceph-fs-common
-Priority: optional
-Section: admin
-Installed-Size: 88
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Replaces: ceph-client-tools
-Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libkeyutils1, libstdc++6 (>= 4.4.0)
-Suggests: ceph-mds
-Conflicts: ceph-client-tools
-Filename: pool/main/c/ceph/ceph-fs-common_0.67.2-0ubuntu1_armhf.deb
-Size: 24672
-MD5sum: f7f55daeb24e959391c0f3d702614295
-SHA1: efcdb6e143beb71809c5ce95c3d8d552cb4bbb98
-SHA256: ece910b3f46e7f62ea5bdf224b1577f4311c447a250a35afebd8b905ac00d897
-Description: common utilities to mount and interact with a ceph file system
-Homepage: http://ceph.com/
-Description-md5: b2714a5dd73de6b9a1f8478ea36a611a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ceph-fs-common-dbg
-Priority: extra
-Section: debug
-Installed-Size: 205
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Replaces: ceph-client-tools-dbg
-Depends: ceph-fs-common (= 0.67.2-0ubuntu1)
-Conflicts: ceph-client-tools-dbg
-Filename: pool/main/c/ceph/ceph-fs-common-dbg_0.67.2-0ubuntu1_armhf.deb
-Size: 66960
-MD5sum: f2a873f57888ab44344b9c7ea3a09c2c
-SHA1: 5353b8c527779568e7d3a28ee5a6f78b3317e08e
-SHA256: d08886e2f60893f68509ea23365cce649e782404f1594863d0f9a943c0a59f8e
-Description: debugging symbols for ceph-fs-common
-Homepage: http://ceph.com/
-Description-md5: aa04d5e291a121b5512a5c379fed4f57
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ceph-mds
-Priority: optional
-Section: admin
-Installed-Size: 4817
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Depends: ceph, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.16), libgcc1 (>= 1:4.4.0), libgoogle-perftools4, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
-Recommends: ceph-fs-common, ceph-fuse, libcephfs1
-Filename: pool/main/c/ceph/ceph-mds_0.67.2-0ubuntu1_armhf.deb
-Size: 2300620
-MD5sum: 292455b402104cae2bc0a23471c11a18
-SHA1: 517a8530ab2c9679a0ecbc56bdc73ebc10a93d0f
-SHA256: 919b2812b0969e9b702a62bc4d3ea32b380b66779c8f67598fb31c93b53774d4
-Description: metadata server for the ceph distributed file system
-Homepage: http://ceph.com/
-Description-md5: d37d51a4735a093f21799c80f707168f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ceph-mds-dbg
-Priority: extra
-Section: debug
-Installed-Size: 100414
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Depends: ceph-mds (= 0.67.2-0ubuntu1)
-Filename: pool/main/c/ceph/ceph-mds-dbg_0.67.2-0ubuntu1_armhf.deb
-Size: 33544868
-MD5sum: c8fb35f01e0c83f69a16c197792decbc
-SHA1: ebb2b5bb80c0a1ac335c92a94d62cd03b389a5af
-SHA256: 394aeef2da3018b798b9a2954b2fd941a6c26c5c32a125e2bcc23f4c7e5955bd
-Description: debugging symbols for ceph-mds
-Homepage: http://ceph.com/
-Description-md5: 4bccb890723e465eee1809af0c5a17ed
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: cups
-Priority: optional
-Section: net
-Installed-Size: 700
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Version: 1.7.0~rc1-0ubuntu1
-Replaces: ghostscript-cups (<< 9.02~)
-Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.16), libcups2 (= 1.7.0~rc1-0ubuntu1), libcupscgi1 (>= 1.4.2), libcupsimage2 (>= 1.4.0), libcupsmime1 (>= 1.4.0), libcupsppdc1 (>= 1.4.0), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.3.0), libusb-1.0-0 (>= 2:1.0.8), debconf (>= 1.2.9) | debconf-2.0, libc-bin (>= 2.13), cups-daemon (>= 1.7.0~rc1-0ubuntu1), poppler-utils (>= 0.12), procps, ghostscript (>= 9.02~), lsb-base (>= 3), cups-common (>= 1.7.0~rc1-0ubuntu1), cups-server-common (>= 1.7.0~rc1-0ubuntu1), cups-client (>= 1.7.0~rc1-0ubuntu1), cups-ppdc, cups-filters (>= 1.0.24-3~)
-Recommends: avahi-daemon, colord, foomatic-filters (>= 4.0), printer-driver-gutenprint, cups-filters (>= 1.0.36) | ghostscript-cups (>= 9.02~)
-Suggests: cups-bsd, foomatic-db-compressed-ppds | foomatic-db, printer-driver-hpcups, hplip, cups-pdf, udev, smbclient
-Breaks: foomatic-filters (<< 4.0), ghostscript-cups (<< 9.02~)
-Filename: pool/main/c/cups/cups_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 226910
-MD5sum: 58ef7057ed2a8ee54051dde9e0e905e8
-SHA1: 6a260248fb18e57eeb06837f08cfc84cc5b32f07
-SHA256: db9b4141b8214e5b17b629b7f15f6dc146478300b330a4226f4f53ef71768552
-Description: Common UNIX Printing System(tm) - server
-Multi-Arch: foreign
-Homepage: http://www.cups.org
-Description-md5: 7cf9b10ad02d144fb419f77e49b87556
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: cups-bsd
-Priority: extra
-Section: net
-Installed-Size: 102
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Replaces: lpr
-Provides: lpr
-Depends: libc6 (>= 2.4), libcups2 (>= 1.6.2), debconf (>= 0.5) | debconf-2.0, cups-client (= 1.7.0~rc1-0ubuntu1), update-inetd, cups-common (>= 1.7.0~rc1-0ubuntu1)
-Suggests: cups
-Conflicts: lpr, lprng
-Filename: pool/main/c/cups/cups-bsd_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 28060
-MD5sum: e3afbada156e8a83d1bc2315fd112abf
-SHA1: 5ba68fc20027d1f86602ab7a33f3390c80b7d47b
-SHA256: 26e2712467a7a57d9361a749a7e5462475b9e2298349c6d29f189d449d1f60a1
-Description: Common UNIX Printing System(tm) - BSD commands
-Multi-Arch: foreign
-Homepage: http://www.cups.org
-Description-md5: 8ca999eda442e2096dafa2745e4db8de
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: cups-client
-Priority: optional
-Section: net
-Installed-Size: 779
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.4), libcups2 (= 1.7.0~rc1-0ubuntu1), libcupsimage2 (>= 1.4.0), cups-common (>= 1.7.0~rc1-0ubuntu1), adduser
-Recommends: smbclient
-Suggests: cups, xpp, cups-bsd
-Conflicts: lprng
-Filename: pool/main/c/cups/cups-client_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 167054
-MD5sum: 31cf628f6d5be4ec4b91b0beee1f3053
-SHA1: 55cd7326f42b71d985fe373308001d0cffdf272d
-SHA256: 7434dcd1f0afa1879f5fb3eb8af0fbcc4ce17ac1ac34f23eb37a8e6340a35836
-Description: Common UNIX Printing System(tm) - client programs (SysV)
-Multi-Arch: foreign
-Homepage: http://www.cups.org
-Description-md5: 49064ce8151bc5cfbb65936322a4e2ce
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: cups-common
-Priority: optional
-Section: net
-Installed-Size: 1255
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: all
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Filename: pool/main/c/cups/cups-common_1.7.0~rc1-0ubuntu1_all.deb
-Size: 217618
-MD5sum: a607046bc84b9c368e517244693ef010
-SHA1: ff82694a16438386a49eb50695529a3958990f4b
-SHA256: 8a277c5939c19695a93af871d159f3bb7fa7b89c8c546c3d06912e09d65824ed
-Description: Common UNIX Printing System(tm) - common files
-Multi-Arch: foreign
-Homepage: http://www.cups.org
-Description-md5: ae28e55960aa62a85c88769b70d73eaa
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: cups-daemon
-Priority: optional
-Section: net
-Installed-Size: 730
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Replaces: cups (<< 1.6.1-1~)
-Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.15), libcups2 (= 1.7.0~rc1-0ubuntu1), libcupsmime1 (>= 1.5.0), libdbus-1-3 (>= 1.0.2), libgnutls26 (>= 2.12.17-0), libgssapi-krb5-2 (>= 1.10+dfsg~), libpam0g (>= 0.99.7.1), libpaper1, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), procps, lsb-base (>= 3), ssl-cert (>= 1.0.11), adduser, bc, avahi-daemon
-Pre-Depends: dpkg (>= 1.15.7.2)
-Recommends: colord, cups-browsed
-Suggests: cups, cups-bsd, cups-common (>= 1.7.0~rc1-0ubuntu1), cups-server-common (>= 1.7.0~rc1-0ubuntu1), cups-client (>= 1.7.0~rc1-0ubuntu1), cups-ppdc, cups-filters, poppler-utils (>= 0.12), ghostscript (>= 9.02~), foomatic-filters (>= 4.0), foomatic-db-compressed-ppds | foomatic-db, printer-driver-gutenprint, printer-driver-hpcups, hplip, cups-pdf, udev, smbclient
-Breaks: cups (<< 1.6.1-1~)
-Filename: pool/main/c/cups/cups-daemon_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 271812
-MD5sum: ff7994d03e24a959e2ee8be3d0acd53e
-SHA1: 59f21560808e971ec27d219feb688ee2fa04c223
-SHA256: 71e2e6ff008154d4c8224fc34d5fdcb9b56dd30f36bf5b30ed3407955ab504ea
-Description: Common UNIX Printing System(tm) - daemon
-Multi-Arch: foreign
-Homepage: http://www.cups.org
-Description-md5: 559bf8b849cd67e4ad13a2a638aea615
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: cups-dbg
-Priority: extra
-Section: libdevel
-Installed-Size: 2761
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Depends: cups-daemon (= 1.7.0~rc1-0ubuntu1)
-Filename: pool/main/c/cups/cups-dbg_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 2063132
-MD5sum: a32773d33f98ded46f359c634638504b
-SHA1: 79ff7813958dfd13b9a4cda8430743ee8142eb22
-SHA256: c5a5be0db6b91e0419c3fcc68d61df19891b39666123a29674fad1c679fbac09
-Description: Common UNIX Printing System(tm) - debugging symbols
-Homepage: http://www.cups.org
-Description-md5: 45781fd5891c0e6a36e3f989431c7203
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: cups-ppdc
-Priority: optional
-Section: net
-Installed-Size: 213
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Depends: libc6 (>= 2.4), libcups2 (>= 1.6.2), libcupsppdc1 (>= 1.4.0), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.3.0), cups-common (>= 1.7.0~rc1-0ubuntu1)
-Filename: pool/main/c/cups/cups-ppdc_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 28898
-MD5sum: 764046b001446770c6b04a498bb7666c
-SHA1: eea852b19e2a088ae995933a310ebd7ed2527e81
-SHA256: 36a2855022591487a0a86da886580440095ec4bd4931d188c3a0301c4e179038
-Description: Common UNIX Printing System(tm) - PPD manipulation utilities
-Multi-Arch: foreign
-Homepage: http://www.cups.org
-Description-md5: ba3fa27bc468a14b73280f189057f4e7
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: cups-server-common
-Priority: optional
-Section: net
-Installed-Size: 2537
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: all
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Replaces: cups (<< 1.6.2-2~)
-Breaks: cups (<< 1.6.2-2~)
-Filename: pool/main/c/cups/cups-server-common_1.7.0~rc1-0ubuntu1_all.deb
-Size: 664436
-MD5sum: f176c089b6aae6280f632202caa720c0
-SHA1: eb6c94abe48fd9391a5b244e8e41aec55937aace
-SHA256: c597c03fb06f7f7dee63ecc2e8f3b2e13cd0d31b85d4dd73a7d6c324d443091f
-Description: Common UNIX Printing System(tm) - server common files
-Multi-Arch: foreign
-Homepage: http://www.cups.org
-Description-md5: 78d6321e2b482147d6a44eac119c72bc
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: dh-python
-Priority: optional
-Section: python
-Installed-Size: 278
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Piotr Ożarowski <piotr@debian.org>
-Architecture: all
-Version: 1.20130819-1ubuntu2
-Replaces: python3 (<< 3.3.2-4~)
-Depends: python3 (>= 3.2.3-3~)
-Breaks: python3 (<< 3.3.2-4~)
-Filename: pool/main/d/dh-python/dh-python_1.20130819-1ubuntu2_all.deb
-Size: 52122
-MD5sum: 49b4fe8d9486ea32da3d6e73f42024b5
-SHA1: 1858af07f469b3e3a312b498c806aa9fd891af30
-SHA256: 1d37beec6deac6f4c6536af4a75c4a44637562ada0cddcef4c65d3f73e7804dc
-Description: Debian helper tools for packaging Python libraries and applications
-Description-md5: 9f24690d2f6e9b70048dc4079a2dfca7
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: minimal
-
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -464,26 +66,27 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
-Package: google-mock
+Package: gir1.2-networkmanager-1.0
 Priority: optional
-Section: devel
-Installed-Size: 3256
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Fredrik Hallenberg <hallon@debian.org>
+Section: libs
+Installed-Size: 255
+Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: armhf
-Version: 1.6.0+svn437-0ubuntu3
-Depends: python:any
-Filename: pool/main/g/google-mock/google-mock_1.6.0+svn437-0ubuntu3_armhf.deb
-Size: 615288
-MD5sum: 79f415a3ea11f6d643ac246855bd8191
-SHA1: f2ee8aed8c767a7a15c882172d82e8bc63643e50
-SHA256: bab95fb3baa04fb3e1bee22e17ce175fed87b28b0f27f078e38b1c9009c1911f
-Description: Google's framework for writing and using C++ mock classes
-Multi-Arch: same
-Homepage: http://code.google.com/p/googlemock/
-Description-md5: 95d9b26f75a8f8f8a93fbe8e13d5b0e9
+Source: network-manager
+Version: 0.9.8.0-0ubuntu18
+Depends: gir1.2-freedesktop, gir1.2-glib-2.0, libnm-glib4 (>= 0.9.8.0), libnm-util2 (>= 0.9.8.0)
+Filename: pool/main/n/network-manager/gir1.2-networkmanager-1.0_0.9.8.0-0ubuntu18_armhf.deb
+Size: 47378
+MD5sum: c6995bd0595185141ba3e3c9abb6921b
+SHA1: ba02bc977b95c6e82a5987ac4775eebd4babc564
+SHA256: c9711ba418dfd55fec70a0bd662b9533ff86ff74457aec6d44bcb85a6095111f
+Description: GObject introspection data for NetworkManager
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Description-md5: 1a7cb995cf66551c57433bbaf46aee25
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
@@ -502,117 +105,6 @@ SHA1: 0af8925afdf6f2eeb1570daea9fb4ab6f6c052df
 SHA256: e8df88e2d28f55abbaa1840fa99a90e95214f755b5178f217b73380615030d3d
 Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libcephfs-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 130872
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Replaces: libceph-dev, libceph1-dev, libcephfs1-dev
-Depends: libcephfs1 (= 0.67.2-0ubuntu1)
-Conflicts: libceph-dev, libceph1-dev, libcephfs1-dev
-Filename: pool/main/c/ceph/libcephfs-dev_0.67.2-0ubuntu1_armhf.deb
-Size: 32271936
-MD5sum: 51a6376f081811a8e3fe3b274ca78d90
-SHA1: f0b04f671090dfb99cba3a2ad43fb1679d21dd6e
-SHA256: 6b3d9205205d3794719c54ec2e5bcca9113a3e2505f8616a2b78a01c39e7cc6a
-Description: Ceph distributed file system client library (development files)
-Homepage: http://ceph.com/
-Description-md5: 6b03c162d6b2cd6497a86ae380717147
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libcephfs-jni
-Priority: optional
-Section: libs
-Installed-Size: 115
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Depends: libcephfs1 (= 0.67.2-0ubuntu1), libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.6)
-Filename: pool/main/c/ceph/libcephfs-jni_0.67.2-0ubuntu1_armhf.deb
-Size: 34360
-MD5sum: 48fbf1c90a8e36978975dcdfcb53f6e9
-SHA1: e40d22da696d0185c85c4035c2fa51f359fd3efc
-SHA256: d25a8d5225535fbd382cfb0905402d9e28865287696007ef5fd9d17014b0f0ee
-Description: Java Native Interface library for CephFS Java bindings
-Homepage: http://ceph.com/
-Description-md5: eeccae7ad4653bc059b325a5ec4ddd58
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libcephfs-jni-dbg
-Priority: extra
-Section: debug
-Installed-Size: 806
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Depends: libcephfs-jni (= 0.67.2-0ubuntu1)
-Filename: pool/main/c/ceph/libcephfs-jni-dbg_0.67.2-0ubuntu1_armhf.deb
-Size: 247086
-MD5sum: 215febe6649f48984b240f147ef38d2f
-SHA1: 125523befe106fa05045b242bbf0b66d056da8ef
-SHA256: d0412cdf29dedad72606262f405c316dcf1db964e2173436561dfed891e6512a
-Description: Debugging symbols for libcephfs-jni
-Homepage: http://ceph.com/
-Description-md5: b463ee0275120595e8db9a2d2d079cf8
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libcephfs1
-Priority: optional
-Section: libs
-Installed-Size: 3663
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Replaces: libceph, libceph1, libcephfs
-Depends: libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.9), libgcc1 (>= 1:4.4.0), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
-Conflicts: libceph, libceph1, libcephfs
-Filename: pool/main/c/ceph/libcephfs1_0.67.2-0ubuntu1_armhf.deb
-Size: 1499360
-MD5sum: 5f9c46c2f410fc817e20c229a3d8be90
-SHA1: 0d481897442bc14f89899e38e3f8e9e2e1ab5712
-SHA256: e7c16d778d3aaec7e5a51fd277107bf047dd2f90608b894721a4b0778314d0e8
-Description: Ceph distributed file system client library
-Homepage: http://ceph.com/
-Description-md5: 02d5e7983127037e5b5e5e07dea2a6e4
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libcephfs1-dbg
-Priority: extra
-Section: debug
-Installed-Size: 66126
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Replaces: libceph1-dbg
-Depends: libcephfs1 (= 0.67.2-0ubuntu1)
-Conflicts: libceph1-dbg
-Filename: pool/main/c/ceph/libcephfs1-dbg_0.67.2-0ubuntu1_armhf.deb
-Size: 19270212
-MD5sum: 5f85689e4ffb5dc43d9e48b17dcbf94c
-SHA1: 427bd6c8f92ecbbdd4e9c257141b7406f6083b29
-SHA256: a1abb7e5017491285e0fac843845e64a24ecde0f9825e6d04ac42248c53a84f5
-Description: debugging symbols for libcephfs1
-Homepage: http://ceph.com/
-Description-md5: ef23abe3fb9706def734dae7e4f8e64f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -679,234 +171,6 @@ Description-md5: c297587e723b1f50e5f866cbfb42b63d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libcups2
-Priority: optional
-Section: libs
-Installed-Size: 432
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Depends: libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libc6 (>= 2.4), libgnutls26 (>= 2.12.17-0), libgssapi-krb5-2 (>= 1.10+dfsg~), zlib1g (>= 1:1.2.0)
-Pre-Depends: multiarch-support
-Suggests: cups-common
-Breaks: cups (<< 1.5.0)
-Filename: pool/main/c/cups/libcups2_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 181196
-MD5sum: 913f0ab03efd7fb42ab052ac8d6bb39c
-SHA1: c9defa6587af0e33a196206179e0923734eaad48
-SHA256: ab8505d744071f1ee9b49560e5b3ab544100ba5f73e76938fde0b60466ee1923
-Description: Common UNIX Printing System(tm) - Core library
-Multi-Arch: same
-Homepage: http://www.cups.org
-Description-md5: cce9961cb86712146cb19e1b4636f79d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: virt-host, ubuntu-desktop, ubuntu-usb, print-server, tomcat-server, samba-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libcups2-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 777
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Depends: libcups2 (= 1.7.0~rc1-0ubuntu1), libgnutls-dev, libkrb5-dev
-Filename: pool/main/c/cups/libcups2-dev_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 258250
-MD5sum: 96de4a6863bbe9139026831405b95c33
-SHA1: e699b87ee8db91942bf3452b9cf71433de95c319
-SHA256: 1de6ace8ba50998b91cb6ae0c935735f7d9af771d68350f76d2b374d081aabb5
-Description: Common UNIX Printing System(tm) - Development files CUPS library
-Homepage: http://www.cups.org
-Description-md5: bf3f385e98251c2563c3f58554d2adce
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libcupscgi1
-Priority: optional
-Section: libs
-Installed-Size: 161
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Depends: libc6 (>= 2.4), libcups2 (= 1.7.0~rc1-0ubuntu1)
-Pre-Depends: multiarch-support
-Filename: pool/main/c/cups/libcupscgi1_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 26644
-MD5sum: f8b5d8bf3f6b8cccb287fe709e29cf42
-SHA1: e36a9912635967aa0541facc17aacc1f3cd1cf85
-SHA256: 995aebd329f46a7d69d69800a4b35de375e3efdbf61b3f48c30d3460f3a18b2e
-Description: Common UNIX Printing System(tm) - CGI library
-Multi-Arch: same
-Homepage: http://www.cups.org
-Description-md5: 3660b0ffb79cde60a9580ea571ecfbcb
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libcupscgi1-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 195
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Depends: libcupscgi1 (= 1.7.0~rc1-0ubuntu1), libcups2-dev (= 1.7.0~rc1-0ubuntu1)
-Filename: pool/main/c/cups/libcupscgi1-dev_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 33832
-MD5sum: 68e636f67646bf56ec66c5d1cd926732
-SHA1: f4df8ba4e372a3c026bbb67e4c51df39841f4c11
-SHA256: 656d4bb84fc72b46b4fde9acdf40c916f6413349f03a089812a35a2d8914cc5d
-Description: Common UNIX Printing System(tm) - Development files for CGI library
-Homepage: http://www.cups.org
-Description-md5: 433b937ac75daeec3873b3445bb48090
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libcupsimage2
-Priority: optional
-Section: libs
-Installed-Size: 144
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Depends: libc6 (>= 2.4), libcups2 (= 1.7.0~rc1-0ubuntu1), libcupsfilters1 (>= 1.0~b1)
-Pre-Depends: multiarch-support
-Filename: pool/main/c/cups/libcupsimage2_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 15096
-MD5sum: 7acefe3531331d7df13132fac1283530
-SHA1: 211d0cb06e32e98f70971be02453922e5f4080a6
-SHA256: ee210e0ba51b449278aeeb9a42e695a340f44ea1d97892040ef86d2f9e43515f
-Description: Common UNIX Printing System(tm) - Raster image library
-Multi-Arch: same
-Homepage: http://www.cups.org
-Description-md5: f4451fb5498322724719d7d3a8635bf4
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libcupsimage2-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 78
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Depends: libcupsimage2 (= 1.7.0~rc1-0ubuntu1), libcups2-dev (= 1.7.0~rc1-0ubuntu1), libcupsfilters-dev (>= 1.0~b1), libpng-dev, libtiff-dev, libjpeg8-dev | libjpeg-dev, zlib1g-dev
-Filename: pool/main/c/cups/libcupsimage2-dev_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 18268
-MD5sum: 4636ee51286e854231629a3031802aaa
-SHA1: cb359bc3dcece522b56f1aaafe431d102da3410f
-SHA256: 7a875891aea0131ef8aa6e63868eaed492e3ef7cc0e6e82218a80aae565e5689
-Description: Common UNIX Printing System(tm) - Development files CUPS image library
-Homepage: http://www.cups.org
-Description-md5: 419c750b3360d0933e0bbc9e17913244
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libcupsmime1
-Priority: optional
-Section: libs
-Installed-Size: 140
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Depends: libc6 (>= 2.4), libcups2 (= 1.7.0~rc1-0ubuntu1)
-Pre-Depends: multiarch-support
-Breaks: cups (<< 1.5.0)
-Filename: pool/main/c/cups/libcupsmime1_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 11372
-MD5sum: 09bef2d08b9463adc7b7eb6d1414f79e
-SHA1: 0288ba4c5b35e91135b3916e9eb2deb2e3258566
-SHA256: ed1fdada8873eea055a130491b0452621e40e1fc24eeef393308c72f06bee7bd
-Description: Common UNIX Printing System(tm) - MIME library
-Multi-Arch: same
-Homepage: http://www.cups.org
-Description-md5: 3c738d1cd62835670ace55e8d83b4f80
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libcupsmime1-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 151
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Depends: libcupsmime1 (= 1.7.0~rc1-0ubuntu1), libcups2-dev (= 1.7.0~rc1-0ubuntu1)
-Filename: pool/main/c/cups/libcupsmime1-dev_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 12830
-MD5sum: de9d0095ef7e99170e5bbd283d1d6c16
-SHA1: ed2197e8e36cb3420f2034d25f615d7a7c6680fe
-SHA256: 01bd764e9d22fcde9dc3e0034b6059db5b394524f98a5cbee521be78acebce03
-Description: Common UNIX Printing System(tm) - Development files MIME library
-Homepage: http://www.cups.org
-Description-md5: ee515191b340413216668249b8b6097b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libcupsppdc1
-Priority: optional
-Section: libs
-Installed-Size: 212
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Depends: libc6 (>= 2.4), libcups2 (= 1.7.0~rc1-0ubuntu1), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.3.0)
-Pre-Depends: multiarch-support
-Filename: pool/main/c/cups/libcupsppdc1_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 48298
-MD5sum: 5465d4bd8d77f872480037d71771a3b6
-SHA1: 88d93ac500aa63d20790c8dce06765fb37a922e7
-SHA256: ce164e2c21567e1badf928fcaff846e04b0df3e6dbb59b9c58b1cf5cf7e63235
-Description: Common UNIX Printing System(tm) - PPD manipulation library
-Multi-Arch: same
-Homepage: http://www.cups.org
-Description-md5: a2ce16897499bbac7df75d4d297b1713
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libcupsppdc1-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 308
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: armhf
-Source: cups
-Version: 1.7.0~rc1-0ubuntu1
-Depends: libcupsppdc1 (= 1.7.0~rc1-0ubuntu1), libcups2-dev (= 1.7.0~rc1-0ubuntu1)
-Filename: pool/main/c/cups/libcupsppdc1-dev_1.7.0~rc1-0ubuntu1_armhf.deb
-Size: 66392
-MD5sum: a6a64e82ac47eea457ac9854c7467b83
-SHA1: 3f92070b095f7e74279c71f1f90f2e5b479ee6a2
-SHA256: c6613199eb8d1aba6e430f35449a46c757caa5ba6bedebe334ddcfc1ce993759
-Description: Common UNIX Printing System(tm) - Development files PPD library
-Homepage: http://www.cups.org
-Description-md5: f1c111d7276de209cb50ebccbc551f69
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: libdbi-perl
 Priority: optional
 Section: perl
@@ -931,30 +195,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
-Package: liblxc0
-Priority: optional
-Section: admin
-Installed-Size: 233
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: lxc
-Version: 0.9.0-0ubuntu23
-Replaces: lxc (<< 0.9.0~alpha3-0ubuntu1~)
-Depends: libapparmor1 (>= 2.6~devel), libc6 (>= 2.17), libcap2 (>= 2.10)
-Pre-Depends: multiarch-support
-Breaks: lxc (<< 0.9.0~alpha3-0ubuntu1~)
-Filename: pool/main/l/lxc/liblxc0_0.9.0-0ubuntu23_armhf.deb
-Size: 85510
-MD5sum: eecaef10a302b7222368748c11f01aed
-SHA1: cbe952f2ca53f5a50548142e12722fda7c5ad57e
-SHA256: e39e0963654cde276e316c312bca713d4169a290c31ebe2ce195510ed3cb3ad5
-Description: Linux Containers userspace tools (library)
-Homepage: http://lxc.sourceforge.net/
-Description-md5: d757397b1a93a5bea5c72032f3ef485d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: edubuntu-desktop-gnome
-
 Package: libmirclient-dev
 Priority: optional
 Section: libdevel
@@ -963,13 +203,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: armhf
 Source: mir
-Version: 0.0.9+13.10.20130825.1-0ubuntu1
-Depends: libmirclient2 (= 0.0.9+13.10.20130825.1-0ubuntu1), libmirprotobuf-dev (= 0.0.9+13.10.20130825.1-0ubuntu1), mircommon-dev (= 0.0.9+13.10.20130825.1-0ubuntu1)
-Filename: pool/main/m/mir/libmirclient-dev_0.0.9+13.10.20130825.1-0ubuntu1_armhf.deb
-Size: 7412
-MD5sum: 0b9184be93ecf1df8ed55ecb2f4a23d5
-SHA1: 4d78e20a20612563022931031401fea1bc383a45
-SHA256: 81910bc3c814f6791be26336738d81b03d61f635841eea69c3fb4fd7ecb176e2
+Version: 0.0.10+13.10.20130826-0ubuntu1
+Depends: libmirclient2 (= 0.0.10+13.10.20130826-0ubuntu1), libmirprotobuf-dev (= 0.0.10+13.10.20130826-0ubuntu1), mircommon-dev (= 0.0.10+13.10.20130826-0ubuntu1)
+Filename: pool/main/m/mir/libmirclient-dev_0.0.10+13.10.20130826-0ubuntu1_armhf.deb
+Size: 7434
+MD5sum: 5a9ed8fae09ecb33fdbd8eb0a8d461a1
+SHA1: 712f35fe38935f7fa5bbbfff1bd756e8608a4b11
+SHA256: 4a81f5c5a0119679b0ed4986b3e7f7cef765476c885636696ca3493b978a4d99
 Description: Display server for Ubuntu - development headers
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -986,14 +226,14 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: armhf
 Source: mir
-Version: 0.0.9+13.10.20130825.1-0ubuntu1
-Depends: libboost-system1.53.0, libc6 (>= 2.9), libgcc1 (>= 1:4.4.0), libhardware2, libmirprotobuf0 (>= 0.0.9+13.10.20130825.1), libprotobuf7, libstdc++6 (>= 4.8), libxkbcommon0 (>= 0.2.0)
+Version: 0.0.10+13.10.20130826-0ubuntu1
+Depends: libboost-system1.53.0, libc6 (>= 2.9), libgcc1 (>= 1:4.4.0), libhardware2, libmirprotobuf0 (>= 0.0.10+13.10.20130826), libprotobuf7, libstdc++6 (>= 4.8), libxkbcommon0 (>= 0.2.0)
 Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirclient2_0.0.9+13.10.20130825.1-0ubuntu1_armhf.deb
-Size: 143394
-MD5sum: ae597c830070665d69058d280651ff1d
-SHA1: 92d750b922ca20ff03076286f2f2dfdd1024107c
-SHA256: 397e6c7adf4e3f917bb3f3a1b99f74d27c02a1520312b480149b1838014dd40e
+Filename: pool/main/m/mir/libmirclient2_0.0.10+13.10.20130826-0ubuntu1_armhf.deb
+Size: 143204
+MD5sum: 676c27dc7127959c063aeb757d49c7ba
+SHA1: f4248b9535036cc94cd65f8db204ce877dfe4d4e
+SHA256: f201db860b20d70118d325cf2fb9a2af3e09e2fc0e3bf7af6e17e8178f6be789
 Description: Display server for Ubuntu - client library
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -1010,15 +250,15 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: armhf
 Source: mir
-Version: 0.0.9+13.10.20130825.1-0ubuntu1
+Version: 0.0.10+13.10.20130826-0ubuntu1
 Replaces: libmirserver0
 Depends: libc6 (>= 2.4), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.4.0), libhardware2, libstdc++6 (>= 4.8)
 Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirplatform_0.0.9+13.10.20130825.1-0ubuntu1_armhf.deb
-Size: 80538
-MD5sum: bfacce7269a80ee6c55254f2f432713b
-SHA1: ae870ef78c8f0e8f2c5ad570397e95ea720017a3
-SHA256: ddc0c20a310434c53fd09866355af7e988806e4a17ba33394790fb089a4c22df
+Filename: pool/main/m/mir/libmirplatform_0.0.10+13.10.20130826-0ubuntu1_armhf.deb
+Size: 79140
+MD5sum: aff5c2fc18f8a995c825fa87908dca33
+SHA1: 8fac1b1e2cc9d948c88500d270768153c921024b
+SHA256: 405bdaa393fa654ada5a0b03893693c45a1e710ca93aec4182bbcc8954ef6d20
 Description: Display server for Ubuntu - platform library
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -1034,13 +274,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: armhf
 Source: mir
-Version: 0.0.9+13.10.20130825.1-0ubuntu1
-Depends: libmirprotobuf0 (= 0.0.9+13.10.20130825.1-0ubuntu1), libprotobuf-dev
-Filename: pool/main/m/mir/libmirprotobuf-dev_0.0.9+13.10.20130825.1-0ubuntu1_armhf.deb
-Size: 4588
-MD5sum: bd650a5f210a2842751e42d9b0da4f1b
-SHA1: dfef1a40d4cc96680a917c3e23ba0ae5f74f5257
-SHA256: 73a0e71bb4c1496f4411246ff57625765b6f06775ab2d1159d1a5efb0d2a981b
+Version: 0.0.10+13.10.20130826-0ubuntu1
+Depends: libmirprotobuf0 (= 0.0.10+13.10.20130826-0ubuntu1), libprotobuf-dev
+Filename: pool/main/m/mir/libmirprotobuf-dev_0.0.10+13.10.20130826-0ubuntu1_armhf.deb
+Size: 4568
+MD5sum: d543f0475e5aef62b85ace61942be9b8
+SHA1: b8d5b3cb34e92a197283adb5f0f45c2286fa234b
+SHA256: d2f92b3f823dc6bba1ea2a046b8a40a791bc3e3b9aacdceda279a12101d0bc8e
 Description: Display server for Ubuntu - protocol definition
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -1052,19 +292,19 @@ Task: kubuntu-full, kubuntu-active-full
 Package: libmirprotobuf0
 Priority: optional
 Section: libs
-Installed-Size: 197
+Installed-Size: 198
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: armhf
 Source: mir
-Version: 0.0.9+13.10.20130825.1-0ubuntu1
+Version: 0.0.10+13.10.20130826-0ubuntu1
 Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libprotobuf7, libstdc++6 (>= 4.4.0)
 Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirprotobuf0_0.0.9+13.10.20130825.1-0ubuntu1_armhf.deb
-Size: 62540
-MD5sum: 314a6d361e38d77b4cb62e1ae18107be
-SHA1: 01ef85932797ad92c4be7299dd2642a2e97a12b1
-SHA256: f9fe4d4aba21e5eb443e63b8cead5adb607f27540a2317afeb653bc6d5e3d640
+Filename: pool/main/m/mir/libmirprotobuf0_0.0.10+13.10.20130826-0ubuntu1_armhf.deb
+Size: 61496
+MD5sum: cbebbb98e2d99f9c3632343f2ad613dd
+SHA1: c52402cf4b9a86077ff656d2f64efaedaba116ce
+SHA256: c79eb144732f740c5674c1879e5ff60a8090d47dae5a98a6ea2c72c30cc2a4b9
 Description: Display server for Ubuntu - protocol implementation
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -1081,13 +321,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: armhf
 Source: mir
-Version: 0.0.9+13.10.20130825.1-0ubuntu1
-Depends: libmirserver1 (= 0.0.9+13.10.20130825.1-0ubuntu1), libmirprotobuf-dev (= 0.0.9+13.10.20130825.1-0ubuntu1), mircommon-dev (= 0.0.9+13.10.20130825.1-0ubuntu1), libglm-dev, libboost-program-options-dev
-Filename: pool/main/m/mir/libmirserver-dev_0.0.9+13.10.20130825.1-0ubuntu1_armhf.deb
-Size: 40664
-MD5sum: cdfb2a1eb6d9c28dc74f27616ffe9e29
-SHA1: 9976d9c6389b2013af728e20ec9619c33e9bb713
-SHA256: dcd91b22347d96b58dbd23503df27d0ae886c266975b79b4214f7c335e2c715e
+Version: 0.0.10+13.10.20130826-0ubuntu1
+Depends: libmirserver1 (= 0.0.10+13.10.20130826-0ubuntu1), libmirprotobuf-dev (= 0.0.10+13.10.20130826-0ubuntu1), mircommon-dev (= 0.0.10+13.10.20130826-0ubuntu1), libglm-dev, libboost-program-options-dev
+Filename: pool/main/m/mir/libmirserver-dev_0.0.10+13.10.20130826-0ubuntu1_armhf.deb
+Size: 40298
+MD5sum: 807804c076a1cc0e03c63f8374e7bf1e
+SHA1: 44e593e6d20d500af09932e9a969b3d073bff5d6
+SHA256: 34aae59ccf920a86cf1233bef453887f38ee934e165db6f04387ef05839ce9c3
 Description: Display server for Ubuntu - development headers
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -1103,14 +343,14 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: armhf
 Source: mir
-Version: 0.0.9+13.10.20130825.1-0ubuntu1
-Depends: libboost-program-options1.53.0, libboost-system1.53.0, libc6 (>= 2.9), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.4.0), libgflags2, libgles2-mesa (>= 7.8.1) | libgles2, libgoogle-glog0, libmirclient2 (>= 0.0.9+13.10.20130825.1), libmirprotobuf0 (>= 0.0.9+13.10.20130825.1), libprotobuf7, libstdc++6 (>= 4.8.1), libxkbcommon0 (>= 0.2.0), libmirplatform (= 0.0.9+13.10.20130825.1-0ubuntu1)
+Version: 0.0.10+13.10.20130826-0ubuntu1
+Depends: libboost-program-options1.53.0, libboost-system1.53.0, libc6 (>= 2.9), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.4.0), libgflags2, libgles2-mesa (>= 7.8.1) | libgles2, libgoogle-glog0, libmirclient2 (>= 0.0.10+13.10.20130826), libmirprotobuf0 (>= 0.0.10+13.10.20130826), libprotobuf7, libstdc++6 (>= 4.8.1), libxkbcommon0 (>= 0.2.0), libmirplatform (= 0.0.10+13.10.20130826-0ubuntu1)
 Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirserver1_0.0.9+13.10.20130825.1-0ubuntu1_armhf.deb
-Size: 469178
-MD5sum: fdc809231f95d70b13dbf8eca36a6ffe
-SHA1: 285975320a08da01d2d38d9d8210272d180b04fa
-SHA256: 13f786f62dbcfeb04455363e8cbc0b74c18d648a7cfa6a36d508cd685770a813
+Filename: pool/main/m/mir/libmirserver1_0.0.10+13.10.20130826-0ubuntu1_armhf.deb
+Size: 468856
+MD5sum: 7680c418eb79ea8f07aaf7048ab83846
+SHA1: b6e2a477b700575a9bffece201fd7cd8977b5ddf
+SHA256: 358b8781d7f167572ed48bd918a024484e2e942b24fe4d9efc0b65abb21547ce
 Description: Display server for Ubuntu - server library
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -1187,19 +427,148 @@ Description-md5: 2f06b7e1bfdb9f620d92f9696d24fabc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libnm-glib-dev
+Priority: optional
+Section: net
+Installed-Size: 1770
+Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: network-manager
+Version: 0.9.8.0-0ubuntu18
+Depends: libnm-glib4 (= 0.9.8.0-0ubuntu18), gir1.2-networkmanager-1.0 (= 0.9.8.0-0ubuntu18), libnm-util-dev, network-manager-dev, libglib2.0-dev, libdbus-glib-1-dev
+Filename: pool/main/n/network-manager/libnm-glib-dev_0.9.8.0-0ubuntu18_armhf.deb
+Size: 220590
+MD5sum: 5a021b391512a784a8cf92f1e1e32d46
+SHA1: 25577c20327434d21602f00e737ac4b4cd59ff3e
+SHA256: 7d938a723dff16a8b56b86bafe65221ecf9e3f43fbfde58655b2de5b56ece2c2
+Description: network management framework (GLib interface)
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Description-md5: 56d0a34d148547835775f648c283d58f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libnm-glib-vpn-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 126
+Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: network-manager
+Version: 0.9.8.0-0ubuntu18
+Depends: libnm-glib-vpn1 (= 0.9.8.0-0ubuntu18), libnm-glib-dev
+Filename: pool/main/n/network-manager/libnm-glib-vpn-dev_0.9.8.0-0ubuntu18_armhf.deb
+Size: 6052
+MD5sum: fecf3be0da8bad0e7aa317c68c6150de
+SHA1: f1877ae57da12fd8072948e65ea603329a3f6b88
+SHA256: ac5e53dde0be22b8a7b42218adc9ee14ee06e96f27a3b8f2adfe28f3c9a1ad19
+Description: network management framework (GLib interface)
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Description-md5: c78ac261b5f6cfbb4c74b78a708c90bc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libnm-glib-vpn1
+Priority: optional
+Section: libs
+Installed-Size: 122
+Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: network-manager
+Version: 0.9.8.0-0ubuntu18
+Depends: libc6 (>= 2.4), libdbus-glib-1-2 (>= 0.88), libglib2.0-0 (>= 2.22), libnm-util2 (>= 0.7.0)
+Filename: pool/main/n/network-manager/libnm-glib-vpn1_0.9.8.0-0ubuntu18_armhf.deb
+Size: 12998
+MD5sum: 5d8feb530c9e99759ea03c23b198e66b
+SHA1: 7303412a03745d2746a61f817d371c1dbb4f1065
+SHA256: 5a3370721de37f02142f8190cbda0bea301bc5545467ec8ef82d8ac2ea672b9a
+Description: network management framework (GLib VPN shared library)
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Description-md5: a8d1fc7f276929433320d96cddd81b4b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libnm-glib4
+Priority: optional
+Section: libs
+Installed-Size: 258
+Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: network-manager
+Version: 0.9.8.0-0ubuntu18
+Depends: libc6 (>= 2.4), libdbus-1-3 (>= 1.0.2), libdbus-glib-1-2 (>= 0.88), libglib2.0-0 (>= 2.31.8), libgudev-1.0-0 (>= 146), libnm-util2 (>= 0.9.6.0+git201212071413.8a9759a)
+Filename: pool/main/n/network-manager/libnm-glib4_0.9.8.0-0ubuntu18_armhf.deb
+Size: 74294
+MD5sum: d2bd93838cace179470b233e7438399f
+SHA1: ab9ba832ec9efb604e0a0dff844bb520652ff1e3
+SHA256: 58edb88ae091dfd66db0944d9bf52d1882dc0729b37d5e2f97f3ac35baa6b46d
+Description: network management framework (GLib shared library)
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Description-md5: 217fbdca65cb15a2066a01b11aa4ed86
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libnm-util-dev
+Priority: optional
+Section: net
+Installed-Size: 3029
+Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: network-manager
+Version: 0.9.8.0-0ubuntu18
+Depends: libnm-util2 (= 0.9.8.0-0ubuntu18), gir1.2-networkmanager-1.0 (= 0.9.8.0-0ubuntu18), libglib2.0-dev, libdbus-glib-1-dev
+Filename: pool/main/n/network-manager/libnm-util-dev_0.9.8.0-0ubuntu18_armhf.deb
+Size: 287044
+MD5sum: d75a385fdc88e00f9d069d5dc9136da8
+SHA1: b08d37cb75f7922554ab5a1963b0dc32e35d10a0
+SHA256: 1a45f68f7d5f3f565d8d87a55f8f8937fec2ca776544f44f89d587511ee0e6f9
+Description: network management framework (development files)
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Description-md5: 386633658ef6f2e5bd09c1075e48d085
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libnm-util2
+Priority: optional
+Section: libs
+Installed-Size: 382
+Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: network-manager
+Version: 0.9.8.0-0ubuntu18
+Depends: libc6 (>= 2.4), libdbus-glib-1-2 (>= 0.78), libglib2.0-0 (>= 2.33.14), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libuuid1 (>= 2.16)
+Filename: pool/main/n/network-manager/libnm-util2_0.9.8.0-0ubuntu18_armhf.deb
+Size: 120242
+MD5sum: 766a3e43c7469b30c7d729afa30dc184
+SHA1: 224ae44ab8ecbcdcb3a10f5adf6dcc3b58221a8d
+SHA256: a34a887ee1a876d4a9bde077a04b97a6b6f7ac2769024517bbf1279b637b6cbc
+Description: network management framework (shared library)
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Description-md5: 9206e0c0315bf3dee48dfe5ab4d4bd13
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: libplatform-api-headers
 Priority: optional
 Section: libdevel
-Installed-Size: 168
+Installed-Size: 173
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: armhf
 Source: platform-api
-Version: 0.18.3+13.10.20130823-0ubuntu1
-Filename: pool/main/p/platform-api/libplatform-api-headers_0.18.3+13.10.20130823-0ubuntu1_armhf.deb
-Size: 16896
-MD5sum: baed683f6b8455c715ea060ec102c7f3
-SHA1: ef08188bda52a50af741261395628bb9d8773ca2
-SHA256: 92d7ce382b2d84004b5b04c40431f4fbac35ba799a8a6dba15b0f2fd766a06e0
+Version: 0.18.3+13.10.20130826-0ubuntu1
+Filename: pool/main/p/platform-api/libplatform-api-headers_0.18.3+13.10.20130826-0ubuntu1_armhf.deb
+Size: 17690
+MD5sum: 64cdd0a2e31c804cca12a85e097f6b37
+SHA1: ed3f0073b5a7d35bea4d32bb2d91b43b77e4d691
+SHA256: 7cb4cb8bd2627a21ccc8af016175461c43332d29a8c495d15ce2cf4d59caeace
 Description: Platform API for system level capabilities (API headers)
 Multi-Arch: same
 Homepage: https://launchpad.net/platform-api
@@ -1214,14 +583,14 @@ Installed-Size: 43
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: armhf
 Source: platform-api
-Version: 0.18.3+13.10.20130823-0ubuntu1
-Depends: libgles2-mesa-dev, libplatform-api-headers (= 0.18.3+13.10.20130823-0ubuntu1), libubuntu-application-api1 | libplatform-api1, libubuntu-application-api-mirserver1 (= 0.18.3+13.10.20130823-0ubuntu1), libubuntu-application-api-mirclient1 (= 0.18.3+13.10.20130823-0ubuntu1)
+Version: 0.18.3+13.10.20130826-0ubuntu1
+Depends: libgles2-mesa-dev, libplatform-api-headers (= 0.18.3+13.10.20130826-0ubuntu1), libubuntu-application-api1 | libplatform-api1, libubuntu-application-api-mirserver1 (= 0.18.3+13.10.20130826-0ubuntu1), libubuntu-application-api-mirclient1 (= 0.18.3+13.10.20130826-0ubuntu1)
 Suggests: libplatform-api1-doc
-Filename: pool/main/p/platform-api/libplatform-api1-dev_0.18.3+13.10.20130823-0ubuntu1_armhf.deb
-Size: 1924
-MD5sum: 1da8cd6ddebc42f57b2f4ae09b4ccfe0
-SHA1: 09480ed3eb8c21a402c4601fd8e4d749d1af81b3
-SHA256: 83d4a2d92cc53f20246213d19e4d217d5ab0f93f76508f3cfc78c000fc5191db
+Filename: pool/main/p/platform-api/libplatform-api1-dev_0.18.3+13.10.20130826-0ubuntu1_armhf.deb
+Size: 1920
+MD5sum: 8d4390a1bf8f069aec17053082c219b4
+SHA1: 454845dd58512508d586dadcde25db6fc30c3332
+SHA256: 59cabf2effdf081eca6beeec1c5b49ede5f98ed912dcdbdc32e000571c0e122f
 Description: Platform API for system level capabilities (development)
 Multi-Arch: same
 Homepage: https://launchpad.net/platform-api
@@ -1232,57 +601,37 @@ Origin: Ubuntu
 Package: libplatform-api1-doc
 Priority: optional
 Section: doc
-Installed-Size: 4482
+Installed-Size: 4619
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: all
 Source: platform-api
-Version: 0.18.3+13.10.20130823-0ubuntu1
+Version: 0.18.3+13.10.20130826-0ubuntu1
 Depends: libplatform-api1-dev
-Filename: pool/main/p/platform-api/libplatform-api1-doc_0.18.3+13.10.20130823-0ubuntu1_all.deb
-Size: 1893650
-MD5sum: aa3eefb658e68f55d0610f9992c39205
-SHA1: 52d3eaf33f122a63d99b7019ced49da455394793
-SHA256: 209221ef01ac6bdc4d6299121f740837c61aca679a434e0e684e132f41e2fa7a
+Filename: pool/main/p/platform-api/libplatform-api1-doc_0.18.3+13.10.20130826-0ubuntu1_all.deb
+Size: 1952154
+MD5sum: 9364ca3be2574897dd6dccd6c6e72e62
+SHA1: 1cdbffba6b5f0209a70eab1b5bb0029e5bdbf373
+SHA256: 554e8c169a5b340394d815954ea245a01a84f8ddaf3c076878560b7aecb83fd0
 Description: Platform API for system level capabilities (development)
 Homepage: https://launchpad.net/platform-api
 Description-md5: 91dba5b6aae30b22730a6ddbabdb540f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libplatform-api1-hybris-tests
-Priority: optional
-Section: devel
-Installed-Size: 500
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: platform-api
-Version: 0.18.3+13.10.20130823-0ubuntu1
-Depends: libboost-system1.53.0, libc6 (>= 2.9), libdbus-1-3 (>= 1.5.12), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.4.0), libgles2-mesa (>= 7.8.1) | libgles2, libstdc++6 (>= 4.6), libubuntu-application-api1 (= 0.18.3+13.10.20130823-0ubuntu1), libubuntu-location-service0, libubuntu-platform-hardware-api1 (>= 0.18.2+13.10.20130709)
-Filename: pool/main/p/platform-api/libplatform-api1-hybris-tests_0.18.3+13.10.20130823-0ubuntu1_armhf.deb
-Size: 209654
-MD5sum: 740827afd61d67fd58b7d1ca031f8111
-SHA1: 25e2d49f047eeba011c828730a198b15d7fa0da2
-SHA256: cffbe0bf24c3eaca6876eaa4849b8372b6022a2d8b080d2d7521237d8d59eaf1
-Description: Hybris implementation of the Platform API (tests)
-Homepage: https://launchpad.net/platform-api
-Description-md5: 89a7bce7ddd7c42cf7b54603187b66a9
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: libplatform-hardware-api-headers
 Priority: optional
 Section: libdevel
-Installed-Size: 55
+Installed-Size: 56
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: armhf
 Source: platform-api
-Version: 0.18.3+13.10.20130823-0ubuntu1
+Version: 0.18.3+13.10.20130826-0ubuntu1
 Depends: libplatform-api-headers
-Filename: pool/main/p/platform-api/libplatform-hardware-api-headers_0.18.3+13.10.20130823-0ubuntu1_armhf.deb
-Size: 5262
-MD5sum: 1686411440e0429d3f3dcc6271b0c4db
-SHA1: 631f1d9eaedae48e53878916486bfb2dabb9ed0f
-SHA256: 811a5f662368905db56ba272199b5edcea6dc90249a543f92751e0b8862b16fd
+Filename: pool/main/p/platform-api/libplatform-hardware-api-headers_0.18.3+13.10.20130826-0ubuntu1_armhf.deb
+Size: 5264
+MD5sum: 2c3b43682380af5b92bdfd05660b59ce
+SHA1: e2f6c58f442f6cc9a0eec0bcb066ec385f444960
+SHA256: 8aa9e3e7267f2faab73aad2f2b550cd8e18df67e0f28c3569f4246a8cef87d70
 Description: Platform API for system level capabilities (API headers)
 Multi-Arch: same
 Homepage: https://launchpad.net/platform-api
@@ -1297,14 +646,14 @@ Installed-Size: 39
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: armhf
 Source: platform-api
-Version: 0.18.3+13.10.20130823-0ubuntu1
-Depends: libgles2-mesa-dev, libplatform-hardware-api-headers (= 0.18.3+13.10.20130823-0ubuntu1), libubuntu-platform-hardware-api1 | libplatform-hardware-api1
+Version: 0.18.3+13.10.20130826-0ubuntu1
+Depends: libgles2-mesa-dev, libplatform-hardware-api-headers (= 0.18.3+13.10.20130826-0ubuntu1), libubuntu-platform-hardware-api1 | libplatform-hardware-api1
 Suggests: libplatform-api1-doc
-Filename: pool/main/p/platform-api/libplatform-hardware-api1-dev_0.18.3+13.10.20130823-0ubuntu1_armhf.deb
-Size: 1648
-MD5sum: 6781151f8494885f39cf0ac8b41495ff
-SHA1: 52c0c7377f20e7c9917415af3006467238ebf4d9
-SHA256: 9555addf0887fa7904dbf6e458e363381516b537e9df2de63bd04fe72d907f5b
+Filename: pool/main/p/platform-api/libplatform-hardware-api1-dev_0.18.3+13.10.20130826-0ubuntu1_armhf.deb
+Size: 1652
+MD5sum: b3ad579f684bbfa952888abe9a2feed6
+SHA1: 23d2cc45282ae20e27f064bb20b9f3eafbde0e6b
+SHA256: c12ab1f382942f79abf800d1b0270e41cd07bc48c82049f62c4f6b1a099b0813
 Description: Platform API for system level capabilities (development)
 Multi-Arch: same
 Homepage: https://launchpad.net/platform-api
@@ -1312,157 +661,21 @@ Description-md5: 0aa12ab7a84a04b9fc839f7c620dfee2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: librados-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 10552
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Replaces: librados1-dev, librados2-dev
-Depends: librados2 (= 0.67.2-0ubuntu1), libc6 (>= 2.16), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0)
-Conflicts: librados1-dev, librados2-dev
-Filename: pool/main/c/ceph/librados-dev_0.67.2-0ubuntu1_armhf.deb
-Size: 2390130
-MD5sum: f11d0f3b86114f05dcb75992fafb8a4d
-SHA1: dc1b72e1ead2968bc5547035d75f3a4751af6804
-SHA256: 4da188dd6d35a31517f48271fd344c2db8f8e23d9934436a5e846dc4f0af6878
-Description: RADOS distributed object store client library (development files)
-Homepage: http://ceph.com/
-Description-md5: 45a1795729f9041b2c4d34b965fbaee2
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: librados2
-Priority: optional
-Section: libs
-Installed-Size: 3383
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Replaces: librados, librados1
-Depends: libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.9), libgcc1 (>= 1:4.4.0), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
-Conflicts: librados, librados1
-Filename: pool/main/c/ceph/librados2_0.67.2-0ubuntu1_armhf.deb
-Size: 1318812
-MD5sum: 702206a595c13a586a40b28357deec6d
-SHA1: 79bfcf5e9e5c06e1417d02d5f7378cd37ae4db3e
-SHA256: d9261c19e86690a7730fe1c883369ce56c7668b7e50734601eca62b4ba365247
-Description: RADOS distributed object store client library
-Homepage: http://ceph.com/
-Description-md5: 42d0f393b45b7f226597be77c6f81917
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: virt-host
-
-Package: librados2-dbg
-Priority: extra
-Section: debug
-Installed-Size: 60695
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Replaces: librados1-dbg
-Depends: librados2 (= 0.67.2-0ubuntu1)
-Conflicts: librados1-dbg
-Filename: pool/main/c/ceph/librados2-dbg_0.67.2-0ubuntu1_armhf.deb
-Size: 17027654
-MD5sum: 1893ac311823b199dfbf10f780532e7f
-SHA1: 644aae478f823316ee426aba68fcd53a0f7911ac
-SHA256: 4c08381bba960f1e55fa6af42fa6d3dbecae7a8ea4cb1ed1a7ac6888763ece2f
-Description: debugging symbols for librados2
-Homepage: http://ceph.com/
-Description-md5: 5fed3bffffed20ba3eae296a5cd8e215
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: librbd-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 25187
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Replaces: librbd1-dev
-Depends: librados-dev, librbd1 (= 0.67.2-0ubuntu1)
-Conflicts: librbd1-dev
-Filename: pool/main/c/ceph/librbd-dev_0.67.2-0ubuntu1_armhf.deb
-Size: 6873556
-MD5sum: e90473e3602c4e4dfb1a66a55069facb
-SHA1: 756813b9f46ccc8d0f846b789e606bf0b4af134a
-SHA256: f862e1efda0d4c7805586891e2fce742ccb1501515ca5fefbe87cf8a8c9a9f68
-Description: RADOS block device client library (development files)
-Homepage: http://ceph.com/
-Description-md5: 5a3f9d05f90eae572a3f0c323daf1cab
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: librbd1
-Priority: optional
-Section: libs
-Installed-Size: 477
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Depends: librados2 (= 0.67.2-0ubuntu1), libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.6)
-Filename: pool/main/c/ceph/librbd1_0.67.2-0ubuntu1_armhf.deb
-Size: 237562
-MD5sum: c3f6417b1de5e95c6d1bde843f86ad4a
-SHA1: 01b0ef883177577e8fea204a36d4a92c2bb99574
-SHA256: 962b934dc5e0bdecf92cd8ed647ece3ea189161200c9deca91ca75b564157d6f
-Description: RADOS block device client library
-Homepage: http://ceph.com/
-Description-md5: 3b39955e1c12f7ad8d4c44efcc8ec188
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: virt-host
-
-Package: librbd1-dbg
-Priority: extra
-Section: debug
-Installed-Size: 10328
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Depends: librbd1 (= 0.67.2-0ubuntu1)
-Filename: pool/main/c/ceph/librbd1-dbg_0.67.2-0ubuntu1_armhf.deb
-Size: 4044750
-MD5sum: abe5a7ccd44ab60d44411a2d06a36abc
-SHA1: 0a27d276d96cec8ced6c53a46d3891743383094f
-SHA256: d4e95d97a5874fde665acc8dcb35a2d76cc9be3b9ba3a95edd89dde1919d1ca3
-Description: debugging symbols for librbd1
-Homepage: http://ceph.com/
-Description-md5: 0479c6b8befcd3b46093c4fdfaef7ca4
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: libubuntu-application-api-mirclient1
 Priority: optional
 Section: libs
-Installed-Size: 70
+Installed-Size: 71
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: armhf
 Source: platform-api
-Version: 0.18.3+13.10.20130823-0ubuntu1
-Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libhybris-common1, libmirclient2 (>= 0.0.9+13.10.20130823), libstdc++6 (>= 4.5)
+Version: 0.18.3+13.10.20130826-0ubuntu1
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libhybris-common1, libmirclient2 (>= 0.0.9+13.10.20130825.1), libstdc++6 (>= 4.5)
 Pre-Depends: multiarch-support
-Filename: pool/main/p/platform-api/libubuntu-application-api-mirclient1_0.18.3+13.10.20130823-0ubuntu1_armhf.deb
-Size: 14962
-MD5sum: 7e64e6e6208176d7ddcdef55d519e268
-SHA1: 496ae2fb483be91b732fdfebf1b91a397ddeab9b
-SHA256: 2c7e208faeb4a3344c80b6e3135b00169c1415e2f98b78eb55d8b647f0d256d2
+Filename: pool/main/p/platform-api/libubuntu-application-api-mirclient1_0.18.3+13.10.20130826-0ubuntu1_armhf.deb
+Size: 14982
+MD5sum: 0e5d8b3491559c460996ddf32db8744b
+SHA1: dcb6b3531a762f24c89269439e94cc6282d67c00
+SHA256: 8427797c52a4641836f3c315256ef02b2d1c636ebaf3997a8483842c2472d543
 Description: Implementation of the Platform API for a Mir client
 Multi-Arch: same
 Homepage: https://launchpad.net/platform-api
@@ -1477,14 +690,14 @@ Installed-Size: 79
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: armhf
 Source: platform-api
-Version: 0.18.3+13.10.20130823-0ubuntu1
-Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libhybris-common1, libmirserver1 (= 0.0.9+13.10.20130823-0ubuntu1), libstdc++6 (>= 4.5)
+Version: 0.18.3+13.10.20130826-0ubuntu1
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libhybris-common1, libmirserver1 (= 0.0.9+13.10.20130825.1-0ubuntu1), libstdc++6 (>= 4.5)
 Pre-Depends: multiarch-support
-Filename: pool/main/p/platform-api/libubuntu-application-api-mirserver1_0.18.3+13.10.20130823-0ubuntu1_armhf.deb
-Size: 18158
-MD5sum: 3121f5550dce511734eeb32a5898891e
-SHA1: 0a3709c65a71b8f5cee9991137d55aca7402e6a7
-SHA256: 8ba5bc961d921d94cf9e16da83ec83b0c414624fa6062d2a4f3b0babb661ac1f
+Filename: pool/main/p/platform-api/libubuntu-application-api-mirserver1_0.18.3+13.10.20130826-0ubuntu1_armhf.deb
+Size: 18172
+MD5sum: c3714a994c0fec4a1145efae2a57b7c5
+SHA1: 6a0192b27e86d6f541d52482f8c768dbd45f815a
+SHA256: b3e6f9df881dd656fa42b66cd3106d24a5e600710187d99b02e6bde638a75c2a
 Description: Implementation of the Platform API for a Mir server
 Multi-Arch: same
 Homepage: https://launchpad.net/platform-api
@@ -1495,20 +708,20 @@ Origin: Ubuntu
 Package: libubuntu-application-api1
 Priority: optional
 Section: libs
-Installed-Size: 170
+Installed-Size: 171
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: armhf
 Source: platform-api
-Version: 0.18.3+13.10.20130823-0ubuntu1
+Version: 0.18.3+13.10.20130826-0ubuntu1
 Replaces: libplatform-api1-hybris (<< 0.18.3)
 Depends: libboost-system1.53.0, libc6 (>= 2.9), libdbus-1-3 (>= 1.5.12), libgcc1 (>= 1:4.4.0), libhybris-common1, libstdc++6 (>= 4.6), libubuntu-location-service0
 Pre-Depends: multiarch-support
 Breaks: libplatform-api1-hybris (<< 0.18.3)
-Filename: pool/main/p/platform-api/libubuntu-application-api1_0.18.3+13.10.20130823-0ubuntu1_armhf.deb
-Size: 53702
-MD5sum: acf8d954ceae6daf3b2d92f3589aad8f
-SHA1: 4f19cc108227fd6fff007783f4a4323a1916e3df
-SHA256: f3f11d2f30a23fba7bab527cd1875c48608b0c2327895388dab4d5de3a70d5c0
+Filename: pool/main/p/platform-api/libubuntu-application-api1_0.18.3+13.10.20130826-0ubuntu1_armhf.deb
+Size: 53982
+MD5sum: 3e29e16f8c600057b4b3b6bc75b00f48
+SHA1: cf438efb8121226d40ee5b73aaac5868ca2686a9
+SHA256: ca10875324dfd854cec2e30de93b846da0653393b2b519dc569172755e25a9c0
 Description: Hybris implementation of the Platform API (runtime)
 Multi-Arch: same
 Homepage: https://launchpad.net/platform-api
@@ -1524,13 +737,13 @@ Installed-Size: 31
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: all
 Source: platform-api
-Version: 0.18.3+13.10.20130823-0ubuntu1
-Depends: libplatform-api1-dev (= 0.18.3+13.10.20130823-0ubuntu1)
-Filename: pool/main/p/platform-api/libubuntu-platform-api1-dev_0.18.3+13.10.20130823-0ubuntu1_all.deb
-Size: 1484
-MD5sum: 5dadd51ab3bdbdde7c227f49c94cf38b
-SHA1: 088718aba0c82f17cfc756d1ac9cce44899b2700
-SHA256: ecf46d5208b253f51f53c357d2c95bbf60dc3e92bb42f72064591d0098b188da
+Version: 0.18.3+13.10.20130826-0ubuntu1
+Depends: libplatform-api1-dev (= 0.18.3+13.10.20130826-0ubuntu1)
+Filename: pool/main/p/platform-api/libubuntu-platform-api1-dev_0.18.3+13.10.20130826-0ubuntu1_all.deb
+Size: 1482
+MD5sum: b84f90369c65ff3513e278a5c4c5fefd
+SHA1: 79edcc004c08e626c81e2f953c145a1aba25946b
+SHA256: 23a349bee22f6d17716212daf8038e5935977d9c6ebb4caa88c5e93e7657e76d
 Description: dummy transitional package for libplatform-api1-dev
 Homepage: https://launchpad.net/platform-api
 Description-md5: de56e227a9689823f5b844fcd76d0d40
@@ -1544,109 +757,22 @@ Installed-Size: 49
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: armhf
 Source: platform-api
-Version: 0.18.3+13.10.20130823-0ubuntu1
+Version: 0.18.3+13.10.20130826-0ubuntu1
 Replaces: libplatform-hardware-api1-hybris (<< 0.18.3)
 Depends: libhybris-common1, libstdc++6 (>= 4.4.0)
 Pre-Depends: multiarch-support
 Breaks: libplatform-hardware-api1-hybris (<< 0.18.3)
-Filename: pool/main/p/platform-api/libubuntu-platform-hardware-api1_0.18.3+13.10.20130823-0ubuntu1_armhf.deb
-Size: 6276
-MD5sum: 1ad124af48b16d60297ae02c9b855def
-SHA1: 3d486ce27b023972bac2e77982d802a14422cf73
-SHA256: 9b781ea4cd0242736f2ead7a58c350619f1bdcc6760b19363b905c4bd9f41f5a
+Filename: pool/main/p/platform-api/libubuntu-platform-hardware-api1_0.18.3+13.10.20130826-0ubuntu1_armhf.deb
+Size: 6304
+MD5sum: 8fd8575b70254781efa9cc59f8a28c3a
+SHA1: 0e1be98f31e08563faa35eb4b0fd1bc14a9a3411
+SHA256: 4c071c13b83c8caa9d692eb4c4466fd76a8427868f082a8d256995f81755b1d5
 Description: Hybris implementation of the hw-access parts of the Platform API (runtime)
 Multi-Arch: same
 Homepage: https://launchpad.net/platform-api
 Description-md5: d9c7c5dff3893ffc9571a67f240b3e83
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: lxc
-Priority: optional
-Section: admin
-Installed-Size: 467
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Version: 0.9.0-0ubuntu23
-Depends: adduser, apparmor, bridge-utils, dnsmasq-base, iptables, liblxc0 (= 0.9.0-0ubuntu23), python3, python3-lxc, rsync, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.8)
-Recommends: cgroup-lite | cgroup-bin, libcap2-bin, lxc-templates (>= 0.8.0~rc1-4ubuntu43), openssl
-Suggests: btrfs-tools, lvm2, lxctl
-Filename: pool/main/l/lxc/lxc_0.9.0-0ubuntu23_armhf.deb
-Size: 115210
-MD5sum: cdc7348d75a751300ec95a678c305d41
-SHA1: 1217b3aeedab3b050aa99117df5f13511ac9d649
-SHA256: f22ffcf869a04e72d7ed8be38f75dc2d69432b08c6e754bd4ff11e51a8d6ef14
-Description: Linux Containers userspace tools
-Homepage: http://lxc.sourceforge.net/
-Description-md5: 4ece0dffd153c29e95ffdb89f8238dfc
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: edubuntu-desktop-gnome
-
-Package: lxc-dbg
-Priority: extra
-Section: debug
-Installed-Size: 593
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: lxc
-Version: 0.9.0-0ubuntu23
-Depends: lxc (= 0.9.0-0ubuntu23), lxc-dev (= 0.9.0-0ubuntu23)
-Filename: pool/main/l/lxc/lxc-dbg_0.9.0-0ubuntu23_armhf.deb
-Size: 351542
-MD5sum: bfac1e12eab1169b2b15d8d9b1e5d4e2
-SHA1: 91eadf725c6c45338f20ee9db32da09f2e6365e3
-SHA256: 20194c3cb09817e665c74d69b2e37ee45e0adc30a455a29d10c184d0ccdcf474
-Description: Linux Containers userspace tools (debug)
-Homepage: http://lxc.sourceforge.net/
-Description-md5: 9ec9c23e26368a478bce79545cfbb782
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: lxc-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 128
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: lxc
-Version: 0.9.0-0ubuntu23
-Depends: lxc (= 0.9.0-0ubuntu23)
-Filename: pool/main/l/lxc/lxc-dev_0.9.0-0ubuntu23_armhf.deb
-Size: 13470
-MD5sum: 668b694d7eb8b8cc438ac527fefa9282
-SHA1: 9aeed7f540bff36cd76e6e2f945a01815e539730
-SHA256: 22ce43b7954adce338bd78e134ab4fa634f5cdb21b4d157165889a544e17f090
-Description: Linux Containers userspace tools (development)
-Homepage: http://lxc.sourceforge.net/
-Description-md5: c719178b7e79ce1ed39519707c589961
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: lxc-templates
-Priority: optional
-Section: admin
-Installed-Size: 199
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: lxc
-Version: 0.9.0-0ubuntu23
-Replaces: lxc (<< 0.8.0~rc1-4ubuntu43)
-Depends: lxc (>= 0.8.0~rc1-4ubuntu43)
-Recommends: cloud-utils, debootstrap | cdebootstrap, openssl, rsync
-Suggests: qemu-user-static
-Breaks: lxc (<< 0.8.0~rc1-4ubuntu43)
-Filename: pool/main/l/lxc/lxc-templates_0.9.0-0ubuntu23_all.deb
-Size: 33354
-MD5sum: 988c0def9ae587af57b0c9dd0566bc67
-SHA1: a666c226f283e2fef25539151632a94ffdb3d76a
-SHA256: 09903d0aa820cda9aaf0c4b76de92286b35f78327667b638aab8756b041cd34f
-Description: Linux Containers userspace tools (development)
-Homepage: http://lxc.sourceforge.net/
-Description-md5: b7b10bcdeb3296f4cf9e69a256d87261
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: edubuntu-desktop-gnome
 
 Package: mir-doc
 Priority: optional
@@ -1656,13 +782,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: all
 Source: mir
-Version: 0.0.9+13.10.20130825.1-0ubuntu1
+Version: 0.0.10+13.10.20130826-0ubuntu1
 Depends: libmirclient-dev, libmirserver-dev
-Filename: pool/main/m/mir/mir-doc_0.0.9+13.10.20130825.1-0ubuntu1_all.deb
-Size: 39321040
-MD5sum: df7be69a7e05b4d9680a5352a3cdb3a1
-SHA1: 55a9bb09ca5ad8bee2dee67f2ffcd2cf89834182
-SHA256: cf16d060b7aa314ba15af1bb5804512bfdbdda588e744b17197fac71ba34a0c4
+Filename: pool/main/m/mir/mir-doc_0.0.10+13.10.20130826-0ubuntu1_all.deb
+Size: 39274074
+MD5sum: 47ff151982cebab28fd3cc0c6c1957c3
+SHA1: 095907ebe01f7b03a1558eb7e06668719dfb734d
+SHA256: 0f68e5be1133859032ddb59d9a8e5952da6ffbb3bdc0766db9d4436c6791bcaf
 Description: API documentation for mir
 Homepage: https://launchpad.net/mir
 Description-md5: 628500f58a32ea2c0fc1cb782e6f260f
@@ -1677,12 +803,12 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: armhf
 Source: mir
-Version: 0.0.9+13.10.20130825.1-0ubuntu1
-Filename: pool/main/m/mir/mircommon-dev_0.0.9+13.10.20130825.1-0ubuntu1_armhf.deb
-Size: 18006
-MD5sum: ea2ffb8eee78db0ec609852000d3d6ea
-SHA1: 469d2fca462e255b105507571de046b090162f28
-SHA256: 946c035b4838d8e7387bfd08f04667a7bf6432afbdcda3f7dfcbe55b4542bc3b
+Version: 0.0.10+13.10.20130826-0ubuntu1
+Filename: pool/main/m/mir/mircommon-dev_0.0.10+13.10.20130826-0ubuntu1_armhf.deb
+Size: 16814
+MD5sum: c71da45705bc784f24faeb3666c3bf50
+SHA1: d3ab3236caaf9e7b2855d2af45af399ccc749539
+SHA256: 5dd0d112c6af2f41a3ca1f6cb2d7292a621edcdb3e0c337fdc59acf4fe3d59d9
 Description: Display server for Ubuntu - development headers
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -1863,131 +989,70 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
-Package: openvswitch-common
-Priority: extra
+Package: network-manager
+Priority: optional
 Section: net
-Installed-Size: 1064
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Installed-Size: 1504
+Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: armhf
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu2
-Depends: libc6 (>= 2.16), libssl1.0.0 (>= 1.0.0), openssl, python, python (>= 2.7) | python-argparse
-Suggests: ethtool
-Filename: pool/main/o/openvswitch/openvswitch-common_1.10.1+git20130823-0ubuntu2_armhf.deb
-Size: 560966
-MD5sum: e30b9696ba3e71c5b7088c97946399bb
-SHA1: 94295429b79ce246650d7071140b51ce1d340819
-SHA256: 35b4ad4fdf19c2b3fd142d0561d7b27c6e01c5d1d612e68fde751deaa98ef412
-Description: Open vSwitch common components
-Homepage: http://openvswitch.org/
-Description-md5: 156b753b1c88479a1a2a4001e7ff34d9
+Version: 0.9.8.0-0ubuntu18
+Depends: libc6 (>= 2.4), libdbus-1-3 (>= 1.0.2), libdbus-glib-1-2 (>= 0.88), libglib2.0-0 (>= 2.31.8), libgudev-1.0-0 (>= 146), libnl-3-200 (>= 3.2.16), libnl-genl-3-200 (>= 3.2.16), libnl-route-3-200, libnm-glib4 (>= 0.9.8.0), libnm-util2 (>= 0.9.6.0+git201212071413.8a9759a), libpolkit-gobject-1-0 (>= 0.99), libsoup2.4-1 (>= 2.26.1), libsystemd-login0 (>= 31), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), lsb-base (>= 3.2-14), wpasupplicant (>= 0.7.3-1), dbus (>= 1.1.2), udev, isc-dhcp-client (>= 4.1.1-P1-4), iproute, dnsmasq-base, policykit-1, iputils-arping
+Pre-Depends: multiarch-support
+Recommends: network-manager-pptp, network-manager-gnome | plasma-widget-networkmanagement | plasma-nm, ppp (>= 2.4.5), iptables, modemmanager, systemd-services, crda
+Suggests: avahi-autoipd, python
+Conflicts: connman
+Breaks: network-manager-gnome (<< 0.9), network-manager-kde (<< 1:0.9), network-manager-openconnect (<< 0.9), network-manager-openvpn (<< 0.9), network-manager-pptp (<< 0.9), network-manager-vpnc (<< 0.9), plasma-widget-networkmanagement (<< 0.9~), ppp (<< 2.4.5)
+Filename: pool/main/n/network-manager/network-manager_0.9.8.0-0ubuntu18_armhf.deb
+Size: 540450
+MD5sum: 871305a295c81ef717dc823e5368961e
+SHA1: edb0ab363f889f148b9ac700d334ef8776bece64
+SHA256: 9c00a3afba4b4005db1a5e8acb6fe398db15fda796d88d43ff72a79e9b0e65fb
+Description: network management framework (daemon and userspace tools)
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Description-md5: 8f6f8b56b77097ec1e2134d2c9189882
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
-Package: openvswitch-controller
-Priority: extra
-Section: net
-Installed-Size: 509
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
-Architecture: armhf
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu2
-Depends: libc6 (>= 2.4), libssl1.0.0 (>= 1.0.0), openvswitch-common (= 1.10.1+git20130823-0ubuntu2), openvswitch-pki (= 1.10.1+git20130823-0ubuntu2)
-Filename: pool/main/o/openvswitch/openvswitch-controller_1.10.1+git20130823-0ubuntu2_armhf.deb
-Size: 242594
-MD5sum: 689bb67fa6d9d477559d9b2d1334a2bc
-SHA1: 2f98e216538b03ee5174b074c9ede5860a74184b
-SHA256: 8f31f9debc1677b80dbe842063b939068c11a9f5340139147a7833ec4678fba9
-Description: Open vSwitch controller implementation
-Homepage: http://openvswitch.org/
-Description-md5: a75c9ab8c2882291fe265d039e045e3f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: openvswitch-dbg
+Package: network-manager-dbg
 Priority: extra
 Section: debug
-Installed-Size: 18654
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Installed-Size: 2581
+Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: armhf
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu2
-Depends: openvswitch-common (= 1.10.1+git20130823-0ubuntu2), openvswitch-controller (= 1.10.1+git20130823-0ubuntu2), openvswitch-ipsec (= 1.10.1+git20130823-0ubuntu2), openvswitch-switch (= 1.10.1+git20130823-0ubuntu2)
-Filename: pool/main/o/openvswitch/openvswitch-dbg_1.10.1+git20130823-0ubuntu2_armhf.deb
-Size: 7836782
-MD5sum: bfd0e3b03fb020d783a629f08535c4fa
-SHA1: 3069ad6516c133b70c7e9de4687a045b520f2a18
-SHA256: 5425e04473d237a8b598b4fe8e2b9f73c85ec4c10c9f08a0f17a14aa733e1c73
-Description: Debug symbols for Open vSwitch packages
-Homepage: http://openvswitch.org/
-Description-md5: 56e4abe8234a245775d9d296c24e43c7
+Source: network-manager
+Version: 0.9.8.0-0ubuntu18
+Depends: network-manager (= 0.9.8.0-0ubuntu18) | libnm-util2 (= 0.9.8.0-0ubuntu18) | libnm-glib4 (= 0.9.8.0-0ubuntu18) | libnm-glib-vpn1 (= 0.9.8.0-0ubuntu18)
+Filename: pool/main/n/network-manager/network-manager-dbg_0.9.8.0-0ubuntu18_armhf.deb
+Size: 2081384
+MD5sum: b120c044f58c6b46e55b1b1241653753
+SHA1: b66cc4dff77bbb4ef1a75f8225308589af3d4eb3
+SHA256: f07c7ab4a72c0930f213c7025895cdeb0c76e167792579cb458b3b2bab561839
+Description: network management framework (debugging symbols)
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Description-md5: fab22ebf7107cdfdeb29ff226f6cf920
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: openvswitch-ipsec
-Priority: extra
+Package: network-manager-dev
+Priority: optional
 Section: net
-Installed-Size: 112
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Installed-Size: 423
+Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
 Architecture: armhf
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu2
-Depends: python, ipsec-tools (>= 0.8~alpha20101208), racoon (>= 0.8~alpha20101208), openvswitch-common (= 1.10.1+git20130823-0ubuntu2), openvswitch-switch (= 1.10.1+git20130823-0ubuntu2), python-openvswitch (= 1.10.1+git20130823-0ubuntu2)
-Filename: pool/main/o/openvswitch/openvswitch-ipsec_1.10.1+git20130823-0ubuntu2_armhf.deb
-Size: 21904
-MD5sum: 4b902cede697088fca0fc96d88dda8b0
-SHA1: f1130e96b0b1fa22ddd67e90c9190f468694665f
-SHA256: b2b5b86c61b26221ee0347fc0908b091f2dce3c24488ca65b780506decb6b5d6
-Description: Open vSwitch GRE-over-IPsec support
-Homepage: http://openvswitch.org/
-Description-md5: 07cc2214b4577629cbf5bbc7095fab0e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: openvswitch-pki
-Priority: extra
-Section: net
-Installed-Size: 87
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
-Architecture: all
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu2
-Depends: openvswitch-common (>= 1.10.1+git20130823-0ubuntu2), openvswitch-common (<< 1.10.1+git20130823-0ubuntu2.1~)
-Filename: pool/main/o/openvswitch/openvswitch-pki_1.10.1+git20130823-0ubuntu2_all.deb
-Size: 15462
-MD5sum: 3c1a06d54120137f36ab362350a1b961
-SHA1: f9b4a156be0b377cd7e224b12962e6e9f15baeff
-SHA256: d770bafa3e891f54b923fe1cdeb75f9497250d734807fc62823dec8af3b2d932
-Description: Open vSwitch public key infrastructure dependency package
-Homepage: http://openvswitch.org/
-Description-md5: fcb2a2bcd30b1f49fc4b6a2ddc55ff28
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: openvswitch-switch
-Priority: extra
-Section: net
-Installed-Size: 2521
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
-Architecture: armhf
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu2
-Depends: libc6 (>= 2.7), libssl1.0.0 (>= 1.0.0), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python, openvswitch-common (= 1.10.1+git20130823-0ubuntu2), module-init-tools, procps, uuid-runtime, netbase
-Suggests: openvswitch-datapath-module
-Filename: pool/main/o/openvswitch/openvswitch-switch_1.10.1+git20130823-0ubuntu2_armhf.deb
-Size: 1343078
-MD5sum: 3a983cf9b9c146b536ff55edcb61e2e8
-SHA1: 7fa23507aa29d5d2d98b07bf5a1bf2096705fde3
-SHA256: 3deb48855fbbc416d837a5343dc18a7f534c4653dc2c45934ca7a6abf261b26f
-Description: Open vSwitch switch implementations
-Homepage: http://openvswitch.org/
-Description-md5: a3693da748c76fbc356928927bf14fce
+Source: network-manager
+Version: 0.9.8.0-0ubuntu18
+Filename: pool/main/n/network-manager/network-manager-dev_0.9.8.0-0ubuntu18_armhf.deb
+Size: 62984
+MD5sum: 683abc1b15d1e57570918deefc743aaa
+SHA1: f9128c6cfd4fcd36b8a18a084b04e6a146ebc511
+SHA256: 65d823900e0715d2a73bd5d26acedbf048defa2d34aefe2565fb37749941005a
+Description: network management framework (development files)
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Description-md5: 7c80f295a14f6455ffe1509a646e6b4d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -2066,221 +1131,6 @@ Description-md5: 6a061202c9118fa07cacafd938b725f0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: python-ceph
-Priority: optional
-Section: python
-Installed-Size: 204
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Depends: librados2, librbd1, python-flask, python-requests, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Filename: pool/main/c/ceph/python-ceph_0.67.2-0ubuntu1_armhf.deb
-Size: 38176
-MD5sum: 99ee8e2ff5715bb55c070168727bc90b
-SHA1: 4ed21cb50db9567ef0e008f2109ac24601c802b4
-SHA256: 7252bda44be9b816792e55406c703096757dd9968ddded529b78d6b7dd3e5717
-Description: Python libraries for the Ceph distributed filesystem
-Homepage: http://ceph.com/
-Description-md5: 0a80206bd610ad5550e3d80267effede
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: python-openvswitch
-Priority: extra
-Section: python
-Installed-Size: 377
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
-Architecture: all
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu2
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Filename: pool/main/o/openvswitch/python-openvswitch_1.10.1+git20130823-0ubuntu2_all.deb
-Size: 75944
-MD5sum: 07c16aaec4c5925a5ecda9f11ccfa434
-SHA1: 679745a014ad73da0d93a0ccad19267d6dd2559c
-SHA256: 70fa802c08a3553fe1baa8cd24ad0ac3e5cf3e7e11741ac1573857d3fc37613e
-Description: Python bindings for Open vSwitch
-Homepage: http://openvswitch.org/
-Description-md5: 4d35f951a751492a379125d6622051e2
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: python3-lxc
-Priority: optional
-Section: python
-Installed-Size: 108
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: lxc
-Version: 0.9.0-0ubuntu23
-Depends: liblxc0 (= 0.9.0-0ubuntu23), python3, libc6 (>= 2.4)
-Recommends: lxc-templates (>= 0.8.0~rc1-4ubuntu43)
-Filename: pool/main/l/lxc/python3-lxc_0.9.0-0ubuntu23_armhf.deb
-Size: 12382
-MD5sum: 78855f63c42f06ce67e4cb4842218c27
-SHA1: 5023b5ae7867ebb8e571737438e7643336e2f53b
-SHA256: 83db7f055ba5f681655da7af5fbe01742c65df74151d6f525cf9675bb4bc2e26
-Description: Linux Containers userspace tools (Python 3.x bindings)
-Homepage: http://lxc.sourceforge.net/
-Description-md5: ee623a31db200104a7207d9de42b8f04
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: edubuntu-desktop-gnome
-
-Package: python3-update-manager
-Priority: standard
-Section: python
-Installed-Size: 239
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: update-manager
-Version: 1:0.191
-Replaces: update-manager-core (<< 1:0.163)
-Depends: python3 (>= 3.2.3-3~), python3-apt (>= 0.8.5~), python3-distupgrade, lsb-release
-Breaks: update-manager-core (<< 1:0.163)
-Filename: pool/main/u/update-manager/python3-update-manager_0.191_all.deb
-Size: 35318
-MD5sum: b17642e007ce25dd99bc98f13e868199
-SHA1: 8b3705809d7d55add41390023c37644aed0aa837
-SHA256: e5f77d2701f51204ff18520f9cdbac945f108be20f747b4e6ed6c97b3e153f54
-Description: python 3.x module for update-manager
-Description-md5: ecfb930b93b3c3391fc6ad445be08cee
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
-Package: radosgw
-Priority: optional
-Section: admin
-Installed-Size: 2128
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Depends: ceph-common (= 0.67.2-0ubuntu1), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.16), libcurl3-gnutls (>= 7.28.0), libexpat1 (>= 2.0.1), libfcgi0ldbl, libgcc1 (>= 1:4.4.0), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), librados2, libstdc++6 (>= 4.6)
-Filename: pool/main/c/ceph/radosgw_0.67.2-0ubuntu1_armhf.deb
-Size: 1113320
-MD5sum: 6f5d2ea4b600e30c62aa3858b319d001
-SHA1: 62521ad5fad617fbe5177bfa0d3aa9ed5a147165
-SHA256: 219c4526b3667b8704223f39e7ade48c56277d71859b7267c4d4e4e35e8edfd8
-Description: REST gateway for RADOS distributed object store
-Homepage: http://ceph.com/
-Description-md5: fa947d9328112c7b2e6719d10f788061
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: radosgw-dbg
-Priority: extra
-Section: debug
-Installed-Size: 42412
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Depends: radosgw (= 0.67.2-0ubuntu1)
-Filename: pool/main/c/ceph/radosgw-dbg_0.67.2-0ubuntu1_armhf.deb
-Size: 16325362
-MD5sum: 4fd8b02ee34859c34853386a21376070
-SHA1: 04bbf38346a29f0a38ccd81094c42467f86d046a
-SHA256: 85260cae9fd07dff0c78c94cea18d678f2fdaff84f896f86f23f8873f52d3c5f
-Description: debugging symbols for radosgw
-Homepage: http://ceph.com/
-Description-md5: b21018ad5ddfda350f7a8d6ec0e73923
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: rbd-fuse
-Priority: optional
-Section: admin
-Installed-Size: 61
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Depends: libc6 (>= 2.4), libfuse2 (>= 2.8.1), librados2, librbd1
-Recommends: fuse
-Filename: pool/main/c/ceph/rbd-fuse_0.67.2-0ubuntu1_armhf.deb
-Size: 10764
-MD5sum: 3d55a85694c4cb477b4b87aca224069d
-SHA1: 529ba9b63d55ae7fa35f5421d7f5d0a9837e3d67
-SHA256: e0526e068fef89f60b1adc2ee617ccd41617ad9114a78f3e6958f04d3be85bff
-Description: FUSE-based rbd client for the Ceph distributed file system
-Homepage: http://ceph.com/
-Description-md5: fca395d7d420f9ee7c9d4be9e208b26a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: rbd-fuse-dbg
-Priority: extra
-Section: debug
-Installed-Size: 84
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
-Architecture: armhf
-Source: ceph
-Version: 0.67.2-0ubuntu1
-Depends: rbd-fuse (= 0.67.2-0ubuntu1)
-Filename: pool/main/c/ceph/rbd-fuse-dbg_0.67.2-0ubuntu1_armhf.deb
-Size: 19064
-MD5sum: f6bc6eaf094953c5a068218c6c162c85
-SHA1: eda52f1519fea922299dae06b7e5b2693cc775e3
-SHA256: c349c59ae8eda239c57993ff79dec6c9ba07f07f4b856ffb6d4256f84e6635e5
-Description: debugging symbols for rbd-fuse
-Homepage: http://ceph.com/
-Description-md5: 987d7c5ba369f3c877ccf7f5d48fb86f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: update-manager
-Priority: optional
-Section: gnome
-Installed-Size: 1054
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Version: 1:0.191
-Depends: python3 (>= 3.2.3-3~), dconf-gsettings-backend | gsettings-backend, update-manager-core (= 1:0.191), python3-aptdaemon.gtk3widgets (>= 0.40) | synaptic, policykit-1, python3-dbus, python3-gi (>= 3.8), gir1.2-vte-2.90, gir1.2-gtk-3.0, ubuntu-release-upgrader-gtk, update-notifier
-Recommends: software-properties-gtk (>= 0.71.2)
-Suggests: gir1.2-dbusmenu-glib-0.4, gir1.2-unity-5.0
-Filename: pool/main/u/update-manager/update-manager_0.191_all.deb
-Size: 558512
-MD5sum: 987ddd91c63cd900b6f0b145cf81a84a
-SHA1: 014e79dd0eda940e3a615e614207172cce0cd866
-SHA256: a5bb16082fda523d44bbc6179057b92a1b104c689e7c420606e384eff5cee79a
-Description: GNOME application that manages apt updates
-Description-md5: 590b36e19703392a6fe86ceaa8467c85
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: update-manager-core
-Priority: standard
-Section: admin
-Installed-Size: 152
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: update-manager
-Version: 1:0.191
-Replaces: update-manager (<< 1:0.146.2)
-Depends: python3 (>= 3.2), python3-update-manager (= 1:0.191), lsb-release, ubuntu-release-upgrader-core
-Recommends: libpam-modules (>= 1.0.1-9ubuntu3)
-Breaks: computer-janitor (<= 1.11-0ubuntu1), update-manager (<< 1:0.146.2)
-Filename: pool/main/u/update-manager/update-manager-core_0.191_all.deb
-Size: 5198
-MD5sum: 27d25b6333c0b2c8eab0630f67862637
-SHA1: af098832b1b9c58212e49bffebfe0673dc6ca407
-SHA256: 997b762319568d308ddc6116f33a7dcbba1fe3f78d8b8d1ddc1b8dea4a74f544
-Description: manage release upgrades
-Description-md5: 0a19dc54e8c67de7adf0ecfe839b541f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
 Package: usb-modeswitch-data
 Priority: extra
 Section: comm
@@ -2304,5 +1154,5 @@ Homepage: http://www.draisberghof.de/usb_modeswitch/
 Description-md5: 83f8894d390ffa31e34c89e43fc95bb1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-active, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
