@@ -1,18 +1,18 @@
 Package: ardour
 Binary: ardour, ardour-altivec, ardour-i686
-Version: 1:2.8.14-2ubuntu1
+Version: 1:2.8.14-2ubuntu3
 Section: universe/sound
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
-Build-Depends: cdbs, autotools-dev, devscripts, debhelper, dh-buildinfo, gettext, intltool, scons, libboost-dev, libcurl4-gnutls-dev, libfftw3-dev, libraptor1-dev (>= 1.4.21-5), liblrdf0-dev (>= 0.4.0-4), libsigc++-2.0-dev, libusb-dev, libxml2-dev (>= 2.5.7), librasqal3-dev | librasqal2-dev (>= 0.9.14), libcairomm-1.0-dev (>= 1.2.4), libglade2-dev, libglademm-2.4-dev, libglib2.0-dev, libgnomecanvas2-dev, libgnomecanvasmm-2.6-dev, libgtkmm-2.4-dev, libpango1.0-dev, ladspa-sdk (>= 1.1-2), libasound2-dev (>= 0.9.4) [linux-any], liboss-salsa-dev [!linux-any], libaubio-dev, libjack-dev, liblo-dev, libsuil-dev, libsamplerate0-dev, libslv2-dev (>= 0.6.6-7), libsndfile1-dev, libsoundtouch-dev (>= 1.5.0), lv2-dev, liblilv-dev, vamp-plugin-sdk (>= 2.1)
+Build-Depends: cdbs, autotools-dev, devscripts, debhelper, dh-buildinfo, gettext, intltool, scons, libboost-dev, libboost-filesystem-dev, libboost-system-dev, libcurl4-gnutls-dev, libfftw3-dev, libraptor1-dev (>= 1.4.21-5), liblrdf0-dev (>= 0.4.0-4), libsigc++-2.0-dev, libusb-dev, libxml2-dev (>= 2.5.7), librasqal3-dev | librasqal2-dev (>= 0.9.14), libcairomm-1.0-dev (>= 1.2.4), libglade2-dev, libglademm-2.4-dev, libglib2.0-dev, libgnomecanvas2-dev, libgnomecanvasmm-2.6-dev, libgtkmm-2.4-dev, libpango1.0-dev, ladspa-sdk (>= 1.1-2), libasound2-dev (>= 0.9.4) [linux-any], liboss-salsa-dev [!linux-any], libaubio-dev, libjack-dev, liblo-dev, libsuil-dev, libsamplerate0-dev, libslv2-dev (>= 0.6.6-7), libsndfile1-dev, libsoundtouch-dev (>= 1.5.0), lv2-dev, liblilv-dev, vamp-plugin-sdk (>= 2.1)
 Architecture: any
 Standards-Version: 3.9.4
 Format: 3.0 (quilt)
 Directory: pool/universe/a/ardour
 Files:
- b48641057ca3500dcb92e364b37a8254 2973 ardour_2.8.14-2ubuntu1.dsc
+ 6f161f2a66764ed4da17de7d231bbc8e 3019 ardour_2.8.14-2ubuntu3.dsc
  c79219ba10735d0b061d53a84ae611a4 2169985 ardour_2.8.14.orig.tar.bz2
- bb795ccb7505e092478db4a4d510186c 57984 ardour_2.8.14-2ubuntu1.debian.tar.gz
+ e743c3bff5f9e7fe7a9ab25f90fd86f1 58292 ardour_2.8.14-2ubuntu3.debian.tar.gz
 Uploaders: Adrian Knoth <adi@drcomp.erfurt.thur.de>, Free Ekanayaka <freee@debian.org>, Jaromír Mikeš <mira.mikes@seznam.cz>, Jonas Smedegaard <dr@jones.dk>
 Dm-Upload-Allowed: yes
 Homepage: http://www.ardour.org/
@@ -23,13 +23,13 @@ Package-List:
  ardour-altivec deb sound extra
  ardour-i686 deb sound extra
 Checksums-Sha1:
- 959ca64928aec10f80e9fddc7d0f92b8a812405f 2973 ardour_2.8.14-2ubuntu1.dsc
+ e9148b1d858db429ba69e47c2a880eddecb2a926 3019 ardour_2.8.14-2ubuntu3.dsc
  bd28b9ae7555fe447c90e3713e8a01e6d87d22b8 2169985 ardour_2.8.14.orig.tar.bz2
- 80ffa2a9b56b1a82d538f9edad4695dd79ac58c5 57984 ardour_2.8.14-2ubuntu1.debian.tar.gz
+ bd7757d441712767f38691b2612471793b87e70e 58292 ardour_2.8.14-2ubuntu3.debian.tar.gz
 Checksums-Sha256:
- ddd7c3ac7becaef6ad0ae8d91340ac009f5d64d99e004a33f4e40610e13dc54d 2973 ardour_2.8.14-2ubuntu1.dsc
+ 27d30dc9c6d8ed9cee24200a0b6a5a20615295a26ce01967e07d92b68ac1bcab 3019 ardour_2.8.14-2ubuntu3.dsc
  e07e483a12354c00d821dafbec5f5d2690062b758205daceab723bf1e9a633fe 2169985 ardour_2.8.14.orig.tar.bz2
- 54f577a750646ec6e2f44bbcf5950bc32479b03c3666e0cb3855791a60d62e9f 57984 ardour_2.8.14-2ubuntu1.debian.tar.gz
+ 016a75a13aa241dacf9b2e2f345fb71706101da70e89c13ac34535ec99323b66 58292 ardour_2.8.14-2ubuntu3.debian.tar.gz
 
 Package: atlas-cpp
 Binary: libatlas-cpp-0.6-1, libatlas-cpp-0.6-1-dbg, libatlas-cpp-doc, libatlas-cpp-0.6-dev
@@ -446,6 +446,30 @@ Checksums-Sha256:
  3301a20bb2552e8e34c6750c5ffb1d1948e13698b21ac549a111ce0bb3d4831d 2094 clhep_2.1.3.1-1.dsc
  2cc76a8f5004778d0d16ab9ed4c8104ace0eeec7d5a43bc85f193091d8d3296b 1859117 clhep_2.1.3.1.orig.tar.gz
  6154f66cceb7a47944fd3b9d8d6dc652c9dd19545de50fd33ede9b250c242732 4598 clhep_2.1.3.1-1.debian.tar.gz
+
+Package: click-apparmor
+Binary: click-apparmor, python3-apparmor-click
+Version: 0.1.5
+Priority: optional
+Section: universe/admin
+Maintainer: Steve Beattie <steve.beattie@canonical.com>
+Build-Depends: debhelper (>= 9), python3 (>= 3.3), python3-all, python3-setuptools, python3-debian, pep8, click-dev, libnih-dbus1
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/universe/c/click-apparmor
+Files:
+ fa66778656d7ccd3c1b1d7d81f32801a 1602 click-apparmor_0.1.5.dsc
+ 3b607d5926452367ce43433e428f7ecc 16479 click-apparmor_0.1.5.tar.gz
+Package-List: 
+ click-apparmor deb admin optional
+ python3-apparmor-click deb admin optional
+Checksums-Sha1:
+ 375bc3717dc661e94595c4aebd229b1520299a4a 1602 click-apparmor_0.1.5.dsc
+ 9fff35429432da4fef9b63e68819cc522c3c25cb 16479 click-apparmor_0.1.5.tar.gz
+Checksums-Sha256:
+ fa0de4f47aeeca9fcf453bd1519a4903e8df66e31f0f81814d0f4832fc1dd5ec 1602 click-apparmor_0.1.5.dsc
+ 6c5b0c979596231f1add93200f73479ca3e5e250365a8d0377a7f493c6462dd7 16479 click-apparmor_0.1.5.tar.gz
 
 Package: coquelicot
 Binary: coquelicot
@@ -4953,28 +4977,37 @@ Checksums-Sha256:
  9dd49065696a8d4dfcb1a1af81e51d6bd487f5a1e72b3325c1fe4ecb5c490adb 3479896 trac_1.0.1.orig.tar.gz
  ea57f671316711628d161276274d00958fe26f7f0bea172747f0996bda1f3158 19958 trac_1.0.1-2.debian.tar.gz
 
-Package: ubuntu-touch-generic-initrd
-Binary: ubuntu-touch-generic-initrd
-Version: 0.22
+Package: ubuntu-ui-toolkit
+Binary: qtdeclarative5-ubuntu-ui-toolkit-plugin, ubuntu-ui-toolkit-theme, ubuntu-ui-toolkit-doc, ubuntu-ui-toolkit-examples, ubuntu-ui-toolkit-autopilot
+Version: 0.1.46+13.10.20130826.1-0ubuntu1
 Priority: optional
-Section: universe/utils
+Section: universe/libs
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: debhelper (>= 9), debootstrap, lsb-release, fakeroot, fakechroot
-Architecture: armhf
+Build-Depends: debhelper (>= 9.0.0), devscripts, libgles2-mesa-dev, libglib2.0-dev, python, libqt5qml-graphicaleffects | libqt5graphicaleffects5, qt5-default, qtbase5-dev, qtbase5-private-dev, qttools5-dev-tools, libqt5v8-5-private-dev, qtbase5-dev-tools, libqt5sql5-sqlite, qtdeclarative5-dev-tools, qtdeclarative5-private-dev, qtdeclarative5-qtquick2-plugin, qtdeclarative5-test-plugin, qtdeclarative5-window-plugin, qtdeclarative5-unity-action-plugin, libqt5organizer5, qtpim5-dev
+Architecture: amd64 i386 armhf all
 Standards-Version: 3.9.4
-Format: 3.0 (native)
-Directory: pool/universe/u/ubuntu-touch-generic-initrd
+Format: 1.0
+Directory: pool/universe/u/ubuntu-ui-toolkit
 Files:
- da9930cb81ada4db1daedc45b89c69fd 1572 ubuntu-touch-generic-initrd_0.22.dsc
- 493e12ac94d5c23f5422a543b6821463 3345 ubuntu-touch-generic-initrd_0.22.tar.gz
+ d290f0f5a88125d0f8dfa298972a0c14 2818 ubuntu-ui-toolkit_0.1.46+13.10.20130826.1-0ubuntu1.dsc
+ 21d16bdd2d050c9f06d3502eeb3dd3f9 1275969 ubuntu-ui-toolkit_0.1.46+13.10.20130826.1.orig.tar.gz
+ fd2c64d0d46c234c3e5077465a3225a8 22963 ubuntu-ui-toolkit_0.1.46+13.10.20130826.1-0ubuntu1.diff.gz
+Homepage: https://launchpad.net/ubuntu-ui-toolkit
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-sdk-team/ubuntu-ui-toolkit/trunk
 Package-List: 
- ubuntu-touch-generic-initrd deb utils optional
+ qtdeclarative5-ubuntu-ui-toolkit-plugin deb libs optional
+ ubuntu-ui-toolkit-autopilot deb libs optional
+ ubuntu-ui-toolkit-doc deb doc optional
+ ubuntu-ui-toolkit-examples deb devel optional
+ ubuntu-ui-toolkit-theme deb libs optional
 Checksums-Sha1:
- 1ebd48f86ae96c3fe34e8d3bb1ee0eded5b85fb2 1572 ubuntu-touch-generic-initrd_0.22.dsc
- 75cabbfee68113ef1da764b20f6e5ff198694250 3345 ubuntu-touch-generic-initrd_0.22.tar.gz
+ 64cd8d32e426d33c20fff4122056db5065e4a814 2818 ubuntu-ui-toolkit_0.1.46+13.10.20130826.1-0ubuntu1.dsc
+ 0946c19ca8ba1e471c1b5329241f848f1959471a 1275969 ubuntu-ui-toolkit_0.1.46+13.10.20130826.1.orig.tar.gz
+ bf15af00d71966e0bdd789c0ed82ed70888262b9 22963 ubuntu-ui-toolkit_0.1.46+13.10.20130826.1-0ubuntu1.diff.gz
 Checksums-Sha256:
- 1c868b6f1f648b0d2aee84b5d834eb43d3fde0be4ed593aa1443c24e54859ae7 1572 ubuntu-touch-generic-initrd_0.22.dsc
- ba7a37ec8703a811761b06f944b90993acede711f1e3c1df1d1805b9c1f4c2b3 3345 ubuntu-touch-generic-initrd_0.22.tar.gz
+ 8241e20c0258fe6e8ec314170d05a75d68a37686f3db892fc252994c83cf95d6 2818 ubuntu-ui-toolkit_0.1.46+13.10.20130826.1-0ubuntu1.dsc
+ 9403c90325e84ac398a8bc092bc5e47a5073418f5d1c550c2110f303243fd333 1275969 ubuntu-ui-toolkit_0.1.46+13.10.20130826.1.orig.tar.gz
+ b153ca44b79f09e8482560eb4c26a1e4113b90a5470bd8450a75f75f2b1cfaa4 22963 ubuntu-ui-toolkit_0.1.46+13.10.20130826.1-0ubuntu1.diff.gz
 
 Package: ubuntustudio-default-settings
 Binary: ubuntustudio-default-settings, ubuntustudio-live-settings
@@ -5188,6 +5221,39 @@ Checksums-Sha256:
  5ad8cda11c79d78f8770a88ba9a434f9b7dfdc86f888097a0a57c05bdad0d24e 2319 unity-system-compositor_0.0.1+13.10.20130826.1-0ubuntu1.dsc
  25b57119c6dc22fc4cf5ac7c6b528c385343d21efce495b105b7f678852a620f 17359 unity-system-compositor_0.0.1+13.10.20130826.1.orig.tar.gz
  ef34b348b792435a59503cf5b5f19969908b43c474dbbd94224ac2aa74e38adc 3407 unity-system-compositor_0.0.1+13.10.20130826.1-0ubuntu1.diff.gz
+
+Package: unity8
+Binary: indicators-client, unity8, unity8-autopilot, unity8-fake-env, unity8-private
+Version: 7.81.3+13.10.20130826.4-0ubuntu1
+Priority: optional
+Section: universe/x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: cmake, debhelper (>= 9), libdee-qt5-dev (>= 3.2), libgl1-mesa-dev [!armhf] | libgl-dev [!armhf], libgl1-mesa-dri, libgles2-mesa-dev [armhf], libhud-client2-dev, libjson-perl, libnih-dbus-dev, libnih-dev, libnm-glib-dev, libnm-util-dev, libpulse-dev, libqmenumodel-dev (>= 0.2.7), libqt5v8-5-private-dev, libsigc++-2.0-dev, libunity-api-dev (>= 7.80.3), libunity-core-6.0-dev (<< 7.80), libunity-dev (>= 7.0.12), libunity-scopes-json-def-phone, libupstart-dev, libusermetricsoutput1-dev, libxcb1-dev, pkg-config, python:any (>= 2.7), python-setuptools, python3:any, qt5-default, qtbase5-dev, qtbase5-private-dev, qtdeclarative5-dev, qtdeclarative5-dev-tools, qtdeclarative5-private-dev, qtdeclarative5-qtquick2-plugin, qtdeclarative5-test-plugin, qtdeclarative5-ubuntu-ui-toolkit-plugin, qtdeclarative5-xmllistmodel-plugin, ttf-ubuntu-font-family
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 1.0
+Directory: pool/universe/u/unity8
+Files:
+ 1d59bd30cf13083c5f152fe0d93b73b4 2984 unity8_7.81.3+13.10.20130826.4-0ubuntu1.dsc
+ 760202cd44e420562f32b12b9a3d758a 6178268 unity8_7.81.3+13.10.20130826.4.orig.tar.gz
+ 23ec9cf26914db989c88fc4ade3d0047 17666 unity8_7.81.3+13.10.20130826.4-0ubuntu1.diff.gz
+Homepage: http://launchpad.net/unity
+Vcs-Browser: https://bazaar.launchpad.net/~unity-team/unity8/trunk
+Vcs-Bzr: https://code.launchpad.net/unity8
+Package-List: 
+ indicators-client deb x11 optional
+ unity8 deb x11 optional
+ unity8-autopilot deb x11 optional
+ unity8-fake-env deb x11 optional
+ unity8-private deb x11 optional
+Checksums-Sha1:
+ 7939b2400f143dcc7ceca18f642a40ec3091e7f3 2984 unity8_7.81.3+13.10.20130826.4-0ubuntu1.dsc
+ de079b73d3a2e1960f31731b8c03d887836553b5 6178268 unity8_7.81.3+13.10.20130826.4.orig.tar.gz
+ e89df024e31a26823f27580615fb14d620a6c6fd 17666 unity8_7.81.3+13.10.20130826.4-0ubuntu1.diff.gz
+Checksums-Sha256:
+ 18b63b6b58ad307a778bf80794c20a74e6efb46461970e606913a3b9c9325758 2984 unity8_7.81.3+13.10.20130826.4-0ubuntu1.dsc
+ 909f385b1c9956f25b95b835c13c4b35ffa079fe243399c7f38979c9398040df 6178268 unity8_7.81.3+13.10.20130826.4.orig.tar.gz
+ d9ad0bf13ab589e8e63b6f6ebc81fee1e8c536ae40a9ec2bf9ad2e76e0bc13cd 17666 unity8_7.81.3+13.10.20130826.4-0ubuntu1.diff.gz
 
 Package: varconf
 Binary: libvarconf-1.0-8, libvarconf-dev, libvarconf-1.0-8-dbg
