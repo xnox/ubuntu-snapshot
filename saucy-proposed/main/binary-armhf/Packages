@@ -1,23 +1,3 @@
-Package: android-platform-headers
-Priority: extra
-Section: libdevel
-Installed-Size: 274
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu18
-Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/android-platform-headers_0.1.0+git20130606+c5d897a-0ubuntu18_all.deb
-Size: 52946
-MD5sum: 5f3f5a09cbde4d404a03a3285319db00
-SHA1: 1df5ce19d35d70fdadf06ef4799105a4b4941ed7
-SHA256: 8dc45e4d107bebbe695225dcdb83e4067e94a2ac9a516f72145488d0fb33426f
-Description: Android Platform Headers from AOSP releases
-Description-md5: 5d4e18662ffad46fc86efe8d568c6096
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: bzr
 Priority: optional
 Section: devel
@@ -157,44 +137,164 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: minimal
 
-Package: libandroid-properties-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 61
+Package: isc-dhcp-client
+Priority: important
+Section: net
+Installed-Size: 1228
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
 Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu18
-Depends: libandroid-properties1 (= 0.1.0+git20130606+c5d897a-0ubuntu18)
-Filename: pool/main/libh/libhybris/libandroid-properties-dev_0.1.0+git20130606+c5d897a-0ubuntu18_armhf.deb
-Size: 5176
-MD5sum: 7a4c872213e234952d87ec594ba957c3
-SHA1: 7d61f88b8827ef2fcc1ed1515d132877a495ebd1
-SHA256: c5c6164afe2ed9c106c7981c79c7d449cacc7dc531a5135149cdbeff1406d70d
-Description: Development headers files for libandroid-properties
-Description-md5: fd78846cc0eb621999aaf215babfb840
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Replaces: dhcp3-client
+Provides: dhcp-client, dhcp3-client
+Depends: libc6 (>= 2.15), debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu5), iproute2
+Suggests: resolvconf, avahi-autoipd, apparmor
+Conflicts: dhcp-client (<< 3.0), ifupdown (<< 0.6.8+nmu3), resolvconf (<= 1.45), samba-common (<< 3.0.0beta1-2)
+Filename: pool/main/i/isc-dhcp/isc-dhcp-client_4.2.4-7ubuntu5_armhf.deb
+Size: 677764
+MD5sum: 0447798e69132c041b323c50e66d39ce
+SHA1: a446d71f79e737dc13db80f309412cc7e10e8fd5
+SHA256: ac3ee2607108f73ec1317ac8c37366a4355cb42c76ad0285f3cbfdaedc71b5c8
+Description: ISC DHCP client
+Description-md5: 7d48c04c85ad9235ca7273ba8da51bbc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: isc-dhcp-client-dbg
+Priority: extra
+Section: debug
+Installed-Size: 4834
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu5)
+Suggests: resolvconf, avahi-autoipd
+Conflicts: dhcp-client (<< 3.0), samba-common (<< 3.0.0beta1-2)
+Filename: pool/main/i/isc-dhcp/isc-dhcp-client-dbg_4.2.4-7ubuntu5_armhf.deb
+Size: 2005698
+MD5sum: 53a1813c7dc29d6bfb769a741dd52e9e
+SHA1: 38472c031d03602168ec1db2a913f7bb7ee5c8ad
+SHA256: 7677d0dfcfd2b11837038d8351e6636a39108b7a092fc70cb0f818e7aa4f8d23
+Description: ISC DHCP client (debugging symbols)
+Description-md5: 65f8c2f2d81ecd053c5bca54e46ec524
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libandroid-properties1
-Priority: extra
-Section: libs
-Installed-Size: 57
+Package: isc-dhcp-common
+Priority: important
+Section: net
+Installed-Size: 1207
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
 Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu18
-Depends: libc6 (>= 2.4)
-Filename: pool/main/libh/libhybris/libandroid-properties1_0.1.0+git20130606+c5d897a-0ubuntu18_armhf.deb
-Size: 9538
-MD5sum: c292b44f1009b839dc9f3ff4fafb0336
-SHA1: 368f6451691b5358be91f5053fda9b8a5ff6b020
-SHA256: 65b7a0fcb7e7c7a33aab1cd7df8513d88d39e0d50910e05516d89a371836aa45
-Description: Library to provide access to get, set and list Android properties
-Description-md5: 9af1ee376636863e49ba13ab6b202faa
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Replaces: dhcp3-common
+Provides: dhcp3-common
+Depends: libc6 (>= 2.15), debianutils (>= 2.8.2)
+Filename: pool/main/i/isc-dhcp/isc-dhcp-common_4.2.4-7ubuntu5_armhf.deb
+Size: 742100
+MD5sum: a675a9b65561a937e3acedc89ac03f07
+SHA1: 7aa23fa87154bfb38e89872420c394c440898201
+SHA256: 4f753c5167ed65e82924760093fe473bd759d3940950d6c726ed0f64caa72f29
+Description: common files used by all the isc-dhcp* packages
+Description-md5: 5683d165d1bf7aa98dc09ae338bc059f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-full, kubuntu-active-full, edubuntu-desktop, edubuntu-usb
+Task: minimal
+
+Package: isc-dhcp-dev
+Priority: optional
+Section: devel
+Installed-Size: 1627
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Replaces: dhcp3-dev
+Provides: dhcp3-dev
+Depends: libc6-dev
+Filename: pool/main/i/isc-dhcp/isc-dhcp-dev_4.2.4-7ubuntu5_armhf.deb
+Size: 695010
+MD5sum: 652dc98694fdf8cd6a0051ba6bc39c27
+SHA1: 158e61abe0184a5716f51978a779e789ee485df2
+SHA256: fa87f88a1358ecd4d1ca7da42f5e17466721aac433aa7d9f311470cb5150761b
+Description: API for accessing and modifying the DHCP server and client state
+Description-md5: 629de35b97db45a08414abd22d153d05
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: isc-dhcp-relay-dbg
+Priority: extra
+Section: debug
+Installed-Size: 4644
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu5)
+Conflicts: dhcp-relay
+Filename: pool/main/i/isc-dhcp/isc-dhcp-relay-dbg_4.2.4-7ubuntu5_armhf.deb
+Size: 1914948
+MD5sum: 40c597cee8a2849ca5336272037116db
+SHA1: f0a571c21a1d3b4983d17c90432da00743c547c9
+SHA256: bdc3c76fe1524d5ef6027bdfe13568bf4656167e283960870d335fade614bcc3
+Description: DHCP relay daemon (debugging symbols)
+Description-md5: 02902cd378278d57c30d249e39a858b3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: isc-dhcp-server
+Priority: optional
+Section: net
+Installed-Size: 1420
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Replaces: dhcp3-server
+Provides: dhcp3-server
+Depends: debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.15), debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu5), lsb-base, adduser
+Suggests: isc-dhcp-server-ldap, apparmor
+Conflicts: dhcp
+Filename: pool/main/i/isc-dhcp/isc-dhcp-server_4.2.4-7ubuntu5_armhf.deb
+Size: 811666
+MD5sum: 7dd5d2c1ee13372037168825487860c8
+SHA1: 9d0c48f05f042a1ae616653002462564caeb7d37
+SHA256: 63613a2fed5f94dbcfa5ec3cd9b53ed5e04d8b864276d873e2fd4c27c56dd09e
+Description: ISC DHCP server for automatic IP address assignment
+Description-md5: 4f5d533c02fa72751acbaefe5e28258d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: isc-dhcp-server-dbg
+Priority: extra
+Section: debug
+Installed-Size: 5536
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu5), lsb-base
+Suggests: isc-dhcp-server-ldap
+Conflicts: dhcp
+Filename: pool/main/i/isc-dhcp/isc-dhcp-server-dbg_4.2.4-7ubuntu5_armhf.deb
+Size: 2315424
+MD5sum: 66e4533308ceb6fb5945c14eaf7ab4d3
+SHA1: 15a68952c4cd85e152b474848f198b929323868a
+SHA256: 8e8870b940349c44930c4d1b4a6203b0048ebb88ca280e691c67f05a9f064765
+Description: ISC DHCP server for automatic IP address assignment (debug)
+Description-md5: b66d42f652cf79ebf5bf05f89e2126b7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
@@ -414,129 +514,6 @@ Description-md5: aa070f52bfbf0d9e220aa40da4b4ced1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
-Package: libhardware-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 47
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu18
-Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Depends: libhardware2 (= 0.1.0+git20130606+c5d897a-0ubuntu18), android-platform-headers (= 0.1.0+git20130606+c5d897a-0ubuntu18)
-Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/libhardware-dev_0.1.0+git20130606+c5d897a-0ubuntu18_armhf.deb
-Size: 4706
-MD5sum: 7c56699b0c8ab5e6f8947ebe13bcc7be
-SHA1: eedf12162af191a621f5c094d43c5e77c92cacbc
-SHA256: 4c195dc6963a49d33e47b01cb2093c6d2dffe6fd6d62e5d64f9657a39fe959b8
-Description: Development files for libhardware
-Description-md5: da5d7fa47a1b4b845a603aff96d464fe
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libhardware2
-Priority: extra
-Section: libs
-Installed-Size: 53
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu18
-Replaces: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Depends: libc6 (>= 2.4), libhybris-common1
-Breaks: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/libhardware2_0.1.0+git20130606+c5d897a-0ubuntu18_armhf.deb
-Size: 6786
-MD5sum: 13b995fb642017b5ca205c7916f8128f
-SHA1: 5d84f8d82a763aab315f71645685673c0b3769b5
-SHA256: 6e22ae5f2d2522d5dde6b9b12f8d569b4371a14fed93256f21b43bd414e34102
-Description: Library to provice access to the Android libhardware HAL
-Description-md5: 653b750176d920864f05b2e85824800a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
-
-Package: libhybris
-Priority: extra
-Section: libs
-Installed-Size: 174
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Version: 0.1.0+git20130606+c5d897a-0ubuntu18
-Depends: libandroid-properties1 (= 0.1.0+git20130606+c5d897a-0ubuntu18), libhardware2, libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libhybris-common1, libstdc++6 (>= 4.1.1)
-Filename: pool/main/libh/libhybris/libhybris_0.1.0+git20130606+c5d897a-0ubuntu18_armhf.deb
-Size: 36632
-MD5sum: d8ad456133d1eb14a0c50e61a459a92b
-SHA1: 92d40ca1b4af6476348d927aab00bf0ce405a773
-SHA256: 5202a6376f71358102d53278409932f65531490f0f74f7a74e14f85c9ed91483
-Description: Allows to run bionic-based HW adaptations in glibc systems - libs
-Description-md5: d20384e11368d9f090577e52e675ed57
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libhybris-common-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 47
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu18
-Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Depends: libhybris-common1 (= 0.1.0+git20130606+c5d897a-0ubuntu18)
-Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/libhybris-common-dev_0.1.0+git20130606+c5d897a-0ubuntu18_armhf.deb
-Size: 4678
-MD5sum: 1864bc1ee97e61f1d8b203ab50851ab0
-SHA1: 384d7ddec466bda6434e9affcf721e735fc5f0e6
-SHA256: fcbf7c9327b8be479d93784798fb26b09e65b82af44bb99874417b0e41bacf03
-Description: Development files for libhybris-common
-Description-md5: 27556b4ff08d6ee084db91ea770617de
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libhybris-common1
-Priority: extra
-Section: libs
-Installed-Size: 120
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu18
-Replaces: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Depends: libandroid-properties1, libc6 (>= 2.12), libgcc1 (>= 1:4.4.0)
-Breaks: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/libhybris-common1_0.1.0+git20130606+c5d897a-0ubuntu18_armhf.deb
-Size: 41364
-MD5sum: 963faab456349811a68d472018b3d1f3
-SHA1: b6c33b7fea403a85d5ca5553edc87060d6afed44
-SHA256: 63faa4b8c386a4bb1f5f5024e9eed08c05da1f000b3a0649d1aae82a5f983a57
-Description: Common library that contains the Android linker and custom hooks
-Description-md5: 618c5643ccb4d8d4d8db9e33d16f42e3
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-full, kubuntu-active-full, edubuntu-desktop, edubuntu-usb
-
-Package: libhybris-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 155
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu18
-Depends: libhybris (= 0.1.0+git20130606+c5d897a-0ubuntu18), android-platform-headers (= 0.1.0+git20130606+c5d897a-0ubuntu18), libandroid-properties-dev (= 0.1.0+git20130606+c5d897a-0ubuntu18), libhardware-dev (= 0.1.0+git20130606+c5d897a-0ubuntu18), libhybris-common-dev (= 0.1.0+git20130606+c5d897a-0ubuntu18), libgles2-mesa-dev
-Filename: pool/main/libh/libhybris/libhybris-dev_0.1.0+git20130606+c5d897a-0ubuntu18_armhf.deb
-Size: 20010
-MD5sum: f216159f461885e636f6a11146eb02f8
-SHA1: 7bf306a2062c02f9695db9ff835db2c7598969a4
-SHA256: c18946564ca0714c5510a3f955fc85441641d0246fd0863f5ee1da23e4ada12d
-Description: Development headers and libraries for libhybris
-Description-md5: fcfe2cd71f2cfbabcbb6f94dda4cbe46
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
 
 Package: libmirclient-dev
 Priority: optional
@@ -1631,26 +1608,6 @@ Description-md5: 5e947646628710d552f512bf911d233f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: livecd-rootfs
-Priority: optional
-Section: devel
-Installed-Size: 129
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Version: 2.178
-Depends: debootstrap, rsync, python-minimal | python, procps, squashfs-tools (>= 1:3.3-1), grep-dctrl, fdupes, lsb-release, lzma, e2fsprogs, germinate (>= 1.25.1), apt-utils, gnupg, live-build (>= 3.0~a55-1), android-tools-fsutils
-Suggests: partimage
-Breaks: ubuntu-defaults-builder (<< 0.32)
-Filename: pool/main/l/livecd-rootfs/livecd-rootfs_2.178_all.deb
-Size: 18436
-MD5sum: 375e61755b4a463c2af9bf809a55dc36
-SHA1: edd4c0ecad24a7dae4cbc60cd184e986cce0460f
-SHA256: 07d9b62ff1599090a679fca4e9e0eb25f7df56090d704b8c63f83420050587a7
-Description: construction script for the livecd rootfs
-Description-md5: 7b59fd93401bd0efd37505de924d874f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: mir-doc
 Priority: optional
 Section: doc
@@ -1933,74 +1890,6 @@ Description-md5: 7c80f295a14f6455ffe1509a646e6b4d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: overlay-scrollbar
-Priority: optional
-Section: libs
-Installed-Size: 52
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: all
-Version: 0.2.16+r359+13.10.20130826-0ubuntu1
-Depends: overlay-scrollbar-gtk2, overlay-scrollbar-gtk3, dconf-gsettings-backend | gsettings-backend
-Filename: pool/main/o/overlay-scrollbar/overlay-scrollbar_0.2.16+r359+13.10.20130826-0ubuntu1_all.deb
-Size: 2102
-MD5sum: 77b4c4513d36c505cc4568f472bfd112
-SHA1: 36e9d669f2e19c9e4a2babb9aed466a041f97c91
-SHA256: 34e729e540cc127b609f76bd0c0e4677ee80b46a800b222bbc239b3cf3001ff6
-Description: Scrollbar overlay
-Homepage: http://launchpad.net/ayatana-scrollbar
-Description-md5: e1abc3be32d21f181effe2ab01d43076
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: overlay-scrollbar-gtk2
-Priority: optional
-Section: libs
-Installed-Size: 94
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: armhf
-Source: overlay-scrollbar
-Version: 0.2.16+r359+13.10.20130826-0ubuntu1
-Replaces: liboverlay-scrollbar-0.2-0 (<< 0.2.16+r348), liboverlay-scrollbar-0.2-dev (<< 0.2.16+r348)
-Depends: overlay-scrollbar, libc6 (>= 2.4), libcairo2 (>= 1.10.0), libglib2.0-0 (>= 2.37.3), libgtk2.0-0 (>= 2.24.6-0ubuntu4)
-Conflicts: liboverlay-scrollbar-0.2-0 (<< 0.2.16+r348), liboverlay-scrollbar-0.2-dev (<< 0.2.16+r348)
-Filename: pool/main/o/overlay-scrollbar/overlay-scrollbar-gtk2_0.2.16+r359+13.10.20130826-0ubuntu1_armhf.deb
-Size: 28856
-MD5sum: b963603cbce2bee705e5aa9bd53bb3d3
-SHA1: b7b85663de1586d42e85a714933f46422491b1eb
-SHA256: 3c947c59f30558b8aa284823f02baf7843959a9f7c6d9ca0fd95c27b421e3dc2
-Description: GTK 2 module for overlay scrollbars
-Multi-Arch: same
-Homepage: http://launchpad.net/ayatana-scrollbar
-Description-md5: 1d3f21e2d8af7452b22c5b3bf608dfba
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: overlay-scrollbar-gtk3
-Priority: optional
-Section: libs
-Installed-Size: 98
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: armhf
-Source: overlay-scrollbar
-Version: 0.2.16+r359+13.10.20130826-0ubuntu1
-Replaces: liboverlay-scrollbar3-0.2-0 (<< 0.2.16+r348), liboverlay-scrollbar3-0.2-dev (<< 0.2.16+r348)
-Depends: overlay-scrollbar, libc6 (>= 2.4), libcairo2 (>= 1.10.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.2.1)
-Conflicts: liboverlay-scrollbar3-0.2-0 (<< 0.2.16+r348), liboverlay-scrollbar3-0.2-dev (<< 0.2.16+r348)
-Filename: pool/main/o/overlay-scrollbar/overlay-scrollbar-gtk3_0.2.16+r359+13.10.20130826-0ubuntu1_armhf.deb
-Size: 29858
-MD5sum: 0faa2012e19a5c77636ebfb8c3e03942
-SHA1: 23b19006d21119b0b435b2cb2894469dc9ddf006
-SHA256: 6245bf55f5ec518f03929026f57675d63fefe45c7d4d7bc1147607aa9535983b
-Description: GTK 3 module for overlay scrollbars
-Multi-Arch: same
-Homepage: http://launchpad.net/ayatana-scrollbar
-Description-md5: c27dd21fae509f36ba27ac9261f3eb62
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
 Package: python-bzrlib
 Priority: optional
 Section: python
@@ -2076,6 +1965,68 @@ Description-md5: 6a061202c9118fa07cacafd938b725f0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: ubuntu-desktop
+Priority: optional
+Section: metapackages
+Installed-Size: 59
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: armhf
+Source: ubuntu-meta
+Version: 1.304
+Depends: alsa-base, alsa-utils, anacron, at-spi2-core, baobab, bc, ca-certificates, checkbox-qt, dmz-cursor-theme, doc-base, eog, evince, file-roller, fonts-dejavu-core, fonts-freefont-ttf, foomatic-db-compressed-ppds, foomatic-filters, gedit, genisoimage, ghostscript-x, gnome-calculator, gnome-control-center, gnome-font-viewer, gnome-menus, gnome-power-manager, gnome-screenshot, gnome-session, gnome-session-canberra, gnome-system-log, gnome-system-monitor, gstreamer0.10-alsa, gstreamer0.10-plugins-base-apps, gstreamer0.10-pulseaudio, gstreamer1.0-alsa, gstreamer1.0-plugins-base-apps, gstreamer1.0-pulseaudio, gucharmap, gvfs-bin, inputattach, language-selector-gnome, libatk-adaptor, libnotify-bin, libpam-systemd, libsasl2-modules, libxp6, lightdm, nautilus, nautilus-sendto, notify-osd, openprinting-ppds, printer-driver-pnm2ppa, pulseaudio, rfkill, seahorse, software-center, software-properties-gtk, ssh-askpass-gnome, system-config-printer-gnome, ubuntu-artwork, ubuntu-drivers-common, ubuntu-extras-keyring, ubuntu-release-upgrader-gtk, ubuntu-settings, ubuntu-sounds, unity, unity-greeter, unzip, update-manager, update-notifier, wireless-tools, wpasupplicant, xdg-user-dirs, xdg-user-dirs-gtk, xdiagnose, xkb-data, xorg, yelp, zenity, zip
+Recommends: activity-log-manager-control-center, aisleriot, app-install-data-partner, apport-gtk, avahi-autoipd, avahi-daemon, bluez, bluez-alsa, bluez-cups, bluez-gstreamer, branding-ubuntu, brasero, brltty, cups, cups-bsd, cups-client, deja-dup, deja-dup-backend-ubuntuone, empathy, example-content, firefox, fonts-kacst-one, fonts-khmeros-core, fonts-lao, fonts-liberation, fonts-lklug-sinhala, fonts-nanum, fonts-sil-abyssinica, fonts-sil-padauk, fonts-takao-pgothic, fonts-thai-tlwg, fonts-tibetan-machine, gcc, gnome-accessibility-themes, gnome-bluetooth, gnome-control-center-unity, gnome-disk-utility, gnome-mahjongg, gnome-orca, gnome-screensaver, gnome-sudoku, gnome-terminal, gnomine, gvfs-fuse, hplip, ibus, ibus-gtk3, ibus-pinyin, ibus-pinyin-db-android, ibus-table, im-config, kerneloops-daemon, landscape-client-ui-install, laptop-detect, libgail-common, libnss-mdns, libpam-gnome-keyring, libproxy1-plugin-gsettings, libproxy1-plugin-networkmanager, libqt4-sql-sqlite, libwmf0.2-7-gtk, make, mousetweaks, nautilus-share, network-manager-gnome, network-manager-pptp, network-manager-pptp-gnome, onboard, overlay-scrollbar, pcmciautils, plymouth-theme-ubuntu-logo, policykit-desktop-privileges, printer-driver-c2esp, printer-driver-foo2zjs, printer-driver-min12xxw, printer-driver-ptouch, printer-driver-pxljr, printer-driver-sag-gdi, printer-driver-splix, pulseaudio-module-bluetooth, pulseaudio-module-x11, python3-aptdaemon.pkcompat, qt-at-spi, remmina, rhythmbox, rhythmbox-plugin-magnatune, rhythmbox-ubuntuone, shotwell, simple-scan, sni-qt, speech-dispatcher, telepathy-idle, totem, totem-mozilla, transmission-gtk, ttf-indic-fonts-core, ttf-punjabi-fonts, ttf-ubuntu-font-family, ttf-wqy-microhei, ubuntu-docs, ubuntuone-control-panel-qt, unity-webapps-common, vino, whoopsie, xcursor-themes, xdg-utils, xterm, xul-ext-ubufox, xul-ext-unity, xul-ext-webaccounts
+Filename: pool/main/u/ubuntu-meta/ubuntu-desktop_1.304_armhf.deb
+Size: 3736
+MD5sum: b6fa99dde32aac161c783c6dfb934b05
+SHA1: 981207c3b9857ab61da7b46f1ee12f9f65a995f1
+SHA256: ce9b4356dbccc09e1839b363216412467e4f3110db558df20cc4c3bc74b6ddd5
+Description: The Ubuntu desktop system
+Description-md5: 40ed9ed27fdbcbed784e2ebb1810b3e0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: ubuntu-minimal
+Priority: important
+Section: metapackages
+Installed-Size: 59
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: armhf
+Source: ubuntu-meta
+Version: 1.304
+Depends: adduser, apt, apt-utils, bzip2, console-setup, debconf, debconf-i18n, eject, gnupg, ifupdown, initramfs-tools, iproute2, iputils-ping, isc-dhcp-client, kbd, less, locales, lsb-release, makedev, mawk, module-init-tools, net-tools, netbase, netcat-openbsd, ntpdate, passwd, procps, python3, resolvconf, rsyslog, sudo, tzdata, ubuntu-keyring, udev, upstart, ureadahead, vim-tiny, whiptail
+Filename: pool/main/u/ubuntu-meta/ubuntu-minimal_1.304_armhf.deb
+Size: 2698
+MD5sum: 8727b84be368234b7d8e5ca4a8bd6572
+SHA1: eea711c35e4cd212b2bacd4f21e15bca8f6473a2
+SHA256: 2a91da87e0389cfcd9f001ad876a2b64aef4ae2502aebcd39714304a550c5898
+Description: Minimal core of Ubuntu
+Description-md5: 790932f14543314e43c3705a3451df24
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: ubuntu-standard
+Priority: standard
+Section: metapackages
+Installed-Size: 59
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: armhf
+Source: ubuntu-meta
+Version: 1.304
+Depends: busybox-static, cpio, cron, dnsutils, dosfstools, ed, file, ftp, hdparm, info, iptables, language-selector-common, logrotate, lshw, lsof, ltrace, man-db, mime-support, parted, pciutils, popularity-contest, psmisc, rsync, strace, time, usbutils, wget
+Recommends: apparmor, apt-transport-https, bash-completion, command-not-found, friendly-recovery, iputils-tracepath, irqbalance, manpages, mlocate, mtr-tiny, nano, ntfs-3g, openssh-client, plymouth, plymouth-theme-ubuntu-text, ppp, pppconfig, pppoeconf, tcpdump, telnet, ufw, update-manager-core, uuid-runtime
+Filename: pool/main/u/ubuntu-meta/ubuntu-standard_1.304_armhf.deb
+Size: 2732
+MD5sum: 642161e3e64aaf234d845128b35ec37c
+SHA1: 7eb574b114f94335bc15aa3b2dd347782ed40f0f
+SHA256: 6df33868239d6f1a9121a30748ed0ddad808b7cee4d335f493758ebd4ab04ca1
+Description: The Ubuntu standard system
+Description-md5: 129cec702d8a0005c808781d98183ffd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
+
 Package: usb-modeswitch-data
 Priority: extra
 Section: comm
@@ -2100,4 +2051,23 @@ Description-md5: 83f8894d390ffa31e34c89e43fc95bb1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: vlan
+Priority: extra
+Section: misc
+Installed-Size: 159
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ard van Breemen <ard@kwaak.net>
+Architecture: armhf
+Version: 1.9-3ubuntu9
+Depends: libc6 (>= 2.4), iproute2
+Filename: pool/main/v/vlan/vlan_1.9-3ubuntu9_armhf.deb
+Size: 33382
+MD5sum: 55f917bd105a77fbf6e7348b92739173
+SHA1: 1468e86f0ec785e5d6112ad4445ae4402ddc2bd2
+SHA256: 6111899093b05a36ebfc7005b28bd4723f591949342a2dac6dca69af51603538
+Description: user mode programs to enable VLANs on your ethernet devices
+Description-md5: da2d3e81af12341c15fb4a7267d2457d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 

@@ -1,23 +1,3 @@
-Package: android-platform-headers
-Priority: extra
-Section: libdevel
-Installed-Size: 274
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu18
-Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/android-platform-headers_0.1.0+git20130606+c5d897a-0ubuntu18_all.deb
-Size: 52946
-MD5sum: 5f3f5a09cbde4d404a03a3285319db00
-SHA1: 1df5ce19d35d70fdadf06ef4799105a4b4941ed7
-SHA256: 8dc45e4d107bebbe695225dcdb83e4067e94a2ac9a516f72145488d0fb33426f
-Description: Android Platform Headers from AOSP releases
-Description-md5: 5d4e18662ffad46fc86efe8d568c6096
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: bzr
 Priority: optional
 Section: devel
@@ -207,6 +187,165 @@ Description-md5: 442edbd184a6e1febc9b203604eb38f4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: minimal
+
+Package: isc-dhcp-client
+Priority: important
+Section: net
+Installed-Size: 1857
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Replaces: dhcp3-client
+Provides: dhcp-client, dhcp3-client
+Depends: libc6 (>= 2.15), debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu5), iproute2
+Suggests: resolvconf, avahi-autoipd, apparmor
+Conflicts: dhcp-client (<< 3.0), ifupdown (<< 0.6.8+nmu3), resolvconf (<= 1.45), samba-common (<< 3.0.0beta1-2)
+Filename: pool/main/i/isc-dhcp/isc-dhcp-client_4.2.4-7ubuntu5_powerpc.deb
+Size: 737298
+MD5sum: cfbbba5efcd6cd8238b2922bb4131e3f
+SHA1: 70de3ae59b6532f24e97409d0029b201368c6cda
+SHA256: 6a0dac68617b99a526077794f9461ead0f26393013aba1a08a2ae9f8af8ac137
+Description: ISC DHCP client
+Description-md5: 7d48c04c85ad9235ca7273ba8da51bbc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: isc-dhcp-client-dbg
+Priority: extra
+Section: debug
+Installed-Size: 5140
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu5)
+Suggests: resolvconf, avahi-autoipd
+Conflicts: dhcp-client (<< 3.0), samba-common (<< 3.0.0beta1-2)
+Filename: pool/main/i/isc-dhcp/isc-dhcp-client-dbg_4.2.4-7ubuntu5_powerpc.deb
+Size: 2149742
+MD5sum: 231d4942f606b82e00c5b85d9f931933
+SHA1: 8dd1654eadf834d37b81a1014e69c9d6a34d9ada
+SHA256: a46b1fdc52c3ff7c23963a7c4355359f5d3398736bc8a84f15ddd4b0927e05ce
+Description: ISC DHCP client (debugging symbols)
+Description-md5: 65f8c2f2d81ecd053c5bca54e46ec524
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: isc-dhcp-common
+Priority: important
+Section: net
+Installed-Size: 1795
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Replaces: dhcp3-common
+Provides: dhcp3-common
+Depends: libc6 (>= 2.15), debianutils (>= 2.8.2)
+Filename: pool/main/i/isc-dhcp/isc-dhcp-common_4.2.4-7ubuntu5_powerpc.deb
+Size: 798326
+MD5sum: 0cf294a429620174ae356243abc02c8e
+SHA1: 99b0cb94e310fd08e748ae055915451ef9d23070
+SHA256: 29ae208aaa81cc3d6597ef60ac10a23ed08c0ee5f22fbaaabd6f1f9a5a3e232b
+Description: common files used by all the isc-dhcp* packages
+Description-md5: 5683d165d1bf7aa98dc09ae338bc059f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: isc-dhcp-dev
+Priority: optional
+Section: devel
+Installed-Size: 1844
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Replaces: dhcp3-dev
+Provides: dhcp3-dev
+Depends: libc6-dev
+Filename: pool/main/i/isc-dhcp/isc-dhcp-dev_4.2.4-7ubuntu5_powerpc.deb
+Size: 750808
+MD5sum: 934c792d5558951d7969b58755df11a4
+SHA1: d54b2d6ea70065358370d3f7a9c08bc0602e4e02
+SHA256: 9aeec39bff582a1cac1e1f28a19bdf26b237c5f0cbc7eaeb52612bb9c301aa74
+Description: API for accessing and modifying the DHCP server and client state
+Description-md5: 629de35b97db45a08414abd22d153d05
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: isc-dhcp-relay-dbg
+Priority: extra
+Section: debug
+Installed-Size: 4943
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu5)
+Conflicts: dhcp-relay
+Filename: pool/main/i/isc-dhcp/isc-dhcp-relay-dbg_4.2.4-7ubuntu5_powerpc.deb
+Size: 2059620
+MD5sum: 4ab2293f902854c097e0c8a640cc3a0e
+SHA1: 65c0fb7d0e63bcd46b131018ebdcc81db3e39176
+SHA256: d6b7c0f862660e91a79d88ab5a795296d451580383d544369f1f44d3d69aa10f
+Description: DHCP relay daemon (debugging symbols)
+Description-md5: 02902cd378278d57c30d249e39a858b3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: isc-dhcp-server
+Priority: optional
+Section: net
+Installed-Size: 2129
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Replaces: dhcp3-server
+Provides: dhcp3-server
+Depends: debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.15), debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu5), lsb-base, adduser
+Suggests: isc-dhcp-server-ldap, apparmor
+Conflicts: dhcp
+Filename: pool/main/i/isc-dhcp/isc-dhcp-server_4.2.4-7ubuntu5_powerpc.deb
+Size: 876184
+MD5sum: e4f47b46279316dc749de3d4db1316ef
+SHA1: 8319827b0691565399afb0506bb6c3a236f27a3b
+SHA256: ff458046e6a32da2db3e51beb90f055b3955dc94a6c51a75b471bd49b11e16cf
+Description: ISC DHCP server for automatic IP address assignment
+Description-md5: 4f5d533c02fa72751acbaefe5e28258d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: isc-dhcp-server-dbg
+Priority: extra
+Section: debug
+Installed-Size: 5856
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu5
+Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu5), lsb-base
+Suggests: isc-dhcp-server-ldap
+Conflicts: dhcp
+Filename: pool/main/i/isc-dhcp/isc-dhcp-server-dbg_4.2.4-7ubuntu5_powerpc.deb
+Size: 2466912
+MD5sum: 1152d3d5a405b6feaf13dfe033bbb0fd
+SHA1: b8bf6265d82c2568472206a445e29f84671e910a
+SHA256: a8ae78b04d20e629984aa464fb3191ddee34596bd7e26d86a7ab8eaf271b7f3f
+Description: ISC DHCP server for automatic IP address assignment (debug)
+Description-md5: b66d42f652cf79ebf5bf05f89e2126b7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
@@ -858,26 +997,6 @@ Description-md5: 5e947646628710d552f512bf911d233f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: livecd-rootfs
-Priority: optional
-Section: devel
-Installed-Size: 129
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Version: 2.178
-Depends: debootstrap, rsync, python-minimal | python, procps, squashfs-tools (>= 1:3.3-1), grep-dctrl, fdupes, lsb-release, lzma, e2fsprogs, germinate (>= 1.25.1), apt-utils, gnupg, live-build (>= 3.0~a55-1), android-tools-fsutils
-Suggests: partimage
-Breaks: ubuntu-defaults-builder (<< 0.32)
-Filename: pool/main/l/livecd-rootfs/livecd-rootfs_2.178_all.deb
-Size: 18436
-MD5sum: 375e61755b4a463c2af9bf809a55dc36
-SHA1: edd4c0ecad24a7dae4cbc60cd184e986cce0460f
-SHA256: 07d9b62ff1599090a679fca4e9e0eb25f7df56090d704b8c63f83420050587a7
-Description: construction script for the livecd rootfs
-Description-md5: 7b59fd93401bd0efd37505de924d874f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: mir-doc
 Priority: optional
 Section: doc
@@ -1138,74 +1257,6 @@ Description-md5: 7c80f295a14f6455ffe1509a646e6b4d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: overlay-scrollbar
-Priority: optional
-Section: libs
-Installed-Size: 52
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: all
-Version: 0.2.16+r359+13.10.20130826-0ubuntu1
-Depends: overlay-scrollbar-gtk2, overlay-scrollbar-gtk3, dconf-gsettings-backend | gsettings-backend
-Filename: pool/main/o/overlay-scrollbar/overlay-scrollbar_0.2.16+r359+13.10.20130826-0ubuntu1_all.deb
-Size: 2102
-MD5sum: 77b4c4513d36c505cc4568f472bfd112
-SHA1: 36e9d669f2e19c9e4a2babb9aed466a041f97c91
-SHA256: 34e729e540cc127b609f76bd0c0e4677ee80b46a800b222bbc239b3cf3001ff6
-Description: Scrollbar overlay
-Homepage: http://launchpad.net/ayatana-scrollbar
-Description-md5: e1abc3be32d21f181effe2ab01d43076
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: overlay-scrollbar-gtk2
-Priority: optional
-Section: libs
-Installed-Size: 126
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: powerpc
-Source: overlay-scrollbar
-Version: 0.2.16+r359+13.10.20130826-0ubuntu1
-Replaces: liboverlay-scrollbar-0.2-0 (<< 0.2.16+r348), liboverlay-scrollbar-0.2-dev (<< 0.2.16+r348)
-Depends: overlay-scrollbar, libc6 (>= 2.4), libcairo2 (>= 1.10.0), libglib2.0-0 (>= 2.37.3), libgtk2.0-0 (>= 2.24.6-0ubuntu4)
-Conflicts: liboverlay-scrollbar-0.2-0 (<< 0.2.16+r348), liboverlay-scrollbar-0.2-dev (<< 0.2.16+r348)
-Filename: pool/main/o/overlay-scrollbar/overlay-scrollbar-gtk2_0.2.16+r359+13.10.20130826-0ubuntu1_powerpc.deb
-Size: 35816
-MD5sum: 52a897f3b29d4478a65167f6a519414b
-SHA1: 8337c0a1bbf586ec50ebd23b2e22610f22fcbd30
-SHA256: 34de836a36f2fa8bd8eb42aaf0c9d51732acfb8fe4944de67d8cace9783bee85
-Description: GTK 2 module for overlay scrollbars
-Multi-Arch: same
-Homepage: http://launchpad.net/ayatana-scrollbar
-Description-md5: 1d3f21e2d8af7452b22c5b3bf608dfba
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: overlay-scrollbar-gtk3
-Priority: optional
-Section: libs
-Installed-Size: 126
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: powerpc
-Source: overlay-scrollbar
-Version: 0.2.16+r359+13.10.20130826-0ubuntu1
-Replaces: liboverlay-scrollbar3-0.2-0 (<< 0.2.16+r348), liboverlay-scrollbar3-0.2-dev (<< 0.2.16+r348)
-Depends: overlay-scrollbar, libc6 (>= 2.4), libcairo2 (>= 1.10.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.2.1)
-Conflicts: liboverlay-scrollbar3-0.2-0 (<< 0.2.16+r348), liboverlay-scrollbar3-0.2-dev (<< 0.2.16+r348)
-Filename: pool/main/o/overlay-scrollbar/overlay-scrollbar-gtk3_0.2.16+r359+13.10.20130826-0ubuntu1_powerpc.deb
-Size: 37562
-MD5sum: 827cd1f0f81623bf2818d1aa08dd89e5
-SHA1: ecdc9e95bca4df06803c6052dd1e21c8e5bbff44
-SHA256: c82e9a17585c27c9baa7f96e0eeca8e8e1c1176c04b60340923d691ca851d818
-Description: GTK 3 module for overlay scrollbars
-Multi-Arch: same
-Homepage: http://launchpad.net/ayatana-scrollbar
-Description-md5: c27dd21fae509f36ba27ac9261f3eb62
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
 Package: python-bzrlib
 Priority: optional
 Section: python
@@ -1281,6 +1332,68 @@ Description-md5: 6a061202c9118fa07cacafd938b725f0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: ubuntu-desktop
+Priority: optional
+Section: metapackages
+Installed-Size: 59
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: ubuntu-meta
+Version: 1.304
+Depends: alsa-base, alsa-utils, anacron, at-spi2-core, baobab, bc, ca-certificates, checkbox-qt, dmz-cursor-theme, doc-base, eog, evince, file-roller, fonts-dejavu-core, fonts-freefont-ttf, foomatic-db-compressed-ppds, foomatic-filters, gedit, genisoimage, ghostscript-x, gnome-calculator, gnome-control-center, gnome-font-viewer, gnome-menus, gnome-power-manager, gnome-screenshot, gnome-session, gnome-session-canberra, gnome-system-log, gnome-system-monitor, gstreamer0.10-alsa, gstreamer0.10-plugins-base-apps, gstreamer0.10-pulseaudio, gstreamer1.0-alsa, gstreamer1.0-plugins-base-apps, gstreamer1.0-pulseaudio, gucharmap, gvfs-bin, inputattach, language-selector-gnome, libatk-adaptor, libnotify-bin, libpam-systemd, libsasl2-modules, libxp6, lightdm, nautilus, nautilus-sendto, notify-osd, openprinting-ppds, pbbuttonsd, printer-driver-pnm2ppa, pulseaudio, rfkill, seahorse, software-center, software-properties-gtk, ssh-askpass-gnome, system-config-printer-gnome, ubuntu-artwork, ubuntu-drivers-common, ubuntu-extras-keyring, ubuntu-release-upgrader-gtk, ubuntu-settings, ubuntu-sounds, unity, unity-greeter, unzip, update-manager, update-notifier, wireless-tools, wpasupplicant, xdg-user-dirs, xdg-user-dirs-gtk, xdiagnose, xkb-data, xorg, yelp, zenity, zip
+Recommends: activity-log-manager-control-center, app-install-data-partner, apport-gtk, avahi-autoipd, avahi-daemon, bluez, bluez-alsa, bluez-cups, bluez-gstreamer, brasero, brltty, cups, cups-bsd, cups-client, deja-dup, deja-dup-backend-ubuntuone, empathy, example-content, firefox, fonts-kacst-one, fonts-khmeros-core, fonts-lao, fonts-liberation, fonts-lklug-sinhala, fonts-nanum, fonts-sil-abyssinica, fonts-sil-padauk, fonts-takao-pgothic, fonts-thai-tlwg, fonts-tibetan-machine, gcc, gnome-accessibility-themes, gnome-bluetooth, gnome-control-center-unity, gnome-disk-utility, gnome-orca, gnome-screensaver, gnome-terminal, gvfs-fuse, hplip, ibus, ibus-gtk3, ibus-pinyin, ibus-pinyin-db-android, ibus-table, im-config, kerneloops-daemon, landscape-client-ui-install, laptop-detect, libgail-common, libnss-mdns, libpam-gnome-keyring, libproxy1-plugin-gsettings, libproxy1-plugin-networkmanager, libqt4-sql-sqlite, libwmf0.2-7-gtk, make, mousetweaks, nautilus-share, network-manager-gnome, network-manager-pptp, network-manager-pptp-gnome, onboard, overlay-scrollbar, pcmciautils, plymouth-theme-ubuntu-logo, policykit-desktop-privileges, printer-driver-c2esp, printer-driver-foo2zjs, printer-driver-min12xxw, printer-driver-ptouch, printer-driver-pxljr, printer-driver-sag-gdi, printer-driver-splix, pulseaudio-module-bluetooth, pulseaudio-module-x11, python3-aptdaemon.pkcompat, qt-at-spi, remmina, rhythmbox, rhythmbox-plugin-magnatune, rhythmbox-ubuntuone, simple-scan, sni-qt, speech-dispatcher, telepathy-idle, thunderbird, thunderbird-gnome-support, totem, totem-mozilla, transmission-gtk, ttf-indic-fonts-core, ttf-punjabi-fonts, ttf-ubuntu-font-family, ttf-wqy-microhei, ubuntu-docs, ubuntuone-control-panel-qt, unity-webapps-common, vino, whoopsie, xcursor-themes, xdg-utils, xterm, xul-ext-ubufox, xul-ext-unity
+Filename: pool/main/u/ubuntu-meta/ubuntu-desktop_1.304_powerpc.deb
+Size: 3720
+MD5sum: 966133db638fd8467719358304708245
+SHA1: d02ce944d1f9be8ea8f116762dc1ff881f19dc32
+SHA256: b2a203e253ba66cf8210548288514995ebcc45758d38320389245f7828cbfcd5
+Description: The Ubuntu desktop system
+Description-md5: 40ed9ed27fdbcbed784e2ebb1810b3e0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: ubuntu-minimal
+Priority: important
+Section: metapackages
+Installed-Size: 59
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: ubuntu-meta
+Version: 1.304
+Depends: adduser, apt, apt-utils, bzip2, console-setup, debconf, debconf-i18n, eject, gnupg, ifupdown, initramfs-tools, iproute2, iputils-ping, isc-dhcp-client, kbd, less, locales, lsb-release, mac-fdisk, makedev, mawk, module-init-tools, net-tools, netbase, netcat-openbsd, ntpdate, passwd, pmac-fdisk, powerpc-utils, procps, python3, resolvconf, rsyslog, sudo, tzdata, ubuntu-keyring, udev, upstart, ureadahead, vim-tiny, whiptail
+Filename: pool/main/u/ubuntu-meta/ubuntu-minimal_1.304_powerpc.deb
+Size: 2712
+MD5sum: c9703ccbb64c4d2c2a3dff66704aefdb
+SHA1: 6a69836b0183d186feabb7acdd6e4c772bfc319a
+SHA256: 3a9bb5361a830b73536e5ff3c178f366e57b41afe25d68a7c86b97a57240c0eb
+Description: Minimal core of Ubuntu
+Description-md5: 790932f14543314e43c3705a3451df24
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: ubuntu-standard
+Priority: standard
+Section: metapackages
+Installed-Size: 59
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: ubuntu-meta
+Version: 1.304
+Depends: busybox-static, cpio, cron, dnsutils, dosfstools, ed, file, ftp, hdparm, hfsutils, info, iptables, language-selector-common, logrotate, lshw, lsof, ltrace, man-db, mime-support, parted, pciutils, popularity-contest, psmisc, rsync, strace, time, usbutils, wget
+Recommends: apparmor, apt-transport-https, bash-completion, command-not-found, friendly-recovery, iputils-tracepath, irqbalance, manpages, mlocate, mtr-tiny, nano, ntfs-3g, openssh-client, plymouth, plymouth-theme-ubuntu-text, ppp, pppconfig, pppoeconf, tcpdump, telnet, ufw, update-manager-core, uuid-runtime
+Filename: pool/main/u/ubuntu-meta/ubuntu-standard_1.304_powerpc.deb
+Size: 2732
+MD5sum: f2f52dab6e32f5d9e08a06b95c94f805
+SHA1: 2260f7796cc55fa20a4692966460cdafd475a981
+SHA256: f86d8c92edb91cadeb1806a3b15eb958bf9e38ec420dcb5fa2f991cee6df6556
+Description: The Ubuntu standard system
+Description-md5: 129cec702d8a0005c808781d98183ffd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
+
 Package: usb-modeswitch-data
 Priority: extra
 Section: comm
@@ -1305,4 +1418,23 @@ Description-md5: 83f8894d390ffa31e34c89e43fc95bb1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: vlan
+Priority: extra
+Section: misc
+Installed-Size: 159
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ard van Breemen <ard@kwaak.net>
+Architecture: powerpc
+Version: 1.9-3ubuntu9
+Depends: libc6 (>= 2.4), iproute2
+Filename: pool/main/v/vlan/vlan_1.9-3ubuntu9_powerpc.deb
+Size: 33996
+MD5sum: e1bbcf530fbe211ed3ddacedb80d55e3
+SHA1: 1a3a0ad177554181df7e4c09493a4635ab0bbfd1
+SHA256: 96b003c54c781337ae30efe1f3f5d7e29b641a2586885e2083ad742a9db1c1b4
+Description: user mode programs to enable VLANs on your ethernet devices
+Description-md5: da2d3e81af12341c15fb4a7267d2457d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
