@@ -92,6 +92,303 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
+Package: grub-common
+Priority: optional
+Section: admin
+Installed-Size: 5512
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: i386
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub-coreboot (<< 2.00-4), grub-efi (<< 1.99-1), grub-efi-amd64 (<< 2.00-4), grub-efi-ia32 (<< 2.00-4), grub-efi-ia64 (<< 2.00-4), grub-ieee1275 (<< 2.00-4), grub-linuxbios (<< 1.96+20080831-1), grub-pc (<< 2.00-4), grub-yeeloong (<< 2.00-4)
+Depends: libc6 (>= 2.8), libdevmapper1.02.1 (>= 2:1.02.36), libfreetype6 (>= 2.2.1), libfuse2 (>= 2.8.1), liblzma5 (>= 5.1.1alpha+20120614), gettext-base, lsb-base (>= 3.0-6)
+Recommends: os-prober (>= 1.33)
+Suggests: multiboot-doc, grub-emu, xorriso (>= 0.5.6.pl00), desktop-base (>= 4.0.6), console-setup
+Conflicts: mdadm (<< 2.6.7-2)
+Breaks: apport (<< 2.1.1), friendly-recovery (<< 0.2.13), lupin-support (<< 0.30)
+Filename: pool/main/g/grub2/grub-common_2.00-18ubuntu1_i386.deb
+Size: 1268562
+MD5sum: 5cdaacb2a48d7dcdc37d97e060ae4f5d
+SHA1: aa29f426b0012899542b770065143e14fb2dcebb
+SHA256: 142ba09ac5d5ac89fd01693941e9b8d8862017ebe552f7152d02c271afbe7a0f
+Description: GRand Unified Bootloader (common files)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 6e1c01c5245ffb9578aee58ee944229b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: grub-efi
+Priority: extra
+Section: admin
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: i386
+Source: grub2
+Version: 2.00-18ubuntu1
+Depends: grub-common, grub-efi-ia32 (= 2.00-18ubuntu1)
+Filename: pool/main/g/grub2/grub-efi_2.00-18ubuntu1_i386.deb
+Size: 2558
+MD5sum: d811aa1c6c4767dd2deb31a4cab48452
+SHA1: 0bf6b736814373985c85136cf36baf81a7106564
+SHA256: 32cafa1dfa47afd87d5aeeb5a35d17ad28147a14f80b70173bd9a00469b0bbc5
+Description: GRand Unified Bootloader, version 2 (dummy package)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: ab0258bbb994f6742ad233346c11cf50
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-efi-amd64
+Priority: extra
+Section: admin
+Installed-Size: 185
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: i386
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub, grub-common (<= 1.97~beta2-1), grub-coreboot, grub-efi-ia32, grub-ieee1275, grub-legacy, grub-pc, grub2 (<< 2.00-18ubuntu1)
+Depends: debconf (>= 0.5) | debconf-2.0, grub-common, grub2-common (= 2.00-18ubuntu1), grub-efi-amd64-bin (= 2.00-18ubuntu1), ucf
+Conflicts: grub, grub-coreboot, grub-efi-ia32, grub-ieee1275, grub-legacy, grub-pc
+Filename: pool/main/g/grub2/grub-efi-amd64_2.00-18ubuntu1_i386.deb
+Size: 44542
+MD5sum: 5eb9a0f754428a87182ff04fcea63ac4
+SHA1: baaad36c14a1af9cd32a6b3f6685bb6af04220a3
+SHA256: 5772c716cca50100c27878ba26c0e4e464566e3c7f0d8fc8b0da9b704e4e050b
+Description: GRand Unified Bootloader, version 2 (EFI-AMD64 version)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 1ec69fc2c3202308968b8f3288b1500c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-efi-amd64-bin
+Priority: extra
+Section: admin
+Installed-Size: 2162
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: i386
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub-common (<= 1.97~beta2-1), grub-efi-amd64 (<< 1.99-1), grub2 (<< 2.00-18ubuntu1)
+Depends: grub-common (= 2.00-18ubuntu1), efibootmgr
+Filename: pool/main/g/grub2/grub-efi-amd64-bin_2.00-18ubuntu1_i386.deb
+Size: 548668
+MD5sum: 7512f62a9b8756d1d37ab15b1d623c43
+SHA1: 0c60de7ac1144ee99b5d71355bfd6d7dfef72cc6
+SHA256: 5934fa9e2523900502bd8fc7be77f2e82925c99a770994fa20572424f359187b
+Description: GRand Unified Bootloader, version 2 (EFI-AMD64 binaries)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 598ec5b1a14f26c488bd7d7079c3e538
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-efi-amd64-dbg
+Priority: extra
+Section: debug
+Installed-Size: 13170
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: i386
+Source: grub2
+Version: 2.00-18ubuntu1
+Depends: grub-common (= 2.00-18ubuntu1), grub-efi-amd64-bin (= 2.00-18ubuntu1)
+Filename: pool/main/g/grub2/grub-efi-amd64-dbg_2.00-18ubuntu1_i386.deb
+Size: 2342816
+MD5sum: 782466fe569b8b5ef016735c441546b6
+SHA1: 43328e667192a2e7df5707d0a21df2f0ca9f659c
+SHA256: cba1e1207c2fb96a980954130f986411e74c6df951bedb3ffa88cff6e9b68775
+Description: GRand Unified Bootloader, version 2 (EFI-AMD64 debug files)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 01a50868394847340399eb4743e46af0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-efi-ia32
+Priority: extra
+Section: admin
+Installed-Size: 185
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: i386
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub, grub-common (<= 1.97~beta2-1), grub-coreboot, grub-efi, grub-efi-amd64, grub-ieee1275, grub-legacy, grub-pc, grub2 (<< 2.00-18ubuntu1)
+Depends: debconf (>= 0.5) | debconf-2.0, grub-common, grub2-common (= 2.00-18ubuntu1), grub-efi-ia32-bin (= 2.00-18ubuntu1), ucf
+Conflicts: grub (<< 0.97-54), grub-coreboot, grub-efi-amd64, grub-ieee1275, grub-legacy, grub-pc
+Filename: pool/main/g/grub2/grub-efi-ia32_2.00-18ubuntu1_i386.deb
+Size: 44544
+MD5sum: e019edbaad2fa50c5574dc7d8ba450a7
+SHA1: 108ee7092b3acef1cacaea5d4e0bd7a2bd0ee175
+SHA256: 4c3f24186783e0b7f6052c816c04311d53a11d5d4e7bc0663876c1329e907485
+Description: GRand Unified Bootloader, version 2 (EFI-IA32 version)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 0b211963be056bf8e983c31763cd0a45
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-efi-ia32-bin
+Priority: extra
+Section: admin
+Installed-Size: 1558
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: i386
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub-common (<= 1.97~beta2-1), grub-efi, grub-efi-ia32 (<< 1.99-1), grub2 (<< 2.00-18ubuntu1)
+Depends: grub-common (= 2.00-18ubuntu1), efibootmgr
+Filename: pool/main/g/grub2/grub-efi-ia32-bin_2.00-18ubuntu1_i386.deb
+Size: 531818
+MD5sum: 54c9852fb5f026e7e550e14f776a8210
+SHA1: a506202aec5c41c770d4a1a14af81a9fdf96fcc3
+SHA256: 29ba85416356800306273f57e658210c86034c116fdeb16015ad154351f7cbd1
+Description: GRand Unified Bootloader, version 2 (EFI-IA32 binaries)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 9f83262e22d6097ee9567fff6e1de4bb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-efi-ia32-dbg
+Priority: extra
+Section: debug
+Installed-Size: 8729
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: i386
+Source: grub2
+Version: 2.00-18ubuntu1
+Depends: grub-common (= 2.00-18ubuntu1), grub-efi-ia32-bin (= 2.00-18ubuntu1)
+Filename: pool/main/g/grub2/grub-efi-ia32-dbg_2.00-18ubuntu1_i386.deb
+Size: 2266366
+MD5sum: bb7818baa9043af6a174611eff5ee66f
+SHA1: 6d091892633efc2318af961901a482433dbd2753
+SHA256: e02460fb981062656bcf03d9613873a4330c3ced0456b41db68919e1456c3298
+Description: GRand Unified Bootloader, version 2 (EFI-IA32 debug files)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 985cf475352ed91c8a577b3365c0062f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-pc
+Priority: optional
+Section: admin
+Installed-Size: 552
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: i386
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub, grub-common (<= 1.97~beta2-1), grub-coreboot, grub-efi-amd64, grub-efi-ia32, grub-ieee1275, grub-legacy, grub2 (<< 2.00-18ubuntu1)
+Depends: debconf (>= 0.5) | debconf-2.0, grub-common, grub2-common (= 2.00-18ubuntu1), grub-pc-bin (= 2.00-18ubuntu1), ucf, grub-gfxpayload-lists
+Conflicts: grub (<< 0.97-54), grub-coreboot, grub-efi-amd64, grub-efi-ia32, grub-ieee1275, grub-legacy
+Filename: pool/main/g/grub2/grub-pc_2.00-18ubuntu1_i386.deb
+Size: 172432
+MD5sum: f27e6bae3b776ab2b8225561c1ebd4b0
+SHA1: 41c4cd0443fc5b6e3d3643d8146f271c2442ab81
+SHA256: f6f2f9851e7cf57358bb4a9e7f685cd9d2f76d0d1c458cc32596c2ed0da66ec5
+Description: GRand Unified Bootloader, version 2 (PC/BIOS version)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 7cb7fdca20b02381c6123a250be96bab
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: grub-pc-bin
+Priority: optional
+Section: admin
+Installed-Size: 2479
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: i386
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub-common (<= 1.97~beta2-1), grub-pc (<< 1.99-1), grub2 (<< 2.00-18ubuntu1)
+Depends: libc6 (>= 2.8), libdevmapper1.02.1 (>= 2:1.02.36), grub-common (= 2.00-18ubuntu1)
+Suggests: desktop-base (>= 4.0.6)
+Filename: pool/main/g/grub2/grub-pc-bin_2.00-18ubuntu1_i386.deb
+Size: 807914
+MD5sum: 01e3e785cab6e3181e33d80a981bd815
+SHA1: ed6b39669c9b1917f2f88850884bb6299f77f7ec
+SHA256: 3121b37518d8d8ccf04b422d96c118c5c93f9da1bce0b02f35bdbeeae237a6cf
+Description: GRand Unified Bootloader, version 2 (PC/BIOS binaries)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: d3fd4372607d45553d46ed1fecfb4f99
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: grub-pc-dbg
+Priority: extra
+Section: debug
+Installed-Size: 9244
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: i386
+Source: grub2
+Version: 2.00-18ubuntu1
+Depends: grub-common (= 2.00-18ubuntu1), grub-pc-bin (= 2.00-18ubuntu1)
+Filename: pool/main/g/grub2/grub-pc-dbg_2.00-18ubuntu1_i386.deb
+Size: 2376294
+MD5sum: 8b5d8a8c4942c3af147b38f99048dfb0
+SHA1: db91b928822bf8af03fcb0a806b471437af4684d
+SHA256: 9b8ca0fb7f71c7c50a10343c947df3e01a16eeb95defc84e6c80df5a0e2e1577
+Description: GRand Unified Bootloader, version 2 (PC/BIOS debug files)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 7c0972b8a14a3f1091b6056556730eb4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub2-common
+Priority: optional
+Section: admin
+Installed-Size: 198
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: i386
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub, grub-common (<< 1.99-1), grub-coreboot (<< 2.00-4), grub-efi (<< 1.99-1), grub-efi-amd64 (<< 2.00-4), grub-efi-ia32 (<< 2.00-4), grub-efi-ia64 (<< 2.00-4), grub-ieee1275 (<< 2.00-4), grub-legacy, grub-linuxbios (<< 1.99-1), grub-pc (<< 2.00-4), grub-yeeloong (<< 2.00-4)
+Depends: grub-common (= 2.00-18ubuntu1), dpkg (>= 1.15.4) | install-info
+Conflicts: grub (<< 0.97-54), grub-doc (<< 0.97-29ubuntu60), grub-legacy, grub-legacy-doc (<< 0.97-29ubuntu60)
+Filename: pool/main/g/grub2/grub2-common_2.00-18ubuntu1_i386.deb
+Size: 116670
+MD5sum: 8155a6c31d55a692137f922baf733e80
+SHA1: 063c02ec3c900cbbea0fbe8923039d1a99313fb5
+SHA256: 8ccd5f149b32824286abc01c55cf57c2aaf7acceeedbdcd7ac269313f8a5828e
+Description: GRand Unified Bootloader (common files for version 2)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: a969e6536e745e177a340b30bdb5ba3f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
 Package: libapache2-mod-auth-mysql
 Priority: optional
 Section: web
@@ -1717,6 +2014,32 @@ Description-md5: 7c80f295a14f6455ffe1509a646e6b4d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: printer-driver-splix
+Priority: optional
+Section: text
+Installed-Size: 195
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Luca Niccoli <lultimouomo@gmail.com>
+Architecture: i386
+Source: splix
+Version: 2.0.0+svn315-0ubuntu1
+Replaces: splix (<< 2.0.0+svn299-1)
+Depends: libc6 (>= 2.4), libcups2 (>= 1.4.0), libcupsimage2 (>= 1.4.0), libgcc1 (>= 1:4.1.1), libjbig0, libstdc++6 (>= 4.1.1), cups-filters (>= 1.0.36) | ghostscript-cups, xz-utils
+Recommends: cups | foomatic-filters
+Breaks: splix (<< 2.0.0+svn299-1)
+Filename: pool/main/s/splix/printer-driver-splix_2.0.0+svn315-0ubuntu1_i386.deb
+Size: 43880
+MD5sum: e007ce7adb295dbfd5746857cad3e2cf
+SHA1: b7e5c7f3f96cdf29d3e1c81c32fc1bdcd93a4fe7
+SHA256: ee8554381edc91e8df032508384c3b5c1189d05e27a1ac07fe7ea7f2cb94a1ee
+Description: Driver for Samsung and Xerox SPL2 and SPLc laser printers
+Homepage: http://splix.ap2c.org/
+Description-md5: bf769a48f0ca1c009ba9795570744dc3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: python-bzrlib
 Priority: optional
