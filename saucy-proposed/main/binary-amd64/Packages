@@ -873,23 +873,347 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: livecd-rootfs
+Package: linux
+Priority: optional
+Section: kernel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-generic
+Filename: pool/main/l/linux-meta/linux_3.11.0.4.5_amd64.deb
+Size: 1684
+MD5sum: 15d851f543a363687985266e2285dc15
+SHA1: dc59e87cce2b18f369462da79a60b668d2a3a65c
+SHA256: b8e7c38ca18c0cdcf33dda1e6f317dd39ab51611b0360dd854f99f1f6147b943
+Description: Generic complete Linux kernel.
+Description-md5: e1f3af50c53d3b40815e9810a03f60ee
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-crashdump
 Priority: optional
 Section: devel
-Installed-Size: 129
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: kdump-tools, grub-pc (>= 1.96+20090611-1ubuntu2) | grub-efi-ia32 | grub-efi-amd64 | grub (>= 0.97-29ubuntu24)
+Recommends: apport
+Suggests: crash
+Filename: pool/main/l/linux-meta/linux-crashdump_3.11.0.4.5_amd64.deb
+Size: 2514
+MD5sum: 10f4c05fdc0030144616c926d28fd19d
+SHA1: 8e1ab185d04699443b37cfbab183b578439f3bf7
+SHA256: 428cea9fef43fdfce736245dea18bd2b15e93d43ea5cf00fa5407e9261e4a20e
+Description: Linux kernel crashdump setup for the latest generic kernel
+Description-md5: 786b3d1e77e0097cb2c8f2ab16f83875
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-generic
+Priority: optional
+Section: kernel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-image-generic (= 3.11.0.4.5), linux-headers-generic (= 3.11.0.4.5)
+Filename: pool/main/l/linux-meta/linux-generic_3.11.0.4.5_amd64.deb
+Size: 1724
+MD5sum: 0f6a881f345845fdc48f15a2e4d40b17
+SHA1: 5c5b70ea586525f288ddb6d4876d275125a56ae2
+SHA256: 2d8d64a5323a7620febe52d1b8c10e518da3cf874d250b4ea9278dab024639f9
+Description: Complete Generic Linux kernel and headers
+Description-md5: 000d0a6187a93215f75bba542cc6df27
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-headers-generic
+Priority: optional
+Section: devel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-headers-3.11.0-4-generic
+Filename: pool/main/l/linux-meta/linux-headers-generic_3.11.0.4.5_amd64.deb
+Size: 2258
+MD5sum: 9b43cbc6283c8dbe0069dd7acb06e423
+SHA1: 66d3118b92165965d261c892cf28d3d877431d50
+SHA256: f16585bbb84796385641e5204bdd2b04e130a97425f7d1cd5f2ee0307aa6a467
+Description: Generic Linux kernel headers
+Description-md5: 9c9742ab9c289b1e900fab477bc0070d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, kubuntu-live, kubuntu-active-live, edubuntu-dvd-live, mythbuntu-live, ubuntu-gnome-live
+
+Package: linux-headers-server
+Priority: optional
+Section: devel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-headers-generic (= 3.11.0.4.5)
+Filename: pool/main/l/linux-meta/linux-headers-server_3.11.0.4.5_amd64.deb
+Size: 1698
+MD5sum: a2e8443b72b4fb6282ddeb0bd165a601
+SHA1: ad22a17d0b0625f561d73935c024c9cb7d6550dd
+SHA256: db5cc3d970a01d72585f95971ae1d54bdbf88cbc222ee3d013c56020beda59e6
+Description: Transitional package.
+Description-md5: 9f8e13d3c6398c379efb34108d986a01
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-headers-virtual
+Priority: optional
+Section: devel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-headers-generic (= 3.11.0.4.5)
+Filename: pool/main/l/linux-meta/linux-headers-virtual_3.11.0.4.5_amd64.deb
+Size: 1692
+MD5sum: 605ea30a6f474107cba263b1b5a98c44
+SHA1: 715eece8758a284e365ca425aed6394aae7b7d82
+SHA256: f00fe4029988b37d0f49668280ddfa28a2f0146ef1ee17a05a73e2ed5214eb92
+Description: Transitional package.
+Description-md5: 9f8e13d3c6398c379efb34108d986a01
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-image
+Priority: optional
+Section: kernel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-image-generic
+Filename: pool/main/l/linux-meta/linux-image_3.11.0.4.5_amd64.deb
+Size: 1696
+MD5sum: 1f26683c1163cef718a7ce922f7a3c91
+SHA1: b95bef0dce41a35d4daec16806b8b6b9e72a239c
+SHA256: 87a5298c50fb504da162f5ec6293f6723cbf22ea91e1fb73b386692a6bdb7405
+Description: Generic Linux kernel image.
+Description-md5: 4b85eb2dcba23bfb3b8a88b27af1d539
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-image-extra-virtual
+Priority: optional
+Section: kernel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-image-generic (= 3.11.0.4.5)
+Filename: pool/main/l/linux-meta/linux-image-extra-virtual_3.11.0.4.5_amd64.deb
+Size: 1702
+MD5sum: 6f1c6f336f6edca55290a96c411af59f
+SHA1: 4ec9d5bf3bdc01cdb3e4651fc30ad475badf0d22
+SHA256: 3669168ac97124a20a18883225ed7de8d7a89d31b5cad0a9018b5f7b2c44d8b4
+Description: Transitional package.
+Description-md5: eb988093c0758268582edcd962efe052
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-image-generic
+Priority: optional
+Section: kernel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-image-3.11.0-4-generic, linux-image-extra-3.11.0-4-generic, linux-firmware
+Filename: pool/main/l/linux-meta/linux-image-generic_3.11.0.4.5_amd64.deb
+Size: 2268
+MD5sum: 8b10b8bd7f93efe40f9737922dd5adfc
+SHA1: 305d084ff9ede1377d0ea731482879fe6a1431a6
+SHA256: a396ff374712e40517dfc8cee29e5209cdcd7e9a4bd4c1b19c17573382411a09
+Description: Generic Linux kernel image
+Description-md5: 6d632579c673704f44b290b16e7dbfd1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-image-server
+Priority: optional
+Section: kernel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-image-generic (= 3.11.0.4.5)
+Filename: pool/main/l/linux-meta/linux-image-server_3.11.0.4.5_amd64.deb
+Size: 1698
+MD5sum: 8c95d67891447af4216304a3e0a584d8
+SHA1: 831ea1b370d3ccdb839af4fde1b8a90e59d25c8f
+SHA256: d65fd5e892489bff0c926335f40eec291a99322d8f71c5fc610fe38c5feabadc
+Description: Transitional package.
+Description-md5: eb988093c0758268582edcd962efe052
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-image-virtual
+Priority: optional
+Section: kernel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-image-3.11.0-4-generic
+Filename: pool/main/l/linux-meta/linux-image-virtual_3.11.0.4.5_amd64.deb
+Size: 2270
+MD5sum: d3ccf3e715ba9fb746f356c5d5dd34d9
+SHA1: 60c0c53c2ca4f45d5692409f8becba5f54d6ba46
+SHA256: d53a5d82a4167495a389318f4ed1ac2e6cf452c4195d7e10b2cb7eb82cd0f956
+Description: This package will always depend on the latest minimal generic kernel image.
+Description-md5: 4860895cdea7f2369c76625e9dd2dd4b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-server
+Priority: optional
+Section: kernel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-generic (= 3.11.0.4.5)
+Filename: pool/main/l/linux-meta/linux-server_3.11.0.4.5_amd64.deb
+Size: 1690
+MD5sum: 5a28656c70097a47d7222de9b1b5609e
+SHA1: ab106d02b5defe2696afbb88ef984605f7b083eb
+SHA256: 388c279006c228d8c866cccefe3475d22bdb8c433a249b63bb4516058b5157a8
+Description: Transitional package.
+Description-md5: b239583bb598a7b339303e3f0513dc63
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-signed-generic
+Priority: optional
+Section: kernel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-signed-image-generic (= 3.11.0.4.5), linux-headers-generic (= 3.11.0.4.5)
+Filename: pool/main/l/linux-meta/linux-signed-generic_3.11.0.4.5_amd64.deb
+Size: 1752
+MD5sum: 1ed2658c63d71dc5b7b83d9a793eb4ca
+SHA1: 2c608695944f2507fa8a39db73c3aab545bae0d2
+SHA256: 7a7b1028bc0dc2e091c22b599ab4442f7acdf7b70a4f70fff49995a6b5551416
+Description: Complete Signed Generic Linux kernel and headers
+Description-md5: c46e75d15f431954f5e63aac8c06ea2d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, kubuntu-live, kubuntu-active-live, edubuntu-dvd-live, mythbuntu-live, ubuntu-gnome-live
+
+Package: linux-signed-image-generic
+Priority: optional
+Section: kernel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-signed-image-3.11.0-4-generic
+Filename: pool/main/l/linux-meta/linux-signed-image-generic_3.11.0.4.5_amd64.deb
+Size: 2292
+MD5sum: ca3d05cf395fd13d91082e7b6804b1b3
+SHA1: 58a4a31229a9081ab3ba5e79422bc6dd42aed0e9
+SHA256: 0f2560d0fcca1bcff201046a330458dd23ff586829b4c2837f8f619113e38216
+Description: Signed Generic Linux kernel image
+Description-md5: 9f06dc406adf6813c92d1a1173d6e913
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, kubuntu-live, kubuntu-active-live, edubuntu-dvd-live, mythbuntu-live, ubuntu-gnome-live
+
+Package: linux-source
+Priority: optional
+Section: devel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: all
-Version: 2.177
-Depends: debootstrap, rsync, python-minimal | python, procps, squashfs-tools (>= 1:3.3-1), grep-dctrl, fdupes, lsb-release, lzma, e2fsprogs, germinate (>= 1.25.1), apt-utils, gnupg, live-build (>= 3.0~a55-1), android-tools-fsutils
-Suggests: partimage
-Breaks: ubuntu-defaults-builder (<< 0.32)
-Filename: pool/main/l/livecd-rootfs/livecd-rootfs_2.177_all.deb
-Size: 18380
-MD5sum: a5f04d27c3cdfcafbed160622ab75d75
-SHA1: cac06cf21b6e2c8fb57286c8fc0bbd47216a7581
-SHA256: 712f6ede60b261dd67553d30a1f414d497dae698458e94d01288675b7cf49d02
-Description: construction script for the livecd rootfs
-Description-md5: 7b59fd93401bd0efd37505de924d874f
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-source-3.11.0
+Filename: pool/main/l/linux-meta/linux-source_3.11.0.4.5_all.deb
+Size: 2250
+MD5sum: cc1e978e3d94278ef363dc7a1cd6899f
+SHA1: 9292fd4f07241c38abcb58d0f77520e33c97e604
+SHA256: 6cf1bcac6a0396e2eb68eeece4427062ebc32bc2a14ea60351648faf687129a5
+Description: Linux kernel source with Ubuntu patches
+Description-md5: 1cac084d2ae18dfd06b96585b4be564d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-tools
+Priority: optional
+Section: kernel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-tools-3.11.0-4
+Filename: pool/main/l/linux-meta/linux-tools_3.11.0.4.5_amd64.deb
+Size: 2258
+MD5sum: 917bef0f4618896a12a94936ac87ae83
+SHA1: 294b5dab3e98228efa8a8b9691cd44eb658c6d62
+SHA256: ff67c040449e7d93291dc35726d5b0c5cefa16a120d4626220c2ec9c24d8a9d3
+Description: Linux kernel versioned Tools
+Description-md5: ea15db5fd6e3e3cff13446d5e28af7c8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: linux-virtual
+Priority: optional
+Section: kernel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-image-virtual (= 3.11.0.4.5), linux-headers-virtual (= 3.11.0.4.5)
+Filename: pool/main/l/linux-meta/linux-virtual_3.11.0.4.5_amd64.deb
+Size: 1714
+MD5sum: 836d2975e0ec9d41e3932b8183531d33
+SHA1: abf0654522e159831992baa42dd153416b14a962
+SHA256: c4b32d7fc20c557475e3e402f75d994d4edaa3f4dce41e7fcc73dbb7e7758249
+Description: Minimal Generic Linux kernel and headers
+Description-md5: 71a1a38f6977c1a1bbc8a7634f51401c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m

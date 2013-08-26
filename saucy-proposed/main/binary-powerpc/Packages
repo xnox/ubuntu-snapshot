@@ -503,23 +503,46 @@ Description-md5: de56e227a9689823f5b844fcd76d0d40
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: livecd-rootfs
+Package: linux-libc-dev
 Priority: optional
 Section: devel
-Installed-Size: 129
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Installed-Size: 3309
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: powerpc
+Source: linux
+Version: 3.11.0-4.9
+Replaces: dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), libdrm-dev, linux-kernel-headers
+Provides: linux-kernel-headers
+Conflicts: amd64-libs-dev (<= 1.1), dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), linux-kernel-headers
+Filename: pool/main/l/linux/linux-libc-dev_3.11.0-4.9_powerpc.deb
+Size: 907502
+MD5sum: b2a1fa245b571cac7e8204cfec95f60d
+SHA1: 8f1c7a738f4985f6523f6ae8f3feca763a7d4ff9
+SHA256: c637e135958f4845b12f9c02c5ffcbd25140cf85327469e4d0d921e714fcf64b
+Description: Linux Kernel Headers for development
+Multi-Arch: same
+Description-md5: d5d143e6dffc891f04a85464446f9451
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: linux-source
+Priority: optional
+Section: devel
+Installed-Size: 33
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: all
-Version: 2.177
-Depends: debootstrap, rsync, python-minimal | python, procps, squashfs-tools (>= 1:3.3-1), grep-dctrl, fdupes, lsb-release, lzma, e2fsprogs, germinate (>= 1.25.1), apt-utils, gnupg, live-build (>= 3.0~a55-1), android-tools-fsutils
-Suggests: partimage
-Breaks: ubuntu-defaults-builder (<< 0.32)
-Filename: pool/main/l/livecd-rootfs/livecd-rootfs_2.177_all.deb
-Size: 18380
-MD5sum: a5f04d27c3cdfcafbed160622ab75d75
-SHA1: cac06cf21b6e2c8fb57286c8fc0bbd47216a7581
-SHA256: 712f6ede60b261dd67553d30a1f414d497dae698458e94d01288675b7cf49d02
-Description: construction script for the livecd rootfs
-Description-md5: 7b59fd93401bd0efd37505de924d874f
+Source: linux-meta
+Version: 3.11.0.4.5
+Depends: linux-source-3.11.0
+Filename: pool/main/l/linux-meta/linux-source_3.11.0.4.5_all.deb
+Size: 2250
+MD5sum: cc1e978e3d94278ef363dc7a1cd6899f
+SHA1: 9292fd4f07241c38abcb58d0f77520e33c97e604
+SHA256: 6cf1bcac6a0396e2eb68eeece4427062ebc32bc2a14ea60351648faf687129a5
+Description: Linux kernel source with Ubuntu patches
+Description-md5: 1cac084d2ae18dfd06b96585b4be564d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 

@@ -367,6 +367,7 @@ Binary: linux-source-3.11.0, linux-doc, linux-tools-common, linux-headers-3.11.0
  pcmcia-storage-modules-3.11.0-4-generic-di, fb-modules-3.11.0-4-generic-di, input-modules-3.11.0-4-generic-di, mouse-modules-3.11.0-4-generic-di, irda-modules-3.11.0-4-generic-di, parport-modules-3.11.0-4-generic-di, nic-pcmcia-modules-3.11.0-4-generic-di, pcmcia-modules-3.11.0-4-generic-di, nic-usb-modules-3.11.0-4-generic-di, sata-modules-3.11.0-4-generic-di, crypto-modules-3.11.0-4-generic-di, squashfs-modules-3.11.0-4-generic-di, speakup-modules-3.11.0-4-generic-di, virtio-modules-3.11.0-4-generic-di, fs-core-modules-3.11.0-4-generic-di, fs-secondary-modules-3.11.0-4-generic-di, storage-core-modules-3.11.0-4-generic-di, block-modules-3.11.0-4-generic-di, message-modules-3.11.0-4-generic-di, vlan-modules-3.11.0-4-generic-di,
  ipmi-modules-3.11.0-4-generic-di
 Version: 3.11.0-4.9
+Priority: optional
 Section: devel
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Build-Depends: debhelper (>= 5), cpio, module-init-tools, kernel-wedge (>= 2.24ubuntu1), makedumpfile [amd64 i386], libelf-dev, libnewt-dev, binutils-dev, rsync, libdw-dev, libpci-dev, dpkg (>= 1.16.0~ubuntu4), pkg-config, flex, bison, libunwind8-dev, openssl, libaudit-dev, bc, python-dev, gcc-4.7 [armhf], gawk
@@ -440,29 +441,80 @@ Checksums-Sha256:
  7a4704580d61de3c4d6da938c81dd1dfdcb208b7630360e11f871a3b6fc2f4ef 118240005 linux_3.11.0-4.9.tar.gz
 Testsuite: autopkgtest
 
-Package: livecd-rootfs
-Binary: livecd-rootfs
-Version: 2.177
+Package: linux-meta
+Binary: linux, linux-source, linux-image, linux-crashdump, linux-tools, linux-headers-generic, linux-image-generic, linux-generic, linux-headers-generic-lpae, linux-image-generic-lpae, linux-generic-lpae, linux-headers-generic-pae, linux-image-generic-pae, linux-generic-pae, linux-headers-highbank, linux-image-highbank, linux-highbank, linux-headers-omap, linux-image-omap, linux-omap, linux-headers-server, linux-image-server, linux-server, linux-signed-image-generic, linux-signed-generic, linux-headers-virtual, linux-image-virtual, linux-virtual, linux-image-extra-virtual
+Version: 3.11.0.4.5
 Priority: optional
 Section: devel
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: debhelper (>= 7)
-Architecture: all
-Standards-Version: 3.6.1.0
-Format: 3.0 (native)
-Directory: pool/main/l/livecd-rootfs
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: dpkg (>= 1.13.19), debhelper (>= 5), gawk
+Architecture: i386 amd64 armhf all
+Standards-Version: 3.6.1
+Format: 1.0
+Directory: pool/main/l/linux-meta
 Files:
- 123ca1228177004c83d88dd15bc1d724 881 livecd-rootfs_2.177.dsc
- 20695a35f8283d65dd8ea70cbe18034c 47354 livecd-rootfs_2.177.tar.gz
-Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/livecd-rootfs/trunk
+ 38daf95b541eec6d7734f59f619a7c9b 3224 linux-meta_3.11.0.4.5.dsc
+ c6b058141ae6ecca77e4b1bfa3e868ff 12008 linux-meta_3.11.0.4.5.tar.gz
+Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-saucy-meta.git
 Package-List: 
- livecd-rootfs deb devel optional
+ linux deb kernel optional
+ linux-crashdump deb devel optional
+ linux-generic deb kernel optional
+ linux-generic-lpae deb kernel optional
+ linux-generic-pae deb kernel optional
+ linux-headers-generic deb kernel optional
+ linux-headers-generic-lpae deb kernel optional
+ linux-headers-generic-pae deb kernel optional
+ linux-headers-highbank deb kernel optional
+ linux-headers-omap deb kernel optional
+ linux-headers-server deb kernel optional
+ linux-headers-virtual deb kernel optional
+ linux-highbank deb kernel optional
+ linux-image deb kernel optional
+ linux-image-extra-virtual deb kernel optional
+ linux-image-generic deb kernel optional
+ linux-image-generic-lpae deb kernel optional
+ linux-image-generic-pae deb kernel optional
+ linux-image-highbank deb kernel optional
+ linux-image-omap deb kernel optional
+ linux-image-server deb kernel optional
+ linux-image-virtual deb kernel optional
+ linux-omap deb kernel optional
+ linux-server deb kernel optional
+ linux-signed-generic deb kernel optional
+ linux-signed-image-generic deb kernel optional
+ linux-source deb devel optional
+ linux-tools deb kernel optional
+ linux-virtual deb kernel optional
 Checksums-Sha1:
- f587282c6ee2252ea7a4071804b5c9a83224153e 881 livecd-rootfs_2.177.dsc
- b070a8d7d38f58e3f37b4b5cb47f01f9c423d221 47354 livecd-rootfs_2.177.tar.gz
+ ef381ff3f17f0f3d84cdcee6df98c8b381916ab3 3224 linux-meta_3.11.0.4.5.dsc
+ 00e3e42b9abe558db400755ed452edf7d9bc07c7 12008 linux-meta_3.11.0.4.5.tar.gz
 Checksums-Sha256:
- 20d849663108f3f25f5edc4072dafbbd7fee89546e0b40de72a1f9993e1e38b8 881 livecd-rootfs_2.177.dsc
- 296833f6ab3fd1dc5cf063e7d9774abe1588ca047d7fd2fd5ecac8ade37e05a4 47354 livecd-rootfs_2.177.tar.gz
+ ca9f10ab2aed4ea618c461e52249c1ab0d6543f88d524e3b58fc8b076c4de002 3224 linux-meta_3.11.0.4.5.dsc
+ fadd49cf4946d75f0c9ed6f3e95ea2e6012a7c9b71dc4b1da74a26ab1b06c2fb 12008 linux-meta_3.11.0.4.5.tar.gz
+
+Package: linux-signed
+Binary: linux-signed-image-3.11.0-4-generic, kernel-signed-image-3.11.0-4-generic-di
+Version: 3.11.0-4.9
+Section: utils
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9), lsb-release, python3, python3-apt, sbsigntool, linux-image-3.11.0-4-generic (>= 3.11.0-4.9)
+Architecture: linux-amd64
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/l/linux-signed
+Files:
+ 49f6b4717506b2a10e8feec67aeb4697 1708 linux-signed_3.11.0-4.9.dsc
+ 7ff06289f988abc09a1f2f7133dc3d9c 6064 linux-signed_3.11.0-4.9.tar.gz
+Package-List: 
+ kernel-signed-image-3.11.0-4-generic-di udeb debian-installer extra
+ linux-signed-image-3.11.0-4-generic deb utils optional
+Checksums-Sha1:
+ 90dd946a9aea6b55fd166c5710ae9e9d85e326d9 1708 linux-signed_3.11.0-4.9.dsc
+ db39554add2c3377a308f50db4b2976d85303b62 6064 linux-signed_3.11.0-4.9.tar.gz
+Checksums-Sha256:
+ fc05426462e536a85189a53bfce69d9b03d5b2ea5e206bdddcfd5d99c68e702f 1708 linux-signed_3.11.0-4.9.dsc
+ 5df2cd4611308ef20f1a163e33c7d8c9e7860f1fb4adb17acf452fcdb94ebed6 6064 linux-signed_3.11.0-4.9.tar.gz
 
 Package: mir
 Binary: libmirprotobuf0, libmirprotobuf-dev, libmirserver1, libmirplatform, mircommon-dev, libmirserver-dev, libmirclient2, libmirclient-dev, mir-demos, mir-doc, mir-test-tools
