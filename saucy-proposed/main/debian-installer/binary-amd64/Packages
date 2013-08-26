@@ -37,6 +37,25 @@ Description: crypto modules
  This package contains crypto modules.
 Kernel-Version: 3.11.0-4-generic
 
+Package: debian-installer-udebs
+Priority: optional
+Section: debian-installer
+Installed-Size: 8
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: amd64
+Source: debian-installer
+Version: 20101020ubuntu260
+Depends: anna, archdetect, biosdevname-udeb, block-modules-3.11.0-4-generic-di, bogl-bterm-udeb, brltty-udeb, busybox-udeb, cdebconf-newt-detect-keys, cdebconf-newt-terminal, cdebconf-newt-udeb, cdebconf-priority, cdebconf-text-udeb, cdebconf-udeb, cdrom-checker, cdrom-detect, cdrom-retriever, choose-mirror, choose-mirror-bin, console-setup-pc-ekmap, console-setup-udeb, crypto-modules-3.11.0-4-generic-di, di-utils, di-utils-reboot, di-utils-shell, di-utils-terminfo, download-installer, env-preseed, ethdetect, fat-modules-3.11.0-4-generic-di, fb-modules-3.11.0-4-generic-di, file-preseed, firewire-core-modules-3.11.0-4-generic-di, floppy-modules-3.11.0-4-generic-di, fs-core-modules-3.11.0-4-generic-di, fs-secondary-modules-3.11.0-4-generic-di, gpgv-udeb, hdparm-udeb, hw-detect, initrd-kickseed, initrd-preseed, input-modules-3.11.0-4-generic-di, installation-locale, isc-dhcp-client-udeb, iso-scan, kbd-udeb, kernel-image-3.11.0-4-generic-di, kernel-signed-image-3.11.0-4-generic-di, kickseed-common, libblkid1-udeb, libcrypto1.0.0-udeb, libdebconfclient0-udeb, libdebian-installer4-udeb, libfribidi0-udeb, libiw30-udeb, libkmod2-udeb, libnl-3-200-udeb, libnl-genl-3-200-udeb, libnss-dns-udeb, libnss-files-udeb, libpci3-udeb, libtextwrap1-udeb, libuuid1-udeb, load-cdrom, load-iso, localechooser, lowmemcheck, lsb-release-udeb, main-menu, media-retriever, message-modules-3.11.0-4-generic-di, mountmedia, nano-udeb, ndisc6-udeb, net-retriever, netcfg, network-preseed, nfs-modules-3.11.0-4-generic-di, nic-firmware, nic-modules-3.11.0-4-generic-di, nic-pcmcia-modules-3.11.0-4-generic-di, nic-shared-modules-3.11.0-4-generic-di, nic-usb-modules-3.11.0-4-generic-di, oem-config-check, parport-modules-3.11.0-4-generic-di, pata-modules-3.11.0-4-generic-di, pciutils-udeb, pcmcia-modules-3.11.0-4-generic-di, pcmcia-storage-modules-3.11.0-4-generic-di, pcmciautils-udeb, preseed-common, rdnssd-udeb, rescue-check, rootskel, sata-modules-3.11.0-4-generic-di, save-logs, scsi-firmware, scsi-modules-3.11.0-4-generic-di, serial-modules-3.11.0-4-generic-di, storage-core-modules-3.11.0-4-generic-di, ubuntu-keyring-udeb, udev-udeb, udpkg, usb-modules-3.11.0-4-generic-di, util-linux-udeb, virtio-modules-3.11.0-4-generic-di, vlan-modules-3.11.0-4-generic-di, vlan-udeb, wpasupplicant-udeb, zlib1g-udeb
+Filename: pool/main/d/debian-installer/debian-installer-udebs_20101020ubuntu260_amd64.udeb
+Size: 1472
+MD5sum: 3dd1e5e5115e007e99a291b188c78ce7
+SHA1: 73286935107c2b0a1f4eb6193a9b85d54987b86f
+SHA256: 879255007c90490486ef3f7bbddee8b4af7b3dd33bb54b1b654a254e3a1aa407
+Description: Metapackage depending on debian-installer's built-in udebs
+ This package depends on the set of udebs that the current debian-installer
+ build was built against, for easier version and migration tracking.
+
 Package: fat-modules-3.11.0-4-generic-di
 Priority: standard
 Section: debian-installer
@@ -727,32 +746,4 @@ SHA256: bbbb3ab88cc28cd539827a852005d8b412520cad767f5f2743e272208c570187
 Description: vlan modules
  This package contains vlan (8021.Q) modules.
 Kernel-Version: 3.11.0-4-generic
-
-Package: vlan-udeb
-Priority: optional
-Section: debian-installer
-Installed-Size: 23
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ard van Breemen <ard@kwaak.net>
-Architecture: amd64
-Source: vlan
-Version: 1.9-3ubuntu9
-Depends: libc6-udeb (>= 2.17), vlan-modules
-Filename: pool/main/v/vlan/vlan-udeb_1.9-3ubuntu9_amd64.udeb
-Size: 4704
-MD5sum: bdce8575844a20857cfa64e19715cbbb
-SHA1: b024a76687d0f2c4c9847d44668580a56be8382c
-SHA256: 5c96146df7523e9f67046c9fea6248236c3da832624840610dc12df72cf2c3cb
-Description: user mode programs to enable VLANs on your ethernet devices
- This package contains the user mode programs you need to add and remove
- VLAN devices from your ethernet devices.
- .
- A typical application for a VLAN enabled box is a single wire firewall,
- router or load balancer.
- .
- You need a VLAN Linux kernel for this.  Linux kernel versions >= 2.4.14
- have VLAN support.
- .
- This package provides the vconfig client for use in debian-installer.
-Installer-Menu-Item: 99999
 
