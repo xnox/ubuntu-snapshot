@@ -28456,13 +28456,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux-meta-ec2
-Version: 2.6.32.355.36
-Depends: linux-image-ec2 (= 2.6.32.355.36)
-Filename: pool/main/l/linux-meta-ec2/linux-ec2_2.6.32.355.36_amd64.deb
-Size: 4040
-MD5sum: 1ee45a76c821660a37b565524cdf8227
-SHA1: 1ed0a9016d69aa6bed67c304c53c7a4d237d6574
-SHA256: 32c4e60b880e75ad1d3d1ae3ebb19388efba18c9a925e6acdc9cab6e0950feaa
+Version: 2.6.32.356.37
+Depends: linux-image-ec2 (= 2.6.32.356.37)
+Filename: pool/main/l/linux-meta-ec2/linux-ec2_2.6.32.356.37_amd64.deb
+Size: 4042
+MD5sum: 73185071d2c2ef86b01641b71ca2a6b4
+SHA1: 22ec0984925f2959321560010a4fce717af31811
+SHA256: cdd4a197de1ab19d8707f7f9c6f2c18bd9cb6cfa2c4d883694aa83dcbbc43421
 Description: Complete Linux kernel for ec2 machines
  This package will always depend on the latest complete Linux kernel available
  for ec2 machines.
@@ -28635,6 +28635,31 @@ Size: 6790360
 MD5sum: 250ea0bac6ca8c10d74ba82697cc3ccd
 SHA1: 7d3e25629d8c1cd3a9ace713f0e55515fd854ddf
 SHA256: 53048295477437601bc62374eb47f2cc344655885fefa1a926974dafaa199a2c
+Description: Linux kernel specific documentation for version 2.6.32
+ This package provides the various documents in the 2.6.32 kernel
+ Documentation/ subdirectory.  These document kernel subsystems, APIs, device
+ drivers, and so on.  See
+ /usr/share/doc/linux-ec2-doc/00-INDEX for a list of what is
+ contained in each file.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+
+Package: linux-ec2-doc
+Priority: optional
+Section: doc
+Installed-Size: 27920
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux-ec2
+Version: 2.6.32-356.69
+Replaces: linux-ec2-doc-2.6
+Conflicts: linux-ec2-doc-2.6
+Filename: pool/main/l/linux-ec2/linux-ec2-doc_2.6.32-356.69_all.deb
+Size: 6790254
+MD5sum: f43350e786af1bdf51248718ff8ba43a
+SHA1: daccffe2c473e78360f6fd17a65ec1982f35d9a8
+SHA256: d812ce32d16847a5264d7dbf2830aa956ddd1be3f829efac97ff2d4f79705d3e
 Description: Linux kernel specific documentation for version 2.6.32
  This package provides the various documents in the 2.6.32 kernel
  Documentation/ subdirectory.  These document kernel subsystems, APIs, device
@@ -28872,6 +28897,41 @@ Size: 69407816
 MD5sum: eb0056ce87c06a388530be038678f046
 SHA1: c05005a52f0704c72d33aa2da0c06a67cf72eebf
 SHA256: 8109fd03c9d8058f45566401b4c3c76b6f7c3367d0bbba4a780b6689fd17b94d
+Description: Linux kernel source for version 2.6.32 with Ubuntu patches
+ This package provides the source code for the Linux kernel version
+ 2.6.32.
+ .
+ This package is mainly meant for other packages to use, in order to build
+ custom flavours.
+ .
+ If you wish to use this package to create a custom Linux kernel, then it
+ is suggested that you investigate the package kernel-package, which has
+ been designed to ease the task of creating kernel image packages.
+ .
+ If you are simply trying to build third-party modules for your kernel,
+ you do not want this package. Install the appropriate linux-headers
+ package instead.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+
+Package: linux-ec2-source-2.6.32
+Priority: optional
+Section: devel
+Installed-Size: 67860
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux-ec2
+Version: 2.6.32-356.69
+Provides: linux-ec2-source, linux-ec2-source-2.6
+Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
+Recommends: libc-dev, gcc, make
+Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
+Filename: pool/main/l/linux-ec2/linux-ec2-source-2.6.32_2.6.32-356.69_all.deb
+Size: 69408758
+MD5sum: 1232b26c762610179c600e6b0eb8f346
+SHA1: 3b01345ee1ca5fe117ff5dc6fc59c4f542d2bc4c
+SHA256: f25de8010f9c5fa67e94723451c1b0de4129aed2f0787c5e87c6420ea68cf32a
 Description: Linux kernel source for version 2.6.32 with Ubuntu patches
  This package provides the source code for the Linux kernel version
  2.6.32.
@@ -29812,6 +29872,50 @@ Description: Linux kernel headers for version 2.6.32 on x86/x86_64
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
+
+Package: linux-headers-2.6.32-356
+Priority: optional
+Section: devel
+Installed-Size: 75132
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux-ec2
+Version: 2.6.32-356.69
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux-ec2/linux-headers-2.6.32-356_2.6.32-356.69_all.deb
+Size: 10307772
+MD5sum: c917bc6b7d2b47282e0632be7308efdf
+SHA1: a844aafd1c8f290722a3d7c4ae8452127141db87
+SHA256: 3f7ca166beb2b0e520d0493b0104354f40d2302fe8f11758baecb70530a9f5bd
+Description: Header files related to Linux kernel version 2.6.32
+ This package provides kernel header files for version 2.6.32, for sites
+ that want the latest kernel headers. Please read
+ /usr/share/doc/linux-headers-2.6.32-356/debian.README.gz for details
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-2.6.32-356-ec2
+Priority: optional
+Section: devel
+Installed-Size: 7404
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-ec2
+Version: 2.6.32-356.69
+Depends: coreutils | fileutils (>= 4.0), linux-headers-2.6.32-356, libc6 (>= 2.8)
+Filename: pool/main/l/linux-ec2/linux-headers-2.6.32-356-ec2_2.6.32-356.69_amd64.deb
+Size: 738918
+MD5sum: b056807c3e2dd731bd1f1059a25803ba
+SHA1: 1a057521f1fc76426543bde6dbbbf2ea0d88c588
+SHA256: d9155a6492f3b3209b558077d10c1720ff5468ba1b610d9e048e9273b7551497
+Description: Linux kernel headers for version 2.6.32 on x86/x86_64
+ This package provides kernel header files for version 2.6.32 on
+ x86/x86_64.
+ .
+ This is for sites that want the latest kernel headers.  Please read
+ /usr/share/doc/linux-headers-2.6.32-356/debian.README.gz for details.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: linux-headers-2.6.32-38
 Priority: optional
@@ -31376,13 +31480,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux-meta-ec2
-Version: 2.6.32.355.36
-Depends: linux-headers-2.6.32-355-ec2
-Filename: pool/main/l/linux-meta-ec2/linux-headers-ec2_2.6.32.355.36_amd64.deb
+Version: 2.6.32.356.37
+Depends: linux-headers-2.6.32-356-ec2
+Filename: pool/main/l/linux-meta-ec2/linux-headers-ec2_2.6.32.356.37_amd64.deb
 Size: 4068
-MD5sum: d1be668c30513d277130a72de123b534
-SHA1: c59046dfbdb6e03f64f160ad3c8b5765b52286d9
-SHA256: 0d2c93774976fc41d87aeb1c5b43cdc06951710000dd5fe5e8cfc725bdca826c
+MD5sum: 5bff621ab8b91ec8b9a3c873fd50cca7
+SHA1: 10c22f8ca1058273a29cf8fd61440e41c8d96228
+SHA256: a806efbe0c9f2a225ac559d42ac650f337f51a5120c079f3cc82b27fe5110a48
 Description: Linux kernel headers for ec2 machines
  This package will always depend on the latest kernel headers available
  for ec2 machines (which are the same headers as for the server flavour).
@@ -32982,6 +33086,42 @@ Description: Linux kernel image for version 2.6.32 on x86/x86_64
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
+
+Package: linux-image-2.6.32-356-ec2
+Priority: optional
+Section: admin
+Installed-Size: 73244
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: amd64
+Source: linux-ec2
+Version: 2.6.32-356.69
+Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, linux-image-2.6, ndiswrapper-modules-1.9, redhat-cluster-modules
+Depends: initramfs-tools (>= 0.36ubuntu6), coreutils | fileutils (>= 4.0), module-init-tools (>= 3.3-pre11-4ubuntu3)
+Pre-Depends: dpkg (>= 1.10.24)
+Suggests: fdutils, linux-ec2-doc-2.6.32 | linux-ec2-source-2.6.32
+Conflicts: hotplug (<< 0.0.20040105-1)
+Filename: pool/main/l/linux-ec2/linux-image-2.6.32-356-ec2_2.6.32-356.69_amd64.deb
+Size: 20108418
+MD5sum: fdaebc30cfa23e242abf35022cebbf0d
+SHA1: a78d8a15e8a69a9255ff9b86cde7287cd05f5184
+SHA256: b3b39285ad3d68e5c42713d855706ef5d2a73dc45ad4214af7c0f823722126a8
+Description: Linux kernel image for version 2.6.32 on x86/x86_64
+ This package contains the Linux kernel image for version 2.6.32 on
+ x86/x86_64.
+ .
+ Also includes the corresponding System.map file, the modules built by the
+ packager, and scripts that try to ensure that the system is not left in an
+ unbootable state after an update.
+ .
+ Supports Generic processors.
+ .
+ Geared toward desktop systems.
+ .
+ You likely do not want to install this package directly. Instead, install
+ the linux-ec2 meta-package, which will ensure that upgrades work
+ correctly, and that supporting packages are also installed.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: linux-image-2.6.32-38-generic
 Priority: optional
@@ -34845,13 +34985,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: amd64
 Source: linux-meta-ec2
-Version: 2.6.32.355.36
-Depends: linux-image-2.6.32-355-ec2, linux-firmware
-Filename: pool/main/l/linux-meta-ec2/linux-image-ec2_2.6.32.355.36_amd64.deb
-Size: 4044
-MD5sum: 2f2a937eb6770cd5d8eda082df536ac5
-SHA1: d51c9774102e95f2765614d25a1b191247d0279c
-SHA256: b0946ed5a13b7030623c55b72da25db229880f0b5cecd016d80c8723bf78b9aa
+Version: 2.6.32.356.37
+Depends: linux-image-2.6.32-356-ec2, linux-firmware
+Filename: pool/main/l/linux-meta-ec2/linux-image-ec2_2.6.32.356.37_amd64.deb
+Size: 4048
+MD5sum: 1f5c5434cbd49d735a14ef31f9b77389
+SHA1: 1f4d07e058a3c51dfcde94cb48322a68d99cc4c5
+SHA256: dba20b6d049b3402758bc7f27c66ff9aa3119c353c32c0d24fca22f22a62edcd
 Description: Linux kernel image for ec2 machines
  This package will always depend on the latest kernel image available
  for ec2 machines.
