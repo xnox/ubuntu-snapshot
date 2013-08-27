@@ -167,6 +167,33 @@ Checksums-Sha256:
  2e70b26c0cf1e203a38b9af50060d65580e92288ffddff74a52a49273771fcc9 2318573 fonts-liberation_1.07.2.orig.tar.bz2
  1d42f8c7b6f3aa449432f86419996a8d28d979eb60ebd39315502b84efcf7ba7 9283 fonts-liberation_1.07.2-7.debian.tar.gz
 
+Package: geoip-database
+Binary: geoip-database
+Version: 20130813-1
+Priority: standard
+Section: net
+Maintainer: Patrick Matthäi <pmatthaei@debian.org>
+Build-Depends: debhelper (>= 9), geoip-bin (>= 1.5.0), libgeoip-dev (>= 1.5.0)
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/g/geoip-database
+Files:
+ 16dab7c5ce875d5cb0cb17d1ca616190 1826 geoip-database_20130813-1.dsc
+ e0624bd978074540df23a8de667fb2cc 1596442 geoip-database_20130813.orig.tar.bz2
+ a7ed42bb23421e4e5cd5f017653b73c7 3550 geoip-database_20130813-1.debian.tar.gz
+Homepage: http://www.maxmind.com/
+Package-List: 
+ geoip-database deb net optional
+Checksums-Sha1:
+ 59d4a6bf730b03ad82d811fa1806baabeb4dfefe 1826 geoip-database_20130813-1.dsc
+ e414c02f4c44f62d198007d644796cf0001d84f2 1596442 geoip-database_20130813.orig.tar.bz2
+ 541d69222fa4a423cc571466d3dfd1dd1cdbc251 3550 geoip-database_20130813-1.debian.tar.gz
+Checksums-Sha256:
+ a426b6b237855a92b4fb70fbadfb7dfd1d70f2db7412a60a00be421952835158 1826 geoip-database_20130813-1.dsc
+ 00ec038c4512d67914abd0caf28588c96d36ce12e46d846ccc62f132f66c3087 1596442 geoip-database_20130813.orig.tar.bz2
+ 5475505e8f3f2efe510fe002c1600cddf7c1b49a59473892c2df3380d5ee36ae 3550 geoip-database_20130813-1.debian.tar.gz
+
 Package: ghostscript
 Binary: ghostscript, ghostscript-x, ghostscript-doc, libgs9, libgs9-common, libgs-dev, ghostscript-dbg
 Version: 9.09~dfsg-0ubuntu1
@@ -640,56 +667,34 @@ Checksums-Sha256:
  858d0d7b073c8c3b3d77ab344b5c67faf80041e30d2f9a91d259f92224906397 51649959 qtwebkit-source_2.3.2.orig.tar.gz
  0f95e06b3eb802e3f7df23e9f013bcbdda547173f2c984f04a39d68f29177d53 80539 qtwebkit-source_2.3.2-0ubuntu1.debian.tar.gz
 
-Package: systemd
-Binary: systemd, systemd-sysv, systemd-services, libpam-systemd, libsystemd-login0, libsystemd-login-dev, libsystemd-daemon0, libsystemd-daemon-dev, libsystemd-journal0, libsystemd-journal-dev, libsystemd-id128-0, libsystemd-id128-dev, udev, libudev1, libudev-dev, udev-udeb, libudev1-udeb, libgudev-1.0-0, gir1.2-gudev-1.0, libgudev-1.0-dev, python-systemd
-Version: 204-0ubuntu10
+Package: tar
+Binary: tar
+Version: 1.26+dfsg-8
 Priority: required
-Section: admin
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Build-Depends: debhelper (>= 9), libcap-dev, pkg-config, libdbus-1-dev (>= 1.3.2~), libglib2.0-dev (>= 2.22.0), xsltproc, docbook-xsl, docbook-xml, gtk-doc-tools, m4, libpam0g-dev, libaudit-dev, dh-autoreconf, automake (>= 1.11), autoconf (>= 2.63), intltool, libcryptsetup-dev (>= 2:1.4.2), libwrap0-dev, libselinux1-dev (>= 2.1.9), libacl1-dev, libattr1-dev, liblzma-dev, gperf, libkmod-dev (>= 5), libblkid-dev (>= 2.20), libgirepository1.0-dev (>= 1.31.1), gobject-introspection (>= 1.31.1), python-dev, libgcrypt11-dev, libglib2.0-doc
-Architecture: linux-any
-Standards-Version: 3.9.2
+Section: utils
+Maintainer: Bdale Garbee <bdale@gag.com>
+Build-Depends: debhelper (>> 5), gettext, autoconf, autotools-dev
+Architecture: any
+Standards-Version: 3.9.4
 Format: 3.0 (quilt)
-Directory: pool/main/s/systemd
+Directory: pool/main/t/tar
 Files:
- de866a2a7ba45e42b0cdf2f1b4fb8f52 3559 systemd_204-0ubuntu10.dsc
- a07619bb19f48164fbf0761d12fd39a8 2186264 systemd_204.orig.tar.xz
- a77358353a9f7fd7d327eb4a6e30a47b 87555 systemd_204-0ubuntu10.debian.tar.gz
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-systemd/systemd.git;a=summary
-Vcs-Git: git://anonscm.debian.org/pkg-systemd/systemd.git -b debian
+ 8cbc2458026412c475819600bc25385c 1796 tar_1.26+dfsg-8.dsc
+ e4c6ecd42829072698855749145d8d9d 1557888 tar_1.26+dfsg.orig.tar.xz
+ bfacdfa8ffe5c4d576a83ad3d1c3871d 37668 tar_1.26+dfsg-8.debian.tar.gz
+Uploaders: Carl Worth <cworth@cworth.org>
+Vcs-Browser: http://git.gag.com/?p=debian/tar
+Vcs-Git: git://git.gag.com/debian/tar
 Package-List: 
- gir1.2-gudev-1.0 deb libs optional
- libgudev-1.0-0 deb libs optional
- libgudev-1.0-dev deb libdevel optional
- libpam-systemd deb admin extra
- libsystemd-daemon-dev deb libdevel extra
- libsystemd-daemon0 deb libs extra
- libsystemd-id128-0 deb libs extra
- libsystemd-id128-dev deb libdevel extra
- libsystemd-journal-dev deb libdevel extra
- libsystemd-journal0 deb libs extra
- libsystemd-login-dev deb libdevel extra
- libsystemd-login0 deb libs extra
- libudev-dev deb libdevel optional
- libudev1 deb libs important
- libudev1-udeb udeb debian-installer optional
- python-systemd deb python extra
- systemd deb admin extra
- systemd-services deb admin extra
- systemd-sysv deb admin extra
- udev deb admin extra
- udev-udeb udeb debian-installer extra
+ tar deb utils required
 Checksums-Sha1:
- 0c8bd779ef125371ccd6dc105817af6d6590f97f 3559 systemd_204-0ubuntu10.dsc
- 37b45766a44a95a6b6a7cdf4b587c151375b2053 2186264 systemd_204.orig.tar.xz
- 191c8fab8047d5d0b52e9c61e15dd3e7258b3f6a 87555 systemd_204-0ubuntu10.debian.tar.gz
+ fc1e8d3b3e4c8809f7000f522b4c84c62501273f 1796 tar_1.26+dfsg-8.dsc
+ c512b9d81df1b86a4935b0c9be7a9264e9ce0eef 1557888 tar_1.26+dfsg.orig.tar.xz
+ ca48d4bee4f6b076758b32b04df30ef6dfba16b2 37668 tar_1.26+dfsg-8.debian.tar.gz
 Checksums-Sha256:
- eb43e2cdf73ce41852725acd69ffccdb3c84238ef6f7da78f992eb9b9179e980 3559 systemd_204-0ubuntu10.dsc
- 072c393503c7c1e55ca7acf3db659cbd28c7fe5fa94fab3db95360bafd96731b 2186264 systemd_204.orig.tar.xz
- ed7906544eca331504ac1c22eb86d7ef5fb09f465c2a4def007bba97a0ac5600 87555 systemd_204-0ubuntu10.debian.tar.gz
-Testsuite: autopkgtest
+ e770b6c56becec0021885cca6a10e9eaa698867733da4dedd7b55e4da9d13d69 1796 tar_1.26+dfsg-8.dsc
+ 2791c99df400cd05afb1d78f29c4a412b6f038e5f38aa4759264cb434d715df6 1557888 tar_1.26+dfsg.orig.tar.xz
+ 71a38bdcb6665473852835f1deee6e71c49f18ca95a2a68a9567f1bff9fed6d3 37668 tar_1.26+dfsg-8.debian.tar.gz
 
 Package: usb-modeswitch-data
 Binary: usb-modeswitch-data

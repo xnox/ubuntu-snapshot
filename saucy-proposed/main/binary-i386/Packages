@@ -69,28 +69,29 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
-Package: gir1.2-gudev-1.0
-Priority: optional
-Section: libs
-Installed-Size: 53
+Package: geoip-database
+Priority: standard
+Section: net
+Installed-Size: 3620
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Depends: gir1.2-glib-2.0, libgudev-1.0-0 (>= 165)
-Filename: pool/main/s/systemd/gir1.2-gudev-1.0_204-0ubuntu10_i386.deb
-Size: 3614
-MD5sum: c98f26cef064e3935c295ae59ae968ed
-SHA1: cc7687f8dfa5f8a75a22da11f31daae689f7c74e
-SHA256: ee367ed2a1d282a524cdaa364f4c8edd46eb3cd28bb273f9921bf002887efed5
-Description: libgudev-1.0 introspection data
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: 17b4f1d7865f064cde612f6abf30b636
+Original-Maintainer: Patrick Matthäi <pmatthaei@debian.org>
+Architecture: all
+Version: 20130813-1
+Pre-Depends: dpkg (>= 1.15.6~)
+Recommends: libgeoip1
+Breaks: libgeoip1 (<< 1.4.5.dfsg)
+Filename: pool/main/g/geoip-database/geoip-database_20130813-1_all.deb
+Size: 1124544
+MD5sum: 6893664e3bd96573e299b2145768df32
+SHA1: f9c1bed98fc2266572aa1c846773765a42707fb2
+SHA256: c3428e799664362d6bbbe18091e6a38e6f5a4af81e6ccc9cc19c93cf2db2955a
+Description: IP lookup command line tools that use the GeoIP library (country database)
+Homepage: http://www.maxmind.com/
+Description-md5: 3bfa5b4c9f973261799fb4d9355f3b6c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: grub-common
 Priority: optional
@@ -497,53 +498,6 @@ Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
-Package: libgudev-1.0-0
-Priority: optional
-Section: libs
-Installed-Size: 86
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd (204-0ubuntu10)
-Version: 1:204-0ubuntu10
-Depends: libc6 (>= 2.3.6-6~), libglib2.0-0 (>= 2.37.3), libudev1 (>= 183)
-Pre-Depends: multiarch-support
-Filename: pool/main/s/systemd/libgudev-1.0-0_204-0ubuntu10_i386.deb
-Size: 14200
-MD5sum: f0389abc6f73553397f848805c93eb41
-SHA1: 3a03fa0d1cf9a12a79d46f7e26ed247b7ddf46b4
-SHA256: 26639edf032306b0199ec20c3da14b2826e6eaf8bd6e1c5b0879e029a68ff78c
-Description: GObject-based wrapper library for libudev
-Multi-Arch: same
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: 69c67b853f66d1327190cab12680738c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libgudev-1.0-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 353
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd (204-0ubuntu10)
-Version: 1:204-0ubuntu10
-Depends: libgudev-1.0-0 (= 1:204-0ubuntu10), gir1.2-gudev-1.0, libglib2.0-dev, pkg-config
-Filename: pool/main/s/systemd/libgudev-1.0-dev_204-0ubuntu10_i386.deb
-Size: 30304
-MD5sum: 0840816ab01d589b6e53c443b785d9e0
-SHA1: 9b0968ae3d890abba25566160c89decc32ebb2ed
-SHA256: 1982a15c405a682a5c6d2b3b8fdf8113a73b11b1e5c507952b50209b44eea0c8
-Description: libgudev-1.0 development files
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: 903f84519fd86bd5fb271a04acb09731
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: libmirclient-dev
 Priority: optional
 Section: libdevel
@@ -782,35 +736,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: libpam-systemd
-Priority: standard
-Section: admin
-Installed-Size: 117
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Replaces: libpam-xdg-support, systemd-services (<< 198-0ubuntu7)
-Provides: libpam-xdg-support
-Depends: systemd-services (= 204-0ubuntu10), libc6 (>= 2.8), libcap2 (>= 2.10), libdbus-1-3 (>= 1.0.2), libpam0g (>= 0.99.7.1), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
-Pre-Depends: multiarch-support
-Conflicts: libpam-xdg-support
-Breaks: systemd-services (<< 198-0ubuntu7)
-Filename: pool/main/s/systemd/libpam-systemd_204-0ubuntu10_i386.deb
-Size: 25702
-MD5sum: 7ecc4f3e5c13b5013bbeece27d779fca
-SHA1: 83decf39dcba2af8536e05c0d7a6e8fe6f91a825
-SHA256: 8dd7e182afab82439f0a94bd4f7be838a41d7ff2ba357ae5d2aaf109509ad4b7
-Description: system and service manager - PAM module
-Multi-Arch: same
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: edcf62758ab0554992770cd6ee003898
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
 Package: libplatform-api-headers
 Priority: optional
 Section: libdevel
@@ -994,193 +919,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: libsystemd-daemon-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 73
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Depends: libsystemd-daemon0 (= 204-0ubuntu10)
-Filename: pool/main/s/systemd/libsystemd-daemon-dev_204-0ubuntu10_i386.deb
-Size: 7228
-MD5sum: b5cc976591d393d30b867cf11e26d458
-SHA1: f7bdcd034a82f1c844ead5c24cac98cbad5d4bc7
-SHA256: ab9ba3516b9128c630fdeb661386429e550947c0d24492da394d37631ee6a4f4
-Description: systemd utility library - development files
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: 15fdb9eeef9f47e6b4ff92785bbb9d88
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libsystemd-daemon0
-Priority: standard
-Section: libs
-Installed-Size: 56
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Depends: libc6 (>= 2.8)
-Pre-Depends: multiarch-support
-Filename: pool/main/s/systemd/libsystemd-daemon0_204-0ubuntu10_i386.deb
-Size: 8904
-MD5sum: f648c7af3a6063952c2bc4cf333a0ee7
-SHA1: 74ae4c123e1cf23fda35b047f302e9a0abf13509
-SHA256: 4c0cc1891a18d5bb4ff7c208fe297f710d0902622d2d5f5f501a05b772011761
-Description: systemd utility library
-Multi-Arch: same
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: 56515555df42a10999b8edaaa40373ce
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
-Package: libsystemd-id128-0
-Priority: extra
-Section: libs
-Installed-Size: 64
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Depends: libc6 (>= 2.7)
-Pre-Depends: multiarch-support
-Filename: pool/main/s/systemd/libsystemd-id128-0_204-0ubuntu10_i386.deb
-Size: 13518
-MD5sum: a2a062e10443d8948aa0aca48df39042
-SHA1: 5818bc432671502fa0a1739b047a4999ec39e982
-SHA256: e5b814d8e5c7b1a8a30d0a9e565090e6a70744218e344926e44b828062670506
-Description: systemd 128 bit ID utility library
-Multi-Arch: same
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: f1e829bb4ba3cea00c4172d21882434f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libsystemd-id128-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 65
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Depends: libsystemd-id128-0 (= 204-0ubuntu10)
-Filename: pool/main/s/systemd/libsystemd-id128-dev_204-0ubuntu10_i386.deb
-Size: 3132
-MD5sum: 5c5eabcf9982fa6bbd5faa1fb048696a
-SHA1: 3ae493494ed15c4719152d761dd9c3d169af6abf
-SHA256: 5f8672ce12450ddd93b91ef5ef777703f5f63d4b389d7e07aadfecce40dffd80
-Description: systemd 128 bit ID utility library - development files
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: a0489c042528c7c04fd2a6520c578975
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libsystemd-journal-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 70
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Depends: libsystemd-journal0 (= 204-0ubuntu10), libsystemd-id128-dev
-Filename: pool/main/s/systemd/libsystemd-journal-dev_204-0ubuntu10_i386.deb
-Size: 4930
-MD5sum: 58b8b8832b5775a153d785eeea918440
-SHA1: 85617b6c245fa8225eaaceb60b8e6f656756e64f
-SHA256: 2df7a2803596b67b839c112a77ac4d9bc0bfccb81aea422f01c132dfbc65c56c
-Description: systemd journal utility library - development files
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: e80c34da97e3cfda38731839be115201
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libsystemd-journal0
-Priority: extra
-Section: libs
-Installed-Size: 167
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Depends: libc6 (>= 2.9), libgcrypt11 (>= 1.4.5), liblzma5 (>= 5.1.1alpha+20120614), libselinux1 (>= 1.32)
-Pre-Depends: multiarch-support
-Filename: pool/main/s/systemd/libsystemd-journal0_204-0ubuntu10_i386.deb
-Size: 59970
-MD5sum: 5f557e42270c7313a92be12a5d5f0b14
-SHA1: 963c36644e048ffbbabadfc9f8af177d6723718d
-SHA256: 46860a55b47ea4fd517521f61544c9f348de30bf940feffc2c4575f3e2cdaa58
-Description: systemd journal utility library
-Multi-Arch: same
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: 954612493a4438c396bb24b45a566df6
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libsystemd-login-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 65
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Depends: libsystemd-login0 (= 204-0ubuntu10)
-Filename: pool/main/s/systemd/libsystemd-login-dev_204-0ubuntu10_i386.deb
-Size: 3946
-MD5sum: 1c3b1476f33ab90fdd4a007b05db02b6
-SHA1: 2540948d71c7ba11ff23111e752f3e3952deb674
-SHA256: c1fd34f84f68c495a192350855a1053cc621b025cdbddac60dc80459efaeb9fb
-Description: systemd login utility library - development files
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: 134f5d47241710892d4b4dbcc9f39609
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libsystemd-login0
-Priority: standard
-Section: libs
-Installed-Size: 98
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Depends: libc6 (>= 2.14)
-Pre-Depends: multiarch-support
-Filename: pool/main/s/systemd/libsystemd-login0_204-0ubuntu10_i386.deb
-Size: 27948
-MD5sum: d06e32cb228c528e19df1a9e76c588d2
-SHA1: f3b5cdfcbe6d574fd6f1572f65a8710f88a07182
-SHA256: 3592c0e3ae90de465dc989d0289ce74455d7017c4a36187526085ea4ed83d89a
-Description: systemd login utility library
-Multi-Arch: same
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: 2a0d17f149cad5d96dc1de7cde14133b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
 Package: libubuntu-application-api-mirclient1
 Priority: optional
 Section: libs
@@ -1297,53 +1035,6 @@ Description-md5: d9c7c5dff3893ffc9571a67f240b3e83
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-
-Package: libudev-dev
-Priority: optional
-Section: admin
-Installed-Size: 299
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Depends: libudev1 (= 204-0ubuntu10)
-Filename: pool/main/s/systemd/libudev-dev_204-0ubuntu10_i386.deb
-Size: 27062
-MD5sum: 27febe919731b1f768640d75ba3c32b1
-SHA1: 40614fe2bf4d47c43180980ada7ff363e326df75
-SHA256: e5fcbe61ed80029c672c763465d5b91ded4e14c7e291ceddfba9a4b148771346
-Description: libudev development files
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: 4085049214953c1e2cf5d9aee1c32173
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libudev1
-Priority: required
-Section: libs
-Installed-Size: 120
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Depends: libc6 (>= 2.17)
-Pre-Depends: multiarch-support
-Filename: pool/main/s/systemd/libudev1_204-0ubuntu10_i386.deb
-Size: 37328
-MD5sum: 50175c686b39bd6c64eab6bac5d749ed
-SHA1: ed213566fe3e1238421f0427a368cf337868673e
-SHA256: 2087ddde1f9875d58c857c9be51f3ad8ff717b8806a8f63972ae9474c7c76ad3
-Description: libudev shared library
-Multi-Arch: same
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: ace5b83d7b48187416c90173a93255b6
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: minimal
 
 Package: mir-doc
 Priority: optional
@@ -1646,56 +1337,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: systemd-services
-Priority: standard
-Section: admin
-Installed-Size: 927
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Replaces: logind, systemd (<< 198-1), ubuntu-system-service
-Provides: logind
-Depends: libacl1 (>= 2.2.51-8), libc6 (>= 2.17), libcap2 (>= 2.10), libdbus-1-3 (>= 1.1.1), libselinux1 (>= 2.0.65), libsystemd-daemon0 (>= 31), libudev1 (>= 183), udev (>= 175-0ubuntu23), dbus
-Recommends: systemd | systemd-shim (>= 3)
-Conflicts: logind
-Breaks: systemd (<< 198-1)
-Filename: pool/main/s/systemd/systemd-services_204-0ubuntu10_i386.deb
-Size: 347638
-MD5sum: f906b4fba93e4cbe03991e8f9fe4dd33
-SHA1: 0460b98362843106dbb9e4067ccc74933e115c27
-SHA256: c4d00f29e07232dfc600277e06e218c44d77d8301895e6a9acdbd5ecd9f7dfa9
-Description: systemd runtime services
-Multi-Arch: foreign
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: 2b01627856e6c435a0ff31af7419b02e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
-Package: udev
+Package: tar
+Essential: yes
 Priority: required
-Section: admin
-Installed-Size: 5090
+Section: utils
+Installed-Size: 704
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Original-Maintainer: Bdale Garbee <bdale@gag.com>
 Architecture: i386
-Source: systemd
-Version: 204-0ubuntu10
-Replaces: systemd-services (<< 202-0ubuntu6)
-Depends: libacl1 (>= 2.2.51-8), libblkid1 (>= 2.19.1), libc6 (>= 2.17), libkmod2 (>= 5~), libselinux1 (>= 2.0.65), libudev1 (= 204-0ubuntu10), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), lsb-base (>= 3.0-6), util-linux (>= 2.16)
-Recommends: usbutils, pciutils
-Filename: pool/main/s/systemd/udev_204-0ubuntu10_i386.deb
-Size: 1041546
-MD5sum: 41e342160d10779639d064c1a9a1fefe
-SHA1: f20a852cab5769182216c7c78f20a90ad5522e4e
-SHA256: 79777d0a099fec9501b66131b3810549b55483fe2e635b5b1d3397297a0087ba
-Description: /dev/ and hotplug management daemon
+Version: 1.26+dfsg-8
+Replaces: cpio (<< 2.4.2-39)
+Pre-Depends: libc6 (>= 2.17)
+Suggests: bzip2, ncompress, xz-utils
+Conflicts: cpio (<= 2.4.2-38)
+Breaks: dpkg-dev (<< 1.14.26)
+Filename: pool/main/t/tar/tar_1.26+dfsg-8_i386.deb
+Size: 215638
+MD5sum: b37d82b389cbb3d2b8beba4097d878d8
+SHA1: 55c1f7033aed0392f5b853e8417e87688a3b3259
+SHA256: bf55e4d8b484643bd281f272f62e2bd557831731ddbd66e0cb2510304561af88
+Description: GNU version of the tar archiving utility
 Multi-Arch: foreign
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Description-md5: e875ddb09f46f1f7672af537f0c875ca
+Description-md5: 48033bf96442788d1f697785773ad9bb
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
