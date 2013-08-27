@@ -1,23 +1,3 @@
-Package: alex
-Priority: optional
-Section: universe/devel
-Installed-Size: 2415
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Version: 3.0.5-2
-Depends: libc6 (>= 2.15), libffi6 (>= 3.0.4), libgmp10
-Filename: pool/universe/a/alex/alex_3.0.5-2_amd64.deb
-Size: 557086
-MD5sum: 943bc383ffd0d8fd80c73898ab8c6a6d
-SHA1: c79a1a1f3f1ec86aa2cd2f64fc2bbafa1b8354ad
-SHA256: 27df93f8e7ac1ea2de5bd6056e478901bc5bd1312c00baf848e6c5c0e03d66f9
-Description: lexical analyser generator for Haskell
-Homepage: http://www.haskell.org/alex/
-Description-md5: bc94d454c7a2f43370b4ac0cf89a5863
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: blackbox
 Priority: optional
 Section: universe/x11
@@ -2130,23 +2110,63 @@ Description-md5: e9b1617d2c59e14b9d4c57e66f9dfb48
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: juju-deployer
-Priority: optional
-Section: universe/net
-Installed-Size: 193
+Package: juju
+Priority: extra
+Section: universe/devel
+Installed-Size: 35
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Andreas Hasenack <andreas@canonical.com>
 Architecture: all
-Version: 0.2.3-0ubuntu1
-Depends: bzr, python-bzrlib, python-jujuclient (>= 0.0.7), python-yaml, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Filename: pool/universe/j/juju-deployer/juju-deployer_0.2.3-0ubuntu1_all.deb
-Size: 29460
-MD5sum: e824664e4f0cb5fcecc13bb00981d38f
-SHA1: 51aecfcf241426715a8a1142f507bbf0c8662f2a
-SHA256: 47351cec197dd1aedbb493c73c9831ff8f885a9bc44bef5e545ced2324d6ef4e
-Description: Deploy complex stacks of services using Juju
-Homepage: https://launchpad.net/juju-deployer/darwin
-Description-md5: b74e8e7ca80bf0050f553f00913ad07f
+Source: juju-core
+Version: 1.13.2-0ubuntu2
+Depends: juju-core (>= 1.13.2-0ubuntu2)
+Filename: pool/universe/j/juju-core/juju_1.13.2-0ubuntu2_all.deb
+Size: 3298
+MD5sum: efc3bf1dd32b23fd63470f5c4d251223
+SHA1: 1cd014cd87177ea03813a71fb8b256319e43f85c
+SHA256: e95c9801d62dd731f1f0f4bfebb8037d18c20bc6a342eab1e305f716a6128e79
+Description: next generation service orchestration system
+Homepage: http://launchpad.net/juju-core
+Description-md5: 38a581a0c033bca65bd1e2c7ba910778
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: juju-core
+Priority: extra
+Section: universe/devel
+Installed-Size: 52630
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 1.13.2-0ubuntu2
+Depends: libc6 (>= 2.4)
+Conflicts: juju (<< 0.7-0ubuntu1~)
+Filename: pool/universe/j/juju-core/juju-core_1.13.2-0ubuntu2_amd64.deb
+Size: 8440786
+MD5sum: 2c86b3306db3e6336189835a56dd452e
+SHA1: c82d483e7bdaabe9fac37235d3979429ef897158
+SHA256: a7f127ca76f3c08813b7f92d64d2907404a6c56e6b6049e0e683f644ce37571f
+Description: Juju is devops distilled - client
+Homepage: http://launchpad.net/juju-core
+Description-md5: cae49183c535ad5fd988bfd509e90051
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: juju-local
+Priority: extra
+Section: universe/devel
+Installed-Size: 35
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: juju-core
+Version: 1.13.2-0ubuntu2
+Depends: juju-core (>= 1.13.2-0ubuntu2), lxc, mongodb-server
+Filename: pool/universe/j/juju-core/juju-local_1.13.2-0ubuntu2_all.deb
+Size: 3344
+MD5sum: 5cfc66412b290569c7dd3ac5f7382d7a
+SHA1: 35e6d78c7aae9de394a0a19409ac124b30196c0f
+SHA256: 3beb646f50160f21d2edb4fcc2f276d52278d31cac4ccff49d052bf866eccb55
+Description: dependency package for the Juju local provider
+Homepage: http://launchpad.net/juju-core
+Description-md5: 56b994bc8fa7f3cb5c7eba487cdbe6ee
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -3091,26 +3111,6 @@ Description-md5: 6c2fc11feaebcab6bfe17274ddd96f32
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libeval-context-perl
-Priority: optional
-Section: universe/perl
-Installed-Size: 95
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
-Architecture: all
-Version: 0.09.11-2
-Depends: perl (>= 5.9.3), libreadonly-perl, libsub-install-perl, libfile-slurp-perl
-Filename: pool/universe/libe/libeval-context-perl/libeval-context-perl_0.09.11-2_all.deb
-Size: 24100
-MD5sum: 7f0b09a08546dadc5c1b8aa33f121fc0
-SHA1: d836c9b9909684940dc8cbae1f2fb1ff4e2256bd
-SHA256: 468bff35a87ce811c9fdf499d2617a7285574ef46f223add9f9d08ec579ca801
-Description: evalute perl code in context wrapper
-Homepage: https://metacpan.org/release/Eval-Context
-Description-md5: b203138a6760417dac0c69a0bc7cf866
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: libewf-dbg
 Priority: extra
 Section: universe/devel
@@ -3172,27 +3172,6 @@ SHA256: 4e2203b8b8c0e2602c64162a4450dfa83b086cd4a4b3b7657a14da864a68bb0c
 Description: library with support for Expert Witness Compression Format
 Homepage: http://code.google.com/p/libewf/
 Description-md5: fda969c7925554537df518bd06a2676e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libfile-changenotify-perl
-Priority: optional
-Section: universe/perl
-Installed-Size: 111
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
-Architecture: all
-Version: 0.23-2
-Depends: perl, liblist-moreutils-perl, libclass-load-perl, libmodule-pluggable-perl | perl (<< 5.17.0), libmoose-perl, libmoosex-params-validate-perl, libmoosex-semiaffordanceaccessor-perl, libnamespace-autoclean-perl
-Recommends: liblinux-inotify2-perl
-Filename: pool/universe/libf/libfile-changenotify-perl/libfile-changenotify-perl_0.23-2_all.deb
-Size: 35580
-MD5sum: 705d479f9056fae7c7222c7c37d90449
-SHA1: bd6f440fb7e35afdd8acc670019c570fcb75f3e8
-SHA256: 64dba3d637cd4b97c86e525ba7520aef63b35b038ba8c95dcc81fa1f40d993f1
-Description: module to monitor files for changes
-Homepage: https://metacpan.org/release/File-ChangeNotify/
-Description-md5: 9e4786f35ca97bf0e9935c4d1ffccbd5
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -5368,26 +5347,6 @@ Description-md5: dd0e80e924cd906751b91fc525ab16ab
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libmoosex-attributehelpers-perl
-Priority: optional
-Section: universe/perl
-Installed-Size: 229
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
-Architecture: all
-Version: 0.23-2
-Depends: perl, libmoose-perl
-Filename: pool/universe/libm/libmoosex-attributehelpers-perl/libmoosex-attributehelpers-perl_0.23-2_all.deb
-Size: 94140
-MD5sum: 313c7284228253c93ebbfd6001109f96
-SHA1: 71824ed9e0739429afb83a93e98769117457225b
-SHA256: b2ff6c56fb42475fb261dacfce91c6c2ac36bde0c7af46860d569a2a6b7040a9
-Description: Perl library to extend your attribute interfaces
-Homepage: https://metacpan.org/release/MooseX-AttributeHelpers/
-Description-md5: 2a3a2cc006db9259b91dd752694ca7fe
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: libmysqld-pic
 Priority: optional
 Section: universe/libdevel
@@ -6760,6 +6719,26 @@ Description-md5: 6eea023073af47469398c4a35d1d3687
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: lpc21isp
+Priority: extra
+Section: universe/devel
+Installed-Size: 95
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Agustin Henze <tin@debian.org>
+Architecture: amd64
+Version: 1.94-2
+Depends: libc6 (>= 2.15)
+Filename: pool/universe/l/lpc21isp/lpc21isp_1.94-2_amd64.deb
+Size: 23536
+MD5sum: 48acd33e898898a4c06c1154e549aa1a
+SHA1: 17126883d980454e37848df76b98d63299425840
+SHA256: 67950205f02477e11e17fab08b7f3b13c4bf74ddd1b3fb1a993117e09cd85f46
+Description: In-circuit programming (ISP) of ARM and Cortex microcontrollers
+Homepage: http://sourceforge.net/projects/lpc21isp/
+Description-md5: 2173e47aa8dcd400875fa7c5865ea3c5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: lua-ldoc
 Priority: optional
 Section: universe/interpreters
@@ -7428,26 +7407,6 @@ Description-md5: aa430ab1aac82841284086df78aee47c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: phablet-tools
-Priority: extra
-Section: universe/admin
-Installed-Size: 190
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Sergio Schvezov <sergio.schvezov@canonical.com>
-Architecture: all
-Version: 1.0+13.10.20130827-0ubuntu1
-Depends: android-tools-adb (>= 4.2.2), android-tools-fastboot (>= 4.2.2), bzr, curl, python-configobj, python-launchpadlib, python-requests, python-xdg, rsync, wget, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Recommends: ubuntu-dev-tools
-Filename: pool/universe/p/phablet-tools/phablet-tools_1.0+13.10.20130827-0ubuntu1_all.deb
-Size: 34640
-MD5sum: d12b4066ecd502250db3c45255cf16a3
-SHA1: 4d30967da7108e4ffac15e76352f6a30bb96e883
-SHA256: edfd621f7891210eefdaecfa7606a59d33f52e17b9fb564b519248acdb132de1
-Description: Scripts to work with Phablet.
-Description-md5: f66f89c3b54ebc4b73bcb931ff3d46cb
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: php-getid3
 Priority: optional
 Section: universe/web
@@ -7967,6 +7926,26 @@ SHA256: 7008335c90ab297b8a6554e70cffee75fc70df52fc7600cdfce8b4f9810d231e
 Description: error tolerant matching engine - Python bindings
 Homepage: https://launchpad.net/libcolombus
 Description-md5: 69bb45332e3872b04be8a253366ebd56
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-cups
+Priority: optional
+Section: universe/python
+Installed-Size: 206
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Otavio Salvador <otavio@debian.org>
+Architecture: amd64
+Source: python-cups
+Version: 1.9.63-0ubuntu1
+Depends: python3 (>= 3.3), python3 (<< 3.4), libc6 (>= 2.14), libcups2 (>= 1.6.0)
+Filename: pool/universe/p/python-cups/python3-cups_1.9.63-0ubuntu1_amd64.deb
+Size: 60734
+MD5sum: ac3e3fbc679031d7637d51f72751e706
+SHA1: e5183150aefd48c8e4500551c08dcc5f4f0405f1
+SHA256: a74e118670cd3ee60797f2a0c42e7c66a4d882bdaa69a8c0e0e15eb86b41b919
+Description: Python3 bindings for CUPS
+Description-md5: 3de14c500eb894fa25a057fb2c5e9652
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
