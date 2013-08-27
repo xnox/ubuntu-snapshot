@@ -1,45 +1,3 @@
-Package: apparmor
-Binary: apparmor, apparmor-utils, apparmor-profiles, apparmor-docs, libapparmor-dev, libapparmor1, libapparmor-perl, libapache2-mod-apparmor, libpam-apparmor, apparmor-notify, python-libapparmor, python3-libapparmor, dh-apparmor, apparmor-easyprof
-Version: 2.8.0-0ubuntu25
-Priority: standard
-Section: admin
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Kees Cook <kees@debian.org>
-Build-Depends: debhelper (>= 8.1.2), flex, bison, bzip2, apache2-dev, dh-apache2, libpam-dev, autotools-dev, libtool, automake, autoconf, chrpath, texlive-latex-base, texlive-latex-recommended, swig, po-debconf, dejagnu, python-all-dev, python, python3-all-dev, python3, perl (>= 5.8.0), liblocale-gettext-perl, pkg-config
-Architecture: any all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/main/a/apparmor
-Files:
- af7ef3be125023ad158acdff6c58bb2b 2835 apparmor_2.8.0-0ubuntu25.dsc
- eaf90c52992df3d205a753b2933595fe 1462560 apparmor_2.8.0.orig.tar.gz
- 28acc8571838d3144fe10582343e3a81 152849 apparmor_2.8.0-0ubuntu25.debian.tar.gz
-Homepage: http://apparmor.net/
-Vcs-Bzr: https://code.launchpad.net/~ubuntu-core-dev/apparmor/master
-Package-List: 
- apparmor deb admin extra
- apparmor-docs deb doc extra
- apparmor-easyprof deb admin extra
- apparmor-notify deb admin extra
- apparmor-profiles deb admin extra
- apparmor-utils deb admin extra
- dh-apparmor deb devel extra
- libapache2-mod-apparmor deb libs extra
- libapparmor-dev deb libdevel extra
- libapparmor-perl deb perl extra
- libapparmor1 deb libs extra
- libpam-apparmor deb libs extra
- python-libapparmor deb python extra
- python3-libapparmor deb python extra
-Checksums-Sha1:
- f13c8d41dacada21b400046d7f1be043281e3b9e 2835 apparmor_2.8.0-0ubuntu25.dsc
- 7a49a5fc2a46f6844bad74a83c9cfe93b8b32125 1462560 apparmor_2.8.0.orig.tar.gz
- 0be399084c99b7bf0ebf05f0c06c7b0ad76d1bbb 152849 apparmor_2.8.0-0ubuntu25.debian.tar.gz
-Checksums-Sha256:
- ffc8c66916c0820dd8045963362879189f1b5f15626c8e5df4bcf7e7cf9d0e80 2835 apparmor_2.8.0-0ubuntu25.dsc
- 03e2e91fac17694635d25d7482e46db69320cd844590740073cf5fdfdd5379c6 1462560 apparmor_2.8.0.orig.tar.gz
- 4cdb802827108d2eb1c16b4ef006c9abaefae19103f7cc0dadd3bf15543d2a46 152849 apparmor_2.8.0-0ubuntu25.debian.tar.gz
-
 Package: augeas
 Binary: augeas-tools, libaugeas-dev, libaugeas0, augeas-dbg, augeas-lenses, augeas-doc
 Version: 1.1.0-0ubuntu1
@@ -152,6 +110,7 @@ Testsuite: autopkgtest
 Package: cloud-initramfs-tools
 Binary: cloud-initramfs-rescuevol, cloud-initramfs-growroot, overlayroot, cloud-initramfs-dyn-netconf
 Version: 0.20ubuntu1
+Priority: extra
 Section: admin
 Maintainer: Scott Moser <smoser@ubuntu.com>
 Build-Depends: debhelper (>= 7.0.50~)
@@ -532,6 +491,43 @@ Checksums-Sha256:
  e2ac2839bc111f87b08e46a25c3abaaec7abc16f06792b9954fe1574fdcd797b 2323 libdbi-perl_1.627-1.dsc
  875c1951a5e203c658f0f252e473b766dbcd299a987f86c17151fc6473b5856b 585833 libdbi-perl_1.627.orig.tar.gz
  018dc829f3d1d7c139ba4b75de99462663174da07092e5d2d6ac748895eb76e6 12029 libdbi-perl_1.627-1.debian.tar.gz
+
+Package: libhybris
+Binary: android-platform-headers, libandroid-properties1, libandroid-properties-dev, libhardware2, libhardware-dev, libhybris-common1, libhybris-common-dev, libhybris, libhybris-dev, libhybris-utils, libhybris-test
+Version: 0.1.0+git20130606+c5d897a-0ubuntu19
+Priority: extra
+Section: libs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9.0.0), autotools-dev, dh-autoreconf, gcc-4.7, g++-4.7, quilt, pkg-config, libgles2-mesa-dev
+Architecture: all armhf i386 amd64
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/libh/libhybris
+Files:
+ a6b0d1e711f679be8fb9f86754dc1794 2564 libhybris_0.1.0+git20130606+c5d897a-0ubuntu19.dsc
+ b458e72d51e75d342cb2f9691a5c3f32 506588 libhybris_0.1.0+git20130606+c5d897a.orig.tar.gz
+ 7cc752d848010a0ab022688a881f4e13 88961 libhybris_0.1.0+git20130606+c5d897a-0ubuntu19.debian.tar.gz
+Vcs-Bzr: lp:libhybris/ubuntu
+Package-List: 
+ android-platform-headers deb libdevel extra
+ libandroid-properties-dev deb libdevel extra
+ libandroid-properties1 deb libs extra
+ libhardware-dev deb libdevel extra
+ libhardware2 deb libs extra
+ libhybris deb libs extra
+ libhybris-common-dev deb libdevel extra
+ libhybris-common1 deb libs extra
+ libhybris-dev deb libdevel extra
+ libhybris-test deb devel extra
+ libhybris-utils deb utils extra
+Checksums-Sha1:
+ 2ace0f314b30143e6f6069618cf62a96a07ea0da 2564 libhybris_0.1.0+git20130606+c5d897a-0ubuntu19.dsc
+ 7d42310e34ec08e9f276e6657b7f2fa06118d49e 506588 libhybris_0.1.0+git20130606+c5d897a.orig.tar.gz
+ 7e51f6c0c1d055e7942cfdd0d0113876a698c924 88961 libhybris_0.1.0+git20130606+c5d897a-0ubuntu19.debian.tar.gz
+Checksums-Sha256:
+ 65d11cb9a3e125dbd5dfe720a245ed6b0032e70e519008ccc4c52f998064c552 2564 libhybris_0.1.0+git20130606+c5d897a-0ubuntu19.dsc
+ 3746b559df667a060e45b9d7b55c8d7e9facc8ba66429bd360023f6dfffab5ed 506588 libhybris_0.1.0+git20130606+c5d897a.orig.tar.gz
+ d4d31ac4f6cfaa8557770345ac4f23e9992aed14a7fb076edb421558df497636 88961 libhybris_0.1.0+git20130606+c5d897a-0ubuntu19.debian.tar.gz
 
 Package: libidn
 Binary: idn, libidn11-dev, libidn11, libidn11-java
