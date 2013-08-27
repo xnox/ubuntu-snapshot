@@ -69,6 +69,29 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: gir1.2-messagingmenu-1.0
+Priority: optional
+Section: libs
+Installed-Size: 47
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: indicator-messages
+Version: 13.10.1+13.10.20130827.4-0ubuntu1
+Depends: gir1.2-glib-2.0, libmessaging-menu0 (>= 13.10.1+13.10.20130820)
+Filename: pool/main/i/indicator-messages/gir1.2-messagingmenu-1.0_13.10.1+13.10.20130827.4-0ubuntu1_amd64.deb
+Size: 3126
+MD5sum: 07f0127ff4a01f8eeab24c7a55807a21
+SHA1: 73d0b1ba11e90104231511d98b9623b48a7ad755
+SHA256: 1b55a77f28a6d9d4455fb3cd53e76ba8584e684624c000de2b1424a0fa5bdab9
+Description: Messaging Menu - gir bindings
+Homepage: https://launchpad.net/indicator-messages
+Description-md5: c3332a75a05dc3da9846ebba71002ac1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
 Package: grub-common
 Priority: optional
 Section: admin
@@ -366,6 +389,32 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-dvd-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
 
+Package: indicator-messages
+Priority: optional
+Section: gnome
+Installed-Size: 345
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
+Architecture: amd64
+Version: 13.10.1+13.10.20130827.4-0ubuntu1
+Replaces: indicator-status-provider-emesene, indicator-status-provider-mc5, indicator-status-provider-pidgin, indicator-status-provider-telepathy, libindicator-messages-status-provider-dev, libindicator-messages-status-provider1
+Depends: libc6 (>= 2.2.5), libglib2.0-0 (>= 2.37.3), dconf-gsettings-backend | gsettings-backend
+Recommends: indicator-applet | indicator-renderer
+Conflicts: indicator-status-provider-emesene, indicator-status-provider-mc5, indicator-status-provider-pidgin, indicator-status-provider-telepathy, libindicator-messages-status-provider-dev, libindicator-messages-status-provider1
+Breaks: gwibber-services (<< 3.5.4-0ubuntu1~), telepathy-indicator (<< 0.3.0-0ubuntu1~), thunderbird (<< 15.0+build1-0ubuntu1~), xchat-gnome-indicator (<< 0.3.11-0ubuntu2~), xchat-indicator (<< 0.3.11-0ubuntu2~)
+Filename: pool/main/i/indicator-messages/indicator-messages_13.10.1+13.10.20130827.4-0ubuntu1_amd64.deb
+Size: 80076
+MD5sum: a542aca09a1c8d35f8cf2e72674146e7
+SHA1: ce79ca342de7897054848067eaf7767f057820e9
+SHA256: 524b39a4aa302e63cc8ebbb0f34409bb7b7d213a32420c44985674aaecd45852
+Description: indicator that collects messages that need a response
+Homepage: https://launchpad.net/indicator-messages
+Description-md5: 4b542e22d4916b1b888ba25c790e7864
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
 Package: libapache2-mod-auth-mysql
 Priority: optional
 Section: web
@@ -473,6 +522,51 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libmessaging-menu-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 301
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: indicator-messages
+Version: 13.10.1+13.10.20130827.4-0ubuntu1
+Depends: gir1.2-messagingmenu-1.0 (= 13.10.1+13.10.20130827.4-0ubuntu1), libmessaging-menu0 (= 13.10.1+13.10.20130827.4-0ubuntu1), libglib2.0-dev
+Filename: pool/main/i/indicator-messages/libmessaging-menu-dev_13.10.1+13.10.20130827.4-0ubuntu1_amd64.deb
+Size: 25456
+MD5sum: ab370bbeca4f3eb60eea93e32c2bdfef
+SHA1: 13c042b820621ad834328af3e97bc0f2869d992c
+SHA256: a508408780b1230576c42a5255a59174018919165afa13dc8627f93909a517cb
+Description: Messaging Menu - library development files
+Homepage: https://launchpad.net/indicator-messages
+Description-md5: ce906b4d3b8508aa9afe60c759709b5d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmessaging-menu0
+Priority: optional
+Section: libs
+Installed-Size: 111
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: indicator-messages
+Version: 13.10.1+13.10.20130827.4-0ubuntu1
+Depends: libc6 (>= 2.2.5), libglib2.0-0 (>= 2.37.3)
+Filename: pool/main/i/indicator-messages/libmessaging-menu0_13.10.1+13.10.20130827.4-0ubuntu1_amd64.deb
+Size: 26684
+MD5sum: f8fc233e0ec80cf0e1c404793161cbaa
+SHA1: 6a498935cbd690e480f2b8a21acc4a69359c8e09
+SHA256: 430bf6fb7f659048b2a95a2219fbca880830f7a96b2f75d2cc15f7609b1c334f
+Description: Messaging Menu - shared library
+Homepage: https://launchpad.net/indicator-messages
+Description-md5: 364e71724412de3ba2d663ca34406232
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libmirclient-dev
 Priority: optional
@@ -708,87 +802,6 @@ SHA256: fc39056ccc4be0ffcddcec83ab70e92fd73a179e0f97fe0804dcb81d3d2f06ef
 Description: MySQL embedded database development files
 Homepage: http://dev.mysql.com/
 Description-md5: 2f06b7e1bfdb9f620d92f9696d24fabc
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libparted0-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 1132
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: parted
-Version: 2.3-15
-Replaces: libparted-dev, libparted2-dev (<< 2.2)
-Provides: libparted-dev
-Depends: libc6-dev, libparted0debian1 (= 2.3-15), libdevmapper-dev (>= 1.02.33), uuid-dev, libblkid-dev
-Suggests: parted (= 2.3-15), parted-doc
-Conflicts: libparted-dev, parted (<< 1.2.11)
-Filename: pool/main/p/parted/libparted0-dev_2.3-15_amd64.deb
-Size: 324236
-MD5sum: 0a5da3156b4a2aef73edf9dc849c6097
-SHA1: 247ae6ec2c5cd83d0765c1bcee366a00ef385577
-SHA256: b859a6e9443f4a4caf259ebf983004ec023621e85bdda4245d3962a6526c194e
-Description: disk partition manipulator - development files
-Homepage: http://www.gnu.org/software/parted
-Description-md5: d9820491205202cf089e9bf9709d4f3e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libparted0debian1
-Priority: standard
-Section: libs
-Installed-Size: 570
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: parted
-Version: 2.3-15
-Replaces: libparted0 (<< 2.2-4), libparted1 (<< 2.2), libparted1.4 (<< 1.4.24-2), libparted2 (<< 2.2)
-Provides: libparted
-Depends: libblkid1 (>= 2.17.2), libc6 (>= 2.14), libdevmapper1.02.1 (>= 2:1.02.36), libuuid1 (>= 2.16)
-Pre-Depends: multiarch-support
-Suggests: parted | nparted, libparted0-dev, libparted0-i18n (= 2.3-15)
-Conflicts: libparted1 (<< 2.2), libparted2 (<< 2.2), parted (<< 1.4.13+14pre1)
-Breaks: python-parted (<< 3.6-5)
-Filename: pool/main/p/parted/libparted0debian1_2.3-15_amd64.deb
-Size: 240998
-MD5sum: 8dbb5c6da2ac21909df17946c04d46e3
-SHA1: 69a9c257018fcaa4840fc8d403fa55ce4c6a70ba
-SHA256: 922b7d06e62bada6dcc81f46535d2be5300e6de8ec09c5b864e94e4a559f6bd6
-Description: disk partition manipulator - shared library
-Multi-Arch: same
-Homepage: http://www.gnu.org/software/parted
-Description-md5: 8351c24350acd1cda567a096a68bf6b7
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: standard, kubuntu-active, kubuntu-active, mythbuntu-live
-
-Package: libparted0debian1-dbg
-Priority: extra
-Section: debug
-Installed-Size: 4672
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: parted
-Version: 2.3-15
-Replaces: libparted-dbg, libparted0-dbg (<< 2.2-4)
-Provides: libparted-dbg
-Depends: libparted0debian1 (= 2.3-15), libparted0-dev (= 2.3-15)
-Conflicts: libparted-dbg
-Filename: pool/main/p/parted/libparted0debian1-dbg_2.3-15_amd64.deb
-Size: 1296354
-MD5sum: 72df5749618635d19a7823a8f944e561
-SHA1: bfcc93b56a81080fee35fd08e2321d1013b661b6
-SHA256: d6e15eb159fe9bea7c4eb5ae127637f988c346a2788abcd3cf96f55279419070
-Description: disk partition manipulator - debugging symbols
-Homepage: http://www.gnu.org/software/parted
-Description-md5: ded6d8d64355819831123a2a24db1821
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -1360,56 +1373,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
-Package: parted
-Priority: standard
-Section: admin
-Installed-Size: 183
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Version: 2.3-15
-Replaces: fsresize, parted1.6
-Depends: libc6 (>= 2.11), libparted0debian1 (>= 2.2-1), libreadline6 (>= 6.0), libtinfo5
-Suggests: parted-doc
-Conflicts: fsresize, parted1.6
-Filename: pool/main/p/parted/parted_2.3-15_amd64.deb
-Size: 52402
-MD5sum: d47e9328654016ce1d0f052db489374d
-SHA1: fb652409a47eb57b5e3e019264fd8437a9be19bf
-SHA256: 7ffda9ac2a0b9769a8e8c69515b2e3d02171d9a31c0e62905e0dfe4412acc397
-Description: disk partition manipulator
-Homepage: http://www.gnu.org/software/parted
-Description-md5: 0672c048225946ff0705e0cecd54cf5d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: standard, kubuntu-active, kubuntu-active
-
-Package: parted-doc
-Priority: optional
-Section: doc
-Installed-Size: 143
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
-Architecture: all
-Source: parted
-Version: 2.3-15
-Replaces: parted1.6-doc
-Depends: install-info
-Suggests: parted | libparted0-dev
-Conflicts: parted1.6-doc
-Filename: pool/main/p/parted/parted-doc_2.3-15_all.deb
-Size: 84462
-MD5sum: a10f442a5b48e5844732907f1dbe8caf
-SHA1: 796a6252f9adcce0255d3f3b4c8a83105a271401
-SHA256: c380071d0ea05df9c1f5d9046fb17eda461f869b1d0721d4389055b0bff6663e
-Description: disk partition manipulator - documentation
-Homepage: http://www.gnu.org/software/parted
-Description-md5: ac1df9e91cfcaaa28de0866f6029d294
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
 
 Package: python-bzrlib
 Priority: optional
