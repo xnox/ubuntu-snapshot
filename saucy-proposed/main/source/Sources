@@ -149,6 +149,33 @@ Checksums-Sha256:
  71277db65d0f01dea458df2869e09f60bbc21d9a35e69aa049f6361421729f73 33431 cairo_1.12.16-0ubuntu1.debian.tar.gz
 Testsuite: autopkgtest
 
+Package: cloud-initramfs-tools
+Binary: cloud-initramfs-rescuevol, cloud-initramfs-growroot, overlayroot, cloud-initramfs-dyn-netconf
+Version: 0.20ubuntu1
+Section: admin
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50~)
+Architecture: all
+Standards-Version: 3.9.3
+Format: 3.0 (native)
+Directory: pool/main/c/cloud-initramfs-tools
+Files:
+ 6c7b3eb9b52a28ed09c87b4ed9402682 1825 cloud-initramfs-tools_0.20ubuntu1.dsc
+ e308e370f21279c0e8fb068f1550e66e 37060 cloud-initramfs-tools_0.20ubuntu1.tar.gz
+Homepage: http://launchpad.net/cloud-initramfs-tools
+Vcs-Bzr: http://code.launchpad.net/~cloud-initramfs-tools/cloud-initramfs-tools/trunk
+Package-List: 
+ cloud-initramfs-dyn-netconf deb admin extra
+ cloud-initramfs-growroot deb admin extra
+ cloud-initramfs-rescuevol deb admin extra
+ overlayroot deb admin extra
+Checksums-Sha1:
+ 2df077d96edb68c957f59f202515ddc8ad68aec9 1825 cloud-initramfs-tools_0.20ubuntu1.dsc
+ df901f634d590200003450f4051cbd6cf928305a 37060 cloud-initramfs-tools_0.20ubuntu1.tar.gz
+Checksums-Sha256:
+ 248205bc39bcfda2e9bbbe9b917e920f146f50eb71c9275636603485ba552927 1825 cloud-initramfs-tools_0.20ubuntu1.dsc
+ 942dfd69d622d3b2d8698e0c2466f17ded0a9ec452185bed224bc3c98dc9e307 37060 cloud-initramfs-tools_0.20ubuntu1.tar.gz
+
 Package: cloud-utils
 Binary: cloud-utils, cloud-guest-utils, cloud-image-utils
 Version: 0.27-0ubuntu3
@@ -180,6 +207,7 @@ Python-Version: >= 2.6
 Package: dbus
 Binary: dbus, dbus-x11, libdbus-1-3, dbus-1-doc, libdbus-1-dev, dbus-1-dbg
 Version: 1.6.12-0ubuntu4
+Priority: required
 Section: devel
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
@@ -211,32 +239,6 @@ Checksums-Sha256:
  993d6123d955f9044a32c29a97d809551ac94466e2e0cd204933f89c65f61dd8 2680 dbus_1.6.12-0ubuntu4.dsc
  f67a7abfd6d045c1e9eba2bba4199d301836bc0c6e8a727c765913aba780ee92 1933805 dbus_1.6.12.orig.tar.gz
  217fe04775a1714b968a18856a0814a75aaaf5b0c4a24b53722b90107eff325b 60927 dbus_1.6.12-0ubuntu4.debian.tar.gz
-
-Package: dh-exec
-Binary: dh-exec
-Version: 0.11
-Priority: extra
-Section: devel
-Maintainer: Gergely Nagy <algernon@madhouse-project.org>
-Build-Depends: debhelper (>= 9~), dh-autoreconf, automake (>= 1:1.11), fakeroot, libpipeline-dev, pkg-config, perl
-Architecture: any
-Standards-Version: 3.9.4
-Format: 3.0 (native)
-Directory: pool/main/d/dh-exec
-Files:
- e53e6d4db37fe4174ffd844879cb5b0d 1639 dh-exec_0.11.dsc
- 3233e1e8dac334fc0d1bfc06ca90e498 116462 dh-exec_0.11.tar.gz
-Homepage: https://github.com/algernon/dh-exec
-Vcs-Browser: http://git.madhouse-project.org/debian/dh-exec/
-Vcs-Git: git://git.madhouse-project.org/debian/dh-exec.git
-Package-List: 
- dh-exec deb devel extra
-Checksums-Sha1:
- 97263ac7686fe74a5c12002850220a90a3b7d5a6 1639 dh-exec_0.11.dsc
- 91f18067f3d1e077c665a93963afbc41f97fcb02 116462 dh-exec_0.11.tar.gz
-Checksums-Sha256:
- 5eca837b3f820d1e2bf9b37c99ec6b9ac17daeadfb711c7215cf927781832484 1639 dh-exec_0.11.dsc
- 2596339b5a825460533035f0e5e2758fd23631c516db32fda1d30ceb45c51486 116462 dh-exec_0.11.tar.gz
 
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
