@@ -1012,6 +1012,51 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: libupstart-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 311
+Maintainer: James Hunt <james.hunt@ubuntu.com>
+Architecture: i386
+Source: upstart
+Version: 1.9.1-0ubuntu5
+Depends: libupstart1 (= 1.9.1-0ubuntu5)
+Filename: pool/main/u/upstart/libupstart-dev_1.9.1-0ubuntu5_i386.deb
+Size: 68230
+MD5sum: aaf350a61e5594b219298d44bffc03cf
+SHA1: 300c1456015adfc65263d068f8ed8e07dc5c828e
+SHA256: 61e1c53c5686cbc3434892673b74864629cbc19fd40eb7d472e2bc8ddf222160
+Description: Upstart Client Library (development files)
+Multi-Arch: same
+Homepage: http://upstart.ubuntu.com/
+Description-md5: ec96d63e3af639995a442cd6b0733410
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libupstart1
+Priority: optional
+Section: admin
+Installed-Size: 202
+Maintainer: James Hunt <james.hunt@ubuntu.com>
+Architecture: i386
+Source: upstart
+Version: 1.9.1-0ubuntu5
+Depends: libc6 (>= 2.1.3), libdbus-1-3 (>= 1.2.16), libnih-dbus1 (>= 1.0.0), libnih1 (>= 1.0.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/u/upstart/libupstart1_1.9.1-0ubuntu5_i386.deb
+Size: 51998
+MD5sum: cce9bf55a3fadb32b8245f39dbc9de0a
+SHA1: 331dc24777904171c978ee09ce6503bae1383d62
+SHA256: 45acbecfc781fc2c1e4ce7bc01362e8a607cfb056a13c3cc58d5635c76a120f5
+Description: Upstart Client Library
+Multi-Arch: same
+Homepage: http://upstart.ubuntu.com/
+Description-md5: 6c0f4f2b94a39a98cf6d9e420c504939
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: mir-doc
 Priority: optional
 Section: doc
@@ -1354,6 +1399,78 @@ Homepage: http://pypi.python.org/pypi/pep8
 Description-md5: e4b7300e38224b873009652032b23796
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: ssl-cert
+Priority: optional
+Section: utils
+Installed-Size: 102
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Architecture: all
+Version: 1.0.33
+Depends: debconf (>= 0.5) | debconf-2.0, openssl (>= 0.9.8g-9), adduser
+Suggests: openssl-blacklist
+Filename: pool/main/s/ssl-cert/ssl-cert_1.0.33_all.deb
+Size: 16650
+MD5sum: bb2d2f616d7b4da9b76caa98002657eb
+SHA1: e2b01268291d438b7d457b5d3595c5b14e5400d1
+SHA256: fde7cfb8e6e2fc3e13fd8b288fd5f63e7146058b95ec79686f97372293da4390
+Description: simple debconf wrapper for OpenSSL
+Multi-Arch: foreign
+Description-md5: 5def45ff95c1ca066f6999553bb7628f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, mail-server, ubuntu-usb, print-server, postgresql-server, lamp-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: upstart
+Priority: required
+Section: admin
+Installed-Size: 1443
+Maintainer: James Hunt <james.hunt@ubuntu.com>
+Architecture: i386
+Version: 1.9.1-0ubuntu5
+Replaces: startup-tasks, system-services, sysvinit, upstart-compat-sysv, upstart-job
+Provides: startup-tasks, system-services, upstart-compat-sysv, upstart-job
+Depends: libc6 (>= 2.15), libdbus-1-3 (>= 1.2.16), libjson-c2 (>= 0.10), libnih-dbus1 (>= 1.0.0), libnih1 (>= 1.0.0), libudev1 (>= 183), sysvinit-utils, sysv-rc, initscripts, mountall, ifupdown (>= 0.6.10ubuntu5), libjson0 (>= 0.10-1.1ubuntu1), debianutils (>= 4)
+Suggests: python3, graphviz, bash-completion, upstart-monitor
+Conflicts: lxcguest, startup-tasks, system-services, sysvinit, upstart-compat-sysv, upstart-job
+Breaks: friendly-recovery (<< 0.2.13), libc6 (<< 2.12.1-0ubuntu12)
+Filename: pool/main/u/upstart/upstart_1.9.1-0ubuntu5_i386.deb
+Size: 524438
+MD5sum: 1a5b0c0e22ba4c4d59cc8f9abfd4c073
+SHA1: f7a9afcd62da6577df19000ca91ec4674a4e1ffd
+SHA256: 86e8472645eddc068a288f3aa3883f2139b08fa746732cbeb1ad4e72c914d924
+Description: event-based init daemon
+Multi-Arch: foreign
+Homepage: http://upstart.ubuntu.com/
+Description-md5: b776ec43b708c13dd0c2ab824471f478
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: upstart-monitor
+Priority: optional
+Section: utils
+Installed-Size: 104
+Maintainer: James Hunt <james.hunt@ubuntu.com>
+Architecture: all
+Source: upstart
+Version: 1.9.1-0ubuntu5
+Depends: python3.3, python3, upstart (>= 1.7), python3-dbus
+Recommends: python3-gi
+Filename: pool/main/u/upstart/upstart-monitor_1.9.1-0ubuntu5_all.deb
+Size: 11412
+MD5sum: 52f770ceee5b559358a90c6e4c9491a7
+SHA1: 4437d9e850a3b2d97846b73e3873de09176b2fcc
+SHA256: 1f381e35f72355bc83ac737af0a0cea0b33b082932b73d0b70ab9ace26953b98
+Description: event monitor for upstart
+Homepage: http://upstart.ubuntu.com/
+Description-md5: 3ada932aec65f4da7c81b4d3251ee8e4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: usb-modeswitch-data
 Priority: extra

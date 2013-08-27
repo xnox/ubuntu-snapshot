@@ -497,6 +497,31 @@ Checksums-Sha256:
  b9e1a91fd6cdc0b66a9f8e586a7d66ddee484882524bad5bc449ec3f9c31f902 924463 mir_0.0.10+13.10.20130827.orig.tar.gz
  71fdb724be71e59be66c5d24cf1806584857daafa12ef0cac63387ca2a3623cd 16209 mir_0.0.10+13.10.20130827-0ubuntu1.diff.gz
 
+Package: miscfiles
+Binary: miscfiles
+Version: 1.4.2.dfsg.1-9.1
+Section: text
+Maintainer: Thomas Bushnell, BSG <tb@debian.org>
+Build-Depends: debhelper
+Architecture: all
+Standards-Version: 3.7.3
+Format: 1.0
+Directory: pool/main/m/miscfiles
+Files:
+ 31f595a3867cdeaa8e31250da0f716fe 1701 miscfiles_1.4.2.dfsg.1-9.1.dsc
+ 7918ea32fd729038cd4155823e678e86 1504759 miscfiles_1.4.2.dfsg.1.orig.tar.gz
+ a3bf33205cf7fd3b4907ac25aa6eb8dd 27848 miscfiles_1.4.2.dfsg.1-9.1.diff.gz
+Package-List: 
+ miscfiles deb text optional
+Checksums-Sha1:
+ 977eeacc6897e7317b773fe4f5e21e5d495cb881 1701 miscfiles_1.4.2.dfsg.1-9.1.dsc
+ bf73eee0437e5e180b314693262e97d1738a4f20 1504759 miscfiles_1.4.2.dfsg.1.orig.tar.gz
+ 59d048a2977050ee8e966d1cbe1ab45bff43e424 27848 miscfiles_1.4.2.dfsg.1-9.1.diff.gz
+Checksums-Sha256:
+ 631ceb3edd14913a93c7beb72028c872e105e396d17978963da7071d33efc074 1701 miscfiles_1.4.2.dfsg.1-9.1.dsc
+ 9228d4718b0c66c675df2d1beda5afb872e2939eda7af4b2e3e697edd47751b6 1504759 miscfiles_1.4.2.dfsg.1.orig.tar.gz
+ 2068490b78e7a41923ad15aa0ab910250536cc7cc533cc42b842eb8eff38a6ee 27848 miscfiles_1.4.2.dfsg.1-9.1.diff.gz
+
 Package: mod-auth-mysql
 Binary: libapache2-mod-auth-mysql
 Version: 4.3.9-13.1ubuntu1
@@ -566,6 +591,67 @@ Checksums-Sha256:
  afcdb3d4fa93950b330d934ce3de155e9d4a575c91b5aa3e0a276b9f52e802a2 21604457 mysql-5.5_5.5.32.orig.tar.gz
  1fdb5d2297c005cd5a9602c0dd8cafa4cbb27abb33c9dd6e8072a860455435b2 305231 mysql-5.5_5.5.32-0ubuntu2.debian.tar.gz
 Testsuite: autopkgtest
+
+Package: parted
+Binary: parted, parted-udeb, libparted0, libparted0debian1, libparted0-udeb, libparted0-i18n, libparted0-dev, libparted0debian1-dbg, parted-doc
+Version: 2.3-15
+Section: admin
+Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
+Build-Depends: dpkg-dev (>= 1.15.7~), debhelper (>= 8.1.3), quilt, libncurses-dev | libncurses5-dev, libreadline-dev | libreadline6-dev, libdevmapper-dev (>= 2:1.02.33) [linux-any], uuid-dev, gettext, texinfo (>= 4.2), debianutils (>= 1.13.1), libblkid-dev, po4a, pkg-config, check, dh-autoreconf, autopoint
+Architecture: any all
+Standards-Version: 3.8.4
+Format: 1.0
+Directory: pool/main/p/parted
+Files:
+ 0fee93199fb1e3cb694ca22f69fe1192 2730 parted_2.3-15.dsc
+ 30ceb6df7e8681891e865e2fe5a7903d 2974168 parted_2.3.orig.tar.gz
+ 982b8a53aa076d5070b895a59051163d 90125 parted_2.3-15.diff.gz
+Uploaders: Otavio Salvador <otavio@debian.org>, Bastian Blank <waldi@debian.org>, Xavier Oswald <xoswald@debian.org>, Colin Watson <cjwatson@debian.org>
+Homepage: http://www.gnu.org/software/parted
+Vcs-Browser: http://git.debian.org/?p=parted/debian/parted.git
+Vcs-Git: git://git.debian.org/git/parted/debian/parted.git
+Package-List: 
+ libparted0 deb libs extra
+ libparted0-dev deb libdevel optional
+ libparted0-i18n deb localization optional
+ libparted0-udeb udeb debian-installer extra
+ libparted0debian1 deb libs optional
+ libparted0debian1-dbg deb debug extra
+ parted deb admin optional
+ parted-doc deb doc optional
+ parted-udeb udeb debian-installer extra
+Checksums-Sha1:
+ d21dcd44136672e768a962e1ffa66fcef8aa3ea2 2730 parted_2.3-15.dsc
+ 9ef653c1f97c88b52d8e41f26ea3a8e3379f9cd6 2974168 parted_2.3.orig.tar.gz
+ 41478f994ad090967a126695d96f3aad8a6a5172 90125 parted_2.3-15.diff.gz
+Checksums-Sha256:
+ b52a1c3e89faa3d736545bb3e8e7fff6d3912716e47ec2f9b1ba87dec81c04d7 2730 parted_2.3-15.dsc
+ e81fa140805b5cd029ff6dda5cfa94d223e83ac182ebcae94f841d62ce468829 2974168 parted_2.3.orig.tar.gz
+ dcdce0b4b8b4cc42f96adad240137344665491e1d5153155ffa16e1b2bc5f831 90125 parted_2.3-15.diff.gz
+
+Package: partman-basicmethods
+Binary: partman-basicmethods
+Version: 55
+Section: debian-installer
+Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 9), dh-di, po-debconf (>= 0.5.0)
+Architecture: all
+Format: 3.0 (native)
+Directory: pool/main/p/partman-basicmethods
+Files:
+ ef76fca989379dd24859af19c76cf308 1747 partman-basicmethods_55.dsc
+ 4b13624e1b824b8c2399d4397fcde3cd 50777 partman-basicmethods_55.tar.gz
+Uploaders: Anton Zinoviev <zinoviev@debian.org>, Colin Watson <cjwatson@debian.org>, Christian Perrier <bubulle@debian.org>
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=d-i/partman-basicmethods.git
+Vcs-Git: git://anonscm.debian.org/d-i/partman-basicmethods.git
+Package-List: 
+ partman-basicmethods udeb debian-installer optional
+Checksums-Sha1:
+ 7b3ca1d6ebca7b0e3cc3f1c549edcc29147caff4 1747 partman-basicmethods_55.dsc
+ 9c7c3871d048b2a35d28e5bdd3fb92de637ae5f2 50777 partman-basicmethods_55.tar.gz
+Checksums-Sha256:
+ 13a052b5e197ce788ed09ff78078ef31231b8519c93cbe55f8e1237b2a25f934 1747 partman-basicmethods_55.dsc
+ b58595e83f5852fd4a768ddafd8a62ef4062522c4dba4c170c2a8b038d343116 50777 partman-basicmethods_55.tar.gz
 
 Package: pep8
 Binary: pep8, python3-pep8
@@ -668,9 +754,66 @@ Checksums-Sha256:
  858d0d7b073c8c3b3d77ab344b5c67faf80041e30d2f9a91d259f92224906397 51649959 qtwebkit-source_2.3.2.orig.tar.gz
  0f95e06b3eb802e3f7df23e9f013bcbdda547173f2c984f04a39d68f29177d53 80539 qtwebkit-source_2.3.2-0ubuntu1.debian.tar.gz
 
+Package: quilt
+Binary: quilt
+Version: 0.60-9
+Section: devel
+Maintainer: Martin Quinson <mquinson@debian.org>
+Build-Depends: debhelper (>= 9)
+Build-Depends-Indep: gettext, hevea, lynx, diffstat, perl, procmail, ed
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/q/quilt
+Files:
+ 5d8389b21cf7f59a2fe034dbb5bd2777 1964 quilt_0.60-9.dsc
+ 058a08a9b626bdec9ec8c519dc92158c 442369 quilt_0.60.orig.tar.gz
+ ecd6eaeeae49123e953adffd17c8eebd 37808 quilt_0.60-9.debian.tar.gz
+Uploaders: Raphaël Hertzog <hertzog@debian.org>, Ryan Niebur <ryanryan52@gmail.com>
+Homepage: http://savannah.nongnu.org/projects/quilt
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/quilt.git
+Vcs-Git: git://git.debian.org/git/collab-maint/quilt
+Package-List: 
+ quilt deb vcs optional
+Checksums-Sha1:
+ 88165d9bb8599fae50e72b6af675448724783cb0 1964 quilt_0.60-9.dsc
+ c93c79598c55ba288f60babcc74a9fc9b04404b6 442369 quilt_0.60.orig.tar.gz
+ 5230e369cf3ca84132e708c93c67ccaac917fc8a 37808 quilt_0.60-9.debian.tar.gz
+Checksums-Sha256:
+ 510a9ac542ae85fe25001ddf981458d91cb7112273b020dd6fcbd12c5a1fc400 1964 quilt_0.60-9.dsc
+ 3d72a292e432beb9a73f9d0acfe3a77c9b4d7e42209919bb244e9958c7cfe64b 442369 quilt_0.60.orig.tar.gz
+ 0186ea028bbb44e1cfa75e2c03e6ec5606ad7d81f797abf661960d5585c27076 37808 quilt_0.60-9.debian.tar.gz
+
+Package: ssl-cert
+Binary: ssl-cert
+Version: 1.0.33
+Priority: optional
+Section: utils
+Maintainer: Debian Apache Maintainers <debian-apache@lists.debian.org>
+Build-Depends: debhelper (>= 7), po-debconf
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/s/ssl-cert
+Files:
+ 24d11dc2e7c47de7fdde5af9b171a118 994 ssl-cert_1.0.33.dsc
+ 8c7e7c875e997825d8d3806ee5e6f4da 28850 ssl-cert_1.0.33.tar.gz
+Uploaders: Tollef Fog Heen <tfheen@debian.org>, Stefan Fritsch <sf@debian.org>
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-apache/ssl-cert.git
+Vcs-Git: git://git.debian.org/git/pkg-apache/ssl-cert.git
+Package-List: 
+ ssl-cert deb utils optional
+Checksums-Sha1:
+ 5f5f74d559923130f00989bd81629faca35d492f 994 ssl-cert_1.0.33.dsc
+ 10391f07116a25ee56e7af685fd4e458c2c47732 28850 ssl-cert_1.0.33.tar.gz
+Checksums-Sha256:
+ 1f7e3a6e157710a5d57520cd289274bdf358232d98b06b9204ce326f87758f10 994 ssl-cert_1.0.33.dsc
+ 589cb90239fb51d14f9966bfcdaddeed82e5f2b3085307b8b8c59807a39636e9 28850 ssl-cert_1.0.33.tar.gz
+
 Package: upstart
 Binary: upstart, upstart-monitor, libupstart1, libupstart-dev
 Version: 1.9.1-0ubuntu5
+Priority: required
 Section: admin
 Maintainer: James Hunt <james.hunt@ubuntu.com>
 Build-Depends: debhelper (>= 9), pkg-config (>= 0.22), libnih-dev (>= 1.0.3), libnih-dbus-dev (>= 1.0.3), nih-dbus-tool (>= 1.0.3), libdbus-1-dev (>= 1.2.16), libexpat1-dev (>= 2.0.0), libudev-dev (>= 151-5), libjson0-dev (>= 0.10), dbus, bash-completion, dh-autoreconf, autopoint, python3, automake (>= 1.12)
