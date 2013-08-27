@@ -1,3 +1,44 @@
+Package: apparmor
+Binary: apparmor, apparmor-utils, apparmor-profiles, apparmor-docs, libapparmor-dev, libapparmor1, libapparmor-perl, libapache2-mod-apparmor, libpam-apparmor, apparmor-notify, python-libapparmor, python3-libapparmor, dh-apparmor, apparmor-easyprof
+Version: 2.8.0-0ubuntu25
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Build-Depends: debhelper (>= 8.1.2), flex, bison, bzip2, apache2-dev, dh-apache2, libpam-dev, autotools-dev, libtool, automake, autoconf, chrpath, texlive-latex-base, texlive-latex-recommended, swig, po-debconf, dejagnu, python-all-dev, python, python3-all-dev, python3, perl (>= 5.8.0), liblocale-gettext-perl, pkg-config
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/a/apparmor
+Files:
+ af7ef3be125023ad158acdff6c58bb2b 2835 apparmor_2.8.0-0ubuntu25.dsc
+ eaf90c52992df3d205a753b2933595fe 1462560 apparmor_2.8.0.orig.tar.gz
+ 28acc8571838d3144fe10582343e3a81 152849 apparmor_2.8.0-0ubuntu25.debian.tar.gz
+Homepage: http://apparmor.net/
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-core-dev/apparmor/master
+Package-List: 
+ apparmor deb admin extra
+ apparmor-docs deb doc extra
+ apparmor-easyprof deb admin extra
+ apparmor-notify deb admin extra
+ apparmor-profiles deb admin extra
+ apparmor-utils deb admin extra
+ dh-apparmor deb devel extra
+ libapache2-mod-apparmor deb libs extra
+ libapparmor-dev deb libdevel extra
+ libapparmor-perl deb perl extra
+ libapparmor1 deb libs extra
+ libpam-apparmor deb libs extra
+ python-libapparmor deb python extra
+ python3-libapparmor deb python extra
+Checksums-Sha1:
+ f13c8d41dacada21b400046d7f1be043281e3b9e 2835 apparmor_2.8.0-0ubuntu25.dsc
+ 7a49a5fc2a46f6844bad74a83c9cfe93b8b32125 1462560 apparmor_2.8.0.orig.tar.gz
+ 0be399084c99b7bf0ebf05f0c06c7b0ad76d1bbb 152849 apparmor_2.8.0-0ubuntu25.debian.tar.gz
+Checksums-Sha256:
+ ffc8c66916c0820dd8045963362879189f1b5f15626c8e5df4bcf7e7cf9d0e80 2835 apparmor_2.8.0-0ubuntu25.dsc
+ 03e2e91fac17694635d25d7482e46db69320cd844590740073cf5fdfdd5379c6 1462560 apparmor_2.8.0.orig.tar.gz
+ 4cdb802827108d2eb1c16b4ef006c9abaefae19103f7cc0dadd3bf15543d2a46 152849 apparmor_2.8.0-0ubuntu25.debian.tar.gz
+
 Package: augeas
 Binary: augeas-tools, libaugeas-dev, libaugeas0, augeas-dbg, augeas-lenses, augeas-doc
 Version: 1.1.0-0ubuntu1
@@ -107,33 +148,66 @@ Checksums-Sha256:
  71277db65d0f01dea458df2869e09f60bbc21d9a35e69aa049f6361421729f73 33431 cairo_1.12.16-0ubuntu1.debian.tar.gz
 Testsuite: autopkgtest
 
-Package: click
-Binary: click, click-dev, python3-click, click-doc, packagekit-plugin-click
-Version: 0.3.2
-Priority: optional
-Section: admin
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Build-Depends: debhelper (>= 9~), dh-autoreconf, autopoint (>= 0.18.1), intltool, python3 (>= 3.2), python3-all, python3-setuptools, python3-debian, python3 (>= 3.3) | python3-mock, pep8, pyflakes, python3-sphinx, libglib2.0-dev (>= 2.28), libjson-glib-dev (>= 0.10), libpackagekit-glib2-dev (>= 0.7.2)
+Package: dbus
+Binary: dbus, dbus-x11, libdbus-1-3, dbus-1-doc, libdbus-1-dev, dbus-1-dbg
+Version: 1.6.12-0ubuntu4
+Section: devel
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Build-Depends: automake (>= 1:1.10), autotools-dev, debhelper (>= 9), dh-autoreconf, doxygen, dpkg-dev (>= 1.16.1), libexpat-dev, libdbus-glib-1-dev, libglib2.0-dev (>= 2.31.4), libselinux1-dev [linux-any], libapparmor-dev (>= 2.8.0-0ubuntu25) [linux-any], libsystemd-daemon-dev (>= 32) [linux-any], libsystemd-login-dev (>= 32) [linux-any], libx11-dev, xmlto, xsltproc
 Architecture: any all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/d/dbus
+Files:
+ 86c7be0d86e314a8302a8987a8a2fc79 2680 dbus_1.6.12-0ubuntu4.dsc
+ a70edc50524f258eaf5c9a9994ed8748 1933805 dbus_1.6.12.orig.tar.gz
+ 13390d5d6a4378faa53b99e066225995 60927 dbus_1.6.12-0ubuntu4.debian.tar.gz
+Uploaders: Sjoerd Simons <sjoerd@debian.org>, Sebastian Dröge <slomo@debian.org>, Michael Biebl <biebl@debian.org>, Loic Minier <lool@dooz.org>, Simon McVittie <smcv@debian.org>
+Homepage: http://dbus.freedesktop.org/
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-utopia/dbus.git
+Vcs-Git: git://anonscm.debian.org/pkg-utopia/dbus.git
+Package-List: 
+ dbus deb admin optional
+ dbus-1-dbg deb debug extra
+ dbus-1-doc deb doc optional
+ dbus-x11 deb x11 optional
+ libdbus-1-3 deb libs optional
+ libdbus-1-dev deb libdevel optional
+Checksums-Sha1:
+ be5df71f613cb417687732b35dcdc136fa3958bb 2680 dbus_1.6.12-0ubuntu4.dsc
+ 96f7ae2edb8711fe4fb42718d03fdb00a90416d5 1933805 dbus_1.6.12.orig.tar.gz
+ 6a9524be182c24ad8253437b1bf925b0304cea5a 60927 dbus_1.6.12-0ubuntu4.debian.tar.gz
+Checksums-Sha256:
+ 993d6123d955f9044a32c29a97d809551ac94466e2e0cd204933f89c65f61dd8 2680 dbus_1.6.12-0ubuntu4.dsc
+ f67a7abfd6d045c1e9eba2bba4199d301836bc0c6e8a727c765913aba780ee92 1933805 dbus_1.6.12.orig.tar.gz
+ 217fe04775a1714b968a18856a0814a75aaaf5b0c4a24b53722b90107eff325b 60927 dbus_1.6.12-0ubuntu4.debian.tar.gz
+
+Package: dh-exec
+Binary: dh-exec
+Version: 0.11
+Priority: extra
+Section: devel
+Maintainer: Gergely Nagy <algernon@madhouse-project.org>
+Build-Depends: debhelper (>= 9~), dh-autoreconf, automake (>= 1:1.11), fakeroot, libpipeline-dev, pkg-config, perl
+Architecture: any
 Standards-Version: 3.9.4
 Format: 3.0 (native)
-Directory: pool/main/c/click
+Directory: pool/main/d/dh-exec
 Files:
- 691de18a46c6998347c86a58d020a61e 1955 click_0.3.2.dsc
- ab51171a0f270a45e1b26f437ff7df01 60097 click_0.3.2.tar.gz
-Vcs-Bzr: http://bazaar.launchpad.net/+branch/click
+ e53e6d4db37fe4174ffd844879cb5b0d 1639 dh-exec_0.11.dsc
+ 3233e1e8dac334fc0d1bfc06ca90e498 116462 dh-exec_0.11.tar.gz
+Homepage: https://github.com/algernon/dh-exec
+Vcs-Browser: http://git.madhouse-project.org/debian/dh-exec/
+Vcs-Git: git://git.madhouse-project.org/debian/dh-exec.git
 Package-List: 
- click deb admin optional
- click-dev deb admin optional
- click-doc deb doc optional
- packagekit-plugin-click deb admin optional
- python3-click deb python optional
+ dh-exec deb devel extra
 Checksums-Sha1:
- 468eff672e3540b6a196dd1d01e14a36ff522a80 1955 click_0.3.2.dsc
- 9f0e7b0eee387e75169a7b8cc586275cc35b65fc 60097 click_0.3.2.tar.gz
+ 97263ac7686fe74a5c12002850220a90a3b7d5a6 1639 dh-exec_0.11.dsc
+ 91f18067f3d1e077c665a93963afbc41f97fcb02 116462 dh-exec_0.11.tar.gz
 Checksums-Sha256:
- 11c8861dde78d8e802995cfa4ba2f94c0681d63ac7337e3014e83babebdf8d8f 1955 click_0.3.2.dsc
- 6c5019ea9c7fe5368ec3eea38267e8da34473605316d83550726e75d8192546f 60097 click_0.3.2.tar.gz
+ 5eca837b3f820d1e2bf9b37c99ec6b9ac17daeadfb711c7215cf927781832484 1639 dh-exec_0.11.dsc
+ 2596339b5a825460533035f0e5e2758fd23631c516db32fda1d30ceb45c51486 116462 dh-exec_0.11.tar.gz
 
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
