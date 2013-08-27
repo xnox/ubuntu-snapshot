@@ -45,6 +45,46 @@ Description-md5: 6948801c3d791b1c318acb50a89989c6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: click
+Priority: optional
+Section: admin
+Installed-Size: 80
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Architecture: armhf
+Version: 0.3.2
+Replaces: click-package
+Provides: click-package
+Depends: libc6 (>= 2.4), python3 (>= 3.2), python3-click (>= 0.3.2), python3-click (<< 0.3.2.1), adduser
+Conflicts: click-package
+Filename: pool/main/c/click/click_0.3.2_armhf.deb
+Size: 8358
+MD5sum: 60d6d63d8efe0045b373ca59540937c9
+SHA1: b8ec04a443cb0e318d70cf03f754789a051081fe
+SHA256: 7e66b910318e6714501f8335a82a7f39dc2ed35f4f21a3d3f18204392be4197b
+Description: Click packages
+Description-md5: 1f88be1eec9a52975d22b0103f98879a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: click-dev
+Priority: optional
+Section: admin
+Installed-Size: 72
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Architecture: armhf
+Source: click
+Version: 0.3.2
+Depends: perl, python3-click (= 0.3.2)
+Filename: pool/main/c/click/click-dev_0.3.2_armhf.deb
+Size: 7298
+MD5sum: 8f2f1689ded11e3ac1c34f0aa4e8ef1c
+SHA1: fd23f66735f9b0439a9a39ec74a902efc4d0631e
+SHA256: dd9729c8d53a5881d3d5826ec4e62f887c83d794fd1a7acc4f0a9ce535011527
+Description: build Click packages
+Description-md5: 524a787d5934e296c23fd4c9d590ebf1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: click-doc
 Priority: optional
 Section: doc
@@ -1074,26 +1114,50 @@ Description-md5: 6a061202c9118fa07cacafd938b725f0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: python-cups
+Package: python3-click
 Priority: optional
 Section: python
-Installed-Size: 187
-Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Otavio Salvador <otavio@debian.org>
+Installed-Size: 208
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
 Architecture: armhf
-Version: 1.9.63-0ubuntu1
-Provides: python2.7-cups
-Depends: python (>= 2.7), python (<< 2.8), libc6 (>= 2.4), libcups2 (>= 1.6.0)
-Filename: pool/main/p/python-cups/python-cups_1.9.63-0ubuntu1_armhf.deb
-Size: 56240
-MD5sum: d8cb3d580d34b20ae564afc9d870b7a8
-SHA1: 7b706ba697c83573dc2528303ab5358742a3cd64
-SHA256: ce683e0e71c0416f3c1e33f0b45074665648a83f8d7e741acabc2150558f9843
-Description: Python bindings for CUPS
-Description-md5: af3a80785033dbfaa0c6564ce547d8c7
+Source: click
+Version: 0.3.2
+Replaces: python3-click-package
+Provides: python3-click-package
+Depends: python3 (>= 3.2.3-3~), python3-debian
+Conflicts: python3-click-package
+Filename: pool/main/c/click/python3-click_0.3.2_armhf.deb
+Size: 31866
+MD5sum: 4c10ac9d8eb06e7c863b8af9437a8d77
+SHA1: be92d00a75198bde4ea6265a194d4ddd3c2b2f2e
+SHA256: dc0edbc31ff470d4954c70e623b5d08e29d4b95a0ff9eca676a550fa65cb195b
+Description: Click packages (Python 3 interface)
+Description-md5: a55b8833aad665015cec861ba580ce8a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: python3-speechd
+Priority: extra
+Section: python
+Installed-Size: 182
+Maintainer: Ubuntu Accessibility Developers <ubuntu-accessibility@lists.ubuntu.com>
+Original-Maintainer: Boris Dušek <dusek@brailcom.org>
+Architecture: all
+Source: speech-dispatcher
+Version: 0.7.1-6.1ubuntu3
+Depends: python3 (>= 3.2.3-3~)
+Conflicts: python-speechd
+Filename: pool/main/s/speech-dispatcher/python3-speechd_0.7.1-6.1ubuntu3_all.deb
+Size: 44684
+MD5sum: 4b2b77959a50023d0f585ca6c385e972
+SHA1: 551a4c36496813ee66a40a8e06cda1fc7fb83721
+SHA256: 8bc6e8694adb8d1f27f6b9c9d79221fb2dfc4ceef91ed954d2c3c530194382d2
+Description: Python interface to Speech Dispatcher
+Homepage: http://devel.freebsoft.org/speechd
+Description-md5: 9d12b4fec6bb06a0d001bfbfcab51d5b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: usb-modeswitch-data
 Priority: extra
