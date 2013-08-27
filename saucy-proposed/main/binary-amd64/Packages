@@ -712,6 +712,87 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: libparted0-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 1132
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: parted
+Version: 2.3-15
+Replaces: libparted-dev, libparted2-dev (<< 2.2)
+Provides: libparted-dev
+Depends: libc6-dev, libparted0debian1 (= 2.3-15), libdevmapper-dev (>= 1.02.33), uuid-dev, libblkid-dev
+Suggests: parted (= 2.3-15), parted-doc
+Conflicts: libparted-dev, parted (<< 1.2.11)
+Filename: pool/main/p/parted/libparted0-dev_2.3-15_amd64.deb
+Size: 324236
+MD5sum: 0a5da3156b4a2aef73edf9dc849c6097
+SHA1: 247ae6ec2c5cd83d0765c1bcee366a00ef385577
+SHA256: b859a6e9443f4a4caf259ebf983004ec023621e85bdda4245d3962a6526c194e
+Description: disk partition manipulator - development files
+Homepage: http://www.gnu.org/software/parted
+Description-md5: d9820491205202cf089e9bf9709d4f3e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libparted0debian1
+Priority: standard
+Section: libs
+Installed-Size: 570
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: parted
+Version: 2.3-15
+Replaces: libparted0 (<< 2.2-4), libparted1 (<< 2.2), libparted1.4 (<< 1.4.24-2), libparted2 (<< 2.2)
+Provides: libparted
+Depends: libblkid1 (>= 2.17.2), libc6 (>= 2.14), libdevmapper1.02.1 (>= 2:1.02.36), libuuid1 (>= 2.16)
+Pre-Depends: multiarch-support
+Suggests: parted | nparted, libparted0-dev, libparted0-i18n (= 2.3-15)
+Conflicts: libparted1 (<< 2.2), libparted2 (<< 2.2), parted (<< 1.4.13+14pre1)
+Breaks: python-parted (<< 3.6-5)
+Filename: pool/main/p/parted/libparted0debian1_2.3-15_amd64.deb
+Size: 240998
+MD5sum: 8dbb5c6da2ac21909df17946c04d46e3
+SHA1: 69a9c257018fcaa4840fc8d403fa55ce4c6a70ba
+SHA256: 922b7d06e62bada6dcc81f46535d2be5300e6de8ec09c5b864e94e4a559f6bd6
+Description: disk partition manipulator - shared library
+Multi-Arch: same
+Homepage: http://www.gnu.org/software/parted
+Description-md5: 8351c24350acd1cda567a096a68bf6b7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-live
+
+Package: libparted0debian1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 4672
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: parted
+Version: 2.3-15
+Replaces: libparted-dbg, libparted0-dbg (<< 2.2-4)
+Provides: libparted-dbg
+Depends: libparted0debian1 (= 2.3-15), libparted0-dev (= 2.3-15)
+Conflicts: libparted-dbg
+Filename: pool/main/p/parted/libparted0debian1-dbg_2.3-15_amd64.deb
+Size: 1296354
+MD5sum: 72df5749618635d19a7823a8f944e561
+SHA1: bfcc93b56a81080fee35fd08e2321d1013b661b6
+SHA256: d6e15eb159fe9bea7c4eb5ae127637f988c346a2788abcd3cf96f55279419070
+Description: disk partition manipulator - debugging symbols
+Homepage: http://www.gnu.org/software/parted
+Description-md5: ded6d8d64355819831123a2a24db1821
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libplatform-api-headers
 Priority: optional
 Section: libdevel
@@ -1279,6 +1360,31 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: parted
+Priority: standard
+Section: admin
+Installed-Size: 183
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Version: 2.3-15
+Replaces: fsresize, parted1.6
+Depends: libc6 (>= 2.11), libparted0debian1 (>= 2.2-1), libreadline6 (>= 6.0), libtinfo5
+Suggests: parted-doc
+Conflicts: fsresize, parted1.6
+Filename: pool/main/p/parted/parted_2.3-15_amd64.deb
+Size: 52402
+MD5sum: d47e9328654016ce1d0f052db489374d
+SHA1: fb652409a47eb57b5e3e019264fd8437a9be19bf
+SHA256: 7ffda9ac2a0b9769a8e8c69515b2e3d02171d9a31c0e62905e0dfe4412acc397
+Description: disk partition manipulator
+Homepage: http://www.gnu.org/software/parted
+Description-md5: 0672c048225946ff0705e0cecd54cf5d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active
 
 Package: parted-doc
 Priority: optional
