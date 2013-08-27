@@ -107,6 +107,34 @@ Checksums-Sha256:
  71277db65d0f01dea458df2869e09f60bbc21d9a35e69aa049f6361421729f73 33431 cairo_1.12.16-0ubuntu1.debian.tar.gz
 Testsuite: autopkgtest
 
+Package: click
+Binary: click, click-dev, python3-click, click-doc, packagekit-plugin-click
+Version: 0.3.2
+Priority: optional
+Section: admin
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Build-Depends: debhelper (>= 9~), dh-autoreconf, autopoint (>= 0.18.1), intltool, python3 (>= 3.2), python3-all, python3-setuptools, python3-debian, python3 (>= 3.3) | python3-mock, pep8, pyflakes, python3-sphinx, libglib2.0-dev (>= 2.28), libjson-glib-dev (>= 0.10), libpackagekit-glib2-dev (>= 0.7.2)
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/c/click
+Files:
+ 691de18a46c6998347c86a58d020a61e 1955 click_0.3.2.dsc
+ ab51171a0f270a45e1b26f437ff7df01 60097 click_0.3.2.tar.gz
+Vcs-Bzr: http://bazaar.launchpad.net/+branch/click
+Package-List: 
+ click deb admin optional
+ click-dev deb admin optional
+ click-doc deb doc optional
+ packagekit-plugin-click deb admin optional
+ python3-click deb python optional
+Checksums-Sha1:
+ 468eff672e3540b6a196dd1d01e14a36ff522a80 1955 click_0.3.2.dsc
+ 9f0e7b0eee387e75169a7b8cc586275cc35b65fc 60097 click_0.3.2.tar.gz
+Checksums-Sha256:
+ 11c8861dde78d8e802995cfa4ba2f94c0681d63ac7337e3014e83babebdf8d8f 1955 click_0.3.2.dsc
+ 6c5019ea9c7fe5368ec3eea38267e8da34473605316d83550726e75d8192546f 60097 click_0.3.2.tar.gz
+
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
 Version: 0.10.1-2
@@ -462,37 +490,6 @@ Checksums-Sha256:
  fc1710854d26d527087dbbefb110193650d9aae1876f90cb64b8d5c0a8dd95a4 390454 libnetfilter-conntrack_1.0.3.orig.tar.bz2
  adc65b532bdf665b1f235e3ce9d2731c4d4607aec874e4ed226c828d47c969b0 2694 libnetfilter-conntrack_1.0.3-1.debian.tar.gz
 
-Package: libtest-simple-perl
-Binary: libtest-simple-perl
-Version: 0.98-2
-Priority: optional
-Section: perl
-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: perl, libtest-pod-coverage-perl, libtest-pod-perl
-Architecture: all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/main/libt/libtest-simple-perl
-Files:
- 9a0a4d40c99a3ef5cca35511550a7a50 2224 libtest-simple-perl_0.98-2.dsc
- a8b26c97440269b33dd79fd847c521d8 107255 libtest-simple-perl_0.98.orig.tar.gz
- d98ad7f88016f8eb4e1265f58a289c16 5388 libtest-simple-perl_0.98-2.debian.tar.gz
-Uploaders: Damyan Ivanov <dmn@debian.org>, Jonathan Yu <jawnsy@cpan.org>, gregor herrmann <gregoa@debian.org>, Salvatore Bonaccorso <carnil@debian.org>
-Homepage: https://metacpan.org/release/Test-Simple/
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-perl/packages/libtest-simple-perl.git
-Vcs-Git: git://anonscm.debian.org/pkg-perl/packages/libtest-simple-perl.git
-Package-List: 
- libtest-simple-perl deb perl optional
-Checksums-Sha1:
- 63e9c9ff39dee1c730c079a016337fa2f60caef0 2224 libtest-simple-perl_0.98-2.dsc
- 792fc70083905bab7fa443dc379ffb1f0998f068 107255 libtest-simple-perl_0.98.orig.tar.gz
- af99fcf9d782666ccb76685003047e95648c9206 5388 libtest-simple-perl_0.98-2.debian.tar.gz
-Checksums-Sha256:
- 3268a34f92be13e7e3c8830f0153b2ae7658cd69a27a3a89da81e9386427c0c9 2224 libtest-simple-perl_0.98-2.dsc
- 2fb203e2cb75e72c6f70af71c6b01998f2c0ec2afba6c38cc5053c6107cd12a8 107255 libtest-simple-perl_0.98.orig.tar.gz
- a787a80cf866e4e58162323ad1fbbb44f436edf41fff8b576975cfbe19a46475 5388 libtest-simple-perl_0.98-2.debian.tar.gz
-
 Package: libunwind
 Binary: libunwind8-dev, libunwind8, libunwind8-dbg, libunwind-setjmp0-dev, libunwind-setjmp0, libunwind-setjmp0-dbg
 Version: 1.1-2ubuntu1
@@ -639,7 +636,7 @@ Testsuite: autopkgtest
 
 Package: platform-api
 Binary: libplatform-api-headers, libplatform-hardware-api-headers, libplatform-api1-dev, libubuntu-application-api-mirserver1, libubuntu-application-api-mirclient1, libplatform-hardware-api1-dev, libplatform-api1-doc, libubuntu-platform-hardware-api1, libubuntu-application-api1, libplatform-api1-hybris-tests, libubuntu-platform-api1-dev, libplatform-api1-hybris, libplatform-hardware-api1-hybris
-Version: 0.18.3+13.10.20130827-0ubuntu1
+Version: 0.18.3+13.10.20130827.1-0ubuntu1
 Priority: optional
 Section: devel
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -649,9 +646,9 @@ Standards-Version: 3.9.4
 Format: 1.0
 Directory: pool/main/p/platform-api
 Files:
- e20ffedbc7d2fbd9c08ab5d8ca2bc715 3171 platform-api_0.18.3+13.10.20130827-0ubuntu1.dsc
- 5251e33d27a893040529389bf4c7d2c8 161191 platform-api_0.18.3+13.10.20130827.orig.tar.gz
- 57b3bc75234106ab5bfc27a455b2f24d 9939 platform-api_0.18.3+13.10.20130827-0ubuntu1.diff.gz
+ c3356cb1fc45261367daede8f9e9b1d8 3185 platform-api_0.18.3+13.10.20130827.1-0ubuntu1.dsc
+ 122f0ccf9bdb2204621944c51bdafab6 161284 platform-api_0.18.3+13.10.20130827.1.orig.tar.gz
+ e4f475687d00c252813676ec9eecaadc 9981 platform-api_0.18.3+13.10.20130827.1-0ubuntu1.diff.gz
 Homepage: https://launchpad.net/platform-api
 Vcs-Browser: https://code.launchpad.net/platform-api
 Vcs-Bzr: lp:platform-api
@@ -670,13 +667,13 @@ Package-List:
  libubuntu-platform-api1-dev deb oldlibs optional
  libubuntu-platform-hardware-api1 deb libs optional
 Checksums-Sha1:
- 3e380b2f8d117366f95c91da13a551275bdfe14d 3171 platform-api_0.18.3+13.10.20130827-0ubuntu1.dsc
- fabdafa32de00674d3472afb6ef825354cae84d9 161191 platform-api_0.18.3+13.10.20130827.orig.tar.gz
- 141c956fd08a2ffc91427317a1f55be4ede6de40 9939 platform-api_0.18.3+13.10.20130827-0ubuntu1.diff.gz
+ 1354a0dd46228657ae698daaba41a96d4b6c0a28 3185 platform-api_0.18.3+13.10.20130827.1-0ubuntu1.dsc
+ aabc11b020783f6cec5f8cce4e4eb5b6c29c83c6 161284 platform-api_0.18.3+13.10.20130827.1.orig.tar.gz
+ c68deb6ff8d0442f52b084c6c197be48b27072ce 9981 platform-api_0.18.3+13.10.20130827.1-0ubuntu1.diff.gz
 Checksums-Sha256:
- d92eed5e8254fc75d3f1c334d0ffa1bac95c7dee460051b4c8310a5eeff9b46c 3171 platform-api_0.18.3+13.10.20130827-0ubuntu1.dsc
- 8117611130710c824c8cc820fb40677e5bad1e8dc6bc6f2a3a989baae69152d5 161191 platform-api_0.18.3+13.10.20130827.orig.tar.gz
- 45f3851c609d19aee1554f215d5893cafcb80b3345587ae97906cd5b7416ef4b 9939 platform-api_0.18.3+13.10.20130827-0ubuntu1.diff.gz
+ 4ca986f912ffbb6969518f9ac54d258e3c904182eff0c4e90ac0a2f2f6cbe9dc 3185 platform-api_0.18.3+13.10.20130827.1-0ubuntu1.dsc
+ 4feeba919e17b191a0bb3c479bbed7aeef6e92ece43df1983f8127b74934851a 161284 platform-api_0.18.3+13.10.20130827.1.orig.tar.gz
+ ddb745e995db7de72e7e66394054ea1eb835b3326a297fffcead84371428dad3 9981 platform-api_0.18.3+13.10.20130827.1-0ubuntu1.diff.gz
 
 Package: python-cups
 Binary: python-cups, python3-cups
@@ -739,36 +736,6 @@ Checksums-Sha256:
  8d759a6a3e50f0c12c07e555bcdafa10f7c74a2008af13a67dd640bf86108a88 2081 qtwebkit-source_2.3.2-0ubuntu1.dsc
  858d0d7b073c8c3b3d77ab344b5c67faf80041e30d2f9a91d259f92224906397 51649959 qtwebkit-source_2.3.2.orig.tar.gz
  0f95e06b3eb802e3f7df23e9f013bcbdda547173f2c984f04a39d68f29177d53 80539 qtwebkit-source_2.3.2-0ubuntu1.debian.tar.gz
-
-Package: system-config-printer
-Binary: system-config-printer-common, system-config-printer-udev, system-config-printer-gnome, python-cupshelpers
-Version: 1.4.1-0ubuntu1
-Priority: optional
-Section: python
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Otavio Salvador <otavio@ossystems.com.br>
-Build-Depends: cdbs (>= 0.4.43), debhelper (>= 5.0.37.2), dh-autoreconf, python-all-dev (>= 2.3.5-11), libxml-parser-perl, desktop-file-utils (>= 0.18-0ubuntu7), xmlto, libusb-1.0-0-dev, libudev-dev, libcups2-dev, libglib2.0-dev
-Architecture: any all
-Standards-Version: 3.7.2
-Format: 1.0
-Directory: pool/main/s/system-config-printer
-Files:
- 2541fcd63348e15fc60248812af0e4d3 1663 system-config-printer_1.4.1-0ubuntu1.dsc
- 876d2e44a2a0062ead46febd62327976 1924074 system-config-printer_1.4.1.orig.tar.gz
- 18906590ece703bb07eefaec9140209c 57543 system-config-printer_1.4.1-0ubuntu1.diff.gz
-Package-List: 
- python-cupshelpers deb gnome optional
- system-config-printer-common deb gnome optional
- system-config-printer-gnome deb gnome optional
- system-config-printer-udev deb gnome optional
-Checksums-Sha1:
- 06d3e6ad2b7ff977d83660d220d48e05327e7825 1663 system-config-printer_1.4.1-0ubuntu1.dsc
- 4cf22395945f2fc8cb0c452d4b3994046dca1d13 1924074 system-config-printer_1.4.1.orig.tar.gz
- 734ebfb94f0a3ad0a166dcd48fdbaf44fd0d7ed3 57543 system-config-printer_1.4.1-0ubuntu1.diff.gz
-Checksums-Sha256:
- 569240d7d4a71fcd3d70ff921d78886ba58116ebf2cacedfd1a05306e254349b 1663 system-config-printer_1.4.1-0ubuntu1.dsc
- ba18317fe480dd23fa21b4d81507486b1e9cbcc51557a8e16a90f2b0237c6fd7 1924074 system-config-printer_1.4.1.orig.tar.gz
- 541ee08ad56a226a92084b8fe1c14b57a85a51e86cd62bb44be9020cc886cdf2 57543 system-config-printer_1.4.1-0ubuntu1.diff.gz
 
 Package: usb-modeswitch-data
 Binary: usb-modeswitch-data
