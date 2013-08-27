@@ -1,3 +1,25 @@
+Package: alien
+Priority: optional
+Section: admin
+Installed-Size: 209
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Joey Hess <joeyh@debian.org>
+Architecture: all
+Version: 8.89
+Depends: debhelper (>= 7), perl, rpm (>= 2.4.4-2), dpkg-dev, make, cpio, rpm2cpio
+Suggests: patch, bzip2, lsb-rpm, lintian, lzma
+Filename: pool/main/a/alien/alien_8.89_all.deb
+Size: 57276
+MD5sum: 34a263d39717ea97c34caa4a2dd91429
+SHA1: 16eaa0574615038887e5e6b4ae7c67684f263c00
+SHA256: 91696474cb0de16b4c6c07fd3312ae2aeabc9d03399f4bc1b4393e0ff90cd141
+Description: convert and install rpm and other packages
+Homepage: http://kitenet.net/~joey/code/alien/
+Description-md5: 250884c1c7113f08b8c335ac3cf22206
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: bzr
 Priority: optional
 Section: devel
@@ -47,25 +69,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: debian-installer
-Priority: optional
-Section: devel
-Installed-Size: 1313
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: amd64
-Version: 20101020ubuntu260
-Filename: pool/main/d/debian-installer/debian-installer_20101020ubuntu260_amd64.deb
-Size: 653282
-MD5sum: 3cf6ef1bfeaad0d74805b6f2680307de
-SHA1: 871facf4453cab09f9636d72e76fecddcede42dd
-SHA256: 35a3879e1666e8aed4476ddd5752ce7c5a2d022c53afff1acdca785839c4c832
-Description: Debian installer
-Description-md5: 4971db8ed5ee1de169a33701c5a72c9c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -111,30 +114,304 @@ Description-md5: f14d9112796808986e9cae4624933403
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
-Package: gir1.2-networkmanager-1.0
+Package: grub-common
 Priority: optional
-Section: libs
-Installed-Size: 255
-Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Section: admin
+Installed-Size: 5492
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
 Architecture: amd64
-Source: network-manager
-Version: 0.9.8.0-0ubuntu19
-Depends: gir1.2-freedesktop, gir1.2-glib-2.0, libnm-glib4 (>= 0.9.8.0), libnm-util2 (>= 0.9.8.0)
-Filename: pool/main/n/network-manager/gir1.2-networkmanager-1.0_0.9.8.0-0ubuntu19_amd64.deb
-Size: 47514
-MD5sum: 5f687b79c0afedaab2db40d1e52b14c7
-SHA1: ec2a8a5d75a4a1c435e297e31d977e286daf9453
-SHA256: 8195bb7fc26ea93b3044fd4b0259467f74ddac7e8ccdeff99b4aacc165294c68
-Description: GObject introspection data for NetworkManager
-Homepage: http://www.gnome.org/projects/NetworkManager/
-Description-md5: 1a7cb995cf66551c57433bbaf46aee25
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub-coreboot (<< 2.00-4), grub-efi (<< 1.99-1), grub-efi-amd64 (<< 2.00-4), grub-efi-ia32 (<< 2.00-4), grub-efi-ia64 (<< 2.00-4), grub-ieee1275 (<< 2.00-4), grub-linuxbios (<< 1.96+20080831-1), grub-pc (<< 2.00-4), grub-yeeloong (<< 2.00-4)
+Depends: libc6 (>= 2.8), libdevmapper1.02.1 (>= 2:1.02.36), libfreetype6 (>= 2.2.1), libfuse2 (>= 2.8.1), liblzma5 (>= 5.1.1alpha+20120614), gettext-base, lsb-base (>= 3.0-6)
+Recommends: os-prober (>= 1.33)
+Suggests: multiboot-doc, grub-emu, xorriso (>= 0.5.6.pl00), desktop-base (>= 4.0.6), console-setup
+Conflicts: mdadm (<< 2.6.7-2)
+Breaks: apport (<< 2.1.1), friendly-recovery (<< 0.2.13), lupin-support (<< 0.30)
+Filename: pool/main/g/grub2/grub-common_2.00-18ubuntu1_amd64.deb
+Size: 1264602
+MD5sum: 2e9817fa88dfca51f964bb8d5570b610
+SHA1: af21a592b004a5b87a467d630e48fdf4a4648051
+SHA256: 9c65dbdc607c5b45c097889e1a2d87239ae88360e0df748e39ac407d5bdff1df
+Description: GRand Unified Bootloader (common files)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 6e1c01c5245ffb9578aee58ee944229b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-dvd-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: grub-efi
+Priority: extra
+Section: admin
+Installed-Size: 32
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: grub2
+Version: 2.00-18ubuntu1
+Depends: grub-common, grub-efi-amd64 (= 2.00-18ubuntu1)
+Filename: pool/main/g/grub2/grub-efi_2.00-18ubuntu1_amd64.deb
+Size: 2556
+MD5sum: f3189070d1fcd15c0946e08b139f802c
+SHA1: 57021435497696bd751b0677223c3315749939fb
+SHA256: f3b75f0304cf62ed14869d66a2d0fc8d9e2bf563871fbacc8518336d826f0d27
+Description: GRand Unified Bootloader, version 2 (dummy package)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: ab0258bbb994f6742ad233346c11cf50
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-efi-amd64
+Priority: extra
+Section: admin
+Installed-Size: 185
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub, grub-common (<= 1.97~beta2-1), grub-coreboot, grub-efi-ia32, grub-ieee1275, grub-legacy, grub-pc, grub2 (<< 2.00-18ubuntu1)
+Depends: debconf (>= 0.5) | debconf-2.0, grub-common, grub2-common (= 2.00-18ubuntu1), grub-efi-amd64-bin (= 2.00-18ubuntu1), ucf
+Conflicts: grub, grub-coreboot, grub-efi-ia32, grub-ieee1275, grub-legacy, grub-pc
+Filename: pool/main/g/grub2/grub-efi-amd64_2.00-18ubuntu1_amd64.deb
+Size: 44838
+MD5sum: d824f3b2134ac5deed501f32b07e488d
+SHA1: 18ff0ab0229e0a80ee39a7c9666dea2d5e40433a
+SHA256: be77cec9d265b194c171686951d5720f05a8c95f2e4e16876e23557d524be6a3
+Description: GRand Unified Bootloader, version 2 (EFI-AMD64 version)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 1ec69fc2c3202308968b8f3288b1500c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-efi-amd64-bin
+Priority: extra
+Section: admin
+Installed-Size: 2161
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub-common (<= 1.97~beta2-1), grub-efi-amd64 (<< 1.99-1), grub2 (<< 2.00-18ubuntu1)
+Depends: grub-common (= 2.00-18ubuntu1), efibootmgr
+Filename: pool/main/g/grub2/grub-efi-amd64-bin_2.00-18ubuntu1_amd64.deb
+Size: 548804
+MD5sum: bfa4c28ec97a9f84fa9ecbabf17cfcc3
+SHA1: 8545d86d5d8c831edf6648ec844383a447448959
+SHA256: 5cab5c441c18fd6fb22ddccf53af0daa6629c979bbb02cf7482bea74fb789db4
+Description: GRand Unified Bootloader, version 2 (EFI-AMD64 binaries)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 598ec5b1a14f26c488bd7d7079c3e538
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-efi-amd64-dbg
+Priority: extra
+Section: debug
+Installed-Size: 13170
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: grub2
+Version: 2.00-18ubuntu1
+Depends: grub-common (= 2.00-18ubuntu1), grub-efi-amd64-bin (= 2.00-18ubuntu1)
+Filename: pool/main/g/grub2/grub-efi-amd64-dbg_2.00-18ubuntu1_amd64.deb
+Size: 2347192
+MD5sum: fb884d495e0ad5fa332081f6b3edd067
+SHA1: 4a19bb8c2588b2faddc63526e64b9342df680dd8
+SHA256: c61c6e4e82962604e6e1ee6e44742024c9a5c45afb59e323f98dd46ad1bd5d99
+Description: GRand Unified Bootloader, version 2 (EFI-AMD64 debug files)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 01a50868394847340399eb4743e46af0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-efi-ia32
+Priority: extra
+Section: admin
+Installed-Size: 185
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub, grub-common (<= 1.97~beta2-1), grub-coreboot, grub-efi, grub-efi-amd64, grub-ieee1275, grub-legacy, grub-pc, grub2 (<< 2.00-18ubuntu1)
+Depends: debconf (>= 0.5) | debconf-2.0, grub-common, grub2-common (= 2.00-18ubuntu1), grub-efi-ia32-bin (= 2.00-18ubuntu1), ucf
+Conflicts: grub (<< 0.97-54), grub-coreboot, grub-efi-amd64, grub-ieee1275, grub-legacy, grub-pc
+Filename: pool/main/g/grub2/grub-efi-ia32_2.00-18ubuntu1_amd64.deb
+Size: 44850
+MD5sum: d1f5db618e22336f066b7d6e8c694a7e
+SHA1: 8793ca7e8a12a91aa85f611b6a1048989e370156
+SHA256: 9ed78b5d4551f0e49a70600a157abd87ad62a55e17cfd78cb27fa5c68c0aab2e
+Description: GRand Unified Bootloader, version 2 (EFI-IA32 version)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 0b211963be056bf8e983c31763cd0a45
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-efi-ia32-bin
+Priority: extra
+Section: admin
+Installed-Size: 1558
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub-common (<= 1.97~beta2-1), grub-efi, grub-efi-ia32 (<< 1.99-1), grub2 (<< 2.00-18ubuntu1)
+Depends: grub-common (= 2.00-18ubuntu1), efibootmgr
+Filename: pool/main/g/grub2/grub-efi-ia32-bin_2.00-18ubuntu1_amd64.deb
+Size: 532138
+MD5sum: 4fc6428ace71cdf35e6ff4cca4f2dd84
+SHA1: 48e8400a22b336e8bde4c552e6846e13628f22c7
+SHA256: e143ad12726dece7bfd32aed7f233d555419114b09161542712194067a9516d8
+Description: GRand Unified Bootloader, version 2 (EFI-IA32 binaries)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 9f83262e22d6097ee9567fff6e1de4bb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-efi-ia32-dbg
+Priority: extra
+Section: debug
+Installed-Size: 8729
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: grub2
+Version: 2.00-18ubuntu1
+Depends: grub-common (= 2.00-18ubuntu1), grub-efi-ia32-bin (= 2.00-18ubuntu1)
+Filename: pool/main/g/grub2/grub-efi-ia32-dbg_2.00-18ubuntu1_amd64.deb
+Size: 2266152
+MD5sum: 656550c0968c7d78bf96bf4e78b41a07
+SHA1: 038d0847bf198fb33c9fad425988c2712b4a2445
+SHA256: a437c5595ac3b3c5f8b1bba9b18eb1bfe505535e1b19126a77c46a050a57bdfe
+Description: GRand Unified Bootloader, version 2 (EFI-IA32 debug files)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 985cf475352ed91c8a577b3365c0062f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub-pc
+Priority: optional
+Section: admin
+Installed-Size: 552
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub, grub-common (<= 1.97~beta2-1), grub-coreboot, grub-efi-amd64, grub-efi-ia32, grub-ieee1275, grub-legacy, grub2 (<< 2.00-18ubuntu1)
+Depends: debconf (>= 0.5) | debconf-2.0, grub-common, grub2-common (= 2.00-18ubuntu1), grub-pc-bin (= 2.00-18ubuntu1), ucf, grub-gfxpayload-lists
+Conflicts: grub (<< 0.97-54), grub-coreboot, grub-efi-amd64, grub-efi-ia32, grub-ieee1275, grub-legacy
+Filename: pool/main/g/grub2/grub-pc_2.00-18ubuntu1_amd64.deb
+Size: 173030
+MD5sum: 1218181b01fb71be06ca214cf37270ec
+SHA1: 986c8cf4f9d77a8a00915a20a7175e314888bf7f
+SHA256: 0620181cf3c08423d22d6cd5dd3d195f4f270a5293b71cdf6e700f1312b731b5
+Description: GRand Unified Bootloader, version 2 (PC/BIOS version)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 7cb7fdca20b02381c6123a250be96bab
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-dvd-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: grub-pc-bin
+Priority: optional
+Section: admin
+Installed-Size: 2454
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub-common (<= 1.97~beta2-1), grub-pc (<< 1.99-1), grub2 (<< 2.00-18ubuntu1)
+Depends: libc6 (>= 2.14), libdevmapper1.02.1 (>= 2:1.02.36), grub-common (= 2.00-18ubuntu1)
+Suggests: desktop-base (>= 4.0.6)
+Filename: pool/main/g/grub2/grub-pc-bin_2.00-18ubuntu1_amd64.deb
+Size: 804804
+MD5sum: 67222a2ef8a9696e851097ae70a3693c
+SHA1: f8019e8074963fcc3cddddfdff847c3cc87af18d
+SHA256: 9d328b68e1849b7a4f11fb3fd9cb526f1fb81a52a9595216fbf71de5f19ac87a
+Description: GRand Unified Bootloader, version 2 (PC/BIOS binaries)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: d3fd4372607d45553d46ed1fecfb4f99
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-dvd-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: grub-pc-dbg
+Priority: extra
+Section: debug
+Installed-Size: 9244
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: grub2
+Version: 2.00-18ubuntu1
+Depends: grub-common (= 2.00-18ubuntu1), grub-pc-bin (= 2.00-18ubuntu1)
+Filename: pool/main/g/grub2/grub-pc-dbg_2.00-18ubuntu1_amd64.deb
+Size: 2374882
+MD5sum: 3bd4cd0d4a371b3e8f0ca5b9a156f7f6
+SHA1: 36db7349f0d16a26d252696446f55b59694236d1
+SHA256: fade05662c4ed5740824f5d161630d3ff7aee4a2ac3769c1223005e1f294af83
+Description: GRand Unified Bootloader, version 2 (PC/BIOS debug files)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 7c0972b8a14a3f1091b6056556730eb4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: grub2-common
+Priority: optional
+Section: admin
+Installed-Size: 198
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: grub2
+Version: 2.00-18ubuntu1
+Replaces: grub, grub-common (<< 1.99-1), grub-coreboot (<< 2.00-4), grub-efi (<< 1.99-1), grub-efi-amd64 (<< 2.00-4), grub-efi-ia32 (<< 2.00-4), grub-efi-ia64 (<< 2.00-4), grub-ieee1275 (<< 2.00-4), grub-legacy, grub-linuxbios (<< 1.99-1), grub-pc (<< 2.00-4), grub-yeeloong (<< 2.00-4)
+Depends: grub-common (= 2.00-18ubuntu1), dpkg (>= 1.15.4) | install-info
+Conflicts: grub (<< 0.97-54), grub-doc (<< 0.97-29ubuntu60), grub-legacy, grub-legacy-doc (<< 0.97-29ubuntu60)
+Filename: pool/main/g/grub2/grub2-common_2.00-18ubuntu1_amd64.deb
+Size: 116592
+MD5sum: 50c87c23f7020cd3afafa57dd03c114d
+SHA1: 87f386c679d6823aa264daed4a85d33cf4579d41
+SHA256: f85d9ac6d56fe7eb3e635177a495cf5fe6360d530e5174aaf068a3db8c36fcd4
+Description: GRand Unified Bootloader (common files for version 2)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: a969e6536e745e177a340b30bdb5ba3f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-dvd-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
@@ -155,6 +432,251 @@ Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libasound2
+Priority: optional
+Section: libs
+Installed-Size: 1162
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: alsa-lib
+Version: 1.0.27.2-1ubuntu2
+Depends: libc6 (>= 2.16), libasound2-data (>= 1.0.27.2-1ubuntu2)
+Pre-Depends: multiarch-support
+Suggests: libasound2-plugins (>= 1.0.24)
+Breaks: bluez-alsa (<= 4.94-2), libasound2-plugin-equal (<= 0.6-1), libasound2-plugins (<< 1.0.24)
+Filename: pool/main/a/alsa-lib/libasound2_1.0.27.2-1ubuntu2_amd64.deb
+Size: 415410
+MD5sum: e9d9c38511e281954aff35f76364956b
+SHA1: c97b8dbcd5b50599724c5987a1191af82fb40775
+SHA256: 0cfd6a80ef69ea18c0143ca5f586aab3d73d002a4bd4993f51807f6a22bbdf09
+Description: shared library for ALSA applications
+Multi-Arch: same
+Homepage: http://www.alsa-project.org/
+Description-md5: f80c24ce80b76f9116fc6c7d1a8aa34b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: virt-host, ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libasound2-data
+Priority: optional
+Section: libs
+Installed-Size: 331
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+Architecture: all
+Source: alsa-lib
+Version: 1.0.27.2-1ubuntu2
+Replaces: libasound2 (<< 1.0.27-4)
+Suggests: alsa-utils
+Breaks: libasound2 (<< 1.0.27-4)
+Filename: pool/main/a/alsa-lib/libasound2-data_1.0.27.2-1ubuntu2_all.deb
+Size: 31620
+MD5sum: 6b7dd8d86652e2568488488cf0c1af47
+SHA1: 371510accf276099ad014aaafee072f25a7c1dab
+SHA256: 59952824e710ab5d1c6e53ba30a748f042bc40cbef52ac5288af6a8638ec3e73
+Description: Configuration files and profiles for ALSA drivers
+Multi-Arch: foreign
+Homepage: http://www.alsa-project.org/
+Description-md5: ccfa849033bc48b7ca28261b57c3eba7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: virt-host, ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libasound2-dbg
+Priority: extra
+Section: debug
+Installed-Size: 1384
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: alsa-lib
+Version: 1.0.27.2-1ubuntu2
+Depends: libasound2 (= 1.0.27.2-1ubuntu2)
+Filename: pool/main/a/alsa-lib/libasound2-dbg_1.0.27.2-1ubuntu2_amd64.deb
+Size: 1104194
+MD5sum: b83565aafa1d763d5d904ccc138bd010
+SHA1: 6eeed120e22334dc449324624d8463167fc19241
+SHA256: b8c8166bea18ffd2a991c0fb2de028a1e27581e014dcad512e3cd77273276151
+Description: debugging symbols for libasound2
+Multi-Arch: same
+Homepage: http://www.alsa-project.org/
+Description-md5: 232fcf589d65c42d570a335193dc6cfd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libasound2-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 467
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: alsa-lib
+Version: 1.0.27.2-1ubuntu2
+Provides: libasound-dev
+Depends: libasound2 (= 1.0.27.2-1ubuntu2)
+Suggests: libasound2-doc
+Filename: pool/main/a/alsa-lib/libasound2-dev_1.0.27.2-1ubuntu2_amd64.deb
+Size: 72410
+MD5sum: 8fb30225f1264bff16d2a4047bfeb1bf
+SHA1: c56c568178b5a4d31e4f195d18f446208e126b8f
+SHA256: db06aa590c0baa90e2c37d5d8cd785736779f94d479eabb3fc1d2ee229f04ca3
+Description: shared library for ALSA applications -- development files
+Multi-Arch: same
+Homepage: http://www.alsa-project.org/
+Description-md5: 6049c8294e480247b4c02744f09d51fe
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libasound2-doc
+Priority: optional
+Section: libdevel
+Installed-Size: 12144
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ALSA Maintainers <pkg-alsa-devel@lists.alioth.debian.org>
+Architecture: all
+Source: alsa-lib
+Version: 1.0.27.2-1ubuntu2
+Depends: libjs-jquery
+Suggests: libasound2-dev
+Filename: pool/main/a/alsa-lib/libasound2-doc_1.0.27.2-1ubuntu2_all.deb
+Size: 1470162
+MD5sum: c8e9143fcfc81cdc857a1b154e8a7d14
+SHA1: de6ae61fe2af23a3a1ee4ff4462d9decf013c87d
+SHA256: a7200f273037371982e5d3b742dedd798ada725ae436bfc6cd591f1f636a181f
+Description: documentation for user-space ALSA application programming
+Homepage: http://www.alsa-project.org/
+Description-md5: 73dfd0644e1f116cf7c39ae3f4f19a1f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libatk-adaptor
+Priority: optional
+Section: misc
+Installed-Size: 71
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
+Architecture: amd64
+Source: at-spi2-atk
+Version: 2.9.90-0ubuntu1
+Replaces: at-spi
+Provides: at-spi
+Depends: libatk-bridge2.0-0 (>= 2.5.3), libc6 (>= 2.2.5), libglib2.0-0 (>= 2.12.0)
+Conflicts: at-spi
+Filename: pool/main/a/at-spi2-atk/libatk-adaptor_2.9.90-0ubuntu1_amd64.deb
+Size: 10378
+MD5sum: a12ff91e4f72c4fc3e7dd6d57b721400
+SHA1: 128e32a1f4c04c3c3dbd0af01013115339a55449
+SHA256: 6bd2d5676bcc553c67e7a5e41df4aaa378667a626ae2058ebc716aacf8e646e9
+Description: AT-SPI 2 toolkit bridge
+Multi-Arch: same
+Homepage: http://live.gnome.org/Accessibility
+Description-md5: 555ac72f9da0fe143c3859b4404b33e1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libatk-adaptor-dbg
+Priority: extra
+Section: debug
+Installed-Size: 56
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
+Architecture: amd64
+Source: at-spi2-atk
+Version: 2.9.90-0ubuntu1
+Depends: libatk-adaptor (= 2.9.90-0ubuntu1)
+Filename: pool/main/a/at-spi2-atk/libatk-adaptor-dbg_2.9.90-0ubuntu1_amd64.deb
+Size: 4574
+MD5sum: d35342dab1f9c62642365901ec741082
+SHA1: 0ac8ecc895c8dac85d28e1c358a2e1142752e3e2
+SHA256: a5edb7a5d8e4e96bae687c19f902b2d8b1d7472996469682ef5dfa18c8ca693e
+Description: AT-SPI 2 toolkit bridge - debugging symbols
+Multi-Arch: same
+Homepage: http://live.gnome.org/Accessibility
+Description-md5: 54d72f2b48843e611d994b4a51c4f160
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libatk-bridge2.0-0
+Priority: optional
+Section: libs
+Installed-Size: 211
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
+Architecture: amd64
+Source: at-spi2-atk
+Version: 2.9.90-0ubuntu1
+Depends: libatk1.0-0 (>= 2.9.4), libatspi2.0-0 (>= 2.9.90), libc6 (>= 2.4), libdbus-1-3 (>= 1.0.2), libglib2.0-0 (>= 2.37.3)
+Pre-Depends: multiarch-support
+Filename: pool/main/a/at-spi2-atk/libatk-bridge2.0-0_2.9.90-0ubuntu1_amd64.deb
+Size: 58978
+MD5sum: adfb3a7d20bbbafb9681a493a5fb3d30
+SHA1: 48719aaf5c1291cdddc0efc3b4db92c7e54c8996
+SHA256: f37bf448e1a92c89d78a37518e3d5e08537afee7408336aaf0936e2108a8bcdc
+Description: AT-SPI 2 toolkit bridge - shared library
+Multi-Arch: same
+Homepage: http://live.gnome.org/Accessibility
+Description-md5: c290f0f14adb88ba9a3084abd9dc2268
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-live, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libatk-bridge2.0-0-dbg
+Priority: extra
+Section: debug
+Installed-Size: 257
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
+Architecture: amd64
+Source: at-spi2-atk
+Version: 2.9.90-0ubuntu1
+Depends: libatk-bridge2.0-0 (= 2.9.90-0ubuntu1)
+Filename: pool/main/a/at-spi2-atk/libatk-bridge2.0-0-dbg_2.9.90-0ubuntu1_amd64.deb
+Size: 175966
+MD5sum: 75b805bc811f5c2610912aeda657658b
+SHA1: 381e32883d70d03e5ba92a9e5074ff5482730a2c
+SHA256: 9e11907badc75b53976460da98cd0adbb7a380848e129cdffba1ce7cde46b634
+Description: AT-SPI 2 toolkit bridge - debugging symbols
+Multi-Arch: same
+Homepage: http://live.gnome.org/Accessibility
+Description-md5: 0f47ff42a5311c3b6c914986ff693d8b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libatk-bridge2.0-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 59
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
+Architecture: amd64
+Source: at-spi2-atk
+Version: 2.9.90-0ubuntu1
+Depends: libatk-bridge2.0-0 (= 2.9.90-0ubuntu1), libglib2.0-dev (>= 2.4.1-2)
+Filename: pool/main/a/at-spi2-atk/libatk-bridge2.0-dev_2.9.90-0ubuntu1_amd64.deb
+Size: 2766
+MD5sum: 32cd3c248ea2a832d457e69961fd229e
+SHA1: 92006e4cab9b9840146a3d865fe14665d334a291
+SHA256: e9d81b664f7fa3a11b5953baf2db01b0d09de354214ada2750fbc488485753b0
+Description: Development files for the AT-SPI 2 toolkit bridge
+Multi-Arch: same
+Homepage: http://live.gnome.org/Accessibility
+Description-md5: 178e73fa408e4d41e0478ebc5a88e6f6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: libatk1.0-0
 Priority: optional
@@ -361,55 +883,6 @@ Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
-Package: liblzo2-2
-Priority: optional
-Section: libs
-Installed-Size: 175
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Peter Eisentraut <petere@debian.org>
-Architecture: amd64
-Source: lzo2
-Version: 2.06-1.2
-Depends: libc6 (>= 2.14)
-Pre-Depends: multiarch-support
-Filename: pool/main/l/lzo2/liblzo2-2_2.06-1.2_amd64.deb
-Size: 54738
-MD5sum: 1361c0035c05fe78fd61d6aea96f2043
-SHA1: 60e8ec8a884eae991ce29deca0f2dc13d55cc76a
-SHA256: 5934d3c106e9cf8e13802a4602dab46e7334807c1712d247d3ac727f32fe2144
-Description: data compression library
-Multi-Arch: same
-Homepage: http://www.oberhumer.com/opensource/lzo/
-Description-md5: 6acbb2b98752f4160eba6ec78c11bb54
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-live, ubuntu-usb, kubuntu-desktop, kubuntu-live, kubuntu-full, kubuntu-active-live, kubuntu-active-desktop, kubuntu-active-live, kubuntu-active-full, kubuntu-active-live, edubuntu-desktop, edubuntu-dvd-live, edubuntu-usb, xubuntu-desktop, xubuntu-live, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-dvd-live, ubuntu-gnome-desktop, ubuntu-gnome-live
-
-Package: liblzo2-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 673
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Peter Eisentraut <petere@debian.org>
-Architecture: amd64
-Source: lzo2
-Version: 2.06-1.2
-Replaces: liblzo-dev
-Depends: liblzo2-2 (= 2.06-1.2), libc6-dev
-Filename: pool/main/l/lzo2/liblzo2-dev_2.06-1.2_amd64.deb
-Size: 138928
-MD5sum: 1936b2faa250025f765d0949ced56973
-SHA1: bf19b45a589840e89f4fe4537ad43de466dcb133
-SHA256: 134dc8235842cb530598d19a87d5ba65d7e9bf7295b5ee0e45f1f9818db4b007
-Description: data compression library (development files)
-Multi-Arch: same
-Homepage: http://www.oberhumer.com/opensource/lzo/
-Description-md5: 33a9c8476074f27fdf0d1f013ef98be9
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: libmirclient-dev
 Priority: optional
 Section: libdevel
@@ -418,13 +891,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: amd64
 Source: mir
-Version: 0.0.10+13.10.20130826.1-0ubuntu1
-Depends: libmirclient2 (= 0.0.10+13.10.20130826.1-0ubuntu1), libmirprotobuf-dev (= 0.0.10+13.10.20130826.1-0ubuntu1), mircommon-dev (= 0.0.10+13.10.20130826.1-0ubuntu1)
-Filename: pool/main/m/mir/libmirclient-dev_0.0.10+13.10.20130826.1-0ubuntu1_amd64.deb
-Size: 7432
-MD5sum: 8c306e8106a389a3af065657f158f26e
-SHA1: e53bc43461344825bc81f094bd6c602f32ea7bb2
-SHA256: 22f9723821694c55141f51e831f58325e946ac88b7df044ff9e26b21fdc56b79
+Version: 0.0.10+13.10.20130827-0ubuntu1
+Depends: libmirclient2 (= 0.0.10+13.10.20130827-0ubuntu1), libmirprotobuf-dev (= 0.0.10+13.10.20130827-0ubuntu1), mircommon-dev (= 0.0.10+13.10.20130827-0ubuntu1)
+Filename: pool/main/m/mir/libmirclient-dev_0.0.10+13.10.20130827-0ubuntu1_amd64.deb
+Size: 7462
+MD5sum: de401c40f94a32a114004adaf315867e
+SHA1: 9b58b1f75589e341b99c210d2cf338a75f5b7856
+SHA256: 15c8eaee05967ccf1892434b6d2c67b37e52f1e94b28f308db82f839ea112322
 Description: Display server for Ubuntu - development headers
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -441,14 +914,14 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: amd64
 Source: mir
-Version: 0.0.10+13.10.20130826.1-0ubuntu1
-Depends: libboost-system1.53.0, libc6 (>= 2.14), libdrm2 (>= 2.4.38), libgcc1 (>= 1:4.1.1), libmirprotobuf0 (>= 0.0.10+13.10.20130826.1), libprotobuf7, libstdc++6 (>= 4.8), libxkbcommon0 (>= 0.2.0)
+Version: 0.0.10+13.10.20130827-0ubuntu1
+Depends: libboost-system1.53.0, libc6 (>= 2.14), libdrm2 (>= 2.4.38), libgcc1 (>= 1:4.1.1), libmirprotobuf0 (>= 0.0.10+13.10.20130827), libprotobuf7, libstdc++6 (>= 4.8), libxkbcommon0 (>= 0.2.0)
 Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirclient2_0.0.10+13.10.20130826.1-0ubuntu1_amd64.deb
-Size: 164600
-MD5sum: 0389a4be426f8b2e93f3051474b8721b
-SHA1: 2fc93c5f1e1c80080d87d9132d5a0f61e31c673d
-SHA256: da3d3f139f3787d2a3bcbc358d747fdc2fcfb35c5582d0bcf4f0e630e0cd9ed0
+Filename: pool/main/m/mir/libmirclient2_0.0.10+13.10.20130827-0ubuntu1_amd64.deb
+Size: 164652
+MD5sum: 6d84b64b6321c0907457db48d71bdf19
+SHA1: 51ac31b3d5c3a2e7724d196911b612dea274f40d
+SHA256: 8c95eb175f3478139dd61390e5a4966db1318293a197969693834e1b7178407b
 Description: Display server for Ubuntu - client library
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -465,15 +938,15 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: amd64
 Source: mir
-Version: 0.0.10+13.10.20130826.1-0ubuntu1
+Version: 0.0.10+13.10.20130827-0ubuntu1
 Replaces: libmirserver0
 Depends: libc6 (>= 2.15), libdrm2 (>= 2.4.38), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgbm1 (>= 8.1~0), libgcc1 (>= 1:4.1.1), libgles2-mesa (>= 7.8.1) | libgles2, libstdc++6 (>= 4.8), libudev1 (>= 183)
 Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirplatform_0.0.10+13.10.20130826.1-0ubuntu1_amd64.deb
-Size: 121790
-MD5sum: 1c113de9a3e169f8006c60873ec1a036
-SHA1: 58da9c0a4fae803f16b0c8abdb5f280fcbee9f4e
-SHA256: 08aa401556b7e98da29048d04416a7e52e1837229262f8240f1348d557fea42e
+Filename: pool/main/m/mir/libmirplatform_0.0.10+13.10.20130827-0ubuntu1_amd64.deb
+Size: 121660
+MD5sum: e75bc595715ea32480e2cefd637490a7
+SHA1: 8e4cf145c3405169ddb907bbdf9f26335db4847a
+SHA256: c699894ae46fc277e9fab577ebec7c56e41e021b1e175eb9e531b0772519527c
 Description: Display server for Ubuntu - platform library
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -490,13 +963,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: amd64
 Source: mir
-Version: 0.0.10+13.10.20130826.1-0ubuntu1
-Depends: libmirprotobuf0 (= 0.0.10+13.10.20130826.1-0ubuntu1), libprotobuf-dev
-Filename: pool/main/m/mir/libmirprotobuf-dev_0.0.10+13.10.20130826.1-0ubuntu1_amd64.deb
-Size: 4570
-MD5sum: 753614798d2cb4e708b82e65eb2e2219
-SHA1: 73ee38be689077da82cc009fd4a7f9357a0e3f7e
-SHA256: b58421f8f54a11ae62801d3a5f1648df1f7fa931e85719c732f2bbed800fd3e0
+Version: 0.0.10+13.10.20130827-0ubuntu1
+Depends: libmirprotobuf0 (= 0.0.10+13.10.20130827-0ubuntu1), libprotobuf-dev
+Filename: pool/main/m/mir/libmirprotobuf-dev_0.0.10+13.10.20130827-0ubuntu1_amd64.deb
+Size: 4558
+MD5sum: e88c44c8edd105ecceafc4d351029818
+SHA1: 0195fca07bd26e7aaf5b0def57626ffc690d00a3
+SHA256: 126061f27e975cc2b0f7a4c2341ebdcb16e44790b2aeb047ecde398f6697fe12
 Description: Display server for Ubuntu - protocol definition
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -508,19 +981,19 @@ Supported: 9m
 Package: libmirprotobuf0
 Priority: optional
 Section: libs
-Installed-Size: 274
+Installed-Size: 275
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: amd64
 Source: mir
-Version: 0.0.10+13.10.20130826.1-0ubuntu1
+Version: 0.0.10+13.10.20130827-0ubuntu1
 Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libprotobuf7, libstdc++6 (>= 4.4.0)
 Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirprotobuf0_0.0.10+13.10.20130826.1-0ubuntu1_amd64.deb
-Size: 74832
-MD5sum: 864913d138f243d20ee665a9f9b6dfba
-SHA1: 3576b1f802c7972e9bce1d919bd470756c1783eb
-SHA256: efc59f1655355e4335cbe0a574a4daf10250764921b5ac1f292f07405e07cca9
+Filename: pool/main/m/mir/libmirprotobuf0_0.0.10+13.10.20130827-0ubuntu1_amd64.deb
+Size: 74718
+MD5sum: 035ab490cf3d893dbded9d017924e9fc
+SHA1: b570e8628670d625c0643bdd81aed48cec6aa78a
+SHA256: 525f6ae7e77bda98d39c22e0e088660752257a7661cf4b58e14151aef2cc1ed4
 Description: Display server for Ubuntu - protocol implementation
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -537,13 +1010,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: amd64
 Source: mir
-Version: 0.0.10+13.10.20130826.1-0ubuntu1
-Depends: libmirserver1 (= 0.0.10+13.10.20130826.1-0ubuntu1), libmirprotobuf-dev (= 0.0.10+13.10.20130826.1-0ubuntu1), mircommon-dev (= 0.0.10+13.10.20130826.1-0ubuntu1), libglm-dev, libboost-program-options-dev
-Filename: pool/main/m/mir/libmirserver-dev_0.0.10+13.10.20130826.1-0ubuntu1_amd64.deb
-Size: 40662
-MD5sum: 6fc501ddf54737018be3a0785c399403
-SHA1: 1dbb976298be776ecc92d8a600e5bb3575e077b7
-SHA256: 7a76c2766c281c2574a0bf1899ded21099293df9d1d1d1fd97b245f57d855458
+Version: 0.0.10+13.10.20130827-0ubuntu1
+Depends: libmirserver1 (= 0.0.10+13.10.20130827-0ubuntu1), libmirprotobuf-dev (= 0.0.10+13.10.20130827-0ubuntu1), mircommon-dev (= 0.0.10+13.10.20130827-0ubuntu1), libglm-dev, libboost-program-options-dev
+Filename: pool/main/m/mir/libmirserver-dev_0.0.10+13.10.20130827-0ubuntu1_amd64.deb
+Size: 40654
+MD5sum: a9184c5d637505e293c29a9de8fce023
+SHA1: 75c128622161f83c2a364d6adb86a325ff7d6d6d
+SHA256: 59335e92be1ae3437f97bc5a8fe593929f2477d12ca58ae6b1366e221a564423
 Description: Display server for Ubuntu - development headers
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -560,14 +1033,14 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: amd64
 Source: mir
-Version: 0.0.10+13.10.20130826.1-0ubuntu1
-Depends: libboost-program-options1.53.0, libboost-system1.53.0, libc6 (>= 2.14), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.1.1), libgflags2, libgles2-mesa (>= 7.8.1) | libgles2, libgoogle-glog0, libmirclient2 (>= 0.0.10+13.10.20130826.1), libmirprotobuf0 (>= 0.0.10+13.10.20130826.1), libprotobuf7, libstdc++6 (>= 4.8.1), libxkbcommon0 (>= 0.2.0), libmirplatform (= 0.0.10+13.10.20130826.1-0ubuntu1)
+Version: 0.0.10+13.10.20130827-0ubuntu1
+Depends: libboost-program-options1.53.0, libboost-system1.53.0, libc6 (>= 2.14), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.1.1), libgflags2, libgles2-mesa (>= 7.8.1) | libgles2, libgoogle-glog0, libmirclient2 (>= 0.0.10+13.10.20130827), libmirprotobuf0 (>= 0.0.10+13.10.20130827), libprotobuf7, libstdc++6 (>= 4.8.1), libxkbcommon0 (>= 0.2.0), libmirplatform (= 0.0.10+13.10.20130827-0ubuntu1)
 Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirserver1_0.0.10+13.10.20130826.1-0ubuntu1_amd64.deb
-Size: 546418
-MD5sum: 0203b450b0c9e76f403bb8e561fdcbf8
-SHA1: 194cc5d68cabfcbdc0e90589f9a1967779885206
-SHA256: 24614f783936e27eedf54df885576cc87ebee62036a2f5d31f00cab0acb841ef
+Filename: pool/main/m/mir/libmirserver1_0.0.10+13.10.20130827-0ubuntu1_amd64.deb
+Size: 546406
+MD5sum: 535014ce41f0aa168a3c17bc4049e1ef
+SHA1: d7a7519a97fc786f23d71b83ed8959f5ac68258f
+SHA256: db7323625bc294509c616a2a0849935a9b2ce643f7dbd4eb15af12316e690e37
 Description: Display server for Ubuntu - server library
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -647,141 +1120,6 @@ Description-md5: 2f06b7e1bfdb9f620d92f9696d24fabc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-
-Package: libnm-glib-dev
-Priority: optional
-Section: net
-Installed-Size: 1770
-Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: network-manager
-Version: 0.9.8.0-0ubuntu19
-Depends: libnm-glib4 (= 0.9.8.0-0ubuntu19), gir1.2-networkmanager-1.0 (= 0.9.8.0-0ubuntu19), libnm-util-dev, network-manager-dev, libglib2.0-dev, libdbus-glib-1-dev
-Filename: pool/main/n/network-manager/libnm-glib-dev_0.9.8.0-0ubuntu19_amd64.deb
-Size: 221972
-MD5sum: ec1a599c042ba6aed55336639d9eafed
-SHA1: 19c4143257cf5677bd6f9272e780439deda6e124
-SHA256: 8c266bf7b77cbc82faf266fe59690e4c8daa879c487924ad1aa8caa47e2215d2
-Description: network management framework (GLib interface)
-Homepage: http://www.gnome.org/projects/NetworkManager/
-Description-md5: 56d0a34d148547835775f648c283d58f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libnm-glib-vpn-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 126
-Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: network-manager
-Version: 0.9.8.0-0ubuntu19
-Depends: libnm-glib-vpn1 (= 0.9.8.0-0ubuntu19), libnm-glib-dev
-Filename: pool/main/n/network-manager/libnm-glib-vpn-dev_0.9.8.0-0ubuntu19_amd64.deb
-Size: 6044
-MD5sum: c5984d85b2c96203b36237463a7e7063
-SHA1: d1096a395417f01578bd013737bee6b02cf03a73
-SHA256: 7963cb496ff2618ab877d9abcea958f4cacb979d5c246561366ca125ad518041
-Description: network management framework (GLib interface)
-Homepage: http://www.gnome.org/projects/NetworkManager/
-Description-md5: c78ac261b5f6cfbb4c74b78a708c90bc
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libnm-glib-vpn1
-Priority: optional
-Section: libs
-Installed-Size: 135
-Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: network-manager
-Version: 0.9.8.0-0ubuntu19
-Depends: libc6 (>= 2.2.5), libdbus-glib-1-2 (>= 0.88), libglib2.0-0 (>= 2.22), libnm-util2 (>= 0.7.0)
-Filename: pool/main/n/network-manager/libnm-glib-vpn1_0.9.8.0-0ubuntu19_amd64.deb
-Size: 15814
-MD5sum: e32928ac26fcdd27f81eb1bdb9d5acc3
-SHA1: 13dbcf394b01aa31646e458313bfb3f256088c99
-SHA256: 48dc3f09a0ac4862a5cad775a756d94a84dd5af7fd22940bf6866e90a223a0db
-Description: network management framework (GLib VPN shared library)
-Homepage: http://www.gnome.org/projects/NetworkManager/
-Description-md5: a8d1fc7f276929433320d96cddd81b4b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libnm-glib4
-Priority: optional
-Section: libs
-Installed-Size: 344
-Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: network-manager
-Version: 0.9.8.0-0ubuntu19
-Depends: libc6 (>= 2.14), libdbus-1-3 (>= 1.0.2), libdbus-glib-1-2 (>= 0.88), libglib2.0-0 (>= 2.31.8), libgudev-1.0-0 (>= 146), libnm-util2 (>= 0.9.6.0+git201212071413.8a9759a)
-Filename: pool/main/n/network-manager/libnm-glib4_0.9.8.0-0ubuntu19_amd64.deb
-Size: 91070
-MD5sum: d8e0b1d825c72f65cacebbbc1cb487c2
-SHA1: ef3d98cf27f71e1c745ea161911a37749db45874
-SHA256: ebdfbfe1bca7c6b7658ba4d016cc7035a50a8b3b03c206f0a1d0c555409f95c5
-Description: network management framework (GLib shared library)
-Homepage: http://www.gnome.org/projects/NetworkManager/
-Description-md5: 217fbdca65cb15a2066a01b11aa4ed86
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libnm-util-dev
-Priority: optional
-Section: net
-Installed-Size: 3030
-Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: network-manager
-Version: 0.9.8.0-0ubuntu19
-Depends: libnm-util2 (= 0.9.8.0-0ubuntu19), gir1.2-networkmanager-1.0 (= 0.9.8.0-0ubuntu19), libglib2.0-dev, libdbus-glib-1-dev
-Filename: pool/main/n/network-manager/libnm-util-dev_0.9.8.0-0ubuntu19_amd64.deb
-Size: 289436
-MD5sum: a7e89c5a2b7b660eed39a7c48219809e
-SHA1: fe333edfa1352e57d53d0b1907b891d605e75ae5
-SHA256: 4f0816c1da1259ac0003e80ba482c4d5096e812bf8d9d450f84b421a0e9a0984
-Description: network management framework (development files)
-Homepage: http://www.gnome.org/projects/NetworkManager/
-Description-md5: 386633658ef6f2e5bd09c1075e48d085
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libnm-util2
-Priority: optional
-Section: libs
-Installed-Size: 507
-Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: network-manager
-Version: 0.9.8.0-0ubuntu19
-Depends: libc6 (>= 2.14), libdbus-glib-1-2 (>= 0.78), libglib2.0-0 (>= 2.33.14), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libuuid1 (>= 2.16)
-Filename: pool/main/n/network-manager/libnm-util2_0.9.8.0-0ubuntu19_amd64.deb
-Size: 140058
-MD5sum: 7c229186e36ddc8dec0f389e97b738da
-SHA1: c575986eadc079536b7bc69e3f75a17985c9e92e
-SHA256: 14509a5f0be0fba02a5fa64dfe037e04666a2972dede5359874c33e50447aaa3
-Description: network management framework (shared library)
-Homepage: http://www.gnome.org/projects/NetworkManager/
-Description-md5: 9206e0c0315bf3dee48dfe5ab4d4bd13
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libplatform-api-headers
 Priority: optional
@@ -1083,561 +1421,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: linux
-Priority: optional
-Section: kernel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-generic
-Filename: pool/main/l/linux-meta/linux_3.11.0.4.5_amd64.deb
-Size: 1684
-MD5sum: 15d851f543a363687985266e2285dc15
-SHA1: dc59e87cce2b18f369462da79a60b668d2a3a65c
-SHA256: b8e7c38ca18c0cdcf33dda1e6f317dd39ab51611b0360dd854f99f1f6147b943
-Description: Generic complete Linux kernel.
-Description-md5: e1f3af50c53d3b40815e9810a03f60ee
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-crashdump
-Priority: optional
-Section: devel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: kdump-tools, grub-pc (>= 1.96+20090611-1ubuntu2) | grub-efi-ia32 | grub-efi-amd64 | grub (>= 0.97-29ubuntu24)
-Recommends: apport
-Suggests: crash
-Filename: pool/main/l/linux-meta/linux-crashdump_3.11.0.4.5_amd64.deb
-Size: 2514
-MD5sum: 10f4c05fdc0030144616c926d28fd19d
-SHA1: 8e1ab185d04699443b37cfbab183b578439f3bf7
-SHA256: 428cea9fef43fdfce736245dea18bd2b15e93d43ea5cf00fa5407e9261e4a20e
-Description: Linux kernel crashdump setup for the latest generic kernel
-Description-md5: 786b3d1e77e0097cb2c8f2ab16f83875
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-doc
-Priority: optional
-Section: doc
-Installed-Size: 28717
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: all
-Source: linux
-Version: 3.11.0-4.9
-Replaces: linux-doc-3
-Conflicts: linux-doc-3
-Filename: pool/main/l/linux/linux-doc_3.11.0-4.9_all.deb
-Size: 9050500
-MD5sum: f7efca52b6b73464105269769837d949
-SHA1: b9e3db76ce9f6f0437cc738063aa365293615b77
-SHA256: 7f2b2992636974cf9bf4ae652a5a82fb384dca993648a853403f65eb15db800e
-Description: Linux kernel specific documentation for version 3.11.0
-Description-md5: 0a37fb386e5cb54f02b758d24333bb91
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-generic
-Priority: optional
-Section: kernel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-image-generic (= 3.11.0.4.5), linux-headers-generic (= 3.11.0.4.5)
-Filename: pool/main/l/linux-meta/linux-generic_3.11.0.4.5_amd64.deb
-Size: 1724
-MD5sum: 0f6a881f345845fdc48f15a2e4d40b17
-SHA1: 5c5b70ea586525f288ddb6d4876d275125a56ae2
-SHA256: 2d8d64a5323a7620febe52d1b8c10e518da3cf874d250b4ea9278dab024639f9
-Description: Complete Generic Linux kernel and headers
-Description-md5: 000d0a6187a93215f75bba542cc6df27
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-headers-3.11.0-4
-Priority: optional
-Section: devel
-Installed-Size: 60666
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: all
-Source: linux
-Version: 3.11.0-4.9
-Depends: coreutils | fileutils (>= 4.0)
-Filename: pool/main/l/linux/linux-headers-3.11.0-4_3.11.0-4.9_all.deb
-Size: 12623144
-MD5sum: f403207475e1f6af3a8bce0b3edb8c4a
-SHA1: 48d27691f6264fefbce0642e6b00ba1d17fea9d8
-SHA256: caf58613adcb5318fc2bfd51a81167b5e38990a808ce6917ffe14713c18e623d
-Description: Header files related to Linux kernel version 3.11.0
-Description-md5: 7d07d7c325a63390345be02f14c88649
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: linux-headers-3.11.0-4-generic
-Priority: optional
-Section: devel
-Installed-Size: 12569
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux
-Version: 3.11.0-4.9
-Provides: linux-headers, linux-headers-3.0
-Depends: linux-headers-3.11.0-4, libc6 (>= 2.14)
-Filename: pool/main/l/linux/linux-headers-3.11.0-4-generic_3.11.0-4.9_amd64.deb
-Size: 1057498
-MD5sum: 5c08c87037d067ba61ed8c42563f5fec
-SHA1: 1fa195de92298497d33fe8853b59548a2fa39150
-SHA256: fbe3b998cb2c4b9a4e8d3728c68a74e620848cfa0bf0607559a4ecfb59f3d9ad
-Description: Linux kernel headers for version 3.11.0 on 64 bit x86 SMP
-Description-md5: 0201480b6f7afbd666ec52f1200505dc
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: linux-headers-generic
-Priority: optional
-Section: devel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-headers-3.11.0-4-generic
-Filename: pool/main/l/linux-meta/linux-headers-generic_3.11.0.4.5_amd64.deb
-Size: 2258
-MD5sum: 9b43cbc6283c8dbe0069dd7acb06e423
-SHA1: 66d3118b92165965d261c892cf28d3d877431d50
-SHA256: f16585bbb84796385641e5204bdd2b04e130a97425f7d1cd5f2ee0307aa6a467
-Description: Generic Linux kernel headers
-Description-md5: 9c9742ab9c289b1e900fab477bc0070d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-live, kubuntu-live, kubuntu-active-live, edubuntu-dvd-live, mythbuntu-live, ubuntu-gnome-live
-
-Package: linux-headers-server
-Priority: optional
-Section: devel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-headers-generic (= 3.11.0.4.5)
-Filename: pool/main/l/linux-meta/linux-headers-server_3.11.0.4.5_amd64.deb
-Size: 1698
-MD5sum: a2e8443b72b4fb6282ddeb0bd165a601
-SHA1: ad22a17d0b0625f561d73935c024c9cb7d6550dd
-SHA256: db5cc3d970a01d72585f95971ae1d54bdbf88cbc222ee3d013c56020beda59e6
-Description: Transitional package.
-Description-md5: 9f8e13d3c6398c379efb34108d986a01
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-headers-virtual
-Priority: optional
-Section: devel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-headers-generic (= 3.11.0.4.5)
-Filename: pool/main/l/linux-meta/linux-headers-virtual_3.11.0.4.5_amd64.deb
-Size: 1692
-MD5sum: 605ea30a6f474107cba263b1b5a98c44
-SHA1: 715eece8758a284e365ca425aed6394aae7b7d82
-SHA256: f00fe4029988b37d0f49668280ddfa28a2f0146ef1ee17a05a73e2ed5214eb92
-Description: Transitional package.
-Description-md5: 9f8e13d3c6398c379efb34108d986a01
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-image
-Priority: optional
-Section: kernel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-image-generic
-Filename: pool/main/l/linux-meta/linux-image_3.11.0.4.5_amd64.deb
-Size: 1696
-MD5sum: 1f26683c1163cef718a7ce922f7a3c91
-SHA1: b95bef0dce41a35d4daec16806b8b6b9e72a239c
-SHA256: 87a5298c50fb504da162f5ec6293f6723cbf22ea91e1fb73b386692a6bdb7405
-Description: Generic Linux kernel image.
-Description-md5: 4b85eb2dcba23bfb3b8a88b27af1d539
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-image-3.11.0-4-generic
-Priority: optional
-Section: kernel
-Installed-Size: 38109
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux
-Version: 3.11.0-4.9
-Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, linux-image-3.0, redhat-cluster-modules
-Depends: initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3)
-Pre-Depends: dpkg (>= 1.10.24)
-Recommends: grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo (>= 19.1)
-Suggests: fdutils, linux-doc-3.11.0 | linux-source-3.11.0, linux-tools, linux-headers-3.11.0-4-generic
-Conflicts: hotplug (<< 0.0.20040105-1)
-Filename: pool/main/l/linux/linux-image-3.11.0-4-generic_3.11.0-4.9_amd64.deb
-Size: 13976788
-MD5sum: 68cad19c8dd6224880cd8fa1fd990f97
-SHA1: 32f3ecb799cb3288e5d5e9e9539726aee3fd7609
-SHA256: 11f1307ac7a042b510c4e2d83b66e4bac0f7adec4bad0e05b0c53f43fdb593fe
-Description: Linux kernel image for version 3.11.0 on 64 bit x86 SMP
-Description-md5: 5ecfa9f1845007c17a97c3ad057fa852
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: linux-image-extra-3.11.0-4-generic
-Priority: optional
-Section: kernel
-Installed-Size: 140086
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux
-Version: 3.11.0-4.9
-Depends: linux-image-3.11.0-4-generic, crda (>= 1.1.1-1ubuntu2) | wireless-crda
-Filename: pool/main/l/linux/linux-image-extra-3.11.0-4-generic_3.11.0-4.9_amd64.deb
-Size: 33605950
-MD5sum: 340e2055fd24f8a1652e758a0b97b2c0
-SHA1: b2f4f0faf2ca7778ff1f15ec62d6276101cb4861
-SHA256: 7cf4bd5a518d5a4c5f0a733879c0222c3abac139fadf969484594993af9f0daf
-Description: Linux kernel extra modules for version 3.11.0 on 64 bit x86 SMP
-Description-md5: ef7dce9a8644c725477c700e96d9e7e2
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: linux-image-extra-virtual
-Priority: optional
-Section: kernel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-image-generic (= 3.11.0.4.5)
-Filename: pool/main/l/linux-meta/linux-image-extra-virtual_3.11.0.4.5_amd64.deb
-Size: 1702
-MD5sum: 6f1c6f336f6edca55290a96c411af59f
-SHA1: 4ec9d5bf3bdc01cdb3e4651fc30ad475badf0d22
-SHA256: 3669168ac97124a20a18883225ed7de8d7a89d31b5cad0a9018b5f7b2c44d8b4
-Description: Transitional package.
-Description-md5: eb988093c0758268582edcd962efe052
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-image-generic
-Priority: optional
-Section: kernel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-image-3.11.0-4-generic, linux-image-extra-3.11.0-4-generic, linux-firmware
-Filename: pool/main/l/linux-meta/linux-image-generic_3.11.0.4.5_amd64.deb
-Size: 2268
-MD5sum: 8b10b8bd7f93efe40f9737922dd5adfc
-SHA1: 305d084ff9ede1377d0ea731482879fe6a1431a6
-SHA256: a396ff374712e40517dfc8cee29e5209cdcd7e9a4bd4c1b19c17573382411a09
-Description: Generic Linux kernel image
-Description-md5: 6d632579c673704f44b290b16e7dbfd1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-image-server
-Priority: optional
-Section: kernel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-image-generic (= 3.11.0.4.5)
-Filename: pool/main/l/linux-meta/linux-image-server_3.11.0.4.5_amd64.deb
-Size: 1698
-MD5sum: 8c95d67891447af4216304a3e0a584d8
-SHA1: 831ea1b370d3ccdb839af4fde1b8a90e59d25c8f
-SHA256: d65fd5e892489bff0c926335f40eec291a99322d8f71c5fc610fe38c5feabadc
-Description: Transitional package.
-Description-md5: eb988093c0758268582edcd962efe052
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-image-virtual
-Priority: optional
-Section: kernel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-image-3.11.0-4-generic
-Filename: pool/main/l/linux-meta/linux-image-virtual_3.11.0.4.5_amd64.deb
-Size: 2270
-MD5sum: d3ccf3e715ba9fb746f356c5d5dd34d9
-SHA1: 60c0c53c2ca4f45d5692409f8becba5f54d6ba46
-SHA256: d53a5d82a4167495a389318f4ed1ac2e6cf452c4195d7e10b2cb7eb82cd0f956
-Description: This package will always depend on the latest minimal generic kernel image.
-Description-md5: 4860895cdea7f2369c76625e9dd2dd4b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-libc-dev
-Priority: optional
-Section: devel
-Installed-Size: 3350
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux
-Version: 3.11.0-4.9
-Replaces: dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), libdrm-dev, linux-kernel-headers
-Provides: linux-kernel-headers
-Conflicts: amd64-libs-dev (<= 1.1), dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), linux-kernel-headers
-Filename: pool/main/l/linux/linux-libc-dev_3.11.0-4.9_amd64.deb
-Size: 937444
-MD5sum: 205725c1a9f5fc7f4dd4988bd0f0e1a2
-SHA1: 860dff904482673dbd2ce09b38632136f876397b
-SHA256: 4b10611aa540e1ef3be236bac3965148b1b02933b36d614429d1a9acb13a0392
-Description: Linux Kernel Headers for development
-Multi-Arch: same
-Description-md5: d5d143e6dffc891f04a85464446f9451
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Build-Essential: yes
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: linux-server
-Priority: optional
-Section: kernel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-generic (= 3.11.0.4.5)
-Filename: pool/main/l/linux-meta/linux-server_3.11.0.4.5_amd64.deb
-Size: 1690
-MD5sum: 5a28656c70097a47d7222de9b1b5609e
-SHA1: ab106d02b5defe2696afbb88ef984605f7b083eb
-SHA256: 388c279006c228d8c866cccefe3475d22bdb8c433a249b63bb4516058b5157a8
-Description: Transitional package.
-Description-md5: b239583bb598a7b339303e3f0513dc63
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-signed-generic
-Priority: optional
-Section: kernel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-signed-image-generic (= 3.11.0.4.5), linux-headers-generic (= 3.11.0.4.5)
-Filename: pool/main/l/linux-meta/linux-signed-generic_3.11.0.4.5_amd64.deb
-Size: 1752
-MD5sum: 1ed2658c63d71dc5b7b83d9a793eb4ca
-SHA1: 2c608695944f2507fa8a39db73c3aab545bae0d2
-SHA256: 7a7b1028bc0dc2e091c22b599ab4442f7acdf7b70a4f70fff49995a6b5551416
-Description: Complete Signed Generic Linux kernel and headers
-Description-md5: c46e75d15f431954f5e63aac8c06ea2d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-live, kubuntu-live, kubuntu-active-live, edubuntu-dvd-live, mythbuntu-live, ubuntu-gnome-live
-
-Package: linux-signed-image-3.11.0-4-generic
-Priority: optional
-Section: utils
-Installed-Size: 39
-Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-signed
-Version: 3.11.0-4.9
-Depends: sbsigntool, linux-image-3.11.0-4-generic (= 3.11.0-4.9), linux-image-extra-3.11.0-4-generic (= 3.11.0-4.9)
-Filename: pool/main/l/linux-signed/linux-signed-image-3.11.0-4-generic_3.11.0-4.9_amd64.deb
-Size: 4070
-MD5sum: 2d285ac6b657770b60cb5d1af8814864
-SHA1: 0276e40d2de24c5b2a03bf08b509a007f116f495
-SHA256: b83f7fa1adfbe33fd63aaf5e9d2799c7f8ed159bf7c37d2a7c469e9920010842
-Description: Signed kernel image generic
-Built-Using: linux (= 3.11.0-4.9)
-Description-md5: 58606405946683c4d2ca4f105784fd91
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: linux-signed-image-generic
-Priority: optional
-Section: kernel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-signed-image-3.11.0-4-generic
-Filename: pool/main/l/linux-meta/linux-signed-image-generic_3.11.0.4.5_amd64.deb
-Size: 2292
-MD5sum: ca3d05cf395fd13d91082e7b6804b1b3
-SHA1: 58a4a31229a9081ab3ba5e79422bc6dd42aed0e9
-SHA256: 0f2560d0fcca1bcff201046a330458dd23ff586829b4c2837f8f619113e38216
-Description: Signed Generic Linux kernel image
-Description-md5: 9f06dc406adf6813c92d1a1173d6e913
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-live, kubuntu-live, kubuntu-active-live, edubuntu-dvd-live, mythbuntu-live, ubuntu-gnome-live
-
-Package: linux-source
-Priority: optional
-Section: devel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: all
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-source-3.11.0
-Filename: pool/main/l/linux-meta/linux-source_3.11.0.4.5_all.deb
-Size: 2250
-MD5sum: cc1e978e3d94278ef363dc7a1cd6899f
-SHA1: 9292fd4f07241c38abcb58d0f77520e33c97e604
-SHA256: 6cf1bcac6a0396e2eb68eeece4427062ebc32bc2a14ea60351648faf687129a5
-Description: Linux kernel source with Ubuntu patches
-Description-md5: 1cac084d2ae18dfd06b96585b4be564d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-source-3.11.0
-Priority: optional
-Section: devel
-Installed-Size: 94004
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: all
-Source: linux
-Version: 3.11.0-4.9
-Provides: linux-source, linux-source-3
-Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
-Recommends: libc-dev, gcc, make
-Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
-Filename: pool/main/l/linux/linux-source-3.11.0_3.11.0-4.9_all.deb
-Size: 92025416
-MD5sum: 82aa8be30c3a6f9df95cf766d0130122
-SHA1: a32e7d6795cbd83db0dcc3df390d52c9804960e0
-SHA256: d6f24eaac1d4eeefef550c3772708cdd989bda743c31dcba3b249b05999e604d
-Description: Linux kernel source for version 3.11.0 with Ubuntu patches
-Description-md5: cfbabb19ee426a281302c702699c2590
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-tools
-Priority: optional
-Section: kernel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-tools-3.11.0-4
-Filename: pool/main/l/linux-meta/linux-tools_3.11.0.4.5_amd64.deb
-Size: 2258
-MD5sum: 917bef0f4618896a12a94936ac87ae83
-SHA1: 294b5dab3e98228efa8a8b9691cd44eb658c6d62
-SHA256: ff67c040449e7d93291dc35726d5b0c5cefa16a120d4626220c2ec9c24d8a9d3
-Description: Linux kernel versioned Tools
-Description-md5: ea15db5fd6e3e3cff13446d5e28af7c8
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-tools-3.11.0-4
-Priority: optional
-Section: devel
-Installed-Size: 1347
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux
-Version: 3.11.0-4.9
-Depends: libaudit1 (>= 1:2.2.1), libc6 (>= 2.14), libdw1 (>= 0.143), libelf1 (>= 0.131), libpci3 (>= 1:3.1.9-2), libslang2 (>= 2.2.4), libunwind8, linux-tools-common
-Filename: pool/main/l/linux/linux-tools-3.11.0-4_3.11.0-4.9_amd64.deb
-Size: 533962
-MD5sum: cc074bce67d5e319ee205b1226f20b0f
-SHA1: e7611569010aa47c774a202a276920bd2b786f46
-SHA256: f78a5623ded82be7942d88a6d9bccd80a0e0a5921bbe606ba732258638d60d67
-Description: Linux kernel version specific tools for version 3.11.0-4
-Description-md5: c05b3c4f5b19dbd3294d5f6b633e8be6
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: linux-tools-common
-Priority: optional
-Section: kernel
-Installed-Size: 185
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: all
-Source: linux
-Version: 3.11.0-4.9
-Replaces: linux-tools (<= 2.6.32-16.25)
-Filename: pool/main/l/linux/linux-tools-common_3.11.0-4.9_all.deb
-Size: 72148
-MD5sum: f8ffd070c54bca46ae8af78fe7f9b6ae
-SHA1: f0a7fe2edf4ce079b8b7d3fda712d70f178c4dd7
-SHA256: 5cd8ee6f0948dd649e32cf04c21663b39bc2468a59ce32cbe312997d34f7daa7
-Description: Linux kernel version specific tools for version 3.11.0
-Description-md5: 5e947646628710d552f512bf911d233f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: linux-virtual
-Priority: optional
-Section: kernel
-Installed-Size: 33
-Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
-Architecture: amd64
-Source: linux-meta
-Version: 3.11.0.4.5
-Depends: linux-image-virtual (= 3.11.0.4.5), linux-headers-virtual (= 3.11.0.4.5)
-Filename: pool/main/l/linux-meta/linux-virtual_3.11.0.4.5_amd64.deb
-Size: 1714
-MD5sum: 836d2975e0ec9d41e3932b8183531d33
-SHA1: abf0654522e159831992baa42dd153416b14a962
-SHA256: c4b32d7fc20c557475e3e402f75d994d4edaa3f4dce41e7fcc73dbb7e7758249
-Description: Minimal Generic Linux kernel and headers
-Description-md5: 71a1a38f6977c1a1bbc8a7634f51401c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: mir-doc
 Priority: optional
 Section: doc
@@ -1646,13 +1429,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: all
 Source: mir
-Version: 0.0.10+13.10.20130826.1-0ubuntu1
+Version: 0.0.10+13.10.20130827-0ubuntu1
 Depends: libmirclient-dev, libmirserver-dev
-Filename: pool/main/m/mir/mir-doc_0.0.10+13.10.20130826.1-0ubuntu1_all.deb
-Size: 39397626
-MD5sum: 04ef01498ce9770fba826541abf3710f
-SHA1: fdf027b4ffa07e82073fce535072728e2c2689c3
-SHA256: 5895c3584acf0641d31e57790472619fdb5ce4cfeb4f9c6a92770c927ebfa8bf
+Filename: pool/main/m/mir/mir-doc_0.0.10+13.10.20130827-0ubuntu1_all.deb
+Size: 39344360
+MD5sum: abcc10e9f3504ec14ee284cf8d2f9a3e
+SHA1: 08067fe2e331995e5d071e6d4afaded0670b4e69
+SHA256: 492dac2f51455c44ca91b38b505d5de40360e531bd20a4ba3a7a9ea689b00d87
 Description: API documentation for mir
 Homepage: https://launchpad.net/mir
 Description-md5: 628500f58a32ea2c0fc1cb782e6f260f
@@ -1668,12 +1451,12 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
 Architecture: amd64
 Source: mir
-Version: 0.0.10+13.10.20130826.1-0ubuntu1
-Filename: pool/main/m/mir/mircommon-dev_0.0.10+13.10.20130826.1-0ubuntu1_amd64.deb
-Size: 16980
-MD5sum: fef86234d65e3ecb951055318be1e36f
-SHA1: cb6ff9668d02159286e5cabc33c8bc3df2a46b59
-SHA256: 658619e6a5eb6cff4db288d6d215800d49f3461d4ced428682d446fc58f010c6
+Version: 0.0.10+13.10.20130827-0ubuntu1
+Filename: pool/main/m/mir/mircommon-dev_0.0.10+13.10.20130827-0ubuntu1_amd64.deb
+Size: 16876
+MD5sum: 9c76fca64d2f2bf511bfcadf35af75db
+SHA1: c7f7e83fb4684df189a23ba9f7f775b181e2d384
+SHA256: 59fbb1bea3fc23ae89f35d38cfecc3add924ce751f2c39d2715948015e0f7a39
 Description: Display server for Ubuntu - development headers
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
@@ -1860,76 +1643,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
-Package: network-manager
-Priority: optional
-Section: net
-Installed-Size: 1952
-Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Version: 0.9.8.0-0ubuntu19
-Depends: libc6 (>= 2.14), libdbus-1-3 (>= 1.0.2), libdbus-glib-1-2 (>= 0.88), libglib2.0-0 (>= 2.31.8), libgudev-1.0-0 (>= 146), libnl-3-200 (>= 3.2.16), libnl-genl-3-200 (>= 3.2.16), libnl-route-3-200, libnm-glib4 (>= 0.9.8.0), libnm-util2 (>= 0.9.6.0+git201212071413.8a9759a), libpolkit-gobject-1-0 (>= 0.99), libsoup2.4-1 (>= 2.26.1), libsystemd-login0 (>= 31), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), lsb-base (>= 3.2-14), wpasupplicant (>= 0.7.3-1), dbus (>= 1.1.2), udev, isc-dhcp-client (>= 4.1.1-P1-4), iproute2, dnsmasq-base, policykit-1, iputils-arping
-Pre-Depends: multiarch-support
-Recommends: network-manager-pptp, network-manager-gnome | plasma-widget-networkmanagement | plasma-nm, ppp (>= 2.4.5), iptables, modemmanager, systemd-services, crda
-Suggests: avahi-autoipd, python
-Conflicts: connman
-Breaks: network-manager-gnome (<< 0.9), network-manager-kde (<< 1:0.9), network-manager-openconnect (<< 0.9), network-manager-openvpn (<< 0.9), network-manager-pptp (<< 0.9), network-manager-vpnc (<< 0.9), plasma-widget-networkmanagement (<< 0.9~), ppp (<< 2.4.5)
-Filename: pool/main/n/network-manager/network-manager_0.9.8.0-0ubuntu19_amd64.deb
-Size: 613534
-MD5sum: a02432f606e33cc0fe449f132eb73ccc
-SHA1: 96679d84d8a6a7dfaec3aae6f713897770ceb9a3
-SHA256: 6656b5299a2757a9483fa33aba66e526a8f92d78197b368b276a7f8de0954f43
-Description: network management framework (daemon and userspace tools)
-Homepage: http://www.gnome.org/projects/NetworkManager/
-Description-md5: 8f6f8b56b77097ec1e2134d2c9189882
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: network-manager-dbg
-Priority: extra
-Section: debug
-Installed-Size: 2612
-Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: network-manager
-Version: 0.9.8.0-0ubuntu19
-Depends: network-manager (= 0.9.8.0-0ubuntu19) | libnm-util2 (= 0.9.8.0-0ubuntu19) | libnm-glib4 (= 0.9.8.0-0ubuntu19) | libnm-glib-vpn1 (= 0.9.8.0-0ubuntu19)
-Filename: pool/main/n/network-manager/network-manager-dbg_0.9.8.0-0ubuntu19_amd64.deb
-Size: 2111330
-MD5sum: 4d6424befb7210df0036c9e11e92a192
-SHA1: 8278ab74b0444c87fd8d683dabf282c459f18c50
-SHA256: 872fe84dbde514b6fefd74228b1549702bf3863c8e79e818eb9bae5b17d7d3c8
-Description: network management framework (debugging symbols)
-Homepage: http://www.gnome.org/projects/NetworkManager/
-Description-md5: fab22ebf7107cdfdeb29ff226f6cf920
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: network-manager-dev
-Priority: optional
-Section: net
-Installed-Size: 423
-Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: network-manager
-Version: 0.9.8.0-0ubuntu19
-Filename: pool/main/n/network-manager/network-manager-dev_0.9.8.0-0ubuntu19_amd64.deb
-Size: 62848
-MD5sum: 921dfdc6a2a8eb92e937c193467bb95b
-SHA1: f4cd989a4acd270ddb1d8481465edadf76a3ca38
-SHA256: 9ec856150486943314a679e614bddbc8dded49febd1c9c8205a0090e1161e6f2
-Description: network management framework (development files)
-Homepage: http://www.gnome.org/projects/NetworkManager/
-Description-md5: 7c80f295a14f6455ffe1509a646e6b4d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
 
 Package: python-bzrlib
 Priority: optional
