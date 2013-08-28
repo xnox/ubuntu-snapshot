@@ -175,6 +175,34 @@ Checksums-Sha256:
  4a5e25f7fc196b155731de779eb6d3d2fb856637ece6469c09ff52db75d98174 1955 click_0.3.3.dsc
  692659b5e07f1bdc9ad662fce1a77015b35e666588fb3410c0d8ac16736e5f2f 60152 click_0.3.3.tar.gz
 
+Package: cloud-utils
+Binary: cloud-utils, cloud-guest-utils, cloud-image-utils
+Version: 0.27-0ubuntu4
+Section: admin
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Build-Depends: debhelper (>= 7), python-all (>= 2.6)
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/c/cloud-utils
+Files:
+ d4d117372b6980d526714e6ed4258311 1855 cloud-utils_0.27-0ubuntu4.dsc
+ b9ebfc4f13f65bc58c49fc57c0703cc8 38453 cloud-utils_0.27.orig.tar.gz
+ 697ce8fd876a25420f759a5245f7c0d0 28796 cloud-utils_0.27-0ubuntu4.debian.tar.gz
+Package-List: 
+ cloud-guest-utils deb admin extra
+ cloud-image-utils deb admin extra
+ cloud-utils deb admin extra
+Checksums-Sha1:
+ 80cd44967c051e0fccbfb0c1686dd7cc2082a470 1855 cloud-utils_0.27-0ubuntu4.dsc
+ 9678e59fe2b7306df1c7c3f73f1847bdbba1c3f2 38453 cloud-utils_0.27.orig.tar.gz
+ af6300ffdbde0a3f16214abf9ff3efffd78f39f3 28796 cloud-utils_0.27-0ubuntu4.debian.tar.gz
+Checksums-Sha256:
+ b5c4a2b76cecb36dc8cbb658701c09df09edc9f9cd88208324570e01f4a213a2 1855 cloud-utils_0.27-0ubuntu4.dsc
+ 6da34d6cc93f34e338c9c31627008d8cf531b1f181d44982b92d52335ea5509b 38453 cloud-utils_0.27.orig.tar.gz
+ 3028ac1451be2fb2d6d309692ae573e64edda67ab79248cf340761a8b396b082 28796 cloud-utils_0.27-0ubuntu4.debian.tar.gz
+Python-Version: >= 2.6
+
 Package: debianutils
 Binary: debianutils
 Version: 4.4
@@ -365,94 +393,6 @@ Checksums-Sha256:
  2b9bbdbd31265e7a17d64c7c73c66b12010227242a7d597a0412411fa6fea86f 2204 ghostscript_9.09~dfsg-0ubuntu1.dsc
  62c937ba498738fed908153e82885a4597e680878b65924cc8786f06413ddff8 16662156 ghostscript_9.09~dfsg.orig.tar.bz2
  6dcd465923c5aa1254aef3a36e80ce3e226d80dc580db1be68187231ed4d5732 111589 ghostscript_9.09~dfsg-0ubuntu1.debian.tar.gz
-
-Package: grub2
-Binary: grub2, grub-linuxbios, grub-efi, grub-common, grub2-common, grub-emu, grub-emu-dbg, grub-pc-bin, grub-pc-dbg, grub-pc, grub-rescue-pc, grub-coreboot-bin, grub-coreboot-dbg, grub-coreboot, grub-efi-ia32-bin, grub-efi-ia32-dbg, grub-efi-ia32, grub-efi-amd64-bin, grub-efi-amd64-dbg, grub-efi-amd64, grub-efi-ia64-bin, grub-efi-ia64-dbg, grub-efi-ia64, grub-ieee1275-bin, grub-ieee1275-dbg, grub-ieee1275, grub-firmware-qemu, grub-yeeloong-bin, grub-yeeloong-dbg, grub-yeeloong, grub-theme-starfield, grub-mount-udeb
-Version: 2.00-18ubuntu1
-Priority: optional
-Section: admin
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 7.4.2~), dpkg-dev (>= 1.15.1~), patchutils, autoconf, automake, autogen (>= 1:5.10), dh-autoreconf, python, flex (>= 2.5.35), bison, po-debconf, help2man, texinfo, gcc-4.7-multilib [i386 kopensolaris-i386 any-amd64 any-ppc64 any-sparc], gcc-4.7, libncurses5-dev, xfonts-unifont, libfreetype6-dev, gettext, libusb-dev [!hurd-any], libdevmapper-dev (>= 2:1.02.34) [linux-any], libgeom-dev (>= 8.2+ds1-1) [kfreebsd-any] | libgeom-dev (<< 8.2) [kfreebsd-any], libsdl1.2-dev [!hurd-any], xorriso (>= 0.5.6.pl00), qemu-system [i386 kfreebsd-i386 kopensolaris-i386 any-amd64], qemu-utils [!hurd-any], parted [!hurd-any], libfuse-dev (>= 2.8.4-1.4) [linux-any kfreebsd-any], ttf-dejavu-core, liblzma-dev, dosfstools [amd64], mtools [amd64]
-Build-Conflicts: autoconf2.13, libnvpair-dev, libzfs-dev
-Architecture: any-i386 any-amd64 any-powerpc any-ppc64 any-sparc any-mipsel any-ia64
-Standards-Version: 3.8.4
-Format: 3.0 (quilt)
-Directory: pool/main/g/grub2
-Files:
- 9c66954e57a4b1f55d9a01998d4f8982 4655 grub2_2.00-18ubuntu1.dsc
- a1043102fbc7bcedbf53e7ee3d17ab91 5136412 grub2_2.00.orig.tar.xz
- c1e24911cd35e29f7d9f68a17dc277a4 389732 grub2_2.00-18ubuntu1.debian.tar.gz
-Uploaders: Robert Millan <rmh@debian.org>, Felix Zielcke <fzielcke@z-51.de>, Jordi Mallach <jordi@debian.org>, Colin Watson <cjwatson@debian.org>
-Dm-Upload-Allowed: yes
-Homepage: http://www.gnu.org/software/grub/
-Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/ubuntu/saucy/grub2/saucy
-Package-List: 
- grub-common deb admin optional
- grub-coreboot deb admin extra
- grub-coreboot-bin deb admin extra
- grub-coreboot-dbg deb debug extra
- grub-efi deb oldlibs extra
- grub-efi-amd64 deb admin extra
- grub-efi-amd64-bin deb admin extra
- grub-efi-amd64-dbg deb debug extra
- grub-efi-ia32 deb admin extra
- grub-efi-ia32-bin deb admin extra
- grub-efi-ia32-dbg deb debug extra
- grub-efi-ia64 deb admin extra
- grub-efi-ia64-bin deb admin extra
- grub-efi-ia64-dbg deb debug extra
- grub-emu deb admin extra
- grub-emu-dbg deb debug extra
- grub-firmware-qemu deb admin extra
- grub-ieee1275 deb admin extra
- grub-ieee1275-bin deb admin extra
- grub-ieee1275-dbg deb debug extra
- grub-linuxbios deb oldlibs extra
- grub-mount-udeb udeb debian-installer extra
- grub-pc deb admin optional
- grub-pc-bin deb admin optional
- grub-pc-dbg deb debug extra
- grub-rescue-pc deb admin extra
- grub-theme-starfield deb admin extra
- grub-yeeloong deb admin extra
- grub-yeeloong-bin deb admin extra
- grub-yeeloong-dbg deb debug extra
- grub2 deb oldlibs extra
- grub2-common deb admin optional
-Checksums-Sha1:
- 723fc661387423b73a12432f547b7edefda81d9b 4655 grub2_2.00-18ubuntu1.dsc
- 274d91e96b56a5b9dd0a07accff69dbb6dfb596b 5136412 grub2_2.00.orig.tar.xz
- 44b7b2e81b1f79d921b19c49bb17a166172f3ccc 389732 grub2_2.00-18ubuntu1.debian.tar.gz
-Checksums-Sha256:
- a1f7dfc5be89fe37ddea0198aa80b71cb120c470f2f9bfffb10b4702b05dfa47 4655 grub2_2.00-18ubuntu1.dsc
- 784ec38e7edc32239ad75b8e66df04dc8bfb26d88681bc9f627133a6eb85c458 5136412 grub2_2.00.orig.tar.xz
- 5ef63c3e25e48a6bca3ee8a57851643a7b5f0702b2c47b2782d5f5c0d81d6dc9 389732 grub2_2.00-18ubuntu1.debian.tar.gz
-Debian-Vcs-Browser: http://anonscm.debian.org/loggerhead/pkg-grub/trunk/grub/
-Debian-Vcs-Bzr: http://anonscm.debian.org/bzr/pkg-grub/trunk/grub/
-
-Package: grub2-signed
-Binary: grub-efi-amd64-signed
-Version: 1.17
-Priority: optional
-Section: utils
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Build-Depends: debhelper (>= 9), lsb-release, python3, python3-apt, grub-efi-amd64-bin (>= 2.00-15ubuntu1)
-Architecture: linux-amd64
-Standards-Version: 3.9.4
-Format: 3.0 (native)
-Directory: pool/main/g/grub2-signed
-Files:
- aab4b7d24e51b4cf72c705cdfe8d5dbd 1566 grub2-signed_1.17.dsc
- f8b9a08766da3287509adae12c34b533 3244 grub2-signed_1.17.tar.gz
-Package-List: 
- grub-efi-amd64-signed deb utils optional
-Checksums-Sha1:
- d22f843de3c8420a511dd773416c5280af9c17f7 1566 grub2-signed_1.17.dsc
- 9f13b48e470b0f42ce8c42597d4ea0eabc1f963b 3244 grub2-signed_1.17.tar.gz
-Checksums-Sha256:
- 8a648d399806bb63a8c0f2b4d5075f12e2f58fece2a52a420253e888ba199f44 1566 grub2-signed_1.17.dsc
- dffe50012b4aa6889b260811346b950c6e6a5b3914e01a3c8800bb828edf83b9 3244 grub2-signed_1.17.tar.gz
 
 Package: gst-plugins-base1.0
 Binary: gstreamer1.0-plugins-base-apps, gstreamer1.0-plugins-base-doc, libgstreamer-plugins-base1.0-0, libgstreamer-plugins-base1.0-dev, gstreamer1.0-alsa, gstreamer1.0-plugins-base, gstreamer1.0-plugins-base-dbg, gstreamer1.0-x, gir1.2-gst-plugins-base-1.0

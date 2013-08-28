@@ -1419,6 +1419,53 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: postgresql-server
 
+Package: postgresql-9.1
+Priority: optional
+Section: database
+Installed-Size: 9464
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
+Architecture: armhf
+Version: 9.1.9-3
+Replaces: postgresql-contrib-9.1 (<< 9.1~beta1-3~), postgresql-plpython-9.1 (<< 9.1.9-3)
+Depends: libc6 (>= 2.15), libcomerr2 (>= 1.01), libgssapi-krb5-2 (>= 1.8+dfsg), libkrb5-3 (>= 1.6.dfsg.2), libldap-2.4-2 (>= 2.4.7), libpam0g (>= 0.99.7.1), libpq5 (>= 9.1~), libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.7.4), postgresql-client-9.1, postgresql-common (>= 115~), tzdata, ssl-cert, locales
+Suggests: oidentd | ident-server, locales-all
+Conflicts: postgresql (<< 7.5)
+Breaks: postgresql-plpython-9.1 (<< 9.1.9-3)
+Filename: pool/main/p/postgresql-9.1/postgresql-9.1_9.1.9-3_armhf.deb
+Size: 2264040
+MD5sum: e097adea86d5fb75b3d8773c3e32a1ca
+SHA1: e7c272273ee709dcc58b0178db163ca82dfcf54e
+SHA256: c7f994c41eb2c41ddf56fe04c70af43cbe2013710c5f527431bcf714108f1dac
+Description: object-relational SQL database, version 9.1 server
+Homepage: http://www.postgresql.org/
+Description-md5: c487fe4e86f0eac09ed9847282436059
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: postgresql-server
+
+Package: postgresql-9.1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 23220
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
+Architecture: armhf
+Source: postgresql-9.1
+Version: 9.1.9-3
+Replaces: postgresql-9.0-dbg
+Depends: postgresql-9.1 (= 9.1.9-3)
+Filename: pool/main/p/postgresql-9.1/postgresql-9.1-dbg_9.1.9-3_armhf.deb
+Size: 5856468
+MD5sum: 40d3a20252933b9f75e816115c199f96
+SHA1: c0e2ebea521ea6ef369dc41b4578805fe71f7972
+SHA256: 5c4d5a9819559478e50989e6fd321dacc2b46a94c187319b66edc7006d5baadc
+Description: debug symbols for postgresql-9.1
+Homepage: http://www.postgresql.org/
+Description-md5: c6e0ff14b6f247b18dd692146951ea3c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: postgresql-client
 Priority: optional
 Section: database
@@ -1436,6 +1483,33 @@ SHA1: 97b20908fdc4b980749d188fd9551033eea32b0f
 SHA256: 6ffbad5a23ef6858dc893e38784e37776a2a80bbf9b3dc972241fbe4d70c1c20
 Description: front-end programs for PostgreSQL (supported version)
 Description-md5: d46431edbfde0d6360f2c20aed4a288c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: postgresql-server
+
+Package: postgresql-client-9.1
+Priority: optional
+Section: database
+Installed-Size: 2380
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
+Architecture: armhf
+Source: postgresql-9.1
+Version: 9.1.9-3
+Replaces: postgresql-9.1 (<< 9.1.9-3)
+Provides: postgresql-client
+Depends: libc6 (>= 2.11), libedit2 (>= 2.11-20080614), libpq5 (>= 9.0~), libssl1.0.0 (>= 1.0.0), zlib1g (>= 1:1.2.3.3), postgresql-client-common (>= 115~)
+Suggests: postgresql-9.1, postgresql-doc-9.1
+Conflicts: postgresql (<< 7.5)
+Breaks: postgresql-9.1 (<< 9.1.9-3)
+Filename: pool/main/p/postgresql-9.1/postgresql-client-9.1_9.1.9-3_armhf.deb
+Size: 669996
+MD5sum: 8f6dad7bae228b6cebe482b9ec8c54bb
+SHA1: 5f5a381c78d4bce22a518401814d49415221e3bb
+SHA256: 14e0b3c2b0c99cb941734f12236442bff0b099ca021cbf77ca0e19675c683df6
+Description: front-end programs for PostgreSQL 9.1
+Homepage: http://www.postgresql.org/
+Description-md5: d10f0cd30a6d2795ffb7635bd161d343
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: postgresql-server
@@ -1506,6 +1580,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: postgresql-server
 
+Package: postgresql-contrib-9.1
+Priority: optional
+Section: database
+Installed-Size: 1623
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
+Architecture: armhf
+Source: postgresql-9.1
+Version: 9.1.9-3
+Depends: postgresql-9.1 (= 9.1.9-3), libc6 (>= 2.15), libossp-uuid16, libpq5 (>= 9.0~), libssl1.0.0 (>= 1.0.0), libxml2 (>= 2.7.4), libxslt1.1 (>= 1.1.25), zlib1g (>= 1:1.1.4), postgresql-common (>= 115~)
+Suggests: libdbd-pg-perl
+Conflicts: postgresql-contrib (<< 7.5)
+Filename: pool/main/p/postgresql-9.1/postgresql-contrib-9.1_9.1.9-3_armhf.deb
+Size: 294390
+MD5sum: 61fa288f904f89c4747358b3b1607df2
+SHA1: 604c09b424e076ff89c1cf8d3fa6797c637b06df
+SHA256: 023917aec7434d43f4320ab6f8e737f20ae56d864272bc48e73c877726e0d93f
+Description: additional facilities for PostgreSQL
+Homepage: http://www.postgresql.org/
+Description-md5: 39314d25e69756d51cd5bd0a1e447fdc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: postgresql-server
+
 Package: postgresql-doc
 Priority: optional
 Section: doc
@@ -1548,6 +1646,120 @@ Description-md5: db66112eca2ed30bbea72deea62c48f0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: postgresql-server
+
+Package: postgresql-plperl-9.1
+Priority: optional
+Section: database
+Installed-Size: 568
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
+Architecture: armhf
+Source: postgresql-9.1
+Version: 9.1.9-3
+Replaces: postgresql-contrib-9.1 (<< 9.1~beta1-3~)
+Provides: postgresql-plperl
+Depends: libc6 (>= 2.4), libperl5.14 (>= 5.14.2), postgresql-9.1 (= 9.1.9-3), perl
+Filename: pool/main/p/postgresql-9.1/postgresql-plperl-9.1_9.1.9-3_armhf.deb
+Size: 35878
+MD5sum: a9f5e8768db5315649c891d450e37f66
+SHA1: 439da668bbcd0684563e4084e44a5f3f1d5847ac
+SHA256: e88b29c37f53b6032e69707e10b89a17652a053d39ad14676b3e41fd371b9010
+Description: PL/Perl procedural language for PostgreSQL 9.1
+Homepage: http://www.postgresql.org/
+Description-md5: d28fe3528dc6eb7990cf84c27ec33d41
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: postgresql-plpython-9.1
+Priority: optional
+Section: database
+Installed-Size: 532
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
+Architecture: armhf
+Source: postgresql-9.1
+Version: 9.1.9-3
+Replaces: postgresql-contrib-9.1 (<< 9.1~beta1-3~)
+Provides: postgresql-plpython
+Depends: libc6 (>= 2.4), libpython2.7 (>= 2.7), postgresql-9.1 (= 9.1.9-3)
+Filename: pool/main/p/postgresql-9.1/postgresql-plpython-9.1_9.1.9-3_armhf.deb
+Size: 31824
+MD5sum: 74de01d13c284385048bad4ab8e575bb
+SHA1: 3204e133c5a0b9c35d85e3eb1a65852c867d7715
+SHA256: 3c71d33569c4711c7498b5fe798fa7ffeb5dd6abb5f767d1bbd2482340439aee
+Description: PL/Python procedural language for PostgreSQL 9.1
+Homepage: http://www.postgresql.org/
+Description-md5: ccc8c07b819b3f7c5ac6ef4ed25c6fe2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: postgresql-plpython3-9.1
+Priority: optional
+Section: database
+Installed-Size: 531
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
+Architecture: armhf
+Source: postgresql-9.1
+Version: 9.1.9-3
+Replaces: postgresql-plpython-9.1 (<< 9.1.9-3)
+Provides: postgresql-plpython3
+Depends: libc6 (>= 2.4), libpython3.3 (>= 3.3.1), postgresql-9.1 (= 9.1.9-3)
+Breaks: postgresql-plpython-9.1 (<< 9.1.9-3)
+Filename: pool/main/p/postgresql-9.1/postgresql-plpython3-9.1_9.1.9-3_armhf.deb
+Size: 31660
+MD5sum: 9607d3d56cf612f60925f30ef51c6fdb
+SHA1: 3002e0677b6c89974d23f546b72f0b627557dd4e
+SHA256: 311bbf4625d88a7fb8bd4b381920ee7513e8f8d070a2fe09e9f7602325d1aa53
+Description: PL/Python 3 procedural language for PostgreSQL 9.1
+Homepage: http://www.postgresql.org/
+Description-md5: e84e4ebe1deb3134f10ae4ad7649c32c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: postgresql-pltcl-9.1
+Priority: optional
+Section: database
+Installed-Size: 556
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
+Architecture: armhf
+Source: postgresql-9.1
+Version: 9.1.9-3
+Replaces: postgresql-contrib-9.1 (<< 9.1~beta1-3~)
+Provides: postgresql-pltcl
+Depends: libc6 (>= 2.4), tcl8.5 (>= 8.5.0), postgresql-9.1 (= 9.1.9-3)
+Filename: pool/main/p/postgresql-9.1/postgresql-pltcl-9.1_9.1.9-3_armhf.deb
+Size: 20448
+MD5sum: 4995f37ec2974f6fd5b502305c34db22
+SHA1: 136ea1f7207259b8efde24556492424abf611700
+SHA256: 08738cb57ad5f44523eec23e90495d1baf037a36e3796521636e19598a3fde85
+Description: PL/Tcl procedural language for PostgreSQL 9.1
+Homepage: http://www.postgresql.org/
+Description-md5: 76e21b8d06f7d196829d87d594e1e2b1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: postgresql-server-dev-9.1
+Priority: optional
+Section: libdevel
+Installed-Size: 3282
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
+Architecture: armhf
+Source: postgresql-9.1
+Version: 9.1.9-3
+Depends: libc6 (>= 2.4), libpq-dev (>= 9.1~), postgresql-common (>= 117~)
+Filename: pool/main/p/postgresql-9.1/postgresql-server-dev-9.1_9.1.9-3_armhf.deb
+Size: 528376
+MD5sum: 5d3014354fcae32d13881ceb69f80474
+SHA1: 93584454ca749681ab92641db5ef38f5e4fd7a1a
+SHA256: c76b27d5b3c217d00ce18a3d4259f30e7b7646e51bd2d4a8b18faa27e17f56b9
+Description: development files for PostgreSQL 9.1 server-side programming
+Homepage: http://www.postgresql.org/
+Description-md5: 8f99aad87baf6549fb0ed8307a6b1148
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: python-bzrlib
 Priority: optional
