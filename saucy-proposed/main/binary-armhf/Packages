@@ -225,6 +225,31 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: gir1.2-clutter-1.0
+Priority: optional
+Section: libs
+Installed-Size: 633
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: clutter-1.0
+Version: 1.14.4-3
+Replaces: gir1.0-clutter-1.0, libclutter-1.0-0 (<< 1.0.8)
+Depends: gir1.2-atk-1.0, gir1.2-cogl-1.0, gir1.2-coglpango-1.0, gir1.2-freedesktop, gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-json-1.0, libclutter-1.0-0 (>= 1.13.10)
+Conflicts: gir1.0-clutter-1.0
+Breaks: libclutter-1.0-0 (<< 1.0.8)
+Filename: pool/main/c/clutter-1.0/gir1.2-clutter-1.0_1.14.4-3_armhf.deb
+Size: 103078
+MD5sum: 6177c0139fcb907460f2da490aecf537
+SHA1: 7ec1b45206ae403cf400adc95ce974c8bbbcc838
+SHA256: 39c46408f94fa1f30d677d9a215754ec6eb9a00e97caea3391b181f02a395dcd
+Description: GObject introspection data for the Clutter 1.0 library
+Homepage: http://www.clutter-project.org/
+Description-md5: 312bf4f2636f72196b1ab50b2a930bad
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-gnome-desktop
+
 Package: gir1.2-gst-plugins-base-1.0
 Priority: optional
 Section: introspection
@@ -626,6 +651,32 @@ Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libclutter-1.0-0
+Priority: optional
+Section: libs
+Installed-Size: 1014
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: clutter-1.0
+Version: 1.14.4-3
+Depends: libatk1.0-0 (>= 2.2.0), libc6 (>= 2.7), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.10), libcogl-pango12 (>= 1.7.4), libcogl12 (>= 1.13.4), libfontconfig1 (>= 2.9.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.3.18), libjson-glib-1.0-0 (>= 0.12.0), libpango-1.0-0 (>= 1.30), libpangocairo-1.0-0 (>= 1.30), libpangoft2-1.0-0 (>= 1.30), libx11-6 (>= 2:1.2.99.901), libxcomposite1 (>= 1:0.3-1), libxdamage1 (>= 1:1.1), libxfixes3 (>= 1:4.0.1), libxi6 (>= 2:1.2.99.4)
+Pre-Depends: multiarch-support
+Recommends: libclutter-1.0-common
+Breaks: libcogl11, libcogl9
+Filename: pool/main/c/clutter-1.0/libclutter-1.0-0_1.14.4-3_armhf.deb
+Size: 418666
+MD5sum: eb2e6e2e6eaada8d796beb39b3e56b73
+SHA1: 21934593f9a0a415064c38e417d704fd02d742db
+SHA256: f89c60d3af35d44b5f2aecef6f7f1acff19e7fef452fe2188e76a8b4bfb90691
+Description: Open GL based interactive canvas library
+Multi-Arch: same
+Homepage: http://www.clutter-project.org/
+Description-md5: a61582dd624c05cff2d537148daf6e7c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: libclutter-1.0-common
 Priority: optional
 Section: libs
@@ -647,6 +698,51 @@ Description-md5: 38161479c76808c77cc7cac8fb452207
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libclutter-1.0-dbg
+Priority: extra
+Section: debug
+Installed-Size: 4309
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: clutter-1.0
+Version: 1.14.4-3
+Depends: libclutter-1.0-0 (= 1.14.4-3)
+Filename: pool/main/c/clutter-1.0/libclutter-1.0-dbg_1.14.4-3_armhf.deb
+Size: 1142050
+MD5sum: 37865407ac181ea3cc8ff92c6ef6229e
+SHA1: 4b5f6359e7a6a677d2913643ad605e1c6374f98d
+SHA256: b48a1faf19d9beba581c233355adeb1568f556391f9e70059d03e796880e74a2
+Description: Open GL based interactive canvas library (debug files)
+Multi-Arch: same
+Homepage: http://www.clutter-project.org/
+Description-md5: fd1375dceedf124a35a174c0c643601c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libclutter-1.0-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 4038
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: clutter-1.0
+Version: 1.14.4-3
+Depends: libclutter-1.0-0 (= 1.14.4-3), gir1.2-clutter-1.0 (= 1.14.4-3), libgdk-pixbuf2.0-dev, libcairo2-dev (>= 1.10), libatk1.0-dev (>= 2.5.3), libpango1.0-dev (>= 1.30), libcogl-dev (>= 1.14.0), libcogl-pango-dev (>= 1.14.0), libgtk-3-dev, libdrm-dev, libx11-dev, libxext-dev, libxfixes-dev, libxdamage-dev, libxcomposite-dev, libxi-dev, libjson-glib-dev (>= 0.12)
+Recommends: pkg-config
+Suggests: libclutter-1.0-doc
+Filename: pool/main/c/clutter-1.0/libclutter-1.0-dev_1.14.4-3_armhf.deb
+Size: 294790
+MD5sum: c53cafafbab15604d16e125b6ab1b7da
+SHA1: 773a4cd1eb49f4247612fa097036d21c7bc18a58
+SHA256: eba0bc7c7ef97f3b529428c3017ef48d7e97a0d5f06c5b256409b58c58dfcae0
+Description: Open GL based interactive canvas library (development files)
+Homepage: http://www.clutter-project.org/
+Description-md5: d2f107ca493c4c999db05729a9a06672
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: libclutter-1.0-doc
 Priority: optional
@@ -1094,6 +1190,114 @@ Description-md5: a167400b2b59382dd0211fa9b603d334
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: maas
+Priority: optional
+Section: net
+Installed-Size: 36
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Depends: maas-cluster-controller, maas-region-controller, python-django-maas
+Filename: pool/main/m/maas/maas_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 1908
+MD5sum: cc06640099ee0435f721893eb4412319
+SHA1: d4329c713c5345e76f64f24f46363436cc316e6b
+SHA256: e6341c292257caaa4cf4a8f04df510d92a34e0bdbebfb3652b6567fa29fd6c51
+Description: Ubuntu MAAS Server
+Homepage: https://launchpad.net/maas
+Description-md5: 61bb9135ef18acaff6eb8c13e1efc46a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: maas-cli
+Priority: optional
+Section: net
+Installed-Size: 102
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Depends: python-bzrlib, python-httplib2, python-maas-client (= 1.4+bzr1551+dfsg-0ubuntu1), python-oauth, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Filename: pool/main/m/maas/maas-cli_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 12104
+MD5sum: c4c2c7361464ec649bff87e0011b3ba0
+SHA1: 9e07b781540db3476f67f86ab8b4b0fca3cfea36
+SHA256: 078aaaaca450bdd03d83c69869173b6ad59aaecf2c9ca8addf51c98d147f65c7
+Description: Ubuntu MAAS Client Tool
+Homepage: https://launchpad.net/maas
+Description-md5: 814b9f5858d62e085e69aea0f840e274
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: maas-cluster-controller
+Priority: optional
+Section: net
+Installed-Size: 178
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Replaces: maas (<= 0.1+bzr1048+dfsg-0ubuntu1), maas-region-controller (<= 0.1+bzr1314+dfsg-0ubuntu1)
+Depends: apache2, bind9utils, distro-info, freeipmi-tools, maas-cli (= 1.4+bzr1551+dfsg-0ubuntu1), maas-common (= 1.4+bzr1551+dfsg-0ubuntu1), python-celery, python-httplib2, python-lockfile, python-maas-provisioningserver (= 1.4+bzr1551+dfsg-0ubuntu1), python-netaddr, python-oauth, python-tempita, python-twisted, python-zope.interface, rsyslog, syslinux-common, tgt, uuid-runtime, wget, debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Suggests: maas-dhcp (= 1.4+bzr1551+dfsg-0ubuntu1)
+Conflicts: tftpd-hpa
+Breaks: maas (<= 0.1+bzr1048+dfsg-0ubuntu1), maas-region-controller (<= 0.1+bzr1314+dfsg-0ubuntu1)
+Filename: pool/main/m/maas/maas-cluster-controller_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 20166
+MD5sum: 42df1ebd056f175df3664a1daa8940a4
+SHA1: e36f862eecc7866d849e8a7fb5c04da65d594b28
+SHA256: 13fa3e4402d70320da55e5350279ccf7bd487724e7fb57ff46749a5f37983a55
+Description: Ubuntu MAAS Cluster Controller
+Homepage: https://launchpad.net/maas
+Description-md5: c10b2ea1c3afc31c6a18490951702ac4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: maas-common
+Priority: optional
+Section: net
+Installed-Size: 41
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Replaces: maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
+Breaks: maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
+Filename: pool/main/m/maas/maas-common_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 6908
+MD5sum: 2e2a45f031e94d11df170190a6b3176e
+SHA1: d0af5de1a61bfeacc30e553d9abca71a7cf7d30a
+SHA256: 1707f3ef079bf831bb5c279e6c804856627f6fa9ff1b9c5d47a03d1abb699f85
+Description: Ubuntu MAAS Server
+Homepage: https://launchpad.net/maas
+Description-md5: 0f08f38d6abc6023bae9225f98d0d50c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: maas-region-controller
+Priority: optional
+Section: net
+Installed-Size: 463
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Replaces: maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
+Depends: apache2, avahi-daemon, bind9utils, dbconfig-common, iproute, libapache2-mod-wsgi, libjs-raphael, libjs-yui3-full, libjs-yui3-min, maas-common (= 1.4+bzr1551+dfsg-0ubuntu1), postgresql-9.1, pwgen, python-django, python-django-maas (= 1.4+bzr1551+dfsg-0ubuntu1), python-django-piston, python-django-south, python-maas-provisioningserver (= 1.4+bzr1551+dfsg-0ubuntu1), rabbitmq-server, rsyslog, squid-deb-proxy, debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Recommends: openssh-server
+Suggests: maas-dns
+Breaks: maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
+Filename: pool/main/m/maas/maas-region-controller_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 92288
+MD5sum: 2bc70b0b01b78420b9d047c8b5f332c9
+SHA1: 4cb66b10a8f767ac932b5e391a519f5abe0990c2
+SHA256: f7d4fdec2596c62abbb97fbbb8714128545193e9023fe48b8a90ce110eecaf1b
+Description: Ubuntu MAAS Server
+Homepage: https://launchpad.net/maas
+Description-md5: af957353fce4c07ff6cc2df04c26a3e3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: mysql-client
 Priority: optional
@@ -1722,6 +1926,70 @@ SHA256: 0ce76f5c67599e34da96068f38539f8234d830577f828be1806d62f404471a89
 Description: distributed version control system - testsuite
 Homepage: http://bazaar-vcs.org
 Description-md5: 6a061202c9118fa07cacafd938b725f0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-django-maas
+Priority: optional
+Section: net
+Installed-Size: 1586
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Depends: python-avahi, python-celery, python-convoy, python-dbus, python-lockfile, python-lxml, python-maas-client (= 1.4+bzr1551+dfsg-0ubuntu1), python-netaddr, python-oops, python-oops-amqp, python-oops-datedir-repo, python-oops-twisted, python-oops-wsgi, python-psycopg2, python-sphinx, python-tempita, python-twisted, python-txamqp, python-txlongpoll, python-zope.interface, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Filename: pool/main/m/maas/python-django-maas_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 183742
+MD5sum: 6283dc2c24196a8e0281ffb747e59e08
+SHA1: fb7377a79ae929360bed10421b4f3e49a3311b8d
+SHA256: 46a8d3cc66c22c27bb9fda65f58ca2d7554332f76ccf2fb44fdbed99e6a9481d
+Description: Ubuntu MAAS Server - (django files)
+Homepage: https://launchpad.net/maas
+Description-md5: 87625774b1d9493b5a765a3b5549c5de
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-maas-client
+Priority: optional
+Section: net
+Installed-Size: 76
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Replaces: maas (<= 0.1+bzr971+dfsg-0ubuntu2)
+Depends: python-oauth, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Breaks: maas (<= 0.1+bzr971+dfsg-0ubuntu2)
+Filename: pool/main/m/maas/python-maas-client_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 11684
+MD5sum: d8b9fb67ab9b3d4e3b52092c4050a33a
+SHA1: 018720056cf87afe570c8199922bf287434232f4
+SHA256: e6c464b6a124221b2948d4f80c75a073158e1d6e315c570a3a0cd16f4254a9d3
+Description: Ubuntu MAAS API Client - (python files)
+Homepage: https://launchpad.net/maas
+Description-md5: 20735e9fca3a578f82aae12168c594a7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-maas-provisioningserver
+Priority: optional
+Section: net
+Installed-Size: 291
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Replaces: maas-cluster-controller (<= 0.1+bzr1243+dfsg-0ubuntu3), python-django-maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
+Depends: python-celery, python-formencode, python-lockfile, python-lxml, python-maas-client, python-netifaces, python-oops, python-oops-amqp, python-oops-datedir-repo, python-oops-twisted, python-pyparsing, python-tempita, python-twisted-core, python-twisted-web, python-txamqp, python-txtftp, python-yaml, python-zope.interface, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Breaks: maas-cluster-controller (<= 0.1+bzr1243+dfsg-0ubuntu3), python-django-maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
+Filename: pool/main/m/maas/python-maas-provisioningserver_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 50682
+MD5sum: 595132dfff18c1c82e568aa6b8a6b6ca
+SHA1: f3ef89488e58968b0bfc25976e5ab2434eede7d9
+SHA256: d0cf14916abd6245b34ef9b79564b76e8ecec63485f9b9c38c027bce4797a4ca
+Description: Ubuntu MAAS Server
+Homepage: https://launchpad.net/maas
+Description-md5: 4f5c7749b5a2c54ca28e3e8e5170dd4e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 

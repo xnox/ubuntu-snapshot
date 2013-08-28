@@ -1310,6 +1310,119 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
+Package: maas
+Priority: optional
+Section: net
+Installed-Size: 36
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Depends: maas-cluster-controller, maas-region-controller, python-django-maas
+Filename: pool/main/m/maas/maas_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 1908
+MD5sum: cc06640099ee0435f721893eb4412319
+SHA1: d4329c713c5345e76f64f24f46363436cc316e6b
+SHA256: e6341c292257caaa4cf4a8f04df510d92a34e0bdbebfb3652b6567fa29fd6c51
+Description: Ubuntu MAAS Server
+Homepage: https://launchpad.net/maas
+Description-md5: 61bb9135ef18acaff6eb8c13e1efc46a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: maas-cli
+Priority: optional
+Section: net
+Installed-Size: 102
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Depends: python-bzrlib, python-httplib2, python-maas-client (= 1.4+bzr1551+dfsg-0ubuntu1), python-oauth, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Filename: pool/main/m/maas/maas-cli_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 12104
+MD5sum: c4c2c7361464ec649bff87e0011b3ba0
+SHA1: 9e07b781540db3476f67f86ab8b4b0fca3cfea36
+SHA256: 078aaaaca450bdd03d83c69869173b6ad59aaecf2c9ca8addf51c98d147f65c7
+Description: Ubuntu MAAS Client Tool
+Homepage: https://launchpad.net/maas
+Description-md5: 814b9f5858d62e085e69aea0f840e274
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: maas-cluster-controller
+Priority: optional
+Section: net
+Installed-Size: 178
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Replaces: maas (<= 0.1+bzr1048+dfsg-0ubuntu1), maas-region-controller (<= 0.1+bzr1314+dfsg-0ubuntu1)
+Depends: apache2, bind9utils, distro-info, freeipmi-tools, maas-cli (= 1.4+bzr1551+dfsg-0ubuntu1), maas-common (= 1.4+bzr1551+dfsg-0ubuntu1), python-celery, python-httplib2, python-lockfile, python-maas-provisioningserver (= 1.4+bzr1551+dfsg-0ubuntu1), python-netaddr, python-oauth, python-tempita, python-twisted, python-zope.interface, rsyslog, syslinux-common, tgt, uuid-runtime, wget, debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Suggests: maas-dhcp (= 1.4+bzr1551+dfsg-0ubuntu1)
+Conflicts: tftpd-hpa
+Breaks: maas (<= 0.1+bzr1048+dfsg-0ubuntu1), maas-region-controller (<= 0.1+bzr1314+dfsg-0ubuntu1)
+Filename: pool/main/m/maas/maas-cluster-controller_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 20166
+MD5sum: 42df1ebd056f175df3664a1daa8940a4
+SHA1: e36f862eecc7866d849e8a7fb5c04da65d594b28
+SHA256: 13fa3e4402d70320da55e5350279ccf7bd487724e7fb57ff46749a5f37983a55
+Description: Ubuntu MAAS Cluster Controller
+Homepage: https://launchpad.net/maas
+Description-md5: c10b2ea1c3afc31c6a18490951702ac4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: maas-common
+Priority: optional
+Section: net
+Installed-Size: 41
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Replaces: maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
+Breaks: maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
+Filename: pool/main/m/maas/maas-common_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 6908
+MD5sum: 2e2a45f031e94d11df170190a6b3176e
+SHA1: d0af5de1a61bfeacc30e553d9abca71a7cf7d30a
+SHA256: 1707f3ef079bf831bb5c279e6c804856627f6fa9ff1b9c5d47a03d1abb699f85
+Description: Ubuntu MAAS Server
+Homepage: https://launchpad.net/maas
+Description-md5: 0f08f38d6abc6023bae9225f98d0d50c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: maas-region-controller
+Priority: optional
+Section: net
+Installed-Size: 463
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Replaces: maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
+Depends: apache2, avahi-daemon, bind9utils, dbconfig-common, iproute, libapache2-mod-wsgi, libjs-raphael, libjs-yui3-full, libjs-yui3-min, maas-common (= 1.4+bzr1551+dfsg-0ubuntu1), postgresql-9.1, pwgen, python-django, python-django-maas (= 1.4+bzr1551+dfsg-0ubuntu1), python-django-piston, python-django-south, python-maas-provisioningserver (= 1.4+bzr1551+dfsg-0ubuntu1), rabbitmq-server, rsyslog, squid-deb-proxy, debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python
+Recommends: openssh-server
+Suggests: maas-dns
+Breaks: maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
+Filename: pool/main/m/maas/maas-region-controller_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 92288
+MD5sum: 2bc70b0b01b78420b9d047c8b5f332c9
+SHA1: 4cb66b10a8f767ac932b5e391a519f5abe0990c2
+SHA256: f7d4fdec2596c62abbb97fbbb8714128545193e9023fe48b8a90ce110eecaf1b
+Description: Ubuntu MAAS Server
+Homepage: https://launchpad.net/maas
+Description-md5: af957353fce4c07ff6cc2df04c26a3e3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: mysql-client
 Priority: optional
 Section: database
@@ -1963,6 +2076,73 @@ SHA256: 0ce76f5c67599e34da96068f38539f8234d830577f828be1806d62f404471a89
 Description: distributed version control system - testsuite
 Homepage: http://bazaar-vcs.org
 Description-md5: 6a061202c9118fa07cacafd938b725f0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: python-django-maas
+Priority: optional
+Section: net
+Installed-Size: 1586
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Depends: python-avahi, python-celery, python-convoy, python-dbus, python-lockfile, python-lxml, python-maas-client (= 1.4+bzr1551+dfsg-0ubuntu1), python-netaddr, python-oops, python-oops-amqp, python-oops-datedir-repo, python-oops-twisted, python-oops-wsgi, python-psycopg2, python-sphinx, python-tempita, python-twisted, python-txamqp, python-txlongpoll, python-zope.interface, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Filename: pool/main/m/maas/python-django-maas_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 183742
+MD5sum: 6283dc2c24196a8e0281ffb747e59e08
+SHA1: fb7377a79ae929360bed10421b4f3e49a3311b8d
+SHA256: 46a8d3cc66c22c27bb9fda65f58ca2d7554332f76ccf2fb44fdbed99e6a9481d
+Description: Ubuntu MAAS Server - (django files)
+Homepage: https://launchpad.net/maas
+Description-md5: 87625774b1d9493b5a765a3b5549c5de
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: python-maas-client
+Priority: optional
+Section: net
+Installed-Size: 76
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Replaces: maas (<= 0.1+bzr971+dfsg-0ubuntu2)
+Depends: python-oauth, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Breaks: maas (<= 0.1+bzr971+dfsg-0ubuntu2)
+Filename: pool/main/m/maas/python-maas-client_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 11684
+MD5sum: d8b9fb67ab9b3d4e3b52092c4050a33a
+SHA1: 018720056cf87afe570c8199922bf287434232f4
+SHA256: e6c464b6a124221b2948d4f80c75a073158e1d6e315c570a3a0cd16f4254a9d3
+Description: Ubuntu MAAS API Client - (python files)
+Homepage: https://launchpad.net/maas
+Description-md5: 20735e9fca3a578f82aae12168c594a7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: python-maas-provisioningserver
+Priority: optional
+Section: net
+Installed-Size: 291
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: maas
+Version: 1.4+bzr1551+dfsg-0ubuntu1
+Replaces: maas-cluster-controller (<= 0.1+bzr1243+dfsg-0ubuntu3), python-django-maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
+Depends: python-celery, python-formencode, python-lockfile, python-lxml, python-maas-client, python-netifaces, python-oops, python-oops-amqp, python-oops-datedir-repo, python-oops-twisted, python-pyparsing, python-tempita, python-twisted-core, python-twisted-web, python-txamqp, python-txtftp, python-yaml, python-zope.interface, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Breaks: maas-cluster-controller (<= 0.1+bzr1243+dfsg-0ubuntu3), python-django-maas (<= 0.1+bzr1048+dfsg-0ubuntu1)
+Filename: pool/main/m/maas/python-maas-provisioningserver_1.4+bzr1551+dfsg-0ubuntu1_all.deb
+Size: 50682
+MD5sum: 595132dfff18c1c82e568aa6b8a6b6ca
+SHA1: f3ef89488e58968b0bfc25976e5ab2434eede7d9
+SHA256: d0cf14916abd6245b34ef9b79564b76e8ecec63485f9b9c38c027bce4797a4ca
+Description: Ubuntu MAAS Server
+Homepage: https://launchpad.net/maas
+Description-md5: 4f5c7749b5a2c54ca28e3e8e5170dd4e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
