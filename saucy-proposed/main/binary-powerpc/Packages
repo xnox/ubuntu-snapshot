@@ -1,3 +1,99 @@
+Package: binutils
+Priority: optional
+Section: devel
+Installed-Size: 12168
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: powerpc
+Version: 2.23.52.20130828-1ubuntu1
+Replaces: binutils-gold (<< 2.20.51.20100415), binutils-mingw-w64-i686 (<< 2.23.52.20130612-1+3), binutils-mingw-w64-x86-64 (<< 2.23.52.20130612-1+3)
+Provides: binutils-gold, elf-binutils
+Depends: libc6 (>= 2.11), zlib1g (>= 1:1.2.0)
+Suggests: binutils-doc (>= 2.23.52.20130828-1ubuntu1)
+Conflicts: binutils-gold (<< 2.20.51.20100415), elf-binutils, gas, modutils (<< 2.4.19-1)
+Breaks: binutils-mingw-w64-i686 (<< 2.23.52.20130612-1+3), binutils-mingw-w64-x86-64 (<< 2.23.52.20130612-1+3)
+Filename: pool/main/b/binutils/binutils_2.23.52.20130828-1ubuntu1_powerpc.deb
+Size: 4098532
+MD5sum: d0b266c69375bbfa021b05b2a178911f
+SHA1: 3395cc83bdb8f4d4a93cc9aaced8ed51d6d429b5
+SHA256: 2037ae33b86ed83628394895a264fabab53ab2ce69b9d5d1548093ac94ab0faf
+Description: GNU assembler, linker and binary utilities
+Description-md5: fde49b4cfeaad346a6e094f973da28d7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: binutils-dev
+Priority: extra
+Section: devel
+Installed-Size: 13729
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: powerpc
+Source: binutils
+Version: 2.23.52.20130828-1ubuntu1
+Replaces: libbfd-dev, libc5-dev
+Provides: libbfd-dev
+Depends: binutils (= 2.23.52.20130828-1ubuntu1)
+Conflicts: libbfd-dev
+Filename: pool/main/b/binutils/binutils-dev_2.23.52.20130828-1ubuntu1_powerpc.deb
+Size: 5151080
+MD5sum: 746a800e9f5a559bcc391f6d49ffe5b3
+SHA1: 358cbc743618949ccc611321aef28d720ddc6c6b
+SHA256: 97cc0b92df0a308aceaaeef4c07df03bcb65c7e9c620009c72850390dfa29770
+Description: GNU binary utilities (BFD development files)
+Description-md5: ddc22c04156534b000b4f021b88a6023
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: binutils-doc
+Priority: optional
+Section: doc
+Installed-Size: 509
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: binutils
+Version: 2.23.52.20130828-1ubuntu1
+Depends: dpkg (>= 1.15.4) | install-info
+Suggests: binutils (= 2.23.52.20130828-1ubuntu1)
+Conflicts: binutils (<< 2.9.1.0.25-3)
+Filename: pool/main/b/binutils/binutils-doc_2.23.52.20130828-1ubuntu1_all.deb
+Size: 450294
+MD5sum: d97e65311de599dbe2f84013a8883c3f
+SHA1: c8d56f41c59f136831cef6f5aff1a296f2c566ca
+SHA256: 9cf54200d34e81c9a2a3cf3d0fc48cca61510635e3556c2a039ca7fc99606429
+Description: Documentation for the GNU assembler, linker and binary utilities
+Description-md5: 61fd9f95707b9eb9ad8fe9b13a862636
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: binutils-spu
+Priority: optional
+Section: devel
+Installed-Size: 4017
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: powerpc
+Source: binutils
+Version: 2.23.52.20130828-1ubuntu1
+Replaces: spu-binutils
+Provides: spu-binutils
+Depends: libc6 (>= 2.11), zlib1g (>= 1:1.2.0), binutils (= 2.23.52.20130828-1ubuntu1)
+Recommends: libc6-dev
+Suggests: binutils-doc (>= 2.23.52.20130828-1ubuntu1)
+Conflicts: spu-binutils
+Filename: pool/main/b/binutils/binutils-spu_2.23.52.20130828-1ubuntu1_powerpc.deb
+Size: 1568560
+MD5sum: 213b5f691b00f7a46daa440c733c417c
+SHA1: 07033507b846af83c1f09ec32caeaead283bfe6f
+SHA256: 35d36f9aa4d6d78740e966bcc0610b101c2f6c5187c71e0ccfe9c053f30df191
+Description: GNU assembler, linker and binary utilities targeted for spu-elf
+Description-md5: 4e89b57caad5a98c31bb85ee97a40e16
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: bzr
 Priority: optional
 Section: devel
@@ -139,15 +235,15 @@ Installed-Size: 278
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Piotr Ożarowski <piotr@debian.org>
 Architecture: all
-Version: 1.20130819-1ubuntu3
+Version: 1.20130819-1ubuntu4
 Replaces: python3 (<< 3.3.2-4~)
 Depends: python3 (>= 3.2.3-3~)
 Breaks: python3 (<< 3.3.2-4~)
-Filename: pool/main/d/dh-python/dh-python_1.20130819-1ubuntu3_all.deb
-Size: 52280
-MD5sum: 06e5681a4afbd5e264a7e46150dd07f5
-SHA1: 8f20d377f89f093dfef69fd0b3787f96ada52fc9
-SHA256: 741deb5ff5f6ed4526d516a8bda8aa4208edef6b6bf2d4aaf6fb142e94ceb8eb
+Filename: pool/main/d/dh-python/dh-python_1.20130819-1ubuntu4_all.deb
+Size: 52318
+MD5sum: 2f10cf350fb7b6503a25fcb82ee0b756
+SHA1: f21b2159cca1cce46bfec7251c0ef9d5a93dabca
+SHA256: d044a1ea5e720621b0049431fdff834e1525de2c97029a2dc525f1046bb1da6e
 Description: Debian helper tools for packaging Python libraries and applications
 Description-md5: 9f24690d2f6e9b70048dc4079a2dfca7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -1700,6 +1796,49 @@ Description-md5: 6a061202c9118fa07cacafd938b725f0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-gridfs
+Priority: optional
+Section: python
+Installed-Size: 98
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Federico Ceratto <federico.ceratto@gmail.com>
+Architecture: all
+Source: pymongo
+Version: 2.6-1
+Provides: python2.7-gridfs
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-pymongo
+Filename: pool/main/p/pymongo/python-gridfs_2.6-1_all.deb
+Size: 10870
+MD5sum: 417610742a79a1ae54911b79fd4b6d5c
+SHA1: f03aa045e94a7f3363cd27b443cba0f8f59a7cf6
+SHA256: aaa4aff242d817ef411a4f99013e1356fbd828c5de21c5d48a901da06f89ddf7
+Description: Python implementation of GridFS for MongoDB
+Homepage: http://api.mongodb.org/python/
+Description-md5: 9f81017354ca04e7ee67c50fa96675e1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-pymongo-doc
+Priority: optional
+Section: doc
+Installed-Size: 2502
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Federico Ceratto <federico.ceratto@gmail.com>
+Architecture: all
+Source: pymongo
+Version: 2.6-1
+Depends: libjs-jquery, libjs-underscore
+Filename: pool/main/p/pymongo/python-pymongo-doc_2.6-1_all.deb
+Size: 991112
+MD5sum: 2fd0748f300fac790e6ec47ca0dea0cd
+SHA1: 6fcefb114e6e0cc500251d1bcff700cb09c2f17b
+SHA256: 07050d96f92c4d1bbd946972c10825b859329318aaaa973efe6a2bf38c8d12ab
+Description: Python interface to the MongoDB document-oriented database (documentation)
+Homepage: http://api.mongodb.org/python/
+Description-md5: fbd62f485ddf85b5deaef066e9d02ec6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python3-click
 Priority: optional
 Section: python
@@ -1719,6 +1858,27 @@ SHA1: 2379c4806466042064523658eb0ce741320432cf
 SHA256: a0774939bca1e80d337c5fa327bf758a31d10267e168a4539a2e252ef246d057
 Description: Click packages (Python 3 interface)
 Description-md5: a55b8833aad665015cec861ba580ce8a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-gridfs
+Priority: optional
+Section: python
+Installed-Size: 90
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Federico Ceratto <federico.ceratto@gmail.com>
+Architecture: all
+Source: pymongo
+Version: 2.6-1
+Depends: python3 (>= 3.2.3-3~)
+Filename: pool/main/p/pymongo/python3-gridfs_2.6-1_all.deb
+Size: 11940
+MD5sum: b832dd9f00c017a39810331f2f4ab889
+SHA1: 269f3dfec0d042567ade5b5ebfa750eba25a672d
+SHA256: 615d397913ff08db135a00282af4e7a7488aaa7bf78de21c12152e6d3b14de76
+Description: Python3 implementation of GridFS for MongoDB
+Homepage: http://api.mongodb.org/python/
+Description-md5: c945face2e12c0bcbca6132ced76cd28
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
