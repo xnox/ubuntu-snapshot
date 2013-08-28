@@ -1,6 +1,7 @@
 Package: apper
 Binary: apper, apper-data, apper-dbg
 Version: 0.8.1-1
+Priority: optional
 Section: universe/kde
 Maintainer: Matthias Klumpp <mak@debian.org>
 Build-Depends: chrpath, cmake (>= 2.8.4), debhelper (>= 9.0.0), docbook (>= 4.5), kde-workspace-dev (>= 4:4.8), kdelibs5-dev (>= 4:4.8), libappstream-dev (>= 0.3.1), libdbus-1-dev, libdebconf-kde-dev, liblistaller-glib-dev (>= 0.5.6), libpackagekit-qt2-dev (>= 0.8.8), libxapian-dev (>= 1.2), pkg-kde-tools (>= 0.14)
@@ -199,6 +200,40 @@ Checksums-Sha256:
  f19774125ee05346f01d3f1cc674b433299ef83cdbc00ea89c3aa5f29f4206b6 2709 blender_2.68a-3.dsc
  ad92724421fcf70323d76b8ef79f447813d2cf1b4ab237b901767c2709bd1dbc 35008506 blender_2.68a.orig.tar.bz2
  fae392af80a0531908fb75304f8fde55d2bad1bdd8e20e218d984ef0729ad44a 38146 blender_2.68a-3.debian.tar.gz
+
+Package: blktap
+Binary: blktap-dev, blktap-utils, libvhd0, libvhdio-2.0.90, libblktapctl0
+Version: 2.0.90-2ubuntu1
+Section: universe/libs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: PKG Xen Devel <pkg-xen-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), autotools-dev, uuid-dev, libaio-dev, libtool, autoconf, automake
+Architecture: linux-any
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/b/blktap
+Files:
+ c3b8a16c2666def323c140e1ddc12568 2246 blktap_2.0.90-2ubuntu1.dsc
+ 6fd456d0ab7ec1210bf64c5a0d6bde33 235286 blktap_2.0.90.orig.tar.gz
+ 958b72058e96d54f56e469f86ddd76d7 7167 blktap_2.0.90-2ubuntu1.debian.tar.gz
+Uploaders: Thomas Goirand <zigo@debian.org>
+Homepage: http://www.xen.org/products/cloudxen.html
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-xen/blktap.git
+Vcs-Git: http://anonscm.debian.org/git/pkg-xen/blktap.git
+Package-List: 
+ blktap-dev deb devel extra
+ blktap-utils deb utils extra
+ libblktapctl0 deb libs extra
+ libvhd0 deb libs extra
+ libvhdio-2.0.90 deb libs extra
+Checksums-Sha1:
+ 69efd07c2e67e34a6099450d8cf63237783d4423 2246 blktap_2.0.90-2ubuntu1.dsc
+ f5c1e09e7ece3a9698827170c5155b54c04c91ce 235286 blktap_2.0.90.orig.tar.gz
+ dad1bf64e0350b8d8ae7f5a964ea16db65a38205 7167 blktap_2.0.90-2ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ f93a0c2b19bab4af4000aed8b81d2c7094b740715dd995ec472f49d38dfd3304 2246 blktap_2.0.90-2ubuntu1.dsc
+ a2a46a6c114ad4041802fd805a97cb66856003f6e3c1f157907b934fdf4c40ee 235286 blktap_2.0.90.orig.tar.gz
+ d38d37c9b0641f0ab51849392ebf4296919c0936921e67b9185609d5b543f0a8 7167 blktap_2.0.90-2ubuntu1.debian.tar.gz
 
 Package: cairo-5c
 Binary: cairo-5c, libcairo5c-0
@@ -826,39 +861,6 @@ Checksums-Sha256:
  da525bfc25c7655a5113c34fd447107af19a47fc44dd537c9c34fa3a40461a69 1536 dxflib_2.5.0.0-1.dsc
  20ad9991eec6b0f7a3cc7c500c044481a32110cdc01b65efa7b20d5ff9caefa9 134739 dxflib_2.5.0.0.orig.tar.gz
  8c179a86e57474cc6cc73dfbf66c72343f7e5d2e13ebeccfeab5dbe24370992f 6407 dxflib_2.5.0.0-1.debian.tar.gz
-
-Package: eclipse-cdt
-Binary: eclipse-cdt, eclipse-cdt-jni, eclipse-cdt-autotools, eclipse-cdt-launch-remote
-Version: 8.1.2-2
-Priority: optional
-Section: universe/java
-Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 9.20120608~), default-jdk, dpkg-dev (>= 1.16.2~), eclipse-pde (>= 3.8~), eclipse-rse, javahelper (>= 0.32~), unzip, zip
-Architecture: any all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/e/eclipse-cdt
-Files:
- 79ccc43f342e952938771f5f40f79918 2286 eclipse-cdt_8.1.2-2.dsc
- cc29dc37a73a3c8321bfe4396feb251f 26679496 eclipse-cdt_8.1.2.orig.tar.xz
- 75492a403655480441665b723a775240 555681 eclipse-cdt_8.1.2-2.debian.tar.gz
-Uploaders: Niels Thykier <niels@thykier.net>, Jakub Adam <jakub.adam@ktknet.cz>
-Homepage: http://www.eclipse.org/cdt/
-Vcs-Browser: http://git.debian.org/?p=pkg-java/eclipse-cdt.git
-Vcs-Git: git://git.debian.org/git/pkg-java/eclipse-cdt.git
-Package-List: 
- eclipse-cdt deb devel optional
- eclipse-cdt-autotools deb devel optional
- eclipse-cdt-jni deb devel optional
- eclipse-cdt-launch-remote deb devel optional
-Checksums-Sha1:
- 519e0be97fdd59db1d4dbb8df81f150a78794865 2286 eclipse-cdt_8.1.2-2.dsc
- d719165196bdb53671ad2bb75d83e6952de647d4 26679496 eclipse-cdt_8.1.2.orig.tar.xz
- 980e7d509a493824a1a2a82238654786dcfb67ff 555681 eclipse-cdt_8.1.2-2.debian.tar.gz
-Checksums-Sha256:
- 8aab9006355c309a48a6cd6987dd548d45b87533708600f3e6106b290ed59c64 2286 eclipse-cdt_8.1.2-2.dsc
- 30860acd4d4ffd67aa114629c6c060d479b9860e80c77882ce2b19286060711c 26679496 eclipse-cdt_8.1.2.orig.tar.xz
- 5c0086074c4812a58457969ce61d6a393bd4ca982e7a2843b7c55f06cf7d7ddc 555681 eclipse-cdt_8.1.2-2.debian.tar.gz
 
 Package: eclipse-mylyn
 Binary: eclipse-mylyn, eclipse-mylyn-context-cdt, eclipse-mylyn-context-jdt, eclipse-mylyn-context-pde, eclipse-mylyn-versions-cvs, eclipse-mylyn-tasks-bugzilla, eclipse-mylyn-tasks-trac, eclipse-mylyn-wikitext, eclipse-mylyn-builds-hudson
@@ -1765,6 +1767,36 @@ Checksums-Sha256:
  1db84fbc2aa7cbe3bee5996f0ce343119c9514ded95aeca8724c59bad6cd82f7 2603 hyperestraier_1.4.13-10ubuntu1.dsc
  a399c5ba27dee460d02b8016e5724b97d254aef5782ead9c7f67270368bbf5ad 1011494 hyperestraier_1.4.13.orig.tar.gz
  a9517f138441a3b4cd962b1a771ad7e996f349a2d9ca46fbc75ad102f600fa16 23895 hyperestraier_1.4.13-10ubuntu1.debian.tar.gz
+
+Package: indicator-network
+Binary: indicator-network
+Version: 0.5.0+13.10.20130828.2-0ubuntu1
+Priority: optional
+Section: universe/gnome
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ken VanDine <ken.vandine@canonical.com>
+Build-Depends: cmake, dbus, debhelper (>= 9.0.0), google-mock (>= 1.6.0+svn437), libglib2.0-dev, libnm-glib-dev (>= 0.9), libnm-util-dev (>= 0.9), libqmenumodel-dev, libqtdbusmock1-dev, libqtdbustest1-dev, liburl-dispatcher1-dev, network-manager-dev, pkg-config, python3-dbusmock, qtbase5-dev, valac (>= 0.18), valgrind
+Architecture: any
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/universe/i/indicator-network
+Files:
+ 59527b7b25c4c4a3173537675df01967 2482 indicator-network_0.5.0+13.10.20130828.2-0ubuntu1.dsc
+ 8eb27196086a04d6af09c203c273c478 76854 indicator-network_0.5.0+13.10.20130828.2.orig.tar.gz
+ 6f1188d6e46ca05b2e1f4fcfe742b865 3268 indicator-network_0.5.0+13.10.20130828.2-0ubuntu1.diff.gz
+Homepage: https://launchpad.net/indicator-network
+Vcs-Browser: https://bazaar.launchpad.net/~indicator-applet-developers/indicator-network/trunk.13.10/files
+Vcs-Bzr: https://code.launchpad.net/~indicator-applet-developers/indicator-network/trunk.13.10
+Package-List: 
+ indicator-network deb gnome optional
+Checksums-Sha1:
+ 62d092840501f9b62fdfd818aa614aa1c18acad9 2482 indicator-network_0.5.0+13.10.20130828.2-0ubuntu1.dsc
+ 6111ac7e813d2eb56ff504e4fa9924063f88526f 76854 indicator-network_0.5.0+13.10.20130828.2.orig.tar.gz
+ f58f0fe553ad4a7d299c5ad34ba17b8024abe2e3 3268 indicator-network_0.5.0+13.10.20130828.2-0ubuntu1.diff.gz
+Checksums-Sha256:
+ 642d56dee7c599faf78f23e0bcbbc532d0dff440831789ab5ef0a069d89280e7 2482 indicator-network_0.5.0+13.10.20130828.2-0ubuntu1.dsc
+ c2c31dc96e4549b794af862bff562ed0d05ccb19c60bf96e701377999a00f586 76854 indicator-network_0.5.0+13.10.20130828.2.orig.tar.gz
+ 68d4e924a1b0baf13f6deffd1f2407bde94a4eecee0f0855e76d0d21eef22e84 3268 indicator-network_0.5.0+13.10.20130828.2-0ubuntu1.diff.gz
 
 Package: infernal
 Binary: infernal, infernal-doc, infernal-dbg
@@ -3370,37 +3402,6 @@ Checksums-Sha256:
  c960cd0afce476ac8a8436e1d8666e0e79c7039027fe5cf278703efbad14025b 618135 owncloud-client_1.3.0+dfsg.orig.tar.bz2
  1678b7f59ae501a59d9ec2fcffa5d6fbdf2e7b59e714813fe8c7cf45293b6edd 14875 owncloud-client_1.3.0+dfsg-1.debian.tar.gz
 
-Package: packagekit-qt
-Binary: libpackagekit-qt2-6, libpackagekit-qt2-dev
-Version: 0.8.8-2ubuntu1
-Priority: optional
-Section: universe/misc
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Matthias Klumpp <mak@debian.org>
-Build-Depends: cmake (>= 2.8), debhelper (>= 9), libqt4-dev (>= 4.8), packagekit (>= 0.8.8), pkg-config (>= 0.26)
-Architecture: any
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/p/packagekit-qt
-Files:
- 66cc25f446be4b1b87c884f086e0db61 2210 packagekit-qt_0.8.8-2ubuntu1.dsc
- 55ba87425a8d7a8b1f021e8769b88534 41416 packagekit-qt_0.8.8.orig.tar.xz
- 891d1f82459eabfd7553d2bcb0a462fa 2386 packagekit-qt_0.8.8-2ubuntu1.debian.tar.gz
-Homepage: http://www.packagekit.org
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-packagekit/packagekit-qt.git
-Vcs-Git: git://anonscm.debian.org/pkg-packagekit/packagekit-qt.git
-Package-List: 
- libpackagekit-qt2-6 deb libs optional
- libpackagekit-qt2-dev deb libdevel optional
-Checksums-Sha1:
- be12321e426265f384d39592f0dbfa3e03d8a563 2210 packagekit-qt_0.8.8-2ubuntu1.dsc
- 5b9df288ce99c799bdb00a9dcfb039a498ee27aa 41416 packagekit-qt_0.8.8.orig.tar.xz
- a328bacf32c960aae6c765ed606f2efd68a39ea8 2386 packagekit-qt_0.8.8-2ubuntu1.debian.tar.gz
-Checksums-Sha256:
- f287f5e5fec4396110b7b71a2b58fddf7d08d1e035cd7f2536b261e8176c109d 2210 packagekit-qt_0.8.8-2ubuntu1.dsc
- e234d4b1f8451821930f463621a86c9708eebfd1db65019883d38a60d13c870c 41416 packagekit-qt_0.8.8.orig.tar.xz
- 56c93c9fcefb79c9c0a2e9445ff76ca82ecd17a5b191a866169c5d4f4a5ca630 2386 packagekit-qt_0.8.8-2ubuntu1.debian.tar.gz
-
 Package: pari
 Binary: pari-gp, libpari-dev, libpari-dbg, libpari-gmp3, pari-doc
 Version: 2.5.4-1
@@ -3870,6 +3871,37 @@ Checksums-Sha256:
  18c0b448c720c30c59fdcbaf5a6cfc57baeedd8741fc885f7626ff6dee0fbdbb 1668 python-regex_0.1.20130605-1.dsc
  4084b83610a3e1d0a6de5e92c557cf11bd94d985d184ed540036c7f5692515f6 1137627 python-regex_0.1.20130605.orig.tar.gz
  ed30f124cc4faae87042bf46dea17807597b02f88ba3a8c222ca802d41fbeec3 3910 python-regex_0.1.20130605-1.debian.tar.gz
+
+Package: qmenumodel
+Binary: libqmenumodel0, libqmenumodel-dev, qmenumodel-qml
+Version: 0.2.7+13.10.20130828.2-0ubuntu1
+Priority: optional
+Section: universe/libs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9.0.0), cmake (>= 2.8.9), libglib2.0-dev, qt5-default, qt5-qmake, qtbase5-dev (>= 5.0), qtdeclarative5-dev (>= 5.0), python3, python3-dbus, python3-gi, gir1.2-glib-2.0, dbus-test-runner, libgles2-mesa-dev | libgl-dev
+Architecture: amd64 armhf i386
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/universe/q/qmenumodel
+Files:
+ 0fd54bb6ec7bbb79c3d00976a212cfeb 2351 qmenumodel_0.2.7+13.10.20130828.2-0ubuntu1.dsc
+ 32f98a8a9c00203b56ce2129f9b87518 56767 qmenumodel_0.2.7+13.10.20130828.2.orig.tar.gz
+ b6ba899113b76c9a7d9ecfbb334f583b 3727 qmenumodel_0.2.7+13.10.20130828.2-0ubuntu1.diff.gz
+Homepage: https://launchpad.net/qmenumodel
+Vcs-Browser: https://bazaar.launchpad.net/~phablet-team/qmenumodel/trunk/files
+Vcs-Bzr: https://code.launchpad.net/~phablet-team/qmenumodel/trunk
+Package-List: 
+ libqmenumodel-dev deb libdevel optional
+ libqmenumodel0 deb libs optional
+ qmenumodel-qml deb libs optional
+Checksums-Sha1:
+ 04d6134b426298c2fd12937c19b9c5d2077cac15 2351 qmenumodel_0.2.7+13.10.20130828.2-0ubuntu1.dsc
+ e87f9bb540481c98c71f56922d1e65a32b5f79af 56767 qmenumodel_0.2.7+13.10.20130828.2.orig.tar.gz
+ efe78164648a3e7360ba729b05330006272b2979 3727 qmenumodel_0.2.7+13.10.20130828.2-0ubuntu1.diff.gz
+Checksums-Sha256:
+ 73bfc078f1d6a3f85418d8e5019067cad23bd6e6966d8c6cc6fc4a944cec35d2 2351 qmenumodel_0.2.7+13.10.20130828.2-0ubuntu1.dsc
+ 08455c590709a45069c838921b81a9841463f8de515fe8e62470336389facc7b 56767 qmenumodel_0.2.7+13.10.20130828.2.orig.tar.gz
+ 0d3163e20d8e53c4a76af3c217bc6e9949b9d064268a9f258ee89eae0d9b9ca1 3727 qmenumodel_0.2.7+13.10.20130828.2-0ubuntu1.diff.gz
 
 Package: qml-friends
 Binary: qtdeclarative5-friends0.2, qml-friends-doc
