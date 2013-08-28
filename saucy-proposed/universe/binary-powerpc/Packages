@@ -1,22 +1,3 @@
-Package: about-distro
-Priority: extra
-Section: universe/kde
-Installed-Size: 258
-Maintainer: Jonathan Riddell <jriddell@ubuntu.com>
-Architecture: powerpc
-Version: 0.0git20130828-0ubuntu1
-Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libkdecore5 (>= 4:4.4.0), libkdeui5 (>= 4:4.3.4), libqtcore4 (>= 4:4.7.0~beta1), libqtgui4 (>= 4:4.5.3), libsolid4 (>= 4:4.3.4), libstdc++6 (>= 4.1.1)
-Filename: pool/universe/a/about-distro/about-distro_0.0git20130828-0ubuntu1_powerpc.deb
-Size: 26072
-MD5sum: dc3e9aaf20b0b469843d0824aa97cf33
-SHA1: 84fd710a528950c1452ba92647c4229e0100ac92
-SHA256: 4929385de875d9f83ad53803b2679af53c329db1ad1c79f92f6c93d6d810628d
-Description: KCM displaying distribution and system information
-Homepage: https://projects.kde.org/projects/playground/base/about-distro
-Description-md5: d196d0bd6494ac168987355fa8810700
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: apper
 Priority: optional
 Section: universe/kde
@@ -82,6 +63,28 @@ SHA256: 0eca4d30c43f08a589768bf4fca4f43927a76f6f766e3fdb8fc1d6cfa5b7d378
 Description: Debugging symbols for Apper
 Homepage: http://kde-apps.org/content/show.php/Apper?content=84745
 Description-md5: 4f11774d7df51aa58e739b63574eea33
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: blackbox
+Priority: optional
+Section: universe/x11
+Installed-Size: 626
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: powerpc
+Version: 0.70.1-16ubuntu1
+Provides: x-window-manager
+Depends: libbt0 (>= 0.70.1), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6), libx11-6, libxext6
+Suggests: menu (>= 1.5), bbkeys (>= 0.9)
+Filename: pool/universe/b/blackbox/blackbox_0.70.1-16ubuntu1_powerpc.deb
+Size: 243322
+MD5sum: 57cb6a8cfb9d4a7aa1f749972c407476
+SHA1: 814f738de8ff3c3464f316fdb13e0a15e24bf92e
+SHA256: 69470460c04a1878af562ef51bd2b0b24b7e0fb7d1cf8fdf38e36c2de5153ce8
+Description: Window manager for X
+Homepage: http://blackboxwm.sourceforge.net/
+Description-md5: 7045fee6354b0d290ca6be346f63eb3a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1764,6 +1767,54 @@ SHA256: 7f78ece32d54c6fbdd2d766e80e684301bf29135a5b2040bddd93aab35b3ca8f
 Description: Batteries included - OCaml development platform - documentation
 Homepage: http://batteries.forge.ocamlcore.org
 Description-md5: 8e855bb4be7b4dbeab3bd5be066a368e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libbt-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 457
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: powerpc
+Source: blackbox
+Version: 0.70.1-16ubuntu1
+Replaces: libbt (<< 0.70.1-3~)
+Depends: libbt0 (= 0.70.1-16ubuntu1), libxft-dev, libxt-dev
+Filename: pool/universe/b/blackbox/libbt-dev_0.70.1-16ubuntu1_powerpc.deb
+Size: 137688
+MD5sum: 1bb2819ef0e8957c162bea4f9668e874
+SHA1: c257cd95384a10296bee977145f6c450089d7a6a
+SHA256: 23ef47f23bf22c23869ab7e309ae4bccdd12f912caf305ceefd17763480b23b7
+Description: Blackbox - development library
+Multi-Arch: same
+Homepage: http://blackboxwm.sourceforge.net/
+Description-md5: 3f098bcca4decf81b38658425d93e901
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libbt0
+Priority: optional
+Section: universe/libs
+Installed-Size: 292
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian QA Group <packages@qa.debian.org>
+Architecture: powerpc
+Source: blackbox
+Version: 0.70.1-16ubuntu1
+Replaces: libbt (<< 0.70.1-4)
+Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6), libx11-6, libxext6, libxft2 (>> 2.1.1)
+Pre-Depends: multiarch-support
+Breaks: libbt (<< 0.70.1-4)
+Filename: pool/universe/b/blackbox/libbt0_0.70.1-16ubuntu1_powerpc.deb
+Size: 107716
+MD5sum: f280a31721ba2b2d2f419dbb904a584c
+SHA1: ce196bb1862c49e9f067298d68088e29ec1a80e8
+SHA256: 34db94b5d4d59feb9e6a5dad5a101a095a76999621cff50dbc6cd9379aa3646a
+Description: Blackbox - shared library
+Multi-Arch: same
+Homepage: http://blackboxwm.sourceforge.net/
+Description-md5: 3e0ac4d0426041bc8725367210a3a5dc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -6289,50 +6340,6 @@ Description-md5: 2cccb18baaf0a79bddc72153a6b2f521
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: ubuntu-ui-toolkit-autopilot
-Priority: optional
-Section: universe/libs
-Installed-Size: 121
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: ubuntu-ui-toolkit
-Version: 0.1.46+13.10.20130828.1-0ubuntu1
-Depends: libautopilot-qt, dpkg-dev, libqt5test5, libqt5widgets5, python-autopilot (>= 1.3), python-mock, ubuntu-ui-toolkit-examples (>= 0.1.46+13.10.20130828.1-0ubuntu1)
-Filename: pool/universe/u/ubuntu-ui-toolkit/ubuntu-ui-toolkit-autopilot_0.1.46+13.10.20130828.1-0ubuntu1_all.deb
-Size: 14986
-MD5sum: 40367fd2983500b26c822bc78af6b5a8
-SHA1: 8694aa166916764466bf1c6910eba31bff111974
-SHA256: 91fa7de84e8e25ccc91ae293673862f74871165b19c89c38125fafaac06f2b9a
-Description: Test package for Ubuntu UI Toolkit
-Homepage: https://launchpad.net/ubuntu-ui-toolkit
-Description-md5: a8d21af558d801b430dddea7e17b37f5
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ubuntu-ui-toolkit-doc
-Priority: optional
-Section: universe/doc
-Installed-Size: 1949
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: ubuntu-ui-toolkit
-Version: 0.1.46+13.10.20130828.1-0ubuntu1
-Replaces: qt-components-ubuntu-doc
-Provides: qt-components-ubuntu-doc
-Pre-Depends: dpkg (>= 1.15.6~)
-Conflicts: qt-components-ubuntu-doc
-Filename: pool/universe/u/ubuntu-ui-toolkit/ubuntu-ui-toolkit-doc_0.1.46+13.10.20130828.1-0ubuntu1_all.deb
-Size: 300394
-MD5sum: d69496e9efb7d792c5c489813c1d2aad
-SHA1: 7d9cd486552bc942697585757dc8111440532065
-SHA256: 24f17688eec145fa62b9fd6f12b8ee3feab7a6907c2b344a5d5cd73a1792ddc3
-Description: Qt Components for Ubuntu - documentation
-Multi-Arch: foreign
-Homepage: https://launchpad.net/ubuntu-ui-toolkit
-Description-md5: e922bd213d5331dc69e55474100c8536
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: ubuntustudio-default-settings
 Priority: optional
 Section: universe/x11
@@ -6436,46 +6443,6 @@ SHA256: 50ec7741e63f1ab21d426cfd160798e664ac643e47f97b05113305474038dc70
 Description: lightweight C++ threading and sockets - utilities
 Homepage: http://www.gnu.org/software/commoncpp/
 Description-md5: a00d966023b2d3a5afdd1ff848969580
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: unity-webapps-qml-autopilot
-Priority: optional
-Section: universe/gnome
-Installed-Size: 123
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: all
-Source: unity-webapps-qml
-Version: 0.1+13.10.20130828-0ubuntu1
-Depends: dpkg-dev, libautopilot-qt, libqt5test5, qmlscene, qtdeclarative5-unity-action-plugin, qtdeclarative5-window-plugin, unity-autopilot, unity-webapps-qml (>= 0.1+13.10.20130828-0ubuntu1), python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Filename: pool/universe/u/unity-webapps-qml/unity-webapps-qml-autopilot_0.1+13.10.20130828-0ubuntu1_all.deb
-Size: 8814
-MD5sum: e34d85d25dd559de925e497efd1aa541
-SHA1: 4fde0663dfba2d14bddbab5464f25388934088a6
-SHA256: d5e6fac57582eca4b4536fa37fe8312ff1bba4c861ff474874ec0d9066023afa
-Description: Autopilot tests for the Unity Webapps QML
-Homepage: https://launchpad.net/unity-webapp-qml
-Description-md5: ff25a009a74f257651b5ac73e631f201
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: unity-webapps-qml-doc
-Priority: optional
-Section: universe/doc
-Installed-Size: 87
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: all
-Source: unity-webapps-qml
-Version: 0.1+13.10.20130828-0ubuntu1
-Suggests: unity-webapps-qml-examples
-Filename: pool/universe/u/unity-webapps-qml/unity-webapps-qml-doc_0.1+13.10.20130828-0ubuntu1_all.deb
-Size: 9842
-MD5sum: 196ee651583004afcdec39d814701dce
-SHA1: 540876bdb03feef1810a6068c76d19e8b6b844a7
-SHA256: c8ea3272a622f6e9876a8026d90d5fc84bff7688a5a11017f26d3f09a944563c
-Description: Documentation for Unity Webapps QML - documentation
-Homepage: https://launchpad.net/unity-webapp-qml
-Description-md5: 62c935a6f4b10ac91afb30b8e8d762e8
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
