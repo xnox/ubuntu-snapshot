@@ -1158,6 +1158,51 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
+Package: libxkbcommon-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 603
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: libxkbcommon
+Version: 0.3.1-1
+Depends: libxkbcommon0 (= 0.3.1-1)
+Filename: pool/main/libx/libxkbcommon/libxkbcommon-dev_0.3.1-1_armhf.deb
+Size: 172442
+MD5sum: 716ffb9faf3c8091c6f9c43d69a12f4f
+SHA1: 5efad76f20287726ad65e0a3160555b0c9fafb92
+SHA256: 6a873c60c1e45f1b282178bca2f96696e23595cf0624bd76979f496dc05b61bd
+Description: library interface to the XKB compiler - development files
+Homepage: http://www.xkbcommon.org/
+Description-md5: 37abc1bc57b20a1af92e4ac032e4dc49
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libxkbcommon0
+Priority: optional
+Section: libs
+Installed-Size: 254
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: libxkbcommon
+Version: 0.3.1-1
+Depends: xkb-data, libc6 (>= 2.8)
+Pre-Depends: multiarch-support
+Filename: pool/main/libx/libxkbcommon/libxkbcommon0_0.3.1-1_armhf.deb
+Size: 103410
+MD5sum: 006537b8cfac5d8999d0b05162771437
+SHA1: f0ead574dd348a4cc4bbed9fd52db7ee6f892011
+SHA256: 00d85752d6a894c70c959137fe67f9eec14d10f7d2df6a1aa7afccf93003c1bc
+Description: library interface to the XKB compiler - shared library
+Multi-Arch: same
+Homepage: http://www.xkbcommon.org/
+Description-md5: 6af15d73a304f17fe923dd6d3ac18c17
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-live, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: mir-doc
 Priority: optional
 Section: doc
@@ -1443,6 +1488,91 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: openvswitch-common
+Priority: extra
+Section: net
+Installed-Size: 1064
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Architecture: armhf
+Source: openvswitch
+Version: 1.10.1+git20130823-0ubuntu3
+Depends: libc6 (>= 2.16), libssl1.0.0 (>= 1.0.0), openssl, python, python (>= 2.7) | python-argparse
+Suggests: ethtool
+Filename: pool/main/o/openvswitch/openvswitch-common_1.10.1+git20130823-0ubuntu3_armhf.deb
+Size: 561118
+MD5sum: d1f121a7072d6623216606a6f4e40d6c
+SHA1: 40f1bc760878671385225dfa88d4b0a1857d2928
+SHA256: 8ce13f11300b6e3d72fcbaf2ab8aa346eefd80cb17d858161de30227f214eae9
+Description: Open vSwitch common components
+Homepage: http://openvswitch.org/
+Description-md5: 156b753b1c88479a1a2a4001e7ff34d9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openvswitch-controller
+Priority: extra
+Section: net
+Installed-Size: 509
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Architecture: armhf
+Source: openvswitch
+Version: 1.10.1+git20130823-0ubuntu3
+Depends: libc6 (>= 2.4), libssl1.0.0 (>= 1.0.0), openvswitch-common (= 1.10.1+git20130823-0ubuntu3), openvswitch-pki (= 1.10.1+git20130823-0ubuntu3)
+Filename: pool/main/o/openvswitch/openvswitch-controller_1.10.1+git20130823-0ubuntu3_armhf.deb
+Size: 242568
+MD5sum: a59d4342706c1b2d779bab9e3b9063a7
+SHA1: e2978c12fa98761d088a8803cdb4c88fecb1b846
+SHA256: 484cde0d81d47b80c2ed86da93e2f60b53759e730cfc174df18d74c2839acda0
+Description: Open vSwitch controller implementation
+Homepage: http://openvswitch.org/
+Description-md5: a75c9ab8c2882291fe265d039e045e3f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openvswitch-dbg
+Priority: extra
+Section: debug
+Installed-Size: 18654
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Architecture: armhf
+Source: openvswitch
+Version: 1.10.1+git20130823-0ubuntu3
+Depends: openvswitch-common (= 1.10.1+git20130823-0ubuntu3), openvswitch-controller (= 1.10.1+git20130823-0ubuntu3), openvswitch-ipsec (= 1.10.1+git20130823-0ubuntu3), openvswitch-switch (= 1.10.1+git20130823-0ubuntu3)
+Filename: pool/main/o/openvswitch/openvswitch-dbg_1.10.1+git20130823-0ubuntu3_armhf.deb
+Size: 7834416
+MD5sum: 34f1cac01160676863b304e674acff0b
+SHA1: d6858decbb852b33626530df85dbdbf88afec6eb
+SHA256: 85531fe34d308cb579e5cdd997cf6b15dd3a7fe53952c9845e14980ee2461713
+Description: Debug symbols for Open vSwitch packages
+Homepage: http://openvswitch.org/
+Description-md5: 56e4abe8234a245775d9d296c24e43c7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openvswitch-ipsec
+Priority: extra
+Section: net
+Installed-Size: 112
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Architecture: armhf
+Source: openvswitch
+Version: 1.10.1+git20130823-0ubuntu3
+Depends: python, ipsec-tools (>= 0.8~alpha20101208), racoon (>= 0.8~alpha20101208), openvswitch-common (= 1.10.1+git20130823-0ubuntu3), openvswitch-switch (= 1.10.1+git20130823-0ubuntu3), python-openvswitch (= 1.10.1+git20130823-0ubuntu3)
+Filename: pool/main/o/openvswitch/openvswitch-ipsec_1.10.1+git20130823-0ubuntu3_armhf.deb
+Size: 21916
+MD5sum: 83028fb98add6ec6068c7483acb98f35
+SHA1: 8cddf63561353bfe1efb0b4a5683496bd4ea83f5
+SHA256: 1e3a1c89f93c7062d329f5ae52879f7bff7f83e81860ebe4c497a07a194f7783
+Description: Open vSwitch GRE-over-IPsec support
+Homepage: http://openvswitch.org/
+Description-md5: 07cc2214b4577629cbf5bbc7095fab0e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: openvswitch-pki
 Priority: extra
 Section: net
@@ -1461,6 +1591,28 @@ SHA256: c81421086e0be0f312898f74bb0e38071367abc922a53d8710d8f114ea10bb71
 Description: Open vSwitch public key infrastructure dependency package
 Homepage: http://openvswitch.org/
 Description-md5: fcb2a2bcd30b1f49fc4b6a2ddc55ff28
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openvswitch-switch
+Priority: extra
+Section: net
+Installed-Size: 2522
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Architecture: armhf
+Source: openvswitch
+Version: 1.10.1+git20130823-0ubuntu3
+Depends: libc6 (>= 2.7), libssl1.0.0 (>= 1.0.0), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python, openvswitch-common (= 1.10.1+git20130823-0ubuntu3), module-init-tools, procps, uuid-runtime, netbase
+Suggests: openvswitch-datapath-module
+Filename: pool/main/o/openvswitch/openvswitch-switch_1.10.1+git20130823-0ubuntu3_armhf.deb
+Size: 1342684
+MD5sum: 6dec73c50cfb42f66047e1c05f823430
+SHA1: 03b1b14529948a29ae82b306f732e4d47f07c2ee
+SHA256: 8dd89307eac7d52d8cbb840194098763cf1c385640debbbafa04a0429fd3eb00
+Description: Open vSwitch switch implementations
+Homepage: http://openvswitch.org/
+Description-md5: a3693da748c76fbc356928927bf14fce
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
