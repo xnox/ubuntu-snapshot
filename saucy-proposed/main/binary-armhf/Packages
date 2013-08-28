@@ -1,3 +1,25 @@
+Package: bind9
+Priority: optional
+Section: net
+Installed-Size: 734
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: armhf
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: apparmor-profiles (<< 2.1+1075-0ubuntu4), bind, bind9utils (<< 1:9.9.3.dfsg.P2-3), dnsutils (<< 1:9.1.0-3)
+Depends: libbind9-90 (= 1:9.9.3.dfsg.P2-3), libc6 (>= 2.4), libcap2 (>= 2.10), libdns99 (= 1:9.9.3.dfsg.P2-3), libisc95 (= 1:9.9.3.dfsg.P2-3), libisccc90 (= 1:9.9.3.dfsg.P2-3), libisccfg90 (= 1:9.9.3.dfsg.P2-3), liblwres90 (= 1:9.9.3.dfsg.P2-3), libxml2 (>= 2.7.4), debconf (>= 0.5) | debconf-2.0, init-system-helpers (>= 1.5), netbase, adduser, lsb-base (>= 3.2-14), bind9utils (= 1:9.9.3.dfsg.P2-3), net-tools
+Suggests: dnsutils, bind9-doc, resolvconf, ufw
+Conflicts: apparmor-profiles (<< 2.1+1075-0ubuntu4), bind
+Filename: pool/main/b/bind9/bind9_9.9.3.dfsg.P2-3_armhf.deb
+Size: 315780
+MD5sum: e99203bdfc75c1f584980829c7cf9489
+SHA1: 4b97f4dc582e1187c12f4d17114643a9daf79ef3
+SHA256: cbbc4b52a5807a7054741ae8c952d0e9c595bc1c43ee6ccb26637d4a0f3c155e
+Description: Internet Domain Name Server
+Description-md5: 4d39ed3fc4e2e72497683d779dfdcd38
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: dns-server
+
 Package: bind9-doc
 Priority: optional
 Section: doc
@@ -13,6 +35,50 @@ SHA1: e914edab072d7454f258867a2eddb3b4c0ef8ed8
 SHA256: 6321daf653b483e15b0c1bac78310a33d7f0e10bd2176dbde4895e9af0f4c6f8
 Description: Documentation for BIND
 Description-md5: 329b8ef5cf9ad3d51ce47e6d8d13d75e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: dns-server
+
+Package: bind9-host
+Priority: standard
+Section: net
+Installed-Size: 144
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: armhf
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: dnsutils (<< 1:9.0.0), host (<< 1:9.7.0)
+Provides: host
+Depends: libbind9-90 (= 1:9.9.3.dfsg.P2-3), libc6 (>= 2.4), libdns99 (= 1:9.9.3.dfsg.P2-3), libisc95 (= 1:9.9.3.dfsg.P2-3), libisccfg90 (= 1:9.9.3.dfsg.P2-3), liblwres90 (= 1:9.9.3.dfsg.P2-3)
+Conflicts: dnsutils (<< 1:9.0.0), host (<< 1:9.7.0)
+Filename: pool/main/b/bind9/bind9-host_9.9.3.dfsg.P2-3_armhf.deb
+Size: 51680
+MD5sum: 28aa07bd40061bcb5b1e600e5eafe981
+SHA1: 6ef8fec87634251b27a5760fe095a9daff2f2eaf
+SHA256: e1a61d834f25f5d975f32685db49fb1eb34245355b66e170d3bf33234fef0167
+Description: Version of 'host' bundled with BIND 9.X
+Description-md5: acdae162c721f5d2986f557bdefa1e70
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: bind9utils
+Priority: optional
+Section: net
+Installed-Size: 457
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: armhf
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: bind9 (<= 1:9.5.0~b2-1)
+Depends: libbind9-90, libc6 (>= 2.4), libdns99, libisc95, libisccc90, libisccfg90, python, python-argparse
+Filename: pool/main/b/bind9/bind9utils_9.9.3.dfsg.P2-3_armhf.deb
+Size: 210922
+MD5sum: 64b973e3862f2bb49f9fc1dc0254d216
+SHA1: 35f7b3ad998a612a03c2c1a0545606677e7953ec
+SHA256: b39cce0581bec204b590e46f83058060bc3ec938acde4433898db62caf9a1c4d
+Description: Utilities for BIND
+Description-md5: 5f6f5621a6edd04ef33a0fe5d2d5bff8
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: dns-server
@@ -158,6 +224,29 @@ Description-md5: ccafef5bb90a2453aecca96cbb772d23
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: minimal
+
+Package: dnsutils
+Priority: standard
+Section: net
+Installed-Size: 295
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: armhf
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: bind, bind9 (<< 1:9.1.0-3)
+Depends: libbind9-90 (= 1:9.9.3.dfsg.P2-3), libc6 (>= 2.4), libdns99 (= 1:9.9.3.dfsg.P2-3), libisc95 (= 1:9.9.3.dfsg.P2-3), libisccfg90 (= 1:9.9.3.dfsg.P2-3), libkrb5-3 (>= 1.6.dfsg.2), liblwres90 (= 1:9.9.3.dfsg.P2-3), bind9-host | host
+Suggests: rblcheck
+Conflicts: netstd (<< 2.00)
+Filename: pool/main/b/bind9/dnsutils_9.9.3.dfsg.P2-3_armhf.deb
+Size: 138422
+MD5sum: 6ddac0b7ebe8177294bc6fa4eb2f29d9
+SHA1: fe6755258a23d5fa54e23cab9929ab2af646eed6
+SHA256: 4faada7d136b23bc9224deb61dd44342ac326e62140e71fd6f3898674fc265f9
+Description: Clients provided with BIND
+Description-md5: 9fac1cb37cd005e52aa0e22df64994e1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
 
 Package: fonts-liberation
 Priority: optional
@@ -520,165 +609,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntustudio-desktop, ubuntu-gnome-desktop
 
-Package: isc-dhcp-client
-Priority: important
-Section: net
-Installed-Size: 1229
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
-Architecture: armhf
-Source: isc-dhcp
-Version: 4.2.4-7ubuntu6
-Replaces: dhcp3-client
-Provides: dhcp-client, dhcp3-client
-Depends: libc6 (>= 2.15), debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu6), iproute2
-Suggests: resolvconf, avahi-autoipd, apparmor
-Conflicts: dhcp-client (<< 3.0), ifupdown (<< 0.6.8+nmu3), resolvconf (<= 1.45), samba-common (<< 3.0.0beta1-2)
-Filename: pool/main/i/isc-dhcp/isc-dhcp-client_4.2.4-7ubuntu6_armhf.deb
-Size: 678278
-MD5sum: 55a67a26e43dfb6909bd1dd6632c6acd
-SHA1: c469d6ffdb8507391b4b84647e5ffd0812210291
-SHA256: 135aafbca1b88277f87659d80e515feb6ca242bc63ae68296eaab3938988a46b
-Description: ISC DHCP client
-Description-md5: 7d48c04c85ad9235ca7273ba8da51bbc
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: minimal
-
-Package: isc-dhcp-client-dbg
-Priority: extra
-Section: debug
-Installed-Size: 4834
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
-Architecture: armhf
-Source: isc-dhcp
-Version: 4.2.4-7ubuntu6
-Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu6)
-Suggests: resolvconf, avahi-autoipd
-Conflicts: dhcp-client (<< 3.0), samba-common (<< 3.0.0beta1-2)
-Filename: pool/main/i/isc-dhcp/isc-dhcp-client-dbg_4.2.4-7ubuntu6_armhf.deb
-Size: 2005720
-MD5sum: 6dca803bcf6b86855bc514a031503b8d
-SHA1: 2efa92a6a7ae180f24f3206e55e59254dca24722
-SHA256: e9195cf7dd5da9e6b8e8fd1d18b06c6176c70b287ad71f71168ed6c0dc507654
-Description: ISC DHCP client (debugging symbols)
-Description-md5: 65f8c2f2d81ecd053c5bca54e46ec524
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: isc-dhcp-common
-Priority: important
-Section: net
-Installed-Size: 1207
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
-Architecture: armhf
-Source: isc-dhcp
-Version: 4.2.4-7ubuntu6
-Replaces: dhcp3-common
-Provides: dhcp3-common
-Depends: libc6 (>= 2.15), debianutils (>= 2.8.2)
-Filename: pool/main/i/isc-dhcp/isc-dhcp-common_4.2.4-7ubuntu6_armhf.deb
-Size: 741606
-MD5sum: 13e6d5cfea05cd314495dbce913e6987
-SHA1: 161da563f02da6058dcbbab7e36c0544fb173da5
-SHA256: db9d6aac1e9ddf0f8c7218363e3761f55075e51fc23161800062cdfaa9228031
-Description: common files used by all the isc-dhcp* packages
-Description-md5: 5683d165d1bf7aa98dc09ae338bc059f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: minimal
-
-Package: isc-dhcp-dev
-Priority: optional
-Section: devel
-Installed-Size: 1627
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
-Architecture: armhf
-Source: isc-dhcp
-Version: 4.2.4-7ubuntu6
-Replaces: dhcp3-dev
-Provides: dhcp3-dev
-Depends: libc6-dev
-Filename: pool/main/i/isc-dhcp/isc-dhcp-dev_4.2.4-7ubuntu6_armhf.deb
-Size: 694682
-MD5sum: 32bf49570227d11bfafd282bbd4c44a5
-SHA1: c0d8df780401ffe65e8c7527e24e8b69f3eb1343
-SHA256: 1119db2252a9774204985c50867260bd817b2b54493b2d11c34515c87743a661
-Description: API for accessing and modifying the DHCP server and client state
-Description-md5: 629de35b97db45a08414abd22d153d05
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: isc-dhcp-relay-dbg
-Priority: extra
-Section: debug
-Installed-Size: 4644
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
-Architecture: armhf
-Source: isc-dhcp
-Version: 4.2.4-7ubuntu6
-Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu6)
-Conflicts: dhcp-relay
-Filename: pool/main/i/isc-dhcp/isc-dhcp-relay-dbg_4.2.4-7ubuntu6_armhf.deb
-Size: 1915132
-MD5sum: 89e51aba267aebaf52c49a9fc21a357b
-SHA1: 541282ce254edf4187de9aefe7d372385d44e3ef
-SHA256: 630f538938c723b00115b2692575989da2c5419ae8272617214f4239a73962b0
-Description: DHCP relay daemon (debugging symbols)
-Description-md5: 02902cd378278d57c30d249e39a858b3
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: isc-dhcp-server
-Priority: optional
-Section: net
-Installed-Size: 1420
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
-Architecture: armhf
-Source: isc-dhcp
-Version: 4.2.4-7ubuntu6
-Replaces: dhcp3-server
-Provides: dhcp3-server
-Depends: debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.15), debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu6), lsb-base, adduser
-Suggests: isc-dhcp-server-ldap, apparmor
-Conflicts: dhcp
-Filename: pool/main/i/isc-dhcp/isc-dhcp-server_4.2.4-7ubuntu6_armhf.deb
-Size: 812288
-MD5sum: 620e20a4bb2ab534e9b072974cf52668
-SHA1: 13a566ade3fe9cab54d9526f166f29df274d7207
-SHA256: 7e152af73085ccb3aa9c37a5cb8638876f3e9bc8daaf9629538ae4884101ad7a
-Description: ISC DHCP server for automatic IP address assignment
-Description-md5: 4f5d533c02fa72751acbaefe5e28258d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: isc-dhcp-server-dbg
-Priority: extra
-Section: debug
-Installed-Size: 5536
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
-Architecture: armhf
-Source: isc-dhcp
-Version: 4.2.4-7ubuntu6
-Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu6), lsb-base
-Suggests: isc-dhcp-server-ldap
-Conflicts: dhcp
-Filename: pool/main/i/isc-dhcp/isc-dhcp-server-dbg_4.2.4-7ubuntu6_armhf.deb
-Size: 2315856
-MD5sum: 549ae44ccc5ae450519da540e41dbabd
-SHA1: 63259478f983baec8fddeccbfce36b6afd904b35
-SHA256: a9fb4e7d067206a97fd35343c790cdf38de1d578bd571387817723e16b4f931c
-Description: ISC DHCP server for automatic IP address assignment (debug)
-Description-md5: b66d42f652cf79ebf5bf05f89e2126b7
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: libapache2-mod-auth-mysql
 Priority: optional
 Section: web
@@ -698,6 +628,49 @@ Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libbind-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 4228
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: armhf
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: bind-dev
+Depends: libdns99 (= 1:9.9.3.dfsg.P2-3), libisccfg90 (= 1:9.9.3.dfsg.P2-3), libisc95 (= 1:9.9.3.dfsg.P2-3), liblwres90 (= 1:9.9.3.dfsg.P2-3), libbind9-90 (= 1:9.9.3.dfsg.P2-3)
+Conflicts: bind-dev
+Filename: pool/main/b/bind9/libbind-dev_9.9.3.dfsg.P2-3_armhf.deb
+Size: 1574162
+MD5sum: 1bbcbbf3393a1dacb48f7d547674fb7d
+SHA1: b82099f55e27b49cf36ceab08a2725d3881fb8c4
+SHA256: 8b4357d1c694b0cff48b9ea3fbe0e9bd64db55197bf5e9d710e52541e0c6071d
+Description: Static Libraries and Headers used by BIND
+Description-md5: 2224f8c1f8613ab53bfc2393a6add6a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libbind9-90
+Priority: standard
+Section: libs
+Installed-Size: 89
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: armhf
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libdns99, libisc95, libisccfg90
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libbind9-90_9.9.3.dfsg.P2-3_armhf.deb
+Size: 23464
+MD5sum: 355d9ad3147dbbfe23d177f3f32c1107
+SHA1: ae45a0caf635c001e3da9e63310ebeeef3a292db
+SHA256: 5ffe655d064f63b6bffc97c93c0b2d7c072f8ff2ce88bf495b402adc3809580e
+Description: BIND9 Shared Library used by BIND
+Description-md5: 54e2889a8502320ca468efcbd1b48934
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: libcolumbus1
 Priority: optional
@@ -785,6 +758,27 @@ Description-md5: aa070f52bfbf0d9e220aa40da4b4ced1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libdns99
+Priority: standard
+Section: libs
+Installed-Size: 1270
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: armhf
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libgeoip1, libgssapi-krb5-2 (>= 1.10+dfsg~), libisc95, libkrb5-3 (>= 1.6.dfsg.2), libssl1.0.0 (>= 1.0.0)
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libdns99_9.9.3.dfsg.P2-3_armhf.deb
+Size: 730984
+MD5sum: 279032016238f90a4f769f639bc0babe
+SHA1: 94ddfd84aadc730b5b764b8189fb976b2ac68362
+SHA256: 62fed18f520c37ce0075f0aeef68889160cedaaf5f0140964eb988239b2349ca
+Description: DNS Shared Library used by BIND
+Description-md5: 08196e0b2c6fd4d0c818845ca28dbe39
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: libgstreamer-plugins-base1.0-0
 Priority: optional
@@ -947,6 +941,93 @@ Homepage: http://gstreamer.freedesktop.org
 Description-md5: de1692260510350a48f76ec91eae40a9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libisc95
+Priority: standard
+Section: libs
+Installed-Size: 302
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: armhf
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: libbind0
+Depends: libc6 (>= 2.15), libxml2 (>= 2.7.4)
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libisc95_9.9.3.dfsg.P2-3_armhf.deb
+Size: 152338
+MD5sum: 9f5d7cce4eff91bf3973cadf41eae44e
+SHA1: 37c5618466e44ae6ded02f836d6aa3f2350c85ec
+SHA256: ed35daded1efbba118771eb4a23bf2ef6209b464d525a3bfd98665d20c753364
+Description: ISC Shared Library used by BIND
+Description-md5: 6530db41bb53f0f9fc50d6f397950e53
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libisccc90
+Priority: standard
+Section: libs
+Installed-Size: 74
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: armhf
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libisc95
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libisccc90_9.9.3.dfsg.P2-3_armhf.deb
+Size: 15190
+MD5sum: 93370a316a611d66de489f06b02176b8
+SHA1: c438482f1624e267ab39e18d841da2dfbd525055
+SHA256: 0aa0d32270f2573d6bc7bc9efc1187541b32ef2bb129658df48be8df22731593
+Description: Command Channel Library used by BIND
+Description-md5: da6a1a2a1fbcd8229f24523ae8ae7b33
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libisccfg90
+Priority: standard
+Section: libs
+Installed-Size: 123
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: armhf
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libdns99, libisc95, libisccc90
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libisccfg90_9.9.3.dfsg.P2-3_armhf.deb
+Size: 35694
+MD5sum: 25bedcf2fa0b0dffa0f3fd2e75444e32
+SHA1: 9948cb02dda374f6174d073caf2fa28928e1b62a
+SHA256: 5024d869ba25a3132fd9d835ab3fe3466782b58c8d0d2c36a85d052b02636715
+Description: Config File Handling Library used by BIND
+Description-md5: 3a890bff8c41bd92ac3e542818fb7f79
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: liblwres90
+Priority: standard
+Section: libs
+Installed-Size: 97
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: armhf
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: libbind0
+Depends: libc6 (>= 2.15)
+Conflicts: libbind0
+Filename: pool/main/b/bind9/liblwres90_9.9.3.dfsg.P2-3_armhf.deb
+Size: 33258
+MD5sum: acf4376fbd2c8c4d1f06570d376112b4
+SHA1: 36e764a0c092c86424b45b5ee46acea590aacaea
+SHA256: c594bfb44dc3586ec4007172860274363ce2fc618ba41824af295dba687f0042
+Description: Lightweight Resolver Library used by BIND
+Description-md5: 73843c094de7b4dfcc9ed1e36cc6d546
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: libmysqlclient-dev
 Priority: optional
