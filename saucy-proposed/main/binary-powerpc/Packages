@@ -1,3 +1,88 @@
+Package: bind9
+Priority: optional
+Section: net
+Installed-Size: 902
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: apparmor-profiles (<< 2.1+1075-0ubuntu4), bind, bind9utils (<< 1:9.9.3.dfsg.P2-3), dnsutils (<< 1:9.1.0-3)
+Depends: libbind9-90 (= 1:9.9.3.dfsg.P2-3), libc6 (>= 2.4), libcap2 (>= 2.10), libdns99 (= 1:9.9.3.dfsg.P2-3), libisc95 (= 1:9.9.3.dfsg.P2-3), libisccc90 (= 1:9.9.3.dfsg.P2-3), libisccfg90 (= 1:9.9.3.dfsg.P2-3), liblwres90 (= 1:9.9.3.dfsg.P2-3), libxml2 (>= 2.7.4), debconf (>= 0.5) | debconf-2.0, init-system-helpers (>= 1.5), netbase, adduser, lsb-base (>= 3.2-14), bind9utils (= 1:9.9.3.dfsg.P2-3), net-tools
+Suggests: dnsutils, bind9-doc, resolvconf, ufw
+Conflicts: apparmor-profiles (<< 2.1+1075-0ubuntu4), bind
+Filename: pool/main/b/bind9/bind9_9.9.3.dfsg.P2-3_powerpc.deb
+Size: 332276
+MD5sum: 82de0336d27cba29765aa7e2c6a932aa
+SHA1: ed39b4f67d013dd1fb97bb371d4af68cc8dfd2f6
+SHA256: ddc5473df460545e6edca28a794b029a0fa100a2ed05a9891c2fbc0949e98427
+Description: Internet Domain Name Server
+Description-md5: 4d39ed3fc4e2e72497683d779dfdcd38
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: dns-server
+
+Package: bind9-doc
+Priority: optional
+Section: doc
+Installed-Size: 1326
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: all
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Filename: pool/main/b/bind9/bind9-doc_9.9.3.dfsg.P2-3_all.deb
+Size: 236102
+MD5sum: 47b2cd64773f45a1abfb9a1c8f09aba6
+SHA1: e914edab072d7454f258867a2eddb3b4c0ef8ed8
+SHA256: 6321daf653b483e15b0c1bac78310a33d7f0e10bd2176dbde4895e9af0f4c6f8
+Description: Documentation for BIND
+Description-md5: 329b8ef5cf9ad3d51ce47e6d8d13d75e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: dns-server
+
+Package: bind9-host
+Priority: standard
+Section: net
+Installed-Size: 173
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: dnsutils (<< 1:9.0.0), host (<< 1:9.7.0)
+Provides: host
+Depends: libbind9-90 (= 1:9.9.3.dfsg.P2-3), libc6 (>= 2.4), libdns99 (= 1:9.9.3.dfsg.P2-3), libisc95 (= 1:9.9.3.dfsg.P2-3), libisccfg90 (= 1:9.9.3.dfsg.P2-3), liblwres90 (= 1:9.9.3.dfsg.P2-3)
+Conflicts: dnsutils (<< 1:9.0.0), host (<< 1:9.7.0)
+Filename: pool/main/b/bind9/bind9-host_9.9.3.dfsg.P2-3_powerpc.deb
+Size: 54432
+MD5sum: 77f79168fc19b5bf51ae45c24f8b5e4f
+SHA1: a7a150a22fd12c2bbae054e286c9322637cca6a5
+SHA256: ec4871fa53d5e4a3ea4031103583163a12704fd1819bfb0a1c40c61a87f39bf1
+Description: Version of 'host' bundled with BIND 9.X
+Description-md5: acdae162c721f5d2986f557bdefa1e70
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: bind9utils
+Priority: optional
+Section: net
+Installed-Size: 578
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: bind9 (<= 1:9.5.0~b2-1)
+Depends: libbind9-90, libc6 (>= 2.4), libdns99, libisc95, libisccc90, libisccfg90, python, python-argparse
+Filename: pool/main/b/bind9/bind9utils_9.9.3.dfsg.P2-3_powerpc.deb
+Size: 240194
+MD5sum: 956d677c48159e111103fa3fa4b9ca74
+SHA1: 9347a75ee4b4db92dfe0f1a6380b61d061b88319
+SHA256: bc8184dcdde37a609fb40e01c22f483362f118fbf9a362b6206e748465dd74c9
+Description: Utilities for BIND
+Description-md5: 5f6f5621a6edd04ef33a0fe5d2d5bff8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: dns-server
+
 Package: binutils
 Priority: optional
 Section: devel
@@ -165,6 +250,29 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: minimal
 
+Package: dnsutils
+Priority: standard
+Section: net
+Installed-Size: 363
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: bind, bind9 (<< 1:9.1.0-3)
+Depends: libbind9-90 (= 1:9.9.3.dfsg.P2-3), libc6 (>= 2.4), libdns99 (= 1:9.9.3.dfsg.P2-3), libisc95 (= 1:9.9.3.dfsg.P2-3), libisccfg90 (= 1:9.9.3.dfsg.P2-3), libkrb5-3 (>= 1.6.dfsg.2), liblwres90 (= 1:9.9.3.dfsg.P2-3), bind9-host | host
+Suggests: rblcheck
+Conflicts: netstd (<< 2.00)
+Filename: pool/main/b/bind9/dnsutils_9.9.3.dfsg.P2-3_powerpc.deb
+Size: 146216
+MD5sum: 7163ccdf56c4390149d405f1e28fd1fa
+SHA1: d64da34452c15f5f8fda29dbe2b581900c26d2aa
+SHA256: 85e4305c9f0527567458e8bd3efd902a8df3179b5e84d9e5050fd595b58b61b6
+Description: Clients provided with BIND
+Description-md5: 9fac1cb37cd005e52aa0e22df64994e1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
+
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -185,95 +293,6 @@ Description-md5: 9f375e761d413f36fd2c7df206c8836d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
-
-Package: ghostscript
-Priority: optional
-Section: text
-Installed-Size: 227
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: powerpc
-Version: 9.10~dfsg~rc1-0ubuntu2
-Provides: postscript-viewer
-Depends: libc6 (>= 2.0), libgs9 (= 9.10~dfsg~rc1-0ubuntu2), gsfonts (>= 6.0-1), debconf | debconf-2.0, debianutils (>= 1.6)
-Suggests: ghostscript-x, hpijs
-Breaks: ghostscript-x (<< 8.64~dfsg-8)
-Filename: pool/main/g/ghostscript/ghostscript_9.10~dfsg~rc1-0ubuntu2_powerpc.deb
-Size: 43966
-MD5sum: 892f95813ea9fdd0bf371d95c032e408
-SHA1: 50fe6d3fa9c0f6d2053d2474b3f5af1715ddf6dd
-SHA256: 74ec88d6eb8bfcf1a95f5f37b69f704888b00270b65b53f6971a409a57e3f750
-Description: interpreter for the PostScript language and for PDF
-Multi-Arch: foreign
-Homepage: http://www.ghostscript.com/
-Description-md5: 3b69f5ec8191e8f0d88dd3e30e7b1b69
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: ghostscript-dbg
-Priority: extra
-Section: debug
-Installed-Size: 22806
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: powerpc
-Source: ghostscript
-Version: 9.10~dfsg~rc1-0ubuntu2
-Depends: libgs9 (= 9.10~dfsg~rc1-0ubuntu2) | ghostscript (= 9.10~dfsg~rc1-0ubuntu2) | ghostcript-cups (= 9.10~dfsg~rc1-0ubuntu2) | ghostcript-x (= 9.10~dfsg~rc1-0ubuntu2)
-Filename: pool/main/g/ghostscript/ghostscript-dbg_9.10~dfsg~rc1-0ubuntu2_powerpc.deb
-Size: 10131736
-MD5sum: f988d4171ff04a70c5b33f988469339d
-SHA1: 88943dcf985ab3e798ed8621c87b738597757af2
-SHA256: 685bc2c24342309093074416c1d6e4e2250949c98270e7bbcff10d7f2f7eb36d
-Description: interpreter for the PostScript language and for PDF - Debug symbols
-Homepage: http://www.ghostscript.com/
-Description-md5: b88404b3189bdd4e7a7b79221e98739c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ghostscript-doc
-Priority: optional
-Section: text
-Installed-Size: 15726
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: all
-Source: ghostscript
-Version: 9.10~dfsg~rc1-0ubuntu2
-Suggests: ghostscript
-Filename: pool/main/g/ghostscript/ghostscript-doc_9.10~dfsg~rc1-0ubuntu2_all.deb
-Size: 6534922
-MD5sum: 28f74c9c06b19397bb6c52d33f6407b7
-SHA1: 1954c951548206d4e4004dcf18a79079446608eb
-SHA256: 1b46a69f420aadae588fdbc9bc2b28aade3e9f4cf9684e8cae9fb1b9c8a09c9a
-Description: interpreter for the PostScript language and for PDF - Documentation
-Homepage: http://www.ghostscript.com/
-Description-md5: 772951004a1a824bee59da206fba24e2
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ghostscript-x
-Priority: optional
-Section: text
-Installed-Size: 204
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: powerpc
-Source: ghostscript
-Version: 9.10~dfsg~rc1-0ubuntu2
-Depends: libc6 (>= 2.7), libx11-6, libxt6, ghostscript (= 9.10~dfsg~rc1-0ubuntu2)
-Filename: pool/main/g/ghostscript/ghostscript-x_9.10~dfsg~rc1-0ubuntu2_powerpc.deb
-Size: 39930
-MD5sum: 2ee5d8156deb2a7f231137201b404740
-SHA1: f78d00fe5bc9706336bef486085b45b49659d78d
-SHA256: 7be8f1a57c4ee0174d229a3cb63c808da8e9143e474be93a0ace406cf9691012
-Description: interpreter for the PostScript language and for PDF - X11 support
-Homepage: http://www.ghostscript.com/
-Description-md5: 5f6f4265cecdf5f91c519e5f197328b3
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: gir1.2-gst-plugins-base-1.0
 Priority: optional
@@ -794,6 +813,49 @@ Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libbind-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 4721
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: bind-dev
+Depends: libdns99 (= 1:9.9.3.dfsg.P2-3), libisccfg90 (= 1:9.9.3.dfsg.P2-3), libisc95 (= 1:9.9.3.dfsg.P2-3), liblwres90 (= 1:9.9.3.dfsg.P2-3), libbind9-90 (= 1:9.9.3.dfsg.P2-3)
+Conflicts: bind-dev
+Filename: pool/main/b/bind9/libbind-dev_9.9.3.dfsg.P2-3_powerpc.deb
+Size: 1528966
+MD5sum: 7346829768a32930f3b069325e441d36
+SHA1: 8acb168d50478d9a6cd0201d8598a729448468c4
+SHA256: 4942c7151c5accb685fa8954929196a340ae9cdd8ce598ec1e1b6a13e8960863
+Description: Static Libraries and Headers used by BIND
+Description-md5: 2224f8c1f8613ab53bfc2393a6add6a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libbind9-90
+Priority: standard
+Section: libs
+Installed-Size: 101
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libdns99, libisc95, libisccfg90
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libbind9-90_9.9.3.dfsg.P2-3_powerpc.deb
+Size: 25822
+MD5sum: b6a674dddc32e378c88fe721def95376
+SHA1: 761381b05a308384d4aab792140008e8e270d72c
+SHA256: 22eda58b40854c05765807806543727e17c9517433c6b34939fa1b423eb35ac5
+Description: BIND9 Shared Library used by BIND
+Description-md5: 54e2889a8502320ca468efcbd1b48934
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
 Package: libcolumbus1
 Priority: optional
 Section: libs
@@ -881,70 +943,26 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
-Package: libgs-dev
-Priority: optional
-Section: text
-Installed-Size: 11209
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: powerpc
-Source: ghostscript
-Version: 9.10~dfsg~rc1-0ubuntu2
-Depends: libgs9 (= 9.10~dfsg~rc1-0ubuntu2), libc6-dev, libcups2-dev, libcupsimage2-dev, libfontconfig1-dev, libidn11-dev, libijs-dev, libjbig2dec0-dev, libjpeg-dev, libpaper-dev, libpng12-0-dev, libtiff5-dev, zlib1g-dev
-Filename: pool/main/g/ghostscript/libgs-dev_9.10~dfsg~rc1-0ubuntu2_powerpc.deb
-Size: 2982952
-MD5sum: e8abe4380f07249e7018ef6c274f080e
-SHA1: 008b8dbb8a7d00a2586c2f69bb5f6374697998ba
-SHA256: d3fa2b91d43c204c471e717cc1bef2c5824f87d14535145837cc2a9adc4ad51b
-Description: interpreter for the PostScript language and for PDF - Development Files
-Homepage: http://www.ghostscript.com/
-Description-md5: f4c1713297a6c688a87d0b2876caf1fa
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libgs9
-Priority: optional
+Package: libdns99
+Priority: standard
 Section: libs
-Installed-Size: 9275
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Installed-Size: 1898
+Maintainer: LaMont Jones <lamont@debian.org>
 Architecture: powerpc
-Source: ghostscript
-Version: 9.10~dfsg~rc1-0ubuntu2
-Depends: libc6 (>= 2.11), libcups2 (>= 1.4.0), libcupsimage2 (>= 1.4.0), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.2.1), libidn11 (>= 1.13), libijs-0.35 (>= 0.35), libjbig2dec0 (>= 0.11), libjpeg8 (>= 8c), liblcms2-2 (>= 2.5), libpaper1, libpng12-0 (>= 1.2.13-4), libtiff5 (>> 4.0.0-1~), zlib1g (>= 1:1.1.4), poppler-data (>= 0.4.5-3~) | gs-cjk-resource, libgs9-common (>= 9.10~dfsg~rc1)
-Filename: pool/main/g/ghostscript/libgs9_9.10~dfsg~rc1-0ubuntu2_powerpc.deb
-Size: 2446426
-MD5sum: d022329ab2b5e1e6c04cff0b9bc9c766
-SHA1: 6994e82761ebc18a12346cbf2010e2fc3d4a0b03
-SHA256: ba99cfd60397fd576eefc60f40511195da042ae612becf9134aeebd4670b58e7
-Description: interpreter for the PostScript language and for PDF - Library
-Homepage: http://www.ghostscript.com/
-Description-md5: 77d0d233cd004663a71b1ef44e87d3f1
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libgeoip1, libgssapi-krb5-2 (>= 1.10+dfsg~), libisc95, libkrb5-3 (>= 1.6.dfsg.2), libssl1.0.0 (>= 1.0.0)
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libdns99_9.9.3.dfsg.P2-3_powerpc.deb
+Size: 793164
+MD5sum: 87c1c894548ac79f758c9152dcf2a91f
+SHA1: 0b95f967e6e1b7648bd36c6844d2dffd677ac027
+SHA256: 08518ee2791cfa50ac7d15b2ee91bcaa962d383a743a2bc58cad3e17b4db1945
+Description: DNS Shared Library used by BIND
+Description-md5: 08196e0b2c6fd4d0c818845ca28dbe39
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libgs9-common
-Priority: optional
-Section: libs
-Installed-Size: 4196
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
-Architecture: all
-Source: ghostscript
-Version: 9.10~dfsg~rc1-0ubuntu2
-Suggests: fonts-droid
-Filename: pool/main/g/ghostscript/libgs9-common_9.10~dfsg~rc1-0ubuntu2_all.deb
-Size: 2291122
-MD5sum: aa55e7920a002e715661936810fa908f
-SHA1: 69c3499812083f5d939f040e4980f694f4682443
-SHA256: 51150136e7794e170f825353cc22468280282e4baefd328ba50a35ebb707cc98
-Description: interpreter for the PostScript language and for PDF - common files
-Homepage: http://www.ghostscript.com/
-Description-md5: f08f64f97de70ffa2ec3f07307565bf1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libgstreamer-plugins-base1.0-0
 Priority: optional
@@ -1107,6 +1125,93 @@ Homepage: http://gstreamer.freedesktop.org
 Description-md5: de1692260510350a48f76ec91eae40a9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libisc95
+Priority: standard
+Section: libs
+Installed-Size: 442
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: libbind0
+Depends: libc6 (>= 2.15), libxml2 (>= 2.7.4)
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libisc95_9.9.3.dfsg.P2-3_powerpc.deb
+Size: 166690
+MD5sum: 560f76785337aa7d7405c82d2ba25609
+SHA1: 930c45d0184e61bff59377cb589a61da96ee5d2d
+SHA256: 7a93ac38a9439ea429cfdeb4eff58743fdfe2771bd10a2cc9003cf0167ea0bd0
+Description: ISC Shared Library used by BIND
+Description-md5: 6530db41bb53f0f9fc50d6f397950e53
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libisccc90
+Priority: standard
+Section: libs
+Installed-Size: 86
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libisc95
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libisccc90_9.9.3.dfsg.P2-3_powerpc.deb
+Size: 17340
+MD5sum: c01f92924c936392a63da606658d3c73
+SHA1: 9375db474e1d5c911106946a1a685730015352ad
+SHA256: 9925dc702a37f2f68172a2174386be2867a01c7081fe72d20b117dba72f44567
+Description: Command Channel Library used by BIND
+Description-md5: da6a1a2a1fbcd8229f24523ae8ae7b33
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libisccfg90
+Priority: standard
+Section: libs
+Installed-Size: 155
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libdns99, libisc95, libisccc90
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libisccfg90_9.9.3.dfsg.P2-3_powerpc.deb
+Size: 40284
+MD5sum: c0cd18e1c6dd6ab14c69221e0c625637
+SHA1: 4e1feee313b9bb4c082f36e797d27dcc485bcd47
+SHA256: 7e571052651adb4fb6457e4176d2c8b37c0b39d12f020ef5e2efd092651f4af6
+Description: Config File Handling Library used by BIND
+Description-md5: 3a890bff8c41bd92ac3e542818fb7f79
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: liblwres90
+Priority: standard
+Section: libs
+Installed-Size: 130
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-3
+Replaces: libbind0
+Depends: libc6 (>= 2.15)
+Conflicts: libbind0
+Filename: pool/main/b/bind9/liblwres90_9.9.3.dfsg.P2-3_powerpc.deb
+Size: 37720
+MD5sum: e53976385f30d19c1b9b598d24ef2bcc
+SHA1: d3b8381f14399f94a5de5311133299e9c9cdb76d
+SHA256: f2861f677329a7872a0a400b24498c9fa3b9dcecba46c4dcbd3fd3ee05b52b76
+Description: Lightweight Resolver Library used by BIND
+Description-md5: 73843c094de7b4dfcc9ed1e36cc6d546
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: libmysqlclient-dev
 Priority: optional
