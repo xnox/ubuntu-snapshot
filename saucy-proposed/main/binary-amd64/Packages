@@ -212,29 +212,6 @@ Origin: Ubuntu
 Supported: 9m
 Task: minimal
 
-Package: dh-python
-Priority: optional
-Section: python
-Installed-Size: 278
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Piotr Ożarowski <piotr@debian.org>
-Architecture: all
-Version: 1.20130819-1ubuntu4
-Replaces: python3 (<< 3.3.2-4~)
-Depends: python3 (>= 3.2.3-3~)
-Breaks: python3 (<< 3.3.2-4~)
-Filename: pool/main/d/dh-python/dh-python_1.20130819-1ubuntu4_all.deb
-Size: 52318
-MD5sum: 2f10cf350fb7b6503a25fcb82ee0b756
-SHA1: f21b2159cca1cce46bfec7251c0ef9d5a93dabca
-SHA256: d044a1ea5e720621b0049431fdff834e1525de2c97029a2dc525f1046bb1da6e
-Description: Debian helper tools for packaging Python libraries and applications
-Description-md5: 9f24690d2f6e9b70048dc4079a2dfca7
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: minimal
-
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -256,6 +233,32 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
+
+Package: gir1.2-clutter-1.0
+Priority: optional
+Section: libs
+Installed-Size: 633
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: clutter-1.0
+Version: 1.14.4-3
+Replaces: gir1.0-clutter-1.0, libclutter-1.0-0 (<< 1.0.8)
+Depends: gir1.2-atk-1.0, gir1.2-cogl-1.0, gir1.2-coglpango-1.0, gir1.2-freedesktop, gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-json-1.0, libclutter-1.0-0 (>= 1.13.10)
+Conflicts: gir1.0-clutter-1.0
+Breaks: libclutter-1.0-0 (<< 1.0.8)
+Filename: pool/main/c/clutter-1.0/gir1.2-clutter-1.0_1.14.4-3_amd64.deb
+Size: 103270
+MD5sum: e1f9da671882f44d5f372f7d942b0f1c
+SHA1: 933f09106bb8916c73e56f0273cebf73122c6ec2
+SHA256: 9cdb5c53b1d69f8d2135bc2904b00c22d1938214916e1bfa2fda56905c161feb
+Description: GObject introspection data for the Clutter 1.0 library
+Homepage: http://www.clutter-project.org/
+Description-md5: 312bf4f2636f72196b1ab50b2a930bad
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-gnome-desktop
 
 Package: gir1.2-gst-plugins-base-1.0
 Priority: optional
@@ -673,6 +676,127 @@ Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libclutter-1.0-0
+Priority: optional
+Section: libs
+Installed-Size: 1490
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: clutter-1.0
+Version: 1.14.4-3
+Depends: libatk1.0-0 (>= 2.2.0), libc6 (>= 2.14), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.10), libcogl-pango12 (>= 1.7.4), libcogl12 (>= 1.13.4), libfontconfig1 (>= 2.9.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.3.18), libjson-glib-1.0-0 (>= 0.12.0), libpango-1.0-0 (>= 1.30), libpangocairo-1.0-0 (>= 1.30), libpangoft2-1.0-0 (>= 1.30), libx11-6 (>= 2:1.2.99.901), libxcomposite1 (>= 1:0.3-1), libxdamage1 (>= 1:1.1), libxfixes3 (>= 1:4.0.1), libxi6 (>= 2:1.2.99.4)
+Pre-Depends: multiarch-support
+Recommends: libclutter-1.0-common
+Breaks: libcogl11, libcogl9
+Filename: pool/main/c/clutter-1.0/libclutter-1.0-0_1.14.4-3_amd64.deb
+Size: 485764
+MD5sum: 49268742aaafffc9f48876affdafac9f
+SHA1: 11311e874cf859418ce63c53413a0b5ef6aa18ef
+SHA256: e511a9325b231e0d4009a767a0418962d8bc752ac11991079d8cd31fa31dfcf1
+Description: Open GL based interactive canvas library
+Multi-Arch: same
+Homepage: http://www.clutter-project.org/
+Description-md5: a61582dd624c05cff2d537148daf6e7c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libclutter-1.0-common
+Priority: optional
+Section: libs
+Installed-Size: 156
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: clutter-1.0
+Version: 1.14.4-3
+Filename: pool/main/c/clutter-1.0/libclutter-1.0-common_1.14.4-3_all.deb
+Size: 81006
+MD5sum: 16ed98e324661ec5f9910f03d20d9101
+SHA1: ad993ea51d7f0fcac7dc6e34ab1870f93ed8367b
+SHA256: 3ea7d09d7aa30866725e8e6276291753c4fdd3c4f3680c818f47fd968228a15d
+Description: Open GL based interactive canvas library (common files)
+Multi-Arch: foreign
+Homepage: http://www.clutter-project.org/
+Description-md5: 38161479c76808c77cc7cac8fb452207
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libclutter-1.0-dbg
+Priority: extra
+Section: debug
+Installed-Size: 5107
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: clutter-1.0
+Version: 1.14.4-3
+Depends: libclutter-1.0-0 (= 1.14.4-3)
+Filename: pool/main/c/clutter-1.0/libclutter-1.0-dbg_1.14.4-3_amd64.deb
+Size: 1148380
+MD5sum: 0744e36fc37418571a984ec9de0df2b5
+SHA1: 3f053c7bb1fa057fca16c3a78fbb9501e87815c9
+SHA256: ee8a912471aff18370ba1692cae5f2e60e070c65a203e760c613d98da1862cb5
+Description: Open GL based interactive canvas library (debug files)
+Multi-Arch: same
+Homepage: http://www.clutter-project.org/
+Description-md5: fd1375dceedf124a35a174c0c643601c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libclutter-1.0-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 4038
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: clutter-1.0
+Version: 1.14.4-3
+Depends: libclutter-1.0-0 (= 1.14.4-3), gir1.2-clutter-1.0 (= 1.14.4-3), libgdk-pixbuf2.0-dev, libcairo2-dev (>= 1.10), libatk1.0-dev (>= 2.5.3), libpango1.0-dev (>= 1.30), libcogl-dev (>= 1.14.0), libcogl-pango-dev (>= 1.14.0), libgl1-mesa-dev (>= 7.1~rc3-1~), libgtk-3-dev, libdrm-dev, libx11-dev, libxext-dev, libxfixes-dev, libxdamage-dev, libxcomposite-dev, libxi-dev, libjson-glib-dev (>= 0.12)
+Recommends: pkg-config
+Suggests: libclutter-1.0-doc
+Filename: pool/main/c/clutter-1.0/libclutter-1.0-dev_1.14.4-3_amd64.deb
+Size: 294952
+MD5sum: c279695d8d136d4e8c59b485d6216381
+SHA1: 010fc85bdb8150acca2f4977bfde6aa9689a21b3
+SHA256: 5c45af081b83b4ed5ff0a97bf5f2eb0aeeb22eb74b936e12a3a73ba066ca570d
+Description: Open GL based interactive canvas library (development files)
+Homepage: http://www.clutter-project.org/
+Description-md5: d2f107ca493c4c999db05729a9a06672
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libclutter-1.0-doc
+Priority: optional
+Section: doc
+Installed-Size: 10364
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: clutter-1.0
+Version: 1.14.4-3
+Replaces: libclutter-0.1-doc
+Suggests: devhelp
+Conflicts: libclutter-0.1-doc, libclutter-doc
+Filename: pool/main/c/clutter-1.0/libclutter-1.0-doc_1.14.4-3_all.deb
+Size: 2556138
+MD5sum: 16ec27a1b93472a1def2e4fffd27d42c
+SHA1: c83dac584ce5d867a80626b66bea064919cbf17c
+SHA256: 5075da2fb8e14fcbceef9615e00bc3d9a2c7533e15acdca3a480f67c005337b8
+Description: Open GL based interactive canvas library (documentation)
+Homepage: http://www.clutter-project.org/
+Description-md5: 02635797d227670df03bfcc254b316dd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: libcolumbus1
 Priority: optional
@@ -1185,27 +1309,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: livecd-rootfs
-Priority: optional
-Section: devel
-Installed-Size: 129
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Version: 2.180
-Depends: debootstrap, rsync, python-minimal | python, procps, squashfs-tools (>= 1:3.3-1), grep-dctrl, fdupes, lsb-release, lzma, e2fsprogs, germinate (>= 1.25.1), apt-utils, gnupg, live-build (>= 3.0~a55-1), android-tools-fsutils
-Suggests: partimage
-Breaks: ubuntu-defaults-builder (<< 0.32)
-Filename: pool/main/l/livecd-rootfs/livecd-rootfs_2.180_all.deb
-Size: 18728
-MD5sum: 85672539cde52607b6519dbe8bf7b321
-SHA1: 500752bc238abefb93decd20ebad7f200896de42
-SHA256: f397a41d3ff20cb8e4b94ad2d409a5a0005e10d43238fbd4b0d4601aeacf959f
-Description: construction script for the livecd rootfs
-Description-md5: 7b59fd93401bd0efd37505de924d874f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
 
 Package: mysql-client
 Priority: optional
