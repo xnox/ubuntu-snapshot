@@ -121,72 +121,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: click
-Priority: optional
-Section: admin
-Installed-Size: 85
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Architecture: amd64
-Version: 0.3.4
-Replaces: click-package
-Provides: click-package
-Depends: libc6 (>= 2.3.4), python3 (>= 3.2), python3-click (>= 0.3.4), python3-click (<< 0.3.4.1), adduser
-Recommends: click-apparmor
-Conflicts: click-package
-Filename: pool/main/c/click/click_0.3.4_amd64.deb
-Size: 8998
-MD5sum: 71e4055b5be9707fec87e4a6c53b11a5
-SHA1: 41aec4e2be50a0db8b843d6354c60b394171df9f
-SHA256: b1ac33ed74a9f2f17c7fec12639697e10419fc0f7e781727988b0f90018d0c63
-Description: Click packages
-Description-md5: 1f88be1eec9a52975d22b0103f98879a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: click-dev
-Priority: optional
-Section: admin
-Installed-Size: 72
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Architecture: amd64
-Source: click
-Version: 0.3.4
-Depends: perl, python3-click (= 0.3.4)
-Filename: pool/main/c/click/click-dev_0.3.4_amd64.deb
-Size: 7270
-MD5sum: a5b6fbdd04e82c7a0719a3aae0bd61e9
-SHA1: 5d1648e9b3da7265e704e07170cd5cdb6c17bb45
-SHA256: 4d15dede83ed314c70b2f474f028f346d9a5bfcaace4c528722841c348abede2
-Description: build Click packages
-Description-md5: 524a787d5934e296c23fd4c9d590ebf1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: click-doc
-Priority: optional
-Section: doc
-Installed-Size: 157
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Architecture: all
-Source: click
-Version: 0.3.4
-Replaces: click-package-doc
-Provides: click-package-doc
-Depends: libjs-sphinxdoc (>= 1.0)
-Conflicts: click-package-doc
-Filename: pool/main/c/click/click-doc_0.3.4_all.deb
-Size: 39166
-MD5sum: bb4b6702897ea111105c9a3f5c8e76cf
-SHA1: 3ccbdb4137e5b4703d188d6d257d1f27ff813fe6
-SHA256: fc857a98d1227da12adb05a44185d05ebceb8129496006deaadc112124fc6730
-Description: Click packages (documentation)
-Description-md5: 60608bb1e29a4ab375e8538c009ecb38
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: debianutils
 Essential: yes
 Priority: required
@@ -234,6 +168,77 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: ghostscript
+Priority: optional
+Section: text
+Installed-Size: 232
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: amd64
+Version: 9.10~dfsg~rc1-0ubuntu1
+Provides: postscript-viewer
+Depends: libc6 (>= 2.2.5), libgs9 (= 9.10~dfsg~rc1-0ubuntu1), gsfonts (>= 6.0-1), debconf | debconf-2.0, debianutils (>= 1.6)
+Suggests: ghostscript-x, hpijs
+Breaks: ghostscript-x (<< 8.64~dfsg-8)
+Filename: pool/main/g/ghostscript/ghostscript_9.10~dfsg~rc1-0ubuntu1_amd64.deb
+Size: 43494
+MD5sum: 5f0b7fb23509f8c06fe7d739101a198e
+SHA1: 82fb18a1259fcd9652aaf0be2b8986d977cef7c1
+SHA256: 5a40e0123207f03d559a0ee38b6704ca5d3b9fc933f75b630ef4992412b4539a
+Description: interpreter for the PostScript language and for PDF
+Multi-Arch: foreign
+Homepage: http://www.ghostscript.com/
+Description-md5: 3b69f5ec8191e8f0d88dd3e30e7b1b69
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: ghostscript-dbg
+Priority: extra
+Section: debug
+Installed-Size: 25918
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: amd64
+Source: ghostscript
+Version: 9.10~dfsg~rc1-0ubuntu1
+Depends: libgs9 (= 9.10~dfsg~rc1-0ubuntu1) | ghostscript (= 9.10~dfsg~rc1-0ubuntu1) | ghostcript-cups (= 9.10~dfsg~rc1-0ubuntu1) | ghostcript-x (= 9.10~dfsg~rc1-0ubuntu1)
+Filename: pool/main/g/ghostscript/ghostscript-dbg_9.10~dfsg~rc1-0ubuntu1_amd64.deb
+Size: 10003766
+MD5sum: 3718b9d627eaa08b1201bc1995a3c8fd
+SHA1: 4004a65a6c52714375f0560191e266089549460a
+SHA256: cd2540ebc08017065f3af375f476a563b381f83b486e433bc48f3d215b11407a
+Description: interpreter for the PostScript language and for PDF - Debug symbols
+Homepage: http://www.ghostscript.com/
+Description-md5: b88404b3189bdd4e7a7b79221e98739c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ghostscript-x
+Priority: optional
+Section: text
+Installed-Size: 217
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: amd64
+Source: ghostscript
+Version: 9.10~dfsg~rc1-0ubuntu1
+Depends: libc6 (>= 2.14), libx11-6, libxt6, ghostscript (= 9.10~dfsg~rc1-0ubuntu1)
+Filename: pool/main/g/ghostscript/ghostscript-x_9.10~dfsg~rc1-0ubuntu1_amd64.deb
+Size: 39208
+MD5sum: 4c5a3a4d09241f74528320988eff051b
+SHA1: 7389c3afb23638aef6fc29a87c5ac199153d0ea1
+SHA256: 2cd5c3f509d9feace9bff7e96ffe0845caddda411e33c97e52dd89bb7137769a
+Description: interpreter for the PostScript language and for PDF - X11 support
+Homepage: http://www.ghostscript.com/
+Description-md5: 5f6f4265cecdf5f91c519e5f197328b3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: gir1.2-gst-plugins-base-1.0
 Priority: optional
 Section: introspection
@@ -279,79 +284,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: gir1.2-gtkclutter-1.0
-Priority: optional
-Section: libs
-Installed-Size: 45
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: clutter-gtk
-Version: 1.4.4-3
-Replaces: gir1.0-clutter-gtk-1.0
-Depends: gir1.2-clutter-1.0, gir1.2-gtk-3.0, libclutter-gtk-1.0-0 (>= 1.3.2)
-Conflicts: gir1.0-clutter-gtk-1.0
-Filename: pool/main/c/clutter-gtk/gir1.2-gtkclutter-1.0_1.4.4-3_amd64.deb
-Size: 3588
-MD5sum: 15556efee2419a3f9ae721d9768c40d4
-SHA1: 89a99081cf5f363d0816a8d8f32d86da00c37384
-SHA256: 254624f8fb1f6205361acb94c844730161aa0686f229a23d2f5ecf286db70451
-Description: GObject introspection data for the GTK+ Clutter library
-Homepage: http://www.clutter-project.org/
-Description-md5: bd3cdd6b014da3b5e717a64bade54654
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-gnome-desktop
-
-Package: gnome-mines
-Priority: optional
-Section: games
-Installed-Size: 1284
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Version: 1:3.8.2-1
-Replaces: gnomine (<< 1:3.7.2)
-Depends: libc6 (>= 2.3.4), libcairo2 (>= 1.2.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.31.8), libgtk-3-0 (>= 3.4.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), librsvg2-2 (>= 2.32.0), dconf-gsettings-backend | gsettings-backend
-Recommends: yelp
-Breaks: gnomine (<< 1:3.7.2)
-Filename: pool/main/g/gnome-mines/gnome-mines_3.8.2-1_amd64.deb
-Size: 297266
-MD5sum: 0cc28814ac50623318fe1d7106f56b3c
-SHA1: f5a4def4732884cdeee7a89f6ffeef850284ec2f
-SHA256: 6ec024bf96afc0f13bd6b83ec55e784aa2fe30df43ff1ef8dba906af66c03ef7
-Description: popular minesweeper puzzle game for GNOME
-Homepage: https://wiki.gnome.org/Mines
-Description-md5: 36262e86f4363ae5903b00c430f60af1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntu-gnome-desktop
-
-Package: gnomine
-Priority: optional
-Section: games
-Installed-Size: 67
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Architecture: all
-Source: gnome-mines
-Version: 1:3.8.2-1
-Depends: gnome-mines
-Filename: pool/main/g/gnome-mines/gnomine_3.8.2-1_all.deb
-Size: 11534
-MD5sum: cc105de1ce8c04fb746bfa1d7a1e7787
-SHA1: a318c6815172d8f20801fe9cc460c0fc3d07e7a8
-SHA256: 393d531269b23c56d6f1455887172fc15a7117c421abcf38cbe02094302a1695
-Description: popular minesweeper puzzle game for GNOME (transitional package)
-Homepage: https://wiki.gnome.org/Mines
-Description-md5: f0f3029a7265c8c15e77b1b69d34cb9e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop
 
 Package: gstreamer1.0-alsa
 Priority: optional
@@ -681,102 +613,6 @@ Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libclutter-gtk-1.0-0
-Priority: optional
-Section: libs
-Installed-Size: 90
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: clutter-gtk
-Version: 1.4.4-3
-Depends: libc6 (>= 2.2.5), libcairo2 (>= 1.2.4), libclutter-1.0-0 (>= 1.13.10), libcogl12 (>= 1.7.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.6.0)
-Pre-Depends: multiarch-support
-Filename: pool/main/c/clutter-gtk/libclutter-gtk-1.0-0_1.4.4-3_amd64.deb
-Size: 26550
-MD5sum: ae631f0b3e8caec13f22fb4760696b15
-SHA1: 1a6d5e55856f02a39cd1ee9f732909f3e533ffe0
-SHA256: a4fd09c39926748b1794e71dd37c5aba04e76c84bdd4ac6f59fe62ab2f9b342e
-Description: Open GL based interactive canvas library GTK+ widget
-Multi-Arch: same
-Homepage: http://www.clutter-project.org/
-Description-md5: b45ee0f005530aab6651f7cd9600f11a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libclutter-gtk-1.0-dbg
-Priority: extra
-Section: debug
-Installed-Size: 251
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: clutter-gtk
-Version: 1.4.4-3
-Depends: libclutter-gtk-1.0-0 (= 1.4.4-3)
-Filename: pool/main/c/clutter-gtk/libclutter-gtk-1.0-dbg_1.4.4-3_amd64.deb
-Size: 79974
-MD5sum: fdd280c042122a82babca6f42029d781
-SHA1: 5eecb2fe5003b65cf37dbf09f45eb346f3fc652b
-SHA256: d962a3460418b9943642afad4ac1ae0bf5de9620eb0560dd32161645cf0446b9
-Description: Open GL based interactive canvas library GTK+ widget (debug files)
-Multi-Arch: same
-Homepage: http://www.clutter-project.org/
-Description-md5: af32fd57db2598d70bdf9ec1db8d3e73
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libclutter-gtk-1.0-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 164
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Architecture: amd64
-Source: clutter-gtk
-Version: 1.4.4-3
-Depends: libclutter-gtk-1.0-0 (= 1.4.4-3), gir1.2-gtkclutter-1.0 (= 1.4.4-3), pkg-config, libgtk-3-dev (>= 3.6.0), libclutter-1.0-dev (>= 1.13.10)
-Suggests: libclutter-gtk-1.0-doc
-Filename: pool/main/c/clutter-gtk/libclutter-gtk-1.0-dev_1.4.4-3_amd64.deb
-Size: 25924
-MD5sum: a12d3f419c4602a6ffd485a3e1cd9dc0
-SHA1: 2c63eb19ed501e9f766c896232f83fba21e4af01
-SHA256: 0a508ab47b86134a7440ddf1502fe0b6dffc15bb6601f140b06ffe7d8ad851e8
-Description: Open GL based interactive canvas library GTK+ widget (development files)
-Homepage: http://www.clutter-project.org/
-Description-md5: e9e6bec0e5d64d1155b64afd7e289839
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libclutter-gtk-1.0-doc
-Priority: optional
-Section: doc
-Installed-Size: 157
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Architecture: all
-Source: clutter-gtk
-Version: 1.4.4-3
-Replaces: libclutter-gtk-0.10-doc, libclutter-gtk-doc
-Recommends: libclutter-1.0-doc
-Suggests: devhelp
-Conflicts: libclutter-gtk-0.10-doc, libclutter-gtk-doc
-Filename: pool/main/c/clutter-gtk/libclutter-gtk-1.0-doc_1.4.4-3_all.deb
-Size: 26692
-MD5sum: 90a54c199099b87ffcb2ff45aca1bb4a
-SHA1: efdb73da30114946fec5c7e1f3b4412d9d93a7ea
-SHA256: 3b3a93985715e4b43d298e1c567b794aa355b98ce57887cbd7031a6d2d58fbaf
-Description: Open GL based interactive canvas library GTK+ widget (documentation)
-Homepage: http://www.clutter-project.org/
-Description-md5: 30dead2af292731b7e504c7925a6b467
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: libcolumbus1
 Priority: optional
 Section: libs
@@ -864,6 +700,51 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libgs-dev
+Priority: optional
+Section: text
+Installed-Size: 13910
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: amd64
+Source: ghostscript
+Version: 9.10~dfsg~rc1-0ubuntu1
+Depends: libgs9 (= 9.10~dfsg~rc1-0ubuntu1), libc6-dev, libcups2-dev, libcupsimage2-dev, libfontconfig1-dev, libidn11-dev, libijs-dev, libjbig2dec0-dev, libjpeg-dev, libpaper-dev, libpng12-0-dev, libtiff5-dev, zlib1g-dev
+Filename: pool/main/g/ghostscript/libgs-dev_9.10~dfsg~rc1-0ubuntu1_amd64.deb
+Size: 3083762
+MD5sum: 6d70aba15e77ba7e6f619821f4edcf46
+SHA1: 5a98b8590b2ccae9d4b803873a6fd036f508c349
+SHA256: aef96b2655d68285961cf0df0410bb70aae9d164c178bed7eb18ffcd065cf277
+Description: interpreter for the PostScript language and for PDF - Development Files
+Homepage: http://www.ghostscript.com/
+Description-md5: f4c1713297a6c688a87d0b2876caf1fa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libgs9
+Priority: optional
+Section: libs
+Installed-Size: 10396
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: amd64
+Source: ghostscript
+Version: 9.10~dfsg~rc1-0ubuntu1
+Depends: libc6 (>= 2.14), libcups2 (>= 1.4.0), libcupsimage2 (>= 1.4.0), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.2.1), libidn11 (>= 1.13), libijs-0.35 (>= 0.35), libjbig2dec0 (>= 0.11), libjpeg8 (>= 8c), liblcms2-2 (>= 2.5), libpaper1, libpng12-0 (>= 1.2.13-4), libtiff5 (>> 4.0.0-1~), zlib1g (>= 1:1.1.4), poppler-data (>= 0.4.5-3~) | gs-cjk-resource, libgs9-common (>= 9.10~dfsg~rc1)
+Filename: pool/main/g/ghostscript/libgs9_9.10~dfsg~rc1-0ubuntu1_amd64.deb
+Size: 2437612
+MD5sum: 58a2d49f30b1e537fd7359b81f57150d
+SHA1: 580fa9a5174e4c53eac6e6eaebac7c18fe850eff
+SHA256: 42797f8f9dca853c6f4656776ef64dfc6358d26f7a23f39316001b389c7f3b48
+Description: interpreter for the PostScript language and for PDF - Library
+Homepage: http://www.ghostscript.com/
+Description-md5: 77d0d233cd004663a71b1ef44e87d3f1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libgstreamer-plugins-base1.0-0
 Priority: optional
@@ -1984,29 +1865,6 @@ SHA256: 0ce76f5c67599e34da96068f38539f8234d830577f828be1806d62f404471a89
 Description: distributed version control system - testsuite
 Homepage: http://bazaar-vcs.org
 Description-md5: 6a061202c9118fa07cacafd938b725f0
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: python3-click
-Priority: optional
-Section: python
-Installed-Size: 208
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Architecture: amd64
-Source: click
-Version: 0.3.4
-Replaces: python3-click-package
-Provides: python3-click-package
-Depends: python3 (>= 3.2.3-3~), python3-debian
-Conflicts: python3-click-package
-Filename: pool/main/c/click/python3-click_0.3.4_amd64.deb
-Size: 32062
-MD5sum: e9cd9db88f149ff5dff53e59faaf1a7c
-SHA1: 88c819f49892c04f57d3cd0090602ddeaa8b4727
-SHA256: cfba4bd8b745a8cd2585a93df766e643bc0c6f047f97bc31bad07a4d539d1658
-Description: Click packages (Python 3 interface)
-Description-md5: a55b8833aad665015cec861ba580ce8a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
