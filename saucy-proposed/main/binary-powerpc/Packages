@@ -186,6 +186,74 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: ghostscript
+Priority: optional
+Section: text
+Installed-Size: 227
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: powerpc
+Version: 9.10~dfsg~rc1-0ubuntu1
+Provides: postscript-viewer
+Depends: libc6 (>= 2.0), libgs9 (= 9.10~dfsg~rc1-0ubuntu1), gsfonts (>= 6.0-1), debconf | debconf-2.0, debianutils (>= 1.6)
+Suggests: ghostscript-x, hpijs
+Breaks: ghostscript-x (<< 8.64~dfsg-8)
+Filename: pool/main/g/ghostscript/ghostscript_9.10~dfsg~rc1-0ubuntu1_powerpc.deb
+Size: 43974
+MD5sum: cf774a8f6c5451af9d2b323d327bc840
+SHA1: 2d24008aa3c6d5bc0ae3ccc27b3f37a2edfa1b75
+SHA256: 70e24bca2b8d9c2afcb703113361b1fd9afaa7040d2dc955bfa6eaa5287e9654
+Description: interpreter for the PostScript language and for PDF
+Multi-Arch: foreign
+Homepage: http://www.ghostscript.com/
+Description-md5: 3b69f5ec8191e8f0d88dd3e30e7b1b69
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: ghostscript-dbg
+Priority: extra
+Section: debug
+Installed-Size: 22806
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: powerpc
+Source: ghostscript
+Version: 9.10~dfsg~rc1-0ubuntu1
+Depends: libgs9 (= 9.10~dfsg~rc1-0ubuntu1) | ghostscript (= 9.10~dfsg~rc1-0ubuntu1) | ghostcript-cups (= 9.10~dfsg~rc1-0ubuntu1) | ghostcript-x (= 9.10~dfsg~rc1-0ubuntu1)
+Filename: pool/main/g/ghostscript/ghostscript-dbg_9.10~dfsg~rc1-0ubuntu1_powerpc.deb
+Size: 10131724
+MD5sum: 23d6a64c102a79c1179392ca84fa8bcd
+SHA1: d2408a7ea077196e8bd19c27044705a78abff994
+SHA256: ead2ac17ccf213ed9cf43079e86a9bc1dd66436497a44274d8390cfd23182e65
+Description: interpreter for the PostScript language and for PDF - Debug symbols
+Homepage: http://www.ghostscript.com/
+Description-md5: b88404b3189bdd4e7a7b79221e98739c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ghostscript-x
+Priority: optional
+Section: text
+Installed-Size: 204
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: powerpc
+Source: ghostscript
+Version: 9.10~dfsg~rc1-0ubuntu1
+Depends: libc6 (>= 2.7), libx11-6, libxt6, ghostscript (= 9.10~dfsg~rc1-0ubuntu1)
+Filename: pool/main/g/ghostscript/ghostscript-x_9.10~dfsg~rc1-0ubuntu1_powerpc.deb
+Size: 39930
+MD5sum: 85b3446e430c6f676322a732931c3df1
+SHA1: 27675a8f4d16c9ee999b1c9089a4c90d2b6cfe8c
+SHA256: ea8c1d41d91aa9b88542a96376bba7b9a566721aacfdbcdd82e36f9a77224371
+Description: interpreter for the PostScript language and for PDF - X11 support
+Homepage: http://www.ghostscript.com/
+Description-md5: 5f6f4265cecdf5f91c519e5f197328b3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: gir1.2-gst-plugins-base-1.0
 Priority: optional
 Section: introspection
@@ -632,6 +700,49 @@ Description-md5: aa070f52bfbf0d9e220aa40da4b4ced1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libgs-dev
+Priority: optional
+Section: text
+Installed-Size: 11209
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: powerpc
+Source: ghostscript
+Version: 9.10~dfsg~rc1-0ubuntu1
+Depends: libgs9 (= 9.10~dfsg~rc1-0ubuntu1), libc6-dev, libcups2-dev, libcupsimage2-dev, libfontconfig1-dev, libidn11-dev, libijs-dev, libjbig2dec0-dev, libjpeg-dev, libpaper-dev, libpng12-0-dev, libtiff5-dev, zlib1g-dev
+Filename: pool/main/g/ghostscript/libgs-dev_9.10~dfsg~rc1-0ubuntu1_powerpc.deb
+Size: 2982922
+MD5sum: 0ea71786c14a9bb7bafeae29c6cdb6a7
+SHA1: bfe4a7e3f94eb70215cdac6e2be4e995318f05bb
+SHA256: 86874c3f974700914399168be012825c364c667cf224cd16aac2a3382835a362
+Description: interpreter for the PostScript language and for PDF - Development Files
+Homepage: http://www.ghostscript.com/
+Description-md5: f4c1713297a6c688a87d0b2876caf1fa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgs9
+Priority: optional
+Section: libs
+Installed-Size: 9274
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: powerpc
+Source: ghostscript
+Version: 9.10~dfsg~rc1-0ubuntu1
+Depends: libc6 (>= 2.11), libcups2 (>= 1.4.0), libcupsimage2 (>= 1.4.0), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.2.1), libidn11 (>= 1.13), libijs-0.35 (>= 0.35), libjbig2dec0 (>= 0.11), libjpeg8 (>= 8c), liblcms2-2 (>= 2.5), libpaper1, libpng12-0 (>= 1.2.13-4), libtiff5 (>> 4.0.0-1~), zlib1g (>= 1:1.1.4), poppler-data (>= 0.4.5-3~) | gs-cjk-resource, libgs9-common (>= 9.10~dfsg~rc1)
+Filename: pool/main/g/ghostscript/libgs9_9.10~dfsg~rc1-0ubuntu1_powerpc.deb
+Size: 2446330
+MD5sum: 7682ee7b42058c34df1392764d2cce3f
+SHA1: e3b3a8d62b7808d191079f9539c30c024acf889c
+SHA256: afc8f56cf69035c735b9f95f23e0b06d54cdaab9faa863e3a8089faf41c7281a
+Description: interpreter for the PostScript language and for PDF - Library
+Homepage: http://www.ghostscript.com/
+Description-md5: 77d0d233cd004663a71b1ef44e87d3f1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libgstreamer-plugins-base1.0-0
 Priority: optional
