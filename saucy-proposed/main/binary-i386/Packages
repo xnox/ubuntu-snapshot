@@ -251,6 +251,29 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: gir1.2-gst-plugins-base-1.0
+Priority: optional
+Section: introspection
+Installed-Size: 312
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.3-1ubuntu1
+Depends: gir1.2-glib-2.0, gir1.2-gstreamer-1.0
+Filename: pool/main/g/gst-plugins-base1.0/gir1.2-gst-plugins-base-1.0_1.1.3-1ubuntu1_i386.deb
+Size: 61504
+MD5sum: d5553adaab60c5cf77e82b352176e79b
+SHA1: beb405b5c395ef1af30624ecfb45211d677de3f7
+SHA256: bb5f87748d7b7960ec221d81ae04454e361f4737fb1c64fb7a86614b18fc258f
+Description: Description: GObject introspection data for the GStreamer Plugins Base library
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: 1c3b9ff935990198956b8c00dd1b7da8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
 Package: gir1.2-gstreamer-1.0
 Priority: optional
 Section: introspection
@@ -297,6 +320,35 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: gstreamer1.0-alsa
+Priority: optional
+Section: libs
+Installed-Size: 177
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.3-1ubuntu1
+Provides: gstreamer1.0-audiosink, gstreamer1.0-audiosource
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3), libgstreamer1.0-0 (>= 1.0.0), libgstreamer-plugins-base1.0-0 (>= 1.1.3)
+Recommends: alsa-base (>= 0.9.0)
+Suggests: alsa-utils (>= 0.9.0)
+Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-alsa_1.1.3-1ubuntu1_i386.deb
+Size: 28358
+MD5sum: 63c61698d74ba40c7195a3d4f52e449e
+SHA1: 8c53299b3b69a6bf7629e296e4bff07440197d0e
+SHA256: e8b65fbd3411ba3078912822fa5930cb63a34ddd4d11cd8eb5c75a2371f346b6
+Description: GStreamer plugin for ALSA
+Multi-Arch: same
+Homepage: http://gstreamer.freedesktop.org
+Gstreamer-Elements: alsasink, alsasrc
+Gstreamer-Version: 1.1
+Description-md5: 339f038172c486f3cef220df0c0e5ac4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
 Package: gstreamer1.0-doc
 Priority: optional
 Section: doc
@@ -316,6 +368,107 @@ SHA256: 5f18709161c3c0d8d86bc5e28ddfeacb9b25510bf88439df0ae91cae825ba06b
 Description: GStreamer core documentation and manuals
 Homepage: http://gstreamer.freedesktop.org
 Description-md5: 2274936f9039765c43e33252ae21527d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: gstreamer1.0-plugins-base
+Priority: optional
+Section: libs
+Installed-Size: 1818
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.3-1ubuntu1
+Provides: gstreamer1.0-audiosource, gstreamer1.0-videosource
+Depends: libc6 (>= 2.7), libcdparanoia0 (>= 3.10.2+debian), libglib2.0-0 (>= 2.37.3), libgstreamer1.0-0 (>= 1.1.3), libogg0 (>= 1.0rc3), liborc-0.4-0 (>= 1:0.4.17), libtheora0 (>= 1.0), libvisual-0.4-0 (>= 0.4.0-4), libvorbis0a (>= 1.1.2), libvorbisenc2 (>= 1.1.2), libgstreamer-plugins-base1.0-0 (>= 1.1.3)
+Suggests: gvfs
+Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-plugins-base_1.1.3-1ubuntu1_i386.deb
+Size: 492570
+MD5sum: fb3c14bc1a60828e0cfb42398c71687a
+SHA1: 3cdff175dc87f92dc948acdebf217a3857c8595d
+SHA256: 1300c18c28a2014f8506cea7725ad2582bb9543a876e59b2eefcd88a6bd39bd6
+Description: GStreamer plugins from the "base" set
+Multi-Arch: same
+Homepage: http://gstreamer.freedesktop.org
+Gstreamer-Decoders: application/kate; application/ogg; application/x-ass; application/x-ogg-avi; application/x-ogm-audio; application/x-ogm-text; application/x-ogm-video; application/x-ssa; application/x-subtitle; application/x-subtitle-dks; application/x-subtitle-mpl2; application/x-subtitle-qttext; application/x-subtitle-sami; application/x-subtitle-tmplayer; audio/ogg; audio/x-vorbis; video/ogg; video/x-theora
+Gstreamer-Elements: adder, appsink, appsrc, audioconvert, audiorate, audioresample, audiotestsrc, cdparanoiasrc, decodebin, encodebin, giosink, giosrc, giostreamsink, giostreamsrc, multifdsink, multisocketsink, oggaviparse, oggdemux, oggmux, oggparse, ogmaudioparse, ogmtextparse, ogmvideoparse, playbin, playsink, ssaparse, streamsynchronizer, subparse, subtitleoverlay, tcpclientsink, tcpclientsrc, tcpserversink, tcpserversrc, theoradec, theoraenc, theoraparse, uridecodebin, videoconvert, videorate, videoscale, videotestsrc, volume, vorbisdec, vorbisenc, vorbisparse, vorbistag
+Gstreamer-Encoders: application/ogg; audio/ogg; audio/x-vorbis; video/ogg; video/x-theora
+Gstreamer-Uri-Sinks: appsink, file
+Gstreamer-Uri-Sources: appsrc, cdda, file
+Gstreamer-Version: 1.1
+Description-md5: 73eb82d2de7fe71e4455e1742423e3e3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gstreamer1.0-plugins-base-apps
+Priority: optional
+Section: utils
+Installed-Size: 112
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.3-1ubuntu1
+Depends: libc6 (>= 2.3.6-6~), libglib2.0-0 (>= 2.32), libgstreamer1.0-0 (>= 1.0.0), gstreamer1.0-tools
+Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-plugins-base-apps_1.1.3-1ubuntu1_i386.deb
+Size: 20050
+MD5sum: 4dcb5308bde99606d461cdcad8761de8
+SHA1: 8f6f16bbda58245c5a8f0ff09fa5ca5f8a000d7f
+SHA256: 2b747177bbe92e433a4c71a31e6a958bd9a1bdad9ee722d322e079584ddbf1d1
+Description: GStreamer helper programs from the "base" set
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: 72cc51baa52c95f36129fb0f74a62970
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: gstreamer1.0-plugins-base-dbg
+Priority: extra
+Section: debug
+Installed-Size: 3856
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.3-1ubuntu1
+Depends: gstreamer1.0-alsa (= 1.1.3-1ubuntu1), gstreamer1.0-plugins-base (= 1.1.3-1ubuntu1), gstreamer1.0-x (= 1.1.3-1ubuntu1), libgstreamer-plugins-base1.0-0 (= 1.1.3-1ubuntu1)
+Suggests: gstreamer1.0-gnomevfs (= 1.1.3-1ubuntu1)
+Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-plugins-base-dbg_1.1.3-1ubuntu1_i386.deb
+Size: 3130086
+MD5sum: 4a150eb54448a61b563e44e606a535e1
+SHA1: 6d19bea483e83f4a2786a3e0e294d62727f9f38a
+SHA256: f440b3bd6e36670e34a90b32341f41cba6b37be42579ab624ddbf4f7289b1332
+Description: GStreamer plugins from the "base" set
+Multi-Arch: same
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: b7d3c79dd3992a2b1b542fa636eec13a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: gstreamer1.0-plugins-base-doc
+Priority: optional
+Section: doc
+Installed-Size: 5357
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: gst-plugins-base1.0
+Version: 1.1.3-1ubuntu1
+Depends: libglib2.0-doc, gstreamer1.0-doc
+Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-plugins-base-doc_1.1.3-1ubuntu1_all.deb
+Size: 320192
+MD5sum: 08ae85ce82629ef3bb14f432d50c405c
+SHA1: 6bee061d6c7d18d036e822e06628cc43ecb4d114
+SHA256: 85323f0b0819e03025eabd20b46a84556950e66174bd18efc920f4788246e9d6
+Description: GStreamer documentation for plugins from the "base" set
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: aaf86bd34d894dca484623ae59419aad
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -343,6 +496,33 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: gstreamer1.0-x
+Priority: optional
+Section: libs
+Installed-Size: 298
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.3-1ubuntu1
+Provides: gstreamer1.0-videosink
+Depends: libc6 (>= 2.4), libcairo2 (>= 1.2.4), libglib2.0-0 (>= 2.37.3), libgstreamer1.0-0 (>= 1.0.0), libpango-1.0-0 (>= 1.22.0), libpangocairo-1.0-0 (>= 1.16.0), libx11-6, libxext6, libxv1, libgstreamer-plugins-base1.0-0 (>= 1.1.3)
+Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-x_1.1.3-1ubuntu1_i386.deb
+Size: 63748
+MD5sum: aba85b157a710557c217f9ca72efa152
+SHA1: 04ddc00fa75bc4f8c528d7b5733e313cc9518b4d
+SHA256: 60e4880907eff274aae2dad4ea79fbf5ecc8e19af993b087ee40af454d917e36
+Description: GStreamer plugins for X11 and Pango
+Multi-Arch: same
+Homepage: http://gstreamer.freedesktop.org
+Gstreamer-Elements: clockoverlay, textoverlay, textrender, timeoverlay, ximagesink, xvimagesink
+Gstreamer-Version: 1.1
+Description-md5: f30e1dbce14d6ece228c6b4e6dfdfdbd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
@@ -575,6 +755,55 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libgstreamer-plugins-base1.0-0
+Priority: optional
+Section: libs
+Installed-Size: 1620
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.3-1ubuntu1
+Depends: libc6 (>= 2.7), libglib2.0-0 (>= 2.37.3), libgstreamer1.0-0 (>= 1.1.3), liborc-0.4-0 (>= 1:0.4.17), zlib1g (>= 1:1.1.4), iso-codes
+Pre-Depends: multiarch-support
+Suggests: libvisual-0.4-plugins, gstreamer-codec-install | gnome-codec-install
+Conflicts: totem-gstreamer (<= 2.17.92-0ubuntu1)
+Filename: pool/main/g/gst-plugins-base1.0/libgstreamer-plugins-base1.0-0_1.1.3-1ubuntu1_i386.deb
+Size: 431800
+MD5sum: 595c2e591c70bad47c3bdfa51044c355
+SHA1: bd4dec51b1aa3731508ce0ed1f055dfdc11d9311
+SHA256: fd24ffd9ddc144a1a7f3e40ed3dd40a5199e45e700203b5717dd6cb051b9de0f
+Description: GStreamer libraries from the "base" set
+Multi-Arch: same
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: 1f83d48f1815b1413bf5322dc753ba59
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-live, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgstreamer-plugins-base1.0-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 2236
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.3-1ubuntu1
+Depends: libgstreamer-plugins-base1.0-0 (= 1.1.3-1ubuntu1), libc6-dev | libc-dev, pkg-config, libgstreamer1.0-dev (>= 1.1.3), libglib2.0-dev, libxml2-dev, gir1.2-gst-plugins-base-1.0 (= 1.1.3-1ubuntu1)
+Filename: pool/main/g/gst-plugins-base1.0/libgstreamer-plugins-base1.0-dev_1.1.3-1ubuntu1_i386.deb
+Size: 193242
+MD5sum: 82e55566cc55b2b5b6caf33f0a9f5063
+SHA1: 8f00547a00022fbcf6649da0124bb66abda06f7e
+SHA256: 818b7d4dc105c6a113ea7d1fd351081d90d70021325aad33d86c20f2dc8ecf37
+Description: GStreamer development files for libraries from the "base" set
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: 0acc042058e8c9e8d17fbca59836d2a0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: libgstreamer1.0-0
 Priority: optional
@@ -823,16 +1052,16 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: i386
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu2
+Version: 5.5.32-0ubuntu3
 Replaces: libmysqlclient15-dev
 Provides: libmysqlclient15-dev
-Depends: libmysqlclient18 (= 5.5.32-0ubuntu2), zlib1g-dev
+Depends: libmysqlclient18 (= 5.5.32-0ubuntu3), zlib1g-dev
 Conflicts: libmysqlclient10-dev, libmysqlclient12-dev, libmysqlclient14-dev, libmysqlclient15-dev
-Filename: pool/main/m/mysql-5.5/libmysqlclient-dev_5.5.32-0ubuntu2_i386.deb
-Size: 1354272
-MD5sum: 18ed475b01d7f74765945ed2b77cc3a8
-SHA1: a12c2f06090da0626c6b3cc0117bbeb37bca0daa
-SHA256: 9caf4fc378c4528fd611d7c6a7324613f2dabfcc295a9607dd7b0244d5fddcda
+Filename: pool/main/m/mysql-5.5/libmysqlclient-dev_5.5.32-0ubuntu3_i386.deb
+Size: 1355056
+MD5sum: d9e9345a87d884e84aa6b3a6a068e8cb
+SHA1: f050b698fb5521468e0f4fa241b0a9d063af3d93
+SHA256: a3c516eb4fdfbb55b45226a6f2a53763a2ec124d789d4bb4bf78218de6cccee5
 Description: MySQL database development files
 Homepage: http://dev.mysql.com/
 Description-md5: 716f7a81dc4e3e8899c7eaa66b24736d
@@ -848,14 +1077,14 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: i386
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu2
-Depends: mysql-common (>= 5.5.32-0ubuntu2), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4)
+Version: 5.5.32-0ubuntu3
+Depends: mysql-common (>= 5.5.32-0ubuntu3), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4)
 Pre-Depends: multiarch-support
-Filename: pool/main/m/mysql-5.5/libmysqlclient18_5.5.32-0ubuntu2_i386.deb
-Size: 911892
-MD5sum: 68d43e83f255387c8359bf6067559514
-SHA1: 2a3676ad477474fad293252b4e1a18169e34d991
-SHA256: 10df8e8d7244b1386b5a5448aef5b2704f0c71e5236f24df4f93f280feafc853
+Filename: pool/main/m/mysql-5.5/libmysqlclient18_5.5.32-0ubuntu3_i386.deb
+Size: 915360
+MD5sum: 280991addfda4a0a54633334862631f6
+SHA1: de09abadeb46b2cbcafd95c0cbfeceaf92d98e64
+SHA256: 33e2ae62294949bbcaaa6fe0461182fc5baf4e289fe3275b8f5f81b94e42b81d
 Description: MySQL database client library
 Multi-Arch: same
 Homepage: http://dev.mysql.com/
@@ -873,13 +1102,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: i386
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu2
-Depends: libmysqlclient-dev (>= 5.5.32-0ubuntu2)
-Filename: pool/main/m/mysql-5.5/libmysqld-dev_5.5.32-0ubuntu2_i386.deb
-Size: 4591046
-MD5sum: eaf75b5e3111c7450609188ae861eab9
-SHA1: fa52e0e9786ee97bad9e4f55540b1d61a4b4bb55
-SHA256: 2e8487a448b2965172f8d4adff90ef38414ea15cb2c8092d4e6131851bb7d83c
+Version: 5.5.32-0ubuntu3
+Depends: libmysqlclient-dev (>= 5.5.32-0ubuntu3)
+Filename: pool/main/m/mysql-5.5/libmysqld-dev_5.5.32-0ubuntu3_i386.deb
+Size: 4595146
+MD5sum: 59802fb63ac7cedc21045694a9c75832
+SHA1: a0d31688ddc3855d1d8090cef272220a28f8ddf4
+SHA256: 2c95c4713c9501a04ea9f479f857f9a155ab59f33511201b13a73d12de856d15
 Description: MySQL embedded database development files
 Homepage: http://dev.mysql.com/
 Description-md5: 2f06b7e1bfdb9f620d92f9696d24fabc
@@ -1073,24 +1302,47 @@ Origin: Ubuntu
 Supported: 9m
 Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master
 
+Package: mysql-client
+Priority: optional
+Section: database
+Installed-Size: 114
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Source: mysql-5.5
+Version: 5.5.32-0ubuntu3
+Depends: mysql-client-5.5
+Filename: pool/main/m/mysql-5.5/mysql-client_5.5.32-0ubuntu3_all.deb
+Size: 11248
+MD5sum: eb0116d7f1edf4c2e6af7720ed642bdf
+SHA1: ee58aff242cefd23984c5dcf7d60cf68947a4af9
+SHA256: 4f2eb45bdb5319fbf8636abbfdca337e7c1715b6726dbada071d19401822e5e9
+Description: MySQL database client (metapackage depending on the latest version)
+Homepage: http://dev.mysql.com/
+Description-md5: c1035c33de63147bb387637ae5083656
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master
+
 Package: mysql-client-5.5
 Priority: optional
 Section: database
-Installed-Size: 28294
+Installed-Size: 28295
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: i386
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu2
-Replaces: mysql-client (<< 5.5.32-0ubuntu2), mysql-client-5.0, mysql-client-5.1
+Version: 5.5.32-0ubuntu3
+Replaces: mysql-client (<< 5.5.32-0ubuntu3), mysql-client-5.0, mysql-client-5.1
 Provides: mysql-client, mysql-client-4.1, virtual-mysql-client
-Depends: debianutils (>= 1.6), libdbi-perl, libdbd-mysql-perl (>= 1.2202), mysql-common (>= 5.5.32-0ubuntu2), perl, libc6 (>= 2.17), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4), mysql-client-core-5.5, libterm-readkey-perl
-Breaks: mysql-client (<< 5.5.32-0ubuntu2), mysql-client-5.0, mysql-client-5.1
-Filename: pool/main/m/mysql-5.5/mysql-client-5.5_5.5.32-0ubuntu2_i386.deb
-Size: 7994722
-MD5sum: 5a4975c27b5b864966961ae6135283c8
-SHA1: 97c097d08a365baa4a7fd4844713c2cd870d02e3
-SHA256: 5f7e5994395c1968a9fe0737f2c4b14a9b6c566297c88c8dc89cd95f47a58a9b
+Depends: debianutils (>= 1.6), libdbi-perl, libdbd-mysql-perl (>= 1.2202), mysql-common (>= 5.5.32-0ubuntu3), perl, libc6 (>= 2.17), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4), mysql-client-core-5.5, libterm-readkey-perl
+Breaks: mysql-client (<< 5.5.32-0ubuntu3), mysql-client-5.0, mysql-client-5.1
+Filename: pool/main/m/mysql-5.5/mysql-client-5.5_5.5.32-0ubuntu3_i386.deb
+Size: 7987028
+MD5sum: d6220ff21a51ec64afb9de16894fdae5
+SHA1: c636ddfeb9b0e68a7c87691c65ad4ba7e721f155
+SHA256: a204902fbd533b676d14fe0869d9ca6310671583dcdd4f9837b794bf5c232550
 Description: MySQL database client binaries
 Homepage: http://dev.mysql.com/
 Description-md5: 70aef1a292fc318f9af72aa188c17716
@@ -1107,15 +1359,15 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: i386
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu2
-Replaces: mysql-client (<< 5.5.32-0ubuntu2), mysql-client-5.0, mysql-client-core-5.1
+Version: 5.5.32-0ubuntu3
+Replaces: mysql-client (<< 5.5.32-0ubuntu3), mysql-client-5.0, mysql-client-core-5.1
 Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libreadline6 (>= 6.0), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4)
-Breaks: mysql-client (<< 5.5.32-0ubuntu2), mysql-client-5.0, mysql-client-core-5.1
-Filename: pool/main/m/mysql-5.5/mysql-client-core-5.5_5.5.32-0ubuntu2_i386.deb
-Size: 1833616
-MD5sum: ec37cae5b67f229deb090aa57fcd0485
-SHA1: 51d04e26bf9295dc1f4538099e461226a0cb4ea1
-SHA256: ab5acec4055114773e9745e06858cbffb68f22a2e8204a36c60790ad98818a18
+Breaks: mysql-client (<< 5.5.32-0ubuntu3), mysql-client-5.0, mysql-client-core-5.1
+Filename: pool/main/m/mysql-5.5/mysql-client-core-5.5_5.5.32-0ubuntu3_i386.deb
+Size: 1833802
+MD5sum: 9288969e36fc52fb63178270d60a2b02
+SHA1: 33e6576ad586fb4d0353eb9bbf3845d95df31e08
+SHA256: 7f9081db0dd1a8ad993c667ec894f67ab5bf8377938d88544d0e11495fc11407
 Description: MySQL database core client binaries
 Homepage: http://dev.mysql.com/
 Description-md5: 94a7aede8ba9259b1382d4dfca4cdde0
@@ -1151,6 +1403,33 @@ Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, ubuntustudio-video, ubuntustudio-publishing, ubuntustudio-graphics, ubuntustudio-audio
 
+Package: mysql-common
+Priority: optional
+Section: database
+Installed-Size: 130
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Source: mysql-5.5
+Version: 5.5.32-0ubuntu3
+Replaces: mysql-common-4.1
+Provides: mysql-common-4.1
+Conflicts: mysql-common-4.1
+Breaks: mysql-client-5.1, mysql-client-core-5.1, mysql-server-5.1, mysql-server-core-5.1
+Filename: pool/main/m/mysql-5.5/mysql-common_5.5.32-0ubuntu3_all.deb
+Size: 13200
+MD5sum: 1db2d24269defab5bca218ae454a8f6c
+SHA1: 5355c4c9de12d77d349b2bc1ba3da3362bede2ca
+SHA256: ba91f4f39de235490480f60f4362df104204004b4959d8d6e9220ccc103995f8
+Description: MySQL database common files, e.g. /etc/mysql/my.cnf
+Multi-Arch: foreign
+Homepage: http://dev.mysql.com/
+Description-md5: 562d254c602f89e4390e28f6362283c8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: lamp-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, ubuntustudio-video, ubuntustudio-publishing, ubuntustudio-graphics, ubuntustudio-audio
+
 Package: mysql-server
 Priority: optional
 Section: database
@@ -1174,27 +1453,50 @@ Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: mysql-server
+Priority: optional
+Section: database
+Installed-Size: 114
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Source: mysql-5.5
+Version: 5.5.32-0ubuntu3
+Depends: mysql-server-5.5
+Filename: pool/main/m/mysql-5.5/mysql-server_5.5.32-0ubuntu3_all.deb
+Size: 11376
+MD5sum: 7ae147f5f0ff8e57f632937acf01c927
+SHA1: 857ff18f5b7d7df08d564940486de0a912ed9188
+SHA256: 732f6da617df8e019c3b40f01f553b65e8b0a598c3cc28f5b405c6adc840f2d1
+Description: MySQL database server (metapackage depending on the latest version)
+Homepage: http://dev.mysql.com/
+Description-md5: e519a9c4f87658afbd1d077af63f9269
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
 Package: mysql-server-5.5
 Priority: optional
 Section: database
-Installed-Size: 30387
+Installed-Size: 30386
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: i386
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu2
-Replaces: libmysqlclient-dev (<< 5.5.17~), mysql-server (<< 5.5.32-0ubuntu2), mysql-server-4.1, mysql-server-5.0, mysql-server-5.1
+Version: 5.5.32-0ubuntu3
+Replaces: libmysqlclient-dev (<< 5.5.17~), mysql-server (<< 5.5.32-0ubuntu3), mysql-server-4.1, mysql-server-5.0, mysql-server-5.1
 Provides: virtual-mysql-server
-Depends: mysql-client-5.5 (>= 5.5.32-0ubuntu2), libdbi-perl, perl (>= 5.6), libc6 (>= 2.17), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4), debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), psmisc, passwd, lsb-base (>= 3.0-10), mysql-server-core-5.5 (= 5.5.32-0ubuntu2), upstart (>= 0.6.7-2)
-Pre-Depends: mysql-common (>= 5.5.32-0ubuntu2), adduser (>= 3.40), debconf
+Depends: mysql-client-5.5 (>= 5.5.32-0ubuntu3), libdbi-perl, perl (>= 5.6), libc6 (>= 2.17), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4), debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), psmisc, passwd, lsb-base (>= 3.0-10), mysql-server-core-5.5 (= 5.5.32-0ubuntu3), upstart (>= 0.6.7-2)
+Pre-Depends: mysql-common (>= 5.5.32-0ubuntu3), adduser (>= 3.40), debconf
 Recommends: libhtml-template-perl
 Suggests: tinyca, mailx
-Breaks: libmysqlclient-dev (<< 5.5.17~), mysql-server (<< 5.5.32-0ubuntu2), mysql-server-4.1, mysql-server-5.1
-Filename: pool/main/m/mysql-5.5/mysql-server-5.5_5.5.32-0ubuntu2_i386.deb
-Size: 8631970
-MD5sum: b9db489d1a3627771aca1de9134875b9
-SHA1: 0d55e400492f9a9d82a3571d25dff56121f0e029
-SHA256: 44031d832c1bcd43bad973ce1398fe2d33ade51ef5d318e9fd718e08cca76d26
+Breaks: libmysqlclient-dev (<< 5.5.17~), mysql-server (<< 5.5.32-0ubuntu3), mysql-server-4.1, mysql-server-5.1
+Filename: pool/main/m/mysql-5.5/mysql-server-5.5_5.5.32-0ubuntu3_i386.deb
+Size: 8627784
+MD5sum: 6f0512c085cd2a218c9261a4b9347a71
+SHA1: 1860b7a889b645fc7fed798c4d50b16cf599228e
+SHA256: 32800a4010b4738f5d57904a4866d90828a601d1069f305f22345b022b38c45c
 Description: MySQL database server binaries and system database setup
 Homepage: http://dev.mysql.com/
 Description-md5: 3ae11e16f793b3ee84f73a5fa268ad9b
@@ -1206,21 +1508,21 @@ Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slav
 Package: mysql-server-core-5.5
 Priority: optional
 Section: database
-Installed-Size: 17388
+Installed-Size: 17384
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: i386
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu2
+Version: 5.5.32-0ubuntu3
 Replaces: mysql-server-5.0, mysql-server-5.1, mysql-server-core-5.0, mysql-server-core-5.1
 Provides: mysql-server-core
 Depends: libaio1 (>= 0.3.93), libc6 (>= 2.17), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1), libwrap0 (>= 7.6-4~), zlib1g (>= 1:1.2.0)
 Breaks: mysql-server-5.0, mysql-server-5.1, mysql-server-core-5.1
-Filename: pool/main/m/mysql-5.5/mysql-server-core-5.5_5.5.32-0ubuntu2_i386.deb
-Size: 5646812
-MD5sum: f9599c854ce1f18715f1dda9edfe79a9
-SHA1: 5754da9e28d6ed22202986e3a664c2544dd8c5d5
-SHA256: 0763731411813fa178afeb9916bb052ef476e3a5df222d5d8215d08b2ea20f2c
+Filename: pool/main/m/mysql-5.5/mysql-server-core-5.5_5.5.32-0ubuntu3_i386.deb
+Size: 5642688
+MD5sum: 29b2eeff352cb988d13916c810c35cac
+SHA1: 9bbba127427093a882cc8b7cdc9eb108b574c92e
+SHA256: 75b7d068e0bc204cdb2fafbdc31a6a362eec7d5dedbc2e5da6596cdb191215c8
 Description: MySQL database server binaries
 Homepage: http://dev.mysql.com/
 Description-md5: a54aa75db64667c487b6c9d3800b8153
