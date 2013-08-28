@@ -2506,45 +2506,6 @@ Checksums-Sha256:
  4a3b47727a1f6ca4cf95d532a9746cb3f0c2272fe0d6c1147940b9d3a8a72e56 174920 lua-penlight_1.0.3a.orig.tar.gz
  9f4b859b06bff70e792865d8e6d01948ba0570723d844fc67cba4211110b43b2 2854 lua-penlight_1.0.3a-1.debian.tar.gz
 
-Package: lubuntu-artwork
-Binary: lubuntu-artwork, lubuntu-artwork-13-10, lubuntu-artwork-13-04, lubuntu-artwork-12-10, lubuntu-artwork-12-04, lubuntu-artwork-11-10, lubuntu-artwork-11-04, lubuntu-artwork-10-10, lubuntu-artwork-10-04, plymouth-theme-lubuntu-logo, plymouth-theme-lubuntu-text, lubuntu-icon-theme, lubuntu-elementary-icon-theme, lubuntu-lxpanel-icons
-Version: 0.40
-Priority: optional
-Section: universe/x11
-Maintainer: Julien Lavergne <gilir@ubuntu.com>
-Build-Depends: debhelper (>= 7.0.50~), icon-naming-utils, intltool
-Architecture: all
-Standards-Version: 3.8.3
-Format: 3.0 (native)
-Directory: pool/universe/l/lubuntu-artwork
-Files:
- 1b17996a811c3a8a101ae4abeda4291d 2501 lubuntu-artwork_0.40.dsc
- e3770519ba227118cd1f41f903efffbb 29310954 lubuntu-artwork_0.40.tar.gz
-Homepage: https://launchpad.net/~lubuntu-desktop
-Vcs-Browser: http://bazaar.launchpad.net/~lubuntu-desktop/+junk/artwork/files
-Vcs-Bzr: lp:~lubuntu-desktop/+junk/lubuntu-artwork
-Package-List: 
- lubuntu-artwork deb x11 optional
- lubuntu-artwork-10-04 deb x11 optional
- lubuntu-artwork-10-10 deb x11 optional
- lubuntu-artwork-11-04 deb x11 optional
- lubuntu-artwork-11-10 deb x11 optional
- lubuntu-artwork-12-04 deb x11 optional
- lubuntu-artwork-12-10 deb x11 optional
- lubuntu-artwork-13-04 deb x11 optional
- lubuntu-artwork-13-10 deb x11 optional
- lubuntu-elementary-icon-theme deb x11 optional
- lubuntu-icon-theme deb x11 optional
- lubuntu-lxpanel-icons deb x11 optional
- plymouth-theme-lubuntu-logo deb x11 optional
- plymouth-theme-lubuntu-text deb x11 optional
-Checksums-Sha1:
- a76e7f9bdeb403d371ffbf3ee5509611462a75d9 2501 lubuntu-artwork_0.40.dsc
- 41e7d44e0f0d377731f4ee877247da250b48f56e 29310954 lubuntu-artwork_0.40.tar.gz
-Checksums-Sha256:
- 8268de9d94d1cc41d6329426fdc2dff2b51c1dfd2c005e78d2d238f39318b977 2501 lubuntu-artwork_0.40.dsc
- 7df14fb07139d2a084bd96f6f140dec69df5c5c6c4f1099b937d5f8153bff865 29310954 lubuntu-artwork_0.40.tar.gz
-
 Package: lubuntu-default-settings
 Binary: lubuntu-default-settings, lxgames-default-session, lubuntu-default-session, lubuntu-nexus7-default-session, lubuntu-nexus7-extra-files, qlubuntu-default-session
 Version: 0.33
@@ -2575,6 +2536,62 @@ Checksums-Sha1:
 Checksums-Sha256:
  7c50ee472e0afc42cdf4632954c264fc53aa56572f19f129c9df1e31f8c40f39 2029 lubuntu-default-settings_0.33.dsc
  850ea4172f3e344bf09b1062bcfa0976ab9876d22e15d86e1f73523f047d0a5f 35869 lubuntu-default-settings_0.33.tar.gz
+
+Package: lubuntu-meta
+Binary: lubuntu-desktop, lubuntu-core
+Version: 0.51
+Section: universe/metapackages
+Maintainer: Lubuntu Team <lubuntu-desktop@lists.launchpad.net>
+Build-Depends: debhelper (>= 7.0.50), germinate (>= 1.18)
+Architecture: i386 amd64 powerpc armhf
+Standards-Version: 3.8.3
+Format: 3.0 (native)
+Directory: pool/universe/l/lubuntu-meta
+Files:
+ d542923cc4f434fc02c2983887bf2ced 1632 lubuntu-meta_0.51.dsc
+ ea0d3f81f365564baf7def5422b4d979 16237 lubuntu-meta_0.51.tar.gz
+Uploaders: David Sugar <david.sugar@canonical.com>, Martin-Éric Racine <q-funk@ubuntu.com>
+Package-List: 
+ lubuntu-core deb metapackages optional
+ lubuntu-desktop deb metapackages optional
+Checksums-Sha1:
+ 10004eeca87512c4a74d8f09686ea4f21d29c619 1632 lubuntu-meta_0.51.dsc
+ d414ada917a4f35c6fe4607073241becd73084d8 16237 lubuntu-meta_0.51.tar.gz
+Checksums-Sha256:
+ b02f099152c86e13535b4f69606406656f28f54bb3bcfb12ff546d87ddb7e667 1632 lubuntu-meta_0.51.dsc
+ 8a8a38ef87887d64d7b437e39c45d3be2f4cd2a423369f5ae6b490f16355b405 16237 lubuntu-meta_0.51.tar.gz
+
+Package: lxpanel
+Binary: lxpanel, lxpanel-dbg, lxpanel-indicator-applet-plugin
+Version: 0.6.0-0ubuntu1
+Section: universe/x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LXDE Maintainers <lxde-debian@lists.lxde.org>
+Build-Depends: debhelper (>= 9), dh-autoreconf, autotools-dev, autopoint, docbook-xml, docbook-xsl, intltool, intltool-debian, libasound2-dev, libglib2.0-dev, libgtk2.0-dev (>= 2.16), libindicator-dev, libiw-dev [linux-any], libmenu-cache-dev, libwnck-dev, libxpm-dev, python, xsltproc
+Architecture: any
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/universe/l/lxpanel
+Files:
+ fa4c37bcafa9b3e0c82fa336c9c05033 2393 lxpanel_0.6.0-0ubuntu1.dsc
+ be516c80d218ef2fce340fdf6e9edd38 2083742 lxpanel_0.6.0.orig.tar.gz
+ de53ef18af908e92807509868deb8be0 15332 lxpanel_0.6.0-0ubuntu1.debian.tar.xz
+Uploaders:  Andrew Lee (李健秋) <ajqlee@debian.org>, Daniel Baumann <daniel@debian.org>
+Homepage: http://www.lxde.org/
+Vcs-Browser: http://git.lxde.org/gitweb/?p=debian/lxpanel.git
+Vcs-Git: git://git.lxde.org/git/debian/lxpanel.git
+Package-List: 
+ lxpanel deb x11 optional
+ lxpanel-dbg deb debug extra
+ lxpanel-indicator-applet-plugin deb x11 optional
+Checksums-Sha1:
+ e2f655080bddd4ba0c3f92247730cadb642c9e22 2393 lxpanel_0.6.0-0ubuntu1.dsc
+ 3fc9b93a4aa83170923614f89640bf1842e40043 2083742 lxpanel_0.6.0.orig.tar.gz
+ 7742d73d419e44ec93d5dc1d6214b1b3fc3da7d6 15332 lxpanel_0.6.0-0ubuntu1.debian.tar.xz
+Checksums-Sha256:
+ 43c8644d093174d379f20adb99966b6988011e7418691a26f0a7ee8e8c7c5cc6 2393 lxpanel_0.6.0-0ubuntu1.dsc
+ ab1f395d03fe585acb4bc2d63e5ebe8af4243644c136f588f1dfa99c7c26f9d7 2083742 lxpanel_0.6.0.orig.tar.gz
+ 11ee0035d12a53145f5ecfcdea320b5e98980bad6fd4baa2b59729b607f4d682 15332 lxpanel_0.6.0-0ubuntu1.debian.tar.xz
 
 Package: mercator
 Binary: libmercator-0.3-3, libmercator-0.3-dev, libmercator-0.3-3-dbg
@@ -2973,6 +2990,37 @@ Checksums-Sha256:
  fdec1ab5ca787c2e40ff95d3269a70a5423365159f54b35335ef6414c7485c30 1999 node-mysql_2.0.0~alpha8-1.dsc
  add97ec859d041c3c64fc036f569435c98ae8941d2646e575a690075db84280a 63304 node-mysql_2.0.0~alpha8.orig.tar.gz
  45afbe7fce317c6e538c5f08996d5ae8e4aac49d6d749e2b68a95921fc152bb2 2042 node-mysql_2.0.0~alpha8-1.debian.tar.gz
+
+Package: obconf
+Binary: obconf
+Version: 1:2.0.4-0ubuntu1
+Priority: optional
+Section: universe/x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LXDE Maintainers <lxde-debian@lists.lxde.org>
+Build-Depends: debhelper (>= 9), dh-autoreconf, autopoint, gettext, libglade2-dev, libgtk2.0-dev, libimlib2-dev, libsm-dev, libstartup-notification0-dev, openbox-dev (>= 3.5.0)
+Architecture: any
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/universe/o/obconf
+Files:
+ 55527f82e100f1152c3e38785a382229 2122 obconf_2.0.4-0ubuntu1.dsc
+ 9271c5d2dc366d61f73665a5e8bceabc 456523 obconf_2.0.4.orig.tar.gz
+ b3946ae7801af09ce12b778ec531d7e4 17621 obconf_2.0.4-0ubuntu1.debian.tar.gz
+Uploaders: Daniel Baumann <daniel@debian.org>
+Homepage: http://www.openbox.org/wiki/ObConf:About
+Vcs-Browser: http://git.lxde.org/gitweb/?p=debian/obconf.git
+Vcs-Git: git://git.lxde.org/git/debian/obconf.git
+Package-List: 
+ obconf deb x11 optional
+Checksums-Sha1:
+ 8076dd057ffc20a737051094ff3c26750fab9259 2122 obconf_2.0.4-0ubuntu1.dsc
+ 90638645b53275fda175281a1826c8c4c01746df 456523 obconf_2.0.4.orig.tar.gz
+ e651466e50ee1bde017a2dfac652d86ffef93e26 17621 obconf_2.0.4-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 4c23f8c94a73934eb518e961e4c20226bf1ed5d41f533a62914b51abd77bec34 2122 obconf_2.0.4-0ubuntu1.dsc
+ 71a3e5f4ee246a27421ba85044f09d449f8de22680944ece9c471cd46a9356b9 456523 obconf_2.0.4.orig.tar.gz
+ cbfb7f0fb976701aeca5b11cbf02c975714d96cb872cd387ce6646e51f272b92 17621 obconf_2.0.4-0ubuntu1.debian.tar.gz
 
 Package: ocaml-batteries
 Binary: libbatteries-ocaml-dev, libbatteries-ocaml-doc, ocaml-batteries-included
