@@ -4926,6 +4926,54 @@ Description-md5: 397e7576b7b653c951a05767d413c623
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libopenblas-base
+Priority: optional
+Section: universe/libs
+Installed-Size: 17358
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: openblas
+Version: 0.2.8-2
+Replaces: libatlas3gf-base (<< 3.8.4-4), libblas3gf (<< 1.2.20110419-3)
+Provides: libblas.so.3
+Depends: libc6 (>= 2.4)
+Suggests: liblapack3
+Breaks: libatlas3gf-base (<< 3.8.4-4), libblas3gf (<< 1.2.20110419-3)
+Filename: pool/universe/o/openblas/libopenblas-base_0.2.8-2_i386.deb
+Size: 3553474
+MD5sum: 0f2ae1604d5c8e9bd2693a566001b3d6
+SHA1: 70a5dea6c45d250bbac6249f0591bf2c6825dfc2
+SHA256: 2ca97cded13f445bdb0af70f13ab74b8478ab449af6de982c5e03013b2765a62
+Description: Optimized BLAS (linear algebra) library based on GotoBLAS2
+Homepage: https://github.com/xianyi/OpenBLAS
+Description-md5: 6a2966277c104a4f572ddd6835755301
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libopenblas-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 29125
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: openblas
+Version: 0.2.8-2
+Provides: libblas.so
+Depends: libopenblas-base (= 0.2.8-2), libblas-dev
+Suggests: liblapack-dev
+Filename: pool/universe/o/openblas/libopenblas-dev_0.2.8-2_i386.deb
+Size: 4254558
+MD5sum: 85825f89e972dbfc3cce1c98acb7bf12
+SHA1: 526dd1a9a8d5bf3f098c9728329794ad0e79aa03
+SHA256: f4de95f851e9d8ba8d0edfca56fb4f41d5cb590494cfc5f91264b2efd4da48ac
+Description: Optimized BLAS (linear algebra) library based on GotoBLAS2
+Homepage: https://github.com/xianyi/OpenBLAS
+Description-md5: 4002e0813d9e6f1d7aae9d4f1ced4eb6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libowncloudsync0
 Priority: optional
 Section: universe/libs
@@ -7807,98 +7855,6 @@ Homepage: http://wiki.laptop.org/go/Poll_Builder
 Description-md5: 1fc86391fb2361dfd071d81dc5479da4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: sylpheed
-Priority: optional
-Section: universe/mail
-Installed-Size: 2047
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ricardo Mones <mones@debian.org>
-Architecture: i386
-Version: 3.4.0~beta5-1ubuntu1
-Provides: mail-reader, news-reader
-Depends: libc6 (>= 2.15), libcairo2 (>= 1.2.4), libcompfaceg1, libenchant1c2a (>= 1.6.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgpgme11 (>= 1.2.0), libgtk2.0-0 (>= 2.24.0), libgtkspell0 (>= 2.0.10), libldap-2.4-2 (>= 2.4.7), libonig2 (>= 5.2.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libpisock9, libssl1.0.0 (>= 1.0.0)
-Pre-Depends: multiarch-support
-Recommends: sylpheed-i18n, xfonts-100dpi | xfonts-75dpi | xfonts-100dpi-transcoded | xfonts-75dpi-transcoded, aspell-en | aspell-dictionary, ca-certificates
-Suggests: jpilot, sylpheed-doc (>= 20020420-3), claws-mail-tools, bogofilter, bsfilter, curl
-Filename: pool/universe/s/sylpheed/sylpheed_3.4.0~beta5-1ubuntu1_i386.deb
-Size: 842264
-MD5sum: 2aeb980aae7f204ceb9b4d97acc69060
-SHA1: cde1839e6e189ac98d45a1f2d8d68c40b9e72dc6
-SHA256: b5b76ca603e3b2309a79d15205b897ac4fec54b5d946549977003bfb38cfa8b9
-Description: Light weight e-mail client with GTK+
-Homepage: http://sylpheed.sraoss.jp/en/
-Description-md5: 00fe4d9fb67883469727af68406718ab
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: lubuntu-desktop
-
-Package: sylpheed-dbg
-Priority: extra
-Section: universe/mail
-Installed-Size: 3390
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ricardo Mones <mones@debian.org>
-Architecture: i386
-Source: sylpheed
-Version: 3.4.0~beta5-1ubuntu1
-Depends: sylpheed (= 3.4.0~beta5-1ubuntu1)
-Recommends: gdb
-Filename: pool/universe/s/sylpheed/sylpheed-dbg_3.4.0~beta5-1ubuntu1_i386.deb
-Size: 3174332
-MD5sum: 783bb27273a5b6d84e0720b4298aaabc
-SHA1: 3e2230ecefda8e58ced806fcd0edacb7b28ba4a9
-SHA256: 55e4b3213dc1bf1fbd0eeab5001d5ad1cf69c766639ddae596ffa8fa964849e8
-Description: Debugging symbols for sylpheed, a GTK+ e-mail client
-Homepage: http://sylpheed.sraoss.jp/en/
-Description-md5: 43bf1f6eaee3f7b4fa5724896413fdd7
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: sylpheed-i18n
-Priority: optional
-Section: universe/mail
-Installed-Size: 4369
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ricardo Mones <mones@debian.org>
-Architecture: all
-Source: sylpheed
-Version: 3.4.0~beta5-1ubuntu1
-Depends: sylpheed (>= 3.4.0~beta5-1ubuntu1)
-Filename: pool/universe/s/sylpheed/sylpheed-i18n_3.4.0~beta5-1ubuntu1_all.deb
-Size: 1434988
-MD5sum: cee0d79dd05901f51da0e8a7a8b73897
-SHA1: 1c77009530e6be99a2c8134053757a8b4f9c19c1
-SHA256: 93362d660be6497ddb9e2f32f1a81480764c619ff054456820ebf913407f2513
-Description: Locale data for Sylpheed (i18n support)
-Homepage: http://sylpheed.sraoss.jp/en/
-Description-md5: 702b96faeeda49c0d054a0628706fffe
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: lubuntu-desktop
-
-Package: sylpheed-plugins
-Priority: optional
-Section: universe/mail
-Installed-Size: 70
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ricardo Mones <mones@debian.org>
-Architecture: i386
-Source: sylpheed
-Version: 3.4.0~beta5-1ubuntu1
-Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.18.0), sylpheed (= 3.4.0~beta5-1ubuntu1)
-Pre-Depends: multiarch-support
-Filename: pool/universe/s/sylpheed/sylpheed-plugins_3.4.0~beta5-1ubuntu1_i386.deb
-Size: 7334
-MD5sum: 5b60f12cf9dfe7171d757deb3b513252
-SHA1: ac246c81482393b197f7e4fcaf2048a24e4be90b
-SHA256: 85e5fa3a0cb4645e4948db809d212881e14290ee3ec3734a05bfe3e5a47ead2d
-Description: Loadable modules for extending Sylpheed features
-Homepage: http://sylpheed.sraoss.jp/en/
-Description-md5: 86aa2ba3965a5f770346799afea19b93
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: lubuntu-desktop
 
 Package: systemd-gui
 Priority: extra

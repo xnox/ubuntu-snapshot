@@ -3359,6 +3359,54 @@ Description-md5: 397e7576b7b653c951a05767d413c623
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libopenblas-base
+Priority: optional
+Section: universe/libs
+Installed-Size: 2778
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: openblas
+Version: 0.2.8-2
+Replaces: libatlas3gf-base (<< 3.8.4-4), libblas3gf (<< 1.2.20110419-3)
+Provides: libblas.so.3
+Depends: libc6 (>= 2.4)
+Suggests: liblapack3
+Breaks: libatlas3gf-base (<< 3.8.4-4), libblas3gf (<< 1.2.20110419-3)
+Filename: pool/universe/o/openblas/libopenblas-base_0.2.8-2_powerpc.deb
+Size: 667078
+MD5sum: b2420f738163addb23444dc31848faf0
+SHA1: 0784b7422b7511d30305a9aec2050855fa0b2956
+SHA256: f58af521393e6585abc612143a62ebde74347635434f83928e27b948c83cf7b9
+Description: Optimized BLAS (linear algebra) library based on GotoBLAS2
+Homepage: https://github.com/xianyi/OpenBLAS
+Description-md5: 6a2966277c104a4f572ddd6835755301
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libopenblas-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 4739
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: openblas
+Version: 0.2.8-2
+Provides: libblas.so
+Depends: libopenblas-base (= 0.2.8-2), libblas-dev
+Suggests: liblapack-dev
+Filename: pool/universe/o/openblas/libopenblas-dev_0.2.8-2_powerpc.deb
+Size: 738652
+MD5sum: 8cc0059a8992cd68e5d28ea420a62489
+SHA1: 0fcf305f5cf1cfbf239dca29654c1a2007b1fe3d
+SHA256: 90b22e94624e79baff86277ee977aacafe7c882882509e9e51cc8750197b3358
+Description: Optimized BLAS (linear algebra) library based on GotoBLAS2
+Homepage: https://github.com/xianyi/OpenBLAS
+Description-md5: 4002e0813d9e6f1d7aae9d4f1ced4eb6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libpari-dbg
 Priority: extra
 Section: universe/libdevel
@@ -5905,95 +5953,6 @@ SHA256: 152bb81dcfe5d08f74df0dc40574481650095a282be1f49959342529b820e57b
 Description: Sugar activity to create a poll, collect votes and analyze community opinions
 Homepage: http://wiki.laptop.org/go/Poll_Builder
 Description-md5: 1fc86391fb2361dfd071d81dc5479da4
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: sylpheed
-Priority: optional
-Section: universe/mail
-Installed-Size: 1979
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ricardo Mones <mones@debian.org>
-Architecture: powerpc
-Version: 3.4.0~beta5-1ubuntu1
-Provides: mail-reader, news-reader
-Depends: libc6 (>= 2.15), libcairo2 (>= 1.2.4), libcompfaceg1, libenchant1c2a (>= 1.6.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgpgme11 (>= 1.2.0), libgtk2.0-0 (>= 2.24.0), libgtkspell0 (>= 2.0.10), libldap-2.4-2 (>= 2.4.7), libonig2 (>= 5.2.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libpisock9, libssl1.0.0 (>= 1.0.0)
-Pre-Depends: multiarch-support
-Recommends: sylpheed-i18n, xfonts-100dpi | xfonts-75dpi | xfonts-100dpi-transcoded | xfonts-75dpi-transcoded, aspell-en | aspell-dictionary, ca-certificates
-Suggests: jpilot, sylpheed-doc (>= 20020420-3), claws-mail-tools, bogofilter, bsfilter, curl
-Filename: pool/universe/s/sylpheed/sylpheed_3.4.0~beta5-1ubuntu1_powerpc.deb
-Size: 824604
-MD5sum: ca15660fa29cff0d0c9278068c162a2f
-SHA1: 72ff292736766ab34013aabe53261d6f76f0f926
-SHA256: fce5cbe9e4c2f7fe015cb3d2c41199fb820db3127ce09e76fb4f30a66c674c94
-Description: Light weight e-mail client with GTK+
-Homepage: http://sylpheed.sraoss.jp/en/
-Description-md5: 00fe4d9fb67883469727af68406718ab
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: sylpheed-dbg
-Priority: extra
-Section: universe/mail
-Installed-Size: 3612
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ricardo Mones <mones@debian.org>
-Architecture: powerpc
-Source: sylpheed
-Version: 3.4.0~beta5-1ubuntu1
-Depends: sylpheed (= 3.4.0~beta5-1ubuntu1)
-Recommends: gdb
-Filename: pool/universe/s/sylpheed/sylpheed-dbg_3.4.0~beta5-1ubuntu1_powerpc.deb
-Size: 3389688
-MD5sum: e849c831c3467a3c051349180b6ab48e
-SHA1: 77e68bdf5a14c50af3fc2858d70491f8f2082456
-SHA256: df52d056bf396016b2191812a2c65b4ad00ce2344f9a7c748d8c66bf2a054622
-Description: Debugging symbols for sylpheed, a GTK+ e-mail client
-Homepage: http://sylpheed.sraoss.jp/en/
-Description-md5: 43bf1f6eaee3f7b4fa5724896413fdd7
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: sylpheed-i18n
-Priority: optional
-Section: universe/mail
-Installed-Size: 4369
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ricardo Mones <mones@debian.org>
-Architecture: all
-Source: sylpheed
-Version: 3.4.0~beta5-1ubuntu1
-Depends: sylpheed (>= 3.4.0~beta5-1ubuntu1)
-Filename: pool/universe/s/sylpheed/sylpheed-i18n_3.4.0~beta5-1ubuntu1_all.deb
-Size: 1434988
-MD5sum: cee0d79dd05901f51da0e8a7a8b73897
-SHA1: 1c77009530e6be99a2c8134053757a8b4f9c19c1
-SHA256: 93362d660be6497ddb9e2f32f1a81480764c619ff054456820ebf913407f2513
-Description: Locale data for Sylpheed (i18n support)
-Homepage: http://sylpheed.sraoss.jp/en/
-Description-md5: 702b96faeeda49c0d054a0628706fffe
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: sylpheed-plugins
-Priority: optional
-Section: universe/mail
-Installed-Size: 70
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ricardo Mones <mones@debian.org>
-Architecture: powerpc
-Source: sylpheed
-Version: 3.4.0~beta5-1ubuntu1
-Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.18.0), sylpheed (= 3.4.0~beta5-1ubuntu1)
-Pre-Depends: multiarch-support
-Filename: pool/universe/s/sylpheed/sylpheed-plugins_3.4.0~beta5-1ubuntu1_powerpc.deb
-Size: 7308
-MD5sum: 3d698d4d62eb200efb42bd94c46d6bef
-SHA1: df8d332d215665a5f536e731f19f36adaf7bab35
-SHA256: 32f38316cbbab26cb48e6745c241646b3e1d6965aba82ba73c298516eeb0c991
-Description: Loadable modules for extending Sylpheed features
-Homepage: http://sylpheed.sraoss.jp/en/
-Description-md5: 86aa2ba3965a5f770346799afea19b93
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
