@@ -149,6 +149,7 @@ Testsuite: autopkgtest
 Package: click
 Binary: click, click-dev, python3-click, click-doc, packagekit-plugin-click
 Version: 0.3.4
+Priority: optional
 Section: admin
 Maintainer: Colin Watson <cjwatson@ubuntu.com>
 Build-Depends: debhelper (>= 9~), dh-autoreconf, autopoint (>= 0.18.1), intltool, python3 (>= 3.2), python3-all, python3-setuptools, python3-debian, python3 (>= 3.3) | python3-mock, pep8, pyflakes, python3-sphinx, libglib2.0-dev (>= 2.28), libjson-glib-dev (>= 0.10), libpackagekit-glib2-dev (>= 0.7.2)
@@ -176,6 +177,7 @@ Checksums-Sha256:
 Package: clutter-gtk
 Binary: libclutter-gtk-1.0-0, libclutter-gtk-1.0-dev, libclutter-gtk-1.0-dbg, libclutter-gtk-1.0-doc, gir1.2-gtkclutter-1.0
 Version: 1.4.4-3
+Priority: optional
 Section: libs
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Build-Depends: debhelper (>= 8.1.3), cdbs (>= 0.4.93~), gnome-pkg-tools, libgtk-3-dev (>= 3.6.0), libclutter-1.0-dev (>= 1.13.10), libjson-glib-dev (>= 0.12), libgirepository1.0-dev (>= 0.10.7-1~), gobject-introspection (>= 0.9.12-4~)
@@ -369,6 +371,7 @@ Checksums-Sha256:
 Package: gnome-mines
 Binary: gnome-mines, gnomine
 Version: 1:3.8.2-1
+Priority: optional
 Section: games
 Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Build-Depends: cdbs (>= 0.4.90~), debhelper (>= 8), dh-autoreconf, gnome-common, gnome-pkg-tools (>= 0.6), intltool (>= 0.35.0), libglib2.0-dev, libgtk-3-dev (>= 3.4.0), librsvg2-dev (>= 2.32.0), valac (>= 0.18), yelp-tools
@@ -818,6 +821,42 @@ Checksums-Sha256:
  eb28e73d579195a17cc1889f9c669fedea85339e50d0d89062da35c491856645 3092 mysql-5.5_5.5.32-0ubuntu3.dsc
  afcdb3d4fa93950b330d934ce3de155e9d4a575c91b5aa3e0a276b9f52e802a2 21604457 mysql-5.5_5.5.32.orig.tar.gz
  dfbb92ecb703f952e38a507562210fa3cff693e6f9a6c8156a0ff9acbc2eefcf 302833 mysql-5.5_5.5.32-0ubuntu3.debian.tar.gz
+Testsuite: autopkgtest
+
+Package: postfix
+Binary: postfix, postfix-ldap, postfix-cdb, postfix-pcre, postfix-mysql, postfix-pgsql, postfix-dev, postfix-doc
+Version: 2.10.1-1
+Section: mail
+Maintainer: LaMont Jones <lamont@debian.org>
+Build-Depends: debhelper (>= 7), po-debconf (>= 0.5.0), groff-base, patch, lsb-release, libdb-dev (>= 4.6.19), libldap2-dev (>= 2.1), libpcre3-dev, libmysqlclient-dev | libmysqlclient15-dev | libmysqlclient14-dev, libssl-dev (>= 0.9.7), libsasl2-dev, libpq-dev, libcdb-dev, hardening-wrapper, dpkg-dev (>= 1.15.5), libsqlite3-dev
+Architecture: any all
+Standards-Version: 3.9.1.0
+Format: 1.0
+Directory: pool/main/p/postfix
+Files:
+ 5a7f02c1775b58aff2c0a2d3906568f2 1760 postfix_2.10.1-1.dsc
+ 209e81079325b6758a7dcf531a0d5f7a 3827595 postfix_2.10.1.orig.tar.gz
+ d51015ece7412d945609bf70dc82cf9d 272828 postfix_2.10.1-1.diff.gz
+Homepage: http://www.postfix.org
+Vcs-Browser: http://git.debian.org/?p=users/lamont/postfix.git
+Vcs-Git: git://git.debian.org/~lamont/postfix.git
+Package-List: 
+ postfix deb mail extra
+ postfix-cdb deb mail extra
+ postfix-dev deb devel extra
+ postfix-doc deb doc extra
+ postfix-ldap deb mail extra
+ postfix-mysql deb mail extra
+ postfix-pcre deb mail extra
+ postfix-pgsql deb mail extra
+Checksums-Sha1:
+ 5af1115dfed0db481cafceafb375240c1787d68e 1760 postfix_2.10.1-1.dsc
+ 3e236cf95a7439750e92d9ef5cd510c00e603eb2 3827595 postfix_2.10.1.orig.tar.gz
+ fed1629f71750444887b053d386912506d2dc437 272828 postfix_2.10.1-1.diff.gz
+Checksums-Sha256:
+ c94b0e4b5c37d64e8223aed33b0bcb8a9770a01815182410cbe94acc35dd31f2 1760 postfix_2.10.1-1.dsc
+ 2e85a62e97418bbb022b4d4433098a7f25adc7dc707c37d9984db2c2f314b1c1 3827595 postfix_2.10.1.orig.tar.gz
+ 2adcb1336919cca35fcdbf53fa631537fedc6ce0ed28a760ffc6ef47a5388009 272828 postfix_2.10.1-1.diff.gz
 Testsuite: autopkgtest
 
 Package: postgresql-9.1
