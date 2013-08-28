@@ -4329,14 +4329,14 @@ Section: universe/utils
 Installed-Size: 207
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: all
-Version: 0.83
+Version: 0.84
 Depends: lxc, cgroup-lite, debianutils, upstart, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
 Recommends: ofono
-Filename: pool/universe/l/lxc-android-config/lxc-android-config_0.83_all.deb
-Size: 13772
-MD5sum: 4062a28a0cbd9c6cb5d51fa4dc109e9d
-SHA1: b6ad9ddbbe40cb4e320aa73ea945e2c79fef26f8
-SHA256: c8a6b83966de6c483f38586838811afa1f81e707878c86fafe2bae5be2d7d87e
+Filename: pool/universe/l/lxc-android-config/lxc-android-config_0.84_all.deb
+Size: 13522
+MD5sum: 9fff651c71dde528b6ef6850fe006924
+SHA1: b1d415286ff2001856354df04ce24428d6de8fdd
+SHA256: a400ac0de512fe00c63022b96469d0878770f41dbc37c7d329e8a770fab82c6a
 Description: configuration to fire up an ubuntu-touch android container
 Multi-Arch: foreign
 Description-md5: 69181f727224b60f61d9d2532b1a6c6e
@@ -4877,6 +4877,91 @@ SHA256: 7431e5e3d6f407e86bdc138ed399bb75196128572f2961dd531d4ab6cf0a88f6
 Description: Metapackage to install all of Openstack services at once
 Homepage: http://openstack.alioth.debian.org/
 Description-md5: 4c7c3936b37c71d3941c324bf58172c3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openvswitch-datapath-dkms
+Priority: extra
+Section: universe/net
+Installed-Size: 15007
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Architecture: all
+Source: openvswitch
+Version: 1.10.1+git20130823-0ubuntu3
+Depends: dkms (>= 1.95), make, libc6-dev
+Filename: pool/universe/o/openvswitch/openvswitch-datapath-dkms_1.10.1+git20130823-0ubuntu3_all.deb
+Size: 2385640
+MD5sum: 08b04339a53d7aa1ccdbe983f95782c4
+SHA1: d9752e271cb8ef7ede5840a196a70b980342b332
+SHA256: d996f497e7c0b7a73f4e9d711ba5234dbfe61b357bc9643108d0a451039514c0
+Description: Open vSwitch datapath module source - DKMS version
+Homepage: http://openvswitch.org/
+Description-md5: 1c175cf2cb1282f4a52570c21d1029b2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openvswitch-datapath-source
+Priority: extra
+Section: universe/net
+Installed-Size: 2438
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Architecture: all
+Source: openvswitch
+Version: 1.10.1+git20130823-0ubuntu3
+Depends: module-assistant, bzip2, debhelper (>= 5.0.37)
+Suggests: openvswitch-switch
+Filename: pool/universe/o/openvswitch/openvswitch-datapath-source_1.10.1+git20130823-0ubuntu3_all.deb
+Size: 2459340
+MD5sum: 50f53afb08b11cfc70b5a3284aa7d30b
+SHA1: 419572119c0478814123a911f1affd2678dfd9a5
+SHA256: 1a0f0ca4246f05397026f6f892b99c185e63b0b4bc10f889c77f318127b37610
+Description: Open vSwitch datapath module source - module-assistant version
+Homepage: http://openvswitch.org/
+Description-md5: afe9054101bf27f371da78dac01a72c2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openvswitch-test
+Priority: extra
+Section: universe/net
+Installed-Size: 181
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Architecture: all
+Source: openvswitch
+Version: 1.10.1+git20130823-0ubuntu3
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-twisted-web
+Filename: pool/universe/o/openvswitch/openvswitch-test_1.10.1+git20130823-0ubuntu3_all.deb
+Size: 36740
+MD5sum: 8499c1b7fa95e7a89a7f9acf9342e120
+SHA1: fe5e34129c80e78ea865e8841451800a4be9e378
+SHA256: a692148e9d2e694431a80d8f27d89661edc3e1614f3b94c2999868d0efd2bf25
+Description: Open vSwitch test package
+Homepage: http://openvswitch.org/
+Description-md5: 6a14159ef2a1781c1884f29cecdc4c02
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ovsdbmonitor
+Priority: extra
+Section: universe/utils
+Installed-Size: 211
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
+Architecture: all
+Source: openvswitch
+Version: 1.10.1+git20130823-0ubuntu3
+Depends: python (>= 2.7.1-0ubuntu2), python-openvswitch, python-twisted-conch
+Filename: pool/universe/o/openvswitch/ovsdbmonitor_1.10.1+git20130823-0ubuntu3_all.deb
+Size: 38090
+MD5sum: ba2855b9f2ed9f6dc6bb6454ba61d132
+SHA1: 0a42c1d31127bb44adb62c7c3788da9fd569ccae
+SHA256: 69fed624f529e1401abcbf2f5dfcf210528696de6d5a0492ab4657d02aaad705
+Description: Open vSwitch graphical monitoring tool
+Homepage: http://openvswitch.org/
+Description-md5: 7763b44a976684bb4eeb22fb0f83a60d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -6444,6 +6529,27 @@ SHA256: 9896be52e0d0264397cf7cf892e1dae5bed27403ee4729e85aa22c6fde8535f6
 Description: Test package for Unity System Compositor
 Homepage: https://launchpad.net/unity-system-compositor
 Description-md5: 3f51a71d80b019a400c2467f58a8be70
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: unity8-autopilot
+Priority: optional
+Section: universe/x11
+Installed-Size: 198
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: unity8
+Version: 7.81.3+13.10.20130828.1-0ubuntu1
+Depends: indicators-client (>= 7.81.3+13.10.20130828.1-0ubuntu1), libautopilot-qt, libqt5test5, libqt5widgets5, python-evdev, unity8 (>= 7.81.3+13.10.20130828.1-0ubuntu1), unity8-fake-env (>= 7.81.3+13.10.20130828.1-0ubuntu1), python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Recommends: gir1.2-glib-2.0, python-gi
+Filename: pool/universe/u/unity8/unity8-autopilot_7.81.3+13.10.20130828.1-0ubuntu1_all.deb
+Size: 18154
+MD5sum: 06434a8c492fd7cd8d291f01dc9f37ef
+SHA1: 22393a72203c73fa6ba3a45f8554745d7d713a82
+SHA256: 5ab4dc705a57daf65701976513e025c9976cb6a101ca5f34880bf695281e5fa4
+Description: Test package for Unity 8 shell
+Homepage: http://launchpad.net/unity
+Description-md5: 5589445a52fd3276b67537cf154814f0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
