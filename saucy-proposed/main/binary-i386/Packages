@@ -113,28 +113,73 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: clvm
+Package: cloud-guest-utils
 Priority: extra
 Section: admin
-Installed-Size: 878
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: i386
-Source: lvm2
-Version: 2.02.98-1ubuntu5
-Depends: libc6 (>= 2.15), libcmap4 (>= 2.3.0), libcpg4 (>= 2.3.0), libdevmapper-event1.02.1 (>= 2:1.02.74), libdevmapper1.02.1 (>= 2:1.02.77), libdlm3, libquorum5 (>= 2.3.0), libudev1 (>= 183), lvm2 (= 2.02.98-1ubuntu5), lsb-base
-Recommends: corosync
-Filename: pool/main/l/lvm2/clvm_2.02.98-1ubuntu5_i386.deb
-Size: 314186
-MD5sum: 33f2968187602a4d57711ff97963e658
-SHA1: 9fa53c07f833884b1fb77c8194900451af80f717
-SHA256: da9670027370e0ccac58998057446d8873f04237ed7830b4b4251adba74c5c40
-Description: Cluster LVM Daemon for lvm2
-Multi-Arch: foreign
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: 46f93b5b21bc2e311bd9e9e51949e9a1
+Installed-Size: 73
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Source: cloud-utils
+Version: 0.27-0ubuntu4
+Replaces: cloud-utils (<< 0.27-0ubuntu3)
+Depends: e2fsprogs (>= 1.4), util-linux (>= 2.17.2), python
+Recommends: gdisk
+Conflicts: cloud-utils (<< 0.27-0ubuntu3)
+Filename: pool/main/c/cloud-utils/cloud-guest-utils_0.27-0ubuntu4_all.deb
+Size: 14738
+MD5sum: 448c81f484647a47d3b2aeaf5c0184fd
+SHA1: 64f5f2f0beefeebda25d3c14578869328d9597a6
+SHA256: a92593df18e1e20a51294aab95324682938f5db31f8db4d98bf254d1aa9888e8
+Description: cloud guest utilities
+Description-md5: fda0c5237d2eca0ed770cea9796a01fa
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Supported: 9m
+Task: cloud-image, edubuntu-desktop-gnome
+
+Package: cloud-image-utils
+Priority: extra
+Section: admin
+Installed-Size: 110
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Source: cloud-utils
+Version: 0.27-0ubuntu4
+Replaces: cloud-utils (<< 0.27-0ubuntu3)
+Depends: ca-certificates, euca2ools, file, genisoimage, qemu-utils, wget, python
+Recommends: distro-info, python-distro-info
+Conflicts: cloud-utils (<< 0.27-0ubuntu3)
+Filename: pool/main/c/cloud-utils/cloud-image-utils_0.27-0ubuntu4_all.deb
+Size: 28176
+MD5sum: 9bf0c81c4838bebde7bcb46230594c1f
+SHA1: 5a2afed948be7ea4ffe50f3637f94844738210d9
+SHA256: 6486921fb53fa3bf75238d739019bc01fb3d8abce9864e56f9b6773bfbe8515c
+Description: cloud image management utilities
+Description-md5: 765804be1cec3814207205510c2632bc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: cloud-image, edubuntu-desktop-gnome
+
+Package: cloud-utils
+Priority: extra
+Section: admin
+Installed-Size: 30
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Version: 0.27-0ubuntu4
+Depends: cloud-guest-utils, cloud-image-utils
+Filename: pool/main/c/cloud-utils/cloud-utils_0.27-0ubuntu4_all.deb
+Size: 1450
+MD5sum: 6dd9d076be48c267b3c49fff337ceef5
+SHA1: f8d51d14826e5134dcedeaeb27064760e2bb89c1
+SHA256: f4945def17ec9fede703cfb4e56ed2f5e9ecbc11742368c064d18e3d7fec6a67
+Description: metapackage for installation of upstream cloud-utils source
+Description-md5: 1e4961d514cf3ca76a2bdf19b3eb3abc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: cloud-image, edubuntu-desktop-gnome
 
 Package: debianutils
 Essential: yes
@@ -184,32 +229,6 @@ Origin: Ubuntu
 Supported: 9m
 Task: minimal
 
-Package: dmsetup
-Priority: important
-Section: admin
-Installed-Size: 178
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: i386
-Source: lvm2 (2.02.98-1ubuntu5)
-Version: 2:1.02.77-1ubuntu5
-Depends: libc6 (>= 2.4), libdevmapper1.02.1 (>= 2:1.02.77), initramfs-tools, util-linux (>> 2.16), udev (>> 141-2)
-Conflicts: devicekit-disks (<< 009)
-Breaks: udev (<< 138-1)
-Filename: pool/main/l/lvm2/dmsetup_1.02.77-1ubuntu5_i386.deb
-Size: 42830
-MD5sum: 947afe2478e1b4a5f7708e184af88a15
-SHA1: ebe365d029c75b5454f134a70961f7743beb223e
-SHA256: 63ec6b6eecf824b7d348abb6ca7cff0d7e6a37913489ef8d849d0e5b069a7038
-Description: Linux Kernel Device Mapper userspace library
-Multi-Arch: foreign
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: 808f3b8b96c64d5f095bd9a6d6d9c928
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: minimal
-
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -254,29 +273,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: gir1.2-messagingmenu-1.0
-Priority: optional
-Section: libs
-Installed-Size: 47
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
-Architecture: i386
-Source: indicator-messages
-Version: 13.10.1+13.10.20130828.2-0ubuntu1
-Depends: gir1.2-glib-2.0, libmessaging-menu0 (>= 13.10.1+13.10.20130820)
-Filename: pool/main/i/indicator-messages/gir1.2-messagingmenu-1.0_13.10.1+13.10.20130828.2-0ubuntu1_i386.deb
-Size: 3118
-MD5sum: 3ee54f15cede8a3e0542b75efcf3ae27
-SHA1: 08dabdcbb13cefce1a80be98ebb2d114f37e3365
-SHA256: 254eefc33c81bd05be8fe954c963c33dd941f53140cee4ca352d7e397adfbefd
-Description: Messaging Menu - gir bindings
-Homepage: https://launchpad.net/indicator-messages
-Description-md5: c3332a75a05dc3da9846ebba71002ac1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: gir1.2-packagekitglib-1.0
 Priority: optional
@@ -343,56 +339,6 @@ SHA256: 25d12904ec29c4a5b777623b02687f5dd9a040847be48c8712bd699dce6bbce9
 Description: Tools for use with GStreamer
 Homepage: http://gstreamer.freedesktop.org
 Description-md5: 909df9df4ba32a53040e4e54751c1cfa
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: indicator-datetime
-Priority: optional
-Section: misc
-Installed-Size: 152
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: i386
-Version: 13.10.0+13.10.20130828.2-0ubuntu1
-Replaces: indicator-datetime (<< 13.10.0)
-Depends: libc6 (>= 2.3.6-6~), libecal-1.2-15 (>= 3.5.91), libedataserver-1.2-17 (>= 3.5.91), libgeoclue0 (>= 0.11.1+git20091217), libglib2.0-0 (>= 2.37.3), libical1 (>= 1.0), dconf-gsettings-backend | gsettings-backend, geoclue-ubuntu-geoip | geoclue-provider, systemd-services, systemd-shim
-Recommends: indicator-applet | indicator-renderer, evolution-data-server, gnome-control-center-datetime | ubuntu-system-settings
-Conflicts: indicator-datetime (<< 13.10.0)
-Filename: pool/main/i/indicator-datetime/indicator-datetime_13.10.0+13.10.20130828.2-0ubuntu1_i386.deb
-Size: 28212
-MD5sum: 8658b23e167d947c01c2729adee3e8d6
-SHA1: 779796c9dda2e53cb1442c547fbf6da50103fa35
-SHA256: e581056d7e697e86cd1e3664b6878edc80727cc62d2ab57ed1575ec0acfe4c83
-Description: Simple clock
-Homepage: https://launchpad.net/indicator-datetime
-Description-md5: 083f98dd29157b1f6c5a8c4594d7d774
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: indicator-messages
-Priority: optional
-Section: gnome
-Installed-Size: 340
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
-Architecture: i386
-Version: 13.10.1+13.10.20130828.2-0ubuntu1
-Replaces: indicator-status-provider-emesene, indicator-status-provider-mc5, indicator-status-provider-pidgin, indicator-status-provider-telepathy, libindicator-messages-status-provider-dev, libindicator-messages-status-provider1
-Depends: libc6 (>= 2.3.6-6~), libglib2.0-0 (>= 2.37.3), dconf-gsettings-backend | gsettings-backend
-Recommends: indicator-applet | indicator-renderer
-Conflicts: indicator-status-provider-emesene, indicator-status-provider-mc5, indicator-status-provider-pidgin, indicator-status-provider-telepathy, libindicator-messages-status-provider-dev, libindicator-messages-status-provider1
-Breaks: gwibber-services (<< 3.5.4-0ubuntu1~), telepathy-indicator (<< 0.3.0-0ubuntu1~), thunderbird (<< 15.0+build1-0ubuntu1~), xchat-gnome-indicator (<< 0.3.11-0ubuntu2~), xchat-indicator (<< 0.3.11-0ubuntu2~)
-Filename: pool/main/i/indicator-messages/indicator-messages_13.10.1+13.10.20130828.2-0ubuntu1_i386.deb
-Size: 80032
-MD5sum: 2d2ee222fb741b4e532afe0e8fd7900c
-SHA1: 24148a9a722e3cee32826c0832c95cb37e08ff2a
-SHA256: 853db085aab7a54dc1d1458c61a3f0524be73a6c4af2b7675adbcd58a447f1d3
-Description: indicator that collects messages that need a response
-Homepage: https://launchpad.net/indicator-messages
-Description-md5: 4b542e22d4916b1b888ba25c790e7864
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -630,82 +576,6 @@ Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
-Package: libdevmapper-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 134
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: i386
-Source: lvm2 (2.02.98-1ubuntu5)
-Version: 2:1.02.77-1ubuntu5
-Depends: libdevmapper1.02.1 (= 2:1.02.77-1ubuntu5), libdevmapper-event1.02.1 (= 2:1.02.77-1ubuntu5), libselinux1-dev, libudev-dev
-Filename: pool/main/l/lvm2/libdevmapper-dev_1.02.77-1ubuntu5_i386.deb
-Size: 18884
-MD5sum: 06a07201a7eea602599ceeb5c059c428
-SHA1: 3ffdf30812bc532a3dfa53b724cb0e79b98e1ee2
-SHA256: 263aafa77d20ad915c56d0653692f2d3058009f9ea58f6504daee943cc8eeb69
-Description: Linux Kernel Device Mapper header files
-Multi-Arch: same
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: cd4f4f9d4fde600f0d1e37da66d54c85
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libdevmapper-event1.02.1
-Priority: optional
-Section: libs
-Installed-Size: 85
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: i386
-Source: lvm2 (2.02.98-1ubuntu5)
-Version: 2:1.02.77-1ubuntu5
-Depends: libc6 (>= 2.15), libdevmapper1.02.1 (>= 2:1.02.63)
-Pre-Depends: multiarch-support
-Breaks: dmeventd (<< 2.02.95-4ubuntu1)
-Filename: pool/main/l/lvm2/libdevmapper-event1.02.1_1.02.77-1ubuntu5_i386.deb
-Size: 11788
-MD5sum: 7c67af06f9582ab5f28e13a71e58baaf
-SHA1: 91fd95a14538f9686c284719900ddc0c15cfbfe7
-SHA256: 2f8c33a0476ea7870363036db07e1b4d8bec8d848297005b20c61a5a5ea98a5f
-Description: Linux Kernel Device Mapper event support library
-Multi-Arch: same
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: 13d66a8a0057f6e6c6d6c2b25188a38d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-live, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-live, mythbuntu-live, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libdevmapper1.02.1
-Priority: important
-Section: libs
-Installed-Size: 315
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: i386
-Source: lvm2 (2.02.98-1ubuntu5)
-Version: 2:1.02.77-1ubuntu5
-Depends: libc6 (>= 2.4), libselinux1 (>= 1.32), libudev1 (>= 183), dmsetup (>= 2:1.02.77-1ubuntu5)
-Pre-Depends: multiarch-support
-Conflicts: libdevmapper1.02
-Breaks: lvm2 (<< 2.02.66)
-Filename: pool/main/l/lvm2/libdevmapper1.02.1_1.02.77-1ubuntu5_i386.deb
-Size: 101946
-MD5sum: cba74958b13ea8777be9fafdad6f4a66
-SHA1: 7a2fce0702b96aa5b11f99fcb63971d8c1356aa6
-SHA256: b527a2951ad4393c5d1eebf224d793a1a54d570e5d7eab76aa8f4661d527259b
-Description: Linux Kernel Device Mapper userspace library
-Multi-Arch: same
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: f57d8a0a3606e56cb6cc150cb7a19e50
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: minimal
-
 Package: libgstreamer1.0-0
 Priority: optional
 Section: libs
@@ -778,122 +648,6 @@ Description-md5: de1692260510350a48f76ec91eae40a9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-
-Package: liblvm2-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 153
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: i386
-Source: lvm2
-Version: 2.02.98-1ubuntu5
-Depends: liblvm2app2.2 (= 2.02.98-1ubuntu5), liblvm2cmd2.02 (= 2.02.98-1ubuntu5), libdevmapper-dev
-Filename: pool/main/l/lvm2/liblvm2-dev_2.02.98-1ubuntu5_i386.deb
-Size: 11068
-MD5sum: b892430f882576bc65a6519133567f6d
-SHA1: e7779c8411b7e771692ff5ee77baf63cc76048ff
-SHA256: 1b2bb5dd3715a5ed834c31194fa75b7416a9fd549b397cb836d66f053c3e72e2
-Description: LVM2 libraries - development files
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: 9355c51a0fa4f1589861097790213f32
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: liblvm2app2.2
-Priority: optional
-Section: libs
-Installed-Size: 808
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: i386
-Source: lvm2
-Version: 2.02.98-1ubuntu5
-Depends: libc6 (>= 2.4), libdevmapper-event1.02.1 (>= 2:1.02.74), libdevmapper1.02.1 (>= 2:1.02.77), libudev1 (>= 183)
-Pre-Depends: multiarch-support
-Filename: pool/main/l/lvm2/liblvm2app2.2_2.02.98-1ubuntu5_i386.deb
-Size: 293562
-MD5sum: 8002e8c44e1b24808028b0c3c4344d3f
-SHA1: 400af2bd69ebb4b1e5f1309b7bd43d96f21548ca
-SHA256: 16cdba5af3ae6e6560ef9048ca052a4577d7b3212d55d83f3f003ee2a9e8bafb
-Description: LVM2 application library
-Multi-Arch: same
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: 577f83d733f4a66a06fad9f3866d0316
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: liblvm2cmd2.02
-Priority: optional
-Section: libs
-Installed-Size: 1099
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: i386
-Source: lvm2
-Version: 2.02.98-1ubuntu5
-Depends: libc6 (>= 2.4), libdevmapper-event1.02.1 (>= 2:1.02.74), libdevmapper1.02.1 (>= 2:1.02.77), libudev1 (>= 183)
-Pre-Depends: multiarch-support
-Filename: pool/main/l/lvm2/liblvm2cmd2.02_2.02.98-1ubuntu5_i386.deb
-Size: 402434
-MD5sum: 06841eed529f86e58081403db27824a8
-SHA1: d7b6e318ac9c070dc321ba003010b92f16e99cb3
-SHA256: d5a8633520802f5ce566a77417050425188b56f2ea6ea538a46759d803844f4a
-Description: LVM2 command library
-Multi-Arch: same
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: 8f4d76592086bd210b07fd8b6370be43
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libmessaging-menu-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 301
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
-Architecture: i386
-Source: indicator-messages
-Version: 13.10.1+13.10.20130828.2-0ubuntu1
-Depends: gir1.2-messagingmenu-1.0 (= 13.10.1+13.10.20130828.2-0ubuntu1), libmessaging-menu0 (= 13.10.1+13.10.20130828.2-0ubuntu1), libglib2.0-dev
-Filename: pool/main/i/indicator-messages/libmessaging-menu-dev_13.10.1+13.10.20130828.2-0ubuntu1_i386.deb
-Size: 24938
-MD5sum: 6487324abdbcc311ac208caed6dd0a4d
-SHA1: e69ec3c38bedb42cbee6ed986582541804975e33
-SHA256: 41b2dde1e952be96d0c9dd08d1813ec8063ccc7046e56387d550e9685516776a
-Description: Messaging Menu - library development files
-Homepage: https://launchpad.net/indicator-messages
-Description-md5: ce906b4d3b8508aa9afe60c759709b5d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libmessaging-menu0
-Priority: optional
-Section: libs
-Installed-Size: 106
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
-Architecture: i386
-Source: indicator-messages
-Version: 13.10.1+13.10.20130828.2-0ubuntu1
-Depends: libc6 (>= 2.3.6-6~), libglib2.0-0 (>= 2.37.3)
-Filename: pool/main/i/indicator-messages/libmessaging-menu0_13.10.1+13.10.20130828.2-0ubuntu1_i386.deb
-Size: 26298
-MD5sum: 14a1b2c4cf57dfc39b95d44ba2560366
-SHA1: 8788b439d1ce76cd786f4b17e07c4a869fd4fedc
-SHA256: 0618aa72a92a73bec651e5a3e674ce0d6144c2df561e9c0c027ca4efe71b216d
-Description: Messaging Menu - shared library
-Homepage: https://launchpad.net/indicator-messages
-Description-md5: 364e71724412de3ba2d663ca34406232
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libmirclient-dev
 Priority: optional
@@ -1251,30 +1005,6 @@ Description-md5: 2b35e7ad9905f44038a180fc098adcca
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-
-Package: lvm2
-Priority: optional
-Section: admin
-Installed-Size: 1336
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
-Architecture: i386
-Version: 2.02.98-1ubuntu5
-Depends: libc6 (>= 2.4), libdevmapper-event1.02.1 (>= 2:1.02.74), libdevmapper1.02.1 (>= 2:1.02.77), libreadline5 (>= 5.2), libudev1 (>= 183), lsb-base, dmsetup (>> 2:1.02.47), initscripts (>= 2.88dsf-13.3), watershed (>= 2)
-Breaks: initramfs-tools (<< 0.99)
-Filename: pool/main/l/lvm2/lvm2_2.02.98-1ubuntu5_i386.deb
-Size: 544678
-MD5sum: be3ca6751abe0418d0ec8d3e072661cf
-SHA1: 845f5d2294be8c5acf87d7acecc7c4af9f73fe86
-SHA256: 4911f4571ef8c1e3cf831cf57243466d1dc39558b509aa026935700c6b2a263a
-Description: Linux Logical Volume Manager
-Multi-Arch: foreign
-Homepage: http://sources.redhat.com/lvm2/
-Description-md5: 9df95d102d2b0aad5aff13603ef0cb3f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
 
 Package: mir-doc
 Priority: optional
