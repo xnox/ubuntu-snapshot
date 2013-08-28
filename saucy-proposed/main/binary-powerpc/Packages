@@ -1,23 +1,3 @@
-Package: android-platform-headers
-Priority: extra
-Section: libdevel
-Installed-Size: 274
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu19
-Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/android-platform-headers_0.1.0+git20130606+c5d897a-0ubuntu19_all.deb
-Size: 52752
-MD5sum: d38947975f971e982dd14036a54f3efe
-SHA1: 3ce58f701a1dab58088b64f14cc549acdcb85d61
-SHA256: 882358be432f4a56698c2626d7a6f384aa7142d8b8670e8fd0460afd21b0fa77
-Description: Android Platform Headers from AOSP releases
-Description-md5: 5d4e18662ffad46fc86efe8d568c6096
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: bzr
 Priority: optional
 Section: devel
@@ -156,6 +136,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: debianutils
+Essential: yes
+Priority: required
+Section: utils
+Installed-Size: 277
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Clint Adams <clint@debian.org>
+Architecture: powerpc
+Version: 4.4
+Replaces: manpages-pl (<< 1:0.5)
+Depends: sensible-utils
+Pre-Depends: libc6 (>= 2.15)
+Filename: pool/main/d/debianutils/debianutils_4.4_powerpc.deb
+Size: 88492
+MD5sum: c9d49e33f4f7508e5076fed66933099e
+SHA1: de22e676351650e982c9f90d162e071fb86db138
+SHA256: f8bbde8c0d92dbb550a5767f73ece3c87d82fa6ac170ab3df53442c1f2686f2b
+Description: Miscellaneous utilities specific to Debian
+Multi-Arch: foreign
+Description-md5: ccafef5bb90a2453aecca96cbb772d23
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -176,6 +180,28 @@ Description-md5: 9f375e761d413f36fd2c7df206c8836d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
+
+Package: gir1.2-packagekitglib-1.0
+Priority: optional
+Section: libs
+Installed-Size: 171
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klumpp <matthias@tenstral.net>
+Architecture: powerpc
+Source: packagekit
+Version: 0.8.10-2ubuntu1
+Depends: gir1.2-glib-2.0 (>= 0.10.1), libpackagekit-glib2-16 (>= 0.8.10)
+Filename: pool/main/p/packagekit/gir1.2-packagekitglib-1.0_0.8.10-2ubuntu1_powerpc.deb
+Size: 37202
+MD5sum: 0f3033c3330bd728be3f97e194585a3a
+SHA1: 46d68ddbe38efe4deba88e41c3618549d95a28d1
+SHA256: afbad4eaf961bb6e2a47e624ad4e499d40a88f9239eb2aba4beb6664e8b3f005
+Description: GObject introspection data for the PackageKit GLib library
+Homepage: http://www.packagekit.org
+Description-md5: 58dad6540a9f05da7569c62ae80d0533
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: grub-common
 Priority: optional
@@ -591,23 +617,48 @@ Description-md5: 2f06b7e1bfdb9f620d92f9696d24fabc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libplatform-api1-doc
+Package: libpackagekit-glib2-16
 Priority: optional
-Section: doc
-Installed-Size: 4755
+Section: libs
+Installed-Size: 466
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: platform-api
-Version: 0.18.3+13.10.20130827.1-0ubuntu1
-Depends: libplatform-api1-dev
-Filename: pool/main/p/platform-api/libplatform-api1-doc_0.18.3+13.10.20130827.1-0ubuntu1_all.deb
-Size: 2021274
-MD5sum: 46f3bc0ddd865650d375c963536cba60
-SHA1: a3adcc4e183bee390f701dc6c15e92d0a53bf823
-SHA256: dfbf3889620936d04bf693523140267bf7bd509c4591b8331c3c55e08ecd9a67
-Description: Platform API for system level capabilities (development)
-Homepage: https://launchpad.net/platform-api
-Description-md5: 91dba5b6aae30b22730a6ddbabdb540f
+Original-Maintainer: Matthias Klumpp <matthias@tenstral.net>
+Architecture: powerpc
+Source: packagekit
+Version: 0.8.10-2ubuntu1
+Depends: libarchive13, libc6 (>= 2.7), libglib2.0-0 (>= 2.37.3), libsqlite3-0 (>= 3.5.9)
+Pre-Depends: multiarch-support
+Recommends: python3-aptdaemon.pkcompat | packagekit-system-interface | packagekit (= 0.8.10-2ubuntu1)
+Filename: pool/main/p/packagekit/libpackagekit-glib2-16_0.8.10-2ubuntu1_powerpc.deb
+Size: 126104
+MD5sum: dcf59164ca5a0f0da85b2bd079fbebc6
+SHA1: 5b12db5c32c83d4594077985a5359c4987d6fea5
+SHA256: 8956affeafd30608c70ae369107bab532752bd64f2434e2d45883e7db70d20cc
+Description: Library for accessing PackageKit using GLib
+Multi-Arch: same
+Homepage: http://www.packagekit.org
+Description-md5: 2f6bf343292f3cd8ceccbf83d3b1645c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpackagekit-glib2-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 1102
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klumpp <matthias@tenstral.net>
+Architecture: powerpc
+Source: packagekit
+Version: 0.8.10-2ubuntu1
+Depends: libdbus-1-dev, libglib2.0-dev (>= 2.24), libpackagekit-glib2-16 (= 0.8.10-2ubuntu1), libsqlite3-dev
+Filename: pool/main/p/packagekit/libpackagekit-glib2-dev_0.8.10-2ubuntu1_powerpc.deb
+Size: 79346
+MD5sum: 9778ad7d249da2e06c5c10c5e2204217
+SHA1: 2fc3da060747d751aa1f6fa9d97a5df8209b15a5
+SHA256: 2c799bb38955745ffc33b1cf5359ffa54ffdd0432b7d2126068efc9d306bb6d0
+Description: Library for accessing PackageKit using GLib (development files)
+Homepage: http://www.packagekit.org
+Description-md5: 4bb71e9f893e95e7a41aa3b2056457f7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -678,47 +729,6 @@ SHA256: 516817c2e860c725c827958f0ab87a77a18c5fd1035e655a2fc4216aedc74988
 Description: Web content engine library for Qt - debugging symbols
 Homepage: http://trac.webkit.org/wiki/QtWebKit
 Description-md5: 2b35e7ad9905f44038a180fc098adcca
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libubuntu-platform-api1-dev
-Priority: optional
-Section: oldlibs
-Installed-Size: 31
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: platform-api
-Version: 0.18.3+13.10.20130827.1-0ubuntu1
-Depends: libplatform-api1-dev (= 0.18.3+13.10.20130827.1-0ubuntu1)
-Filename: pool/main/p/platform-api/libubuntu-platform-api1-dev_0.18.3+13.10.20130827.1-0ubuntu1_all.deb
-Size: 1480
-MD5sum: 3ab3c71d3320a2d0260b220b0a1f8ec7
-SHA1: 7ced431d5b9db3467d170dad39032709b626f826
-SHA256: db31e6ada7b68a0b143f6e7f96c8f9db8420af435a3206a377575e7fcb58d91d
-Description: dummy transitional package for libplatform-api1-dev
-Homepage: https://launchpad.net/platform-api
-Description-md5: de56e227a9689823f5b844fcd76d0d40
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: mir-doc
-Priority: optional
-Section: doc
-Installed-Size: 69797
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: all
-Source: mir
-Version: 0.0.10+13.10.20130827.1-0ubuntu1
-Depends: libmirclient-dev, libmirserver-dev
-Filename: pool/main/m/mir/mir-doc_0.0.10+13.10.20130827.1-0ubuntu1_all.deb
-Size: 39534536
-MD5sum: 57f4a3b607a1aeaf4cbd18c8311a8271
-SHA1: 17cd63d6c3800d8927bb8a3999a2dc07c21f86af
-SHA256: adee07e42ec417deeba83bfe45bffd8cf7d4c8cb9f749b4311f184e69b189467
-Description: API documentation for mir
-Homepage: https://launchpad.net/mir
-Description-md5: 628500f58a32ea2c0fc1cb782e6f260f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -894,6 +904,26 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: packagekit-docs
+Priority: optional
+Section: doc
+Installed-Size: 2525
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klumpp <matthias@tenstral.net>
+Architecture: all
+Source: packagekit
+Version: 0.8.10-2ubuntu1
+Filename: pool/main/p/packagekit/packagekit-docs_0.8.10-2ubuntu1_all.deb
+Size: 395612
+MD5sum: d3ed375ecd8494afc3224740ff51312c
+SHA1: 3a6b967c225d4b95979249d6d814832b3d2be20b
+SHA256: 4fd877acb5b69c6b8399dcdb162766c54289a509fb9bca1d792a3c58e47e8522
+Description: Documentation for PackageKit
+Homepage: http://www.packagekit.org
+Description-md5: f43626bcae09213d8ed071770d06d57a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-bzrlib
 Priority: optional
 Section: python
@@ -966,6 +996,28 @@ SHA256: 0ce76f5c67599e34da96068f38539f8234d830577f828be1806d62f404471a89
 Description: distributed version control system - testsuite
 Homepage: http://bazaar-vcs.org
 Description-md5: 6a061202c9118fa07cacafd938b725f0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-packagekit
+Priority: optional
+Section: python
+Installed-Size: 124
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klumpp <matthias@tenstral.net>
+Architecture: all
+Source: packagekit
+Version: 0.8.10-2ubuntu1
+Depends: python3-dbus, python3 (>= 3.2.3-3~)
+Recommends: packagekit
+Filename: pool/main/p/packagekit/python3-packagekit_0.8.10-2ubuntu1_all.deb
+Size: 20066
+MD5sum: fb1d034529c4a8148c443bae83d710ea
+SHA1: aa179084c3a3a0665803abd4ff9aa608bb02c3a3
+SHA256: eeb033a10a8560c21b20dae5c4f952ecf8c01d6f4f430a8a4f9d9526b3c88080
+Description: PackageKit backend Python bindings
+Homepage: http://www.packagekit.org
+Description-md5: 644eb2b6272644fef74823bbe4973423
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 

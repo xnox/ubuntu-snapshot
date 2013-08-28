@@ -1,23 +1,3 @@
-Package: android-platform-headers
-Priority: extra
-Section: libdevel
-Installed-Size: 274
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu19
-Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/android-platform-headers_0.1.0+git20130606+c5d897a-0ubuntu19_all.deb
-Size: 52752
-MD5sum: d38947975f971e982dd14036a54f3efe
-SHA1: 3ce58f701a1dab58088b64f14cc549acdcb85d61
-SHA256: 882358be432f4a56698c2626d7a6f384aa7142d8b8670e8fd0460afd21b0fa77
-Description: Android Platform Headers from AOSP releases
-Description-md5: 5d4e18662ffad46fc86efe8d568c6096
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: bzr
 Priority: optional
 Section: devel
@@ -156,6 +136,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: debianutils
+Essential: yes
+Priority: required
+Section: utils
+Installed-Size: 269
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Clint Adams <clint@debian.org>
+Architecture: armhf
+Version: 4.4
+Replaces: manpages-pl (<< 1:0.5)
+Depends: sensible-utils
+Pre-Depends: libc6 (>= 2.15)
+Filename: pool/main/d/debianutils/debianutils_4.4_armhf.deb
+Size: 86958
+MD5sum: 593e03d82f7445375a2f49d4fdc67281
+SHA1: e4f7979256b8e3fa1ceafcb3fdbe3eeeac1d23e5
+SHA256: 800b3b3b3eb3b934acbd805c8953b7a3eaf601b5a545be9eb5d8425c00e55781
+Description: Miscellaneous utilities specific to Debian
+Multi-Arch: foreign
+Description-md5: ccafef5bb90a2453aecca96cbb772d23
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -177,44 +181,27 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
-Package: libandroid-properties-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 61
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu19
-Depends: libandroid-properties1 (= 0.1.0+git20130606+c5d897a-0ubuntu19)
-Filename: pool/main/libh/libhybris/libandroid-properties-dev_0.1.0+git20130606+c5d897a-0ubuntu19_armhf.deb
-Size: 5178
-MD5sum: 22014e9e1ea7204085300b301f3246d2
-SHA1: 9880160f9df5fefd9302208370ebbafaefdfd2dd
-SHA256: be6e2ae0bdd2a82a5e92ac310ff1c9652f765c188e1a9adf13c7a1799775d117
-Description: Development headers files for libandroid-properties
-Description-md5: fd78846cc0eb621999aaf215babfb840
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libandroid-properties1
-Priority: extra
+Package: gir1.2-packagekitglib-1.0
+Priority: optional
 Section: libs
-Installed-Size: 57
+Installed-Size: 171
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klumpp <matthias@tenstral.net>
 Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu19
-Depends: libc6 (>= 2.4)
-Filename: pool/main/libh/libhybris/libandroid-properties1_0.1.0+git20130606+c5d897a-0ubuntu19_armhf.deb
-Size: 9600
-MD5sum: 55e33b46868b749009565f96b1a5e182
-SHA1: a26c7dcb2407f92ae050ce26f1dbc8690b774384
-SHA256: ef74777a85718fdf3caac863b36ea48bfd175f26f4507789ce9f57178241feb4
-Description: Library to provide access to get, set and list Android properties
-Description-md5: 9af1ee376636863e49ba13ab6b202faa
+Source: packagekit
+Version: 0.8.10-2ubuntu1
+Depends: gir1.2-glib-2.0 (>= 0.10.1), libpackagekit-glib2-16 (>= 0.8.10)
+Filename: pool/main/p/packagekit/gir1.2-packagekitglib-1.0_0.8.10-2ubuntu1_armhf.deb
+Size: 35552
+MD5sum: 29ef7265b2bcaa0bb2d0d9465894c11f
+SHA1: 5283a811adabdb0aedd018d33ed58f216bf8bc4a
+SHA256: a7bbae05f1ad5ff63297fe0af86680183774d1c04fbe7740307f739eaad60826
+Description: GObject introspection data for the PackageKit GLib library
+Homepage: http://www.packagekit.org
+Description-md5: 58dad6540a9f05da7569c62ae80d0533
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
@@ -510,292 +497,6 @@ Description-md5: 59e71e7e764b950dc1184788af416a7e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libhardware-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 47
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu19
-Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Depends: libhardware2 (= 0.1.0+git20130606+c5d897a-0ubuntu19), android-platform-headers (= 0.1.0+git20130606+c5d897a-0ubuntu19)
-Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/libhardware-dev_0.1.0+git20130606+c5d897a-0ubuntu19_armhf.deb
-Size: 4706
-MD5sum: 51ec5add27b77fddeb09c5e79d5c20a1
-SHA1: 57382730779fe3afd66a99e5029c9b0094de837d
-SHA256: 0308278c2abc8780457f500d27a7334a8154701b069b256dee3e0bc466e1e70f
-Description: Development files for libhardware
-Description-md5: da5d7fa47a1b4b845a603aff96d464fe
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libhardware2
-Priority: extra
-Section: libs
-Installed-Size: 53
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu19
-Replaces: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Depends: libc6 (>= 2.4), libhybris-common1
-Breaks: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/libhardware2_0.1.0+git20130606+c5d897a-0ubuntu19_armhf.deb
-Size: 6790
-MD5sum: aab5ec85e25f2677b00d85acce19f90c
-SHA1: 96a63fc87476a6d31b7eb903595dcb72002130b8
-SHA256: fe64015603e056f31f02b9f847c151679c5be6c26e7089fa31304a4c6f1dde6d
-Description: Library to provice access to the Android libhardware HAL
-Description-md5: 653b750176d920864f05b2e85824800a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libhybris
-Priority: extra
-Section: libs
-Installed-Size: 174
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Version: 0.1.0+git20130606+c5d897a-0ubuntu19
-Depends: libandroid-properties1 (= 0.1.0+git20130606+c5d897a-0ubuntu19), libhardware2, libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libhybris-common1, libstdc++6 (>= 4.1.1)
-Filename: pool/main/libh/libhybris/libhybris_0.1.0+git20130606+c5d897a-0ubuntu19_armhf.deb
-Size: 36630
-MD5sum: 2e51b618d8e480dbcdb4e32a9c876ea6
-SHA1: 8cd833e1f4dd0d4d9addf8d36eb3952974299ecd
-SHA256: ea7858dc69b8a3a5c0b48e3ca52d6f3059c7c7d859871c3076d61d4689359575
-Description: Allows to run bionic-based HW adaptations in glibc systems - libs
-Description-md5: d20384e11368d9f090577e52e675ed57
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libhybris-common-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 47
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu19
-Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Depends: libhybris-common1 (= 0.1.0+git20130606+c5d897a-0ubuntu19)
-Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/libhybris-common-dev_0.1.0+git20130606+c5d897a-0ubuntu19_armhf.deb
-Size: 4680
-MD5sum: d0e83cdad948ac2b9fcf0fb4885f6641
-SHA1: e92c4f928dfbafd37de97727b91750e4ca3dfc60
-SHA256: 7c32416c17eee8715600ecde65656e39410dac69e9297a455c3e73acbaea0f05
-Description: Development files for libhybris-common
-Description-md5: 27556b4ff08d6ee084db91ea770617de
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libhybris-common1
-Priority: extra
-Section: libs
-Installed-Size: 120
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu19
-Replaces: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Depends: libandroid-properties1, libc6 (>= 2.12), libgcc1 (>= 1:4.4.0)
-Breaks: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/libhybris-common1_0.1.0+git20130606+c5d897a-0ubuntu19_armhf.deb
-Size: 41360
-MD5sum: 88cf5960f9bbcb9d985bda50d34bd0ad
-SHA1: 222620cede0c86441befebc1e41f826eee909a1d
-SHA256: 7deaf36f956120095b1013bb124b0df2abe941f6c7e8866387063e4e7cfd62a3
-Description: Common library that contains the Android linker and custom hooks
-Description-md5: 618c5643ccb4d8d4d8db9e33d16f42e3
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libhybris-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 155
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu19
-Depends: libhybris (= 0.1.0+git20130606+c5d897a-0ubuntu19), android-platform-headers (= 0.1.0+git20130606+c5d897a-0ubuntu19), libandroid-properties-dev (= 0.1.0+git20130606+c5d897a-0ubuntu19), libhardware-dev (= 0.1.0+git20130606+c5d897a-0ubuntu19), libhybris-common-dev (= 0.1.0+git20130606+c5d897a-0ubuntu19), libgles2-mesa-dev
-Filename: pool/main/libh/libhybris/libhybris-dev_0.1.0+git20130606+c5d897a-0ubuntu19_armhf.deb
-Size: 20018
-MD5sum: 927d88617168ee7fceb75369d4232c46
-SHA1: b9c56b964318e9743fa1641582b9d4944d3b553c
-SHA256: 5cde30281d8f78a5c544d9c157d678304d19ede4114e1722b7b645bb2fa374aa
-Description: Development headers and libraries for libhybris
-Description-md5: fcfe2cd71f2cfbabcbb6f94dda4cbe46
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libmirclient-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 87
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: armhf
-Source: mir
-Version: 0.0.10+13.10.20130827.1-0ubuntu1
-Depends: libmirclient2 (= 0.0.10+13.10.20130827.1-0ubuntu1), libmirprotobuf-dev (= 0.0.10+13.10.20130827.1-0ubuntu1), mircommon-dev (= 0.0.10+13.10.20130827.1-0ubuntu1)
-Filename: pool/main/m/mir/libmirclient-dev_0.0.10+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 7434
-MD5sum: d97cead3d09c03d488b960bae60a822f
-SHA1: 80cdd2243b1710e6af4e9e16e3ac0d7b6717923e
-SHA256: c597684737c9d46748f2ce8b53d68556a4ea24465798b11a655c9fbe7018ca38
-Description: Display server for Ubuntu - development headers
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: bad81f957875312d57ff2d16afca10de
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
-
-Package: libmirclient2
-Priority: optional
-Section: libs
-Installed-Size: 408
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: armhf
-Source: mir
-Version: 0.0.10+13.10.20130827.1-0ubuntu1
-Depends: libboost-system1.53.0, libc6 (>= 2.9), libgcc1 (>= 1:4.4.0), libhardware2, libmirprotobuf0 (>= 0.0.10+13.10.20130827.1), libprotobuf7, libstdc++6 (>= 4.8), libxkbcommon0 (>= 0.2.0)
-Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirclient2_0.0.10+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 143464
-MD5sum: af3e4cc8f15ba11fec43376b77a7cf83
-SHA1: e250e2da14c46d380dc61eb3810fcc198e21c9f3
-SHA256: 5a16c9dcef25380be2ca645885c0a37f7024d39054595f0069150a9b1020bb26
-Description: Display server for Ubuntu - client library
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: 833ddf930ef3c3df05aca4213ced851d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
-
-Package: libmirplatform
-Priority: optional
-Section: libs
-Installed-Size: 268
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: armhf
-Source: mir
-Version: 0.0.10+13.10.20130827.1-0ubuntu1
-Replaces: libmirserver0
-Depends: libc6 (>= 2.4), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.4.0), libhardware2, libstdc++6 (>= 4.8)
-Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirplatform_0.0.10+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 79540
-MD5sum: c95737a34ff4487e89fb1bf5b7f75206
-SHA1: 56b69fa31f853120ecfc21f9f17c646e49c45745
-SHA256: ae27f0a5bf05947e885d37b677ad541ce6241d28a4c8f087c751ce675d5c710b
-Description: Display server for Ubuntu - platform library
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: 5ca581b6c17780dd3707f6b3fff2597b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libmirprotobuf-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 66
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: armhf
-Source: mir
-Version: 0.0.10+13.10.20130827.1-0ubuntu1
-Depends: libmirprotobuf0 (= 0.0.10+13.10.20130827.1-0ubuntu1), libprotobuf-dev
-Filename: pool/main/m/mir/libmirprotobuf-dev_0.0.10+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 4602
-MD5sum: cc663daacecabdc699ee4b4c3cb4426e
-SHA1: 2770ce6a33daa8d9add783a263a3f441fb486fd1
-SHA256: 7049c498067596dbd43976a82f5c62282c8de79fbb40f84eefe207c4e892babb
-Description: Display server for Ubuntu - protocol definition
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: dafcf3520428a348b335759e46da047f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
-
-Package: libmirprotobuf0
-Priority: optional
-Section: libs
-Installed-Size: 202
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: armhf
-Source: mir
-Version: 0.0.10+13.10.20130827.1-0ubuntu1
-Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libprotobuf7, libstdc++6 (>= 4.4.0)
-Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirprotobuf0_0.0.10+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 62026
-MD5sum: 761934b5a27334d651cc5842892073e2
-SHA1: e2a49c64c93f66729a5a70f4b21f497bbc2f7040
-SHA256: 547415f03b7ffa0ba06e632349446141b9e898e443e2d2d6bca25544258ec1d5
-Description: Display server for Ubuntu - protocol implementation
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: c619d91f67bba57f73bf198297f21d7d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
-
-Package: libmirserver-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 369
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: armhf
-Source: mir
-Version: 0.0.10+13.10.20130827.1-0ubuntu1
-Depends: libmirserver1 (= 0.0.10+13.10.20130827.1-0ubuntu1), libmirprotobuf-dev (= 0.0.10+13.10.20130827.1-0ubuntu1), mircommon-dev (= 0.0.10+13.10.20130827.1-0ubuntu1), libglm-dev, libboost-program-options-dev
-Filename: pool/main/m/mir/libmirserver-dev_0.0.10+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 40840
-MD5sum: 57f64dda351e184b17369da8a41d1bf7
-SHA1: 29130cb62cfb5c3012ccd8e657ad20ab8a09a4f1
-SHA256: 37a1514bd5e0c4b2e11980a91126d079e7261811a9717898474b7af33b227f93
-Description: Display server for Ubuntu - development headers
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: 98260f2d94306b61ba8e99360b379f43
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libmirserver1
-Priority: optional
-Section: libs
-Installed-Size: 1255
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: armhf
-Source: mir
-Version: 0.0.10+13.10.20130827.1-0ubuntu1
-Depends: libboost-program-options1.53.0, libboost-system1.53.0, libc6 (>= 2.9), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.4.0), libgflags2, libgles2-mesa (>= 7.8.1) | libgles2, libgoogle-glog0, libmirclient2 (>= 0.0.10+13.10.20130827.1), libmirprotobuf0 (>= 0.0.10+13.10.20130827.1), libprotobuf7, libstdc++6 (>= 4.8.1), libxkbcommon0 (>= 0.2.0), libmirplatform (= 0.0.10+13.10.20130827.1-0ubuntu1)
-Pre-Depends: multiarch-support
-Filename: pool/main/m/mir/libmirserver1_0.0.10+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 470114
-MD5sum: 5375d6dca688e6a79223bfd5f92269e5
-SHA1: 1053ea3ca286dca84cd05044a4cedffe8e1c1595
-SHA256: ded9ce729e15e019463c9b249fe550581451ae59fdb5fbe364c01955d5e9603a
-Description: Display server for Ubuntu - server library
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: ec9e31363965aaba264f7029d7781e84
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: libmysqlclient-dev
 Priority: optional
 Section: libdevel
@@ -865,266 +566,50 @@ Description-md5: 2f06b7e1bfdb9f620d92f9696d24fabc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libplatform-api-headers
-Priority: optional
-Section: libdevel
-Installed-Size: 181
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: platform-api
-Version: 0.18.3+13.10.20130827.1-0ubuntu1
-Filename: pool/main/p/platform-api/libplatform-api-headers_0.18.3+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 18362
-MD5sum: d1449bb1bc3c7f879e88e65fd5dc6fc7
-SHA1: 2611d1455f9341a6cd8e2eb9c3090e61f7cc49ae
-SHA256: daf9f6a3a12018be175106f70e1bc6b7dc1492249209e879a3a0689f8f4e0320
-Description: Platform API for system level capabilities (API headers)
-Multi-Arch: same
-Homepage: https://launchpad.net/platform-api
-Description-md5: 25a939647ddf8f9955955164e5bf326d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libplatform-api1-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 43
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: platform-api
-Version: 0.18.3+13.10.20130827.1-0ubuntu1
-Depends: libgles2-mesa-dev, libplatform-api-headers (= 0.18.3+13.10.20130827.1-0ubuntu1), libubuntu-application-api1 | libplatform-api1, libubuntu-application-api-mirserver1 (= 0.18.3+13.10.20130827.1-0ubuntu1), libubuntu-application-api-mirclient1 (= 0.18.3+13.10.20130827.1-0ubuntu1)
-Suggests: libplatform-api1-doc
-Filename: pool/main/p/platform-api/libplatform-api1-dev_0.18.3+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 1918
-MD5sum: 2e16514e68060bab6233ca185ca50e7e
-SHA1: 51009975f2be3d8bfb5945b0a04cff33dc1e2b1f
-SHA256: 4e4bba1b6fb4d9f7e5a9fdb730c5c7a191022d3faf6758a4077095d54c811d39
-Description: Platform API for system level capabilities (development)
-Multi-Arch: same
-Homepage: https://launchpad.net/platform-api
-Description-md5: 3202ff5a28cf213561124d4022a95e03
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libplatform-api1-doc
-Priority: optional
-Section: doc
-Installed-Size: 4755
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: platform-api
-Version: 0.18.3+13.10.20130827.1-0ubuntu1
-Depends: libplatform-api1-dev
-Filename: pool/main/p/platform-api/libplatform-api1-doc_0.18.3+13.10.20130827.1-0ubuntu1_all.deb
-Size: 2021274
-MD5sum: 46f3bc0ddd865650d375c963536cba60
-SHA1: a3adcc4e183bee390f701dc6c15e92d0a53bf823
-SHA256: dfbf3889620936d04bf693523140267bf7bd509c4591b8331c3c55e08ecd9a67
-Description: Platform API for system level capabilities (development)
-Homepage: https://launchpad.net/platform-api
-Description-md5: 91dba5b6aae30b22730a6ddbabdb540f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libplatform-hardware-api-headers
-Priority: optional
-Section: libdevel
-Installed-Size: 56
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: platform-api
-Version: 0.18.3+13.10.20130827.1-0ubuntu1
-Depends: libplatform-api-headers
-Filename: pool/main/p/platform-api/libplatform-hardware-api-headers_0.18.3+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 5272
-MD5sum: 4394b73562dcb49644b6e1416cae1c30
-SHA1: 96760f1166dc1d52bc62082039e0173f94ecc054
-SHA256: 8f80e6a3b0ed8fea07c12ed159408bc8cf3e07625710d976153d615fee69e938
-Description: Platform API for system level capabilities (API headers)
-Multi-Arch: same
-Homepage: https://launchpad.net/platform-api
-Description-md5: 23b96ac55caf7d67de1fc92dd6797a36
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libplatform-hardware-api1-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 39
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: platform-api
-Version: 0.18.3+13.10.20130827.1-0ubuntu1
-Depends: libgles2-mesa-dev, libplatform-hardware-api-headers (= 0.18.3+13.10.20130827.1-0ubuntu1), libubuntu-platform-hardware-api1 | libplatform-hardware-api1
-Suggests: libplatform-api1-doc
-Filename: pool/main/p/platform-api/libplatform-hardware-api1-dev_0.18.3+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 1644
-MD5sum: fcbb296e6c012814a64711a2e0bcfb6d
-SHA1: e076bb118e219f5db56d005bb58d1a9b4fc1623b
-SHA256: b8142bf0c6c347976302e5ab274524700567165ac4f278210166ca0194430d3f
-Description: Platform API for system level capabilities (development)
-Multi-Arch: same
-Homepage: https://launchpad.net/platform-api
-Description-md5: 0aa12ab7a84a04b9fc839f7c620dfee2
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libubuntu-application-api-mirclient1
+Package: libpackagekit-glib2-16
 Priority: optional
 Section: libs
-Installed-Size: 71
+Installed-Size: 302
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klumpp <matthias@tenstral.net>
 Architecture: armhf
-Source: platform-api
-Version: 0.18.3+13.10.20130827.1-0ubuntu1
-Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libhybris-common1, libmirclient2 (>= 0.0.10+13.10.20130827.1), libstdc++6 (>= 4.5)
+Source: packagekit
+Version: 0.8.10-2ubuntu1
+Depends: libarchive13, libc6 (>= 2.7), libglib2.0-0 (>= 2.37.3), libsqlite3-0 (>= 3.5.9)
 Pre-Depends: multiarch-support
-Filename: pool/main/p/platform-api/libubuntu-application-api-mirclient1_0.18.3+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 15044
-MD5sum: 0f1638712f9a0d284d27eb5f5b753da2
-SHA1: 0a09f6a1b1b04646b0d57e43939554060977d775
-SHA256: db89a88d7b7ff5471f849a9539153313463c60cf3def3b633eb1b0801218d509
-Description: Implementation of the Platform API for a Mir client
+Recommends: python3-aptdaemon.pkcompat | packagekit-system-interface | packagekit (= 0.8.10-2ubuntu1)
+Filename: pool/main/p/packagekit/libpackagekit-glib2-16_0.8.10-2ubuntu1_armhf.deb
+Size: 113100
+MD5sum: b13e20109b4bb8ac9c685e91e6194c99
+SHA1: 699bd93ebda93da58e762c7dc6d5ff11a2f82d60
+SHA256: 75d32a96853b64cd9816bc5698af76e8209e5bd1e0594f2568985c3a1c763bfe
+Description: Library for accessing PackageKit using GLib
 Multi-Arch: same
-Homepage: https://launchpad.net/platform-api
-Description-md5: 41ce2fde8cfd2f72dcc39fdc151f0c18
+Homepage: http://www.packagekit.org
+Description-md5: 2f6bf343292f3cd8ceccbf83d3b1645c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libubuntu-application-api-mirserver1
-Priority: optional
-Section: libs
-Installed-Size: 79
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: platform-api
-Version: 0.18.3+13.10.20130827.1-0ubuntu1
-Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libhybris-common1, libmirserver1 (= 0.0.10+13.10.20130827.1-0ubuntu1), libstdc++6 (>= 4.5)
-Pre-Depends: multiarch-support
-Filename: pool/main/p/platform-api/libubuntu-application-api-mirserver1_0.18.3+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 18122
-MD5sum: 4ea9ad1b806b166d1212d47a8522f1b0
-SHA1: 22018f538f7e9130ff8c5be9bcf2f4c2158e7bf0
-SHA256: 4d21ceff5fc3f35504f4f6a171837be4323f13f710a5555b70801c144c0657a3
-Description: Implementation of the Platform API for a Mir server
-Multi-Arch: same
-Homepage: https://launchpad.net/platform-api
-Description-md5: 81fd6f1651d2a9e246d7a752cb2278e0
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libubuntu-application-api1
-Priority: optional
-Section: libs
-Installed-Size: 176
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: platform-api
-Version: 0.18.3+13.10.20130827.1-0ubuntu1
-Replaces: libplatform-api1-hybris (<< 0.18.3)
-Depends: libboost-system1.53.0, libc6 (>= 2.9), libdbus-1-3 (>= 1.5.12), libgcc1 (>= 1:4.4.0), libhybris-common1, libstdc++6 (>= 4.6), libubuntu-location-service0, liburl-dispatcher1 (>= 0.1)
-Pre-Depends: multiarch-support
-Breaks: libplatform-api1-hybris (<< 0.18.3)
-Filename: pool/main/p/platform-api/libubuntu-application-api1_0.18.3+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 54322
-MD5sum: 733d2b810dfcf3385b6f151eeabfc31a
-SHA1: 9c64746faec55681d55664458095ce3f8351eb8c
-SHA256: 777ade3ee44e9b5c4ef88feb0ba926f41b39cf14a1a1d4a4db25b5ce84a0ea57
-Description: Hybris implementation of the Platform API (runtime)
-Multi-Arch: same
-Homepage: https://launchpad.net/platform-api
-Description-md5: a4eee79a5b79818edbf7e0bf487d4c22
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: libubuntu-platform-api1-dev
-Priority: optional
-Section: oldlibs
-Installed-Size: 31
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: platform-api
-Version: 0.18.3+13.10.20130827.1-0ubuntu1
-Depends: libplatform-api1-dev (= 0.18.3+13.10.20130827.1-0ubuntu1)
-Filename: pool/main/p/platform-api/libubuntu-platform-api1-dev_0.18.3+13.10.20130827.1-0ubuntu1_all.deb
-Size: 1480
-MD5sum: 3ab3c71d3320a2d0260b220b0a1f8ec7
-SHA1: 7ced431d5b9db3467d170dad39032709b626f826
-SHA256: db31e6ada7b68a0b143f6e7f96c8f9db8420af435a3206a377575e7fcb58d91d
-Description: dummy transitional package for libplatform-api1-dev
-Homepage: https://launchpad.net/platform-api
-Description-md5: de56e227a9689823f5b844fcd76d0d40
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libubuntu-platform-hardware-api1
-Priority: optional
-Section: libs
-Installed-Size: 50
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: platform-api
-Version: 0.18.3+13.10.20130827.1-0ubuntu1
-Replaces: libplatform-hardware-api1-hybris (<< 0.18.3)
-Depends: libhybris-common1, libstdc++6 (>= 4.4.0)
-Pre-Depends: multiarch-support
-Breaks: libplatform-hardware-api1-hybris (<< 0.18.3)
-Filename: pool/main/p/platform-api/libubuntu-platform-hardware-api1_0.18.3+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 6240
-MD5sum: cdc6d083c146643f7bda60e077d9f1f2
-SHA1: e85b801a6ceb5c4f791ee1da7eae25f1a19ec345
-SHA256: 0e3ba9de2bb1f1e22f41a0470630e1e462b89e00be9787248192efa65ce14c48
-Description: Hybris implementation of the hw-access parts of the Platform API (runtime)
-Multi-Arch: same
-Homepage: https://launchpad.net/platform-api
-Description-md5: d9c7c5dff3893ffc9571a67f240b3e83
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: mir-doc
-Priority: optional
-Section: doc
-Installed-Size: 69797
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Architecture: all
-Source: mir
-Version: 0.0.10+13.10.20130827.1-0ubuntu1
-Depends: libmirclient-dev, libmirserver-dev
-Filename: pool/main/m/mir/mir-doc_0.0.10+13.10.20130827.1-0ubuntu1_all.deb
-Size: 39534536
-MD5sum: 57f4a3b607a1aeaf4cbd18c8311a8271
-SHA1: 17cd63d6c3800d8927bb8a3999a2dc07c21f86af
-SHA256: adee07e42ec417deeba83bfe45bffd8cf7d4c8cb9f749b4311f184e69b189467
-Description: API documentation for mir
-Homepage: https://launchpad.net/mir
-Description-md5: 628500f58a32ea2c0fc1cb782e6f260f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: mircommon-dev
-Priority: optional
+Package: libpackagekit-glib2-dev
+Priority: extra
 Section: libdevel
-Installed-Size: 168
+Installed-Size: 1102
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Original-Maintainer: Matthias Klumpp <matthias@tenstral.net>
 Architecture: armhf
-Source: mir
-Version: 0.0.10+13.10.20130827.1-0ubuntu1
-Filename: pool/main/m/mir/mircommon-dev_0.0.10+13.10.20130827.1-0ubuntu1_armhf.deb
-Size: 17306
-MD5sum: 9ab8fe44c137f72a78b083de4a189043
-SHA1: 341e8e6e2260a7fa51ae4a0a78d5228e7c65cccf
-SHA256: 5a042fa8d99a417fadb81c1d719b046294a5e9f95a110f83c9410bab1293c87e
-Description: Display server for Ubuntu - development headers
-Multi-Arch: same
-Homepage: https://launchpad.net/mir
-Description-md5: afceda22de73c8f8ef2fe0642ae4e906
+Source: packagekit
+Version: 0.8.10-2ubuntu1
+Depends: libdbus-1-dev, libglib2.0-dev (>= 2.24), libpackagekit-glib2-16 (= 0.8.10-2ubuntu1), libsqlite3-dev
+Filename: pool/main/p/packagekit/libpackagekit-glib2-dev_0.8.10-2ubuntu1_armhf.deb
+Size: 79550
+MD5sum: f2d5acec91522f17ee426ecd6284a32a
+SHA1: ad7799ce90c9cb79abf6b05fabf8daf6ada5a144
+SHA256: 7022dc05a1499f59e92cafd83d203c183e8f645bbf6ca91b043030052d6d5968
+Description: Library for accessing PackageKit using GLib (development files)
+Homepage: http://www.packagekit.org
+Description-md5: 4bb71e9f893e95e7a41aa3b2056457f7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: kubuntu-full, kubuntu-active-full
 
 Package: mysql-client
 Priority: optional
@@ -1298,6 +783,26 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: packagekit-docs
+Priority: optional
+Section: doc
+Installed-Size: 2525
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klumpp <matthias@tenstral.net>
+Architecture: all
+Source: packagekit
+Version: 0.8.10-2ubuntu1
+Filename: pool/main/p/packagekit/packagekit-docs_0.8.10-2ubuntu1_all.deb
+Size: 395612
+MD5sum: d3ed375ecd8494afc3224740ff51312c
+SHA1: 3a6b967c225d4b95979249d6d814832b3d2be20b
+SHA256: 4fd877acb5b69c6b8399dcdb162766c54289a509fb9bca1d792a3c58e47e8522
+Description: Documentation for PackageKit
+Homepage: http://www.packagekit.org
+Description-md5: f43626bcae09213d8ed071770d06d57a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-bzrlib
 Priority: optional
 Section: python
@@ -1370,6 +875,28 @@ SHA256: 0ce76f5c67599e34da96068f38539f8234d830577f828be1806d62f404471a89
 Description: distributed version control system - testsuite
 Homepage: http://bazaar-vcs.org
 Description-md5: 6a061202c9118fa07cacafd938b725f0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-packagekit
+Priority: optional
+Section: python
+Installed-Size: 124
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klumpp <matthias@tenstral.net>
+Architecture: all
+Source: packagekit
+Version: 0.8.10-2ubuntu1
+Depends: python3-dbus, python3 (>= 3.2.3-3~)
+Recommends: packagekit
+Filename: pool/main/p/packagekit/python3-packagekit_0.8.10-2ubuntu1_all.deb
+Size: 20066
+MD5sum: fb1d034529c4a8148c443bae83d710ea
+SHA1: aa179084c3a3a0665803abd4ff9aa608bb02c3a3
+SHA256: eeb033a10a8560c21b20dae5c4f952ecf8c01d6f4f430a8a4f9d9526b3c88080
+Description: PackageKit backend Python bindings
+Homepage: http://www.packagekit.org
+Description-md5: 644eb2b6272644fef74823bbe4973423
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 

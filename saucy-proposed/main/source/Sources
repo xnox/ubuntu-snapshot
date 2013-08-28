@@ -1,3 +1,44 @@
+Package: aptdaemon
+Binary: aptdaemon, python3-aptdaemon, python-aptdaemon, python3-aptdaemon.test, aptdaemon-data, python-aptdaemon-gtk, python3-aptdaemon.pkcompat, python-aptdaemon.gtkwidgets, python3-aptdaemon.gtk3widgets, python-aptdaemon.gtk3widgets
+Version: 1.1.1-0ubuntu1
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Julian Andres Klode <jak@debian.org>
+Build-Depends: debhelper (>= 7.3), debconf-i18n, dbus, lintian, dh-translations, python-all, python-setuptools, python-distutils-extra, python-nose, python3-all, python3-setuptools, python3-distutils-extra, python3-nose, gir1.2-glib-2.0, gir1.2-gtk-3.0, gir1.2-packagekitglib-1.0 (>= 0.8.9), gir1.2-vte-2.90, python3-apt (>= 0.8.5~ubuntu1), python3-defer (>= 1.0.6), python3-dbus, python3-gi, python3-mock, python3-pkg-resources, python-apt (>= 0.8.5~ubuntu1), python-defer (>= 1.0.6), python-dbus, python-gi, python-mock, python-pkg-resources, iso-codes, pep8, xvfb
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/a/aptdaemon
+Files:
+ bdb1cbc0d5402f56b0be5a1e8a9315cc 2921 aptdaemon_1.1.1-0ubuntu1.dsc
+ ce46f6215b31fc0b3de2fabba3dda8e0 1366199 aptdaemon_1.1.1.orig.tar.gz
+ 39e809e5cdb3b79837062cfe68a8500f 22616 aptdaemon_1.1.1-0ubuntu1.debian.tar.gz
+Homepage: https://launchpad.net/aptdaemon
+Vcs-Browser: https://code.launchpad.net/~aptdaemon-developers/aptdaemon/ubuntu-saucy
+Vcs-Bzr: lp:~aptdaemon-developers/aptdaemon/ubuntu-saucy
+Package-List: 
+ aptdaemon deb admin extra
+ aptdaemon-data deb admin extra
+ python-aptdaemon deb python extra
+ python-aptdaemon-gtk deb python extra
+ python-aptdaemon.gtk3widgets deb python extra
+ python-aptdaemon.gtkwidgets deb python extra
+ python3-aptdaemon deb python extra
+ python3-aptdaemon.gtk3widgets deb python extra
+ python3-aptdaemon.pkcompat deb python extra
+ python3-aptdaemon.test deb python extra
+Checksums-Sha1:
+ 77c0696fa5e13414b091b8188bce284f2b61c4b3 2921 aptdaemon_1.1.1-0ubuntu1.dsc
+ 3462883ed1ae944812e99cdb186f5eef0c84c4a3 1366199 aptdaemon_1.1.1.orig.tar.gz
+ b3e0ff50c9cfb189574e0e7114b0a160fd38e6b4 22616 aptdaemon_1.1.1-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 13ada8134f3f2377de3e4fa27a3d825271e72e406a032187c106305d69c1244f 2921 aptdaemon_1.1.1-0ubuntu1.dsc
+ 03dfb1a220e13f5c5ef7d0da135aca3236107d009e87fbae4b35a654e9958746 1366199 aptdaemon_1.1.1.orig.tar.gz
+ 77c4657df725aa5d940d74b7db2433d862e18fee1729dae3ed8f296afe5e97ee 22616 aptdaemon_1.1.1-0ubuntu1.debian.tar.gz
+Original-Vcs-Browser: http://bzr.debian.org/loggerhead/apt/aptdaemon/debian-sid
+Original-Vcs-Bzr: nosmart+http://bzr.debian.org/bzr/apt/aptdaemon/debian-sid
+Testsuite: autopkgtest
+
 Package: augeas
 Binary: augeas-tools, libaugeas-dev, libaugeas0, augeas-dbg, augeas-lenses, augeas-doc
 Version: 1.1.0-0ubuntu1
@@ -170,6 +211,31 @@ Checksums-Sha256:
  993d6123d955f9044a32c29a97d809551ac94466e2e0cd204933f89c65f61dd8 2680 dbus_1.6.12-0ubuntu4.dsc
  f67a7abfd6d045c1e9eba2bba4199d301836bc0c6e8a727c765913aba780ee92 1933805 dbus_1.6.12.orig.tar.gz
  217fe04775a1714b968a18856a0814a75aaaf5b0c4a24b53722b90107eff325b 60927 dbus_1.6.12-0ubuntu4.debian.tar.gz
+
+Package: debianutils
+Binary: debianutils
+Version: 4.4
+Priority: required
+Section: utils
+Maintainer: Clint Adams <clint@debian.org>
+Architecture: any
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/d/debianutils
+Files:
+ af1ed536d280ce576ca4f8a0e1d57091 1560 debianutils_4.4.dsc
+ c0cb076754d7f4eb1e3397d00916647f 272098 debianutils_4.4.tar.gz
+Uploaders: Manoj Srivastava <srivasta@debian.org>
+Vcs-Browser: http://git.debian.org/?p=users/clint/debianutils.git
+Vcs-Git: git://git.debian.org/users/clint/debianutils.git
+Package-List: 
+ debianutils deb utils required
+Checksums-Sha1:
+ 06ca4ddf3386fb2326eb9bc39eb6cf22c644e18f 1560 debianutils_4.4.dsc
+ 019b969ab698c83117254b50fc8f469f10a5d8d6 272098 debianutils_4.4.tar.gz
+Checksums-Sha256:
+ e365ad42af528f46eb117ef244216aaf265372f2b92635b28452a8f0d981bb17 1560 debianutils_4.4.dsc
+ 190850cdd6b5302e0a1ba1aaed1bc7074d67d3bd8d04c613f242f7145afa53a6 272098 debianutils_4.4.tar.gz
 
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
@@ -464,43 +530,6 @@ Checksums-Sha256:
  875c1951a5e203c658f0f252e473b766dbcd299a987f86c17151fc6473b5856b 585833 libdbi-perl_1.627.orig.tar.gz
  018dc829f3d1d7c139ba4b75de99462663174da07092e5d2d6ac748895eb76e6 12029 libdbi-perl_1.627-1.debian.tar.gz
 
-Package: libhybris
-Binary: android-platform-headers, libandroid-properties1, libandroid-properties-dev, libhardware2, libhardware-dev, libhybris-common1, libhybris-common-dev, libhybris, libhybris-dev, libhybris-utils, libhybris-test
-Version: 0.1.0+git20130606+c5d897a-0ubuntu19
-Priority: extra
-Section: libs
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: debhelper (>= 9.0.0), autotools-dev, dh-autoreconf, gcc-4.7, g++-4.7, quilt, pkg-config, libgles2-mesa-dev
-Architecture: all armhf i386 amd64
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/main/libh/libhybris
-Files:
- a6b0d1e711f679be8fb9f86754dc1794 2564 libhybris_0.1.0+git20130606+c5d897a-0ubuntu19.dsc
- b458e72d51e75d342cb2f9691a5c3f32 506588 libhybris_0.1.0+git20130606+c5d897a.orig.tar.gz
- 7cc752d848010a0ab022688a881f4e13 88961 libhybris_0.1.0+git20130606+c5d897a-0ubuntu19.debian.tar.gz
-Vcs-Bzr: lp:libhybris/ubuntu
-Package-List: 
- android-platform-headers deb libdevel extra
- libandroid-properties-dev deb libdevel extra
- libandroid-properties1 deb libs extra
- libhardware-dev deb libdevel extra
- libhardware2 deb libs extra
- libhybris deb libs extra
- libhybris-common-dev deb libdevel extra
- libhybris-common1 deb libs extra
- libhybris-dev deb libdevel extra
- libhybris-test deb devel extra
- libhybris-utils deb utils extra
-Checksums-Sha1:
- 2ace0f314b30143e6f6069618cf62a96a07ea0da 2564 libhybris_0.1.0+git20130606+c5d897a-0ubuntu19.dsc
- 7d42310e34ec08e9f276e6657b7f2fa06118d49e 506588 libhybris_0.1.0+git20130606+c5d897a.orig.tar.gz
- 7e51f6c0c1d055e7942cfdd0d0113876a698c924 88961 libhybris_0.1.0+git20130606+c5d897a-0ubuntu19.debian.tar.gz
-Checksums-Sha256:
- 65d11cb9a3e125dbd5dfe720a245ed6b0032e70e519008ccc4c52f998064c552 2564 libhybris_0.1.0+git20130606+c5d897a-0ubuntu19.dsc
- 3746b559df667a060e45b9d7b55c8d7e9facc8ba66429bd360023f6dfffab5ed 506588 libhybris_0.1.0+git20130606+c5d897a.orig.tar.gz
- d4d31ac4f6cfaa8557770345ac4f23e9992aed14a7fb076edb421558df497636 88961 libhybris_0.1.0+git20130606+c5d897a-0ubuntu19.debian.tar.gz
-
 Package: libidn
 Binary: idn, libidn11-dev, libidn11, libidn11-java
 Version: 1.28-1
@@ -598,45 +627,6 @@ Checksums-Sha256:
  9dfe0fcae2a866de9d3942c66995e4b460230446887dbdab302d41a8aee8d09a 1098603 libunwind_1.1.orig.tar.gz
  4eeb8a83a6068c30c2179548199018c4e8b2f37437661511d0f3a7cc0563b0c6 24202 libunwind_1.1-2ubuntu1.debian.tar.gz
 
-Package: mir
-Binary: libmirprotobuf0, libmirprotobuf-dev, libmirserver1, libmirplatform, mircommon-dev, libmirserver-dev, libmirclient2, libmirclient-dev, mir-demos, mir-doc, mir-test-tools
-Version: 0.0.10+13.10.20130827.1-0ubuntu1
-Priority: optional
-Section: x11
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
-Build-Depends: cmake, cmake-data, pkg-config, debhelper (>= 9), doxygen, xsltproc, graphviz, libboost-dev, libboost-chrono-dev, libboost-date-time-dev, libboost-program-options-dev, libboost-system-dev, libboost-thread-dev, libboost-regex-dev, libboost-filesystem-dev, protobuf-compiler, libdrm-dev [!armhf], libegl1-mesa-dev, libgles2-mesa-dev, libgbm-dev [!armhf], libglm-dev, libprotobuf-dev, libhardware-dev [armhf], libgoogle-glog-dev, liblttng-ust-dev, libxkbcommon-dev, libumockdev-dev, umockdev, libudev-dev, google-mock (>= 1.6.0+svn437), valgrind
-Architecture: i386 amd64 armhf arm64 all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/m/mir
-Files:
- c3dd0f0d68dad072c4946030d3dcd13b 2991 mir_0.0.10+13.10.20130827.1-0ubuntu1.dsc
- 2c98bf0e368aaf57f4ee0bc55983820f 926757 mir_0.0.10+13.10.20130827.1.orig.tar.gz
- 7f9d0dfcf40726305ebf37c752c532a2 16427 mir_0.0.10+13.10.20130827.1-0ubuntu1.diff.gz
-Homepage: https://launchpad.net/mir
-Vcs-Bzr: https://code.launchpad.net/~mir-team/mir/trunk
-Package-List: 
- libmirclient-dev deb libdevel optional
- libmirclient2 deb libs optional
- libmirplatform deb libs optional
- libmirprotobuf-dev deb libdevel optional
- libmirprotobuf0 deb libs optional
- libmirserver-dev deb libdevel optional
- libmirserver1 deb libs optional
- mir-demos deb x11 optional
- mir-doc deb doc optional
- mir-test-tools deb x11 optional
- mircommon-dev deb libdevel optional
-Checksums-Sha1:
- ae43244f187c3e696ae274e1396bf872664f5d29 2991 mir_0.0.10+13.10.20130827.1-0ubuntu1.dsc
- 578c84ab9312fd7febd6e90dcb8fb0feb1aa0504 926757 mir_0.0.10+13.10.20130827.1.orig.tar.gz
- e1ad60cf524dedb84a2b7f9da5a9aab71f7fd574 16427 mir_0.0.10+13.10.20130827.1-0ubuntu1.diff.gz
-Checksums-Sha256:
- f0a6f7e50244ca7f637be7eacc62cda28d30d3a3ae9f31927b4aa186c5cc09ec 2991 mir_0.0.10+13.10.20130827.1-0ubuntu1.dsc
- facf7d95d0c78b5194f9e64919f461ccfc80f1e5d9323540b168044d7b4f9054 926757 mir_0.0.10+13.10.20130827.1.orig.tar.gz
- 3124cce8e17c6dbc4f5e943b19e518089cb5b7bf23371fb24443e52bcc10c668 16427 mir_0.0.10+13.10.20130827.1-0ubuntu1.diff.gz
-
 Package: mod-auth-mysql
 Binary: libapache2-mod-auth-mysql
 Version: 4.3.9-13.1ubuntu1
@@ -707,46 +697,48 @@ Checksums-Sha256:
  1fdb5d2297c005cd5a9602c0dd8cafa4cbb27abb33c9dd6e8072a860455435b2 305231 mysql-5.5_5.5.32-0ubuntu2.debian.tar.gz
 Testsuite: autopkgtest
 
-Package: platform-api
-Binary: libplatform-api-headers, libplatform-hardware-api-headers, libplatform-api1-dev, libubuntu-application-api-mirserver1, libubuntu-application-api-mirclient1, libplatform-hardware-api1-dev, libplatform-api1-doc, libubuntu-platform-hardware-api1, libubuntu-application-api1, libplatform-api1-hybris-tests, libubuntu-platform-api1-dev, libplatform-api1-hybris, libplatform-hardware-api1-hybris
-Version: 0.18.3+13.10.20130827.1-0ubuntu1
+Package: packagekit
+Binary: packagekit, packagekit-tools, packagekit-docs, libpackagekit-glib2-16, libpackagekit-glib2-dev, gir1.2-packagekitglib-1.0, packagekit-gtk3-module, gstreamer0.10-packagekit, browser-plugin-packagekit, python3-packagekit, packagekit-backend-aptcc, packagekit-backend-smart, packagekit-dbg
+Version: 0.8.10-2ubuntu1
 Priority: optional
-Section: devel
+Section: admin
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: cmake, debhelper (>= 9), doxygen, graphviz, libgles2-mesa-dev, gcc-4.7, g++-4.7, libhybris-common-dev, pkg-config, libmirclient-dev, libmirserver-dev, liburl-dispatcher1-dev, libdbus-1-dev, dbus-cpp-dev, libubuntu-location-service-dev
+Original-Maintainer: Matthias Klumpp <matthias@tenstral.net>
+Build-Depends: bash-completion, debhelper (>= 9.0.0), dh-autoreconf (>= 4), docbook-utils, gir1.2-glib-2.0 (>= 0.10.1), gobject-introspection (>= 0.10.1), gtk-doc-tools, libapt-pkg-dev (>= 0.8.14), libarchive-dev, libgirepository1.0-dev (>= 0.10.1), libglib2.0-dev (>= 2.24), libgstreamer-plugins-base0.10-dev, libgtk-3-dev (>= 3.2), libgtk2.0-dev (>= 2.24), libnm-glib-dev [linux-any], libnspr4-dev (>= 4.8.6), libpolkit-gobject-1-dev, libsqlite3-dev, libsystemd-login-dev (>= 44) [linux-any], libtool, libxt-dev, network-manager-dev [linux-any], pm-utils [linux-any], policykit-1, python3 (>= 3.2), xmlto, xulrunner-dev (>= 8.0) | firefox-dev (>= 8.0)
 Architecture: any all
 Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/p/platform-api
+Format: 3.0 (quilt)
+Directory: pool/main/p/packagekit
 Files:
- c3356cb1fc45261367daede8f9e9b1d8 3185 platform-api_0.18.3+13.10.20130827.1-0ubuntu1.dsc
- 122f0ccf9bdb2204621944c51bdafab6 161284 platform-api_0.18.3+13.10.20130827.1.orig.tar.gz
- e4f475687d00c252813676ec9eecaadc 9981 platform-api_0.18.3+13.10.20130827.1-0ubuntu1.diff.gz
-Homepage: https://launchpad.net/platform-api
-Vcs-Browser: https://code.launchpad.net/platform-api
-Vcs-Bzr: lp:platform-api
+ db04a9a47d2277604601c55352205cf8 3092 packagekit_0.8.10-2ubuntu1.dsc
+ d6eaa6c89be0bcfbc24340eb3e1c2e95 1566936 packagekit_0.8.10.orig.tar.xz
+ fa2409ad3aa5a34d1842814199dd6f85 22898 packagekit_0.8.10-2ubuntu1.debian.tar.gz
+Uploaders: Julian Andres Klode <jak@debian.org>
+Homepage: http://www.packagekit.org
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-packagekit/packagekit.git
+Vcs-Git: git://anonscm.debian.org/pkg-packagekit/packagekit.git
 Package-List: 
- libplatform-api-headers deb libdevel optional
- libplatform-api1-dev deb libdevel optional
- libplatform-api1-doc deb doc optional
- libplatform-api1-hybris deb oldlibs optional
- libplatform-api1-hybris-tests deb devel optional
- libplatform-hardware-api-headers deb libdevel optional
- libplatform-hardware-api1-dev deb libdevel optional
- libplatform-hardware-api1-hybris deb oldlibs optional
- libubuntu-application-api-mirclient1 deb libs optional
- libubuntu-application-api-mirserver1 deb libs optional
- libubuntu-application-api1 deb libs optional
- libubuntu-platform-api1-dev deb oldlibs optional
- libubuntu-platform-hardware-api1 deb libs optional
+ browser-plugin-packagekit deb web optional
+ gir1.2-packagekitglib-1.0 deb introspection optional
+ gstreamer0.10-packagekit deb libs optional
+ libpackagekit-glib2-16 deb libs optional
+ libpackagekit-glib2-dev deb libdevel optional
+ packagekit deb admin optional
+ packagekit-backend-aptcc deb admin optional
+ packagekit-backend-smart deb admin optional
+ packagekit-dbg deb debug extra
+ packagekit-docs deb doc optional
+ packagekit-gtk3-module deb libs optional
+ packagekit-tools deb libs optional
+ python3-packagekit deb python optional
 Checksums-Sha1:
- 1354a0dd46228657ae698daaba41a96d4b6c0a28 3185 platform-api_0.18.3+13.10.20130827.1-0ubuntu1.dsc
- aabc11b020783f6cec5f8cce4e4eb5b6c29c83c6 161284 platform-api_0.18.3+13.10.20130827.1.orig.tar.gz
- c68deb6ff8d0442f52b084c6c197be48b27072ce 9981 platform-api_0.18.3+13.10.20130827.1-0ubuntu1.diff.gz
+ 165911c9eb9e7b2a3fa95766858f9cb30b579790 3092 packagekit_0.8.10-2ubuntu1.dsc
+ feabce018af8ac0b33d4ce1c751812e2d4da65bb 1566936 packagekit_0.8.10.orig.tar.xz
+ 53914f790eb93ca0e6ab31e8f17d844d7e7e80be 22898 packagekit_0.8.10-2ubuntu1.debian.tar.gz
 Checksums-Sha256:
- 4ca986f912ffbb6969518f9ac54d258e3c904182eff0c4e90ac0a2f2f6cbe9dc 3185 platform-api_0.18.3+13.10.20130827.1-0ubuntu1.dsc
- 4feeba919e17b191a0bb3c479bbed7aeef6e92ece43df1983f8127b74934851a 161284 platform-api_0.18.3+13.10.20130827.1.orig.tar.gz
- ddb745e995db7de72e7e66394054ea1eb835b3326a297fffcead84371428dad3 9981 platform-api_0.18.3+13.10.20130827.1-0ubuntu1.diff.gz
+ 16e424408cd40cc0dc2700f449935cee0b75099de50b659c6aca438a157b1202 3092 packagekit_0.8.10-2ubuntu1.dsc
+ d57e227598c75bfddf247c720a12389bc3ad736ce845e21d1e64e3187f14c544 1566936 packagekit_0.8.10.orig.tar.xz
+ 09e18c5a142e1be79e222715831971ce7ad701092afd6f865520cb0824bc086e 22898 packagekit_0.8.10-2ubuntu1.debian.tar.gz
 
 Package: qtwebkit-source
 Binary: libqtwebkit-dev, libqtwebkit4, libqtwebkit-qmlwebkitplugin, libqtwebkit4-dbg
