@@ -1186,6 +1186,27 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
+Package: livecd-rootfs
+Priority: optional
+Section: devel
+Installed-Size: 129
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 2.180
+Depends: debootstrap, rsync, python-minimal | python, procps, squashfs-tools (>= 1:3.3-1), grep-dctrl, fdupes, lsb-release, lzma, e2fsprogs, germinate (>= 1.25.1), apt-utils, gnupg, live-build (>= 3.0~a55-1), android-tools-fsutils
+Suggests: partimage
+Breaks: ubuntu-defaults-builder (<< 0.32)
+Filename: pool/main/l/livecd-rootfs/livecd-rootfs_2.180_all.deb
+Size: 18728
+MD5sum: 85672539cde52607b6519dbe8bf7b321
+SHA1: 500752bc238abefb93decd20ebad7f200896de42
+SHA256: f397a41d3ff20cb8e4b94ad2d409a5a0005e10d43238fbd4b0d4601aeacf959f
+Description: construction script for the livecd rootfs
+Description-md5: 7b59fd93401bd0efd37505de924d874f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: mysql-client
 Priority: optional
 Section: database
@@ -1765,53 +1786,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: python-bson
-Priority: optional
-Section: python
-Installed-Size: 133
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Federico Ceratto <federico.ceratto@gmail.com>
-Architecture: i386
-Source: pymongo
-Version: 2.6-1
-Provides: python2.7-bson
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Recommends: python-bson-ext
-Filename: pool/main/p/pymongo/python-bson_2.6-1_i386.deb
-Size: 20662
-MD5sum: 445c8f17e9aa4d6b1cb4973a377e4bb9
-SHA1: 50c5eeb80aafe29afacd4cea3796143d26ea9f2f
-SHA256: 9b9745ba16090692a7b85fa5115afce658d2e5f976b7350c6701d19cf2f12d80
-Description: Python implementation of BSON for MongoDB
-Homepage: http://api.mongodb.org/python/
-Description-md5: 24c9d1f8de40c146a0ea5c924447b746
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: python-bson-ext
-Priority: optional
-Section: python
-Installed-Size: 106
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Federico Ceratto <federico.ceratto@gmail.com>
-Architecture: i386
-Source: pymongo
-Version: 2.6-1
-Provides: python2.7-bson-ext
-Depends: python (>= 2.7), python (<< 2.8), libc6 (>= 2.4), python-bson (= 2.6-1)
-Filename: pool/main/p/pymongo/python-bson-ext_2.6-1_i386.deb
-Size: 20686
-MD5sum: 129b7af4a7db71a9a68c7f6fca270b77
-SHA1: a3e96f3a1028f21634d4421f4ee40c455612f22c
-SHA256: 3287354650d153aa583eedbdd940e5d41515cf697de637caf1295ce0f3dd02cf
-Description: C-coded extension to the python-bson package
-Homepage: http://api.mongodb.org/python/
-Description-md5: 24b483279d6d0f416623936f52653bcc
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: python-bzrlib
 Priority: optional
 Section: python
@@ -1890,122 +1864,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: python-gridfs
-Priority: optional
-Section: python
-Installed-Size: 98
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Federico Ceratto <federico.ceratto@gmail.com>
-Architecture: all
-Source: pymongo
-Version: 2.6-1
-Provides: python2.7-gridfs
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-pymongo
-Filename: pool/main/p/pymongo/python-gridfs_2.6-1_all.deb
-Size: 10870
-MD5sum: 417610742a79a1ae54911b79fd4b6d5c
-SHA1: f03aa045e94a7f3363cd27b443cba0f8f59a7cf6
-SHA256: aaa4aff242d817ef411a4f99013e1356fbd828c5de21c5d48a901da06f89ddf7
-Description: Python implementation of GridFS for MongoDB
-Homepage: http://api.mongodb.org/python/
-Description-md5: 9f81017354ca04e7ee67c50fa96675e1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: python-pymongo
-Priority: optional
-Section: python
-Installed-Size: 477
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Federico Ceratto <federico.ceratto@gmail.com>
-Architecture: i386
-Source: pymongo
-Version: 2.6-1
-Provides: python2.7-pymongo
-Depends: python-bson (= 2.6-1), python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Recommends: python-gridfs (>= 2.6-1), python-pymongo-ext
-Filename: pool/main/p/pymongo/python-pymongo_2.6-1_i386.deb
-Size: 100880
-MD5sum: 0946d8daef6b07bef6b8f1b08110a294
-SHA1: 8d06371bec3f309754bcc0d6c4ca85b8c21c6641
-SHA256: 5c838f3f7c513069f8c1284056d661bba2a153abd471b913749e1729d7e5ab6a
-Description: Python interface to the MongoDB document-oriented database
-Homepage: http://api.mongodb.org/python/
-Description-md5: 0b1ed7838a37434fed39e622e41112f4
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: python-pymongo-doc
-Priority: optional
-Section: doc
-Installed-Size: 2502
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Federico Ceratto <federico.ceratto@gmail.com>
-Architecture: all
-Source: pymongo
-Version: 2.6-1
-Depends: libjs-jquery, libjs-underscore
-Filename: pool/main/p/pymongo/python-pymongo-doc_2.6-1_all.deb
-Size: 991112
-MD5sum: 2fd0748f300fac790e6ec47ca0dea0cd
-SHA1: 6fcefb114e6e0cc500251d1bcff700cb09c2f17b
-SHA256: 07050d96f92c4d1bbd946972c10825b859329318aaaa973efe6a2bf38c8d12ab
-Description: Python interface to the MongoDB document-oriented database (documentation)
-Homepage: http://api.mongodb.org/python/
-Description-md5: fbd62f485ddf85b5deaef066e9d02ec6
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: python-pymongo-ext
-Priority: optional
-Section: python
-Installed-Size: 86
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Federico Ceratto <federico.ceratto@gmail.com>
-Architecture: i386
-Source: pymongo
-Version: 2.6-1
-Provides: python2.7-pymongo-ext
-Depends: python (>= 2.7), python (<< 2.8), libc6 (>= 2.3.6-6~), python-bson (= 2.6-1), python-pymongo (= 2.6-1)
-Recommends: python-gridfs (>= 2.6-1)
-Filename: pool/main/p/pymongo/python-pymongo-ext_2.6-1_i386.deb
-Size: 9762
-MD5sum: 569ef935f5e74a8f6f4849c418af9d97
-SHA1: b861b449fc0892f70960d6c4249cfd880453d872
-SHA256: dbb8a5660425aa4a517f872f1883f8604e5e1b7fc088b63e29c3fd2435de8914
-Description: C-coded extension to the python-pymongo package
-Homepage: http://api.mongodb.org/python/
-Description-md5: 136aead8416b732e3ca0303bea791e72
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: python3-bson
-Priority: optional
-Section: python
-Installed-Size: 125
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Federico Ceratto <federico.ceratto@gmail.com>
-Architecture: i386
-Source: pymongo
-Version: 2.6-1
-Depends: python3 (>= 3.2.3-3~)
-Recommends: python3-bson-ext
-Filename: pool/main/p/pymongo/python3-bson_2.6-1_i386.deb
-Size: 20342
-MD5sum: 5b9750bc5eadce0481fcf6a3bc19ed48
-SHA1: 84bf7fa905c7403c16cc51ba30ff54eb2a969eba
-SHA256: 4b730cc1028240cb7d82aae30f0055f0f7fc7a03a1f0de97e72d5bdb60d177e5
-Description: Python3 implementation of BSON for MongoDB
-Homepage: http://api.mongodb.org/python/
-Description-md5: 6ff36ca063d2514878e6687fccf82dc3
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: python3-click
 Priority: optional
 Section: python
@@ -2025,28 +1883,6 @@ SHA1: c7ec16697c00db10c2a9b3874a277c1f483fe28b
 SHA256: 41fe462a4113783454a1c7d57b71e52565dbfa9a95f58f17d5725ecdd89256b7
 Description: Click packages (Python 3 interface)
 Description-md5: a55b8833aad665015cec861ba580ce8a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: python3-gridfs
-Priority: optional
-Section: python
-Installed-Size: 90
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Federico Ceratto <federico.ceratto@gmail.com>
-Architecture: all
-Source: pymongo
-Version: 2.6-1
-Depends: python3 (>= 3.2.3-3~)
-Filename: pool/main/p/pymongo/python3-gridfs_2.6-1_all.deb
-Size: 11940
-MD5sum: b832dd9f00c017a39810331f2f4ab889
-SHA1: 269f3dfec0d042567ade5b5ebfa750eba25a672d
-SHA256: 615d397913ff08db135a00282af4e7a7488aaa7bf78de21c12152e6d3b14de76
-Description: Python3 implementation of GridFS for MongoDB
-Homepage: http://api.mongodb.org/python/
-Description-md5: c945face2e12c0bcbca6132ced76cd28
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -2072,29 +1908,6 @@ Homepage: http://www.packagekit.org
 Description-md5: 644eb2b6272644fef74823bbe4973423
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: python3-pymongo
-Priority: optional
-Section: python
-Installed-Size: 457
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Federico Ceratto <federico.ceratto@gmail.com>
-Architecture: i386
-Source: pymongo
-Version: 2.6-1
-Depends: python3-bson (= 2.6-1), python3 (>= 3.2.3-3~)
-Recommends: python3-gridfs (>= 2.6-1), python3-pymongo-ext
-Filename: pool/main/p/pymongo/python3-pymongo_2.6-1_i386.deb
-Size: 98248
-MD5sum: a26e0b877e21e32c9ed658f2a93e4d25
-SHA1: 6a0471b02fb7a0816591af4b74c02ffb804c27ac
-SHA256: 7f943043ed752e62acbf0c3a3b5b6a5e2a6f661cca9f29e89466f7133e667b71
-Description: Python3 interface to the MongoDB document-oriented database
-Homepage: http://api.mongodb.org/python/
-Description-md5: a5eda4845154bda48840dc515daa29c6
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
 
 Package: unity-webapps-service
 Priority: optional
