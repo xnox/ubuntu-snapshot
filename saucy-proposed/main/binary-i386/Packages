@@ -252,6 +252,26 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: gir1.2-unity-webapps-0.2
+Priority: optional
+Section: introspection
+Installed-Size: 62
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130828-0ubuntu1
+Filename: pool/main/libu/libunity-webapps/gir1.2-unity-webapps-0.2_2.5.0~+13.10.20130828-0ubuntu1_i386.deb
+Size: 10000
+MD5sum: db1b95b24f05d20541f8a82cb1de65ab
+SHA1: 396082a6753b8dc56067078ab7c6ed116bc2b6bc
+SHA256: e716bcbce8ed6d30c66df43122ea4ab0dd1952366b030315cab7ff2dde22f39a
+Description: GObject introspection data for the UnityWebapps library
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: aa958933c4aff1c55b3d2a05924987fa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: gstreamer1.0-alsa
 Priority: optional
 Section: libs
@@ -1028,6 +1048,70 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: libunity-webapps-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 341
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130828-0ubuntu1
+Depends: gir1.2-unity-webapps-0.2, libunity-webapps0 (= 2.5.0~+13.10.20130828-0ubuntu1)
+Filename: pool/main/libu/libunity-webapps/libunity-webapps-dev_2.5.0~+13.10.20130828-0ubuntu1_i386.deb
+Size: 25996
+MD5sum: 2ff709497625e1cf386576f7a250d6b8
+SHA1: 223e5cfee1438d7b1e86d717f34cc18a1db722e4
+SHA256: d3d540bc850adf74fe8187b32b4bfced82ca66b5419c44f7aeabea462ebb1f06
+Description: Web Apps integration with Unity - development files
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: 39f603f3793361a1aa23a6efaeb59e61
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libunity-webapps-doc
+Priority: optional
+Section: doc
+Installed-Size: 308
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: all
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130828-0ubuntu1
+Filename: pool/main/libu/libunity-webapps/libunity-webapps-doc_2.5.0~+13.10.20130828-0ubuntu1_all.deb
+Size: 24826
+MD5sum: ae3b47204e2a31874f3c1e5389cf56e9
+SHA1: f33d79613dd35d883716928bae8e416ca5e48bfb
+SHA256: 04b0e260b3e567f144bafbd0ae6d6dda3508404cbc3f7c82840511f065081b69
+Description: Web Apps integration with Unity - documentation
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: 9691a395a77926383f936f9555572791
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libunity-webapps0
+Priority: optional
+Section: libs
+Installed-Size: 284
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130828-0ubuntu1
+Depends: unity-webapps-service, libc6 (>= 2.3.6-6~), libglib2.0-0 (>= 2.37.3), libjson-glib-1.0-0 (>= 0.12.0), libpackagekit-glib2-16 (>= 0.8.10), libpolkit-gobject-1-0 (>= 0.99), libsqlite3-0 (>= 3.5.9)
+Breaks: bamfdaemon (<= 0.3.0-0ubuntu1), xul-ext-unity (<= 2.3-0quantal1), xul-ext-websites-integration (<= 2.3-0quantal1)
+Filename: pool/main/libu/libunity-webapps/libunity-webapps0_2.5.0~+13.10.20130828-0ubuntu1_i386.deb
+Size: 79920
+MD5sum: 7ce2a1eb75badb1dc29344ee08652d92
+SHA1: 205b524aab98d7b5dba0c1db25c5e02af276eb0a
+SHA256: 6ff02135f8da9d60fa067f597191d5050d88fb2ec71ad7cf9ce4296a2a059532
+Description: Web Apps integration with the Unity desktop
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: a167400b2b59382dd0211fa9b603d334
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
 Package: libxkbcommon-dev
 Priority: optional
 Section: libdevel
@@ -1074,29 +1158,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-live, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: mysql-client
-Priority: optional
-Section: database
-Installed-Size: 114
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
-Architecture: all
-Source: mysql-5.5
-Version: 5.5.32-0ubuntu2
-Depends: mysql-client-5.5
-Filename: pool/main/m/mysql-5.5/mysql-client_5.5.32-0ubuntu2_all.deb
-Size: 11226
-MD5sum: 521677a2baad4814ab176a4cba0eb39a
-SHA1: 91d9f062b159963ea93a48f7ad66c6e45f761317
-SHA256: 8cf5191c41b0dee3b37660b35201aea104c50b3575aa762f5761b18256fd69e8
-Description: MySQL database client (metapackage depending on the latest version)
-Homepage: http://dev.mysql.com/
-Description-md5: c1035c33de63147bb387637ae5083656
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master
 
 Package: mysql-client
 Priority: optional
@@ -1180,33 +1241,6 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: all
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu2
-Replaces: mysql-common-4.1
-Provides: mysql-common-4.1
-Conflicts: mysql-common-4.1
-Breaks: mysql-client-5.1, mysql-client-core-5.1, mysql-server-5.1, mysql-server-core-5.1
-Filename: pool/main/m/mysql-5.5/mysql-common_5.5.32-0ubuntu2_all.deb
-Size: 13116
-MD5sum: 72a1145d1f32697553bc992b8ad2ee77
-SHA1: bd69b502b2e43e3e16ce0716709891204377f441
-SHA256: f0ed0c976bea07231e95913bfddb2c00fdd299991a952bbd8a2703f5533f4603
-Description: MySQL database common files, e.g. /etc/mysql/my.cnf
-Multi-Arch: foreign
-Homepage: http://dev.mysql.com/
-Description-md5: 562d254c602f89e4390e28f6362283c8
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: lamp-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, ubuntustudio-video, ubuntustudio-publishing, ubuntustudio-graphics, ubuntustudio-audio
-
-Package: mysql-common
-Priority: optional
-Section: database
-Installed-Size: 130
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
-Architecture: all
-Source: mysql-5.5
 Version: 5.5.32-0ubuntu3
 Replaces: mysql-common-4.1
 Provides: mysql-common-4.1
@@ -1225,29 +1259,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, ubuntustudio-video, ubuntustudio-publishing, ubuntustudio-graphics, ubuntustudio-audio
-
-Package: mysql-server
-Priority: optional
-Section: database
-Installed-Size: 114
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
-Architecture: all
-Source: mysql-5.5
-Version: 5.5.32-0ubuntu2
-Depends: mysql-server-5.5
-Filename: pool/main/m/mysql-5.5/mysql-server_5.5.32-0ubuntu2_all.deb
-Size: 11344
-MD5sum: 6438c16208d04ec71f480fb0947e3de2
-SHA1: 4788684dfb483baede85dfc8ff566f5957c8271e
-SHA256: 5ce5734101979de12034897395ba584e087df1e1c649327fa40b69c9d0790dd5
-Description: MySQL database server (metapackage depending on the latest version)
-Homepage: http://dev.mysql.com/
-Description-md5: e519a9c4f87658afbd1d077af63f9269
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: mysql-server
 Priority: optional
@@ -1326,140 +1337,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
-Package: openvswitch-common
-Priority: extra
-Section: net
-Installed-Size: 1581
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
-Architecture: i386
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu3
-Depends: libc6 (>= 2.16), libssl1.0.0 (>= 1.0.0), openssl, python, python (>= 2.7) | python-argparse
-Suggests: ethtool
-Filename: pool/main/o/openvswitch/openvswitch-common_1.10.1+git20130823-0ubuntu3_i386.deb
-Size: 691518
-MD5sum: cedb6604837784bd7129cfa0a5deeafe
-SHA1: d17897a1bc3d4b209461b4d562b0fadf653fe6f9
-SHA256: a371fed493e2ea643e63fe0b3d8e512b5d6d8bf24519d266f8c1ab962f46cf67
-Description: Open vSwitch common components
-Homepage: http://openvswitch.org/
-Description-md5: 156b753b1c88479a1a2a4001e7ff34d9
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: openvswitch-controller
-Priority: extra
-Section: net
-Installed-Size: 758
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
-Architecture: i386
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu3
-Depends: libc6 (>= 2.4), libssl1.0.0 (>= 1.0.0), openvswitch-common (= 1.10.1+git20130823-0ubuntu3), openvswitch-pki (= 1.10.1+git20130823-0ubuntu3)
-Filename: pool/main/o/openvswitch/openvswitch-controller_1.10.1+git20130823-0ubuntu3_i386.deb
-Size: 303050
-MD5sum: d08931d19f6fa21a21485b13ba18320e
-SHA1: 7a3f950a2554bed58c45e8581dedf27f74a312db
-SHA256: 7aa13dfc731ef1e2f7945452a8bcfa90e0f88e549319e4ff536e7e3211166ebe
-Description: Open vSwitch controller implementation
-Homepage: http://openvswitch.org/
-Description-md5: a75c9ab8c2882291fe265d039e045e3f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: openvswitch-dbg
-Priority: extra
-Section: debug
-Installed-Size: 16992
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
-Architecture: i386
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu3
-Depends: openvswitch-common (= 1.10.1+git20130823-0ubuntu3), openvswitch-controller (= 1.10.1+git20130823-0ubuntu3), openvswitch-ipsec (= 1.10.1+git20130823-0ubuntu3), openvswitch-switch (= 1.10.1+git20130823-0ubuntu3)
-Filename: pool/main/o/openvswitch/openvswitch-dbg_1.10.1+git20130823-0ubuntu3_i386.deb
-Size: 7311354
-MD5sum: 27bc8a84519b7bad989183c7478aae02
-SHA1: 643aec15bccc18896fddaa344569a4a550454f40
-SHA256: 25d1b0e6136c4b71c3787462b61b9249443ad21be9eb7856034f108d23e586b6
-Description: Debug symbols for Open vSwitch packages
-Homepage: http://openvswitch.org/
-Description-md5: 56e4abe8234a245775d9d296c24e43c7
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: openvswitch-ipsec
-Priority: extra
-Section: net
-Installed-Size: 112
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
-Architecture: i386
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu3
-Depends: python, ipsec-tools (>= 0.8~alpha20101208), racoon (>= 0.8~alpha20101208), openvswitch-common (= 1.10.1+git20130823-0ubuntu3), openvswitch-switch (= 1.10.1+git20130823-0ubuntu3), python-openvswitch (= 1.10.1+git20130823-0ubuntu3)
-Filename: pool/main/o/openvswitch/openvswitch-ipsec_1.10.1+git20130823-0ubuntu3_i386.deb
-Size: 22088
-MD5sum: d47fcd252eb7b89268c366c24cb6cd2f
-SHA1: 1b573408c9910ada88c97290ccc8c32ea88aaacf
-SHA256: 0dd2edcf9cfd5c06bd32f6b877b4c2ff1eae157754cc892556f335702aa4270a
-Description: Open vSwitch GRE-over-IPsec support
-Homepage: http://openvswitch.org/
-Description-md5: 07cc2214b4577629cbf5bbc7095fab0e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: openvswitch-pki
-Priority: extra
-Section: net
-Installed-Size: 87
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
-Architecture: all
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu3
-Depends: openvswitch-common (>= 1.10.1+git20130823-0ubuntu3), openvswitch-common (<< 1.10.1+git20130823-0ubuntu3.1~)
-Filename: pool/main/o/openvswitch/openvswitch-pki_1.10.1+git20130823-0ubuntu3_all.deb
-Size: 15466
-MD5sum: 6c36ec6660f64d6a4717d92d1b61e103
-SHA1: a482c2ffd3c312aadda86d6eeb9c8f5e875f57a0
-SHA256: c81421086e0be0f312898f74bb0e38071367abc922a53d8710d8f114ea10bb71
-Description: Open vSwitch public key infrastructure dependency package
-Homepage: http://openvswitch.org/
-Description-md5: fcb2a2bcd30b1f49fc4b6a2ddc55ff28
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: openvswitch-switch
-Priority: extra
-Section: net
-Installed-Size: 3958
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
-Architecture: i386
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu3
-Depends: libc6 (>= 2.7), libssl1.0.0 (>= 1.0.0), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python, openvswitch-common (= 1.10.1+git20130823-0ubuntu3), module-init-tools, procps, uuid-runtime, netbase
-Suggests: openvswitch-datapath-module
-Filename: pool/main/o/openvswitch/openvswitch-switch_1.10.1+git20130823-0ubuntu3_i386.deb
-Size: 1685558
-MD5sum: e6d9517fe6628bc2470bb9acbcaca798
-SHA1: ed5128311a69d65ba4f9f99011506cff3e554a61
-SHA256: 3d5b71716febd56309fa1688046cfe90c77eda0374f20b0fd933771829a46321
-Description: Open vSwitch switch implementations
-Homepage: http://openvswitch.org/
-Description-md5: a3693da748c76fbc356928927bf14fce
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
 
 Package: packagekit-docs
 Priority: optional
@@ -1939,28 +1816,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: python-openvswitch
-Priority: extra
-Section: python
-Installed-Size: 377
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Open vSwitch developers <dev@openvswitch.org>
-Architecture: all
-Source: openvswitch
-Version: 1.10.1+git20130823-0ubuntu3
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Filename: pool/main/o/openvswitch/python-openvswitch_1.10.1+git20130823-0ubuntu3_all.deb
-Size: 75994
-MD5sum: b4bfafe09e82c50c703a1640c25e73cc
-SHA1: 133f5e03fe746ee6dac4f7dca8b2292764cdbcca
-SHA256: c55d8d2f0166f34fcc457716bf50a5177e5877bbbad80b8aaeda545279977aca
-Description: Python bindings for Open vSwitch
-Homepage: http://openvswitch.org/
-Description-md5: 4d35f951a751492a379125d6622051e2
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: python3-click
 Priority: optional
 Section: python
@@ -2005,6 +1860,28 @@ Homepage: http://www.packagekit.org
 Description-md5: 644eb2b6272644fef74823bbe4973423
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: unity-webapps-service
+Priority: optional
+Section: gnome
+Installed-Size: 444
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130828-0ubuntu1
+Depends: geoclue-ubuntu-geoip | geoclue-provider, dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.3.6-6~), libdbusmenu-glib4 (>= 0.4.2), libgdk-pixbuf2.0-0 (>= 2.22.0), libgeoclue0 (>= 0.11.1), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.0.0), libjson-glib-1.0-0 (>= 0.12.0), libmessaging-menu0 (>= 12.10.2), libnotify4 (>= 0.7.0), libsoup2.4-1 (>= 2.4.0), libsqlite3-0 (>= 3.5.9), libtelepathy-glib0 (>= 0.11.3), libunity-webapps0 (>= 2.4), libunity9 (>= 5.0.0), libwnck-3-0 (>= 2.91.6)
+Filename: pool/main/libu/libunity-webapps/unity-webapps-service_2.5.0~+13.10.20130828-0ubuntu1_i386.deb
+Size: 120396
+MD5sum: f74a748f8f2093e95c88c199579c91b5
+SHA1: 8e1abc3ebf5dd9e91301c6f9c4c41e47fbe0080f
+SHA256: 2325df331c10667eed1cf97c8385735b68f367c8718a993a45e24d1d3889c871
+Description: Service for Web Apps integration with the Unity desktop
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: b150af47b4181bd5946d75d2a40a22ae
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: usb-modeswitch-data
 Priority: extra
