@@ -121,6 +121,79 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: dbus
+Priority: standard
+Section: devel
+Installed-Size: 971
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Version: 1.6.12-0ubuntu5
+Depends: libapparmor1 (>= 2.8.0-0ubuntu25), libc6 (>= 2.14), libdbus-1-3 (>= 1.0.2), libexpat1 (>= 2.0.1), libselinux1 (>= 1.32), libsystemd-login0 (>= 31), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), adduser, lsb-base (>= 3.2-14), upstart (>= 0.6.3-6), netbase (>= 4.45ubuntu3)
+Recommends: libpam-systemd
+Suggests: dbus-x11
+Breaks: unity-services (<< 6.0.0-0ubuntu6)
+Filename: pool/main/d/dbus/dbus_1.6.12-0ubuntu5_amd64.deb
+Size: 364974
+MD5sum: 6931f95f82b77b2046c861450bc172d6
+SHA1: 4aed4333def747ecdf9d71a24ce64d76c6788c84
+SHA256: 2acf6fb0af436caed2149b0579fa6d20de6baae4787e80e252b2b1536dd14930
+Description: simple interprocess messaging system (daemon and utilities)
+Multi-Arch: foreign
+Homepage: http://dbus.freedesktop.org/
+Description-md5: 8317e43242716ec7f7692a3ac5895e1c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: dbus-1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 6123
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: dbus
+Version: 1.6.12-0ubuntu5
+Depends: libdbus-1-3 (= 1.6.12-0ubuntu5), dbus (= 1.6.12-0ubuntu5), dbus-x11 (= 1.6.12-0ubuntu5), libapparmor1 (>= 2.8.0-0ubuntu25), libc6 (>= 2.15), libexpat1 (>= 2.0.1), libselinux1 (>= 1.32), libsystemd-login0 (>= 31), libx11-6
+Filename: pool/main/d/dbus/dbus-1-dbg_1.6.12-0ubuntu5_amd64.deb
+Size: 3810408
+MD5sum: b90a7ac7bdf620222809aa398756c1a4
+SHA1: c96b8382dcf5747816b8d6969580085fcc1a4797
+SHA256: 29e540ff49b4b7b2eeb4c44b08e98c9047cb3f4f4f7690ed9fc80c5d142f27e3
+Description: simple interprocess messaging system (debug symbols)
+Homepage: http://dbus.freedesktop.org/
+Description-md5: 8e652fad9ff7afdabd20cb27b87476a9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: dbus-x11
+Priority: optional
+Section: x11
+Installed-Size: 137
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: dbus
+Version: 1.6.12-0ubuntu5
+Depends: libc6 (>= 2.15), libx11-6, dbus
+Breaks: x11-common (<< 1:7.5+4)
+Filename: pool/main/d/dbus/dbus-x11_1.6.12-0ubuntu5_amd64.deb
+Size: 21700
+MD5sum: 74a30e1634d4dfaf3c8c9785102dbe3c
+SHA1: df19a9acf0d6af1a1161e8750cf49a2f38b472e8
+SHA256: 6de2b60435f8e29db8d4553cef57d38142a118af7916f4f91e70562e8a5f5380
+Description: simple interprocess messaging system (X11 deps)
+Multi-Arch: foreign
+Homepage: http://dbus.freedesktop.org/
+Description-md5: 101d13ea029d06116b86761850faa2f3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -604,6 +677,56 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libdbus-1-3
+Priority: required
+Section: libs
+Installed-Size: 377
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: dbus
+Version: 1.6.12-0ubuntu5
+Depends: libc6 (>= 2.14)
+Pre-Depends: multiarch-support
+Recommends: dbus
+Breaks: kde-window-manager (<< 4:4.4.5-9), kdebase-workspace-bin (<< 4:4.4.5-9)
+Filename: pool/main/d/dbus/libdbus-1-3_1.6.12-0ubuntu5_amd64.deb
+Size: 152394
+MD5sum: 12f6ffee0609c1924abe8348a4b784d1
+SHA1: 759fc64892b8d4452680daf8a72edef071671e75
+SHA256: 28822d6c0696bb3e3a3b7ddbe9f5244893c0dc23822386391dff61bb11b1b941
+Description: simple interprocess messaging system (library)
+Multi-Arch: same
+Homepage: http://dbus.freedesktop.org/
+Description-md5: 394b84dd0007d22bc4bb591ca6b5fa31
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: libdbus-1-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 876
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: dbus
+Version: 1.6.12-0ubuntu5
+Depends: libdbus-1-3 (= 1.6.12-0ubuntu5), pkg-config
+Filename: pool/main/d/dbus/libdbus-1-dev_1.6.12-0ubuntu5_amd64.deb
+Size: 209434
+MD5sum: 2264c46d3f208a8c662ba1a9d9a994a5
+SHA1: a78af9cf8211205ea84c4fb07e8dc33c0e402a85
+SHA256: 987552aefacd4e9fc78b76c38f0143de98fd6a069feb5bd6137edc079182e95f
+Description: simple interprocess messaging system (development headers)
+Multi-Arch: same
+Homepage: http://dbus.freedesktop.org/
+Description-md5: 59e71e7e764b950dc1184788af416a7e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: libgstreamer-plugins-base1.0-0
 Priority: optional
