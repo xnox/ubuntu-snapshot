@@ -60,6 +60,48 @@ Description-md5: 1b5cca4db2c5c6f0514f2fb6297f3d04
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: dante-client
+Priority: optional
+Section: universe/net
+Installed-Size: 97
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Peter Pentchev <roam@ringlet.net>
+Architecture: amd64
+Source: dante
+Version: 1.1.19.dfsg-3ubuntu6.12.04.1
+Depends: libdsocksd0 (= 1.1.19.dfsg-3ubuntu6.12.04.1)
+Filename: pool/universe/d/dante/dante-client_1.1.19.dfsg-3ubuntu6.12.04.1_amd64.deb
+Size: 11532
+MD5sum: 0ef58d53bc0b3c866d3cf923d6bb6d06
+SHA1: ffc45aedb3c7d123919b7350485651de87257837
+SHA256: 9e9742d5f2250b63721efa19332e93383a6e3a6e07fed4007e4eee9990c3e4aa
+Description: SOCKS wrapper for users behind a firewall
+Homepage: http://www.inet.no/dante/
+Description-md5: 3dda083094c90b44bebc6ecc9da32d8c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: dante-server
+Priority: optional
+Section: universe/net
+Installed-Size: 313
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Peter Pentchev <roam@ringlet.net>
+Architecture: amd64
+Source: dante
+Version: 1.1.19.dfsg-3ubuntu6.12.04.1
+Depends: libc6 (>= 2.15), libpam0g (>= 0.99.7.1), libwrap0 (>= 7.6-4~)
+Filename: pool/universe/d/dante/dante-server_1.1.19.dfsg-3ubuntu6.12.04.1_amd64.deb
+Size: 132108
+MD5sum: 1f4c98ef0394cc54e9538839c7fe806d
+SHA1: 41841de302e0798f205a06488422f9a240c67ea1
+SHA256: 93d0bca2cfedbec3867dfb83a35446c8575b4b5c89a31da5cc244b931fb3cfa1
+Description: SOCKS (v4 and v5) proxy daemon (danted)
+Homepage: http://www.inet.no/dante/
+Description-md5: 00072cb7e925ba8110ef47af279dbfff
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: gdm
 Priority: optional
 Section: universe/gnome
@@ -215,6 +257,29 @@ Description-md5: 3563689edf83b10166ff560c4f933b9c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libdsocksd0
+Priority: optional
+Section: universe/libs
+Installed-Size: 249
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Peter Pentchev <roam@ringlet.net>
+Architecture: amd64
+Source: dante
+Version: 1.1.19.dfsg-3ubuntu6.12.04.1
+Replaces: dante-client (<< 1.1.19.dfsg)
+Depends: libc6 (>> 2.15), libc6 (<< 2.16)
+Conflicts: dante-client (<< 1.1.19.dfsg)
+Filename: pool/universe/d/dante/libdsocksd0_1.1.19.dfsg-3ubuntu6.12.04.1_amd64.deb
+Size: 99724
+MD5sum: ade64680556a08042a36d5ea9fe0e10c
+SHA1: f9034cec21bd0fe8f65094a892fd4dbf9c0f80a5
+SHA256: 68ac26fa489792e47a9c78466b1d089b7512de52f6851d02c3fcf97c4771f273
+Description: SOCKS library for internal use by the dante client
+Homepage: http://www.inet.no/dante/
+Description-md5: af048292cc1b5da350c2855aeef91ab0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libdvdnav-dbg
 Priority: extra
 Section: universe/devel
@@ -361,6 +426,48 @@ SHA1: 89295c604aeba0df708f23054d46b61496e9069b
 SHA256: d4ae10517faad9d984b2391d7c176d989c69293620659208f5ff35300513fec1
 Description: library for GNOME Panel applets - documentation files
 Description-md5: d6ba5e667d59eb12ab2bc47bc9798559
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsocksd0
+Priority: optional
+Section: universe/libs
+Installed-Size: 235
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Peter Pentchev <roam@ringlet.net>
+Architecture: amd64
+Source: dante
+Version: 1.1.19.dfsg-3ubuntu6.12.04.1
+Depends: libc6 (>> 2.15), libc6 (<< 2.16)
+Filename: pool/universe/d/dante/libsocksd0_1.1.19.dfsg-3ubuntu6.12.04.1_amd64.deb
+Size: 94848
+MD5sum: d6b13ff25f02cf6c6b20446ffb718d57
+SHA1: 737e99ace4f78b989d4aac890eaae5fd93ea8cf6
+SHA256: cda344bc3b1242ce9ffbb40b72f6de7333439b932e1cc36e41d17d8dbf9f1792
+Description: SOCKS library for packages built using libsocksd-dev
+Homepage: http://www.inet.no/dante/
+Description-md5: d1245be6c35efe33be994e5f388cba4d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsocksd0-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 399
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Peter Pentchev <roam@ringlet.net>
+Architecture: amd64
+Source: dante
+Version: 1.1.19.dfsg-3ubuntu6.12.04.1
+Depends: libsocksd0 (= 1.1.19.dfsg-3ubuntu6.12.04.1)
+Filename: pool/universe/d/dante/libsocksd0-dev_1.1.19.dfsg-3ubuntu6.12.04.1_amd64.deb
+Size: 95924
+MD5sum: d20e899899ceeee3fa3cefa8c8effb1b
+SHA1: 944a7930b01c96dcf300bf824622427c63c5cd8f
+SHA256: 9cf55f6cc7930ec9083f120360ba8726a02cdcbf5fe3b02efbf2071e29cab246
+Description: Development files for compiling programs with SOCKS support
+Homepage: http://www.inet.no/dante/
+Description-md5: e3665f1fe22527f31227f98afb542c9a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
