@@ -209,29 +209,6 @@ Description-md5: 5fdb7838fa336de9de2703cb644c12e4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: cloud-init
-Priority: extra
-Section: admin
-Installed-Size: 857
-Maintainer: Scott Moser <smoser@ubuntu.com>
-Architecture: all
-Version: 0.7.3~bzr862-0ubuntu1
-Replaces: ec2-init (<< 0.5.3)
-Provides: ec2-init
-Depends: cloud-utils, ifupdown (>= 0.6.10ubuntu5), procps, python (>= 2.7.1-0ubuntu2), python-requests (>= 0.8.2), software-properties-common, debconf (>= 0.5) | debconf-2.0, python (<< 2.8), python-boto, python-cheetah, python-configobj, python-json-patch, python-oauth, python-prettytable, python-serial, python-yaml
-Conflicts: ec2-init (<< 0.5.3)
-Filename: pool/main/c/cloud-init/cloud-init_0.7.3~bzr862-0ubuntu1_all.deb
-Size: 196204
-MD5sum: 763143fca3024a66d203b75b27cadf2b
-SHA1: 456c3a9ea45af35ea1d03d21125b1a82c0cd703f
-SHA256: b51b37b3d048ce0125b8aca300bef9f2f0e86d5ab743e4af3a1b99d152c8ccae
-Description: Init scripts for cloud instances
-Python-Version: 2.7
-Description-md5: 8719ef0e4178017b7147590b1fde082e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: cloud-image
-
 Package: cpp11-migrate-3.3
 Priority: optional
 Section: devel
@@ -319,28 +296,6 @@ Description-md5: 77a6d9cb5ff0c6e1dc81858155a05394
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: grub-legacy-ec2
-Priority: extra
-Section: admin
-Installed-Size: 143
-Maintainer: Scott Moser <smoser@ubuntu.com>
-Architecture: all
-Source: cloud-init
-Version: 0.7.3~bzr862-0ubuntu1
-Depends: debconf (>= 1.5.19) | cdebconf, ucf, util-linux (>= 2.15-1), debconf (>= 0.5) | debconf-2.0
-Suggests: grub-legacy-doc
-Conflicts: grub
-Filename: pool/main/c/cloud-init/grub-legacy-ec2_0.7.3~bzr862-0ubuntu1_all.deb
-Size: 24166
-MD5sum: 8218458546d70b5f84d85f4aea18465e
-SHA1: 50ed57139defc8e2143cc81eb1e38133d5f13d9c
-SHA256: ab507edd891371661217167869385f588db7bd117599f77d7f6c0efbb992dfd2
-Description: Handles update-grub for ec2 instances
-Description-md5: e5f8ea347000ef0d0aedb42c000e0b9c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: cloud-image
 
 Package: gstreamer1.0-alsa
 Priority: optional
@@ -831,6 +786,504 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: libegl1-mesa
+Priority: optional
+Section: libs
+Installed-Size: 236
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Replaces: libegl1-x11
+Provides: libegl1-x11
+Depends: libc6 (>= 2.4), libdrm2 (>= 2.4.25), libgbm1 (>= 7.11~1), libudev1 (>= 183), libwayland-client0 (>= 1.0.2), libwayland-server0 (>= 1.0.2), libx11-6, libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-xfixes0, libxcb1
+Pre-Depends: multiarch-support
+Recommends: libegl1-mesa-drivers
+Conflicts: libegl1-x11
+Filename: pool/main/m/mesa/libegl1-mesa_9.2-1ubuntu1_powerpc.deb
+Size: 46552
+MD5sum: 084034eb82285388815de604cce3c884
+SHA1: 55b43c6c4755118f34fd2fa7a13a203f078a3d97
+SHA256: f2659aa34297483cd2b50d2d2f864af6a3a0bd0753b00942658e737d7a943c36
+Description: free implementation of the EGL API -- runtime
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 303131c20d722e28695d1b6357d3c1c6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libegl1-mesa-dbg
+Priority: extra
+Section: debug
+Installed-Size: 616
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libegl1-mesa (= 9.2-1ubuntu1)
+Filename: pool/main/m/mesa/libegl1-mesa-dbg_9.2-1ubuntu1_powerpc.deb
+Size: 154436
+MD5sum: f7e5d913644246fe3fab99c4d9595a7e
+SHA1: cd3eabb0ebabf5aa4edbac0c6d589679988b0042
+SHA256: 72c888a3793e0ba5436bc865dbaf73a76b0e7c65798e378067ad0d56f07e9994
+Description: free implementation of the EGL API -- debugging symbols
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 2f865519d57e73074704ab36dee31207
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libegl1-mesa-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 162
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libegl1-mesa (= 9.2-1ubuntu1), libegl1-mesa-drivers (= 9.2-1ubuntu1), libdrm-dev (>= 2.4.45), x11proto-dri2-dev (>= 2.1), x11proto-gl-dev (>= 1.4.11), libx11-dev, libxext-dev, libxxf86vm-dev, libxdamage-dev, libxfixes-dev, libxcb-glx0-dev, libxcb-dri2-0-dev, libx11-xcb-dev
+Filename: pool/main/m/mesa/libegl1-mesa-dev_9.2-1ubuntu1_powerpc.deb
+Size: 16574
+MD5sum: 0354fe5713891e385a64e285d3b4dc1b
+SHA1: 24befd5f62fe9de1399e07a36c406055370cf93f
+SHA256: 991a22ab2fb8a455b5483c77b8dadedbd4ebbe7d8d3552db6d7b33cc4be646ea
+Description: free implementation of the EGL API -- development files
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 8e7125460d26d2b46c63ba2792ce25e2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libegl1-mesa-drivers
+Priority: optional
+Section: libs
+Installed-Size: 3323
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libc6 (>= 2.4), libdrm-nouveau2 (>= 2.4.38), libdrm-radeon1 (>= 2.4.31), libdrm2 (>= 2.4.38), libegl1-mesa (= 9.2-1ubuntu1), libgbm1 (>= 7.11~1), libgcc1 (>= 1:4.2.1), libgl1-mesa-dri, libopenvg1-mesa (>= 7.9~) | libopenvg1, libstdc++6 (>= 4.6), libudev1 (>= 183), libwayland-client0 (>= 1.0.2), libwayland-server0 (>= 1.0.2), libx11-6 (>= 2:1.4.99.1), libxext6, libxfixes3, libglapi-mesa (= 9.2-1ubuntu1)
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mesa/libegl1-mesa-drivers_9.2-1ubuntu1_powerpc.deb
+Size: 898942
+MD5sum: d94a30c6ae9a4ee489cdb136db409d0a
+SHA1: 1f51268ee9502fea6c86d1909234be85e8aa0eef
+SHA256: 5a177e883edbba331388985440671a40053076e4a0059fc9f3a400a807cceb2c
+Description: free implementation of the EGL API -- hardware drivers
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 6f63ffb98c579f02a36dc4f9945d5353
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libegl1-mesa-drivers-dbg
+Priority: extra
+Section: debug
+Installed-Size: 18899
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libegl1-mesa-drivers (= 9.2-1ubuntu1)
+Filename: pool/main/m/mesa/libegl1-mesa-drivers-dbg_9.2-1ubuntu1_powerpc.deb
+Size: 4438980
+MD5sum: 27ee72c384f9a3ef0df81e858247e449
+SHA1: 5093b26eb52761d590c27ab8fe9e54083b3966f1
+SHA256: 28b78a268bea04842030116b71e7a42648b48e99d5a6d7de86f20a63ba7c471e
+Description: free implementation of the EGL API -- driver debugging symbols
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 2a77b1ce20257ac2bbd8df0260110ab0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgbm-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 101
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libgbm1 (= 9.2-1ubuntu1), libudev-dev
+Filename: pool/main/m/mesa/libgbm-dev_9.2-1ubuntu1_powerpc.deb
+Size: 7152
+MD5sum: 30052a7ce3af50be3c92ae761ff8a5fe
+SHA1: 3d104f517df0a4e1c03a7818645d725d15f25891
+SHA256: dea29b0f04c137531d24bbc8999d99df2994f103a193164cdabb39a9427acd61
+Description: generic buffer management API -- development files
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 97d3ae24c3bec4dfba8e29c665cda9e5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgbm1
+Priority: optional
+Section: libs
+Installed-Size: 130
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libc6 (>= 2.4), libdrm2 (>= 2.4.3), libgl1-mesa-dri, libudev1 (>= 183), libwayland-client0 (>= 1.0.2), libwayland-server0 (>= 1.0.2), libxcb-dri2-0, libxcb1
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mesa/libgbm1_9.2-1ubuntu1_powerpc.deb
+Size: 16520
+MD5sum: 51977845d220c8b40d96d95d76abee3b
+SHA1: 3872e81bfb4c23ddb6f7a578e3b177ecbc454f94
+SHA256: 541e63f677c89ee7373686304bfffd46cdbe69b4a7731465379660847cabb9ca
+Description: generic buffer management API -- runtime
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 9c1f8de2c17715ff7ed9524db86be4dd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgbm1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 270
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libgbm1 (= 9.2-1ubuntu1)
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mesa/libgbm1-dbg_9.2-1ubuntu1_powerpc.deb
+Size: 56838
+MD5sum: 87e805c4b35a526f212acb6e071c065c
+SHA1: e6b843c732fcdfd7b4ca0d011427e98978e0b083
+SHA256: d65c206dda88d214fd9e04929952d7477829a8a3ed8cfbe8a19f5f3cadbdc6b7
+Description: generic buffer management API -- debugging symbols
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: ff539259b350b2362cba34825ad1a809
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgl1-mesa-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 89
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Replaces: libgl-dev, libgl1-mesa-dri-dev
+Provides: libgl-dev, libgl1-mesa-dri-dev
+Depends: mesa-common-dev (= 9.2-1ubuntu1), libgl1-mesa-glx (= 9.2-1ubuntu1), libdrm-dev (>= 2.4.45), libx11-dev, libx11-xcb-dev, libxcb-dri2-0-dev, libxcb-glx0-dev, libxdamage-dev, libxext-dev, libxfixes-dev, libxxf86vm-dev, x11proto-dri2-dev (>= 2.6), x11proto-gl-dev (>= 1.4.14)
+Conflicts: libgl-dev, libgl1-mesa-dri-dev
+Filename: pool/main/m/mesa/libgl1-mesa-dev_9.2-1ubuntu1_powerpc.deb
+Size: 5156
+MD5sum: 8663d8f711505ba238f8cd1d5d14c050
+SHA1: 553ba87f6d62f94a58f2e211c2841ab9c096fc40
+SHA256: f3330b12eff21135f135906bbe6c5485e5fa15b2878b0a8b25c1df981ffa4c99
+Description: free implementation of the OpenGL API -- GLX development files
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: edeb377b6e64f69c00b2215e4025a28a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full
+
+Package: libgl1-mesa-dri
+Priority: optional
+Section: libs
+Installed-Size: 13676
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Replaces: libgl1-mesa-dri-experimental (<< 7.11.1), xlibmesa-dri (<< 1:7.0.0)
+Depends: libc6 (>= 2.17), libdrm-nouveau2 (>= 2.4.38), libdrm-radeon1 (>= 2.4.31), libdrm2 (>= 2.4.38), libexpat1 (>= 2.0.1), libgcc1 (>= 1:4.2.1), libglapi-mesa, libllvm3.3, libstdc++6 (>= 4.6)
+Pre-Depends: multiarch-support
+Recommends: libtxc-dxtn-s2tc0 | libtxc-dxtn0
+Suggests: libglide3
+Conflicts: xlibmesa-dri (<< 1:7.0.0)
+Breaks: libgl1-mesa-dri-experimental (<< 7.11.1), libgl1-mesa-glx (<< 7.10.2-4), libgl1-mesa-glx-no-multiarch, xserver-xorg-core (<< 2:1.10.2-2), xserver-xorg-core-no-multiarch
+Filename: pool/main/m/mesa/libgl1-mesa-dri_9.2-1ubuntu1_powerpc.deb
+Size: 2431566
+MD5sum: b5374a6c71cf4d39ce20b54b9c166756
+SHA1: 393a2867db2710ee78d2dc5b6b32654dfc1e577d
+SHA256: 97ee0b2d3cd97963f9c89f67ca7c25cab41295a26dfc3851b8f995b845435831
+Description: free implementation of the OpenGL API -- DRI modules
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: da6c27328d7c638224ef0acc251a333d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgl1-mesa-dri-dbg
+Priority: extra
+Section: libdevel
+Installed-Size: 66257
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Replaces: libgl1-mesa-dri-experimental-dbg (<< 7.11.1)
+Depends: libgl1-mesa-dri (= 9.2-1ubuntu1)
+Filename: pool/main/m/mesa/libgl1-mesa-dri-dbg_9.2-1ubuntu1_powerpc.deb
+Size: 13776466
+MD5sum: d6ffd30a6b1e9286f7abfbd14ba6bca7
+SHA1: 61dcbff14d1b92d493787f0ecf14544a42f873af
+SHA256: feb8f0de8a3243d2b839ad8a69508bb51720a30e9e2338dc7b661fefbbf0b7c2
+Description: Debugging symbols for the Mesa DRI modules
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: fb1e2b71da0f9ac97628cc83179582ac
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgl1-mesa-glx
+Priority: optional
+Section: libs
+Installed-Size: 573
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Replaces: libgl1, libgl1-mesa-dri (<< 6.4.0)
+Provides: libgl1
+Depends: libc6 (>= 2.4), libdrm2 (>= 2.3.1), libglapi-mesa (= 9.2-1ubuntu1), libx11-6 (>= 2:1.4.99.1), libx11-xcb1, libxcb-dri2-0 (>= 1.8), libxcb-glx0 (>= 1.8), libxcb1, libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxxf86vm1
+Pre-Depends: multiarch-support
+Recommends: libgl1-mesa-dri (>= 7.2)
+Conflicts: libgl1, libgl1-mesa-dri (<< 6.4.0)
+Breaks: fglrx-glx (<< 1:11-6-1), libgl1-nvidia-alternatives (<= 275.09.07-1)
+Filename: pool/main/m/mesa/libgl1-mesa-glx_9.2-1ubuntu1_powerpc.deb
+Size: 94232
+MD5sum: d03145ec81ae38b7541fc88ad3249947
+SHA1: 6a016a28b1a0ee87126f9eb246ad6026133ab9e7
+SHA256: 2f6b1f76a90a2df42ee92d959020c2e31b1f15c0e704e468675e5a3d050448de
+Description: free implementation of the OpenGL API -- GLX runtime
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 55c9cfe284958a4586b3c6b8323ccf0c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgl1-mesa-glx-dbg
+Priority: extra
+Section: libdevel
+Installed-Size: 2119
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libgl1-mesa-glx (= 9.2-1ubuntu1)
+Filename: pool/main/m/mesa/libgl1-mesa-glx-dbg_9.2-1ubuntu1_powerpc.deb
+Size: 408136
+MD5sum: ba3fa4cc3e505e02c5a5a4035b4c9bff
+SHA1: 9f189a3e4d8e2485f8e1c8579ba7fae222ab56c2
+SHA256: 0e015b8d182fd4d456a83a7a54b00467a9b3d618322009d01fd9b801b270891d
+Description: Debugging symbols for the Mesa GLX runtime
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 164c9f30dd80a2fb1fdca740b3ebe620
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libglapi-mesa
+Priority: optional
+Section: libs
+Installed-Size: 311
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mesa/libglapi-mesa_9.2-1ubuntu1_powerpc.deb
+Size: 29706
+MD5sum: 37122934db4d301fc86d6ea7b6879d7f
+SHA1: cb49286c1d91700e4b062cf0de6e2c50862b2509
+SHA256: 5568a3ddf033aa2d1c7c727375e51630af15ef0f1c29c6b8abbe7528770d7e1c
+Description: free implementation of the GL API -- shared library
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 6da05dae0e50a214ae9b1d095f83c561
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libglapi-mesa-dbg
+Priority: extra
+Section: debug
+Installed-Size: 448
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libglapi-mesa (= 9.2-1ubuntu1)
+Filename: pool/main/m/mesa/libglapi-mesa-dbg_9.2-1ubuntu1_powerpc.deb
+Size: 61394
+MD5sum: 081342b07bcb9c0adb451433d6f903cc
+SHA1: 84ef670358507f474c32ed3f364aba143f9bece4
+SHA256: a7a41073b93924ba2db733a28af2a8930b00ece51aa52c20bba081555f7d3673
+Description: free implementation of the GL API -- debugging symbols
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 06022288c7b9a148961fac43facd60e8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgles1-mesa
+Priority: optional
+Section: libs
+Installed-Size: 133
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Replaces: libgles1
+Provides: libgles1
+Depends: libglapi-mesa (= 9.2-1ubuntu1), libc6 (>= 2.3.5)
+Pre-Depends: multiarch-support
+Conflicts: libgles1
+Filename: pool/main/m/mesa/libgles1-mesa_9.2-1ubuntu1_powerpc.deb
+Size: 11738
+MD5sum: c709ef808db8558e43e5459ff27f9c4c
+SHA1: a18659b4cd97e34db6a3a9d420bddb0ac590729c
+SHA256: 4cf671991ba4d74029c9816a1e9ea4dac62ec057c8deb8e93271dd71d8129f5f
+Description: free implementation of the OpenGL|ES 1.x API -- runtime
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 5d45602a19e7c4d5c096452a8c1b6ee3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgles1-mesa-dbg
+Priority: extra
+Section: debug
+Installed-Size: 172
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libgles1-mesa (= 9.2-1ubuntu1)
+Filename: pool/main/m/mesa/libgles1-mesa-dbg_9.2-1ubuntu1_powerpc.deb
+Size: 19580
+MD5sum: 3f1bef659a183b88d5a7bec7ea39cb13
+SHA1: 4b45abd369a5fcbefae21d6f18072773e70b8a47
+SHA256: f7c0352a75c53f1f2bdb620f0b30041ac56c10101d317280de53b1f0cb94c4eb
+Description: free implementation of the OpenGL|ES 1.x API -- debugging symbols
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 4fa9b5bb249bd2e4b78b460050218045
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgles1-mesa-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 195
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libgles1-mesa (= 9.2-1ubuntu1), libegl1-mesa-dev
+Filename: pool/main/m/mesa/libgles1-mesa-dev_9.2-1ubuntu1_powerpc.deb
+Size: 17916
+MD5sum: 368e789c7dc60e3b09f395084d115b32
+SHA1: abac88d6c93d5cf8296921aff0bb9b28c656b542
+SHA256: 62d743282da4dbcfabe4ec2d3946b71d182eed193963e1b9aace9f5c4cf220f7
+Description: free implementation of the OpenGL|ES 1.x API -- development files
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 3fc8f0ee3bdb7f86c55dc67a5bbbf86f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgles2-mesa
+Priority: optional
+Section: libs
+Installed-Size: 138
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Replaces: libgles2
+Provides: libgles2
+Depends: libglapi-mesa (= 9.2-1ubuntu1), libc6 (>= 2.3.5)
+Pre-Depends: multiarch-support
+Conflicts: libgles2
+Filename: pool/main/m/mesa/libgles2-mesa_9.2-1ubuntu1_powerpc.deb
+Size: 12950
+MD5sum: 587ab20743c37798fbce5ecd2de7376f
+SHA1: 1a4241cc1f588276785521086263dbb962a5ece0
+SHA256: 66e15be52ba3cb5d15065b702c8afce3e0bc045d4b1e9bb8c4d41a2da85c7bc7
+Description: free implementation of the OpenGL|ES 2.x API -- runtime
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 385f5e9ca66553853ff0600865879832
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active
+
+Package: libgles2-mesa-dbg
+Priority: extra
+Section: debug
+Installed-Size: 191
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libgles2-mesa (= 9.2-1ubuntu1)
+Filename: pool/main/m/mesa/libgles2-mesa-dbg_9.2-1ubuntu1_powerpc.deb
+Size: 22914
+MD5sum: 58b531d5c177bd36b22b667daa1d1fd4
+SHA1: 44cecbb3e2c0ac1924d2715eadc2bc71ab4cfca7
+SHA256: 919b4f91d9833e29ae86e9c9c6838b60bc3fba43c54454805f0ef5bb1276a9fe
+Description: free implementation of the OpenGL|ES 2.x API -- debugging symbols
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: b9ce4487980b8d0298c3fd42c2ad83a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgles2-mesa-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 288
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libgles2-mesa (= 9.2-1ubuntu1), libegl1-mesa-dev
+Filename: pool/main/m/mesa/libgles2-mesa-dev_9.2-1ubuntu1_powerpc.deb
+Size: 24810
+MD5sum: a3a6cce77490213dd94925433d7c43e5
+SHA1: 8e05c3070912566807acacb3945bcea56f245fa3
+SHA256: 8e53c76209f30e885daae7e3c123da5e70e8a5855f85ee8a7e831def3892d6f6
+Description: free implementation of the OpenGL|ES 2.x API -- development files
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 7598b085943a2f03c7a2a79086dffcee
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libgstreamer-plugins-base1.0-0
 Priority: optional
 Section: libs
@@ -1131,6 +1584,124 @@ Description-md5: 2f06b7e1bfdb9f620d92f9696d24fabc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libopenvg1-mesa
+Priority: optional
+Section: libs
+Installed-Size: 125
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Replaces: libopenvg1
+Provides: libopenvg1
+Depends: libc6 (>= 2.4)
+Pre-Depends: multiarch-support
+Conflicts: libopenvg1
+Filename: pool/main/m/mesa/libopenvg1-mesa_9.2-1ubuntu1_powerpc.deb
+Size: 13034
+MD5sum: f8b98aeb564dedc4c06cf1e26d426e20
+SHA1: 95509abc8b562de37b8814b3490f68b1120877ad
+SHA256: f158a0b33fba2e131c22719af298852fba51ec00ddd9a6e7addb532150c8d3dd
+Description: free implementation of the OpenVG API -- runtime
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 23fad5a33ddc86c1ebd79b349b93c466
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libopenvg1-mesa-dbg
+Priority: extra
+Section: debug
+Installed-Size: 158
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libopenvg1-mesa (= 9.2-1ubuntu1)
+Filename: pool/main/m/mesa/libopenvg1-mesa-dbg_9.2-1ubuntu1_powerpc.deb
+Size: 21930
+MD5sum: e8e142b4bf2d7298492e5b4556918d69
+SHA1: e0618f87490a697ce6d7c94b5669ef51c5c2a93d
+SHA256: 1ccdc3dd1cdb5e7a4edff46073ee6c379963ee501cac71d496c0bf6c9b6074a1
+Description: free implementation of the OpenVG API -- debugging symbols
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: e093793928f70f1daa03783f40a7298c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libopenvg1-mesa-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 148
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libopenvg1-mesa (= 9.2-1ubuntu1), libegl1-mesa-dev
+Filename: pool/main/m/mesa/libopenvg1-mesa-dev_9.2-1ubuntu1_powerpc.deb
+Size: 11992
+MD5sum: 9775d3f6b112bb2eb205ec511520078a
+SHA1: b87ff7a6d3885d8b92f81e0726888501629b987b
+SHA256: 22c09c0851dc48d3b764d499e03ba95d2a545777565daa97588e4af97ada809a
+Description: free implementation of the OpenVG API -- development files
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 83d64f6fb398c328ebe1bcc729f426b3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libosmesa6
+Priority: extra
+Section: libs
+Installed-Size: 4204
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Replaces: libgl1-mesa-swx11 (<< 6.5.2)
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.2.1), libglapi-mesa (= 9.2-1ubuntu1), libstdc++6 (>= 4.1.1)
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mesa/libosmesa6_9.2-1ubuntu1_powerpc.deb
+Size: 852562
+MD5sum: 7f4c53191430bd941645a69e2922841d
+SHA1: a33a2628aa707aec0010b694d0bfaa97e0ff1b92
+SHA256: 1f043992dfb7db99b11a565e280925799a3f4c63ca5c3ba3fb27e2619e837e22
+Description: Mesa Off-screen rendering extension
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: e0dd0508dd95a809bb554369d28e278c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libosmesa6-dev
+Priority: extra
+Section: devel
+Installed-Size: 102
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Replaces: libgl1-mesa-swx11-dev (<< 6.5.2), libosmesa-dev, mesa-common-dev (<< 6.5.2), xlibosmesa-dev
+Provides: libosmesa-dev, xlibosmesa-dev
+Depends: libosmesa6 (= 9.2-1ubuntu1), mesa-common-dev (= 9.2-1ubuntu1) | libgl-dev
+Conflicts: libosmesa-dev, libosmesa4-dev, xlibosmesa-dev
+Filename: pool/main/m/mesa/libosmesa6-dev_9.2-1ubuntu1_powerpc.deb
+Size: 7280
+MD5sum: b0312429aa69e8c5695eae976216a34e
+SHA1: 68daba977d7e12a3b28030636db85061ab8925ae
+SHA256: 38e475f9f3c7c1019ada8499cc1d5f98397ceddaf16f47ed337fc9db8ce96289
+Description: Mesa Off-screen rendering extension -- development files
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 9b1d7a0b3e6a2ea021f4443f42dcff4f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libqtwebkit-dev
 Priority: optional
 Section: libdevel
@@ -1241,6 +1812,73 @@ Description: Upstart Client Library
 Multi-Arch: same
 Homepage: http://upstart.ubuntu.com/
 Description-md5: 6c0f4f2b94a39a98cf6d9e420c504939
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libxatracker-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 102
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libxatracker1 (= 9.2-1ubuntu1)
+Filename: pool/main/m/mesa/libxatracker-dev_9.2-1ubuntu1_powerpc.deb
+Size: 7560
+MD5sum: 992739c767adb5f0cf5df080a718ffde
+SHA1: 5a5dbc696e2ab3d81632e814354ce94f64a8c8b6
+SHA256: 9f1ea9b4d5a8464c951f33c5ffa1ad62f8bae8da6792a5ee68f1074c89111613
+Description: X acceleration library -- development files
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: acb2dd21dbe796c5f50a1f153cef93e2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libxatracker1
+Priority: optional
+Section: libs
+Installed-Size: 435
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libgl1-mesa-dri
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mesa/libxatracker1_9.2-1ubuntu1_powerpc.deb
+Size: 121116
+MD5sum: f607deefc0b5a7d99c17d567251bda9d
+SHA1: f777c76e1a8418d629b1c50d2a88b6b33768968a
+SHA256: 4c11d1f939c5948bec5488d3e53296a43e0f89f907fff54eeb0d237d715dc26b
+Description: X acceleration library -- runtime
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 016e30e30b0b6c5bb9448c735436c520
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libxatracker1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 2111
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Depends: libxatracker1 (= 9.2-1ubuntu1)
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mesa/libxatracker1-dbg_9.2-1ubuntu1_powerpc.deb
+Size: 468670
+MD5sum: 11cbd7e37eb3762a2c64a62b71ac78a7
+SHA1: bde4c7875cbdb6b7cc414cc64094a23ee093a9fa
+SHA256: ca01a034c2ac35b6bf68b2f626e1623e8eecb54ad4998cb5e4434e68745382a4
+Description: X acceleration library -- debugging symbols
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: fe0902eeca3a0d7aa29c9e1bb6de29c2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1379,6 +2017,29 @@ Homepage: http://www.llvm.org/
 Description-md5: cc71b67cee5965263bab53df0cb1b6d6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: mesa-common-dev
+Priority: optional
+Section: devel
+Installed-Size: 1683
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Source: mesa
+Version: 9.2-1ubuntu1
+Replaces: libgl1-mesa-dev (<< 7.5~rc4-2), libgl1-mesa-swx11-dev (<< 6.5.2), xlibmesa-gl-dev (<< 1:7), xlibosmesa-dev
+Depends: libx11-dev, libdrm-dev (>= 2.4.45)
+Filename: pool/main/m/mesa/mesa-common-dev_9.2-1ubuntu1_powerpc.deb
+Size: 247424
+MD5sum: 66e9c25d81bce59e9b9f6ed0186a94ba
+SHA1: 781f4fcdc881aa54922b54f913e18b6e27e0bce3
+SHA256: a33107c314d17224fa95fd656272dd28840169e61f06f98c2abe1d8aaa71161e
+Description: Developer documentation for Mesa
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 0d9d46ba6861a0a8c404cf51db1e980d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-full, kubuntu-active-full
 
 Package: mir-doc
 Priority: optional
