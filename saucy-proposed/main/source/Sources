@@ -65,6 +65,7 @@ Testsuite: autopkgtest
 Package: at-spi2-core
 Binary: at-spi2-core, at-spi2-core-dbg, libatspi2.0-0, libatspi2.0-dev, libatspi2.0-0-dbg, gir1.2-atspi-2.0, at-spi2-doc
 Version: 2.9.90-0ubuntu2
+Priority: optional
 Section: misc
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
@@ -780,6 +781,45 @@ Checksums-Sha256:
  d06da21162a367b3e3810d910d503530885b7e04ad9f8e3355a09a74963091ed 304188 mysql-5.5_5.5.32-0ubuntu4.debian.tar.gz
 Testsuite: autopkgtest
 
+Package: network-manager
+Binary: network-manager, network-manager-dev, libnm-glib4, libnm-glib-dev, libnm-glib-vpn1, libnm-glib-vpn-dev, libnm-util2, libnm-util-dev, network-manager-dbg, gir1.2-networkmanager-1.0
+Version: 0.9.8.0-0ubuntu20
+Section: net
+Maintainer: Ubuntu Core Dev Team <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), dh-autoreconf, autotools-dev, pkg-config, intltool, libdbus-glib-1-dev (>= 0.75), libdbus-1-dev (>= 1.1), libiw-dev (>= 27+28pre9), libglib2.0-dev (>= 2.22), libsoup2.4-dev (>= 2.26), libnl-3-dev (>= 3.2.7), libnl-route-3-dev (>= 3.2.7), libnl-genl-3-dev (>= 3.2.7), ppp-dev (>= 2.4.5), libpolkit-gobject-1-dev, libnss3-dev, uuid-dev, libsystemd-login-dev, libudev-dev (>= 165), libgudev-1.0-dev (>= 165), libgirepository1.0-dev (>= 0.10.7-1~), gobject-introspection (>= 0.9.12-4~), gtk-doc-tools, isc-dhcp-client (>= 4.1.1-P1-4), dbus-test-runner, dbus, valac (>= 0.17.1.24), python-gobject-2, python-dbus, gir1.2-glib-2.0, gir1.2-freedesktop
+Architecture: linux-any
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/n/network-manager
+Files:
+ a87d3a4244fbd66d3b9be22539911e5f 3255 network-manager_0.9.8.0-0ubuntu20.dsc
+ 38d28f6bd9220d85dfff47210706195c 2056356 network-manager_0.9.8.0.orig.tar.xz
+ e90913f40ffbd2b85e8c34f8ad2e3d85 157096 network-manager_0.9.8.0-0ubuntu20.debian.tar.gz
+Uploaders: Michael Biebl <biebl@debian.org>
+Homepage: http://www.gnome.org/projects/NetworkManager/
+Vcs-Bzr: https://code.launchpad.net/~network-manager/network-manager/ubuntu
+Package-List: 
+ gir1.2-networkmanager-1.0 deb introspection optional
+ libnm-glib-dev deb libdevel optional
+ libnm-glib-vpn-dev deb libdevel optional
+ libnm-glib-vpn1 deb libs optional
+ libnm-glib4 deb libs optional
+ libnm-util-dev deb libdevel optional
+ libnm-util2 deb libs optional
+ network-manager deb net optional
+ network-manager-dbg deb debug extra
+ network-manager-dev deb devel optional
+Checksums-Sha1:
+ b449bee6eb6df7c574724a0860b829b573375344 3255 network-manager_0.9.8.0-0ubuntu20.dsc
+ ba453a19fbbf0e3f773bead2111fb93761c4ba83 2056356 network-manager_0.9.8.0.orig.tar.xz
+ 2cfbba04c1d37f309703bfd56c78fcfbd1386054 157096 network-manager_0.9.8.0-0ubuntu20.debian.tar.gz
+Checksums-Sha256:
+ 4a56e8a8f268ebd6bb92af08b6c3af89e48838892d90414a23dac4a85e33821e 3255 network-manager_0.9.8.0-0ubuntu20.dsc
+ c366bcded6354d8186ad93c05d26d6a20bc550aa0391f974704e7a60e9f6096b 2056356 network-manager_0.9.8.0.orig.tar.xz
+ ab604f96ce9c939e45369599c2dd65ea15bf9832032c87ef669f3ce665f8f5c6 157096 network-manager_0.9.8.0-0ubuntu20.debian.tar.gz
+Testsuite: autopkgtest
+
 Package: postgresql-9.1
 Binary: libpq-dev, libpq5, libecpg6, libecpg-dev, libecpg-compat3, libpgtypes3, postgresql-9.1, postgresql-9.1-dbg, postgresql-client-9.1, postgresql-server-dev-9.1, postgresql-doc-9.1, postgresql-contrib-9.1, postgresql-plperl-9.1, postgresql-plpython-9.1, postgresql-plpython3-9.1, postgresql-pltcl-9.1
 Version: 9.1.9-3
@@ -829,6 +869,7 @@ Testsuite: autopkgtest
 Package: python-django-openstack-auth
 Binary: python-openstack-auth
 Version: 1.1.1-0ubuntu1
+Priority: optional
 Section: python
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Build-Depends: debhelper (>= 8.0.0), python-setuptools, python-all (>= 2.6.6-3~), python-mox, python-django, python-keystoneclient
