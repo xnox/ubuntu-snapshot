@@ -601,6 +601,29 @@ Origin: Ubuntu
 Supported: 18m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntustudio-desktop
 
+Package: gnutls-bin
+Priority: optional
+Section: net
+Installed-Size: 642
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: armel
+Source: gnutls26 (2.12.14-5ubuntu4.4)
+Version: 3.0.11+really2.12.14-5ubuntu4.4
+Depends: libc6 (>= 2.15), libgnutls26 (>= 2.12.6.1-0)
+Filename: pool/main/g/gnutls26/gnutls-bin_3.0.11+really2.12.14-5ubuntu4.4_armel.deb
+Size: 175592
+MD5sum: 4efde31befd1e2a332fcca11bca00c28
+SHA1: 1ce777afc520814cdfb58b56798997889440b8e8
+SHA256: 55833c7c3325bf1703ea8d18cc7a151706dacdee4dc52eecea1671c073332a57
+Description: GNU TLS library - commandline utilities
+Multi-Arch: foreign
+Homepage: http://www.gnutls.org/
+Description-md5: 33f669c0eda9ac17638870658371c713
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
 Package: gnutls-doc
 Priority: optional
 Section: doc
@@ -1279,6 +1302,132 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop
+
+Package: libgnutls-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 1740
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: armel
+Source: gnutls26
+Version: 2.12.14-5ubuntu4.4
+Replaces: gnutls-dev
+Provides: gnutls-dev
+Depends: libgnutls26 (= 2.12.14-5ubuntu4.4), libgnutlsxx27 (= 2.12.14-5ubuntu4.4), libgnutls-openssl27 (= 2.12.14-5ubuntu4.4), libgcrypt11-dev (>= 1.4.0), libc6-dev | libc-dev, zlib1g-dev, libtasn1-3-dev (>= 0.3.4), libp11-kit-dev (>= 0.4)
+Suggests: gnutls-doc, gnutls-bin
+Conflicts: gnutls-dev
+Filename: pool/main/g/gnutls26/libgnutls-dev_2.12.14-5ubuntu4.4_armel.deb
+Size: 498928
+MD5sum: ee4a4f9e83626c6e57715594caedf2cd
+SHA1: 748990f52c78ddfe4d719006999cf930a13b5d20
+SHA256: 3c9ec1d9d9f68e4bc2bd1c995556947c4a5b6aabd8b514cb9f1a978da456d3da
+Description: GNU TLS library - development files
+Homepage: http://www.gnutls.org/
+Description-md5: e2a3e8bac6f6874ae5a4bc8e489881a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libgnutls-openssl27
+Priority: optional
+Section: libs
+Installed-Size: 260
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: armel
+Source: gnutls26
+Version: 2.12.14-5ubuntu4.4
+Depends: libgnutls26 (= 2.12.14-5ubuntu4.4), libc6 (>= 2.4), libtasn1-3 (>= 1.6-0)
+Pre-Depends: multiarch-support
+Filename: pool/main/g/gnutls26/libgnutls-openssl27_2.12.14-5ubuntu4.4_armel.deb
+Size: 17802
+MD5sum: b90cc26c423026686ca266e8ac919ae0
+SHA1: ec9f2b6ff172c4a748d40cb9caf756c69cd07b70
+SHA256: 2653b00cd3e016d6dbd2cd118ab34fa853c98cf14315f236703370788e2a318b
+Description: GNU TLS library - OpenSSL wrapper
+Multi-Arch: same
+Homepage: http://www.gnutls.org/
+Description-md5: ed7bc845df883f3776627eaef9179481
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libgnutls26
+Priority: standard
+Section: libs
+Installed-Size: 992
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: armel
+Source: gnutls26
+Version: 2.12.14-5ubuntu4.4
+Replaces: gnutls0, gnutls0.4, gnutls3
+Depends: libc6 (>= 2.8), libgcrypt11 (>= 1.4.5), libp11-kit0 (>= 0.11), libtasn1-3 (>= 1.6-0), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Suggests: gnutls-bin
+Conflicts: gnutls0, gnutls0.4
+Breaks: ccbuild (<= 2.0.1-1), csync2 (<= 1.34-2.2), freewheeling (<= 0.6-1.1), gkrellm (<= 2.3.4-1), libsoup2.4-1 (= 2.31.2-1), libsoup2.4-1 (<= 2.30.1-1), macopix-gtk2 (<= 1.7.4-3), pokerth (<= 0.8.3-3+b1), pokerth-server (<= 0.8.3-3+b1), sipsak (<= 0.9.6-2.1), slrn (<= 1.0.0~pre18-1.1), slrnpull (<= 1.0.0~pre18-1.1), snowdrop (<= 0.02b-9), ssmtp (<= 2.64-4), tf5 (<= 5.0beta8-4), wput (<= 0.6.2-2), zoneminder (<= 1.24.4-1)
+Filename: pool/main/g/gnutls26/libgnutls26_2.12.14-5ubuntu4.4_armel.deb
+Size: 439810
+MD5sum: d8044e20bdfe1e3e9de13867ca949062
+SHA1: 146b3d65d627430cdc107ca9632b7f59319fd746
+SHA256: 4d45c293ddc6ed355c2eba5fe97f087145b5709882d82762640f66838b1af2f2
+Description: GNU TLS library - runtime library
+Multi-Arch: same
+Homepage: http://www.gnutls.org/
+Description-md5: 07e0914117156d2b3fcf0d63e9ef8ac2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: standard, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libgnutls26-dbg
+Priority: extra
+Section: devel
+Installed-Size: 4116
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: armel
+Source: gnutls26
+Version: 2.12.14-5ubuntu4.4
+Depends: libgnutls26 (= 2.12.14-5ubuntu4.4)
+Conflicts: libgnutls13-dbg, libgnutls28-dbg
+Filename: pool/main/g/gnutls26/libgnutls26-dbg_2.12.14-5ubuntu4.4_armel.deb
+Size: 1506276
+MD5sum: 1232dfd0496c9b86aaca95d9e73cc0f1
+SHA1: 278a004b589820ea163831dd272d3eee42dc4f91
+SHA256: 38a116d1ded2ebaa9aabd3a17c88ca2df804d4179bb0e1fcd3c374b8cba528aa
+Description: GNU TLS library - debugger symbols
+Homepage: http://www.gnutls.org/
+Description-md5: 49ef95a26f6727eeaa8d2c979d728b2d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libgnutlsxx27
+Priority: extra
+Section: libs
+Installed-Size: 277
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GnuTLS Maintainers <pkg-gnutls-maint@lists.alioth.debian.org>
+Architecture: armel
+Source: gnutls26
+Version: 2.12.14-5ubuntu4.4
+Depends: libgnutls26 (= 2.12.14-5ubuntu4.4), libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.3.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/g/gnutls26/libgnutlsxx27_2.12.14-5ubuntu4.4_armel.deb
+Size: 18770
+MD5sum: e6c4e889ff61dee6f74ac32469038c52
+SHA1: 9e2dbaca9da53c62ba1b0bf31e18132c63981d3f
+SHA256: a4810a45f01c9b1b8ee8a35f7f48a487d3b478d8e225b4045402ebb392467ee7
+Description: GNU TLS library - C++ runtime library
+Multi-Arch: same
+Homepage: http://www.gnutls.org/
+Description-md5: afe5e834531764319ee8050592126f1d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
 
 Package: libgtkhtml-4.0-0
 Priority: optional
