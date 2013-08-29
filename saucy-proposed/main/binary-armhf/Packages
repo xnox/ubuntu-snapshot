@@ -137,6 +137,32 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: gimp
+Priority: optional
+Section: graphics
+Installed-Size: 11048
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ari Pollak <ari@debian.org>
+Architecture: armhf
+Version: 2.8.6-1ubuntu1
+Replaces: gimp-plugin-registry (<< 4.20120506)
+Provides: gimp-helpbrowser, gimp-python
+Depends: libgimp2.0 (>= 2.8.6), libgimp2.0 (<= 2.8.6-z), gimp-data (>= 2.8.6), gimp-data (<= 2.8.6-z), python-gtk2 (>= 2.8.0), libgdk-pixbuf2.0-0 (>= 2.24.1), libaa1 (>= 1.4p5), libbabl-0.1-0 (>= 0.1.10), libbz2-1.0, libc6 (>= 2.15), libcairo2 (>= 1.10.2), libdbus-1-3 (>= 1.0.2), libdbus-glib-1-2 (>= 0.88), libexif12, libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.2.1), libgegl-0.2-0 (>= 0.2.0), libglib2.0-0 (>= 2.37.3), libgs9 (>= 8.61.dfsg.1), libgtk2.0-0 (>= 2.24.10), libgudev-1.0-0 (>= 146), libjasper1, libjpeg8 (>= 8c), liblcms1 (>= 1.15-1), libmng1 (>= 1.0.10), libpango-1.0-0 (>= 1.29.4), libpangocairo-1.0-0 (>= 1.29.4), libpangoft2-1.0-0 (>= 1.29.4), libpng12-0 (>= 1.2.13-4), libpoppler-glib8 (>= 0.18.0), librsvg2-2 (>= 2.14.4), libtiff5 (>> 4.0.0-1~), libwebkitgtk-1.0-0 (>= 1.3.10), libwmf0.2-7 (>= 0.2.8.4), libx11-6, libxcursor1 (>> 1.1.2), libxext6, libxfixes3, libxmu6, libxpm4, zlib1g (>= 1:1.1.4), python (>= 2.7.1-0ubuntu2), python2.7
+Recommends: ghostscript
+Suggests: gimp-help-en | gimp-help, gimp-data-extras, gvfs-backends, libasound2
+Breaks: gimp-plugin-registry (<< 4.20120506)
+Filename: pool/main/g/gimp/gimp_2.8.6-1ubuntu1_armhf.deb
+Size: 3023762
+MD5sum: bfaf85851728eae7492c3cccca1cf2d1
+SHA1: 384fd73743eaad804da4d4cfa9c7f3233e4a0e96
+SHA256: 7d0aedb4ea316460b97d2c570254bd8bd9138998b2150df1dc2ee5426f8fbcde
+Description: The GNU Image Manipulation Program
+Homepage: http://www.gimp.org/
+Description-md5: ad6dd18a09fb86ea4529ac53f33168b9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb, edubuntu-desktop-gnome, edubuntu-usb, xubuntu-desktop, ubuntustudio-publishing, ubuntustudio-photography, ubuntustudio-graphics
+
 Package: gimp-data
 Priority: optional
 Section: graphics
@@ -160,6 +186,27 @@ Description-md5: f70d84aecd044d27d27535082275ce75
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb, edubuntu-desktop-gnome, edubuntu-usb, xubuntu-desktop, ubuntustudio-publishing, ubuntustudio-photography, ubuntustudio-graphics
+
+Package: gimp-dbg
+Priority: extra
+Section: graphics
+Installed-Size: 48167
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ari Pollak <ari@debian.org>
+Architecture: armhf
+Source: gimp
+Version: 2.8.6-1ubuntu1
+Depends: gimp (= 2.8.6-1ubuntu1) | libgimp2.0 (= 2.8.6-1ubuntu1)
+Filename: pool/main/g/gimp/gimp-dbg_2.8.6-1ubuntu1_armhf.deb
+Size: 11888604
+MD5sum: bf6d5e5ef515f0f269d1c12e000ccd67
+SHA1: 0b0dfd9a758bee52f5ca67f20b13f4a3fdf6e728
+SHA256: 1b5cc75f047de508b854a210a0dd956e7c2f2e8001ed2a0732a5ca36d73b121b
+Description: Debugging symbols for GIMP
+Homepage: http://www.gimp.org/
+Description-md5: 2f9db4a750267fb9aae49799596bcd26
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: gstreamer1.0-plugins-good
 Priority: optional
@@ -551,6 +598,51 @@ Description: generic buffer management API -- debugging symbols
 Multi-Arch: same
 Homepage: http://mesa3d.sourceforge.net/
 Description-md5: ff539259b350b2362cba34825ad1a809
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgimp2.0
+Priority: optional
+Section: libs
+Installed-Size: 2452
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ari Pollak <ari@debian.org>
+Architecture: armhf
+Source: gimp
+Version: 2.8.6-1ubuntu1
+Depends: libc6 (>= 2.15), libcairo2 (>= 1.10.2), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk2.0-0 (>= 2.24.10), libpango-1.0-0 (>= 1.29.4), libpangocairo-1.0-0 (>= 1.29.4)
+Recommends: gimp-data (>= 2.8.6), gimp-data (<= 2.8.6-z)
+Filename: pool/main/g/gimp/libgimp2.0_2.8.6-1ubuntu1_armhf.deb
+Size: 423056
+MD5sum: 53280d9c74aeb4b97ae0f8889e821c43
+SHA1: 2c045bda02d7dba05a4ae934fb5cee3e6bd86e52
+SHA256: e16c6f8a461362281b8923632fbe3086374f78f8b7b9e1b83abb18ac7c453c25
+Description: Libraries for the GNU Image Manipulation Program
+Homepage: http://www.gimp.org/
+Description-md5: 87c9f62281987fda19082f1b5cc2c95c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb, edubuntu-desktop-gnome, edubuntu-usb, xubuntu-desktop, ubuntustudio-publishing, ubuntustudio-photography, ubuntustudio-graphics
+
+Package: libgimp2.0-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 1695
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ari Pollak <ari@debian.org>
+Architecture: armhf
+Source: gimp
+Version: 2.8.6-1ubuntu1
+Depends: libc6 (>= 2.4), libgimp2.0 (= 2.8.6-1ubuntu1), libglib2.0-0 (>= 2.30.2), libgtk2.0-dev (>= 2.12.5), pkg-config
+Suggests: libgimp2.0-doc
+Filename: pool/main/g/gimp/libgimp2.0-dev_2.8.6-1ubuntu1_armhf.deb
+Size: 85150
+MD5sum: adb549970ee27db97dad173e24a18ef8
+SHA1: 198f4ada82f53998a7b1be4af9569b98623f8b0f
+SHA256: 38c1bab875e8995f844d22de1472f5fb7b8897b7b2a58922e45c8aa833ad105f
+Description: Headers and other files for compiling plugins for GIMP
+Homepage: http://www.gimp.org/
+Description-md5: c7c7d24560c6f749d332154868167ed5
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1789,4 +1881,116 @@ Description-md5: 83f8894d390ffa31e34c89e43fc95bb1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: xserver-common
+Priority: optional
+Section: x11
+Installed-Size: 1682
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: all
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu4
+Replaces: xserver-xorg-core (<< 2:1.5.2)
+Depends: x11-common, xkb-data, x11-xkb-utils
+Recommends: xfonts-base, xauth
+Filename: pool/main/x/xorg-server/xserver-common_1.14.2.901-2ubuntu4_all.deb
+Size: 32452
+MD5sum: d2623191230a3ea8c7e6d102db40360b
+SHA1: d9161687703d75e977c2477a724908b82b83b4f0
+SHA256: b618c13c51e3332cf9b629acdef53f7ff78b08057ae372ea52bf908b8cd63591
+Description: common files used by various X servers
+Description-md5: be03943b6955ee9fae7163ad516c772f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: xserver-xorg-core
+Priority: optional
+Section: x11
+Installed-Size: 2406
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu4
+Provides: xorg-input-abi-19, xorg-video-abi-14
+Depends: xserver-common (>= 2:1.14.2.901-2ubuntu4), keyboard-configuration, udev (>= 149), libaudit1 (>= 1:2.2.1), libc6 (>= 2.17), libdrm2 (>= 2.3.1), libgcrypt11 (>= 1.4.5), libpciaccess0 (>= 0.12.902), libpixman-1-0 (>= 0.30.0), libselinux1 (>= 2.0.82), libudev1 (>= 183), libxau6, libxdmcp6, libxfont1 (>= 1:1.4.2)
+Recommends: libgl1-mesa-dri (>= 7.10.2-4)
+Suggests: xfonts-100dpi | xfonts-75dpi, xfonts-scalable
+Conflicts: xserver-xorg-input-evtouch
+Breaks: libgl1-mesa-dri (<< 7.10.2-4), libgl1-mesa-dri-experimental (<< 7.10.2-4), libxfixes3 (<< 1:5.0.1), libxi6 (<< 2:1.7.1.901), qt4-x11 (<< 4:4.8.0-1ubuntu2), unity (<< 7.0.2), utouch-frame (<< 2.1.0), utouch-geis (<< 2.2.3), xserver-xorg-input, xserver-xorg-input-2, xserver-xorg-input-2.1, xserver-xorg-input-4, xserver-xorg-input-7, xserver-xorg-input-joystick (<= 1:1.5.0-3), xserver-xorg-input-synaptics (<= 1.2.2-1ubuntu4), xserver-xorg-input-tslib (<= 0.0.6-3), xserver-xorg-input-vmmouse (<= 1:12.6.5-4ubuntu2), xserver-xorg-input-wacom (<= 0.10.5+20100415-1), xserver-xorg-video, xserver-xorg-video-1.0, xserver-xorg-video-1.9, xserver-xorg-video-2, xserver-xorg-video-4, xserver-xorg-video-5, xserver-xorg-video-6, xserver-xorg-video-cyrix (<= 1:1.1.0-8), xserver-xorg-video-i810 (<< 2:2.4), xserver-xorg-video-imstt (<= 1:1.1.0-7), xserver-xorg-video-nsc (<= 1:2.8.3-4), xserver-xorg-video-sunbw2 (<= 1:1.1.0-5), xserver-xorg-video-v4l (<< 1:0.2.0), xserver-xorg-video-vga (<= 1:4.1.0-8)
+Filename: pool/main/x/xorg-server/xserver-xorg-core_1.14.2.901-2ubuntu4_armhf.deb
+Size: 1286176
+MD5sum: 075ab8476b5d497b9116eb30e1c98041
+SHA1: 9b4c772f958f20a749ce84f5f7af28da0f511ba7
+SHA256: cb0853678609de2afe4ff4370993667ce5ebf9f2b49a755edccd73bd53e5e587
+Description: Xorg X server - core server
+Description-md5: e3826a765918b79dee4b90ec97f9302c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: xserver-xorg-core-dbg
+Priority: extra
+Section: x11
+Installed-Size: 15186
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu4
+Depends: xserver-xorg-core (= 2:1.14.2.901-2ubuntu4)
+Filename: pool/main/x/xorg-server/xserver-xorg-core-dbg_1.14.2.901-2ubuntu4_armhf.deb
+Size: 6351260
+MD5sum: 3206242781e8d64db3cbcafe39de2028
+SHA1: 068b93d1f51ee4d428c6c65262fe2e1e48f8c624
+SHA256: 82ab54e40d6fcee69902db66aab9563b2c6cc0adcaa5f4103dfc48cfd707fd7f
+Description: Xorg - the X.Org X server (debugging symbols)
+Description-md5: 748963cc445faabee033c53886a8a0cf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: xserver-xorg-dev
+Priority: optional
+Section: x11
+Installed-Size: 1434
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu4
+Depends: libpixman-1-dev (>= 0.27.2), x11proto-core-dev (>= 7.0.22), x11proto-input-dev (>= 2.3), x11proto-xext-dev (>= 7.1.99), x11proto-video-dev, x11proto-randr-dev (>= 1.4.0), x11proto-render-dev (>= 2:0.11), x11proto-dri2-dev (>= 2.8), x11proto-gl-dev (>= 1.4.16), x11proto-fonts-dev, x11proto-xinerama-dev, x11proto-kb-dev, x11proto-xf86dri-dev, x11proto-resource-dev (>= 1.2.0), x11proto-scrnsaver-dev, libxkbfile-dev, libpciaccess-dev, mesa-common-dev, libmirclient-dev
+Filename: pool/main/x/xorg-server/xserver-xorg-dev_1.14.2.901-2ubuntu4_armhf.deb
+Size: 274268
+MD5sum: 6f9d19f27b8260c77316455b3a0f7612
+SHA1: ead9839963b19babab9f31307d9407804bf21783
+SHA256: a49b8d88bd3c64b3e8abb9b4e1f8470ae2cd7d67be6352feb4a4040611043884
+Description: Xorg X server - development files
+Description-md5: 241552d78aca8911808aea0707649843
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: xvfb
+Priority: optional
+Section: x11
+Installed-Size: 1331
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Source: xorg-server
+Version: 2:1.14.2.901-2ubuntu4
+Provides: xserver
+Depends: xserver-common (>= 2:1.14.2.901-2ubuntu4), libaudit1 (>= 1:2.2.1), libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libpixman-1-0 (>= 0.30.0), libselinux1 (>= 2.0.82), libxau6, libxdmcp6, libxfont1 (>= 1:1.4.2), xauth, x11-xkb-utils
+Recommends: libgl1-mesa-dri
+Filename: pool/main/x/xorg-server/xvfb_1.14.2.901-2ubuntu4_armhf.deb
+Size: 739722
+MD5sum: 5ba9c806a83cd7227ff999d3e223f4f1
+SHA1: a04a2690d8f0404d6e5814be06372671c6f99b21
+SHA256: 5a40ffb352e050181fd00bd82cc4ffb13ede0cec5165986390e37d7d3c124c70
+Description: Virtual Framebuffer 'fake' X server
+Multi-Arch: foreign
+Description-md5: ff95e4399e5ec034de6998347673eb73
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
