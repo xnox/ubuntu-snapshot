@@ -146,42 +146,6 @@ Checksums-Sha256:
  bf6b9780d1395a358465bb3677dca11998ca3aa9f3c91755e8224d5ed4ff0571 45457 bzr_2.6.0-1ubuntu1.debian.tar.gz
 Testsuite: autopkgtest
 
-Package: dbus
-Binary: dbus, dbus-x11, libdbus-1-3, dbus-1-doc, libdbus-1-dev, dbus-1-dbg
-Version: 1.6.12-0ubuntu5
-Priority: required
-Section: devel
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
-Build-Depends: automake (>= 1:1.10), autotools-dev, debhelper (>= 9), dh-autoreconf, doxygen, dpkg-dev (>= 1.16.1), libexpat-dev, libdbus-glib-1-dev, libglib2.0-dev (>= 2.31.4), libselinux1-dev [linux-any], libapparmor-dev (>= 2.8.0-0ubuntu25) [linux-any], libsystemd-daemon-dev (>= 32) [linux-any], libsystemd-login-dev (>= 32) [linux-any], libx11-dev, xmlto, xsltproc
-Architecture: any all
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/main/d/dbus
-Files:
- e1d026b3d492cc12d30d25891ea55d52 2680 dbus_1.6.12-0ubuntu5.dsc
- a70edc50524f258eaf5c9a9994ed8748 1933805 dbus_1.6.12.orig.tar.gz
- 44a6ef3dbfebdc53c5d3d85255df006d 61118 dbus_1.6.12-0ubuntu5.debian.tar.gz
-Uploaders: Sjoerd Simons <sjoerd@debian.org>, Sebastian Dröge <slomo@debian.org>, Michael Biebl <biebl@debian.org>, Loic Minier <lool@dooz.org>, Simon McVittie <smcv@debian.org>
-Homepage: http://dbus.freedesktop.org/
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-utopia/dbus.git
-Vcs-Git: git://anonscm.debian.org/pkg-utopia/dbus.git
-Package-List: 
- dbus deb admin optional
- dbus-1-dbg deb debug extra
- dbus-1-doc deb doc optional
- dbus-x11 deb x11 optional
- libdbus-1-3 deb libs optional
- libdbus-1-dev deb libdevel optional
-Checksums-Sha1:
- c892c034d024e9eebbdd547c20615637298dc6bd 2680 dbus_1.6.12-0ubuntu5.dsc
- 96f7ae2edb8711fe4fb42718d03fdb00a90416d5 1933805 dbus_1.6.12.orig.tar.gz
- aafa28651a824d0c7933e68899cb1e421d4992eb 61118 dbus_1.6.12-0ubuntu5.debian.tar.gz
-Checksums-Sha256:
- 0d1dad776214be2360dbb3b58968daed8aa792eaf891ffd749b3a7cc586fcfbb 2680 dbus_1.6.12-0ubuntu5.dsc
- f67a7abfd6d045c1e9eba2bba4199d301836bc0c6e8a727c765913aba780ee92 1933805 dbus_1.6.12.orig.tar.gz
- f25f3a250cfa1964630ae461163eb3b3b88a84b626378f6b360191833031accc 61118 dbus_1.6.12-0ubuntu5.debian.tar.gz
-
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
 Version: 0.10.1-2
@@ -574,6 +538,68 @@ Checksums-Sha256:
  9dfe0fcae2a866de9d3942c66995e4b460230446887dbdab302d41a8aee8d09a 1098603 libunwind_1.1.orig.tar.gz
  4eeb8a83a6068c30c2179548199018c4e8b2f37437661511d0f3a7cc0563b0c6 24202 libunwind_1.1-2ubuntu1.debian.tar.gz
 
+Package: llvm-toolchain-3.3
+Binary: clang-3.3, clang-format-3.3, cpp11-migrate-3.3, clang-3.3-doc, libclang1-3.3, libclang1-3.3-dbg, libclang-3.3-dev, libclang-common-3.3-dev, libllvm3.3, libllvm3.3-dbg, llvm-3.3, llvm-3.3-runtime, llvm-3.3-dev, libllvm-3.3-ocaml-dev, llvm-3.3-doc, llvm-3.3-examples, lldb-3.3
+Version: 1:3.3-5ubuntu4
+Section: misc
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9.0), flex, bison, dejagnu, tcl8.5, expect, autoconf, automake1.9, perl, libtool, doxygen, chrpath, texinfo, sharutils, autotools-dev (>= 20060702.1), libffi-dev (>= 3.0.9), lsb-release, patchutils, diffstat, xz-utils, python-dev, libedit-dev, swig, python-sphinx, ocaml-nox, binutils-dev, libcloog-isl-dev, libisl-dev (>= 0.11.1), binutils (>= 2.23.52.20130522), procps, help2man
+Build-Conflicts: ocaml, oprofile
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/l/llvm-toolchain-3.3
+Files:
+ 1cb64eb5e8bff718378ae9e5f44086f9 4209 llvm-toolchain-3.3_3.3-5ubuntu4.dsc
+ 27d6d269287d22c47019558929a5af71 87796 llvm-toolchain-3.3_3.3.orig-clang-tools-extra.tar.bz2
+ 7043daa073c8e0a423a29079ca8f9fdb 7617885 llvm-toolchain-3.3_3.3.orig-clang.tar.bz2
+ bd2c31717aafe4c82cd493c7ce4e3c5b 1123983 llvm-toolchain-3.3_3.3.orig-compiler-rt.tar.bz2
+ 72a7d8f0ab7e5fcd3fa05ddd4ee1ed9d 2619258 llvm-toolchain-3.3_3.3.orig-lldb.tar.bz2
+ 79c248e7cba6a9e26ad74fbee976f258 6405158 llvm-toolchain-3.3_3.3.orig-polly.tar.bz2
+ 737613631f4f2a74fb969c0697cca262 10616453 llvm-toolchain-3.3_3.3.orig.tar.bz2
+ db4243f5f2b3d24374f59ef60ee11552 169940 llvm-toolchain-3.3_3.3-5ubuntu4.debian.tar.gz
+Uploaders: Sylvestre Ledru <sylvestre@debian.org>
+Homepage: http://www.llvm.org/
+Vcs-Browser: http://svn.debian.org/viewsvn/pkg-llvm/llvm-toolchain/branches/3.3/
+Vcs-Svn: svn://svn.debian.org/svn/pkg-llvm/llvm-toolchain/branches/3.3/
+Package-List: 
+ clang-3.3 deb devel optional
+ clang-3.3-doc deb doc optional
+ clang-format-3.3 deb devel optional
+ cpp11-migrate-3.3 deb devel optional
+ libclang-3.3-dev deb libdevel optional
+ libclang-common-3.3-dev deb libdevel optional
+ libclang1-3.3 deb devel optional
+ libclang1-3.3-dbg deb debug extra
+ libllvm-3.3-ocaml-dev deb ocaml optional
+ libllvm3.3 deb libs optional
+ libllvm3.3-dbg deb debug extra
+ lldb-3.3 deb devel optional
+ llvm-3.3 deb devel optional
+ llvm-3.3-dev deb devel optional
+ llvm-3.3-doc deb doc optional
+ llvm-3.3-examples deb doc optional
+ llvm-3.3-runtime deb devel optional
+Checksums-Sha1:
+ 5022a243cc73d1b2ff187cb5ac06a6ad44b50374 4209 llvm-toolchain-3.3_3.3-5ubuntu4.dsc
+ 9c60ba47204f0cf80777f48d1e426a186683d3c7 87796 llvm-toolchain-3.3_3.3.orig-clang-tools-extra.tar.bz2
+ 8efff22d7c079c0d63338abbbb80d1f3938ba2e8 7617885 llvm-toolchain-3.3_3.3.orig-clang.tar.bz2
+ 7e5762455b62bcafed21e5319b682ede3cad5c67 1123983 llvm-toolchain-3.3_3.3.orig-compiler-rt.tar.bz2
+ 73f1459e6d97adaf0fe2f4c18b8a2a094c585c6e 2619258 llvm-toolchain-3.3_3.3.orig-lldb.tar.bz2
+ 1a47dec9cf9cba4eb2c470db0687aa661ea109ae 6405158 llvm-toolchain-3.3_3.3.orig-polly.tar.bz2
+ 19b9af0b59fefe46b565e40a8aa52ff9fe61c428 10616453 llvm-toolchain-3.3_3.3.orig.tar.bz2
+ 4aa69c649465fdb21f775e3e250d2106fd8bd3b6 169940 llvm-toolchain-3.3_3.3-5ubuntu4.debian.tar.gz
+Checksums-Sha256:
+ 319330aead43ebe4dd43e7b9b355afcadcf37fe4e27dffc9416c887be2c623bd 4209 llvm-toolchain-3.3_3.3-5ubuntu4.dsc
+ 8df6aaecb50c9bc841da995b22ef18a7b5ba0cd34fe904f48430d37f29194295 87796 llvm-toolchain-3.3_3.3.orig-clang-tools-extra.tar.bz2
+ 4b6db2679478090e88dc8b7a79b267021081f45c0d5af2938b46aa6ee38fc417 7617885 llvm-toolchain-3.3_3.3.orig-clang.tar.bz2
+ 6ad8c4356360db19dcf9e4d7da8666bb700af98c51a9095c898fda75ae236d56 1123983 llvm-toolchain-3.3_3.3.orig-compiler-rt.tar.bz2
+ c7ae5b6b3af250ad92b245ddfec29b844d1a743fda772d47ea481567c1b0cc5a 2619258 llvm-toolchain-3.3_3.3.orig-lldb.tar.bz2
+ 4a3be7c4d4195443ec71983b724c389291168fce7797c264ef887093c8e5fc25 6405158 llvm-toolchain-3.3_3.3.orig-polly.tar.bz2
+ b71812e279bcd3f58f5dbc12af1488a474650c2a5b5a88390868740059bde063 10616453 llvm-toolchain-3.3_3.3.orig.tar.bz2
+ 01998f3b87940e9d2a448b078ec5cdd73e64146bbad3b4920d45ea1fa01c4fde 169940 llvm-toolchain-3.3_3.3-5ubuntu4.debian.tar.gz
+
 Package: mesa
 Binary: libxatracker1, libxatracker1-dbg, libxatracker-dev, libgbm1, libgbm1-dbg, libgbm-dev, libegl1-mesa, libegl1-mesa-dbg, libegl1-mesa-dev, libegl1-mesa-drivers, libegl1-mesa-drivers-dbg, libopenvg1-mesa, libopenvg1-mesa-dbg, libopenvg1-mesa-dev, libgles1-mesa, libgles1-mesa-dbg, libgles1-mesa-dev, libgles2-mesa, libgles2-mesa-dbg, libgles2-mesa-dev, libglapi-mesa, libglapi-mesa-dbg, libgl1-mesa-glx, libgl1-mesa-glx-dbg, libgl1-mesa-dri, libgl1-mesa-dri-dbg, libgl1-mesa-dri-experimental, libgl1-mesa-dri-experimental-dbg, libgl1-mesa-dev, mesa-common-dev, libosmesa6, libosmesa6-dev
 Version: 9.2-1ubuntu1
@@ -789,38 +815,6 @@ Checksums-Sha256:
  28a533e181009308722e8b3c51f1ea7224ab910c380ac1a86f07118667602dd8 15815421 postgresql-9.1_9.1.9.orig.tar.bz2
  759ffb0cba6e8b6a386f5f29cd6276df4db21e93d2ee4ab183e5673c8c7d62fa 41134 postgresql-9.1_9.1.9-3.debian.tar.gz
 Testsuite: autopkgtest
-
-Package: postgresql-common
-Binary: postgresql-common, postgresql-client-common, postgresql-server-dev-all, postgresql, postgresql-client, postgresql-doc, postgresql-contrib
-Version: 148
-Priority: optional
-Section: misc
-Maintainer: Debian PostgreSQL Maintainers <pkg-postgresql-public@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 7.0.50~), lsb-release
-Architecture: all
-Standards-Version: 3.9.4
-Format: 3.0 (native)
-Directory: pool/main/p/postgresql-common
-Files:
- 4a1257aa24c0cbd7fab14ec86df3f8e3 2151 postgresql-common_148.dsc
- 163b7eba273b14a3ff22f3673159f410 160288 postgresql-common_148.tar.gz
-Uploaders: Martin Pitt <mpitt@debian.org>, Christoph Berg <myon@debian.org>, Peter Eisentraut <petere@debian.org>
-Vcs-Browser: http://anonscm.debian.org/loggerhead/pkg-postgresql/postgresql-common/trunk
-Vcs-Bzr: http://bzr.debian.org/bzr/pkg-postgresql/postgresql-common/trunk/
-Package-List: 
- postgresql deb database optional
- postgresql-client deb database optional
- postgresql-client-common deb database optional
- postgresql-common deb database optional
- postgresql-contrib deb database optional
- postgresql-doc deb doc optional
- postgresql-server-dev-all deb database optional
-Checksums-Sha1:
- 205137a82d225dd3eb2322ca01dedccd725fd595 2151 postgresql-common_148.dsc
- 1a601cfd37e9b07c40f410a8d5ddd5ed1e1449b2 160288 postgresql-common_148.tar.gz
-Checksums-Sha256:
- 491fd119f8f87aa1b5e2e5dedba6b981cf2bd932d73a8980007ef80a549df4da 2151 postgresql-common_148.dsc
- 8e160bce504c572d4b14e320e3278cee1fc3fa0b7905c4c17db1e3a447810359 160288 postgresql-common_148.tar.gz
 
 Package: qtwebkit-source
 Binary: libqtwebkit-dev, libqtwebkit4, libqtwebkit-qmlwebkitplugin, libqtwebkit4-dbg
