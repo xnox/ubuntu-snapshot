@@ -1,3 +1,41 @@
+Package: apport
+Binary: apport, python-problem-report, python3-problem-report, python-apport, python3-apport, apport-retrace, apport-valgrind, apport-gtk, apport-kde, dh-apport
+Version: 2.9.2-0ubuntu8.4
+Section: utils
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Build-Depends: debhelper (>= 7.3.15ubuntu2), dh-translations, gdb, python-twisted-core, python-gi, python3-gi, gir1.2-glib-2.0 (>= 1.29.17), lsb-release, net-tools, python-all, python3-all
+Build-Depends-Indep: python-distutils-extra (>= 2.24~), python3-distutils-extra (>= 2.24~), python-apt (>= 0.7.9), python3-apt (>= 0.7.9), intltool, xvfb, python3-mock, procps, psmisc, gir1.2-gtk-3.0 (>= 3.1.90), gir1.2-wnck-3.0, pep8, pyflakes, xterm, dbus-x11, gvfs-daemons, libglib2.0-dev, libnih-dev, libc6-dbg | libc-dbg, default-jdk | java-sdk
+Architecture: all
+Standards-Version: 3.9.4
+Format: 1.0
+Directory: pool/main/a/apport
+Files:
+ 948b564e4a6b6966690374b3755772a5 2138 apport_2.9.2-0ubuntu8.4.dsc
+ 5b217ed7acc6e763bcfbe47b7a3de85e 842916 apport_2.9.2.orig.tar.gz
+ 8c827652db8d884e9aa9f1a2d1351a54 948434 apport_2.9.2-0ubuntu8.4.diff.gz
+Homepage: https://wiki.ubuntu.com/Apport
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-core-dev/ubuntu/raring/apport/ubuntu
+Package-List: 
+ apport deb utils optional
+ apport-gtk deb gnome optional
+ apport-kde deb kde optional
+ apport-retrace deb devel optional
+ apport-valgrind deb devel optional
+ dh-apport deb devel optional
+ python-apport deb python optional
+ python-problem-report deb python optional
+ python3-apport deb python optional
+ python3-problem-report deb python optional
+Checksums-Sha1:
+ 935795d269c96d76afb83b919cd05a4338ff45fc 2138 apport_2.9.2-0ubuntu8.4.dsc
+ 90d81289d02e86ffd07b53c9dacf5ad6f1a43445 842916 apport_2.9.2.orig.tar.gz
+ 00c094c11ca727b5cc45ee69b70cc232536f2245 948434 apport_2.9.2-0ubuntu8.4.diff.gz
+Checksums-Sha256:
+ be5df2671bb247b63be1cece5f3509838bf932d41446f759b4cfc42c7c317550 2138 apport_2.9.2-0ubuntu8.4.dsc
+ 61eb79cc631c84752b01b19b006068d697a2ca6a6e39e02e0960d4765206b75f 842916 apport_2.9.2.orig.tar.gz
+ a0344f96b51ca87a63b4f70079df74e13027992b7ee7da40041eb64f1b5d762c 948434 apport_2.9.2-0ubuntu8.4.diff.gz
+Testsuite: autopkgtest
+
 Package: cups
 Binary: libcups2, libcupsimage2, libcupscgi1, libcupsmime1, libcupsppdc1, cups, cups-daemon, cups-client, libcups2-dev, libcupsimage2-dev, libcupscgi1-dev, libcupsmime1-dev, libcupsppdc1-dev, cups-bsd, cups-common, cups-ppdc, cups-dbg
 Version: 1.6.2-1ubuntu7
@@ -667,7 +705,7 @@ Checksums-Sha256:
 
 Package: lsb
 Binary: lsb-core, lsb-graphics, lsb-cxx, lsb-desktop, lsb-qt4, lsb-languages, lsb-multimedia, lsb-printing, lsb-security, lsb, lsb-base, lsb-release, lsb-invalid-mta
-Version: 4.0-0ubuntu27.2
+Version: 4.0-0ubuntu27.3
 Priority: important
 Section: misc
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -678,8 +716,8 @@ Standards-Version: 3.8.2
 Format: 1.0
 Directory: pool/main/l/lsb
 Files:
- 3df88e3a1398973b81f2e0cb9a735f98 2104 lsb_4.0-0ubuntu27.2.dsc
- b9f04b4710e129e264fa40e2de108547 63216 lsb_4.0-0ubuntu27.2.tar.gz
+ 25c2b21b9c14e47f9cc8c6448a290c0a 1464 lsb_4.0-0ubuntu27.3.dsc
+ fed5c4ab51db99144a54be23cbeaf600 63945 lsb_4.0-0ubuntu27.3.tar.gz
 Homepage: http://www.linux-foundation.org/en/LSB
 Package-List: 
  lsb deb misc extra
@@ -696,11 +734,11 @@ Package-List:
  lsb-release deb misc extra
  lsb-security deb misc extra
 Checksums-Sha1:
- b598ef92ad03423831649b13ff85a0a76572d5da 2104 lsb_4.0-0ubuntu27.2.dsc
- 80bbae8ac7f529af2dcdb3ab6dd2ac7841c17e5c 63216 lsb_4.0-0ubuntu27.2.tar.gz
+ 6d76a49977505696063c4085deae6f69f1723e7f 1464 lsb_4.0-0ubuntu27.3.dsc
+ 801267566dee09b2fa8b07e70da431c626379acc 63945 lsb_4.0-0ubuntu27.3.tar.gz
 Checksums-Sha256:
- 5ca2168fab0541f8b21b8d8d7a8ae7d6b4ce5d82ce683d6a842f1ebb3fc56934 2104 lsb_4.0-0ubuntu27.2.dsc
- efdc6e2b27b1350b3340b6af20f171b30b7a97bc1afb17f620c835a2b272cfbc 63216 lsb_4.0-0ubuntu27.2.tar.gz
+ 4f7233db4b7252a10e2665ed4c683c3127859ea5d5018eaf6935e94d793a5263 1464 lsb_4.0-0ubuntu27.3.dsc
+ 464b9e9d7b171c0f7a73be13100a1eb00f113d7cfa5e8f890930129c0cb92af5 63945 lsb_4.0-0ubuntu27.3.tar.gz
 
 Package: maas
 Binary: maas, maas-common, maas-region-controller, python-maas-provisioningserver, maas-cli, python-maas-client, maas-cluster-controller, python-django-maas, maas-dhcp, maas-dns
