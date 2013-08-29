@@ -209,6 +209,29 @@ Description-md5: 5fdb7838fa336de9de2703cb644c12e4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: cloud-init
+Priority: extra
+Section: admin
+Installed-Size: 857
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Version: 0.7.3~bzr862-0ubuntu1
+Replaces: ec2-init (<< 0.5.3)
+Provides: ec2-init
+Depends: cloud-utils, ifupdown (>= 0.6.10ubuntu5), procps, python (>= 2.7.1-0ubuntu2), python-requests (>= 0.8.2), software-properties-common, debconf (>= 0.5) | debconf-2.0, python (<< 2.8), python-boto, python-cheetah, python-configobj, python-json-patch, python-oauth, python-prettytable, python-serial, python-yaml
+Conflicts: ec2-init (<< 0.5.3)
+Filename: pool/main/c/cloud-init/cloud-init_0.7.3~bzr862-0ubuntu1_all.deb
+Size: 196204
+MD5sum: 763143fca3024a66d203b75b27cadf2b
+SHA1: 456c3a9ea45af35ea1d03d21125b1a82c0cd703f
+SHA256: b51b37b3d048ce0125b8aca300bef9f2f0e86d5ab743e4af3a1b99d152c8ccae
+Description: Init scripts for cloud instances
+Python-Version: 2.7
+Description-md5: 8719ef0e4178017b7147590b1fde082e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: cloud-image
+
 Package: cpp11-migrate-3.3
 Priority: optional
 Section: devel
@@ -296,6 +319,28 @@ Description-md5: 77a6d9cb5ff0c6e1dc81858155a05394
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: grub-legacy-ec2
+Priority: extra
+Section: admin
+Installed-Size: 143
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Source: cloud-init
+Version: 0.7.3~bzr862-0ubuntu1
+Depends: debconf (>= 1.5.19) | cdebconf, ucf, util-linux (>= 2.15-1), debconf (>= 0.5) | debconf-2.0
+Suggests: grub-legacy-doc
+Conflicts: grub
+Filename: pool/main/c/cloud-init/grub-legacy-ec2_0.7.3~bzr862-0ubuntu1_all.deb
+Size: 24166
+MD5sum: 8218458546d70b5f84d85f4aea18465e
+SHA1: 50ed57139defc8e2143cc81eb1e38133d5f13d9c
+SHA256: ab507edd891371661217167869385f588db7bd117599f77d7f6c0efbb992dfd2
+Description: Handles update-grub for ec2 instances
+Description-md5: e5f8ea347000ef0d0aedb42c000e0b9c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: cloud-image
 
 Package: gstreamer1.0-alsa
 Priority: optional
