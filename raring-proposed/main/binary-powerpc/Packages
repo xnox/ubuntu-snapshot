@@ -1,3 +1,70 @@
+Package: apport
+Priority: optional
+Section: utils
+Installed-Size: 1140
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Version: 2.9.2-0ubuntu8.4
+Replaces: python-apport (<< 2.2-0ubuntu1)
+Depends: python3, python3-apport (>= 2.9.2-0ubuntu8.4), lsb-base (>= 3.0-6), python3-gi, gir1.2-glib-2.0 (>= 1.29.17), sysv-rc (>= 2.86.ds1-14.1ubuntu2), upstart-job
+Recommends: apport-symptoms, policykit-1
+Suggests: apport-gtk | apport-kde
+Breaks: python-apport (<< 2.2-0ubuntu1)
+Filename: pool/main/a/apport/apport_2.9.2-0ubuntu8.4_all.deb
+Size: 177614
+MD5sum: 226fab7be54307ac2ee9e75085905db8
+SHA1: f62f47d2bf37f9eb52d832219720b17404095a21
+SHA256: 8b31da1f65aac8e5815323ab1cfb219bf959e99f6a81e7362017338843c53ca3
+Description: automatically generate crash reports for debugging
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: c04626471654f9246cf5e28b560d262e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: apport-gtk
+Priority: optional
+Section: gnome
+Installed-Size: 196
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.9.2-0ubuntu8.4
+Depends: python3, python3-apport (>= 2.9.2-0ubuntu8.4), gir1.2-gtk-3.0 (>= 3.1.90), gir1.2-wnck-3.0, python3-gi, apport (>= 0.41), procps, x-terminal-emulator
+Recommends: update-notifier, gdb | gdb-minimal
+Filename: pool/main/a/apport/apport-gtk_2.9.2-0ubuntu8.4_all.deb
+Size: 10080
+MD5sum: 5ae95d8ecf270d36f3c6e885aa350878
+SHA1: b321b9f2aeff4ac00949d2bd36cd4e0ed278adb3
+SHA256: 5db7fe6812f5eaad96291f3b8cac9e0950fe53d3035829ec11f95b8ee9c49603
+Description: GTK+ frontend for the apport crash report system
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 2f45e17d5bf22355d7921dba196ae6dd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: apport-retrace
+Priority: optional
+Section: devel
+Installed-Size: 174
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.9.2-0ubuntu8.4
+Depends: python (>= 2.7), python3, python-apport (>= 2.9.2-0ubuntu8.4), apt, binutils, dpkg-dev, gdb, libc6-dbg | libc6-dbgsym | libc-dbg
+Suggests: gdb-multiarch
+Filename: pool/main/a/apport/apport-retrace_2.9.2-0ubuntu8.4_all.deb
+Size: 13150
+MD5sum: e15c743bb9f24e7f954355b8cb9c6a7d
+SHA1: 32af55a7fb1ac51a6c8882bf641bd79d20ed4773
+SHA256: feb0a9153ec6df76876372aa15b68d0c50b2a96787320a4da651f49d4b20eb04
+Description: tools for reprocessing Apport crash reports
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 7608c287131a28c4611767ba61f02050
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: bsdutils
 Essential: yes
 Priority: required
@@ -196,6 +263,27 @@ Description-md5: ba3fa27bc468a14b73280f189057f4e7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: dh-apport
+Priority: optional
+Section: devel
+Installed-Size: 164
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.9.2-0ubuntu8.4
+Depends: perl
+Filename: pool/main/a/apport/dh-apport_2.9.2-0ubuntu8.4_all.deb
+Size: 6502
+MD5sum: 87b6a0272b32730130231a234d922c7f
+SHA1: c54f507ed0fe4a01d0e6e12795aa2710bd1de315
+SHA256: c85b12b6032c482b000ba4c5f7e22d07a5a03c099a38bda2d9a7dc90a4069a6b
+Description: debhelper extension for the apport crash report system
+Multi-Arch: foreign
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: a5c779df9e0b356100c76151d7cef527
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: facter
 Priority: optional
@@ -5793,6 +5881,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: minimal
 
+Package: python-apport
+Priority: optional
+Section: python
+Installed-Size: 517
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.9.2-0ubuntu8.4
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-apt (>= 0.7.9), python-problem-report (>= 0.94), lsb-release
+Recommends: apport
+Suggests: python-launchpadlib (>= 1.5.7)
+Filename: pool/main/a/apport/python-apport_2.9.2-0ubuntu8.4_all.deb
+Size: 89342
+MD5sum: 54a71873602cd21502da81b39e365c4d
+SHA1: 77a410f6003466ceea804cd5cc67191bdc8166c2
+SHA256: 7be05f14690dfcdf57e0378455bf1562c44bafc0e77c9c3a13286c5a9406767c
+Description: Python library for Apport crash report handling
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 23518535b15759d78d26010a6b43517a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-boto
 Priority: optional
 Section: python
@@ -6035,6 +6145,26 @@ Description-md5: 4f5c7749b5a2c54ca28e3e8e5170dd4e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-problem-report
+Priority: optional
+Section: python
+Installed-Size: 171
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.9.2-0ubuntu8.4
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Filename: pool/main/a/apport/python-problem-report_2.9.2-0ubuntu8.4_all.deb
+Size: 9280
+MD5sum: f1545bd606b2f904671820ddf10d8151
+SHA1: 27895cc89d15d3cb4d06456954c2d9ce66888c96
+SHA256: 1ba934b07e8ab82c4a33794d094f88ff482d95debc43b7665aca7c19774906d1
+Description: Python library to handle problem reports
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 06dbdefca60b63fb6c44c8daf9a9cc5f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python2.7
 Priority: optional
 Section: python
@@ -6172,6 +6302,29 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: virt-host, ubuntu-desktop, mail-server, ubuntu-usb, dns-server, cloud-image, server, openssh-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: python3-apport
+Priority: optional
+Section: python
+Installed-Size: 504
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.9.2-0ubuntu8.4
+Depends: python3 (>= 3.2.3-3~), python3-apt (>= 0.7.9), python3-problem-report (>= 0.94), lsb-release
+Recommends: apport
+Suggests: python3-launchpadlib
+Filename: pool/main/a/apport/python3-apport_2.9.2-0ubuntu8.4_all.deb
+Size: 88856
+MD5sum: 336dbe47dfa3ad02b4d2162afb20076e
+SHA1: e7068311093d9f1d3f78281ee58b74d7414fa93d
+SHA256: 6a3840956af454ff295de6b771fe68507bf8791c5c6cb1d0b4c56edb1e44740e
+Description: Python 3 library for Apport crash report handling
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 90fc3702a69ad06599a95a46ceb5778a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: python3-gi
 Priority: standard
 Section: python
@@ -6241,6 +6394,27 @@ Description: Python 3 bindings for gobject-introspection libraries (debug extens
 Description-md5: cee150898742e87b20dceb8ab5b02a97
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: python3-problem-report
+Priority: optional
+Section: python
+Installed-Size: 167
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.9.2-0ubuntu8.4
+Depends: python3 (>= 3.2.3-3~)
+Filename: pool/main/a/apport/python3-problem-report_2.9.2-0ubuntu8.4_all.deb
+Size: 9182
+MD5sum: 8b6fa82260fcea99db2bcf004924a37a
+SHA1: 0d2baad1d627dfbf8ed8de57db1dbee5bbff52d2
+SHA256: 70cf9e0df89b2ebca096c42c474fec09d6703ec08a3dc5d0f11a630d3ae2046c
+Description: Python 3 library to handle problem reports
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 9c38d91ac205b1680832021377d9156d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: python3.3
 Priority: important
