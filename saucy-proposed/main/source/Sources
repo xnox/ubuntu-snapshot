@@ -149,6 +149,7 @@ Testsuite: autopkgtest
 Package: checkbox
 Binary: checkbox, checkbox-cli, checkbox-urwid, checkbox-gtk, checkbox-qt, checkbox-hw-collection
 Version: 0.16.5
+Priority: optional
 Section: utils
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Build-Depends: debhelper (>= 9.2), dh-translations, libqt4-dev, po-debconf, python, python-distutils-extra, python-setuptools, python3-all, python3-distutils-extra, python3-gi, python3-lxml, python3-mock, python3-pkg-resources, python3-setuptools, qt4-qmake
@@ -272,36 +273,6 @@ Checksums-Sha256:
  c7eb1b96b7f86d36a647066c44977e283add8afd39e51587e0aeb6baf5b8dfb5 2234 fonts-liberation_1.07.2-7.dsc
  2e70b26c0cf1e203a38b9af50060d65580e92288ffddff74a52a49273771fcc9 2318573 fonts-liberation_1.07.2.orig.tar.bz2
  1d42f8c7b6f3aa449432f86419996a8d28d979eb60ebd39315502b84efcf7ba7 9283 fonts-liberation_1.07.2-7.debian.tar.gz
-
-Package: gnome-settings-daemon
-Binary: gnome-settings-daemon, gnome-settings-daemon-dev
-Version: 3.6.4-0ubuntu18
-Priority: extra
-Section: gnome
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Build-Depends: cdbs, debhelper (>= 9), gnome-pkg-tools, gtk-doc-tools, dh-autoreconf, autotools-dev, intltool (>= 0.37.1), libdbus-glib-1-dev (>= 0.74), libglib2.0-dev (>= 2.31.0), libgtk-3-dev (>= 3.3.4), libnotify-dev (>= 0.7.0), libxt-dev, libxi-dev, libfontconfig1-dev, libxext-dev, libx11-dev, libxtst-dev, gsettings-desktop-schemas-dev (>= 3.5.90), libgnome-desktop-3-dev (>= 3.5.3), libpulse-dev (>= 0.9.16), libcanberra-gtk3-dev, libcups2-dev, libpolkit-gobject-1-dev, libappindicator3-dev (>= 0.4.90), hwdata, libupower-glib-dev (>= 0.9.11), libsystemd-login-dev, libcolord-dev (>= 0.1.12), liblcms2-dev, libnss3-dev, libgudev-1.0-dev, libwacom-dev (>= 0.6), xserver-xorg-input-wacom, libgnomekbd-dev (>= 3.5.1), libxklavier-dev, libibus-1.0-dev (>= 1.5.0), libaccountsservice-dev (>= 0.6.34)
-Architecture: any
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/main/g/gnome-settings-daemon
-Files:
- c0eb5d2709314e2195c67e4d47daf3c0 2331 gnome-settings-daemon_3.6.4-0ubuntu18.dsc
- 362803ee1f1a0aa02e3c7df61ef82309 1518708 gnome-settings-daemon_3.6.4.orig.tar.xz
- f0e8fb66b3c4227e9143d0ed482221c4 55983 gnome-settings-daemon_3.6.4-0ubuntu18.debian.tar.gz
-Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Jeremy Bicha <jbicha@ubuntu.com>
-Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/gnome-settings-daemon/ubuntu
-Package-List: 
- gnome-settings-daemon deb gnome optional
- gnome-settings-daemon-dev deb gnome optional
-Checksums-Sha1:
- fa459588a05e6f04e581c3bd2bb83535c8b1524c 2331 gnome-settings-daemon_3.6.4-0ubuntu18.dsc
- 6ab132afbefc7b3335ef5dc34e07da0766c88339 1518708 gnome-settings-daemon_3.6.4.orig.tar.xz
- 247c492d440df93334cc223a2bc591b122305594 55983 gnome-settings-daemon_3.6.4-0ubuntu18.debian.tar.gz
-Checksums-Sha256:
- 0cc887481b445b98ea19934523430f1135466240565f0fcebe820a53ed6e44f5 2331 gnome-settings-daemon_3.6.4-0ubuntu18.dsc
- 3db993f2dbabc0c9d06a309bb12c9a7104b9cdda414ac4b1c301f5114a441c15 1518708 gnome-settings-daemon_3.6.4.orig.tar.xz
- a2923b61bcf2be9cbc708b1691ebd62b944ea3f3ccef032aa5930d42e7e5ae2a 55983 gnome-settings-daemon_3.6.4-0ubuntu18.debian.tar.gz
 
 Package: gst-plugins-good1.0
 Binary: gstreamer1.0-plugins-good-doc, gstreamer1.0-pulseaudio, gstreamer1.0-plugins-good, gstreamer1.0-plugins-good-dbg, libgstreamer-plugins-good1.0-0, libgstreamer-plugins-good1.0-dev
@@ -741,6 +712,45 @@ Checksums-Sha256:
  b95c11f2d4f00c6053c2362db2f37047a4310ae78b08210b28eb680904b52b28 2425 libunwind_1.1-2ubuntu1.dsc
  9dfe0fcae2a866de9d3942c66995e4b460230446887dbdab302d41a8aee8d09a 1098603 libunwind_1.1.orig.tar.gz
  4eeb8a83a6068c30c2179548199018c4e8b2f37437661511d0f3a7cc0563b0c6 24202 libunwind_1.1-2ubuntu1.debian.tar.gz
+
+Package: mir
+Binary: libmirprotobuf0, libmirprotobuf-dev, libmirserver1, libmirplatform, mircommon-dev, libmirserver-dev, libmirclient2, libmirclient-dev, mir-demos, mir-doc, mir-test-tools
+Version: 0.0.10+13.10.20130829.1-0ubuntu1
+Priority: optional
+Section: x11
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Build-Depends: cmake, cmake-data, pkg-config, debhelper (>= 9), doxygen, xsltproc, graphviz, libboost-dev, libboost-chrono-dev, libboost-date-time-dev, libboost-program-options-dev, libboost-system-dev, libboost-thread-dev, libboost-regex-dev, libboost-filesystem-dev, protobuf-compiler, libdrm-dev [!armhf], libegl1-mesa-dev, libgles2-mesa-dev, libgbm-dev [!armhf], libglm-dev, libprotobuf-dev, libhardware-dev [armhf], libgoogle-glog-dev, liblttng-ust-dev, libxkbcommon-dev, libumockdev-dev, umockdev, libudev-dev, google-mock (>= 1.6.0+svn437), valgrind
+Architecture: i386 amd64 armhf arm64 all
+Standards-Version: 3.9.4
+Format: 1.0
+Directory: pool/main/m/mir
+Files:
+ 3d23b6b62f97dfb7aab693e4756b61be 2991 mir_0.0.10+13.10.20130829.1-0ubuntu1.dsc
+ f415d70ab62825058f10b1ea5f4533a7 931022 mir_0.0.10+13.10.20130829.1.orig.tar.gz
+ 3065c9052e0211528e168debbeaa386a 16927 mir_0.0.10+13.10.20130829.1-0ubuntu1.diff.gz
+Homepage: https://launchpad.net/mir
+Vcs-Bzr: https://code.launchpad.net/~mir-team/mir/trunk
+Package-List: 
+ libmirclient-dev deb libdevel optional
+ libmirclient2 deb libs optional
+ libmirplatform deb libs optional
+ libmirprotobuf-dev deb libdevel optional
+ libmirprotobuf0 deb libs optional
+ libmirserver-dev deb libdevel optional
+ libmirserver1 deb libs optional
+ mir-demos deb x11 optional
+ mir-doc deb doc optional
+ mir-test-tools deb x11 optional
+ mircommon-dev deb libdevel optional
+Checksums-Sha1:
+ c32120fc455dcbc1f256d590653fe1d37b826075 2991 mir_0.0.10+13.10.20130829.1-0ubuntu1.dsc
+ fc9cf8a72d976d9ddd05edbb252843cc93fd5f43 931022 mir_0.0.10+13.10.20130829.1.orig.tar.gz
+ 4978d3da1ebd205ac7ca618b69c4dc3647d1b116 16927 mir_0.0.10+13.10.20130829.1-0ubuntu1.diff.gz
+Checksums-Sha256:
+ d60cb68690b0c1d1f4c7d0e6e0c1fd2ba500591d5fa6472902fc4e24d488de76 2991 mir_0.0.10+13.10.20130829.1-0ubuntu1.dsc
+ 92a6fe637282f4a1aeb9ff418fc48c402c139ecb9e9ccf44d446a91a475c8ad2 931022 mir_0.0.10+13.10.20130829.1.orig.tar.gz
+ 2c8714ce93f203b5030060a69ee175b61e20d54f7f825d22e8ce3ae11e6474dc 16927 mir_0.0.10+13.10.20130829.1-0ubuntu1.diff.gz
 
 Package: mod-auth-mysql
 Binary: libapache2-mod-auth-mysql

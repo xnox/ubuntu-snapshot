@@ -121,6 +121,89 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: checkbox
+Priority: optional
+Section: python
+Installed-Size: 4544
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Version: 0.16.5
+Depends: debconf, gir1.2-gudev-1.0, policykit-1, python3-lxml, udev, udisks2 | udisks, debconf (>= 0.5) | debconf-2.0, python3 (>= 3.2.3-3~), libc6 (>= 2.4)
+Recommends: dpkg (>= 1.13), gir1.2-gst-plugins-base-1.0, gir1.2-gstreamer-1.0, gstreamer1.0-plugins-good, gstreamer1.0-pulseaudio, libgstreamer1.0-0, lsb-release, perl, pm-utils, python3-apt, python3-dbus, python3-gi
+Suggests: bonnie++, bootchart, checkbox-cli | checkbox-gtk, curl, ethtool, fwts, git-core, glmark2, glmark2-es2, hdparm, lshw, mesa-utils, nmap, obexd-client, obexftp, render-bench, smartmontools, sox, stress, sysstat, wmctrl, wodim
+Filename: pool/main/c/checkbox/checkbox_0.16.5_i386.deb
+Size: 1497698
+MD5sum: 9e01fe4c2e0c10a53087fea11b999234
+SHA1: ae9dc79afbb85943390fc31a227960be61da8f97
+SHA256: ad330742f83268d79fd0eb27f7f67fb120d5db06d99d6b607375747c354c7010
+Description: System testing application
+Description-md5: 34ad9b11ae8cc30e80449033f9375414
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: checkbox-cli
+Priority: optional
+Section: utils
+Installed-Size: 117
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: checkbox
+Version: 0.16.5
+Depends: checkbox (>= 0.16.5)
+Filename: pool/main/c/checkbox/checkbox-cli_0.16.5_all.deb
+Size: 6736
+MD5sum: 2cc81162f9ad5e92878a9810040de705
+SHA1: 054e16a831db6c35d73ceb5d73b3d5822cde425e
+SHA256: 82eaf6e26af59400dab40a9bec73a7feb41a8c41f84f32acee34412f9e557f6d
+Description: Command line interface for checkbox
+Description-md5: 0b0cbc65238f8217e58e47fe5accc9a2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: checkbox-gtk
+Priority: optional
+Section: gnome
+Installed-Size: 167
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: checkbox
+Version: 0.16.5
+Depends: checkbox (>= 0.16.5), gir1.2-gtk-3.0, python3-gi, python3-gi-cairo
+Filename: pool/main/c/checkbox/checkbox-gtk_0.16.5_all.deb
+Size: 20614
+MD5sum: 7bfec5e19c89a0d350b21384fa2b94bc
+SHA1: a8f865e28c58c14f4d726c4c6af00087b9c06c6a
+SHA256: b2e4e8ee23aee21fd2a4c23d839be5cce2255c645f02b42c5fca57e3eed53572
+Description: GTK interface for checkbox
+Description-md5: 11104673da622312d3fd7190ea5fe480
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: checkbox-qt
+Priority: optional
+Section: utils
+Installed-Size: 277
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: checkbox
+Version: 0.16.5
+Depends: checkbox (>= 0.16.5), libqt4-dbus (>= 4:4.5.3), libqtgui4 (>= 4:4.6.1), python3-dbus, libc6 (>= 2.2), libgcc1 (>= 1:4.1.1), libqtcore4 (>= 4:4.7.0~beta1), libstdc++6 (>= 4.1.1)
+Filename: pool/main/c/checkbox/checkbox-qt_0.16.5_i386.deb
+Size: 75138
+MD5sum: e9172207a095045adc72b661b4752a94
+SHA1: 3aca55ec28af9b059d64db11f394c408d60db592
+SHA256: c9872ca8c3104899f50684b0d356847737cb601041c0e184e2827c09091493d1
+Description: QT4 interface for checkbox
+Description-md5: 9ad76bcc4ac321bc82ba9eb9edfc03c2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -142,51 +225,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
-
-Package: gnome-settings-daemon
-Priority: extra
-Section: gnome
-Installed-Size: 2360
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Architecture: i386
-Version: 3.6.4-0ubuntu18
-Depends: libaccountsservice0 (>= 0.6.34-0ubuntu5), libappindicator3-1 (>= 0.2.92), libc6 (>= 2.7), libcairo2 (>= 1.10.0), libcanberra-gtk3-0 (>= 0.25), libcanberra0 (>= 0.2), libcolord1 (>= 0.1.31), libcups2 (>= 1.6.0), libfontconfig1 (>= 2.9.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgnome-desktop-3-7 (>= 3.7.90), libgtk-3-0 (>= 3.3.16), libgudev-1.0-0 (>= 146), libibus-1.0-5 (>= 1.5.1), liblcms2-2 (>= 2.2+git20110628), libnotify4 (>= 0.7.3), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libpulse-mainloop-glib0 (>= 1:0.99.1), libpulse0 (>= 1:0.99.1), libsystemd-login0 (>= 31), libupower-glib1 (>= 0.9.9), libwacom2 (>= 0.6), libx11-6, libxext6, libxfixes3 (>= 1:4.0.1), libxi6 (>= 2:1.2.99.4), libxkbfile1, libxtst6, dconf-gsettings-backend | gsettings-backend, gsettings-desktop-schemas (>= 3.3.90-0ubuntu2), nautilus-data (>= 2.91.3-1), accountsservice (>= 0.6.34)
-Recommends: ibus (>= 1.5.0), pulseaudio, systemd-services
-Suggests: x11-xserver-utils, gnome-screensaver, metacity | x-window-manager
-Breaks: banshee (<< 0.13.2+dfsg-7), gnome-color-manager (<< 3.0), gnome-control-center (<< 1:3.6.3-0ubuntu18), gnome-screensaver (<< 2.28.0), gnome-session (<< 2.24), indicator-datetime (<< 12.10.3daily13.03.26), rhythmbox (<< 0.11.5), totem (<< 2.22.0), unity-greeter (<< 0.2.1-0ubuntu1)
-Filename: pool/main/g/gnome-settings-daemon/gnome-settings-daemon_3.6.4-0ubuntu18_i386.deb
-Size: 451516
-MD5sum: 14c305af1c525975ba7d536fe0800a4d
-SHA1: 93c040ea5053e55877d005694d0ff290a38065a6
-SHA256: 769194e0c33fb77ea1b4ebb244b9789e278a32e040f1614aa9d703c5bba7bae8
-Description: daemon handling the GNOME session settings
-Description-md5: ba41f64fe10326f7ff74ab22f1003a11
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: gnome-settings-daemon-dev
-Priority: extra
-Section: gnome
-Installed-Size: 130
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Architecture: i386
-Source: gnome-settings-daemon
-Version: 3.6.4-0ubuntu18
-Depends: libdbus-glib-1-dev (>= 0.74), libglib2.0-dev (>= 2.26.0)
-Filename: pool/main/g/gnome-settings-daemon/gnome-settings-daemon-dev_3.6.4-0ubuntu18_i386.deb
-Size: 34638
-MD5sum: ebedee5c33bc703d4678fbaeb3717f32
-SHA1: cc762c8569c80165d054aee0d30b70b31679caad
-SHA256: 7ce897f1899334ee8e642d41d05fb8a5ad771cba3e9ff347fe17fcff9c6ed1ce
-Description: Headers for building applications communicating with gnome-settings-daemon
-Description-md5: 7da21b55f83cd4a428a2bd849fda6b81
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
 
 Package: gstreamer1.0-plugins-good
 Priority: optional
@@ -447,6 +485,172 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: libmirclient-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 88
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: i386
+Source: mir
+Version: 0.0.10+13.10.20130829.1-0ubuntu1
+Depends: libmirclient2 (= 0.0.10+13.10.20130829.1-0ubuntu1), libmirprotobuf-dev (= 0.0.10+13.10.20130829.1-0ubuntu1), mircommon-dev (= 0.0.10+13.10.20130829.1-0ubuntu1)
+Filename: pool/main/m/mir/libmirclient-dev_0.0.10+13.10.20130829.1-0ubuntu1_i386.deb
+Size: 7466
+MD5sum: 578c3d3b037ef63c1396613a80fd290d
+SHA1: 617cae75201906e86be3194630d6b9ce02d800ac
+SHA256: bb4ec4fe013d189d08041e948337c5e97e4dfb1e5edfb8d1cdf64647d67ce9ac
+Description: Display server for Ubuntu - development headers
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: bad81f957875312d57ff2d16afca10de
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmirclient2
+Priority: optional
+Section: libs
+Installed-Size: 508
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: i386
+Source: mir
+Version: 0.0.10+13.10.20130829.1-0ubuntu1
+Depends: libboost-system1.53.0, libc6 (>= 2.9), libdrm2 (>= 2.4.38), libgcc1 (>= 1:4.1.1), libmirprotobuf0 (>= 0.0.10+13.10.20130829.1), libprotobuf7, libstdc++6 (>= 4.8), libxkbcommon0 (>= 0.2.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mir/libmirclient2_0.0.10+13.10.20130829.1-0ubuntu1_i386.deb
+Size: 165248
+MD5sum: dc0f5527d7171110740fb18938232d3b
+SHA1: 26ddf8d7da773e1b3ba6352e4f1911cdca716e29
+SHA256: bdc83c2f98142af14c3f7540738ae058efc97e0e0d935aecf443e73be02ade05
+Description: Display server for Ubuntu - client library
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: 833ddf930ef3c3df05aca4213ced851d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmirplatform
+Priority: optional
+Section: libs
+Installed-Size: 392
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: i386
+Source: mir
+Version: 0.0.10+13.10.20130829.1-0ubuntu1
+Replaces: libmirserver0
+Depends: libc6 (>= 2.15), libdrm2 (>= 2.4.38), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgbm1 (>= 8.1~0), libgcc1 (>= 1:4.1.1), libgles2-mesa (>= 7.8.1) | libgles2, libstdc++6 (>= 4.8), libudev1 (>= 183)
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mir/libmirplatform_0.0.10+13.10.20130829.1-0ubuntu1_i386.deb
+Size: 123962
+MD5sum: 48f29f64e026eab822606a0a9e8871f7
+SHA1: e7d26095bff0d97df64e29b4f8054dd07366d132
+SHA256: 65e673100d2cfdfb3005a18d52e4ca26a2cd92a8f20f36ddec52e020af7aaee9
+Description: Display server for Ubuntu - platform library
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: 5ca581b6c17780dd3707f6b3fff2597b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmirprotobuf-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 67
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: i386
+Source: mir
+Version: 0.0.10+13.10.20130829.1-0ubuntu1
+Depends: libmirprotobuf0 (= 0.0.10+13.10.20130829.1-0ubuntu1), libprotobuf-dev
+Filename: pool/main/m/mir/libmirprotobuf-dev_0.0.10+13.10.20130829.1-0ubuntu1_i386.deb
+Size: 4592
+MD5sum: 16073fd8d6dfdec28b9992c6a4829727
+SHA1: 5acc581f015e192177269e2a18ba7b757e790e0e
+SHA256: a29fdc1b129744ebed3b74ad7152df0da71d6f4d5539542f5080cd78569804bd
+Description: Display server for Ubuntu - protocol definition
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: dafcf3520428a348b335759e46da047f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmirprotobuf0
+Priority: optional
+Section: libs
+Installed-Size: 262
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: i386
+Source: mir
+Version: 0.0.10+13.10.20130829.1-0ubuntu1
+Depends: libc6 (>= 2.3.6-6~), libgcc1 (>= 1:4.1.1), libprotobuf7, libstdc++6 (>= 4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mir/libmirprotobuf0_0.0.10+13.10.20130829.1-0ubuntu1_i386.deb
+Size: 73954
+MD5sum: a3af976615991168427978bc538002d3
+SHA1: d6a4840a61425611430de7fea6a749b555d1eafe
+SHA256: ef35c48a18bb0e6bc9ba206c8ea0d1f8218567431ec9d29248c1beaab8d629c5
+Description: Display server for Ubuntu - protocol implementation
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: c619d91f67bba57f73bf198297f21d7d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmirserver-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 377
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: i386
+Source: mir
+Version: 0.0.10+13.10.20130829.1-0ubuntu1
+Depends: libmirserver1 (= 0.0.10+13.10.20130829.1-0ubuntu1), libmirprotobuf-dev (= 0.0.10+13.10.20130829.1-0ubuntu1), mircommon-dev (= 0.0.10+13.10.20130829.1-0ubuntu1), libglm-dev, libboost-program-options-dev
+Filename: pool/main/m/mir/libmirserver-dev_0.0.10+13.10.20130829.1-0ubuntu1_i386.deb
+Size: 41714
+MD5sum: 06d7e6a33ff87883f7dfd4a4aa2265db
+SHA1: 67bd41a1d4c63d803b9109145a027f86212c9ed6
+SHA256: 4c1723aea5d3b82917c51b46297dda451bcf4b24d5ae8421f2d98445155577fb
+Description: Display server for Ubuntu - development headers
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: 98260f2d94306b61ba8e99360b379f43
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmirserver1
+Priority: optional
+Section: libs
+Installed-Size: 1701
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: i386
+Source: mir
+Version: 0.0.10+13.10.20130829.1-0ubuntu1
+Depends: libboost-program-options1.53.0, libboost-system1.53.0, libc6 (>= 2.9), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.1.1), libgflags2, libgles2-mesa (>= 7.8.1) | libgles2, libgoogle-glog0, libmirclient2 (>= 0.0.10+13.10.20130829.1), libmirprotobuf0 (>= 0.0.10+13.10.20130829.1), libprotobuf7, libstdc++6 (>= 4.8.1), libxkbcommon0 (>= 0.2.0), libmirplatform (= 0.0.10+13.10.20130829.1-0ubuntu1)
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mir/libmirserver1_0.0.10+13.10.20130829.1-0ubuntu1_i386.deb
+Size: 554968
+MD5sum: c9ccf01f9cd1ccc124f17f1d8631248a
+SHA1: 131d16610593626895303a6076719f0767c0b214
+SHA256: 97d6989a7fcd2261486d6d88216665827223b7eca7dfb07fa8a52839f1cb3be3
+Description: Display server for Ubuntu - server library
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: ec9e31363965aaba264f7029d7781e84
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libqt5location5
 Priority: optional
 Section: libs
@@ -609,6 +813,50 @@ Description: Upstart Client Library
 Multi-Arch: same
 Homepage: http://upstart.ubuntu.com/
 Description-md5: 6c0f4f2b94a39a98cf6d9e420c504939
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: mir-doc
+Priority: optional
+Section: doc
+Installed-Size: 70490
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: all
+Source: mir
+Version: 0.0.10+13.10.20130829.1-0ubuntu1
+Depends: libmirclient-dev, libmirserver-dev
+Filename: pool/main/m/mir/mir-doc_0.0.10+13.10.20130829.1-0ubuntu1_all.deb
+Size: 39913852
+MD5sum: 166565f46a8bfd1804de59848946a587
+SHA1: e65871955b665f1e901e0dac84ae1574be847e06
+SHA256: aa9f58f3f7dbc53d566fa63f7b93218e3950b8832bd32854b21ed162c1da647f
+Description: API documentation for mir
+Homepage: https://launchpad.net/mir
+Description-md5: 628500f58a32ea2c0fc1cb782e6f260f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: mircommon-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 169
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: i386
+Source: mir
+Version: 0.0.10+13.10.20130829.1-0ubuntu1
+Filename: pool/main/m/mir/mircommon-dev_0.0.10+13.10.20130829.1-0ubuntu1_i386.deb
+Size: 17820
+MD5sum: f534d4926b535b576040c6381aa297d6
+SHA1: a8bfa89688b946dbe6069193d42a061b6311637b
+SHA256: 4b8ac62461f256223e0a25c07c31d0fedfae47e75ef741291c1d66a65175a437
+Description: Display server for Ubuntu - development headers
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: afceda22de73c8f8ef2fe0642ae4e906
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
