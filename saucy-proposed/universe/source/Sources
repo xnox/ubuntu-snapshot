@@ -2691,6 +2691,40 @@ Checksums-Sha256:
  de4820f46cc3024e24851f516e5b982a9f43a424872e8406c2fa3a00a9530f4a 4820388 mldemos_0.5.1.orig.tar.gz
  823d920168910c34de39f3f0eb09d434ddf312bc6cfa5eab5b827c5e48a36a69 4276 mldemos_0.5.1-1.debian.tar.gz
 
+Package: mongodb
+Binary: mongodb, mongodb-server, mongodb-clients, mongodb-dev
+Version: 1:2.4.6-0ubuntu4
+Section: universe/database
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Antonin Kral <A.Kral@sh.cvut.cz>
+Build-Depends: cdbs (>= 0.4.73~), debhelper (>= 9), libboost-date-time-dev, libboost-dev, libboost-filesystem-dev, libboost-program-options-dev, libboost-thread-dev, libgoogle-perftools-dev [linux-amd64 linux-i386], libpcap-dev, libpcre3-dev, libreadline-dev, libsnappy-dev, libstemmer-dev, libssl-dev, libv8-dev [armhf], python-pymongo, scons
+Architecture: amd64 i386 kfreebsd-amd64 kfreebsd-i386 armhf
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/universe/m/mongodb
+Files:
+ c62008a3b2d60d439a9b08ffa473492b 2515 mongodb_2.4.6-0ubuntu4.dsc
+ 74496298ce47cf3ad70ea02abb2ee8b2 14141660 mongodb_2.4.6.orig.tar.gz
+ 525d4dccd91cce77e124c4a38996bd68 58710 mongodb_2.4.6-0ubuntu4.debian.tar.gz
+Uploaders:  Roberto C. Sanchez <roberto@connexer.com>, Jérémy Lal <kapouer@melix.org>
+Homepage: http://www.mongodb.org
+Vcs-Browser: https://github.com/bobek/mongo-debian
+Vcs-Git: git://github.com/bobek/mongo-debian.git
+Package-List: 
+ mongodb deb database extra
+ mongodb-clients deb database extra
+ mongodb-dev deb libdevel extra
+ mongodb-server deb database extra
+Checksums-Sha1:
+ 35ac19911270390ee54800d7cf8d734509b26fda 2515 mongodb_2.4.6-0ubuntu4.dsc
+ 32066d405f3bed175c9433dc4ac455c2e0091b53 14141660 mongodb_2.4.6.orig.tar.gz
+ cf9a95b28b655bd55b34bdc613b16b990d22eadd 58710 mongodb_2.4.6-0ubuntu4.debian.tar.gz
+Checksums-Sha256:
+ 3547f716df8331b99901f38c54170b4b9ecb737ab35e92e9b850a10a26b1c068 2515 mongodb_2.4.6-0ubuntu4.dsc
+ b5f397abc92d36d84a85753d15fb5d7dab6545ce9dfd9fb7685c630e6b050acb 14141660 mongodb_2.4.6.orig.tar.gz
+ 1fe4ebd0e4ba9dde73f6f0e4f815de3477df2ba599ad1eec33146548c73001d4 58710 mongodb_2.4.6-0ubuntu4.debian.tar.gz
+Testsuite: autopkgtest
+
 Package: mono-basic
 Binary: libmono-microsoft-visualbasic8.0-cil, libmono-microsoft-visualbasic10.0-cil, libmono-microsoft-visualbasic11.0-cil, libmono-cecil-vb0.9-cil, mono-vbnc, mono-basic-dbg
 Version: 3.0~pre20130627.4dcc70f-1
@@ -3454,35 +3488,6 @@ Checksums-Sha256:
  7a7b7c411c1da33439b79f3f71ebde3402f8aef77e083cc11fc5fc20b00f56df 1452 php-symfony2-yaml_2.2.1-1.dsc
  240b04b4e474b76f1c4b5b51bdddc741677655904b2d5557fa87eee95d649b60 40257 php-symfony2-yaml_2.2.1.orig.tar.gz
  e5e523425cfbc9672c892a27c39953712d9854bf2bf6c319cef91eb7ac2666c7 2036 php-symfony2-yaml_2.2.1-1.debian.tar.gz
-
-Package: pinba-engine-mysql
-Binary: pinba-engine-mysql-5.5
-Version: 1.0.0-2build1
-Priority: extra
-Section: universe/misc
-Maintainer: Vincent Bernat <bernat@debian.org>
-Build-Depends: debhelper (>= 7.0.50~), dpkg-dev (>= 1.16.1~), libjudy-dev, libevent-dev, libjemalloc-dev, libprotobuf-dev, protobuf-compiler, libmysqlclient-dev, mysql-source-5.5, chrpath
-Architecture: any
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/universe/p/pinba-engine-mysql
-Files:
- 1fff6989e9fa99695e36c81539c89168 2111 pinba-engine-mysql_1.0.0-2build1.dsc
- 39aa6862eb26a9c6bb65a63f124e81ac 378257 pinba-engine-mysql_1.0.0.orig.tar.gz
- 7f5e5c2b2d7dd75ea02b6da2084bd889 3216 pinba-engine-mysql_1.0.0-2build1.debian.tar.gz
-Homepage: http://pinba.org/
-Vcs-Browser: http://git.debian.org/?p=collab-maint/pinba-engine-mysql.git
-Vcs-Git: git://git.debian.org/git/collab-maint/pinba-engine-mysql.git
-Package-List: 
- pinba-engine-mysql-5.5 deb database extra
-Checksums-Sha1:
- f1fc1850548de36cae5fec300ce6c57d2f379dfa 2111 pinba-engine-mysql_1.0.0-2build1.dsc
- 140089698c1d30b76eb25ae39d9ee88ac6cbdd9a 378257 pinba-engine-mysql_1.0.0.orig.tar.gz
- 70c06d2a37c97c888cdf61762e75815d1e5ba48f 3216 pinba-engine-mysql_1.0.0-2build1.debian.tar.gz
-Checksums-Sha256:
- c94a8066ae8aeb22284f13f68f4871c1c068cae9a1c4bc25e0e40a1239df7f89 2111 pinba-engine-mysql_1.0.0-2build1.dsc
- 2ff7fb222952d1d37fc464b44b3429e8492ae2d25ba3ae063d028839e7f9e0b0 378257 pinba-engine-mysql_1.0.0.orig.tar.gz
- edbdc96ed74bde01e6e50e57ee72b2d21da3b3ec48824c4783b71346e63f97fa 3216 pinba-engine-mysql_1.0.0-2build1.debian.tar.gz
 
 Package: postgis
 Binary: postgis, postgis-doc, libpostgis-java, liblwgeom-2.0.3, liblwgeom-dev, postgresql-9.1-postgis-2.0, postgresql-9.1-postgis-2.0-scripts
