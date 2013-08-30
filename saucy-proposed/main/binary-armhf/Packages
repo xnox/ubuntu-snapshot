@@ -1,68 +1,3 @@
-Package: at-spi2-core
-Priority: optional
-Section: misc
-Installed-Size: 178
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
-Architecture: armhf
-Version: 2.9.90-0ubuntu2
-Depends: libatspi2.0-0, libc6 (>= 2.7), libdbus-1-3 (>= 1.0.2), libglib2.0-0 (>= 2.37.3), libx11-6, libxtst6
-Breaks: gdm3 (<< 3.4)
-Filename: pool/main/a/at-spi2-core/at-spi2-core_2.9.90-0ubuntu2_armhf.deb
-Size: 44770
-MD5sum: dffd7d561def0f998e4cbf040f75fb93
-SHA1: aa61ca3dca6c12ef7b063ddae5a11871778ebb6d
-SHA256: 53f7e9faf03ce3f7f60f57ab1e8b757fffa076d8274b32ba78af8a15ef0fc2fb
-Description: Assistive Technology Service Provider Interface (dbus core)
-Multi-Arch: foreign
-Homepage: http://live.gnome.org/Accessibility
-Description-md5: bfa19b4797e8c3ac7592c237175ae49e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-live, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: at-spi2-core-dbg
-Priority: extra
-Section: debug
-Installed-Size: 169
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
-Architecture: armhf
-Source: at-spi2-core
-Version: 2.9.90-0ubuntu2
-Depends: at-spi2-core (= 2.9.90-0ubuntu2)
-Filename: pool/main/a/at-spi2-core/at-spi2-core-dbg_2.9.90-0ubuntu2_armhf.deb
-Size: 102638
-MD5sum: ddc0d3290fa7d56d0a1beb4c951be7e8
-SHA1: 51d12ae438b8fd23be2580cc645382573bdf1d6d
-SHA256: 3c32530b9571d356f0a578317648ccf2753ab65d45097d9c1f149d3bb41152f3
-Description: Assistive Technology Service Provider Interface - debugging symbols
-Homepage: http://live.gnome.org/Accessibility
-Description-md5: bed70eea3d0c01227e434bb20a6f0102
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: at-spi2-doc
-Priority: optional
-Section: misc
-Installed-Size: 992
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
-Architecture: all
-Source: at-spi2-core
-Version: 2.9.90-0ubuntu2
-Recommends: devhelp
-Filename: pool/main/a/at-spi2-core/at-spi2-doc_2.9.90-0ubuntu2_all.deb
-Size: 99942
-MD5sum: f7eff7f61e03bb04b57cddb525ec7dc0
-SHA1: 4cd5d7dadb1f89afb9319037788a82e67dc037fc
-SHA256: 4f7d5bfb385fa9e4829a90ce09c0cdd59429a13b37e0d4e4860e8fec8c28db7f
-Description: Assistive Technology Service Provider Interface (Documentation)
-Homepage: http://live.gnome.org/Accessibility
-Description-md5: e4ecae3df3f427dece5859c37aad6173
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: binutils
 Priority: optional
 Section: devel
@@ -202,28 +137,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
-Package: gir1.2-atspi-2.0
+Package: gir1.2-gdata-0.0
 Priority: optional
-Section: misc
-Installed-Size: 85
+Section: libs
+Installed-Size: 192
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: armhf
-Source: at-spi2-core
-Version: 2.9.90-0ubuntu2
-Replaces: gir1.0-gtk-2.0 (<< 2.22), gobject-introspection-repository
-Depends: gir1.2-glib-2.0, libatspi2.0-0
-Filename: pool/main/a/at-spi2-core/gir1.2-atspi-2.0_2.9.90-0ubuntu2_armhf.deb
-Size: 16750
-MD5sum: d605959b7f93bed3400b5bdf2d9a8771
-SHA1: 8da4c13211394dec1a907fcce2caa94843c7cd0e
-SHA256: 1db6ceb2922abddfc03b83724a6bbd309e71860030702cf7cf974f2638b19e61
-Description: Assistive Technology Service Provider (GObject introspection)
-Homepage: http://live.gnome.org/Accessibility
-Description-md5: b2f515b8cdef2fbe0cb29eb69f2ea27a
+Source: libgdata
+Version: 0.13.4-0ubuntu1
+Depends: gir1.2-freedesktop, gir1.2-glib-2.0, gir1.2-soup-2.4, libgdata13 (>= 0.13.3)
+Conflicts: gir1.0-gdata-0.0
+Filename: pool/main/libg/libgdata/gir1.2-gdata-0.0_0.13.4-0ubuntu1_armhf.deb
+Size: 30762
+MD5sum: 1ff0769394203c891acc050777cbdb65
+SHA1: d51d423099b065c75ac45cd2d3bc0dbccb26e9b1
+SHA256: 6c500de95b48dc536ff83ed55b9b92199bfc21bbd9893499d2d8280fad048034
+Description: GObject introspection data for the GData webservices library
+Homepage: http://live.gnome.org/libgdata
+Description-md5: f54b7f85ee1176e1236a3584322d2174
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
 Package: gir1.2-networkmanager-1.0
 Priority: optional
@@ -264,75 +199,6 @@ SHA1: 0af8925afdf6f2eeb1570daea9fb4ab6f6c052df
 SHA256: e8df88e2d28f55abbaa1840fa99a90e95214f755b5178f217b73380615030d3d
 Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libatspi2.0-0
-Priority: optional
-Section: misc
-Installed-Size: 150
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
-Architecture: armhf
-Source: at-spi2-core
-Version: 2.9.90-0ubuntu2
-Depends: libc6 (>= 2.7), libdbus-1-3 (>= 1.1.1), libglib2.0-0 (>= 2.37.3), libx11-6
-Pre-Depends: multiarch-support
-Recommends: at-spi2-core (= 2.9.90-0ubuntu2)
-Filename: pool/main/a/at-spi2-core/libatspi2.0-0_2.9.90-0ubuntu2_armhf.deb
-Size: 53428
-MD5sum: 9b75154d52a9b7c10ce4a30e89f91337
-SHA1: 175c9f6c5886aa3012e90a8549cc8885d206b836
-SHA256: 8a600ba9faa1a9f78f62c595580cff03c56c5553f433115fda93493df40f614d
-Description: Assistive Technology Service Provider Interface - shared library
-Multi-Arch: same
-Homepage: http://live.gnome.org/Accessibility
-Description-md5: 8e8543c1983d4f5d6305bf8bf14c302b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-live, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libatspi2.0-0-dbg
-Priority: extra
-Section: debug
-Installed-Size: 247
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
-Architecture: armhf
-Source: at-spi2-core
-Version: 2.9.90-0ubuntu2
-Depends: libatspi2.0-0 (= 2.9.90-0ubuntu2)
-Filename: pool/main/a/at-spi2-core/libatspi2.0-0-dbg_2.9.90-0ubuntu2_armhf.deb
-Size: 161568
-MD5sum: 10de359fbb84e6f5efa02c4535a086a6
-SHA1: f567c9eaf7342e8649ed0da1a4fc2dd19fc5c603
-SHA256: 92cae35f8b1dee4f1e5baeef66a6f1f35a478638ecd3841341f64a926b50d427
-Description: Assistive Technology Service Provider Interface - debugging symbols
-Multi-Arch: same
-Homepage: http://live.gnome.org/Accessibility
-Description-md5: 2f09127682a7556899d0526f5ed08a5a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libatspi2.0-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 554
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
-Architecture: armhf
-Source: at-spi2-core
-Version: 2.9.90-0ubuntu2
-Replaces: gir-repository-dev
-Depends: gir1.2-atspi-2.0 (= 2.9.90-0ubuntu2), libatspi2.0-0 (= 2.9.90-0ubuntu2), libglib2.0-dev (>= 2.4.1-2), libdbus-1-dev, libdbus-glib-1-dev, dbus, libxtst-dev
-Filename: pool/main/a/at-spi2-core/libatspi2.0-dev_2.9.90-0ubuntu2_armhf.deb
-Size: 75316
-MD5sum: 9fc89918bbc710e9d671611ac5b425e6
-SHA1: ba96e0cf96693f9ee5131212362998094f7f9de8
-SHA256: cf8391898fea4484fa9cec21032f1c8c5e18c715f7308b7a70d3b27f73e1f06e
-Description: Development files for the assistive technology serice provider
-Homepage: http://live.gnome.org/Accessibility
-Description-md5: bec738c7ab772a19d5eca02168d4c616
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -423,6 +289,93 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: libgdata-common
+Priority: optional
+Section: libs
+Installed-Size: 64
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: libgdata
+Version: 0.13.4-0ubuntu1
+Filename: pool/main/libg/libgdata/libgdata-common_0.13.4-0ubuntu1_all.deb
+Size: 18336
+MD5sum: 8ce0d5bf63855e53f3e6e65fbcb77705
+SHA1: fa74816c49263c756b7e23c2e24d2150b32b9871
+SHA256: fde94fb51b468a5b8c031982977f8a240d546f872ee16917a233b0c6b21da3c2
+Description: Library for accessing GData webservices - common data files
+Homepage: http://live.gnome.org/libgdata
+Description-md5: 5d011a11f567ab94a8c35d7b48cad649
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
+Package: libgdata-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 3093
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libgdata
+Version: 0.13.4-0ubuntu1
+Depends: libgdata13 (= 0.13.4-0ubuntu1), gir1.2-gdata-0.0 (= 0.13.4-0ubuntu1), libgcr-3-dev, libglib2.0-dev (>= 2.31.0), liboauth-dev (>= 0.9.4), libsoup2.4-dev (>= 2.37.91), libsoup-gnome2.4-dev (>= 2.37.91), libxml2-dev
+Suggests: libgdata-doc
+Filename: pool/main/libg/libgdata/libgdata-dev_0.13.4-0ubuntu1_armhf.deb
+Size: 332698
+MD5sum: b58bf4b19651b9a38596d0c3428af45e
+SHA1: aab391ca7cb227fb11ad67e7cb7ea594036d8433
+SHA256: 11e779f78bb26107d2ec934626a1c8491a990c6ab5a6a05f96f01749315d4856
+Description: Library for accessing GData webservices - development files
+Homepage: http://live.gnome.org/libgdata
+Description-md5: 9892c19f92db563fe9dd7a426623ff57
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgdata-doc
+Priority: optional
+Section: doc
+Installed-Size: 5610
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: libgdata
+Version: 0.13.4-0ubuntu1
+Recommends: libgdata-dev
+Suggests: devhelp
+Filename: pool/main/libg/libgdata/libgdata-doc_0.13.4-0ubuntu1_all.deb
+Size: 317496
+MD5sum: b918a5af196268a71f2aeb8c72b102d4
+SHA1: dee6aa59dac973b6d587344cce7c7b8d132d15f7
+SHA256: db157782eab35ac6220420f8462efbe0760dec7f765b9ae31b76a73d4a7007ab
+Description: Library for accessing GData webservices - documentation
+Homepage: http://live.gnome.org/libgdata
+Description-md5: 457badc41d89dbaf51ffd8a78ca96272
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgdata13
+Priority: optional
+Section: libs
+Installed-Size: 546
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: libgdata
+Version: 0.13.4-0ubuntu1
+Depends: libc6 (>= 2.7), libgcr-base-3-1 (>= 3.8.0), libglib2.0-0 (>= 2.37.3), liboauth0 (>= 0.9.1), libsoup-gnome2.4-1 (>= 2.37.91), libsoup2.4-1 (>= 2.41.90), libxml2 (>= 2.7.4), libgdata-common
+Filename: pool/main/libg/libgdata/libgdata13_0.13.4-0ubuntu1_armhf.deb
+Size: 181634
+MD5sum: e5c42229e0d8f09452733f82c961f2ff
+SHA1: 7de7d134a7fc923848300d49cbd0fcd3bedc5356
+SHA256: 7ee2f7afdfcbd22a058cdbae5303a7bb30d27327af2a32d7a8732f0dc3d25f27
+Description: Library for accessing GData webservices - shared libraries
+Homepage: http://live.gnome.org/libgdata
+Description-md5: 2206a13104622d0ae3e6b435b0e80fc0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
 Package: libmysqlclient-dev
 Priority: optional
 Section: libdevel
@@ -431,16 +384,16 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: armhf
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu4
+Version: 5.5.32-0ubuntu5
 Replaces: libmysqlclient15-dev
 Provides: libmysqlclient15-dev
-Depends: libmysqlclient18 (= 5.5.32-0ubuntu4), zlib1g-dev
+Depends: libmysqlclient18 (= 5.5.32-0ubuntu5), zlib1g-dev
 Conflicts: libmysqlclient10-dev, libmysqlclient12-dev, libmysqlclient14-dev, libmysqlclient15-dev
-Filename: pool/main/m/mysql-5.5/libmysqlclient-dev_5.5.32-0ubuntu4_armhf.deb
-Size: 1287886
-MD5sum: 950344ee1b2cc9501caeda33ccbac9ba
-SHA1: f2f5d8623cedb79a8e13fbf22f9f7003bf85a8aa
-SHA256: 0538532b28617880a6652edee0717ff34048eb333c893acbf4fdfc7837ca9ced
+Filename: pool/main/m/mysql-5.5/libmysqlclient-dev_5.5.32-0ubuntu5_armhf.deb
+Size: 1289160
+MD5sum: 581813a1bac1094ce41d31334882044d
+SHA1: 5c37045f5e6c0c0e537fceac7830f674814a5b8f
+SHA256: 842419e83a8edce58e00cd7bf18b74733ceec39f93b1d03493e43bc1aebbdbf2
 Description: MySQL database development files
 Homepage: http://dev.mysql.com/
 Description-md5: 716f7a81dc4e3e8899c7eaa66b24736d
@@ -455,14 +408,14 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: armhf
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu4
-Depends: mysql-common (>= 5.5.32-0ubuntu4), libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), zlib1g (>= 1:1.1.4)
+Version: 5.5.32-0ubuntu5
+Depends: mysql-common (>= 5.5.32-0ubuntu5), libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), zlib1g (>= 1:1.1.4)
 Pre-Depends: multiarch-support
-Filename: pool/main/m/mysql-5.5/libmysqlclient18_5.5.32-0ubuntu4_armhf.deb
-Size: 864078
-MD5sum: 6c613aeb5ddb05260f0d432f7beea932
-SHA1: 1391f5fedef9ca38bbe7d73aa8fb101e2a1e6d46
-SHA256: afd5b41d74ae132ee69bb1d9bcbee88836eb26d19f3e6a8f3ed1275afd573d42
+Filename: pool/main/m/mysql-5.5/libmysqlclient18_5.5.32-0ubuntu5_armhf.deb
+Size: 864066
+MD5sum: a42bec58090bd49474084b9ea7f0a62b
+SHA1: b3a8e6df54608e31ef523b9099b5fd8210f17649
+SHA256: 46eb61f7339d61f7260a6ba81526db6c33a8a4bd92eb91e8c17ddf3d2e7aeaf3
 Description: MySQL database client library
 Multi-Arch: same
 Homepage: http://dev.mysql.com/
@@ -479,13 +432,13 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: armhf
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu4
-Depends: libmysqlclient-dev (>= 5.5.32-0ubuntu4)
-Filename: pool/main/m/mysql-5.5/libmysqld-dev_5.5.32-0ubuntu4_armhf.deb
-Size: 4478594
-MD5sum: cc0e8282eb8e342eefb91d3177e59817
-SHA1: 079cd7fb2388a0863208121c6ab360a9ad033546
-SHA256: 9d398cb4e2faa512e658c24967af05091847e62f07b367e040af16345ee444a5
+Version: 5.5.32-0ubuntu5
+Depends: libmysqlclient-dev (>= 5.5.32-0ubuntu5)
+Filename: pool/main/m/mysql-5.5/libmysqld-dev_5.5.32-0ubuntu5_armhf.deb
+Size: 4474904
+MD5sum: a1d7e0d290bb0af2855291b52c8b24eb
+SHA1: 06e982094c4affff72494ce331312d12ab13aae3
+SHA256: 02435ddcdc4c2a3355dd8c5b96ebbe0793406190b3076e6c2ce95ebe5ab78952
 Description: MySQL embedded database development files
 Homepage: http://dev.mysql.com/
 Description-md5: 2f06b7e1bfdb9f620d92f9696d24fabc
@@ -664,6 +617,28 @@ Description-md5: 6c0f4f2b94a39a98cf6d9e420c504939
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: mysql-client
+Priority: optional
+Section: database
+Installed-Size: 114
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Source: mysql-5.5
+Version: 5.5.32-0ubuntu5
+Depends: mysql-client-5.5
+Filename: pool/main/m/mysql-5.5/mysql-client_5.5.32-0ubuntu5_all.deb
+Size: 11148
+MD5sum: 734c78796f4af8d58ed0669572019f0a
+SHA1: ad7973737cc92df254d5424588273c8349e313b5
+SHA256: 540f556e99cef6028205ac6f1143531bcfde512c9abeaa6dfce51d5caf2bf42a
+Description: MySQL database client (metapackage depending on the latest version)
+Homepage: http://dev.mysql.com/
+Description-md5: c1035c33de63147bb387637ae5083656
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master
+
 Package: mysql-client-5.5
 Priority: optional
 Section: database
@@ -672,16 +647,16 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: armhf
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu4
-Replaces: mysql-client (<< 5.5.32-0ubuntu4), mysql-client-5.0, mysql-client-5.1
+Version: 5.5.32-0ubuntu5
+Replaces: mysql-client (<< 5.5.32-0ubuntu5), mysql-client-5.0, mysql-client-5.1
 Provides: mysql-client, mysql-client-4.1, virtual-mysql-client
-Depends: debianutils (>= 1.6), libdbi-perl, libdbd-mysql-perl (>= 1.2202), mysql-common (>= 5.5.32-0ubuntu4), perl, libc6 (>= 2.17), libgcc1 (>= 1:4.4.0), zlib1g (>= 1:1.1.4), mysql-client-core-5.5, libterm-readkey-perl
-Breaks: mysql-client (<< 5.5.32-0ubuntu4), mysql-client-5.0, mysql-client-5.1
-Filename: pool/main/m/mysql-5.5/mysql-client-5.5_5.5.32-0ubuntu4_armhf.deb
-Size: 7691630
-MD5sum: 778fea0960cc80975eee8c8cd0d467fd
-SHA1: 10a696c50f177ea76152f7085fdd0befc8b45a0d
-SHA256: 315adbb605cca0294becf7b3f781a18ab517115f7d16a126f9cb4263eccc65bd
+Depends: debianutils (>= 1.6), libdbi-perl, libdbd-mysql-perl (>= 1.2202), mysql-common (>= 5.5.32-0ubuntu5), perl, libc6 (>= 2.17), libgcc1 (>= 1:4.4.0), zlib1g (>= 1:1.1.4), mysql-client-core-5.5, libterm-readkey-perl
+Breaks: mysql-client (<< 5.5.32-0ubuntu5), mysql-client-5.0, mysql-client-5.1
+Filename: pool/main/m/mysql-5.5/mysql-client-5.5_5.5.32-0ubuntu5_armhf.deb
+Size: 7674786
+MD5sum: 33bdb908806ce21a8f9e949aac1132eb
+SHA1: 97ef7fed9e94938eff73fff4fb08b4904e5aab5d
+SHA256: 7d78aa3f2fecf1caaadab3b37f128c428625aa78f7bf727e2d67c3dbb87b841b
 Description: MySQL database client binaries
 Homepage: http://dev.mysql.com/
 Description-md5: 70aef1a292fc318f9af72aa188c17716
@@ -697,21 +672,69 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: armhf
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu4
-Replaces: mysql-client (<< 5.5.32-0ubuntu4), mysql-client-5.0, mysql-client-core-5.1
+Version: 5.5.32-0ubuntu5
+Replaces: mysql-client (<< 5.5.32-0ubuntu5), mysql-client-5.0, mysql-client-core-5.1
 Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libreadline6 (>= 6.0), libstdc++6 (>= 4.4.0), zlib1g (>= 1:1.1.4)
-Breaks: mysql-client (<< 5.5.32-0ubuntu4), mysql-client-5.0, mysql-client-core-5.1
-Filename: pool/main/m/mysql-5.5/mysql-client-core-5.5_5.5.32-0ubuntu4_armhf.deb
-Size: 1748082
-MD5sum: 4ad6a84fa493057f205490d859298b69
-SHA1: d2ef9f8437fcc465894db179357becfed640bd2e
-SHA256: 3d54e988fdf449f80f450d28e9480400b6a98cac33d94e63ca16df7d467bf87b
+Breaks: mysql-client (<< 5.5.32-0ubuntu5), mysql-client-5.0, mysql-client-core-5.1
+Filename: pool/main/m/mysql-5.5/mysql-client-core-5.5_5.5.32-0ubuntu5_armhf.deb
+Size: 1743944
+MD5sum: 3687b030b1f95182f7ad3acda74cae47
+SHA1: 655c5023111dd73de7222fb2181c619a8ce50c5b
+SHA256: 7488f3394ccf476fc3cbaa0edae306872f34f81c2afa8464afd4100f89c1440a
 Description: MySQL database core client binaries
 Homepage: http://dev.mysql.com/
 Description-md5: 94a7aede8ba9259b1382d4dfca4cdde0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: mysql-common
+Priority: optional
+Section: database
+Installed-Size: 130
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Source: mysql-5.5
+Version: 5.5.32-0ubuntu5
+Replaces: mysql-common-4.1
+Provides: mysql-common-4.1
+Conflicts: mysql-common-4.1
+Breaks: mysql-client-5.1, mysql-client-core-5.1, mysql-server-5.1, mysql-server-core-5.1
+Filename: pool/main/m/mysql-5.5/mysql-common_5.5.32-0ubuntu5_all.deb
+Size: 13096
+MD5sum: 0340c0ebd5bdc77a6841c3ae2076aa67
+SHA1: ee203b174b8047cd778516a7b54638ff0c588948
+SHA256: cf59302537a5dbf647d63b461e5147d838cec8303c2dcd8b9f3f106f0e0fca46
+Description: MySQL database common files, e.g. /etc/mysql/my.cnf
+Multi-Arch: foreign
+Homepage: http://dev.mysql.com/
+Description-md5: 562d254c602f89e4390e28f6362283c8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: lamp-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, ubuntustudio-video, ubuntustudio-publishing, ubuntustudio-graphics, ubuntustudio-audio
+
+Package: mysql-server
+Priority: optional
+Section: database
+Installed-Size: 114
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Source: mysql-5.5
+Version: 5.5.32-0ubuntu5
+Depends: mysql-server-5.5
+Filename: pool/main/m/mysql-5.5/mysql-server_5.5.32-0ubuntu5_all.deb
+Size: 11276
+MD5sum: 9a43d7196726a70b8e24cfd89adb1cfc
+SHA1: 79e84407d52afb9442ff7ddfdd4fa1d332ae0640
+SHA256: 17a8e3b32f973c04604d391986d86ea6ac2540dcb3035cb527629b333c4359ae
+Description: MySQL database server (metapackage depending on the latest version)
+Homepage: http://dev.mysql.com/
+Description-md5: e519a9c4f87658afbd1d077af63f9269
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: mysql-server-5.5
 Priority: optional
@@ -721,19 +744,19 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: armhf
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu4
-Replaces: libmysqlclient-dev (<< 5.5.17~), mysql-server (<< 5.5.32-0ubuntu4), mysql-server-4.1, mysql-server-5.0, mysql-server-5.1
+Version: 5.5.32-0ubuntu5
+Replaces: libmysqlclient-dev (<< 5.5.17~), mysql-server (<< 5.5.32-0ubuntu5), mysql-server-4.1, mysql-server-5.0, mysql-server-5.1
 Provides: virtual-mysql-server
-Depends: mysql-client-5.5 (>= 5.5.32-0ubuntu4), libdbi-perl, perl (>= 5.6), libc6 (>= 2.17), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0), zlib1g (>= 1:1.1.4), debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), psmisc, passwd, lsb-base (>= 3.0-10), mysql-server-core-5.5 (= 5.5.32-0ubuntu4), upstart (>= 0.6.7-2)
-Pre-Depends: mysql-common (>= 5.5.32-0ubuntu4), adduser (>= 3.40), debconf
+Depends: mysql-client-5.5 (>= 5.5.32-0ubuntu5), libdbi-perl, perl (>= 5.6), libc6 (>= 2.17), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0), zlib1g (>= 1:1.1.4), debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), psmisc, passwd, lsb-base (>= 3.0-10), mysql-server-core-5.5 (= 5.5.32-0ubuntu5)
+Pre-Depends: mysql-common (>= 5.5.32-0ubuntu5), adduser (>= 3.40), debconf
 Recommends: libhtml-template-perl
 Suggests: tinyca, mailx
-Breaks: libmysqlclient-dev (<< 5.5.17~), mysql-server (<< 5.5.32-0ubuntu4), mysql-server-4.1, mysql-server-5.1
-Filename: pool/main/m/mysql-5.5/mysql-server-5.5_5.5.32-0ubuntu4_armhf.deb
-Size: 8333166
-MD5sum: 4cef85834c60d7952931bbdd37ae32e8
-SHA1: 159b6ff194798f4f088db480c1e601d9c0323820
-SHA256: 5c3f3cdbb5056860a1ad014deb6068df5761e7f501383b40869b37f603dc0103
+Breaks: libmysqlclient-dev (<< 5.5.17~), mysql-server (<< 5.5.32-0ubuntu5), mysql-server-4.1, mysql-server-5.1
+Filename: pool/main/m/mysql-5.5/mysql-server-5.5_5.5.32-0ubuntu5_armhf.deb
+Size: 8334618
+MD5sum: aa4feba9d22f272d5680567043d9dbbd
+SHA1: 395969677e8be09c395dc8649f7fb215611758c7
+SHA256: 8eb5f5c74716ca5d159610b960609d2f32e6460e195bf82d75da69da474c8828
 Description: MySQL database server binaries and system database setup
 Homepage: http://dev.mysql.com/
 Description-md5: 3ae11e16f793b3ee84f73a5fa268ad9b
@@ -749,16 +772,16 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
 Architecture: armhf
 Source: mysql-5.5
-Version: 5.5.32-0ubuntu4
+Version: 5.5.32-0ubuntu5
 Replaces: mysql-server-5.0, mysql-server-5.1, mysql-server-core-5.0, mysql-server-core-5.1
 Provides: mysql-server-core
 Depends: libaio1 (>= 0.3.93), libc6 (>= 2.17), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0), libwrap0 (>= 7.6-4~), zlib1g (>= 1:1.2.0)
 Breaks: mysql-server-5.0, mysql-server-5.1, mysql-server-core-5.1
-Filename: pool/main/m/mysql-5.5/mysql-server-core-5.5_5.5.32-0ubuntu4_armhf.deb
-Size: 5414926
-MD5sum: b4fc5ed56219b9686f5bb7c4811e9e0f
-SHA1: 8c928755ec7f9c14e52b0e9cb74318c979fcd6bd
-SHA256: 5ea4add6233da33dd32a106fb3c9c6a1fbc67fb0c90bafece06958f29905a447
+Filename: pool/main/m/mysql-5.5/mysql-server-core-5.5_5.5.32-0ubuntu5_armhf.deb
+Size: 5414994
+MD5sum: 553726d7d2681eff244bee9af4e0ea25
+SHA1: 193a41a4e901bc2440ca7019b36949f6d352c863
+SHA256: a8b37c3b9abd2990e04d0bf4f37edc1e4f4936aeb967aa97220d2159be0c1e12
 Description: MySQL database server binaries
 Homepage: http://dev.mysql.com/
 Description-md5: a54aa75db64667c487b6c9d3800b8153
