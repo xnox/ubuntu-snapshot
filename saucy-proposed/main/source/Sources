@@ -76,6 +76,7 @@ Checksums-Sha256:
 Package: bind9
 Binary: bind9, bind9utils, bind9-doc, host, bind9-host, libbind-dev, libbind9-90, libdns99, libisc95, liblwres90, libisccc90, libisccfg90, dnsutils, lwresd
 Version: 1:9.9.3.dfsg.P2-4
+Priority: standard
 Section: net
 Maintainer: LaMont Jones <lamont@debian.org>
 Build-Depends: libkrb5-dev, debhelper (>= 5), libssl-dev, libtool, bison, libdb-dev (>> 4.6), libldap2-dev, libxml2-dev, libcap2-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], hardening-wrapper, libgeoip-dev (>= 1.4.6.dfsg-5), dpkg-dev (>= 1.15.5), python, python-argparse, dh-systemd
@@ -542,7 +543,7 @@ Checksums-Sha256:
 
 Package: mysql-5.5
 Binary: libmysqlclient18, libmysqld-pic, libmysqld-dev, libmysqlclient-dev, mysql-common, mysql-client-core-5.5, mysql-client-5.5, mysql-server-core-5.5, mysql-server-5.5, mysql-server, mysql-client, mysql-testsuite, mysql-testsuite-5.5, mysql-source-5.5
-Version: 5.5.32-0ubuntu5
+Version: 5.5.32-0ubuntu6
 Priority: optional
 Section: database
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
@@ -553,9 +554,9 @@ Standards-Version: 3.9.2
 Format: 3.0 (quilt)
 Directory: pool/main/m/mysql-5.5
 Files:
- d49e44f9f41c78870e0ae859ca443ea4 3092 mysql-5.5_5.5.32-0ubuntu5.dsc
+ 74e764eb2bce81061427897c7a35dd51 3092 mysql-5.5_5.5.32-0ubuntu6.dsc
  7f222e5aaddcd0da8ae0b0d66ce0c722 21604457 mysql-5.5_5.5.32.orig.tar.gz
- 71513e2567323b90918fbfaa0789dea5 303178 mysql-5.5_5.5.32-0ubuntu5.debian.tar.gz
+ 0eaebc8b5b55523ee9ab0fc3bbf0900d 304368 mysql-5.5_5.5.32-0ubuntu6.debian.tar.gz
 Uploaders: Norbert Tretkowski <norbert@tretkowski.de>, Clint Byrum <clint@ubuntu.com>
 Homepage: http://dev.mysql.com/
 Package-List: 
@@ -574,13 +575,13 @@ Package-List:
  mysql-testsuite deb database optional
  mysql-testsuite-5.5 deb database optional
 Checksums-Sha1:
- 4f72bc38ed8f9166e7d62df1b367a279e01bdef6 3092 mysql-5.5_5.5.32-0ubuntu5.dsc
+ 71274fb73a9e7a814a3ab7b5abf7059b4c4c4ee1 3092 mysql-5.5_5.5.32-0ubuntu6.dsc
  fe224aac8c12bd95f398aa093c7772f3a0f3881c 21604457 mysql-5.5_5.5.32.orig.tar.gz
- 27651565deca1048074d78e9d966c5226ab4c762 303178 mysql-5.5_5.5.32-0ubuntu5.debian.tar.gz
+ 1cbeaee3bf2368402c803776b40750e3f97f42ea 304368 mysql-5.5_5.5.32-0ubuntu6.debian.tar.gz
 Checksums-Sha256:
- 5d9e59335fa461913a66a6e134d05d86430da42ea00dcb34b2aefbe9b2cf3cb6 3092 mysql-5.5_5.5.32-0ubuntu5.dsc
+ 08b8270edb0c3c66788d60797924be70e1a75cc610121fdaaf22ed371a1200c5 3092 mysql-5.5_5.5.32-0ubuntu6.dsc
  afcdb3d4fa93950b330d934ce3de155e9d4a575c91b5aa3e0a276b9f52e802a2 21604457 mysql-5.5_5.5.32.orig.tar.gz
- 413c126ad946ba605a34496a7157f9a9527c642acef91d4008a380f2a63cde88 303178 mysql-5.5_5.5.32-0ubuntu5.debian.tar.gz
+ 90867e9bb17c9404d42c1a49e8ff8d638f6bebd1c80eda6752438ace7cb704be 304368 mysql-5.5_5.5.32-0ubuntu6.debian.tar.gz
 Testsuite: autopkgtest
 
 Package: nas
@@ -765,41 +766,6 @@ Checksums-Sha256:
  8d759a6a3e50f0c12c07e555bcdafa10f7c74a2008af13a67dd640bf86108a88 2081 qtwebkit-source_2.3.2-0ubuntu1.dsc
  858d0d7b073c8c3b3d77ab344b5c67faf80041e30d2f9a91d259f92224906397 51649959 qtwebkit-source_2.3.2.orig.tar.gz
  0f95e06b3eb802e3f7df23e9f013bcbdda547173f2c984f04a39d68f29177d53 80539 qtwebkit-source_2.3.2-0ubuntu1.debian.tar.gz
-
-Package: upstart
-Binary: upstart, upstart-monitor, upstart-dconf-bridge, libupstart1, libupstart-dev
-Version: 1.10-0ubuntu1
-Priority: required
-Section: admin
-Maintainer: James Hunt <james.hunt@ubuntu.com>
-Build-Depends: debhelper (>= 9), pkg-config (>= 0.22), libnih-dev (>= 1.0.3), libnih-dbus-dev (>= 1.0.3), nih-dbus-tool (>= 1.0.3), libdbus-1-dev (>= 1.2.16), libexpat1-dev (>= 2.0.0), libudev-dev (>= 151-5), libjson0-dev (>= 0.10), dbus, bash-completion, dh-autoreconf, autopoint, python3, automake (>= 1.12), libdconf-dev
-Architecture: any all
-Standards-Version: 3.8.4
-Format: 1.0
-Directory: pool/main/u/upstart
-Files:
- 9816a3813999c5d64b2d78814d542a30 2435 upstart_1.10-0ubuntu1.dsc
- 1401e7fe811bb76ebbbde8a117026b80 1464529 upstart_1.10.orig.tar.gz
- 83ae17515c4c9579ad9ab597f6f18a5b 50532 upstart_1.10-0ubuntu1.diff.gz
-Uploaders: Scott James Remnant <scott@ubuntu.com>
-Homepage: http://upstart.ubuntu.com/
-Package-List: 
- libupstart-dev deb libdevel optional
- libupstart1 deb admin optional
- upstart deb admin required
- upstart-dconf-bridge deb utils optional
- upstart-monitor deb utils optional
-Checksums-Sha1:
- 85b76543f6cc4d9ef9114343a4ccdea3fb8c795c 2435 upstart_1.10-0ubuntu1.dsc
- b159d510700c1737abd13e9e23c4d3d9ffe99d84 1464529 upstart_1.10.orig.tar.gz
- d54144b258e2e0c18352fa1bb1fc142403d41b7c 50532 upstart_1.10-0ubuntu1.diff.gz
-Checksums-Sha256:
- 0b3703595178e3b098de35537b3d3f4ae47a38591a6352b2cb524a7597eb3434 2435 upstart_1.10-0ubuntu1.dsc
- a217d3cc31ff0708e568b1cb5d53144ad8bf00b3885dcd37c00ad5a17dbf1c46 1464529 upstart_1.10.orig.tar.gz
- 2ed157aa585d7ba21cf2294963c2b41777ac0ceaa077fca29d5e407ff0a44b5e 50532 upstart_1.10-0ubuntu1.diff.gz
-Debian-Vcs-Browser: http://anonscm.debian.org/loggerhead/collab-maint/upstart/trunk/
-Debian-Vcs-Bzr: nosmart+http://bzr.debian.org/bzr/collab-maint/upstart/trunk/
-Testsuite: autopkgtest
 
 Package: usb-modeswitch-data
 Binary: usb-modeswitch-data

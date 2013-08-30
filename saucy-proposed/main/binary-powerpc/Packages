@@ -1,3 +1,88 @@
+Package: bind9
+Priority: optional
+Section: net
+Installed-Size: 906
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: apparmor-profiles (<< 2.1+1075-0ubuntu4), bind, bind9utils (<< 1:9.9.3.dfsg.P2-3), dnsutils (<< 1:9.1.0-3)
+Depends: libbind9-90 (= 1:9.9.3.dfsg.P2-4), libc6 (>= 2.4), libcap2 (>= 2.10), libdns99 (= 1:9.9.3.dfsg.P2-4), libisc95 (= 1:9.9.3.dfsg.P2-4), libisccc90 (= 1:9.9.3.dfsg.P2-4), libisccfg90 (= 1:9.9.3.dfsg.P2-4), liblwres90 (= 1:9.9.3.dfsg.P2-4), libxml2 (>= 2.7.4), debconf (>= 0.5) | debconf-2.0, init-system-helpers (>= 1.5), netbase, adduser, lsb-base (>= 3.2-14), bind9utils (= 1:9.9.3.dfsg.P2-4), net-tools
+Suggests: dnsutils, bind9-doc, resolvconf, ufw
+Conflicts: apparmor-profiles (<< 2.1+1075-0ubuntu4), bind
+Filename: pool/main/b/bind9/bind9_9.9.3.dfsg.P2-4_powerpc.deb
+Size: 333476
+MD5sum: faa9b181b759cd79c90d528e09f9312a
+SHA1: 025930750b32c25baca3441e65d6745bf5649a2d
+SHA256: 73f29fbf7947dbf9da47f0d6dd415f60d3aaeefc769d41790380d4dd010f710f
+Description: Internet Domain Name Server
+Description-md5: 4d39ed3fc4e2e72497683d779dfdcd38
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: dns-server
+
+Package: bind9-doc
+Priority: optional
+Section: doc
+Installed-Size: 1326
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: all
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Filename: pool/main/b/bind9/bind9-doc_9.9.3.dfsg.P2-4_all.deb
+Size: 236108
+MD5sum: ab8ddb0af4b00f8015f0e1cb05c7d314
+SHA1: 7694cbd7445c67759cf76999697698327f4ba5ca
+SHA256: 67d75afdbaf7b01b037086cca1a44aaaa8a3e49c2d81a3c91de7662f664cbc13
+Description: Documentation for BIND
+Description-md5: 329b8ef5cf9ad3d51ce47e6d8d13d75e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: dns-server
+
+Package: bind9-host
+Priority: standard
+Section: net
+Installed-Size: 173
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: dnsutils (<< 1:9.0.0), host (<< 1:9.7.0)
+Provides: host
+Depends: libbind9-90 (= 1:9.9.3.dfsg.P2-4), libc6 (>= 2.4), libdns99 (= 1:9.9.3.dfsg.P2-4), libisc95 (= 1:9.9.3.dfsg.P2-4), libisccfg90 (= 1:9.9.3.dfsg.P2-4), liblwres90 (= 1:9.9.3.dfsg.P2-4)
+Conflicts: dnsutils (<< 1:9.0.0), host (<< 1:9.7.0)
+Filename: pool/main/b/bind9/bind9-host_9.9.3.dfsg.P2-4_powerpc.deb
+Size: 54434
+MD5sum: 2f6cdba35a0e2f067f1de9fe3be53a0a
+SHA1: 5841fcf60e28b321d4002d736b2ad8b18a6eaaf7
+SHA256: 4c3caabd86ca93d99f66e94e80b6ec9815a26f176738e80bcad41d273936e366
+Description: Version of 'host' bundled with BIND 9.X
+Description-md5: acdae162c721f5d2986f557bdefa1e70
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: bind9utils
+Priority: optional
+Section: net
+Installed-Size: 578
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: bind9 (<= 1:9.5.0~b2-1)
+Depends: libbind9-90, libc6 (>= 2.4), libdns99, libisc95, libisccc90, libisccfg90, python, python-argparse
+Filename: pool/main/b/bind9/bind9utils_9.9.3.dfsg.P2-4_powerpc.deb
+Size: 240348
+MD5sum: 2381452733a94649da5e22961d16a345
+SHA1: 76530e95458d980a8e4784648041b2bfb834e383
+SHA256: 91b267652a2b45363edbb79f84c7b2524bacdd0774cb2d615fec5e4e625098ca
+Description: Utilities for BIND
+Description-md5: 5f6f5621a6edd04ef33a0fe5d2d5bff8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: dns-server
+
 Package: binutils
 Priority: optional
 Section: devel
@@ -141,6 +226,29 @@ Description-md5: 6948801c3d791b1c318acb50a89989c6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: dnsutils
+Priority: standard
+Section: net
+Installed-Size: 363
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: bind, bind9 (<< 1:9.1.0-3)
+Depends: libbind9-90 (= 1:9.9.3.dfsg.P2-4), libc6 (>= 2.4), libdns99 (= 1:9.9.3.dfsg.P2-4), libisc95 (= 1:9.9.3.dfsg.P2-4), libisccfg90 (= 1:9.9.3.dfsg.P2-4), libkrb5-3 (>= 1.6.dfsg.2), liblwres90 (= 1:9.9.3.dfsg.P2-4), bind9-host | host
+Suggests: rblcheck
+Conflicts: netstd (<< 2.00)
+Filename: pool/main/b/bind9/dnsutils_9.9.3.dfsg.P2-4_powerpc.deb
+Size: 146238
+MD5sum: 049f1b4c0b374b017098614e8929f0b5
+SHA1: 6ca785bd445c8454e2448ca334259bb3f7ef22f4
+SHA256: 12aef3798c50b7c1f2b39a8c47b423667e03aee1393cb23184b9f7a0b6dd2163
+Description: Clients provided with BIND
+Description-md5: 9fac1cb37cd005e52aa0e22df64994e1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
+
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -277,6 +385,49 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, ubuntustudio-video, ubuntustudio-publishing, ubuntustudio-graphics, ubuntustudio-audio
 
+Package: libbind-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 4721
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: bind-dev
+Depends: libdns99 (= 1:9.9.3.dfsg.P2-4), libisccfg90 (= 1:9.9.3.dfsg.P2-4), libisc95 (= 1:9.9.3.dfsg.P2-4), liblwres90 (= 1:9.9.3.dfsg.P2-4), libbind9-90 (= 1:9.9.3.dfsg.P2-4)
+Conflicts: bind-dev
+Filename: pool/main/b/bind9/libbind-dev_9.9.3.dfsg.P2-4_powerpc.deb
+Size: 1529308
+MD5sum: cbde6d56bb056cf401fe28ea7f140bb5
+SHA1: cf34c54325c301427a9f4cca0a2abdb0e5db8464
+SHA256: 2f9ee27fcf082912fdebbd37d7935d2f4410c90653f6cec75918b43d5b985ebe
+Description: Static Libraries and Headers used by BIND
+Description-md5: 2224f8c1f8613ab53bfc2393a6add6a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libbind9-90
+Priority: standard
+Section: libs
+Installed-Size: 102
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libdns99, libisc95, libisccfg90
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libbind9-90_9.9.3.dfsg.P2-4_powerpc.deb
+Size: 25834
+MD5sum: 57b61d43d78fc8e0856d83762012d943
+SHA1: 752a7f15b828e92c116f7edacfef6b0edf8e4fae
+SHA256: a80bf12aa3927c48c22a374294b460a9ce53a6f56445cf8ae765714809b5ed78
+Description: BIND9 Shared Library used by BIND
+Description-md5: 54e2889a8502320ca468efcbd1b48934
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
 Package: libcolumbus1
 Priority: optional
 Section: libs
@@ -364,6 +515,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: libdns99
+Priority: standard
+Section: libs
+Installed-Size: 1898
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libgeoip1, libgssapi-krb5-2 (>= 1.10+dfsg~), libisc95, libkrb5-3 (>= 1.6.dfsg.2), libssl1.0.0 (>= 1.0.0)
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libdns99_9.9.3.dfsg.P2-4_powerpc.deb
+Size: 793422
+MD5sum: 87387471ba3652149a3a21d5da4bf681
+SHA1: f0175619104eb4c8d434d1c899258fd2e6a17a00
+SHA256: 3bba6570e5e456b9b552f187f0cad50109de269c849e1d8bafeb9859532094e3
+Description: DNS Shared Library used by BIND
+Description-md5: 08196e0b2c6fd4d0c818845ca28dbe39
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
 Package: libgdata-common
 Priority: optional
 Section: libs
@@ -450,6 +623,94 @@ Description-md5: 2206a13104622d0ae3e6b435b0e80fc0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
+Package: libisc95
+Priority: standard
+Section: libs
+Installed-Size: 443
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: libbind0
+Depends: libc6 (>= 2.15), libxml2 (>= 2.7.4)
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libisc95_9.9.3.dfsg.P2-4_powerpc.deb
+Size: 166714
+MD5sum: 561630a3c306c55925d21352c0785160
+SHA1: 6f347634cc04514f48b97874453bdda1c0fb8c2c
+SHA256: 24c4c13b4d78c3c02b7c5945d059b0e97c85bdcfda2e73f93e93c349d69da6c5
+Description: ISC Shared Library used by BIND
+Description-md5: 6530db41bb53f0f9fc50d6f397950e53
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libisccc90
+Priority: standard
+Section: libs
+Installed-Size: 86
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libisc95
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libisccc90_9.9.3.dfsg.P2-4_powerpc.deb
+Size: 17360
+MD5sum: a817a1383a15ebf164bbe3f2464f258a
+SHA1: 1da4c7491ccc7a543b3aa62f8428ac05ec4d85bf
+SHA256: c6444f48953b6baff47b734809cc374c70adc2b2eb1906c60645a59eb69d32dd
+Description: Command Channel Library used by BIND
+Description-md5: da6a1a2a1fbcd8229f24523ae8ae7b33
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libisccfg90
+Priority: standard
+Section: libs
+Installed-Size: 155
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: libbind0
+Depends: libc6 (>= 2.4), libdns99, libisc95, libisccc90
+Conflicts: libbind0, libbind9-41
+Filename: pool/main/b/bind9/libisccfg90_9.9.3.dfsg.P2-4_powerpc.deb
+Size: 40294
+MD5sum: 636114972704a5e05ad91054bfbede84
+SHA1: 3ac15076fb04635a298f78902f5e01b396c51947
+SHA256: a0989309f4171ceb8b0850f15bbfd2a26b0a44c6cce334ef7766e617073b3d61
+Description: Config File Handling Library used by BIND
+Description-md5: 3a890bff8c41bd92ac3e542818fb7f79
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: liblwres90
+Priority: standard
+Section: libs
+Installed-Size: 130
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Replaces: libbind0
+Depends: libc6 (>= 2.15)
+Conflicts: libbind0
+Filename: pool/main/b/bind9/liblwres90_9.9.3.dfsg.P2-4_powerpc.deb
+Size: 37744
+MD5sum: 01563aa65e35a0e003bf3dc853ebefa6
+SHA1: 326320819d25849be72ff451c3216526dd48c555
+SHA256: dfe81deb4c35fb99e4f307907f9f95445eaa686e9d7f28009bad0da828486147
+Description: Lightweight Resolver Library used by BIND
+Description-md5: 73843c094de7b4dfcc9ed1e36cc6d546
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: libmysqlclient-dev
 Priority: optional
@@ -716,49 +977,6 @@ SHA256: 516817c2e860c725c827958f0ab87a77a18c5fd1035e655a2fc4216aedc74988
 Description: Web content engine library for Qt - debugging symbols
 Homepage: http://trac.webkit.org/wiki/QtWebKit
 Description-md5: 2b35e7ad9905f44038a180fc098adcca
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libupstart-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 293
-Maintainer: James Hunt <james.hunt@ubuntu.com>
-Architecture: powerpc
-Source: upstart
-Version: 1.10-0ubuntu1
-Depends: libupstart1 (= 1.10-0ubuntu1)
-Filename: pool/main/u/upstart/libupstart-dev_1.10-0ubuntu1_powerpc.deb
-Size: 55670
-MD5sum: feac33b531da2e87251077f153788708
-SHA1: 2bb00ea444c04c3f3bd5703310ed905f13a46aff
-SHA256: e677d1353fb3dcd79b6ceded08a630d9acc0e94721c4ac9835c6e6bf11089197
-Description: Upstart Client Library (development files)
-Multi-Arch: same
-Homepage: http://upstart.ubuntu.com/
-Description-md5: ec96d63e3af639995a442cd6b0733410
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libupstart1
-Priority: optional
-Section: admin
-Installed-Size: 186
-Maintainer: James Hunt <james.hunt@ubuntu.com>
-Architecture: powerpc
-Source: upstart
-Version: 1.10-0ubuntu1
-Depends: libc6 (>= 2.1.3), libdbus-1-3 (>= 1.2.16), libnih-dbus1 (>= 1.0.0), libnih1 (>= 1.0.0)
-Pre-Depends: multiarch-support
-Filename: pool/main/u/upstart/libupstart1_1.10-0ubuntu1_powerpc.deb
-Size: 48354
-MD5sum: 328ef10a238bd2162d697d9204c921d4
-SHA1: 2758639dc0b2ceb3f03c7067978a55228f796795
-SHA256: 28cb2db1186644193338dc9cef87e0440d280bb6cc1c76472845803fe5eef11a
-Description: Upstart Client Library
-Multi-Arch: same
-Homepage: http://upstart.ubuntu.com/
-Description-md5: 6c0f4f2b94a39a98cf6d9e420c504939
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1326,73 +1544,6 @@ SHA256: 0ce76f5c67599e34da96068f38539f8234d830577f828be1806d62f404471a89
 Description: distributed version control system - testsuite
 Homepage: http://bazaar-vcs.org
 Description-md5: 6a061202c9118fa07cacafd938b725f0
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: upstart
-Priority: required
-Section: admin
-Installed-Size: 1529
-Maintainer: James Hunt <james.hunt@ubuntu.com>
-Architecture: powerpc
-Version: 1.10-0ubuntu1
-Replaces: startup-tasks, system-services, sysvinit, upstart-compat-sysv, upstart-job
-Provides: startup-tasks, system-services, upstart-compat-sysv, upstart-job
-Depends: libc6 (>= 2.15), libdbus-1-3 (>= 1.2.16), libjson-c2 (>= 0.10), libnih-dbus1 (>= 1.0.0), libnih1 (>= 1.0.0), libudev1 (>= 183), sysvinit-utils, sysv-rc, initscripts, mountall, ifupdown (>= 0.6.10ubuntu5), libjson0 (>= 0.10-1.1ubuntu1), debianutils (>= 4)
-Suggests: python3, graphviz, bash-completion, upstart-monitor
-Conflicts: lxcguest, startup-tasks, system-services, sysvinit, upstart-compat-sysv, upstart-job
-Breaks: friendly-recovery (<< 0.2.13), libc6 (<< 2.12.1-0ubuntu12)
-Filename: pool/main/u/upstart/upstart_1.10-0ubuntu1_powerpc.deb
-Size: 540358
-MD5sum: 2e48cfe5eb4eba71d4ffd3446a9184bb
-SHA1: ffb9a326162a4c1e4c6aec8186f8dca95cca2fcc
-SHA256: cd355d0246588b91818a58fe8dc2122e5b0f7d127f67ab139123e9caffa1b4c4
-Description: event-based init daemon
-Multi-Arch: foreign
-Homepage: http://upstart.ubuntu.com/
-Description-md5: b776ec43b708c13dd0c2ab824471f478
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: minimal
-
-Package: upstart-dconf-bridge
-Priority: optional
-Section: utils
-Installed-Size: 136
-Maintainer: James Hunt <james.hunt@ubuntu.com>
-Architecture: powerpc
-Source: upstart
-Version: 1.10-0ubuntu1
-Depends: libc6 (>= 2.3.5), libdbus-1-3 (>= 1.2.16), libdconf1 (>= 0.14.0), libglib2.0-0 (>= 2.26.0), libnih-dbus1 (>= 1.0.0), libnih1 (>= 1.0.0), upstart (>= 1.10)
-Filename: pool/main/u/upstart/upstart-dconf-bridge_1.10-0ubuntu1_powerpc.deb
-Size: 26534
-MD5sum: 7c542da5dc871cb2eeafb2fe5753df5e
-SHA1: 1eba2ec414587e0ec67571dd80b643b209bb3c46
-SHA256: adb254b2042c3c739f316dead39b4e87a64c4b79ee3f430ac81b41a99bd650ff
-Description: DConf bridge for upstart
-Homepage: http://upstart.ubuntu.com/
-Description-md5: f92d425b06c2dfbd62ae1fa06e7210f5
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: upstart-monitor
-Priority: optional
-Section: utils
-Installed-Size: 104
-Maintainer: James Hunt <james.hunt@ubuntu.com>
-Architecture: all
-Source: upstart
-Version: 1.10-0ubuntu1
-Depends: python3.3, python3, upstart (>= 1.7), python3-dbus
-Recommends: python3-gi
-Filename: pool/main/u/upstart/upstart-monitor_1.10-0ubuntu1_all.deb
-Size: 11406
-MD5sum: c60bac462c5f61a1ee62b9391c24d296
-SHA1: 76c56bf88820aa4a89d244850eb26c39ff9910b5
-SHA256: 6887d9ef61a66a812eb95b89f7d7afeb7824d7aac78c749d39b9a04a2d49b8b3
-Description: event monitor for upstart
-Homepage: http://upstart.ubuntu.com/
-Description-md5: 3ada932aec65f4da7c81b4d3251ee8e4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 

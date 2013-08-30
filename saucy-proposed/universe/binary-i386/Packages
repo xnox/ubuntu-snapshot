@@ -1669,6 +1669,25 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
 
+Package: host
+Priority: optional
+Section: universe/net
+Installed-Size: 48
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: all
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Depends: bind9-host
+Filename: pool/universe/b/bind9/host_9.9.3.dfsg.P2-4_all.deb
+Size: 3040
+MD5sum: aba28035e14758eceafb78404489eb41
+SHA1: 595c56ac208023155bb59d923739039a48b005de
+SHA256: e041143a1da87ec4697dcda482f09d65af1400f6804f1d8d5105e1ccdc0fb88e
+Description: Transitional package
+Description-md5: 3c0b6923194ef2929ab26358ef75c037
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: hyperestraier
 Priority: optional
 Section: universe/text
@@ -1748,49 +1767,6 @@ SHA256: a0ad0b52fa3578701bdd2ebe254be884a3e9c87f16e1ff2c7bcab2860d992f13
 Description: inference of RNA secondary structural alignments – documentation
 Homepage: http://infernal.janelia.org/
 Description-md5: e9b1617d2c59e14b9d4c57e66f9dfb48
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: jpilot
-Priority: extra
-Section: universe/otherosfs
-Installed-Size: 1866
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ludovic Rousseau <rousseau@debian.org>
-Architecture: i386
-Version: 1.8.1.2-2
-Depends: libc6 (>= 2.15), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.12.0), libgtk2.0-0 (>= 2.8.0), libpisock9 (>= 0.12.5~)
-Recommends: jpilot-plugins
-Suggests: jpilot-backup
-Filename: pool/universe/j/jpilot/jpilot_1.8.1.2-2_i386.deb
-Size: 689024
-MD5sum: bfc2e330b1197e71beb4382d7243e143
-SHA1: aa0f2f95cb2f5407a6021608fbb016e4de0b1502
-SHA256: 008e5d9187b968decc4769cf03cc7f87770c7404e057cbd216c8a385e0f365b2
-Description: graphical app. to modify the contents of your Palm Pilot's DBs
-Homepage: http://jpilot.org/
-Description-md5: 7fd566061f386634ac4920903d10eefc
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: jpilot-plugins
-Priority: extra
-Section: universe/otherosfs
-Installed-Size: 151
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Ludovic Rousseau <rousseau@debian.org>
-Architecture: i386
-Source: jpilot
-Version: 1.8.1.2-2
-Depends: libc6 (>= 2.4), libgcrypt11 (>= 1.4.5), libglib2.0-0 (>= 2.12.0), libgtk2.0-0 (>= 2.8.0), jpilot (= 1.8.1.2-2)
-Filename: pool/universe/j/jpilot/jpilot-plugins_1.8.1.2-2_i386.deb
-Size: 43466
-MD5sum: 80e09b64e9d32bb48676c4859bd449b7
-SHA1: fa79ab4cbcfc4da98bfe653ec67d7381f4d8f94d
-SHA256: e2339e5a22af5dab60364dd7bdee4fbba75e43a63e81b6d02fe89fb0422bfd8e
-Description: plugins for jpilot (Palm Pilot desktop)
-Homepage: http://jpilot.org/
-Description-md5: 30ad1dc3dd7771a2005914b84add3a20
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -5832,22 +5808,24 @@ Description-md5: fa0c0f5531d9b0f9865a460f8a19e168
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: mailagent
+Package: lwresd
 Priority: optional
-Section: universe/mail
-Installed-Size: 1305
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Manoj Srivastava <srivasta@debian.org>
+Section: universe/net
+Installed-Size: 666
+Maintainer: LaMont Jones <lamont@debian.org>
 Architecture: i386
-Version: 1:3.1-74-0.3
-Depends: libc6 (>= 2.4), perl, libperl4-corelibs-perl, debconf (>= 1.2.0) | debconf-2.0, exim4 | postfix | sendmail | mail-transport-agent
-Filename: pool/universe/m/mailagent/mailagent_3.1-74-0.3_i386.deb
-Size: 482726
-MD5sum: b8f649faf6965b3b5bd804f5fb50bdbd
-SHA1: 78321ac93fe458dc119ca1075b5594740338dcd6
-SHA256: 430117a377138298f0bef8be5692a4570ead860330a9bcd39083075e4a93b4e2
-Description: An automatic mail-processing tool and filter.
-Description-md5: 3da312466ea5e857be9481fb61e64597
+Source: bind9
+Version: 1:9.9.3.dfsg.P2-4
+Depends: libbind9-90 (= 1:9.9.3.dfsg.P2-4), libc6 (>= 2.4), libcap2 (>= 2.10), libdns99 (= 1:9.9.3.dfsg.P2-4), libisc95 (= 1:9.9.3.dfsg.P2-4), libisccc90 (= 1:9.9.3.dfsg.P2-4), libisccfg90 (= 1:9.9.3.dfsg.P2-4), liblwres90 (= 1:9.9.3.dfsg.P2-4), libxml2 (>= 2.7.4), init-system-helpers (>= 1.5), adduser
+Recommends: libnss-lwres
+Suggests: bind9utils
+Filename: pool/universe/b/bind9/lwresd_9.9.3.dfsg.P2-4_i386.deb
+Size: 240652
+MD5sum: 6a1313cb32f9b17b89829b6965aaffd8
+SHA1: fb741e87ba7bf3260a31acc6296b802731bc6f64
+SHA256: a3dd28cd9ce1a7985cd53f6545538cd5fa3c0ea875f3e5b848191456475f4edb
+Description: Lightweight Resolver Daemon
+Description-md5: 71f952026129db86d1ca118762b06ef2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -6012,27 +5990,6 @@ SHA256: 175e4cb082f27e89636a525b1f46ea2d94996c35d9d31c7dde8cb308b0264763
 Description: MySQL testsuite
 Homepage: http://dev.mysql.com/
 Description-md5: 3e88fc28903eb44dd0b2a0eb9f813181
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: nagiosgrapher
-Priority: extra
-Section: universe/misc
-Installed-Size: 406
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Nagios Maintainer Group <pkg-nagios-devel@lists.alioth.debian.org>
-Architecture: i386
-Version: 1.7.1-4.1
-Depends: libc6 (>= 2.4), ucf, ttf-dejavu, rrdtool, librrds-perl, libgd-gd2-perl, libimage-magick-perl, libcalendar-simple-perl, liburi-perl, nagios3 | icinga, nagios-images
-Suggests: netcat
-Filename: pool/universe/n/nagiosgrapher/nagiosgrapher_1.7.1-4.1_i386.deb
-Size: 63502
-MD5sum: a39c658ddc8de3b46029803fd69590aa
-SHA1: 4239fbd6e16fd4eb63bb1b3e8360cb2853014226
-SHA256: 4f4fa610cbd1de6ec2bce0d8caf14f0e63b7e378e6c5e9e3744a09cef16db6b8
-Description: Charting add-on for Nagios
-Homepage: http://www.netways.de/en/de/produkte/nagios_addons/nagiosgrapher/
-Description-md5: 516ca2b07b85ceb33839b82e7c6b6385
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -6213,26 +6170,6 @@ Description: NCBI libraries for biology applications (X-based utilities)
 Multi-Arch: foreign
 Homepage: http://www.ncbi.nlm.nih.gov/IEB/ToolBox/
 Description-md5: d0eef02c68ea048bf0b8710f46afdc1e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: netmrg
-Priority: optional
-Section: universe/net
-Installed-Size: 1356
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Uwe Steinmann <steinm@debian.org>
-Architecture: i386
-Version: 0.20-7
-Depends: adduser, rrdtool, apache2 | httpd, php5 | php4 | php5-cgi | php4-cgi, php5-cli | php4-cli, php5-mysql | php4-mysql, mysql-client, debconf, wwwconfig-common, libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libmysqlclient18 (>= 5.5.13-1), libsnmp30 (>= 5.7.2~dfsg), libstdc++6 (>= 4.6), libxml2 (>= 2.7.4), debconf (>= 0.5) | debconf-2.0
-Suggests: mysql-server
-Filename: pool/universe/n/netmrg/netmrg_0.20-7_i386.deb
-Size: 391424
-MD5sum: 8f3593275c520c14f792e420a5df0869
-SHA1: 8d66340adfabaaf41d5e59ac056b3e6d67efbd6d
-SHA256: 28daac2e8d94e6e5a2a8c0b5938d2c22c60d6940c9bb6f7aad40231f5930c972
-Description: network monitoring tool
-Description-md5: fba2bb941f689a10fb86e047a91d8711
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
