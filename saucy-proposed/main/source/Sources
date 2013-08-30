@@ -73,6 +73,48 @@ Checksums-Sha256:
  9d81e4228329e2d5cccb018ab06bc8b734fb2dede2c4d9b5c02303d4a690b76b 1940928 augeas_1.1.0.orig.tar.gz
  45c6484a3636ec838a508db600f731bfee8bf2164d8f622981757a95f29157c2 8730 augeas_1.1.0-0ubuntu1.debian.tar.gz
 
+Package: bind9
+Binary: bind9, bind9utils, bind9-doc, host, bind9-host, libbind-dev, libbind9-90, libdns99, libisc95, liblwres90, libisccc90, libisccfg90, dnsutils, lwresd
+Version: 1:9.9.3.dfsg.P2-4
+Section: net
+Maintainer: LaMont Jones <lamont@debian.org>
+Build-Depends: libkrb5-dev, debhelper (>= 5), libssl-dev, libtool, bison, libdb-dev (>> 4.6), libldap2-dev, libxml2-dev, libcap2-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], hardening-wrapper, libgeoip-dev (>= 1.4.6.dfsg-5), dpkg-dev (>= 1.15.5), python, python-argparse, dh-systemd
+Build-Conflicts: libdb4.2-dev
+Architecture: any all
+Standards-Version: 3.7.3.0
+Format: 1.0
+Directory: pool/main/b/bind9
+Files:
+ 73ff1d0ae47ec3c203ef010034e2cab5 1979 bind9_9.9.3.dfsg.P2-4.dsc
+ 6d87a978dd19b6665dbd1238b03e63d8 7592821 bind9_9.9.3.dfsg.P2.orig.tar.gz
+ 4d9d94c324077d322d2c8a293475ae33 246546 bind9_9.9.3.dfsg.P2-4.diff.gz
+Uploaders: Bdale Garbee <bdale@gag.com>
+Vcs-Browser: http://git.debian.org/?p=users/lamont/bind9.git
+Vcs-Git: git://git.debian.org/~lamont/bind9.git
+Package-List: 
+ bind9 deb net optional
+ bind9-doc deb doc optional
+ bind9-host deb net standard
+ bind9utils deb net optional
+ dnsutils deb net standard
+ host deb net standard
+ libbind-dev deb libdevel optional
+ libbind9-90 deb libs standard
+ libdns99 deb libs standard
+ libisc95 deb libs standard
+ libisccc90 deb libs optional
+ libisccfg90 deb libs optional
+ liblwres90 deb libs standard
+ lwresd deb net optional
+Checksums-Sha1:
+ b7d7e066e235f090d8bcfa4982e06ef5f7f5ac58 1979 bind9_9.9.3.dfsg.P2-4.dsc
+ cc8f8da343af600f2cf223d0173a451ce78b8a5c 7592821 bind9_9.9.3.dfsg.P2.orig.tar.gz
+ 19b3efd415e7224fcb8d91f489122691bfaf8525 246546 bind9_9.9.3.dfsg.P2-4.diff.gz
+Checksums-Sha256:
+ 02e30dbc0ec69ace424fd0704e6ded90ed09abaad32fe63bfb423be98cbbcde9 1979 bind9_9.9.3.dfsg.P2-4.dsc
+ e77f83453f6b12ec8fab1b54dfe7dd8c155d0fc97596f4f067b4fe640b0faf2f 7592821 bind9_9.9.3.dfsg.P2.orig.tar.gz
+ 4ffae73cefec4eb841e5629cd44061a5f56bbb61b5b705a7158ee86947d7c7b1 246546 bind9_9.9.3.dfsg.P2-4.diff.gz
+
 Package: binutils
 Binary: binutils, binutils-dev, binutils-multiarch, binutils-static, binutils-static-udeb, binutils-hppa64, binutils-spu, binutils-doc, binutils-source
 Version: 2.23.52.20130828-1ubuntu1
@@ -656,35 +698,6 @@ Checksums-Sha256:
  28a533e181009308722e8b3c51f1ea7224ab910c380ac1a86f07118667602dd8 15815421 postgresql-9.1_9.1.9.orig.tar.bz2
  759ffb0cba6e8b6a386f5f29cd6276df4db21e93d2ee4ab183e5673c8c7d62fa 41134 postgresql-9.1_9.1.9-3.debian.tar.gz
 Testsuite: autopkgtest
-
-Package: powertop
-Binary: powertop
-Version: 2.4-0ubuntu1
-Priority: extra
-Section: utils
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Patrick Winnertz <winnie@debian.org>
-Build-Depends: debhelper (>= 9), libncurses5-dev, libncursesw5-dev, libnl-3-dev, libnl-genl-3-dev, libpci-dev, pkg-config
-Architecture: any
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/main/p/powertop
-Files:
- 1bbd696cfacab7e7bf0cf48b56202931 1291 powertop_2.4-0ubuntu1.dsc
- 3aa686bb245d6683b86cba9a6a4b8c6d 632390 powertop_2.4.orig.tar.gz
- 519c706822591f288a95b88d09977c88 7434 powertop_2.4-0ubuntu1.debian.tar.gz
-Uploaders: Jose Luis Rivas <ghostbar38@gmail.com>
-Homepage: https://01.org/powertop/
-Package-List: 
- powertop deb utils optional
-Checksums-Sha1:
- b266ce1e2e15665518865976f85883c2b36ee960 1291 powertop_2.4-0ubuntu1.dsc
- 3a5558a2bec10ff18864e8566bbec90783a8edd7 632390 powertop_2.4.orig.tar.gz
- a9bf15af2c42423017f86a1071826c28209ea203 7434 powertop_2.4-0ubuntu1.debian.tar.gz
-Checksums-Sha256:
- d43853245f4b361a64478942412595534c61ada961b73f5dac62f51c7afaf9ef 1291 powertop_2.4-0ubuntu1.dsc
- 42796c94546ae7f3d232e41b7fa09b2532396ca389908ff528870311db6327b7 632390 powertop_2.4.orig.tar.gz
- cdd674c391ec5f1674c87b31f6ee588c9a5fbd4f51c87a4857b372af0407cc05 7434 powertop_2.4-0ubuntu1.debian.tar.gz
 
 Package: qtlocation-opensource-src
 Binary: libqt5location5, libqt5location5-plugins, qtdeclarative5-qtlocation-plugin, qtlocation5-dev, qtlocation5-private-dev, qtlocation5-examples, qtlocation5-dbg
