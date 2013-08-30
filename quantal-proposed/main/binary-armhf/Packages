@@ -247,6 +247,29 @@ Description-md5: 881dd7ae5d144e48dc92946d884ecd75
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: curl
+Priority: optional
+Section: web
+Installed-Size: 341
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: armhf
+Version: 7.27.0-1ubuntu1.4
+Replaces: curl-ssl
+Provides: curl-ssl
+Depends: libc6 (>= 2.15-0ubuntu8), libcurl3 (= 7.27.0-1ubuntu1.4), zlib1g (>= 1:1.1.4)
+Filename: pool/main/c/curl/curl_7.27.0-1ubuntu1.4_armhf.deb
+Size: 142354
+MD5sum: 0e3e452bb0d1cd07809cb32d898722db
+SHA1: 30de0acbbe6bb11b19f9c035ce4cbb3760ac72aa
+SHA256: 5f0163bbe1d983643b0a12d15381338d755a7356c1ce2625bc7866d582616bdf
+Description: command line tool for transferring data with URL syntax
+Homepage: http://curl.haxx.se
+Description-md5: bfedc129a9c070522f2c8ad7dc3bd643
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: cloud-image, server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
 Package: dh-modaliases
 Priority: optional
 Section: admin
@@ -1274,6 +1297,188 @@ SHA1: db806067458ffee2cf5aab2f3eca5985f46f04da
 SHA256: 1d5acaa1dbc5d7b7190c0ea960c2bd6333128458ac204fddfb4c448d3d8be718
 Description: Development file for plugin settings - OpenCompositing Project
 Description-md5: 61d1c40aa4308fbedaf76a0b0daed3ed
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcurl3
+Priority: optional
+Section: libs
+Installed-Size: 428
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: armhf
+Source: curl
+Version: 7.27.0-1ubuntu1.4
+Replaces: libcurl2 (<< 1:7.11.2-2), libcurl4
+Depends: libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libgssapi-krb5-2 (>= 1.10+dfsg~), libidn11 (>= 1.13), libldap-2.4-2 (>= 2.4.7), librtmp0 (>= 2.3), libssl1.0.0 (>= 1.0.1), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Recommends: ca-certificates
+Conflicts: libcurl4
+Filename: pool/main/c/curl/libcurl3_7.27.0-1ubuntu1.4_armhf.deb
+Size: 218742
+MD5sum: 45d2f7bdab0826d29e18420c146420eb
+SHA1: bdd4ca62b19caa07d493a638753676312e24cd87
+SHA256: c1610034a9effa4fcb45ca62fbace7f00af3fefaeb30d394b86a24631f6cf3f5
+Description: easy-to-use client-side URL transfer library (OpenSSL flavour)
+Multi-Arch: same
+Homepage: http://curl.haxx.se
+Description-md5: b5acf1dece8a7a9df2a9c7e96a0320f8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop
+
+Package: libcurl3-dbg
+Priority: extra
+Section: libdevel
+Installed-Size: 3317
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: armhf
+Source: curl
+Version: 7.27.0-1ubuntu1.4
+Replaces: libcurl4-dbg
+Provides: libcurl4-dbg
+Depends: libcurl3 (= 7.27.0-1ubuntu1.4) | libcurl3-gnutls (= 7.27.0-1ubuntu1.4) | libcurl3-nss (= 7.27.0-1ubuntu1.4)
+Suggests: libc-dbg
+Conflicts: libcurl4-dbg
+Filename: pool/main/c/curl/libcurl3-dbg_7.27.0-1ubuntu1.4_armhf.deb
+Size: 2967416
+MD5sum: 23740aa9ef8903ec8460eb73bd5cefae
+SHA1: 25970d5d3d357ffe0e039d2bce1a8fd88d35b90b
+SHA256: 5c18ea7547b302b2a4af4f8ae801a2978af4c87bf9b530fde0c275f7b76437ad
+Description: debugging symbols for libcurl (OpenSSL, GnuTLS and NSS flavours)
+Multi-Arch: same
+Homepage: http://curl.haxx.se
+Description-md5: 75dc37d46c31142928caa6ed53e144bf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcurl3-gnutls
+Priority: standard
+Section: libs
+Installed-Size: 416
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: armhf
+Source: curl
+Version: 7.27.0-1ubuntu1.4
+Replaces: libcurl4-gnutls
+Depends: libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libgcrypt11 (>= 1.4.5), libgnutls26 (>= 2.12.6.1-0), libgssapi-krb5-2 (>= 1.10+dfsg~), libidn11 (>= 1.13), libldap-2.4-2 (>= 2.4.7), librtmp0 (>= 2.3), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Recommends: ca-certificates
+Conflicts: libcurl4-gnutls
+Filename: pool/main/c/curl/libcurl3-gnutls_7.27.0-1ubuntu1.4_armhf.deb
+Size: 210838
+MD5sum: 7cbddb2e4c7bfeff30ad7f4b172754d6
+SHA1: 268cfe599c747abfa3e0214b227b9b71421fe8f9
+SHA256: bf646bc11f8d3cf5ea02208a01e680a0f32084198eeb45d28ad4288813bed850
+Description: easy-to-use client-side URL transfer library (GnuTLS flavour)
+Multi-Arch: same
+Homepage: http://curl.haxx.se
+Description-md5: 5bc1af3749bfa2199d172a967075b532
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libcurl3-nss
+Priority: optional
+Section: libs
+Installed-Size: 423
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: armhf
+Source: curl
+Version: 7.27.0-1ubuntu1.4
+Replaces: libcurl4-nss
+Depends: libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libgssapi-krb5-2 (>= 1.10+dfsg~), libidn11 (>= 1.13), libldap-2.4-2 (>= 2.4.7), libnspr4 (>= 1.8.0.10), libnss3 (>= 3.12.5), librtmp0 (>= 2.3), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Recommends: ca-certificates
+Conflicts: libcurl4-nss
+Filename: pool/main/c/curl/libcurl3-nss_7.27.0-1ubuntu1.4_armhf.deb
+Size: 217312
+MD5sum: 7cb7e431133bd19cdf41dba153f185e6
+SHA1: 8a372a9d57ba66ca62c9058436e4f3a10e72f55e
+SHA256: 41ccd155d24168933e739dbeeb9ae2c17ec0469f14bdccb2488af9a4212e2fd1
+Description: easy-to-use client-side URL transfer library (NSS flavour)
+Multi-Arch: same
+Homepage: http://curl.haxx.se
+Description-md5: a8b95aaf83761d5af90fd97fc5569c72
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: libcurl4-gnutls-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 2229
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: armhf
+Source: curl
+Version: 7.27.0-1ubuntu1.4
+Replaces: libcurl-dev, libcurl-ssl-dev, libcurl3-gnutls-dev, libcurl4-dev
+Provides: libcurl-dev, libcurl-ssl-dev, libcurl3-gnutls-dev, libcurl4-dev
+Depends: libcurl3-gnutls (= 7.27.0-1ubuntu1.4), libc6-dev | libc-dev, libgnutls-dev, libidn11-dev, libkrb5-dev, libldap2-dev, librtmp-dev, zlib1g-dev
+Suggests: libcurl3-dbg
+Conflicts: libcurl-dev, libcurl4-nss-dev, libcurl4-openssl-dev
+Filename: pool/main/c/curl/libcurl4-gnutls-dev_7.27.0-1ubuntu1.4_armhf.deb
+Size: 1062304
+MD5sum: 57fba35c8475590403e06d45d1ad78c4
+SHA1: 73ade02a02c059c41b65281ade6307c2ada9bd77
+SHA256: 0352f583514d9ced9936592a192097e72b7683ce91c58c37bde453bb29ae6c51
+Description: development files and documentation for libcurl (GnuTLS flavour)
+Homepage: http://curl.haxx.se
+Description-md5: cf466d605e7f6ba2d9a210b9ff7cf506
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcurl4-nss-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 2237
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: armhf
+Source: curl
+Version: 7.27.0-1ubuntu1.4
+Replaces: libcurl-dev, libcurl-ssl-dev, libcurl3-nss-dev, libcurl4-dev
+Provides: libcurl-dev, libcurl-ssl-dev, libcurl3-nss-dev, libcurl4-dev
+Depends: libcurl3-nss (= 7.27.0-1ubuntu1.4), libc6-dev | libc-dev, libidn11-dev, libkrb5-dev, libldap2-dev, libnss3-dev, librtmp-dev, zlib1g-dev
+Suggests: libcurl3-dbg
+Conflicts: libcurl-dev, libcurl4-gnutls-dev, libcurl4-openssl-dev
+Filename: pool/main/c/curl/libcurl4-nss-dev_7.27.0-1ubuntu1.4_armhf.deb
+Size: 1068126
+MD5sum: 9e18c053646591c93fb6b7ccb07ab5bb
+SHA1: 5e55d54c03f2f10bcc5ee1bc4b64e24cb9571b48
+SHA256: 7d7d1c03c9ef19771186b6f94d448e1c8dbe4684f7791e212588ee8da4495d41
+Description: development files and documentation for libcurl (NSS flavour)
+Homepage: http://curl.haxx.se
+Description-md5: ea23d26e1e30e1d8c9854839a5f36f16
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcurl4-openssl-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 2247
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alessandro Ghedini <ghedo@debian.org>
+Architecture: armhf
+Source: curl
+Version: 7.27.0-1ubuntu1.4
+Replaces: libcurl-dev, libcurl-ssl-dev, libcurl3-dev (<< 7.14.1-1), libcurl3-openssl-dev
+Provides: libcurl-dev, libcurl-ssl-dev, libcurl3-dev, libcurl3-openssl-dev, libcurl4-dev
+Depends: libcurl3 (= 7.27.0-1ubuntu1.4), libc6-dev | libc-dev, libidn11-dev, libkrb5-dev, libldap2-dev, librtmp-dev, libssl-dev, zlib1g-dev
+Suggests: libcurl3-dbg
+Conflicts: libcurl-dev, libcurl4-gnutls-dev, libcurl4-nss-dev
+Filename: pool/main/c/curl/libcurl4-openssl-dev_7.27.0-1ubuntu1.4_armhf.deb
+Size: 1070874
+MD5sum: a9e71d7ce6c73612a0d2b86c4dd0d151
+SHA1: 4878bdbb85bd58be93396764697c5599131bce7c
+SHA256: 97900e1a7db4ff4d591a2472e8e17e4e873d723711ca72fe82665e96fe3fe99c
+Description: development files and documentation for libcurl (OpenSSL flavour)
+Homepage: http://curl.haxx.se
+Description-md5: d34823c09cbc282f1e66e15adefbdb9f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
