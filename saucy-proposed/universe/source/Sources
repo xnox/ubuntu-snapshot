@@ -1,3 +1,39 @@
+Package: akonadi
+Binary: akonadi-server, libakonadiprotocolinternals1, libakonadi-dev, akonadi-backend-mysql, akonadi-backend-postgresql, akonadi-backend-sqlite, akonadi-dbg
+Version: 1.10.2-0ubuntu1
+Section: universe/libs
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Build-Depends: debhelper (>= 7), cmake (>= 2.6.2), automoc, pkg-kde-tools (>= 0.12), libqt4-dev (>= 4:4.6.0), shared-mime-info, libmysqlclient-dev, libxslt-dev, libsoprano-dev (>= 2.1.1), xsltproc, libdbus-1-dev, libboost-program-options-dev, libsqlite3-dev, dh-apparmor
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/universe/a/akonadi
+Files:
+ 8dbca026fe03853ae83002a02b3741d0 2083 akonadi_1.10.2-0ubuntu1.dsc
+ 35eb8f76588b1d111f75bc46e3ac784b 227993 akonadi_1.10.2.orig.tar.bz2
+ fad79ae566b90e59879278a9619b2b3e 17910 akonadi_1.10.2-0ubuntu1.debian.tar.gz
+Uploaders: Sune Vuorela <debian@pusling.com>, Modestas Vainius <modax@debian.org>, Fathi Boudra <fabo@debian.org>
+Homepage: http://pim.kde.org/akonadi
+Vcs-Browser: http://bazaar.launchpad.net/~kubuntu-packagers/kubuntu-packaging/akonadi
+Vcs-Bzr: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging/akonadi
+Package-List: 
+ akonadi-backend-mysql deb misc extra
+ akonadi-backend-postgresql deb misc extra
+ akonadi-backend-sqlite deb misc extra
+ akonadi-dbg deb debug extra
+ akonadi-server deb net extra
+ libakonadi-dev deb libdevel extra
+ libakonadiprotocolinternals1 deb libs extra
+Checksums-Sha1:
+ 751cfe9bf941dfc871cdbb0a020d58c9d68abe31 2083 akonadi_1.10.2-0ubuntu1.dsc
+ 97660e2a4fc8797ae86ac2981490d3868c6085ff 227993 akonadi_1.10.2.orig.tar.bz2
+ 4136c47871d8bdfd2d12832c737c4e781e60a20f 17910 akonadi_1.10.2-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ d4c57bcb22418983d16942f05b7929dc14b935a2037c06902753b79da4431cba 2083 akonadi_1.10.2-0ubuntu1.dsc
+ f3d50d5ab8070e7ceb9e64ac5eaa5f47a451071e27328219fe93bc9eeb3e32ca 227993 akonadi_1.10.2.orig.tar.bz2
+ c094a4b9112912b8bab0a1365906d188c770ec7ef4482caac2f3c91ea9ee0f4c 17910 akonadi_1.10.2-0ubuntu1.debian.tar.gz
+
 Package: ardour
 Binary: ardour, ardour-altivec, ardour-i686
 Version: 1:2.8.14-2ubuntu3
@@ -1797,6 +1833,37 @@ Checksums-Sha256:
  2815c35181f9e9b866fb6e7f3d9bb8814b98312aad703ce5c7560d449eb60a9a 512177 kinput2_3.1.orig.tar.gz
  3608512ccec71b1c4c5bcd68bf04b18e871c976887eb9e32ddb3380f0d46bf60 14862 kinput2_3.1-11.diff.gz
 
+Package: kubuntu-settings
+Binary: kubuntu-settings-active, kubuntu-settings-desktop, kubuntu-settings-netbook, plymouth-theme-kubuntu-logo, plymouth-theme-kubuntu-text, kubuntu-active-default-settings, kubuntu-default-settings, kubuntu-netbook-default-settings
+Version: 1:13.10ubuntu6
+Section: universe/kde
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9), pkg-kde-tools (>= 0.9.2ubuntu14)
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/universe/k/kubuntu-settings
+Files:
+ ced3b84459795e8748b8641e9f823820 1615 kubuntu-settings_13.10ubuntu6.dsc
+ 3c72a0e93c24ef5c71e48febf79b907a 483364 kubuntu-settings_13.10ubuntu6.tar.xz
+Vcs-Browser: http://bazaar.launchpad.net/~kubuntu-packagers/kubuntu-settings/kubuntu-settings
+Vcs-Bzr: http://code.launchpad.net/~kubuntu-packagers/kubuntu-settings/kubuntu-settings
+Package-List: 
+ kubuntu-active-default-settings deb oldlibs optional
+ kubuntu-default-settings deb oldlibs optional
+ kubuntu-netbook-default-settings deb oldlibs optional
+ kubuntu-settings-active deb kde optional
+ kubuntu-settings-desktop deb kde optional
+ kubuntu-settings-netbook deb kde optional
+ plymouth-theme-kubuntu-logo deb kde optional
+ plymouth-theme-kubuntu-text deb kde optional
+Checksums-Sha1:
+ d3352ae6dceae96774185d8ebea42177e57b44b7 1615 kubuntu-settings_13.10ubuntu6.dsc
+ f5f1ef13c70652f5c1466ca65de847630d42de17 483364 kubuntu-settings_13.10ubuntu6.tar.xz
+Checksums-Sha256:
+ b3540571b71f29f0c9e7a225b763a4347c0faee1a3dea4c7b4ca33323da12d19 1615 kubuntu-settings_13.10ubuntu6.dsc
+ c3d1576610754b0432022b500eddf54af3d1f3dc5de319b645f9ef571e72f664 483364 kubuntu-settings_13.10ubuntu6.tar.xz
+
 Package: language-pack-kde-en
 Binary: language-pack-kde-en
 Version: 1:13.10+20130813.0ubuntu2
@@ -2534,6 +2601,39 @@ Checksums-Sha256:
  e4115cbf920b75abd6157c81dda99f3b558868255c51cce5c59272bb0544b1fb 1353 lua-penlight_1.0.3a-1.dsc
  4a3b47727a1f6ca4cf95d532a9746cb3f0c2272fe0d6c1147940b9d3a8a72e56 174920 lua-penlight_1.0.3a.orig.tar.gz
  9f4b859b06bff70e792865d8e6d01948ba0570723d844fc67cba4211110b43b2 2854 lua-penlight_1.0.3a-1.debian.tar.gz
+
+Package: mediascanner
+Binary: libmediascanner-1.0-1, mediascanner, grilo-plugins-0.2-mediascanner, libmediascanner-dev, libmediascanner-doc
+Version: 0.3.93+13.10.20130830.2-0ubuntu1
+Priority: optional
+Section: universe/libs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: cmake (>= 2.8), debhelper (>= 9), dbus, doxygen (>= 1.8), graphviz, grilo-plugins-0.2 (>> 0.2.5-5), gstreamer1.0-plugins-good (>= 1.0), libboost-date-time-dev (>= 1.50), libboost-dev (>= 1.50), libboost-filesystem-dev (>= 1.50), libboost-locale-dev (>= 1.50), libboost-regex-dev (>= 1.50), libboost-system-dev (>= 1.50), libgrilo-0.2-dev (>= 0.2.1~git20121002), libgstreamer-plugins-base1.0-dev (>= 1.0), libgtest-dev, libgudev-1.0-dev, liblucene++-dev (>= 3.0.4), python
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 1.0
+Directory: pool/universe/m/mediascanner
+Files:
+ f0ce8c5753082e14cf34a52b57953f28 2779 mediascanner_0.3.93+13.10.20130830.2-0ubuntu1.dsc
+ edf2f962192cc9faab07e359d8c29e48 412069 mediascanner_0.3.93+13.10.20130830.2.orig.tar.gz
+ 0bda5e266d50a6c88e599e62a715887e 3732 mediascanner_0.3.93+13.10.20130830.2-0ubuntu1.diff.gz
+Homepage: https://launchpad.net/mediascanner
+Vcs-Browser: https://bazaar.launchpad.net/~mediascanner-team/mediascanner/trunk/files
+Vcs-Bzr: https://code.launchpad.net/~mediascanner-team/mediascanner/trunk
+Package-List: 
+ grilo-plugins-0.2-mediascanner deb libs optional
+ libmediascanner-1.0-1 deb libs optional
+ libmediascanner-dev deb libdevel optional
+ libmediascanner-doc deb doc optional
+ mediascanner deb utils optional
+Checksums-Sha1:
+ 791bdf340f4967b5e35addc1544c3cd18be31b02 2779 mediascanner_0.3.93+13.10.20130830.2-0ubuntu1.dsc
+ 24993c87b27b12002a0f2eba769b58923c3d173b 412069 mediascanner_0.3.93+13.10.20130830.2.orig.tar.gz
+ 7cfd959aa9ffdeaaa3d7d4c79f9c523a6021c130 3732 mediascanner_0.3.93+13.10.20130830.2-0ubuntu1.diff.gz
+Checksums-Sha256:
+ db84b98d7747e967854b322ad33e8d58bd595c85b8cc6e8586bb0ff58c5be611 2779 mediascanner_0.3.93+13.10.20130830.2-0ubuntu1.dsc
+ 219d315857fda02ad1bbe61372eba1705327c9d33622795baf2bfa6bdc061497 412069 mediascanner_0.3.93+13.10.20130830.2.orig.tar.gz
+ 64b15af4646871f7cae4e0c4739c1a7307759d58908627d464f690b4185cfe0d 3732 mediascanner_0.3.93+13.10.20130830.2-0ubuntu1.diff.gz
 
 Package: mercator
 Binary: libmercator-0.3-3, libmercator-0.3-dev, libmercator-0.3-3-dbg
