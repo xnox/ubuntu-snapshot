@@ -369,6 +369,29 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: gir1.2-messagingmenu-1.0
+Priority: optional
+Section: libs
+Installed-Size: 47
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: indicator-messages
+Version: 13.10.1+13.10.20130830.2-0ubuntu1
+Depends: gir1.2-glib-2.0, libmessaging-menu0 (>= 13.10.1+13.10.20130820)
+Filename: pool/main/i/indicator-messages/gir1.2-messagingmenu-1.0_13.10.1+13.10.20130830.2-0ubuntu1_amd64.deb
+Size: 3124
+MD5sum: d887a196fbd785c35a8091b2221f681b
+SHA1: 21ee1e65cf1aaf3e05702f49a0b521ae51e9e165
+SHA256: 4925b025e7fd58b1b0fd8a0ec862e3f2b4515a3e9f76418c7400568e95c31fef
+Description: Messaging Menu - gir bindings
+Homepage: https://launchpad.net/indicator-messages
+Description-md5: c3332a75a05dc3da9846ebba71002ac1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
 Package: gir1.2-networkmanager-1.0
 Priority: optional
 Section: libs
@@ -391,6 +414,54 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
+Package: indicator-messages
+Priority: optional
+Section: gnome
+Installed-Size: 334
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
+Architecture: amd64
+Version: 13.10.1+13.10.20130830.2-0ubuntu1
+Replaces: indicator-status-provider-emesene, indicator-status-provider-mc5, indicator-status-provider-pidgin, indicator-status-provider-telepathy, libindicator-messages-status-provider-dev, libindicator-messages-status-provider1
+Depends: libc6 (>= 2.2.5), libglib2.0-0 (>= 2.37.3), dconf-gsettings-backend | gsettings-backend
+Recommends: indicator-applet | indicator-renderer
+Conflicts: indicator-status-provider-emesene, indicator-status-provider-mc5, indicator-status-provider-pidgin, indicator-status-provider-telepathy, libindicator-messages-status-provider-dev, libindicator-messages-status-provider1
+Breaks: gwibber-services (<< 3.5.4-0ubuntu1~), telepathy-indicator (<< 0.3.0-0ubuntu1~), thunderbird (<< 15.0+build1-0ubuntu1~), xchat-gnome-indicator (<< 0.3.11-0ubuntu2~), xchat-indicator (<< 0.3.11-0ubuntu2~)
+Filename: pool/main/i/indicator-messages/indicator-messages_13.10.1+13.10.20130830.2-0ubuntu1_amd64.deb
+Size: 75714
+MD5sum: e1121ad52ebd2007983044d0a54251d0
+SHA1: 7607d0be6cf2b2a1af167d057af4eb1a57269552
+SHA256: 903961478ef15cc04255456c3d97bf78ebec7c731b5b5f88ef64fec57eef3761
+Description: indicator that collects messages that need a response
+Homepage: https://launchpad.net/indicator-messages
+Description-md5: 4b542e22d4916b1b888ba25c790e7864
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: indicator-power
+Priority: optional
+Section: gnome
+Installed-Size: 184
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Version: 12.10.6+13.10.20130830.2-0ubuntu1
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3), libgudev-1.0-0 (>= 146), dconf-gsettings-backend | gsettings-backend, upower
+Recommends: gnome-control-center (>= 3.1) | ubuntu-system-settings, indicator-applet (>= 0.2) | indicator-renderer
+Filename: pool/main/i/indicator-power/indicator-power_12.10.6+13.10.20130830.2-0ubuntu1_amd64.deb
+Size: 42360
+MD5sum: dd8baf43a47c502b3ce31b1f0eb9737c
+SHA1: 5c93d7e67edc22ecd7a473700a78d90e7f19f334
+SHA256: 5fccee159d472cc3bcd308b59eafeaca3e0ebefffd86f70e727e8974777bc08f
+Description: Indicator showing power state.
+Homepage: https://launchpad.net/indicator-power
+Description-md5: a640c20ce04b08d6092562fe0fecbddd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: language-pack-ar
 Priority: optional
@@ -1272,6 +1343,50 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-usb-live, edubuntu-usb-live
 
+Package: language-pack-gnome-lo
+Priority: optional
+Section: translations
+Installed-Size: 40
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130829
+Replaces: language-pack-gnome-lo (<< 1:13.10+20130829), language-pack-gnome-lo-base, language-pack-kde-lo (<< 1:13.10+20130829), language-pack-kde-lo-base (<< 1:13.10+20130829), language-pack-lo (<< 1:13.10+20130829), language-pack-lo-base (<< 1:13.10+20130829)
+Depends: language-pack-gnome-lo-base (>= 1:13.10+20130723), language-pack-lo
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-lo/language-pack-gnome-lo_13.10+20130829_all.deb
+Size: 3706
+MD5sum: 84d9cd26903fa16adb4d1cb263fa84be
+SHA1: 1da326b32dd8d66b60ca3e7865f999ec80994589
+SHA256: 1cf94bf1a20dcb6d008454e630bba356cf6b677ac07d18c08fbdb3982a9be3a5
+Description: GNOME translation updates for language Lao
+Description-md5: 3fcfb4957a33b7684fcbba7e88bd298e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-mk
+Priority: optional
+Section: translations
+Installed-Size: 733
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130829
+Replaces: language-pack-gnome-mk (<< 1:13.10+20130829), language-pack-gnome-mk-base, language-pack-kde-mk (<< 1:13.10+20130829), language-pack-kde-mk-base (<< 1:13.10+20130829), language-pack-mk (<< 1:13.10+20130829), language-pack-mk-base (<< 1:13.10+20130829)
+Depends: language-pack-gnome-mk-base (>= 1:13.10+20130723), language-pack-mk
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-mk/language-pack-gnome-mk_13.10+20130829_all.deb
+Size: 177732
+MD5sum: d77e9ddfd83e0c8d33da552a3b452916
+SHA1: 1fa2abd06290e9cc8b476efd279863c05b16c9a7
+SHA256: da71a66feef8104b18df4d21ae310cbbc0812448cdb9bac9a595eab7451de0d2
+Description: GNOME translation updates for language Macedonian
+Description-md5: 2922782fc5716cf8bc95473be5487aaf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
 Package: language-pack-gnome-nl
 Priority: optional
 Section: translations
@@ -1487,6 +1602,72 @@ SHA1: f84fa950947ecd6451965d091e0df22cebea70db
 SHA256: bdb2069c8e4ba248aa5be80d600959675f01470555e5c0dfed664aafbdc4e88a
 Description: translation updates for language Kurdish
 Description-md5: 3592b9815f5e61a1a402749bd9a44ccd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-lo
+Priority: optional
+Section: translations
+Installed-Size: 57
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130829
+Replaces: language-pack-gnome-lo (<< 1:13.10+20130829), language-pack-gnome-lo-base (<< 1:13.10+20130829), language-pack-kde-lo (<< 1:13.10+20130829), language-pack-kde-lo-base (<< 1:13.10+20130829), language-pack-lo (<< 1:13.10+20130829), language-pack-lo-base
+Depends: language-pack-lo-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-lo/language-pack-lo_13.10+20130829_all.deb
+Size: 7944
+MD5sum: 1ca6552ac463d1d78523d4799f189107
+SHA1: a120c4d244d9b0ea2dbe89d7c9bb5d4270d90ca6
+SHA256: 72a22ee3421612219b61bf3cc4f8b1796c396ad5b486247bcc7aee4ac5df7ad8
+Description: translation updates for language Lao
+Description-md5: 1ea34c02248959a0e4d245025939bf22
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-mk
+Priority: optional
+Section: translations
+Installed-Size: 104
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130829
+Replaces: language-pack-gnome-mk (<< 1:13.10+20130829), language-pack-gnome-mk-base (<< 1:13.10+20130829), language-pack-kde-mk (<< 1:13.10+20130829), language-pack-kde-mk-base (<< 1:13.10+20130829), language-pack-mk (<< 1:13.10+20130829), language-pack-mk-base
+Depends: language-pack-mk-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-mk/language-pack-mk_13.10+20130829_all.deb
+Size: 20894
+MD5sum: 871f3867f808c1e8d62260bec7d51744
+SHA1: b60e45279c5dead15c6b89d9981e802f368c8e47
+SHA256: caa64183980a82a093fdf778f569d3f6bb2018353601fe6172d94cb1d6a37813
+Description: translation updates for language Macedonian
+Description-md5: a36efa2e9ffdbe0e1c5132e7b3bc555b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-ms
+Priority: optional
+Section: translations
+Installed-Size: 1585
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130829
+Replaces: language-pack-gnome-ms (<< 1:13.10+20130829), language-pack-gnome-ms-base (<< 1:13.10+20130829), language-pack-kde-ms (<< 1:13.10+20130829), language-pack-kde-ms-base (<< 1:13.10+20130829), language-pack-ms (<< 1:13.10+20130829), language-pack-ms-base
+Depends: language-pack-ms-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-ms/language-pack-ms_13.10+20130829_all.deb
+Size: 453764
+MD5sum: 0378c7a30323677ab87e17feae488f87
+SHA1: 157880e5e68e5013127162389fc4c621d4a7da82
+SHA256: 2c2593bf91bf263d4813f9fe56f15ea866677ec61f2946539c4546ad721314db
+Description: translation updates for language Malay
+Description-md5: 6fac81122e8e9c5fc177bd018d9c2d5c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -1901,6 +2082,217 @@ Origin: Ubuntu
 Supported: 9m
 Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
+Package: libmessaging-menu-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 301
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: indicator-messages
+Version: 13.10.1+13.10.20130830.2-0ubuntu1
+Depends: gir1.2-messagingmenu-1.0 (= 13.10.1+13.10.20130830.2-0ubuntu1), libmessaging-menu0 (= 13.10.1+13.10.20130830.2-0ubuntu1), libglib2.0-dev
+Filename: pool/main/i/indicator-messages/libmessaging-menu-dev_13.10.1+13.10.20130830.2-0ubuntu1_amd64.deb
+Size: 25464
+MD5sum: cad03bd57babebd973ababfd4359ea88
+SHA1: c4946f537fd2b6a5009b99edb8f3e93e538ef785
+SHA256: f1ba30cf9d40e161d8a13009348923baf9e4d8050ad99534852eff14d6d38977
+Description: Messaging Menu - library development files
+Homepage: https://launchpad.net/indicator-messages
+Description-md5: ce906b4d3b8508aa9afe60c759709b5d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmessaging-menu0
+Priority: optional
+Section: libs
+Installed-Size: 112
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: indicator-messages
+Version: 13.10.1+13.10.20130830.2-0ubuntu1
+Depends: libc6 (>= 2.2.5), libglib2.0-0 (>= 2.37.3)
+Filename: pool/main/i/indicator-messages/libmessaging-menu0_13.10.1+13.10.20130830.2-0ubuntu1_amd64.deb
+Size: 26748
+MD5sum: 22b010b3318c549990db28ee54611169
+SHA1: 6ebc99da3c7d8b18de87b63e5147ca2ff3855f5a
+SHA256: aa76f191f4a0f39fbd2ea982b1f08758328c804b20e27d6dcca47095440c3ca8
+Description: Messaging Menu - shared library
+Homepage: https://launchpad.net/indicator-messages
+Description-md5: 364e71724412de3ba2d663ca34406232
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libmirclient-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 88
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: amd64
+Source: mir
+Version: 0.0.10+13.10.20130830-0ubuntu1
+Depends: libmirclient2 (= 0.0.10+13.10.20130830-0ubuntu1), libmirprotobuf-dev (= 0.0.10+13.10.20130830-0ubuntu1), mircommon-dev (= 0.0.10+13.10.20130830-0ubuntu1)
+Filename: pool/main/m/mir/libmirclient-dev_0.0.10+13.10.20130830-0ubuntu1_amd64.deb
+Size: 7444
+MD5sum: f05770adbebe4007b2d2e6cbc4df626c
+SHA1: 011aaef1a845adbc3b6fbae98b00a43cec75ba54
+SHA256: 37d1ee1d4f134ced3f6d0ea99c387d572c29267703105832712d01fbdd960c15
+Description: Display server for Ubuntu - development headers
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: bad81f957875312d57ff2d16afca10de
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmirclient2
+Priority: optional
+Section: libs
+Installed-Size: 546
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: amd64
+Source: mir
+Version: 0.0.10+13.10.20130830-0ubuntu1
+Depends: libboost-system1.53.0, libc6 (>= 2.14), libdrm2 (>= 2.4.38), libgcc1 (>= 1:4.1.1), libmirprotobuf0 (>= 0.0.10+13.10.20130830), libprotobuf7, libstdc++6 (>= 4.8), libxkbcommon0 (>= 0.2.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mir/libmirclient2_0.0.10+13.10.20130830-0ubuntu1_amd64.deb
+Size: 164480
+MD5sum: 0f9d0cac1d620eefef21b2a20d0f6126
+SHA1: 70269afb50c67dfa16493c6c2e21852290d12423
+SHA256: 998d68113f6235d0a06bc28635a59ecb79e2f4c9e04039cec10c97db2badb80d
+Description: Display server for Ubuntu - client library
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: 833ddf930ef3c3df05aca4213ced851d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmirplatform
+Priority: optional
+Section: libs
+Installed-Size: 423
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: amd64
+Source: mir
+Version: 0.0.10+13.10.20130830-0ubuntu1
+Replaces: libmirserver0
+Depends: libc6 (>= 2.15), libdrm2 (>= 2.4.38), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgbm1 (>= 8.1~0), libgcc1 (>= 1:4.1.1), libgles2-mesa (>= 7.8.1) | libgles2, libstdc++6 (>= 4.8), libudev1 (>= 183)
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mir/libmirplatform_0.0.10+13.10.20130830-0ubuntu1_amd64.deb
+Size: 123192
+MD5sum: 839150ea4c5b2f78ab0061fa66422820
+SHA1: ea89c227aa8d008913d455cc7cc5921c55f384a8
+SHA256: e6531d5fd18b1fba04f6e10412f045244b1d5949c26f2c6be002b8e3d6391770
+Description: Display server for Ubuntu - platform library
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: 5ca581b6c17780dd3707f6b3fff2597b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmirprotobuf-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 67
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: amd64
+Source: mir
+Version: 0.0.10+13.10.20130830-0ubuntu1
+Depends: libmirprotobuf0 (= 0.0.10+13.10.20130830-0ubuntu1), libprotobuf-dev
+Filename: pool/main/m/mir/libmirprotobuf-dev_0.0.10+13.10.20130830-0ubuntu1_amd64.deb
+Size: 4586
+MD5sum: f517a3216b1851900d64ca9b0b26b507
+SHA1: 2637baac32dc1515be5b32b931717d89ddaf07bf
+SHA256: 2db80f0427e0e5409e3b20784dc89290fee7a058b83f8a2c3e8f0aaeb5095648
+Description: Display server for Ubuntu - protocol definition
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: dafcf3520428a348b335759e46da047f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmirprotobuf0
+Priority: optional
+Section: libs
+Installed-Size: 280
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: amd64
+Source: mir
+Version: 0.0.10+13.10.20130830-0ubuntu1
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libprotobuf7, libstdc++6 (>= 4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mir/libmirprotobuf0_0.0.10+13.10.20130830-0ubuntu1_amd64.deb
+Size: 75982
+MD5sum: 654dc758b1cc83c04ec823b1170a4311
+SHA1: 11a549f116a3135a93fc2e8dc9c90856c269bc4e
+SHA256: 959b665b2934f4ea725fcde3fa5cdda79ae16f7cc6843df1341b753045131bb5
+Description: Display server for Ubuntu - protocol implementation
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: c619d91f67bba57f73bf198297f21d7d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmirserver-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 377
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: amd64
+Source: mir
+Version: 0.0.10+13.10.20130830-0ubuntu1
+Depends: libmirserver1 (= 0.0.10+13.10.20130830-0ubuntu1), libmirprotobuf-dev (= 0.0.10+13.10.20130830-0ubuntu1), mircommon-dev (= 0.0.10+13.10.20130830-0ubuntu1), libglm-dev, libboost-program-options-dev
+Filename: pool/main/m/mir/libmirserver-dev_0.0.10+13.10.20130830-0ubuntu1_amd64.deb
+Size: 42068
+MD5sum: ce40e611fe1a6514f344e0b1c382c858
+SHA1: 80b7ba19633bbec8ae5fe44425c836a5c3b6815e
+SHA256: c2eaef5f435c1491b35bac66207972c33527025cad2cda9d118f734663943a7b
+Description: Display server for Ubuntu - development headers
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: 98260f2d94306b61ba8e99360b379f43
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmirserver1
+Priority: optional
+Section: libs
+Installed-Size: 1832
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: amd64
+Source: mir
+Version: 0.0.10+13.10.20130830-0ubuntu1
+Depends: libboost-program-options1.53.0, libboost-system1.53.0, libc6 (>= 2.14), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgcc1 (>= 1:4.1.1), libgflags2, libgles2-mesa (>= 7.8.1) | libgles2, libgoogle-glog0, libmirclient2 (>= 0.0.10+13.10.20130830), libmirprotobuf0 (>= 0.0.10+13.10.20130830), libprotobuf7, libstdc++6 (>= 4.8.1), libxkbcommon0 (>= 0.2.0), libmirplatform (= 0.0.10+13.10.20130830-0ubuntu1)
+Pre-Depends: multiarch-support
+Filename: pool/main/m/mir/libmirserver1_0.0.10+13.10.20130830-0ubuntu1_amd64.deb
+Size: 558890
+MD5sum: 3ff28effd8812f3b63be94c04b8f9b97
+SHA1: 09435a61569009cc0b259f41f9a8e679dd01b076
+SHA256: 335fa7d048116a22c99fd37b8d4af56e23e34a021aba610e175c1d23af1ec47e
+Description: Display server for Ubuntu - server library
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: ec9e31363965aaba264f7029d7781e84
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libmysqlclient-dev
 Priority: optional
 Section: libdevel
@@ -2108,6 +2500,116 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: libplatform-api-headers
+Priority: optional
+Section: libdevel
+Installed-Size: 181
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: platform-api
+Version: 0.18.3+13.10.20130830-0ubuntu1
+Filename: pool/main/p/platform-api/libplatform-api-headers_0.18.3+13.10.20130830-0ubuntu1_amd64.deb
+Size: 17884
+MD5sum: 044e1f8a0eaab5a1c2c0903a68f54a4e
+SHA1: d5129cb4c8716e1846d5eda6fa562fe1f35aaa06
+SHA256: f455766e384a8ccf329915dbab46d5199a1baeef3da9307e359e78de5ada5c4c
+Description: Platform API for system level capabilities (API headers)
+Multi-Arch: same
+Homepage: https://launchpad.net/platform-api
+Description-md5: 25a939647ddf8f9955955164e5bf326d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libplatform-api1-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 44
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: platform-api
+Version: 0.18.3+13.10.20130830-0ubuntu1
+Depends: libgles2-mesa-dev, libplatform-api-headers (= 0.18.3+13.10.20130830-0ubuntu1), libubuntu-application-api1 | libplatform-api1, libubuntu-application-api-mirserver1 (= 0.18.3+13.10.20130830-0ubuntu1), libubuntu-application-api-mirclient1 (= 0.18.3+13.10.20130830-0ubuntu1)
+Suggests: libplatform-api1-doc
+Filename: pool/main/p/platform-api/libplatform-api1-dev_0.18.3+13.10.20130830-0ubuntu1_amd64.deb
+Size: 1916
+MD5sum: db4cf14288576a9f40d02d67e088fa48
+SHA1: 33724ce80eff4057b3d99b0fb66d743ec2bfb064
+SHA256: 3266936c7ba626ab4a6a808a890d7d38330d5b186d07d1b0a15d2eb414aa151c
+Description: Platform API for system level capabilities (development)
+Multi-Arch: same
+Homepage: https://launchpad.net/platform-api
+Description-md5: 3202ff5a28cf213561124d4022a95e03
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libplatform-api1-doc
+Priority: optional
+Section: doc
+Installed-Size: 4742
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: platform-api
+Version: 0.18.3+13.10.20130830-0ubuntu1
+Depends: libplatform-api1-dev
+Filename: pool/main/p/platform-api/libplatform-api1-doc_0.18.3+13.10.20130830-0ubuntu1_all.deb
+Size: 2009604
+MD5sum: c8d4c88f795bc02a19ad9d69be24f5cf
+SHA1: cd3522c576feb26115e662a80b7a1e78064208a2
+SHA256: ea8d88256c3160bc1a7040f3293a6462bb9157e812e5905f0f143247c54908d6
+Description: Platform API for system level capabilities (development)
+Homepage: https://launchpad.net/platform-api
+Description-md5: 91dba5b6aae30b22730a6ddbabdb540f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libplatform-hardware-api-headers
+Priority: optional
+Section: libdevel
+Installed-Size: 56
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: platform-api
+Version: 0.18.3+13.10.20130830-0ubuntu1
+Depends: libplatform-api-headers
+Filename: pool/main/p/platform-api/libplatform-hardware-api-headers_0.18.3+13.10.20130830-0ubuntu1_amd64.deb
+Size: 5270
+MD5sum: 140390e0a1c070fad90240b5b2b278a7
+SHA1: c3207ae0a0afd36c6787dd552f57deead33c57f4
+SHA256: 84d09d2d2d7ffe2a677c2a5ab461740bc4a035ace0bd1bd5a186579d24037cf3
+Description: Platform API for system level capabilities (API headers)
+Multi-Arch: same
+Homepage: https://launchpad.net/platform-api
+Description-md5: 23b96ac55caf7d67de1fc92dd6797a36
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libplatform-hardware-api1-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 39
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: platform-api
+Version: 0.18.3+13.10.20130830-0ubuntu1
+Depends: libgles2-mesa-dev, libplatform-hardware-api-headers (= 0.18.3+13.10.20130830-0ubuntu1), libubuntu-platform-hardware-api1 | libplatform-hardware-api1
+Suggests: libplatform-api1-doc
+Filename: pool/main/p/platform-api/libplatform-hardware-api1-dev_0.18.3+13.10.20130830-0ubuntu1_amd64.deb
+Size: 1652
+MD5sum: d3f95cca168e9953c47a7895335fd2ee
+SHA1: f44699b4ef381ab9f678ae6fb443d83659ea9b87
+SHA256: d48f840d80ee04948c519a9eafc76ebc78b723e946542caa57c01197d210e9f6
+Description: Platform API for system level capabilities (development)
+Multi-Arch: same
+Homepage: https://launchpad.net/platform-api
+Description-md5: 0aa12ab7a84a04b9fc839f7c620dfee2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libqt5location5
 Priority: optional
 Section: libs
@@ -2229,6 +2731,167 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: libubuntu-application-api-mirclient1
+Priority: optional
+Section: libs
+Installed-Size: 84
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: platform-api
+Version: 0.18.3+13.10.20130830-0ubuntu1
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libhybris-common1, libmirclient2 (>= 0.0.10+13.10.20130830), libstdc++6 (>= 4.5)
+Pre-Depends: multiarch-support
+Filename: pool/main/p/platform-api/libubuntu-application-api-mirclient1_0.18.3+13.10.20130830-0ubuntu1_amd64.deb
+Size: 17726
+MD5sum: b4778b5d4c380d1b5f8e5311c52163a1
+SHA1: 240ef9b053ce52dc2ac446d9e8655a3ee812105d
+SHA256: 9197356890f2dc5b3dbd2bff949a929f57ce1b34f3457ee4b85b132277ee617f
+Description: Implementation of the Platform API for a Mir client
+Multi-Arch: same
+Homepage: https://launchpad.net/platform-api
+Description-md5: 41ce2fde8cfd2f72dcc39fdc151f0c18
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libubuntu-application-api-mirserver1
+Priority: optional
+Section: libs
+Installed-Size: 92
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: platform-api
+Version: 0.18.3+13.10.20130830-0ubuntu1
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libhybris-common1, libmirserver1 (= 0.0.10+13.10.20130830-0ubuntu1), libstdc++6 (>= 4.5)
+Pre-Depends: multiarch-support
+Filename: pool/main/p/platform-api/libubuntu-application-api-mirserver1_0.18.3+13.10.20130830-0ubuntu1_amd64.deb
+Size: 21000
+MD5sum: 695a29a9dd15c77244cc8aa8029a9fa8
+SHA1: bd6faf1eac9cfd48e16430b54ee09a424e0c3084
+SHA256: e14226aca0d976b1e5dacf12039cc11292bc382430e9ea36178d5f69f7bad85f
+Description: Implementation of the Platform API for a Mir server
+Multi-Arch: same
+Homepage: https://launchpad.net/platform-api
+Description-md5: 81fd6f1651d2a9e246d7a752cb2278e0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libubuntu-application-api1
+Priority: optional
+Section: libs
+Installed-Size: 232
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: platform-api
+Version: 0.18.3+13.10.20130830-0ubuntu1
+Replaces: libplatform-api1-hybris (<< 0.18.3)
+Depends: libboost-system1.53.0, libc6 (>= 2.9), libdbus-1-3 (>= 1.5.12), libgcc1 (>= 1:4.1.1), libhybris-common1, libstdc++6 (>= 4.6), libubuntu-location-service0, liburl-dispatcher1 (>= 0.1)
+Pre-Depends: multiarch-support
+Breaks: libplatform-api1-hybris (<< 0.18.3)
+Filename: pool/main/p/platform-api/libubuntu-application-api1_0.18.3+13.10.20130830-0ubuntu1_amd64.deb
+Size: 67730
+MD5sum: cf7b3398a6eda32d729c4a89db9afd10
+SHA1: 9044e593832ec647fa3e9144fdc36ed2fe5eb2a1
+SHA256: 2e82add4c0e783d33fa282821822435962891f2b5cf8bf432924519bb10948ea
+Description: Hybris implementation of the Platform API (runtime)
+Multi-Arch: same
+Homepage: https://launchpad.net/platform-api
+Description-md5: a4eee79a5b79818edbf7e0bf487d4c22
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libubuntu-platform-api1-dev
+Priority: optional
+Section: oldlibs
+Installed-Size: 31
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: platform-api
+Version: 0.18.3+13.10.20130830-0ubuntu1
+Depends: libplatform-api1-dev (= 0.18.3+13.10.20130830-0ubuntu1)
+Filename: pool/main/p/platform-api/libubuntu-platform-api1-dev_0.18.3+13.10.20130830-0ubuntu1_all.deb
+Size: 1480
+MD5sum: 50900641804d8e4a5be02035c3db8faf
+SHA1: ce53436fbedcfdde4150712e5e02afe40cbb49f3
+SHA256: e3dba537045aa52f55828cf409691f113514aeedfe470feed9e9c7240648fde6
+Description: dummy transitional package for libplatform-api1-dev
+Homepage: https://launchpad.net/platform-api
+Description-md5: de56e227a9689823f5b844fcd76d0d40
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libubuntu-platform-hardware-api1
+Priority: optional
+Section: libs
+Installed-Size: 50
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: amd64
+Source: platform-api
+Version: 0.18.3+13.10.20130830-0ubuntu1
+Replaces: libplatform-hardware-api1-hybris (<< 0.18.3)
+Depends: libc6 (>= 2.2.5), libgcc1 (>= 1:4.1.1), libhybris-common1, libstdc++6 (>= 4.1.1)
+Pre-Depends: multiarch-support
+Breaks: libplatform-hardware-api1-hybris (<< 0.18.3)
+Filename: pool/main/p/platform-api/libubuntu-platform-hardware-api1_0.18.3+13.10.20130830-0ubuntu1_amd64.deb
+Size: 6394
+MD5sum: 5df52b30cbf141b3b48f85b0798fc5eb
+SHA1: a577b62c993ddf6aacf13a17e44701be9430d43d
+SHA256: 4fce52d9b7128f2ff86f0af07931a5b6be7487fe4ac8ac2be32df4f576b975f4
+Description: Hybris implementation of the hw-access parts of the Platform API (runtime)
+Multi-Arch: same
+Homepage: https://launchpad.net/platform-api
+Description-md5: d9c7c5dff3893ffc9571a67f240b3e83
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: mir-doc
+Priority: optional
+Section: doc
+Installed-Size: 70506
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: all
+Source: mir
+Version: 0.0.10+13.10.20130830-0ubuntu1
+Depends: libmirclient-dev, libmirserver-dev
+Filename: pool/main/m/mir/mir-doc_0.0.10+13.10.20130830-0ubuntu1_all.deb
+Size: 39963744
+MD5sum: faeb21eb7aadab0bf1fb6bc378aa42b6
+SHA1: 090aff1edd54e00efaad9954a54f37861c4fcffa
+SHA256: 5471e485d9879a656f62508a5f89eaa18fc587b8e63eb9bcdf4e4931842cde73
+Description: API documentation for mir
+Homepage: https://launchpad.net/mir
+Description-md5: 628500f58a32ea2c0fc1cb782e6f260f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: mircommon-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 169
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Thomas Voß <thomas.voss@canonical.com>
+Architecture: amd64
+Source: mir
+Version: 0.0.10+13.10.20130830-0ubuntu1
+Filename: pool/main/m/mir/mircommon-dev_0.0.10+13.10.20130830-0ubuntu1_amd64.deb
+Size: 17978
+MD5sum: cc7c6c4f792b8fbfd2c689a7d859ef09
+SHA1: 2c62fb9a92a0c1f26d8fcaa31d5681a138e5db0e
+SHA256: 09393c1958b7548139eb815f53db3ed8ccf6942e7d0f594dcdd0be3912b1a36f
+Description: Display server for Ubuntu - development headers
+Multi-Arch: same
+Homepage: https://launchpad.net/mir
+Description-md5: afceda22de73c8f8ef2fe0642ae4e906
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: mysql-client
 Priority: optional
 Section: database
@@ -2244,6 +2907,29 @@ Size: 11148
 MD5sum: 734c78796f4af8d58ed0669572019f0a
 SHA1: ad7973737cc92df254d5424588273c8349e313b5
 SHA256: 540f556e99cef6028205ac6f1143531bcfde512c9abeaa6dfce51d5caf2bf42a
+Description: MySQL database client (metapackage depending on the latest version)
+Homepage: http://dev.mysql.com/
+Description-md5: c1035c33de63147bb387637ae5083656
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master
+
+Package: mysql-client
+Priority: optional
+Section: database
+Installed-Size: 114
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Source: mysql-5.5
+Version: 5.5.32-0ubuntu6
+Depends: mysql-client-5.5
+Filename: pool/main/m/mysql-5.5/mysql-client_5.5.32-0ubuntu6_all.deb
+Size: 11048
+MD5sum: 7c228f25a81b31e612c12a6ea9623823
+SHA1: 9ba0e74b598fe0192828fccb19b01321d0f6f443
+SHA256: cfd4dab50bcd8281bd9f61ccca33b1de0dcb71219b27af5fd429cd8693fc1ca7
 Description: MySQL database client (metapackage depending on the latest version)
 Homepage: http://dev.mysql.com/
 Description-md5: c1035c33de63147bb387637ae5083656
@@ -2330,6 +3016,33 @@ Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, ubuntustudio-video, ubuntustudio-publishing, ubuntustudio-graphics, ubuntustudio-audio
 
+Package: mysql-common
+Priority: optional
+Section: database
+Installed-Size: 130
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Source: mysql-5.5
+Version: 5.5.32-0ubuntu6
+Replaces: mysql-common-4.1
+Provides: mysql-common-4.1
+Conflicts: mysql-common-4.1
+Breaks: mysql-client-5.1, mysql-client-core-5.1, mysql-server-5.1, mysql-server-core-5.1
+Filename: pool/main/m/mysql-5.5/mysql-common_5.5.32-0ubuntu6_all.deb
+Size: 12958
+MD5sum: eba65d33748daecbf4b28a9642995ce7
+SHA1: 4697a0d1b2feab8866bd48e5c43e8bdaab93a0ff
+SHA256: e7a9f1ce03ab21671bce53bfce0c752fc265c76667dd76104ec4e5e172e55111
+Description: MySQL database common files, e.g. /etc/mysql/my.cnf
+Multi-Arch: foreign
+Homepage: http://dev.mysql.com/
+Description-md5: 562d254c602f89e4390e28f6362283c8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: lamp-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, ubuntustudio-video, ubuntustudio-publishing, ubuntustudio-graphics, ubuntustudio-audio
+
 Package: mysql-server
 Priority: optional
 Section: database
@@ -2345,6 +3058,29 @@ Size: 11276
 MD5sum: 9a43d7196726a70b8e24cfd89adb1cfc
 SHA1: 79e84407d52afb9442ff7ddfdd4fa1d332ae0640
 SHA256: 17a8e3b32f973c04604d391986d86ea6ac2540dcb3035cb527629b333c4359ae
+Description: MySQL database server (metapackage depending on the latest version)
+Homepage: http://dev.mysql.com/
+Description-md5: e519a9c4f87658afbd1d077af63f9269
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: lamp-server, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: mysql-server
+Priority: optional
+Section: database
+Installed-Size: 114
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian MySQL Maintainers <pkg-mysql-maint@lists.alioth.debian.org>
+Architecture: all
+Source: mysql-5.5
+Version: 5.5.32-0ubuntu6
+Depends: mysql-server-5.5
+Filename: pool/main/m/mysql-5.5/mysql-server_5.5.32-0ubuntu6_all.deb
+Size: 11168
+MD5sum: ca8470acb03f11b6cdd7b4bc13eab345
+SHA1: 508d0369d6799d98d37b3b9b4b32294a0c43ddf8
+SHA256: 2386a7f8f8d8f27e50a3032a68a1fd3814c0d3ad2b4ef2edc37d9d06c11d6f78
 Description: MySQL database server (metapackage depending on the latest version)
 Homepage: http://dev.mysql.com/
 Description-md5: e519a9c4f87658afbd1d077af63f9269
