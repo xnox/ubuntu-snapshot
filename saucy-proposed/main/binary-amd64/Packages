@@ -490,6 +490,30 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: hplip-data
+Priority: optional
+Section: utils
+Installed-Size: 9549
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HPIJS and HPLIP maintainers <pkg-hpijs-devel@lists.alioth.debian.org>
+Architecture: all
+Source: hplip
+Version: 3.13.8-1
+Depends: python (>= 2.7.1-0ubuntu2), xz-utils
+Suggests: hplip
+Filename: pool/main/h/hplip/hplip-data_3.13.8-1_all.deb
+Size: 6721666
+MD5sum: e6ffd033a3efee575d2ad501e4ed7d7f
+SHA1: 5d5216d8f082634236d0b2ab516a5fc1f0fa2065
+SHA256: afdac828987cfd803a32c9d2fa8159b5c1c7f4f111108ddeab997724fe82c979
+Description: HP Linux Printing and Imaging - data files
+Homepage: http://hplipopensource.com/hplip-web/index.html
+Description-md5: 99432a59ee13492042933313a6992d32
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: hplip-dbg
 Priority: extra
 Section: utils
@@ -509,6 +533,28 @@ SHA256: 0abb3b16db75f6e6c60f07b9bf6eac65c9bff596c296508d17ace1ae04e8ec47
 Description: HP Linux Printing and Imaging - debugging information
 Homepage: http://hplipopensource.com/hplip-web/index.html
 Description-md5: 710137fceefc7e3d667c64008f481e76
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: hplip-doc
+Priority: optional
+Section: doc
+Installed-Size: 789
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HPIJS and HPLIP maintainers <pkg-hpijs-devel@lists.alioth.debian.org>
+Architecture: all
+Source: hplip
+Version: 3.13.8-1
+Suggests: hplip
+Filename: pool/main/h/hplip/hplip-doc_3.13.8-1_all.deb
+Size: 608376
+MD5sum: ea5202adc6c50f7dd7a531a56ccba72b
+SHA1: 0a83dea13a25e7a28c638789dadc064f8869179e
+SHA256: 32713af4e805d6f58a0b3702114d2c9402c4b7f69596c5d3c2b7fc5a5b9cae69
+Description: HP Linux Printing and Imaging - documentation
+Homepage: http://hplipopensource.com/hplip-web/index.html
+Description-md5: 7a9d622f180b9cbe47e31edb62d9f944
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -8837,6 +8883,33 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: printer-driver-foo2zjs
+Priority: optional
+Section: text
+Installed-Size: 3218
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Architecture: amd64
+Source: foo2zjs
+Version: 20130826dfsg0-0ubuntu2
+Replaces: foo2zjs (<< 20111023dfsg0-1~)
+Depends: libc6 (>= 2.14), libcups2 (>= 1.4.0), libjbig0, python3, xz-utils, mscompress, foomatic-filters, dc
+Recommends: wget, unzip, cups, cups-client
+Suggests: psutils, hannah-foo2zjs, tk8.4, tix
+Breaks: cups (<< 1.5.0-3~), foo2zjs (<< 20111023dfsg0-1~), udev (<< 136-1)
+Filename: pool/main/f/foo2zjs/printer-driver-foo2zjs_20130826dfsg0-0ubuntu2_amd64.deb
+Size: 1179882
+MD5sum: d4b6f927cc73a6cf3cd0ab8dbf58ae65
+SHA1: e78a1ae7e18f77794b12d9f0936eec066b26741f
+SHA256: b74fdd5d8ee259dd1bfa66a60035f2aa451e46c2e5d040cd9ba13e63644c2b99
+Description: printer driver for ZjStream-based printers
+Homepage: http://foo2zjs.rkkda.com/
+Description-md5: 46dde92d651ea7e8f08d5611cf1b2363
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: printer-driver-hpcups
 Priority: optional
 Section: text
@@ -8889,6 +8962,31 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: print-server
+
+Package: printer-driver-postscript-hp
+Priority: optional
+Section: utils
+Installed-Size: 975
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HPIJS and HPLIP maintainers <pkg-hpijs-devel@lists.alioth.debian.org>
+Architecture: all
+Source: hplip
+Version: 3.13.8-1
+Replaces: hplip (<< 3.11.10-1ubuntu2), hplip-data (<< 3.11.10-1ubuntu2)
+Depends: python3, xz-utils, hplip (>= 3.13.8-1)
+Breaks: cups (<< 1.5.0-11~), hplip (<< 3.11.10-1ubuntu2), hplip-data (<< 3.11.10-1ubuntu2)
+Filename: pool/main/h/hplip/printer-driver-postscript-hp_3.13.8-1_all.deb
+Size: 671120
+MD5sum: f7837aee9798013e11ed64780c8cb382
+SHA1: b00b86a34f2691480e28ce1716538156bd035af4
+SHA256: c87e2f7895a86dfc1e1d6a81056a20a044e4ca2fd273d086ef9e072a9602d415
+Description: HP Printers PostScript Descriptions
+Homepage: http://hplipopensource.com/hplip-web/index.html
+Description-md5: 33ca72b4a7d8d06f5c3a8785de40d15d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: pulseaudio
 Priority: optional
