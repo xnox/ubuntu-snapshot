@@ -268,6 +268,69 @@ Description-md5: 6948801c3d791b1c318acb50a89989c6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: click
+Priority: optional
+Section: admin
+Installed-Size: 85
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Architecture: powerpc
+Version: 0.4.1
+Replaces: click-package
+Provides: click-package
+Depends: libc6 (>= 2.4), python3 (>= 3.2), python3-click (>= 0.4.1), python3-click (<< 0.4.1.1), adduser
+Recommends: click-apparmor
+Conflicts: click-package
+Filename: pool/main/c/click/click_0.4.1_powerpc.deb
+Size: 9008
+MD5sum: b9cc1255489d498741bdff0f73cd6e2d
+SHA1: 5f44fcc0523eebbc542ad76aafa5fbd3c7a9504f
+SHA256: 23ca05fb98f71da388eb7bca82fa3964ed2c73095821d5f089e4b3c04c3a4597
+Description: Click packages
+Description-md5: 1f88be1eec9a52975d22b0103f98879a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: click-dev
+Priority: optional
+Section: admin
+Installed-Size: 73
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Architecture: powerpc
+Source: click
+Version: 0.4.1
+Depends: perl, python3-click (= 0.4.1)
+Filename: pool/main/c/click/click-dev_0.4.1_powerpc.deb
+Size: 7284
+MD5sum: 2acd5933759aae5839af870f29a4ec30
+SHA1: 50b074aa03b93eb6747cb39c179565d0ddf826b2
+SHA256: d67cf04c75fe57f4204594cd96f4968b4bbae8a78dbef4f0aab73658d9f3fb9e
+Description: build Click packages
+Description-md5: 524a787d5934e296c23fd4c9d590ebf1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: click-doc
+Priority: optional
+Section: doc
+Installed-Size: 159
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Architecture: all
+Source: click
+Version: 0.4.1
+Replaces: click-package-doc
+Provides: click-package-doc
+Depends: libjs-sphinxdoc (>= 1.0)
+Conflicts: click-package-doc
+Filename: pool/main/c/click/click-doc_0.4.1_all.deb
+Size: 40778
+MD5sum: 66353d647101dbe758eb435c19509e94
+SHA1: 43b11e3dfa24bf8d2143d70734da4a17f84f8fac
+SHA256: 76d2d41c3c796c8dee8c618af2792e6a2258b1a815b6f4b0f495199ff6ea7b91
+Description: Click packages (documentation)
+Description-md5: 60608bb1e29a4ab375e8538c009ecb38
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: dnsutils
 Priority: standard
 Section: net
@@ -376,6 +439,195 @@ Description-md5: 1a7cb995cf66551c57433bbaf46aee25
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
+Package: gvfs
+Priority: optional
+Section: libs
+Installed-Size: 565
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Version: 1.17.90-0ubuntu1
+Depends: libc6 (>= 2.7), libglib2.0-0 (>= 2.37.3), libudev1 (>= 183), gvfs-daemons (>= 1.17.90-0ubuntu1), gvfs-daemons (<< 1.17.90-0ubuntu1.1~), gvfs-libs (= 1.17.90-0ubuntu1), gvfs-common (= 1.17.90-0ubuntu1)
+Suggests: gvfs-backends, gvfs-backends-goa
+Breaks: brasero (<< 2.28.0-2), libgdu0 (<< 2.28.1-3), libglib2.0-0 (<< 2.30), rhythmbox (<< 0.12.6-2)
+Filename: pool/main/g/gvfs/gvfs_1.17.90-0ubuntu1_powerpc.deb
+Size: 77176
+MD5sum: 172411c5315f4b19a6e79ce6177de5ee
+SHA1: 7473369982a4e2c11cfbed47dd18d1628594d07c
+SHA256: b2f6da9283082779ce374a5d2cfd32bffd01d704750d06548fb4f20571b592ec
+Description: userspace virtual filesystem - GIO module
+Multi-Arch: same
+Description-md5: 61f453207c2ab18880315d27f13ee0fb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-dvd-live, kubuntu-active-dvd-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gvfs-backends
+Priority: optional
+Section: libs
+Installed-Size: 1402
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gvfs
+Version: 1.17.90-0ubuntu1
+Replaces: gvfs-common (<< 1.12.0-2)
+Depends: libarchive13, libavahi-client3 (>= 0.6.16), libavahi-common3 (>= 0.6.16), libavahi-glib1 (>= 0.6.16), libbluetooth3 (>= 4.91), libc6 (>= 2.7), libcdio-cdda1 (>= 0.83), libcdio-paranoia1 (>= 0.83), libcdio13 (>= 0.83), libdbus-1-3 (>= 1.0.2), libdbus-glib-1-2 (>= 0.78), libexpat1 (>= 2.0.1), libgcrypt11 (>= 1.4.5), libglib2.0-0 (>= 2.37.3), libgphoto2-6 (>= 2.4.10.1), libgphoto2-port10 (>= 2.5.2), libgtk-3-0 (>= 3.0.0), libgudev-1.0-0 (>= 146), libimobiledevice4 (>= 1.1.5), libmtp9 (>= 1.1.6), libplist1 (>= 0.16), libsmbclient (>= 2:3.3.1), libsoup2.4-1 (>= 2.41.90), libxml2 (>= 2.7.4), dconf-gsettings-backend | gsettings-backend, gvfs (= 1.17.90-0ubuntu1), gvfs-daemons (= 1.17.90-0ubuntu1), gvfs-libs (= 1.17.90-0ubuntu1), gvfs-common (= 1.17.90-0ubuntu1), psmisc
+Recommends: gnome-keyring
+Suggests: obex-data-server, samba-common
+Breaks: gvfs-common (<< 1.12.0-2)
+Filename: pool/main/g/gvfs/gvfs-backends_1.17.90-0ubuntu1_powerpc.deb
+Size: 212840
+MD5sum: 930afec5498582b1f24912e81b7f2e6d
+SHA1: acb6b3b8266d46498cf52568f95121f5baf13b31
+SHA256: 983ca7594e990049b5dc17d64c8f465573780dca8e433f1495b7a25db9c5ab66
+Description: userspace virtual filesystem - backends
+Multi-Arch: foreign
+Description-md5: 33d9d0b77211277edc2b5fdaf9916857
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gvfs-bin
+Priority: optional
+Section: libs
+Installed-Size: 424
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gvfs
+Version: 1.17.90-0ubuntu1
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.37.0), gvfs-common (= 1.17.90-0ubuntu1)
+Suggests: gvfs
+Filename: pool/main/g/gvfs/gvfs-bin_1.17.90-0ubuntu1_powerpc.deb
+Size: 46968
+MD5sum: 05a9e92f321d180a5aea657f14ffd1ef
+SHA1: 47c9bd418d0371761a26cf15beb888609c39f907
+SHA256: 2266682c8363dcccc0e9b811a42d747fc71909f1cee29fa3eb5f9e3e3bbc842b
+Description: userspace virtual filesystem - binaries
+Multi-Arch: foreign
+Description-md5: 02be92bf6407403290f8dec1428dea18
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gvfs-common
+Priority: optional
+Section: libs
+Installed-Size: 344
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: gvfs
+Version: 1.17.90-0ubuntu1
+Replaces: gvfs (<< 1.10.1-1)
+Depends: desktop-file-utils
+Recommends: gvfs
+Breaks: gvfs (<< 1.10.1-1)
+Filename: pool/main/g/gvfs/gvfs-common_1.17.90-0ubuntu1_all.deb
+Size: 40174
+MD5sum: 0e7e0b50cb32166b0fb7afe09354806b
+SHA1: ff71d077bbce6a1b9b8bd51af1be6c7bce442cd2
+SHA256: 0561d759d241c627d28f1edd872315a6c84ab4fa1cfab32a030ba82f3a397399
+Description: userspace virtual filesystem - common data files
+Multi-Arch: foreign
+Description-md5: 9572165fd324aff77138e36127f7d629
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-dvd-live, kubuntu-active-dvd-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gvfs-daemons
+Priority: optional
+Section: libs
+Installed-Size: 647
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gvfs
+Version: 1.17.90-0ubuntu1
+Replaces: gvfs (<< 1.10.1-1), gvfs-backends (<< 1.8.1-1)
+Depends: libc6 (>= 2.7), libglib2.0-0 (>= 2.37.3), libgudev-1.0-0 (>= 146), libsecret-1-0 (>= 0.7), libsystemd-login0 (>= 31), libudev1 (>= 183), libudisks2-0 (>= 2.0.91), x11-utils, udisks2, gvfs-libs (= 1.17.90-0ubuntu1), gvfs-common (= 1.17.90-0ubuntu1)
+Recommends: dbus, policykit-1-gnome, gvfs
+Suggests: gvfs-backends, gvfs-backends-goa
+Breaks: brasero (<< 2.28.0-2), gvfs (<< 1.10.1-1), gvfs-backends (<< 1.8.1-1), libgdu0 (<< 2.28.1-3), libglib2.0-0 (<< 2.28.6-2), rhythmbox (<< 0.12.6-2)
+Filename: pool/main/g/gvfs/gvfs-daemons_1.17.90-0ubuntu1_powerpc.deb
+Size: 91770
+MD5sum: 03001d840b312b2ebf0aa0d881f763fa
+SHA1: 179f21f10c40edbcd2c51599f7bb19ab029b35f6
+SHA256: dbc1217cf832db923834585dca5c6a36aae20e965d1146938a5fa9b960a1c8a0
+Description: userspace virtual filesystem - servers
+Multi-Arch: foreign
+Description-md5: 3ce59381bd6888364e59f20a23789369
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-dvd-live, kubuntu-active-dvd-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gvfs-dbg
+Priority: extra
+Section: debug
+Installed-Size: 7365
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gvfs
+Version: 1.17.90-0ubuntu1
+Depends: gvfs (= 1.17.90-0ubuntu1)
+Filename: pool/main/g/gvfs/gvfs-dbg_1.17.90-0ubuntu1_powerpc.deb
+Size: 1582264
+MD5sum: 9b18cd91a4250bcda90d0f18ef6dfcb9
+SHA1: 2b3b22d095e82cb4537956dd92e6f6b15046933a
+SHA256: 62603344691eec0ac82679e29cfc36f05ba4d9d867d8d330af71b604cbbf3ab0
+Description: userspace virtual filesystem - debugging information
+Description-md5: 5812d809c0496325bb376dd4fd9c9dc0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gvfs-fuse
+Priority: optional
+Section: libs
+Installed-Size: 265
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gvfs
+Version: 1.17.90-0ubuntu1
+Depends: libc6 (>= 2.3.5), libfuse2 (>= 2.8.1), libglib2.0-0 (>= 2.37.0), gvfs (= 1.17.90-0ubuntu1), fuse (>= 2.8.4)
+Filename: pool/main/g/gvfs/gvfs-fuse_1.17.90-0ubuntu1_powerpc.deb
+Size: 12034
+MD5sum: 668f401530830bf7f2b43b8dd04c377d
+SHA1: b8692eff5a090519afbfee6671a6360e7d69cf36
+SHA256: 8d88c0cfb124f7b9166feb124c9b2b8a99dd7aa6589e90fe048666e6afce68a9
+Description: userspace virtual filesystem - fuse server
+Description-md5: e8ae435dfe556826602d3a021208211e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gvfs-libs
+Priority: optional
+Section: libs
+Installed-Size: 612
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gvfs
+Version: 1.17.90-0ubuntu1
+Replaces: gvfs (<< 1.10.1-1), libgvfscommon0
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3), libsecret-1-0 (>= 0.7), gvfs-common (= 1.17.90-0ubuntu1)
+Conflicts: libgvfscommon0
+Breaks: gvfs (<< 1.10.1-1)
+Filename: pool/main/g/gvfs/gvfs-libs_1.17.90-0ubuntu1_powerpc.deb
+Size: 90240
+MD5sum: fb0851b736f6f707fdbb0c06be37ad4a
+SHA1: 8f21d718be7a0555f35a8d82a8e8b76c0c6c6f6b
+SHA256: 89789ed917828d979c791e5113072c7b83341bea2f9b2fe005a2c49c449dc4f6
+Description: userspace virtual filesystem - private libraries
+Multi-Arch: same
+Description-md5: 6558598d97ea2bbb18ca95c90e7c0683
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-dvd-live, kubuntu-active-dvd-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: language-pack-af
 Priority: optional
@@ -7203,6 +7455,28 @@ SHA256: 0ce76f5c67599e34da96068f38539f8234d830577f828be1806d62f404471a89
 Description: distributed version control system - testsuite
 Homepage: http://bazaar-vcs.org
 Description-md5: 6a061202c9118fa07cacafd938b725f0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-click
+Priority: optional
+Section: python
+Installed-Size: 209
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Architecture: powerpc
+Source: click
+Version: 0.4.1
+Replaces: python3-click-package
+Provides: python3-click-package
+Depends: python3 (>= 3.2.3-3~), python3-debian
+Conflicts: python3-click-package
+Filename: pool/main/c/click/python3-click_0.4.1_powerpc.deb
+Size: 32368
+MD5sum: 47b1b763128a04cb8d24dd39830c8936
+SHA1: 160dece40c56fbfd59116ccb2c47ab26bbb80543
+SHA256: 41bb03ac318205ceb6b0912aad19b621298b546edad67c28cd4e8b872a06275a
+Description: Click packages (Python 3 interface)
+Description-md5: a55b8833aad665015cec861ba580ce8a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
