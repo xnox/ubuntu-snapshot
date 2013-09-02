@@ -96,6 +96,7 @@ Checksums-Sha256:
 Package: mtj
 Binary: libmtj-java, libmtj-java-doc
 Version: 0.9.14+dfsg-2
+Priority: optional
 Section: multiverse/java
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
 Build-Depends: debhelper (>= 9), javahelper, default-jdk (>= 1:1.6), ant, libnetlib-java
@@ -210,4 +211,38 @@ Checksums-Sha256:
  337b25e6ccb3764f0df1e176470b883c90e40e98840d4133340fcc89eb3cea0c 26355286 svox_1.0+git20130326.orig.tar.gz
  c8ef4fa72e56b3dd8e2b3fa877e573d18b4c70e5f2cb8d2f187cc1a0725682f7 12820 svox_1.0+git20130326-1.debian.tar.gz
 Autobuild: yes
+
+Package: vmtk
+Binary: libvmtk1.0, python-vmtk, libvmtk-dev, vmtk
+Version: 1.0.1-2
+Section: multiverse/science
+Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Build-Depends: cdbs (>= 0.4.49), debhelper (>= 7), cmake, python-support (>= 0.6.4), python-dev, libvtk5-dev, python-vtk, libinsighttoolkit3-dev | libinsighttoolkit-dev, libjpeg-dev, libtiff-dev, libfreetype6-dev, libxext-dev, libpng-dev, libexpat1-dev, uuid-dev, libgdcm2-dev, libvtkgdcm2-dev, libopenjpeg-dev, libssl-dev, libvtk5-qt4-dev, libvtk-java
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/multiverse/v/vmtk
+Files:
+ 8c3ea9d1e61ad99fd419dd63f368f1f8 2424 vmtk_1.0.1-2.dsc
+ 06eb636a05805c72d809d57ee4b3d44b 1256703 vmtk_1.0.1.orig.tar.gz
+ 49d637159f980a79487cdd03f452448e 17527 vmtk_1.0.1-2.debian.tar.gz
+Uploaders: Johannes Ring <johannr@simula.no>
+Homepage: http://www.vmtk.org
+Vcs-Browser: http://svn.debian.org/wsvn/debian-science/packages/vmtk/trunk/
+Vcs-Svn: svn://svn.debian.org/svn/debian-science/packages/vmtk/trunk
+Package-List: 
+ libvmtk-dev deb non-free/libdevel optional
+ libvmtk1.0 deb non-free/libs optional
+ python-vmtk deb non-free/python optional
+ vmtk deb non-free/science optional
+Checksums-Sha1:
+ f9d7163e7d358b9d174cb875b764870872e24f1b 2424 vmtk_1.0.1-2.dsc
+ ae2da67e60a288512158e9361106aa3c789c14b9 1256703 vmtk_1.0.1.orig.tar.gz
+ 8afad30c8e73be0945e05a4286dfc1c472cb1bd3 17527 vmtk_1.0.1-2.debian.tar.gz
+Checksums-Sha256:
+ 8399d07695cd6e463db6dbaa9c3b6bde823d2b0f173908941a115d99abaa51b9 2424 vmtk_1.0.1-2.dsc
+ e5af084efff6d8e5643c1b289dc1fec7899886c5fce4cb90062422d69deb907c 1256703 vmtk_1.0.1.orig.tar.gz
+ 3a925859a25798dbce283ae09f7ff12a1fc7632840543c4e63a924eba2a35d2c 17527 vmtk_1.0.1-2.debian.tar.gz
+Autobuild: yes
+Python-Version: >= 2.3
 
