@@ -469,6 +469,51 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
+Package: hplip
+Priority: optional
+Section: utils
+Installed-Size: 402
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HPIJS and HPLIP maintainers <pkg-hpijs-devel@lists.alioth.debian.org>
+Architecture: armhf
+Version: 3.13.8-1
+Depends: libc6 (>= 2.4), libcups2 (>= 1.6.0), libdbus-1-3 (>= 1.0.2), libhpmud0 (= 3.13.8-1), libsane (>= 1.0.11-3), libsane-hpaio (= 3.13.8-1), hplip-data (= 3.13.8-1), printer-driver-hpcups (= 3.13.8-1), python (>= 2.7), python (<< 2.8), python-dbus (>= 0.80), python-imaging, python-pexpect, python-reportlab, coreutils (>= 5.1.0), lsb-base (>= 3), adduser (>= 3.34), cups (>= 1.1.20), policykit-1, python-gobject-2, wget
+Recommends: printer-driver-postscript-hp, sane-utils, avahi-daemon
+Suggests: hplip-gui, hplip-doc, python-notify, system-config-printer
+Filename: pool/main/h/hplip/hplip_3.13.8-1_armhf.deb
+Size: 81806
+MD5sum: e10c7f015b0260c9a28e52fc227e94bc
+SHA1: 08bf0d5ab32ecd884d7e3343cb3313296513f83a
+SHA256: 242babfbcb61ec00bd6560273c5440be7732b7af3160d2a007e9750c4287a82a
+Description: HP Linux Printing and Imaging System (HPLIP)
+Homepage: http://hplipopensource.com/hplip-web/index.html
+Description-md5: 2c0bf2568da19b1e4a1da75410d4aa8a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: hplip-dbg
+Priority: extra
+Section: utils
+Installed-Size: 1787
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HPIJS and HPLIP maintainers <pkg-hpijs-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: hplip
+Version: 3.13.8-1
+Depends: hplip (= 3.13.8-1) | printer-driver-hpcups (= 3.13.8-1) | printer-driver-hpijs (= 3.13.8-1)
+Breaks: hplip (<< 3.10.2-2ubuntu2)
+Filename: pool/main/h/hplip/hplip-dbg_3.13.8-1_armhf.deb
+Size: 1393046
+MD5sum: da5c68a00997f588e3b6afa29e32feaf
+SHA1: 8ae8f45dca3082d2a437ac80ae4682e76921ad8f
+SHA256: 74953d1e91f93c38d78319af1915f2bebc15c0824f843d3bae202b1c8b9cbfa5
+Description: HP Linux Printing and Imaging - debugging information
+Homepage: http://hplipopensource.com/hplip-web/index.html
+Description-md5: 710137fceefc7e3d667c64008f481e76
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: language-pack-af
 Priority: optional
 Section: translations
@@ -6834,6 +6879,51 @@ Description-md5: e231fd3ca061829155ca7ee4294ecab7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libhpmud-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 123
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HPIJS and HPLIP maintainers <pkg-hpijs-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: hplip
+Version: 3.13.8-1
+Depends: libhpmud0 (= 3.13.8-1)
+Filename: pool/main/h/hplip/libhpmud-dev_3.13.8-1_armhf.deb
+Size: 7338
+MD5sum: 2c9d667c83ac20a159ac7aec37b57116
+SHA1: 5348c1dd922c37f8325ae639f35640204555670b
+SHA256: 578e3c9d64e3a80d6929673b3e9fd969acdbd7f8892291a44f54e21f8a3707d4
+Description: HP Multi-Point Transport Driver (hpmud) development libraries
+Homepage: http://hplipopensource.com/hplip-web/index.html
+Description-md5: c3037acc090b7dd9e9bb4af0e55b60d8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libhpmud0
+Priority: optional
+Section: libs
+Installed-Size: 280
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HPIJS and HPLIP maintainers <pkg-hpijs-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: hplip
+Version: 3.13.8-1
+Replaces: hplip (<< 3.10.6-3)
+Depends: libc6 (>= 2.15), libsnmp30 (>= 5.7.2~dfsg), libusb-1.0-0 (>= 2:1.0.8)
+Breaks: hplip (<< 3.10.6-3)
+Filename: pool/main/h/hplip/libhpmud0_3.13.8-1_armhf.deb
+Size: 96716
+MD5sum: c2f94bdaaf1139d9ab0b384e05acb21f
+SHA1: c7945f409015ac0be1dd9f7c6c6f22f479c9c475
+SHA256: 05995b81ee713bac45fa6848adf61e0f545fbf3d9c31ad8b2bbc76f01162eac5
+Description: HP Multi-Point Transport Driver (hpmud) run-time libraries
+Homepage: http://hplipopensource.com/hplip-web/index.html
+Description-md5: 1edbc501bdc7dd319ba80065197918f1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: libisc95
 Priority: standard
 Section: libs
@@ -7597,6 +7687,31 @@ Description-md5: 614762c6888cf44fba7adfedc787bb41
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libsane-hpaio
+Priority: optional
+Section: libs
+Installed-Size: 1211
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HPIJS and HPLIP maintainers <pkg-hpijs-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: hplip
+Version: 3.13.8-1
+Replaces: hplip (<< 3.10.6-3), hplip-data (<< 3.10.5-4ubuntu1)
+Depends: libc6 (>= 2.7), libcups2 (>= 1.6.0), libdbus-1-3 (>= 1.0.2), libhpmud0
+Recommends: sane-utils, hplip (= 3.13.8-1)
+Breaks: hplip (<< 3.10.6-3), hplip-data (<< 3.10.5-4ubuntu1)
+Filename: pool/main/h/hplip/libsane-hpaio_3.13.8-1_armhf.deb
+Size: 132324
+MD5sum: 6627374086022176a831e95f6308d0d1
+SHA1: ddba11816d1ba95af4ac21885edc2c73c596ad5e
+SHA256: a9efed5f452d9388a6154f1af980b826eac2728e4d96b9879fa77c201ed5a64e
+Description: HP SANE backend for multi-function peripherals
+Homepage: http://hplipopensource.com/hplip-web/index.html
+Description-md5: 208dafbff3569d9b6dbc7f0b94df7754
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: libubuntu-application-api-mirclient1
 Priority: optional
 Section: libs
@@ -8290,6 +8405,57 @@ Homepage: http://www.postgresql.org/
 Description-md5: 8f99aad87baf6549fb0ed8307a6b1148
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: printer-driver-hpcups
+Priority: optional
+Section: text
+Installed-Size: 1623
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HPIJS and HPLIP maintainers <pkg-hpijs-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: hplip
+Version: 3.13.8-1
+Replaces: hplip-cups (<< 3.11.10-1ubuntu2)
+Depends: libc6 (>= 2.15), libcups2 (>= 1.4.0), libcupsimage2 (>= 1.4.0), libdbus-1-3 (>= 1.0.2), libgcc1 (>= 1:4.4.0), libhpmud0, libjpeg8 (>= 8c), libstdc++6 (>= 4.4.0), cups-filters (>= 1.0.36) | ghostscript-cups, cups (>= 1.4.0) | cupsddk, cups
+Suggests: hplip-doc, hplip (= 3.13.8-1)
+Breaks: hplip-cups (<< 3.11.10-1ubuntu2)
+Filename: pool/main/h/hplip/printer-driver-hpcups_3.13.8-1_armhf.deb
+Size: 302614
+MD5sum: 62b24eb5c7a02043b77c5ee0072ced12
+SHA1: 5edd0c3d2daf71c7ae137efec3535d8f00c88706
+SHA256: 1ac483ca48c9216d94bebda19957d37d1228a6a912fe63f9adbfcb3640614d6b
+Description: HP Linux Printing and Imaging - CUPS Raster driver (hpcups)
+Homepage: http://hplipopensource.com/hplip-web/index.html
+Description-md5: f0d901d77cf3b6cbd910072d6a2c9cd4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: printer-driver-hpijs
+Priority: optional
+Section: text
+Installed-Size: 1702
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HPIJS and HPLIP maintainers <pkg-hpijs-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: hplip
+Version: 3.13.8-1
+Replaces: hpijs (<< 3.11.10-1ubuntu2)
+Depends: libc6 (>= 2.4), libdbus-1-3 (>= 1.0.2), libgcc1 (>= 1:4.4.0), libhpmud0 (= 3.13.8-1), libjpeg8 (>= 8c), libstdc++6 (>= 4.4.0)
+Recommends: ghostscript, cups (>= 1.4.0) | cupsddk | hpijs-ppds, foomatic-filters
+Suggests: hplip, hpijs-ppds, hplip-doc
+Breaks: hpijs (<< 3.11.10-1ubuntu2)
+Filename: pool/main/h/hplip/printer-driver-hpijs_3.13.8-1_armhf.deb
+Size: 330142
+MD5sum: 7a5e8934a079990fa22f11af35301a7b
+SHA1: 68c7fc4c8f853b4e519ffb82040e007052d55b66
+SHA256: 4c2bc05effab350903d9915309005ceab61f5607463873310e67a7bc173920c3
+Description: HP Linux Printing and Imaging - printer driver (hpijs)
+Homepage: http://hplipopensource.com/hplip-web/index.html
+Description-md5: 0abde1720bd76a49ce5f50ce9548ba9b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: print-server
 
 Package: pulseaudio
 Priority: optional
