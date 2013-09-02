@@ -7525,6 +7525,71 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: oem-config
+Priority: extra
+Section: admin
+Installed-Size: 265
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.16
+Replaces: oem-config-gtk (<< 1.54.13), oem-config-kde (<< 1.54.13), oem-config-keyboard, oem-config-locale, oem-config-timezone
+Depends: debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), ubiquity (= 2.15.16), oem-config-frontend-2.15.16
+Conflicts: oem-config-keyboard, oem-config-locale, oem-config-timezone
+Filename: pool/main/u/ubiquity/oem-config_2.15.16_all.deb
+Size: 13904
+MD5sum: ea3bea98950d2114611ed3255abd9906
+SHA1: 36859f3e55b536bb49ed3e1a5c559f15797554d1
+SHA256: 41f273527b357dcaa9cb01a1fb947a4684245dbb840e1e81ab1d20419b5eb0b8
+Description: Perform end-user configuration after initial OEM installation
+Description-md5: 9380d07ec19991f384138c016b142ce0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: oem-config-debconf
+Priority: extra
+Section: admin
+Installed-Size: 185
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.16
+Provides: oem-config-frontend-2.15.16
+Depends: sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), oem-config (= 2.15.16), ubiquity-frontend-debconf (= 2.15.16)
+Filename: pool/main/u/ubiquity/oem-config-debconf_2.15.16_all.deb
+Size: 2956
+MD5sum: af97ff6cff89f25052ee3681ab4a9511
+SHA1: ad5160141f3b40b63f365a218248308bc66e01fd
+SHA256: cd04a9035b499aefbccb3c28d945f9b2bbd8013171fa754a583c5758317a6433
+Description: debconf frontend for end-user post-OEM-install configuration
+Description-md5: 0b339016cd37fb3df25a4085c60673e9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: oem-config-gtk
+Priority: extra
+Section: admin
+Installed-Size: 196
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.16
+Replaces: oem-config (<< 1.0)
+Provides: oem-config-frontend-2.15.16
+Depends: oem-config (= 2.15.16), ubiquity-frontend-gtk (= 2.15.16), python3-aptdaemon.gtk3widgets, aptdaemon
+Filename: pool/main/u/ubiquity/oem-config-gtk_2.15.16_all.deb
+Size: 4180
+MD5sum: 43aabeb91ab227f14c0062b02cf78977
+SHA1: 2a4e194faf61e3400b6cef9e026c48c5716d3a68
+SHA256: e494c5dd69b7f41c1ffe4b0aac186dcb8329d7b857119034c4bc16c88864eee1
+Description: GTK+ frontend for end-user post-OEM-install configuration
+Description-md5: 8709c78036a09529b74b507a6299fd60
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: orbit2
 Priority: optional
 Section: devel
@@ -8089,6 +8154,99 @@ Description-md5: 19d07746abc740ae906d1c40fe4fb3a7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: ubiquity
+Priority: optional
+Section: admin
+Installed-Size: 15267
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: i386
+Version: 2.15.16
+Replaces: espresso, espresso-grub, espresso-kbd-chooser, espresso-keyboard-setup, espresso-locale, espresso-timezone, espresso-utils, espresso-yaboot, partman, ubiquity-frontend-gtk (<< 2.3.8), ubuntu-express, user-setup (<< 0.05ubuntu6)
+Depends: libc6 (>= 2.15), libdebconfclient0 (>= 0.145), libdebian-installer4 (>= 0.87ubuntu2), libiw30 (>= 30~pre1), libparted0debian1 (>= 2.2-1), debconf (>= 1.5.43), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python3 (>= 3.2.3-3~), ubiquity-frontend-2.15.16, ubiquity-artwork-2.15.16, laptop-detect, lsb-release, ubiquity-casper, python3-apt (>= 0.7.100.3~), console-setup (>= 1.70ubuntu7), iso-codes, passwd, adduser, os-prober, rdate, ntfs-3g (>= 1:2011.1.15AR.4+2011.4.12-1) | ntfsprogs, ecryptfs-utils, cryptsetup, policykit-1, python3-pyicu (>= 1.0), reiserfsprogs, language-selector-common (>= 0.4.16), archdetect-deb, dpkg-repack, apt-clone, wget, grub-common, dbus-x11
+Recommends: grub-pc | grub | grub-efi, dmraid, btrfs-tools, ubuntu-drivers-common, lvm2
+Conflicts: espresso, espresso-grub, espresso-kbd-chooser, espresso-keyboard-setup, espresso-locale, espresso-timezone, espresso-utils, espresso-yaboot, partman, ubuntu-express, user-setup (<< 0.05ubuntu6)
+Filename: pool/main/u/ubiquity/ubiquity_2.15.16_i386.deb
+Size: 4880398
+MD5sum: 551bec7d34aaf80b93d968c274dbe9e2
+SHA1: c837f5652506c48d2e3557097920687d00933bae
+SHA256: 2ad43b0465e62896d501b21450947953d71c526bedf9f56447a348a68955b841
+Description: Ubuntu live CD installer
+Description-md5: a02e939502ca1f257871281bbc51e7e1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-dvd-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: ubiquity-frontend-debconf
+Priority: optional
+Section: admin
+Installed-Size: 2656
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: i386
+Source: ubiquity
+Version: 2.15.16
+Provides: ubiquity-frontend-2.15.16
+Depends: python3 (>= 3.2.3-3~), ubiquity (= 2.15.16), debconf (>= 1.5.24ubuntu2) | cdebconf, bogl-bterm (>= 0.1.18-2ubuntu4), tasksel
+Filename: pool/main/u/ubiquity/ubiquity-frontend-debconf_2.15.16_i386.deb
+Size: 444958
+MD5sum: ab1700d3360fa839183a591644bc69b2
+SHA1: 5fd51978a6e67e2f31f2cb2df5a28d1b9e497fe0
+SHA256: 5606d18dead0561eb1a024a2ad8bbc5d6c7fa8b99e6d76d6a835ef09ed29f5d9
+Description: debconf frontend for the Ubiquity live installer
+Description-md5: fa1dbae8b89fc2e16547475097735858
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: edubuntu-dvd-live
+
+Package: ubiquity-frontend-gtk
+Priority: optional
+Section: admin
+Installed-Size: 851
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: i386
+Source: ubiquity
+Version: 2.15.16
+Replaces: espresso-frontend-gtk, ubiquity (<< 2.4.3), ubuntu-express-frontend-gtk
+Provides: indicator-renderer, ubiquity-frontend-2.15.16
+Depends: libc6 (>= 2.1.3), libcairo2 (>= 1.2.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.0.0), libido3-0.1-0 (>= 13.10.0daily13.06.19), libindicator3-7 (>= 0.4.90), libx11-6, python3 (>= 3.2.3-3~), ubiquity (= 2.15.16), python3-dbus, gir1.2-gtk-3.0, gir1.2-soup-2.4, gir1.2-vte-2.90, gir1.2-webkit-3.0, iso-codes, metacity | xfwm4 | matchbox-window-manager | lubuntu-default-settings | openbox | gnome-shell, gir1.2-xkl-1.0, gir1.2-timezonemap-1.0, gir1.2-gnomekeyring-1.0, python3-gi, python3-cairo, python3-gi-cairo, gir1.2-appindicator3-0.1, python3-oauthlib, busybox-static | busybox
+Suggests: gnome-control-center | feh
+Conflicts: espresso-frontend-gtk, ubiquity (<< 2.4.3), ubuntu-express-frontend-gtk
+Filename: pool/main/u/ubiquity/ubiquity-frontend-gtk_2.15.16_i386.deb
+Size: 92030
+MD5sum: 2898f84679e27085934d0accbdc67740
+SHA1: c8dea91243f39b49d75ccfefb428734be20e990b
+SHA256: 24aa81481495718c103d7656e73d863a8310bbf5076076418a7a0bb7391a028b
+Description: GTK+ frontend for Ubiquity live installer
+Description-md5: 44de7bf97742fb6f9f2aaa099078ef33
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, ubuntu-usb-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: ubiquity-ubuntu-artwork
+Priority: optional
+Section: admin
+Installed-Size: 757
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.16
+Replaces: espresso-ubuntu-artwork, espresso-ubuntu-doc, ubiquity (<< 1.13.0), ubiquity-ubuntu-doc, ubuntu-express-ubuntu-artwork, ubuntu-express-ubuntu-doc
+Provides: ubiquity-artwork-2.15.16
+Conflicts: espresso-ubuntu-artwork, espresso-ubuntu-doc, ubiquity-ubuntu-doc, ubuntu-express-ubuntu-artwork, ubuntu-express-ubuntu-doc
+Filename: pool/main/u/ubiquity/ubiquity-ubuntu-artwork_2.15.16_all.deb
+Size: 523178
+MD5sum: e36d2badafcbffdb8ca221a988539d7a
+SHA1: c42f48bbad5fb09ed7afbab300693eef0da3f5e5
+SHA256: 93384246e5a8e006a33cbcf2e7bf70a1724226453c8e79c7b680cd341db09ebf
+Description: Ubuntu artwork for Ubiquity live installer
+Description-md5: a7bbb2b9a8b2a3fbc7110f5a8d336a36
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-dvd-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
 
 Package: ubuntu-settings
 Priority: optional
