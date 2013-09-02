@@ -192,6 +192,7 @@ Binary: libboost1.53-dbg, libboost1.53-dev, libboost1.53-tools-dev, libboost1.53
  libboost-serialization1.53-dev, libboost-signals1.53.0, libboost-signals1.53-dev, libboost-system1.53.0, libboost-system1.53-dev, libboost-test1.53.0, libboost-test1.53-dev, libboost-thread1.53.0, libboost-thread1.53-dev, libboost-timer1.53.0, libboost-timer1.53-dev, libboost-wave1.53.0,
  libboost-wave1.53-dev
 Version: 1.53.0-6+exp3ubuntu1
+Priority: optional
 Section: misc
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Boost Team <pkg-boost-devel@lists.alioth.debian.org>
@@ -306,6 +307,33 @@ Checksums-Sha256:
  0994797182eb828867eee81cccc79480bd2946c99304266bc427b902cf91dab0 11301124 bzr_2.6.0.orig.tar.gz
  bf6b9780d1395a358465bb3677dca11998ca3aa9f3c91755e8224d5ed4ff0571 45457 bzr_2.6.0-1ubuntu1.debian.tar.gz
 Testsuite: autopkgtest
+
+Package: click
+Binary: click, click-dev, python3-click, click-doc, packagekit-plugin-click
+Version: 0.4.1
+Section: admin
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Build-Depends: debhelper (>= 9~), dh-autoreconf, autopoint (>= 0.18.1), intltool, python3 (>= 3.2), python3-all, python3-setuptools, python3-debian, python3 (>= 3.3) | python3-mock, pep8, pyflakes, python3-sphinx, libglib2.0-dev (>= 2.28), libjson-glib-dev (>= 0.10), libpackagekit-glib2-dev (>= 0.7.2)
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/c/click
+Files:
+ 76549b47ee37122e144e739c4e12a98e 1955 click_0.4.1.dsc
+ ed2b34fd317936afd05c04c232b7bc22 61132 click_0.4.1.tar.gz
+Vcs-Bzr: http://bazaar.launchpad.net/+branch/click
+Package-List: 
+ click deb admin optional
+ click-dev deb admin optional
+ click-doc deb doc optional
+ packagekit-plugin-click deb admin optional
+ python3-click deb python optional
+Checksums-Sha1:
+ 8917f97295c9b65620665f169ced94d9c5213751 1955 click_0.4.1.dsc
+ db521d0ed5e56cf942a387ee159fd896ddda8282 61132 click_0.4.1.tar.gz
+Checksums-Sha256:
+ b270d62788610f90c908dd92f4d05329480ea9a1e1faddd6d1e804169f2dc76a 1955 click_0.4.1.dsc
+ f8c7e3d43ff908b52cfe8a61d28cc3557dac520ff291f9ff8b5ebbfafd742106 61132 click_0.4.1.tar.gz
 
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
@@ -440,35 +468,6 @@ Checksums-Sha256:
  61c39856bbc7cee082f530e22f65316e4a696b4690576c4e23b5efb957993e3a 2874 gtkhtml4.0_4.6.6-1.dsc
  145d23bbe729ff4ee7e7027bb5ff405b34822271327fdd81fe913134831374cd 1060284 gtkhtml4.0_4.6.6.orig.tar.xz
  36ae899ffce5888e8fdf1f06cefbb364ec0dd887fa26907dd5a88cb60b72f958 12673 gtkhtml4.0_4.6.6-1.debian.tar.gz
-
-Package: indicator-power
-Binary: indicator-power
-Version: 12.10.6+13.10.20130830.2-0ubuntu1
-Priority: optional
-Section: gnome
-Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: debhelper (>= 9), dh-autoreconf, autopoint, intltool, libgtest-dev, libglib2.0-dev (>= 2.36), libgudev-1.0-dev, python
-Architecture: any
-Standards-Version: 3.9.2
-Format: 1.0
-Directory: pool/main/i/indicator-power
-Files:
- c24cd190a16326371b0caad8a46f514c 2230 indicator-power_12.10.6+13.10.20130830.2-0ubuntu1.dsc
- ad8527d56ee531ecac936ed49fb5dc54 49794 indicator-power_12.10.6+13.10.20130830.2.orig.tar.gz
- b3672f6632f113ed9f9889db8d74e8de 5960 indicator-power_12.10.6+13.10.20130830.2-0ubuntu1.diff.gz
-Homepage: https://launchpad.net/indicator-power
-Vcs-Browser: https://bazaar.launchpad.net/~indicator-applet-developers/indicator-power/trunk.13.04/files
-Vcs-Bzr: https://code.launchpad.net/~indicator-applet-developers/indicator-power/trunk.13.04
-Package-List: 
- indicator-power deb gnome optional
-Checksums-Sha1:
- dd28360e3eefde79e22f6ffbbf2418e903746635 2230 indicator-power_12.10.6+13.10.20130830.2-0ubuntu1.dsc
- 2cd6e3529192feb6bcb3844e7c20122d9346bdc4 49794 indicator-power_12.10.6+13.10.20130830.2.orig.tar.gz
- f687b29317fb143ff541d8cf44e921ea9f2c4f79 5960 indicator-power_12.10.6+13.10.20130830.2-0ubuntu1.diff.gz
-Checksums-Sha256:
- 9d24746ab5a43d540f286ae2c2c5de4f3947d76fd738895f762f1b41517eeffb 2230 indicator-power_12.10.6+13.10.20130830.2-0ubuntu1.dsc
- 8f0157998cc068bf499f248f016e4b39cde906696536843b7e49e23942efbfd8 49794 indicator-power_12.10.6+13.10.20130830.2.orig.tar.gz
- e3059d2745d5ebed370e206d3fac0b3ed2959fa8f6423686f9f3ae05f6b50b50 5960 indicator-power_12.10.6+13.10.20130830.2-0ubuntu1.diff.gz
 
 Package: jackd2
 Binary: jackd2, libjack-jackd2-0, jackd2-firewire, libjack-jackd2-dev
@@ -6918,36 +6917,6 @@ Checksums-Sha256:
  28a533e181009308722e8b3c51f1ea7224ab910c380ac1a86f07118667602dd8 15815421 postgresql-9.1_9.1.9.orig.tar.bz2
  759ffb0cba6e8b6a386f5f29cd6276df4db21e93d2ee4ab183e5673c8c7d62fa 41134 postgresql-9.1_9.1.9-3.debian.tar.gz
 Testsuite: autopkgtest
-
-Package: pyppd
-Binary: pyppd
-Version: 1.0.0-3ubuntu1
-Priority: extra
-Section: python
-Maintainer: Debian Printing Group <debian-printing@lists.debian.org>
-Build-Depends: debhelper (>= 7.0.50~), python3-all
-Architecture: all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/main/p/pyppd
-Files:
- 858f2c03bcf3867694b5a3231c019e2b 1259 pyppd_1.0.0-3ubuntu1.dsc
- c006ea654f64df96a6b1dd44414a74dc 14226 pyppd_1.0.0.orig.tar.gz
- 0107d42c22e5fffbfdfa35e087b81ffe 6842 pyppd_1.0.0-3ubuntu1.debian.tar.gz
-Uploaders: Didier Raboud <odyx@debian.org>
-Homepage: http://pypi.python.org/pypi/pyppd
-Vcs-Browser: http://git.debian.org/?p=collab-maint/pyppd.git
-Vcs-Git: git://git.debian.org/collab-maint/pyppd.git
-Package-List: 
- pyppd deb python extra
-Checksums-Sha1:
- 9ba3697d0c5030a023db84a467cfe1f090742feb 1259 pyppd_1.0.0-3ubuntu1.dsc
- 335eab2aa85fb7e5831fed3bb02c08515a0542e3 14226 pyppd_1.0.0.orig.tar.gz
- d77a73191ec0026d15844424a7bc9cecd819c523 6842 pyppd_1.0.0-3ubuntu1.debian.tar.gz
-Checksums-Sha256:
- e22a97a53d09dc6ae3e687d389b796db25caaf5001462958616c8702677ed512 1259 pyppd_1.0.0-3ubuntu1.dsc
- 401ea86effe5dc099ee579b7a83ff8da9d6e9b1885a3e8a53d8cba79cd9fc51a 14226 pyppd_1.0.0.orig.tar.gz
- 35708bc062f785d5579fe73d1cf5c5a268f34a655b81240a58537c273e02ae87 6842 pyppd_1.0.0-3ubuntu1.debian.tar.gz
 
 Package: qtlocation-opensource-src
 Binary: libqt5location5, libqt5location5-plugins, qtdeclarative5-qtlocation-plugin, qtlocation5-dev, qtlocation5-private-dev, qtlocation5-examples, qtlocation5-dbg
