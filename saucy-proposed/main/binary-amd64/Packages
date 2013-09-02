@@ -254,72 +254,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: click
-Priority: optional
-Section: admin
-Installed-Size: 85
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Architecture: amd64
-Version: 0.4.1
-Replaces: click-package
-Provides: click-package
-Depends: libc6 (>= 2.3.4), python3 (>= 3.2), python3-click (>= 0.4.1), python3-click (<< 0.4.1.1), adduser
-Recommends: click-apparmor
-Conflicts: click-package
-Filename: pool/main/c/click/click_0.4.1_amd64.deb
-Size: 9310
-MD5sum: 84644f5a05ead4079c329b6371159992
-SHA1: e4b3c444691bda0e098b04118511f3c9ac0b9173
-SHA256: b24a5a320fa35efac139ab0133831c12620b1578057b0b8a087a6ded28273861
-Description: Click packages
-Description-md5: 1f88be1eec9a52975d22b0103f98879a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: click-dev
-Priority: optional
-Section: admin
-Installed-Size: 73
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Architecture: amd64
-Source: click
-Version: 0.4.1
-Depends: perl, python3-click (= 0.4.1)
-Filename: pool/main/c/click/click-dev_0.4.1_amd64.deb
-Size: 7284
-MD5sum: e5146e4d779b732f156569365751281e
-SHA1: 6ebaff9a561b14068edd2a08492e40e24ceef8d9
-SHA256: 396607c23825e4dca1fa87a2db5e77fb63174e4a2511194bc2867084a9a1580d
-Description: build Click packages
-Description-md5: 524a787d5934e296c23fd4c9d590ebf1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: click-doc
-Priority: optional
-Section: doc
-Installed-Size: 159
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Architecture: all
-Source: click
-Version: 0.4.1
-Replaces: click-package-doc
-Provides: click-package-doc
-Depends: libjs-sphinxdoc (>= 1.0)
-Conflicts: click-package-doc
-Filename: pool/main/c/click/click-doc_0.4.1_all.deb
-Size: 40778
-MD5sum: 66353d647101dbe758eb435c19509e94
-SHA1: 43b11e3dfa24bf8d2143d70734da4a17f84f8fac
-SHA256: 76d2d41c3c796c8dee8c618af2792e6a2258b1a815b6f4b0f495199ff6ea7b91
-Description: Click packages (documentation)
-Description-md5: 60608bb1e29a4ab375e8538c009ecb38
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: dnsutils
 Priority: standard
 Section: net
@@ -8738,25 +8672,66 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: python3-click
+Package: python-gobject
 Priority: optional
 Section: python
-Installed-Size: 209
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Architecture: amd64
-Source: click
-Version: 0.4.1
-Replaces: python3-click-package
-Provides: python3-click-package
-Depends: python3 (>= 3.2.3-3~), python3-debian
-Conflicts: python3-click-package
-Filename: pool/main/c/click/python3-click_0.4.1_amd64.deb
-Size: 33128
-MD5sum: e4a7832bcd6736bf74ae0878dd63fa78
-SHA1: 5f3ad5c0b583c11346502713999bd06121584623
-SHA256: be7f454a00697fd462ce1547e10bf52346436d439b83afec318e7e62c58f084f
-Description: Click packages (Python 3 interface)
-Description-md5: a55b8833aad665015cec861ba580ce8a
+Installed-Size: 40
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: all
+Source: pygobject
+Version: 3.9.91-0ubuntu1
+Depends: python-gi (>= 3.9.91-0ubuntu1), python-gobject-2
+Filename: pool/main/p/pygobject/python-gobject_3.9.91-0ubuntu1_all.deb
+Size: 2480
+MD5sum: e208a87e4dbe0cedfe6a7a492a594b7d
+SHA1: 074d15a359fa15e7fcfe0c741ee44a660dbb4251
+SHA256: 6b8e3f036a5a4bc26ef6e86a908c4eeb12eb5bb960effbdfe9e09cb6d279f9b8
+Description: Python 2.x bindings for GObject - transitional package
+Description-md5: 0972cedec40e0869495e1025aa320af1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: python-gobject-dbg
+Priority: extra
+Section: python
+Installed-Size: 40
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: all
+Source: pygobject
+Version: 3.9.91-0ubuntu1
+Depends: python-gi-dbg (>= 3.9.91-0ubuntu1), python-gobject-2-dbg
+Filename: pool/main/p/pygobject/python-gobject-dbg_3.9.91-0ubuntu1_all.deb
+Size: 2612
+MD5sum: c000572083716d5f8a8bfa4b40434680
+SHA1: 4b6a9ba64e4e620229e4293891c4622e1acb0492
+SHA256: cde05b075bdea5a8d04aa829b4022a43ca94d87b40cebbd8c5a3b6c4fd08526a
+Description: Python 2.x debugging modules for GObject - transitional package
+Description-md5: 954e52c58f6a715d93f0bb39d354dcd4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: python-gobject-dev
+Priority: optional
+Section: python
+Installed-Size: 40
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: all
+Source: pygobject
+Version: 3.9.91-0ubuntu1
+Depends: python-gi-dev (>= 3.9.91-0ubuntu1), python-gi-dev (<< 3.9.91-0ubuntu1.1~), python-gobject-2-dev
+Filename: pool/main/p/pygobject/python-gobject-dev_3.9.91-0ubuntu1_all.deb
+Size: 2500
+MD5sum: 134f03d6e5459f56bf7198f40403a534
+SHA1: 859ad2198b409a9befc4781f5642246d8e0ff194
+SHA256: b9a97674bde03cc062c1dd00ac3cde042c484e826f0d14dad96d2f2dcff64558
+Description: Python 2.x development headers for GObject - transitional package
+Description-md5: 5e92564f564cce4acd6aa4f0e7329881
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -9074,47 +9049,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
-
-Package: ubuntu-settings
-Priority: optional
-Section: x11
-Installed-Size: 51
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: all
-Version: 13.10.4
-Replaces: ubuntu-default-settings (<= 12.10.1)
-Depends: dconf-gsettings-backend | gsettings-backend, libglib2.0-bin
-Conflicts: ubuntu-default-settings (<= 12.10.1)
-Filename: pool/main/u/ubuntu-settings/ubuntu-settings_13.10.4_all.deb
-Size: 4584
-MD5sum: 96b78932bc525327c1369b63c6f5f859
-SHA1: 36041d09e87ec20aaeb001bf56b47345327bdd62
-SHA256: ce94bc159ca4714fc48f3408927c1dfef6a37fac70e55f2f78ff5e77d7500fb8
-Description: default settings for the Ubuntu desktop
-Description-md5: d323aeeccb784a54b1c845d23dcf7ea6
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntustudio-desktop
-
-Package: ubuntu-touch-settings
-Priority: optional
-Section: x11
-Installed-Size: 36
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: all
-Source: ubuntu-settings
-Version: 13.10.4
-Depends: dconf-gsettings-backend | gsettings-backend, libglib2.0-bin
-Filename: pool/main/u/ubuntu-settings/ubuntu-touch-settings_13.10.4_all.deb
-Size: 3078
-MD5sum: 80b42ee7994e0471f485e3ac0200129c
-SHA1: 09ad839cfc2353d221fa4748069d565f02a82311
-SHA256: 6a869c043d526dec8066ace2345935505d36fc1b0a1e7c475ed6b94f3065bbbb
-Description: default settings for Ubuntu Touch
-Description-md5: 4133be4d518d0733744b36407ddc7134
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
 
 Package: unity-scope-home
 Priority: optional

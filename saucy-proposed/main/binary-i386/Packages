@@ -254,72 +254,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: click
-Priority: optional
-Section: admin
-Installed-Size: 85
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Architecture: i386
-Version: 0.4.1
-Replaces: click-package
-Provides: click-package
-Depends: libc6 (>= 2.3.4), python3 (>= 3.2), python3-click (>= 0.4.1), python3-click (<< 0.4.1.1), adduser
-Recommends: click-apparmor
-Conflicts: click-package
-Filename: pool/main/c/click/click_0.4.1_i386.deb
-Size: 9196
-MD5sum: 967c7de48379d198045d30fb62f2552c
-SHA1: d6ba26a41ec26db22bb3d4401b07ae90511681f8
-SHA256: f0336c2f68c771c1edbae1732770bad331c574a878b83bcfbefaebf04d3bde47
-Description: Click packages
-Description-md5: 1f88be1eec9a52975d22b0103f98879a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: click-dev
-Priority: optional
-Section: admin
-Installed-Size: 73
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Architecture: i386
-Source: click
-Version: 0.4.1
-Depends: perl, python3-click (= 0.4.1)
-Filename: pool/main/c/click/click-dev_0.4.1_i386.deb
-Size: 7268
-MD5sum: 44335bf684efd0b6ae5866dbb1b932b9
-SHA1: b7e4663e642eafd72cc66a796145ba25ad453d61
-SHA256: 7a67b9e72253a6c64372f0e543d7e56e1830b2702947e25c261f3b0e7f6c7ac3
-Description: build Click packages
-Description-md5: 524a787d5934e296c23fd4c9d590ebf1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: click-doc
-Priority: optional
-Section: doc
-Installed-Size: 159
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Architecture: all
-Source: click
-Version: 0.4.1
-Replaces: click-package-doc
-Provides: click-package-doc
-Depends: libjs-sphinxdoc (>= 1.0)
-Conflicts: click-package-doc
-Filename: pool/main/c/click/click-doc_0.4.1_all.deb
-Size: 40778
-MD5sum: 66353d647101dbe758eb435c19509e94
-SHA1: 43b11e3dfa24bf8d2143d70734da4a17f84f8fac
-SHA256: 76d2d41c3c796c8dee8c618af2792e6a2258b1a815b6f4b0f495199ff6ea7b91
-Description: Click packages (documentation)
-Description-md5: 60608bb1e29a4ab375e8538c009ecb38
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: dnsutils
 Priority: standard
 Section: net
@@ -8786,25 +8720,238 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: python3-click
+Package: python-gi
 Priority: optional
 Section: python
-Installed-Size: 209
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Installed-Size: 757
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
 Architecture: i386
-Source: click
-Version: 0.4.1
-Replaces: python3-click-package
-Provides: python3-click-package
-Depends: python3 (>= 3.2.3-3~), python3-debian
-Conflicts: python3-click-package
-Filename: pool/main/c/click/python3-click_0.4.1_i386.deb
-Size: 33328
-MD5sum: 7e4706c14e4254e304d9cc980a38b38c
-SHA1: 30e688224b646af1790a613a444af010fb00c85b
-SHA256: 980f465a2825cacf1280f02aaa5fe16dafcb6de04c35f159846989c841066de2
-Description: Click packages (Python 3 interface)
-Description-md5: a55b8833aad665015cec861ba580ce8a
+Source: pygobject
+Version: 3.9.91-0ubuntu1
+Replaces: python-gobject (<< 3.0.2-4)
+Provides: python2.7-gi
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), libc6 (>= 2.4), libgirepository-1.0-1 (>= 1.33.10), libglib2.0-0 (>= 2.35.9), gir1.2-glib-2.0 (>= 1.34.2)
+Pre-Depends: multiarch-support
+Suggests: python-gi-cairo
+Breaks: python-aptdaemon (<< 1.0), python-gobject (<< 3.0.2-4), python-nautilus (<= 1.1-1), software-center (<= 5.6.0-0ubuntu2)
+Filename: pool/main/p/pygobject/python-gi_3.9.91-0ubuntu1_i386.deb
+Size: 232910
+MD5sum: 064858e92026b1d21b39558dc851cdad
+SHA1: 02b80c8288df5b9cc3f815ffe6b6c1fb2f921d1a
+SHA256: 76534c4bb5922e16c8d42e266d80a624f50869b93d52ef4eb5a0f1c1b69d6f92
+Description: Python 2.x bindings for gobject-introspection libraries
+Description-md5: 8d2225b2f817f42645ac3c6bd82fee0f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: python-gi-cairo
+Priority: optional
+Section: python
+Installed-Size: 77
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: i386
+Source: pygobject
+Version: 3.9.91-0ubuntu1
+Replaces: python-gobject-cairo
+Provides: python-gobject-cairo
+Depends: python (>= 2.7), python (<< 2.8), libc6 (>= 2.3.6-6~), libcairo2 (>= 1.2.4), libglib2.0-0 (>= 2.35.9), python-gi (= 3.9.91-0ubuntu1), python-cairo
+Conflicts: python-gobject-cairo
+Filename: pool/main/p/pygobject/python-gi-cairo_3.9.91-0ubuntu1_i386.deb
+Size: 5750
+MD5sum: f5751ea7bc265d43b3609ce762c31aa5
+SHA1: bfde276b3663dfcd0e6a53aeffd50a258fe55c74
+SHA256: f84c36b24a873d2d7a35b1fb65459aa15fece0c741183d092fbdf2397e8c1c6a
+Description: Python Cairo bindings for the GObject library
+Description-md5: e531132cde7475ea3077c4d44b37a39d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: python-gi-dbg
+Priority: extra
+Section: debug
+Installed-Size: 858
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: i386
+Source: pygobject
+Version: 3.9.91-0ubuntu1
+Replaces: python-gobject-dbg (<< 3.0.2-4)
+Depends: python-dbg (>= 2.7), python-dbg (<< 2.8), libc6 (>= 2.4), libcairo2 (>= 1.2.4), libgirepository-1.0-1 (>= 1.33.10), libglib2.0-0 (>= 2.35.9), python-gi (= 3.9.91-0ubuntu1)
+Pre-Depends: multiarch-support
+Breaks: python-gobject-dbg (<< 3.0.2-4)
+Filename: pool/main/p/pygobject/python-gi-dbg_3.9.91-0ubuntu1_i386.deb
+Size: 504268
+MD5sum: 35892c0e366351d3ea0eeda3b7005f0a
+SHA1: 464382692855181b73e74491fa9f5f91f54037c8
+SHA256: 3b4f094526bd57632d8d8739a2fce81db5281b6396470db72516ff37a4d2aed2
+Description: Python bindings for the GObject library (debug extension)
+Description-md5: cc6cbe7a432fd5c4af8daff83f2f824f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: python-gi-dev
+Priority: optional
+Section: python
+Installed-Size: 85
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: i386
+Source: pygobject
+Version: 3.9.91-0ubuntu1
+Replaces: python-gobject-dev (<< 3.0.2-4)
+Depends: python-gi (= 3.9.91-0ubuntu1), python3-gi (= 3.9.91-0ubuntu1), libglib2.0-dev (>= 2.35.9), libffi-dev (>= 3.0.5)
+Breaks: python-gobject-dev (<< 3.0.2-4)
+Filename: pool/main/p/pygobject/python-gi-dev_3.9.91-0ubuntu1_i386.deb
+Size: 8838
+MD5sum: fa5cb8bd876664401753e3ca6fe33832
+SHA1: 8fe4e37157c56b15ca45211d93345752355d9015
+SHA256: 90c9809fc199a1607210f4176f0d57cfa0044612f1863e07507bd10c38080363
+Description: development headers for GObject Python bindings
+Description-md5: f5f0bb4fb02f0013d4124b7ce2dabd49
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: python-gobject
+Priority: optional
+Section: python
+Installed-Size: 40
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: all
+Source: pygobject
+Version: 3.9.91-0ubuntu1
+Depends: python-gi (>= 3.9.91-0ubuntu1), python-gobject-2
+Filename: pool/main/p/pygobject/python-gobject_3.9.91-0ubuntu1_all.deb
+Size: 2480
+MD5sum: e208a87e4dbe0cedfe6a7a492a594b7d
+SHA1: 074d15a359fa15e7fcfe0c741ee44a660dbb4251
+SHA256: 6b8e3f036a5a4bc26ef6e86a908c4eeb12eb5bb960effbdfe9e09cb6d279f9b8
+Description: Python 2.x bindings for GObject - transitional package
+Description-md5: 0972cedec40e0869495e1025aa320af1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: python-gobject-dbg
+Priority: extra
+Section: python
+Installed-Size: 40
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: all
+Source: pygobject
+Version: 3.9.91-0ubuntu1
+Depends: python-gi-dbg (>= 3.9.91-0ubuntu1), python-gobject-2-dbg
+Filename: pool/main/p/pygobject/python-gobject-dbg_3.9.91-0ubuntu1_all.deb
+Size: 2612
+MD5sum: c000572083716d5f8a8bfa4b40434680
+SHA1: 4b6a9ba64e4e620229e4293891c4622e1acb0492
+SHA256: cde05b075bdea5a8d04aa829b4022a43ca94d87b40cebbd8c5a3b6c4fd08526a
+Description: Python 2.x debugging modules for GObject - transitional package
+Description-md5: 954e52c58f6a715d93f0bb39d354dcd4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: python-gobject-dev
+Priority: optional
+Section: python
+Installed-Size: 40
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: all
+Source: pygobject
+Version: 3.9.91-0ubuntu1
+Depends: python-gi-dev (>= 3.9.91-0ubuntu1), python-gi-dev (<< 3.9.91-0ubuntu1.1~), python-gobject-2-dev
+Filename: pool/main/p/pygobject/python-gobject-dev_3.9.91-0ubuntu1_all.deb
+Size: 2500
+MD5sum: 134f03d6e5459f56bf7198f40403a534
+SHA1: 859ad2198b409a9befc4781f5642246d8e0ff194
+SHA256: b9a97674bde03cc062c1dd00ac3cde042c484e826f0d14dad96d2f2dcff64558
+Description: Python 2.x development headers for GObject - transitional package
+Description-md5: 5e92564f564cce4acd6aa4f0e7329881
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: python3-gi
+Priority: standard
+Section: python
+Installed-Size: 670
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: i386
+Source: pygobject
+Version: 3.9.91-0ubuntu1
+Replaces: python3-gobject
+Provides: python3-gobject
+Depends: python3 (>= 3.3), python3 (<< 3.4), libc6 (>= 2.4), libgirepository-1.0-1 (>= 1.33.10), libglib2.0-0 (>= 2.35.9), gir1.2-glib-2.0 (>= 1.35.9)
+Pre-Depends: multiarch-support
+Conflicts: python3-gobject
+Filename: pool/main/p/pygobject/python3-gi_3.9.91-0ubuntu1_i386.deb
+Size: 197408
+MD5sum: f1ab8fffc1781db4949c67d7061b95d9
+SHA1: 0270ec0054b0c1aa6e01287216143292ee3d9bef
+SHA256: 3259a06fe6fb1aa95b011e3a3d49ac79e54daae69efa71a593107fe09558de6d
+Description: Python 3 bindings for gobject-introspection libraries
+Description-md5: f0850471c776a975236399e3050363aa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: python3-gi-cairo
+Priority: optional
+Section: python
+Installed-Size: 66
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: i386
+Source: pygobject
+Version: 3.9.91-0ubuntu1
+Depends: python3 (>= 3.3), python3 (<< 3.4), libc6 (>= 2.3.6-6~), libcairo2 (>= 1.10.0), libglib2.0-0 (>= 2.35.9), python3-gi (= 3.9.91-0ubuntu1), python3-cairo (>= 1.10.0+dfsg-3~exp2)
+Filename: pool/main/p/pygobject/python3-gi-cairo_3.9.91-0ubuntu1_i386.deb
+Size: 6030
+MD5sum: f54f0610a853510c0fcde1899ed35f57
+SHA1: 266b2d843262aa747c1e50219dc56354a7f3fad6
+SHA256: 9d28aa7c39337d88fda581decbd95c98f3349b44fa801914e80ecb15d61c3527
+Description: Python 3 Cairo bindings for the GObject library
+Description-md5: 9b3c3678114febdf17db503bab5e0915
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: python3-gi-dbg
+Priority: extra
+Section: debug
+Installed-Size: 851
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: i386
+Source: pygobject
+Version: 3.9.91-0ubuntu1
+Replaces: python3-gobject-dbg
+Provides: python3-gobject-dbg
+Depends: python3-dbg (<< 3.4), python3-dbg (>= 3.3), libc6 (>= 2.4), libcairo2 (>= 1.10.0), libgirepository-1.0-1 (>= 1.33.10), libglib2.0-0 (>= 2.35.9), python3-gi (= 3.9.91-0ubuntu1)
+Pre-Depends: multiarch-support
+Conflicts: python3-gobject-dbg
+Filename: pool/main/p/pygobject/python3-gi-dbg_3.9.91-0ubuntu1_i386.deb
+Size: 489594
+MD5sum: 60cd292bb4d745c8a675b16df8212b39
+SHA1: 91c2dbe68f5728f2e08f63463fe73c73e5e8adab
+SHA256: b52e6088b0d3cf7123511e45e20067aaaceb93722cfe7c41832f65245fe10a72
+Description: Python 3 bindings for gobject-introspection libraries (debug extension)
+Description-md5: cee150898742e87b20dceb8ab5b02a97
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -9122,47 +9269,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
-
-Package: ubuntu-settings
-Priority: optional
-Section: x11
-Installed-Size: 51
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: all
-Version: 13.10.4
-Replaces: ubuntu-default-settings (<= 12.10.1)
-Depends: dconf-gsettings-backend | gsettings-backend, libglib2.0-bin
-Conflicts: ubuntu-default-settings (<= 12.10.1)
-Filename: pool/main/u/ubuntu-settings/ubuntu-settings_13.10.4_all.deb
-Size: 4584
-MD5sum: 96b78932bc525327c1369b63c6f5f859
-SHA1: 36041d09e87ec20aaeb001bf56b47345327bdd62
-SHA256: ce94bc159ca4714fc48f3408927c1dfef6a37fac70e55f2f78ff5e77d7500fb8
-Description: default settings for the Ubuntu desktop
-Description-md5: d323aeeccb784a54b1c845d23dcf7ea6
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntustudio-desktop
-
-Package: ubuntu-touch-settings
-Priority: optional
-Section: x11
-Installed-Size: 36
-Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
-Architecture: all
-Source: ubuntu-settings
-Version: 13.10.4
-Depends: dconf-gsettings-backend | gsettings-backend, libglib2.0-bin
-Filename: pool/main/u/ubuntu-settings/ubuntu-touch-settings_13.10.4_all.deb
-Size: 3078
-MD5sum: 80b42ee7994e0471f485e3ac0200129c
-SHA1: 09ad839cfc2353d221fa4748069d565f02a82311
-SHA256: 6a869c043d526dec8066ace2345935505d36fc1b0a1e7c475ed6b94f3065bbbb
-Description: default settings for Ubuntu Touch
-Description-md5: 4133be4d518d0733744b36407ddc7134
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
 
 Package: unity-scope-home
 Priority: optional
