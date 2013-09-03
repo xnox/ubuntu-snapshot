@@ -1943,6 +1943,66 @@ Description-md5: 12b771ab0234d5a2b3c27868cdd3dfac
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: juju
+Priority: extra
+Section: universe/devel
+Installed-Size: 35
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: juju-core
+Version: 1.13.3-0ubuntu1
+Depends: juju-core (>= 1.13.3-0ubuntu1)
+Filename: pool/universe/j/juju-core/juju_1.13.3-0ubuntu1_all.deb
+Size: 3296
+MD5sum: 9652d4757f0916d435f6e4738ca0ee41
+SHA1: e5609b3e4a9779f665546097bb23a2ad8dbd72eb
+SHA256: e9ba00e6f0b3b6013983699cc67f861ae435c076c69407112d7e1ebeb7b53d24
+Description: next generation service orchestration system
+Homepage: http://launchpad.net/juju-core
+Description-md5: 38a581a0c033bca65bd1e2c7ba910778
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: juju-core
+Priority: extra
+Section: universe/devel
+Installed-Size: 44337
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Version: 1.13.3-0ubuntu1
+Depends: libc6 (>= 2.3.6-6~)
+Conflicts: juju (<< 0.7-0ubuntu1~)
+Filename: pool/universe/j/juju-core/juju-core_1.13.3-0ubuntu1_i386.deb
+Size: 8475994
+MD5sum: 6f2b2b4b46016a5a1589bcaa088f4cb1
+SHA1: 66efb54307e64b15c512637a6e8fd0b73c41b6b8
+SHA256: 506ad0594bfd613434fdb4f8c8dad8eee4914865a315513d5b62d812ea2e5a3d
+Description: Juju is devops distilled - client
+Homepage: http://launchpad.net/juju-core
+Description-md5: cae49183c535ad5fd988bfd509e90051
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: juju-local
+Priority: extra
+Section: universe/devel
+Installed-Size: 35
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: juju-core
+Version: 1.13.3-0ubuntu1
+Depends: juju-core (>= 1.13.3-0ubuntu1), lxc, mongodb-server
+Filename: pool/universe/j/juju-core/juju-local_1.13.3-0ubuntu1_all.deb
+Size: 3338
+MD5sum: 524955b3748eeb53b32cb4ca8236fe10
+SHA1: 27402b1ec288825c6268015ccc4191b34c789c8c
+SHA256: 552252d2924a4542be4c34b5e8976345367dcc1087e63c589241b11394630b08
+Description: dependency package for the Juju local provider
+Homepage: http://launchpad.net/juju-core
+Description-md5: 56b994bc8fa7f3cb5c7eba487cdbe6ee
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: language-pack-kde-en
 Priority: optional
 Section: universe/translations
@@ -8564,31 +8624,6 @@ Description-md5: 7aff63daa58338732b9ecd8281e6ead3
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: qtdeclarative5-ubuntu-ui-toolkit-plugin
-Priority: optional
-Section: universe/libs
-Installed-Size: 1185
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Source: ubuntu-ui-toolkit
-Version: 0.1.46+13.10.20130903.3-0ubuntu1
-Replaces: qt-components-ubuntu
-Provides: qt-components-ubuntu
-Depends: libqt5qml-graphicaleffects | libqt5graphicaleffects5, libqt5svg5, qtdeclarative5-qtquick2-plugin, qtdeclarative5-window-plugin, qtdeclarative5-unity-action-plugin, ttf-ubuntu-font-family, ubuntu-ui-toolkit-theme, libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libgl1-mesa-glx | libgl1, libglib2.0-0 (>= 2.20.0), libqt5core5 (>= 5.0.2), libqt5dbus5 (>= 5.0.2), libqt5gui5 (>= 5.0.2), libqt5organizer5, libqt5qml5, libqt5quick5, libstdc++6 (>= 4.1.1)
-Pre-Depends: dpkg (>= 1.15.6~), multiarch-support
-Conflicts: qt-components-ubuntu
-Filename: pool/universe/u/ubuntu-ui-toolkit/qtdeclarative5-ubuntu-ui-toolkit-plugin_0.1.46+13.10.20130903.3-0ubuntu1_i386.deb
-Size: 301082
-MD5sum: 3615bd581d71600b203a786f6df3b5a4
-SHA1: ea9e957d686c8927ad1b1e33447a4ed00d8a0ac9
-SHA256: e5885c96f4fa943563cd31baea03516c7dff5425107249cfbceb7205067ef888
-Description: Qt Components for Ubuntu - QML plugin
-Multi-Arch: same
-Homepage: https://launchpad.net/ubuntu-ui-toolkit
-Description-md5: 9e544ade168ff90b20e3d73dabebef3e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: qviaggiatreno
 Priority: optional
 Section: universe/misc
@@ -9413,96 +9448,6 @@ Description-md5: d9728590e11574da56601abbc160ac08
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-gnome-desktop
-
-Package: ubuntu-ui-toolkit-autopilot
-Priority: optional
-Section: universe/libs
-Installed-Size: 119
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: ubuntu-ui-toolkit
-Version: 0.1.46+13.10.20130903.3-0ubuntu1
-Depends: libautopilot-qt, dpkg-dev, libqt5test5, libqt5widgets5, python-autopilot (>= 1.3), python-mock, ubuntu-ui-toolkit-examples (>= 0.1.46+13.10.20130903.3-0ubuntu1)
-Filename: pool/universe/u/ubuntu-ui-toolkit/ubuntu-ui-toolkit-autopilot_0.1.46+13.10.20130903.3-0ubuntu1_all.deb
-Size: 14680
-MD5sum: b1271718e6af5c589c15b1b6708ba989
-SHA1: 22fafba96a124fac9791715fd809132334fdf80d
-SHA256: 0b840e282c1873220942b0a0de298d3e299b3010248da04b643667c2ef0c3b02
-Description: Test package for Ubuntu UI Toolkit
-Homepage: https://launchpad.net/ubuntu-ui-toolkit
-Description-md5: a8d21af558d801b430dddea7e17b37f5
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ubuntu-ui-toolkit-doc
-Priority: optional
-Section: universe/doc
-Installed-Size: 1967
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: ubuntu-ui-toolkit
-Version: 0.1.46+13.10.20130903.3-0ubuntu1
-Replaces: qt-components-ubuntu-doc
-Provides: qt-components-ubuntu-doc
-Pre-Depends: dpkg (>= 1.15.6~)
-Conflicts: qt-components-ubuntu-doc
-Filename: pool/universe/u/ubuntu-ui-toolkit/ubuntu-ui-toolkit-doc_0.1.46+13.10.20130903.3-0ubuntu1_all.deb
-Size: 301494
-MD5sum: b2378e602ea9d2d374c4d6abdd3f35f3
-SHA1: 2f1beaa81b2e038640bcd0df02ea7ff86ec446e7
-SHA256: 06bbe2e0f740d89e61bad3a9d7f8cb04b1bf7aaed2eb1dcae14c7c0a0a7246c9
-Description: Qt Components for Ubuntu - documentation
-Multi-Arch: foreign
-Homepage: https://launchpad.net/ubuntu-ui-toolkit
-Description-md5: e922bd213d5331dc69e55474100c8536
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ubuntu-ui-toolkit-examples
-Priority: optional
-Section: universe/devel
-Installed-Size: 837
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Source: ubuntu-ui-toolkit
-Version: 0.1.46+13.10.20130903.3-0ubuntu1
-Replaces: qt-components-ubuntu-demos, qt-components-ubuntu-examples
-Provides: qt-components-ubuntu-demos, qt-components-ubuntu-examples
-Depends: qmlscene, qtdeclarative5-ubuntu-ui-toolkit-plugin, ubuntu-ui-toolkit-theme, ubuntu-ui-toolkit-doc, qtdeclarative5-qtmultimedia-plugin, qtdeclarative5-xmllistmodel-plugin
-Recommends: libqt5multimedia5-plugins
-Conflicts: qt-components-ubuntu-demos, qt-components-ubuntu-examples
-Filename: pool/universe/u/ubuntu-ui-toolkit/ubuntu-ui-toolkit-examples_0.1.46+13.10.20130903.3-0ubuntu1_i386.deb
-Size: 623194
-MD5sum: 1f1712097550e2d2ef97766199fc62c7
-SHA1: af003ab64f6bf9d62d4af0c67ff4422a42bc05f5
-SHA256: c476faa9d355a08efb4ed54ac1fb7941463385dddb2972d8a60afbf8984a4a3e
-Description: Qt Components for Ubuntu - demos and examples
-Homepage: https://launchpad.net/ubuntu-ui-toolkit
-Description-md5: 7b9f239a8fd0c115eb64744f642bfe9d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ubuntu-ui-toolkit-theme
-Priority: optional
-Section: universe/libs
-Installed-Size: 397
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Source: ubuntu-ui-toolkit
-Version: 0.1.46+13.10.20130903.3-0ubuntu1
-Replaces: qt-components-ubuntu
-Pre-Depends: dpkg (>= 1.15.6~)
-Filename: pool/universe/u/ubuntu-ui-toolkit/ubuntu-ui-toolkit-theme_0.1.46+13.10.20130903.3-0ubuntu1_i386.deb
-Size: 187874
-MD5sum: 5583e8eece286610a9e3f04b85258b64
-SHA1: 9b880e6464f000424345cd1dcc4e87a919bcb84f
-SHA256: 5a1c30697b0bd1b441e797dcbdbf6b1d56095d7e413de2914d522d5e12195612
-Description: Qt Components for Ubuntu - Ubuntu Theme
-Multi-Arch: foreign
-Homepage: https://launchpad.net/ubuntu-ui-toolkit
-Description-md5: b5751a7509e564edaeaf8baf445d5512
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
 
 Package: ucommon-doc
 Priority: optional
