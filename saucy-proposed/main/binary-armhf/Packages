@@ -385,6 +385,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
+Package: gir1.2-messagingmenu-1.0
+Priority: optional
+Section: libs
+Installed-Size: 47
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: indicator-messages
+Version: 13.10.1+13.10.20130903-0ubuntu1
+Depends: gir1.2-glib-2.0, libmessaging-menu0 (>= 13.10.1+13.10.20130820)
+Filename: pool/main/i/indicator-messages/gir1.2-messagingmenu-1.0_13.10.1+13.10.20130903-0ubuntu1_armhf.deb
+Size: 3124
+MD5sum: 2d3ab92e419d2f67c9be5f45e602ffc7
+SHA1: 525e182c62ce559cb6dc82fef4273b47125115d4
+SHA256: 806ccaf5a47ee06ba67a51751cdc3efa653f836f82145e941a63dbdb602cf03a
+Description: Messaging Menu - gir bindings
+Homepage: https://launchpad.net/indicator-messages
+Description-md5: c3332a75a05dc3da9846ebba71002ac1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
 Package: gir1.2-networkmanager-1.0
 Priority: optional
 Section: libs
@@ -407,74 +429,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
-Package: gnome-session
+Package: gnome-control-center-datetime
 Priority: optional
-Section: gnome
-Installed-Size: 274
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Architecture: all
-Version: 3.9.90-0ubuntu2
-Replaces: gnome-session-bin (<< 3.0), gnome3-session
-Provides: gnome3-session, x-session-manager
-Depends: gnome-settings-daemon (>= 3.0), gnome-session-bin (>= 3.9.90-0ubuntu2), gnome-session-bin (<< 3.10), gnome-session-common (= 3.9.90-0ubuntu2)
-Recommends: session-migration
-Suggests: gnome-user-guide, desktop-base, gnome-keyring
-Conflicts: gnome3-session
-Breaks: bug-buddy (<< 2.20), gnome-power-manager (<< 2.28), xserver-xorg (<< 1:7.4)
-Filename: pool/main/g/gnome-session/gnome-session_3.9.90-0ubuntu2_all.deb
-Size: 10826
-MD5sum: c32b9fe1ccd10d7309b66a0fdc9a7f32
-SHA1: 17eff86b0271b16cc3a91a1c6eabb81945c75ac0
-SHA256: 53c6d55cf2d32a5425006b14d38664ab8f7373b0aee86bab8c2ae336aa04e179
-Description: GNOME Session Manager - GNOME 3 session
-Description-md5: 7cfb8372c3ddbf9bd501f540d336a524
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
-
-Package: gnome-session-bin
-Priority: optional
-Section: gnome
-Installed-Size: 503
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Section: misc
+Installed-Size: 136
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
 Architecture: armhf
-Source: gnome-session
-Version: 3.9.90-0ubuntu2
-Depends: libc6 (>= 2.4), libcairo2 (>= 1.2.4), libdbus-1-3 (>= 1.0.2), libdbus-glib-1-2 (>= 0.88), libgdk-pixbuf2.0-0 (>= 2.22.0), libgl1-mesa-glx | libgl1, libglib2.0-0 (>= 2.37.3), libgnome-desktop-3-7 (>= 3.7.90), libgtk-3-0 (>= 3.0.0), libice6 (>= 1:1.0.0), libjson-glib-1.0-0 (>= 0.12.0), libsm6, libsystemd-journal0 (>= 183), libsystemd-login0 (>= 43), libupower-glib1 (>= 0.9.0), libx11-6, libxau6, libxcomposite1 (>= 1:0.3-1), libxrender1, dconf-gsettings-backend | gsettings-backend, dbus-x11, gsettings-desktop-schemas, upower (>= 0.9.0)
-Conflicts: gnome-session (<< 2.26.1-5)
-Filename: pool/main/g/gnome-session/gnome-session-bin_3.9.90-0ubuntu2_armhf.deb
-Size: 128982
-MD5sum: b2dfc2491c8d903a1a389151b3c74dd9
-SHA1: 8668511d67a87669dd22091b3538c7dea52b701e
-SHA256: bce7e04cd23299af7f11497380429d187ec3ab8e4cd1d276b5d291836981b1d7
-Description: GNOME Session Manager - Minimal runtime
-Description-md5: 4c2133392307e0ef72a944d936883f7d
+Source: indicator-datetime
+Version: 13.10.0+13.10.20130903-0ubuntu1
+Replaces: indicator-datetime (<< 13.10.0)
+Depends: libc6 (>= 2.7), libglib2.0-0 (>= 2.37.3), libgnome-control-center1 (>= 1:2.91.2), libgtk-3-0 (>= 3.1.4), libpolkit-gobject-1-0 (>= 0.99), libtimezonemap1, indicator-datetime (= 13.10.0+13.10.20130903-0ubuntu1), gnome-control-center
+Conflicts: indicator-datetime (<< 13.10.0)
+Filename: pool/main/i/indicator-datetime/gnome-control-center-datetime_13.10.0+13.10.20130903-0ubuntu1_armhf.deb
+Size: 21262
+MD5sum: 4bb5f2a1e3ff9550bb5b2f1dde8658cd
+SHA1: b29450e5c60e101f6f15c9044e840b77cad59a08
+SHA256: 66446dc0e72c5835b6197dfe794153f0f4d2e17be51e046190ed08418f616021
+Description: Clock settings in the GNOME Control Center
+Homepage: https://launchpad.net/indicator-datetime
+Description-md5: 2f0f93c004654bea6f095337e500f759
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: gnome-session-common
-Priority: optional
-Section: gnome
-Installed-Size: 344
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Architecture: all
-Source: gnome-session
-Version: 3.9.90-0ubuntu2
-Replaces: gnome-session (<< 3.0), gnome-session-bin (<< 3.0), libgnomevfs2-common (<< 1:2.24.0-3)
-Filename: pool/main/g/gnome-session/gnome-session-common_3.9.90-0ubuntu2_all.deb
-Size: 43298
-MD5sum: d56da7bfac55c83110da6aa1da20d625
-SHA1: 8ae07d19dbe2b4ac76ab5a77993db10aa0a5b8a0
-SHA256: d5fcbee9c07d92010ee74066d2c53e1dce1953f547d09f75b4e11c25e663dbb9
-Description: GNOME Session Manager - common files
-Description-md5: 4e4f4b98eb1049a0a4a28d994692754e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: hplip
 Priority: optional
@@ -564,6 +540,54 @@ Homepage: http://hplipopensource.com/hplip-web/index.html
 Description-md5: 7a9d622f180b9cbe47e31edb62d9f944
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: indicator-datetime
+Priority: optional
+Section: misc
+Installed-Size: 140
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: armhf
+Version: 13.10.0+13.10.20130903-0ubuntu1
+Replaces: indicator-datetime (<< 13.10.0)
+Depends: libc6 (>= 2.4), libecal-1.2-15 (>= 3.5.91), libedataserver-1.2-17 (>= 3.5.91), libgeoclue0 (>= 0.11.1+git20091217), libglib2.0-0 (>= 2.37.3), libical1 (>= 1.0), dconf-gsettings-backend | gsettings-backend, geoclue-ubuntu-geoip | geoclue-provider, systemd-services, systemd-shim
+Recommends: indicator-applet | indicator-renderer, evolution-data-server, gnome-control-center-datetime | ubuntu-system-settings
+Conflicts: indicator-datetime (<< 13.10.0)
+Filename: pool/main/i/indicator-datetime/indicator-datetime_13.10.0+13.10.20130903-0ubuntu1_armhf.deb
+Size: 26194
+MD5sum: b92048d3859e27c25fa3624da5f261d0
+SHA1: c7fc2c12c9534a824741879f27188671344e79d3
+SHA256: d640a1a5821f311b7f5bd438593af4d36890b63b20f0829f1a831319aa15945d
+Description: Simple clock
+Homepage: https://launchpad.net/indicator-datetime
+Description-md5: 083f98dd29157b1f6c5a8c4594d7d774
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: indicator-messages
+Priority: optional
+Section: gnome
+Installed-Size: 300
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
+Architecture: armhf
+Version: 13.10.1+13.10.20130903-0ubuntu1
+Replaces: indicator-status-provider-emesene, indicator-status-provider-mc5, indicator-status-provider-pidgin, indicator-status-provider-telepathy, libindicator-messages-status-provider-dev, libindicator-messages-status-provider1
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3), dconf-gsettings-backend | gsettings-backend
+Recommends: indicator-applet | indicator-renderer
+Conflicts: indicator-status-provider-emesene, indicator-status-provider-mc5, indicator-status-provider-pidgin, indicator-status-provider-telepathy, libindicator-messages-status-provider-dev, libindicator-messages-status-provider1
+Breaks: gwibber-services (<< 3.5.4-0ubuntu1~), telepathy-indicator (<< 0.3.0-0ubuntu1~), thunderbird (<< 15.0+build1-0ubuntu1~), xchat-gnome-indicator (<< 0.3.11-0ubuntu2~), xchat-indicator (<< 0.3.11-0ubuntu2~)
+Filename: pool/main/i/indicator-messages/indicator-messages_13.10.1+13.10.20130903-0ubuntu1_armhf.deb
+Size: 68872
+MD5sum: b3dc9e017a805730c3ed91a4b1e0a540
+SHA1: 42e464bca455574aeaf0a3719558a2d4aeb05f36
+SHA256: 77e99a6732ac439ffd05a98b7838aba04458e2dce6c9c17a874d24b201cebbf8
+Description: indicator that collects messages that need a response
+Homepage: https://launchpad.net/indicator-messages
+Description-md5: 4b542e22d4916b1b888ba25c790e7864
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: language-pack-af
 Priority: optional
@@ -6997,6 +7021,49 @@ Description-md5: 73843c094de7b4dfcc9ed1e36cc6d546
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libmessaging-menu-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 301
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: indicator-messages
+Version: 13.10.1+13.10.20130903-0ubuntu1
+Depends: gir1.2-messagingmenu-1.0 (= 13.10.1+13.10.20130903-0ubuntu1), libmessaging-menu0 (= 13.10.1+13.10.20130903-0ubuntu1), libglib2.0-dev
+Filename: pool/main/i/indicator-messages/libmessaging-menu-dev_13.10.1+13.10.20130903-0ubuntu1_armhf.deb
+Size: 25568
+MD5sum: 5ab0fe8fcaa5235ae692f9b216e74d96
+SHA1: 907e5563ad668247795385e4c2f0a4194c81041b
+SHA256: 71725b216fa52f7b51a999874ba4550df665da23f25791f47b1fb330f381d7a2
+Description: Messaging Menu - library development files
+Homepage: https://launchpad.net/indicator-messages
+Description-md5: ce906b4d3b8508aa9afe60c759709b5d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libmessaging-menu0
+Priority: optional
+Section: libs
+Installed-Size: 82
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: The Ayatana Packagers <pkg-ayatana-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: indicator-messages
+Version: 13.10.1+13.10.20130903-0ubuntu1
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3)
+Filename: pool/main/i/indicator-messages/libmessaging-menu0_13.10.1+13.10.20130903-0ubuntu1_armhf.deb
+Size: 20950
+MD5sum: 92da6997b5137254337687a2ef283cb1
+SHA1: fbf25589e3b89b87214ca147f78fbbf4f8a236c2
+SHA256: 2b6b9eff01bb83f8f53ce02b093ab001f0c7291f61976004ab6975267334e679
+Description: Messaging Menu - shared library
+Homepage: https://launchpad.net/indicator-messages
+Description-md5: 364e71724412de3ba2d663ca34406232
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libmirclient-dev
 Priority: optional
