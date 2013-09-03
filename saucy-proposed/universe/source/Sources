@@ -1221,6 +1221,7 @@ Checksums-Sha256:
 Package: geomview
 Binary: geomview, libgeomview-1.9.4, libgeomview-dev
 Version: 1.9.4-4.1
+Priority: optional
 Section: universe/math
 Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
 Build-Depends: cdbs, patchutils, debhelper (>= 5), libmotif-dev, libgl1-mesa-dev, freeglut3-dev, texlive-latex-base | tetex-bin, texi2html, xutils-dev, texinfo, texlive-generic-recommended
@@ -1312,6 +1313,41 @@ Checksums-Sha256:
  de11104a09ef415db3643734896ceea99b95296ee2064deb70fa7ee889d5bf20 890281 gfan_0.5+dfsg.orig.tar.gz
  e411d1203b7522ae0db55910792fb1813779370dda04c5b28f03732509311b90 193324 gfan_0.5+dfsg-3build1.debian.tar.gz
 
+Package: ghc
+Binary: ghc, ghc-prof, ghc-doc, ghc-dynamic, ghc-haddock
+Version: 7.6.3-4
+Section: universe/haskell
+Maintainer: Debian Haskell Group <pkg-haskell-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), libgmp-dev, devscripts, ghc, grep-dctrl, dh-autoreconf, gcc, llvm [armel armhf], libffi-dev, pkg-config, xsltproc, docbook-xsl, docbook-xml, binutils [armel armhf], libncurses5-dev, dpkg-dev (>= 1.16.1.1)
+Build-Depends-Indep: hscolour, fop
+Build-Conflicts: ccache
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/g/ghc
+Files:
+ 00a016af328259b690982f4432d88f54 1706 ghc_7.6.3-4.dsc
+ 986d1f90ca30d60f7b2820d75c6b8ea7 110763823 ghc_7.6.3.orig.tar.bz2
+ e660aab11efff03fb0e99310b5eddf58 47790 ghc_7.6.3-4.debian.tar.gz
+Uploaders: Joachim Breitner <nomeata@debian.org>, Erik de Castro Lopo <erikd@mega-nerd.com>
+Homepage: http://haskell.org/ghc/
+Vcs-Browser: http://darcs.debian.org/cgi-bin/darcsweb.cgi?r=pkg-haskell/ghc
+Vcs-Darcs: http://darcs.debian.org/pkg-haskell/ghc
+Package-List: 
+ ghc deb haskell extra
+ ghc-doc deb doc extra
+ ghc-dynamic deb haskell extra
+ ghc-haddock deb haskell extra
+ ghc-prof deb haskell extra
+Checksums-Sha1:
+ 48aabf2d9e13b76766ce6de6c29ec2bd6ae9f417 1706 ghc_7.6.3-4.dsc
+ 8938e1ef08b37a4caa071fa169e79a3001d065ff 110763823 ghc_7.6.3.orig.tar.bz2
+ 5d820ab552dc461767a6e57433568bbd44b88638 47790 ghc_7.6.3-4.debian.tar.gz
+Checksums-Sha256:
+ d3b83436b87e0f92efb8849710043315072b4db8b647258860ca08d941575460 1706 ghc_7.6.3-4.dsc
+ bd43823d31f6b5d0b2ca7b74151a8f98336ab0800be85f45bb591c9c26aac998 110763823 ghc_7.6.3.orig.tar.bz2
+ dcddc5cfd6db087794421c7c48bdcfa79d28332830fcc8e3658a7b2c6c459bd6 47790 ghc_7.6.3-4.debian.tar.gz
+
 Package: gimp-gap
 Binary: gimp-gap
 Version: 2.6.0+dfsg-4
@@ -1387,6 +1423,72 @@ Checksums-Sha1:
 Checksums-Sha256:
  cc10b96f58ca61b8c452d6858b8cb19b6a614f887665cd2dc97eb1d935214011 1270 git-buildpackage_0.6.2.dsc
  a9c9c34103a075a1b18da2bea5f458ed9f2292ae0e4242b7b9a49da053d04dd3 286685 git-buildpackage_0.6.2.tar.gz
+
+Package: glee
+Binary: glee-dev, libglee0d1, libglee0d1-dbg
+Version: 5.4.0-2
+Priority: optional
+Section: universe/libs
+Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), dh-exec (>= 0.3), dh-buildinfo, mesa-common-dev, libgl1-mesa-dev
+Architecture: any
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/g/glee
+Files:
+ ff5a716f69cd78d42ffa7fc229581817 1406 glee_5.4.0-2.dsc
+ 0bd03db136dbc075488b6c6e83f326ae 269529 glee_5.4.0.orig.tar.gz
+ d1526cab5f158e78c837e892200084bc 3885 glee_5.4.0-2.debian.tar.bz2
+Uploaders: Miriam Ruiz <miriam@debian.org>
+Homepage: http://elf-stone.com/glee.php
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-games/packages/trunk/glee/?op=log
+Vcs-Svn: svn://svn.debian.org/svn/pkg-games/packages/trunk/glee/
+Package-List: 
+ glee-dev deb libdevel optional
+ libglee0d1 deb libs optional
+ libglee0d1-dbg deb debug extra
+Checksums-Sha1:
+ 5bdf80433db5b6bb34aa30a67ff65607883fc26f 1406 glee_5.4.0-2.dsc
+ 97a6894948a5b05a8e7b3a1fcf3440895b46bc16 269529 glee_5.4.0.orig.tar.gz
+ 9152f5c7ec34a7039e0bfb3186da6e512e163d9b 3885 glee_5.4.0-2.debian.tar.bz2
+Checksums-Sha256:
+ a294b9e6b12a614507cef4634f3658bc60016768afd73c82e766aae481db2459 1406 glee_5.4.0-2.dsc
+ 3b58430172392ec75acdad5fd833ecf494c5518382bc27932f48d46dbb01cd29 269529 glee_5.4.0.orig.tar.gz
+ 4d22ca504f969784fda1ba35552da18db9a06b183579ce5634a3b9086bc3d302 3885 glee_5.4.0-2.debian.tar.bz2
+
+Package: gnat-gps
+Binary: gnat-gps, gnat-gps-dbg, gnat-gps-doc, gnat-gps-common
+Version: 5.0-16
+Priority: optional
+Section: universe/devel
+Maintainer: Ludovic Brenta <lbrenta@debian.org>
+Build-Depends: debhelper (>= 9), dpkg-dev (>= 1.16.1), gnat, gnat-4.6, libgnatprj4.6-dev, libxmlada4.1-dev, python-dev, dh-ada-library, dh-linktree, libtemplates-parser11.6-dev (>= 11.5-2), pkg-config, libgtkada2.24.1-dev, libgtk2.0-dev
+Build-Depends-Indep: texinfo, imagemagick, libjs-prototype (>= 1.6.1), libjs-scriptaculous (>= 1.5.1), texlive-fonts-recommended, texlive-latex-base, texlive-generic-recommended
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/g/gnat-gps
+Files:
+ 95e0b7bbd36ad7c4e53efbd8eb346f5f 2465 gnat-gps_5.0-16.dsc
+ c1d97d7a247e21f6f5c4f07c46a02c1e 8274222 gnat-gps_5.0.orig.tar.bz2
+ d042e9cea26e49f30a23172324a4b367 59405 gnat-gps_5.0-16.debian.tar.bz2
+Uploaders: Xavier Grave <xavier.grave@ipno.in2p3.fr>, Nicolas Boulenguez <nicolas@debian.org>
+Homepage: http://libre.adacore.com/libre/tools/gps
+Vcs-Browser: http://www.ada-france.org:8081/branch/changes/org.debian.gnat-gps
+Vcs-Mtn: www.ada-france.org org.debian.gnat-gps
+Package-List: 
+ gnat-gps deb devel optional
+ gnat-gps-common deb devel optional
+ gnat-gps-dbg deb debug extra
+ gnat-gps-doc deb doc optional
+Checksums-Sha1:
+ 12d8d8e05f1912652b35187a28ed9f98da5e9522 2465 gnat-gps_5.0-16.dsc
+ dd155bd27ba8c829f0973d0e655f4d34d8f644f9 8274222 gnat-gps_5.0.orig.tar.bz2
+ f72218d028e5ba697a8428f8833d2f364190c466 59405 gnat-gps_5.0-16.debian.tar.bz2
+Checksums-Sha256:
+ 67e319382bc0cab20780363015ff558cf76590184994199eb27360652ca8349e 2465 gnat-gps_5.0-16.dsc
+ 996665e34709aef47bc67d24704a801610d3910fad69235cf9caf27495f63013 8274222 gnat-gps_5.0.orig.tar.bz2
+ 234cfff6246846f5564b23cd30fb3ba9e42e47d9b893b710fcc220da91b084e7 59405 gnat-gps_5.0-16.debian.tar.bz2
 
 Package: gnome-python-extras
 Binary: python-gtkspell
@@ -2546,6 +2648,7 @@ Checksums-Sha256:
 Package: llvm-defaults
 Binary: llvm, llvm-runtime, llvm-dev, libllvm-ocaml-dev, clang
 Version: 0.20
+Priority: optional
 Section: universe/devel
 Maintainer: LLVM Packaging Team <pkg-llvm-team@lists.alioth.debian.org>
 Build-Depends: debhelper (>= 5.0.0), dpkg-dev (>= 1.13.9), lsb-release, llvm-3.2-dev (>= 3.2), libllvm-3.2-ocaml-dev (>= 3.2), m4
