@@ -3330,35 +3330,6 @@ Checksums-Sha256:
  f7c843032455f83c8d1f15de9a7012441ab28e5ec6d06deabb2526859a4afb55 79890 pgocaml_1.7.1.orig.tar.gz
  0c2b20a911c95e2ae5d4dbaa0c06f6af81206b2ebe2c0e3329942dcd99b7732e 4066 pgocaml_1.7.1-2.debian.tar.gz
 
-Package: phablet-tools
-Binary: phablet-tools
-Version: 1.0+13.10.20130904-0ubuntu1
-Priority: extra
-Section: universe/admin
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Sergio Schvezov <sergio.schvezov@canonical.com>
-Build-Depends: debhelper (>= 9.0.0), python (>= 2.7), python-configobj, python-lzma, python-mock, python-requests, python-setuptools, python-testscenarios, python-testtools, python-xdg
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/universe/p/phablet-tools
-Files:
- 5b6269f8bbb9ee7cdfdbb0354eebff58 2188 phablet-tools_1.0+13.10.20130904-0ubuntu1.dsc
- 64ecc54c75f87e2b2a7172c271adca29 35691 phablet-tools_1.0+13.10.20130904.orig.tar.gz
- 0168085d9a120a792681ab6df7ae27c7 6896 phablet-tools_1.0+13.10.20130904-0ubuntu1.diff.gz
-Vcs-Browser: https://bazaar.launchpad.net/~phablet-team/phablet-tools/trunk/files
-Vcs-Bzr: https://code.launchpad.net/~phablet-team/phablet-tools/trunk
-Package-List: 
- phablet-tools deb admin extra
-Checksums-Sha1:
- 57440ff229139bd778f40ca2430b858fe74d5837 2188 phablet-tools_1.0+13.10.20130904-0ubuntu1.dsc
- 63a36d6176fe7eccaaf8b99734a0539c5fc692cc 35691 phablet-tools_1.0+13.10.20130904.orig.tar.gz
- 6b5c3f1138ef2213cb5ea35a59f385f1b1f625b2 6896 phablet-tools_1.0+13.10.20130904-0ubuntu1.diff.gz
-Checksums-Sha256:
- f09f077357b4d0b13526017d842f11a625764a82ce410f59566aab3bbe00b42b 2188 phablet-tools_1.0+13.10.20130904-0ubuntu1.dsc
- a6247295bd2a310de017db88426d3d58c07597b732d6b694cd33ca659a527fb5 35691 phablet-tools_1.0+13.10.20130904.orig.tar.gz
- 8ba268f7e4b95f9857d9685a1b783fce42932a8a7b417a66b687a6a2378d824f 6896 phablet-tools_1.0+13.10.20130904-0ubuntu1.diff.gz
-
 Package: php-getid3
 Binary: php-getid3
 Version: 1.9.6-1
@@ -4798,6 +4769,57 @@ Checksums-Sha256:
  66fe3e68df11fc85102c0da874cf2a6ca97eb3d5a2ff98d69199ecfb6268b258 2298 sleuthkit_3.2.3-2ubuntu2.dsc
  ba5f63d7fd60d978de03777c72b1571004caa8dfe384f09757b6a8efa890ea62 2039699 sleuthkit_3.2.3.orig.tar.gz
  72db023520a530718e19c384828b37d15d15740d3ac71620caef0cc435eb2e2b 30139 sleuthkit_3.2.3-2ubuntu2.debian.tar.gz
+
+Package: sssd
+Binary: sssd, sssd-common, sssd-ad, sssd-ad-common, sssd-ipa, sssd-krb5, sssd-krb5-common, sssd-ldap, sssd-proxy, sssd-tools, libnss-sss, libpam-sss, libipa-hbac0, libipa-hbac-dev, libsss-idmap0, libsss-idmap-dev, libsss-nss-idmap0, libsss-nss-idmap-dev, libsss-sudo, python-libipa-hbac, python-libsss-nss-idmap, python-sss
+Version: 1.11.0-0ubuntu3
+Section: universe/utils
+Maintainer: Ubuntu Core Developers <ubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Debian SSSD Team <pkg-sssd-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), quilt, dh-autoreconf, autopoint, lsb-release, dpkg-dev (>= 1.16.1~), dnsutils, libpopt-dev, libdbus-1-dev, libkeyutils-dev, libldap2-dev, libpam-dev, libnl-3-dev, libnl-route-3-dev, libnss3-dev, libnspr4-dev, libpcre3-dev, libselinux1-dev, libsasl2-dev, libtevent-dev, libldb-dev, libtalloc-dev, libtdb-dev, xml-core, docbook-xsl, docbook-xml, libxml2-utils, xsltproc, krb5-config, libkrb5-dev, libc-ares-dev, python-dev (>= 2.6.6-3~), libsemanage1-dev, libdhash-dev, libcollection-dev, libini-config-dev, dh-apparmor, libglib2.0-dev, libndr-dev, libndr-standard-dev, libsamba-util-dev, samba4-dev, libdcerpc-dev, dh-systemd (>= 1.5)
+Architecture: any
+Standards-Version: 3.9.4
+Format: 1.0
+Directory: pool/universe/s/sssd
+Files:
+ e996efa1982fcd41550ad94cf52f1500 3536 sssd_1.11.0-0ubuntu3.dsc
+ 6d2133b8bab79edb7c48c4dbc5d461ba 3346231 sssd_1.11.0.orig.tar.gz
+ 74e6b7aa429bac4fb012f8f1e130f3c5 50837 sssd_1.11.0-0ubuntu3.diff.gz
+Uploaders: Timo Aaltonen <tjaalton@ubuntu.com>
+Homepage: https://fedorahosted.org/sssd/
+Vcs-Browser: http://git.debian.org/?p=pkg-sssd/sssd.git
+Vcs-Git: git://git.debian.org/git/pkg-sssd/sssd
+Package-List: 
+ libipa-hbac-dev deb libdevel extra
+ libipa-hbac0 deb libs extra
+ libnss-sss deb utils extra
+ libpam-sss deb utils extra
+ libsss-idmap-dev deb libdevel extra
+ libsss-idmap0 deb libs extra
+ libsss-nss-idmap-dev deb libdevel extra
+ libsss-nss-idmap0 deb libs extra
+ libsss-sudo deb libs extra
+ python-libipa-hbac deb python extra
+ python-libsss-nss-idmap deb python extra
+ python-sss deb python extra
+ sssd deb metapackages extra
+ sssd-ad deb utils extra
+ sssd-ad-common deb utils extra
+ sssd-common deb utils extra
+ sssd-ipa deb utils extra
+ sssd-krb5 deb utils extra
+ sssd-krb5-common deb utils extra
+ sssd-ldap deb utils extra
+ sssd-proxy deb utils extra
+ sssd-tools deb utils extra
+Checksums-Sha1:
+ c5c2ac21bf43b27e470ada2c993a5954301a890f 3536 sssd_1.11.0-0ubuntu3.dsc
+ c52f7a37649a5eda1cd58c0ebe8d42e42bf9528c 3346231 sssd_1.11.0.orig.tar.gz
+ 080bea4f1f85f8de79b71faa7996899afb96143a 50837 sssd_1.11.0-0ubuntu3.diff.gz
+Checksums-Sha256:
+ 6c998ef583ac7ffb3ef3acfdc9ab9d34644924b40dfd5f121df772173d238845 3536 sssd_1.11.0-0ubuntu3.dsc
+ bae84db6285123e9402619d194b009ecba8dcfcbe252e4e163cd5e9a21c678d3 3346231 sssd_1.11.0.orig.tar.gz
+ d04e8d19e74f238fbf29435bed2a0f51d9596314aea5d2c107df9114dd8d55e7 50837 sssd_1.11.0-0ubuntu3.diff.gz
 
 Package: sugar-jigsawpuzzle-activity
 Binary: sugar-jigsawpuzzle-activity
