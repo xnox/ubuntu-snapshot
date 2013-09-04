@@ -154,6 +154,31 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, edubuntu-desktop, edubuntu-usb, edubuntu-desktop-kde
 
+Package: apt
+Priority: important
+Section: admin
+Installed-Size: 3132
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Version: 0.8.16~exp12ubuntu10.13
+Replaces: manpages-pl (<< 20060617-3~)
+Depends: ubuntu-keyring, libapt-pkg4.12 (>= 0.8.16~exp12ubuntu10.13), libc6 (>= 2.15), libgcc1 (>= 1:4.2.1), libstdc++6 (>= 4.6), gnupg
+Pre-Depends: dpkg (>= 1.15.7.2)
+Suggests: aptitude | synaptic | wajig, dpkg-dev, apt-doc, bzip2, lzma, python-apt
+Conflicts: python-apt (<< 0.7.93.2~)
+Filename: pool/main/a/apt/apt_0.8.16~exp12ubuntu10.13_powerpc.deb
+Size: 1096702
+MD5sum: 4b41f9189f6a7ba068f2a38c70e5b9d7
+SHA1: c990fd7592f8e65e0c6a2650a880acac16ecd756
+SHA256: 8817af8f3f5581e9eee905c0e7351029d6ecb419baaa4dd7cc3102a1fdf6058a
+Description: commandline package manager
+Description-md5: 9fb97a88cb7383934ef963352b53b4a7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: minimal
+
 Package: apt-doc
 Priority: optional
 Section: doc
@@ -172,6 +197,48 @@ Description: documentation for APT
 Description-md5: bc2b838ed28e60af95d78926380a3300
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: apt-transport-https
+Priority: standard
+Section: admin
+Installed-Size: 168
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libapt-pkg4.12 (>= 0.8.16~exp12ubuntu10.13), libc6 (>= 2.4), libcurl3-gnutls (>= 7.22.0-3ubuntu4.3), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Filename: pool/main/a/apt/apt-transport-https_0.8.16~exp12ubuntu10.13_powerpc.deb
+Size: 15968
+MD5sum: a3f93eb02086d99e747366c2b6ee4164
+SHA1: bc87d3ee468b93e54d594ee04be318178fac1c8a
+SHA256: fb2d64a23c008b789edbb1eaa501ccff6b6b3e5dccbd87a89c931094ff64bbf0
+Description: https download transport for APT
+Description-md5: 3365a6b50bd0e4eef6e176a80c735f43
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active
+
+Package: apt-utils
+Priority: important
+Section: admin
+Installed-Size: 531
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libapt-inst1.4 (>= 0.8.0), libapt-pkg4.12 (>= 0.8.16~exp12ubuntu10.13), libc6 (>= 2.4), libdb5.1, libgcc1 (>= 1:4.2.1), libstdc++6 (>= 4.4.0)
+Filename: pool/main/a/apt/apt-utils_0.8.16~exp12ubuntu10.13_powerpc.deb
+Size: 192260
+MD5sum: aa64e88525f3f738b0059a9f0674cb81
+SHA1: e94573455ab872df184f36bc9c4a4115461023d1
+SHA256: cf50ab47fd732f4bdd7f3d857d83397af496aed9b81b38e92e53c78f2ec76c21
+Description: package managment related utility programs
+Description-md5: 578941ab78e4cbae72c741e56d175708
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
 
 Package: consolekit
 Priority: optional
@@ -1104,6 +1171,50 @@ Description-md5: 8892169afb7b9bc499e71c9594bafe1b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libapt-inst1.4
+Priority: important
+Section: admin
+Installed-Size: 825
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libapt-pkg4.12 (>= 0.8.16~exp12ubuntu10.13), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/a/apt/libapt-inst1.4_0.8.16~exp12ubuntu10.13_powerpc.deb
+Size: 103576
+MD5sum: 05e45aa75c92e05920c325fdc9f4e73f
+SHA1: c09a2521ee44be5652e3bc11aede4716f917d9d7
+SHA256: e7cc860932af5caae87e651da2828633ff5e78a4e2633a7ab55e6ef6c1a1dbb2
+Description: deb package format runtime library
+Multi-Arch: same
+Description-md5: 5df05e67cb17e91ac56a732061d88850
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: libapt-pkg-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 483
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libapt-pkg4.12 (= 0.8.16~exp12ubuntu10.13), libapt-inst1.4 (= 0.8.16~exp12ubuntu10.13), zlib1g-dev | zlib-dev
+Filename: pool/main/a/apt/libapt-pkg-dev_0.8.16~exp12ubuntu10.13_powerpc.deb
+Size: 91796
+MD5sum: 22841aef05468055a6073d9b5718b6d0
+SHA1: 85c0d50038a9f4a22f7054a5f0b145fe7a4dcb1b
+SHA256: 9e022cecf2ed9eb10601f2efec65ccd23d2c8eb9f5b4f11f54cdd2c9b672293f
+Description: development files for APT's libapt-pkg and libapt-inst
+Multi-Arch: same
+Description-md5: 8e463f77664788b23a47f5ac592f4595
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libapt-pkg-doc
 Priority: optional
 Section: doc
@@ -1122,6 +1233,30 @@ Description: documentation for APT development
 Description-md5: decce989b471f196cddabf52bee63592
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libapt-pkg4.12
+Priority: important
+Section: admin
+Installed-Size: 3046
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.2.1), libstdc++6 (>= 4.6), zlib1g (>= 1:1.2.3.3.dfsg)
+Pre-Depends: multiarch-support
+Filename: pool/main/a/apt/libapt-pkg4.12_0.8.16~exp12ubuntu10.13_powerpc.deb
+Size: 950032
+MD5sum: 6ecae82e62ba89e608aca7be6d479def
+SHA1: bf5e80f5ca9d7789201f90645dbf160c4c30a084
+SHA256: f7042624cc6a403d1bfeeac02f581bc63cfafec8f122d883d2b71b5c04574350
+Description: package managment runtime library
+Multi-Arch: same
+Description-md5: c7584b884ab52c1972b8736fef25ad35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: minimal
 
 Package: libasn1-8-heimdal
 Priority: standard

@@ -154,6 +154,31 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, edubuntu-desktop, edubuntu-usb, edubuntu-desktop-kde
 
+Package: apt
+Priority: important
+Section: admin
+Installed-Size: 2938
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: armhf
+Version: 0.8.16~exp12ubuntu10.13
+Replaces: manpages-pl (<< 20060617-3~)
+Depends: ubuntu-keyring, libapt-pkg4.12 (>= 0.8.16~exp12ubuntu10.13), libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.6), gnupg
+Pre-Depends: dpkg (>= 1.15.7.2)
+Suggests: aptitude | synaptic | wajig, dpkg-dev, apt-doc, bzip2, lzma, python-apt
+Conflicts: python-apt (<< 0.7.93.2~)
+Filename: pool/main/a/apt/apt_0.8.16~exp12ubuntu10.13_armhf.deb
+Size: 1058580
+MD5sum: 298b51b08d34942c8133b81b2fd225bc
+SHA1: 048695a2f23324a23d341759e70c29a621612ed7
+SHA256: 5587101ac8c77b50ca4c50b248f05ea1f46e730c2d1fdeb143a1f90fa045a2d0
+Description: commandline package manager
+Description-md5: 9fb97a88cb7383934ef963352b53b4a7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: minimal
+
 Package: apt-doc
 Priority: optional
 Section: doc
@@ -172,6 +197,48 @@ Description: documentation for APT
 Description-md5: bc2b838ed28e60af95d78926380a3300
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: apt-transport-https
+Priority: standard
+Section: admin
+Installed-Size: 163
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: armhf
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libapt-pkg4.12 (>= 0.8.16~exp12ubuntu10.13), libc6 (>= 2.15-0ubuntu8), libcurl3-gnutls (>= 7.22.0-3ubuntu4.3), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0)
+Filename: pool/main/a/apt/apt-transport-https_0.8.16~exp12ubuntu10.13_armhf.deb
+Size: 15212
+MD5sum: 3e54783c96506cca687cd50e5c6993eb
+SHA1: caeadfbaedb4bf4d25a4da57b7dcded7f923decb
+SHA256: 6020b1b193723191311da6dd6554750fa2085c02d12668e34a8399eafeee8f2f
+Description: https download transport for APT
+Description-md5: 3365a6b50bd0e4eef6e176a80c735f43
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active
+
+Package: apt-utils
+Priority: important
+Section: admin
+Installed-Size: 455
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: armhf
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libapt-inst1.4 (>= 0.8.0), libapt-pkg4.12 (>= 0.8.16~exp12ubuntu10.13), libc6 (>= 2.15-0ubuntu8), libdb5.1, libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0)
+Filename: pool/main/a/apt/apt-utils_0.8.16~exp12ubuntu10.13_armhf.deb
+Size: 170576
+MD5sum: e55402cb50a9e0b81b960aea6dd16064
+SHA1: 919365802be44f8c9696bfc5dfe6f107e23104a4
+SHA256: 4148ab3ee6d021fc3fd159526dcc878a03bc2dfe63051fc88f739c708639ad25
+Description: package managment related utility programs
+Description-md5: 578941ab78e4cbae72c741e56d175708
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
 
 Package: consolekit
 Priority: optional
@@ -1104,6 +1171,50 @@ Description-md5: 8892169afb7b9bc499e71c9594bafe1b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libapt-inst1.4
+Priority: important
+Section: admin
+Installed-Size: 797
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: armhf
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libapt-pkg4.12 (>= 0.8.16~exp12ubuntu10.13), libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/a/apt/libapt-inst1.4_0.8.16~exp12ubuntu10.13_armhf.deb
+Size: 96782
+MD5sum: f1431396c9a1cc34cd3562be43fc52cd
+SHA1: c0c2afd2d8df0001f842ad59bf5b9fb5eddbd63a
+SHA256: f0ac5b1b96624425cec589509d16a2605ad8e6afe0849298b1b54fc04ec511b0
+Description: deb package format runtime library
+Multi-Arch: same
+Description-md5: 5df05e67cb17e91ac56a732061d88850
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: libapt-pkg-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 483
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: armhf
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libapt-pkg4.12 (= 0.8.16~exp12ubuntu10.13), libapt-inst1.4 (= 0.8.16~exp12ubuntu10.13), zlib1g-dev | zlib-dev
+Filename: pool/main/a/apt/libapt-pkg-dev_0.8.16~exp12ubuntu10.13_armhf.deb
+Size: 93150
+MD5sum: b3c22b90af95784dcb95182df57ee745
+SHA1: c4c0c466417398c88c0d873f7af8440080cbe5b5
+SHA256: 023b6a81da666329cbe808480c160b68d7e481ec2b50705484b3686310a895df
+Description: development files for APT's libapt-pkg and libapt-inst
+Multi-Arch: same
+Description-md5: 8e463f77664788b23a47f5ac592f4595
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libapt-pkg-doc
 Priority: optional
 Section: doc
@@ -1122,6 +1233,30 @@ Description: documentation for APT development
 Description-md5: decce989b471f196cddabf52bee63592
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libapt-pkg4.12
+Priority: important
+Section: admin
+Installed-Size: 2614
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: armhf
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libc6 (>= 2.15-0ubuntu8), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.6), zlib1g (>= 1:1.2.3.3.dfsg)
+Pre-Depends: multiarch-support
+Filename: pool/main/a/apt/libapt-pkg4.12_0.8.16~exp12ubuntu10.13_armhf.deb
+Size: 874656
+MD5sum: bf40bac2cc6b66853ddc63394c9ec35b
+SHA1: e5ead4d7ac597bf55713b98f2c6cf1621c3a1fb2
+SHA256: f958d90bdcd23d262d0999267a0b53bd60f39b7c64e27b285ad6ca70548ad286
+Description: package managment runtime library
+Multi-Arch: same
+Description-md5: c7584b884ab52c1972b8736fef25ad35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: minimal
 
 Package: libasn1-8-heimdal
 Priority: standard
