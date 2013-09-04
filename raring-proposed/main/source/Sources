@@ -352,6 +352,7 @@ Checksums-Sha256:
 Package: horizon
 Binary: python-django-horizon, openstack-dashboard, python-django-openstack, openstack-dashboard-ubuntu-theme
 Version: 1:2013.1.3-0ubuntu1
+Priority: extra
 Section: net
 Maintainer: Chuck Short <zulcss@ubuntu.com>
 Build-Depends: debhelper (>= 8.0.0), pep8, pylint, python-all (>= 2.6.6-3~), python-django-nose, python-mox, python-netaddr, python-nose, python-setuptools, python-sphinx
@@ -379,6 +380,39 @@ Checksums-Sha256:
  ae61cd3cadec4bae79d0cebdfc34335b06242c5607e8dd9628dc825323def351 1920 horizon_2013.1.3-0ubuntu1.dsc
  4dbf05e75313d9d6ac966de1d139f26647ab537a3d1f418a3e4424210b4c05fd 1788951 horizon_2013.1.3.orig.tar.gz
  86fa46f28c47f2dd3b7a702f647416c09c00ec6eef25b7768822cc9c3243efb7 151698 horizon_2013.1.3-0ubuntu1.debian.tar.gz
+
+Package: keystone
+Binary: python-keystone, keystone, keystone-doc
+Version: 1:2013.1.3-0ubuntu1
+Section: net
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Monty Taylor <mordred@inaugust.com>
+Build-Depends: debhelper (>= 7.0.50), po-debconf, python-all (>= 2.6), python-eventlet, python-keystoneclient (>= 1:0.2.3), python-ldap, python-lxml, python-memcache, python-migrate, python-mox, python-nose, python-oslo.config, python-pam, python-passlib, python-paste, python-pastedeploy, python-routes, python-sphinx, python-sqlalchemy, python-swift, python-unittest2, python-webob, python-webtest, python-iso8601
+Architecture: all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/k/keystone
+Files:
+ 1bf9804d5ca47adaaa22b37ea709e000 2183 keystone_2013.1.3-0ubuntu1.dsc
+ 49bfcd088426960ef787d040ea8426af 799651 keystone_2013.1.3.orig.tar.gz
+ 0189fc3e53c298ef350e855c81db0a16 13888 keystone_2013.1.3-0ubuntu1.debian.tar.gz
+Uploaders: Soren Hansen <soren@ubuntu.com>
+Homepage: http://launchpad.net/keystone
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/keystone/grizzly/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/keystone/grizzly
+Package-List: 
+ keystone deb python extra
+ keystone-doc deb doc extra
+ python-keystone deb python extra
+Checksums-Sha1:
+ 17d9f4062dcf7cb2a475130f4646d308b5004a29 2183 keystone_2013.1.3-0ubuntu1.dsc
+ 0244bb8105910a5e9997fc67ff8532b23b3506d6 799651 keystone_2013.1.3.orig.tar.gz
+ 07115e75d4ece2a18a37ba9ef64632982ba94c2f 13888 keystone_2013.1.3-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 83d945ee07a5bb2400f175c15c6a2b929ba3ff1c2b05b556ae15fac5649a1053 2183 keystone_2013.1.3-0ubuntu1.dsc
+ e097170ebb1cf22de50f2d5ab2216a5116ffe0934720dbad8b02d61c370b8261 799651 keystone_2013.1.3.orig.tar.gz
+ 685b43067c6dc39a60a7785614303155b2d7e7b1227b447fe184fa6f5d742183 13888 keystone_2013.1.3-0ubuntu1.debian.tar.gz
+Python-Version: >= 2.6
 
 Package: libdebian-installer
 Binary: libdebian-installer4, libdebian-installer4-dev, libdebian-installer4-udeb, libdebian-installer-extra4, libdebian-installer-extra4-udeb
@@ -981,6 +1015,68 @@ Checksums-Sha256:
  a2bee4b7807e0cb201f8259e3ca5788f25950c0e2620e0a149ce27887ca1b540 8202499 mesa_9.1.4.orig.tar.gz
  c4938c6d0fd8609f8c4e23c5c0b409a829fcbbf0e9051ee00a7879225b0eb06b 61193 mesa_9.1.4-0ubuntu0.1.diff.gz
 
+Package: nova
+Binary: python-nova, nova-common, nova-compute, nova-compute-lxc, nova-compute-uml, nova-compute-xen, nova-compute-qemu, nova-compute-kvm, nova-compute-xcp, nova-xcp-plugins, nova-xcp-network, nova-conductor, nova-cert, nova-scheduler, nova-volume, nova-ajax-console-proxy, nova-novncproxy, nova-xvpvncproxy, nova-spiceproxy, nova-api, nova-network, nova-objectstore, nova-console, nova-consoleauth, nova-doc, nova-api-metadata, nova-api-os-compute, nova-api-os-volume, nova-api-ec2, nova-cells, nova-baremetal
+Version: 1:2013.1.3-0ubuntu1
+Section: net
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Build-Depends: debhelper (>= 7.0.50), python-all (>= 2.6), python-all-dev (>= 2.6.6-3~)
+Build-Depends-Indep: openssh-client, openssl, python-amqplib, python-boto, python-carrot, python-cheetah, python-cinderclient, python-coverage, python-crypto, python-distutils-extra, python-eventlet, python-fixtures (>= 0.3.12), python-feedparser, python-glanceclient, python-iso8601, python-kombu, python-lxml, python-migrate, python-mox, python-netaddr, python-novaclient (>= 1:2.9.0), python-oslo-config, python-paramiko, python-paste, python-pastedeploy (>= 1.5.0), python-pyasn1, python-quantumclient, python-routes, python-setuptools, python-setuptools-git, python-stevedore (>= 0.7.2), python-sphinx (>> 1.0), python-sqlalchemy-ext (>= 0.7.8-1~) | python-sqlalchemy (<< 0.6.3-2), python-suds, python-testtools (>= 0.9.22), python-unittest2, python-webob (>= 1.2.3), pep8, sqlite3, testrepository (>= 0.0.8)
+Build-Conflicts: python-cjson
+Architecture: all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/n/nova
+Files:
+ a2cac49d5e2518d53cb97d38792fdc95 4019 nova_2013.1.3-0ubuntu1.dsc
+ 6215982b9ed08b9042e088470d60a0a6 5780115 nova_2013.1.3.orig.tar.gz
+ 76ebedce5f209b26ca255178e34d3bfb 38344 nova_2013.1.3-0ubuntu1.debian.tar.gz
+Uploaders: Soren Hansen <soren@ubuntu.com>, Thomas Goirand <zigo@debian.org>
+Homepage: http://launchpad.net/nova
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/nova/grizzly/files
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-server-dev/nova/grizzly
+Package-List: 
+ nova-ajax-console-proxy deb oldlibs extra
+ nova-api deb net extra
+ nova-api-ec2 deb net extra
+ nova-api-metadata deb net extra
+ nova-api-os-compute deb net extra
+ nova-api-os-volume deb oldlibs extra
+ nova-baremetal deb net extra
+ nova-cells deb net extra
+ nova-cert deb net extra
+ nova-common deb net extra
+ nova-compute deb net extra
+ nova-compute-kvm deb net extra
+ nova-compute-lxc deb net extra
+ nova-compute-qemu deb net extra
+ nova-compute-uml deb net extra
+ nova-compute-xcp deb net extra
+ nova-compute-xen deb net extra
+ nova-conductor deb net extra
+ nova-console deb net extra
+ nova-consoleauth deb net extra
+ nova-doc deb doc extra
+ nova-network deb net extra
+ nova-novncproxy deb net extra
+ nova-objectstore deb net extra
+ nova-scheduler deb net extra
+ nova-spiceproxy deb net extra
+ nova-volume deb oldlibs extra
+ nova-xcp-network deb net extra
+ nova-xcp-plugins deb net extra
+ nova-xvpvncproxy deb net extra
+ python-nova deb python extra
+Checksums-Sha1:
+ 7a7824228ce34ff921a207d5ac677d2e4698e215 4019 nova_2013.1.3-0ubuntu1.dsc
+ 89b172e91f0a39cee3c8d2e014b9e5554005a4e8 5780115 nova_2013.1.3.orig.tar.gz
+ a43535fee545e0f884012fce7c23b46d269561b1 38344 nova_2013.1.3-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 2780d0bd6d04705b555ebe9047ab1ee0c7446db8bf1bc3358045599d3f381fad 4019 nova_2013.1.3-0ubuntu1.dsc
+ f7c25186920daccb16867c5fd272318beb8cc076e5a55f79b5906618ef2724f4 5780115 nova_2013.1.3.orig.tar.gz
+ e701b5869fc6e98ecad1637a638747effd8f5775b48cd6840ccbccfa08b6681d 38344 nova_2013.1.3-0ubuntu1.debian.tar.gz
+
 Package: pygobject
 Binary: python-gi, python3-gi, python-gi-cairo, python-gi-dbg, python3-gi-dbg, python-gi-dev, python3-gi-cairo, python-gobject, python-gobject-dbg, python-gobject-dev
 Version: 3.8.0-2ubuntu1
@@ -1249,6 +1345,58 @@ Checksums-Sha256:
  6bb9c3bc44e61ec59e8c71e18236fcc13f1fae0022e4f2cab82025db8783332a 2072 qtwebkit-source_2.3.0-0ubuntu2.1.dsc
  d3d42d987b83e9387955752e74755284c64422fea1e09b1d033b0ff75929903b 51613669 qtwebkit-source_2.3.0.orig.tar.gz
  a5b673dda56c584e56a91364de981cbac40a4269b25af1ee38769ab9c1cddac7 81311 qtwebkit-source_2.3.0-0ubuntu2.1.debian.tar.gz
+
+Package: quantum
+Binary: quantum-server, quantum-common, quantum-plugin-cisco, quantum-plugin-nec, quantum-plugin-nec-agent, quantum-plugin-bigswitch, quantum-plugin-hyperv, quantum-plugin-brocade, quantum-plugin-plumgrid, quantum-plugin-metaplugin, quantum-plugin-nicira, quantum-l3-agent, quantum-dhcp-agent, quantum-metadata-agent, quantum-lbaas-agent, python-quantum, quantum-plugin-openvswitch, quantum-plugin-openvswitch-agent, quantum-plugin-linuxbridge, quantum-plugin-linuxbridge-agent, quantum-plugin-ryu, quantum-plugin-ryu-agent, quantum-plugin-midonet
+Version: 1:2013.1.3-0ubuntu1
+Section: net
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Build-Depends: debhelper (>= 8.0.0), python-all (>= 2.6)
+Build-Depends-Indep: alembic (>= 0.4.1), pep8, python-amqplib, python-anyjson, python-cliff, python-configobj, python-coverage, python-eventlet, python-fixtures (>= 0.3.12), python-httplib2, python-iso8601, python-keystone, python-kombu, python-lxml, python-mock (>= 1.0b1), python-mox, python-netaddr, python-netifaces, python-nose, python-novaclient, python-oslo.config, python-paste, python-pastedeploy, python-pyudev, python-quantumclient (>= 1:2.2.0), python-routes, python-setuptools, python-setuptools-git, python-simplejson, python-sqlalchemy, python-testtools, python-webob, python-webtest
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/q/quantum
+Files:
+ bd4e3043d04b6dd2b0a42ac844635c23 3676 quantum_2013.1.3-0ubuntu1.dsc
+ ca410283029db2cade16c8af003f9b7f 1174471 quantum_2013.1.3.orig.tar.gz
+ 0946a9665d22ae399e9c758f8a29cdca 16215 quantum_2013.1.3-0ubuntu1.debian.tar.gz
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/neutron/grizzly/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/neutron/grizzly
+Package-List: 
+ python-quantum deb python optional
+ quantum-common deb net optional
+ quantum-dhcp-agent deb net optional
+ quantum-l3-agent deb net optional
+ quantum-lbaas-agent deb net optional
+ quantum-metadata-agent deb net optional
+ quantum-plugin-bigswitch deb net optional
+ quantum-plugin-brocade deb net optional
+ quantum-plugin-cisco deb net optional
+ quantum-plugin-hyperv deb net optional
+ quantum-plugin-linuxbridge deb net optional
+ quantum-plugin-linuxbridge-agent deb net optional
+ quantum-plugin-metaplugin deb net optional
+ quantum-plugin-midonet deb net optional
+ quantum-plugin-nec deb net optional
+ quantum-plugin-nec-agent deb net optional
+ quantum-plugin-nicira deb net optional
+ quantum-plugin-openvswitch deb net optional
+ quantum-plugin-openvswitch-agent deb net optional
+ quantum-plugin-plumgrid deb net optional
+ quantum-plugin-ryu deb net optional
+ quantum-plugin-ryu-agent deb net optional
+ quantum-server deb net optional
+Checksums-Sha1:
+ d3f9034212edcfafa88d72dcb1904bc1ace9f8a2 3676 quantum_2013.1.3-0ubuntu1.dsc
+ e21fd544f0d1780d2b34809c3d1e106d3bfcee26 1174471 quantum_2013.1.3.orig.tar.gz
+ 66b549868717a2605e99a581244216e705f29b84 16215 quantum_2013.1.3-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 5f4c8cd9bc7930f8c229f9917e204f2662db101c021df4a6c4714bba433114fc 3676 quantum_2013.1.3-0ubuntu1.dsc
+ 79e60ec1aef800da3a4e1841909cdd8b2cf645979d08f27bc481957c7944e93d 1174471 quantum_2013.1.3.orig.tar.gz
+ 8b08672bb4c920b578cca9db70446009b772364c81b2c855093d15468168597d 16215 quantum_2013.1.3-0ubuntu1.debian.tar.gz
+Python-Version: >= 2.6
 
 Package: software-center
 Binary: software-center
