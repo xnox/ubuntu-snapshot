@@ -234,6 +234,27 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
 
+Package: dhcp3-dev
+Priority: optional
+Section: devel
+Installed-Size: 57
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: all
+Source: isc-dhcp
+Version: 4.1.ESV-R4-0ubuntu5.9
+Depends: isc-dhcp-dev
+Filename: pool/main/i/isc-dhcp/dhcp3-dev_4.1.ESV-R4-0ubuntu5.9_all.deb
+Size: 1800
+MD5sum: 83f8573e6071dde8b4c12a70dc435016
+SHA1: 00afcc83984275b6f7d57ee2b28a735d627fd6d5
+SHA256: d30a403c9c798edb5e504cd319016ef3449263858f88c281d12af503c710f195
+Description: ISC DHCP development files (transitional package)
+Description-md5: c9e5844d7f870c11ac192a6c2c5bc423
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
 Package: duplicity
 Priority: optional
 Section: utils
@@ -654,6 +675,173 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 5y
 Task: minimal
+
+Package: isc-dhcp-client
+Priority: important
+Section: net
+Installed-Size: 733
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: isc-dhcp
+Version: 4.1.ESV-R4-0ubuntu5.9
+Replaces: dhcp3-client
+Provides: dhcp3-client
+Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.1.ESV-R4-0ubuntu5.9), iproute, libc6 (>= 2.15)
+Suggests: resolvconf, avahi-autoipd, apparmor
+Conflicts: dhcp-client (<< 3.0), ifupdown (<< 0.6.8+nmu3), resolvconf (<= 1.45), samba-common (<< 3.0.0beta1-2)
+Breaks: network-manager (<< 0.8.2~rc1)
+Filename: pool/main/i/isc-dhcp/isc-dhcp-client_4.1.ESV-R4-0ubuntu5.9_amd64.deb
+Size: 289890
+MD5sum: 12fc83e848c4cf66b0a82432283c5e56
+SHA1: f647970fde3dbf32b9dfea0ce9257815c2fb778b
+SHA256: cefcc8d8ffb6b759bf387b0f57b6161873db14c9680b32dfd9458e056eafd448
+Description: ISC DHCP client
+Description-md5: 7d48c04c85ad9235ca7273ba8da51bbc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: minimal
+
+Package: isc-dhcp-client-dbg
+Priority: extra
+Section: debug
+Installed-Size: 1959
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: isc-dhcp
+Version: 4.1.ESV-R4-0ubuntu5.9
+Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.1.ESV-R4-0ubuntu5.9)
+Suggests: resolvconf, avahi-autoipd
+Conflicts: dhcp-client (<< 3.0), samba-common (<< 3.0.0beta1-2)
+Filename: pool/main/i/isc-dhcp/isc-dhcp-client-dbg_4.1.ESV-R4-0ubuntu5.9_amd64.deb
+Size: 682354
+MD5sum: 964e6c4620085e5cb67346815d4252bd
+SHA1: c048e9a9ca327cbf361d2b2fe4151ff88cca4830
+SHA256: 4c7ddc4d8191b5082c97972a55a2d2743cd1801fc9b9d70b84fa3d0ad63b13b0
+Description: ISC DHCP client (debugging symbols)
+Description-md5: 65f8c2f2d81ecd053c5bca54e46ec524
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: isc-dhcp-common
+Priority: important
+Section: net
+Installed-Size: 673
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: isc-dhcp
+Version: 4.1.ESV-R4-0ubuntu5.9
+Replaces: dhcp3-common
+Provides: dhcp3-common
+Depends: debianutils (>= 2.8.2), libc6 (>= 2.15)
+Filename: pool/main/i/isc-dhcp/isc-dhcp-common_4.1.ESV-R4-0ubuntu5.9_amd64.deb
+Size: 347360
+MD5sum: a15c19fb63a1ca3a4ba2bf8d6d017802
+SHA1: 44e05d3c17375e460ccbfdfd89ba6391e23b2881
+SHA256: 7b84f964fe3bfc6e13ae9fdf7a7e97b3344e21be71f4ae749085289f363fbdaa
+Description: common files used by all the isc-dhcp* packages
+Description-md5: 5683d165d1bf7aa98dc09ae338bc059f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: minimal
+
+Package: isc-dhcp-dev
+Priority: optional
+Section: devel
+Installed-Size: 2354
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: isc-dhcp
+Version: 4.1.ESV-R4-0ubuntu5.9
+Replaces: dhcp3-dev
+Provides: dhcp3-dev
+Depends: libc6-dev
+Filename: pool/main/i/isc-dhcp/isc-dhcp-dev_4.1.ESV-R4-0ubuntu5.9_amd64.deb
+Size: 725880
+MD5sum: e11704fa9d37131e79e065c4b5c50a00
+SHA1: 9a8c19053eec2f0120e13bb0c1b6b12d7908184b
+SHA256: 5d499a39c45e7d7b7934b8d9622dcb71e625aca9f5724bb47e9a560fd0a2afe8
+Description: API for accessing and modifying the DHCP server and client state
+Description-md5: 629de35b97db45a08414abd22d153d05
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: isc-dhcp-relay-dbg
+Priority: extra
+Section: debug
+Installed-Size: 1793
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: isc-dhcp
+Version: 4.1.ESV-R4-0ubuntu5.9
+Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.1.ESV-R4-0ubuntu5.9)
+Conflicts: dhcp-relay
+Filename: pool/main/i/isc-dhcp/isc-dhcp-relay-dbg_4.1.ESV-R4-0ubuntu5.9_amd64.deb
+Size: 616424
+MD5sum: 11d7f7f69931c05418db23a63928bb23
+SHA1: 6904c2826964acb0c81db01f9e0dc0b003d18cc4
+SHA256: c34ae9c64f27d73d509237cc087d3fa89021cf555b4af3c5fcbcc7df031b00bf
+Description: DHCP relay daemon (debugging symbols)
+Description-md5: 02902cd378278d57c30d249e39a858b3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: isc-dhcp-server
+Priority: optional
+Section: net
+Installed-Size: 986
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: isc-dhcp
+Version: 4.1.ESV-R4-0ubuntu5.9
+Replaces: dhcp3-server
+Provides: dhcp3-server
+Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.1.ESV-R4-0ubuntu5.9), lsb-base, adduser, libc6 (>= 2.15), libcap2 (>= 2.10), debconf (>= 0.5) | debconf-2.0, upstart-job
+Suggests: isc-dhcp-server-ldap, apparmor
+Conflicts: dhcp
+Filename: pool/main/i/isc-dhcp/isc-dhcp-server_4.1.ESV-R4-0ubuntu5.9_amd64.deb
+Size: 428460
+MD5sum: eef48aa364dbd02ca0c30374b522c6ba
+SHA1: ac09042e0746930686595d5ba37779b8f3275f7a
+SHA256: 8411906904f632c62af4e489e4e29025821779d3e2ccf88ba122aadfd952f5e8
+Description: ISC DHCP server for automatic IP address assignment
+Description-md5: 4f5d533c02fa72751acbaefe5e28258d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+
+Package: isc-dhcp-server-dbg
+Priority: extra
+Section: debug
+Installed-Size: 2588
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: isc-dhcp
+Version: 4.1.ESV-R4-0ubuntu5.9
+Depends: debianutils (>= 2.8.2), isc-dhcp-common (= 4.1.ESV-R4-0ubuntu5.9), lsb-base
+Suggests: isc-dhcp-server-ldap
+Conflicts: dhcp
+Filename: pool/main/i/isc-dhcp/isc-dhcp-server-dbg_4.1.ESV-R4-0ubuntu5.9_amd64.deb
+Size: 903630
+MD5sum: c607a55aaadf6bb3e6494035fbb3155b
+SHA1: 95775a92c2e679d6e2640356a32cfc2c3b147261
+SHA256: 18db98581695404ba96de26b9a7c555bc335affd3f739d1f104d6001eb331cd8
+Description: ISC DHCP server for automatic IP address assignment (debug)
+Description-md5: b66d42f652cf79ebf5bf05f89e2126b7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
 
 Package: kpartx
 Priority: extra
