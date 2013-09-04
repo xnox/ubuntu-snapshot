@@ -7362,6 +7362,29 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: python-quantum
+Priority: optional
+Section: python
+Installed-Size: 5328
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Provides: python2.7-quantum
+Depends: python-amqplib, python-anyjson, python-configobj, python-eventlet, python-gflags, python-httplib2, python-iso8601, python-keystone, python-kombu, python-lxml, python-netaddr, python-paste, python-pastedeploy, python-pyudev, python-quantumclient (>= 1:0.1.0.1-0ubuntu1), python-routes, python-simplejson, python-sqlalchemy (>= 0.7~), python-webob, python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-greenlet, python-sqlalchemy (<< 0.8), python-keystoneclient, alembic, python-oslo.config, python-novaclient
+Filename: pool/main/q/quantum/python-quantum_2013.1.3-0ubuntu1_all.deb
+Size: 785634
+MD5sum: 533b24ae14999b0ad7a039b8542ab46a
+SHA1: 34aa9ef2cfc24849de856987c40a6896ea7a0728
+SHA256: bd447989d0f22120b3b5c975f2ad2de309d55c8a9474426a5961cdbb53a62718
+Description: Quantum is a virutal network service for Openstack - Python library
+Python-Version: 2.7
+Description-md5: e38f13f563282ba0527ba60d7a43a9ee
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: python2.7
 Priority: optional
 Section: python
@@ -8066,6 +8089,388 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: kubuntu-full, kubuntu-active-full
+
+Package: quantum-common
+Priority: optional
+Section: net
+Installed-Size: 102
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Replaces: quantum-server (<= 2013.1~g2-0ubuntu1)
+Depends: adduser, python-quantum (= 1:2013.1.3-0ubuntu1), python
+Breaks: quantum-server (<= 2013.1~g2-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-common_2013.1.3-0ubuntu1_all.deb
+Size: 9458
+MD5sum: 4b90d698d58e3ed873a230c952c37351
+SHA1: 50ab9853e88d934158e1b5ab790b3c0241ea8021
+SHA256: fa2fa0fa48a0c780ed0e3f8f422cf71cd8f05f6dfe4c200e72697b09ca067c0e
+Description: Quantum is a virtual network service for Openstack - common
+Description-md5: 43fbaf2c0951aab958f09334708cee8b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-dhcp-agent
+Priority: optional
+Section: net
+Installed-Size: 72
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Replaces: quantum-common (<= 2012.2~rc1~20120907.1154-0ubuntu1)
+Depends: dnsmasq-base, dnsmasq-utils, quantum-common (= 1:2013.1.3-0ubuntu1), quantum-metadata-agent (= 1:2013.1.3-0ubuntu1), upstart-job, python
+Breaks: quantum-common (<= 2012.2~rc1~20120907.1154-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-dhcp-agent_2013.1.3-0ubuntu1_all.deb
+Size: 4942
+MD5sum: 371730d90e1f8b479f6682bf0658c8df
+SHA1: d40dc8d7825171b27c34ba40804c160cbc592e0a
+SHA256: 8a6d0d95e3acc9ba5bdeb5024ae9f5d105fa67deffa1042105c4b2df5a67fe73
+Description: Quantum is a virtual network service for Openstack - DHCP agent
+Description-md5: a83017d5a5b42b8ec2dd571de7767d6d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-l3-agent
+Priority: optional
+Section: net
+Installed-Size: 72
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Replaces: quantum-common (<= 2012.2~rc1~20120907.1154-0ubuntu1), quantum-server (<= 2013.1~g2-0ubuntu1)
+Depends: quantum-common (= 1:2013.1.3-0ubuntu1), quantum-metadata-agent (= 1:2013.1.3-0ubuntu1), iputils-arping, upstart-job, python
+Breaks: quantum-common (<= 2012.2~rc1~20120907.1154-0ubuntu1), quantum-server (<= 2013.1~g2-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-l3-agent_2013.1.3-0ubuntu1_all.deb
+Size: 4720
+MD5sum: 46ce4bad1a2299e87eaf775c044b91db
+SHA1: 16cee188329ea394e3ec8f4d9539f9cc97a89d7f
+SHA256: e0563cdb24d971b5ed634dff1947a8e5ee25c01c74d990b11ae52f459f830c3e
+Description: Quantum is a virtual network service for Openstack - l3 agent
+Description-md5: 8af25f8a1b5e595928b02f4e38f1f142
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-lbaas-agent
+Priority: optional
+Section: net
+Installed-Size: 70
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Replaces: quantum-common (<= 2012.2~rc1~20120907.1154-0ubuntu1)
+Depends: haproxy, quantum-common (= 1:2013.1.3-0ubuntu1), upstart-job, python
+Breaks: quantum-common (<= 2012.2~rc1~20120907.1154-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-lbaas-agent_2013.1.3-0ubuntu1_all.deb
+Size: 4268
+MD5sum: fa6958d4fb52cd8051c61be8306f5d5c
+SHA1: 6df55144ddec76b89c91776810df54acbb8d959d
+SHA256: d63c78e980d84dc8f6aa8b016094854d2e739b4e04300012bd4bf3048368ccb3
+Description: Quantum is a virtual network service for Openstack - LBaaS agent
+Description-md5: e87aba2f1cbd1205a90663519e598123
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-metadata-agent
+Priority: optional
+Section: net
+Installed-Size: 62
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Replaces: quantum-l3-agent (<= 2013.1.g3-0ubuntu1)
+Depends: quantum-common (= 1:2013.1.3-0ubuntu1), upstart-job, python
+Breaks: quantum-l3-agent (<= 2013.1.g3-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-metadata-agent_2013.1.3-0ubuntu1_all.deb
+Size: 3646
+MD5sum: c72c264fbb6daa9a8aee42da95e6cbaa
+SHA1: 714b02a714bcda86a8fefad5ee6352ee28ddec85
+SHA256: 2a9b85ac8e4d16e519dc3aa40ed37ee0e1546a6d2347a6fae43d6842b709074d
+Description: Quantum is a virtual network service for Openstack - metadata agent
+Description-md5: 8710274544ad7d7284a4820f42cd9f19
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-plugin-cisco
+Priority: optional
+Section: net
+Installed-Size: 51
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Provides: quantum-plugin
+Depends: quantum-common (= 1:2013.1.3-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-plugin-cisco_2013.1.3-0ubuntu1_all.deb
+Size: 2918
+MD5sum: 4e4bc857ffda833f240e512a52abbae8
+SHA1: 94b7af6db5639b0692adde66975f525133949f56
+SHA256: e874a07e9c900bd635890efb9440ef097dc3277b2fca042718c649e55fdd2206
+Description: Quantum is a virtual network service for Openstack - Cisco plugin
+Description-md5: 3f3f1f6f7db606759d00453a338afb8a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-plugin-linuxbridge
+Priority: optional
+Section: net
+Installed-Size: 52
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Provides: quantum-plugin
+Depends: quantum-common (= 1:2013.1.3-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-plugin-linuxbridge_2013.1.3-0ubuntu1_all.deb
+Size: 3278
+MD5sum: 1153e3be7aec63a4aeaf12c4acfc8958
+SHA1: 140c0953786e2b85842680d64df19436b70ad227
+SHA256: 680a472b1cd01bc385d276f014aecb46467b15cf89cf9af49592c51ba926d2a4
+Description: Quantum is a virtual network service for Openstack - linuxbridge plugin
+Description-md5: 37d7a1e2e6de305ae617b088d60443ca
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-plugin-linuxbridge-agent
+Priority: optional
+Section: net
+Installed-Size: 73
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Replaces: quantum-common (<= 2012.2~rc1~20120907.1154-0ubuntu1)
+Depends: bridge-utils, quantum-common (= 1:2013.1.3-0ubuntu1), quantum-plugin-linuxbridge, upstart-job, python
+Breaks: quantum-common (<= 2012.2~rc1~20120907.1154-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-plugin-linuxbridge-agent_2013.1.3-0ubuntu1_all.deb
+Size: 3914
+MD5sum: a2de9f87039a5901771fe92324ffd1b1
+SHA1: 79867a7e636fa6204f4548a283f0c03b54a95aaf
+SHA256: 8f195c07c1dfdd5fbc1b4d0c53b44ab4a0b86d58c89cc44508e3d2a30f2dd2c6
+Description: Quantum is a virtual network service for Openstack - linuxbridge plugin agent
+Description-md5: 44431c62ae6dcaf169a054eca2b2a7c7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-plugin-metaplugin
+Priority: optional
+Section: net
+Installed-Size: 51
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Provides: quantum-plugin
+Depends: quantum-common (= 1:2013.1.3-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-plugin-metaplugin_2013.1.3-0ubuntu1_all.deb
+Size: 2846
+MD5sum: 7010e17e82f6c0bdf0e3ef4fe1178289
+SHA1: 9ee443942480f53035623662fc5be3bba37d47b5
+SHA256: ba689930965a6983a69bc9ca7d25b4dab0e030c6fe6713583d2cb9b109d05634
+Description: Quantum is a virtual network service for Openstack - Metaplugin plugin
+Description-md5: 876f39f7b451a7c8dc6700bee2c2d0e6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-plugin-midonet
+Priority: optional
+Section: net
+Installed-Size: 51
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Provides: quantum-plugin
+Depends: quantum-common (= 1:2013.1.3-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-plugin-midonet_2013.1.3-0ubuntu1_all.deb
+Size: 2792
+MD5sum: 92072f0473ca48cb3119071b62258d33
+SHA1: 246a1b2a25fb98e55a7cf34d7ab97a192ded34f1
+SHA256: 9d5c893dc69bf5c0f308a2642cdbc3ba7500588f3bfddecce880f17ab35d5087
+Description: Quantum is a virtual network service for Openstack - Midonet plugin
+Description-md5: 3a99185cfbeb998dfee5dace84a6b0e1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-plugin-nec
+Priority: optional
+Section: net
+Installed-Size: 52
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Provides: quantum-plugin
+Depends: quantum-common (= 1:2013.1.3-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-plugin-nec_2013.1.3-0ubuntu1_all.deb
+Size: 3136
+MD5sum: 39c889ce442b47c895caf03bbc6631b3
+SHA1: dd3b3492e6c1e0d61f8bd0a6930bcf5600f953b1
+SHA256: 3c8d0697d1cd3743fb9a81df5f88ea00d8f5c47def34e1e7806ad4bf3e322cc5
+Description: Quantum is a virtual network service for Openstack - NEC plugin
+Description-md5: 7d64eab5700e4ce3cacac86ec54d1790
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-plugin-nicira
+Priority: optional
+Section: net
+Installed-Size: 59
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Provides: quantum-plugin
+Depends: quantum-common (= 1:2013.1.3-0ubuntu1), python
+Filename: pool/main/q/quantum/quantum-plugin-nicira_2013.1.3-0ubuntu1_all.deb
+Size: 4246
+MD5sum: 3d1de6323d651e458dab7cbb00cef7ed
+SHA1: a132ef9eed62dd67eea9f2abc5c456b9fa804489
+SHA256: 452edafd4260a06688eede473100dec5b98b032ba244ddfbbed1177bc8aa7474
+Description: Quantum is a virtual network service for Openstack - Nicira plugin
+Description-md5: 535deccfa7df5e13b813aba79dcc3585
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-plugin-openvswitch
+Priority: optional
+Section: net
+Installed-Size: 54
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Provides: quantum-plugin
+Depends: quantum-common (= 1:2013.1.3-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-plugin-openvswitch_2013.1.3-0ubuntu1_all.deb
+Size: 3920
+MD5sum: 9a6e3d6997266756564c15fe25ec49d1
+SHA1: e977acd4d5597e5f477c46599aa896a4218b0467
+SHA256: df213d8b7bb48d82dbc0ee76ed46f1a8219e0ff8f7f1ada5fbcb8d770aa09c9f
+Description: Quantum is a virtual network service for Openstack - Open vSwitch plugin
+Description-md5: 5332f7de595332c72a582ee2259f4d1b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-plugin-openvswitch-agent
+Priority: optional
+Section: net
+Installed-Size: 73
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Replaces: quantum-common (<= 2012.2~rc1~20120907.1154-0ubuntu1)
+Depends: openvswitch-switch, quantum-common (= 1:2013.1.3-0ubuntu1), quantum-plugin-openvswitch, upstart-job, python
+Breaks: quantum-common (<= 2012.2~rc1~20120907.1154-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-plugin-openvswitch-agent_2013.1.3-0ubuntu1_all.deb
+Size: 3960
+MD5sum: e86cc020f0b464a7576ed31b0f1267b3
+SHA1: 00719370ae9f2162f61895cd09d62442aef08f98
+SHA256: fffbd6e00b1dbde09425f53e0968da8309c9543bf3f13fa0d4666972fc32c40b
+Description: Quantum is a virtual network service for Openstack - Open vSwitch plugin agent
+Description-md5: 713f4bd03976c5c116f50f718cb0e590
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-plugin-ryu
+Priority: optional
+Section: net
+Installed-Size: 51
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Provides: quantum-plugin
+Depends: quantum-common (= 1:2013.1.3-0ubuntu1)
+Filename: pool/main/q/quantum/quantum-plugin-ryu_2013.1.3-0ubuntu1_all.deb
+Size: 2980
+MD5sum: df85aec41b1c2c0591e82c2d67c0ada0
+SHA1: 03adda58836f778d59829c394bccb434eab4229a
+SHA256: c5f7d8c237b41d54789f166f225764505b7bdf8f5d54d1170f906791a63e1546
+Description: Quantum is a virtual network service for Openstack - RYU plugin
+Description-md5: edd6392f1cf932690965f9912ea1cd9c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-plugin-ryu-agent
+Priority: optional
+Section: net
+Installed-Size: 73
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Replaces: quantum-common (<= 2012.2~rc1~20120907.1154-0ubuntu1), quantum-server (<< 2012.1-0ubuntu3)
+Depends: quantum-common (= 1:2013.1.3-0ubuntu1), quantum-plugin-ryu, upstart-job, python
+Breaks: quantum-common (<= 2012.2~rc1~20120907.1154-0ubuntu1), quantum-server (<< 2012.1-0ubuntu3)
+Filename: pool/main/q/quantum/quantum-plugin-ryu-agent_2013.1.3-0ubuntu1_all.deb
+Size: 3946
+MD5sum: 2fc791d49f905c571ff52df28311ded5
+SHA1: 078fb6e6c8461e458383244dacc2f552fc4e74df
+SHA256: c155d53741420ad788694a3b3ce91fb6e4d6d5bb777931f4a2b6bd01b7df193d
+Description: Quantum is a virtual network service for Openstack - RYU plugin agent
+Description-md5: e5204297d003c9e7ca00f815a9769e26
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: quantum-server
+Priority: optional
+Section: net
+Installed-Size: 69
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: quantum
+Version: 1:2013.1.3-0ubuntu1
+Depends: adduser, quantum-common (= 1:2013.1.3-0ubuntu1), upstart-job, python
+Recommends: quantum-plugin-openvswitch
+Filename: pool/main/q/quantum/quantum-server_2013.1.3-0ubuntu1_all.deb
+Size: 3878
+MD5sum: b74facd26ca2daf5443f35b4a44d0010
+SHA1: 95dacc2abbb8f568d686c649cc1be1573cf53792
+SHA256: d9d86e413836389d968dde04c1897f9987e40481c17d274b26ded2392ad6bf51
+Description: Quantum is a virtual network service for Openstack - server
+Description-md5: 43bd16442d11c72b6cf07b716b987029
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: software-center
 Priority: optional
