@@ -161,6 +161,96 @@ Origin: Ubuntu
 Supported: 5y
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, edubuntu-desktop, edubuntu-usb, edubuntu-desktop-kde
 
+Package: apt
+Priority: important
+Section: admin
+Installed-Size: 3106
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: i386
+Version: 0.8.16~exp12ubuntu10.13
+Replaces: manpages-pl (<< 20060617-3~)
+Depends: ubuntu-keyring, libapt-pkg4.12 (>= 0.8.16~exp12ubuntu10.13), libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6), gnupg
+Pre-Depends: dpkg (>= 1.15.7.2)
+Suggests: aptitude | synaptic | wajig, dpkg-dev, apt-doc, bzip2, lzma, python-apt
+Conflicts: python-apt (<< 0.7.93.2~)
+Filename: pool/main/a/apt/apt_0.8.16~exp12ubuntu10.13_i386.deb
+Size: 1095824
+MD5sum: ca392331e50f3f3fffd35649340f18cb
+SHA1: ebd4f400cf782e215c3533cf7286c3cac1bd7a60
+SHA256: 6f306006b16289fa0f73d27495182577f7b762b5eb74be7730c0144df786e1ee
+Description: commandline package manager
+Description-md5: 9fb97a88cb7383934ef963352b53b4a7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Supported: 5y
+Task: minimal
+
+Package: apt-doc
+Priority: optional
+Section: doc
+Installed-Size: 575
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: all
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Filename: pool/main/a/apt/apt-doc_0.8.16~exp12ubuntu10.13_all.deb
+Size: 173334
+MD5sum: 1128f5ff49626c9858fa6e374c0f513c
+SHA1: 5477fb508a01e869c0f220874eabeb66bb89ef4f
+SHA256: a74354e8f923ebb3ee14f9fe0461437b7251c0d82a31da8bda762aba7111422b
+Description: documentation for APT
+Description-md5: bc2b838ed28e60af95d78926380a3300
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: apt-transport-https
+Priority: standard
+Section: admin
+Installed-Size: 167
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: i386
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libapt-pkg4.12 (>= 0.8.16~exp12ubuntu10.13), libc6 (>= 2.4), libcurl3-gnutls (>= 7.22.0-3ubuntu4.3), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Filename: pool/main/a/apt/apt-transport-https_0.8.16~exp12ubuntu10.13_i386.deb
+Size: 16330
+MD5sum: d0be6ca5ae5853e06de9aa79690323cb
+SHA1: c4bba455e89509db298534a2596fb852e810afc7
+SHA256: d97917bc3c0888f48e3b6ab516e9fa11b9c6b7d618e80b2f86f7ad9be08b9be7
+Description: https download transport for APT
+Description-md5: 3365a6b50bd0e4eef6e176a80c735f43
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: standard, kubuntu-active
+
+Package: apt-utils
+Priority: important
+Section: admin
+Installed-Size: 539
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: i386
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libapt-inst1.4 (>= 0.8.0), libapt-pkg4.12 (>= 0.8.16~exp12ubuntu10.13), libc6 (>= 2.4), libdb5.1, libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Filename: pool/main/a/apt/apt-utils_0.8.16~exp12ubuntu10.13_i386.deb
+Size: 193604
+MD5sum: f4a8cb95c9e9291c457eed3d87aae043
+SHA1: 8f0d07c00fc25ec074a8b043e8020f34f75f78e2
+SHA256: deddbc0821047656f857979d3824ee286f5ad5ca109cbd91323c19c7c426e048
+Description: package managment related utility programs
+Description-md5: 578941ab78e4cbae72c741e56d175708
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: minimal
+
 Package: consolekit
 Priority: optional
 Section: admin
@@ -1133,6 +1223,97 @@ Description-md5: 8892169afb7b9bc499e71c9594bafe1b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
+
+Package: libapt-inst1.4
+Priority: important
+Section: admin
+Installed-Size: 817
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: i386
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libapt-pkg4.12 (>= 0.8.16~exp12ubuntu10.13), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/a/apt/libapt-inst1.4_0.8.16~exp12ubuntu10.13_i386.deb
+Size: 102406
+MD5sum: a3dc8a9ad6645b32224b9afeadb75fd9
+SHA1: ba91f19d6a02ca0a7fac6f389e45f447a5fa3e31
+SHA256: 28305f81a39faa6d7a114a6541dffe3f7e57341ca5ca7b6b87146c45356aa25f
+Description: deb package format runtime library
+Multi-Arch: same
+Description-md5: 5df05e67cb17e91ac56a732061d88850
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: minimal
+
+Package: libapt-pkg-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 483
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: i386
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libapt-pkg4.12 (= 0.8.16~exp12ubuntu10.13), libapt-inst1.4 (= 0.8.16~exp12ubuntu10.13), zlib1g-dev | zlib-dev
+Filename: pool/main/a/apt/libapt-pkg-dev_0.8.16~exp12ubuntu10.13_i386.deb
+Size: 93468
+MD5sum: 138e8fb773aa6454690159471d76269f
+SHA1: be074ea4f1457dd796ffdb0bc73045b90126d1ae
+SHA256: db3b306bc927b4cda62c16379610c33b8ce64eae32b7de2da13ba282b1a2c1c4
+Description: development files for APT's libapt-pkg and libapt-inst
+Multi-Arch: same
+Description-md5: 8e463f77664788b23a47f5ac592f4595
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libapt-pkg-doc
+Priority: optional
+Section: doc
+Installed-Size: 5247
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: all
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Filename: pool/main/a/apt/libapt-pkg-doc_0.8.16~exp12ubuntu10.13_all.deb
+Size: 747812
+MD5sum: 3f33a063667e35e381f5c22f141cad4e
+SHA1: 41e9e95d1659c7f8535ca56336b1cfe5935686de
+SHA256: df7541bb23d385d62bdb28d7e9072bc91642c5d2a06cc1c046c87ff0a3f62b0e
+Description: documentation for APT development
+Description-md5: decce989b471f196cddabf52bee63592
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libapt-pkg4.12
+Priority: important
+Section: admin
+Installed-Size: 2965
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: i386
+Source: apt
+Version: 0.8.16~exp12ubuntu10.13
+Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6), zlib1g (>= 1:1.2.3.3.dfsg)
+Pre-Depends: multiarch-support
+Filename: pool/main/a/apt/libapt-pkg4.12_0.8.16~exp12ubuntu10.13_i386.deb
+Size: 944116
+MD5sum: 1f53ab4a93e7175145e79a4018700d30
+SHA1: d15781f7e2ba5359d997bb48e38d6bee8a9da8ff
+SHA256: 13110741a7e0150e00d22860841533a207f7107bc0458c63f712acce8d3e514e
+Description: package managment runtime library
+Multi-Arch: same
+Description-md5: c7584b884ab52c1972b8736fef25ad35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Supported: 5y
+Task: minimal
 
 Package: libasn1-8-heimdal
 Priority: standard
