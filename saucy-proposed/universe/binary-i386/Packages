@@ -8444,53 +8444,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-gnome-desktop
 
-Package: pollen
-Priority: optional
-Section: universe/admin
-Installed-Size: 79
-Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
-Architecture: i386
-Version: 3.3-0ubuntu1
-Replaces: anerd-server (<< 3.0)
-Provides: anerd-server
-Depends: sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), golang-go
-Recommends: haveged, pollinate
-Breaks: anerd-server (<< 3.0)
-Filename: pool/universe/p/pollen/pollen_3.3-0ubuntu1_i386.deb
-Size: 9192
-MD5sum: 8d4ed5b0fddd502639479dd4bccc271d
-SHA1: 296cf3610faad2acd751bc91bface6b1a63f1a2d
-SHA256: 5414299c2d4594c320cc6bac7d5a37f01a127635c267123b33bfb79c2ec2f6c2
-Description: Entropy-as-a-Service web server
-Homepage: http://launchpad.net/pollen
-Description-md5: e82e0d796160a300116ea3ec9e3e4bf5
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: pollinate
-Priority: optional
-Section: universe/admin
-Installed-Size: 66
-Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
-Architecture: all
-Source: pollen
-Version: 3.3-0ubuntu1
-Replaces: anerd (<< 3.0), anerd-client (<< 3.0)
-Provides: anerd, anerd-client
-Depends: sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), run-one, curl
-Suggests: pollen-server, ent
-Breaks: anerd (<< 3.0), anerd-client (<< 3.0)
-Filename: pool/universe/p/pollen/pollinate_3.3-0ubuntu1_all.deb
-Size: 9768
-MD5sum: 53508568f86ad425d71d9ae0f3b4818c
-SHA1: 993feb2e7e31d81aad26e0d891557df78b7901d8
-SHA256: abaa81b8e2b23871c73b411fc16a8feced6ab9df079759a10033f55aac7ce6ee
-Description: Entropy-as-a-Service client
-Homepage: http://launchpad.net/pollen
-Description-md5: a304605e79b0f9dcac10339acccd0f5e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: postgis
 Priority: optional
 Section: universe/misc
@@ -10650,6 +10603,107 @@ SHA256: 8ce7c47ec99af56d53abddfbc8ab908459330b686be058bc84a6e3029809553b
 Description: Autopiloted tests for Unity
 Homepage: https://launchpad.net/unity
 Description-md5: 175b20b65abb453a1c7c7aa69c1d9c61
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: unity-webapps-dev
+Priority: optional
+Section: universe/gnome
+Installed-Size: 261
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: webapps-applications
+Version: 2.4.16+13.10.20130904.2-0ubuntu1
+Replaces: unity-webapps-common (<< 2.4.16)
+Depends: gjs, make | build-essential | dpkg-dev, python3-polib, unity-webapps-common
+Filename: pool/universe/w/webapps-applications/unity-webapps-dev_2.4.16+13.10.20130904.2-0ubuntu1_all.deb
+Size: 46372
+MD5sum: 9c8b4ed0cf3f11e14ffa2066198ad10a
+SHA1: bcd8fbe739e841417f8a36b9630e5b9317c65198
+SHA256: 419b770810590b1594ad6ed649ab18b7941105ee58dbcd34f48ec415a1e51659
+Description: Tools for developing Unity WebApp integration scripts.
+Homepage: https://launchpad.net/webapps-applications
+Description-md5: fe239fc4928a7a9abbc0d8b36b86f35a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: unity-webapps-qml
+Priority: optional
+Section: universe/gnome
+Installed-Size: 436
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Version: 0.1+13.10.20130904.2-0ubuntu1
+Depends: libqt5webkit5-qmlwebkitplugin, qtdeclarative5-unity-action-plugin, qtdeclarative5-qtquick2-plugin, libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libglib2.0-0 (>= 2.20.0), libmessaging-menu0 (>= 12.10.2), libnotify4 (>= 0.7.0), libqt5core5 (>= 5.0.2), libqt5gui5 (>= 5.0.2), libqt5qml5, libqt5quick5, libstdc++6 (>= 4.1.1), libunity9 (>= 4.0.0)
+Filename: pool/universe/u/unity-webapps-qml/unity-webapps-qml_0.1+13.10.20130904.2-0ubuntu1_i386.deb
+Size: 129112
+MD5sum: cbda7b40b25225f51bce05accaf5f13b
+SHA1: 8abbddfcad8b21aa456bf48f45b76ee06f12f99d
+SHA256: bff2dd85e070542e1ddb7f3fb96b054ba92aaee469b30f5bbfcba5cde72e27b3
+Description: Unity Webapps QML component
+Multi-Arch: same
+Homepage: https://launchpad.net/unity-webapp-qml
+Description-md5: 1e74fa6c3286383cd2cf95b0cfe337a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: unity-webapps-qml-autopilot
+Priority: optional
+Section: universe/gnome
+Installed-Size: 123
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: all
+Source: unity-webapps-qml
+Version: 0.1+13.10.20130904.2-0ubuntu1
+Depends: dpkg-dev, libautopilot-qt, libqt5test5, qmlscene, qtdeclarative5-unity-action-plugin, qtdeclarative5-window-plugin, unity-autopilot, unity-webapps-qml (>= 0.1+13.10.20130904.2-0ubuntu1), python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Filename: pool/universe/u/unity-webapps-qml/unity-webapps-qml-autopilot_0.1+13.10.20130904.2-0ubuntu1_all.deb
+Size: 8570
+MD5sum: c50800ef282c1ebc441c6eaf1d0b63dd
+SHA1: 4d9b86dae873b6bae9b0f50fe89bf66ba8635d53
+SHA256: 6199dfc6c50c9261f900709d2f0149f0f65c31bd9b98ef2e8566116a9f4bd6f9
+Description: Autopilot tests for the Unity Webapps QML
+Homepage: https://launchpad.net/unity-webapp-qml
+Description-md5: ff25a009a74f257651b5ac73e631f201
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: unity-webapps-qml-doc
+Priority: optional
+Section: universe/doc
+Installed-Size: 87
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: all
+Source: unity-webapps-qml
+Version: 0.1+13.10.20130904.2-0ubuntu1
+Suggests: unity-webapps-qml-examples
+Filename: pool/universe/u/unity-webapps-qml/unity-webapps-qml-doc_0.1+13.10.20130904.2-0ubuntu1_all.deb
+Size: 9818
+MD5sum: 991834f7a1dc806a0b7ce73fe3db687d
+SHA1: 69290594f0fc1cd06ad036c991c53082825ce886
+SHA256: 8b792f499f45cb4f3e4ed9491c999132a75c21769abee5473e80f72346a6bb79
+Description: Documentation for Unity Webapps QML - documentation
+Homepage: https://launchpad.net/unity-webapp-qml
+Description-md5: 62c935a6f4b10ac91afb30b8e8d762e8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: unity-webapps-qml-examples
+Priority: optional
+Section: universe/libs
+Installed-Size: 126
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: unity-webapps-qml
+Version: 0.1+13.10.20130904.2-0ubuntu1
+Depends: unity-webapps-qml (>= 0.1+13.10.20130904.2-0ubuntu1), qtdeclarative5-window-plugin
+Filename: pool/universe/u/unity-webapps-qml/unity-webapps-qml-examples_0.1+13.10.20130904.2-0ubuntu1_i386.deb
+Size: 14596
+MD5sum: bf8c8786e13c634423e955a158fab8b7
+SHA1: e50c1409ba650d370b98bb49e2a50c4910571ec7
+SHA256: c9f9aeab70c362675db9c1d9f1c4ea51d9fbcad5c240b221b1b06172e20cade5
+Description: Example usage of Unity Webapps QML component
+Homepage: https://launchpad.net/unity-webapp-qml
+Description-md5: 235b7b4ac2bb4a797af08154ff31ba36
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
