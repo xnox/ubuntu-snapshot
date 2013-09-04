@@ -40,6 +40,7 @@ Testsuite: autopkgtest
 Package: cinder
 Binary: python-cinder, cinder-common, cinder-api, cinder-volume, cinder-scheduler, cinder-backup
 Version: 1:2013.1.3-0ubuntu1
+Priority: extra
 Section: net
 Maintainer: Chuck Short <zulcss@ubuntu.com>
 Build-Depends: debhelper (>= 8.0.0), python-all (>= 2.6)
@@ -191,6 +192,41 @@ Checksums-Sha256:
 Ruby-Versions: all
 Testsuite: autopkgtest
 
+Package: glance
+Binary: python-glance, glance, python-glance-doc, glance-common, glance-api, glance-registry
+Version: 1:2013.1.3-0ubuntu1
+Section: net
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50), python-all (>= 2.6), sqlite3
+Build-Depends-Indep: curl, pep8, python-boto, python-crypto, python-eventlet, python-fixtures, python-httplib2 (>= 0.6.0), python-iso8601, python-anyjson, python-jsonschema, python-keystoneclient, python-kombu, python-lxml, python-migrate, python-mox, python-nose, python-oslo-config, python-paste, python-pastedeploy, python-passlib, python-requests, python-routes, python-setuptools, python-sphinx, python-sqlalchemy-ext | python-sqlalchemy (<< 0.6.3-2), python-swiftclient, python-testtools, python-webob, python-xattr
+Architecture: all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/g/glance
+Files:
+ 966676c4db470549885ef7cb115118be 2375 glance_2013.1.3-0ubuntu1.dsc
+ f9ba3865ff2cf98caa471bd54173fecd 721788 glance_2013.1.3.orig.tar.gz
+ 5cf54f91bd4cf3c36a82c7c9443f3a1e 12934 glance_2013.1.3-0ubuntu1.debian.tar.gz
+Homepage: http://launchpad.net/glance
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/glance/grizzly/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/glance/grizzly
+Package-List: 
+ glance deb python extra
+ glance-api deb python extra
+ glance-common deb python extra
+ glance-registry deb python extra
+ python-glance deb python extra
+ python-glance-doc deb doc extra
+Checksums-Sha1:
+ 44a15fd0ecda4d18a8c3a2d4e10d3053eee7546c 2375 glance_2013.1.3-0ubuntu1.dsc
+ 2ce2b9e92e8bbd1871e70901df185c65d987500f 721788 glance_2013.1.3.orig.tar.gz
+ 3615fc4d76e4306c3e3bf1a1cf073bc54bc21a1c 12934 glance_2013.1.3-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ a78f4a9f3820320c77e433d1ce5c4cd3ce4b237fc5f014c9f78d8fe4275e9652 2375 glance_2013.1.3-0ubuntu1.dsc
+ 642782416d790dfcb6d5bb85626dd5d48784ba8f3a53e7863ec13312e86cb209 721788 glance_2013.1.3.orig.tar.gz
+ 327e89206218fd8270ab5b91eb6dfb7a8d1845e0a09fbcbf53ac8c0680c7fb88 12934 glance_2013.1.3-0ubuntu1.debian.tar.gz
+Python-Version: >= 2.6
+
 Package: glib-networking
 Binary: glib-networking, glib-networking-services, glib-networking-common, glib-networking-dbg
 Version: 2.36.2-0ubuntu0.1
@@ -312,6 +348,37 @@ Checksums-Sha256:
  2f0a3608876ecb3274c9e4cccca5ec3d16fc37a8938b73fd821bc481d68c21c5 3033 heimdal_1.6~git20120403+dfsg1-2ubuntu0.13.04.1.dsc
  4ccf55feaf3b844c06d07fa83150e1a2e41bd4f19255bd5e8f198c05bfa2dc90 9261264 heimdal_1.6~git20120403+dfsg1.orig.tar.gz
  28946df61ad8c340756248b249f458ff093779aa69a425179010e87ef056deb9 75299 heimdal_1.6~git20120403+dfsg1-2ubuntu0.13.04.1.debian.tar.gz
+
+Package: horizon
+Binary: python-django-horizon, openstack-dashboard, python-django-openstack, openstack-dashboard-ubuntu-theme
+Version: 1:2013.1.3-0ubuntu1
+Section: net
+Maintainer: Chuck Short <zulcss@ubuntu.com>
+Build-Depends: debhelper (>= 8.0.0), pep8, pylint, python-all (>= 2.6.6-3~), python-django-nose, python-mox, python-netaddr, python-nose, python-setuptools, python-sphinx
+Architecture: all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/h/horizon
+Files:
+ eb4f68873fd9d4689f5f658a5e5702c5 1920 horizon_2013.1.3-0ubuntu1.dsc
+ 8edb861987dffe3017eada91d3009f0a 1788951 horizon_2013.1.3.orig.tar.gz
+ 9f11a26a3a9a4231cc9f642eb2aa3a7a 151698 horizon_2013.1.3-0ubuntu1.debian.tar.gz
+Homepage: http://launchpad.net/horizon
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/horizon/grizzly/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/horizon/grizzly
+Package-List: 
+ openstack-dashboard deb net extra
+ openstack-dashboard-ubuntu-theme deb net extra
+ python-django-horizon deb python extra
+ python-django-openstack deb net extra
+Checksums-Sha1:
+ 40e2b0fae546b586dd0f2540b728a35a89ef4d80 1920 horizon_2013.1.3-0ubuntu1.dsc
+ 97ec433ceeca1ab7504d10c94e6d742b74017c91 1788951 horizon_2013.1.3.orig.tar.gz
+ 88a074ae186338f1aa61b03d80002397ca1ae5ba 151698 horizon_2013.1.3-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ ae61cd3cadec4bae79d0cebdfc34335b06242c5607e8dd9628dc825323def351 1920 horizon_2013.1.3-0ubuntu1.dsc
+ 4dbf05e75313d9d6ac966de1d139f26647ab537a3d1f418a3e4424210b4c05fd 1788951 horizon_2013.1.3.orig.tar.gz
+ 86fa46f28c47f2dd3b7a702f647416c09c00ec6eef25b7768822cc9c3243efb7 151698 horizon_2013.1.3-0ubuntu1.debian.tar.gz
 
 Package: libdebian-installer
 Binary: libdebian-installer4, libdebian-installer4-dev, libdebian-installer4-udeb, libdebian-installer-extra4, libdebian-installer-extra4-udeb

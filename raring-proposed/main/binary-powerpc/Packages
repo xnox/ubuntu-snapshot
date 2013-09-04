@@ -90,6 +90,109 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: minimal
 
+Package: cinder-api
+Priority: extra
+Section: net
+Installed-Size: 62
+Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: cinder
+Version: 1:2013.1.3-0ubuntu1
+Depends: cinder-common (= 1:2013.1.3-0ubuntu1), upstart-job, python
+Filename: pool/main/c/cinder/cinder-api_2013.1.3-0ubuntu1_all.deb
+Size: 3614
+MD5sum: 96431d2b9b8c763bd707900339412c50
+SHA1: 89d133f9d26827c0efb8c3fc8ad5d7cd79b37d90
+SHA256: eeebb5d69c2bb6696c5be577a2061ab70ec7c2df859ffc354a24724360944e29
+Description: Cinder storage service - API server
+Homepage: http://launchpad.net/cinder
+Description-md5: 325d82ff6875c8b415e2cbe731a45c21
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: cinder-backup
+Priority: extra
+Section: net
+Installed-Size: 53
+Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: cinder
+Version: 1:2013.1.3-0ubuntu1
+Depends: cinder-common (= 1:2013.1.3-0ubuntu1), upstart-job, python
+Filename: pool/main/c/cinder/cinder-backup_2013.1.3-0ubuntu1_all.deb
+Size: 3246
+MD5sum: 4dec1764ce8c91eb0757a0bb705e058f
+SHA1: 598e7894933fe0c04cce213f4a41b4f9bc564c0e
+SHA256: 4a95ea138cb42ccaadb868f00404e60e80f5804a970c0f43c001b6b266666406
+Description: Cinder storage service - Scheduler server
+Homepage: http://launchpad.net/cinder
+Description-md5: e2df85270f1e60cf99b08a0d7054224e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: cinder-common
+Priority: extra
+Section: net
+Installed-Size: 121
+Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: cinder
+Version: 1:2013.1.3-0ubuntu1
+Depends: adduser, python-cinder (= 1:2013.1.3-0ubuntu1), python
+Filename: pool/main/c/cinder/cinder-common_2013.1.3-0ubuntu1_all.deb
+Size: 14300
+MD5sum: fb2516abaeeb110de731517d70de4d81
+SHA1: f9ca0e18505936caa0ed2374aca49e960b8b41d0
+SHA256: 7a26a17c78050aa5b91729ab9490b97b86725008a4d09f919fc68de57bf80586
+Description: Cinder storage service - common files
+Homepage: http://launchpad.net/cinder
+Description-md5: d0c1f1d187fc251f073166729bba6897
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: cinder-scheduler
+Priority: extra
+Section: net
+Installed-Size: 62
+Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: cinder
+Version: 1:2013.1.3-0ubuntu1
+Depends: cinder-common (= 1:2013.1.3-0ubuntu1), upstart-job, python
+Filename: pool/main/c/cinder/cinder-scheduler_2013.1.3-0ubuntu1_all.deb
+Size: 3656
+MD5sum: a95f63c4f5a059e7e9a61d21bd6302e5
+SHA1: d1a5aff0ccd19f05def257745d9c7033d6b18a4d
+SHA256: 054353e843cf6f3ebebc1751943d5c55f47f6d16795f94b87b89dcf58c0fb4a4
+Description: Cinder storage service - Scheduler server
+Homepage: http://launchpad.net/cinder
+Description-md5: cdc56e77ac87da514cb5cf0c47684649
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: cinder-volume
+Priority: extra
+Section: net
+Installed-Size: 102
+Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: cinder
+Version: 1:2013.1.3-0ubuntu1
+Replaces: cinder-common (<= 2012.2~rc1~20120907.1154-0ubuntu1)
+Depends: cinder-common (= 1:2013.1.3-0ubuntu1), lvm2, tgt, upstart-job, python
+Suggests: ceph-common
+Breaks: cinder-common (<= 2012.2~rc1~20120907.1154-0ubuntu1)
+Filename: pool/main/c/cinder/cinder-volume_2013.1.3-0ubuntu1_all.deb
+Size: 6014
+MD5sum: 1376528b7455b3f0c5a9730c17ff0668
+SHA1: b02e49f027192f0cf2f4b056e0ff804b89bc3ecd
+SHA256: c2046a1f0645e00557c2b2adfe1c96aa9ffce7dd70ab2a5bae0f8552672f36dc
+Description: Cinder storage service - Volume server
+Homepage: http://launchpad.net/cinder
+Description-md5: 47b3310ccd07d775fd3dc3ac73b9c761
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: cups
 Priority: optional
 Section: net
@@ -6323,6 +6426,27 @@ Description-md5: 4d976920c48ddb853a514f4335f32a98
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: cloud-image, edubuntu-desktop-gnome, ubuntu-gnome-desktop
+
+Package: python-cinder
+Priority: extra
+Section: net
+Installed-Size: 7681
+Maintainer: Chuck Short <zulcss@ubuntu.com>
+Architecture: all
+Source: cinder
+Version: 1:2013.1.3-0ubuntu1
+Depends: python-amqplib, python-anyjson, python-eventlet, python-glance, python-glanceclient, python-keystoneclient, python-oslo.config, python-greenlet, python-iso8601, python-kombu, python-lockfile, python-lxml, python-migrate, python-paramiko, python-paste, python-pastedeploy, python-routes, python-stevedore (>= 0.8), python-swiftclient, python-sqlalchemy (>= 0.7~), python-suds, python-webob, python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-sqlalchemy (<< 0.8), python-babel
+Suggests: python-hp3parclient
+Filename: pool/main/c/cinder/python-cinder_2013.1.3-0ubuntu1_all.deb
+Size: 1317768
+MD5sum: 5914877d2c52377b2caca2bd966ff118
+SHA1: 05eb31f9b8139c295530bb21c7e26015343839b3
+SHA256: 7f12c2c1547671ab4cb02e870644d16c7fa778b733b1969c9c8a12b83a009ca1
+Description: Cinder Python libraries
+Homepage: http://launchpad.net/cinder
+Description-md5: 306e549f267870a6b2c0790521663c58
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: python-django-maas
 Priority: optional
