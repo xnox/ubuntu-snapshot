@@ -455,6 +455,92 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: glance
+Priority: extra
+Section: python
+Installed-Size: 32
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Architecture: all
+Version: 1:2013.1.3-0ubuntu1
+Depends: glance-api (= 1:2013.1.3-0ubuntu1), glance-registry (= 1:2013.1.3-0ubuntu1)
+Suggests: python-ceph
+Filename: pool/main/g/glance/glance_2013.1.3-0ubuntu1_all.deb
+Size: 1686
+MD5sum: df8ada7333cdbaedde310282fe3923a4
+SHA1: 044aced747163e40cf05732db2eff7d3ff4de528
+SHA256: ea59997786fe715dd95926e1ccb8f69c41ed806be7f51db2709a2be9be4f15a1
+Description: OpenStack Image Registry and Delivery Service - Daemons
+Homepage: http://launchpad.net/glance
+Description-md5: 339da060766773f0f887cd36e425e1e7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: glance-api
+Priority: extra
+Section: python
+Installed-Size: 153
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Architecture: all
+Source: glance
+Version: 1:2013.1.3-0ubuntu1
+Replaces: glance (<< 2012.1~e1~20110919.1021-0ubuntu2)
+Depends: glance-common (= 1:2013.1.3-0ubuntu1), upstart-job, python
+Recommends: python-glanceclient
+Filename: pool/main/g/glance/glance-api_2013.1.3-0ubuntu1_all.deb
+Size: 23566
+MD5sum: 1e88a6b1d05c512284c09994a34bc7f2
+SHA1: 947efe337340918112241640c2bbf4633b161ee5
+SHA256: dc6febfaef41c57484d3ff93893a2a3e2610e135f943b89f1a0991ea526e415a
+Description: OpenStack Image Registry and Delivery Service - API
+Homepage: http://launchpad.net/glance
+Description-md5: 42730c4382da9ba8dd9214037a2fa93e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: glance-common
+Priority: extra
+Section: python
+Installed-Size: 99
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Architecture: all
+Source: glance
+Version: 1:2013.1.3-0ubuntu1
+Replaces: glance (<= 2011.3-0ubuntu4.1)
+Depends: adduser, python-glance (= 1:2013.1.3-0ubuntu1), python
+Breaks: glance (<= 2011.3-0ubuntu4.1)
+Filename: pool/main/g/glance/glance-common_2013.1.3-0ubuntu1_all.deb
+Size: 9496
+MD5sum: 744289ecf8d8f5cb74c6aaf723c6fc0e
+SHA1: 77053a5241769bd6f5648767cfc3765f02a01842
+SHA256: 7be4040f534342eedef2adad8a2390376c7079bbdd8e685fa1e6ff55e22f1148
+Description: OpenStack Image Registry and Delivery Service - Common
+Homepage: http://launchpad.net/glance
+Description-md5: 30114b8292754cb9dbc0df08ef8677a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: glance-registry
+Priority: extra
+Section: python
+Installed-Size: 98
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Architecture: all
+Source: glance
+Version: 1:2013.1.3-0ubuntu1
+Replaces: glance (<< 2012.1~e1~20110919.1021-0ubuntu2)
+Depends: glance-common (= 1:2013.1.3-0ubuntu1), upstart-job, python
+Recommends: python-glanceclient
+Filename: pool/main/g/glance/glance-registry_2013.1.3-0ubuntu1_all.deb
+Size: 12118
+MD5sum: 246535e8bd0a21db07c8648748a6c809
+SHA1: a8a7c8f33014e499d0fb9c53b6ddb14c21e40952
+SHA256: 54d3dc3991e7ab752ade5e85f31dd867fdc0334c414f1f4a986da6fbd46a6d6c
+Description: OpenStack Image Registry and Delivery Service - Registry
+Homepage: http://launchpad.net/glance
+Description-md5: fe9b1490f5110376f973da81ebc05838
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: glib-networking
 Priority: optional
 Section: libs
@@ -6383,6 +6469,244 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: minimal
 
+Package: nova-api
+Priority: extra
+Section: net
+Installed-Size: 1926
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Architecture: all
+Source: nova
+Version: 1:2013.1.3-0ubuntu1
+Depends: nova-common (= 1:2013.1.3-0ubuntu1), upstart-job, python, iptables
+Filename: pool/main/n/nova/nova-api_2013.1.3-0ubuntu1_all.deb
+Size: 5568
+MD5sum: 3b792a6895c56ca3a5e69f8b08dd7319
+SHA1: 4af55b190029b2023a6b45b5bdec152aec531e50
+SHA256: d3d5ab3c5cea8f2cb0ed8e6932e1a48d6951a7c64ef5b2258ab11136de0fba6f
+Description: OpenStack Compute - API frontend
+Homepage: http://launchpad.net/nova
+Description-md5: 93751a4c42a717b98a076fc37e614e1c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: nova-cert
+Priority: extra
+Section: net
+Installed-Size: 1917
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Architecture: all
+Source: nova
+Version: 1:2013.1.3-0ubuntu1
+Depends: nova-common (= 1:2013.1.3-0ubuntu1), upstart-job, python
+Filename: pool/main/n/nova/nova-cert_2013.1.3-0ubuntu1_all.deb
+Size: 5190
+MD5sum: 2c514707a94ba5cd8ffdb53ce6ba2af2
+SHA1: 8a59141e7b61916064685bcbf0dd0d99311f4e3d
+SHA256: aee7d82435ad1a769d6991319b79db5deee38075dd38e6315239a251c6216639
+Description: OpenStack Compute - certificate management
+Homepage: http://launchpad.net/nova
+Description-md5: 171b61c56d67b812f80c5642bfa0d1d2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: nova-common
+Priority: extra
+Section: net
+Installed-Size: 2055
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Architecture: all
+Source: nova
+Version: 1:2013.1.3-0ubuntu1
+Depends: adduser, python-amqplib, python-nova (= 1:2013.1.3-0ubuntu1), python
+Recommends: python-glanceclient, python-keystone
+Filename: pool/main/n/nova/nova-common_2013.1.3-0ubuntu1_all.deb
+Size: 25348
+MD5sum: 0507e1167fa16941e54b364458aeb708
+SHA1: 73e7ae811e6df00a6e73a392e40348868469e734
+SHA256: 0a0079851ba6461698f6780c92bb7f74d0e523b00b3a9765eb4be7761f0a6cd0
+Description: OpenStack Compute - common files
+Homepage: http://launchpad.net/nova
+Description-md5: ca300a4c4a13a67629e52754451325a3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: nova-compute
+Priority: extra
+Section: net
+Installed-Size: 1935
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Architecture: all
+Source: nova
+Version: 1:2013.1.3-0ubuntu1
+Depends: curl, ebtables, gawk, iptables, kpartx, lsb-base (>= 3.0.6), nova-common (= 1:2013.1.3-0ubuntu1), nova-compute-kvm | nova-compute-hypervisor, open-iscsi, parted, qemu-utils, genisoimage, vlan, upstart-job, python, adduser
+Suggests: guestmount, sysfsutils, sg3-utils, multipath-tools
+Filename: pool/main/n/nova/nova-compute_2013.1.3-0ubuntu1_all.deb
+Size: 7830
+MD5sum: ec22ca69ed8e821d127df691a4be8772
+SHA1: 84e7f7fba69160a7764198994c2d484baeb36def
+SHA256: 9b46fbf4a8ec2c65be61e1a3adefde6808c6a6cf9b4ee7e580167156259b518e
+Description: OpenStack Compute - compute node
+Homepage: http://launchpad.net/nova
+Description-md5: 4ede856ba4b4b8796676686d84f6183b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: nova-compute-kvm
+Priority: extra
+Section: net
+Installed-Size: 1893
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Architecture: all
+Source: nova
+Version: 1:2013.1.3-0ubuntu1
+Provides: nova-compute-hypervisor
+Depends: qemu-system (>= 1.3.0) | kvm, libvirt-bin, nova-compute (= 1:2013.1.3-0ubuntu1), python-libvirt
+Conflicts: nova-compute-hypervisor
+Filename: pool/main/n/nova/nova-compute-kvm_2013.1.3-0ubuntu1_all.deb
+Size: 2810
+MD5sum: 4eed4704139899ffd89894b4208c3fde
+SHA1: f90bdf87d95b67dddc85e61becf4110211897528
+SHA256: 48610a408640b8d0b9c5496d7a4857c4c8baf05e148b7fa32435ed8bc12ec3f1
+Description: OpenStack Compute - compute node (KVM)
+Homepage: http://launchpad.net/nova
+Description-md5: 3a3f4fc6eb0e0d1a1a52636f4a84daa1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: nova-compute-lxc
+Priority: extra
+Section: net
+Installed-Size: 1893
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Architecture: all
+Source: nova
+Version: 1:2013.1.3-0ubuntu1
+Provides: nova-compute-hypervisor
+Depends: libvirt-bin, nova-compute (= 1:2013.1.3-0ubuntu1), python-libvirt
+Conflicts: nova-compute-hypervisor
+Filename: pool/main/n/nova/nova-compute-lxc_2013.1.3-0ubuntu1_all.deb
+Size: 2786
+MD5sum: 31875909196502641be2240f49016c43
+SHA1: a60690cbee064552064073dde444023a249c061a
+SHA256: 7580c7e7812f490bd8b5e83f94e243ac3d9285252ec878a13178d107960ef175
+Description: OpenStack Compute - compute node (LXC)
+Homepage: http://launchpad.net/nova
+Description-md5: 8c74b0f3d56b3da8c70cf752f98f7869
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: nova-doc
+Priority: extra
+Section: doc
+Installed-Size: 19063
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Architecture: all
+Source: nova
+Version: 1:2013.1.3-0ubuntu1
+Recommends: libjs-jquery
+Filename: pool/main/n/nova/nova-doc_2013.1.3-0ubuntu1_all.deb
+Size: 2749160
+MD5sum: 64801ffbd9d27f9c12e88320401d2942
+SHA1: 57d6b182386b9d046a35a6dd7a9a3f2340f0a91d
+SHA256: b441cbf9a569325bda788a0b8e3c80975f8055862d1bf5aff47b0dd3469a52b6
+Description: OpenStack Compute - documentation
+Homepage: http://launchpad.net/nova
+Description-md5: 1c367fcc5afa32969a8f351c6365dd1c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: nova-network
+Priority: extra
+Section: net
+Installed-Size: 1935
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Architecture: all
+Source: nova
+Version: 1:2013.1.3-0ubuntu1
+Depends: bridge-utils, dnsmasq-base, dnsmasq-utils, iptables, iputils-arping, netcat, nova-common (= 1:2013.1.3-0ubuntu1), vlan, upstart-job, python
+Suggests: radvd
+Filename: pool/main/n/nova/nova-network_2013.1.3-0ubuntu1_all.deb
+Size: 8668
+MD5sum: dc26696cc995f788817021cd4ba1cf2e
+SHA1: 456be9ce3ab3db142eccb12ca743cfff55c21905
+SHA256: 8ec062822f48049a4349e38a0db60b06efc1c9384a8a026791f32aa5ea206d03
+Description: OpenStack Compute - Network manager
+Homepage: http://launchpad.net/nova
+Description-md5: ce3e77d724d3353406c26c4d4af8c565
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: nova-objectstore
+Priority: extra
+Section: net
+Installed-Size: 1918
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Architecture: all
+Source: nova
+Version: 1:2013.1.3-0ubuntu1
+Depends: nova-common (= 1:2013.1.3-0ubuntu1), upstart-job, python
+Filename: pool/main/n/nova/nova-objectstore_2013.1.3-0ubuntu1_all.deb
+Size: 5374
+MD5sum: c414cb6163a5ed9570717a01a4f49ee8
+SHA1: f6caffa162737d56820b0f9d66dae286472950e8
+SHA256: 5f9acc633d241815c547f293740240f66874feb4d9b87fe86e49401c8df08e47
+Description: OpenStack Compute - object store
+Homepage: http://launchpad.net/nova
+Description-md5: 25cb037ff1b6bb2f705647605954cac3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: nova-scheduler
+Priority: extra
+Section: net
+Installed-Size: 1922
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Architecture: all
+Source: nova
+Version: 1:2013.1.3-0ubuntu1
+Depends: nova-common (= 1:2013.1.3-0ubuntu1), upstart-job, python
+Filename: pool/main/n/nova/nova-scheduler_2013.1.3-0ubuntu1_all.deb
+Size: 6914
+MD5sum: 903a87ca68f00299e6b56fc72827c000
+SHA1: 91c2e859f456b5eb788fb11589113afc4e66c84c
+SHA256: 6911286a508b4b85da5758fee2a1395bfee843cb82d71fb91b3377bf9b3ff567
+Description: OpenStack Compute - virtual machine scheduler
+Homepage: http://launchpad.net/nova
+Description-md5: 8edec11a409c894d59bffef4d16d21b6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: nova-volume
+Priority: extra
+Section: net
+Installed-Size: 1885
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Architecture: all
+Source: nova
+Version: 1:2013.1.3-0ubuntu1
+Depends: cinder-volume, cinder-api, cinder-scheduler
+Filename: pool/main/n/nova/nova-volume_2013.1.3-0ubuntu1_all.deb
+Size: 9586
+MD5sum: 4335b17e1d3bbf9e6f91d85aa373f60f
+SHA1: 289014bf9dab7450aa980d88f23798c2ec0c238e
+SHA256: f7cbd17b240dda9e1ba3d9b77610af309480d0ccde1c32c80752b1f055dd6fae
+Description: OpenStack Compute - storage
+Homepage: http://launchpad.net/nova
+Description-md5: f85e1ba6a9aabcaf096890562606c8de
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: openstack-dashboard
 Priority: extra
 Section: net
@@ -6646,6 +6970,48 @@ Description-md5: f5f0bb4fb02f0013d4124b7ce2dabd49
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-glance
+Priority: extra
+Section: python
+Installed-Size: 2977
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Architecture: all
+Source: glance
+Version: 1:2013.1.3-0ubuntu1
+Provides: python2.7-glance
+Depends: python-argparse, python-crypto, python-dateutil, python-eventlet, python-httplib2, python-iso8601, python-jsonschema, python-keystone, python-kombu, python-migrate, python-oslo-config, python-pastedeploy, python-requests, python-routes, python-setuptools, python-sqlalchemy-ext | python-sqlalchemy (<< 0.6.3-2), python-swiftclient, python-webob, python-xattr, python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-greenlet, python-sqlalchemy (>= 0.7~), python-sqlalchemy (<< 0.8), python-anyjson, python-boto, python-oslo.config, python-lxml, python-paste, python-passlib, python-keystoneclient
+Filename: pool/main/g/glance/python-glance_2013.1.3-0ubuntu1_all.deb
+Size: 332252
+MD5sum: ad10d70bfb57957e33d8cfada56fc2a9
+SHA1: a907d1d8f253d99edec1fbb3da5a4ce1879e4aea
+SHA256: 00892716b97d6c2af4bce4201f666d4b5f8495c17f398a1cf45cb2b24d8c4a02
+Description: OpenStack Image Registry and Delivery Service - Python library
+Homepage: http://launchpad.net/glance
+Python-Version: 2.7
+Description-md5: ec0b5e83302f9dde6c1f98f25a8f33c7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-glance-doc
+Priority: extra
+Section: doc
+Installed-Size: 638
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Architecture: all
+Source: glance
+Version: 1:2013.1.3-0ubuntu1
+Depends: libjs-jquery
+Filename: pool/main/g/glance/python-glance-doc_2013.1.3-0ubuntu1_all.deb
+Size: 136416
+MD5sum: cf7ea4f42519c2f7e121abf9e7528233
+SHA1: 2ae6c4a4412764a8972dc196da95387e61c70c4b
+SHA256: 803be35113641e7650cfc8038cbead5ae99ea1e010f62ceeff608f3640f83553
+Description: OpenStack Image Registry and Delivery Service - Documentation
+Homepage: http://launchpad.net/glance
+Description-md5: bad2142db8d3e8aad00122582264f750
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-gobject
 Priority: optional
 Section: python
@@ -6748,6 +7114,32 @@ SHA256: ae5a1dfd202be37baea712a2b2235d8b824ce7d8bf2c7957f341dbbaccc19d0c
 Description: Ubuntu MAAS Server
 Homepage: https://launchpad.net/maas
 Description-md5: 4f5c7749b5a2c54ca28e3e8e5170dd4e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-nova
+Priority: extra
+Section: python
+Installed-Size: 18321
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Architecture: all
+Source: nova
+Version: 1:2013.1.3-0ubuntu1
+Provides: python2.7-nova
+Depends: openssh-client, openssl, python-boto, python-carrot, python-cheetah, python-cinderclient, python-daemon, python-eventlet, python-feedparser, python-gflags, python-glance, python-glanceclient, python-iso8601, python-keystone, python-kombu, python-ldap, python-libxml2, python-lockfile, python-lxml, python-m2crypto, python-migrate, python-netaddr, python-novaclient (>= 1:2.9.0), python-paste, python-pastedeploy, python-pycurl, python-routes, python-simplejson, python-sqlalchemy-ext (>= 0.7.8-1~) | python-sqlalchemy (<< 0.6.3-2), python-pyasn1, python-suds, python-tempita, python-webob (>= 1.2.3), python-xattr, sudo, python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-sqlalchemy (>= 0.7~), python-sqlalchemy (<< 0.8), python-amqplib, python-anyjson, python-greenlet, python-paramiko, python-httplib2, python-quantumclient, python-keystoneclient, python-stevedore, python-oslo.config
+Recommends: python-mysqldb
+Suggests: python-suds (>= 0.4.0)
+Conflicts: python-cjson
+Filename: pool/main/n/nova/python-nova_2013.1.3-0ubuntu1_all.deb
+Size: 2714654
+MD5sum: fcfcc21c866d4facd616d00e1a1aabfb
+SHA1: a9f1df20f533527335502fbf32842943436d3e03
+SHA256: 6d187ec1ffb64ac51c3a30cb9246fab3dbe360c28a192016d54541d3e5a8a9f6
+Description: OpenStack Compute Python libraries
+Homepage: http://launchpad.net/nova
+Python-Version: 2.7
+Description-md5: 9e7471c108af7843da4a920afe750d19
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
