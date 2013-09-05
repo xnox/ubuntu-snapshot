@@ -1,6 +1,7 @@
 Package: apparmor-easyprof-ubuntu
 Binary: apparmor-easyprof-ubuntu
 Version: 1.0.29
+Priority: optional
 Section: admin
 Maintainer: Jamie Strandboge <jamie@ubuntu.com>
 Build-Depends: debhelper (>= 9)
@@ -168,35 +169,30 @@ Checksums-Sha256:
  bf6b9780d1395a358465bb3677dca11998ca3aa9f3c91755e8224d5ed4ff0571 45457 bzr_2.6.0-1ubuntu1.debian.tar.gz
 Testsuite: autopkgtest
 
-Package: dh-python
-Binary: dh-python
-Version: 1.20130903-1
-Priority: optional
+Package: ca-certificates-java
+Binary: ca-certificates-java
+Version: 20130815
 Section: misc
-Maintainer: Piotr Ożarowski <piotr@debian.org>
-Build-Depends: debhelper (>= 9), python3-minimal, libpython3-stdlib, python3-docutils
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 6), default-jdk, javahelper, junit4
 Architecture: all
 Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/main/d/dh-python
+Format: 3.0 (native)
+Directory: pool/main/c/ca-certificates-java
 Files:
- adff8f27ea15934a6a35879a15836e51 1993 dh-python_1.20130903-1.dsc
- 5cbbba002cf8b4038c3556872792fe83 52328 dh-python_1.20130903.orig.tar.xz
- 9f6f3b57c2edc11754803656079a21c9 4060 dh-python_1.20130903-1.debian.tar.gz
-Uploaders: Stefano Rivera <stefanor@debian.org>, Barry Warsaw <barry@debian.org>
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=dh-python/dh-python.git
-Vcs-Git: git://anonscm.debian.org/dh-python/dh-python.git
+ dcecada7e784ce1bc07ef9e27e2d65df 1856 ca-certificates-java_20130815.dsc
+ f93e4762800515d6f12ceb397e80a150 11823 ca-certificates-java_20130815.tar.gz
+Uploaders: Matthias Klose <doko@ubuntu.com>, Torsten Werner <twerner@debian.org>, Damien Raude-Morvan <drazzib@debian.org>, James Page <james.page@ubuntu.com>
+Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-java/trunk/ca-certificates-java/
+Vcs-Svn: svn://anonscm.debian.org/pkg-java/trunk/ca-certificates-java
 Package-List: 
- dh-python deb python optional
+ ca-certificates-java deb java optional
 Checksums-Sha1:
- 65631146e0dd1bfaef30f39774669007d7857e57 1993 dh-python_1.20130903-1.dsc
- 54dfbd38e13666ff85e505fffa59bae776ecd698 52328 dh-python_1.20130903.orig.tar.xz
- 975ac8cc85fbc78ebee9d14bee0388a690166cbe 4060 dh-python_1.20130903-1.debian.tar.gz
+ 864192f1274aeda1228da91312c57b9ddb68a495 1856 ca-certificates-java_20130815.dsc
+ cfa3a5777652ee66ab73386da7beba7e67a2bb64 11823 ca-certificates-java_20130815.tar.gz
 Checksums-Sha256:
- 85323f86725b2bfa99dbc8ed884e2747a8d26776f950d1bb4d74246457e453ea 1993 dh-python_1.20130903-1.dsc
- fee9dada11c9d5f350a42a79e6941fabecaa9f4e9468f69796749ddfa7d746e8 52328 dh-python_1.20130903.orig.tar.xz
- 834810bf98b1f86e7cf9248a92e01eb804e9b907e73f9521ea9a79c568f2e820 4060 dh-python_1.20130903-1.debian.tar.gz
-Testsuite: autopkgtest
+ bc96cbb6bb97e94b3d7a295fe16cef16af2c1d1947a5e16d5c89e933f1c7d443 1856 ca-certificates-java_20130815.dsc
+ d113891fb03bd548d5dca26e90ee52e05e2bb9fe9977a2163ddcb50b9f44c46e 11823 ca-certificates-java_20130815.tar.gz
 
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
@@ -933,6 +929,30 @@ Checksums-Sha1:
 Checksums-Sha256:
  ce02584d46ce8a4cbb32f03f3d21404ae2bafedc2091fed8fab09c6012588905 1713 linux-signed_3.11.0-5.10.dsc
  ef232fce17306288badb1bcf8a52e59d3677af6b37624bed9f86d93f0a69df84 6183 linux-signed_3.11.0-5.10.tar.gz
+
+Package: livecd-rootfs
+Binary: livecd-rootfs
+Version: 2.182
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper (>= 7)
+Architecture: all
+Standards-Version: 3.6.1.0
+Format: 3.0 (native)
+Directory: pool/main/l/livecd-rootfs
+Files:
+ 53ebbb8498da897933b2dc5f9adc1534 1577 livecd-rootfs_2.182.dsc
+ 37d048525f2da583502848931912a575 48372 livecd-rootfs_2.182.tar.gz
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/livecd-rootfs/trunk
+Package-List: 
+ livecd-rootfs deb devel optional
+Checksums-Sha1:
+ 7e21ca4893fdb943c22f4a056a856259b4bdcbf6 1577 livecd-rootfs_2.182.dsc
+ ab695528e11153a27e63bfee53e49b3968dc6624 48372 livecd-rootfs_2.182.tar.gz
+Checksums-Sha256:
+ 65201d05c2903da5af2d1229fc5d2798374f214495734cce5153e7056c88893c 1577 livecd-rootfs_2.182.dsc
+ 97c6fd644b21e83fc519261ce3f0bacf5019ab6c7c330210073323ae69fe1efe 48372 livecd-rootfs_2.182.tar.gz
 
 Package: mir
 Binary: libmirprotobuf0, libmirprotobuf-dev, libmirserver1, libmirplatform, mircommon-dev, libmirserver-dev, libmirclient2, libmirclient-dev, mir-demos, mir-doc, mir-test-tools
