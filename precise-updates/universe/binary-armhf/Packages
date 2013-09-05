@@ -2613,6 +2613,48 @@ Description-md5: 9aadce16ef37b93d56befeaf3c431717
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: dante-client
+Priority: optional
+Section: universe/net
+Installed-Size: 97
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Peter Pentchev <roam@ringlet.net>
+Architecture: armhf
+Source: dante
+Version: 1.1.19.dfsg-3ubuntu6.12.04.1
+Depends: libdsocksd0 (= 1.1.19.dfsg-3ubuntu6.12.04.1)
+Filename: pool/universe/d/dante/dante-client_1.1.19.dfsg-3ubuntu6.12.04.1_armhf.deb
+Size: 11512
+MD5sum: bef8bd759707a21901a613c2eef17d04
+SHA1: 949aa24f959f0cafda5958190c81a53a6f4f0220
+SHA256: 8dcd9cac4d167b33de8b759861de49af35fd89d376fb0f31c71b9a131c6b8f21
+Description: SOCKS wrapper for users behind a firewall
+Homepage: http://www.inet.no/dante/
+Description-md5: 3dda083094c90b44bebc6ecc9da32d8c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: dante-server
+Priority: optional
+Section: universe/net
+Installed-Size: 252
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Peter Pentchev <roam@ringlet.net>
+Architecture: armhf
+Source: dante
+Version: 1.1.19.dfsg-3ubuntu6.12.04.1
+Depends: libc6 (>= 2.15-0ubuntu8), libpam0g (>= 0.99.7.1), libwrap0 (>= 7.6-4~)
+Filename: pool/universe/d/dante/dante-server_1.1.19.dfsg-3ubuntu6.12.04.1_armhf.deb
+Size: 119036
+MD5sum: b22402f06c1afac112da467fb29a658d
+SHA1: 4b5613f252645633afe1ed5330936460ec704151
+SHA256: 7bf1aa94c5270c8bb535be0792c1ff3d01876416cc9c9c85270058425b41c31d
+Description: SOCKS (v4 and v5) proxy daemon (danted)
+Homepage: http://www.inet.no/dante/
+Description-md5: 00072cb7e925ba8110ef47af279dbfff
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: dconf-tools
 Priority: extra
 Section: universe/libs
@@ -9403,6 +9445,29 @@ Description-md5: 8868484dcc04142a5081a5a8f9557c3d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libdsocksd0
+Priority: optional
+Section: universe/libs
+Installed-Size: 196
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Peter Pentchev <roam@ringlet.net>
+Architecture: armhf
+Source: dante
+Version: 1.1.19.dfsg-3ubuntu6.12.04.1
+Replaces: dante-client (<< 1.1.19.dfsg)
+Depends: libc6 (>= 2.15-0ubuntu8), libc6 (<< 2.16)
+Conflicts: dante-client (<< 1.1.19.dfsg)
+Filename: pool/universe/d/dante/libdsocksd0_1.1.19.dfsg-3ubuntu6.12.04.1_armhf.deb
+Size: 90282
+MD5sum: 0e695397fdfecdb39f6b882a7cd12970
+SHA1: a92a58e4b98277991082cc533c601bf27ce07a43
+SHA256: 8cabdf2098eb24a7f26d721ae39124622ec613066818e48cc3bf324d9c947b8b
+Description: SOCKS library for internal use by the dante client
+Homepage: http://www.inet.no/dante/
+Description-md5: af048292cc1b5da350c2855aeef91ab0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libfbclient2
 Priority: optional
 Section: universe/libs
@@ -12393,6 +12458,48 @@ Description: SNMP (Simple Network Management Protocol) Python support
 Homepage: http://net-snmp.sourceforge.net/
 Python-Version: 2.7
 Description-md5: 5c78ea4471c165a17eb0e76db000842a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsocksd0
+Priority: optional
+Section: universe/libs
+Installed-Size: 187
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Peter Pentchev <roam@ringlet.net>
+Architecture: armhf
+Source: dante
+Version: 1.1.19.dfsg-3ubuntu6.12.04.1
+Depends: libc6 (>= 2.15-0ubuntu8), libc6 (<< 2.16)
+Filename: pool/universe/d/dante/libsocksd0_1.1.19.dfsg-3ubuntu6.12.04.1_armhf.deb
+Size: 85692
+MD5sum: 01f5afca88000b7dc995aedbddf4f92d
+SHA1: 047eb7ba0726596b2361d77e409fbad71529c04e
+SHA256: 4de4490af4df913a881403df0ebf23a0fe9c95642d38b7c81b25c2024052617f
+Description: SOCKS library for packages built using libsocksd-dev
+Homepage: http://www.inet.no/dante/
+Description-md5: d1245be6c35efe33be994e5f388cba4d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsocksd0-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 269
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Peter Pentchev <roam@ringlet.net>
+Architecture: armhf
+Source: dante
+Version: 1.1.19.dfsg-3ubuntu6.12.04.1
+Depends: libsocksd0 (= 1.1.19.dfsg-3ubuntu6.12.04.1)
+Filename: pool/universe/d/dante/libsocksd0-dev_1.1.19.dfsg-3ubuntu6.12.04.1_armhf.deb
+Size: 80556
+MD5sum: 8d929dbfba507921e9c10d4252f83137
+SHA1: 840f22b2643e0f847fd15b2ee4effc5e7886b1bd
+SHA256: bbc91cdddc57a95bb1c947b38924c7905e33bc52780014e8f876d0be5b7a59fa
+Description: Development files for compiling programs with SOCKS support
+Homepage: http://www.inet.no/dante/
+Description-md5: e3665f1fe22527f31227f98afb542c9a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
