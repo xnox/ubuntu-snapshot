@@ -13317,6 +13317,27 @@ Description-md5: 325aff66e0ba138a809ef6f09fff0988
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-headers-3.8.0-30-lowlatency
+Priority: optional
+Section: universe/devel
+Installed-Size: 11507
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: linux-lowlatency
+Version: 3.8.0-30.22
+Provides: linux-headers, linux-headers-3.0
+Depends: coreutils | fileutils (>= 4.0), linux-lowlatency-headers-3.8.0-30, libc6 (>= 2.11)
+Filename: pool/universe/l/linux-lowlatency/linux-headers-3.8.0-30-lowlatency_3.8.0-30.22_i386.deb
+Size: 1006892
+MD5sum: 7bb45175a4e1e06159e0d1331b6108f0
+SHA1: 54510a68f088b19242b9a6b0270b6d2c97265f55
+SHA256: 944d1cb80f87d269e797964dc4a4b12d3513ec06752d8fed9bddebd874dbb569
+Description: Linux kernel headers for version 3.8.0 on x86/x86_64
+Description-md5: 2555c4437aa86c91ac996f03f4f2dff1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Phased-Update-Percentage: 10
+
 Package: linux-headers-lowlatency
 Priority: optional
 Section: universe/devel
@@ -13324,17 +13345,18 @@ Installed-Size: 27
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lowlatency
-Version: 3.8.0.29.17
-Depends: linux-headers-3.8.0-29-lowlatency
-Filename: pool/universe/l/linux-meta-lowlatency/linux-headers-lowlatency_3.8.0.29.17_i386.deb
-Size: 2304
-MD5sum: 581b61bb232976f061e307821864f440
-SHA1: a5dd0518ce9ac6d4a1b2b11c44d4f55cd8e7d10a
-SHA256: cb9e6e93547be86a2fb0f89f3818ce76f87919cda2959d0805bc139221dbb1cd
+Version: 3.8.0.30.18
+Depends: linux-headers-3.8.0-30-lowlatency
+Filename: pool/universe/l/linux-meta-lowlatency/linux-headers-lowlatency_3.8.0.30.18_i386.deb
+Size: 2300
+MD5sum: 352c62504d972ec136878e6bf6d72e47
+SHA1: a030ca111fe22f61b0204010d8ee570d501a83cd
+SHA256: 498cfc554226e2f02b6c21002f9b890bd4453626840490c88d3b6b21928c0bac
 Description: lowlatency Linux kernel headers
 Description-md5: b28bf5c7c758bfbbbd15e31ed4c78ed6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Phased-Update-Percentage: 10
 
 Package: linux-headers-lowlatency-pae
 Priority: optional
@@ -13343,17 +13365,18 @@ Installed-Size: 27
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lowlatency
-Version: 3.8.0.29.17
+Version: 3.8.0.30.18
 Depends: linux-headers-lowlatency
-Filename: pool/universe/l/linux-meta-lowlatency/linux-headers-lowlatency-pae_3.8.0.29.17_i386.deb
-Size: 1694
-MD5sum: ecab46f0edb00025dfdf7ecb0e43be26
-SHA1: c0ba119d0a916685bb33609c1e3ba5e7908e6ead
-SHA256: 6f45fa8b60cb2156c3957017c92c95186dae10a9c3d799f0a2740f2c5f4bdbc3
+Filename: pool/universe/l/linux-meta-lowlatency/linux-headers-lowlatency-pae_3.8.0.30.18_i386.deb
+Size: 1696
+MD5sum: 458c65a226ebb934ece85c426bd71dab
+SHA1: 86291f45b66fd1833366a903bc214e114a46e00c
+SHA256: 3797e61900b8d72935ad5f7a6c10f60f2e9481189e267c6d05fcdc3c033e2333
 Description: Transitional package
 Description-md5: 6af73404b873a966ac6255b05036407d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Phased-Update-Percentage: 10
 
 Package: linux-image-3.8.0-22-lowlatency
 Priority: optional
@@ -13475,6 +13498,31 @@ Description-md5: 11b5789bd5292a8b16f63a1373a1622c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-image-3.8.0-30-lowlatency
+Priority: optional
+Section: universe/admin
+Installed-Size: 119628
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: linux-lowlatency
+Version: 3.8.0-30.22
+Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, linux-image-3.0, ndiswrapper-modules-1.9, redhat-cluster-modules
+Depends: initramfs-tools (>= 0.36ubuntu6), coreutils | fileutils (>= 4.0), module-init-tools (>= 3.3-pre11-4ubuntu3), crda (>= 1.1.1-1ubuntu2) | wireless-crda, rtirq-init
+Pre-Depends: dpkg (>= 1.10.24)
+Recommends: grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo (>= 19.1)
+Suggests: fdutils, linux-doc-3.8.0 | linux-source-3.8.0, linux-tools, linux-headers-3.8.0-30-lowlatency
+Conflicts: hotplug (<< 0.0.20040105-1)
+Filename: pool/universe/l/linux-lowlatency/linux-image-3.8.0-30-lowlatency_3.8.0-30.22_i386.deb
+Size: 43309576
+MD5sum: 735fd73d8c412945a0da5a8fd259c522
+SHA1: cb3e4044a1ab1b0d380152e75f4ac89fe1ad9bff
+SHA256: fa5e7ea0befaf5a857257cc6f66eed84ba989b3ae90d0a95c6a44c86dd1f4c0f
+Description: Linux kernel image for version 3.8.0 on x86/x86_64
+Description-md5: 11b5789bd5292a8b16f63a1373a1622c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Phased-Update-Percentage: 10
+
 Package: linux-image-lowlatency
 Priority: optional
 Section: universe/kernel
@@ -13482,17 +13530,18 @@ Installed-Size: 27
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lowlatency
-Version: 3.8.0.29.17
-Depends: linux-image-3.8.0-29-lowlatency, linux-firmware
-Filename: pool/universe/l/linux-meta-lowlatency/linux-image-lowlatency_3.8.0.29.17_i386.deb
-Size: 2322
-MD5sum: a7173d4c7e2aa8b80d3bcc72a7386d08
-SHA1: b6c8afcc806df8385438e43c16b49a104385c57b
-SHA256: 53b0134f10e5d56ba936127faf82fa79c349fcd11dfdd5eb3c26c4c00f735dfa
+Version: 3.8.0.30.18
+Depends: linux-image-3.8.0-30-lowlatency, linux-firmware
+Filename: pool/universe/l/linux-meta-lowlatency/linux-image-lowlatency_3.8.0.30.18_i386.deb
+Size: 2308
+MD5sum: 8f42aa6ad32bf6c0e851c1452a0d99dd
+SHA1: c3b6752fbd4c99846ebd7a94341efa4fba54cf99
+SHA256: 0f60ce7f1b381d3527e22becf4a155b9db82e90c039327ac0a945fc9a796a0d9
 Description: lowlatency Linux kernel image
 Description-md5: 81c6fc6425f7566aa856ff1be6d8b320
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Phased-Update-Percentage: 10
 
 Package: linux-image-lowlatency-pae
 Priority: optional
@@ -13501,17 +13550,18 @@ Installed-Size: 27
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lowlatency
-Version: 3.8.0.29.17
+Version: 3.8.0.30.18
 Depends: linux-image-lowlatency
-Filename: pool/universe/l/linux-meta-lowlatency/linux-image-lowlatency-pae_3.8.0.29.17_i386.deb
+Filename: pool/universe/l/linux-meta-lowlatency/linux-image-lowlatency-pae_3.8.0.30.18_i386.deb
 Size: 1692
-MD5sum: 61fa5285d6191c473665481d5cb13c3c
-SHA1: 45bfcd4eefdc37e4a64f097ce4789b60b8c96928
-SHA256: 7f107bd09feb62f8efb6a82139ea3d0cc98291ac86d2a629c2a8414eaa089f0c
+MD5sum: 14add895b9de798ae586592b64db934b
+SHA1: 42a79cf6596fc477fbe7f59fd1b44bd882b9a72d
+SHA256: 71d6f0fde9d3eb5d582ac646269e2d01ef2f44ec3345e947dbae78c6b93f2969
 Description: Transitional package
 Description-md5: 6843cc37a69c40820f7d377dff479023
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Phased-Update-Percentage: 10
 
 Package: linux-lowlatency
 Priority: optional
@@ -13520,17 +13570,18 @@ Installed-Size: 27
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lowlatency
-Version: 3.8.0.29.17
-Depends: linux-image-lowlatency (= 3.8.0.29.17), linux-headers-lowlatency (= 3.8.0.29.17)
-Filename: pool/universe/l/linux-meta-lowlatency/linux-lowlatency_3.8.0.29.17_i386.deb
-Size: 1722
-MD5sum: 13d6448755f9a61ba6c7e9953791d664
-SHA1: c765063cf35d04412d2484b5c18ca268b80ef500
-SHA256: 2032317399d49a5b475d540787b355281b60a90324bf3c47ad2b62750f8cdba9
+Version: 3.8.0.30.18
+Depends: linux-image-lowlatency (= 3.8.0.30.18), linux-headers-lowlatency (= 3.8.0.30.18)
+Filename: pool/universe/l/linux-meta-lowlatency/linux-lowlatency_3.8.0.30.18_i386.deb
+Size: 1724
+MD5sum: 4a41511a141295e8a3ddd9ac1391d453
+SHA1: 5c05e2c6f34ad093b73823f7d3e74fba51168fa2
+SHA256: 46761e935d0315263d61c529ab07677c14c5f501b9111d29465f7d23a3d4cca8
 Description: Complete lowlatency Linux kernel
 Description-md5: b52e19b8044c25aff9dce108f24e2ee9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Phased-Update-Percentage: 10
 
 Package: linux-lowlatency-headers-3.8.0-22
 Priority: optional
@@ -13627,6 +13678,26 @@ Description-md5: 52f40f39aae538890e6af0f72c200154
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-lowlatency-headers-3.8.0-30
+Priority: optional
+Section: universe/devel
+Installed-Size: 58668
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: linux-lowlatency
+Version: 3.8.0-30.22
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/universe/l/linux-lowlatency/linux-lowlatency-headers-3.8.0-30_3.8.0-30.22_all.deb
+Size: 12197400
+MD5sum: 8365c441897a2ff234a83f2c69c80e66
+SHA1: e3dfc37e06f7d74c22793ec9ed364ac1ae32a3e9
+SHA256: c606aab05523b4c7cab4e382f5e3690c52acc4fba5103f85cee66157f3fe568b
+Description: Header files related to Linux kernel version 3.8.0
+Description-md5: bb7538c30772c32403c5467c73b701eb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Phased-Update-Percentage: 10
+
 Package: linux-lowlatency-pae
 Priority: optional
 Section: universe/kernel
@@ -13634,17 +13705,18 @@ Installed-Size: 27
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lowlatency
-Version: 3.8.0.29.17
+Version: 3.8.0.30.18
 Depends: linux-lowlatency
-Filename: pool/universe/l/linux-meta-lowlatency/linux-lowlatency-pae_3.8.0.29.17_i386.deb
-Size: 1686
-MD5sum: 5c84b6a974c35a65cfb443129805a542
-SHA1: bb7263a1653af3a8033dc82852817e7cf64d62ce
-SHA256: c3e460ad37fa4054626a260261015b83841e3e582dc8e063f4883ac5b5071634
+Filename: pool/universe/l/linux-meta-lowlatency/linux-lowlatency-pae_3.8.0.30.18_i386.deb
+Size: 1692
+MD5sum: 9b24483bde452c1a0616a3693f6281fd
+SHA1: 32ef283306b5cb8adf8d863686ac265590fde261
+SHA256: 6ae0bd1e8a51bcbc4549ad6a1ac0649926a3365d640a1a0fd4b8acf43fb54f15
 Description: Transitional package
 Description-md5: 0aa935414a87ff9b660c4f39bab85ed9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Phased-Update-Percentage: 10
 
 Package: lokalize
 Priority: optional
