@@ -184,6 +184,241 @@ Origin: Ubuntu
 Supported: 9m
 Task: minimal
 
+Package: ceph
+Priority: optional
+Section: admin
+Installed-Size: 25329
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Version: 0.56.7-0ubuntu1
+Replaces: gceph, librgw-dev, librgw1, librgw1-dbg
+Depends: libaio1 (>= 0.3.93), libboost-thread1.49.0 (>= 1.49.0-1), libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libgoogle-perftools4, libleveldb1, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16), upstart-job, hdparm | sdparm, binutils, ceph-common, uuid-runtime, python, xfsprogs
+Recommends: libcephfs1, librados2, librbd1, gdisk, parted, cryptsetup-bin
+Conflicts: gceph, librgw-dev, librgw1, librgw1-dbg
+Filename: pool/main/c/ceph/ceph_0.56.7-0ubuntu1_amd64.deb
+Size: 7199450
+MD5sum: 84396900b49d82fc32ca9debfc58deef
+SHA1: bd1c04ea0f9f9410ba6736fc2df1fd481936339f
+SHA256: 3b53b138f8125b2a24d18b0ac6a32d9f04f2a71f0790b5084a0ca96e12f444ec
+Description: distributed storage and file system
+Homepage: http://ceph.com/
+Description-md5: 5b760ba7afcf53e40aaef27366b1074b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-common
+Priority: optional
+Section: admin
+Installed-Size: 10754
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Replaces: ceph-client-tools
+Depends: libc6 (>= 2.15), libedit2 (>= 2.11-20080614-1), libgcc1 (>= 1:4.1.1), libkeyutils1, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), librados2, librbd1 (= 0.56.7-0ubuntu1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Suggests: ceph
+Conflicts: ceph-client-tools
+Filename: pool/main/c/ceph/ceph-common_0.56.7-0ubuntu1_amd64.deb
+Size: 4187806
+MD5sum: 3adb6114dd7c8c690ca55e1bc94179a6
+SHA1: 6f84918b310faeb75bf2565d9f0971084484ebee
+SHA256: faf9d024cb18602c9d7c5306bff5b1e011bdf8d5a8d18eca6338aca6c08f81e2
+Description: common utilities to mount and interact with a ceph filesystem
+Homepage: http://ceph.com/
+Description-md5: ebf427a8705be2b903f71b7d00fb30ac
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-common-dbg
+Priority: extra
+Section: debug
+Installed-Size: 140022
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Replaces: ceph-client-tools-dbg
+Depends: ceph-common (= 0.56.7-0ubuntu1)
+Conflicts: ceph-client-tools-dbg
+Filename: pool/main/c/ceph/ceph-common-dbg_0.56.7-0ubuntu1_amd64.deb
+Size: 41659136
+MD5sum: 68e4c1d30cfe3d0805214e6e0ff926dc
+SHA1: b8d87bde2391acddefa7333f8269086e550658d0
+SHA256: 0e97cd7bca636d4e9317553b74e4c664845fd11d39888b7acfd8a0ddb960c1cc
+Description: debugging symbols for ceph-common
+Homepage: http://ceph.com/
+Description-md5: b96ee3902ab102b5426232512df7efd6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-dbg
+Priority: extra
+Section: debug
+Installed-Size: 160845
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Replaces: gceph-dbg
+Depends: ceph (= 0.56.7-0ubuntu1)
+Conflicts: gceph-dbg
+Filename: pool/main/c/ceph/ceph-dbg_0.56.7-0ubuntu1_amd64.deb
+Size: 44108580
+MD5sum: 785367c388f7a290f9dac49d10031dd4
+SHA1: f00d3d1f16cb093b6ad3d526b89d6880da4ca709
+SHA256: dd6baaeee5b0da300455f0041777995ed2b69694d4b8f23a9e9f51fa17c3518d
+Description: debugging symbols for ceph
+Homepage: http://ceph.com/
+Description-md5: 3ff977e8109f333e8b11cc7bb540e9e5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-fs-common
+Priority: optional
+Section: admin
+Installed-Size: 101
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Replaces: ceph-client-tools
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libkeyutils1, libstdc++6 (>= 4.4.0), ceph-common (= 0.56.7-0ubuntu1)
+Suggests: ceph
+Conflicts: ceph-client-tools
+Filename: pool/main/c/ceph/ceph-fs-common_0.56.7-0ubuntu1_amd64.deb
+Size: 26742
+MD5sum: 734349bcbe08e5054ecbe017a09a759f
+SHA1: 9553afacd5c424ddfda60e1fff5f168886147ebd
+SHA256: 30a0021227751e260152e2d284c2c51d59d471cd70d73192ba28a236100b8259
+Description: common utilities to mount and interact with a ceph filesystem
+Homepage: http://ceph.com/
+Description-md5: 3a35a08cd209768fff8f19f04d89b206
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-fs-common-dbg
+Priority: extra
+Section: debug
+Installed-Size: 236
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Replaces: ceph-client-tools-dbg
+Depends: ceph-fs-common (= 0.56.7-0ubuntu1)
+Conflicts: ceph-client-tools-dbg
+Filename: pool/main/c/ceph/ceph-fs-common-dbg_0.56.7-0ubuntu1_amd64.deb
+Size: 67332
+MD5sum: eb45bb052198dacbd4b6a143869a0a49
+SHA1: a8c3fde05eb434da54c2adbd0c0a4fbf43dab136
+SHA256: 5d25ac35cc19d66250c46407d50e8d880ee4d153988afd3a0b152309603eeecc
+Description: debugging symbols for ceph-fs-common
+Homepage: http://ceph.com/
+Description-md5: 7bf3754769f2fd7259f0d825b5c65b2e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-fuse
+Priority: optional
+Section: admin
+Installed-Size: 3088
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Depends: libc6 (>= 2.15), libfuse2 (>= 2.8.1), libgcc1 (>= 1:4.1.1), libgoogle-perftools4, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Recommends: fuse-utils
+Filename: pool/main/c/ceph/ceph-fuse_0.56.7-0ubuntu1_amd64.deb
+Size: 1233738
+MD5sum: fee0ad6d19ad44465db6164e6dc73a3a
+SHA1: 2fd7a7feeb2d6b388ac514b8f2995c1b64bebb40
+SHA256: 8a5375cc021b32d7290a550dccf1088c456d05f8290efd1372f0b479ae1ad505
+Description: FUSE-based client for the Ceph distributed file system
+Homepage: http://ceph.com/
+Description-md5: 2e66da405a3a0048edd7d65c675526ff
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-fuse-dbg
+Priority: extra
+Section: debug
+Installed-Size: 42191
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Depends: ceph-fuse (= 0.56.7-0ubuntu1)
+Filename: pool/main/c/ceph/ceph-fuse-dbg_0.56.7-0ubuntu1_amd64.deb
+Size: 12853704
+MD5sum: 5cf99da11ff045d6fcf27e3d97fe7dec
+SHA1: 1f15f91d08d7cc2c0ef91508785059e406b1cf18
+SHA256: c931e24e53650eabebe5f7c3e633cb51560341ecaf19c8b605f653503c92aa7a
+Description: debugging symbols for ceph-fuse
+Homepage: http://ceph.com/
+Description-md5: 3379c0e590cdcd0711795dc0925dd7a9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-mds
+Priority: optional
+Section: admin
+Installed-Size: 5405
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libgoogle-perftools4, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16), upstart-job, ceph, ceph-fs-common
+Filename: pool/main/c/ceph/ceph-mds_0.56.7-0ubuntu1_amd64.deb
+Size: 2182312
+MD5sum: c60627b82cd81f2e79b33922e18bc5ed
+SHA1: 0d52cdb9911374776c4982004a269fef2396c096
+SHA256: cc70e502f5346f375fbc5bc484734d72e5286923d59679602738c87b9215b53f
+Description: distributed filesystem service
+Homepage: http://ceph.com/
+Description-md5: 5696ba010c8ae89d561b802f92f69f12
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: ceph-mds-dbg
+Priority: extra
+Section: debug
+Installed-Size: 87782
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Depends: ceph-mds (= 0.56.7-0ubuntu1)
+Filename: pool/main/c/ceph/ceph-mds-dbg_0.56.7-0ubuntu1_amd64.deb
+Size: 27784992
+MD5sum: f3b8a91e1178ad0f19f9393db8f419e5
+SHA1: 6a048725fba19d650a13fa6294807e8b154801c7
+SHA256: 7618522a1195115c1f7d7f6ae2d200acae54074115f64a72134089b7b326b4c9
+Description: debugging symbols for ceph
+Homepage: http://ceph.com/
+Description-md5: 8ecb119057d280467496455a9b745977
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: cinder-api
 Priority: extra
 Section: net
@@ -1123,6 +1358,122 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: minimal
+
+Package: libcephfs-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 157431
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Replaces: libceph-dev, libceph1-dev
+Depends: libcephfs1 (= 0.56.7-0ubuntu1)
+Conflicts: libceph-dev, libceph1-dev
+Filename: pool/main/c/ceph/libcephfs-dev_0.56.7-0ubuntu1_amd64.deb
+Size: 28793128
+MD5sum: 3e920a6f29700401c781e9f9fb66db31
+SHA1: bbba84726b8abccba80fad788e818168cb474a8e
+SHA256: a44c677e718c4448ce4acb3fadc300339b180d23c4c97d6d6548db519dcc125e
+Description: Ceph distributed file system client library (development files)
+Homepage: http://ceph.com/
+Description-md5: 6b03c162d6b2cd6497a86ae380717147
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libcephfs-jni
+Priority: optional
+Section: libs
+Installed-Size: 128
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Depends: libcephfs1 (= 0.56.7-0ubuntu1), libc6 (>= 2.2.5), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6)
+Filename: pool/main/c/ceph/libcephfs-jni_0.56.7-0ubuntu1_amd64.deb
+Size: 30942
+MD5sum: 63cf1bcd2eadd687dd0f19c67784df1e
+SHA1: 6f5635b40e18198128d978676de6d1c6e76d3902
+SHA256: 65ca1d0250eaaca38dd56006023e4d45b718e88503fe461f01d6370fda615598
+Description: Java Native Interface library for CephFS Java bindings
+Homepage: http://ceph.com/
+Description-md5: 5fa079ccc13050307cbbc2ab43bd4c3e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libcephfs-jni-dbg
+Priority: extra
+Section: debug
+Installed-Size: 730
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Depends: libcephfs-jni (= 0.56.7-0ubuntu1)
+Filename: pool/main/c/ceph/libcephfs-jni-dbg_0.56.7-0ubuntu1_amd64.deb
+Size: 192748
+MD5sum: 41ba11f64155e584d72b1ccdc4c9af1f
+SHA1: 62c072de5248d6850a092530b8c53a26c246d189
+SHA256: 63ae5481b0d7bcd3527456fbdc2fd111a3ab995f862ab6c11699b3898f66e5bc
+Description: Debugging symbols for libcephfs-jni
+Homepage: http://ceph.com/
+Description-md5: 8289f58cb95c9b860aebf44a021ab413
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libcephfs1
+Priority: optional
+Section: libs
+Installed-Size: 4711
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Replaces: libceph, libceph1
+Depends: libboost-thread1.49.0 (>= 1.49.0-1), libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Conflicts: libceph, libceph1
+Filename: pool/main/c/ceph/libcephfs1_0.56.7-0ubuntu1_amd64.deb
+Size: 1526450
+MD5sum: 8218f80b9fb282a4c844f1005c1b183f
+SHA1: 8821441c735aa4757d28032da55b1020e975e1e7
+SHA256: 895248a3c1dc81bee9850053a8c8bcbe693731819ba489ad97bb9cd849fa0cb2
+Description: Ceph distributed file system client library
+Homepage: http://ceph.com/
+Description-md5: 02d5e7983127037e5b5e5e07dea2a6e4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libcephfs1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 55813
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Replaces: libceph1-dbg
+Depends: libcephfs1 (= 0.56.7-0ubuntu1)
+Conflicts: libceph1-dbg
+Filename: pool/main/c/ceph/libcephfs1-dbg_0.56.7-0ubuntu1_amd64.deb
+Size: 15342064
+MD5sum: 9e361548530655682ecd728e8ccec638
+SHA1: 6d7931af3ae7702f98e75334d397d926791e2d91
+SHA256: aa448b1c89be6e1f38a09110f8e841052e00fde8d7d8ef15fdc94d94c04cde07
+Description: debugging symbols for libcephfs1
+Homepage: http://ceph.com/
+Description-md5: ef23abe3fb9706def734dae7e4f8e64f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: libcups2
 Priority: optional
@@ -3031,21 +3382,21 @@ Supported: 9m
 Package: libqt4-dbg
 Priority: extra
 Section: libs
-Installed-Size: 126997
+Installed-Size: 126993
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-debug (<< 4.4.0~beta1-1)
-Depends: libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3)
+Depends: libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4)
 Conflicts: qt-x11-free-dbg
 Breaks: libqt4-debug (<< 4.4.0~beta1-1)
-Filename: pool/main/q/qt4-x11/libqt4-dbg_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 123186330
-MD5sum: 87fc12dbd2519ea55638d0cbff49c6fc
-SHA1: 81d9f7416ebe738b5ea6f10e9ec798f6fb157c7c
-SHA256: 38906a809cc3df46ffe65d64ce4e45a2c9b59b2a1e752198660f72e937612afc
+Filename: pool/main/q/qt4-x11/libqt4-dbg_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 123200290
+MD5sum: 292ba14820ffddf99bc68bce143f7660
+SHA1: 8e1e6405b9cece54d4167b4ef21b552233547015
+SHA256: 45e8cc80581d4ef2317c487c459dac2f0aa9fbec24dbb34f56952b413a172595
 Description: Qt 4 library debugging symbols
 Homepage: http://qt-project.org/
 Description-md5: eb306b2c018309e76cbbf8fad24c95cc
@@ -3061,17 +3412,17 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-core (<< 4.4.0~beta1-1), libqt4-dev (<< 4:4.7.1)
-Depends: libc6 (>= 2.14), libdbus-1-3 (>= 1.3.1), libgcc1 (>= 1:4.1.1), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Depends: libc6 (>= 2.14), libdbus-1-3 (>= 1.3.1), libgcc1 (>= 1:4.1.1), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
-Recommends: qdbus (= 4:4.8.4+dfsg-0ubuntu9.3)
+Recommends: qdbus (= 4:4.8.4+dfsg-0ubuntu9.4)
 Breaks: libqt4-core (<< 4.4.0~beta1-1), libqt4-dev (<< 4:4.7.1)
-Filename: pool/main/q/qt4-x11/libqt4-dbus_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 178284
-MD5sum: c793a85520614f1f6fd3cf4598e81261
-SHA1: acb4103312b8d3479689736652c9f0e3a9c41ccd
-SHA256: ba12491e5dd67d45fa26c32fa2216b981ee3246c433cdf306156d2c17678d905
+Filename: pool/main/q/qt4-x11/libqt4-dbus_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 178334
+MD5sum: 6d528fdaad95b8d02488b602a26f8cd0
+SHA1: 8963aa8f7c7d779e84ac5c5cb655ec498c305b5f
+SHA256: 19341b4e91531764435e768adf74612b98233769974de2c3e631da7fde96262a
 Description: Qt 4 D-Bus module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3089,15 +3440,15 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-script (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-xmlpatterns (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-script (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-xmlpatterns (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
 Suggests: libqt4-declarative-folderlistmodel, libqt4-declarative-gestures, libqt4-declarative-particles, libqt4-declarative-shaders, qt4-qmlviewer
-Filename: pool/main/q/qt4-x11/libqt4-declarative_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 1064684
-MD5sum: 07dc698095c4ee9481cc35ed15b12b9e
-SHA1: 8719e07a21fe9378b980916ee8fb038ae44e56e3
-SHA256: 48351779e4f12e69ca2584083761a838f26992b6887929d5c28e83eef171bd21
+Filename: pool/main/q/qt4-x11/libqt4-declarative_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 1065036
+MD5sum: e44cec7f4d7e32f322c33527d8aa2a67
+SHA1: 9dde8d3dcf77c5397e56dfc4b3212e2494c7890d
+SHA256: f2ba7983f367c44513564f6171d01239bbb8e9a08094837db313747332ca1758
 Description: Qt 4 Declarative module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3115,14 +3466,14 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: libc6 (>= 2.2.5), libgcc1 (>= 1:4.1.1), libqt4-declarative (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: libc6 (>= 2.2.5), libgcc1 (>= 1:4.1.1), libqt4-declarative (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
-Filename: pool/main/q/qt4-x11/libqt4-declarative-gestures_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 20726
-MD5sum: 0b6a088df7c407ea5389ac2e9461ce63
-SHA1: 550cc2b3d72b6070a55fb3a75495cdfb097b911d
-SHA256: 8533200821aafcc3668e44706d96bd7cb14a3c656feecacea0085b200ce75f4a
+Filename: pool/main/q/qt4-x11/libqt4-declarative-gestures_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 20712
+MD5sum: 6678ca8a07e8a07751ce22bd8cb870f7
+SHA1: b761b9c438d66a5f4f2fd0fa143d21b8b68bc2ac
+SHA256: affcbaf958d8989382e5adf35030a0afff6cdb26981679c8be9ec60c8fb482f2
 Description: Qt 4 gestures QML plugin
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3140,14 +3491,14 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libqt4-declarative (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libqt4-declarative (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
-Filename: pool/main/q/qt4-x11/libqt4-declarative-particles_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 26452
-MD5sum: e71ecefa699309539cd6540fe74486a9
-SHA1: 571a600c0ac2d23689124b92e7d818a8a59f25a1
-SHA256: be94f0bb4f69a4a77d302bf38a00fc9f0dbfbd77f6ae0ac99316d19c24400aff
+Filename: pool/main/q/qt4-x11/libqt4-declarative-particles_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 26370
+MD5sum: e11728c73a95a75a8f8b8bd18821fcfb
+SHA1: a7d32864715c1ba87b4272b8fae379f5665537bf
+SHA256: eba29172d8f381645372f4db7044b07ad696c0accd11adacef094c7721f67e3d
 Description: Qt 4 particles QML plugin
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3165,16 +3516,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-gui (<< 4.4.0~beta1-1)
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-script (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-script (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
 Breaks: libqt4-gui (<< 4.4.0~beta1-1)
-Filename: pool/main/q/qt4-x11/libqt4-designer_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 3576444
-MD5sum: 3d4ccef7806bd109090ac89ffcac134c
-SHA1: 6833f929d2b742a444fd1feea946a01fad6269d4
-SHA256: 563bc011bb008048765a40b8dd3d9704ff5fc47d3bc9cdbb0b954cc426d84fae
+Filename: pool/main/q/qt4-x11/libqt4-designer_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 3577898
+MD5sum: 6bb48df49ef9f2fd2702ca53d0164589
+SHA1: 0ce0ee599a2a51ddfe26790ddb2fb3b47da4b83a
+SHA256: 2fd3aaa0121bcb18cf4fa96fa199481c55835350e45cbf52557d38d2576cedcc
 Description: Qt 4 designer module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3187,21 +3538,21 @@ Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-activ
 Package: libqt4-designer-dbg
 Priority: extra
 Section: debug
-Installed-Size: 44750
+Installed-Size: 44822
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-dbg (<< 4:4.7.3-3)
-Depends: libqt4-designer (= 4:4.8.4+dfsg-0ubuntu9.3)
+Depends: libqt4-designer (= 4:4.8.4+dfsg-0ubuntu9.4)
 Recommends: libqt4-dbg
 Breaks: libqt4-dbg (<< 4:4.7.3-3)
-Filename: pool/main/q/qt4-x11/libqt4-designer-dbg_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 42871012
-MD5sum: a9f3b51b6f3f6b6469264c0b5031ecec
-SHA1: 3bcc052ce79fa26d493fba340a905ad63ed31b2b
-SHA256: f6ca7112284405658b054a1bffa0fb94e947dfebde266a63bc526fc86dba68ea
+Filename: pool/main/q/qt4-x11/libqt4-designer-dbg_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 42955180
+MD5sum: a7e9de7eff63671c942dc338d96cf608
+SHA1: 1649cd566ab9880a5a59a6d66400359f7bf8d2f8
+SHA256: 35772623893f23f7e28261fe21846792304484fa97cfd71d49fb182cb60ba28f
 Description: Qt 4 designer library debugging symbols
 Homepage: http://qt-project.org/
 Description-md5: 4491691a63e68e54f064a6e60370b3c5
@@ -3217,17 +3568,17 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-opengl-dev (<< 4.4.0-2), libqtwebkit-dev (<< 2.0~)
-Depends: libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-declarative (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-designer (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-dev-bin (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-help (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-qt3support (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-script (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-scripttools (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-svg (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-test (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-xmlpatterns (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), qt4-linguist-tools (= 4:4.8.4+dfsg-0ubuntu9.3), qt4-qmake (= 4:4.8.4+dfsg-0ubuntu9.3), qt4-default | qt-default
-Recommends: libqt4-opengl-dev (= 4:4.8.4+dfsg-0ubuntu9.3), libqtwebkit-dev (>= 2.0~)
+Depends: libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-declarative (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-designer (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-dev-bin (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-help (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-qt3support (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-script (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-scripttools (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-svg (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-test (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-xmlpatterns (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), qt4-linguist-tools (= 4:4.8.4+dfsg-0ubuntu9.4), qt4-qmake (= 4:4.8.4+dfsg-0ubuntu9.4), qt4-default | qt-default
+Recommends: libqt4-opengl-dev (= 4:4.8.4+dfsg-0ubuntu9.4), libqtwebkit-dev (>= 2.0~)
 Suggests: libmysqlclient-dev, libpq-dev, libsqlite3-dev, qt4-dev-tools, qt4-doc, unixodbc-dev
 Breaks: libphonon4-dev (<< 4:4.6.0.0-1+exp1~), libqt4-opengl-dev (<< 4.4.0-2), libqtwebkit-dev (<< 2.0~)
-Filename: pool/main/q/qt4-x11/libqt4-dev_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 821732
-MD5sum: 982fa38de095833c0d5dea5edb41278f
-SHA1: ada99fa2d914ad51655bb5fa10d990fa2b581856
-SHA256: 486835c93845b6514465db956a135d8eac61a9583fbebe20c31ad26afda59463
+Filename: pool/main/q/qt4-x11/libqt4-dev_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 830284
+MD5sum: 8d9910f119d7bee7a03421f769ec19fc
+SHA1: 6c1fd3d161fdbf2602b128fb5574ba662b3470e6
+SHA256: 4e762604eb1f15bb19153af6cae6ebe2d6ba3541ecb390ab25325c0a2748bad9
 Description: Qt 4 development files
 Homepage: http://qt-project.org/
 Description-md5: a972324e9d55eec79dbff3af47559638
@@ -3244,16 +3595,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-dev (<< 4:4.8.2)
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-qt3support (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4)
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-qt3support (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4)
 Recommends: qtchooser
 Breaks: libqt4-dev (<< 4:4.8.2)
-Filename: pool/main/q/qt4-x11/libqt4-dev-bin_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 1593622
-MD5sum: 7ebaed419d57956de5c1338cab0239d5
-SHA1: 98332f84a09698834e1496f48f54fdd97ac2d17d
-SHA256: 85dd2809877c8e505757b177e8f4362f5e93cfcbf6e52957c1886c37e27f98d2
+Filename: pool/main/q/qt4-x11/libqt4-dev-bin_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 1591738
+MD5sum: 265bed399a93fc72bc83b54a71635eba
+SHA1: ff46549737574f504de33b9dac3fc992ee923d14
+SHA256: abc0dbdb60aa7655d3f8931fa63dec409c19b9aba4d5bef242dd5274c1e50485
 Description: Qt 4 development programs
 Multi-Arch: foreign
 Homepage: http://qt-project.org/
@@ -3271,13 +3622,13 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: libqt4-designer (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-opengl (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-svg (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3)
-Filename: pool/main/q/qt4-x11/libqt4-gui_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 6306
-MD5sum: a44233de7d3e69730e06e05a18d60251
-SHA1: f3d0447bdbef280c7941a9c4a8f2e11f76fc593e
-SHA256: feee5b4c2dc8c8fc2844f417bc2ed3f43fdc44c92d98fe6681759946c4aa05b5
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: libqt4-designer (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-opengl (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-svg (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4)
+Filename: pool/main/q/qt4-x11/libqt4-gui_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 6310
+MD5sum: 18eeaddd405ffdbe85c0fad0fd8c2fae
+SHA1: 5530e092f17b82a596cb703d41d21305f9242b6e
+SHA256: 41288399ec7312ecd78728c46a9551b82856ae92271ae64944e25faa7df64893
 Description: transitional package for Qt 4 GUI runtime libraries
 Homepage: http://qt-project.org/
 Description-md5: 21b72d16b92d0f21e67c8a304b1ec0f8
@@ -3293,14 +3644,14 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
-Filename: pool/main/q/qt4-x11/libqt4-help_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 196858
-MD5sum: 189d21c9da2b80c44eb07cccf9039f5a
-SHA1: 03cd0574bb1c5419a5479f03f650fb8f81b55b99
-SHA256: 668ad829e59edf3a73c087264ea09d283e59c78bb3c9ea8d84565f6e9bb7ecb8
+Filename: pool/main/q/qt4-x11/libqt4-help_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 197150
+MD5sum: 1974452c1db752bfe089caa78010f158
+SHA1: e3f4a5d1801e20c8cf17df08c5e6143a1a35f6bd
+SHA256: 79a319b9755959df94f7470e0f66bb9b58c1923f8c265ee01dfab7ba6a47a955
 Description: Qt 4 help module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3318,16 +3669,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-core (<< 4.4.0~beta1-1)
-Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4)
+Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4)
 Pre-Depends: multiarch-support
 Breaks: libqt4-core (<< 4.4.0~beta1-1)
-Filename: pool/main/q/qt4-x11/libqt4-network_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 526384
-MD5sum: 9767cf815e17c879f723030d3c3d5a53
-SHA1: bb21b1ab2e7a78fe9b12aab53a47d61c8b1249bd
-SHA256: 45dbc082b56d2864e1ba68463291b85d0ba054d22e1a60ded35dbb3fc7481dde
+Filename: pool/main/q/qt4-x11/libqt4-network_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 527230
+MD5sum: 85d56fffbd5543672447824c3988eb5a
+SHA1: 7e606a2230fceed70b236755b07ee595dcd660ce
+SHA256: 11c7fb5d89c473154a7cb7c89a9df7e46bd1b163e9f00e42afb830834618feb7
 Description: Qt 4 network module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3345,16 +3696,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-gui (<< 4.4.0~beta1-1)
-Depends: libc6 (>= 2.14), libfreetype6 (>= 2.2.1), libgcc1 (>= 1:4.1.1), libgl1-mesa-glx | libgl1, libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1), libx11-6, libxrender1
+Depends: libc6 (>= 2.14), libfreetype6 (>= 2.2.1), libgcc1 (>= 1:4.1.1), libgl1-mesa-glx | libgl1, libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1), libx11-6, libxrender1
 Pre-Depends: multiarch-support
 Breaks: libqt4-gui (<< 4.4.0~beta1-1)
-Filename: pool/main/q/qt4-x11/libqt4-opengl_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 293730
-MD5sum: 6e1431f6cd6912a5b1deff3e464711aa
-SHA1: b286ed9f4ebbaff22619036ecf8262b4968f3ab5
-SHA256: 1502d01a4ab7ebb7d2b66514326318f2684409867a3830dacb7604165bc59bcd
+Filename: pool/main/q/qt4-x11/libqt4-opengl_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 293952
+MD5sum: 2a8d55794321a612bb5532bb01dc02f4
+SHA1: bedf4f1a65289e360895622e8af148ac0c3238d4
+SHA256: 065dab0352d6f73013fe4d37dfda59309848253a70c4193972746332cc8425ac
 Description: Qt 4 OpenGL module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3372,15 +3723,15 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-dev (<< 4.4.0-2)
-Depends: libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev, libqt4-dev (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-opengl (= 4:4.8.4+dfsg-0ubuntu9.3)
+Depends: libgl1-mesa-dev | libgl-dev, libglu1-mesa-dev | libglu-dev, libqt4-dev (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-opengl (= 4:4.8.4+dfsg-0ubuntu9.4)
 Breaks: libqt4-dev (<< 4.4.0-2)
-Filename: pool/main/q/qt4-x11/libqt4-opengl-dev_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 22928
-MD5sum: 88dc2c43d7b122bb92e1b698900bc841
-SHA1: b33ca59542419055e3964232e1fc8503bfce499c
-SHA256: 950edef01dd43cb2ab667844f6d8a5d6f30e542b9920350f89e0a02ecd3efe01
+Filename: pool/main/q/qt4-x11/libqt4-opengl-dev_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 22870
+MD5sum: 8e01cbbec48fb1313a7c22ddb6354a73
+SHA1: 14b4053b42b629d04e758ee2d47e9fd8f4be1d3b
+SHA256: cf05ead1c212a8e47be30da6da4d16b8027bd39bcb8e1b4efcf240dbacde0f3b
 Description: Qt 4 OpenGL library development files
 Homepage: http://qt-project.org/
 Description-md5: 3a77d802eeaa1b2143dbee1ed81d6860
@@ -3397,13 +3748,13 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: libqt4-dev (= 4:4.8.4+dfsg-0ubuntu9.3)
-Filename: pool/main/q/qt4-x11/libqt4-private-dev_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 581482
-MD5sum: 4240ff327290b3a711156029aff867a0
-SHA1: 1791577252f9820bfdcfabbe10cfbd3e99423bb1
-SHA256: 890d055b5f5bd19a7d518f57dd2f1babf0d98b36e9def9d767e3f1e1f948f078
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: libqt4-dev (= 4:4.8.4+dfsg-0ubuntu9.4)
+Filename: pool/main/q/qt4-x11/libqt4-private-dev_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 582822
+MD5sum: ce534bdcc044f46ee81ea5a517b622cc
+SHA1: b98443dd901e911d23a7fc2406cfc35bdbb155ca
+SHA256: 847a29ae1439b0ef133795a4dbe30f5f66f5b567a6c3f18b7a7b0c556f28a00c
 Description: Qt 4 private development files
 Homepage: http://qt-project.org/
 Description-md5: 3b49216a54fd67f2d78d35f413e75487
@@ -3419,16 +3770,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-gui (<< 4.2.1-1), qt4-designer (<< 4.4.0~beta1-1)
-Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libqt4-designer (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libqt4-designer (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
 Breaks: libqt4-gui (<< 4.2.1-1), qt4-designer (<< 4.4.0~beta1-1)
-Filename: pool/main/q/qt4-x11/libqt4-qt3support_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 1012580
-MD5sum: 8163bc1baa3a2fcc59fbcae3467ffa8d
-SHA1: acd2860619057fc533f8a87cc270ad3757377c1c
-SHA256: 70fe464de5d59ab4e9b6decd44418f5e2ffffec27ecaf4546f8b68c9d0e204e3
+Filename: pool/main/q/qt4-x11/libqt4-qt3support_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 1014934
+MD5sum: 78973fed2f77b103b70993f4359190d1
+SHA1: dbf3d4bd0ac6beae9299df242c998ef4d92cf70e
+SHA256: 09e3dd84842adc76003f78b7d620da980b44050f5b6d95b2acdf9bb8cc5ac7a3
 Description: Qt 3 compatibility library for Qt 4
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3446,16 +3797,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-dbg (<< 4:4.7.3-3)
-Depends: libqt4-qt3support (= 4:4.8.4+dfsg-0ubuntu9.3)
+Depends: libqt4-qt3support (= 4:4.8.4+dfsg-0ubuntu9.4)
 Recommends: libqt4-dbg
 Breaks: libqt4-dbg (<< 4:4.7.3-3)
-Filename: pool/main/q/qt4-x11/libqt4-qt3support-dbg_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 14774606
-MD5sum: c77cb725504044d28023dcccc1a96c9d
-SHA1: c08e79073d05b11b7bdcbcab96256507f97902f6
-SHA256: 2d4471f7a3958d2cc326e2c4be038db38ece9ff5afcfe2bd94117f01d2726ec4
+Filename: pool/main/q/qt4-x11/libqt4-qt3support-dbg_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 14771124
+MD5sum: 86a65bc1b9e206d3e3c953843a3522ed
+SHA1: 3e5c7282e7b19f64be08d15bc245ea5ccf8c5c20
+SHA256: 517a6be2c1d4c4fbfb4b277ea8eb4da1d08aaf4f41a2cacf04e92214de2c1a43
 Description: Qt 3 compatibility library for Qt 4 debugging symbols
 Homepage: http://qt-project.org/
 Description-md5: 29e27abea5e7e9c89082297b36db40eb
@@ -3471,16 +3822,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-core (<< 4.4.0~beta1-1)
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
 Breaks: libqt4-core (<< 4.4.0~beta1-1)
-Filename: pool/main/q/qt4-x11/libqt4-script_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 772918
-MD5sum: f0123364bf203cf6878b72b007236d49
-SHA1: ec8554dfb4a8353631a58ef12d9ee06a70f430d9
-SHA256: 65b3f07b0092eb24c5584df863007b288418bab83499f21c49f0685973f996a5
+Filename: pool/main/q/qt4-x11/libqt4-script_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 773570
+MD5sum: 6aa1ad79e7450baecb6dc67e48e6ac98
+SHA1: 0c199da0fecb819aa9f9d2e37cba6b103e842566
+SHA256: 376e4438020d2e23d0e7c9b2d4705cdbcd561c6eb4b2563f26771fd208f189de
 Description: Qt 4 script module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3493,21 +3844,21 @@ Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-activ
 Package: libqt4-script-dbg
 Priority: extra
 Section: debug
-Installed-Size: 19039
+Installed-Size: 19040
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-dbg (<< 4:4.7.3-3)
-Depends: libqt4-script (= 4:4.8.4+dfsg-0ubuntu9.3)
+Depends: libqt4-script (= 4:4.8.4+dfsg-0ubuntu9.4)
 Recommends: libqt4-dbg
 Breaks: libqt4-dbg (<< 4:4.7.3-3)
-Filename: pool/main/q/qt4-x11/libqt4-script-dbg_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 18774370
-MD5sum: 902210ac28c4fee90d84df5b93cc8a14
-SHA1: c7f63371fd8bdd23424b9c846a8e2a098c059be9
-SHA256: 84d8debb664ee39e337976f263fabac496e0b79df4a75402bb5a6dd9925daad3
+Filename: pool/main/q/qt4-x11/libqt4-script-dbg_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 18775982
+MD5sum: ba7de29c6fab93fa4c08115c8cd7e83a
+SHA1: 859e2f206ecd73e3c771a1b722289525bc1c341b
+SHA256: c0b86ff4aac0a7b9edd6dd725eac24d50a218e3855a01472523816753150efda
 Description: Qt 4 script library debugging symbols
 Homepage: http://qt-project.org/
 Description-md5: 4fe268671423816b84a8ae12bcc16c4b
@@ -3518,19 +3869,19 @@ Supported: 9m
 Package: libqt4-scripttools
 Priority: optional
 Section: libs
-Installed-Size: 894
+Installed-Size: 895
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-script (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-script (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
-Filename: pool/main/q/qt4-x11/libqt4-scripttools_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 215376
-MD5sum: ea09c5e3e383978e3085084b643337f1
-SHA1: 1694d2c0895d0b6685a31728074e9ba06c93a501
-SHA256: 81f131e1bc1439e23ce7bda472fd732dc80c32b22fc97ab430dd562d9e2e9198
+Filename: pool/main/q/qt4-x11/libqt4-scripttools_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 215022
+MD5sum: 3cd4c7b0fd7b285062d02c80fb78605d
+SHA1: 0144bfc8d6c19a85c2f86e3d7bdb825564eae0f1
+SHA256: 7c5d4f5b6bd4b9a227405a2831a61e2647d9c1356bc562e25a90bbc662e6ecbd
 Description: Qt 4 script tools module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3548,16 +3899,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
 Recommends: libqt4-sql-mysql | libqt4-sql-odbc | libqt4-sql-psql | libqt4-sql-sqlite
 Suggests: libqt4-dev
-Filename: pool/main/q/qt4-x11/libqt4-sql_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 96244
-MD5sum: 58472057408af2098900fcf8f694b287
-SHA1: 091248c014e6bae296f71cac1c42f81ab114b985
-SHA256: ee75d7e7fba23ce3e982588512ccb8718af1208f81a5c37abf4f760a7adb47d9
+Filename: pool/main/q/qt4-x11/libqt4-sql_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 96218
+MD5sum: bd99f82c37c2ad397a73f2a962c2ed68
+SHA1: 267d64bde405bcaa2d7a734281d8d2ebc8ec2452
+SHA256: 4f76c6390426f9c541d9a9391366f2751cc5ae40db54c7084de4307105d86096
 Description: Qt 4 SQL module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3575,15 +3926,15 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libmysqlclient18 (>= 5.5.13-1), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libmysqlclient18 (>= 5.5.13-1), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
 Suggests: libqt4-dev
-Filename: pool/main/q/qt4-x11/libqt4-sql-mysql_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 30054
-MD5sum: 8fa7913cdecdd106e6e57394af12c14f
-SHA1: 89e8240717650df6cf707f2cc8b1d5a903eaee1e
-SHA256: 22c4c92d44c528bd2e79fc9f8b45b181d8c2f1fe8db0495ae712fc7420586b6b
+Filename: pool/main/q/qt4-x11/libqt4-sql-mysql_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 30144
+MD5sum: d08172be07e89cebfcae231664c610fb
+SHA1: fe8a3d19e75144c6f1fa2485f080654b3f58a7a9
+SHA256: 23eee15cc034652f74b7cf9d8cb02f2156e280eeca74d635d3931a61432f9781
 Description: Qt 4 MySQL database driver
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3601,15 +3952,15 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libsqlite3-0 (>= 3.5.9), libstdc++6 (>= 4.1.1)
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libsqlite3-0 (>= 3.5.9), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
 Suggests: libqt4-dev
-Filename: pool/main/q/qt4-x11/libqt4-sql-sqlite_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 23518
-MD5sum: 29f1c45d311a06afe59b289f3c48379b
-SHA1: a427c9343f84ddeee87811371f4336dc82b1b9af
-SHA256: 95bc17a279f76987740fc69e2ba84cfcbf840e5b8de7e7f363c8cd95aa3df857
+Filename: pool/main/q/qt4-x11/libqt4-sql-sqlite_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 23522
+MD5sum: fe98673662b0a2675f2ee55c46933ed9
+SHA1: 1c688d203ab6e9525b2104dae484c97e4863304f
+SHA256: 9480f75fdf116a585725f0da892a773cf09a2bcb57360fea23ad356ef67931e7
 Description: Qt 4 SQLite 3 database driver
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3627,16 +3978,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-gui (<< 4.4.0~beta1-1)
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4)
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1), zlib1g (>= 1:1.1.4)
 Pre-Depends: multiarch-support
 Breaks: libqt4-gui (<< 4.4.0~beta1-1)
-Filename: pool/main/q/qt4-x11/libqt4-svg_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 134952
-MD5sum: 8477fb05c1e60aead0b1c55cb5bc31ec
-SHA1: 7744d143ba8480c73f90c6e8ba9b420dc314eb5c
-SHA256: a2a2135eb7724de2d1e69d548a2247c05831bb59d0aedc74c2a12837518a55e0
+Filename: pool/main/q/qt4-x11/libqt4-svg_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 134940
+MD5sum: 41df6a90ebef4dee95b6a0bd25b770e5
+SHA1: 45325638ebe1bfedf47a2656d2872822b6e88b16
+SHA256: f1c128c5bc5fff608b2077453ae775976b73ef97b05e4d4436df58fd4ddaae70
 Description: Qt 4 SVG module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3654,16 +4005,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-core (<< 4.4.0~beta1-1)
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
 Breaks: libqt4-core (<< 4.4.0~beta1-1)
-Filename: pool/main/q/qt4-x11/libqt4-test_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 60064
-MD5sum: e68ee42341278e28af6e69b8f9b65b17
-SHA1: 0be8b9a859a4b378c220c9c5910241c08c6588c8
-SHA256: 3f0e44ab9b5ebe5a1a2786911aed5bc9942d76fa26d6c017a4bef82a8d804301
+Filename: pool/main/q/qt4-x11/libqt4-test_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 60070
+MD5sum: f59a3f17a860ce73d763c809452ebcaa
+SHA1: 8255014284299b3e529af0ee339f898521e2f230
+SHA256: b2fd15120b437360d7e561d4c461feae3ea911dd7a11cdb854b7edc56fa3828b
 Description: Qt 4 test module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3681,13 +4032,13 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Depends: libqtwebkit4-dbg (>= 2.0~)
-Filename: pool/main/q/qt4-x11/libqt4-webkit-dbg_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 8262
-MD5sum: 5f8c97707226b21f1fb194f2d14630d2
-SHA1: 37227489d4e1c8b48f900bdfe1335d86e99a6654
-SHA256: a6ef7ab08ccf40eb5e9513cd64c206e837266302d06e724dbd261eaffe7067d8
+Filename: pool/main/q/qt4-x11/libqt4-webkit-dbg_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 8004
+MD5sum: 92040bc1a85ab717bbadb1b422f81e31
+SHA1: 03201b91e52d89cac42021a24e5d788af8b46a28
+SHA256: 95991cb65a6e5b918af5e9d6f064defd8bcc9fc02a7ba2b6a60e7e6484f0695d
 Description: transitional package for Qt 4 WebKit debugging symbols
 Homepage: http://qt-project.org/
 Description-md5: eb6f0cce6774adbc05136f7b0ed3de8f
@@ -3703,16 +4054,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-core (<< 4.4.0~beta1-1)
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
 Breaks: libqt4-core (<< 4.4.0~beta1-1)
-Filename: pool/main/q/qt4-x11/libqt4-xml_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 90428
-MD5sum: 9b8fb27946945ebd48bc530233a4e6ce
-SHA1: a0ced9bbd2c016a1bbbb04cd5617dd29c73a56df
-SHA256: 39012c896833888a3bce05908f97e4d935ff7f40362e55a7466be43ff95d9806
+Filename: pool/main/q/qt4-x11/libqt4-xml_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 90470
+MD5sum: 5496e451a4538def06c6783060a265b4
+SHA1: c809376e202ab8e4bb7cbb22988c994dd1c18b7f
+SHA256: 2ca3029bce8baa223c756223e01873130d7c0d7cd6b1cac3ba2b0f784e524b41
 Description: Qt 4 XML module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3730,14 +4081,14 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Pre-Depends: multiarch-support
-Filename: pool/main/q/qt4-x11/libqt4-xmlpatterns_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 1009148
-MD5sum: 215d072c5f7c47dca46ca0449a34b18b
-SHA1: a3b4e6042a94dd55266763073cc3303d387159c0
-SHA256: 451d6ce1462d26eabbe1337af3790850e0b27be1d0dc11b454a42e65c0ee96d9
+Filename: pool/main/q/qt4-x11/libqt4-xmlpatterns_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 1010318
+MD5sum: a910eb01b34c87d65507ed596d86a13e
+SHA1: 1284d6fdfe75217b7fb582e5198ddee3d98a9ad4
+SHA256: 28326853210ef61bef9344eb81f297e6e60fa66d732abd9635c67ffafadcb033
 Description: Qt 4 XML patterns module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3755,14 +4106,14 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: libqt4-xmlpatterns (= 4:4.8.4+dfsg-0ubuntu9.3)
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: libqt4-xmlpatterns (= 4:4.8.4+dfsg-0ubuntu9.4)
 Recommends: libqt4-dbg
-Filename: pool/main/q/qt4-x11/libqt4-xmlpatterns-dbg_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 29312006
-MD5sum: 3f7e133d9cf3778ccc46419c36fc9073
-SHA1: a509595ca5e67b62fd2f2668768dc17e2a8fbdc4
-SHA256: 96ec8b55499ff80e9fe5d39eb724415488fbe3cacbecc48678106ca9927557ed
+Filename: pool/main/q/qt4-x11/libqt4-xmlpatterns-dbg_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 29311992
+MD5sum: f8584292c558d3d2513a612871d8b02d
+SHA1: 241304d59534de7696a651685f6dff285c44c56a
+SHA256: eddd517df5ba1c67f10d4cd88d057c2b0b701a00e4ac4f121fbebf77e84579fe
 Description: Qt 4 XML patterns library debugging symbols
 Homepage: http://qt-project.org/
 Description-md5: 5ff329580982f75247bbb5b0fd24d68b
@@ -3778,17 +4129,17 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-core (<< 4.4.0~beta1-1), libqt4-gui (<< 4.4.0~beta1-1)
 Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libglib2.0-0 (>= 2.22.0), libstdc++6 (>= 4.6), zlib1g (>= 1:1.1.4)
 Pre-Depends: multiarch-support
 Suggests: libthai0, libicu48
 Breaks: libqt4-core (<< 4.4.0~beta1-1), libqt4-gui (<< 4.4.0~beta1-1)
-Filename: pool/main/q/qt4-x11/libqtcore4_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 2069312
-MD5sum: 8a036de25a87feca3d5aea626022fbf8
-SHA1: 2534e342d891524a649e59e641c0a8c0ec213758
-SHA256: 6d153cf4106e9fe0c2f8c43a41ac3439cf189dfba6e145e3d2fab282d6c9d543
+Filename: pool/main/q/qt4-x11/libqtcore4_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 2071124
+MD5sum: 279524ac50a30254200f0af747295ea1
+SHA1: bbf3c5cc1b3714c05fd8a733fe449836f4070018
+SHA256: 01d659ddcd80421bd9825ed5b1bd9dc009e26df45c08c3748d42243f4380bbeb
 Description: Qt 4 core module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3806,18 +4157,18 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-core (<< 4.0.1-3), libqt4-designer (<< 4.4.0~beta1-1), libqt4-gui (<< 4.4.0), qt4-designer (<< 4.1.4)
-Depends: fontconfig, libaudio2, libc6 (>= 2.15), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.3.5), libgcc1 (>= 1:4.1.1), libglib2.0-0 (>= 2.12.0), libice6 (>= 1:1.0.0), libjpeg8 (>= 8c), libmng1 (>= 1.0.10), libpng12-0 (>= 1.2.13-4), libqt4-declarative (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libsm6, libstdc++6 (>= 4.1.1), libtiff5 (>> 4.0.0-1~), libx11-6 (>= 2:1.2.99.901), libxext6, libxi6 (>= 2:1.2.99.4), libxrender1, zlib1g (>= 1:1.1.4)
+Depends: fontconfig, libaudio2, libc6 (>= 2.15), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.3.5), libgcc1 (>= 1:4.1.1), libglib2.0-0 (>= 2.12.0), libice6 (>= 1:1.0.0), libjpeg8 (>= 8c), libmng1 (>= 1.0.10), libpng12-0 (>= 1.2.13-4), libqt4-declarative (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libsm6, libstdc++6 (>= 4.1.1), libtiff5 (>> 4.0.0-1~), libx11-6 (>= 2:1.2.99.901), libxext6, libxi6 (>= 2:1.2.99.4), libxrender1, zlib1g (>= 1:1.1.4)
 Pre-Depends: multiarch-support
 Recommends: libcups2
 Suggests: qt4-qtconfig
 Breaks: libqt4-core (<< 4.0.1-3), libqt4-designer (<< 4.4.0~beta1-1), libqt4-gui (<< 4.4.0), qt4-designer (<< 4.1.4)
-Filename: pool/main/q/qt4-x11/libqtgui4_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 3989914
-MD5sum: 6a6cdbb56e2e56c5bd5f64c13e38f24d
-SHA1: a34154e62f47633063a1355e08ab069a86351a8e
-SHA256: 15f5942799cb14c879c803e273bc44ef524a36b567c5dc9c07eff601fc5454da
+Filename: pool/main/q/qt4-x11/libqtgui4_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 3992118
+MD5sum: 2e58f61565ff2a94dea2f3f0fae7e3d7
+SHA1: ed235976efa741241046a8ac46cbaf1d8d4f8c84
+SHA256: 9fc7a0667d800154da93dce1ca6621b40e19352d66a1e72d9e7bb27e34f42d62
 Description: Qt 4 GUI module
 Multi-Arch: same
 Homepage: http://qt-project.org/
@@ -3896,6 +4247,148 @@ SHA256: c1ec89e2fc940d6d4b6c782f713f359f54bc9b9155117a59908b64caadbba5d2
 Description: Web content engine library for Qt - debugging symbols
 Homepage: http://trac.webkit.org/wiki/QtWebKit
 Description-md5: 2b35e7ad9905f44038a180fc098adcca
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: librados-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 11892
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Replaces: libcrush-dev, libcrush1-dev, librados1-dev
+Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), librados2 (= 0.56.7-0ubuntu1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Conflicts: libcrush-dev, libcrush1-dev, librados1-dev
+Filename: pool/main/c/ceph/librados-dev_0.56.7-0ubuntu1_amd64.deb
+Size: 2294608
+MD5sum: 637cdb4bce90be2076696a343a1f8d4d
+SHA1: 2c8b9ccddef729e0331122ec8f9d82efccee37c2
+SHA256: 1be995f8a5c9689a238398dfb387dab78bbae250e3a973b05e0ebc1a07dbbd85
+Description: RADOS distributed object store client library (development files)
+Homepage: http://ceph.com/
+Description-md5: 45a1795729f9041b2c4d34b965fbaee2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: librados2
+Priority: optional
+Section: libs
+Installed-Size: 4219
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Replaces: libcrush, libcrush1, librados, librados1
+Depends: libboost-thread1.49.0 (>= 1.49.0-1), libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Conflicts: libcrush, libcrush1, librados, librados1
+Filename: pool/main/c/ceph/librados2_0.56.7-0ubuntu1_amd64.deb
+Size: 1310132
+MD5sum: 226bbd312b7573125c556065f96be890
+SHA1: f5ddd5fe451cd656d4726263144a0f96a5b639af
+SHA256: 89f2b138d1d239cd4cf6087e6cdf11f0e810cd4ce05668febb38cee5344a5091
+Description: RADOS distributed object store client library
+Homepage: http://ceph.com/
+Description-md5: 42d0f393b45b7f226597be77c6f81917
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: virt-host
+
+Package: librados2-dbg
+Priority: extra
+Section: debug
+Installed-Size: 48279
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Replaces: libcrush1-dbg, librados1-dbg
+Depends: librados2 (= 0.56.7-0ubuntu1)
+Conflicts: libcrush1-dbg, librados1-dbg
+Filename: pool/main/c/ceph/librados2-dbg_0.56.7-0ubuntu1_amd64.deb
+Size: 12872766
+MD5sum: 16811dd655b10b3824581230f417bb6f
+SHA1: 47b895812868e3f383f29496002c29282aacc0ba
+SHA256: a6b49fbd15387f84816b58a342a6763356480c74c47a6a92bcaa6bd97693372a
+Description: debugging symbols for librados2
+Homepage: http://ceph.com/
+Description-md5: 5fed3bffffed20ba3eae296a5cd8e215
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: librbd-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 32361
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Replaces: librbd1-dev
+Depends: librbd1 (= 0.56.7-0ubuntu1), librados-dev
+Conflicts: librbd1-dev
+Filename: pool/main/c/ceph/librbd-dev_0.56.7-0ubuntu1_amd64.deb
+Size: 6573726
+MD5sum: e97bd18d21c3048a45f842db225a7949
+SHA1: 38dad1942a030037ae1a1df2eb475b73004bd9bb
+SHA256: b5ed157f73598b0e449ff86ba29b9890fa091d061609bd7250bf7a2ca7bd1fe0
+Description: RADOS block device client library (development files)
+Homepage: http://ceph.com/
+Description-md5: 5a3f9d05f90eae572a3f0c323daf1cab
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: librbd1
+Priority: optional
+Section: libs
+Installed-Size: 661
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), librados2 (= 0.56.7-0ubuntu1), libstdc++6 (>= 4.6)
+Filename: pool/main/c/ceph/librbd1_0.56.7-0ubuntu1_amd64.deb
+Size: 254276
+MD5sum: 4ab0b9b2f5c58a4f633f2d6ecda4eea7
+SHA1: 6e4c50e3de363adec14d6133bcbb98d9bb3148a4
+SHA256: dcbd667bf5a416a581b01554a0d051e78d30310c510910033b3f22df9e62f2c7
+Description: RADOS block device client library
+Homepage: http://ceph.com/
+Description-md5: 3b39955e1c12f7ad8d4c44efcc8ec188
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: virt-host
+
+Package: librbd1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 10407
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Depends: librbd1 (= 0.56.7-0ubuntu1)
+Filename: pool/main/c/ceph/librbd1-dbg_0.56.7-0ubuntu1_amd64.deb
+Size: 3524416
+MD5sum: 345d20fde7802ad0f0c4c9f565b7eedb
+SHA1: 55eeed13154e138c18531303fb5e1968425eec4d
+SHA256: 426e322acec686a92724ca8d86d1f3a04f19dc4f32214d098165c226065b075f
+Description: debugging symbols for librbd1
+Homepage: http://ceph.com/
+Description-md5: 0479c6b8befcd3b46093c4fdfaef7ca4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -7442,6 +7935,28 @@ Origin: Ubuntu
 Supported: 9m
 Task: cloud-image, edubuntu-desktop-gnome, ubuntu-gnome-desktop
 
+Package: python-ceph
+Priority: optional
+Section: python
+Installed-Size: 110
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), librados2, librbd1
+Filename: pool/main/c/ceph/python-ceph_0.56.7-0ubuntu1_amd64.deb
+Size: 14638
+MD5sum: cedc20d5d5ea769fe29bc9614d258b08
+SHA1: c79f4633ebf1deda6a29e69806b7b3f1eae6f661
+SHA256: 92c63c25442f3aa8e29250c97561ac7088a614a3646d0fa0bc7de66687a5a832
+Description: Python libraries for the Ceph distributed filesystem
+Homepage: http://ceph.com/
+Description-md5: 0a80206bd610ad5550e3d80267effede
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: python-cinder
 Priority: extra
 Section: net
@@ -8334,16 +8849,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-dbus (<< 4:4.7.4-1)
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Recommends: qtchooser
 Breaks: libqt4-dbus (<< 4:4.7.4-1)
-Filename: pool/main/q/qt4-x11/qdbus_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 29116
-MD5sum: bd2aec279acabe2c314fa89b3666bbbd
-SHA1: 923eb882b23dafaa475195bcef536c328e4321f3
-SHA256: fbbdac0a155cdbe3b806adf98b0d6b468d5535c0189cc1341ad2bd921da08f2d
+Filename: pool/main/q/qt4-x11/qdbus_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 29076
+MD5sum: 10ae4d1d805e94fccda356345e0efdd0
+SHA1: 75625b79797c1684f8340f656a53d87db9462c92
+SHA256: c99ff4154d38cc3430200f4d4bd952d3a8b4eec8f36e5d4e1dce8575e9fb8809
 Description: Qt 4 D-Bus tool
 Multi-Arch: foreign
 Homepage: http://qt-project.org/
@@ -8356,20 +8871,20 @@ Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-activ
 Package: qt4-bin-dbg
 Priority: extra
 Section: debug
-Installed-Size: 56426
+Installed-Size: 56428
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-dbg (<< 4:4.7.3-3)
-Depends: libqt4-dbg (= 4:4.8.4+dfsg-0ubuntu9.3)
+Depends: libqt4-dbg (= 4:4.8.4+dfsg-0ubuntu9.4)
 Breaks: libqt4-dbg (<< 4:4.7.3-3)
-Filename: pool/main/q/qt4-x11/qt4-bin-dbg_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 54455042
-MD5sum: 1209064a1d099a22139753ab62c4d5aa
-SHA1: 08391a4c0bfa6e264018661ba960d6d5dedb48d4
-SHA256: 65e8c43e17821f2518d01d9169e4e27f592cc14d58d6f2023326b8c8ad828011
+Filename: pool/main/q/qt4-x11/qt4-bin-dbg_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 54455978
+MD5sum: 1179ef39cfd3d6a29db412d301ee6c28
+SHA1: 49d95675f6e69d756f5fbbc49d509c625685eaf6
+SHA256: e18e057473997ca5618646900ff5aac467bf040ad385c412dc188edf161daef7
 Description: Qt 4 binaries debugging symbols
 Homepage: http://qt-project.org/
 Description-md5: 30d00ec1a95d529311faf7e9c80834b8
@@ -8411,15 +8926,15 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libgl1-mesa-glx | libgl1, libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-declarative (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-designer (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-help (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-opengl (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-script (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-scripttools (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-svg (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-test (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-xmlpatterns (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
-Recommends: libqt4-declarative-gestures, libqt4-declarative-particles, qt4-dev-tools (= 4:4.8.4+dfsg-0ubuntu9.3), qt4-doc (= 4:4.8.4+dfsg-0ubuntu9.3)
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libgl1-mesa-glx | libgl1, libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-declarative (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-designer (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-help (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-opengl (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-script (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-scripttools (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-sql (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-svg (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-test (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-xmlpatterns (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
+Recommends: libqt4-declarative-gestures, libqt4-declarative-particles, qt4-dev-tools (= 4:4.8.4+dfsg-0ubuntu9.4), qt4-doc (= 4:4.8.4+dfsg-0ubuntu9.4)
 Suggests: qt4-qmlviewer
-Filename: pool/main/q/qt4-x11/qt4-demos_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 9842126
-MD5sum: 8d0aec78ba5c2388268111e48e84476d
-SHA1: 41b1ab9c7e1f606882413445602bfec37eb67962
-SHA256: 0493a71965d5a5828a5f21065a9d02007258a724a9f5036c485b141f2ba1c0b5
+Filename: pool/main/q/qt4-x11/qt4-demos_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 9952142
+MD5sum: 2d0c37eed7f5221e93422b252159f828
+SHA1: 62704c271ff0ff41723f8c9906c0de87402e71cb
+SHA256: f2aff92da53aa81aa62cfc7f65228c83f45775df78345445ff4c9eaaef0cb010
 Description: Qt 4 examples and demos
 Homepage: http://qt-project.org/
 Description-md5: 52e28f0cb6d84d109e8fe6949d554c02
@@ -8431,19 +8946,19 @@ Task: kubuntu-full, kubuntu-active-full
 Package: qt4-demos-dbg
 Priority: extra
 Section: libs
-Installed-Size: 120791
+Installed-Size: 120762
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
-Depends: qt4-demos (= 4:4.8.4+dfsg-0ubuntu9.3)
+Version: 4:4.8.4+dfsg-0ubuntu9.4
+Depends: qt4-demos (= 4:4.8.4+dfsg-0ubuntu9.4)
 Recommends: libqt4-dbg
-Filename: pool/main/q/qt4-x11/qt4-demos-dbg_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 115127768
-MD5sum: 6b7b9eba765942bd49d2ba3dfc3a63de
-SHA1: f4d23ffe996be972347f7f3d8a2631a5fc884677
-SHA256: cb761443bbe020c3850dcda47e7ce6932a97d42f5b97f174f201c9a5965fddad
+Filename: pool/main/q/qt4-x11/qt4-demos-dbg_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 115075446
+MD5sum: c33cc7486ecf3fba7a8cd25e397450f4
+SHA1: 09770e1c9a1b391abfdb3795520da8475aee4ee7
+SHA256: ca49c9a2654831e89149222399c0e74875de174e9315cf89de7c88c38906f7b9
 Description: Qt 4 examples and demos debugging symbols
 Homepage: http://qt-project.org/
 Description-md5: 991afe4aa3b4dd3ec2b9dca0d716372c
@@ -8459,16 +8974,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-core (<< 4.4.0~beta1-1), libqt4-designer (<< 4.4.0~beta1-1), qt4-dev-tools (<= 4.0.1-2)
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-designer (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.1.1)
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-designer (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-network (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.1.1)
 Recommends: libqt4-dev, qtchooser
 Breaks: libqt4-core (<< 4.4.0~beta1-1), libqt4-designer (<< 4.4.0~beta1-1), qt4-dev-tools (<= 4.0.1-2)
-Filename: pool/main/q/qt4-x11/qt4-designer_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 344650
-MD5sum: 944c31c85e65cfde2f4e8258212a2fa3
-SHA1: 65b4de63674ae482659243178b8cd48db06f92ae
-SHA256: 23d48071f1e2fb8b694fd1deaec8c9792f1d26a744fa69da92a893b576ae2ea2
+Filename: pool/main/q/qt4-x11/qt4-designer_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 345850
+MD5sum: fe6f90658f852e79a8ff95fdb5451204
+SHA1: 5fa8ac0835221824a760d886642ddc1680f8ed90
+SHA256: a53272c51dcc2bf25f755982d5f7a015613a3a980a577a84cc50900f816cf605
 Description: graphical designer for Qt 4 applications
 Homepage: http://qt-project.org/
 Description-md5: cdfd30f0ec154b8bdc30b8b14be6b2d4
@@ -8485,18 +9000,18 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-core (<< 4.4.0~beta1-1)
-Depends: libqt4-sql-sqlite, libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libpng12-0 (>= 1.2.13-4), libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-declarative (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-help (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.3), libqt4-xmlpatterns (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.4.0), libx11-6, libxtst6
+Depends: libqt4-sql-sqlite, libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libpng12-0 (>= 1.2.13-4), libqt4-dbus (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-declarative (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-help (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.4), libqt4-xmlpatterns (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libqtgui4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.4.0), libx11-6, libxtst6
 Recommends: libqt4-dev, qt4-designer, qt4-doc, qtchooser
 Suggests: qt4-doc-html
 Conflicts: qt3-dev-tools-embedded
 Breaks: libqt4-core (<< 4.4.0~beta1-1)
-Filename: pool/main/q/qt4-x11/qt4-dev-tools_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 3844904
-MD5sum: 559544f82a3a0dee674c7df442708138
-SHA1: de913e211264604e32468af71c0e4a1e279279ce
-SHA256: dc4e0124b2669752bedd3d2f2ddbb193734ff6cb8972e6fd04b133c8a7f439ae
+Filename: pool/main/q/qt4-x11/qt4-dev-tools_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 3848364
+MD5sum: b6590a69c16253f54fe015984d1b8211
+SHA1: 9fe7b040087bc6707a7057d164b1399ac2dd8ab5
+SHA256: 6f5ecca699ba6ef2a5d007f055db47ca6b371069f154cffe314e4df60d166020
 Description: Qt 4 development tools
 Homepage: http://qt-project.org/
 Description-md5: 5011b416d52e1154bf49b8ee22432d56
@@ -8536,16 +9051,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-dev (<< 4:4.7.3-2)
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.3), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.3), libstdc++6 (>= 4.4.0), zlib1g (>= 1:1.1.4)
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt4-xml (= 4:4.8.4+dfsg-0ubuntu9.4), libqtcore4 (= 4:4.8.4+dfsg-0ubuntu9.4), libstdc++6 (>= 4.4.0), zlib1g (>= 1:1.1.4)
 Recommends: qtchooser
 Breaks: libqt4-dev (<< 4:4.7.3-2)
-Filename: pool/main/q/qt4-x11/qt4-linguist-tools_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 818402
-MD5sum: cd598e5eeaf806aad30719c43979c934
-SHA1: 3e6bf6390914e79ff8548e358a587aaacfc49962
-SHA256: 982b7751a0b2690a82201412fc409fb24327f287e71f4fa7ab9f06f753a802e7
+Filename: pool/main/q/qt4-x11/qt4-linguist-tools_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 817858
+MD5sum: 9e0007736aa7c5a3210eab7f8244bd86
+SHA1: 5da13723bf87ed6a977b8a0fcc234a3a6c399e75
+SHA256: e4b78639c43f4b07dcf5dee9b408b08804930580469ab10c09e1dac76bc7362c
 Description: Qt 4 Linguist tools
 Multi-Arch: foreign
 Homepage: http://qt-project.org/
@@ -8563,16 +9078,16 @@ Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Architecture: amd64
 Source: qt4-x11
-Version: 4:4.8.4+dfsg-0ubuntu9.3
+Version: 4:4.8.4+dfsg-0ubuntu9.4
 Replaces: libqt4-dev (<< 4.5.0~beta1+snapshot20090114-1)
 Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
 Recommends: qtchooser
 Breaks: libqt4-dev (<< 4.5.0~beta1+snapshot20090114-1)
-Filename: pool/main/q/qt4-x11/qt4-qmake_4.8.4+dfsg-0ubuntu9.3_amd64.deb
-Size: 1208926
-MD5sum: 4512318f1353dbfc3b8c9f0570e1a9cd
-SHA1: 78155dc344d0ce30a609137c77d40f52ab37a7e5
-SHA256: 6fcc51be78f8d3c92725b00c6683f46c7755a5fc04533442e7f522410e13f35b
+Filename: pool/main/q/qt4-x11/qt4-qmake_4.8.4+dfsg-0ubuntu9.4_amd64.deb
+Size: 1209052
+MD5sum: 663cb0ff7cbef55ed12ef15e1c9cffae
+SHA1: c156ed6c7f501ed6f198fb47fd4a04ccece8b6ea
+SHA256: 734bc94945275eb0d2e56f8e4192749d2a9ea3dd534adb07e27ff1e8cd36f090
 Description: Qt 4 qmake Makefile generator tool
 Multi-Arch: foreign
 Homepage: http://qt-project.org/
@@ -8960,6 +9475,50 @@ SHA1: 95dacc2abbb8f568d686c649cc1be1573cf53792
 SHA256: d9d86e413836389d968dde04c1897f9987e40481c17d274b26ded2392ad6bf51
 Description: Quantum is a virtual network service for Openstack - server
 Description-md5: 43bd16442d11c72b6cf07b716b987029
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: radosgw
+Priority: optional
+Section: admin
+Installed-Size: 2922
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Depends: libc6 (>= 2.15), libcurl3-gnutls (>= 7.16.2), libexpat1 (>= 2.0.1), libfcgi0ldbl, libgcc1 (>= 1:4.1.1), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), librados2 (= 0.56.7-0ubuntu1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16), ceph-common
+Filename: pool/main/c/ceph/radosgw_0.56.7-0ubuntu1_amd64.deb
+Size: 1169644
+MD5sum: 7601386fc9c149b513ccec97c44ed7d6
+SHA1: 9203e857914b1d16a8699c34a0e5648564fc8156
+SHA256: 5ef3596902e0a053d30a920fc662a9f3e4a0efd20e03c92da25bf4a2533d5d9e
+Description: REST gateway for RADOS distributed object store
+Homepage: http://ceph.com/
+Description-md5: fa947d9328112c7b2e6719d10f788061
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: radosgw-dbg
+Priority: extra
+Section: debug
+Installed-Size: 36175
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: amd64
+Source: ceph
+Version: 0.56.7-0ubuntu1
+Depends: radosgw (= 0.56.7-0ubuntu1)
+Filename: pool/main/c/ceph/radosgw-dbg_0.56.7-0ubuntu1_amd64.deb
+Size: 11134780
+MD5sum: a2f2e97083fc3f0a62b3707cea362bf7
+SHA1: 935e51ce8827b80c6f729e70b35c307c82ae5df9
+SHA256: 979bb774292b32a53dfab895854e01a1a5c6023261b4a3aa72440de198d190fe
+Description: debugging symbols for radosgw
+Homepage: http://ceph.com/
+Description-md5: b21018ad5ddfda350f7a8d6ec0e73923
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
