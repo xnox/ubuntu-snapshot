@@ -1839,27 +1839,6 @@ Description-md5: e507e6d9d0acf312b7c0025c14164de2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: gvb
-Priority: optional
-Section: universe/science
-Installed-Size: 652
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Pietro Battiston <toobaz@email.it>
-Architecture: all
-Version: 1.2.1-1.1
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-scipy (>= 0.6.0-8), python-cairo (>= 1.4.0-2), python-gnome2
-Suggests: ffmpeg
-Filename: pool/universe/g/gvb/gvb_1.2.1-1.1_all.deb
-Size: 202922
-MD5sum: e1e4f8eac437042d32cf062cc87fbfcf
-SHA1: 0598e8d15921f87ff1e408309a0a5291d42d436d
-SHA256: 04b67b76d3e18b98377903a848debf007278cfeb40570de82a55ab110be0b3e6
-Description: visual simulator of 1 and 2-dimensional vibrations
-Homepage: http://www.pietrobattiston.it/gvb
-Description-md5: 6df54c2b17a2a17122740d2caec3ca07
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: hyperestraier
 Priority: optional
 Section: universe/text
@@ -7164,6 +7143,93 @@ SHA256: f34caeaf866177431e214d469ded4fc5a9b793147b4d60a2e44ec4512fac28df
 Description: Machine Learning Demos (MLDemos) with Visualization
 Homepage: http://mldemos.epfl.ch
 Description-md5: cabf63ed9a9c9743f1bd3ad56db12044
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mongodb
+Priority: optional
+Section: universe/database
+Installed-Size: 44
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Antonin Kral <A.Kral@sh.cvut.cz>
+Architecture: amd64
+Version: 1:2.4.6-0ubuntu5
+Depends: mongodb-dev, mongodb-server (>= 1:2.4.1-2)
+Filename: pool/universe/m/mongodb/mongodb_2.4.6-0ubuntu5_amd64.deb
+Size: 5290
+MD5sum: de1d54bc9a7ea901d79ab86a579aef62
+SHA1: 340bddf7c143c8358c2acb9a52e1b46cf2d2e4c2
+SHA256: 13697dcab4532eef6bc3a9fccd45a3eb6ccee8e5d39c0bc9a998be8d562215f7
+Description: object/document-oriented database (metapackage)
+Homepage: http://www.mongodb.org
+Description-md5: 8fa8c030cb4f008d0ac716b496446f9d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mongodb-clients
+Priority: optional
+Section: universe/database
+Installed-Size: 153261
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Antonin Kral <A.Kral@sh.cvut.cz>
+Architecture: amd64
+Source: mongodb
+Version: 1:2.4.6-0ubuntu5
+Replaces: mongodb (<= 1:1.4.2-2)
+Depends: libboost-filesystem1.53.0, libboost-program-options1.53.0, libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libgoogle-perftools4, libpcap0.8 (>= 0.9.8), libpcre3 (>= 8.10), libpcrecpp0 (>= 7.7), libsnappy1, libssl1.0.0 (>= 1.0.0), libstdc++6 (>= 4.6)
+Filename: pool/universe/m/mongodb/mongodb-clients_2.4.6-0ubuntu5_amd64.deb
+Size: 61692392
+MD5sum: d263f810d2fa3c9ec66acbef3e0877ad
+SHA1: 519fb6ce11968fa0f6af2a1bd02e36c7f08c0b65
+SHA256: ebfc52b393e5f0d26c75a243833cd33faf2a9625e0538fbb02f436f9aa8a2b43
+Description: object/document-oriented database (client apps)
+Homepage: http://www.mongodb.org
+Description-md5: 9b175679f732bcceca031594b6d559c6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mongodb-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 7672
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Antonin Kral <A.Kral@sh.cvut.cz>
+Architecture: amd64
+Source: mongodb
+Version: 1:2.4.6-0ubuntu5
+Replaces: mongodb (<= 1:1.4.2-2)
+Depends: libboost-dev
+Suggests: mongodb-server
+Filename: pool/universe/m/mongodb/mongodb-dev_2.4.6-0ubuntu5_amd64.deb
+Size: 1706252
+MD5sum: 85ddd7ae2ca368e4985a0e2d0f34bcb4
+SHA1: 0e192078e595cd66608799c990e44bc4a553d816
+SHA256: 7bdd7b6e67c0150bf47b9cdb04f54bafef7a9743d3c7bb08558b529a0ac3d956
+Description: object/document-oriented database (development)
+Homepage: http://www.mongodb.org
+Description-md5: aae66c33fc44569344d33b8deb4330c9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mongodb-server
+Priority: optional
+Section: universe/database
+Installed-Size: 23741
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Antonin Kral <A.Kral@sh.cvut.cz>
+Architecture: amd64
+Source: mongodb
+Version: 1:2.4.6-0ubuntu5
+Replaces: mongodb (<= 1:1.4.2-2)
+Depends: adduser, mongodb-clients, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libboost-filesystem1.53.0, libboost-program-options1.53.0, libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libgoogle-perftools4, libpcre3 (>= 8.10), libpcrecpp0 (>= 7.7), libsnappy1, libssl1.0.0 (>= 1.0.0), libstdc++6 (>= 4.6)
+Filename: pool/universe/m/mongodb/mongodb-server_2.4.6-0ubuntu5_amd64.deb
+Size: 9478010
+MD5sum: 0ea16034629a09729955cde4f7a19df8
+SHA1: b7ee3d7dd4d7ff34259ff26a2dbd6249bd93c336
+SHA256: 7db7ab08ae57e23c8bca3bb2c8dc854b56c684b94598ae4e02b9c0eba860ca54
+Description: object/document-oriented database (server package)
+Homepage: http://www.mongodb.org
+Description-md5: 8369759ba5e46f57cb29e59a68d73f39
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
