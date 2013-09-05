@@ -43,6 +43,96 @@ Origin: Ubuntu
 Supported: 18m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
+Package: apt
+Priority: important
+Section: admin
+Installed-Size: 3324
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Version: 0.9.7.5ubuntu5.5
+Replaces: manpages-pl (<< 20060617-3~)
+Depends: ubuntu-keyring, libapt-pkg4.12 (>= 0.9.7.5ubuntu5.5), libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6), gnupg
+Suggests: aptitude | synaptic | wajig, dpkg-dev, apt-doc, xz-utils, python-apt
+Conflicts: python-apt (<< 0.7.93.2~)
+Filename: pool/main/a/apt/apt_0.9.7.5ubuntu5.5_amd64.deb
+Size: 1157962
+MD5sum: 213f5151aa70f117c00104ac7d327161
+SHA1: 86828a7b45a1f8aaea61b33b6778612c1f13b59a
+SHA256: 0e933d22ecba47dbdb9cb4ebf8f283cfc74b9e6cbf50801e588d22220f1e0c68
+Description: commandline package manager
+Description-md5: 9fb97a88cb7383934ef963352b53b4a7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Supported: 18m
+Task: minimal
+
+Package: apt-doc
+Priority: optional
+Section: doc
+Installed-Size: 585
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: all
+Source: apt
+Version: 0.9.7.5ubuntu5.5
+Filename: pool/main/a/apt/apt-doc_0.9.7.5ubuntu5.5_all.deb
+Size: 172464
+MD5sum: ea0ce2fb671f1c4fbcd6801ecb0e7e2b
+SHA1: cdafb6a06378ef1f854debe26e09fc07a38167ec
+SHA256: ca4cd0fd1f5b5fca537231a994dec03da212b36a638ed6550cbe839fc266d62a
+Description: documentation for APT
+Description-md5: bc2b838ed28e60af95d78926380a3300
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: apt-transport-https
+Priority: standard
+Section: admin
+Installed-Size: 178
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Source: apt
+Version: 0.9.7.5ubuntu5.5
+Depends: libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.14), libcurl3-gnutls (>= 7.27.0-1ubuntu1.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Filename: pool/main/a/apt/apt-transport-https_0.9.7.5ubuntu5.5_amd64.deb
+Size: 15836
+MD5sum: d87027495ec793967c31ec64bdb03f21
+SHA1: d62baac9c4faee096eaff8ea0d35e9a41dc1af9a
+SHA256: 2046bd53bf81e18ba84d09c94a8ffe78ba7f33899955bc817cff90b66f8d2e06
+Description: https download transport for APT
+Description-md5: 3365a6b50bd0e4eef6e176a80c735f43
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: standard, kubuntu-active
+
+Package: apt-utils
+Priority: important
+Section: admin
+Installed-Size: 612
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Source: apt
+Version: 0.9.7.5ubuntu5.5
+Depends: libapt-inst1.5 (>= 0.8.0), libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.14), libdb5.1, libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Suggests: xz-utils
+Filename: pool/main/a/apt/apt-utils_0.9.7.5ubuntu5.5_amd64.deb
+Size: 185144
+MD5sum: 6dfdf3f0fdf5cb91f7f39723239126cd
+SHA1: ee5bf8c452fe391c3abce8e6e315dde7e1c75a95
+SHA256: 5438781aaafa2a6714155a3690680d4fe920fc1d152655a4061200d6a4fbf861
+Description: package managment related utility programs
+Description-md5: 578941ab78e4cbae72c741e56d175708
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: minimal
+
 Package: brasero
 Priority: optional
 Section: gnome
@@ -1240,6 +1330,98 @@ Description-md5: 31bf1a2908be95c12379e0aee0ecfc5c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
+
+Package: libapt-inst1.5
+Priority: important
+Section: admin
+Installed-Size: 716
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Source: apt
+Version: 0.9.7.5ubuntu5.5
+Depends: libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/a/apt/libapt-inst1.5_0.9.7.5ubuntu5.5_amd64.deb
+Size: 70350
+MD5sum: 4e0ab9e8c12d4ded57d5e6037b779e38
+SHA1: 405c475b527143f79da86973a247a1623f22bb3a
+SHA256: 698d6e9a8da7ce42745696725523d84d07a05db573900e8cabba367f13a82032
+Description: deb package format runtime library
+Multi-Arch: same
+Description-md5: 5df05e67cb17e91ac56a732061d88850
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: minimal
+
+Package: libapt-pkg-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 492
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Source: apt
+Version: 0.9.7.5ubuntu5.5
+Depends: libapt-pkg4.12 (= 0.9.7.5ubuntu5.5), libapt-inst1.5 (= 0.9.7.5ubuntu5.5), zlib1g-dev
+Filename: pool/main/a/apt/libapt-pkg-dev_0.9.7.5ubuntu5.5_amd64.deb
+Size: 93048
+MD5sum: 2d51b93dfc548fe00e115351c2d78f42
+SHA1: bdf9869f746e0f8c27eddac769cbe20cf6f94ff5
+SHA256: b9cf10a15c1b68aa0a5ea2d36dcd86f73d5c531c0351fce861bcf62efa779d2f
+Description: development files for APT's libapt-pkg and libapt-inst
+Multi-Arch: same
+Description-md5: 8e463f77664788b23a47f5ac592f4595
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libapt-pkg-doc
+Priority: optional
+Section: doc
+Installed-Size: 6466
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: all
+Source: apt
+Version: 0.9.7.5ubuntu5.5
+Filename: pool/main/a/apt/libapt-pkg-doc_0.9.7.5ubuntu5.5_all.deb
+Size: 875768
+MD5sum: a9b4111e01a3dd04a826855ae15b4be2
+SHA1: 9231b49d1c4610f9498dad0ccdfb40070ade7d21
+SHA256: 8c00d85e0c7b77dc40cfa28818ef25dc3b0ea18e17865a0a37cc1a438abc3cbe
+Description: documentation for APT development
+Description-md5: decce989b471f196cddabf52bee63592
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libapt-pkg4.12
+Priority: important
+Section: admin
+Installed-Size: 2711
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Source: apt
+Version: 0.9.7.5ubuntu5.5
+Depends: libbz2-1.0, libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6), zlib1g (>= 1:1.2.2.3)
+Pre-Depends: multiarch-support
+Breaks: apt (<< 0.9.4~)
+Filename: pool/main/a/apt/libapt-pkg4.12_0.9.7.5ubuntu5.5_amd64.deb
+Size: 798536
+MD5sum: bd87584f2cbdeb2dc518bef046b9f8f6
+SHA1: 729142c8fd4721192cd5742256c6845ffb319c00
+SHA256: 724d6b2ca2d0aea22927e9747d31e8c01ff79abae5805dae5205805c0b3aed3f
+Description: package managment runtime library
+Multi-Arch: same
+Description-md5: c7584b884ab52c1972b8736fef25ad35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Supported: 18m
+Task: minimal
 
 Package: libasn1-8-heimdal
 Priority: standard

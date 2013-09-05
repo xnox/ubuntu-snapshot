@@ -1,3 +1,23 @@
+Package: android-platform-headers
+Priority: extra
+Section: libdevel
+Installed-Size: 276
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: libhybris
+Version: 0.1.0+git20130606+c5d897a-0ubuntu22
+Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
+Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
+Filename: pool/main/libh/libhybris/android-platform-headers_0.1.0+git20130606+c5d897a-0ubuntu22_all.deb
+Size: 53508
+MD5sum: e9c0d34267b3499c7f1234ac4193eef3
+SHA1: 79caec84723d120063bcade530abbca03d33421e
+SHA256: 937ec4c81d625e7d9941293679441b3e1cba3d48b1b10a1e7816a5fc1c4a81fb
+Description: Android Platform Headers from AOSP releases
+Description-md5: 5d4e18662ffad46fc86efe8d568c6096
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: apparmor
 Priority: standard
 Section: admin
@@ -408,21 +428,24 @@ Description-md5: 6948801c3d791b1c318acb50a89989c6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: click-apparmor
+Package: cpp-4.8-doc
 Priority: optional
-Section: admin
-Installed-Size: 65
-Maintainer: Steve Beattie <steve.beattie@canonical.com>
+Section: doc
+Installed-Size: 552
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
 Architecture: all
-Version: 0.1.8
-Depends: python3 (>= 3.3), python3-apparmor-click (= 0.1.8), click, apparmor (>= 2.8.0-0ubuntu15)
-Filename: pool/main/c/click-apparmor/click-apparmor_0.1.8_all.deb
-Size: 4736
-MD5sum: f22b4f6b2ddce267696126fa0ca7699c
-SHA1: 0d8e38655cb7bb18193ce0b805839b4fdee4e886
-SHA256: 278230463677d790296dbf7f40454d67adb1c2f723baa634d306ec99a9ea9c29
-Description: Click manifest to AppArmor easyprof conversion tools
-Description-md5: 2f38f52265e23d1e53ff74e49c902daa
+Source: gcc-4.8
+Version: 4.8.1-10ubuntu1
+Depends: gcc-4.8-base (>= 4.8), dpkg (>= 1.15.4) | install-info
+Filename: pool/main/g/gcc-4.8/cpp-4.8-doc_4.8.1-10ubuntu1_all.deb
+Size: 195638
+MD5sum: 8bd9a713ac5f674e4e2990d1b4263094
+SHA1: 19693ec49df25abb2ad013291fb4282637f32741
+SHA256: 64bfd03d6d2284fb0bf3b57a6e0023a9c669e0984492081ff824ab0b620b20e7
+Description: Documentation for the GNU C preprocessor (cpp)
+Homepage: http://gcc.gnu.org/
+Description-md5: 22a9ba311e91d8d744a9e4df2030d2bf
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -615,6 +638,113 @@ Description-md5: fb3b03f43036d62b4dc6ed630144d256
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gcc-4.8-doc
+Priority: optional
+Section: doc
+Installed-Size: 8582
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: all
+Source: gcc-4.8
+Version: 4.8.1-10ubuntu1
+Replaces: gcc (<= 2.7.2.3-4.3), gcc-docs (<< 2.95.2)
+Depends: gcc-4.8-base (>= 4.8), dpkg (>= 1.15.4) | install-info
+Conflicts: gcc-docs (<< 2.95.2)
+Filename: pool/main/g/gcc-4.8/gcc-4.8-doc_4.8.1-10ubuntu1_all.deb
+Size: 2487696
+MD5sum: 20cff677322d074c9ce86dcf589a2bcf
+SHA1: 48da248088a374b3bfe27b895654eb358528614f
+SHA256: 2e4db3d4ad7ce8f5b6b58304eab3217e3d05437d7736363adc922ed01261aa2a
+Description: Documentation for the GNU compilers (gcc, gobjc, g++)
+Homepage: http://gcc.gnu.org/
+Description-md5: bf320d6d806b62ff03b567626d36b1fb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gcc-4.8-source
+Priority: optional
+Section: devel
+Installed-Size: 79725
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: all
+Source: gcc-4.8
+Version: 4.8.1-10ubuntu1
+Depends: make (>= 3.81), autoconf2.64, quilt, patchutils, gawk
+Filename: pool/main/g/gcc-4.8/gcc-4.8-source_4.8.1-10ubuntu1_all.deb
+Size: 69509626
+MD5sum: 01f211a4901835165fb7b3a7f4e43afc
+SHA1: 8faed8fc630d933bb5e4c7ab689cb73dcd2b4444
+SHA256: 5eb28a263b8e51d38b589ed6ceaa5e1a2bc70a187bf81f3e28e22ae1bf8bf7ed
+Description: Source of the GNU Compiler Collection
+Homepage: http://gcc.gnu.org/
+Description-md5: cb00049993a8c14b73bb041c050eb8c5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gccgo-4.8-doc
+Priority: optional
+Section: doc
+Installed-Size: 147
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: all
+Source: gcc-4.8
+Version: 4.8.1-10ubuntu1
+Depends: gcc-4.8-base (>= 4.8), dpkg (>= 1.15.4) | install-info
+Filename: pool/main/g/gcc-4.8/gccgo-4.8-doc_4.8.1-10ubuntu1_all.deb
+Size: 51972
+MD5sum: e73190d05e87fe479163a1341f3240c9
+SHA1: 91a636139bc8c1451344fb0628227d1423149207
+SHA256: b9b21e2ab3e89dafbf9334151d3ea3d21e9bd06f75ce4aa53d9eefe02b074726
+Description: Documentation for the GNU Go compiler (gccgo)
+Homepage: http://gcc.gnu.org/
+Description-md5: 76326180b2469131aa9547f46e5b3105
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gcj-4.8-jre-lib
+Priority: optional
+Section: java
+Installed-Size: 11193
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: all
+Source: gcc-4.8
+Version: 4.8.1-10ubuntu1
+Depends: gcc-4.8-base (>= 4.8), libgcj14 (>= 4.8)
+Filename: pool/main/g/gcc-4.8/gcj-4.8-jre-lib_4.8.1-10ubuntu1_all.deb
+Size: 10495136
+MD5sum: 823b1d87617abdb61dc345cbe8f35ba5
+SHA1: 06749a032b415c3247d19f06cbcd7e5c052789c1
+SHA256: e6495d20ed4a857d5268d563da905e22cda45e8eadaf7b62c00ea6df62ed8c9d
+Description: Java runtime library for use with gcj (jar files)
+Homepage: http://gcc.gnu.org/
+Description-md5: c6c8d4fc017cdac424e562b583372f96
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gfortran-4.8-doc
+Priority: optional
+Section: doc
+Installed-Size: 1402
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: all
+Source: gcc-4.8
+Version: 4.8.1-10ubuntu1
+Depends: gcc-4.8-base (>= 4.8), dpkg (>= 1.15.4) | install-info
+Filename: pool/main/g/gcc-4.8/gfortran-4.8-doc_4.8.1-10ubuntu1_all.deb
+Size: 353612
+MD5sum: e6dbd6064c55f0c6856daf831c2cd709
+SHA1: 97e0d9a7ae33427f428937760a99965522462487
+SHA256: ae2507d24b640505c7356e9ad351c946b0b178b0c58fb69ad2219bb1578f0c59
+Description: Documentation for the GNU Fortran compiler (gfortran)
+Homepage: http://gcc.gnu.org/
+Description-md5: 17a01a9ada93e104865a01e6615e2401
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: ghostscript
 Priority: optional
@@ -7767,6 +7897,29 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: libgcj-doc
+Priority: optional
+Section: doc
+Installed-Size: 429777
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: all
+Source: gcc-4.8
+Version: 4.8.1-10ubuntu1
+Provides: classpath-doc
+Depends: gcc-4.8-base (>= 4.8)
+Filename: pool/main/g/gcc-4.8/libgcj-doc_4.8.1-10ubuntu1_all.deb
+Size: 43583318
+MD5sum: 6020d42222d46ddf489ac61e36fdab27
+SHA1: 6679a94ee5b0217c5ebc132f5a95e426c5208440
+SHA256: d75466412cbb92a9317af9033e924f5e3a379664dcc6ebc99807e166acefab1f
+Description: libgcj API documentation and example programs
+Enhances: libgcj14-dev
+Homepage: http://gcc.gnu.org/
+Description-md5: f5a770b1765898ba56a3f1f8c749ab2d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libgdata-common
 Priority: optional
 Section: libs
@@ -8712,6 +8865,28 @@ Description-md5: 208dafbff3569d9b6dbc7f0b94df7754
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libstdc++-4.8-doc
+Priority: optional
+Section: doc
+Installed-Size: 97197
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
+Architecture: all
+Source: gcc-4.8
+Version: 4.8.1-10ubuntu1
+Depends: gcc-4.8-base (>= 4.8), libjs-jquery
+Conflicts: libstdc++5-3.3-doc, libstdc++5-doc, libstdc++6-4.0-doc, libstdc++6-4.1-doc, libstdc++6-4.2-doc, libstdc++6-4.3-doc, libstdc++6-4.4-doc, libstdc++6-4.5-doc, libstdc++6-4.6-doc, libstdc++6-4.7-doc, libstdc++6-doc
+Filename: pool/main/g/gcc-4.8/libstdc++-4.8-doc_4.8.1-10ubuntu1_all.deb
+Size: 16104588
+MD5sum: 694175479d681224a84cc8d2cf677ce5
+SHA1: 6c5abd3da4158dee94f8ca849b0595455d9a483a
+SHA256: 5aa07b89607dd934c6d56868b0a42f14b092381f656c521ef3a7547c750440c6
+Description: GNU Standard C++ Library v3 (documentation files)
+Homepage: http://gcc.gnu.org/
+Description-md5: 1a4b88b8d9f96dfb2ac2be1049b4db01
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: libubuntu-platform-api1-dev
 Priority: optional
@@ -9766,25 +9941,6 @@ SHA256: cfce76a25623ba2b461ee21df2cef048813e0ce51cd00a8b5f720bad91040145
 Description: AppArmor library Python bindings
 Homepage: http://apparmor.net/
 Description-md5: 36d3d516db38bd0cbb93cfa172912961
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: python3-apparmor-click
-Priority: optional
-Section: admin
-Installed-Size: 68
-Maintainer: Steve Beattie <steve.beattie@canonical.com>
-Architecture: all
-Source: click-apparmor
-Version: 0.1.8
-Depends: python3 (>= 3.3), apparmor-easyprof, apparmor-easyprof-ubuntu (>= 1.0.17), python3-click, libnih-dbus1
-Filename: pool/main/c/click-apparmor/python3-apparmor-click_0.1.8_all.deb
-Size: 10066
-MD5sum: f12fefeba40836526b97f03e78082dce
-SHA1: 116116650b28f522fee4fe9be48b7f05d3cad054
-SHA256: fdec141ae402f4096630db77264273643259e7ac1b0d1f1b3e7c6c389b9a486b
-Description: Click manifest to AppArmor easyprof conversion tools
-Description-md5: 753c20b93f7c33ee3e7c64c06bf058bc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
