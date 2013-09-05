@@ -1714,25 +1714,6 @@ Description-md5: e9b1617d2c59e14b9d4c57e66f9dfb48
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: initramfs-tools-ubuntu-touch
-Priority: optional
-Section: universe/utils
-Installed-Size: 80
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Version: 0.46
-Depends: initramfs-tools, abootimg, udev (>= 175-0ubuntu29), upstart, coreutils, android-tools-adbd
-Filename: pool/universe/i/initramfs-tools-ubuntu-touch/initramfs-tools-ubuntu-touch_0.46_armhf.deb
-Size: 7526
-MD5sum: 3a850b8159338e586522017bab0ca91f
-SHA1: 4f95bd51052f27a574087d7b0e1665569dbb12d5
-SHA256: 299e166c99450c6ba0c49a61b562619083da50078720b37b3461607fdccdcf81
-Description: tools for mounting an Ubuntu Touch rootfs
-Multi-Arch: foreign
-Description-md5: 12b771ab0234d5a2b3c27868cdd3dfac
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: language-pack-kde-en
 Priority: optional
 Section: universe/translations
@@ -4641,25 +4622,90 @@ Description-md5: 5e894b08c5dafd9438d2e46d63086621
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: moovida-plugins-good
+Package: mongodb
 Priority: optional
-Section: universe/video
-Installed-Size: 323
+Section: universe/database
+Installed-Size: 44
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
-Architecture: all
-Version: 1.0.9+bzr1614-1ubuntu2
-Replaces: elisa-plugins-good
-Depends: python, python-support (>= 0.90.0), dbus, python (>= 2.5) | python-elementtree, python (>= 2.5) | python-celementtree, python-dbus, python-moovida (>= 1.0.9)
-Suggests: python-twisted-web2
-Conflicts: elisa-plugins-good
-Filename: pool/universe/m/moovida-plugins-good/moovida-plugins-good_1.0.9+bzr1614-1ubuntu2_all.deb
-Size: 32378
-MD5sum: 306be3417ebf0e8352e011ccbd5cf93c
-SHA1: 88cb3bd30acc05f370185f330177cfd298aae91d
-SHA256: 931536ab936626b7f0cd7613f41c46d1185b87eac498bd5d33119924871ff335
-Description: Moovida plugins from the "good" set
-Description-md5: 5aba9672f54f63ff098d5036da4b6fd8
+Original-Maintainer: Antonin Kral <A.Kral@sh.cvut.cz>
+Architecture: armhf
+Version: 1:2.4.6-0ubuntu5
+Depends: mongodb-dev, mongodb-server (>= 1:2.4.1-2)
+Filename: pool/universe/m/mongodb/mongodb_2.4.6-0ubuntu5_armhf.deb
+Size: 5294
+MD5sum: eebf45ec95487c3849701cf80d21e7d2
+SHA1: 99477f4f08941f953d8c92e8a6300f12276c3876
+SHA256: f565df7cb0accfe07be3e92e0e877f940b1a032abd686350de4a208d1b464cbc
+Description: object/document-oriented database (metapackage)
+Homepage: http://www.mongodb.org
+Description-md5: 8fa8c030cb4f008d0ac716b496446f9d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mongodb-clients
+Priority: optional
+Section: universe/database
+Installed-Size: 60140
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Antonin Kral <A.Kral@sh.cvut.cz>
+Architecture: armhf
+Source: mongodb
+Version: 1:2.4.6-0ubuntu5
+Replaces: mongodb (<= 1:1.4.2-2)
+Depends: libboost-filesystem1.53.0, libboost-program-options1.53.0, libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.15), libgcc1 (>= 1:4.4.0), libpcap0.8 (>= 0.9.8), libpcre3 (>= 8.10), libpcrecpp0 (>= 7.7), libsnappy1, libssl1.0.0 (>= 1.0.0), libstdc++6 (>= 4.6), libv8-3.14.5
+Filename: pool/universe/m/mongodb/mongodb-clients_2.4.6-0ubuntu5_armhf.deb
+Size: 32963576
+MD5sum: 55cd615ae3a64e322950035f57ca3348
+SHA1: 4c620c685014fea9ffd509d24fe8922c5fa354a2
+SHA256: 28535846aced84148cf302dcb67b42cd16d7a2d02422e36390cf37749014eaa6
+Description: object/document-oriented database (client apps)
+Homepage: http://www.mongodb.org
+Description-md5: 9b175679f732bcceca031594b6d559c6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mongodb-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 6281
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Antonin Kral <A.Kral@sh.cvut.cz>
+Architecture: armhf
+Source: mongodb
+Version: 1:2.4.6-0ubuntu5
+Replaces: mongodb (<= 1:1.4.2-2)
+Depends: libboost-dev
+Suggests: mongodb-server
+Filename: pool/universe/m/mongodb/mongodb-dev_2.4.6-0ubuntu5_armhf.deb
+Size: 1664168
+MD5sum: 0fe712e88420d463ae1f4429744ddfe4
+SHA1: ab6cd5690f7900277a7691dff6bfb8da4fb91c46
+SHA256: 905c5c6a87ffc259524ef7fbb5a8f7490d224418e86e561cf56e89251d6bbef9
+Description: object/document-oriented database (development)
+Homepage: http://www.mongodb.org
+Description-md5: aae66c33fc44569344d33b8deb4330c9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: mongodb-server
+Priority: optional
+Section: universe/database
+Installed-Size: 8887
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Antonin Kral <A.Kral@sh.cvut.cz>
+Architecture: armhf
+Source: mongodb
+Version: 1:2.4.6-0ubuntu5
+Replaces: mongodb (<= 1:1.4.2-2)
+Depends: adduser, mongodb-clients, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libboost-filesystem1.53.0, libboost-program-options1.53.0, libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.15), libgcc1 (>= 1:4.4.0), libpcre3 (>= 8.10), libpcrecpp0 (>= 7.7), libsnappy1, libssl1.0.0 (>= 1.0.0), libstdc++6 (>= 4.6), libv8-3.14.5
+Filename: pool/universe/m/mongodb/mongodb-server_2.4.6-0ubuntu5_armhf.deb
+Size: 4803340
+MD5sum: d0e331508f2703ee65669e5b463fb879
+SHA1: 306aca73431030adc5705efb6b2744a029d08675
+SHA256: d5b3deb9398b2fc21ec2a865aea83f90bd0f3995cf6d424c5ffdf2a7a7fcc6d8
+Description: object/document-oriented database (server package)
+Homepage: http://www.mongodb.org
+Description-md5: 8369759ba5e46f57cb29e59a68d73f39
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -6361,26 +6407,6 @@ SHA256: c7d7e738194f6582eb6bb8ec7ad8585671e28e398a3650c2277fac67ec2ea617
 Description: Enhanced wiki and issue tracking system for software development projects
 Homepage: http://trac.edgewall.com
 Description-md5: 2cccb18baaf0a79bddc72153a6b2f521
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ubuntu-touch-generic-initrd
-Priority: optional
-Section: universe/utils
-Installed-Size: 2382
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: initramfs-tools-ubuntu-touch
-Version: 0.46
-Suggests: abootimg
-Filename: pool/universe/i/initramfs-tools-ubuntu-touch/ubuntu-touch-generic-initrd_0.46_armhf.deb
-Size: 2382158
-MD5sum: ebe7dab4e4755f85244ae9708d9ac8a5
-SHA1: c09032460509ad62dc4f4a3397098e7e5edee4bf
-SHA256: f89606605b2dacb47206af24aac856c5d0db11f1fca0a632a99b48cb914f0581
-Description: generic initramfs to boot Ubuntu Touch flipped container images
-Multi-Arch: foreign
-Description-md5: 31ea177f991c91628222849a3698b612
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
