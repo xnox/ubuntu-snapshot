@@ -1,26 +1,3 @@
-Package: apparmor-easyprof-ubuntu
-Binary: apparmor-easyprof-ubuntu
-Version: 1.0.29
-Priority: optional
-Section: admin
-Maintainer: Jamie Strandboge <jamie@ubuntu.com>
-Build-Depends: debhelper (>= 9)
-Architecture: all
-Standards-Version: 3.9.3
-Format: 3.0 (native)
-Directory: pool/main/a/apparmor-easyprof-ubuntu
-Files:
- d2fa4e550004093bea4d2121e4b09352 1493 apparmor-easyprof-ubuntu_1.0.29.dsc
- a7ffe222029ab96936d2200bd5024247 11745 apparmor-easyprof-ubuntu_1.0.29.tar.gz
-Package-List: 
- apparmor-easyprof-ubuntu deb admin optional
-Checksums-Sha1:
- e06efd4505a437ebc2efee21dfed00eaed55acdb 1493 apparmor-easyprof-ubuntu_1.0.29.dsc
- f9e1b79bbc70d5d32a7ac97b65cd33e64d0a9410 11745 apparmor-easyprof-ubuntu_1.0.29.tar.gz
-Checksums-Sha256:
- e96e71d2f532b8d93569aa86777764a4f872a1e29caf52d84a937bf03abacd2b 1493 apparmor-easyprof-ubuntu_1.0.29.dsc
- 0c7e5288c1d099fded53fb1e26264117952db6b23d542bc2a639e2a93b130417 11745 apparmor-easyprof-ubuntu_1.0.29.tar.gz
-
 Package: aptdaemon
 Binary: aptdaemon, python3-aptdaemon, python-aptdaemon, python3-aptdaemon.test, aptdaemon-data, python-aptdaemon-gtk, python3-aptdaemon.pkcompat, python-aptdaemon.gtkwidgets, python3-aptdaemon.gtk3widgets, python-aptdaemon.gtk3widgets
 Version: 1.1.1-0ubuntu1
@@ -931,30 +908,6 @@ Checksums-Sha256:
  ce02584d46ce8a4cbb32f03f3d21404ae2bafedc2091fed8fab09c6012588905 1713 linux-signed_3.11.0-5.10.dsc
  ef232fce17306288badb1bcf8a52e59d3677af6b37624bed9f86d93f0a69df84 6183 linux-signed_3.11.0-5.10.tar.gz
 
-Package: livecd-rootfs
-Binary: livecd-rootfs
-Version: 2.182
-Priority: optional
-Section: devel
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: debhelper (>= 7)
-Architecture: all
-Standards-Version: 3.6.1.0
-Format: 3.0 (native)
-Directory: pool/main/l/livecd-rootfs
-Files:
- 53ebbb8498da897933b2dc5f9adc1534 1577 livecd-rootfs_2.182.dsc
- 37d048525f2da583502848931912a575 48372 livecd-rootfs_2.182.tar.gz
-Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/livecd-rootfs/trunk
-Package-List: 
- livecd-rootfs deb devel optional
-Checksums-Sha1:
- 7e21ca4893fdb943c22f4a056a856259b4bdcbf6 1577 livecd-rootfs_2.182.dsc
- ab695528e11153a27e63bfee53e49b3968dc6624 48372 livecd-rootfs_2.182.tar.gz
-Checksums-Sha256:
- 65201d05c2903da5af2d1229fc5d2798374f214495734cce5153e7056c88893c 1577 livecd-rootfs_2.182.dsc
- 97c6fd644b21e83fc519261ce3f0bacf5019ab6c7c330210073323ae69fe1efe 48372 livecd-rootfs_2.182.tar.gz
-
 Package: mir
 Binary: libmirprotobuf0, libmirprotobuf-dev, libmirserver1, libmirplatform, mircommon-dev, libmirserver-dev, libmirclient2, libmirclient-dev, mir-demos, mir-doc, mir-test-tools
 Version: 0.0.10+13.10.20130904-0ubuntu1
@@ -1204,6 +1157,36 @@ Checksums-Sha256:
  8d759a6a3e50f0c12c07e555bcdafa10f7c74a2008af13a67dd640bf86108a88 2081 qtwebkit-source_2.3.2-0ubuntu1.dsc
  858d0d7b073c8c3b3d77ab344b5c67faf80041e30d2f9a91d259f92224906397 51649959 qtwebkit-source_2.3.2.orig.tar.gz
  0f95e06b3eb802e3f7df23e9f013bcbdda547173f2c984f04a39d68f29177d53 80539 qtwebkit-source_2.3.2-0ubuntu1.debian.tar.gz
+
+Package: system-config-printer
+Binary: system-config-printer-common, system-config-printer-udev, system-config-printer-gnome, python-cupshelpers
+Version: 1.4.2-0ubuntu2
+Priority: optional
+Section: python
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Otavio Salvador <otavio@ossystems.com.br>
+Build-Depends: cdbs (>= 0.4.43), debhelper (>= 5.0.37.2), dh-autoreconf, python-all-dev (>= 2.3.5-11), libxml-parser-perl, desktop-file-utils (>= 0.18-0ubuntu7), xmlto, libusb-1.0-0-dev, libudev-dev, libcups2-dev, libglib2.0-dev
+Architecture: any all
+Standards-Version: 3.7.2
+Format: 1.0
+Directory: pool/main/s/system-config-printer
+Files:
+ f37b39fb2c0367562d409a01a406300c 1663 system-config-printer_1.4.2-0ubuntu2.dsc
+ 08e470be88e847426ef8077ececa0a78 1924476 system-config-printer_1.4.2.orig.tar.gz
+ 8ccb86edffe0713d40e12cdbcff437ad 58162 system-config-printer_1.4.2-0ubuntu2.diff.gz
+Package-List: 
+ python-cupshelpers deb gnome optional
+ system-config-printer-common deb gnome optional
+ system-config-printer-gnome deb gnome optional
+ system-config-printer-udev deb gnome optional
+Checksums-Sha1:
+ f33d74798f63c7ad277741519ec1707a9a50d672 1663 system-config-printer_1.4.2-0ubuntu2.dsc
+ 2474f520175bc56acfbdf6d5e759ecb32bcf9320 1924476 system-config-printer_1.4.2.orig.tar.gz
+ cec5037cabc4d5f6d0b81f7618cdfd8bfcee1d6a 58162 system-config-printer_1.4.2-0ubuntu2.diff.gz
+Checksums-Sha256:
+ c5f4721cc0e3f2243581a8600bb7575527211cd9861bc4335aca9226a58ab9cd 1663 system-config-printer_1.4.2-0ubuntu2.dsc
+ 63b89fb3e5a6d533b9c3c5afbb60996ef9b7e0425696d64a6dc5ff5f45e6b7f0 1924476 system-config-printer_1.4.2.orig.tar.gz
+ 523de74e85d6c0194c716811898e8c207a81ced78d7f16517e18c6dc21dfaa42 58162 system-config-printer_1.4.2-0ubuntu2.diff.gz
 
 Package: usb-modeswitch-data
 Binary: usb-modeswitch-data
