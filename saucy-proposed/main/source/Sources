@@ -407,7 +407,7 @@ Package: linux
 Binary: linux-source-3.11.0, linux-doc, linux-tools-common, linux-headers-3.11.0-5, linux-libc-dev, linux-tools-3.11.0-5, linux-image-3.11.0-5-generic, linux-image-extra-3.11.0-5-generic, linux-headers-3.11.0-5-generic, linux-image-3.11.0-5-generic-dbgsym, linux-udebs-generic, linux-image-3.11.0-5-generic-lpae, linux-image-extra-3.11.0-5-generic-lpae, linux-headers-3.11.0-5-generic-lpae, linux-image-3.11.0-5-generic-lpae-dbgsym, linux-udebs-generic-lpae, kernel-image-3.11.0-5-generic-di, nic-modules-3.11.0-5-generic-di, nic-shared-modules-3.11.0-5-generic-di, serial-modules-3.11.0-5-generic-di, ppp-modules-3.11.0-5-generic-di, pata-modules-3.11.0-5-generic-di, firewire-core-modules-3.11.0-5-generic-di, scsi-modules-3.11.0-5-generic-di, plip-modules-3.11.0-5-generic-di, floppy-modules-3.11.0-5-generic-di, fat-modules-3.11.0-5-generic-di, nfs-modules-3.11.0-5-generic-di, md-modules-3.11.0-5-generic-di, multipath-modules-3.11.0-5-generic-di, usb-modules-3.11.0-5-generic-di,
  pcmcia-storage-modules-3.11.0-5-generic-di, fb-modules-3.11.0-5-generic-di, input-modules-3.11.0-5-generic-di, mouse-modules-3.11.0-5-generic-di, irda-modules-3.11.0-5-generic-di, parport-modules-3.11.0-5-generic-di, nic-pcmcia-modules-3.11.0-5-generic-di, pcmcia-modules-3.11.0-5-generic-di, nic-usb-modules-3.11.0-5-generic-di, sata-modules-3.11.0-5-generic-di, crypto-modules-3.11.0-5-generic-di, squashfs-modules-3.11.0-5-generic-di, speakup-modules-3.11.0-5-generic-di, virtio-modules-3.11.0-5-generic-di, fs-core-modules-3.11.0-5-generic-di, fs-secondary-modules-3.11.0-5-generic-di, storage-core-modules-3.11.0-5-generic-di, block-modules-3.11.0-5-generic-di, message-modules-3.11.0-5-generic-di, vlan-modules-3.11.0-5-generic-di,
  ipmi-modules-3.11.0-5-generic-di
-Version: 3.11.0-5.10
+Version: 3.11.0-5.11
 Priority: optional
 Section: devel
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
@@ -418,9 +418,9 @@ Standards-Version: 3.9.4.0
 Format: 1.0
 Directory: pool/main/l/linux
 Files:
- c9fc663e675c22e943090e6e8a1fc269 7057 linux_3.11.0-5.10.dsc
+ d2c6978dd41ae63eb7485a383701a981 7057 linux_3.11.0-5.11.dsc
  ea61ce46820155438a52935ff84b5081 113151474 linux_3.11.0.orig.tar.gz
- 77c430269ee54643f0852d45184298ab 2921920 linux_3.11.0-5.10.diff.gz
+ 0f38f7fb87c1774a7705e64a7fedb0ee 2940763 linux_3.11.0-5.11.diff.gz
 Vcs-Git: http://kernel.ubuntu.com/git-repos/ubuntu/ubuntu-saucy.git
 Package-List: 
  block-modules-3.11.0-5-generic-di udeb debian-installer standard
@@ -476,13 +476,13 @@ Package-List:
  virtio-modules-3.11.0-5-generic-di udeb debian-installer standard
  vlan-modules-3.11.0-5-generic-di udeb debian-installer extra
 Checksums-Sha1:
- c53459ab8c6dbf5fcc7c10b829aea769160a464a 7057 linux_3.11.0-5.10.dsc
+ 10dd5008bbb19664f09517a4d788ce29bc49c03c 7057 linux_3.11.0-5.11.dsc
  3dbecb002d2bc839124d0b2b9b692dcc2afafe39 113151474 linux_3.11.0.orig.tar.gz
- 30a44132450ca9d31fe2e508361b97dfd4b7bb55 2921920 linux_3.11.0-5.10.diff.gz
+ 65c46f37fc31b6088648d78dd4482416a43a2d6c 2940763 linux_3.11.0-5.11.diff.gz
 Checksums-Sha256:
- f344d445ac5df583491b06823784ae0bd30644ee994b23c5ee2e715342dd7dc5 7057 linux_3.11.0-5.10.dsc
+ 4ded8d867c92bfad0b10206417f32668bb39170541542a88f5ffbe160709c7ac 7057 linux_3.11.0-5.11.dsc
  59904beb1fdae62eb1991f29926c234283c9e4009b6e437499f13d2749bed6ca 113151474 linux_3.11.0.orig.tar.gz
- 0253140f1a4a815a063a2b9dc44389c12d09eba8fc6adec3839b283ccbcc1dda 2921920 linux_3.11.0-5.10.diff.gz
+ e60f2c30f205d6b0923dc747daf90ecf01b9e9d5a3dd606ea57fb36ff5df9a50 2940763 linux_3.11.0-5.11.diff.gz
 Testsuite: autopkgtest
 
 Package: linux-meta
@@ -566,27 +566,27 @@ Checksums-Sha256:
 
 Package: linux-signed
 Binary: linux-signed-image-3.11.0-5-generic, kernel-signed-image-3.11.0-5-generic-di
-Version: 3.11.0-5.10
+Version: 3.11.0-5.11
 Priority: optional
 Section: utils
 Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
-Build-Depends: debhelper (>= 9), lsb-release, python3, python3-apt, sbsigntool, linux-image-3.11.0-5-generic (>= 3.11.0-5.10)
+Build-Depends: debhelper (>= 9), lsb-release, python3, python3-apt, sbsigntool, linux-image-3.11.0-5-generic (>= 3.11.0-5.11)
 Architecture: linux-amd64
 Standards-Version: 3.9.4
 Format: 3.0 (native)
 Directory: pool/main/l/linux-signed
 Files:
- 54d424e039aa87ad59cc0702b1634204 1713 linux-signed_3.11.0-5.10.dsc
- 0a94a4bec16711f08a5c7786d83452c9 6183 linux-signed_3.11.0-5.10.tar.gz
+ 65a3cbe77a28a45c2091e73a9f628f7d 1713 linux-signed_3.11.0-5.11.dsc
+ a6350befc0de8344f286a2d91e2582ff 6150 linux-signed_3.11.0-5.11.tar.gz
 Package-List: 
  kernel-signed-image-3.11.0-5-generic-di udeb debian-installer extra
  linux-signed-image-3.11.0-5-generic deb utils optional
 Checksums-Sha1:
- 3531fdba49f4909ecca26658d649d172e51a9ba5 1713 linux-signed_3.11.0-5.10.dsc
- b51350d0c6736bd70155c4767c5f33d5aa996512 6183 linux-signed_3.11.0-5.10.tar.gz
+ bcfe4e14d54287b7010736de0fd08852063badc8 1713 linux-signed_3.11.0-5.11.dsc
+ 176659034d044ebcd3e4ff2770917377d8a0aa2c 6150 linux-signed_3.11.0-5.11.tar.gz
 Checksums-Sha256:
- ce02584d46ce8a4cbb32f03f3d21404ae2bafedc2091fed8fab09c6012588905 1713 linux-signed_3.11.0-5.10.dsc
- ef232fce17306288badb1bcf8a52e59d3677af6b37624bed9f86d93f0a69df84 6183 linux-signed_3.11.0-5.10.tar.gz
+ c7b7b9e7ba591f1bcdbf61b78612f354c5cddefe94a5d40d8277cd2eefc9d920 1713 linux-signed_3.11.0-5.11.dsc
+ f7c27424ad4bbcbeea1f8991883f14e0275ba44bdb1f3db9d9e3a67651aa4224 6150 linux-signed_3.11.0-5.11.tar.gz
 
 Package: linux-ti-omap4
 Binary: linux-headers-3.5.0-232, linux-ti-omap4-tools-3.5.0-232, linux-image-3.5.0-232-omap4, linux-headers-3.5.0-232-omap4, linux-image-3.5.0-232-omap4-dbgsym
@@ -774,6 +774,7 @@ Testsuite: autopkgtest
 Package: python-glanceclient
 Binary: python-glanceclient
 Version: 1:0.11.0-0ubuntu1
+Priority: extra
 Section: python
 Maintainer: Chuck Short <zulcss@ubuntu.com>
 Build-Depends: debhelper (>= 8.0.0), python-all (>= 2.6.6-3~), python-d2to1, python-httplib2, python-keystoneclient, python-mox, python-nose, python-openssl, python-pbr, python-prettytable (>= 0.6), python-setuptools, python-setuptools-git, python-sphinx, python-testtools, python-warlock, testrepository
