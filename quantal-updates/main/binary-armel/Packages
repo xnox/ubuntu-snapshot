@@ -26535,6 +26535,27 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-doc
+Priority: optional
+Section: doc
+Installed-Size: 26324
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.5.0-40.62
+Replaces: linux-doc-3
+Conflicts: linux-doc-3
+Filename: pool/main/l/linux/linux-doc_3.5.0-40.62_all.deb
+Size: 8380316
+MD5sum: 0b2909bef8530f86353ec4f8ae562a84
+SHA1: 932cfa4e155faeebefadc5433c9089166324c3ff
+SHA256: 5c3589685d5f28b04e571dc708562d2803fcc359670ba39e8b60c47846fb8a39
+Description: Linux kernel specific documentation for version 3.5.0
+Description-md5: 656c36c4accf2887e4c8a5ed6787f7aa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
 Package: linux-firmware
 Priority: optional
 Section: misc
@@ -27254,6 +27275,46 @@ Description-md5: 1de309a74235a11e467472c33b002c6b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-headers-3.5.0-40
+Priority: optional
+Section: devel
+Installed-Size: 57458
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.5.0-40.62
+Provides: linux-headers, linux-headers-3
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux/linux-headers-3.5.0-40_3.5.0-40.62_all.deb
+Size: 12116704
+MD5sum: 0f6e77e58d1fb0afb11089037e7db658
+SHA1: 806679ae032afecd6a3a6316e7cc4503ed416ec9
+SHA256: 9929e4731d083b3ee30a1da5e71005a495425fe80291f4ad4cb56c38dbd4a4f6
+Description: Header files related to Linux kernel version 3.5.0
+Description-md5: 4e37acb33417510f8921892df04be287
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-3.5.0-40-omap
+Priority: optional
+Section: devel
+Installed-Size: 8550
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: armel
+Source: linux
+Version: 3.5.0-40.62
+Provides: linux-headers, linux-headers-3.0
+Depends: linux-headers-3.5.0-40, libc6 (>= 2.8), libgcc1 (>= 1:4.4.0)
+Filename: pool/main/l/linux/linux-headers-3.5.0-40-omap_3.5.0-40.62_armel.deb
+Size: 912766
+MD5sum: 6d960d2460503a90935b44c8c00cb6bd
+SHA1: 8e72ae8968fd70ab6625ae72af6b335f71bb17f0
+SHA256: 5b7a0c895e746eec852850fc19bcf86bcdba05733a0f546a106d8dca7c59978d
+Description: Linux kernel headers for version 3.5.0 on TI OMAP3-based ARM (soft float) systems
+Description-md5: fea26d138810e80f394e209d894d52c1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-headers-omap
 Priority: optional
 Section: devel
@@ -27261,13 +27322,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armel
 Source: linux-meta
-Version: 3.5.0.39.55
-Depends: linux-headers-3.5.0-39-omap
-Filename: pool/main/l/linux-meta/linux-headers-omap_3.5.0.39.55_armel.deb
-Size: 2286
-MD5sum: e333867f5dba4d683b2cff4c4913fee5
-SHA1: 5828a5de3f9868221296cfdb3fef8943c2e578f7
-SHA256: a0a1c594ab72b1d54b498409da881fef8b3d04b33d7c4b703de0706c1fa3cb16
+Version: 3.5.0.40.56
+Depends: linux-headers-3.5.0-40-omap
+Filename: pool/main/l/linux-meta/linux-headers-omap_3.5.0.40.56_armel.deb
+Size: 2284
+MD5sum: 7c3d0749c6544f45a8ef31c0aa913cc5
+SHA1: 908734d0328bc69e4d2bf8213eab5560b48b6e62
+SHA256: 7b7f52866f8713390de229f84b908b73f73b533afc5e1fa0ab32efdf7e70614e
 Description: Linux kernel headers for the OMAP3 architecture.
 Description-md5: 7e79a2450c3b29619554fa8f3096235d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -27681,6 +27742,30 @@ Description-md5: e4aa45144259f599d801bc1afe7036ed
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-image-3.5.0-40-omap
+Priority: optional
+Section: kernel
+Installed-Size: 65367
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: armel
+Source: linux
+Version: 3.5.0-40.62
+Provides: fuse-module, linux-image, linux-image-3.0
+Depends: initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3)
+Pre-Depends: dpkg (>= 1.10.24)
+Recommends: flash-kernel
+Suggests: fdutils, linux-doc-3.5.0 | linux-source-3.5.0, linux-tools
+Conflicts: hotplug (<< 0.0.20040105-1)
+Filename: pool/main/l/linux/linux-image-3.5.0-40-omap_3.5.0-40.62_armel.deb
+Size: 22157720
+MD5sum: d67dfe61230b05d3fb8f8659423a7e5f
+SHA1: 7ee70039714e516fcfdf4e553f100aee32268870
+SHA256: 202de083ada7c5281b89a4bd078cf307ed898bf7f4dc25a75c8a687ebb141bd6
+Description: Linux kernel image for version 3.5.0 on TI OMAP3-based ARM (soft float) systems
+Description-md5: e4aa45144259f599d801bc1afe7036ed
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-image-omap
 Priority: optional
 Section: kernel
@@ -27688,13 +27773,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armel
 Source: linux-meta
-Version: 3.5.0.39.55
-Depends: linux-image-3.5.0-39-omap, linux-firmware
-Filename: pool/main/l/linux-meta/linux-image-omap_3.5.0.39.55_armel.deb
-Size: 2300
-MD5sum: a5b8364a782cc88cdfe1115f08998ebe
-SHA1: 13264e9014e0c9c98c2d2aca870b86198c5208c7
-SHA256: 5b7a42673b5237df5afa45dd42f846eca4be14f9969c56f542827d2310c31219
+Version: 3.5.0.40.56
+Depends: linux-image-3.5.0-40-omap, linux-firmware
+Filename: pool/main/l/linux-meta/linux-image-omap_3.5.0.40.56_armel.deb
+Size: 2288
+MD5sum: e444e5bd3db7c31793c663911f5555b5
+SHA1: 17991502133700c3ed693557c7c14d78a4c4635d
+SHA256: 84ddc9da05b5df342ddf5360998a5fc88db8a1538a0156431f3ab9f1c5668093
 Description: Linux kernel image for the OMAP3 architecture.
 Description-md5: d111ceb833540b8aac4e0768e4f9ead5
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -27703,19 +27788,19 @@ Origin: Ubuntu
 Package: linux-libc-dev
 Priority: optional
 Section: devel
-Installed-Size: 3080
+Installed-Size: 3084
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armel
 Source: linux
-Version: 3.5.0-39.60
+Version: 3.5.0-40.62
 Replaces: dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), libdrm-dev, linux-kernel-headers
 Provides: linux-kernel-headers
 Conflicts: amd64-libs-dev (<= 1.1), dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), linux-kernel-headers
-Filename: pool/main/l/linux/linux-libc-dev_3.5.0-39.60_armel.deb
-Size: 864140
-MD5sum: 7c41e069339e7c68bda0144cae86746c
-SHA1: 69ba083d0ff88162732635396439d0ebd88d3581
-SHA256: 0b011cb66ec3faf212e79d74ee3636cfaffc88efecf75db640312186e5c4e852
+Filename: pool/main/l/linux/linux-libc-dev_3.5.0-40.62_armel.deb
+Size: 866014
+MD5sum: 766a438f712d6c5ae75ea40a3e1efae5
+SHA1: 25642b03cd835ea28caa160203ddab5676438db2
+SHA256: c430f897a98f9811284b5ce1162accb621cf1a51fec64f6ddb51200e63f36f6e
 Description: Linux Kernel Headers for development
 Multi-Arch: same
 Description-md5: d5d143e6dffc891f04a85464446f9451
@@ -27732,13 +27817,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armel
 Source: linux-meta
-Version: 3.5.0.39.55
+Version: 3.5.0.40.56
 Depends: linux-image-omap, linux-headers-omap
-Filename: pool/main/l/linux-meta/linux-omap_3.5.0.39.55_armel.deb
-Size: 1734
-MD5sum: 72d9494bd494082ebca95cb02049c716
-SHA1: 5fc29adf08693000deb35847cd31869c80cf18fa
-SHA256: 56b2e1706923c8e4c006c8950666cfab74ddb74484bc99ef546a10842018a6aa
+Filename: pool/main/l/linux-meta/linux-omap_3.5.0.40.56_armel.deb
+Size: 1732
+MD5sum: 33bfa37889090ece045a9a4c74234422
+SHA1: 35cd2a01d3b69eccf521a1724bb9368f9ee29afd
+SHA256: 2d853631c437743c2d19158d15b3f01bc00c6031e44fb2c9b55e1ca7f3d30d3d
 Description: Complete Linux kernel for the OMAP3 architecture.
 Description-md5: 4deb759aacbc95b6ee824c25593fc262
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -27775,13 +27860,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: all
 Source: linux-meta
-Version: 3.5.0.39.55
+Version: 3.5.0.40.56
 Depends: linux-source-3.5.0
-Filename: pool/main/l/linux-meta/linux-source_3.5.0.39.55_all.deb
+Filename: pool/main/l/linux-meta/linux-source_3.5.0.40.56_all.deb
 Size: 2260
-MD5sum: 9679c97f9115b938bc424be6258d3087
-SHA1: 2e6f622789c0d0916bb66d17aedf5169f481ea67
-SHA256: e1dba7fade66c81ab5da87519b77500bdaad5a5351c893d1ebd95fcca66528e5
+MD5sum: c27a94aa2471526577ed9e18d4df6e28
+SHA1: b3cabdd83795afa5bc5685d3ab5b2ba841e5e558
+SHA256: 044130301f94465daae9885a8451299976b48e824297b4b7e2d72a602bc745a7
 Description: Linux kernel source with Ubuntu patches
 Description-md5: 1cac084d2ae18dfd06b96585b4be564d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -28179,6 +28264,29 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-source-3.5.0
+Priority: optional
+Section: devel
+Installed-Size: 89501
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.5.0-40.62
+Provides: linux-source, linux-source-3
+Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
+Recommends: libc-dev, gcc, make
+Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
+Filename: pool/main/l/linux/linux-source-3.5.0_3.5.0-40.62_all.deb
+Size: 85755876
+MD5sum: 81930924ac10af5d4d5d818da27b271e
+SHA1: 92a6d1fc17e19cbfb17a362e8ac608a41686315c
+SHA256: f5a9730ec1bf2605fa70852a9255b7ae7d46d18422455397a94c626eb8347b7d
+Description: Linux kernel source for version 3.5.0 with Ubuntu patches
+Description-md5: 1a4f23531bb42603992e0020198aada6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
 Package: linux-tools
 Priority: optional
 Section: kernel
@@ -28186,13 +28294,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armel
 Source: linux-meta
-Version: 3.5.0.39.55
-Depends: linux-tools-3.5.0-39
-Filename: pool/main/l/linux-meta/linux-tools_3.5.0.39.55_armel.deb
-Size: 2276
-MD5sum: 83b79a3c9deb289f1614e784f8408311
-SHA1: c9fb727b1810a1c5cfb71e961a9987ea653ee45e
-SHA256: c581fa908567dd09a6117d6ff01d4c230861b8eb52b096deb63f33eb57f919a5
+Version: 3.5.0.40.56
+Depends: linux-tools-3.5.0-40
+Filename: pool/main/l/linux-meta/linux-tools_3.5.0.40.56_armel.deb
+Size: 2266
+MD5sum: 6086724482b993bcea75936011f93cdc
+SHA1: 256add3a7eae20cc55caba4a0573fcdc3be6a62a
+SHA256: 4664e4af1ed56fab63e1a41d8d06a858e2d24022d7234bb0278381079544cc43
 Description: Linux kernel versioned Tools
 Description-md5: ea15db5fd6e3e3cff13446d5e28af7c8
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -28539,6 +28647,25 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-tools-3.5.0-40
+Priority: optional
+Section: devel
+Installed-Size: 932
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: armel
+Source: linux
+Version: 3.5.0-40.62
+Depends: libc6 (>= 2.8), libdw1 (>= 0.143), libelf1 (>= 0.131), libgcc1 (>= 1:4.4.0), libnewt0.52, libslang2 (>= 2.2.4), linux-tools-common
+Filename: pool/main/l/linux/linux-tools-3.5.0-40_3.5.0-40.62_armel.deb
+Size: 373944
+MD5sum: 3d349270458d0411f3d291a9090f26d5
+SHA1: c8830cdcc7dcb7f608c1a1b83113bd619ad707f5
+SHA256: adc2947620ff07b3bc9cace8c90bc5d70149132f4023552378f99db9ed688078
+Description: Linux kernel version specific tools for version 3.5.0-40
+Description-md5: 9eb850cd27ee2f876d2bf287d559c9fa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-tools-common
 Priority: optional
 Section: kernel
@@ -28873,6 +29000,26 @@ Size: 70184
 MD5sum: 0e7862ec7a040cfc6d473065185947ee
 SHA1: 91a6665345f6ba4a7d35c64bc50a875b575ff5a1
 SHA256: 8eb6ac20ad78b15f68a4f16f2791106dd6171bd3e4688cae9d468c4d68b974a3
+Description: Linux kernel version specific tools for version 3.5.0
+Description-md5: 226de1ba87e7416591658659b1486d0c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: linux-tools-common
+Priority: optional
+Section: kernel
+Installed-Size: 239
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 3.5.0-40.62
+Replaces: linux-tools (<= 2.6.32-16.25)
+Filename: pool/main/l/linux/linux-tools-common_3.5.0-40.62_all.deb
+Size: 74672
+MD5sum: 9405a5e33e14031a74cc8709fc0fa8a0
+SHA1: 4c56f85f027daf0af7f0bf93838940ffc21452bb
+SHA256: 7d665911857587d74dbb019b08a7e9088de43dbeeda8a7ed48e7d02b46ddb036
 Description: Linux kernel version specific tools for version 3.5.0
 Description-md5: 226de1ba87e7416591658659b1486d0c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
