@@ -208,44 +208,37 @@ Checksums-Sha256:
  2e70b26c0cf1e203a38b9af50060d65580e92288ffddff74a52a49273771fcc9 2318573 fonts-liberation_1.07.2.orig.tar.bz2
  1d42f8c7b6f3aa449432f86419996a8d28d979eb60ebd39315502b84efcf7ba7 9283 fonts-liberation_1.07.2-7.debian.tar.gz
 
-Package: isc-dhcp
-Binary: isc-dhcp-server, isc-dhcp-server-dbg, isc-dhcp-server-ldap, isc-dhcp-common, isc-dhcp-dev, isc-dhcp-client, isc-dhcp-client-dbg, isc-dhcp-client-udeb, isc-dhcp-relay, isc-dhcp-relay-dbg
-Version: 4.2.4-7ubuntu7
-Priority: important
+Package: horizon
+Binary: python-django-horizon, openstack-dashboard, python-django-openstack, openstack-dashboard-ubuntu-theme
+Version: 1:2013.2~b2-0ubuntu6
+Priority: extra
 Section: net
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 7.4.20ubuntu6), dpkg-dev (>= 1.13.2), groff, quilt, autoconf, automake, autotools-dev, pkg-config, po-debconf, libssl-dev, libldap2-dev, hardening-wrapper, libcap-dev, dh-apport, dh-apparmor
-Architecture: any
+Maintainer: Chuck Short <zulcss@ubuntu.com>
+Build-Depends: debhelper (>= 8.0.0), python-pbr, python-d2to1, pylint, python-all (>= 2.6.6-3~), python-django-nose, python-mox, python-netaddr, python-nose, python-setuptools, python-sphinx
+Architecture: all
 Standards-Version: 3.9.3
 Format: 3.0 (quilt)
-Directory: pool/main/i/isc-dhcp
+Directory: pool/main/h/horizon
 Files:
- e42237f64a1b26d7f9b998029e578640 2725 isc-dhcp_4.2.4-7ubuntu7.dsc
- c244cefe663d43100af757d8ff625a1f 8063457 isc-dhcp_4.2.4.orig.tar.gz
- 2ea04895ffeedc703da818180c4ae81c 126254 isc-dhcp_4.2.4-7ubuntu7.debian.tar.gz
-Uploaders: Andrew Pollock <apollock@debian.org>, Michael Gilbert <mgilbert@debian.org>
-Vcs-Browser: http://git.debian.org/?p=pkg-dhcp/isc-dhcp.git;a=summary
-Vcs-Git: git://git.debian.org/pkg-dhcp/isc-dhcp.git
+ 8360ec5fc248bb4d7ff88a1322517738 1945 horizon_2013.2~b2-0ubuntu6.dsc
+ 5da3751e5f5dd03e566063db506c9407 1856873 horizon_2013.2~b2.orig.tar.gz
+ 47b905c8081a82e272615448347c1781 205129 horizon_2013.2~b2-0ubuntu6.debian.tar.gz
+Homepage: http://launchpad.net/horizon
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/horizon/havana/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/horizon/havana
 Package-List: 
- isc-dhcp-client deb net important
- isc-dhcp-client-dbg deb debug extra
- isc-dhcp-client-udeb udeb debian-installer extra
- isc-dhcp-common deb net important
- isc-dhcp-dev deb devel optional
- isc-dhcp-relay deb net optional
- isc-dhcp-relay-dbg deb debug extra
- isc-dhcp-server deb net optional
- isc-dhcp-server-dbg deb debug extra
- isc-dhcp-server-ldap deb net optional
+ openstack-dashboard deb net extra
+ openstack-dashboard-ubuntu-theme deb net extra
+ python-django-horizon deb python extra
+ python-django-openstack deb net extra
 Checksums-Sha1:
- 13f5df3f026042f45fc8edcad25149eec0f5b997 2725 isc-dhcp_4.2.4-7ubuntu7.dsc
- ba877b6af5f21df84831f698187814668432e8fe 8063457 isc-dhcp_4.2.4.orig.tar.gz
- 8d07272534000ab8d939f21bdfa3cf80c1617743 126254 isc-dhcp_4.2.4-7ubuntu7.debian.tar.gz
+ 5037113c367ec079f8c4657c135ae9fad0d72fc2 1945 horizon_2013.2~b2-0ubuntu6.dsc
+ 8aac4d31ff141bed7b49138b95a5c4b573b075aa 1856873 horizon_2013.2~b2.orig.tar.gz
+ 7cce5d4813248d145a152c339de0cfbb8e78ec5e 205129 horizon_2013.2~b2-0ubuntu6.debian.tar.gz
 Checksums-Sha256:
- cab6083d4c94b1be013250cea5d60387d719ca38b70ecef33b2224817fd0bbce 2725 isc-dhcp_4.2.4-7ubuntu7.dsc
- a9f77eb26372ada936ec39d843e0fe8c898b7e6980341e76c8cda694748fbf9a 8063457 isc-dhcp_4.2.4.orig.tar.gz
- a46011b503f8a3b137da148a9c1842dc18b7c84df9a640f5e11225da7e683c39 126254 isc-dhcp_4.2.4-7ubuntu7.debian.tar.gz
+ c9e796b6361d603bfee611b72e0fcaed1787fd516330a01ffe51ba8ba06748de 1945 horizon_2013.2~b2-0ubuntu6.dsc
+ d70f33b2fe000ad0d2d46aa66d09ee1803081c36fda4134a37f71ee3590d7b0b 1856873 horizon_2013.2~b2.orig.tar.gz
+ 784861e52f5a5a86bdab54c6c1af82bc5b406b7bfc89dece525d49dbe9f80ee3 205129 horizon_2013.2~b2-0ubuntu6.debian.tar.gz
 
 Package: jackd2
 Binary: jackd2, libjack-jackd2-0, jackd2-firewire, libjack-jackd2-dev
@@ -808,6 +801,36 @@ Checksums-Sha256:
  084159599e996fe4f4655e827d9c26215516463c960d9a4e0908e1d754a5f927 3319 postgresql-9.1_9.1.9-3.dsc
  28a533e181009308722e8b3c51f1ea7224ab910c380ac1a86f07118667602dd8 15815421 postgresql-9.1_9.1.9.orig.tar.bz2
  759ffb0cba6e8b6a386f5f29cd6276df4db21e93d2ee4ab183e5673c8c7d62fa 41134 postgresql-9.1_9.1.9-3.debian.tar.gz
+Testsuite: autopkgtest
+
+Package: python-swiftclient
+Binary: python-swiftclient
+Version: 1:1.6.0-0ubuntu1
+Priority: extra
+Section: python
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Adam Gandelman <adamg@canonical.com>
+Build-Depends: debhelper (>= 8.0.0), python-all (>= 2.6.6-3~), python-coverage, python-d2to1, python-eventlet, python-fixtures, python-httplib2, python-keystoneclient, python-mock, python-nose, python-pbr, python-prettytable, python-setuptools, python-simplejson, python-testtools, python-subunit, testrepository
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/p/python-swiftclient
+Files:
+ 70e90096f4ea51effeefa1f21c4a0ae1 1694 python-swiftclient_1.6.0-0ubuntu1.dsc
+ 9713c1d1aa80e8052027c22fd40607ac 71606 python-swiftclient_1.6.0.orig.tar.gz
+ e4939867444116978f2395739d0ba85e 2862 python-swiftclient_1.6.0-0ubuntu1.debian.tar.gz
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/python-swiftclient/havana/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/python-swiftclient/havana
+Package-List: 
+ python-swiftclient deb python extra
+Checksums-Sha1:
+ 456854ef1330877cd1d99b5a26ab952c9025195c 1694 python-swiftclient_1.6.0-0ubuntu1.dsc
+ 52bb9680c8d4244b3cdeefffa19a068c4863cc6b 71606 python-swiftclient_1.6.0.orig.tar.gz
+ 9e38f62dfd76a4aaa3ebfcc1a07494053ae71abe 2862 python-swiftclient_1.6.0-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 5cf801479e50fd5faaeb847f7b77796c01b37776b6007cff22a2774f3fc53410 1694 python-swiftclient_1.6.0-0ubuntu1.dsc
+ 4b4150f078549b40893e83ddc8d79166da9532cd565acf671bad4d5152b0360f 71606 python-swiftclient_1.6.0.orig.tar.gz
+ a4ea7138a69af4e72e8240e15e4413b0b7767d68bc581b0c91d11ddf940ff67e 2862 python-swiftclient_1.6.0-0ubuntu1.debian.tar.gz
 Testsuite: autopkgtest
 
 Package: qtwebkit-source
