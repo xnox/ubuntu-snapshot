@@ -208,38 +208,6 @@ Checksums-Sha256:
  2e70b26c0cf1e203a38b9af50060d65580e92288ffddff74a52a49273771fcc9 2318573 fonts-liberation_1.07.2.orig.tar.bz2
  1d42f8c7b6f3aa449432f86419996a8d28d979eb60ebd39315502b84efcf7ba7 9283 fonts-liberation_1.07.2-7.debian.tar.gz
 
-Package: horizon
-Binary: python-django-horizon, openstack-dashboard, python-django-openstack, openstack-dashboard-ubuntu-theme
-Version: 1:2013.2~b2-0ubuntu6
-Priority: extra
-Section: net
-Maintainer: Chuck Short <zulcss@ubuntu.com>
-Build-Depends: debhelper (>= 8.0.0), python-pbr, python-d2to1, pylint, python-all (>= 2.6.6-3~), python-django-nose, python-mox, python-netaddr, python-nose, python-setuptools, python-sphinx
-Architecture: all
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/main/h/horizon
-Files:
- 8360ec5fc248bb4d7ff88a1322517738 1945 horizon_2013.2~b2-0ubuntu6.dsc
- 5da3751e5f5dd03e566063db506c9407 1856873 horizon_2013.2~b2.orig.tar.gz
- 47b905c8081a82e272615448347c1781 205129 horizon_2013.2~b2-0ubuntu6.debian.tar.gz
-Homepage: http://launchpad.net/horizon
-Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/horizon/havana/files
-Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/horizon/havana
-Package-List: 
- openstack-dashboard deb net extra
- openstack-dashboard-ubuntu-theme deb net extra
- python-django-horizon deb python extra
- python-django-openstack deb net extra
-Checksums-Sha1:
- 5037113c367ec079f8c4657c135ae9fad0d72fc2 1945 horizon_2013.2~b2-0ubuntu6.dsc
- 8aac4d31ff141bed7b49138b95a5c4b573b075aa 1856873 horizon_2013.2~b2.orig.tar.gz
- 7cce5d4813248d145a152c339de0cfbb8e78ec5e 205129 horizon_2013.2~b2-0ubuntu6.debian.tar.gz
-Checksums-Sha256:
- c9e796b6361d603bfee611b72e0fcaed1787fd516330a01ffe51ba8ba06748de 1945 horizon_2013.2~b2-0ubuntu6.dsc
- d70f33b2fe000ad0d2d46aa66d09ee1803081c36fda4134a37f71ee3590d7b0b 1856873 horizon_2013.2~b2.orig.tar.gz
- 784861e52f5a5a86bdab54c6c1af82bc5b406b7bfc89dece525d49dbe9f80ee3 205129 horizon_2013.2~b2-0ubuntu6.debian.tar.gz
-
 Package: jackd2
 Binary: jackd2, libjack-jackd2-0, jackd2-firewire, libjack-jackd2-dev
 Version: 1.9.9.5+20130622git7de15e7a-1
@@ -801,6 +769,35 @@ Checksums-Sha256:
  084159599e996fe4f4655e827d9c26215516463c960d9a4e0908e1d754a5f927 3319 postgresql-9.1_9.1.9-3.dsc
  28a533e181009308722e8b3c51f1ea7224ab910c380ac1a86f07118667602dd8 15815421 postgresql-9.1_9.1.9.orig.tar.bz2
  759ffb0cba6e8b6a386f5f29cd6276df4db21e93d2ee4ab183e5673c8c7d62fa 41134 postgresql-9.1_9.1.9-3.debian.tar.gz
+Testsuite: autopkgtest
+
+Package: python-keystoneclient
+Binary: python-keystoneclient
+Version: 1:0.3.2-0ubuntu1
+Priority: extra
+Section: python
+Maintainer: Chuck Short <zulcss@ubuntu.com>
+Build-Depends: debhelper (>= 8.0.0), python-all (>= 2.6.6-3~), python-babel, python-coverage, python-crypto, python-d2to1, python-pbr, python-fixtures, python-httplib2, python-keyring, python-iso8601, python-oslo.config, python-mock, python-mox, python-netaddr, python-prettytable, python-requests (>= 1.1.0), python-setuptools, python-simplejson, python-six, python-testtools, python-webob, testrepository
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/p/python-keystoneclient
+Files:
+ 19faf938c339117ead89aa80f22e37c3 1740 python-keystoneclient_0.3.2-0ubuntu1.dsc
+ f474aa93a79b8566020ffdeed6424c21 231132 python-keystoneclient_0.3.2.orig.tar.gz
+ c57cd64d9f6ce5e18ccb78879bfd5e87 4754 python-keystoneclient_0.3.2-0ubuntu1.debian.tar.gz
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/python-keystoneclient/havana/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/python-keystoneclient/havana
+Package-List: 
+ python-keystoneclient deb python extra
+Checksums-Sha1:
+ e580c7b363d1de0cbeaef423de0b9c0f2be491c9 1740 python-keystoneclient_0.3.2-0ubuntu1.dsc
+ 8e6bac881262513e31a3eaee8533f98d3113129f 231132 python-keystoneclient_0.3.2.orig.tar.gz
+ 1300278d4f78e38d2bef82dc68da62a417e076ed 4754 python-keystoneclient_0.3.2-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ ca7bba7be6b80148a94a3c53bd7d4d0aaaadf7f27862a265b2ae29920c6f792e 1740 python-keystoneclient_0.3.2-0ubuntu1.dsc
+ cfa6766fd3141cd4dbb5ebf126a4b14095dd0aafee71a753fff9f6a0b4ab8a65 231132 python-keystoneclient_0.3.2.orig.tar.gz
+ 081d36bb7825ab1d561fc3da5ef369e2214389248f5aa08c9f9199c66a17c775 4754 python-keystoneclient_0.3.2-0ubuntu1.debian.tar.gz
 Testsuite: autopkgtest
 
 Package: python-swiftclient
