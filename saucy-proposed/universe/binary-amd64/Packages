@@ -1940,22 +1940,50 @@ Description-md5: e9b1617d2c59e14b9d4c57e66f9dfb48
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: initramfs-tools-ubuntu-touch
+Package: isc-dhcp-relay
 Priority: optional
-Section: universe/utils
-Installed-Size: 80
+Section: universe/net
+Installed-Size: 1673
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
 Architecture: amd64
-Version: 0.48
-Depends: initramfs-tools, abootimg, udev (>= 175-0ubuntu29), upstart, coreutils, android-tools-adbd
-Filename: pool/universe/i/initramfs-tools-ubuntu-touch/initramfs-tools-ubuntu-touch_0.48_amd64.deb
-Size: 7352
-MD5sum: adf7f50cf1bbe264b745bce50571abfd
-SHA1: 5a62eaf85b2b25596f04c774289ef7ca689c6e1f
-SHA256: 7afcf79d24bfacb366087ed8103d1b36834a857fc654c3648593ccf650af0393
-Description: tools for mounting an Ubuntu Touch rootfs
-Multi-Arch: foreign
-Description-md5: 12b771ab0234d5a2b3c27868cdd3dfac
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu7
+Replaces: dhcp3-relay
+Provides: dhcp3-relay
+Depends: debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.15), debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu7)
+Conflicts: dhcp-relay
+Filename: pool/universe/i/isc-dhcp/isc-dhcp-relay_4.2.4-7ubuntu7_amd64.deb
+Size: 714460
+MD5sum: ced5174634ea1edc0b2e041370f8041f
+SHA1: b8444179fac1ea3ccc31620db16d8f12074f664f
+SHA256: b09994791c08384bdcf093b35818678e1f3a88534f600f72a0694eac2489cd0b
+Description: ISC DHCP relay daemon
+Description-md5: 8ac0a3dc9bfa84255727d8b36fa148b7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: isc-dhcp-server-ldap
+Priority: optional
+Section: universe/net
+Installed-Size: 1971
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu7
+Replaces: dhcp3-server-ldap
+Provides: dhcp3-server-ldap
+Depends: libc6 (>= 2.15), libldap-2.4-2 (>= 2.4.7), debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu7), isc-dhcp-server (= 4.2.4-7ubuntu7)
+Conflicts: dhcp
+Filename: pool/universe/i/isc-dhcp/isc-dhcp-server-ldap_4.2.4-7ubuntu7_amd64.deb
+Size: 872418
+MD5sum: 3f3aec241fe455e413632d527725fc03
+SHA1: 7f36306dcf1f344be03d1594de2a0319ef2b187d
+SHA256: 51dae026e76baeb790a8aef4d60011ee5fdbe79ebcfc6d13ecfe67ac6de542b5
+Description: DHCP server able to use LDAP as backend
+Enhances: isc-dhcp-server
+Description-md5: 315981eda99e6f970143cbd2e782b05c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -6884,26 +6912,6 @@ SHA256: 3e077533a863fb543686e4f18ecaa098e2d7e8d1d249ca88e79d8821adfec1db
 Description: C front end for LLVM C/C++ compiler
 Homepage: http://dragonegg.llvm.org/
 Description-md5: 6eea023073af47469398c4a35d1d3687
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: lxc-android-config
-Priority: optional
-Section: universe/utils
-Installed-Size: 208
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Version: 0.89
-Depends: lxc, cgroup-lite, debianutils, upstart, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
-Recommends: ofono
-Filename: pool/universe/l/lxc-android-config/lxc-android-config_0.89_all.deb
-Size: 13880
-MD5sum: f8120995c15305c3cc30a1a29e4719f3
-SHA1: bb7321966f2e001aa15b806e7252c2d73bf578f6
-SHA256: 48fd2a14c08007e58d8d7b67a6fb62247a4b651e6a90668755e3f0caeb09c540
-Description: configuration to fire up an ubuntu-touch android container
-Multi-Arch: foreign
-Description-md5: 69181f727224b60f61d9d2532b1a6c6e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 

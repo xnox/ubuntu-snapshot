@@ -1693,22 +1693,50 @@ Description-md5: e9b1617d2c59e14b9d4c57e66f9dfb48
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: initramfs-tools-ubuntu-touch
+Package: isc-dhcp-relay
 Priority: optional
-Section: universe/utils
-Installed-Size: 80
+Section: universe/net
+Installed-Size: 1112
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
 Architecture: armhf
-Version: 0.48
-Depends: initramfs-tools, abootimg, udev (>= 175-0ubuntu29), upstart, coreutils, android-tools-adbd
-Filename: pool/universe/i/initramfs-tools-ubuntu-touch/initramfs-tools-ubuntu-touch_0.48_armhf.deb
-Size: 7398
-MD5sum: ae06395797b026198a929938028bed5a
-SHA1: d4dafd9b44a10e6dc8bd7404a5e1b9dd3a98b71b
-SHA256: f5e8e3f27409920c6ea4f02457df0f367c7f2bfbeb0c2d132cbb4ed099843078
-Description: tools for mounting an Ubuntu Touch rootfs
-Multi-Arch: foreign
-Description-md5: 12b771ab0234d5a2b3c27868cdd3dfac
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu7
+Replaces: dhcp3-relay
+Provides: dhcp3-relay
+Depends: debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.15), debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu7)
+Conflicts: dhcp-relay
+Filename: pool/universe/i/isc-dhcp/isc-dhcp-relay_4.2.4-7ubuntu7_armhf.deb
+Size: 619320
+MD5sum: 1c4f30e6bea9fb17fd52c76c0d6c2fe2
+SHA1: e7783d92f0c54025a4a8778113abb38d3fff4cf1
+SHA256: e9f8033e51415d73c4b70e47153a528e6e7206a9b2c734a5d02e816bbb4c9dfd
+Description: ISC DHCP relay daemon
+Description-md5: 8ac0a3dc9bfa84255727d8b36fa148b7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: isc-dhcp-server-ldap
+Priority: optional
+Section: universe/net
+Installed-Size: 1296
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian ISC DHCP maintainers <pkg-dhcp-devel@lists.alioth.debian.org>
+Architecture: armhf
+Source: isc-dhcp
+Version: 4.2.4-7ubuntu7
+Replaces: dhcp3-server-ldap
+Provides: dhcp3-server-ldap
+Depends: libc6 (>= 2.15), libldap-2.4-2 (>= 2.4.7), debianutils (>= 2.8.2), isc-dhcp-common (= 4.2.4-7ubuntu7), isc-dhcp-server (= 4.2.4-7ubuntu7)
+Conflicts: dhcp
+Filename: pool/universe/i/isc-dhcp/isc-dhcp-server-ldap_4.2.4-7ubuntu7_armhf.deb
+Size: 765488
+MD5sum: 8580b14a0c980a3a980cd1b5fd486801
+SHA1: 919b9d2f31d9d7c5b14e10be1c873faafe64deb6
+SHA256: c7fd78948be3eca597785c164af34b27cffe53d6ec061fc65357eec9497c9114
+Description: DHCP server able to use LDAP as backend
+Enhances: isc-dhcp-server
+Description-md5: 315981eda99e6f970143cbd2e782b05c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -4402,26 +4430,6 @@ Description-md5: 50f6fef1e0cebb2fe721362f90ec1ebf
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: lxc-android-config
-Priority: optional
-Section: universe/utils
-Installed-Size: 208
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Version: 0.89
-Depends: lxc, cgroup-lite, debianutils, upstart, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
-Recommends: ofono
-Filename: pool/universe/l/lxc-android-config/lxc-android-config_0.89_all.deb
-Size: 13880
-MD5sum: f8120995c15305c3cc30a1a29e4719f3
-SHA1: bb7321966f2e001aa15b806e7252c2d73bf578f6
-SHA256: 48fd2a14c08007e58d8d7b67a6fb62247a4b651e6a90668755e3f0caeb09c540
-Description: configuration to fire up an ubuntu-touch android container
-Multi-Arch: foreign
-Description-md5: 69181f727224b60f61d9d2532b1a6c6e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: minc-tools
 Priority: optional
 Section: universe/science
@@ -6247,26 +6255,6 @@ SHA256: c7d7e738194f6582eb6bb8ec7ad8585671e28e398a3650c2277fac67ec2ea617
 Description: Enhanced wiki and issue tracking system for software development projects
 Homepage: http://trac.edgewall.com
 Description-md5: 2cccb18baaf0a79bddc72153a6b2f521
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ubuntu-touch-generic-initrd
-Priority: optional
-Section: universe/utils
-Installed-Size: 2403
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: armhf
-Source: initramfs-tools-ubuntu-touch
-Version: 0.48
-Suggests: abootimg
-Filename: pool/universe/i/initramfs-tools-ubuntu-touch/ubuntu-touch-generic-initrd_0.48_armhf.deb
-Size: 2402962
-MD5sum: 588817a09154bf6cae5ebe6f86cb67c7
-SHA1: 54f1b7b5e2ef26c2ad61ea529835729283a17ed4
-SHA256: faadb10ea0685c88615ee6f18b7c07f04b6e62eae583d4bb874d045072ca53b9
-Description: generic initramfs to boot Ubuntu Touch flipped container images
-Multi-Arch: foreign
-Description-md5: 31ea177f991c91628222849a3698b612
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
