@@ -69,6 +69,26 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: gir1.2-unity-webapps-0.2
+Priority: optional
+Section: introspection
+Installed-Size: 62
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: amd64
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130907-0ubuntu1
+Filename: pool/main/libu/libunity-webapps/gir1.2-unity-webapps-0.2_2.5.0~+13.10.20130907-0ubuntu1_amd64.deb
+Size: 9930
+MD5sum: 445bc485006acd493131dc5548a2eff8
+SHA1: 99f07683bebde119c7be7533921a9bf014a4493e
+SHA256: 96ef24eec1ddace3b2bfb53eea3fce08edfeb220715bded4eaeee7d9a5ea0a22
+Description: GObject introspection data for the UnityWebapps library
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: aa958933c4aff1c55b3d2a05924987fa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libapache2-mod-auth-mysql
 Priority: optional
 Section: web
@@ -624,6 +644,70 @@ Description-md5: d9c7c5dff3893ffc9571a67f240b3e83
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: libunity-webapps-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 341
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: amd64
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130907-0ubuntu1
+Depends: gir1.2-unity-webapps-0.2, libunity-webapps0 (= 2.5.0~+13.10.20130907-0ubuntu1)
+Filename: pool/main/libu/libunity-webapps/libunity-webapps-dev_2.5.0~+13.10.20130907-0ubuntu1_amd64.deb
+Size: 25698
+MD5sum: 0de8ef039cbceae2ee619f51d9b86331
+SHA1: f4e3aa82cd542a7d66995ad47e5caba39b9ab959
+SHA256: a2b4bc0178f97baf104a720cf156b50d35c211f63c33621565b94984ff63a4b2
+Description: Web Apps integration with Unity - development files
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: 39f603f3793361a1aa23a6efaeb59e61
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libunity-webapps-doc
+Priority: optional
+Section: doc
+Installed-Size: 308
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: all
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130907-0ubuntu1
+Filename: pool/main/libu/libunity-webapps/libunity-webapps-doc_2.5.0~+13.10.20130907-0ubuntu1_all.deb
+Size: 25518
+MD5sum: 592e661d78552d6165a5cf0f57e83020
+SHA1: 29d65f9a6a4ca0ccaa13547029b950bb2a220066
+SHA256: 15e988bff1be913ca10674a1d61fd03501c96c74e13aab104b167be73900524c
+Description: Web Apps integration with Unity - documentation
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: 9691a395a77926383f936f9555572791
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libunity-webapps0
+Priority: optional
+Section: libs
+Installed-Size: 299
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: amd64
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130907-0ubuntu1
+Depends: unity-webapps-service, libc6 (>= 2.2.5), libglib2.0-0 (>= 2.37.3), libjson-glib-1.0-0 (>= 0.12.0), libpackagekit-glib2-16 (>= 0.8.10), libpolkit-gobject-1-0 (>= 0.99), libsqlite3-0 (>= 3.5.9)
+Breaks: bamfdaemon (<= 0.3.0-0ubuntu1), xul-ext-unity (<= 2.3-0quantal1), xul-ext-websites-integration (<= 2.3-0quantal1)
+Filename: pool/main/libu/libunity-webapps/libunity-webapps0_2.5.0~+13.10.20130907-0ubuntu1_amd64.deb
+Size: 80224
+MD5sum: 9e9e8d38353e57f93146dbc74e2842e5
+SHA1: 80f4ca19010a17dad42ddfa15af9d3a6de2e1789
+SHA256: 7c8942f1b9284105e79fa17ff63362b9abbeec9ebf0e2086e5f4a306cd84b44b
+Description: Web Apps integration with the Unity desktop
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: a167400b2b59382dd0211fa9b603d334
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: linux
 Priority: optional
@@ -1628,6 +1712,28 @@ Description-md5: 6a061202c9118fa07cacafd938b725f0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: unity-webapps-service
+Priority: optional
+Section: gnome
+Installed-Size: 488
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: amd64
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130907-0ubuntu1
+Depends: geoclue-ubuntu-geoip | geoclue-provider, webbrowser-app, dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.3.4), libdbusmenu-glib4 (>= 0.4.2), libgdk-pixbuf2.0-0 (>= 2.22.0), libgeoclue0 (>= 0.11.1), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.0.0), libjson-glib-1.0-0 (>= 0.12.0), libmessaging-menu0 (>= 12.10.2), libnotify4 (>= 0.7.0), libsoup2.4-1 (>= 2.4.0), libsqlite3-0 (>= 3.5.9), libtelepathy-glib0 (>= 0.11.3), libunity-webapps0 (>= 2.4), libunity9 (>= 5.0.0), libwnck-3-0 (>= 2.91.6)
+Filename: pool/main/libu/libunity-webapps/unity-webapps-service_2.5.0~+13.10.20130907-0ubuntu1_amd64.deb
+Size: 125876
+MD5sum: 1e6130e22e2bbbd2f6fcf351d2644f8d
+SHA1: 0e8219c0ffdde86a87a3daa5b594de8e65c3e49c
+SHA256: 206475ebe9d90fa3affb501156c1e84fea06969459a0dc8660427f242f2e969b
+Description: Service for Web Apps integration with the Unity desktop
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: b150af47b4181bd5946d75d2a40a22ae
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: usb-modeswitch-data
 Priority: extra

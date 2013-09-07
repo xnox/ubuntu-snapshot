@@ -89,6 +89,25 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
+Package: gir1.2-unity-webapps-0.2
+Priority: optional
+Section: introspection
+Installed-Size: 62
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: armhf
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130907-0ubuntu1
+Filename: pool/main/libu/libunity-webapps/gir1.2-unity-webapps-0.2_2.5.0~+13.10.20130907-0ubuntu1_armhf.deb
+Size: 9974
+MD5sum: f83360c59d2e2586743a569b15aa8649
+SHA1: b7d4e38f320419a49f750a17a099bf09c4267661
+SHA256: b276af84e15b50d5f99edab6efaf9a3c52ab582ab1a7fba0c93cf6f6fb274b91
+Description: GObject introspection data for the UnityWebapps library
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: aa958933c4aff1c55b3d2a05924987fa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libapache2-mod-auth-mysql
 Priority: optional
 Section: web
@@ -602,6 +621,67 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
+Package: libunity-webapps-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 341
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: armhf
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130907-0ubuntu1
+Depends: gir1.2-unity-webapps-0.2, libunity-webapps0 (= 2.5.0~+13.10.20130907-0ubuntu1)
+Filename: pool/main/libu/libunity-webapps/libunity-webapps-dev_2.5.0~+13.10.20130907-0ubuntu1_armhf.deb
+Size: 26112
+MD5sum: f19cdd084c0be208c4258d29f1ad33ac
+SHA1: d52da6103f246595524aa5bf6ff127524e61e9ef
+SHA256: 609b09c67a1dbb7687eeabd5a852bcf2be47e1c973ee2717e3a6f012ce752eb1
+Description: Web Apps integration with Unity - development files
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: 39f603f3793361a1aa23a6efaeb59e61
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libunity-webapps-doc
+Priority: optional
+Section: doc
+Installed-Size: 308
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: all
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130907-0ubuntu1
+Filename: pool/main/libu/libunity-webapps/libunity-webapps-doc_2.5.0~+13.10.20130907-0ubuntu1_all.deb
+Size: 25518
+MD5sum: 592e661d78552d6165a5cf0f57e83020
+SHA1: 29d65f9a6a4ca0ccaa13547029b950bb2a220066
+SHA256: 15e988bff1be913ca10674a1d61fd03501c96c74e13aab104b167be73900524c
+Description: Web Apps integration with Unity - documentation
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: 9691a395a77926383f936f9555572791
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libunity-webapps0
+Priority: optional
+Section: libs
+Installed-Size: 180
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: armhf
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130907-0ubuntu1
+Depends: unity-webapps-service, libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3), libjson-glib-1.0-0 (>= 0.12.0), libpackagekit-glib2-16 (>= 0.8.10), libpolkit-gobject-1-0 (>= 0.99), libsqlite3-0 (>= 3.5.9)
+Breaks: bamfdaemon (<= 0.3.0-0ubuntu1), xul-ext-unity (<= 2.3-0quantal1), xul-ext-websites-integration (<= 2.3-0quantal1)
+Filename: pool/main/libu/libunity-webapps/libunity-webapps0_2.5.0~+13.10.20130907-0ubuntu1_armhf.deb
+Size: 58298
+MD5sum: f699a155648616fbe3ee3d73a60de634
+SHA1: 9a49db2a2373e7debc5bf67776c0ef4422ef5f44
+SHA256: 09ec96fece07f0df6d8f617d16a7acd9c8f2019048a66193354abc58957d07c3
+Description: Web Apps integration with the Unity desktop
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: a167400b2b59382dd0211fa9b603d334
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
 Package: linux
 Priority: optional
 Section: kernel
@@ -740,18 +820,18 @@ Origin: Ubuntu
 Package: linux-headers-3.11.0-5-generic
 Priority: optional
 Section: devel
-Installed-Size: 11717
+Installed-Size: 11718
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux
-Version: 3.11.0-5.10
+Version: 3.11.0-5.11
 Provides: linux-headers, linux-headers-3.0
 Depends: linux-headers-3.11.0-5, libc6 (>= 2.11)
-Filename: pool/main/l/linux/linux-headers-3.11.0-5-generic_3.11.0-5.10_armhf.deb
-Size: 1109598
-MD5sum: 50041969976487aad416e9b7da111aab
-SHA1: c7bc28b4f06dc7af3ab5828c6e9e431d6f66639e
-SHA256: 55759e16fca6a7e7c3c7f2a4a489bd014ca10e35b41f7a8a9d98c7941a5f60d8
+Filename: pool/main/l/linux/linux-headers-3.11.0-5-generic_3.11.0-5.11_armhf.deb
+Size: 1111684
+MD5sum: 77763584127683d4a1c7b466a3ae2b12
+SHA1: 147ec3a6619d3456049a92886c205d0b2850d6f2
+SHA256: 9718b8073232696e007f58c72c97c49be19101ecebb53f4a0487d2668c892971
 Description: Linux kernel headers for version 3.11.0 on ARM (hard float) SMP
 Description-md5: 6a07efb63acd2ab672c591e9c8e27a7c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -760,18 +840,18 @@ Origin: Ubuntu
 Package: linux-headers-3.11.0-5-generic-lpae
 Priority: optional
 Section: devel
-Installed-Size: 9851
+Installed-Size: 9852
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux
-Version: 3.11.0-5.10
+Version: 3.11.0-5.11
 Provides: linux-headers, linux-headers-3.0
 Depends: linux-headers-3.11.0-5, libc6 (>= 2.11)
-Filename: pool/main/l/linux/linux-headers-3.11.0-5-generic-lpae_3.11.0-5.10_armhf.deb
-Size: 998144
-MD5sum: 13cfc0bdab80a860e6a9e3a57ec21146
-SHA1: 30df862f025ed49f8bd09b4542550dc810e7b016
-SHA256: 7afd9e3ae70c0b0fadbbfbf87ff479d690ade5f7799f2ecd8003f97465b40893
+Filename: pool/main/l/linux/linux-headers-3.11.0-5-generic-lpae_3.11.0-5.11_armhf.deb
+Size: 999288
+MD5sum: bdb79865c45bef41db6d89c19c1ce0a9
+SHA1: 43b75cfaca18741e30bbff29ac7fe79834a9f01f
+SHA256: a99847f460cbf5c855ee321347e58bddfbb0abcb27218dd24480147ce34245fd
 Description: Linux kernel headers for version 3.11.0 on ARM (hard float) SMP
 Description-md5: 6a07efb63acd2ab672c591e9c8e27a7c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -953,22 +1033,22 @@ Origin: Ubuntu
 Package: linux-image-3.11.0-5-generic
 Priority: optional
 Section: kernel
-Installed-Size: 122282
+Installed-Size: 122287
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux
-Version: 3.11.0-5.10
+Version: 3.11.0-5.11
 Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, linux-image-3.0, redhat-cluster-modules
 Depends: initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3)
 Pre-Depends: dpkg (>= 1.10.24)
 Recommends: flash-kernel
 Suggests: fdutils, linux-doc-3.11.0 | linux-source-3.11.0, linux-tools, linux-headers-3.11.0-5-generic
 Conflicts: hotplug (<< 0.0.20040105-1)
-Filename: pool/main/l/linux/linux-image-3.11.0-5-generic_3.11.0-5.10_armhf.deb
-Size: 41552356
-MD5sum: 4d1065ac1403ee80500d699f96b7610d
-SHA1: 8e6d5a7785d6c3598921c0bdc8fc7597a6aa0292
-SHA256: ab9182185d70d842451231c3861ddbfbda78e2283dd70f9cde76e39d94dfc934
+Filename: pool/main/l/linux/linux-image-3.11.0-5-generic_3.11.0-5.11_armhf.deb
+Size: 41595160
+MD5sum: f75f35bcfa93120abe4aaabbffd5638c
+SHA1: 0dd404854036d9c327b38a8e7f92ba6ad7751798
+SHA256: c158133a36b81f26c018ab46a49fa58baa5180e17675df00a59b3544b2cdc9db
 Description: Linux kernel image for version 3.11.0 on ARM (hard float) SMP
 Description-md5: 932bc528420a153829aaed32ef3d2545
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -977,22 +1057,22 @@ Origin: Ubuntu
 Package: linux-image-3.11.0-5-generic-lpae
 Priority: optional
 Section: kernel
-Installed-Size: 80341
+Installed-Size: 80343
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux
-Version: 3.11.0-5.10
+Version: 3.11.0-5.11
 Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, linux-image-3.0, redhat-cluster-modules
 Depends: initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3)
 Pre-Depends: dpkg (>= 1.10.24)
 Recommends: flash-kernel
 Suggests: fdutils, linux-doc-3.11.0 | linux-source-3.11.0, linux-tools, linux-headers-3.11.0-5-generic-lpae
 Conflicts: hotplug (<< 0.0.20040105-1)
-Filename: pool/main/l/linux/linux-image-3.11.0-5-generic-lpae_3.11.0-5.10_armhf.deb
-Size: 26763104
-MD5sum: b943f0f3146d0455b09b42b88f69a2e8
-SHA1: 10cd1fc421cf136789b7a8b8f6ca8000efe6338b
-SHA256: 4c32aca72969ec34f1bf0bdb0e83ed6e0cf478b0b28d8d86008e6c5cf975cbf6
+Filename: pool/main/l/linux/linux-image-3.11.0-5-generic-lpae_3.11.0-5.11_armhf.deb
+Size: 26757884
+MD5sum: 9b11ee254cd8eb2818c89a5e8072833c
+SHA1: 254f6064673bb57f29e1701461e683d83e25a481
+SHA256: dfd962f1b40c9fafb84896451f32a880322b59e44308cca4711b80ba2f89ef8b
 Description: Linux kernel image for version 3.11.0 on ARM (hard float) SMP
 Description-md5: ac32b8246b074bd0019b40491101427a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -1120,19 +1200,19 @@ Origin: Ubuntu
 Package: linux-libc-dev
 Priority: optional
 Section: devel
-Installed-Size: 3262
+Installed-Size: 3263
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux
-Version: 3.11.0-5.10
+Version: 3.11.0-5.11
 Replaces: dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), libdrm-dev, linux-kernel-headers
 Provides: linux-kernel-headers
 Conflicts: amd64-libs-dev (<= 1.1), dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), linux-kernel-headers
-Filename: pool/main/l/linux/linux-libc-dev_3.11.0-5.10_armhf.deb
-Size: 912478
-MD5sum: 97563f4cf1bfb495b6667b74ec288dd1
-SHA1: fff37734253995de1f2f2915e44479ffd2283c5e
-SHA256: e9cd7a5dd4b8b214a0f7404544430da576f0353b1941cbbcb434cbf8cfbaafb0
+Filename: pool/main/l/linux/linux-libc-dev_3.11.0-5.11_armhf.deb
+Size: 914368
+MD5sum: 2682085fa3e5aff4448f01f0877bb136
+SHA1: 69df8feb49c78ac7e607125c2d9df0268aefd5f8
+SHA256: 6850c0210db8595f6d985971c0bd00908bdbf75c600e5892d8806e0d40474d65
 Description: Linux Kernel Headers for development
 Multi-Arch: same
 Description-md5: d5d143e6dffc891f04a85464446f9451
@@ -1286,13 +1366,13 @@ Installed-Size: 896
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: armhf
 Source: linux
-Version: 3.11.0-5.10
+Version: 3.11.0-5.11
 Depends: libaudit1 (>= 1:2.2.1), libc6 (>= 2.8), libdw1 (>= 0.143), libelf1 (>= 0.131), libgcc1 (>= 1:4.4.0), libslang2 (>= 2.2.4), linux-tools-common
-Filename: pool/main/l/linux/linux-tools-3.11.0-5_3.11.0-5.10_armhf.deb
-Size: 433052
-MD5sum: 2ffa1230091bdaf16109bdd1c63688c9
-SHA1: c8ab331d519f9ca6aee0616b1b4ce6530a890fd5
-SHA256: 8deb6cac669df60e12044eed9ce82ad5b16f151a50cc5ece5273f732960b6550
+Filename: pool/main/l/linux/linux-tools-3.11.0-5_3.11.0-5.11_armhf.deb
+Size: 433406
+MD5sum: 7891865514fd1720ab8c646aa86a5cd2
+SHA1: c724ca258c59371f23d75f4d4982822499bf9c83
+SHA256: 398fa9259bcb28b17caf93eb5e51b6daa1d56e43e15d2a8ab2129e4c1189128a
 Description: Linux kernel version specific tools for version 3.11.0-5
 Description-md5: d600fd9704d2d02cf6dcc758274784e0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -1706,6 +1786,27 @@ Homepage: http://bazaar-vcs.org
 Description-md5: 6a061202c9118fa07cacafd938b725f0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: unity-webapps-service
+Priority: optional
+Section: gnome
+Installed-Size: 328
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: armhf
+Source: libunity-webapps
+Version: 2.5.0~+13.10.20130907-0ubuntu1
+Depends: geoclue-ubuntu-geoip | geoclue-provider, webbrowser-app, dconf-gsettings-backend | gsettings-backend, libc6 (>= 2.4), libdbusmenu-glib4 (>= 0.4.2), libgdk-pixbuf2.0-0 (>= 2.22.0), libgeoclue0 (>= 0.11.1), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.0.0), libjson-glib-1.0-0 (>= 0.12.0), libmessaging-menu0 (>= 12.10.2), libnotify4 (>= 0.7.0), libsoup2.4-1 (>= 2.4.0), libsqlite3-0 (>= 3.5.9), libtelepathy-glib0 (>= 0.11.3), libunity-webapps0 (>= 2.4), libunity9 (>= 5.0.0), libwnck-3-0 (>= 2.91.6)
+Filename: pool/main/libu/libunity-webapps/unity-webapps-service_2.5.0~+13.10.20130907-0ubuntu1_armhf.deb
+Size: 98790
+MD5sum: b1ab76e4f44e5c5b8e4a4a013bf73d30
+SHA1: 00a0cc1e1933d752c9fb082cb9102f5b54f82c6f
+SHA256: 500b976bf4a89e99725ac06cf91b9588c39b3ee60398724069eeccfae378d788
+Description: Service for Web Apps integration with the Unity desktop
+Homepage: https://launchpad.net/libunity-webapps
+Description-md5: b150af47b4181bd5946d75d2a40a22ae
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
 Package: usb-modeswitch-data
 Priority: extra
