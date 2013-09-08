@@ -1351,25 +1351,26 @@ Description-md5: 25b25cbc27f90b45552ddd81ceec8b64
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: fceux
+Package: fitscheck
 Priority: optional
-Section: universe/otherosfs
-Installed-Size: 2399
+Section: universe/python
+Installed-Size: 48
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Joe Nahmias <jello@debian.org>
-Architecture: armhf
-Version: 2.2.1+dfsg0-2
-Provides: nes-emulator
-Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.4.0), libgd3 (>= 2.1.0~alpha~), libgdk-pixbuf2.0-0 (>= 2.22.0), libgl1-mesa-glx | libgl1, libglib2.0-0 (>= 2.12.0), libgtk2.0-0 (>= 2.24.0), liblua5.1-0, libsdl1.2debian (>= 1.2.11), libstdc++6 (>= 4.6), libx11-6, zlib1g (>= 1:1.1.4)
-Suggests: efp
-Filename: pool/universe/f/fceux/fceux_2.2.1+dfsg0-2_armhf.deb
-Size: 1573762
-MD5sum: c5f4553eb9211dc22e74dda4ff584eec
-SHA1: 6ad7b5db99e41f99178c02fc35d451b7f284a608
-SHA256: 378f40d86dc7cc9c0520796a99da51a5815b85e676d79660255c0009eb7448e2
-Description: all-in-one NES/Famicom Emulator
-Homepage: http://fceux.com/
-Description-md5: 2670df7c21f44efb2e2f7f7d84ce71ae
+Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Architecture: all
+Source: pyfits
+Version: 1:3.1.2-2
+Replaces: python-pyfits (<< 1:3.0.7-2~)
+Depends: pyfits-utils
+Breaks: python-pyfits (<< 1:3.0.7-2~)
+Filename: pool/universe/p/pyfits/fitscheck_3.1.2-2_all.deb
+Size: 2278
+MD5sum: 336e57fd7a775bcd3c9261e3c518e852
+SHA1: ae44f6dd5591a99a5e2a1ad2074af7a4b5c11e4b
+SHA256: 6b730c1d8f28a7dce31cb80eaeda69b7cf0d1b0919c39958a7f43125eaf376c1
+Description: transitional package for pyfits-utils
+Homepage: http://www.stsci.edu/resources/software_hardware/pyfits
+Description-md5: 38e4c9e6228ed0d59b4b21f22db378b2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -2131,27 +2132,6 @@ Description-md5: 8273ed66e6b6bb0336ccd938db0961a1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, ubuntustudio-video, ubuntustudio-graphics
-
-Package: kde-l10n-uk
-Priority: optional
-Section: universe/kde
-Installed-Size: 50093
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Architecture: all
-Version: 4:4.11.1-0ubuntu1
-Replaces: print-manager (<< 4:4.9.90)
-Depends: libkdecore5 (>= 4:4.7.0)
-Breaks: print-manager (<< 4:4.9.90)
-Filename: pool/universe/k/kde-l10n-uk/kde-l10n-uk_4.11.1-0ubuntu1_all.deb
-Size: 27583466
-MD5sum: cf7b8845dfbc46a4569e5f4b090c6407
-SHA1: 8e50863302f22c62ad66a5fe73904d9896c5320b
-SHA256: af201a9f5bd93fce4b46401c826ac15c7f684bc1550e15a09b91579ec0eb4796
-Description: Ukrainian (uk) localization for KDE
-Homepage: http://l10n.kde.org/team-infos.php?teamcode=uk
-Description-md5: 2ae5035b2a220b240e3161e004aad1bc
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
 
 Package: kde-style-oxygen
 Priority: optional
@@ -7697,6 +7677,29 @@ SHA256: cb47a3ec98e871ce2f9411b2277f971d65247be416e403c24cd1077a6da64fef
 Description: proof-tree visualization for Proof General
 Homepage: http://askra.de/software/prooftree
 Description-md5: b27f2d4918792b35e6871a08a544fafa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: pyfits-utils
+Priority: optional
+Section: universe/python
+Installed-Size: 63
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Architecture: all
+Source: pyfits
+Version: 1:3.1.2-2
+Replaces: fitscheck (<< 1:3.1.2-1~), python-pyfits (<< 1:3.0.7-2~)
+Depends: python, python-numpy, python-pyfits
+Breaks: fitscheck (<< 1:3.1.2-1~), python-pyfits (<< 1:3.0.7-2~)
+Filename: pool/universe/p/pyfits/pyfits-utils_3.1.2-2_all.deb
+Size: 6294
+MD5sum: ff723653575bd934b1163317f38bbeec
+SHA1: a9e83e1087622c4d5319cbaf0aebe1d704f1e6a3
+SHA256: 3f0aea49fde913a36f3546089c0bf6b8b18ccaf3c23753f901ede4968b139280
+Description: script to detect and fix FITS standards violations
+Homepage: http://www.stsci.edu/resources/software_hardware/pyfits
+Description-md5: c3c703744936a59ab4b9af12b61ebb35
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 

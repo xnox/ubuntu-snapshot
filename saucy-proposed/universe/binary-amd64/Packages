@@ -1525,25 +1525,26 @@ Description-md5: 25b25cbc27f90b45552ddd81ceec8b64
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: fceux
+Package: fitscheck
 Priority: optional
-Section: universe/otherosfs
-Installed-Size: 2773
+Section: universe/python
+Installed-Size: 48
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Joe Nahmias <jello@debian.org>
-Architecture: amd64
-Version: 2.2.1+dfsg0-2
-Provides: nes-emulator
-Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libgd3 (>= 2.1.0~alpha~), libgdk-pixbuf2.0-0 (>= 2.22.0), libgl1-mesa-glx | libgl1, libglib2.0-0 (>= 2.12.0), libgtk2.0-0 (>= 2.24.0), liblua5.1-0, libsdl1.2debian (>= 1.2.11), libstdc++6 (>= 4.6), libx11-6, zlib1g (>= 1:1.1.4)
-Suggests: efp
-Filename: pool/universe/f/fceux/fceux_2.2.1+dfsg0-2_amd64.deb
-Size: 1651894
-MD5sum: 08b5667f5a3aeabfcc97d2d685aa4f1c
-SHA1: 5d14db5790a73111d7e489a94780c1a452b4b3b2
-SHA256: fd52665053273bd423fb6f4ca4c751df3140be0850160a847673d3683287c310
-Description: all-in-one NES/Famicom Emulator
-Homepage: http://fceux.com/
-Description-md5: 2670df7c21f44efb2e2f7f7d84ce71ae
+Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Architecture: all
+Source: pyfits
+Version: 1:3.1.2-2
+Replaces: python-pyfits (<< 1:3.0.7-2~)
+Depends: pyfits-utils
+Breaks: python-pyfits (<< 1:3.0.7-2~)
+Filename: pool/universe/p/pyfits/fitscheck_3.1.2-2_all.deb
+Size: 2278
+MD5sum: 336e57fd7a775bcd3c9261e3c518e852
+SHA1: ae44f6dd5591a99a5e2a1ad2074af7a4b5c11e4b
+SHA256: 6b730c1d8f28a7dce31cb80eaeda69b7cf0d1b0919c39958a7f43125eaf376c1
+Description: transitional package for pyfits-utils
+Homepage: http://www.stsci.edu/resources/software_hardware/pyfits
+Description-md5: 38e4c9e6228ed0d59b4b21f22db378b2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -2296,27 +2297,6 @@ Description-md5: 8273ed66e6b6bb0336ccd938db0961a1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop-gnome, ubuntustudio-video, ubuntustudio-graphics
-
-Package: kde-l10n-uk
-Priority: optional
-Section: universe/kde
-Installed-Size: 50093
-Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
-Architecture: all
-Version: 4:4.11.1-0ubuntu1
-Replaces: print-manager (<< 4:4.9.90)
-Depends: libkdecore5 (>= 4:4.7.0)
-Breaks: print-manager (<< 4:4.9.90)
-Filename: pool/universe/k/kde-l10n-uk/kde-l10n-uk_4.11.1-0ubuntu1_all.deb
-Size: 27583466
-MD5sum: cf7b8845dfbc46a4569e5f4b090c6407
-SHA1: 8e50863302f22c62ad66a5fe73904d9896c5320b
-SHA256: af201a9f5bd93fce4b46401c826ac15c7f684bc1550e15a09b91579ec0eb4796
-Description: Ukrainian (uk) localization for KDE
-Homepage: http://l10n.kde.org/team-infos.php?teamcode=uk
-Description-md5: 2ae5035b2a220b240e3161e004aad1bc
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
 
 Package: kde-style-oxygen
 Priority: optional
@@ -8320,6 +8300,53 @@ Description-md5: 94c16c4657c76f1cc3031b2131462b81
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libunshield-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 48
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Evgeni Golov <evgeni@debian.org>
+Architecture: amd64
+Source: unshield
+Version: 1.0-1
+Depends: libunshield0 (= 1.0-1)
+Filename: pool/universe/u/unshield/libunshield-dev_1.0-1_amd64.deb
+Size: 3814
+MD5sum: 86fec3399edf2776d6ba3bfeeec9bf82
+SHA1: fe9489616f114a3efc70827ae9312848e2896e44
+SHA256: ac041733073efdce7d172c67f1b07b6c0c2253f8148d67d543dba7f4ec316f99
+Description: development files for libunshield
+Multi-Arch: same
+Homepage: https://github.com/twogood/unshield/
+Description-md5: f53a2ef1fdc7f66e30b0fc65a88111c5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libunshield0
+Priority: optional
+Section: universe/libs
+Installed-Size: 76
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Evgeni Golov <evgeni@debian.org>
+Architecture: amd64
+Source: unshield
+Version: 1.0-1
+Replaces: libunshield
+Depends: libc6 (>= 2.4), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Conflicts: liborange, libunshield
+Filename: pool/universe/u/unshield/libunshield0_1.0-1_amd64.deb
+Size: 23206
+MD5sum: 6d46f74b4c5c7c777845a9a298373588
+SHA1: 92b9337704ac0aac0f8c130398c260ca46521944
+SHA256: 814494a9d445d0d9680130e4a553a96cab3427697b245786a1d3ef015308e370
+Description: library to extract CAB files from InstallShield installers
+Multi-Arch: same
+Homepage: https://github.com/twogood/unshield/
+Description-md5: ecabf129265c9587ce2fd292ab982c0d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libvarconf-1.0-8
 Priority: optional
 Section: universe/libs
@@ -10247,6 +10274,29 @@ Description-md5: b27f2d4918792b35e6871a08a544fafa
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: pyfits-utils
+Priority: optional
+Section: universe/python
+Installed-Size: 63
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
+Architecture: all
+Source: pyfits
+Version: 1:3.1.2-2
+Replaces: fitscheck (<< 1:3.1.2-1~), python-pyfits (<< 1:3.0.7-2~)
+Depends: python, python-numpy, python-pyfits
+Breaks: fitscheck (<< 1:3.1.2-1~), python-pyfits (<< 1:3.0.7-2~)
+Filename: pool/universe/p/pyfits/pyfits-utils_3.1.2-2_all.deb
+Size: 6294
+MD5sum: ff723653575bd934b1163317f38bbeec
+SHA1: a9e83e1087622c4d5319cbaf0aebe1d704f1e6a3
+SHA256: 3f0aea49fde913a36f3546089c0bf6b8b18ccaf3c23753f901ede4968b139280
+Description: script to detect and fix FITS standards violations
+Homepage: http://www.stsci.edu/resources/software_hardware/pyfits
+Description-md5: c3c703744936a59ab4b9af12b61ebb35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-autopilot
 Priority: optional
 Section: universe/python
@@ -11509,6 +11559,26 @@ SHA256: 2fc6e215c4ec5b21685afc9941885e75192330c72ca0e2b68dbf94da0b22eb98
 Description: universal hardware driver for Ettus Research products
 Homepage: http://code.ettus.com/redmine/ettus/projects/uhd/wiki
 Description-md5: ac3e8afa9dfae1a7d90c1774d80251c8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: unshield
+Priority: optional
+Section: universe/utils
+Installed-Size: 61
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Evgeni Golov <evgeni@debian.org>
+Architecture: amd64
+Version: 1.0-1
+Depends: libc6 (>= 2.10), libunshield0
+Filename: pool/universe/u/unshield/unshield_1.0-1_amd64.deb
+Size: 10272
+MD5sum: fc29f9b948561134fb3ac1869bacc28d
+SHA1: c78766a6a1f66acdd3959af2095ca2ad0b1e49f4
+SHA256: f86d716e2a9f30b9c0c4778928907de9c11a9437f718e98aae4e03008aa86269
+Description: extracts CAB files from InstallShield installers
+Homepage: https://github.com/twogood/unshield/
+Description-md5: 40b2f8b11d1efdfcb261e7f36386cf80
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
