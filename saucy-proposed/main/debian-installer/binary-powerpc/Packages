@@ -1,37 +1,103 @@
-Package: cdrom-retriever
-Priority: optional
-Section: debian-installer
-Installed-Size: 54
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: all
-Version: 1.31
-Provides: retriever
-Depends: cdebconf-udeb, cdrom-detect
-Filename: pool/main/c/cdrom-retriever/cdrom-retriever_1.31_all.udeb
-Size: 14358
-MD5sum: a174ecca8234b8f5509d237e5cb1958b
-SHA1: ba28c97f45cb1d44258e2396d9d7da4ebea51f66
-SHA256: 5d54de8af9d380884e7d14f3f5e17553c210f3d65358f61471fca01e5fec70d3
-Description: Fetch modules from a CDROM
- This is a retriever module that just symlinks files around since
- the CDROM is supposed to be mounted on /cdrom.
-
-Package: load-cdrom
+Package: cdebconf-gtk-entropy
 Priority: extra
 Section: debian-installer
-Installed-Size: 15
+Installed-Size: 71
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: all
-Source: cdrom-retriever
-Version: 1.31
-Depends: cdebconf-udeb, cdrom-retriever, anna (>= 1.07)
-Filename: pool/main/c/cdrom-retriever/load-cdrom_1.31_all.udeb
-Size: 3948
-MD5sum: a0d387802f525e86434aea2244540655
-SHA1: cf7e69933c7ea97032e6dd33ca4d28e8523a0c53
-SHA256: 3d12222e6654461aea4ac5af13f83851a53e945f6847b265f4efa739edbb3ecc
-Description: Load installer components from CD
-Installer-Menu-Item: 1600
+Architecture: powerpc
+Source: cdebconf-entropy
+Version: 0.28
+Provides: cdebconf-entropy
+Depends: cdebconf-gtk-udeb, libc6-udeb (>= 2.17), libglib2.0-udeb (>= 2.37.6), libgtk2.0-0-udeb (>= 2.24.0), cdebconf-udeb
+Filename: pool/main/c/cdebconf-entropy/cdebconf-gtk-entropy_0.28_powerpc.udeb
+Size: 17098
+MD5sum: 6ea8161ec9162c0374d3ce47b1e4d689
+SHA1: 9bd95746b1ab924ec268baf384e38950e2fa2b3e
+SHA256: f0dde327b35d2d921722a5602dc800ff2db05cee03cb384d4935952c4222aeaa
+Description: cdebconf gtk plugin for reading from /dev/random
+ cdebconf plugin to facilitate reading random data from /dev/random.
+ Asks the user to enter random characters on the keyboard and random mouse
+ movements while a progressbar shows the amount of entropy already gathered.
+
+Package: cdebconf-gtk-terminal
+Priority: extra
+Section: debian-installer
+Installed-Size: 63
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: powerpc
+Source: cdebconf-terminal
+Version: 0.22
+Provides: cdebconf-terminal
+Depends: cdebconf-gtk-udeb, ttf-dejavu-mono-udeb, libc6-udeb (>= 2.17), libglib2.0-udeb (>= 2.37.6), libgtk2.0-0-udeb (>= 2.24.0), libvte9-udeb (>= 1:0.28.0), cdebconf-udeb
+Filename: pool/main/c/cdebconf-terminal/cdebconf-gtk-terminal_0.22_powerpc.udeb
+Size: 14608
+MD5sum: 7a540665d8eb1def8bad2a3119e600ec
+SHA1: 374c2c2f4bad77cc03c31e74a3460d0bf1fbc24e
+SHA256: 929c94c049bce6e50cf618104e6c92b6894a9d4b6e0611d6c3be8229b934f497
+Description: cdebconf gtk plugin displaying a terminal
+ cdebconf plugin to display a terminal inside the debian-installer graphical
+ frontend.
+
+Package: cdebconf-newt-entropy
+Priority: extra
+Section: debian-installer
+Installed-Size: 69
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: powerpc
+Source: cdebconf-entropy
+Version: 0.28
+Provides: cdebconf-entropy
+Depends: cdebconf-newt-udeb, libc6-udeb (>= 2.17), libnewt0.52, libtextwrap1-udeb, cdebconf-udeb
+Filename: pool/main/c/cdebconf-entropy/cdebconf-newt-entropy_0.28_powerpc.udeb
+Size: 18580
+MD5sum: c411857bee47de8fa7cd974ee7c85654
+SHA1: 4e0a45178529043c5c6f50ba13cdb3aed5d1b6c5
+SHA256: 83da5c3587a9199a8f399ca983172bb5d874e3afcd5e15e91649690d15958af0
+Description: cdebconf newt plugin for reading from /dev/random
+ cdebconf plugin to facilitate reading random data from /dev/random.
+ Asks the user to enter random characters on the keyboard and shows a
+ progressbar with percent-of-data read.
+
+Package: cdebconf-newt-terminal
+Priority: extra
+Section: debian-installer
+Installed-Size: 42
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: powerpc
+Source: cdebconf-terminal
+Version: 0.22
+Provides: cdebconf-terminal
+Depends: cdebconf-newt-udeb (>= 0.146), libc6-udeb (>= 2.17), libnewt0.52
+Filename: pool/main/c/cdebconf-terminal/cdebconf-newt-terminal_0.22_powerpc.udeb
+Size: 4618
+MD5sum: b4ada9eccf2c224cca302575a5cf3d95
+SHA1: 19c1c1f98dcfa857df4e878aaae54b8e8aaf0047
+SHA256: d77083ddae7eb8862aa37506b5431a8a5775b37708f1c3cdd4d2d30016fd47a4
+Description: cdebconf newt plugin to provide a clean terminal
+ cdebconf plugin to run a program in a clean terminal environment, shutting
+ down newt to do so.
+
+Package: cdebconf-text-entropy
+Priority: extra
+Section: debian-installer
+Installed-Size: 69
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: powerpc
+Source: cdebconf-entropy
+Version: 0.28
+Provides: cdebconf-entropy
+Depends: cdebconf-text-udeb, libc6-udeb (>= 2.17), cdebconf-udeb
+Filename: pool/main/c/cdebconf-entropy/cdebconf-text-entropy_0.28_powerpc.udeb
+Size: 18354
+MD5sum: 98667c00aab05ac6e18ac366c8c30a75
+SHA1: e89048200f209b4a5191ceb3586723c05d5bcd98
+SHA256: ac9560dab05245006169c6ea33d558f63b0779611c3f961a64c830c49e90a767
+Description: cdebconf text plugin for reading from /dev/random
+ cdebconf plugin to facilitate reading random data from /dev/random.
+ Asks the user to enter random characters on the keyboard and shows a
+ progressbar with percent-of-data read.
 
