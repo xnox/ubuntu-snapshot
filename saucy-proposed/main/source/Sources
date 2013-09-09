@@ -235,6 +235,41 @@ Checksums-Sha256:
  19420c97296802162fd4e0e0a08e797f5038ec8bd98cffe222362e24c7405784 1582664 gnome-settings-daemon_3.8.5.orig.tar.xz
  624ac85b52403dd0c55c0d5ef41b1df7c4f745a8a9774e19aacedf9ace54fd3a 75578 gnome-settings-daemon_3.8.5-0ubuntu1.debian.tar.gz
 
+Package: gst-plugins-base1.0
+Binary: gstreamer1.0-plugins-base-apps, gstreamer1.0-plugins-base-doc, libgstreamer-plugins-base1.0-0, libgstreamer-plugins-base1.0-dev, gstreamer1.0-alsa, gstreamer1.0-plugins-base, gstreamer1.0-plugins-base-dbg, gstreamer1.0-x, gir1.2-gst-plugins-base-1.0
+Version: 1.1.4-1
+Section: libs
+Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Build-Depends: libgstreamer1.0-dev (>= 1.1.4), libasound2-dev (>= 0.9.0) [linux-any], libgudev-1.0-dev (>= 143) [linux-any], autotools-dev, automake (>= 1.11), autoconf (>= 2.62), libtool (>= 2.2.6), dh-autoreconf, autopoint (>= 0.17), cdbs (>= 0.4.93~), debhelper (>= 9), gnome-pkg-tools (>= 0.7), gtk-doc-tools (>= 1.12), pkg-config (>= 0.11.0), libxv-dev (>= 6.8.2.dfsg.1-3), libxt-dev (>= 6.8.2.dfsg.1-3), libvorbis-dev (>= 1.0.0-2), libcdparanoia-dev (>= 3.10.2) [!hurd-i386], liborc-0.4-dev (>= 1:0.4.17), libpango1.0-dev (>= 1.16.0), libtheora-dev (>= 1.1), libglib2.0-dev (>= 2.32), zlib1g-dev (>= 1:1.1.4), libvisual-0.4-dev (>= 0.4.0), dpkg-dev (>= 1.15.1), iso-codes, libgtk-3-dev, libglib2.0-doc, gstreamer1.0-doc, libgirepository1.0-dev (>= 0.9.12-4~), gobject-introspection (>= 0.9.12-4~), gir1.2-glib-2.0, gir1.2-freedesktop, gir1.2-gstreamer-1.0
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/g/gst-plugins-base1.0
+Files:
+ a72997050637a5dc7ed97083e34e2e4b 2820 gst-plugins-base1.0_1.1.4-1.dsc
+ c6fdc295e7575efbf3c84ef6ed21ec92 2501592 gst-plugins-base1.0_1.1.4.orig.tar.xz
+ 050e95496e0b702ba2a79723a8ec5ab1 46418 gst-plugins-base1.0_1.1.4-1.debian.tar.gz
+Uploaders: Loïc Minier <lool@debian.org>, Sebastien Bacher <seb128@debian.org>, Sebastian Dröge <slomo@debian.org>, Sjoerd Simons <sjoerd@debian.org>
+Homepage: http://gstreamer.freedesktop.org
+Package-List: 
+ gir1.2-gst-plugins-base-1.0 deb introspection optional
+ gstreamer1.0-alsa deb libs optional
+ gstreamer1.0-plugins-base deb libs optional
+ gstreamer1.0-plugins-base-apps deb utils optional
+ gstreamer1.0-plugins-base-dbg deb debug extra
+ gstreamer1.0-plugins-base-doc deb doc optional
+ gstreamer1.0-x deb libs optional
+ libgstreamer-plugins-base1.0-0 deb libs optional
+ libgstreamer-plugins-base1.0-dev deb libdevel optional
+Checksums-Sha1:
+ ad865a644a94e31f68e550925f6bf2f206e8c707 2820 gst-plugins-base1.0_1.1.4-1.dsc
+ 17d34fe748b8f440cc776159d42a21a5838c7641 2501592 gst-plugins-base1.0_1.1.4.orig.tar.xz
+ 8b6b558cc80f84417ea6edf5a19e82c2f623b84c 46418 gst-plugins-base1.0_1.1.4-1.debian.tar.gz
+Checksums-Sha256:
+ 7d57d77ead197fd4892013345ec2ed90aabf9aa8c522db41b3bb36c7e4362f23 2820 gst-plugins-base1.0_1.1.4-1.dsc
+ 3f78ba6af4dd2ab1947139809d64f8b1910300f1495c38dc99d9cdb8c456a949 2501592 gst-plugins-base1.0_1.1.4.orig.tar.xz
+ 404fd052a2982ec604e7ddc49e25a134ca89a14740752ab70c692ae44b3d6de5 46418 gst-plugins-base1.0_1.1.4-1.debian.tar.gz
+
 Package: gstreamer1.0
 Binary: libgstreamer1.0-0, libgstreamer1.0-0-dbg, libgstreamer1.0-dev, gstreamer1.0-doc, gstreamer1.0-tools, gir1.2-gstreamer-1.0
 Version: 1.1.4-1
@@ -687,45 +722,6 @@ Checksums-Sha1:
 Checksums-Sha256:
  70adc6db61c593a3a261716b493a0934f25f5acf2ef70207b2520e8b80a7f8b1 1713 linux-signed_3.11.0-6.12.dsc
  bca33c08c78389549929d7bb2413253e5ce69311c64d4f98dd4aaa27485515a1 6159 linux-signed_3.11.0-6.12.tar.gz
-
-Package: lsb
-Binary: lsb-core, lsb-graphics, lsb-cxx, lsb-desktop, lsb-languages, lsb-multimedia, lsb-printing, lsb-security, lsb, lsb-base, lsb-release, lsb-invalid-mta
-Version: 4.1+Debian11ubuntu4
-Priority: important
-Section: misc
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian LSB Team <debian-lsb@lists.debian.org>
-Build-Depends: debhelper (>> 7.0.50~), po-debconf (>= 0.5.0), dpkg-dev (>= 1.10), python-all-dev (>= 2.6.6-6~), python3-all-dev
-Architecture: any all
-Standards-Version: 3.9.4
-Format: 3.0 (native)
-Directory: pool/main/l/lsb
-Files:
- fabb64764a3b4de564bac1a66e1abf2c 1696 lsb_4.1+Debian11ubuntu4.dsc
- 40674046f39c6722c008fe21974fa4c1 65368 lsb_4.1+Debian11ubuntu4.tar.xz
-Uploaders: Didier Raboud <odyx@debian.org>, Jeff Licquia <licquia@debian.org>
-Homepage: http://www.linuxfoundation.org/collaborate/workgroups/lsb
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/lsb.git
-Vcs-Git: git://anonscm.debian.org/collab-maint/lsb.git
-Package-List: 
- lsb deb misc extra
- lsb-base deb misc required
- lsb-core deb misc extra
- lsb-cxx deb misc extra
- lsb-desktop deb misc extra
- lsb-graphics deb misc extra
- lsb-invalid-mta deb misc extra
- lsb-languages deb misc extra
- lsb-multimedia deb misc extra
- lsb-printing deb misc extra
- lsb-release deb misc optional
- lsb-security deb misc extra
-Checksums-Sha1:
- 4a4d05b7a9f19b39348b8f85335489bf005ea8bf 1696 lsb_4.1+Debian11ubuntu4.dsc
- 99f21beb739fc96133454681b81ab3e0929a69d6 65368 lsb_4.1+Debian11ubuntu4.tar.xz
-Checksums-Sha256:
- 789e9481ce1f6fb2bfa5b1728b2270d4f116707f0b32d1e5f48c9c1bade1ad18 1696 lsb_4.1+Debian11ubuntu4.dsc
- 0d7008928eb8038541f6ba6313ba9d01b0ea268fad7288019e5fe1b217aa3a8d 65368 lsb_4.1+Debian11ubuntu4.tar.xz
 
 Package: mir
 Binary: libmirprotobuf0, libmirprotobuf-dev, libmirserver1, libmirplatform, mircommon-dev, libmirserver-dev, libmirclient2, libmirclient-dev, mir-demos, mir-doc, mir-test-tools
