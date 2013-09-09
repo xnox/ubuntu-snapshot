@@ -44,6 +44,29 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
+Package: gir1.2-gst-plugins-base-1.0
+Priority: optional
+Section: introspection
+Installed-Size: 312
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.4-1
+Depends: gir1.2-glib-2.0, gir1.2-gstreamer-1.0
+Filename: pool/main/g/gst-plugins-base1.0/gir1.2-gst-plugins-base-1.0_1.1.4-1_i386.deb
+Size: 61186
+MD5sum: 48de107978b4d1b6573133c7ab0ded7e
+SHA1: 77e53676332815b22406da3484e84e2d269af542
+SHA256: 294255738af7b63377f3abd34faf3997d82a9fff1a12f6dd7ea05249b333c512
+Description: Description: GObject introspection data for the GStreamer Plugins Base library
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: 1c3b9ff935990198956b8c00dd1b7da8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
 Package: gir1.2-gstreamer-1.0
 Priority: optional
 Section: introspection
@@ -225,6 +248,35 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: gstreamer1.0-alsa
+Priority: optional
+Section: libs
+Installed-Size: 177
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.4-1
+Provides: gstreamer1.0-audiosink, gstreamer1.0-audiosource
+Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3), libgstreamer1.0-0 (>= 1.0.0), libgstreamer-plugins-base1.0-0 (>= 1.1.4)
+Recommends: alsa-base (>= 0.9.0)
+Suggests: alsa-utils (>= 0.9.0)
+Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-alsa_1.1.4-1_i386.deb
+Size: 28372
+MD5sum: f3243b6bc204db4c747e2392fc0de452
+SHA1: 8797fa12a076c6456463e240c1d5ebdcaf65ce99
+SHA256: 18ad2d65855fdc9e7d52d1476e414923da8134c44fd9c52c8d871edf3950ae9e
+Description: GStreamer plugin for ALSA
+Multi-Arch: same
+Homepage: http://gstreamer.freedesktop.org
+Gstreamer-Elements: alsasink, alsasrc
+Gstreamer-Version: 1.1
+Description-md5: 339f038172c486f3cef220df0c0e5ac4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
 Package: gstreamer1.0-doc
 Priority: optional
 Section: doc
@@ -244,6 +296,107 @@ SHA256: 270481aff8532391a64c51ab8d98f99e48842432a8dd1796555590f70ca48072
 Description: GStreamer core documentation and manuals
 Homepage: http://gstreamer.freedesktop.org
 Description-md5: 2274936f9039765c43e33252ae21527d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: gstreamer1.0-plugins-base
+Priority: optional
+Section: libs
+Installed-Size: 1826
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.4-1
+Provides: gstreamer1.0-audiosource, gstreamer1.0-videosource
+Depends: libc6 (>= 2.7), libcdparanoia0 (>= 3.10.2+debian), libglib2.0-0 (>= 2.37.3), libgstreamer1.0-0 (>= 1.1.4), libogg0 (>= 1.0rc3), liborc-0.4-0 (>= 1:0.4.17), libtheora0 (>= 1.0), libvisual-0.4-0 (>= 0.4.0-4), libvorbis0a (>= 1.1.2), libvorbisenc2 (>= 1.1.2), libgstreamer-plugins-base1.0-0 (>= 1.1.4)
+Suggests: gvfs
+Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-plugins-base_1.1.4-1_i386.deb
+Size: 494642
+MD5sum: 304b82a5cf86de7c02f1584bb215895b
+SHA1: 62c292161c0ae0393c8738894da8a1136b68693d
+SHA256: 8622a6132479865e07f972741fffcc7b103172bea573d12c13d7918c62aea384
+Description: GStreamer plugins from the "base" set
+Multi-Arch: same
+Homepage: http://gstreamer.freedesktop.org
+Gstreamer-Decoders: application/kate; application/ogg; application/x-ass; application/x-ogg-avi; application/x-ogm-audio; application/x-ogm-text; application/x-ogm-video; application/x-ssa; application/x-subtitle; application/x-subtitle-dks; application/x-subtitle-mpl2; application/x-subtitle-qttext; application/x-subtitle-sami; application/x-subtitle-tmplayer; audio/ogg; audio/x-vorbis; video/ogg; video/x-theora
+Gstreamer-Elements: adder, appsink, appsrc, audioconvert, audiorate, audioresample, audiotestsrc, cdparanoiasrc, decodebin, encodebin, giosink, giosrc, giostreamsink, giostreamsrc, multifdsink, multisocketsink, oggaviparse, oggdemux, oggmux, oggparse, ogmaudioparse, ogmtextparse, ogmvideoparse, playbin, playsink, ssaparse, streamsynchronizer, subparse, subtitleoverlay, tcpclientsink, tcpclientsrc, tcpserversink, tcpserversrc, theoradec, theoraenc, theoraparse, uridecodebin, videoconvert, videorate, videoscale, videotestsrc, volume, vorbisdec, vorbisenc, vorbisparse, vorbistag
+Gstreamer-Encoders: application/ogg; audio/ogg; audio/x-vorbis; video/ogg; video/x-theora
+Gstreamer-Uri-Sinks: appsink, file
+Gstreamer-Uri-Sources: appsrc, cdda, file
+Gstreamer-Version: 1.1
+Description-md5: 73eb82d2de7fe71e4455e1742423e3e3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: gstreamer1.0-plugins-base-apps
+Priority: optional
+Section: utils
+Installed-Size: 112
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.4-1
+Depends: libc6 (>= 2.3.6-6~), libglib2.0-0 (>= 2.32), libgstreamer1.0-0 (>= 1.0.0), gstreamer1.0-tools
+Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-plugins-base-apps_1.1.4-1_i386.deb
+Size: 19916
+MD5sum: f008b32a9f77c1870ef26dd8dbed16ab
+SHA1: e27f216e1fd69143f849d7532e4b32b4d34d0c83
+SHA256: 196531e6121a74ce853d5238472a24a8e482ad1c7de61615cc9087d4994458c2
+Description: GStreamer helper programs from the "base" set
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: 72cc51baa52c95f36129fb0f74a62970
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: gstreamer1.0-plugins-base-dbg
+Priority: extra
+Section: debug
+Installed-Size: 3869
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.4-1
+Depends: gstreamer1.0-alsa (= 1.1.4-1), gstreamer1.0-plugins-base (= 1.1.4-1), gstreamer1.0-x (= 1.1.4-1), libgstreamer-plugins-base1.0-0 (= 1.1.4-1)
+Suggests: gstreamer1.0-gnomevfs (= 1.1.4-1)
+Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-plugins-base-dbg_1.1.4-1_i386.deb
+Size: 3135120
+MD5sum: c521295c437511b38a26573f25e96aa0
+SHA1: ac116b322f2c9608eddd46efd4645db84d5be933
+SHA256: 1570ba289dbcbd73893db38f8061b8ce8e73b9b243041ab005466afcec89eb61
+Description: GStreamer plugins from the "base" set
+Multi-Arch: same
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: b7d3c79dd3992a2b1b542fa636eec13a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: gstreamer1.0-plugins-base-doc
+Priority: optional
+Section: doc
+Installed-Size: 5376
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: gst-plugins-base1.0
+Version: 1.1.4-1
+Depends: libglib2.0-doc, gstreamer1.0-doc
+Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-plugins-base-doc_1.1.4-1_all.deb
+Size: 321546
+MD5sum: 6b34005de79c81f3caf1d92adde68aeb
+SHA1: 5482d9914ea8674b1e94fc74ab1d2634fc11ebb3
+SHA256: 2e5f9e9f5de91a56b30ed067f6a07ee8d6fb080b58a4ce11455654268a7c1235
+Description: GStreamer documentation for plugins from the "base" set
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: aaf86bd34d894dca484623ae59419aad
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -271,6 +424,33 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: gstreamer1.0-x
+Priority: optional
+Section: libs
+Installed-Size: 298
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.4-1
+Provides: gstreamer1.0-videosink
+Depends: libc6 (>= 2.4), libcairo2 (>= 1.2.4), libglib2.0-0 (>= 2.37.3), libgstreamer1.0-0 (>= 1.0.0), libpango-1.0-0 (>= 1.22.0), libpangocairo-1.0-0 (>= 1.16.0), libx11-6, libxext6, libxv1, libgstreamer-plugins-base1.0-0 (>= 1.1.4)
+Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-x_1.1.4-1_i386.deb
+Size: 63872
+MD5sum: bf48dce00d4bea29825bea4aae176ba5
+SHA1: 28814680cb9bc141c51e4cac37767a743130f555
+SHA256: 58704d242ad1cfa163d1fb1fac0449f371ebcdb360b7da2b536a76d23bbcffa5
+Description: GStreamer plugins for X11 and Pango
+Multi-Arch: same
+Homepage: http://gstreamer.freedesktop.org
+Gstreamer-Elements: clockoverlay, textoverlay, textrender, timeoverlay, ximagesink, xvimagesink
+Gstreamer-Version: 1.1
+Description-md5: f30e1dbce14d6ece228c6b4e6dfdfdbd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
@@ -450,6 +630,55 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgstreamer-plugins-base1.0-0
+Priority: optional
+Section: libs
+Installed-Size: 1624
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.4-1
+Depends: libc6 (>= 2.7), libglib2.0-0 (>= 2.37.3), libgstreamer1.0-0 (>= 1.1.4), liborc-0.4-0 (>= 1:0.4.17), zlib1g (>= 1:1.1.4), iso-codes
+Pre-Depends: multiarch-support
+Suggests: libvisual-0.4-plugins, gstreamer-codec-install | gnome-codec-install
+Conflicts: totem-gstreamer (<= 2.17.92-0ubuntu1)
+Filename: pool/main/g/gst-plugins-base1.0/libgstreamer-plugins-base1.0-0_1.1.4-1_i386.deb
+Size: 431562
+MD5sum: 08b9042dd3be82e17dbceb8e661b93e5
+SHA1: 4d9860d637a78bcedab63cef8c19a6c071baf7c5
+SHA256: daf87e1511cde92b0efd5923af5e28567a0e67e649bed03251c0ee25d078bb2a
+Description: GStreamer libraries from the "base" set
+Multi-Arch: same
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: 1f83d48f1815b1413bf5322dc753ba59
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-live, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgstreamer-plugins-base1.0-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 2238
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: gst-plugins-base1.0
+Version: 1.1.4-1
+Depends: libgstreamer-plugins-base1.0-0 (= 1.1.4-1), libc6-dev | libc-dev, pkg-config, libgstreamer1.0-dev (>= 1.1.4), libglib2.0-dev, libxml2-dev, gir1.2-gst-plugins-base-1.0 (= 1.1.4-1)
+Filename: pool/main/g/gst-plugins-base1.0/libgstreamer-plugins-base1.0-dev_1.1.4-1_i386.deb
+Size: 193564
+MD5sum: 1901e596e38cad1602fa0d6d82255f68
+SHA1: e5fe17e3aae73c140f8c083ba47a876cba5ea7c4
+SHA256: 06048f81a1bae174bbaf872e9174d7232d5285d039467e32f789cc2a5a6cc543
+Description: GStreamer development files for libraries from the "base" set
+Homepage: http://gstreamer.freedesktop.org
+Description-md5: 0acc042058e8c9e8d17fbca59836d2a0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: libgstreamer1.0-0
 Priority: optional
