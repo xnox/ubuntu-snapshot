@@ -73,6 +73,42 @@ Checksums-Sha256:
  9d81e4228329e2d5cccb018ab06bc8b734fb2dede2c4d9b5c02303d4a690b76b 1940928 augeas_1.1.0.orig.tar.gz
  45c6484a3636ec838a508db600f731bfee8bf2164d8f622981757a95f29157c2 8730 augeas_1.1.0-0ubuntu1.debian.tar.gz
 
+Package: cinder
+Binary: python-cinder, cinder-common, cinder-api, cinder-volume, cinder-scheduler, cinder-backup
+Version: 1:2013.2~b3-0ubuntu1
+Priority: extra
+Section: net
+Maintainer: Chuck Short <zulcss@ubuntu.com>
+Build-Depends: debhelper (>= 8.0.0), python-all (>= 2.6)
+Build-Depends-Indep: python-amqplib, python-anyjson (>= 0.3.3), python-babel, python-coverage, python-d2to1, python-eventlet (>= 0.12.0), python-fixtures, python-glanceclient, python-greenlet (>= 0.3.2), python-hp3parclient (>= 1.0.0), python-iso8601, python-keystoneclient (>= 1:0.2.3), python-kombu (>= 2.5.12), python-lockfile, python-lxml, python-migrate, python-mock, python-mox, python-mysqldb, python-nose, python-novaclient, python-oslo.config, python-paramiko (>= 1.8), python-paste, python-pastedeploy, python-pbr, python-routes, python-swiftclient, python-setuptools, python-setuptools-git, python-sphinx, python-sqlalchemy, python-stevedore (>= 0.9), python-suds, python-testtools, python-webob, testrepository
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/c/cinder
+Files:
+ 22721db06d1dfaa7a4e99e76a06ad1c1 2251 cinder_2013.2~b3-0ubuntu1.dsc
+ beae8f17c84ff974db3913f35e541121 2774266 cinder_2013.2~b3.orig.tar.gz
+ d221cd9909b81ca3e51f0df1ce7bbfa7 9943 cinder_2013.2~b3-0ubuntu1.debian.tar.gz
+Homepage: http://launchpad.net/cinder
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/cinder/havana/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/cinder/havana
+Package-List: 
+ cinder-api deb net extra
+ cinder-backup deb net extra
+ cinder-common deb net extra
+ cinder-scheduler deb net extra
+ cinder-volume deb net extra
+ python-cinder deb python extra
+Checksums-Sha1:
+ a453f7836f89de97742124ba7eb06a88cea6c073 2251 cinder_2013.2~b3-0ubuntu1.dsc
+ 64632f27b4024f3852b0206cde63702c9f1ae8b1 2774266 cinder_2013.2~b3.orig.tar.gz
+ 816f6f76f366aee61a746149fbe58842b971f315 9943 cinder_2013.2~b3-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 4ff4750a6a6541226aad87ca8943fcdbb79f8647f05511eeda928f362d75d790 2251 cinder_2013.2~b3-0ubuntu1.dsc
+ 16d2d5cf07a4cfa9f2b6751935542b212eb8cb2cf4f12989079eeff51bbc8e48 2774266 cinder_2013.2~b3.orig.tar.gz
+ 32ac648c3521cdcfe41b8ad1b67f95f366d719dcec993373cc44b827232e50e0 9943 cinder_2013.2~b3-0ubuntu1.debian.tar.gz
+Testsuite: autopkgtest
+
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
 Version: 0.10.1-2
@@ -172,6 +208,43 @@ Checksums-Sha256:
  2e70b26c0cf1e203a38b9af50060d65580e92288ffddff74a52a49273771fcc9 2318573 fonts-liberation_1.07.2.orig.tar.bz2
  1d42f8c7b6f3aa449432f86419996a8d28d979eb60ebd39315502b84efcf7ba7 9283 fonts-liberation_1.07.2-7.debian.tar.gz
 
+Package: glance
+Binary: python-glance, glance, python-glance-doc, glance-common, glance-api, glance-registry
+Version: 1:2013.2~b3-0ubuntu1
+Priority: extra
+Section: net
+Maintainer: Ubuntu OpenStack <openstack-packaging@lists.ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50), python-all (>= 2.6), sqlite3
+Build-Depends-Indep: curl, python-anyjson, python-boto, python-cinderclient (>= 1:1.0.4), python-crypto, python-eventlet, python-fixtures, python-greenlet, python-httplib2 (>= 0.6.0), python-iso8601, python-jsonschema, python-keystoneclient, python-kombu, python-lxml, python-migrate, python-mox, python-nose, python-openssl, python-oslo.config, python-oslo.sphinx, python-passlib, python-paste, python-pastedeploy, python-requests, python-routes, python-setuptools, python-sphinx, python-sqlalchemy-ext | python-sqlalchemy (<< 0.6.3-2), python-swiftclient, python-testtools, python-webob, python-xattr
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/g/glance
+Files:
+ e334a95239868ec308e4afd63e272aae 2195 glance_2013.2~b3-0ubuntu1.dsc
+ a2801214a1c119a196cc75a5cabe7978 1021311 glance_2013.2~b3.orig.tar.gz
+ 6b9c2dea4ea23ba402afbbbdb7d974df 13255 glance_2013.2~b3-0ubuntu1.debian.tar.gz
+Homepage: http://launchpad.net/glance
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/glance/havana/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/glance/havana
+Package-List: 
+ glance deb python extra
+ glance-api deb python extra
+ glance-common deb python extra
+ glance-registry deb python extra
+ python-glance deb python extra
+ python-glance-doc deb doc extra
+Checksums-Sha1:
+ 8d3a61df9ffe75f72b02116e578586b99f63fcd2 2195 glance_2013.2~b3-0ubuntu1.dsc
+ a3fbf8473de499554efc3122e8813883b9b5334d 1021311 glance_2013.2~b3.orig.tar.gz
+ 1d6397d0b2e415b4047b97537d80d2982a414298 13255 glance_2013.2~b3-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ ee6253fc418cde470b8a98f73ef0ebbf6285f1336380fd22ed49132e78ff44d5 2195 glance_2013.2~b3-0ubuntu1.dsc
+ 10804642e14d8fe03f9ccf09554b147e63f9cba501cfe6e13d79cfeb04d5b2bd 1021311 glance_2013.2~b3.orig.tar.gz
+ 93f0187707e1051d56d440f8284c8539a6e32db93bea1c938ca975d53d65cedb 13255 glance_2013.2~b3-0ubuntu1.debian.tar.gz
+Python-Version: >= 2.6
+Testsuite: autopkgtest
+
 Package: gnome-control-center
 Binary: gnome-control-center, gnome-control-center-dev, gnome-control-center-data, libgnome-control-center-dev, libgnome-control-center1
 Version: 1:3.6.3-0ubuntu35
@@ -270,6 +343,49 @@ Checksums-Sha256:
  7d57d77ead197fd4892013345ec2ed90aabf9aa8c522db41b3bb36c7e4362f23 2820 gst-plugins-base1.0_1.1.4-1.dsc
  3f78ba6af4dd2ab1947139809d64f8b1910300f1495c38dc99d9cdb8c456a949 2501592 gst-plugins-base1.0_1.1.4.orig.tar.xz
  404fd052a2982ec604e7ddc49e25a134ca89a14740752ab70c692ae44b3d6de5 46418 gst-plugins-base1.0_1.1.4-1.debian.tar.gz
+
+Package: gtk+3.0
+Binary: libgtk-3-0, libgtk-3-0-udeb, libgtk-3-common, libgtk-3-bin, libgtk-3-dev, libgtk-3-0-dbg, libgtk-3-doc, gtk-3-examples, gir1.2-gtk-3.0, libgail-3-0, libgail-3-dev, libgail-3-0-dbg, libgail-3-doc
+Version: 3.8.4-0ubuntu1
+Section: libs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 8.1.3), cdbs (>= 0.4.93~), gnome-pkg-tools (>= 0.11), dpkg-dev (>= 1.16.0), gtk-doc-tools (>= 1.11), dh-autoreconf, gettext, pkg-config, autotools-dev, libglib2.0-dev (>= 2.35.3), libgdk-pixbuf2.0-dev (>= 2.27.1), libpango1.0-dev (>= 1.32.4), libatk1.0-dev (>= 2.7.5), libatk-bridge2.0-dev, libx11-dev (>= 2:1.3.3-2), libxext-dev (>= 2:1.1.1-3), libxi-dev (>= 2:1.3-4), libxrandr-dev (>= 2:1.2.99), libxt-dev, libxrender-dev (>= 1:0.9.5-2), libxft-dev, libxcursor-dev (>= 1:1.1.10-2), libxcomposite-dev (>= 1:0.2.0-3), libxdamage-dev (>= 1:1.0.1-3), libxkbfile-dev, libxinerama-dev (>= 2:1.1-3), libxfixes-dev (>= 1:3.0.0-3), libcairo2-dev (>= 1.10.0), x11proto-xext-dev, libcups2-dev (>= 1.2), libcolord-dev (>= 0.1.9), gobject-introspection (>= 1.32.0), libgirepository1.0-dev (>= 1.32.0), xvfb, libwayland-dev (>= 1.0.0), libxkbcommon-dev (>= 0.2.0-0ubuntu3~)
+Build-Depends-Indep: docbook-xml, docbook-utils, libglib2.0-doc, libatk1.0-doc, libpango1.0-doc, libcairo2-doc
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/g/gtk+3.0
+Files:
+ 328ce4ee6ded3aef9e51187d428b43f2 3065 gtk+3.0_3.8.4-0ubuntu1.dsc
+ 2b232d76c01ceb626948bcbe70b05269 13716408 gtk+3.0_3.8.4.orig.tar.xz
+ 9f73907bb2fff738459b1052d796d11e 119184 gtk+3.0_3.8.4-0ubuntu1.debian.tar.gz
+Uploaders: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Emilio Pozuelo Monfort <pochu@debian.org>, Jeremy Bicha <jbicha@ubuntu.com>, Michael Biebl <biebl@debian.org>
+Homepage: http://www.gtk.org/
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-desktop/gtk/ubuntugtk3
+Package-List: 
+ gir1.2-gtk-3.0 deb introspection optional
+ gtk-3-examples deb x11 extra
+ libgail-3-0 deb libs optional
+ libgail-3-0-dbg deb debug extra
+ libgail-3-dev deb libdevel optional
+ libgail-3-doc deb doc optional
+ libgtk-3-0 deb libs optional
+ libgtk-3-0-dbg deb debug extra
+ libgtk-3-0-udeb udeb debian-installer extra
+ libgtk-3-bin deb misc optional
+ libgtk-3-common deb misc optional
+ libgtk-3-dev deb libdevel optional
+ libgtk-3-doc deb doc optional
+Checksums-Sha1:
+ 3095b7edc9998ad660d1a08a2b66b04c2015ae92 3065 gtk+3.0_3.8.4-0ubuntu1.dsc
+ d4448633071a1c3866ff3c8be331c7bd6c3b3dd7 13716408 gtk+3.0_3.8.4.orig.tar.xz
+ 280d4cfd0b2eab7f2dafc7e729bae2a73e4c318e 119184 gtk+3.0_3.8.4-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 7402e353561e9afaf3ea782c508466c02b337e334af7088eed0beabe254d7a68 3065 gtk+3.0_3.8.4-0ubuntu1.dsc
+ b08360167702299e91b3435a4ce6bae41dd26d2794e898632f12dd091b0692e2 13716408 gtk+3.0_3.8.4.orig.tar.xz
+ 7746b5ee935c11629ba46c9fad7e062828900f9215654e156d45002fe4b8a7a8 119184 gtk+3.0_3.8.4-0ubuntu1.debian.tar.gz
+Testsuite: autopkgtest
 
 Package: jackd2
 Binary: jackd2, libjack-jackd2-0, jackd2-firewire, libjack-jackd2-dev
@@ -756,6 +872,148 @@ Checksums-Sha256:
  ed0d42547808fe9a213cf62e93ffef65e518da774bb497138d126f2de4a54d2e 48479 mod-auth-mysql_4.3.9.orig.tar.gz
  a5da30f609d1f96db37698abb90a9d267c8c5cfd9d1ea726d3bd4df18d074c37 21075 mod-auth-mysql_4.3.9-13.1ubuntu1.diff.gz
 
+Package: neutron
+Binary: neutron-server, neutron-common, neutron-plugin-cisco, neutron-plugin-nec, neutron-plugin-nec-agent, neutron-plugin-bigswitch, neutron-plugin-hyperv, neutron-plugin-brocade, neutron-plugin-plumgrid, neutron-plugin-metaplugin, neutron-plugin-nicira, neutron-l3-agent, neutron-dhcp-agent, neutron-metadata-agent, neutron-lbaas-agent, python-neutron, neutron-plugin-openvswitch, neutron-plugin-openvswitch-agent, neutron-plugin-linuxbridge, neutron-plugin-linuxbridge-agent, neutron-plugin-ryu, neutron-plugin-ryu-agent, neutron-plugin-midonet, neutron-plugin-mlnx-agent, quantum-server, quantum-common, quantum-plugin-cisco, quantum-plugin-nec, quantum-plugin-nec-agent, quantum-plugin-bigswitch, quantum-plugin-hyperv, quantum-plugin-brocade, quantum-plugin-plumgrid, quantum-plugin-metaplugin, quantum-plugin-nicira, quantum-l3-agent, quantum-dhcp-agent, quantum-metadata-agent, quantum-lbaas-agent, python-quantum, quantum-plugin-openvswitch, quantum-plugin-openvswitch-agent,
+ quantum-plugin-linuxbridge, quantum-plugin-linuxbridge-agent, quantum-plugin-ryu, quantum-plugin-ryu-agent,
+ quantum-plugin-midonet
+Version: 1:2013.2~b3-0ubuntu1
+Section: net
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Build-Depends: debhelper (>= 8.0.0), python-all (>= 2.6)
+Build-Depends-Indep: alembic (>= 0.4.1), python-amqplib, python-anyjson (>= 0.3.3), python-babel, python-cliff, python-configobj, python-coverage, python-d2to1, python-eventlet, python-fixtures (>= 0.3.12), python-httplib2, python-iso8601, python-keystoneclient (>= 1:0.2.0), python-kombu (>= 2.5.12), python-lxml, python-mock (>= 1.0b1), python-mox, python-netaddr, python-netifaces, python-neutronclient (>= 1:2.2.3), python-nose, python-novaclient, python-oslo.config (>= 1:1.2.0), python-paste, python-pastedeploy, python-pbr, python-pyudev, python-routes, python-setuptools, python-setuptools-git, python-simplejson, python-sqlalchemy, python-stevedore (>= 0.9), python-testtools, python-webob, python-webtest, subunit, testrepository (>= 0.0.8)
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/n/neutron
+Files:
+ 1372150b407cc36e58af5f51fb977399 5202 neutron_2013.2~b3-0ubuntu1.dsc
+ 7bf8bd391b76f121f02faf25824cdad4 3754309 neutron_2013.2~b3.orig.tar.gz
+ a47b20644e98cc463debfb2d2d2739a7 15703 neutron_2013.2~b3-0ubuntu1.debian.tar.gz
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/neutron/havana/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/neutron/havana
+Package-List: 
+ neutron-common deb net optional
+ neutron-dhcp-agent deb net optional
+ neutron-l3-agent deb net optional
+ neutron-lbaas-agent deb net optional
+ neutron-metadata-agent deb net optional
+ neutron-plugin-bigswitch deb net optional
+ neutron-plugin-brocade deb net optional
+ neutron-plugin-cisco deb net optional
+ neutron-plugin-hyperv deb net optional
+ neutron-plugin-linuxbridge deb net optional
+ neutron-plugin-linuxbridge-agent deb net optional
+ neutron-plugin-metaplugin deb net optional
+ neutron-plugin-midonet deb net optional
+ neutron-plugin-mlnx-agent deb net optional
+ neutron-plugin-nec deb net optional
+ neutron-plugin-nec-agent deb net optional
+ neutron-plugin-nicira deb net optional
+ neutron-plugin-openvswitch deb net optional
+ neutron-plugin-openvswitch-agent deb net optional
+ neutron-plugin-plumgrid deb net optional
+ neutron-plugin-ryu deb net optional
+ neutron-plugin-ryu-agent deb net optional
+ neutron-server deb net optional
+ python-neutron deb python optional
+ python-quantum deb oldlibs optional
+ quantum-common deb oldlibs optional
+ quantum-dhcp-agent deb oldlibs optional
+ quantum-l3-agent deb oldlibs optional
+ quantum-lbaas-agent deb oldlibs optional
+ quantum-metadata-agent deb oldlibs optional
+ quantum-plugin-bigswitch deb oldlibs optional
+ quantum-plugin-brocade deb oldlibs optional
+ quantum-plugin-cisco deb oldlibs optional
+ quantum-plugin-hyperv deb oldlibs optional
+ quantum-plugin-linuxbridge deb oldlibs optional
+ quantum-plugin-linuxbridge-agent deb oldlibs optional
+ quantum-plugin-metaplugin deb oldlibs optional
+ quantum-plugin-midonet deb oldlibs optional
+ quantum-plugin-nec deb oldlibs optional
+ quantum-plugin-nec-agent deb oldlibs optional
+ quantum-plugin-nicira deb oldlibs optional
+ quantum-plugin-openvswitch deb oldlibs optional
+ quantum-plugin-openvswitch-agent deb oldlibs optional
+ quantum-plugin-plumgrid deb oldlibs optional
+ quantum-plugin-ryu deb oldlibs optional
+ quantum-plugin-ryu-agent deb oldlibs optional
+ quantum-server deb oldlibs optional
+Checksums-Sha1:
+ 3ecb6ec2e910b841e7cba9c9da708a24356c56d2 5202 neutron_2013.2~b3-0ubuntu1.dsc
+ a67723d823a8c787a1388808d7d2c755a0547417 3754309 neutron_2013.2~b3.orig.tar.gz
+ 6c577a78a5a3d5dfd84a43714feefb809f578eea 15703 neutron_2013.2~b3-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 95748fa7e8711aa4a43d2e4223ff28dbc3022d96480a9cfe4747e0eff7cb4c5e 5202 neutron_2013.2~b3-0ubuntu1.dsc
+ cb8f608bed28c9593c72d69583ae36fdf11a3ebefcb72518569a530590a370b1 3754309 neutron_2013.2~b3.orig.tar.gz
+ 3a2fb4784fc23d6de4a89dc1826a11e04a07bb7655a216682e89dde184af8262 15703 neutron_2013.2~b3-0ubuntu1.debian.tar.gz
+Python-Version: >= 2.6
+Testsuite: autopkgtest
+
+Package: nova
+Binary: python-nova, nova-common, nova-compute, nova-compute-lxc, nova-compute-uml, nova-compute-xen, nova-compute-qemu, nova-compute-kvm, nova-compute-xcp, nova-xcp-plugins, nova-xcp-network, nova-conductor, nova-cert, nova-scheduler, nova-volume, nova-ajax-console-proxy, nova-novncproxy, nova-xvpvncproxy, nova-spiceproxy, nova-api, nova-network, nova-objectstore, nova-console, nova-consoleauth, nova-doc, nova-api-metadata, nova-api-os-compute, nova-api-os-volume, nova-api-ec2, nova-cells, nova-baremetal
+Version: 1:2013.2~b3-0ubuntu1
+Section: net
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Openstack Maintainers <openstack@lists.launchpad.net>
+Build-Depends: debhelper (>= 7.0.50), python-all (>= 2.6), python-all-dev (>= 2.6.6-3~)
+Build-Depends-Indep: openssh-client, openssl, python-amqplib, python-babel, python-boto, python-carrot, python-cinderclient, python-coverage, python-crypto, python-d2to1 (>= 0.2.10), python-distutils-extra, python-eventlet, python-fixtures (>= 0.3.12), python-feedparser, python-glanceclient, python-iso8601, python-kombu (>= 2.5.12), python-jinja2, python-lxml, python-migrate, python-mox, python-netaddr (>= 0.7.6), python-novaclient (>= 1:2.9.0), python-oslo.config, python-oslo.sphinx, python-paramiko, python-paste, python-pastedeploy (>= 1.5.0), python-pbr (>= 0.5.11), python-pyasn1, python-pyparsing (>= 1.5.6), python-neutronclient, python-routes, python-setuptools, python-setuptools-git, python-stevedore (>= 0.7.2), python-sphinx (>> 1.0), python-sqlalchemy-ext (>= 0.7.8-1~) | python-sqlalchemy, python-suds, python-testtools (>= 0.9.22), python-unittest2, python-webob (>= 1.2.3), sqlite3, testrepository (>= 0.0.8)
+Build-Conflicts: python-cjson
+Architecture: all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/n/nova
+Files:
+ 3202828d475ae90d57effbcbbc472a46 3870 nova_2013.2~b3-0ubuntu1.dsc
+ 0f81fe05b5f7ff9b1618000ab859ac6b 8221576 nova_2013.2~b3.orig.tar.gz
+ d22c781931e2d8fa7691d4467e247140 35408 nova_2013.2~b3-0ubuntu1.debian.tar.gz
+Uploaders: Soren Hansen <soren@ubuntu.com>, Thomas Goirand <zigo@debian.org>
+Homepage: http://launchpad.net/nova
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/nova/havana/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/nova/havana
+Package-List: 
+ nova-ajax-console-proxy deb oldlibs extra
+ nova-api deb net extra
+ nova-api-ec2 deb net extra
+ nova-api-metadata deb net extra
+ nova-api-os-compute deb net extra
+ nova-api-os-volume deb oldlibs extra
+ nova-baremetal deb net extra
+ nova-cells deb net extra
+ nova-cert deb net extra
+ nova-common deb net extra
+ nova-compute deb net extra
+ nova-compute-kvm deb net extra
+ nova-compute-lxc deb net extra
+ nova-compute-qemu deb net extra
+ nova-compute-uml deb net extra
+ nova-compute-xcp deb net extra
+ nova-compute-xen deb net extra
+ nova-conductor deb net extra
+ nova-console deb net extra
+ nova-consoleauth deb net extra
+ nova-doc deb doc extra
+ nova-network deb net extra
+ nova-novncproxy deb net extra
+ nova-objectstore deb net extra
+ nova-scheduler deb net extra
+ nova-spiceproxy deb net extra
+ nova-volume deb oldlibs extra
+ nova-xcp-network deb net extra
+ nova-xcp-plugins deb net extra
+ nova-xvpvncproxy deb net extra
+ python-nova deb python extra
+Checksums-Sha1:
+ 97408d83897d6d87f483de2f8d76c4a1c5842517 3870 nova_2013.2~b3-0ubuntu1.dsc
+ 15fc80c08182eb159318e636cda3f9250bee7008 8221576 nova_2013.2~b3.orig.tar.gz
+ 3f64ddaab386243398930debd30961eb30180e92 35408 nova_2013.2~b3-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ e045b54994675688853224e2304f66b37b81796ed660fce1829d7b6d58f74ab5 3870 nova_2013.2~b3-0ubuntu1.dsc
+ f8063116637ee539d2a229238e4453a4b7bb2bf2a5c53c9ece4d383d61d9a666 8221576 nova_2013.2~b3.orig.tar.gz
+ 05104d26cdc16fb0fa6997a286f77a1778d0fba0fc630414e662dfdedc127f04 35408 nova_2013.2~b3-0ubuntu1.debian.tar.gz
+Testsuite: autopkgtest
+
 Package: platform-api
 Binary: libplatform-api-headers, libplatform-hardware-api-headers, libplatform-api1-dev, libubuntu-application-api-mirserver1, libubuntu-application-api-mirclient1, libplatform-hardware-api1-dev, libplatform-api1-doc, libubuntu-platform-hardware-api1, libubuntu-application-api1, libplatform-api1-hybris-tests, libubuntu-platform-api1-dev, libplatform-api1-hybris, libplatform-hardware-api1-hybris
 Version: 0.18.3+13.10.20130904-0ubuntu1
@@ -846,6 +1104,7 @@ Testsuite: autopkgtest
 Package: python-dogpile.cache
 Binary: python-dogpile.cache
 Version: 0.5.0-0ubuntu2
+Priority: optional
 Section: python
 Maintainer: Chuck Short <zulcss@ubuntu.com>
 Build-Depends: debhelper (>= 8.0.0), python-setuptools, python-all (>= 2.6.6-3~), python-mako, python-nose, python-mock, python-dogpile.core

@@ -291,6 +291,39 @@ Checksums-Sha256:
  7f223b0d797e04d9b02fc4748df562611e66920c296b5bc3389b1853644f4998 3794839 cdo_1.6.0+dfsg.1.orig.tar.gz
  407ce3ba3d9f241fbc676ec72b4b7773b6411be1c3b62071e3e53b52867c8e9c 7450 cdo_1.6.0+dfsg.1-4.debian.tar.bz2
 
+Package: ceilometer
+Binary: python-ceilometer, ceilometer-common, ceilometer-collector, ceilometer-api, ceilometer-agent-compute, ceilometer-agent-central
+Version: 2013.2~b3-0ubuntu1
+Priority: optional
+Section: universe/python
+Maintainer: Chuck Short <zulcss@ubuntu.com>
+Build-Depends: alembic, debhelper (>= 8.0.0), msgpack-python, python-all (>= 2.6), python-anyjson (>= 0.3.3), python-babel (>= 0.9.6), python-ceilometerclient (>= 1.0.1), python-cinderclient, python-coverage, python-d2to1, python-docutils, python-eventlet, python-extras, python-fixtures (>= 0.3.12), python-flask (>= 0.9), python-glanceclient, python-happybase, python-iso8601, python-keystoneclient (>= 1:0.2), python-kombu (>= 2.4.7), python-lockfile, python-lxml, python-migrate, python-mock, python-mox, python-netaddr, python-netifaces, python-nova, python-novaclient (>= 1:2.6.10), python-oslo.config (>= 1:1.2.0a3), python-oslo.sphinx, python-pbr, python-pecan (>= 0.2.0), python-pymongo (>= 2.2), python-requests (>= 1.1), python-setuptools-git (>= 0.4), python-simplejson, python-sphinx, python-sqlalchemy, python-stevedore (>= 0.9), python-subunit, python-swift, python-swiftclient, python-testscenarios, python-testtools, python-unittest2, python-webob (>= 1.2), python-wsme (>= 0.5b2), python-yaml, testrepository (>= 0.0.13)
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/c/ceilometer
+Files:
+ f365e6bc7f18b7b70f81a71e85c4c3b7 2589 ceilometer_2013.2~b3-0ubuntu1.dsc
+ 18fce1f0d02753351ef6c68dea8c5926 773955 ceilometer_2013.2~b3.orig.tar.gz
+ 0ba79b222725d1881c43243bc8a07048 9757 ceilometer_2013.2~b3-0ubuntu1.debian.tar.gz
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/ceilometer/havana/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/ceilometer/havana
+Package-List: 
+ ceilometer-agent-central deb python optional
+ ceilometer-agent-compute deb python optional
+ ceilometer-api deb python optional
+ ceilometer-collector deb python optional
+ ceilometer-common deb python optional
+ python-ceilometer deb python optional
+Checksums-Sha1:
+ 43097ca801d6b51cbc9ee0633c4a4aafccda4aaa 2589 ceilometer_2013.2~b3-0ubuntu1.dsc
+ 8154cb9fb4b5ac524150115d1fa5f31e6d4d1163 773955 ceilometer_2013.2~b3.orig.tar.gz
+ f0cd1d0110a08266596de6e0c8bba07d549fea19 9757 ceilometer_2013.2~b3-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 298e585730c230d8780fbec226a86aed4fcb1236c7bc77b9c593f8f1221c51e0 2589 ceilometer_2013.2~b3-0ubuntu1.dsc
+ 041a5bc86fed3496fb739ba1efcdc4dd154315c1c6b88c317159690ad43d6307 773955 ceilometer_2013.2~b3.orig.tar.gz
+ 29c30ab6a5227237d3d3305299dba9f2bef335fbe68e2dc45f4032639ecd11f4 9757 ceilometer_2013.2~b3-0ubuntu1.debian.tar.gz
+
 Package: check-postgres
 Binary: check-postgres
 Version: 2.20.1-1
@@ -876,6 +909,7 @@ Checksums-Sha256:
 Package: flask-autoindex
 Binary: python-flask-autoindex, python-flask-autoindex-doc
 Version: 0.5-3
+Priority: optional
 Section: universe/misc
 Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
 Build-Depends: debhelper (>= 9), python-all (>= 2.6.6-3~), python-setuptools, python-sphinx (>= 1.0.7+dfsg), python-flask (>= 0.8), python-flask-silk
@@ -1395,19 +1429,19 @@ Checksums-Sha256:
 
 Package: gradle
 Binary: gradle, libgradle-core-java, libgradle-plugins-java, gradle-doc
-Version: 1.4-1
+Version: 1.4-2
 Section: universe/java
 Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
-Build-Depends: ant (>= 1.8), ant-optional (>= 1.8), bnd, checkstyle (>= 5.1), debhelper (>= 7.0.50~), default-jdk, default-jdk-doc, docbook-xsl, gradle, groovy (>= 1.8), groovy-doc, ivy, javahelper, junit4, libantlr-java, libasm4-java, libbcpg-java, libbcprov-java, libclassycle-java, libcodenarc-groovy-java (>= 0.17), libcommons-cli-java, libcommons-codec-java, libcommons-collections3-java, libcommons-io-java, libcore-renderer-java, libdom4j-java, libecj-java, libgoogle-gson-java, libgradle-plugins-java, libguava-java, libhttpclient-java (>= 4.2.1), libjaffl-java (>= 0.5.9-2), libjansi-java, libjarjar-java (>= 1.4+svn142), libjaxen-java, libjcifs-java, libjcip-annotations-java, libjetty-extra-java, libjetty-java, libjmock2-java, libjna-java, libjnr-posix-java (>= 1.1.8), libjsch-java, libkryo-java, liblogback-java (>= 1:0.9.28), libmaven-ant-tasks-java, libnative-platform-java, libnekohtml-java, libplexus-cipher-java, libplexus-containers1.5-java, libplexus-interpolation-java, libplexus-sec-dispatcher-java, libplexus-utils2-java, libpolyglot-maven-java, librhino-java, libservlet2.5-java, libslf4j-java (>= 1.7.2), libspock-java, libwagon-java, libxalan2-java, libxerces2-java, libxmlunit-java, libxslthl-java, maven (>= 3.0.4-4), testng, unzip
+Build-Depends: ant (>= 1.8), ant-optional (>= 1.8), bnd, checkstyle (>= 5.1), debhelper (>= 7.0.50~), default-jdk, default-jdk-doc, docbook-xsl, gradle, groovy (>= 1.8), groovy-doc, ivy (>= 2.3), javahelper, junit4, libantlr-java, libasm4-java, libbcpg-java, libbcprov-java, libclassycle-java, libcodenarc-groovy-java (>= 0.17), libcommons-cli-java, libcommons-codec-java, libcommons-collections3-java, libcommons-io-java, libcore-renderer-java, libdom4j-java, libecj-java, libgoogle-gson-java, libgradle-plugins-java, libguava-java, libhttpclient-java (>= 4.2.1), libjaffl-java (>= 0.5.9-2), libjansi-java, libjarjar-java (>= 1.4+svn142), libjaxen-java, libjcifs-java, libjcip-annotations-java, libjetty-extra-java, libjetty-java, libjmock2-java, libjna-java, libjnr-posix-java (>= 1.1.8), libjsch-java, libkryo-java, liblogback-java (>= 1:0.9.28), libmaven-ant-tasks-java, libnative-platform-java, libnekohtml-java, libplexus-cipher-java, libplexus-containers1.5-java, libplexus-interpolation-java, libplexus-sec-dispatcher-java, libplexus-utils2-java, libpolyglot-maven-java, librhino-java, libservlet2.5-java, libslf4j-java (>= 1.7.2), libspock-java, libwagon-java, libxalan2-java, libxerces2-java, libxmlunit-java, libxslthl-java, maven (>= 3.0.4-4), testng, unzip
 Build-Conflicts: groovy (>= 2.0.0~)
 Architecture: all
 Standards-Version: 3.9.4
 Format: 3.0 (quilt)
 Directory: pool/universe/g/gradle
 Files:
- 0d3d7ea2662b2d944d640e08a1ffa826 3342 gradle_1.4-1.dsc
+ 3f8beac8c71b6aa53154b43d69a4f55d 3351 gradle_1.4-2.dsc
  8b3751e6a6ee79ea37e2cdb501fdb1c7 3407021 gradle_1.4.orig.tar.gz
- 5a0f6399101c2f32bad113de9b3da40a 21619 gradle_1.4-1.debian.tar.gz
+ e6fdb4c798e50130e6829937e723d53f 22609 gradle_1.4-2.debian.tar.gz
 Uploaders: Miguel Landaeta <miguel@miguel.cc>, Damien Raude-Morvan <drazzib@debian.org>
 Homepage: http://gradle.org/
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-java/gradle.git
@@ -1418,13 +1452,13 @@ Package-List:
  libgradle-core-java deb java optional
  libgradle-plugins-java deb java optional
 Checksums-Sha1:
- a95ec5329f81d352aa0634c7f11b8c57d1e51ac2 3342 gradle_1.4-1.dsc
+ e9d2f4cb3865091ea4b12f550793704e399309d7 3351 gradle_1.4-2.dsc
  a9ccb5e1b2ff7267e4bbd27105fde399cebfac98 3407021 gradle_1.4.orig.tar.gz
- 79b3fbb814bf64462126eab2353e62738aa82f9f 21619 gradle_1.4-1.debian.tar.gz
+ 485ca6f5f8113091ae40b6b4c80def5c081b40df 22609 gradle_1.4-2.debian.tar.gz
 Checksums-Sha256:
- 33b75919c69ac5d8bd058c3a1eb10fd9f0836828602b67683db20879cf8327f1 3342 gradle_1.4-1.dsc
+ 3b8b142a5efc9e69770e7b56ec8155be40c6584bd588552726dd5c6a71083d87 3351 gradle_1.4-2.dsc
  a01f44f2a13f9fc0fe15da4b770ed286a1722dd1591cec88a9f5326907c6a28e 3407021 gradle_1.4.orig.tar.gz
- bf1f2855bfdda85bcb704e4100af4111d0a44a8efe045f03417dc1ab31e48b54 21619 gradle_1.4-1.debian.tar.gz
+ 3d03898ca1470d7bec1d051b81bb93ba51dc2609a24476b81ffc3b49f992f721 22609 gradle_1.4-2.debian.tar.gz
 
 Package: gwenview
 Binary: gwenview, gwenview-dbg
@@ -1458,6 +1492,37 @@ Checksums-Sha256:
  1f2687e2fb7f893a18f967897a40136f82f88a2bc9e1ecfd1d24edb43fff68f2 2908892 gwenview_4.11.1.orig.tar.xz
  79c80085a7709808cdac012b0dcc2595caf8ffd2958b2ea5b4d6f4a972f8c326 7184 gwenview_4.11.1-0ubuntu1.debian.tar.gz
 
+Package: haildb
+Binary: libhaildb-dev, libhaildb-dbg, libhaildb6
+Version: 2.3.2-1.3
+Priority: optional
+Section: universe/libs
+Maintainer: Monty Taylor <mordred@inaugust.com>
+Build-Depends: debhelper (>= 7.0.50), doxygen, zlib1g-dev, automake, autoconf, libtool, libcloog-ppl-dev
+Architecture: any
+Standards-Version: 3.9.1
+Format: 3.0 (quilt)
+Directory: pool/universe/h/haildb
+Files:
+ 972314029713e569acbcbb1363a2468f 2029 haildb_2.3.2-1.3.dsc
+ d4d1b1bfab7ebd12f58cedef115e46c0 1687216 haildb_2.3.2.orig.tar.gz
+ 5c9923ddd2ae27a940525e7e0c2a78e6 4691 haildb_2.3.2-1.3.debian.tar.gz
+Homepage: http://launchpad.net/haildb
+Vcs-Browser: http://bazaar.launchpad.net/~haildb-core/debian/sid/haildb/trunk/files
+Vcs-Bzr: http://bazaar.launchpad.net/~haildb-core/debian/sid/haildb/trunk
+Package-List: 
+ libhaildb-dbg deb debug extra
+ libhaildb-dev deb libdevel optional
+ libhaildb6 deb libs optional
+Checksums-Sha1:
+ 782e2957939b25a7a947f76f316491145b46d6b5 2029 haildb_2.3.2-1.3.dsc
+ 1eac762df1f8b8bdf64560d492a7964cb203ae98 1687216 haildb_2.3.2.orig.tar.gz
+ cd412c17d7c0b52f2bd1af8688ba1ba843d3335d 4691 haildb_2.3.2-1.3.debian.tar.gz
+Checksums-Sha256:
+ d542936bd9a8b292238b27c47bfee7b92747d176817f574dbc699c04089c7ef3 2029 haildb_2.3.2-1.3.dsc
+ 4dff658c27d68c1c72b8e985fa9c20ad0e2095a573cca13c77c7ffb582f8c0af 1687216 haildb_2.3.2.orig.tar.gz
+ 6d89fb4b5994032a2142350c292b568d12882776bc10827b6379a1d6f6a6ca24 4691 haildb_2.3.2-1.3.debian.tar.gz
+
 Package: handbrake
 Binary: handbrake, handbrake-cli, handbrake-dbg
 Version: 0.9.8+dfsg2+git0b44ec-2
@@ -1488,6 +1553,44 @@ Checksums-Sha256:
  a2f4f39818ea10a509e6828fa4e29708e3917067f396cb42783fe5fe85b6ae36 2296 handbrake_0.9.8+dfsg2+git0b44ec-2.dsc
  9776a3ac5ffa1245c8d303ad4f1324bf4c7950a502bec8b4448f51448a3f872e 2234237 handbrake_0.9.8+dfsg2+git0b44ec.orig.tar.bz2
  4db3c21ea5453a7434d52a480ef2c4809dbeaa0dee079824aa7102c4c3a03c48 23756 handbrake_0.9.8+dfsg2+git0b44ec-2.debian.tar.gz
+
+Package: heat
+Binary: python-heat, heat-common, heat-engine, heat-api, heat-api-cfn, heat-api-cloudwatch
+Version: 2013.2~b3-0ubuntu1
+Priority: optional
+Section: universe/misc
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: PKG OpenStack <openstack-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), python-all (>= 2.6.6-3~), python-d2to1, python-pbr
+Build-Depends-Indep: python-argparse, python-babel, python-boto (>= 2.4), python-ceilometerclient, python-cinderclient, python-coverage, python-crypto, python-eventlet (>= 0.12.0), python-extras, python-glanceclient, python-greenlet (>= 0.3.2), python-httplib2, python-iso8601, python-keystoneclient (>= 1:0.2.3), python-kombu, python-lxml (>= 2.3), python-memcache, python-migrate, python-mox, python-netaddr, python-neutronclient (>= 1:2.2.0), python-nose, python-nosexcover, python-novaclient, python-oslo.config, python-oslo.sphinx, python-paramiko, python-paste, python-pastedeploy, python-pycryptopp, python-qpid, python-routes, python-sendfile, python-setuptools, python-six, python-sphinx, python-sqlalchemy (>= 0.7.8), python-swiftclient, python-testrepository (>= 0.0.13), python-testtools (>= 0.9.29), python-webob (>= 1.2.3), python-yaml, testrepository (>= 0.0.13)
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/h/heat
+Files:
+ 61b21500da7fea7735dc2b40334ac03e 2713 heat_2013.2~b3-0ubuntu1.dsc
+ abfce27bde3a92634218fb87e226382a 981088 heat_2013.2~b3.orig.tar.gz
+ 4ee90d001f5e23c6fa9db2a7e728dbba 7597 heat_2013.2~b3-0ubuntu1.debian.tar.gz
+Uploaders:  Loic Dachary (OuoU) <loic@debian.org>, Julien Danjou <acid@debian.org>, Thomas Goirand <zigo@debian.org>, Ghe Rivero <ghe.rivero@stackops.com>, Mehdi Abaakouk <sileht@sileht.net>
+Homepage: http://wiki.openstack.org/Heat
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/heat/havana/files
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/heat/havana
+Package-List: 
+ heat-api deb web optional
+ heat-api-cfn deb web optional
+ heat-api-cloudwatch deb web optional
+ heat-common deb web optional
+ heat-engine deb web optional
+ python-heat deb python optional
+Checksums-Sha1:
+ 28df6d52b49784f9a94ab02cc620d25c74b35f3a 2713 heat_2013.2~b3-0ubuntu1.dsc
+ 8230261e6e210c9b708dd33de8f73c468b2d5f2b 981088 heat_2013.2~b3.orig.tar.gz
+ 0dc3868fd3707c80dc8afaecd2210c7e88bcfe2d 7597 heat_2013.2~b3-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ c8a3f4cb6e11018928dd019e7ebe9265c09439ac4fe22769b366a6e1aaee9485 2713 heat_2013.2~b3-0ubuntu1.dsc
+ 3810e9bd6c4aeb3b772a9443ef10ab6dc6eb2cdcad19f244c9dde976637eb0da 981088 heat_2013.2~b3.orig.tar.gz
+ d164ca32e93c39072751b63b5d4a68c0259b77bd68e1b8bc75aaafef181b61ef 7597 heat_2013.2~b3-0ubuntu1.debian.tar.gz
+Testsuite: autopkgtest
 
 Package: hyperestraier
 Binary: hyperestraier, libestraier8, libestraier-dev, ruby-hyperestraier, ruby-hyperestraier-doc, libestraier-ruby, libestraier-ruby1.8, libestraier-ruby1.9.1, libestraier-ruby-doc, libestraier-java, libestraier-perl
@@ -1559,36 +1662,35 @@ Checksums-Sha256:
 
 Package: infernal
 Binary: infernal, infernal-doc, infernal-dbg
-Version: 1.1~rc2-1
+Version: 1.1~rc4-1
 Priority: optional
 Section: universe/science
 Maintainer: Debian Med Packaging Team <debian-med-packaging@lists.alioth.debian.org>
-Build-Depends: dpkg-dev (>= 1.16.1~), debhelper (>= 7.0.50~), autotools-dev, quilt
-Architecture: any all
+Build-Depends: dpkg-dev (>= 1.16.1~), debhelper (>= 9), autotools-dev
+Architecture: i386 amd64 kfreebsd-i386 kfreebsd-amd64 hurd-i386 all
 Standards-Version: 3.9.4
-Format: 1.0
+Format: 3.0 (quilt)
 Directory: pool/universe/i/infernal
 Files:
- e5f2d75c020134962baf2beaefbd5d74 2171 infernal_1.1~rc2-1.dsc
- 494248985dff1e0d39e90fd418ad60ce 19127761 infernal_1.1~rc2.orig.tar.gz
- 9595d86f4b5b8caac7ad407b23752596 7041 infernal_1.1~rc2-1.diff.gz
+ 158aece9f291649f174d71715efb804c 1579 infernal_1.1~rc4-1.dsc
+ c9d17cda40c9e70f40ad0cc1c6deaba4 19169671 infernal_1.1~rc4.orig.tar.gz
+ af9466322ae3cb8534807280e2ce1037 7612 infernal_1.1~rc4-1.debian.tar.gz
 Uploaders: Steffen Moeller <moeller@debian.org>, Charles Plessy <plessy@debian.org>, Andreas Tille <tille@debian.org>
-Dm-Upload-Allowed: yes
 Homepage: http://infernal.janelia.org/
-Vcs-Browser: http://svn.debian.org/wsvn/debian-med/trunk/packages/infernal/trunk/
-Vcs-Svn: svn://svn.debian.org/debian-med/trunk/packages/infernal/trunk/
+Vcs-Browser: http://anonscm.debian.org/viewvc/debian-med/trunk/packages/infernal/trunk/
+Vcs-Svn: svn://anonscm.debian.org/debian-med/trunk/packages/infernal/trunk/
 Package-List: 
  infernal deb science optional
  infernal-dbg deb debug extra
  infernal-doc deb doc optional
 Checksums-Sha1:
- 7edceb02dd53bc5725dd9f2c83e3d821381c3690 2171 infernal_1.1~rc2-1.dsc
- 7235c1991be586c92252781b887290d4047213c1 19127761 infernal_1.1~rc2.orig.tar.gz
- 690f948a07123166dcfbb02e1abd6928f6b1567a 7041 infernal_1.1~rc2-1.diff.gz
+ 6e8f0dc9739eb8f3bafe32a7b4fb06c0a8013ad6 1579 infernal_1.1~rc4-1.dsc
+ a4d62c853e8ed1e5b773961b0c0b4d6ee1562e4b 19169671 infernal_1.1~rc4.orig.tar.gz
+ 709bb4069879968601a1ee3c77627bedf2aab58e 7612 infernal_1.1~rc4-1.debian.tar.gz
 Checksums-Sha256:
- f17651fe95d8c6b2f41009927e863c4b1b14aef5ef1fd88d656a144a030242b4 2171 infernal_1.1~rc2-1.dsc
- b4561572f059f391ba927d3066457ee5ee84e464a53fb0e3fc4f737de6894c84 19127761 infernal_1.1~rc2.orig.tar.gz
- afe3ba13f83d7815c69d64542665d0fdb396d31477630141dcb4fb788fea13dc 7041 infernal_1.1~rc2-1.diff.gz
+ be93f51cd874bdd159935dc3eecb253b2f76d75b5600b84b9b6181ac0c52fbf7 1579 infernal_1.1~rc4-1.dsc
+ 8891822c7935bdfb4fc9a28e6a563584a0564c17745a54984ef3242af704b3f8 19169671 infernal_1.1~rc4.orig.tar.gz
+ 2e8b0d4f907574f02fc4ef5245e411fefc09a87ebe53d3344adf34242b0ab4e6 7612 infernal_1.1~rc4-1.debian.tar.gz
 
 Package: insighttoolkit4
 Binary: libinsighttoolkit4.3, libinsighttoolkit4-dev, insighttoolkit4-examples
@@ -3405,6 +3507,34 @@ Checksums-Sha256:
  7a7b7c411c1da33439b79f3f71ebde3402f8aef77e083cc11fc5fc20b00f56df 1452 php-symfony2-yaml_2.2.1-1.dsc
  240b04b4e474b76f1c4b5b51bdddc741677655904b2d5557fa87eee95d649b60 40257 php-symfony2-yaml_2.2.1.orig.tar.gz
  e5e523425cfbc9672c892a27c39953712d9854bf2bf6c319cef91eb7ac2666c7 2036 php-symfony2-yaml_2.2.1-1.debian.tar.gz
+
+Package: plasma-nm
+Binary: plasma-nm
+Version: 0.0~git20130909-0ubuntu1
+Priority: extra
+Section: universe/kde
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Original-Maintainer: Jonathan Riddell <jriddell@ubuntu.com>
+Build-Depends: debhelper (>= 8.0.0), cmake, kdelibs5-dev, libmodemmanagerqt-dev, libnetworkmanagerqt-dev, pkg-config, network-manager-dev, libnm-util-dev, libnm-glib-dev
+Architecture: any
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/p/plasma-nm
+Files:
+ 8014311caaa0350aaf49e5fff430b8cc 1417 plasma-nm_0.0~git20130909-0ubuntu1.dsc
+ 8971fe0c5e6132aaa51cb5014f055ac0 30640592 plasma-nm_0.0~git20130909.orig.tar.gz
+ 0208b86d19f08a18beff71885cb327d1 1951 plasma-nm_0.0~git20130909-0ubuntu1.debian.tar.gz
+Homepage: https://projects.kde.org/projects/playground/network/plasma-nm
+Package-List: 
+ plasma-nm deb kde extra
+Checksums-Sha1:
+ a7acdd8681a3c4e33deeac67604978917a38a65c 1417 plasma-nm_0.0~git20130909-0ubuntu1.dsc
+ e3e78016b40fcafc943d1343c9f0c0d3861d0d91 30640592 plasma-nm_0.0~git20130909.orig.tar.gz
+ 8b678ee038c046bec537922c4bb09446d6e9b504 1951 plasma-nm_0.0~git20130909-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ c533c5fe8258bb661dc4886c7fb06a2e94984886aad4e7bc2fae96d8d55f0ca2 1417 plasma-nm_0.0~git20130909-0ubuntu1.dsc
+ 8660765786b261f4ad2f68bdd1d62aecca645a48dfe27f015205ea7838f9df27 30640592 plasma-nm_0.0~git20130909.orig.tar.gz
+ 17c2cb77a8472e3929895c4f8102595b309a65e2165a2c38c799a66ee7d537ed 1951 plasma-nm_0.0~git20130909-0ubuntu1.debian.tar.gz
 
 Package: postgis
 Binary: postgis, postgis-doc, libpostgis-java, liblwgeom-2.0.3, liblwgeom-dev, postgresql-9.1-postgis-2.0, postgresql-9.1-postgis-2.0-scripts
