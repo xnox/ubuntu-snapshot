@@ -31,6 +31,31 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, edubuntu-desktop, ubuntu-netbook
 
+Package: idle
+Priority: optional
+Section: python
+Installed-Size: 60
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python-defaults
+Version: 2.6.5-0ubuntu1.1
+Depends: python (= 2.6.5-0ubuntu1.1), python-tk (>= 2.4.3-3), idle-python2.6
+Filename: pool/main/p/python-defaults/idle_2.6.5-0ubuntu1.1_all.deb
+Size: 2762
+MD5sum: c752756612c86d56f9b51343b18af696
+SHA1: 1b16b0a73cdbc9aa12533469bb82bc2e5ea35866
+SHA256: bcc00f44fd0e816bc3e95fcc8e424529d0520d66733eccee8da5c67b5fd95fd6
+Description: An IDE for Python using Tkinter (default version)
+ IDLE is an Integrated Development Environment for Python.
+ IDLE is written using Tkinter and therefore quite platform-independent.
+ .
+ This package is a dependency package, which depends on Debian's default
+ Python version (currently v2.6) of IDLE.
+Enhances: python
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: language-pack-aa
 Priority: optional
 Section: translations
@@ -24916,6 +24941,251 @@ Description: Linux kernel specific tools for version 2.6.32
  version locked tools in the 2.6.32 kernel source.
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: python
+Priority: important
+Section: python
+Installed-Size: 628
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python-defaults
+Version: 2.6.5-0ubuntu1.1
+Replaces: python-base, python-xmlbase, python2.3 (<= 2.3.2-6)
+Provides: python-ctypes, python-email, python-plistlib, python-wsgiref, python-xmlbase
+Depends: python2.6 (>= 2.6.5), python-minimal (= 2.6.5-0ubuntu1.1)
+Suggests: python-doc (>= 2.6.5-0ubuntu1.1), python-tk (>= 2.6.5-0ubuntu1.1), python-profiler (>= 2.6.5-0ubuntu1.1)
+Conflicts: libboost-dbg (<< 1.34.1-15ubuntu3), libboost-python-dev (<< 1.34.1-15ubuntu3), libboost-python1.35-dev (<< 1.35.0-8ubuntu5), libboost1.35-dbg (<< 1.35.0-8ubuntu5), pitivi (<< 0.11.3-1ubuntu1), python-aubio (<< 0.3.2-2ubuntu3), python-base, python-bz2, python-central (<< 0.5.5), python-csv, python-freevo (<< 1.8.1-3ubuntu3), python-xmlbase, python2.1 (<= 2.1.2), python2.3 (<< 2.3.5-14), qmtest (<< 2.4-5ubuntu1), ufw (<< 0.27~r416)
+Filename: pool/main/p/python-defaults/python_2.6.5-0ubuntu1.1_all.deb
+Size: 148150
+MD5sum: 823fc29487ade3a9de3639ad26f3054d
+SHA1: 3f1574ee773193d8feef41e33d1dfb1eb5aaad23
+SHA256: 30bc94b89349b57203d6a9e58785ac60794af738927e7782bf4449dd5eb7b5fb
+Description: An interactive high-level object-oriented language (default version)
+ Python, the high-level, interactive object oriented language,
+ includes an extensive class library with lots of goodies for
+ network programming, system administration, sounds and graphics.
+ .
+ This package is a dependency package, which depends on Debian's default
+ Python version (currently v2.6).
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: python-all
+Priority: optional
+Section: python
+Installed-Size: 20
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python-defaults
+Version: 2.6.5-0ubuntu1.1
+Depends: python (= 2.6.5-0ubuntu1.1), python2.6
+Filename: pool/main/p/python-defaults/python-all_2.6.5-0ubuntu1.1_all.deb
+Size: 882
+MD5sum: 7d556d85f56c7b1d6702e1bfd05d4301
+SHA1: aac9fe12201f0d1d9cc808b43cada0b11a454f93
+SHA256: 745ad10f93ca10787257f8c314cda7eb00012c5cb3c9da85d6569fea6cf9f99e
+Description: Package depending on all supported Python runtime versions
+ The package currently depends on python2.6, in the future,
+ dependencies on jython (Python for a JVM) and ironpython (Python for Mono)
+ may be added.
+ .
+ This package is used as a build dependency for other packages to
+ avoid hardcoded dependencies on specific Python runtimes.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-all-dbg
+Priority: extra
+Section: python
+Installed-Size: 20
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python-defaults
+Version: 2.6.5-0ubuntu1.1
+Depends: python (= 2.6.5-0ubuntu1.1), python-all (= 2.6.5-0ubuntu1.1), python-dbg (= 2.6.5-0ubuntu1.1), python2.6-dbg
+Filename: pool/main/p/python-defaults/python-all-dbg_2.6.5-0ubuntu1.1_all.deb
+Size: 906
+MD5sum: c5d4f90c218d0fd638d1dc3623a37e16
+SHA1: 36ceaf274e6257939019de866e29d79abd1ffa28
+SHA256: 8c676c5046c187acea0090ce82f548bdb3cfa53ef1d66d41a5d53ea5f34c02f7
+Description: Package depending on all supported Python debugging packages
+ The package currently depends on python2.6-dbg, in the
+ future, dependencies on jython (Python for a JVM) and ironpython (Python
+ for Mono) may be added.
+ .
+ This package is used as a build dependency for other packages to
+ avoid hardcoded dependencies on specific Python development packages.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-all-dev
+Priority: optional
+Section: python
+Installed-Size: 20
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python-defaults
+Version: 2.6.5-0ubuntu1.1
+Depends: python (= 2.6.5-0ubuntu1.1), python-all (= 2.6.5-0ubuntu1.1), python-dev (= 2.6.5-0ubuntu1.1), python2.6-dev
+Filename: pool/main/p/python-defaults/python-all-dev_2.6.5-0ubuntu1.1_all.deb
+Size: 898
+MD5sum: a1185a6ea2ae5ec68f84d36d43723967
+SHA1: 67c94cb8c6ebeea80fcfc80057558b1b0179dbba
+SHA256: 10978ad4054d9e9b1821e4beec02495c923f40eb4a425e63f7b908b1977dbcb2
+Description: Package depending on all supported Python development packages
+ The package currently depends on python2.6-dev, in the
+ future, dependencies on jython (Python for a JVM) and ironpython (Python
+ for Mono) may be added.
+ .
+ This package is used as a build dependency for other packages to
+ avoid hardcoded dependencies on specific Python development packages.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-dbg
+Priority: extra
+Section: python
+Installed-Size: 36
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python-defaults
+Version: 2.6.5-0ubuntu1.1
+Provides: python-gdbm-dbg, python-tk-dbg
+Depends: python (= 2.6.5-0ubuntu1.1), python2.6-dbg (>= 2.6.5)
+Filename: pool/main/p/python-defaults/python-dbg_2.6.5-0ubuntu1.1_all.deb
+Size: 1046
+MD5sum: ec4225b68f97335b7bcb712dcc761c7e
+SHA1: 1e2dcf364c855db17d534c030d6350b04e44f7bf
+SHA256: 39154fcbc5c88d3f74d8555157b673f65494a04c4ace6b8f23e7cb3c02066112
+Description: Debug Build of the Python Interpreter (version 2.6)
+ Python interpreter configured with --pydebug. Dynamically loaded modules are
+ searched in /usr/lib/python2.6/lib-dynload/debug first.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-dev
+Priority: optional
+Section: python
+Installed-Size: 24
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python-defaults
+Version: 2.6.5-0ubuntu1.1
+Depends: python (= 2.6.5-0ubuntu1.1), python2.6-dev (>= 2.6.5)
+Filename: pool/main/p/python-defaults/python-dev_2.6.5-0ubuntu1.1_all.deb
+Size: 972
+MD5sum: 1fc29604f3a61ffe696f7205c80122ae
+SHA1: 2bca9c4d83c4e0f6d7a912e4b71af37a342c4307
+SHA256: adefb401a0fa3e9862aa8a5c75d88051e129fbb7fc95d071fb2d227771c355b5
+Description: Header files and a static library for Python (default)
+ Header files, a static library and development tools for building
+ Python modules, extending the Python interpreter or embedding Python
+ in applications.
+ .
+ Includes the Python distutils, which were in a separate package up to
+ version 1.5.2.
+ .
+ This package is a dependency package, which depends on Debian's default
+ Python version (currently v2.6).
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-doc
+Priority: optional
+Section: doc
+Installed-Size: 56
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python-defaults
+Version: 2.6.5-0ubuntu1.1
+Replaces: python (<< 2.3.5), python-doc-info
+Depends: python2.6-doc (>= 2.6.5)
+Suggests: python (>= 2.6.5-0ubuntu1.1)
+Conflicts: python (<< 2.3.5), python-doc-info
+Filename: pool/main/p/python-defaults/python-doc_2.6.5-0ubuntu1.1_all.deb
+Size: 11200
+MD5sum: 90b5b47c4f961651eca437530b37e509
+SHA1: 9ac50e188f294f0df10316fb89d84cc23043b687
+SHA256: f1a2148e79f945543257bc2d9582648f72ce95951f9301da3d3edb687ceda6e1
+Description: Documentation for the high-level object-oriented language Python
+ This is the official set of documentation for the interactive high-level
+ object-oriented language Python (v2.6). All documents are provided
+ in HTML format, some in info format. The package consists of nine documents:
+ .
+   * Tutorial
+   * Python Library Reference
+   * Macintosh Module Reference
+   * Python Language Reference
+   * Extending and Embedding Python
+   * Python/C API Reference
+   * Installing Python Modules
+   * Documenting Python
+   * Distributing Python Modules
+ .
+ This package is a dependency package, which depends on Debian's default
+ Python version (currently v2.6).
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-examples
+Priority: optional
+Section: python
+Installed-Size: 20
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python-defaults
+Version: 2.6.5-0ubuntu1.1
+Depends: python (= 2.6.5-0ubuntu1.1), python2.6-examples (>= 2.6.5)
+Filename: pool/main/p/python-defaults/python-examples_2.6.5-0ubuntu1.1_all.deb
+Size: 878
+MD5sum: e8363e18552d836f85a38e40943c114d
+SHA1: ebec9565d6736cd7ed666e4de62c12d02e0a39c1
+SHA256: 127f45168be0b795517cca31f3f0d9a3ab93e3e3addbe0dc9944ad401548a601
+Description: Examples for the Python language (default version)
+ Examples, Demos and Tools for Python. These are files included in
+ the upstream Python distribution.
+ .
+ This package is a dependency package, which depends on Debian's default
+ Python version (currently v2.6).
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-minimal
+Essential: yes
+Priority: required
+Section: python
+Installed-Size: 120
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python-defaults
+Version: 2.6.5-0ubuntu1.1
+Replaces: python (<= 2.4-1)
+Depends: python2.6-minimal (>= 2.6.5), dpkg (>= 1.13.20)
+Recommends: python
+Conflicts: python (<= 2.4-1), python-central (<< 0.5.5)
+Filename: pool/main/p/python-defaults/python-minimal_2.6.5-0ubuntu1.1_all.deb
+Size: 21180
+MD5sum: 0cc1d32288e931bd6b989f687913574e
+SHA1: 17ec990240988f73a12ac72177346c856cb6433d
+SHA256: a74a539995b093f591ec064fae90ccc9f82d3b0f7075bc70c67ad0bec6078c8e
+Description: A minimal subset of the Python language (default version)
+ This package contains the interpreter and some essential modules.  It's used
+ in the boot process for some basic tasks.
+ See /usr/share/doc/python2.6-minimal/README.Debian for a list of the modules
+ contained in this package.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
 
 Package: vgabios
 Priority: extra
