@@ -144,27 +144,27 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
-Package: gir1.2-gst-plugins-base-1.0
+Package: gir1.2-gtk-3.0
 Priority: optional
-Section: introspection
-Installed-Size: 312
+Section: libs
+Installed-Size: 907
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: armhf
-Source: gst-plugins-base1.0
-Version: 1.1.4-1
-Depends: gir1.2-glib-2.0, gir1.2-gstreamer-1.0
-Filename: pool/main/g/gst-plugins-base1.0/gir1.2-gst-plugins-base-1.0_1.1.4-1_armhf.deb
-Size: 61160
-MD5sum: 06ec34cd6da6b2eea8cbf39f5de6d4ea
-SHA1: db623c160f1a1fd0a44bb850d5a5e479f523c66a
-SHA256: e9bf0aa2f51395e3cbe288d36a23822ada27ab9b1499ffdcd2af19514459fdad
-Description: Description: GObject introspection data for the GStreamer Plugins Base library
-Homepage: http://gstreamer.freedesktop.org
-Description-md5: 1c3b9ff935990198956b8c00dd1b7da8
+Source: gtk+3.0
+Version: 3.8.4-0ubuntu1
+Depends: libgtk-3-common, gir1.2-atk-1.0, gir1.2-freedesktop, gir1.2-gdkpixbuf-2.0, gir1.2-glib-2.0, gir1.2-pango-1.0, libgtk-3-0 (>= 3.8.2)
+Filename: pool/main/g/gtk+3.0/gir1.2-gtk-3.0_3.8.4-0ubuntu1_armhf.deb
+Size: 169326
+MD5sum: 30dcaeaa7f02c7cc13f468fa30db4172
+SHA1: a8d3ac131ee5a348aa9989ef5b9b570ee158716e
+SHA256: 3b6ba4413fb05584534efa2a214fe69bd6dfd97cd7b00c333a79694fd033c21a
+Description: GTK+ graphical user interface library -- gir bindings
+Homepage: http://www.gtk.org/
+Description-md5: f16f9e8db01aaaf8ce43a52cf10f4f37
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: gir1.2-notify-0.7
 Priority: optional
@@ -292,156 +292,28 @@ Description-md5: fe9b1490f5110376f973da81ebc05838
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: gstreamer1.0-alsa
-Priority: optional
-Section: libs
-Installed-Size: 161
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
-Architecture: armhf
-Source: gst-plugins-base1.0
-Version: 1.1.4-1
-Provides: gstreamer1.0-audiosink, gstreamer1.0-audiosource
-Depends: libasound2 (>= 1.0.16), libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3), libgstreamer1.0-0 (>= 1.0.0), libgstreamer-plugins-base1.0-0 (>= 1.1.4)
-Recommends: alsa-base (>= 0.9.0)
-Suggests: alsa-utils (>= 0.9.0)
-Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-alsa_1.1.4-1_armhf.deb
-Size: 30110
-MD5sum: e5aa296e99c6b25e754735dabdcb763d
-SHA1: 75c8abe6755dcae46c7d29727cb9a0e680203568
-SHA256: aaaf69d51a25020a6128fc7cf54c84d129d21723f669f12392ccd5b7720d7b1e
-Description: GStreamer plugin for ALSA
-Multi-Arch: same
-Homepage: http://gstreamer.freedesktop.org
-Gstreamer-Elements: alsasink, alsasrc
-Gstreamer-Version: 1.1
-Description-md5: 339f038172c486f3cef220df0c0e5ac4
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
-
-Package: gstreamer1.0-plugins-base
-Priority: optional
-Section: libs
-Installed-Size: 1337
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
-Architecture: armhf
-Source: gst-plugins-base1.0
-Version: 1.1.4-1
-Provides: gstreamer1.0-audiosource, gstreamer1.0-videosource
-Depends: libc6 (>= 2.7), libcdparanoia0 (>= 3.10.2+debian), libglib2.0-0 (>= 2.37.3), libgstreamer1.0-0 (>= 1.1.4), libogg0 (>= 1.0rc3), liborc-0.4-0 (>= 1:0.4.17), libtheora0 (>= 1.0), libvisual-0.4-0 (>= 0.4.0-4), libvorbis0a (>= 1.1.2), libvorbisenc2 (>= 1.1.2), libgstreamer-plugins-base1.0-0 (>= 1.1.4)
-Suggests: gvfs
-Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-plugins-base_1.1.4-1_armhf.deb
-Size: 488810
-MD5sum: fad6544c2aabb99a3d7b88c66522c762
-SHA1: 41e7539cfd4fa7ec7e3e5cfbc189cf574b0506ba
-SHA256: b73eb7c4ef893740d7d402128a75d478ad8487076a6922af0536511823e744c9
-Description: GStreamer plugins from the "base" set
-Multi-Arch: same
-Homepage: http://gstreamer.freedesktop.org
-Gstreamer-Decoders: application/kate; application/ogg; application/x-ass; application/x-ogg-avi; application/x-ogm-audio; application/x-ogm-text; application/x-ogm-video; application/x-ssa; application/x-subtitle; application/x-subtitle-dks; application/x-subtitle-mpl2; application/x-subtitle-qttext; application/x-subtitle-sami; application/x-subtitle-tmplayer; audio/ogg; audio/x-vorbis; video/ogg; video/x-theora
-Gstreamer-Elements: adder, appsink, appsrc, audioconvert, audiorate, audioresample, audiotestsrc, cdparanoiasrc, decodebin, encodebin, giosink, giosrc, giostreamsink, giostreamsrc, multifdsink, multisocketsink, oggaviparse, oggdemux, oggmux, oggparse, ogmaudioparse, ogmtextparse, ogmvideoparse, playbin, playsink, ssaparse, streamsynchronizer, subparse, subtitleoverlay, tcpclientsink, tcpclientsrc, tcpserversink, tcpserversrc, theoradec, theoraenc, theoraparse, uridecodebin, videoconvert, videorate, videoscale, videotestsrc, volume, vorbisdec, vorbisenc, vorbisparse, vorbistag
-Gstreamer-Encoders: application/ogg; audio/ogg; audio/x-vorbis; video/ogg; video/x-theora
-Gstreamer-Uri-Sinks: appsink, file
-Gstreamer-Uri-Sources: appsrc, cdda, file
-Gstreamer-Version: 1.1
-Description-md5: 73eb82d2de7fe71e4455e1742423e3e3
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: gstreamer1.0-plugins-base-apps
-Priority: optional
-Section: utils
-Installed-Size: 116
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
-Architecture: armhf
-Source: gst-plugins-base1.0
-Version: 1.1.4-1
-Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.32), libgstreamer1.0-0 (>= 1.0.0), gstreamer1.0-tools
-Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-plugins-base-apps_1.1.4-1_armhf.deb
-Size: 20826
-MD5sum: e49187bbe12f0331517c2c11aec95363
-SHA1: d3e0b0856c2d94dbc6031ecb2ef88fd2961564fa
-SHA256: 03df704a4e05eef4f6789cbb8bc77d97e946b3f2a9472bd8efe33a68a35d01ba
-Description: GStreamer helper programs from the "base" set
-Homepage: http://gstreamer.freedesktop.org
-Description-md5: 72cc51baa52c95f36129fb0f74a62970
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: gstreamer1.0-plugins-base-dbg
+Package: gtk-3-examples
 Priority: extra
-Section: debug
-Installed-Size: 4151
+Section: x11
+Installed-Size: 1871
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: armhf
-Source: gst-plugins-base1.0
-Version: 1.1.4-1
-Depends: gstreamer1.0-alsa (= 1.1.4-1), gstreamer1.0-plugins-base (= 1.1.4-1), gstreamer1.0-x (= 1.1.4-1), libgstreamer-plugins-base1.0-0 (= 1.1.4-1)
-Suggests: gstreamer1.0-gnomevfs (= 1.1.4-1)
-Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-plugins-base-dbg_1.1.4-1_armhf.deb
-Size: 3273160
-MD5sum: e0e9f949715e11557a2b5dc6e4652911
-SHA1: c9a4129db6eb700b3ff9016093eda21117d45557
-SHA256: cb3c4c95c133d7fe5d516ff87d9a747f033438fc544864b35b3ada7e22ae72db
-Description: GStreamer plugins from the "base" set
-Multi-Arch: same
-Homepage: http://gstreamer.freedesktop.org
-Description-md5: b7d3c79dd3992a2b1b542fa636eec13a
+Source: gtk+3.0
+Version: 3.8.4-0ubuntu1
+Replaces: libgtk-3-common (<< 3.5.4)
+Depends: libc6 (>= 2.4), libcairo2 (>= 1.10.0), libgdk-pixbuf2.0-0 (>= 2.25.2), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (= 3.8.4-0ubuntu1), libpango-1.0-0 (>= 1.32.4), libpangocairo-1.0-0 (>= 1.32.4), dconf-gsettings-backend | gsettings-backend
+Breaks: libgtk-3-common (<< 3.5.4)
+Filename: pool/main/g/gtk+3.0/gtk-3-examples_3.8.4-0ubuntu1_armhf.deb
+Size: 267716
+MD5sum: 2b2bc9f26eda11035391ee7bad2df988
+SHA1: 5cc29916c8718fa8d69925ac7b598ebc9443f0d6
+SHA256: 42593770ed08effab2678ea5d00512723affeaaadc28b88d2d6d6fdaa9a594c2
+Description: example files for GTK+ 3
+Homepage: http://www.gtk.org/
+Description-md5: 20d01ceb8b030c4e6e1bcf1ff939c8a6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: gstreamer1.0-plugins-base-doc
-Priority: optional
-Section: doc
-Installed-Size: 5376
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
-Architecture: all
-Source: gst-plugins-base1.0
-Version: 1.1.4-1
-Depends: libglib2.0-doc, gstreamer1.0-doc
-Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-plugins-base-doc_1.1.4-1_all.deb
-Size: 321546
-MD5sum: 6b34005de79c81f3caf1d92adde68aeb
-SHA1: 5482d9914ea8674b1e94fc74ab1d2634fc11ebb3
-SHA256: 2e5f9e9f5de91a56b30ed067f6a07ee8d6fb080b58a4ce11455654268a7c1235
-Description: GStreamer documentation for plugins from the "base" set
-Homepage: http://gstreamer.freedesktop.org
-Description-md5: aaf86bd34d894dca484623ae59419aad
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: gstreamer1.0-x
-Priority: optional
-Section: libs
-Installed-Size: 245
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
-Architecture: armhf
-Source: gst-plugins-base1.0
-Version: 1.1.4-1
-Provides: gstreamer1.0-videosink
-Depends: libc6 (>= 2.4), libcairo2 (>= 1.2.4), libglib2.0-0 (>= 2.37.3), libgstreamer1.0-0 (>= 1.0.0), libpango-1.0-0 (>= 1.22.0), libpangocairo-1.0-0 (>= 1.16.0), libx11-6, libxext6, libxv1, libgstreamer-plugins-base1.0-0 (>= 1.1.4)
-Filename: pool/main/g/gst-plugins-base1.0/gstreamer1.0-x_1.1.4-1_armhf.deb
-Size: 62776
-MD5sum: 0763a9d2cfd3205a3a78cbe29130a2ea
-SHA1: ed90dba41bcc200d059f4c522b7fb6a9c0556604
-SHA256: 5c04b057d2e4433657e31bc04c7b7e416e6ffb21a5aa66493fd6690a1654593f
-Description: GStreamer plugins for X11 and Pango
-Multi-Arch: same
-Homepage: http://gstreamer.freedesktop.org
-Gstreamer-Elements: clockoverlay, textoverlay, textrender, timeoverlay, ximagesink, xvimagesink
-Gstreamer-Version: 1.1
-Description-md5: f30e1dbce14d6ece228c6b4e6dfdfdbd
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
@@ -486,6 +358,75 @@ Description-md5: aa070f52bfbf0d9e220aa40da4b4ced1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libgail-3-0
+Priority: optional
+Section: libs
+Installed-Size: 153
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: gtk+3.0
+Version: 3.8.4-0ubuntu1
+Depends: libatk1.0-0 (>= 1.12.4), libc6 (>= 2.4), libglib2.0-0 (>= 2.35.3), libgtk-3-0 (= 3.8.4-0ubuntu1), libpango-1.0-0 (>= 1.32.4), at-spi2-core
+Pre-Depends: multiarch-support
+Filename: pool/main/g/gtk+3.0/libgail-3-0_3.8.4-0ubuntu1_armhf.deb
+Size: 18900
+MD5sum: d67f152dc462b48a07c638bd617fbea5
+SHA1: 33dbfa72d03e217dd26dbed828207a6c26b7ea4f
+SHA256: 9c60fc455a9e253279645cebe1289a69731ac8d8b077f4bf65575b90880736a0
+Description: GNOME Accessibility Implementation Library -- shared libraries
+Multi-Arch: same
+Homepage: http://www.gtk.org/
+Description-md5: ab3b6da8ff97ae53ae0793ae62e8ce35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-active-live, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgail-3-0-dbg
+Priority: extra
+Section: debug
+Installed-Size: 170
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: gtk+3.0
+Version: 3.8.4-0ubuntu1
+Depends: libgail-3-0 (= 3.8.4-0ubuntu1)
+Recommends: libgtk-3-0-dbg
+Filename: pool/main/g/gtk+3.0/libgail-3-0-dbg_3.8.4-0ubuntu1_armhf.deb
+Size: 22086
+MD5sum: 68dd77b18fc53ca6b6659e8325c93752
+SHA1: 1dbc7d732e009c9d81c58c9d0667c4d8fa913544
+SHA256: 21dbc4424a40f434cdc5b84d3e7747b764a67803edb5795a53690c18721af437
+Description: Gail libraries and debugging symbols
+Multi-Arch: same
+Homepage: http://www.gtk.org/
+Description-md5: 7572e37e6047b9331d4e75a86129227b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgail-3-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 150
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: gtk+3.0
+Version: 3.8.4-0ubuntu1
+Depends: libgail-3-0 (= 3.8.4-0ubuntu1), libgtk-3-dev (= 3.8.4-0ubuntu1), pkg-config (>= 0.26-1), libatk1.0-dev (>= 2.2.0)
+Suggests: libgail-3-doc
+Filename: pool/main/g/gtk+3.0/libgail-3-dev_3.8.4-0ubuntu1_armhf.deb
+Size: 12466
+MD5sum: 73a661bed2bd882d523c4cbd7ad3501d
+SHA1: 0ecc4ba0f12b758cc3821186f4815b6848a75eea
+SHA256: 05c356832c0746f7706cd602aa1baa5ec31bfc699ccbabf0bdbb3e0804449cbe
+Description: GNOME Accessibility Implementation Library -- development files
+Homepage: http://www.gtk.org/
+Description-md5: 2af7ddcc4fb4dffeaea80c02eeee7d6f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: libgail-3-doc
 Priority: optional
@@ -596,52 +537,78 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
-Package: libgstreamer-plugins-base1.0-0
+Package: libgtk-3-0
 Priority: optional
 Section: libs
-Installed-Size: 1220
+Installed-Size: 5234
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: armhf
-Source: gst-plugins-base1.0
-Version: 1.1.4-1
-Depends: libc6 (>= 2.7), libglib2.0-0 (>= 2.37.3), libgstreamer1.0-0 (>= 1.1.4), liborc-0.4-0 (>= 1:0.4.17), zlib1g (>= 1:1.1.4), iso-codes
+Source: gtk+3.0
+Version: 3.8.4-0ubuntu1
+Provides: gtk3-binver-3.0.0
+Depends: libgtk-3-common (>= 3.8.4), libatk-bridge2.0-0 (>= 2.5.3), libatk1.0-0 (>= 2.2.0), libc6 (>= 2.9), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.10.0), libcolord1 (>= 0.1.10), libcups2 (>= 1.6.2), libfontconfig1 (>= 2.9.0), libgdk-pixbuf2.0-0 (>= 2.27.1), libglib2.0-0 (>= 2.37.3), libpango-1.0-0 (>= 1.32.4), libpangocairo-1.0-0 (>= 1.32.4), libpangoft2-1.0-0 (>= 1.32.4), libwayland-client0 (>= 1.0.2), libwayland-cursor0 (>= 1.0.2), libx11-6 (>= 2:1.4.99.1), libxcomposite1 (>= 1:0.3-1), libxcursor1 (>> 1.1.2), libxdamage1 (>= 1:1.1), libxext6, libxfixes3, libxi6 (>= 2:1.2.99.4), libxinerama1, libxkbcommon0 (>= 0.2.0-0ubuntu3~), libxrandr2 (>= 2:1.2.99.3), shared-mime-info
 Pre-Depends: multiarch-support
-Suggests: libvisual-0.4-plugins, gstreamer-codec-install | gnome-codec-install
-Conflicts: totem-gstreamer (<= 2.17.92-0ubuntu1)
-Filename: pool/main/g/gst-plugins-base1.0/libgstreamer-plugins-base1.0-0_1.1.4-1_armhf.deb
-Size: 415166
-MD5sum: cbdfa52dad8c32c66f73c09766fc5c55
-SHA1: d1c7ce2971b3fd662ee8f590a2dd8bba3908cb3f
-SHA256: 7091fd620f31d5f0b7b828fc3ac2788d5060cc96d25e7a54768b23357be46c36
-Description: GStreamer libraries from the "base" set
+Recommends: hicolor-icon-theme, libgtk-3-bin
+Suggests: librsvg2-common, gvfs
+Breaks: gnome-themes-standard (<< 3.6), gtk3-engines-unico (<< 1.0.2-0ubuntu2), libvte-2.90-9 (<< 1:0.32), libwebkitgtk-3.0-0 (<< 1.8.0), murrine-themes (<= 0.98.2)
+Filename: pool/main/g/gtk+3.0/libgtk-3-0_3.8.4-0ubuntu1_armhf.deb
+Size: 1459382
+MD5sum: 46685d6c09acc89edc59eb1e1c108f68
+SHA1: 3d05d5a7a946d48b2637c5da085a3490182a585c
+SHA256: 6f0031b3a6af6300f34386a0ef8576039b8864cf1157ac438b7473bde29f192d
+Description: GTK+ graphical user interface library
 Multi-Arch: same
-Homepage: http://gstreamer.freedesktop.org
-Description-md5: 1f83d48f1815b1413bf5322dc753ba59
+Homepage: http://www.gtk.org/
+Description-md5: 2d73631a8c144c8ea021cee46ee049b5
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-active-live, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-live, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
-Package: libgstreamer-plugins-base1.0-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 2238
+Package: libgtk-3-0-dbg
+Priority: extra
+Section: debug
+Installed-Size: 9852
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Maintainers of GStreamer packages <pkg-gstreamer-maintainers@lists.alioth.debian.org>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: armhf
-Source: gst-plugins-base1.0
-Version: 1.1.4-1
-Depends: libgstreamer-plugins-base1.0-0 (= 1.1.4-1), libc6-dev | libc-dev, pkg-config, libgstreamer1.0-dev (>= 1.1.4), libglib2.0-dev, libxml2-dev, gir1.2-gst-plugins-base-1.0 (= 1.1.4-1)
-Filename: pool/main/g/gst-plugins-base1.0/libgstreamer-plugins-base1.0-dev_1.1.4-1_armhf.deb
-Size: 193676
-MD5sum: 8574375addcbe054ec4a171fcb9f7b81
-SHA1: a4653ccc24832f44aee36534bc5e4af6484c06e3
-SHA256: 647d676e8783019e7b72ae99da4dd96c784532d1905198108cd72cadb8efcc2f
-Description: GStreamer development files for libraries from the "base" set
-Homepage: http://gstreamer.freedesktop.org
-Description-md5: 0acc042058e8c9e8d17fbca59836d2a0
+Source: gtk+3.0
+Version: 3.8.4-0ubuntu1
+Depends: libgtk-3-0 (= 3.8.4-0ubuntu1), libgtk-3-common
+Filename: pool/main/g/gtk+3.0/libgtk-3-0-dbg_3.8.4-0ubuntu1_armhf.deb
+Size: 2368716
+MD5sum: 80972af649666514d850de5925e7b565
+SHA1: e654d63d9029944aed6275b0180683fd8617ed0f
+SHA256: 8167b16b9b412948310b1fb94fa3b102ebf11e08472874a08a277b8255ebf7e1
+Description: GTK+ libraries and debugging symbols
+Multi-Arch: same
+Homepage: http://www.gtk.org/
+Description-md5: dc8b9ec0e4c1ec0225178df62ff88672
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libgtk-3-bin
+Priority: optional
+Section: misc
+Installed-Size: 153
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: gtk+3.0
+Version: 3.8.4-0ubuntu1
+Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.35.3), libgtk-3-0 (>= 3.8.4-0ubuntu1), libgtk-3-common (>= 3.8.4)
+Filename: pool/main/g/gtk+3.0/libgtk-3-bin_3.8.4-0ubuntu1_armhf.deb
+Size: 18028
+MD5sum: beda5827c292a7e7c6a21352ffd7be4c
+SHA1: 3b5532ae6d8f625a89f525f437b4cb273c577e08
+SHA256: bfca3ebae1f372d9f29a5cf9dbdfef5a5dbf1366722229b63a3cf7221a672fc6
+Description: programs for the GTK+ graphical user interface library
+Multi-Arch: foreign
+Homepage: http://www.gtk.org/
+Description-md5: 35573b29e3a6877ccd55de7c6873d715
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-live, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libgtk-3-common
 Priority: optional
@@ -668,6 +635,28 @@ Description-md5: 3ebc2dc44381a6b09ce3f8e0696e2008
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-live, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgtk-3-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 9058
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: gtk+3.0
+Version: 3.8.4-0ubuntu1
+Depends: libgtk-3-0 (= 3.8.4-0ubuntu1), gir1.2-gtk-3.0 (= 3.8.4-0ubuntu1), libgtk-3-common, libglib2.0-dev (>= 2.35.3), libgdk-pixbuf2.0-dev (>= 2.27.1), libpango1.0-dev (>= 1.32.4), libatk1.0-dev (>= 2.7.5), libatk-bridge2.0-dev, libcairo2-dev (>= 1.10.0), libwayland-dev (>= 1.0.0), libx11-dev, libxkbcommon-dev, libxext-dev, libxinerama-dev, libxi-dev, libxrandr-dev, libxcursor-dev, libxfixes-dev, libxcomposite-dev, libxdamage-dev, pkg-config (>= 0.26-1)
+Suggests: libgtk-3-doc
+Filename: pool/main/g/gtk+3.0/libgtk-3-dev_3.8.4-0ubuntu1_armhf.deb
+Size: 759696
+MD5sum: 2680e222476e1812132374ddb4432648
+SHA1: 03c746d556eda35d3d42b579baece9af39c3f49b
+SHA256: edd2d2bcfa4557b2361cf49d4d4e2554867116955439f84e8f0f930922f63056
+Description: development files for the GTK+ library
+Homepage: http://www.gtk.org/
+Description-md5: 5e247317651e3625eb226ee49f0cfec7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: libgtk-3-doc
 Priority: optional
