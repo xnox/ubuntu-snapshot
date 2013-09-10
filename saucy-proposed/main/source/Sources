@@ -1,3 +1,44 @@
+Package: apparmor
+Binary: apparmor, apparmor-utils, apparmor-profiles, apparmor-docs, libapparmor-dev, libapparmor1, libapparmor-perl, libapache2-mod-apparmor, libpam-apparmor, apparmor-notify, python-libapparmor, python3-libapparmor, dh-apparmor, apparmor-easyprof
+Version: 2.8.0-0ubuntu28
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Build-Depends: debhelper (>= 8.1.2), flex, bison, bzip2, apache2-dev, dh-apache2, libpam-dev, autotools-dev, libtool, automake, autoconf, chrpath, texlive-latex-base, texlive-latex-recommended, swig, po-debconf, dejagnu, python-all-dev, python, python3-all-dev, python3, perl (>= 5.8.0), liblocale-gettext-perl, pkg-config
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/a/apparmor
+Files:
+ 5d983886886b24e998f827042f3dc9e0 2835 apparmor_2.8.0-0ubuntu28.dsc
+ eaf90c52992df3d205a753b2933595fe 1462560 apparmor_2.8.0.orig.tar.gz
+ 6748987e393112dded2e960fe730048c 159709 apparmor_2.8.0-0ubuntu28.debian.tar.gz
+Homepage: http://apparmor.net/
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-core-dev/apparmor/master
+Package-List: 
+ apparmor deb admin extra
+ apparmor-docs deb doc extra
+ apparmor-easyprof deb admin extra
+ apparmor-notify deb admin extra
+ apparmor-profiles deb admin extra
+ apparmor-utils deb admin extra
+ dh-apparmor deb devel extra
+ libapache2-mod-apparmor deb libs extra
+ libapparmor-dev deb libdevel extra
+ libapparmor-perl deb perl extra
+ libapparmor1 deb libs extra
+ libpam-apparmor deb libs extra
+ python-libapparmor deb python extra
+ python3-libapparmor deb python extra
+Checksums-Sha1:
+ 074fd8923e10ea0702e77ebe347bbc4bc12dcd24 2835 apparmor_2.8.0-0ubuntu28.dsc
+ 7a49a5fc2a46f6844bad74a83c9cfe93b8b32125 1462560 apparmor_2.8.0.orig.tar.gz
+ 79cd7323753744e367dbcc645a9cde5973e95171 159709 apparmor_2.8.0-0ubuntu28.debian.tar.gz
+Checksums-Sha256:
+ 6020d9740e399da443571158cf6d8edf466ee29a172f88fc30570915b49e52be 2835 apparmor_2.8.0-0ubuntu28.dsc
+ 03e2e91fac17694635d25d7482e46db69320cd844590740073cf5fdfdd5379c6 1462560 apparmor_2.8.0.orig.tar.gz
+ 406013754cdb092697bc7514f4ce6194ba6abc6a5504ea2fd758f00a8a909877 159709 apparmor_2.8.0-0ubuntu28.debian.tar.gz
+
 Package: aptdaemon
 Binary: aptdaemon, python3-aptdaemon, python-aptdaemon, python3-aptdaemon.test, aptdaemon-data, python-aptdaemon-gtk, python3-aptdaemon.pkcompat, python-aptdaemon.gtkwidgets, python3-aptdaemon.gtk3widgets, python-aptdaemon.gtk3widgets
 Version: 1.1.1-0ubuntu1
@@ -625,6 +666,7 @@ Binary: linux-source-3.11.0, linux-doc, linux-tools-common, linux-headers-3.11.0
  pcmcia-storage-modules-3.11.0-7-generic-di, fb-modules-3.11.0-7-generic-di, input-modules-3.11.0-7-generic-di, mouse-modules-3.11.0-7-generic-di, irda-modules-3.11.0-7-generic-di, parport-modules-3.11.0-7-generic-di, nic-pcmcia-modules-3.11.0-7-generic-di, pcmcia-modules-3.11.0-7-generic-di, nic-usb-modules-3.11.0-7-generic-di, sata-modules-3.11.0-7-generic-di, crypto-modules-3.11.0-7-generic-di, squashfs-modules-3.11.0-7-generic-di, speakup-modules-3.11.0-7-generic-di, virtio-modules-3.11.0-7-generic-di, fs-core-modules-3.11.0-7-generic-di, fs-secondary-modules-3.11.0-7-generic-di, storage-core-modules-3.11.0-7-generic-di, block-modules-3.11.0-7-generic-di, message-modules-3.11.0-7-generic-di, vlan-modules-3.11.0-7-generic-di,
  ipmi-modules-3.11.0-7-generic-di
 Version: 3.11.0-7.13
+Priority: optional
 Section: devel
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Build-Depends: debhelper (>= 5), cpio, module-init-tools, kernel-wedge (>= 2.24ubuntu1), makedumpfile [amd64 i386], libelf-dev, libnewt-dev, binutils-dev, rsync, libdw-dev, libpci-dev, dpkg (>= 1.16.0~ubuntu4), pkg-config, flex, bison, libunwind8-dev, openssl, libaudit-dev, bc, python-dev, gcc-4.7 [armhf], gawk
@@ -704,6 +746,7 @@ Testsuite: autopkgtest
 Package: linux-meta
 Binary: linux, linux-source, linux-image, linux-crashdump, linux-tools, linux-headers-generic, linux-image-generic, linux-generic, linux-headers-generic-lpae, linux-image-generic-lpae, linux-generic-lpae, linux-headers-generic-pae, linux-image-generic-pae, linux-generic-pae, linux-headers-highbank, linux-image-highbank, linux-highbank, linux-headers-omap, linux-image-omap, linux-omap, linux-headers-server, linux-image-server, linux-server, linux-signed-image-generic, linux-signed-generic, linux-headers-virtual, linux-image-virtual, linux-virtual, linux-image-extra-virtual
 Version: 3.11.0.7.8
+Priority: optional
 Section: devel
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Build-Depends: dpkg (>= 1.13.19), debhelper (>= 5), gawk
@@ -751,6 +794,29 @@ Checksums-Sha1:
 Checksums-Sha256:
  7127f3b3b7a95a41f3ef1e87300645375930040a9f5f4855eb466c689dca8c52 3224 linux-meta_3.11.0.7.8.dsc
  b3c47d06f657d25cddd42a3eca4a04ac20e62f128e325d2ae5d3fb6dbf0cea22 12040 linux-meta_3.11.0.7.8.tar.gz
+
+Package: linux-signed
+Binary: linux-signed-image-3.11.0-7-generic, kernel-signed-image-3.11.0-7-generic-di
+Version: 3.11.0-7.13
+Section: utils
+Maintainer: Canonical Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 9), lsb-release, python3, python3-apt, sbsigntool, linux-image-3.11.0-7-generic (>= 3.11.0-7.13)
+Architecture: linux-amd64
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/l/linux-signed
+Files:
+ 2efdcd08890d6939f8b436105109bf47 1713 linux-signed_3.11.0-7.13.dsc
+ 3ef5b1a96cdd389dab7c9ec4bba0e532 6177 linux-signed_3.11.0-7.13.tar.gz
+Package-List: 
+ kernel-signed-image-3.11.0-7-generic-di udeb debian-installer extra
+ linux-signed-image-3.11.0-7-generic deb utils optional
+Checksums-Sha1:
+ 42b1ebc469736b349feea3db58efbc0716bab4f9 1713 linux-signed_3.11.0-7.13.dsc
+ 47d36fc30aac7baaad8fa461739e24a01bdbdb50 6177 linux-signed_3.11.0-7.13.tar.gz
+Checksums-Sha256:
+ bfcc90512cdc3e04836293939dc759f86628bd4ba83f5e24fb410899ef201a9b 1713 linux-signed_3.11.0-7.13.dsc
+ eb1dbcad58fcb5171a49b33c062c1e94ef2e7a69ee36ea8dbe708fe67f81788c 6177 linux-signed_3.11.0-7.13.tar.gz
 
 Package: mir
 Binary: libmirprotobuf0, libmirprotobuf-dev, libmirserver1, libmirplatform, mircommon-dev, libmirserver-dev, libmirclient2, libmirclient-dev, mir-demos, mir-doc, mir-test-tools
