@@ -1,20 +1,163 @@
-Package: android-platform-headers
-Priority: extra
-Section: libdevel
-Installed-Size: 276
+Package: apparmor
+Priority: standard
+Section: admin
+Installed-Size: 1124
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: i386
+Version: 2.8.0-0ubuntu28
+Replaces: apparmor-parser, apparmor-utils (<< 2.8.0-0ubuntu28), libapache2-mod-apparmor (<< 2.5.1-0ubuntu3)
+Depends: libc6 (>= 2.8), debconf (>= 0.5) | debconf-2.0, python, libapparmor-perl, lsb-base, initramfs-tools, debconf
+Suggests: apparmor-profiles, apparmor-docs, apparmor-utils
+Breaks: apparmor-utils (<< 2.8.0-0ubuntu28), libapache2-mod-apparmor (<< 2.5.1-0ubuntu3)
+Filename: pool/main/a/apparmor/apparmor_2.8.0-0ubuntu28_i386.deb
+Size: 381456
+MD5sum: d95322e1540d576266fabf19f615b25d
+SHA1: ad32eeea7a1ff2a45ae951f48869a2f0670be3d4
+SHA256: 342fd9afa8cf4f9f95e1cac0634e89e7d8b4ed60df5d28fe7934fe063d164a5e
+Description: User-space parser utility for AppArmor
+Homepage: http://apparmor.net/
+Description-md5: 35c06b71e31a437828d84b93a41bd493
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active
+
+Package: apparmor-docs
+Priority: extra
+Section: doc
+Installed-Size: 289
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
 Architecture: all
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu24
-Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/android-platform-headers_0.1.0+git20130606+c5d897a-0ubuntu24_all.deb
-Size: 52546
-MD5sum: ed6d5ed0d8c8d622eb50bdd920934010
-SHA1: e635118f8e02ae0f93cce7e2e2a301eaeac0ee8a
-SHA256: 3f451e6fe7ef5a4f883dee571c06b6d1b9d4b2622109ecef1dd2fcc7d5ac7b9f
-Description: Android Platform Headers from AOSP releases
-Description-md5: 5d4e18662ffad46fc86efe8d568c6096
+Source: apparmor
+Version: 2.8.0-0ubuntu28
+Filename: pool/main/a/apparmor/apparmor-docs_2.8.0-0ubuntu28_all.deb
+Size: 239824
+MD5sum: d9f5c681d5d8d6bf2a9e2da2275d2e16
+SHA1: 8d783d3765362a4c1146b93063e68d3845eeaff7
+SHA256: dac0b9250fd8569c793b213d0978100424b6a26212274be4de0864c6d44e260c
+Description: Documentation for AppArmor
+Homepage: http://apparmor.net/
+Description-md5: ca238fbee0c75e966c57c3649cd3bc9a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apparmor-easyprof
+Priority: extra
+Section: admin
+Installed-Size: 161
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: all
+Source: apparmor
+Version: 2.8.0-0ubuntu28
+Replaces: apparmor-utils (<< 2.8.0-0ubuntu14)
+Depends: python3 (>= 3.2.3-3~)
+Breaks: apparmor-utils (<< 2.8.0-0ubuntu14)
+Filename: pool/main/a/apparmor/apparmor-easyprof_2.8.0-0ubuntu28_all.deb
+Size: 23270
+MD5sum: 45ba5e4b25a42d38857f129564d090d0
+SHA1: 9164e67fb929a57fa2dc5251915cb1ff068b1cb3
+SHA256: 8022421ea05cc8475542bf6721e9aee368a5d2f1c03a142b7e4843da517545c0
+Description: AppArmor easyprof profiling tool
+Multi-Arch: foreign
+Homepage: http://apparmor.net/
+Description-md5: e82ab0ed04f6b741d056bf09b6fa0a55
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apparmor-notify
+Priority: extra
+Section: admin
+Installed-Size: 108
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: all
+Source: apparmor
+Version: 2.8.0-0ubuntu28
+Depends: libapparmor-perl, perl
+Suggests: libnotify-bin
+Filename: pool/main/a/apparmor/apparmor-notify_2.8.0-0ubuntu28_all.deb
+Size: 12232
+MD5sum: 869c517bf1531ea2689a6b8c5417de80
+SHA1: ae8629e1acfe90b63a484ac30a298921afc5832e
+SHA256: f7e78528b7ad7e520b758b480fce2a12d124300b95d627ba06e5921efbc77f7f
+Description: AppArmor notification system
+Homepage: http://apparmor.net/
+Description-md5: e52281d3d6b2d671b6cf682c76155a65
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apparmor-profiles
+Priority: extra
+Section: admin
+Installed-Size: 273
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: all
+Source: apparmor
+Version: 2.8.0-0ubuntu28
+Recommends: apparmor
+Filename: pool/main/a/apparmor/apparmor-profiles_2.8.0-0ubuntu28_all.deb
+Size: 38402
+MD5sum: b146f703b57d5405e35fcdc957d7fca9
+SHA1: f141b5da86682262bff26dafe334b560c30749d8
+SHA256: 615354bc28c03986a4e56dcdc487bb09b5b05571a91c2b8a957c584c590cbd84
+Description: Profiles for AppArmor Security policies
+Homepage: http://apparmor.net/
+Description-md5: dd1ced2ad1af9effef302648735d913e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apparmor-utils
+Priority: optional
+Section: admin
+Installed-Size: 453
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: i386
+Source: apparmor
+Version: 2.8.0-0ubuntu28
+Depends: apparmor (>= 2.6.1-4ubuntu1), liblocale-gettext-perl, libterm-readkey-perl, librpc-xml-perl, libapparmor-perl, perl
+Suggests: apparmor-docs, libterm-readline-gnu-perl, vim-addon-manager
+Filename: pool/main/a/apparmor/apparmor-utils_2.8.0-0ubuntu28_i386.deb
+Size: 97346
+MD5sum: 986ef380f1f2d8b5506a4736d8584071
+SHA1: 48919e0010d260a93ecfe59e5779d62aaccba906
+SHA256: 858c07528910be6065f49ccd6bdf56937529831640ba8beb8f65c589e8e7fcc2
+Description: Utilities for controlling AppArmor
+Homepage: http://apparmor.net/
+Description-md5: 22a5090997862bae53e19125fba08de9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: dh-apparmor
+Priority: extra
+Section: devel
+Installed-Size: 84
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: all
+Source: apparmor
+Version: 2.8.0-0ubuntu28
+Replaces: debhelper (<< 9.20120115ubuntu3)
+Depends: perl, apparmor-easyprof
+Breaks: debhelper (<< 9.20120115ubuntu3)
+Filename: pool/main/a/apparmor/dh-apparmor_2.8.0-0ubuntu28_all.deb
+Size: 7710
+MD5sum: 2f6e3cc3c0d65abbc5ff5d9407e6e861
+SHA1: 02bf0f2f9473cf845cbe5952c6f842b3bca6cd67
+SHA256: 90c06cff86d6e83a43da35898cd77c03605c6c6e0113d16485a13fcc76d2114a
+Description: AppArmor debhelper routines
+Multi-Arch: foreign
+Homepage: http://apparmor.net/
+Description-md5: efd212d2f49b2d33d3233f07e30c77cc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -85,42 +228,24 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
-Package: libandroid-properties-dev
+Package: libapache2-mod-apparmor
 Priority: extra
-Section: libdevel
-Installed-Size: 61
+Section: web
+Installed-Size: 144
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
 Architecture: i386
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu24
-Depends: libandroid-properties1 (= 0.1.0+git20130606+c5d897a-0ubuntu24)
-Filename: pool/main/libh/libhybris/libandroid-properties-dev_0.1.0+git20130606+c5d897a-0ubuntu24_i386.deb
-Size: 5162
-MD5sum: 03abbec3d7f2432c4ed6328501015253
-SHA1: 1d4eff79bf0c78431c5a58730224cf3864c10ba1
-SHA256: 0f85215c4f0637f7ad9b0b8f28f4c3eae9e053da10787e74979997fcb23ffd67
-Description: Development headers files for libandroid-properties
-Description-md5: fd78846cc0eb621999aaf215babfb840
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libandroid-properties1
-Priority: extra
-Section: libs
-Installed-Size: 57
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu24
-Depends: libc6 (>= 2.4)
-Filename: pool/main/libh/libhybris/libandroid-properties1_0.1.0+git20130606+c5d897a-0ubuntu24_i386.deb
-Size: 10084
-MD5sum: abf0298239e27862b584a69655e5efec
-SHA1: 4d9f97523cf2827df89fec5775f7659469f82998
-SHA256: b26fdc6a0ea2fa536cb1bc418c54eca28206269214c3979fd9902c8f71593f79
-Description: Library to provide access to get, set and list Android properties
-Description-md5: 9af1ee376636863e49ba13ab6b202faa
+Source: apparmor
+Version: 2.8.0-0ubuntu28
+Depends: libapparmor1 (>= 2.6~devel), libc6 (>= 2.1.3), apache2-api-20120211
+Filename: pool/main/a/apparmor/libapache2-mod-apparmor_2.8.0-0ubuntu28_i386.deb
+Size: 24536
+MD5sum: 36ee2bb6aec1e12c1c5ebb1c70d41786
+SHA1: 564107493ed0f77c3fb6587e910919f4a4e297b7
+SHA256: 04ef2ce0de22443391f82bbbc31d6c6dfb9f0f277eba180e8d4c4c097a7e5c40
+Description: changehat AppArmor library as an Apache module
+Homepage: http://apparmor.net/
+Description-md5: a5901c8ca6f4b08d12fc507332ec3d1f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -144,6 +269,74 @@ Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libapparmor-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 134
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: i386
+Source: apparmor
+Version: 2.8.0-0ubuntu28
+Depends: libapparmor1 (= 2.8.0-0ubuntu28)
+Filename: pool/main/a/apparmor/libapparmor-dev_2.8.0-0ubuntu28_i386.deb
+Size: 26734
+MD5sum: 6830232186a0ff2fc7c26585fd4d0b19
+SHA1: 8e9d41b64d4ba1c57cba24fa23b3d648d74aaa92
+SHA256: edf095e2686c8dcd6158493601f74af11da7114230d281d7c4f0d906af33293f
+Description: AppArmor development libraries and header files
+Homepage: http://apparmor.net/
+Description-md5: 4854e8f39d4ec17f1ef336b898438f73
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libapparmor-perl
+Priority: optional
+Section: perl
+Installed-Size: 192
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: i386
+Source: apparmor
+Version: 2.8.0-0ubuntu28
+Depends: perl-base (>= 5.14.2-21build1), perlapi-5.14.2, libapparmor1 (>= 2.8.0-0ubuntu25), libc6 (>= 2.4)
+Filename: pool/main/a/apparmor/libapparmor-perl_2.8.0-0ubuntu28_i386.deb
+Size: 32952
+MD5sum: 9fbc8b4542f778f6661cb165fd7a31f3
+SHA1: bc2fb4414b06c060710486df522374799ddd95d9
+SHA256: 3e25708419edea0d0eee0819f7712747d8a2b514ff616e3a06c86785c49540fc
+Description: AppArmor library Perl bindings
+Homepage: http://apparmor.net/
+Description-md5: 42d32a45493e77e0e2b388d84ea70892
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active
+
+Package: libapparmor1
+Priority: optional
+Section: libs
+Installed-Size: 126
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: i386
+Source: apparmor
+Version: 2.8.0-0ubuntu28
+Depends: libc6 (>= 2.8)
+Filename: pool/main/a/apparmor/libapparmor1_2.8.0-0ubuntu28_i386.deb
+Size: 41096
+MD5sum: b9fd4bfd21c6519f9806eed1ebedcc1f
+SHA1: f4332c22e0662487ab1cfc18641801e810d09e20
+SHA256: 043baaeb7118c5b2e60b902831da9864f1a620a083f284313dd3a47f6ce6d857
+Description: changehat AppArmor library
+Homepage: http://apparmor.net/
+Description-md5: b066f3d6ec4f1e72570ebf49e31e9490
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: libdbi-perl
 Priority: optional
@@ -169,72 +362,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: lamp-server, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
-
-Package: libdebian-installer-extra4
-Priority: optional
-Section: libs
-Installed-Size: 51
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: i386
-Source: libdebian-installer
-Version: 0.87ubuntu3
-Depends: libc6 (>= 2.7), libdebian-installer4 (= 0.87ubuntu3)
-Filename: pool/main/libd/libdebian-installer/libdebian-installer-extra4_0.87ubuntu3_i386.deb
-Size: 5722
-MD5sum: 3ed09302fea663bf7f22935f3f18024a
-SHA1: ef7b865b81006bdc4966fa3c600cc67a11056eb5
-SHA256: e918a6dbc2ad8cfdc9951a034435fb861a99b0abec0102facfa61c69374e0985
-Description: Library of some extra debian-installer functions
-Description-md5: 32e7f9f03c25886318648f08caae21cf
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libdebian-installer4
-Priority: optional
-Section: libs
-Installed-Size: 88
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: i386
-Source: libdebian-installer
-Version: 0.87ubuntu3
-Depends: libc6 (>= 2.4)
-Filename: pool/main/libd/libdebian-installer/libdebian-installer4_0.87ubuntu3_i386.deb
-Size: 25536
-MD5sum: 052e27ca408983fc372442ad08df7869
-SHA1: b16cbe3882d8b76ec81eff14aa00d096cb5e1578
-SHA256: 482e8fa1a7b195bb45662014b60b3b5add281c83656e2863b9440ac5d20def3f
-Description: Library of common debian-installer functions
-Description-md5: 00094361ed8983bbb1d7b850c62f3e1d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
-
-Package: libdebian-installer4-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 1451
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: i386
-Source: libdebian-installer
-Version: 0.87ubuntu3
-Provides: libdebian-installer-dev
-Depends: libdebian-installer4 (= 0.87ubuntu3), libdebian-installer-extra4 (= 0.87ubuntu3)
-Conflicts: libdebian-installer-dev
-Filename: pool/main/libd/libdebian-installer/libdebian-installer4-dev_0.87ubuntu3_i386.deb
-Size: 186500
-MD5sum: d9d59f24eed8dbf913fae724f10f4510
-SHA1: b49955572c76932acd5c17f8420cad132264f788
-SHA256: 9a4b6b8cf463628d8850a982290244712bf0c34846823416ef95a25275890d41
-Description: Library of common debian-installer functions
-Description-md5: 814b97674c6f9c4cc2c9d5abc86ff4f8
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
 
 Package: libgdata-common
 Priority: optional
@@ -326,213 +453,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
-
-Package: libhardware-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 48
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu24
-Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Depends: libhardware2 (= 0.1.0+git20130606+c5d897a-0ubuntu24), android-platform-headers (= 0.1.0+git20130606+c5d897a-0ubuntu24)
-Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/libhardware-dev_0.1.0+git20130606+c5d897a-0ubuntu24_i386.deb
-Size: 4696
-MD5sum: 26f211e89917c78939adfc8b218eea98
-SHA1: 428853716d43c7ffea63c2c2b8d199859d428653
-SHA256: 231d04f5690cfc26f99fc047c5408b73f97d54e2bb4936e480ee94d0feb8bbab
-Description: Development files for libhardware
-Description-md5: da5d7fa47a1b4b845a603aff96d464fe
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libhardware2
-Priority: extra
-Section: libs
-Installed-Size: 53
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu24
-Replaces: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Depends: libc6 (>= 2.3.6-6~), libhybris-common1
-Breaks: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/libhardware2_0.1.0+git20130606+c5d897a-0ubuntu24_i386.deb
-Size: 6802
-MD5sum: e23494c3300f43ce7252d69099b2d8a0
-SHA1: fa0a0b23bbd958c4242707cfde3cb3a1acaf9506
-SHA256: 0b3d509bfec8fcff92d058a52b3701d5b36ba85fb9a92400fe0aa3eaf701d55e
-Description: Library to provice access to the Android libhardware HAL
-Description-md5: 653b750176d920864f05b2e85824800a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libhybris
-Priority: extra
-Section: libs
-Installed-Size: 173
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Version: 0.1.0+git20130606+c5d897a-0ubuntu24
-Depends: libandroid-properties1 (= 0.1.0+git20130606+c5d897a-0ubuntu24), libhardware2, libmedia1, libc6 (>= 2.4), libhybris-common1, libstdc++6 (>= 4.1.1)
-Filename: pool/main/libh/libhybris/libhybris_0.1.0+git20130606+c5d897a-0ubuntu24_i386.deb
-Size: 36552
-MD5sum: 876f811f5e8dc8d837e239f81d397baf
-SHA1: 528c6aa4e9bff387349ceedb66ee425384e9a297
-SHA256: 3d81410bb19cdd8f22e30d566f7759356b48427dfa79c33247534405df7e07ca
-Description: Allows to run bionic-based HW adaptations in glibc systems - libs
-Description-md5: d20384e11368d9f090577e52e675ed57
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libhybris-common-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 48
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu24
-Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Depends: libhybris-common1 (= 0.1.0+git20130606+c5d897a-0ubuntu24)
-Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/libhybris-common-dev_0.1.0+git20130606+c5d897a-0ubuntu24_i386.deb
-Size: 4672
-MD5sum: 04ecc74113881eab428b11a34983bcf1
-SHA1: a2a08f81cd301a21b5ebb69c8c3e3d46c0a13ef3
-SHA256: a1258df2ff0e1fd05559ebe8c156ffd3983d7992efb221ec5658e13abe7fffbe
-Description: Development files for libhybris-common
-Description-md5: 27556b4ff08d6ee084db91ea770617de
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libhybris-common1
-Priority: extra
-Section: libs
-Installed-Size: 140
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu24
-Replaces: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Depends: libandroid-properties1, libc6 (>= 2.12)
-Breaks: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
-Filename: pool/main/libh/libhybris/libhybris-common1_0.1.0+git20130606+c5d897a-0ubuntu24_i386.deb
-Size: 41212
-MD5sum: 14b3e4e903b7b49d121da463e979c785
-SHA1: 6df8303b8d9b81cf8b2c169a88e6e66763f11005
-SHA256: a34eebe9f9019107e9a3304c3bdd1e76ab5d5db8e8772c2f5906ca86357c32b7
-Description: Common library that contains the Android linker and custom hooks
-Description-md5: 618c5643ccb4d8d4d8db9e33d16f42e3
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libhybris-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 134
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu24
-Depends: libhybris (= 0.1.0+git20130606+c5d897a-0ubuntu24), android-platform-headers (= 0.1.0+git20130606+c5d897a-0ubuntu24), libandroid-properties-dev (= 0.1.0+git20130606+c5d897a-0ubuntu24), libhardware-dev (= 0.1.0+git20130606+c5d897a-0ubuntu24), libmedia-dev (= 0.1.0+git20130606+c5d897a-0ubuntu24), libhybris-common-dev (= 0.1.0+git20130606+c5d897a-0ubuntu24), libgles2-mesa-dev
-Filename: pool/main/libh/libhybris/libhybris-dev_0.1.0+git20130606+c5d897a-0ubuntu24_i386.deb
-Size: 17074
-MD5sum: 46a583e3a5d594bc7482605f808ac12d
-SHA1: 1f0f9eb6176932efab792d3ddb7e69bf4a782594
-SHA256: 259870db17c2fbeb7f19b1106a872475ea091c89e53d486dba3b8f74d133b77c
-Description: Development headers and libraries for libhybris
-Description-md5: fcfe2cd71f2cfbabcbb6f94dda4cbe46
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: libhybris-test
-Priority: extra
-Section: devel
-Installed-Size: 158
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu24
-Depends: libhybris (= 0.1.0+git20130606+c5d897a-0ubuntu24), libc6 (>= 2.4), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgles2-mesa (>= 7.8.1) | libgles2, libhardware2, libmedia1
-Filename: pool/main/libh/libhybris/libhybris-test_0.1.0+git20130606+c5d897a-0ubuntu24_i386.deb
-Size: 34764
-MD5sum: d17b4614e488598361518c50019b29e8
-SHA1: 04ef1ddd28b431e1cda8034369b85a6d46c66d04
-SHA256: ada04903e6e9526075f7b96556f252073dce6273f7d05b4a452b445e45718380
-Description: Allows to run bionic-based HW adaptations in glibc systems - tests
-Description-md5: 1f5205701476c6ee1c9d6d7b14515a90
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libhybris-utils
-Priority: extra
-Section: utils
-Installed-Size: 63
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu24
-Depends: libhybris (= 0.1.0+git20130606+c5d897a-0ubuntu24), libandroid-properties1, libc6 (>= 2.4)
-Filename: pool/main/libh/libhybris/libhybris-utils_0.1.0+git20130606+c5d897a-0ubuntu24_i386.deb
-Size: 8936
-MD5sum: e4934dd1b8bd3271dfd34429a20645ed
-SHA1: c712fcae96549959b8106d750d65a7e99d7b66df
-SHA256: 2440b75b9f68c688be579b36099f92198605a2b7d25499428a409c160ad58e9a
-Description: Utilities to help working with the Android HW abstraction layer
-Description-md5: 17d25b33712773c77cb635c91dcc04c5
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libmedia-dev
-Priority: extra
-Section: libdevel
-Installed-Size: 77
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu24
-Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu24)
-Depends: libmedia1 (= 0.1.0+git20130606+c5d897a-0ubuntu24), android-platform-headers (= 0.1.0+git20130606+c5d897a-0ubuntu24)
-Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu24)
-Filename: pool/main/libh/libhybris/libmedia-dev_0.1.0+git20130606+c5d897a-0ubuntu24_i386.deb
-Size: 7904
-MD5sum: b2c1126af0b8938430ddcca572be2100
-SHA1: f30ff0a09dd972297f74cf0ec88963b790ebb588
-SHA256: dcb294a332d68cac4edcb2363ae5293d70a5495742a1b2462becdb1770c049eb
-Description: Development files for libmedia
-Description-md5: 45c1b80daa4ded84393244ce3d2a9727
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libmedia1
-Priority: extra
-Section: libs
-Installed-Size: 77
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: i386
-Source: libhybris
-Version: 0.1.0+git20130606+c5d897a-0ubuntu24
-Replaces: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu24)
-Depends: libc6 (>= 2.3.6-6~), libhybris-common1
-Breaks: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu24)
-Filename: pool/main/libh/libhybris/libmedia1_0.1.0+git20130606+c5d897a-0ubuntu24_i386.deb
-Size: 12778
-MD5sum: a17d458c2c4e20bd367eae63b37b11c2
-SHA1: 072fa149121b5cd2313c969bed3c6969a5d453e2
-SHA256: b00f3c36a920f8de0b1f1a99b85b450ab4a2954b1e8ce48c0d5db5be3bd04256
-Description: Library to provice access to the Android Media HAL
-Description-md5: 044f927cfde78948132863ee5c37c97e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
 
 Package: libmirclient-dev
 Priority: optional
@@ -696,6 +616,28 @@ Description: Display server for Ubuntu - server library
 Multi-Arch: same
 Homepage: https://launchpad.net/mir
 Description-md5: ec9e31363965aaba264f7029d7781e84
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libpam-apparmor
+Priority: extra
+Section: libs
+Installed-Size: 78
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: i386
+Source: apparmor
+Version: 2.8.0-0ubuntu28
+Depends: libapparmor1 (>= 2.6~devel), libc6 (>= 2.1.3), libpam0g (>= 0.99.7.1)
+Filename: pool/main/a/apparmor/libpam-apparmor_2.8.0-0ubuntu28_i386.deb
+Size: 7618
+MD5sum: d3aedf5ca39f404789134a745c3512c5
+SHA1: b306d1d9c4e5c4d83815faaa98f445529ff889d0
+SHA256: 838e95a847ed89e8006204e9240572a28b6abb9336fd92ea32024e31f71c42b3
+Description: changehat AppArmor library as a PAM module
+Homepage: http://apparmor.net/
+Description-md5: e416b01d786a37c6ad586d6663ee5027
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -2374,6 +2316,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: python-libapparmor
+Priority: extra
+Section: python
+Installed-Size: 190
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: i386
+Source: apparmor
+Version: 2.8.0-0ubuntu28
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), libapparmor1 (>= 2.8.0-0ubuntu25), libc6 (>= 2.4)
+Filename: pool/main/a/apparmor/python-libapparmor_2.8.0-0ubuntu28_i386.deb
+Size: 28668
+MD5sum: c47dd2d97eba724726a4893fca478151
+SHA1: 036365a30dff36bfb042f19883b6b8741405bac0
+SHA256: 7e31a43e5c9ee2675bfaecda19ed2af402d01a49fd80f7df63aa4b44049e01bd
+Description: AppArmor library Python bindings
+Homepage: http://apparmor.net/
+Description-md5: 36d3d516db38bd0cbb93cfa172912961
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: python-neutron
 Priority: optional
 Section: python
@@ -2416,6 +2380,28 @@ SHA1: 151b8b23bcaf07b6a12f9a1c0444bdd6ceb0792c
 SHA256: e71982309e547195e61d710a8e4ef6fca562c7a055e9ec404198bbff86b66f8f
 Description: transitional dummy package
 Description-md5: 1f317b04f78374dba7d1e14def0b7f80
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: python3-libapparmor
+Priority: extra
+Section: python
+Installed-Size: 167
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Kees Cook <kees@debian.org>
+Architecture: i386
+Source: apparmor
+Version: 2.8.0-0ubuntu28
+Depends: python3 (>= 3.3), python3 (<< 3.4), libapparmor1 (>= 2.8.0-0ubuntu25), libc6 (>= 2.4)
+Filename: pool/main/a/apparmor/python3-libapparmor_2.8.0-0ubuntu28_i386.deb
+Size: 28152
+MD5sum: 02bd03fea56366f5be79eefd2a9cacf3
+SHA1: 70366f06085e2d19f6ec71f1326f649ca5e60c67
+SHA256: 1472a0ab1aac756f13b7a95affa401d4fdb9403f5b4fbd82348ec2680a4a0e88
+Description: AppArmor library Python3 bindings
+Homepage: http://apparmor.net/
+Description-md5: 48fb2712cf2310bd6af2d05c836cc285
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
