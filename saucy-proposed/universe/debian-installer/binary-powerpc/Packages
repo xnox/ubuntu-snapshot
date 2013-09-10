@@ -1,16 +1,76 @@
-Package: partman-nbd
+Package: mdcfg
 Priority: optional
 Section: universe/debian-installer
-Installed-Size: 205
+Installed-Size: 35
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Version: 1.43
+Depends: partitioned-harddrives
+Filename: pool/universe/m/mdcfg/mdcfg_1.43_all.udeb
+Size: 4210
+MD5sum: f639b78ef0b9857a77a5ecd970ea76f6
+SHA1: 8c92e7c325717da24eeab7f47e58b1bff631817a
+SHA256: 2e07ec9c9a0a017afc1d24a72bf1c4c6e0cb69bc43c603fc0b60e465ab42ec37
+Description: Configure MD devices
+ Use this module to configure the MD devices.
+Installer-Menu-Item: 4500
+
+Package: mdcfg-utils
+Priority: optional
+Section: universe/debian-installer
+Installed-Size: 466
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Source: mdcfg
+Version: 1.43
+Depends: cdebconf-udeb, di-utils (>= 1.16), md-modules, mdadm-udeb (>= 2.5.2), partconf-find-partitions
+Filename: pool/universe/m/mdcfg/mdcfg-utils_1.43_all.udeb
+Size: 156882
+MD5sum: f4d0ba735f66d1bf72af7dae5aa74c67
+SHA1: 3b2af3fd552580bdf73e67d0f1a86ceaaa3076aa
+SHA256: ccda7a14d292b271cc397cad17b31a317fd01e3c610acc0c8de8b6f4ff3258a7
+Description: Configure MD devices
+ Use this module to configure the MD devices.
+
+Package: prep-installer
+Priority: optional
+Section: universe/debian-installer
+Installed-Size: 89
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Architecture: powerpc
-Version: 0.21
-Depends: cdebconf-udeb, partman-base, nbd-client-udeb, nbd-modules, configured-network
-Filename: pool/universe/p/partman-nbd/partman-nbd_0.21_powerpc.udeb
-Size: 53682
-MD5sum: 1d8b1658a57c89a6d7c51d02c86c36b1
-SHA1: 16ccc00e123af5bbb48e592e84ae267eacc353c7
-SHA256: 1194d7ed64f9833653922155f61ec0323d37fbe893f3e08a99de3ffebc8fa46b
-Description: Adds support for NBD to partman
+Version: 0.22
+Provides: bootable-system
+Depends: cdebconf-udeb, kernel-installer, parted-udeb, di-utils-mapdevfs, os-prober, archdetect
+Filename: pool/universe/p/prep-installer/prep-installer_0.22_powerpc.udeb
+Size: 25306
+MD5sum: 4374c9fbc12dcd863cb8851142529948
+SHA1: 225fb2a761b78c7bcc742bd7bc3af45ed2016384
+SHA256: fec2638437e04e5c6364c021e0b30f04ab5b49fc1a99b3e8f71ec0eb8ce6d613
+Description: Install a kernel directly to the prep partition on a hard disk
+ This package will install a prep or chrp kernel directly to a prep partition.
+Subarchitecture: prep chrp_ibm chrp_rs6k
+Installer-Menu-Item: 7500
+
+Package: quik-installer
+Priority: standard
+Section: universe/debian-installer
+Installed-Size: 343
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: powerpc
+Version: 0.0.36
+Provides: bootable-system
+Depends: kernel-installer, di-utils (>= 1.15), di-utils-mapdevfs, archdetect, cdebconf-udeb
+Filename: pool/universe/q/quik-installer/quik-installer_0.0.36_powerpc.udeb
+Size: 112804
+MD5sum: cbaf42b68f58f8b8bd45da8d8e5e0750
+SHA1: da3291cee5e0330ddfdeaa496a7297e2b197b724
+SHA256: bd695750b97b09d49ce3c9f793875e1d22af3f1a093f5c1b493dffad04774813
+Description: Install quik on a hard disk
+ This package will install quik on the hard disk.
+Subarchitecture: powermac_oldworld
+Installer-Menu-Item: 7300
 

@@ -1,16 +1,36 @@
-Package: partman-nbd
+Package: mdcfg
 Priority: optional
 Section: universe/debian-installer
-Installed-Size: 206
+Installed-Size: 35
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: amd64
-Version: 0.21
-Depends: cdebconf-udeb, partman-base, nbd-client-udeb, nbd-modules, configured-network
-Filename: pool/universe/p/partman-nbd/partman-nbd_0.21_amd64.udeb
-Size: 53712
-MD5sum: 13e33da13cfc49491441ab8e4438bbb5
-SHA1: 23cb27128dd1e4aea7dd67382e51eaa6f176c920
-SHA256: 16029000ebcb704b90ead8932774f0b762ec64f57b382d8e955636df9626ece0
-Description: Adds support for NBD to partman
+Architecture: all
+Version: 1.43
+Depends: partitioned-harddrives
+Filename: pool/universe/m/mdcfg/mdcfg_1.43_all.udeb
+Size: 4210
+MD5sum: f639b78ef0b9857a77a5ecd970ea76f6
+SHA1: 8c92e7c325717da24eeab7f47e58b1bff631817a
+SHA256: 2e07ec9c9a0a017afc1d24a72bf1c4c6e0cb69bc43c603fc0b60e465ab42ec37
+Description: Configure MD devices
+ Use this module to configure the MD devices.
+Installer-Menu-Item: 4500
+
+Package: mdcfg-utils
+Priority: optional
+Section: universe/debian-installer
+Installed-Size: 466
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Source: mdcfg
+Version: 1.43
+Depends: cdebconf-udeb, di-utils (>= 1.16), md-modules, mdadm-udeb (>= 2.5.2), partconf-find-partitions
+Filename: pool/universe/m/mdcfg/mdcfg-utils_1.43_all.udeb
+Size: 156882
+MD5sum: f4d0ba735f66d1bf72af7dae5aa74c67
+SHA1: 3b2af3fd552580bdf73e67d0f1a86ceaaa3076aa
+SHA256: ccda7a14d292b271cc397cad17b31a317fd01e3c610acc0c8de8b6f4ff3258a7
+Description: Configure MD devices
+ Use this module to configure the MD devices.
 

@@ -17,147 +17,109 @@ Description: Metapackage depending on debian-installer's built-in udebs
  This package depends on the set of udebs that the current debian-installer
  build was built against, for easier version and migration tracking.
 
-Package: partconf-find-partitions
+Package: load-media
+Priority: extra
+Section: debian-installer
+Installed-Size: 135
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Source: media-retriever
+Version: 1.31
+Depends: cdebconf-udeb, media-retriever, anna
+Filename: pool/main/m/media-retriever/load-media_1.31_all.udeb
+Size: 46694
+MD5sum: 00a746d3108c79da9dde19515dfab80f
+SHA1: 6b2fcfdbedc1fcfafd3f88173dbaf46a348691f1
+SHA256: d1f78956ce573f69fbeae523a6a5ea97d7f3b6c3493829b0f37701b3391dadf6
+Description: Load installer components from removable media
+Installer-Menu-Item: 1100
+
+Package: media-retriever
 Priority: optional
 Section: debian-installer
-Installed-Size: 34
+Installed-Size: 60
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: powerpc
-Source: partconf
-Version: 1.43
-Depends: libc6-udeb (>= 2.17), libparted0-udeb (>= 2.2-1)
-Filename: pool/main/p/partconf/partconf-find-partitions_1.43_powerpc.udeb
-Size: 6182
-MD5sum: ae93655476899d0ad21edf8653e1949b
-SHA1: 5f45f5b50cbea5d58801828f931e0b1148c501b9
-SHA256: cbfe7789ba1a4d151fc845775f29196c365d5bb8c4e3ad4fa4a3161c4c572f17
-Description: debian-installer utility for finding partitions
- Helper program for finding partitions and detecting their size and
- existing file system.
+Architecture: all
+Version: 1.31
+Provides: retriever
+Depends: cdebconf-udeb, mountmedia
+Filename: pool/main/m/media-retriever/media-retriever_1.31_all.udeb
+Size: 15838
+MD5sum: 2d32ba51eb590954b5bc8d72431d346d
+SHA1: 1181c593e4449a81e54ad3310244b07a80e237b2
+SHA256: 541ddc0307aafb145dae72bc42dad3d2205051d6367400c9149f5018caea2ba0
+Description: Fetches modules from removable media
 
-Package: partconf-mkfstab
+Package: network-console
 Priority: optional
 Section: debian-installer
-Installed-Size: 51
+Installed-Size: 248
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Architecture: powerpc
-Source: partconf
-Version: 1.43
-Depends: libc6-udeb (>= 2.17), libdebian-installer4-udeb (>= 0.87ubuntu2)
-Filename: pool/main/p/partconf/partconf-mkfstab_1.43_powerpc.udeb
-Size: 5634
-MD5sum: e3a29359c0248181993b2a81eb976170
-SHA1: 60164ad864fa4122fb74b041026df15e3a30a1ff
-SHA256: e272dcca3c07e37056078f3dbcaa42eaa5f4d5ed1fe25eeba4b6996f75af15b0
-Description: debian-installer utility for creating fstab file
- Helper program for creating fstab files in the new installed Debian
- system.
+Version: 1.46
+Depends: cdebconf-udeb, configured-network, openssh-server-udeb
+Filename: pool/main/n/network-console/network-console_1.46_powerpc.udeb
+Size: 83850
+MD5sum: d84628d696168e9c8ac0ab3a4e5324c8
+SHA1: ec2a88cc8a581489a194781015a5f07537c1eab2
+SHA256: bce4b655f3a1cb939b09eca8019c394e46abc3b0106e16dd7ce694145fdefb7f
+Description: Continue installation remotely using SSH
+Installer-Menu-Item: 2100
 
-Package: partman-jfs
+Package: nobootloader
 Priority: standard
 Section: debian-installer
-Installed-Size: 142
+Installed-Size: 220
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Architecture: all
-Version: 41
-Provides: partman-filesystem
-Depends: cdebconf-udeb, jfsutils-udeb, jfs-modules, partman-basicfilesystems (>= 59), partman-base (>= 124)
-Filename: pool/main/p/partman-jfs/partman-jfs_41_all.udeb
-Size: 31510
-MD5sum: 2acd631d1d3f5e228cf2f8109950b739
-SHA1: be0531b240a918867a5595dc6b36d2bf0c9863c4
-SHA256: c7c1c95dd73eed49ea6540f198d49bca8f08b5fd8e4cc8a82873e11a22a9e191
-Description: Add support for jfs to partman
+Version: 1.41
+Provides: bootable-system
+Depends: cdebconf-udeb, installed-base, di-utils-mapdevfs
+Filename: pool/main/n/nobootloader/nobootloader_1.41_all.udeb
+Size: 73966
+MD5sum: 49db0e54b9c4663810da8eabbe67130d
+SHA1: e89c9fa008e6ed41bd53604e7e8b349850e7d09c
+SHA256: af7437ba9d9dbd67499ce3c52081311457e5dc775fd3f9adaee8bb37e2168b1f
+Description: Don't install any bootloader
+ This package will skip installing a boot-loader
+Installer-Menu-Item: 7700
 
-Package: partman-lvm
+Package: rescue-check
+Priority: standard
+Section: debian-installer
+Installed-Size: 24
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Source: rescue
+Version: 1.41
+Depends: cdebconf-udeb (>= 0.75), main-menu (>= 1.03), di-utils (>= 1.18)
+Filename: pool/main/r/rescue/rescue-check_1.41_all.udeb
+Size: 2708
+MD5sum: c31470b9c08a3d3c643a2500ff913950
+SHA1: 677d4b88a82a0fce54b9579e87ee63bdd4e7fd56
+SHA256: f85efd275b3d6b5c107725a28f9662140cf200e00ffa9c37cd87a17b81f7d04d
+Description: enter d-i rescue mode if requested
+
+Package: rescue-mode
 Priority: optional
 Section: debian-installer
-Installed-Size: 1046
+Installed-Size: 404
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Architecture: all
-Version: 87
-Depends: cdebconf-udeb (>= 0.133), partman-base (>= 134), di-utils (>= 1.14), md-modules, lvm2-udeb
-Filename: pool/main/p/partman-lvm/partman-lvm_87_all.udeb
-Size: 314808
-MD5sum: 119f53a6a879edfe52b847b77cb9729b
-SHA1: 822d702bd418a26fb9e1e933fafb3362455e333c
-SHA256: 8d016d728c0ef13902ed5ffe59f1b94b9f45055c20f872777d6fca491ad23216
-Description: Adds support for LVM to partman
-
-Package: partman-md
-Priority: standard
-Section: debian-installer
-Installed-Size: 655
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: all
-Version: 67
-Depends: cdebconf-udeb, di-utils (>= 1.16), md-modules, mdadm-udeb (>= 2.5.2), partman-base (>= 134)
-Filename: pool/main/p/partman-md/partman-md_67_all.udeb
-Size: 206248
-MD5sum: 74bf2722e8a4ed9e6e1b1195d72acecc
-SHA1: d6348b38ed46436959ddac1952ee1ec87c5d00fb
-SHA256: 7be389244250bf9bb219ebee99e6a4c5e0a610d1d0fda3c3f3bc841c222ee127
-Description: Add to partman support for MD
-
-Package: partman-newworld
-Priority: standard
-Section: debian-installer
-Installed-Size: 107
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: powerpc
-Version: 31
-Depends: cdebconf-udeb, partman-base (>= 114), hfs-modules
-Filename: pool/main/p/partman-newworld/partman-newworld_31_powerpc.udeb
-Size: 19320
-MD5sum: 5fa28a80803d33e5ff54014d12d017f5
-SHA1: f19bf77eefc4d5a2f798b5d4cbff4db874d33631
-SHA256: 4531e30bad697d8197e03dd41b76dcb520c5403f9363a7b7a7151f79d5b2e64b
-Description: partman support for new-world PowerMac boot partitions
- This package provides the 'newworld' partition use method. The yaboot
- boot loader used on PCI-era PowerMac systems requires a special
- Apple_Bootstrap partition, created by this method.
-Subarchitecture: powermac_newworld
-
-Package: partman-prep
-Priority: standard
-Section: debian-installer
-Installed-Size: 81
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: powerpc
-Version: 27
-Depends: cdebconf-udeb, partman-base (>= 114)
-Filename: pool/main/p/partman-prep/partman-prep_27_powerpc.udeb
-Size: 13130
-MD5sum: 48e899cc376f83e9126b855951be5c3f
-SHA1: 8ed52432b33efc54800d5cbc8d85a2b493f1de1a
-SHA256: f882d235308258230efe397aeb60d170b9dfccc15fd7e03ca4b66386009df795
-Description: Add partman support for PPC PReP boot partitions
- This package provides the 'prep' partition method. The yaboot
- boot loader used on IBM pSeries systems requires a special
- bootstrap partition, created by this method.
-Subarchitecture: chrp_ibm chrp_rs6k prep
-
-Package: partman-xfs
-Priority: standard
-Section: debian-installer
-Installed-Size: 76
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: all
-Version: 53
-Provides: partman-filesystem
-Depends: cdebconf-udeb, xfsprogs-udeb, xfs-modules, partman-basicfilesystems (>= 59), partman-base (>= 124)
-Filename: pool/main/p/partman-xfs/partman-xfs_53_all.udeb
-Size: 5636
-MD5sum: 731026e119de07579523fdd430194f26
-SHA1: 91adec5610cbbc3f305d27340d809f52af364cdd
-SHA256: 8a1ca1266daf4864565cc14c59ff7a54b8ded7be96382ec47f46205d13323f14
-Description: Add to partman support for xfs
+Source: rescue
+Version: 1.41
+Depends: rescue-check, cdebconf-udeb (>= 0.73), harddrive-detection, e2fsprogs-udeb, ext2-modules, ext3-modules, ext4-modules, fat-modules, jfsutils-udeb, jfs-modules, md-modules, crypto-dm-modules, xfsprogs-udeb, xfs-modules, lvm2-udeb, mdadm-udeb (>= 2.5.2), di-utils (>= 1.62), crypto-modules, cryptsetup-udeb, fdisk-udeb, parted-udeb
+Filename: pool/main/r/rescue/rescue-mode_1.41_all.udeb
+Size: 141820
+MD5sum: b28393ba5dade237d03c2e1ef8e7ede8
+SHA1: cf86b7b97215edfcf3f5cfabfc7057f7d573caab
+SHA256: 70ef7e5a547bc6d0571df06ffdb6a2f155b163780f201b3b16f052d568727824
+Description: mount requested partition and start a rescue shell
+Installer-Menu-Item: 3900
 
