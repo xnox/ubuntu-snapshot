@@ -1,35 +1,65 @@
-Package: base-installer
-Priority: required
+Package: libdebian-installer4-udeb
+Priority: optional
 Section: debian-installer
-Installed-Size: 411
+Installed-Size: 60
 Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
 Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Architecture: i386
-Version: 1.122ubuntu17
-Depends: cdebconf-udeb, di-utils-mapdevfs, di-utils (>= 1.68), rootskel (>= 1.19)
-Filename: pool/main/b/base-installer/base-installer_1.122ubuntu17_i386.udeb
-Size: 135454
-MD5sum: 5f8f4edeebeb41719b7572f435b05259
-SHA1: 75f9d128ceaadbffd2455fb4408cb8a5c1be6a02
-SHA256: 086d355c6a9bb6ae0e82fe4de55bec4c32db7f02a8efaae52dec0e04c6c5b2a7
-Description: base system installation framework
+Source: libdebian-installer
+Version: 0.87ubuntu3
+Depends: libc6-udeb (>= 2.17)
+Filename: pool/main/libd/libdebian-installer/libdebian-installer4-udeb_0.87ubuntu3_i386.udeb
+Size: 18484
+MD5sum: c77e37fdc7712c5ec76a9cb442c6455b
+SHA1: bc51fd075bc04a602a5e189c2ea43ae03263035e
+SHA256: baed50aea8e67b131993ca8621e14490c9552de01a528aa78fd23b78bef2a4c3
+Description: Library of common debian-installer functions
+ This library is used by debian-installer to perform common functions
+ such as logging messages and executing commands. If you aren't
+ working on debian-installer or building your own install system based
+ on debian-installer, then you probably don't need this library.
 
-Package: bootstrap-base
-Priority: required
+Package: libpci3-udeb
+Priority: optional
 Section: debian-installer
-Installed-Size: 419
-Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Installed-Size: 58
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
 Architecture: i386
-Source: base-installer
-Version: 1.122ubuntu17
-Provides: installed-base, kernel-installer
-Depends: libc6-udeb (>= 2.17), libdebconfclient0-udeb, libdebian-installer4-udeb (>= 0.87ubuntu2), mounted-partitions, created-fstab, base-installer, debootstrap-udeb (>= 1.0.7), gpgv-udeb, ubuntu-keyring-udeb, archdetect
-Filename: pool/main/b/base-installer/bootstrap-base_1.122ubuntu17_i386.udeb
-Size: 94948
-MD5sum: 4a13a8da3d7f6f11570c218a7e17462d
-SHA1: 1ae22348e258afda3e131115aafbfd779a0f5fde
-SHA256: 8c1698e294bcb1a64e95bde8fa4861b009d4bc8801dad41b8fa4cb2c61a6da9e
-Description: Install the base system
-Installer-Menu-Item: 6500
+Source: pciutils
+Version: 1:3.1.9-6ubuntu8
+Depends: libc6-udeb (>= 2.17), zlib1g-udeb (>= 1:1.2.3.3.dfsg-1)
+Filename: pool/main/p/pciutils/libpci3-udeb_3.1.9-6ubuntu8_i386.udeb
+Size: 19816
+MD5sum: f3339b5fa55c1be5d2c8f967abf68935
+SHA1: 6acef1253e07542ad3d44bf4c29458757a88e5d9
+SHA256: 5404df6fe82623fb3fe4d676cc05c8543d389a6310c133e26dc9be06fb281af5
+Description: Linux PCI Utilities (shared library)
+ This package contains the libpci shared library files.
+ .
+ The libpci library provides portable access to configuration
+ registers of devices connected to the PCI bus.
+ .
+ This is a minimal version for use in debian-installer.
+
+Package: pciutils-udeb
+Priority: standard
+Section: debian-installer
+Installed-Size: 249
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: i386
+Source: pciutils
+Version: 1:3.1.9-6ubuntu8
+Depends: libc6-udeb (>= 2.17), zlib1g-udeb (>= 1:1.2.3.3.dfsg-1)
+Filename: pool/main/p/pciutils/pciutils-udeb_3.1.9-6ubuntu8_i386.udeb
+Size: 168250
+MD5sum: 83c7747679c1cf321cedeb0e67f0f616
+SHA1: 9022a8ee6b412330dc847fba4346acac55623d6d
+SHA256: 2e75ae612219b24d68220225c081d72fc705d6a51c9fae338d185c654b632b67
+Description: Linux PCI Utilities (udeb)
+ This package contains various utilities for inspecting and setting of
+ devices connected to the PCI bus.
+ .
+ This is a minimal version for use in debian-installer.
 
