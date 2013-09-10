@@ -354,6 +354,23 @@ Description: DM-Multipath support
   This package contains modules for device-mapper multipath support.
 Kernel-Version: 3.11.0-6-generic
 
+Package: network-console
+Priority: optional
+Section: debian-installer
+Installed-Size: 248
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: amd64
+Version: 1.46
+Depends: cdebconf-udeb, configured-network, openssh-server-udeb
+Filename: pool/main/n/network-console/network-console_1.46_amd64.udeb
+Size: 83934
+MD5sum: 295d93c7edcee588d65a8b7a98a2bd65
+SHA1: 4a9052a37b3f4514fc4d627fd63d5069b38e6d0a
+SHA256: dba5bc90b6ea6384082f677aef507b1db77198fca2c876e41a37e0f80cdb44b2
+Description: Continue installation remotely using SSH
+Installer-Menu-Item: 2100
+
 Package: nfs-modules-3.11.0-6-generic-di
 Priority: standard
 Section: debian-installer
@@ -463,6 +480,110 @@ SHA1: fd7296a5817b30877cab6c2c5a55f35eb7e96033
 SHA256: 0d6df3453b28add05bc0ebe48d59899bb9bbc4b2158f16740b49ab2711fbb81d
 Description: Parallel port support
 Kernel-Version: 3.11.0-6-generic
+
+Package: partconf-find-partitions
+Priority: optional
+Section: debian-installer
+Installed-Size: 35
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: amd64
+Source: partconf
+Version: 1.43
+Depends: libc6-udeb (>= 2.17), libparted0-udeb (>= 2.2-1)
+Filename: pool/main/p/partconf/partconf-find-partitions_1.43_amd64.udeb
+Size: 6142
+MD5sum: 17627b925e601206f212b3223f548343
+SHA1: 314fe588ceadaa4002bae45ac252ac4d5e14851d
+SHA256: beb67c7dc88889f5872f11b59b1840cb7db5752e25d8f7cc04aa087ba8f9e75d
+Description: debian-installer utility for finding partitions
+ Helper program for finding partitions and detecting their size and
+ existing file system.
+
+Package: partconf-mkfstab
+Priority: optional
+Section: debian-installer
+Installed-Size: 53
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: amd64
+Source: partconf
+Version: 1.43
+Depends: libc6-udeb (>= 2.17), libdebian-installer4-udeb (>= 0.87ubuntu2)
+Filename: pool/main/p/partconf/partconf-mkfstab_1.43_amd64.udeb
+Size: 5786
+MD5sum: f62d4a69247152701033fb0e3b41d645
+SHA1: 7a4d6914a5687583d2bf45fce1f4c8715854be70
+SHA256: 8376dc8c84aa9b3a5cfe7b3ccddec73d07bd8dc8674a88a780358b094fc6f563
+Description: debian-installer utility for creating fstab file
+ Helper program for creating fstab files in the new installed Debian
+ system.
+
+Package: partman-jfs
+Priority: standard
+Section: debian-installer
+Installed-Size: 142
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Version: 41
+Provides: partman-filesystem
+Depends: cdebconf-udeb, jfsutils-udeb, jfs-modules, partman-basicfilesystems (>= 59), partman-base (>= 124)
+Filename: pool/main/p/partman-jfs/partman-jfs_41_all.udeb
+Size: 31510
+MD5sum: 2acd631d1d3f5e228cf2f8109950b739
+SHA1: be0531b240a918867a5595dc6b36d2bf0c9863c4
+SHA256: c7c1c95dd73eed49ea6540f198d49bca8f08b5fd8e4cc8a82873e11a22a9e191
+Description: Add support for jfs to partman
+
+Package: partman-lvm
+Priority: optional
+Section: debian-installer
+Installed-Size: 1046
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Version: 87
+Depends: cdebconf-udeb (>= 0.133), partman-base (>= 134), di-utils (>= 1.14), md-modules, lvm2-udeb
+Filename: pool/main/p/partman-lvm/partman-lvm_87_all.udeb
+Size: 314808
+MD5sum: 119f53a6a879edfe52b847b77cb9729b
+SHA1: 822d702bd418a26fb9e1e933fafb3362455e333c
+SHA256: 8d016d728c0ef13902ed5ffe59f1b94b9f45055c20f872777d6fca491ad23216
+Description: Adds support for LVM to partman
+
+Package: partman-md
+Priority: standard
+Section: debian-installer
+Installed-Size: 655
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Version: 67
+Depends: cdebconf-udeb, di-utils (>= 1.16), md-modules, mdadm-udeb (>= 2.5.2), partman-base (>= 134)
+Filename: pool/main/p/partman-md/partman-md_67_all.udeb
+Size: 206248
+MD5sum: 74bf2722e8a4ed9e6e1b1195d72acecc
+SHA1: d6348b38ed46436959ddac1952ee1ec87c5d00fb
+SHA256: 7be389244250bf9bb219ebee99e6a4c5e0a610d1d0fda3c3f3bc841c222ee127
+Description: Add to partman support for MD
+
+Package: partman-xfs
+Priority: standard
+Section: debian-installer
+Installed-Size: 76
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Version: 53
+Provides: partman-filesystem
+Depends: cdebconf-udeb, xfsprogs-udeb, xfs-modules, partman-basicfilesystems (>= 59), partman-base (>= 124)
+Filename: pool/main/p/partman-xfs/partman-xfs_53_all.udeb
+Size: 5636
+MD5sum: 731026e119de07579523fdd430194f26
+SHA1: 91adec5610cbbc3f305d27340d809f52af364cdd
+SHA256: 8a1ca1266daf4864565cc14c59ff7a54b8ded7be96382ec47f46205d13323f14
+Description: Add to partman support for xfs
 
 Package: pata-modules-3.11.0-6-generic-di
 Priority: standard

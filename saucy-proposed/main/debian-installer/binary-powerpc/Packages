@@ -17,3 +17,147 @@ Description: Metapackage depending on debian-installer's built-in udebs
  This package depends on the set of udebs that the current debian-installer
  build was built against, for easier version and migration tracking.
 
+Package: partconf-find-partitions
+Priority: optional
+Section: debian-installer
+Installed-Size: 34
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: powerpc
+Source: partconf
+Version: 1.43
+Depends: libc6-udeb (>= 2.17), libparted0-udeb (>= 2.2-1)
+Filename: pool/main/p/partconf/partconf-find-partitions_1.43_powerpc.udeb
+Size: 6182
+MD5sum: ae93655476899d0ad21edf8653e1949b
+SHA1: 5f45f5b50cbea5d58801828f931e0b1148c501b9
+SHA256: cbfe7789ba1a4d151fc845775f29196c365d5bb8c4e3ad4fa4a3161c4c572f17
+Description: debian-installer utility for finding partitions
+ Helper program for finding partitions and detecting their size and
+ existing file system.
+
+Package: partconf-mkfstab
+Priority: optional
+Section: debian-installer
+Installed-Size: 51
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: powerpc
+Source: partconf
+Version: 1.43
+Depends: libc6-udeb (>= 2.17), libdebian-installer4-udeb (>= 0.87ubuntu2)
+Filename: pool/main/p/partconf/partconf-mkfstab_1.43_powerpc.udeb
+Size: 5634
+MD5sum: e3a29359c0248181993b2a81eb976170
+SHA1: 60164ad864fa4122fb74b041026df15e3a30a1ff
+SHA256: e272dcca3c07e37056078f3dbcaa42eaa5f4d5ed1fe25eeba4b6996f75af15b0
+Description: debian-installer utility for creating fstab file
+ Helper program for creating fstab files in the new installed Debian
+ system.
+
+Package: partman-jfs
+Priority: standard
+Section: debian-installer
+Installed-Size: 142
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Version: 41
+Provides: partman-filesystem
+Depends: cdebconf-udeb, jfsutils-udeb, jfs-modules, partman-basicfilesystems (>= 59), partman-base (>= 124)
+Filename: pool/main/p/partman-jfs/partman-jfs_41_all.udeb
+Size: 31510
+MD5sum: 2acd631d1d3f5e228cf2f8109950b739
+SHA1: be0531b240a918867a5595dc6b36d2bf0c9863c4
+SHA256: c7c1c95dd73eed49ea6540f198d49bca8f08b5fd8e4cc8a82873e11a22a9e191
+Description: Add support for jfs to partman
+
+Package: partman-lvm
+Priority: optional
+Section: debian-installer
+Installed-Size: 1046
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Version: 87
+Depends: cdebconf-udeb (>= 0.133), partman-base (>= 134), di-utils (>= 1.14), md-modules, lvm2-udeb
+Filename: pool/main/p/partman-lvm/partman-lvm_87_all.udeb
+Size: 314808
+MD5sum: 119f53a6a879edfe52b847b77cb9729b
+SHA1: 822d702bd418a26fb9e1e933fafb3362455e333c
+SHA256: 8d016d728c0ef13902ed5ffe59f1b94b9f45055c20f872777d6fca491ad23216
+Description: Adds support for LVM to partman
+
+Package: partman-md
+Priority: standard
+Section: debian-installer
+Installed-Size: 655
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Version: 67
+Depends: cdebconf-udeb, di-utils (>= 1.16), md-modules, mdadm-udeb (>= 2.5.2), partman-base (>= 134)
+Filename: pool/main/p/partman-md/partman-md_67_all.udeb
+Size: 206248
+MD5sum: 74bf2722e8a4ed9e6e1b1195d72acecc
+SHA1: d6348b38ed46436959ddac1952ee1ec87c5d00fb
+SHA256: 7be389244250bf9bb219ebee99e6a4c5e0a610d1d0fda3c3f3bc841c222ee127
+Description: Add to partman support for MD
+
+Package: partman-newworld
+Priority: standard
+Section: debian-installer
+Installed-Size: 107
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: powerpc
+Version: 31
+Depends: cdebconf-udeb, partman-base (>= 114), hfs-modules
+Filename: pool/main/p/partman-newworld/partman-newworld_31_powerpc.udeb
+Size: 19320
+MD5sum: 5fa28a80803d33e5ff54014d12d017f5
+SHA1: f19bf77eefc4d5a2f798b5d4cbff4db874d33631
+SHA256: 4531e30bad697d8197e03dd41b76dcb520c5403f9363a7b7a7151f79d5b2e64b
+Description: partman support for new-world PowerMac boot partitions
+ This package provides the 'newworld' partition use method. The yaboot
+ boot loader used on PCI-era PowerMac systems requires a special
+ Apple_Bootstrap partition, created by this method.
+Subarchitecture: powermac_newworld
+
+Package: partman-prep
+Priority: standard
+Section: debian-installer
+Installed-Size: 81
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: powerpc
+Version: 27
+Depends: cdebconf-udeb, partman-base (>= 114)
+Filename: pool/main/p/partman-prep/partman-prep_27_powerpc.udeb
+Size: 13130
+MD5sum: 48e899cc376f83e9126b855951be5c3f
+SHA1: 8ed52432b33efc54800d5cbc8d85a2b493f1de1a
+SHA256: f882d235308258230efe397aeb60d170b9dfccc15fd7e03ca4b66386009df795
+Description: Add partman support for PPC PReP boot partitions
+ This package provides the 'prep' partition method. The yaboot
+ boot loader used on IBM pSeries systems requires a special
+ bootstrap partition, created by this method.
+Subarchitecture: chrp_ibm chrp_rs6k prep
+
+Package: partman-xfs
+Priority: standard
+Section: debian-installer
+Installed-Size: 76
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Version: 53
+Provides: partman-filesystem
+Depends: cdebconf-udeb, xfsprogs-udeb, xfs-modules, partman-basicfilesystems (>= 59), partman-base (>= 124)
+Filename: pool/main/p/partman-xfs/partman-xfs_53_all.udeb
+Size: 5636
+MD5sum: 731026e119de07579523fdd430194f26
+SHA1: 91adec5610cbbc3f305d27340d809f52af364cdd
+SHA256: 8a1ca1266daf4864565cc14c59ff7a54b8ded7be96382ec47f46205d13323f14
+Description: Add to partman support for xfs
+
