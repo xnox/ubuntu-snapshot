@@ -1,16 +1,111 @@
-Package: anna
-Priority: standard
+Package: cdrom-checker
+Priority: optional
 Section: debian-installer
-Installed-Size: 203
+Installed-Size: 146
 Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
 Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
 Architecture: i386
-Version: 1.48ubuntu1
-Depends: libc6-udeb (>= 2.17), libdebconfclient0-udeb, libdebian-installer4-udeb (>= 0.87ubuntu3), cdebconf-udeb
-Filename: pool/main/a/anna/anna_1.48ubuntu1_i386.udeb
-Size: 70674
-MD5sum: f4cde0a3c00c76b0ee2a996313a6d9ce
-SHA1: 37ec963a3730aff21810675f293cf88b44ec0b1b
-SHA256: 539c46855db92abab6c65e91cb590c22fa34cbc2f7bee28d1dc66428e0d7b63b
-Description: anna's not nearly apt, but for the Debian installer, it will do
+Version: 1.28ubuntu1
+Depends: cdrom-detect, cdebconf-udeb (>= 0.31)
+Filename: pool/main/c/cdrom-checker/cdrom-checker_1.28ubuntu1_i386.udeb
+Size: 46086
+MD5sum: 9b9db186315fc68f4e10adab5cbdd2f8
+SHA1: d8935f830fd637fc038d43dbd644c09ad96c3b4d
+SHA256: 36d582b3c11ff1a127b9e76496fa59466fcc44ea8f302bf48b2844b59d5687f0
+Description: Verify the cd contents
+Installer-Menu-Item: 94000
+
+Package: clock-setup
+Priority: standard
+Section: debian-installer
+Installed-Size: 192
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: i386
+Version: 0.117ubuntu1
+Depends: libc6-udeb (>= 2.17), cdebconf-udeb, localechooser, tzsetup-udeb, di-utils (>= 1.66), configured-network, rdate-udeb
+Filename: pool/main/c/clock-setup/clock-setup_0.117ubuntu1_i386.udeb
+Size: 63264
+MD5sum: fd91049e9cfe3bb32b0eb7b5a3b56524
+SHA1: fafcb3fecb94c0f3c104f8cf96a2cedf820da7c7
+SHA256: ee116b933da2feda9c7a7acbab6b52bc70c8bf4c6635ae3c9da2b2ab720198d0
+Description: set up clock
+Installer-Menu-Item: 2600
+
+Package: download-installer
+Priority: extra
+Section: debian-installer
+Installed-Size: 14
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Source: net-retriever
+Version: 1.35ubuntu1
+Depends: cdebconf-udeb, net-retriever, anna (>= 1.07)
+Filename: pool/main/n/net-retriever/download-installer_1.35ubuntu1_all.udeb
+Size: 3470
+MD5sum: c0c57cd66634e0c394ce7dca0f83a06b
+SHA1: 440cc5aba96449b163538817fd53720ed242e0a7
+SHA256: 26af168e6d52aaa402f1b9e077e21f9884744c833e5dd8ce60c894b6034a8073
+Description: Download installer components
+Installer-Menu-Item: 2300
+
+Package: libparted0-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 388
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: parted
+Version: 2.3-16
+Depends: libblkid1-udeb (>= 2.16), libc6-udeb (>= 2.17), libdevmapper1.02.1-udeb (>= 2:1.02.77), libuuid1-udeb (>= 2.16)
+Filename: pool/main/p/parted/libparted0-udeb_2.3-16_i386.udeb
+Size: 153024
+MD5sum: 081ba543610e2c6b9500be3a62ae36f1
+SHA1: 0ee79192370cc8c4cdfc1214701fb0ae4af67e26
+SHA256: 1545d8c0683f606a00c73b8700f518589cb99fa0132d366045c947d288062b1c
+Description: disk partition manipulator - library udeb
+ GNU Parted is a program that allows you to create, destroy, resize,
+ move, and copy disk partitions. This is useful for creating space
+ for new operating systems, reorganizing disk usage, and copying data
+ to new hard disks.
+ .
+ This is a cut-down library package for use in debian-installer.
+
+Package: net-retriever
+Priority: optional
+Section: debian-installer
+Installed-Size: 82
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: i386
+Version: 1.35ubuntu1
+Provides: retriever
+Depends: libc6-udeb (>= 2.17), libdebian-installer4-udeb (>= 0.87ubuntu3), cdebconf-udeb, choose-mirror, configured-network, di-utils (>= 1.58), gpgv-udeb, ubuntu-keyring-udeb
+Filename: pool/main/n/net-retriever/net-retriever_1.35ubuntu1_i386.udeb
+Size: 22014
+MD5sum: eabd63d621c089e35313ab59f54ef1b1
+SHA1: 2b6d8eaac505fe8d5d8bba0d3b28d4c5f83a3bbe
+SHA256: 39677c259dfed52143e188ff37d1cfb344060d8d80588423733f44e438ac534f
+Description: Fetch modules from the Internet
+ This is a retriever that uses wget to fetch files over http or ftp.
+
+Package: parted-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 75
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Parted Maintainer Team <parted-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: parted
+Version: 2.3-16
+Depends: libc6-udeb (>= 2.17), libparted0-udeb (>= 2.2-1)
+Filename: pool/main/p/parted/parted-udeb_2.3-16_i386.udeb
+Size: 26400
+MD5sum: d983dc464cf05ac47adac74f6154eaec
+SHA1: b6c0da8d3c40267ee7f3ea963caceefcbcc924d0
+SHA256: 655324a52b1d2db9b48e2de730afffd980daa301ba6c49b5babd2c331d8884df
+Description: Manually partition a hard drive (parted)
+Installer-Menu-Item: 99999
 
