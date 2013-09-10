@@ -1,0 +1,99 @@
+Package: base-installer
+Priority: required
+Section: debian-installer
+Installed-Size: 409
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: armhf
+Version: 1.122ubuntu17
+Depends: cdebconf-udeb, di-utils-mapdevfs, di-utils (>= 1.68), rootskel (>= 1.19)
+Filename: pool/main/b/base-installer/base-installer_1.122ubuntu17_armhf.udeb
+Size: 134932
+MD5sum: ebb81bf4a4c2f918f7687dd201f44041
+SHA1: 7d3519c6b689f0d3929b4b5b1e43b8488c5556a5
+SHA256: 7b0eb0569034ae84544de4ed76c44b21da7e41dafc4f118b56e83d0dfb983e55
+Description: base system installation framework
+
+Package: bootstrap-base
+Priority: required
+Section: debian-installer
+Installed-Size: 419
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: armhf
+Source: base-installer
+Version: 1.122ubuntu17
+Provides: installed-base, kernel-installer
+Depends: libc6-udeb (>= 2.17), libdebconfclient0-udeb, libdebian-installer4-udeb (>= 0.87ubuntu2), mounted-partitions, created-fstab, base-installer, debootstrap-udeb (>= 1.0.7), gpgv-udeb, ubuntu-keyring-udeb, archdetect
+Filename: pool/main/b/base-installer/bootstrap-base_1.122ubuntu17_armhf.udeb
+Size: 94666
+MD5sum: 0cb9658eea835e1c06682cd2546aec2a
+SHA1: e960531379a164004d66c444e46f5c3c526f0455
+SHA256: 51a60a01ea60ce690091cafc2deab7642e0f462098f36cd54dde367811fabe52
+Description: Install the base system
+Installer-Menu-Item: 6500
+
+Package: flash-kernel-installer
+Priority: standard
+Section: debian-installer
+Installed-Size: 94
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: armhf
+Source: flash-kernel
+Version: 3.0~rc.4ubuntu37
+Provides: bootable-system
+Depends: cdebconf-udeb, installed-base
+Filename: pool/main/f/flash-kernel/flash-kernel-installer_3.0~rc.4ubuntu37_armhf.udeb
+Size: 19402
+MD5sum: 4adf9f1e66cc1803d4b65f8edcf68c23
+SHA1: 05fc9d042a14a10e8ec619d164561082abbc95d9
+SHA256: b9fffe5294aaf87103308a0ac5bbe6c093c1a20e6e1972a3732a82bee2e71f05
+Description: Make the system bootable
+Subarchitecture: armadaxp generic-lpae generic iop32x ixp4xx kirkwood orion5x s3c24xx mx5 omap omap4
+Installer-Menu-Item: 7300
+
+Package: libpci3-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 38
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: armhf
+Source: pciutils
+Version: 1:3.1.9-6ubuntu8
+Depends: libc6-udeb (>= 2.17), zlib1g-udeb (>= 1:1.2.3.3.dfsg-1)
+Filename: pool/main/p/pciutils/libpci3-udeb_3.1.9-6ubuntu8_armhf.udeb
+Size: 14904
+MD5sum: 2ee1d26640a6911f6a815aff341d1b53
+SHA1: 0727ec99df9899b03d89c626c097c1bd7163b5f2
+SHA256: 26c2a9d2f262d45d84071e6fae25a72514187039a5a3182eb6bc7a1a7e60fb28
+Description: Linux PCI Utilities (shared library)
+ This package contains the libpci shared library files.
+ .
+ The libpci library provides portable access to configuration
+ registers of devices connected to the PCI bus.
+ .
+ This is a minimal version for use in debian-installer.
+
+Package: pciutils-udeb
+Priority: standard
+Section: debian-installer
+Installed-Size: 213
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Anibal Monsalve Salazar <anibal@debian.org>
+Architecture: armhf
+Source: pciutils
+Version: 1:3.1.9-6ubuntu8
+Depends: libc6-udeb (>= 2.17), zlib1g-udeb (>= 1:1.2.3.3.dfsg-1)
+Filename: pool/main/p/pciutils/pciutils-udeb_3.1.9-6ubuntu8_armhf.udeb
+Size: 159954
+MD5sum: 9ddd64f47351607032f45a8223e4a89b
+SHA1: 1bb7358cfa1a5e0da46c77706137778401966287
+SHA256: 3cf80ef7282a87bc3c24f67737a7bfab63026af078f076ce8a48a928badba41c
+Description: Linux PCI Utilities (udeb)
+ This package contains various utilities for inspecting and setting of
+ devices connected to the PCI bus.
+ .
+ This is a minimal version for use in debian-installer.
+
