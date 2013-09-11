@@ -19,6 +19,31 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: apt
+Priority: important
+Section: admin
+Installed-Size: 3414
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Version: 0.9.9.1~ubuntu3
+Replaces: manpages-it, manpages-pl (<< 20060617-3~)
+Depends: libapt-pkg4.12 (>= 0.9.9.1~ubuntu3), libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6), ubuntu-keyring, gnupg
+Suggests: aptitude | synaptic | wajig, dpkg-dev, apt-doc, xz-utils, python-apt
+Conflicts: python-apt (<< 0.7.93.2~)
+Filename: pool/main/a/apt/apt_0.9.9.1~ubuntu3_amd64.deb
+Size: 1241504
+MD5sum: 6853d979284554cc4a63d43080d46a4c
+SHA1: f144e26bf1aa86f1dc6d46f2a4fb079027ab4352
+SHA256: db17271a9d7089ae63f4c9afa279349578c717ac5427ce1ff2188ab00f34f3d9
+Description: commandline package manager
+Description-md5: 9fb97a88cb7383934ef963352b53b4a7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
 Package: apt-doc
 Priority: optional
 Section: doc
@@ -38,6 +63,51 @@ Description-md5: bc2b838ed28e60af95d78926380a3300
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: apt-transport-https
+Priority: standard
+Section: admin
+Installed-Size: 187
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Source: apt
+Version: 0.9.9.1~ubuntu3
+Depends: libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.14), libcurl3-gnutls (>= 7.16.2), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Filename: pool/main/a/apt/apt-transport-https_0.9.9.1~ubuntu3_amd64.deb
+Size: 16614
+MD5sum: 432f9045fc12c43877aed9835332d898
+SHA1: 48eb6ad6def0278d59f93907278e53fd251ad3cc
+SHA256: 6c7d4e6acab19f4433723d75fd34b9167a612fb2cc3082d7f01abfebad78f000
+Description: https download transport for APT
+Description-md5: 3365a6b50bd0e4eef6e176a80c735f43
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: standard, kubuntu-active, kubuntu-active
+
+Package: apt-utils
+Priority: important
+Section: admin
+Installed-Size: 660
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Source: apt
+Version: 0.9.9.1~ubuntu3
+Depends: libapt-inst1.5 (>= 0.8.0), libapt-pkg4.12 (>= 0.9.9.1~ubuntu3), libc6 (>= 2.14), libdb5.1, libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Suggests: xz-utils
+Filename: pool/main/a/apt/apt-utils_0.9.9.1~ubuntu3_amd64.deb
+Size: 197532
+MD5sum: a2e2d6d0bda0a0fef1e4f6cbd4614637
+SHA1: 9603019edc2e0a335ceb00d0e53f66e99fbeda1a
+SHA256: 966941cff4ba9f6f2e4d7c0954e0c5e86e8058fef19050e3833e08717fac449a
+Description: package managment related utility programs
+Description-md5: 578941ab78e4cbae72c741e56d175708
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
 
 Package: fonts-liberation
 Priority: optional
@@ -398,6 +468,52 @@ Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libapt-inst1.5
+Priority: important
+Section: admin
+Installed-Size: 720
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Source: apt
+Version: 0.9.9.1~ubuntu3
+Depends: libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/a/apt/libapt-inst1.5_0.9.9.1~ubuntu3_amd64.deb
+Size: 71718
+MD5sum: e8b3b62b8b427d6e426c44c715ca3555
+SHA1: 2e48db49ff518de03ab9620dc12b451ec01e808a
+SHA256: 43fbbbac47a4f30b29e47878d8e26b31c967a3e4463aa69f390e459f2229f5fa
+Description: deb package format runtime library
+Multi-Arch: same
+Description-md5: 5df05e67cb17e91ac56a732061d88850
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
+
+Package: libapt-pkg-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 502
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Source: apt
+Version: 0.9.9.1~ubuntu3
+Depends: libapt-pkg4.12 (= 0.9.9.1~ubuntu3), libapt-inst1.5 (= 0.9.9.1~ubuntu3), zlib1g-dev
+Filename: pool/main/a/apt/libapt-pkg-dev_0.9.9.1~ubuntu3_amd64.deb
+Size: 94518
+MD5sum: b0d58934bb79d4c122ba1a6cb2a11ad5
+SHA1: af674aad7ac8a40e868a6ad41674e838e75a62e3
+SHA256: 11d594bb14b3f325942e3d49b0ce5d611be6dabef5b034cd19bc621960182b7c
+Description: development files for APT's libapt-pkg and libapt-inst
+Multi-Arch: same
+Description-md5: 8e463f77664788b23a47f5ac592f4595
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libapt-pkg-doc
 Priority: optional
 Section: doc
@@ -417,6 +533,32 @@ Description-md5: decce989b471f196cddabf52bee63592
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
+
+Package: libapt-pkg4.12
+Priority: important
+Section: admin
+Installed-Size: 2787
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: amd64
+Source: apt
+Version: 0.9.9.1~ubuntu3
+Depends: libbz2-1.0, libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.6), zlib1g (>= 1:1.2.2.3)
+Pre-Depends: multiarch-support
+Breaks: apt (<< 0.9.4~)
+Filename: pool/main/a/apt/libapt-pkg4.12_0.9.9.1~ubuntu3_amd64.deb
+Size: 830176
+MD5sum: 9b70396cbed299383d89e24373f3fc6b
+SHA1: 9220413bb1a84fda210a09d1cc58ada05194e097
+SHA256: 08fc82a25b5d813187b34458e90442c6c1866ffb95e11e83742976a006b3bfe1
+Description: package managment runtime library
+Multi-Arch: same
+Description-md5: c7584b884ab52c1972b8736fef25ad35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Supported: 9m
+Task: minimal
 
 Package: libdbi-perl
 Priority: optional
