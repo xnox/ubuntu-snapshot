@@ -73,6 +73,34 @@ Checksums-Sha256:
  9d81e4228329e2d5cccb018ab06bc8b734fb2dede2c4d9b5c02303d4a690b76b 1940928 augeas_1.1.0.orig.tar.gz
  45c6484a3636ec838a508db600f731bfee8bf2164d8f622981757a95f29157c2 8730 augeas_1.1.0-0ubuntu1.debian.tar.gz
 
+Package: debian-installer
+Binary: debian-installer, debian-installer-udebs
+Version: 20101020ubuntu264
+Section: devel
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 7.0.0), apt, apt-utils, gnupg, ubuntu-keyring, dctrl-tools, wget, bc, debiandoc-sgml, xsltproc, docbook-xml, docbook-xsl, libbogl-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], lsb-release, glibc-pic, libslang2-pic (>= 2.0.6-4), libnewt-pic (>= 0.52.2-11.3) [!mipsel], libnewt-dev (>= 0.52.2-11.3) [mipsel], libgcc1 [i386 amd64], cramfsprogs [powerpc ia64 mips mipsel armeb armel], genext2fs (>= 1.3-7.1), e2fsprogs, mklibs (>= 0.1.25), genisoimage (>= 9:1.1.10-1ubuntu2) [!s390 !s390x], genromfs [sparc sparc64], hfsutils [powerpc], dosfstools (>= 3.0.9-1ubuntu2) [i386 ia64 m68k amd64 armel armhf], cpio, devio [armeb armel], parted [armel armhf], slugimage (>= 0.10+r58-6) [armeb armel], u-boot-tools [armel armhf], syslinux (>= 2:4.02) [i386 amd64], palo [hppa], elilo [ia64], yaboot [powerpc], aboot (>= 0.9b-2) [alpha], silo [sparc], sparc-utils [sparc sparc64], genisovh [mips], tip22 [mips], colo [mipsel], sibyl [mips mipsel], atari-bootstrap [m68k], vmelilo [m68k], m68k-vme-tftplilo [m68k], amiboot [m68k], emile [m68k], emile-bootblocks [m68k], u-boot-linaro-omap3-beagle [armel armhf], u-boot-linaro-omap4-panda [armel armhf], shim-signed [amd64], tofrodos [i386 amd64 kfreebsd-i386 kfreebsd-amd64], mtools [i386 ia64 m68k amd64 kfreebsd-i386 kfreebsd-amd64 hurd-i386 armel armhf], po4a [i386 amd64], python3 (>= 3.1) [i386 amd64], module-init-tools [i386 armeb armel armhf amd64 alpha hppa ia64 m68k mips mipsel powerpc s390 sh4 sparc sparc64], bf-utf-source [!s390 !s390x], mkvmlinuz [powerpc], openssl [armel], makefs [kfreebsd-i386 kfreebsd-amd64], grub-pc (>= 1.98~20100101-1) [kfreebsd-i386 kfreebsd-amd64 hurd-i386], xorriso [kfreebsd-i386 kfreebsd-amd64 hurd-i386], grub-efi-amd64-bin (>= 2.00) [amd64], grub-common [amd64], debian-ports-archive-keyring [sh4 sparc64]
+Build-Conflicts: libnewt-pic [mipsel]
+Architecture: any
+Standards-Version: 3.8.3
+Format: 1.0
+Directory: pool/main/d/debian-installer
+Files:
+ 289fc7224843506e31eb569af929f2e7 3062 debian-installer_20101020ubuntu264.dsc
+ 150d181682ddb88e1ecacaf94852307e 1966768 debian-installer_20101020ubuntu264.tar.gz
+Uploaders: Frans Pop <fjp@debian.org>, Otavio Salvador <otavio@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/debian-installer/ubuntu
+Package-List: 
+ debian-installer deb devel optional
+ debian-installer-udebs udeb debian-installer optional
+Checksums-Sha1:
+ ca1410991c95825b8494c7cc48989db090b2e853 3062 debian-installer_20101020ubuntu264.dsc
+ 2a48711a651dedab6694131d54195c9aa00cd5c4 1966768 debian-installer_20101020ubuntu264.tar.gz
+Checksums-Sha256:
+ e484209347c47751cdf82ba3ac15374ab3279cf7a5d1cbdaeff07571ea821003 3062 debian-installer_20101020ubuntu264.dsc
+ 47507fc887df0510fd6db2a85d0be615a4373b8cf4e1b4cd818bf838abfb9de9 1966768 debian-installer_20101020ubuntu264.tar.gz
+Debian-Vcs-Svn: svn://svn.debian.org/d-i/trunk/installer
+
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
 Version: 0.10.1-2
@@ -171,38 +199,6 @@ Checksums-Sha256:
  c7eb1b96b7f86d36a647066c44977e283add8afd39e51587e0aeb6baf5b8dfb5 2234 fonts-liberation_1.07.2-7.dsc
  2e70b26c0cf1e203a38b9af50060d65580e92288ffddff74a52a49273771fcc9 2318573 fonts-liberation_1.07.2.orig.tar.bz2
  1d42f8c7b6f3aa449432f86419996a8d28d979eb60ebd39315502b84efcf7ba7 9283 fonts-liberation_1.07.2-7.debian.tar.gz
-
-Package: horizon
-Binary: python-django-horizon, openstack-dashboard, python-django-openstack, openstack-dashboard-ubuntu-theme
-Version: 1:2013.2~b3-0ubuntu1
-Priority: extra
-Section: net
-Maintainer: Chuck Short <zulcss@ubuntu.com>
-Build-Depends: debhelper (>= 8.0.0), python-pbr, python-d2to1, pylint, python-all (>= 2.6.6-3~), python-django-nose, python-mox, python-netaddr, python-nose, python-setuptools, python-sphinx
-Architecture: all
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/main/h/horizon
-Files:
- 20dc3f7a04fa4ace5ba88d7cfd7303de 1945 horizon_2013.2~b3-0ubuntu1.dsc
- 289914748dff0f4c96f34e0aacf2261c 1944045 horizon_2013.2~b3.orig.tar.gz
- 193301e173bb52e86036382643417040 225699 horizon_2013.2~b3-0ubuntu1.debian.tar.gz
-Homepage: http://launchpad.net/horizon
-Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-server-dev/horizon/havana/files
-Vcs-Bzr: https://code.launchpad.net/~ubuntu-server-dev/horizon/havana
-Package-List: 
- openstack-dashboard deb net extra
- openstack-dashboard-ubuntu-theme deb net extra
- python-django-horizon deb python extra
- python-django-openstack deb net extra
-Checksums-Sha1:
- 60fae9b61388d7ad733063c901ec8d30e574d200 1945 horizon_2013.2~b3-0ubuntu1.dsc
- 11e46c6f84f361ff87c6d74b1efc6b7e13d359b8 1944045 horizon_2013.2~b3.orig.tar.gz
- dec3c0a2e47a99a92db1f8bb5119ec642de52e2e 225699 horizon_2013.2~b3-0ubuntu1.debian.tar.gz
-Checksums-Sha256:
- 7b59785b50c309e684e7349b763896d21ae3e178e3e8f0974b6cd8e1453f256c 1945 horizon_2013.2~b3-0ubuntu1.dsc
- 749bac7fb2ac5dd66f364170a31a8386c0fd53f9039732a7c081b91253e9402d 1944045 horizon_2013.2~b3.orig.tar.gz
- c366d88370ce8f712350ac906cc830614e068135d10b97feb9b2413c2550fc64 225699 horizon_2013.2~b3-0ubuntu1.debian.tar.gz
 
 Package: jackd2
 Binary: jackd2, libjack-jackd2-0, jackd2-firewire, libjack-jackd2-dev
@@ -924,6 +920,45 @@ Checksums-Sha256:
  8d759a6a3e50f0c12c07e555bcdafa10f7c74a2008af13a67dd640bf86108a88 2081 qtwebkit-source_2.3.2-0ubuntu1.dsc
  858d0d7b073c8c3b3d77ab344b5c67faf80041e30d2f9a91d259f92224906397 51649959 qtwebkit-source_2.3.2.orig.tar.gz
  0f95e06b3eb802e3f7df23e9f013bcbdda547173f2c984f04a39d68f29177d53 80539 qtwebkit-source_2.3.2-0ubuntu1.debian.tar.gz
+
+Package: sendmail
+Binary: sendmail-bin, rmail, sensible-mda, libmilter1.0.1, libmilter1.0.1-dbg, libmilter-dev, sendmail-doc, sendmail, sendmail-base, sendmail-cf
+Version: 8.14.4-2.1ubuntu4
+Priority: extra
+Section: mail
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Richard A Nelson (Rick) <cowboy@debian.org>
+Build-Depends: make (>> 3.79.1-14), m4, cdbs, quilt, patchutils, dh-buildinfo, debhelper (>= 5), linux-libc-dev (>= 2.6.21-3) [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], groff, bsdmainutils, libdb-dev, libldap2-dev, libwrap0-dev, liblockfile-dev, libsasl2-dev, libssl-dev
+Build-Depends-Indep: groff, bsdmainutils
+Build-Conflicts: bind-dev, fakeroot (<< 0.4.5), libbind-dev
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 1.0
+Directory: pool/main/s/sendmail
+Files:
+ 13a49e1dfd84c5d103efda7bb0aa03ce 2583 sendmail_8.14.4-2.1ubuntu4.dsc
+ 55701f352bb8285e4de14ad6f3d48e35 2072180 sendmail_8.14.4.orig.tar.gz
+ f7cc878b2658a061017e953dd1e196bb 488282 sendmail_8.14.4-2.1ubuntu4.diff.gz
+Homepage: http://www.sendmail.org
+Package-List: 
+ libmilter-dev deb libdevel extra
+ libmilter1.0.1 deb libs extra
+ libmilter1.0.1-dbg deb libs extra
+ rmail deb mail extra
+ sendmail deb mail extra
+ sendmail-base deb mail extra
+ sendmail-bin deb mail extra
+ sendmail-cf deb mail extra
+ sendmail-doc deb doc extra
+ sensible-mda deb mail extra
+Checksums-Sha1:
+ 522466dd23147ceb1dc56205e85a6eb1efb36fd0 2583 sendmail_8.14.4-2.1ubuntu4.dsc
+ 401096475f2e89f68ca5edc1456eb13269f950ad 2072180 sendmail_8.14.4.orig.tar.gz
+ 9de961337fea7b7c620bb986f5aff0b5a2ca56a3 488282 sendmail_8.14.4-2.1ubuntu4.diff.gz
+Checksums-Sha256:
+ 5f2cc6aac4dc790407f551c904ea8c571fbb957033d7557e1aec24695fc55243 2583 sendmail_8.14.4-2.1ubuntu4.dsc
+ 40246cd35e99c40f22f4e88d328ff0084ef925257f2b0708a62ee6588725c7a3 2072180 sendmail_8.14.4.orig.tar.gz
+ 68500fc9ea39e5247d476177777c9c54f855a6c6be2b7c4a5e9d802bee0a30b8 488282 sendmail_8.14.4-2.1ubuntu4.diff.gz
 
 Package: usb-modeswitch-data
 Binary: usb-modeswitch-data
