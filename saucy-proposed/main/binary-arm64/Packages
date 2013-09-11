@@ -80,23 +80,109 @@ Description-md5: 9691a395a77926383f936f9555572791
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: python-dogpile.core
-Priority: optional
-Section: python
-Installed-Size: 102
-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Package: oem-config
+Priority: extra
+Section: admin
+Installed-Size: 265
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
 Architecture: all
-Version: 0.4.1-0ubuntu2
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Filename: pool/main/p/python-dogpile.core/python-dogpile.core_0.4.1-0ubuntu2_all.deb
-Size: 10518
-MD5sum: dcce5966c9ee1f48f0e82cb16c8feef5
-SHA1: 2f6a5cbb80d60710217ee23dfbf05bb07b1538fd
-SHA256: 4be2ace0dd38d41cfd935c9a0ddb1ea62c2d802dfcc82655a6e7384b8463703c
-Description: ´dogpile´ lock, part of a typically larger caching solution.
-Description-md5: f6f2f0546c4579a719d946163ab19fb3
+Source: ubiquity
+Version: 2.15.17
+Replaces: oem-config-gtk (<< 1.54.13), oem-config-kde (<< 1.54.13), oem-config-keyboard, oem-config-locale, oem-config-timezone
+Depends: debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), ubiquity (= 2.15.17), oem-config-frontend-2.15.17
+Conflicts: oem-config-keyboard, oem-config-locale, oem-config-timezone
+Filename: pool/main/u/ubiquity/oem-config_2.15.17_all.deb
+Size: 13784
+MD5sum: a0cd813adf84c69f4ebf103811ff4e02
+SHA1: 8774fd6baeaadd52a330db76d127ce9999113dea
+SHA256: e7f1d473b8af205916923972d106638eb62f587104f9e768976aa687399f7436
+Description: Perform end-user configuration after initial OEM installation
+Description-md5: 9380d07ec19991f384138c016b142ce0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: oem-config-debconf
+Priority: extra
+Section: admin
+Installed-Size: 185
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.17
+Provides: oem-config-frontend-2.15.17
+Depends: sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), oem-config (= 2.15.17), ubiquity-frontend-debconf (= 2.15.17)
+Filename: pool/main/u/ubiquity/oem-config-debconf_2.15.17_all.deb
+Size: 2962
+MD5sum: 7339ebfb95842553707b8c698068b1ed
+SHA1: fd7dbfc15e701363e3ad4ff7a9f5ec2ffb5baf97
+SHA256: d1f02ae238f36bb8b16bbb4da311dcc5608ca2b1bc0fb05f7e0898627232feee
+Description: debconf frontend for end-user post-OEM-install configuration
+Description-md5: 0b339016cd37fb3df25a4085c60673e9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: oem-config-gtk
+Priority: extra
+Section: admin
+Installed-Size: 196
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.17
+Replaces: oem-config (<< 1.0)
+Provides: oem-config-frontend-2.15.17
+Depends: oem-config (= 2.15.17), ubiquity-frontend-gtk (= 2.15.17), python3-aptdaemon.gtk3widgets, aptdaemon
+Filename: pool/main/u/ubiquity/oem-config-gtk_2.15.17_all.deb
+Size: 4162
+MD5sum: 834acc4de91a106d5f987b15ba47f6ca
+SHA1: 93ed61f75af85899f8688eae302cbc38c07eb7ed
+SHA256: 03478985dcc929c5ebaa219c4460b4e8616928723982900935fde3df009b5315
+Description: GTK+ frontend for end-user post-OEM-install configuration
+Description-md5: 8709c78036a09529b74b507a6299fd60
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ubiquity-plugin-ubuntuone
+Priority: optional
+Section: admin
+Installed-Size: 221
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.17
+Replaces: ubiquity
+Depends: python3 (>= 3.2.3-3~), gir1.2-gnomekeyring-1.0, python3-gi, python3-oauthlib, ubiquity-frontend-gtk
+Filename: pool/main/u/ubiquity/ubiquity-plugin-ubuntuone_2.15.17_all.deb
+Size: 11362
+MD5sum: fd845ccf6ce217b946e7b1fc9d4aa63c
+SHA1: cf0a5e027c21db7bc8965382d956927cceb7abc0
+SHA256: 15cec00f0b9b5eb47f64bd7e9cc05e21cd82a0defd80d64f6a046cc92856ce81
+Description: Ubuntu One login and sign plugin for GTK+ Ubiquity live installer
+Description-md5: cc826c17658bc523cfcc9013dbdae4a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ubiquity-ubuntu-artwork
+Priority: optional
+Section: admin
+Installed-Size: 757
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.17
+Replaces: espresso-ubuntu-artwork, espresso-ubuntu-doc, ubiquity (<< 1.13.0), ubiquity-ubuntu-doc, ubuntu-express-ubuntu-artwork, ubuntu-express-ubuntu-doc
+Provides: ubiquity-artwork-2.15.17
+Conflicts: espresso-ubuntu-artwork, espresso-ubuntu-doc, ubiquity-ubuntu-doc, ubuntu-express-ubuntu-artwork, ubuntu-express-ubuntu-doc
+Filename: pool/main/u/ubiquity/ubiquity-ubuntu-artwork_2.15.17_all.deb
+Size: 522844
+MD5sum: 35f07c437f27f2c48c9a21b45c0747ba
+SHA1: 7c8d4ff5875309eebb0644663ba637ac0989697c
+SHA256: 471fa700745648ab65722150a5f9ce7ea223679b0473ef3af7d8b2ccac6151a2
+Description: Ubuntu artwork for Ubiquity live installer
+Description-md5: a7bbb2b9a8b2a3fbc7110f5a8d336a36
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
 
 Package: usb-modeswitch-data
 Priority: extra

@@ -61,6 +61,57 @@ Description-md5: aa958933c4aff1c55b3d2a05924987fa
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: grub-common
+Priority: optional
+Section: admin
+Installed-Size: 5728
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: grub2
+Version: 2.00-18ubuntu2
+Replaces: grub-coreboot (<< 2.00-4), grub-efi (<< 1.99-1), grub-efi-amd64 (<< 2.00-4), grub-efi-ia32 (<< 2.00-4), grub-efi-ia64 (<< 2.00-4), grub-ieee1275 (<< 2.00-4), grub-linuxbios (<< 1.96+20080831-1), grub-pc (<< 2.00-4), grub-yeeloong (<< 2.00-4)
+Depends: libc6 (>= 2.8), libdevmapper1.02.1 (>= 2:1.02.36), libfreetype6 (>= 2.2.1), libfuse2 (>= 2.8.1), liblzma5 (>= 5.1.1alpha+20120614), gettext-base, lsb-base (>= 3.0-6)
+Recommends: os-prober (>= 1.33)
+Suggests: multiboot-doc, grub-emu, xorriso (>= 0.5.6.pl00), desktop-base (>= 4.0.6), console-setup
+Conflicts: mdadm (<< 2.6.7-2)
+Breaks: apport (<< 2.1.1), friendly-recovery (<< 0.2.13), lupin-support (<< 0.30)
+Filename: pool/main/g/grub2/grub-common_2.00-18ubuntu2_powerpc.deb
+Size: 1218878
+MD5sum: 90be6c791d4bde0a5f00ead944a070c1
+SHA1: ec4d9bcc16338eabf3ac06fa624ba03764c91ac6
+SHA256: 623f7fe7399a8587b1433e89a819b6587aa0719906a61825d7d6b74a3afbd817
+Description: GRand Unified Bootloader (common files)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: 6e1c01c5245ffb9578aee58ee944229b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: grub2-common
+Priority: optional
+Section: admin
+Installed-Size: 198
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: grub2
+Version: 2.00-18ubuntu2
+Replaces: grub, grub-common (<< 1.99-1), grub-coreboot (<< 2.00-4), grub-efi (<< 1.99-1), grub-efi-amd64 (<< 2.00-4), grub-efi-ia32 (<< 2.00-4), grub-efi-ia64 (<< 2.00-4), grub-ieee1275 (<< 2.00-4), grub-legacy, grub-linuxbios (<< 1.99-1), grub-pc (<< 2.00-4), grub-yeeloong (<< 2.00-4)
+Depends: grub-common (= 2.00-18ubuntu2), dpkg (>= 1.15.4) | install-info
+Conflicts: grub (<< 0.97-54), grub-doc (<< 0.97-29ubuntu60), grub-legacy, grub-legacy-doc (<< 0.97-29ubuntu60)
+Filename: pool/main/g/grub2/grub2-common_2.00-18ubuntu2_powerpc.deb
+Size: 116678
+MD5sum: d6467900d565c87e023cef2efe303dd6
+SHA1: 3e025352ddb0c7ca84d03b93a1bef53b3dbc19b8
+SHA256: d9556a0180889f81676f8b2b39aff11ccc562bf1fabc6038c5a97e6d7a72b785
+Description: GRand Unified Bootloader (common files for version 2)
+Multi-Arch: foreign
+Homepage: http://www.gnu.org/software/grub/
+Description-md5: a969e6536e745e177a340b30bdb5ba3f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libapache2-mod-auth-mysql
 Priority: optional
 Section: web
@@ -323,21 +374,65 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
-Package: python-dogpile.core
-Priority: optional
-Section: python
-Installed-Size: 102
-Maintainer: Chuck Short <zulcss@ubuntu.com>
+Package: oem-config
+Priority: extra
+Section: admin
+Installed-Size: 265
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
 Architecture: all
-Version: 0.4.1-0ubuntu2
-Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Filename: pool/main/p/python-dogpile.core/python-dogpile.core_0.4.1-0ubuntu2_all.deb
-Size: 10518
-MD5sum: dcce5966c9ee1f48f0e82cb16c8feef5
-SHA1: 2f6a5cbb80d60710217ee23dfbf05bb07b1538fd
-SHA256: 4be2ace0dd38d41cfd935c9a0ddb1ea62c2d802dfcc82655a6e7384b8463703c
-Description: ´dogpile´ lock, part of a typically larger caching solution.
-Description-md5: f6f2f0546c4579a719d946163ab19fb3
+Source: ubiquity
+Version: 2.15.17
+Replaces: oem-config-gtk (<< 1.54.13), oem-config-kde (<< 1.54.13), oem-config-keyboard, oem-config-locale, oem-config-timezone
+Depends: debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), ubiquity (= 2.15.17), oem-config-frontend-2.15.17
+Conflicts: oem-config-keyboard, oem-config-locale, oem-config-timezone
+Filename: pool/main/u/ubiquity/oem-config_2.15.17_all.deb
+Size: 13784
+MD5sum: a0cd813adf84c69f4ebf103811ff4e02
+SHA1: 8774fd6baeaadd52a330db76d127ce9999113dea
+SHA256: e7f1d473b8af205916923972d106638eb62f587104f9e768976aa687399f7436
+Description: Perform end-user configuration after initial OEM installation
+Description-md5: 9380d07ec19991f384138c016b142ce0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: oem-config-debconf
+Priority: extra
+Section: admin
+Installed-Size: 185
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.17
+Provides: oem-config-frontend-2.15.17
+Depends: sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), oem-config (= 2.15.17), ubiquity-frontend-debconf (= 2.15.17)
+Filename: pool/main/u/ubiquity/oem-config-debconf_2.15.17_all.deb
+Size: 2962
+MD5sum: 7339ebfb95842553707b8c698068b1ed
+SHA1: fd7dbfc15e701363e3ad4ff7a9f5ec2ffb5baf97
+SHA256: d1f02ae238f36bb8b16bbb4da311dcc5608ca2b1bc0fb05f7e0898627232feee
+Description: debconf frontend for end-user post-OEM-install configuration
+Description-md5: 0b339016cd37fb3df25a4085c60673e9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: oem-config-gtk
+Priority: extra
+Section: admin
+Installed-Size: 196
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.17
+Replaces: oem-config (<< 1.0)
+Provides: oem-config-frontend-2.15.17
+Depends: oem-config (= 2.15.17), ubiquity-frontend-gtk (= 2.15.17), python3-aptdaemon.gtk3widgets, aptdaemon
+Filename: pool/main/u/ubiquity/oem-config-gtk_2.15.17_all.deb
+Size: 4162
+MD5sum: 834acc4de91a106d5f987b15ba47f6ca
+SHA1: 93ed61f75af85899f8688eae302cbc38c07eb7ed
+SHA256: 03478985dcc929c5ebaa219c4460b4e8616928723982900935fde3df009b5315
+Description: GTK+ frontend for end-user post-OEM-install configuration
+Description-md5: 8709c78036a09529b74b507a6299fd60
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -406,6 +501,48 @@ Description-md5: 44de7bf97742fb6f9f2aaa099078ef33
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-live, ubuntu-usb-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: ubiquity-plugin-ubuntuone
+Priority: optional
+Section: admin
+Installed-Size: 221
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.17
+Replaces: ubiquity
+Depends: python3 (>= 3.2.3-3~), gir1.2-gnomekeyring-1.0, python3-gi, python3-oauthlib, ubiquity-frontend-gtk
+Filename: pool/main/u/ubiquity/ubiquity-plugin-ubuntuone_2.15.17_all.deb
+Size: 11362
+MD5sum: fd845ccf6ce217b946e7b1fc9d4aa63c
+SHA1: cf0a5e027c21db7bc8965382d956927cceb7abc0
+SHA256: 15cec00f0b9b5eb47f64bd7e9cc05e21cd82a0defd80d64f6a046cc92856ce81
+Description: Ubuntu One login and sign plugin for GTK+ Ubiquity live installer
+Description-md5: cc826c17658bc523cfcc9013dbdae4a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ubiquity-ubuntu-artwork
+Priority: optional
+Section: admin
+Installed-Size: 757
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Architecture: all
+Source: ubiquity
+Version: 2.15.17
+Replaces: espresso-ubuntu-artwork, espresso-ubuntu-doc, ubiquity (<< 1.13.0), ubiquity-ubuntu-doc, ubuntu-express-ubuntu-artwork, ubuntu-express-ubuntu-doc
+Provides: ubiquity-artwork-2.15.17
+Conflicts: espresso-ubuntu-artwork, espresso-ubuntu-doc, ubiquity-ubuntu-doc, ubuntu-express-ubuntu-artwork, ubuntu-express-ubuntu-doc
+Filename: pool/main/u/ubiquity/ubiquity-ubuntu-artwork_2.15.17_all.deb
+Size: 522844
+MD5sum: 35f07c437f27f2c48c9a21b45c0747ba
+SHA1: 7c8d4ff5875309eebb0644663ba637ac0989697c
+SHA256: 471fa700745648ab65722150a5f9ce7ea223679b0473ef3af7d8b2ccac6151a2
+Description: Ubuntu artwork for Ubiquity live installer
+Description-md5: a7bbb2b9a8b2a3fbc7110f5a8d336a36
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
 
 Package: unity-webapps-service
 Priority: optional
