@@ -1,22 +1,3 @@
-Package: apparmor-easyprof-ubuntu
-Priority: optional
-Section: admin
-Installed-Size: 89
-Maintainer: Jamie Strandboge <jamie@ubuntu.com>
-Architecture: all
-Version: 1.0.31
-Depends: apparmor (>= 2.8.0-0ubuntu26)
-Filename: pool/main/a/apparmor-easyprof-ubuntu/apparmor-easyprof-ubuntu_1.0.31_all.deb
-Size: 9960
-MD5sum: 85b5a299cf2ef11cacfa5d2b8e828109
-SHA1: 38412c963c685431a4d9aa094d7b1ff0bf0b89e8
-SHA256: b16e274a6afea743ad212a9e561ad308e50731505b951eb4a7addd4b9e2c266c
-Description: AppArmor easyprof templates for Ubuntu
-Description-md5: 7e6a2e2f170348400aa571f1e2095040
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -759,6 +740,58 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: virt-host
+
+Package: nfs-common
+Priority: optional
+Section: net
+Installed-Size: 682
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian kernel team <debian-kernel@lists.debian.org>
+Architecture: i386
+Source: nfs-utils
+Version: 1:1.2.8-2ubuntu2
+Replaces: mount (<< 2.13~), nfs-client, nfs-kernel-server (<< 1:1.2.6-3)
+Provides: nfs-client
+Depends: libc6 (>= 2.15), libcap2 (>= 2.10), libcomerr2 (>= 1.01), libdevmapper1.02.1 (>= 2:1.02.20), libevent-2.0-5 (>= 2.0.10-stable), libgssglue1, libkeyutils1, libkrb5-3 (>= 1.6.dfsg.2), libmount1 (>= 2.19.1), libnfsidmap2, libtirpc1, libwrap0 (>= 7.6-4~), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), rpcbind (>= 0.2.0-6ubuntu1), adduser, ucf, lsb-base (>= 1.3-9ubuntu3), initscripts (>= 2.88dsf-13.10ubuntu1), mountall (>= 2.41)
+Recommends: python
+Suggests: open-iscsi, watchdog
+Conflicts: nfs-client
+Filename: pool/main/n/nfs-utils/nfs-common_1.2.8-2ubuntu2_i386.deb
+Size: 243368
+MD5sum: 5b5dc3fd6ce18d351d93aa439fb86f0a
+SHA1: f208a614c0c857f7d0d487f468fef5574697a0a1
+SHA256: d755a62a70a7b99dcd7efd432d969d3fd34935641feb83bf428aa9a362f98da3
+Description: NFS support files common to client and server
+Homepage: http://nfs.sourceforge.net/
+Description-md5: c2f5fd5a7d525f1cc35fbb49cc8628fd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: nfs-kernel-server
+Priority: optional
+Section: net
+Installed-Size: 502
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian kernel team <debian-kernel@lists.debian.org>
+Architecture: i386
+Source: nfs-utils
+Version: 1:1.2.8-2ubuntu2
+Replaces: knfs, nfs-server
+Provides: knfs, nfs-server
+Depends: libblkid1 (>= 2.16), libc6 (>= 2.15), libcap2 (>= 2.10), libsqlite3-0 (>= 3.5.9), libtirpc1, libwrap0 (>= 7.6-4~), nfs-common (= 1:1.2.8-2ubuntu2), ucf, lsb-base (>= 1.3-9ubuntu3)
+Conflicts: knfs, nfs-server
+Filename: pool/main/n/nfs-utils/nfs-kernel-server_1.2.8-2ubuntu2_i386.deb
+Size: 114112
+MD5sum: 44a1322161aeea47e6a9b26037c92259
+SHA1: 7a8c84ae6a7c4bd33af96c4bd850455bbd76b01d
+SHA256: 5994c5f0c8439ee510c09634557616fa2e3deb05264a201791dfb8c86955cc1e
+Description: support for NFS kernel server
+Homepage: http://nfs.sourceforge.net/
+Description-md5: 899bf536fe9edad1d8a30a8fada5180d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: oem-config
 Priority: extra
