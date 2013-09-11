@@ -1,3 +1,26 @@
+Package: cloud-init
+Priority: extra
+Section: admin
+Installed-Size: 875
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Version: 0.7.3~bzr869-0ubuntu1
+Replaces: ec2-init (<< 0.5.3)
+Provides: ec2-init
+Depends: cloud-guest-utils | cloud-utils, ifupdown (>= 0.6.10ubuntu5), procps, python (>= 2.7.1-0ubuntu2), python-requests (>= 0.8.2), software-properties-common, debconf (>= 0.5) | debconf-2.0, python (<< 2.8), python-boto, python-cheetah, python-configobj, python-json-patch, python-oauth, python-prettytable, python-serial, python-yaml
+Conflicts: ec2-init (<< 0.5.3)
+Filename: pool/main/c/cloud-init/cloud-init_0.7.3~bzr869-0ubuntu1_all.deb
+Size: 201154
+MD5sum: 1841b01ab0572ca81b1e947357f090ca
+SHA1: 83db28bb1c4471fffa30044e4edef4f0b05f7f72
+SHA256: 8fdb63554889c708b09aec652fcf9263cf1ff9073f5e87136a53a281735c63f6
+Description: Init scripts for cloud instances
+Python-Version: 2.7
+Description-md5: 8719ef0e4178017b7147590b1fde082e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: cloud-image
+
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -41,28 +64,6 @@ Description-md5: f54b7f85ee1176e1236a3584322d2174
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
-
-Package: gir1.2-ibus-1.0
-Priority: optional
-Section: introspection
-Installed-Size: 338
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: ibus
-Version: 1.5.3-6ubuntu2
-Depends: gir1.2-glib-2.0, libibus-1.0-5 (>= 1.5.3)
-Filename: pool/main/i/ibus/gir1.2-ibus-1.0_1.5.3-6ubuntu2_powerpc.deb
-Size: 109010
-MD5sum: 7ef3637881a2a7b1de520f6cb4cca15b
-SHA1: f938da6060bae13dbd76f84ca70bbbb5936dbc49
-SHA256: 716e0cf700e3c4541e5220b6f83a3a3221a9559fdeab328365354da0ac8fa8e4
-Description: Intelligent Input Bus - introspection data
-Homepage: http://code.google.com/p/ibus/
-Description-md5: c39b02e52edca9051d32a1b84aa1381f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-active-live, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: gir1.2-unity-webapps-0.2
 Priority: optional
@@ -110,6 +111,28 @@ Description-md5: 6e1c01c5245ffb9578aee58ee944229b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: grub-legacy-ec2
+Priority: extra
+Section: admin
+Installed-Size: 143
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Source: cloud-init
+Version: 0.7.3~bzr869-0ubuntu1
+Depends: debconf (>= 1.5.19) | cdebconf, ucf, util-linux (>= 2.15-1), debconf (>= 0.5) | debconf-2.0
+Suggests: grub-legacy-doc
+Conflicts: grub
+Filename: pool/main/c/cloud-init/grub-legacy-ec2_0.7.3~bzr869-0ubuntu1_all.deb
+Size: 24058
+MD5sum: 33d6d81a442629c6f69cd6d2221ab64c
+SHA1: 9c4142026a472c5d0c2edc011fefc4ceeaaf40ef
+SHA256: 33eaaa44dc629ff841d8c95685a94caf54e772581ce981310c3b34cabf94ac25
+Description: Handles update-grub for ec2 instances
+Description-md5: e5f8ea347000ef0d0aedb42c000e0b9c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: cloud-image
+
 Package: grub2-common
 Priority: optional
 Section: admin
@@ -133,97 +156,6 @@ Homepage: http://www.gnu.org/software/grub/
 Description-md5: a969e6536e745e177a340b30bdb5ba3f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: ibus
-Priority: optional
-Section: utils
-Installed-Size: 1104
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Version: 1.5.3-6ubuntu2
-Depends: dconf-cli, gir1.2-ibus-1.0 (= 1.5.3-6ubuntu2), gnome-icon-theme, librsvg2-common, python-gi, python-notify, dconf-gsettings-backend | gsettings-backend, python (>= 2.7.1-0ubuntu2), libatk1.0-0 (>= 1.12.4), libc6 (>= 2.4), libcairo2 (>= 1.2.4), libdconf1 (>= 0.14.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.2.1), libgtk2.0-0 (>= 2.24.5-4), libibus-1.0-5 (>= 1.5.3), libnotify4 (>= 0.7.0), libpango-1.0-0 (>= 1.14.0), libx11-6, libxi6 (>= 2:1.2.99.4)
-Recommends: ibus-gtk | ibus-qt4, ibus-gtk3 | ibus-qt4, im-config
-Suggests: ibus-clutter, ibus-doc, ibus-qt4
-Breaks: ibus-anthy (<< 1.5.3-2), ibus-el (<< 0.3.2-2), ibus-googlepinyin (<< 0.1.2-2)
-Filename: pool/main/i/ibus/ibus_1.5.3-6ubuntu2_powerpc.deb
-Size: 218428
-MD5sum: 470504ad5875d3af875a1949fffa56e7
-SHA1: a258d99b651244ebbd6744515a6adfb32369917a
-SHA256: 50785f4af2c25c0c7523e7c634826784cb0ab444ad61d9c409caab69b1cf2ab2
-Description: Intelligent Input Bus - core
-Multi-Arch: foreign
-Homepage: http://code.google.com/p/ibus/
-Description-md5: 489faf3b419b10c90a2fd62eb552cc93
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-active-live, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: ibus-doc
-Priority: optional
-Section: doc
-Installed-Size: 3891
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
-Architecture: all
-Source: ibus
-Version: 1.5.3-6ubuntu2
-Filename: pool/main/i/ibus/ibus-doc_1.5.3-6ubuntu2_all.deb
-Size: 331424
-MD5sum: 0bfe140732f972b2222ae9060848c6c3
-SHA1: 16829a579d16b02fe679b8811e64487bee564d82
-SHA256: e422bfb210260e267e7f45f9d9a864065cc4c16fe17229ca1e3d8be912c64d50
-Description: Intelligent Input Bus - development documentation
-Homepage: http://code.google.com/p/ibus/
-Description-md5: 09048d4e789485a527aee6fb9a9dd253
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ibus-gtk
-Priority: optional
-Section: utils
-Installed-Size: 87
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: ibus
-Version: 1.5.3-6ubuntu2
-Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.31.8), libgtk2.0-0 (>= 2.24.5-4), libibus-1.0-5 (>= 1.5.1), libpango-1.0-0 (>= 1.14.0)
-Filename: pool/main/i/ibus/ibus-gtk_1.5.3-6ubuntu2_powerpc.deb
-Size: 14458
-MD5sum: bdcb9c89c4674b55c0770dffe2222051
-SHA1: b4fbc44cbbafa1bdb8c9ec5a8b96559ee35eb735
-SHA256: 54cdb5bdb8117a3c0d27654bc38df976c99bcbb63d255465c1509bec39ad9e53
-Description: Intelligent Input Bus - GTK+2 support
-Multi-Arch: same
-Homepage: http://code.google.com/p/ibus/
-Description-md5: 1f9ea675e099fe199fcaa23aae7ef941
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-active-live, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: ibus-gtk3
-Priority: optional
-Section: utils
-Installed-Size: 87
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: ibus
-Version: 1.5.3-6ubuntu2
-Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.31.8), libgtk-3-0 (>= 3.0.0), libibus-1.0-5 (>= 1.5.1), libpango-1.0-0 (>= 1.14.0)
-Filename: pool/main/i/ibus/ibus-gtk3_1.5.3-6ubuntu2_powerpc.deb
-Size: 14510
-MD5sum: 12093f9c694c44f670ee8f5b3171cf1c
-SHA1: cd23cf3d95ff8770fbdc9936ccc4ee2327b37be6
-SHA256: 8efce889ce72cf959e10085a0e5db5fe27499bfeb8af9cbefebd705af4d07fb3
-Description: Intelligent Input Bus - GTK+3 support
-Multi-Arch: same
-Homepage: http://code.google.com/p/ibus/
-Description-md5: bffc1306e64ce23ae551c3e11837360a
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-active-live, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
@@ -355,52 +287,6 @@ Description-md5: 2206a13104622d0ae3e6b435b0e80fc0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
-
-Package: libibus-1.0-5
-Priority: optional
-Section: libs
-Installed-Size: 433
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: ibus
-Version: 1.5.3-6ubuntu2
-Depends: libc6 (>= 2.4), libglib2.0-0 (>= 2.37.3)
-Pre-Depends: multiarch-support
-Filename: pool/main/i/ibus/libibus-1.0-5_1.5.3-6ubuntu2_powerpc.deb
-Size: 139056
-MD5sum: 5034826f5b8fd89cb2cf7d9b84e3be4f
-SHA1: 4841a1beee4a89725de16815e9b2252410c612d7
-SHA256: af66ddc433b23616ae97467f0eeaa55cbcbfdd4614df5d7f03fb52e71c7ff8b9
-Description: Intelligent Input Bus - shared library
-Multi-Arch: same
-Homepage: http://code.google.com/p/ibus/
-Description-md5: fb7cfdef40194dc7d14444000e952d91
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-live, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: libibus-1.0-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 2017
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: ibus
-Version: 1.5.3-6ubuntu2
-Replaces: libibus-dev
-Depends: gir1.2-ibus-1.0 (= 1.5.3-6ubuntu2), libdbus-1-dev, libglib2.0-dev, libibus-1.0-5 (= 1.5.3-6ubuntu2)
-Filename: pool/main/i/ibus/libibus-1.0-dev_1.5.3-6ubuntu2_powerpc.deb
-Size: 198746
-MD5sum: 2bb4c895fed670eb67dbdd84f24028e4
-SHA1: 8a386a221e6bf38d58c528b0eeaaa4de9f607a47
-SHA256: 082ec8ab1dbc8ec0fa17214a9224b40b3c5eb0caf2cb41673dc2a4caa406d718
-Description: Intelligent Input Bus - development file
-Homepage: http://code.google.com/p/ibus/
-Description-md5: 90767d47bc8a96a7e5f705c5b19a9d1f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
 
 Package: libqtwebkit-dev
 Priority: optional
@@ -594,28 +480,6 @@ Description: GTK+ frontend for end-user post-OEM-install configuration
 Description-md5: 8709c78036a09529b74b507a6299fd60
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: python-ibus
-Priority: optional
-Section: python
-Installed-Size: 231
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: IME Packaging Team <pkg-ime-devel@lists.alioth.debian.org>
-Architecture: all
-Source: ibus
-Version: 1.5.3-6ubuntu2
-Depends: iso-codes, python-dbus (>= 0.83.0), python-gtk2, python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Filename: pool/main/i/ibus/python-ibus_1.5.3-6ubuntu2_all.deb
-Size: 37882
-MD5sum: 699752e049e15f69ce24a53e97d53e75
-SHA1: 1d075a520bd956da6065a6ecd4df4e332a01338b
-SHA256: 73d7f7eeb4b8618c704c90256a8796eb3894d41ebd3b81e55684469819009f6a
-Description: Intelligent Input Bus - Python support
-Homepage: http://code.google.com/p/ibus/
-Description-md5: a700abef97697e7294f7362fecc2514b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, kubuntu-active-live, kubuntu-active-live, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: ubiquity
 Priority: optional
