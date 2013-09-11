@@ -19,6 +19,50 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: freetds-common
+Priority: optional
+Section: libs
+Installed-Size: 92
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Langasek <vorlon@debian.org>
+Architecture: all
+Source: freetds
+Version: 0.91-5
+Replaces: libct3, libct4 (<< 0.82-1)
+Filename: pool/main/f/freetds/freetds-common_0.91-5_all.deb
+Size: 24256
+MD5sum: 3eb2adb8cea310bece33c8a6c61657c2
+SHA1: bdf3909101d9f6b65f9398c2d72c6390cf5d0212
+SHA256: dd1ccfa8784a592e7e13d83ffcec16badca277dded1565847ee395678c222ee2
+Description: configuration files for FreeTDS SQL client libraries
+Multi-Arch: foreign
+Homepage: http://www.freetds.org/
+Description-md5: a0e753a476f0693fa2896e6335f586c9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: freetds-dev
+Priority: optional
+Section: devel
+Installed-Size: 1001
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Langasek <vorlon@debian.org>
+Architecture: armhf
+Source: freetds
+Version: 0.91-5
+Depends: libct4 (= 0.91-5), libsybdb5 (= 0.91-5)
+Conflicts: crystalspace-dev
+Filename: pool/main/f/freetds/freetds-dev_0.91-5_armhf.deb
+Size: 426788
+MD5sum: 8531d5e0f407723a4dcf494d2f17392b
+SHA1: 43919f6fe780c731536ea72a071178bf3439fd1d
+SHA256: ba04722d39378e05c98c749204f8e70d6a10442de544b3ecbdbfcc6868ce2cc8
+Description: MS SQL and Sybase client library (static libs and headers)
+Homepage: http://www.freetds.org/
+Description-md5: 66f74ed837454f3b258fb8264488f827
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: gir1.2-gdata-0.0
 Priority: optional
 Section: libs
@@ -78,6 +122,29 @@ SHA1: 0af8925afdf6f2eeb1570daea9fb4ab6f6c052df
 SHA256: e8df88e2d28f55abbaa1840fa99a90e95214f755b5178f217b73380615030d3d
 Description: Apache 2 module for MySQL authentication
 Description-md5: ef80cee8ed7ae93c707d9527ba185c06
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libct4
+Priority: optional
+Section: libs
+Installed-Size: 269
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Langasek <vorlon@debian.org>
+Architecture: armhf
+Source: freetds
+Version: 0.91-5
+Depends: libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libgnutls26 (>= 2.12.17-0), libgssapi-krb5-2 (>= 1.10+dfsg~), freetds-common
+Pre-Depends: multiarch-support
+Filename: pool/main/f/freetds/libct4_0.91-5_armhf.deb
+Size: 145924
+MD5sum: dc068da5422495e102e46fec3c2504dd
+SHA1: dac7de8088fcf4baba2aa2871155fdfeed68cdbb
+SHA256: 7d0115c81ea7ce22911be5da6ed7ad5dbf783d746e74ba9735122f604d8d5eca
+Description: libraries for connecting to MS SQL and Sybase SQL servers
+Multi-Arch: same
+Homepage: http://www.freetds.org/
+Description-md5: 88bdfc8ca47c9a060f885576c2df10f0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -191,6 +258,29 @@ Description-md5: 2206a13104622d0ae3e6b435b0e80fc0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
+Package: libsybdb5
+Priority: optional
+Section: libs
+Installed-Size: 324
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Langasek <vorlon@debian.org>
+Architecture: armhf
+Source: freetds
+Version: 0.91-5
+Depends: libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libgnutls26 (>= 2.12.17-0), libgssapi-krb5-2 (>= 1.10+dfsg~), freetds-common
+Pre-Depends: multiarch-support
+Filename: pool/main/f/freetds/libsybdb5_0.91-5_armhf.deb
+Size: 168938
+MD5sum: 8ab05ba102a590476b6f8f79df8b5aac
+SHA1: dc98d033453431242d76690a0f6ee70042e38280
+SHA256: 1b93aa12e13ab930412f8517a06710c8e33bb1cc8f44ecef08b93479c429e8d7
+Description: libraries for connecting to MS SQL and Sybase SQL servers
+Multi-Arch: same
+Homepage: http://www.freetds.org/
+Description-md5: 29f178ab4ec52996d65073243a0058bf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: libunity-webapps-dev
 Priority: optional
@@ -372,6 +462,32 @@ SHA1: 93ed61f75af85899f8688eae302cbc38c07eb7ed
 SHA256: 03478985dcc929c5ebaa219c4460b4e8616928723982900935fde3df009b5315
 Description: GTK+ frontend for end-user post-OEM-install configuration
 Description-md5: 8709c78036a09529b74b507a6299fd60
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: tdsodbc
+Priority: optional
+Section: libs
+Installed-Size: 317
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Steve Langasek <vorlon@debian.org>
+Architecture: armhf
+Source: freetds
+Version: 0.91-5
+Replaces: freetds0, libct0, libct1
+Depends: libc6 (>= 2.17), libgcrypt11 (>= 1.4.5), libgnutls26 (>= 2.12.17-0), libgssapi-krb5-2 (>= 1.10+dfsg~), odbcinst1debian2 (>= 2.2.11-3), debconf (>= 0.5) | debconf-2.0, freetds-common
+Recommends: libodbc1
+Conflicts: freetds0, libct0, unixodbc (<< 2.1.1-2)
+Breaks: libiodbc2 (<< 3.52.7-3~), odbcinst1debian2 (<< 2.2.14p2-3), unixodbc (<< 2.2.14p2-3)
+Filename: pool/main/f/freetds/tdsodbc_0.91-5_armhf.deb
+Size: 169414
+MD5sum: 176ec2140cf7f02614f9ddf5fe438544
+SHA1: cb579b454b0082980a6c4893752e0f4f46e0ebf1
+SHA256: 9cf497d5e2ecd43ecf403522e1895a8f226e0e3b3f437f6f775361d3e9147f95
+Description: ODBC driver for connecting to MS SQL and Sybase SQL servers
+Multi-Arch: same
+Homepage: http://www.freetds.org/
+Description-md5: 0fecf9617c4dc2509f73a437bea0f895
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
