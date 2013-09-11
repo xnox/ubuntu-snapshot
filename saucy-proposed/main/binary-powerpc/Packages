@@ -1,3 +1,27 @@
+Package: apt
+Priority: important
+Section: admin
+Installed-Size: 3399
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Version: 0.9.9.1~ubuntu3
+Replaces: manpages-it, manpages-pl (<< 20060617-3~)
+Depends: libapt-pkg4.12 (>= 0.9.9.1~ubuntu3), libc6 (>= 2.15), libgcc1 (>= 1:4.2.1), libstdc++6 (>= 4.6), ubuntu-keyring, gnupg
+Suggests: aptitude | synaptic | wajig, dpkg-dev, apt-doc, xz-utils, python-apt
+Conflicts: python-apt (<< 0.7.93.2~)
+Filename: pool/main/a/apt/apt_0.9.9.1~ubuntu3_powerpc.deb
+Size: 1250104
+MD5sum: 0c94e929633ad85fe29a9bff4fce72a0
+SHA1: 3ba277155cd7131cbde132de866ca1cebbf4616f
+SHA256: 65d0969845ab476aebeb5fca298ab7c7790fcdf19c57f1d3ec2d67d5a208d799
+Description: commandline package manager
+Description-md5: 9fb97a88cb7383934ef963352b53b4a7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: minimal
+
 Package: apt-doc
 Priority: optional
 Section: doc
@@ -16,6 +40,49 @@ Description: documentation for APT
 Description-md5: bc2b838ed28e60af95d78926380a3300
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: apt-transport-https
+Priority: standard
+Section: admin
+Installed-Size: 186
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.9.9.1~ubuntu3
+Depends: libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.4), libcurl3-gnutls (>= 7.16.2), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1)
+Filename: pool/main/a/apt/apt-transport-https_0.9.9.1~ubuntu3_powerpc.deb
+Size: 16594
+MD5sum: 827cf059130f62f4d18cc8a7d61aca51
+SHA1: cfcce294e0c44c69d88298b514859ea5c600abb9
+SHA256: 8019b5801be6016c24d838054f2c5102f20b3ac20c5eb186055082a855e90b93
+Description: https download transport for APT
+Description-md5: 3365a6b50bd0e4eef6e176a80c735f43
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active
+
+Package: apt-utils
+Priority: important
+Section: admin
+Installed-Size: 660
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.9.9.1~ubuntu3
+Depends: libapt-inst1.5 (>= 0.8.0), libapt-pkg4.12 (>= 0.9.9.1~ubuntu3), libc6 (>= 2.4), libdb5.1, libgcc1 (>= 1:4.2.1), libstdc++6 (>= 4.4.0)
+Suggests: xz-utils
+Filename: pool/main/a/apt/apt-utils_0.9.9.1~ubuntu3_powerpc.deb
+Size: 201998
+MD5sum: bcf00ad365c907babc04c0d9b86266a7
+SHA1: 066dbe02d9e27584a0f3ed5d5106c174aee33619
+SHA256: 2760879d65c68fc5f5b4cac333531afa2d04c0225f288011fe8b287887247971
+Description: package managment related utility programs
+Description-md5: 578941ab78e4cbae72c741e56d175708
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
 
 Package: fonts-liberation
 Priority: optional
@@ -151,6 +218,50 @@ Description-md5: ef80cee8ed7ae93c707d9527ba185c06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libapt-inst1.5
+Priority: important
+Section: admin
+Installed-Size: 719
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.9.9.1~ubuntu3
+Depends: libapt-pkg4.12 (>= 0.8.16~exp9), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/a/apt/libapt-inst1.5_0.9.9.1~ubuntu3_powerpc.deb
+Size: 73574
+MD5sum: f26c86f4aca309956c9df5cf7895017f
+SHA1: 3aaceb0c4db695112186f54e8f11765176c03f0f
+SHA256: 9b4b505a92d13bf4a941b5fcfdce41ee2a04ebbe715ca4f5b941a331bb09704e
+Description: deb package format runtime library
+Multi-Arch: same
+Description-md5: 5df05e67cb17e91ac56a732061d88850
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: libapt-pkg-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 502
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.9.9.1~ubuntu3
+Depends: libapt-pkg4.12 (= 0.9.9.1~ubuntu3), libapt-inst1.5 (= 0.9.9.1~ubuntu3), zlib1g-dev
+Filename: pool/main/a/apt/libapt-pkg-dev_0.9.9.1~ubuntu3_powerpc.deb
+Size: 94428
+MD5sum: 4593a547739a1359c5177d0d962c611d
+SHA1: 1a71dc967b90ca06161fb1b04b969fa7d061ce74
+SHA256: b0faf71315059f1e110f3b32324423fead900bbbd7a36ad91e6a356b81886a10
+Description: development files for APT's libapt-pkg and libapt-inst
+Multi-Arch: same
+Description-md5: 8e463f77664788b23a47f5ac592f4595
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libapt-pkg-doc
 Priority: optional
 Section: doc
@@ -169,6 +280,31 @@ Description: documentation for APT development
 Description-md5: decce989b471f196cddabf52bee63592
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libapt-pkg4.12
+Priority: important
+Section: admin
+Installed-Size: 2904
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: APT Development Team <deity@lists.debian.org>
+Architecture: powerpc
+Source: apt
+Version: 0.9.9.1~ubuntu3
+Depends: libbz2-1.0, libc6 (>= 2.15), libgcc1 (>= 1:4.2.1), libstdc++6 (>= 4.6), zlib1g (>= 1:1.2.3.4)
+Pre-Depends: multiarch-support
+Breaks: apt (<< 0.9.4~)
+Filename: pool/main/a/apt/libapt-pkg4.12_0.9.9.1~ubuntu3_powerpc.deb
+Size: 840882
+MD5sum: 65c219f27548c6c644eedbcececb9983
+SHA1: d12fa7e1061a962fb4ca0e44bf3e485a05bdb442
+SHA256: c8ac76bb9dc64eeb6a4de2110ddbf3f7d367b24e49158d43290c700f9926506f
+Description: package managment runtime library
+Multi-Arch: same
+Description-md5: c7584b884ab52c1972b8736fef25ad35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: minimal
 
 Package: libdbi-perl
 Priority: optional
