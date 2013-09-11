@@ -2133,26 +2133,6 @@ Description-md5: 2ee04266f5bb85ca1e8246549cbcbf06
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: indicators-client
-Priority: optional
-Section: universe/x11
-Installed-Size: 70
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: amd64
-Source: unity8
-Version: 7.81.3+13.10.20130911.1-0ubuntu1
-Depends: qmenumodel-qml (>= 0.2.7), qtdeclarative5-ubuntu-ui-toolkit-plugin (>= 0.1.46+13.10.20130829.1-0ubuntu1), unity8 (= 7.81.3+13.10.20130911.1-0ubuntu1), libc6 (>= 2.2.5), libgcc1 (>= 1:4.1.1), libqt5core5 (>= 5.0.2), libqt5gui5 (>= 5.0.2), libqt5qml5, libqt5quick5, libqt5widgets5 (>= 5.0.2), libstdc++6 (>= 4.1.1)
-Filename: pool/universe/u/unity8/indicators-client_7.81.3+13.10.20130911.1-0ubuntu1_amd64.deb
-Size: 11582
-MD5sum: c30d43a36cd62fb458c2997b6bc946e6
-SHA1: 489692219dd87f608abe34975fa8038c5b1dd112
-SHA256: 2a88aca0e9bc5caad3279f686fdf1bc3132aef0d194a767a5f63247c6b22fe5f
-Description: Indicators client test application
-Homepage: http://launchpad.net/unity
-Description-md5: d9c32ed4d40bdde510b88bb974e7f9b9
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: infernal
 Priority: optional
 Section: universe/science
@@ -7369,6 +7349,53 @@ Description-md5: 05175bd403d719e6bc14a284ed5ff3bf
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: pollen
+Priority: optional
+Section: universe/admin
+Installed-Size: 80
+Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
+Architecture: amd64
+Version: 3.4-0ubuntu1
+Replaces: anerd-server (<< 3.0)
+Provides: anerd-server
+Depends: sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), golang-go
+Recommends: haveged, pollinate, ent
+Breaks: anerd-server (<< 3.0)
+Filename: pool/universe/p/pollen/pollen_3.4-0ubuntu1_amd64.deb
+Size: 8856
+MD5sum: eb118331a66ba89ea5bc8f4b9e1f3f76
+SHA1: e9ec7222cb291e5bf1fec1e6c87048f213c03afd
+SHA256: e76a57e7c6320462059588a352c4b1fb1ee8e6fbb1e49fcd62b27a59f467a411
+Description: Entropy-as-a-Service web server
+Homepage: http://launchpad.net/pollen
+Description-md5: e82e0d796160a300116ea3ec9e3e4bf5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: pollinate
+Priority: optional
+Section: universe/admin
+Installed-Size: 66
+Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
+Architecture: all
+Source: pollen
+Version: 3.4-0ubuntu1
+Replaces: anerd (<< 3.0), anerd-client (<< 3.0)
+Provides: anerd, anerd-client
+Depends: sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), run-one, curl
+Suggests: pollen-server, ent
+Breaks: anerd (<< 3.0), anerd-client (<< 3.0)
+Filename: pool/universe/p/pollen/pollinate_3.4-0ubuntu1_all.deb
+Size: 9088
+MD5sum: bb1820f8e8da861816fbb58713e36aee
+SHA1: 17880c00bc34fb2da0b417e6c1d85a574c77682b
+SHA256: 97b2168a89402adc6780633bed3a7c2ab58cc1742167fb2426de30aca92a442e
+Description: Entropy-as-a-Service client
+Homepage: http://launchpad.net/pollen
+Description-md5: a304605e79b0f9dcac10339acccd0f5e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: postgis
 Priority: optional
 Section: universe/misc
@@ -8845,92 +8872,6 @@ SHA256: 2fc6e215c4ec5b21685afc9941885e75192330c72ca0e2b68dbf94da0b22eb98
 Description: universal hardware driver for Ettus Research products
 Homepage: http://code.ettus.com/redmine/ettus/projects/uhd/wiki
 Description-md5: ac3e8afa9dfae1a7d90c1774d80251c8
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: unity8
-Priority: optional
-Section: universe/x11
-Installed-Size: 7000
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: amd64
-Version: 7.81.3+13.10.20130911.1-0ubuntu1
-Provides: indicator-renderer
-Depends: gsettings-desktop-schemas, libunity-mir1, qmenumodel-qml (>= 0.2.7), qtdeclarative5-dee-plugin, qtdeclarative5-gsettings1.0, qtdeclarative5-ubuntu-ui-toolkit-plugin (>= 0.1.46+13.10.20130829.1-0ubuntu1), qtdeclarative5-unity-notifications-plugin | unity-notifications-impl, qtdeclarative5-xmllistmodel-plugin, unity-launcher-impl-2, unity-notifications-impl-1, unity8-fake-env | qtubuntu-shell, unity8-private (= 7.81.3+13.10.20130911.1-0ubuntu1), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libqt5core5 (>= 5.0.2), libqt5gui5 (>= 5.0.2), libqt5qml5, libqt5quick5, libstdc++6 (>= 4.1.1)
-Recommends: indicator-battery, indicator-messages, indicator-time, unity-lens-friends, unity-scope-video-remote, unity-scope-gdrive, unity-lens-applications, unity-scope-home, unity-scope-musicstores
-Filename: pool/universe/u/unity8/unity8_7.81.3+13.10.20130911.1-0ubuntu1_amd64.deb
-Size: 5955772
-MD5sum: eb5e6843ea20410e62b1e99b6fdba319
-SHA1: b2c286f56f041327083c3acc2a20fbb8de146f8d
-SHA256: 9ae80ac6574eaed160c1a2d8495df561637b7cf2c44817f461e167424f9d54a9
-Description: Unity 8 shell
-Homepage: http://launchpad.net/unity
-Description-md5: d37f2dcedb14c11259d82d9b78326c43
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: unity8-autopilot
-Priority: optional
-Section: universe/x11
-Installed-Size: 199
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: unity8
-Version: 7.81.3+13.10.20130911.1-0ubuntu1
-Depends: indicators-client (>= 7.81.3+13.10.20130911.1-0ubuntu1), libautopilot-qt, libqt5test5, libqt5widgets5, python-evdev, unity8 (>= 7.81.3+13.10.20130911.1-0ubuntu1), unity8-fake-env (>= 7.81.3+13.10.20130911.1-0ubuntu1), python (>= 2.7.1-0ubuntu2), python (<< 2.8)
-Recommends: gir1.2-glib-2.0, python-gi
-Filename: pool/universe/u/unity8/unity8-autopilot_7.81.3+13.10.20130911.1-0ubuntu1_all.deb
-Size: 18230
-MD5sum: a85d024c35e1cf9323d1a8c5a9a98abe
-SHA1: 171c8d08af31859d7d329c99113d1855b9466e70
-SHA256: 1c5cc8a68e119d56808ec1d6f4d3e5b14b7abdbdfd9f7a3cec07f7e9038c6b14
-Description: Test package for Unity 8 shell
-Homepage: http://launchpad.net/unity
-Description-md5: 5589445a52fd3276b67537cf154814f0
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: unity8-fake-env
-Priority: optional
-Section: universe/x11
-Installed-Size: 659
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: amd64
-Source: unity8
-Version: 7.81.3+13.10.20130911.1-0ubuntu1
-Provides: qtubuntu-shell
-Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libqt5core5 (>= 5.0.2), libqt5gui5 (>= 5.0.2), libqt5qml5, libqt5quick5, libstdc++6 (>= 4.1.1)
-Filename: pool/universe/u/unity8/unity8-fake-env_7.81.3+13.10.20130911.1-0ubuntu1_amd64.deb
-Size: 202580
-MD5sum: 6e1caf5ef548d2b67a2bf5093b80c28a
-SHA1: 15b889f57138b4f6178844fcfad86f9f5a93fab8
-SHA256: da59331046b543f9723ca222feb5e2876b0a5f6223326df0f3bb0a4b63cfafe3
-Description: Fake environment for running Unity 8 shell
-Multi-Arch: same
-Homepage: http://launchpad.net/unity
-Description-md5: 0d991f354bedcb77c9043e7f57b5c6b9
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: unity8-private
-Priority: optional
-Section: universe/x11
-Installed-Size: 1843
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: amd64
-Source: unity8
-Version: 7.81.3+13.10.20130911.1-0ubuntu1
-Provides: unity-launcher-impl, unity-launcher-impl-2
-Depends: libc6 (>= 2.14), libdbus-1-3 (>= 1.0.2), libdee-1.0-4 (>= 0.5.2), libdee-qt5-3 (>= 3.2+13.10.20130821.1), libgcc1 (>= 1:4.1.1), libglib2.0-0 (>= 2.37.0), libgsettings-qt1, libhud-client2 (>= 13.04.0-0ubuntu1~ppa7), libnih-dbus1 (>= 1.0.0), libnih1 (>= 1.0.0), libnm-glib4 (>= 0.8.998), libnm-util2 (>= 0.8.998), libpulse0 (>= 1:0.99.1), libqmenumodel0, libqt5core5 (>= 5.0.2), libqt5dbus5 (>= 5.0.2), libqt5gui5 (>= 5.0.2), libqt5qml5, libqt5quick5, libsigc++-2.0-0c2a (>= 2.0.2), libstdc++6 (>= 4.6), libunity-core-6.0-7 (>= 7.0.0), libupstart1 (>= 1.9.1), libusermetricsoutput1 (>= 1.0.1)
-Filename: pool/universe/u/unity8/unity8-private_7.81.3+13.10.20130911.1-0ubuntu1_amd64.deb
-Size: 567992
-MD5sum: e426a44d68cd74bc688e90409479486c
-SHA1: 3cb7a09d734909ba11a0aad059c4606f2d76adb3
-SHA256: 2c24c04a1e0211e6b33dd291cd69c8c8763e67cade179dcbc46ecba9baa46072
-Description: Unity 8 private libs
-Multi-Arch: same
-Homepage: http://launchpad.net/unity
-Description-md5: ed26c476896e97ab15c48b38368ac34b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
