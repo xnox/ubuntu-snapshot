@@ -297,6 +297,30 @@ Origin: Ubuntu
 Supported: 5y
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
+Package: gir1.2-syncdaemon-1.0
+Priority: optional
+Section: libs
+Installed-Size: 94
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Rick McBride <rick.mcbride@canonical.com>
+Architecture: amd64
+Source: ubuntuone-client
+Version: 3.0.2-0ubuntu2
+Replaces: gir1.0-syncdaemon-1.0
+Depends: gir1.2-glib-2.0, libsyncdaemon-1.0-1
+Conflicts: gir1.0-syncdaemon-1.0
+Filename: pool/main/u/ubuntuone-client/gir1.2-syncdaemon-1.0_3.0.2-0ubuntu2_amd64.deb
+Size: 14916
+MD5sum: 857487c7aa97b68453a526e5df6c61d2
+SHA1: 8457ddedddf55502409c29a10c294a7c2137d5d6
+SHA256: cdf495b8b527e53577e59fece10d2b9f6da65e4c5118f644f9390e04ffcc85c0
+Description: Ubuntu One synchronization daemon library
+Homepage: https://one.ubuntu.com
+Description-md5: 20e0a85a600957e7a2cfb46019da4536
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
 Package: gnome-bluetooth
 Priority: optional
 Section: gnome
@@ -1688,6 +1712,56 @@ Description: development files for libsmbclient
 Multi-Arch: same
 Homepage: http://www.samba.org
 Description-md5: d6338d0aed68408023b999dd547aaecf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: libsyncdaemon-1.0-1
+Priority: optional
+Section: libs
+Installed-Size: 173
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Rick McBride <rick.mcbride@canonical.com>
+Architecture: amd64
+Source: ubuntuone-client
+Version: 3.0.2-0ubuntu2
+Replaces: ubuntuone-client (<< 1.3.0)
+Depends: libc6 (>= 2.2.5), libdbus-glib-1-2 (>= 0.78), libglib2.0-0 (>= 2.24.0), ubuntuone-client (>= 3.0.2-0ubuntu2)
+Suggests: ubuntuone-client-dbg
+Breaks: ubuntuone-client (<< 1.3.0)
+Filename: pool/main/u/ubuntuone-client/libsyncdaemon-1.0-1_3.0.2-0ubuntu2_amd64.deb
+Size: 45718
+MD5sum: bde4c02ac2210d4f386837880633cc7e
+SHA1: 0df0544b0bdcf065449b4e5c6a28fe20051fd8b6
+SHA256: d6283637d472aec4c79384a5b514728cd501cffc4d48fd2d9dc19aaf5737d365
+Description: Ubuntu One synchronization daemon library
+Homepage: https://one.ubuntu.com
+Description-md5: 81a465275e49c3cfa1083917ae9ca177
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: libsyncdaemon-1.0-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 540
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Rick McBride <rick.mcbride@canonical.com>
+Architecture: amd64
+Source: ubuntuone-client
+Version: 3.0.2-0ubuntu2
+Replaces: ubuntuone-client (<< 1.3.0)
+Depends: libsyncdaemon-1.0-1 (= 3.0.2-0ubuntu2), libdbus-glib-1-dev
+Breaks: ubuntuone-client (<< 1.3.0)
+Filename: pool/main/u/ubuntuone-client/libsyncdaemon-1.0-dev_3.0.2-0ubuntu2_amd64.deb
+Size: 69936
+MD5sum: 3004cde8618430ef1a2029d3544f0f89
+SHA1: e72ae6d4ff52e4ea507da4bc06d6255cd6bc6595
+SHA256: 9c56d941c253066b1aefd18a7ae3cd157c636d6c09b7907deeb267a2081b9664
+Description: Ubuntu One synchronization daemon library
+Homepage: https://one.ubuntu.com
+Description-md5: 5f8e8e12d0c4b2e856694b931648eaa5
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
@@ -15112,6 +15186,31 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: python-ubuntuone-client
+Priority: optional
+Section: python
+Installed-Size: 1359
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Rick McBride <rick.mcbride@canonical.com>
+Architecture: all
+Source: ubuntuone-client
+Version: 3.0.2-0ubuntu2
+Replaces: ubuntuone-client (<< 0.92.0-0ubuntu1)
+Provides: python2.7-ubuntuone-client
+Depends: python2.7, python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-ubuntuone-storageprotocol (>= 3.0.0-0ubuntu1.1), python-dbus, python-xdg, python-twisted-web, python-pyinotify, python-twisted-names, python-oauth (>= 1.0~svn1092-0ubuntu2)
+Filename: pool/main/u/ubuntuone-client/python-ubuntuone-client_3.0.2-0ubuntu2_all.deb
+Size: 228700
+MD5sum: b5a4eaebde23fe23d7ed519a308a8e12
+SHA1: 17d578050e9d18e0d1d3b3d6a8ee8cc66cd07372
+SHA256: 5a5363ddcbb82d88ba5a262b889065c7535412eeebc6c6999ad4d372b479af31
+Description: Ubuntu One client Python libraries
+Homepage: https://one.ubuntu.com
+Description-md5: 33c64f03af29f43eedcea97ff84512b0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
 Package: python2.7
 Priority: important
 Section: python
@@ -15632,6 +15731,78 @@ Description: GnuPG keys of the Ubuntu Cloud Image builder
 Description-md5: 51c8d5c78b723f301ee9f0718a899a94
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: ubuntuone-client
+Priority: optional
+Section: net
+Installed-Size: 332
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Rick McBride <rick.mcbride@canonical.com>
+Architecture: all
+Version: 3.0.2-0ubuntu2
+Replaces: nautilus-ubuntuone, ubuntuone-oauth-login, ubuntuone-storagefs
+Depends: python, python-ubuntuone-client (= 3.0.2-0ubuntu2), gir1.2-notify-0.7, python-configglue, python-apport, python-twisted-core (>= 11.1.0-1ubuntu1), ubuntu-sso-client (>= 2.99.91)
+Recommends: gir1.2-unity-5.0 | gir1.2-unity-4.0 | gir1.2-unity-3.0 (>= 3.8.4), gir1.2-indicate-0.7 | gir1.2-indicate-0.6, ubuntuone-installer (>= 2.99.5-0ubuntu3), ubuntu-sso-client-gui (>= 2.99.91)
+Suggests: ubuntuone-client-dbg, ubuntuone-client-proxy
+Conflicts: nautilus-ubuntuone, ubuntuone-client-gnome (<< 1.5.7), ubuntuone-oauth-login, ubuntuone-storagefs
+Filename: pool/main/u/ubuntuone-client/ubuntuone-client_3.0.2-0ubuntu2_all.deb
+Size: 46660
+MD5sum: 631e5552e42aa475a988a199d0705ae4
+SHA1: 3b334618581e6a6b2b4bf3b922cb2cfefb550c39
+SHA256: 7b66e54943ea71ddfb62e44e2ab3de5e9e3506f9e43fb06ed22548c9ffe2e8d7
+Description: Ubuntu One client
+Homepage: https://one.ubuntu.com
+Description-md5: 29297db1079e0fcb7f339d9d03a51e52
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: ubuntuone-client-dbg
+Priority: extra
+Section: debug
+Installed-Size: 380
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Rick McBride <rick.mcbride@canonical.com>
+Architecture: amd64
+Source: ubuntuone-client
+Version: 3.0.2-0ubuntu2
+Depends: libsyncdaemon-1.0-1 (= 3.0.2-0ubuntu2)
+Filename: pool/main/u/ubuntuone-client/ubuntuone-client-dbg_3.0.2-0ubuntu2_amd64.deb
+Size: 90280
+MD5sum: a474de68b7c27e8f21ce8510e23afd73
+SHA1: 54e0cd7f929d0464e45456e728423597f51f3feb
+SHA256: ad5f5b288637d4bd81dc5ec5d7697dec8095be60a88408bddbe0d56e951793a1
+Description: Debugging symbols for ubuntuone-client
+Homepage: https://one.ubuntu.com
+Description-md5: fa30c0a41440cb0cfb89d0ea3fb4c6c5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+
+Package: ubuntuone-client-proxy
+Priority: optional
+Section: python
+Installed-Size: 119
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Rick McBride <rick.mcbride@canonical.com>
+Architecture: all
+Source: ubuntuone-client
+Version: 3.0.2-0ubuntu2
+Replaces: python-ubuntuone-client (<< 2.99.91)
+Depends: python, python-qt4, python-qt4-dbus, python-twisted-core, python-ubuntu-sso-client (>= 2.99.91), python-ubuntuone-client (= 3.0.2-0ubuntu2), python-zope.interface
+Breaks: python-ubuntuone-client (<< 2.99.91)
+Filename: pool/main/u/ubuntuone-client/ubuntuone-client-proxy_3.0.2-0ubuntu2_all.deb
+Size: 14932
+MD5sum: 254b45d237bfb92997ebb7e2f53dbdbd
+SHA1: 085bf26d57b3b3db6159509dd3597c33b7ad9e71
+SHA256: 359cfd1101d93925066873f6d3119b6c6305046087144b59c2c21abd6d1d54d4
+Description: Ubuntu One client Proxy support
+Homepage: https://one.ubuntu.com
+Description-md5: 6a0f581d4b5168ef69cf12e106ea7984
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 5y
 
 Package: winbind
 Priority: optional
