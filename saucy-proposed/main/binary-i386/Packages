@@ -1,3 +1,164 @@
+Package: android-platform-headers
+Priority: extra
+Section: libdevel
+Installed-Size: 276
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: libhybris
+Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
+Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
+Filename: pool/main/libh/libhybris/android-platform-headers_0.1.0+git20130606+c5d897a-0ubuntu26_all.deb
+Size: 52914
+MD5sum: 3ac23eb60d48f58c407510ef7d6d8310
+SHA1: 0ea287f7a03e04dbebd9f10b90f877f45aef8323
+SHA256: 7c0093925263818522b01076d4186f306cd589b9101922032a384848df4ce33b
+Description: Android Platform Headers from AOSP releases
+Description-md5: 5d4e18662ffad46fc86efe8d568c6096
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apport
+Priority: optional
+Section: utils
+Installed-Size: 1168
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Version: 2.12.1-0ubuntu4
+Replaces: python-apport (<< 2.2-0ubuntu1)
+Depends: python3, python3-apport (>= 2.12.1-0ubuntu4), lsb-base (>= 3.0-6), python3-gi, gir1.2-glib-2.0 (>= 1.29.17), sysv-rc (>= 2.86.ds1-14.1ubuntu2), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
+Recommends: apport-symptoms, policykit-1
+Suggests: apport-gtk | apport-kde
+Breaks: python-apport (<< 2.2-0ubuntu1)
+Filename: pool/main/a/apport/apport_2.12.1-0ubuntu4_all.deb
+Size: 184346
+MD5sum: f7c03c18c58d8f4979599737a7131fb9
+SHA1: 69184b8affa1437da256d5117c02fdb0d57b25d1
+SHA256: f20304c9d553284b0ecac04c62802c5614e47deb99dded7c4fbe50d7d7890c73
+Description: automatically generate crash reports for debugging
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: c04626471654f9246cf5e28b560d262e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: apport-gtk
+Priority: optional
+Section: gnome
+Installed-Size: 199
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.1-0ubuntu4
+Depends: python3, python3-apport (>= 2.12.1-0ubuntu4), gir1.2-gtk-3.0 (>= 3.1.90), gir1.2-wnck-3.0, python3-gi, apport (>= 0.41), procps, x-terminal-emulator
+Recommends: update-notifier, gdb | gdb-minimal
+Filename: pool/main/a/apport/apport-gtk_2.12.1-0ubuntu4_all.deb
+Size: 9868
+MD5sum: a04938ed01ee275b913cbfda0f52e121
+SHA1: a57e03e3ec40a6d7258ce665f904f73aa0c0b846
+SHA256: 7aae885ece6ff51087d7e8a770dd4dd9857fa4c7976b65192b26bea19dcdf13b
+Description: GTK+ frontend for the apport crash report system
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 2f45e17d5bf22355d7921dba196ae6dd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: apport-noui
+Priority: optional
+Section: utils
+Installed-Size: 144
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.1-0ubuntu4
+Depends: python3, python3-apport (>= 2.12.1-0ubuntu4), apport (>= 0.41), procps, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
+Filename: pool/main/a/apport/apport-noui_2.12.1-0ubuntu4_all.deb
+Size: 2160
+MD5sum: 6e74ec376f6d2b4ec091078cbbbbcf2f
+SHA1: 4d9079429443a522a9948ca8bcefaf5e16cd8a01
+SHA256: 76a9c88d5bcf02c37afb12e9398f6ebb598d99426d74cd00b5b90abcd1e42904
+Description: tools for automatically reporting Apport crash reports
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 679b8a64ce43a788744dbacfc594051c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: apport-retrace
+Priority: optional
+Section: devel
+Installed-Size: 176
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.1-0ubuntu4
+Depends: python (>= 2.7), python3, python-apport (>= 2.12.1-0ubuntu4), apt, binutils, dpkg-dev, gdb, libc6-dbg | libc6-dbgsym | libc-dbg
+Suggests: gdb-multiarch
+Filename: pool/main/a/apport/apport-retrace_2.12.1-0ubuntu4_all.deb
+Size: 13202
+MD5sum: 2bbe69b0c83cbdd80bfc410f24164a67
+SHA1: d13fafa445ebcf7c640091421251c53b900b0002
+SHA256: d4b4d1c119fb92b6e7594f8eb08c8b64a9a2c2b6ca9776d3f64a366ff846a6b6
+Description: tools for reprocessing Apport crash reports
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 7608c287131a28c4611767ba61f02050
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: byobu
+Priority: optional
+Section: misc
+Installed-Size: 578
+Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
+Architecture: all
+Version: 5.58-0ubuntu1
+Replaces: byobu-extras (<< 2.17), screen-profiles (<< 2.0), screen-profiles-extras (<< 2.0)
+Provides: byobu-extras, screen-profiles, screen-profiles-extras
+Depends: debconf (>= 0.5) | debconf-2.0, gettext-base, python, python-newt (>= 0.52.2-11), tmux (>= 1.5) | screen, gawk
+Recommends: screen, tmux (>= 1.5)
+Suggests: apport, lsb-release, po-debconf, ttf-ubuntu-font-family (>= 0.80-0ubuntu1~medium), update-notifier-common, vim, w3m
+Breaks: byobu-extras (<< 2.17), screen-profiles (<< 2.0), screen-profiles-extras (<< 2.0)
+Filename: pool/main/b/byobu/byobu_5.58-0ubuntu1_all.deb
+Size: 102884
+MD5sum: 0be03d452894e39e77fd8819a04023c0
+SHA1: 9033a2add107e831def5b56364a4cfeb76683af3
+SHA256: 4182e2da44b5b3c84b0c04b08ff70abb963a82bdb7f86ffb9d8a951f0e956d82
+Description: powerful, text based window manager and shell multiplexer
+Enhances: screen
+Homepage: http://byobu.co
+Description-md5: 024f61f4fb7dd0808208a74ed4c03472
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb, cloud-image, server, edubuntu-usb
+
+Package: dh-apport
+Priority: optional
+Section: devel
+Installed-Size: 167
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.1-0ubuntu4
+Depends: perl
+Filename: pool/main/a/apport/dh-apport_2.12.1-0ubuntu4_all.deb
+Size: 7630
+MD5sum: f6884a690c80ce7539d347da4d2f0fcf
+SHA1: 1ba14f44b6242b9ff245cbca31f1691b233157c7
+SHA256: 8d90676eb9e4149144b2f685f1cc4cf7420a87b81b3171a427aeeb9d5b966e89
+Description: debhelper extension for the apport crash report system
+Multi-Arch: foreign
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: a5c779df9e0b356100c76151d7cef527
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -28,16 +189,16 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: i386
 Source: libgdata
-Version: 0.13.4-0ubuntu1
+Version: 0.14.0-1ubuntu1
 Depends: gir1.2-freedesktop, gir1.2-glib-2.0, gir1.2-goa-1.0, gir1.2-soup-2.4, libgdata13 (>= 0.13.3)
 Conflicts: gir1.0-gdata-0.0
-Filename: pool/main/libg/libgdata/gir1.2-gdata-0.0_0.13.4-0ubuntu1_i386.deb
-Size: 30980
-MD5sum: 3094d5ecb6870c899e506b8ba89aa539
-SHA1: 6312289ac755f6c220a005878d01b581ee4a1221
-SHA256: 48edb589d352bd50044bb64ddf4b4cfa8c32311e1eb5bb4469ee355fe9d5ecf3
+Filename: pool/main/libg/libgdata/gir1.2-gdata-0.0_0.14.0-1ubuntu1_i386.deb
+Size: 30936
+MD5sum: b9824ca80f76d4b8644ba4e809f8da01
+SHA1: d0a86a9f385b64e23e7c9cef7f73aec5b6520d98
+SHA256: 24b2b4773e3b0fea1d1dd9a923f9dd10421759bd6a3bc515d11d0f675d33d644
 Description: GObject introspection data for the GData webservices library
-Homepage: http://live.gnome.org/libgdata
+Homepage: https://wiki.gnome.org/libgdata
 Description-md5: f54b7f85ee1176e1236a3584322d2174
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
@@ -361,6 +522,46 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
 
+Package: libandroid-properties-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 61
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libhybris
+Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Depends: libandroid-properties1 (= 0.1.0+git20130606+c5d897a-0ubuntu26)
+Filename: pool/main/libh/libhybris/libandroid-properties-dev_0.1.0+git20130606+c5d897a-0ubuntu26_i386.deb
+Size: 5202
+MD5sum: e97a1c80ec7aece082446f00c6d54d90
+SHA1: 0233d90010832e4a3c33f6825119f09927bfcfc3
+SHA256: 8455466c5e3e1c4c87a8daad744d079aad36fc0afb383498ce0e7b3dca107bc6
+Description: Development headers files for libandroid-properties
+Description-md5: fd78846cc0eb621999aaf215babfb840
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libandroid-properties1
+Priority: extra
+Section: libs
+Installed-Size: 58
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libhybris
+Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Depends: libc6 (>= 2.4)
+Filename: pool/main/libh/libhybris/libandroid-properties1_0.1.0+git20130606+c5d897a-0ubuntu26_i386.deb
+Size: 10058
+MD5sum: 84fcd2501334c65083d4b34e0c91b96f
+SHA1: 3236530c1f498dbddc74a30c46a58d9f6a908d0a
+SHA256: ceafd6885c2cde40745e7c0e2c3796eb33e5b86794e14b7686218b2e3cf3b044
+Description: Library to provide access to get, set and list Android properties
+Description-md5: 9af1ee376636863e49ba13ab6b202faa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libapache2-mod-auth-mysql
 Priority: optional
 Section: web
@@ -389,14 +590,14 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: all
 Source: libgdata
-Version: 0.13.4-0ubuntu1
-Filename: pool/main/libg/libgdata/libgdata-common_0.13.4-0ubuntu1_all.deb
-Size: 18336
-MD5sum: 8ce0d5bf63855e53f3e6e65fbcb77705
-SHA1: fa74816c49263c756b7e23c2e24d2150b32b9871
-SHA256: fde94fb51b468a5b8c031982977f8a240d546f872ee16917a233b0c6b21da3c2
+Version: 0.14.0-1ubuntu1
+Filename: pool/main/libg/libgdata/libgdata-common_0.14.0-1ubuntu1_all.deb
+Size: 18368
+MD5sum: 272d82fa27166ba6607609e3bb6d9ef8
+SHA1: d0abfe0dc3f1adb3b49996f1a322127c24ac0b7c
+SHA256: 5e8c509a901af1a791caa738480a52ce8777d58b721730492f08facf74c8fd1d
 Description: Library for accessing GData webservices - common data files
-Homepage: http://live.gnome.org/libgdata
+Homepage: https://wiki.gnome.org/libgdata
 Description-md5: 5d011a11f567ab94a8c35d7b48cad649
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
@@ -411,16 +612,16 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: i386
 Source: libgdata
-Version: 0.13.4-0ubuntu1
-Depends: libgdata13 (= 0.13.4-0ubuntu1), gir1.2-gdata-0.0 (= 0.13.4-0ubuntu1), libgcr-3-dev, libglib2.0-dev (>= 2.31.0), libgoa-1.0-dev (>= 3.2), liboauth-dev (>= 0.9.4), libsoup2.4-dev (>= 2.37.91), libsoup-gnome2.4-dev (>= 2.37.91), libxml2-dev
+Version: 0.14.0-1ubuntu1
+Depends: libgdata13 (= 0.14.0-1ubuntu1), gir1.2-gdata-0.0 (= 0.14.0-1ubuntu1), libgcr-3-dev, libglib2.0-dev (>= 2.31.0), libgoa-1.0-dev (>= 3.2), liboauth-dev (>= 0.9.4), libsoup2.4-dev (>= 2.37.91), libsoup-gnome2.4-dev (>= 2.37.91), libxml2-dev
 Suggests: libgdata-doc
-Filename: pool/main/libg/libgdata/libgdata-dev_0.13.4-0ubuntu1_i386.deb
-Size: 339998
-MD5sum: 0c927339624ffad366402a891d7ffe6e
-SHA1: 25a4c62afe06cdcaa62b235e0d1f69cb415be673
-SHA256: 8b39590f7d4dfdc9b752f78bc9526fd73fdfe0b6f236099a24c7204b2777e7f5
+Filename: pool/main/libg/libgdata/libgdata-dev_0.14.0-1ubuntu1_i386.deb
+Size: 338904
+MD5sum: ec287f1970b5583669dcd1855da57ab4
+SHA1: 84944ed803392f5553ef26b082cd14e56288220d
+SHA256: 0ed2d219dbf9f62f08da46de9b42981d0068d8312042a0c623fb4691390dd5d6
 Description: Library for accessing GData webservices - development files
-Homepage: http://live.gnome.org/libgdata
+Homepage: https://wiki.gnome.org/libgdata
 Description-md5: 9892c19f92db563fe9dd7a426623ff57
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
@@ -429,21 +630,21 @@ Supported: 9m
 Package: libgdata-doc
 Priority: optional
 Section: doc
-Installed-Size: 5610
+Installed-Size: 5448
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: all
 Source: libgdata
-Version: 0.13.4-0ubuntu1
+Version: 0.14.0-1ubuntu1
 Recommends: libgdata-dev
 Suggests: devhelp
-Filename: pool/main/libg/libgdata/libgdata-doc_0.13.4-0ubuntu1_all.deb
-Size: 317496
-MD5sum: b918a5af196268a71f2aeb8c72b102d4
-SHA1: dee6aa59dac973b6d587344cce7c7b8d132d15f7
-SHA256: db157782eab35ac6220420f8462efbe0760dec7f765b9ae31b76a73d4a7007ab
+Filename: pool/main/libg/libgdata/libgdata-doc_0.14.0-1ubuntu1_all.deb
+Size: 314852
+MD5sum: e8d6e2789d7adba6eccf0b17201e46a4
+SHA1: 2aa42c51040f3d5373df5aa3035cc2796244a5af
+SHA256: ecd1efb64b8ad040a2492b0721e06cd9609368e74ce577bb8bc6a90f352fb7ba
 Description: Library for accessing GData webservices - documentation
-Homepage: http://live.gnome.org/libgdata
+Homepage: https://wiki.gnome.org/libgdata
 Description-md5: 457badc41d89dbaf51ffd8a78ca96272
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
@@ -457,20 +658,231 @@ Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
 Architecture: i386
 Source: libgdata
-Version: 0.13.4-0ubuntu1
+Version: 0.14.0-1ubuntu1
 Depends: libc6 (>= 2.7), libgcr-base-3-1 (>= 3.8.0), libglib2.0-0 (>= 2.37.3), libgoa-1.0-0 (>= 3.1.90), liboauth0 (>= 0.9.1), libsoup-gnome2.4-1 (>= 2.37.91), libsoup2.4-1 (>= 2.41.90), libxml2 (>= 2.7.4), libgdata-common
-Filename: pool/main/libg/libgdata/libgdata13_0.13.4-0ubuntu1_i386.deb
-Size: 202796
-MD5sum: 8bb79c5c03e7cd987f34ddde1cb83786
-SHA1: 759b2cbc04d95000de30dc38e08c1f9f3ec6033d
-SHA256: 34cad42b0836abc54fc11cfc248fb5b183584adc10a593dc9c4b13daeaabe2d6
+Filename: pool/main/libg/libgdata/libgdata13_0.14.0-1ubuntu1_i386.deb
+Size: 202788
+MD5sum: 2dbd22b303d64e92d3ae61914861a26e
+SHA1: cba2552fb930958cafc293c448e15b3344644b52
+SHA256: 8cb52b8228cbfe37639b2ef5e8b5610f8246754fb0dd58a9c4dba82854e1af63
 Description: Library for accessing GData webservices - shared libraries
-Homepage: http://live.gnome.org/libgdata
+Homepage: https://wiki.gnome.org/libgdata
 Description-md5: 2206a13104622d0ae3e6b435b0e80fc0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
+Package: libhardware-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 48
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libhybris
+Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
+Depends: libhardware2 (= 0.1.0+git20130606+c5d897a-0ubuntu26), android-platform-headers (= 0.1.0+git20130606+c5d897a-0ubuntu26)
+Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
+Filename: pool/main/libh/libhybris/libhardware-dev_0.1.0+git20130606+c5d897a-0ubuntu26_i386.deb
+Size: 4690
+MD5sum: 82dd1600da2ea768abe165e7676aff1d
+SHA1: a86a0c1c30a6bbc52ccdc4332bc2be735590d107
+SHA256: c22f3bc177a5a61cf68b007935cd25cad4288455527ba7cd574e75af6065f36c
+Description: Development files for libhardware
+Description-md5: da5d7fa47a1b4b845a603aff96d464fe
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libhardware2
+Priority: extra
+Section: libs
+Installed-Size: 53
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libhybris
+Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Replaces: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
+Depends: libc6 (>= 2.3.6-6~), libhybris-common1
+Breaks: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
+Filename: pool/main/libh/libhybris/libhardware2_0.1.0+git20130606+c5d897a-0ubuntu26_i386.deb
+Size: 6798
+MD5sum: c0ed2592088d0064a7683dac76122009
+SHA1: a4604da1aed4493998140f03328e407f69085d55
+SHA256: 011e7a68032bdef8ea045a2286b00e7da45450215cd31285fabc0270c47d602b
+Description: Library to provice access to the Android libhardware HAL
+Description-md5: 653b750176d920864f05b2e85824800a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libhybris
+Priority: extra
+Section: libs
+Installed-Size: 173
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Depends: libandroid-properties1 (= 0.1.0+git20130606+c5d897a-0ubuntu26), libhardware2, libmedia1, libc6 (>= 2.4), libhybris-common1, libstdc++6 (>= 4.1.1)
+Filename: pool/main/libh/libhybris/libhybris_0.1.0+git20130606+c5d897a-0ubuntu26_i386.deb
+Size: 35998
+MD5sum: 3e6ae5cd996a96c036961cf4a58f593b
+SHA1: f017db93cc0b45f10375e9647c3cc81f6b961b62
+SHA256: 46fa7b4580770c5aeecf148e96ce968e6b2d78a80a0331a469f7edb2a31f085d
+Description: Allows to run bionic-based HW adaptations in glibc systems - libs
+Description-md5: d20384e11368d9f090577e52e675ed57
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libhybris-common-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 48
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libhybris
+Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
+Depends: libhybris-common1 (= 0.1.0+git20130606+c5d897a-0ubuntu26)
+Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
+Filename: pool/main/libh/libhybris/libhybris-common-dev_0.1.0+git20130606+c5d897a-0ubuntu26_i386.deb
+Size: 4670
+MD5sum: 659ea685e9b88ffc5d2681656c908b35
+SHA1: cb8109aa623276c8a3fb762e24669eebdd062be4
+SHA256: 4e05a316cb2b440cc1ce17e0e49b55b3bb67f3d3d0583dfd88157bc12c8db53b
+Description: Development files for libhybris-common
+Description-md5: 27556b4ff08d6ee084db91ea770617de
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libhybris-common1
+Priority: extra
+Section: libs
+Installed-Size: 140
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libhybris
+Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Replaces: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
+Depends: libandroid-properties1, libc6 (>= 2.12)
+Breaks: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu13)
+Filename: pool/main/libh/libhybris/libhybris-common1_0.1.0+git20130606+c5d897a-0ubuntu26_i386.deb
+Size: 41212
+MD5sum: 6b96c9332419bacbf33e299e345d596f
+SHA1: 6a97131c6b08f1004b6d96980898a49dbdab54a0
+SHA256: d572d8e498ed1ccc415330e0a7f33b3682fe2d5119def428c0325b4fcd279873
+Description: Common library that contains the Android linker and custom hooks
+Description-md5: 618c5643ccb4d8d4d8db9e33d16f42e3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libhybris-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 134
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libhybris
+Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Depends: libhybris (= 0.1.0+git20130606+c5d897a-0ubuntu26), android-platform-headers (= 0.1.0+git20130606+c5d897a-0ubuntu26), libandroid-properties-dev (= 0.1.0+git20130606+c5d897a-0ubuntu26), libhardware-dev (= 0.1.0+git20130606+c5d897a-0ubuntu26), libmedia-dev (= 0.1.0+git20130606+c5d897a-0ubuntu26), libhybris-common-dev (= 0.1.0+git20130606+c5d897a-0ubuntu26), libgles2-mesa-dev
+Filename: pool/main/libh/libhybris/libhybris-dev_0.1.0+git20130606+c5d897a-0ubuntu26_i386.deb
+Size: 17146
+MD5sum: b89e08ccb02d466e856e5dadceb3f9ba
+SHA1: 10877cb1b402d46bce289f82554000622b3919a2
+SHA256: a128db0bf19acda4f4b5f657758db220f33cf5ae4c458488104e46c18fbb4b78
+Description: Development headers and libraries for libhybris
+Description-md5: fcfe2cd71f2cfbabcbb6f94dda4cbe46
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libhybris-test
+Priority: extra
+Section: devel
+Installed-Size: 158
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libhybris
+Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Depends: libhybris (= 0.1.0+git20130606+c5d897a-0ubuntu26), libc6 (>= 2.4), libegl1-mesa (>= 7.8.1) | libegl1-x11, libgles2-mesa (>= 7.8.1) | libgles2, libhardware2, libmedia1
+Filename: pool/main/libh/libhybris/libhybris-test_0.1.0+git20130606+c5d897a-0ubuntu26_i386.deb
+Size: 34884
+MD5sum: 9498912ed32c0fc2690b77d9d1ca532f
+SHA1: 936d58c8f18aad58a19508c2bc61bdb099b0b1e0
+SHA256: dd87b8c6f47b5a8718b4f236ec6c56ab50e72f957540eb83f73fb9c5febae5f6
+Description: Allows to run bionic-based HW adaptations in glibc systems - tests
+Description-md5: 1f5205701476c6ee1c9d6d7b14515a90
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libhybris-utils
+Priority: extra
+Section: utils
+Installed-Size: 63
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libhybris
+Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Depends: libhybris (= 0.1.0+git20130606+c5d897a-0ubuntu26), libandroid-properties1, libc6 (>= 2.4)
+Filename: pool/main/libh/libhybris/libhybris-utils_0.1.0+git20130606+c5d897a-0ubuntu26_i386.deb
+Size: 8962
+MD5sum: 024de84d7216587ea19541a942f4726d
+SHA1: adf1fe75dbf016eb00bf071a275171c9b49592d0
+SHA256: 947288ef5033fceeab6d33f9e8b03ec9e374f77570b13d08ef66a49fbb050751
+Description: Utilities to help working with the Android HW abstraction layer
+Description-md5: 17d25b33712773c77cb635c91dcc04c5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmedia-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 77
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libhybris
+Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Replaces: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu24)
+Depends: libmedia1 (= 0.1.0+git20130606+c5d897a-0ubuntu26), android-platform-headers (= 0.1.0+git20130606+c5d897a-0ubuntu26)
+Breaks: libhybris-dev (<< 0.1.0+git20130606+c5d897a-0ubuntu24)
+Filename: pool/main/libh/libhybris/libmedia-dev_0.1.0+git20130606+c5d897a-0ubuntu26_i386.deb
+Size: 8082
+MD5sum: fc3ed21e4cc47df4b8135676a6500906
+SHA1: 8360cb05f5652679a51da94dfbb948bee763a22f
+SHA256: aac510bc75fd0716ee6fe4202737367ace3977c9be5b86f3c65e1f715e8dc6fe
+Description: Development files for libmedia
+Description-md5: 45c1b80daa4ded84393244ce3d2a9727
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libmedia1
+Priority: extra
+Section: libs
+Installed-Size: 77
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: i386
+Source: libhybris
+Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Replaces: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu24)
+Depends: libc6 (>= 2.3.6-6~), libhybris-common1
+Breaks: libhybris (<< 0.1.0+git20130606+c5d897a-0ubuntu24)
+Filename: pool/main/libh/libhybris/libmedia1_0.1.0+git20130606+c5d897a-0ubuntu26_i386.deb
+Size: 13032
+MD5sum: aa63404c8b1a7508644d163e80fcd01d
+SHA1: df38b225a77f25188edfaea9453642ba7fdd98fc
+SHA256: e819daca0cf4215066d1dbfdd6dcc83145ddc9ba8a5beeffa91057b93f17bc19
+Description: Library to provice access to the Android Media HAL
+Description-md5: 044f927cfde78948132863ee5c37c97e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: libqtwebkit-dev
 Priority: optional
@@ -715,6 +1127,95 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: virt-host
+
+Package: python-apport
+Priority: optional
+Section: python
+Installed-Size: 526
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.1-0ubuntu4
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8), python-apt (>= 0.7.9), python-problem-report (>= 0.94), lsb-release, python-launchpadlib (>= 1.5.7)
+Recommends: apport
+Filename: pool/main/a/apport/python-apport_2.12.1-0ubuntu4_all.deb
+Size: 89878
+MD5sum: bdfc5cbc874d2947a17cbd2f74e65183
+SHA1: 9780e8db1a1f52ef053c66477aafddc268d8d077
+SHA256: 92807ba40c0e1aa0fd05a5f140d1c496cec5946211c8229717ad2e05c1fd64c0
+Description: Python library for Apport crash report handling
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 23518535b15759d78d26010a6b43517a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: python-problem-report
+Priority: optional
+Section: python
+Installed-Size: 173
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.1-0ubuntu4
+Depends: python (>= 2.7.1-0ubuntu2), python (<< 2.8)
+Filename: pool/main/a/apport/python-problem-report_2.12.1-0ubuntu4_all.deb
+Size: 10528
+MD5sum: 97e7bb9d74e751f9eeabfe2d6be59f9a
+SHA1: 110fe34cac676dbcca9b4cf7b9341a3a25846153
+SHA256: 746700137ba2168ffc168e582d91298803589a3bbbffb8ffefafb8b273d203f1
+Description: Python library to handle problem reports
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 06dbdefca60b63fb6c44c8daf9a9cc5f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: python3-apport
+Priority: optional
+Section: python
+Installed-Size: 513
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.1-0ubuntu4
+Depends: python3 (>= 3.2.3-3~), python3-apt (>= 0.7.9), python3-problem-report (>= 0.94), lsb-release
+Recommends: apport
+Suggests: python3-launchpadlib
+Filename: pool/main/a/apport/python3-apport_2.12.1-0ubuntu4_all.deb
+Size: 89530
+MD5sum: 637995ec4b53afad88e7babd2f276f28
+SHA1: 8be27679b72121d37e03bb7eaa276da7e545ad52
+SHA256: 5cad0b0dcc99e9826e886ce38677acae745b971ed63930af9232caa1ffbdabe6
+Description: Python 3 library for Apport crash report handling
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 90fc3702a69ad06599a95a46ceb5778a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: python3-problem-report
+Priority: optional
+Section: python
+Installed-Size: 169
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.1-0ubuntu4
+Depends: python3 (>= 3.2.3-3~)
+Filename: pool/main/a/apport/python3-problem-report_2.12.1-0ubuntu4_all.deb
+Size: 10572
+MD5sum: 75f4ec8145c15ea7e3e31f92692bb6bd
+SHA1: f8f174d3db876253facff542cc7434409b3adc59
+SHA256: 707beb1bb41edcc9f01880c04b02f160a7190507391e7b6b515eaf9f5f6b5275
+Description: Python 3 library to handle problem reports
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 9c38d91ac205b1680832021377d9156d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: unity-webapps-service
 Priority: optional
