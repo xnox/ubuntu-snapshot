@@ -73,45 +73,6 @@ Checksums-Sha256:
  9d81e4228329e2d5cccb018ab06bc8b734fb2dede2c4d9b5c02303d4a690b76b 1940928 augeas_1.1.0.orig.tar.gz
  45c6484a3636ec838a508db600f731bfee8bf2164d8f622981757a95f29157c2 8730 augeas_1.1.0-0ubuntu1.debian.tar.gz
 
-Package: djvulibre
-Binary: libdjvulibre-dev, libdjvulibre21, libdjvulibre-text, djvulibre-dbg, djvulibre-desktop, djview, djview3, djvuserve, djvulibre-bin
-Version: 3.5.25.4-1ubuntu1
-Priority: optional
-Section: graphics
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Barak A. Pearlmutter <bap@debian.org>
-Build-Depends: dh-autoreconf, debhelper (>= 9), libjpeg-dev, libtiff5-dev | libtiff4-dev | libtiff3g-dev | libtiff-dev, librsvg2-bin | imagemagick
-Architecture: any all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/main/d/djvulibre
-Files:
- 95cee29763be1c0667ae29c20b652661 1898 djvulibre_3.5.25.4-1ubuntu1.dsc
- 0a7ab14f159fcf53cd3743a1514e8a9c 3575460 djvulibre_3.5.25.4.orig.tar.gz
- ec90eb0d983dd3331326cf2d2c6f9d8c 30533 djvulibre_3.5.25.4-1ubuntu1.debian.tar.gz
-Uploaders: Leon Bottou <leonb@bottou.org>
-Homepage: http://djvu.sourceforge.net/
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/djvulibre.git
-Vcs-Git: git://anonscm.debian.org/collab-maint/djvulibre.git
-Package-List: 
- djview deb graphics optional
- djview3 deb graphics optional
- djvulibre-bin deb graphics optional
- djvulibre-dbg deb debug extra
- djvulibre-desktop deb libs optional
- djvuserve deb web optional
- libdjvulibre-dev deb libdevel optional
- libdjvulibre-text deb libs optional
- libdjvulibre21 deb libs optional
-Checksums-Sha1:
- 118e4abccc368f2adbc76364f5a1d70e531c82d0 1898 djvulibre_3.5.25.4-1ubuntu1.dsc
- c7044201703f30df0f1732c54c6544467412811d 3575460 djvulibre_3.5.25.4.orig.tar.gz
- af238030391bcef9f920432997ab40aba23c061d 30533 djvulibre_3.5.25.4-1ubuntu1.debian.tar.gz
-Checksums-Sha256:
- 4da2d43671293132cc14dd4d01c3e645d6409a673c837b81e6ea89d3446b4558 1898 djvulibre_3.5.25.4-1ubuntu1.dsc
- 6d8b3414d8ec87c5a40d3dde6fee54beebee6cbf6ec56aa7851dfbca9aaa3f36 3575460 djvulibre_3.5.25.4.orig.tar.gz
- 8e4d528f8e8deb7ea2bd519d0a19306b0c41a73be641a369353bd1bb2fdb1b1c 30533 djvulibre_3.5.25.4-1ubuntu1.debian.tar.gz
-
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
 Version: 0.10.1-2
@@ -214,6 +175,7 @@ Checksums-Sha256:
 Package: foomatic-db
 Binary: foomatic-db, foomatic-db-compressed-ppds, openprinting-ppds
 Version: 20130912-0ubuntu1
+Priority: optional
 Section: text
 Maintainer: Debian Printing Group <debian-printing@lists.debian.org>
 Build-Depends: debhelper (>> 7.0.50), pyppd (>= 0.4.9-4~), foomatic-db-engine (>= 4.0.5-0ubuntu5)
@@ -503,6 +465,31 @@ Checksums-Sha256:
  b95c11f2d4f00c6053c2362db2f37047a4310ae78b08210b28eb680904b52b28 2425 libunwind_1.1-2ubuntu1.dsc
  9dfe0fcae2a866de9d3942c66995e4b460230446887dbdab302d41a8aee8d09a 1098603 libunwind_1.1.orig.tar.gz
  4eeb8a83a6068c30c2179548199018c4e8b2f37437661511d0f3a7cc0563b0c6 24202 libunwind_1.1-2ubuntu1.debian.tar.gz
+
+Package: linux-firmware
+Binary: linux-firmware, nic-firmware, scsi-firmware
+Version: 1.114
+Section: misc
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Build-Depends: debhelper (>= 4.0.0), rsync, gcc
+Architecture: all
+Standards-Version: 3.6.1
+Format: 1.0
+Directory: pool/main/l/linux-firmware
+Files:
+ 306c799ed9eec5a6d98659ea659950cc 1637 linux-firmware_1.114.dsc
+ 432a87f41ec74b545b7f5afb8791c64c 24880344 linux-firmware_1.114.tar.gz
+Vcs-Git: git://kernel.ubuntu.com/ubuntu/linux-firmware.git
+Package-List: 
+ linux-firmware deb misc optional
+ nic-firmware udeb debian-installer optional
+ scsi-firmware udeb debian-installer optional
+Checksums-Sha1:
+ 95d736b2d317fc449fa5b0c85be8d70a6608d68c 1637 linux-firmware_1.114.dsc
+ e118e222885c8ac33f43e1eae577c02c202e77d5 24880344 linux-firmware_1.114.tar.gz
+Checksums-Sha256:
+ a9ec6ece795ee193e298de2b09f968a67914eca368f350836c7f859e17391b7a 1637 linux-firmware_1.114.dsc
+ 8928b500d8aeef9d7659ae74a698887e85320d754d2fd41f29428cd79c73a037 24880344 linux-firmware_1.114.tar.gz
 
 Package: mod-auth-mysql
 Binary: libapache2-mod-auth-mysql
