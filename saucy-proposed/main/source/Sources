@@ -140,34 +140,6 @@ Checksums-Sha256:
  9e08c27d1cfd56574414794579e9555b7951ec09b8de02bf731e4da860ae1baf 604999 byobu_5.58.orig.tar.gz
  0cc865b0ac99fb2eccc7c8cd468d660601caff5fc0700e21c665f176beef3cd1 64133 byobu_5.58-0ubuntu1.debian.tar.gz
 
-Package: duplicity
-Binary: duplicity
-Version: 0.6.21-0ubuntu4
-Priority: optional
-Section: utils
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Alexander Zangerl <az@debian.org>
-Build-Depends: debhelper (>= 5.0.37.2), librsync-dev (>= 0.9.6), python-dev (>= 2.6.6-3), dpatch, rdiff, gnupg, python-mock
-Architecture: any
-Standards-Version: 3.9.1
-Format: 1.0
-Directory: pool/main/d/duplicity
-Files:
- 190a5e77b8405066640844072d7e9c0b 1238 duplicity_0.6.21-0ubuntu4.dsc
- 4ade1de475e0af64211bb6933b593057 1235340 duplicity_0.6.21.orig.tar.gz
- 05eb2ae6765e7f6ff0117542b9654c7a 14441 duplicity_0.6.21-0ubuntu4.diff.gz
-Package-List: 
- duplicity deb utils optional
-Checksums-Sha1:
- 0aac3017a22e45892b32a19916b38dbf9e283d69 1238 duplicity_0.6.21-0ubuntu4.dsc
- 8594666f5312a7b367ab80b979d70a5c45f1145b 1235340 duplicity_0.6.21.orig.tar.gz
- e074d218258a4bc5678d9398f8993e82d58b23a4 14441 duplicity_0.6.21-0ubuntu4.diff.gz
-Checksums-Sha256:
- 4d8c922efe76226972bd2b62af83bb3194ef11f990e334dee8f6ee0fd7ce3649 1238 duplicity_0.6.21-0ubuntu4.dsc
- a3628aa6c151fbc1a3014f0db7812d7234e04bba0a45ce1255e7450bdfeff706 1235340 duplicity_0.6.21.orig.tar.gz
- 3b68f0c1052e0926c3da7bec539ecf92ea83d4e0a99e8b7e796c319f8148f8ee 14441 duplicity_0.6.21-0ubuntu4.diff.gz
-Testsuite: autopkgtest
-
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
 Version: 0.10.1-2
@@ -332,6 +304,28 @@ Checksums-Sha256:
 Debian-Vcs-Browser: http://anonscm.debian.org/loggerhead/pkg-grub/trunk/grub/
 Debian-Vcs-Bzr: http://anonscm.debian.org/bzr/pkg-grub/trunk/grub/
 
+Package: grub2-signed
+Binary: grub-efi-amd64-signed
+Version: 1.19
+Section: utils
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Build-Depends: debhelper (>= 9), lsb-release, python3, python3-apt, grub-efi-amd64-bin (>= 2.00-18ubuntu3)
+Architecture: linux-amd64
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/g/grub2-signed
+Files:
+ bd919744613e94683bd7c2db365ea599 1566 grub2-signed_1.19.dsc
+ 3ed12af4495a10489ff53528248e72e1 3338 grub2-signed_1.19.tar.gz
+Package-List: 
+ grub-efi-amd64-signed deb utils optional
+Checksums-Sha1:
+ f0c5d03a53f8484a1911851ec1a69bdf2f933112 1566 grub2-signed_1.19.dsc
+ 1bad27e551fa0c2483f9de12c475feb8c65332e6 3338 grub2-signed_1.19.tar.gz
+Checksums-Sha256:
+ e435026559fad4619b11289d04a875ed46ca7bdceb5942b916910f00c1bf24c0 1566 grub2-signed_1.19.dsc
+ 8a360cd5f5078bd8cf6a36bb9204dd8490c7e990a0dc2b1625543c9d76d6657e 3338 grub2-signed_1.19.tar.gz
+
 Package: jackd2
 Binary: jackd2, libjack-jackd2-0, jackd2-firewire, libjack-jackd2-dev
 Version: 1.9.9.5+20130622git7de15e7a-1
@@ -437,6 +431,7 @@ Testsuite: autopkgtest
 Package: libhybris
 Binary: android-platform-headers, libandroid-properties1, libandroid-properties-dev, libmedia1, libmedia-dev, libhardware2, libhardware-dev, libhybris-common1, libhybris-common-dev, libhybris, libhybris-dev, libhybris-utils, libhybris-test
 Version: 0.1.0+git20130606+c5d897a-0ubuntu26
+Priority: extra
 Section: libs
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Build-Depends: debhelper (>= 9.0.0), autotools-dev, dh-autoreconf, gcc-4.7, g++-4.7, quilt, pkg-config, libgles2-mesa-dev
