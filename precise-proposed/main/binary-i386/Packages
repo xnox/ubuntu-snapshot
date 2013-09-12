@@ -10153,13 +10153,13 @@ Installed-Size: 28
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lts-quantal
-Version: 3.5.0.40.46
+Version: 3.5.0.41.47
 Depends: linux-image-generic-lts-quantal, linux-headers-generic-lts-quantal
-Filename: pool/main/l/linux-meta-lts-quantal/linux-generic-lts-quantal_3.5.0.40.46_i386.deb
+Filename: pool/main/l/linux-meta-lts-quantal/linux-generic-lts-quantal_3.5.0.41.47_i386.deb
 Size: 1744
-MD5sum: d9a016ca5433c1e86d96a256517908fd
-SHA1: a61220c491dca70d1c69b7b34e4642c03c07c325
-SHA256: 44b2d910eea96e1b31dc5aaa48ee28cb76a22649054e72b05b5ad0765b3d2e10
+MD5sum: 1a14d356d6a13ac037a24da85a17846c
+SHA1: 8125fcb02c217b7a330352c8ff232628ebcf0b18
+SHA256: aa29557d0af20926c1eae5412ab24b3bc1d267fe096068c8876f3bd0eb43b0c2
 Description: Generic Linux kernel image and headers
 Description-md5: 25f903038c92ee94e474b11119858716
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -12169,6 +12169,45 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-headers-3.5.0-41
+Priority: optional
+Section: devel
+Installed-Size: 57465
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux-lts-quantal
+Version: 3.5.0-41.64~precise1
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux-lts-quantal/linux-headers-3.5.0-41_3.5.0-41.64~precise1_all.deb
+Size: 12128922
+MD5sum: 5746a4ec16fa0f09ef35cf81fa33d7a1
+SHA1: 03f7433639b95443dc068a6d0bcb3d267160fac8
+SHA256: 09fadb217dbea8f038cbbfed9400fa5148a3dc956c26285bd227af0fef41d2aa
+Description: Header files related to Linux kernel version 3.5.0
+Description-md5: 7760aab8989e039fd23dea62d2fe41a6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-3.5.0-41-generic
+Priority: optional
+Section: devel
+Installed-Size: 11018
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux-lts-quantal
+Version: 3.5.0-41.64~precise1
+Provides: linux-headers, linux-headers-3.0
+Depends: linux-headers-3.5.0-41, libc6 (>= 2.11)
+Filename: pool/main/l/linux-lts-quantal/linux-headers-3.5.0-41-generic_3.5.0-41.64~precise1_i386.deb
+Size: 956468
+MD5sum: 3459b2cb0310c87beaa55cb0e7c1f7e2
+SHA1: 7b0e66d69d3c44b1c994dbae37a0785f5742a8d3
+SHA256: 7d471d3616f1a93b9ea800892524620a7b635ef6e1b975f679046194da07b104
+Description: Linux kernel headers for version 3.5.0 on 32 bit x86 SMP
+Description-md5: a0861cd6c44f23644f6d73cdc57ddd1e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-headers-3.8.0-19
 Priority: optional
 Section: devel
@@ -12722,13 +12761,13 @@ Installed-Size: 28
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lts-quantal
-Version: 3.5.0.40.46
-Depends: linux-headers-3.5.0-40-generic
-Filename: pool/main/l/linux-meta-lts-quantal/linux-headers-generic-lts-quantal_3.5.0.40.46_i386.deb
-Size: 2386
-MD5sum: 2ac8aa57e368e284f915bb65e893a9c3
-SHA1: ac90bb391ec89ebcffae93ec8f6d53920a228420
-SHA256: 7d32e950b31f9e21863753060cd722792d1006b079926befebb09b622c80ea2e
+Version: 3.5.0.41.47
+Depends: linux-headers-3.5.0-41-generic
+Filename: pool/main/l/linux-meta-lts-quantal/linux-headers-generic-lts-quantal_3.5.0.41.47_i386.deb
+Size: 2376
+MD5sum: d80fe68b082bd0b29efd6e5b3d5ada36
+SHA1: a38d2b870a30099270fd931bee626b0e267849db
+SHA256: ed623e38bfc28e8c91730f32645f16092aee0ef1b7fca06588a6e6edd6f5e86f
 Description: Generic Linux kernel headers
 Description-md5: 49b52776080593de169d30338dd93a48
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -15359,6 +15398,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-image-3.5.0-41-generic
+Priority: optional
+Section: kernel
+Installed-Size: 115776
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux-lts-quantal
+Version: 3.5.0-41.64~precise1
+Provides: fuse-module, ivtv-modules, kvm-api-4, linux-image, linux-image-3.0, ndiswrapper-modules-1.9, redhat-cluster-modules
+Depends: initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3), crda (>= 1.1.1-1ubuntu2) | wireless-crda
+Pre-Depends: dpkg (>= 1.10.24)
+Recommends: grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo (>= 19.1)
+Suggests: fdutils, linux-lts-quantal-doc-3.5.0 | linux-lts-quantal-source-3.5.0, linux-lts-quantal-tools, linux-headers-3.5.0-41-generic
+Conflicts: hotplug (<< 0.0.20040105-1)
+Filename: pool/main/l/linux-lts-quantal/linux-image-3.5.0-41-generic_3.5.0-41.64~precise1_i386.deb
+Size: 40262920
+MD5sum: b6a1bce80f7a1d245c3ea8a3f28e20ad
+SHA1: 3c2d292037880472b903b7eb974c4b61273df578
+SHA256: 9252db3cd2505843783c9dc32902996e0c3ebcf11b9e0d64a3eef3b1edbbcc3b
+Description: Linux kernel image for version 3.5.0 on 32 bit x86 SMP
+Description-md5: eeaa119f302f70c1a8950e18fdeea032
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-image-3.8.0-19-generic
 Priority: optional
 Section: kernel
@@ -16063,13 +16126,13 @@ Installed-Size: 28
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lts-quantal
-Version: 3.5.0.40.46
-Depends: linux-image-3.5.0-40-generic, linux-firmware
-Filename: pool/main/l/linux-meta-lts-quantal/linux-image-generic-lts-quantal_3.5.0.40.46_i386.deb
-Size: 2392
-MD5sum: 8c12fe62f7975274758ad6500c06980d
-SHA1: 16d5b939a9789032809312d5ae56d945bec62a38
-SHA256: e565ea8edf5cb9a28d42502a2a2ca39dd8a8ac39049a44d9537bec0a6efa8661
+Version: 3.5.0.41.47
+Depends: linux-image-3.5.0-41-generic, linux-firmware
+Filename: pool/main/l/linux-meta-lts-quantal/linux-image-generic-lts-quantal_3.5.0.41.47_i386.deb
+Size: 2382
+MD5sum: ce3c9edc022b69ac3b19fe5126004906
+SHA1: b5e04d669c801466e5f39fdc4d2b6aa0ab7186b3
+SHA256: 27fa5f9f28359f11218e4e8dfc37497a7bf27aab34a12f3a442248036702e221
 Description: Generic Linux kernel image
 Description-md5: c7e4fbc023632f2e538ff93b600ef34c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -17262,6 +17325,25 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-tools-3.5.0-41
+Priority: optional
+Section: devel
+Installed-Size: 1035
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux-lts-quantal
+Version: 3.5.0-41.64~precise1
+Depends: libc6 (>= 2.8), libdw1 (>= 0.143), libelf1 (>= 0.131), libnewt0.52, libslang2 (>= 2.0.7-1), linux-tools-common
+Filename: pool/main/l/linux-lts-quantal/linux-tools-3.5.0-41_3.5.0-41.64~precise1_i386.deb
+Size: 400626
+MD5sum: 5b265ced1234c49b80f8d27b2a76b98c
+SHA1: dd2cbe0e8b8442d73f33ba4fe60cc8d33e9805a6
+SHA256: 1e9ae5fa1cbf496aea743ed2c0beb35a570f493e7a805b8f924da048fd964ff9
+Description: Linux kernel version specific tools for version 3.5.0-41
+Description-md5: ddec26650b5666a479761cd4757a71bc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-tools-3.8.0-19
 Priority: optional
 Section: devel
@@ -17845,13 +17927,13 @@ Installed-Size: 28
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lts-quantal
-Version: 3.5.0.40.46
-Depends: linux-tools-3.5.0-40
-Filename: pool/main/l/linux-meta-lts-quantal/linux-tools-lts-quantal_3.5.0.40.46_i386.deb
+Version: 3.5.0.41.47
+Depends: linux-tools-3.5.0-41
+Filename: pool/main/l/linux-meta-lts-quantal/linux-tools-lts-quantal_3.5.0.41.47_i386.deb
 Size: 2370
-MD5sum: d5b6c83d77057900e1de9fd301b6a449
-SHA1: 3da22169f887873bdce8d6b00951544a286640ad
-SHA256: 9ad6ed30389d8782705d4d4b0631958f14847e6de95ebaa16b13bfd4fdb57191
+MD5sum: 3d0c35e2fa7a29582b2fadf0b3b26ebd
+SHA1: 7fcb997d8cfb6d98ee6bb3cd42e4588b7f0aef23
+SHA256: f53325e01f87baf39f5889c44d8307bc81288c66d2df0bf22dd3716f6838040a
 Description: Linux kernel versioned Tools
 Description-md5: ea15db5fd6e3e3cff13446d5e28af7c8
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
