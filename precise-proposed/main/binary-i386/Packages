@@ -10173,13 +10173,13 @@ Installed-Size: 27
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lts-raring
-Version: 3.8.0.30.30
+Version: 3.8.0.31.31
 Depends: linux-image-generic-lts-raring, linux-headers-generic-lts-raring
-Filename: pool/main/l/linux-meta-lts-raring/linux-generic-lts-raring_3.8.0.30.30_i386.deb
-Size: 1732
-MD5sum: 22d224dd8fe30ab2de603eb7899e6f5d
-SHA1: 55998723ddbd0cb8172d387e913205d043623071
-SHA256: 3d30759d9891774a62281f56c4cf7de6b84a0068b45bd5162a8a52eaffcd6e4d
+Filename: pool/main/l/linux-meta-lts-raring/linux-generic-lts-raring_3.8.0.31.31_i386.deb
+Size: 1736
+MD5sum: d195c3e8dd0ac8a8de3476c1006ed51b
+SHA1: c8e9b87947d894662c8be199219666f52cbfbb51
+SHA256: bedcb84d73ce4e5f9eb8d3ede8b7f71250cf23a8b56936f98dd466cc0d4839e1
 Description: Generic Linux kernel image and headers
 Description-md5: 25f903038c92ee94e474b11119858716
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -12655,6 +12655,45 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-headers-3.8.0-31
+Priority: optional
+Section: devel
+Installed-Size: 58732
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux-lts-raring
+Version: 3.8.0-31.46~precise1
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux-lts-raring/linux-headers-3.8.0-31_3.8.0-31.46~precise1_all.deb
+Size: 12199608
+MD5sum: 591688df671802d5423d527c6bfa3178
+SHA1: fd75a3640edd21447af884b41956640d5e166a6d
+SHA256: 1907f00e4f3a23815a61434277509a2142187ab50aa5d0537149190620b9ccac
+Description: Header files related to Linux kernel version 3.8.0
+Description-md5: 4fd8ccbb34c1dbb607ce25ffd6c54e90
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-3.8.0-31-generic
+Priority: optional
+Section: devel
+Installed-Size: 11568
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux-lts-raring
+Version: 3.8.0-31.46~precise1
+Provides: linux-headers, linux-headers-3.0
+Depends: linux-headers-3.8.0-31, libc6 (>= 2.11)
+Filename: pool/main/l/linux-lts-raring/linux-headers-3.8.0-31-generic_3.8.0-31.46~precise1_i386.deb
+Size: 1004564
+MD5sum: b12a7e5bd46a9e28e7ae6d037b2a409b
+SHA1: 43585901250fce30f8d3c465587e02237533a1e3
+SHA256: 04b1d95ed580c2825fa97340f0c9fd96527749b50ded551c6ecc49000a2dca3b
+Description: Linux kernel headers for version 3.8.0 on 32 bit x86 SMP
+Description-md5: 5ff953e47b5fad7934846c3fafa22448
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-headers-generic
 Priority: optional
 Section: devel
@@ -12703,13 +12742,13 @@ Installed-Size: 27
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lts-raring
-Version: 3.8.0.30.30
-Depends: linux-headers-3.8.0-30-generic
-Filename: pool/main/l/linux-meta-lts-raring/linux-headers-generic-lts-raring_3.8.0.30.30_i386.deb
+Version: 3.8.0.31.31
+Depends: linux-headers-3.8.0-31-generic
+Filename: pool/main/l/linux-meta-lts-raring/linux-headers-generic-lts-raring_3.8.0.31.31_i386.deb
 Size: 2428
-MD5sum: 320036e2c515ce424c3fc2520b1155d4
-SHA1: 478452ecd05cf87af36eea296a89d588284d89e3
-SHA256: b5f611b65c9feffb7f35ce33684928f6000cbbe98406af967e161f9925f158e6
+MD5sum: a34db80cf3fec1a56c5475f3cf0b930d
+SHA1: 312b907cc7640e2fb632eaf62283c5c63699ded5
+SHA256: 3b93e30078a61efec11e7f0a118f4b46440794ec6a328b98635b25a1c88ec015
 Description: Generic Linux kernel headers
 Description-md5: 49b52776080593de169d30338dd93a48
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -15617,6 +15656,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-image-3.8.0-31-generic
+Priority: optional
+Section: kernel
+Installed-Size: 131196
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux-lts-raring
+Version: 3.8.0-31.46~precise1
+Provides: fuse-module, linux-image, linux-image-3.0
+Depends: initramfs-tools (>= 0.36ubuntu6), module-init-tools (>= 3.3-pre11-4ubuntu3)
+Pre-Depends: dpkg (>= 1.10.24)
+Recommends: grub-pc | grub-efi-amd64 | grub-efi-ia32 | grub | lilo (>= 19.1)
+Suggests: fdutils, linux-lts-raring-doc-3.8.0 | linux-lts-raring-source-3.8.0, linux-lts-raring-tools, linux-headers-3.8.0-31-generic
+Conflicts: hotplug (<< 0.0.20040105-1)
+Filename: pool/main/l/linux-lts-raring/linux-image-3.8.0-31-generic_3.8.0-31.46~precise1_i386.deb
+Size: 47615168
+MD5sum: c02f6f770787ecbd474e973512ab5d0c
+SHA1: 05505b516031ab6421b3ea519b757bb3e69e25e6
+SHA256: 6b6f268d73dd26fc6037b6cb76cee0279e16fa5cfe6aa6b400f3dd9a9d9a80d4
+Description: Linux kernel image for version 3.8.0 on 32 bit x86 SMP
+Description-md5: d7891e7bf108bf056e7f29fce10ead08
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-image-current-generic
 Priority: optional
 Section: kernel
@@ -16020,13 +16083,13 @@ Installed-Size: 27
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lts-raring
-Version: 3.8.0.30.30
-Depends: linux-image-3.8.0-30-generic, linux-firmware
-Filename: pool/main/l/linux-meta-lts-raring/linux-image-generic-lts-raring_3.8.0.30.30_i386.deb
-Size: 2444
-MD5sum: 9e0824d28ac2c90301e37d14ab1a89de
-SHA1: 97e843b411c51877e1e19da8e8c36343962f6caa
-SHA256: 91ac1895a3c1ab2c94f11e56a85b65dd34c04b6ff6159d26c444ae4be2c82d5d
+Version: 3.8.0.31.31
+Depends: linux-image-3.8.0-31-generic, linux-firmware
+Filename: pool/main/l/linux-meta-lts-raring/linux-image-generic-lts-raring_3.8.0.31.31_i386.deb
+Size: 2440
+MD5sum: 6a38ab7fb190afd1792e3102df270e43
+SHA1: 07a7613c7031a60d60ca3b1c103cc4a409bb8985
+SHA256: ca641138ae3bc69a2924485c343db5b556ef1937f918791e0ad80968203a4255
 Description: Generic Linux kernel image
 Description-md5: c7e4fbc023632f2e538ff93b600ef34c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -17436,6 +17499,25 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
 
+Package: linux-tools-3.8.0-31
+Priority: optional
+Section: devel
+Installed-Size: 1134
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: i386
+Source: linux-lts-raring
+Version: 3.8.0-31.46~precise1
+Depends: libc6 (>= 2.8), libdw1 (>= 0.143), libelf1 (>= 0.131), libnewt0.52, libslang2 (>= 2.0.7-1), linux-tools-common
+Filename: pool/main/l/linux-lts-raring/linux-tools-3.8.0-31_3.8.0-31.46~precise1_i386.deb
+Size: 463362
+MD5sum: 08902feddd7a7290cd44870e3514c51e
+SHA1: 6233227ce4a06579408a7688c54efb39c9a2a281
+SHA256: bc86f270aa3614d3ef2dd1e2914d1fd0fe0838dfd48c9783869ecfe6b5b1fba3
+Description: Linux kernel version specific tools for version 3.8.0-31
+Description-md5: 10ef5e7deb4bf23e951f259db872a590
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-tools-common
 Priority: optional
 Section: kernel
@@ -17783,13 +17865,13 @@ Installed-Size: 27
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: i386
 Source: linux-meta-lts-raring
-Version: 3.8.0.30.30
-Depends: linux-tools-3.8.0-30
-Filename: pool/main/l/linux-meta-lts-raring/linux-tools-lts-raring_3.8.0.30.30_i386.deb
+Version: 3.8.0.31.31
+Depends: linux-tools-3.8.0-31
+Filename: pool/main/l/linux-meta-lts-raring/linux-tools-lts-raring_3.8.0.31.31_i386.deb
 Size: 2418
-MD5sum: ebcd266537930b6b27b6825c80c73a10
-SHA1: 15c2ea992e6ea8e5500ccb7d1607c47db1781377
-SHA256: e2fe833b5b1edde1e728752bc7f6fd2db9deb278dfe406f135dc79b9e3dc77ed
+MD5sum: bd15bc70910d91725f7c7146430c5e21
+SHA1: cefd45e563b09a5eef08926b5990c357c8670568
+SHA256: def754125470a39284d3b33f2f2b921761d3ea5c481543328cf6359b3b9e1be2
 Description: Linux kernel versioned Tools
 Description-md5: ea15db5fd6e3e3cff13446d5e28af7c8
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug

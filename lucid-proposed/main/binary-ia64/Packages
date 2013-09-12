@@ -20445,6 +20445,26 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-dvd-live, kubuntu-dvd-live, edubuntu-dvd-live
 
+Package: linux
+Priority: optional
+Section: kernel
+Installed-Size: 32
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: ia64
+Source: linux-ports-meta
+Version: 2.6.32.52.44
+Depends: linux-image (= 2.6.32.52.44)
+Filename: pool/main/l/linux-ports-meta/linux_2.6.32.52.44_ia64.deb
+Size: 4374
+MD5sum: 55fedccc79ed84aeb31842f00f91684d
+SHA1: e5ede4cccefead9bbbe7e52e3001b654b02acddd
+SHA256: 905be704a8105432964893eb88066fb611981692c012b6566a595c5bc5a71bc5
+Description: Generic complete Linux kernel.
+ This package will always depend on the latest generic complete Linux kernel
+ available.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-doc
 Priority: optional
 Section: doc
@@ -20628,6 +20648,30 @@ Size: 6784560
 MD5sum: 85e5b640409c5c79a5f317d85768ea3d
 SHA1: a16f711ea76cefee67ac76620103ff0f462e3e7d
 SHA256: 2879719b4a2e88a479e778be774a8510f8757ad35da6e28829fd15c73842efb6
+Description: Linux kernel specific documentation for version 2.6.32
+ This package provides the various documents in the 2.6.32 kernel
+ Documentation/ subdirectory.  These document kernel subsystems, APIs, device
+ drivers, and so on.  See
+ /usr/share/doc/linux-doc/00-INDEX for a list of what is
+ contained in each file.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-doc
+Priority: optional
+Section: doc
+Installed-Size: 27904
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 2.6.32-52.114
+Replaces: linux-doc-2.6
+Conflicts: linux-doc-2.6
+Filename: pool/main/l/linux/linux-doc_2.6.32-52.114_all.deb
+Size: 6786716
+MD5sum: 96446925e026236647eb8f690bb8563c
+SHA1: 2a44c57ac711bfe6eaec2360e1281a0952e9cd31
+SHA256: 3ddc75112df6cca1b88b1eb19fbd0151665c0cc54c714748dd52e0c0e79b0010
 Description: Linux kernel specific documentation for version 2.6.32
  This package provides the various documents in the 2.6.32 kernel
  Documentation/ subdirectory.  These document kernel subsystems, APIs, device
@@ -21909,6 +21953,52 @@ Description: Linux kernel headers for version 2.6.32 on IA-64 SMP
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-headers-2.6.32-52
+Priority: optional
+Section: devel
+Installed-Size: 74148
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 2.6.32-52.114
+Provides: linux-headers, linux-headers-2.6
+Depends: coreutils | fileutils (>= 4.0)
+Filename: pool/main/l/linux/linux-headers-2.6.32-52_2.6.32-52.114_all.deb
+Size: 10183026
+MD5sum: 93f8bf19cf246cafc011dd5dabda35db
+SHA1: 56606d655a72c1cf77f6998b33200829ac3f25b5
+SHA256: d657a1862e9fb0520c8d1c1892c42c3a8257ab585c12fc4261b5150bf3be48f3
+Description: Header files related to Linux kernel version 2.6.32
+ This package provides kernel header files for version 2.6.32, for sites
+ that want the latest kernel headers. Please read
+ /usr/share/doc/linux-headers-2.6.32-52/debian.README.gz for details
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-2.6.32-52-ia64
+Priority: optional
+Section: devel
+Installed-Size: 7812
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: ia64
+Source: linux
+Version: 2.6.32-52.114
+Provides: linux-headers, linux-headers-2.6
+Depends: coreutils | fileutils (>= 4.0), linux-headers-2.6.32-52, libc6.1 (>= 2.8)
+Filename: pool/main/l/linux/linux-headers-2.6.32-52-ia64_2.6.32-52.114_ia64.deb
+Size: 870268
+MD5sum: 54778e3497ec48bce179ff4221667cc3
+SHA1: c1784e1a5ece78efd9a0db46832a86a66a2ece9d
+SHA256: 3578b01d7b2dd344a4f36121033af3e8bb022b3d00e00e6791310391ec868aba
+Description: Linux kernel headers for version 2.6.32 on IA-64 SMP
+ This package provides kernel header files for version 2.6.32 on
+ IA-64 SMP.
+ .
+ This is for sites that want the latest kernel headers.  Please read
+ /usr/share/doc/linux-headers-2.6.32-52/debian.README.gz for details.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-headers-2.6.35-22
 Priority: optional
 Section: devel
@@ -22082,6 +22172,67 @@ Description: Header files related to Linux kernel version 3.0.0
  This package provides kernel header files for version 3.0.0, for sites
  that want the latest kernel headers. Please read
  /usr/share/doc/linux-lts-backport-oneiric-headers-3.0.0-31/debian.README.gz for details
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-headers-ia64
+Priority: optional
+Section: devel
+Installed-Size: 32
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: ia64
+Source: linux-ports-meta
+Version: 2.6.32.52.44
+Depends: linux-headers-2.6.32-52-ia64
+Filename: pool/main/l/linux-ports-meta/linux-headers-ia64_2.6.32.52.44_ia64.deb
+Size: 4380
+MD5sum: bc00d7bfef933c398fb7c4fbc26cdb3f
+SHA1: 2931cd22e5c610acbd37e3b8c3dcf78c5e0c15b0
+SHA256: 2264593d55e1a1ceb072484a8b3231ce8cfd3ce33537868683afb46bb2e47759
+Description: Linux kernel headers on Itanium
+ This package will always depend on the latest kernel headers available
+ for Itanium.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, edubuntu-desktop, ubuntu-netbook
+
+Package: linux-ia64
+Priority: optional
+Section: metapackages
+Installed-Size: 32
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: ia64
+Source: linux-ports-meta
+Version: 2.6.32.52.44
+Depends: linux-image-ia64 (= 2.6.32.52.44)
+Filename: pool/main/l/linux-ports-meta/linux-ia64_2.6.32.52.44_ia64.deb
+Size: 4384
+MD5sum: 96b370d216cee530b8486c6c3aed922c
+SHA1: ac1fe91f4164d090ac2f62c9d2d39a6a933ba1e7
+SHA256: 738859a1d4f7b9ecdc15723b8b49d1a28734105931ee4b7b1dbfb05c60f7fd1f
+Description: Complete Linux kernel on Itanium.
+ This package will always depend on the latest complete Linux kernel available
+ for Itanium.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-image
+Priority: optional
+Section: kernel
+Installed-Size: 32
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: ia64
+Source: linux-ports-meta
+Version: 2.6.32.52.44
+Depends: linux-image-ia64 (= 2.6.32.52.44)
+Filename: pool/main/l/linux-ports-meta/linux-image_2.6.32.52.44_ia64.deb
+Size: 4378
+MD5sum: c58704adcb39a4fa5f4e1651ba44c5e8
+SHA1: ea16187a80e0162d529d0cba397b93743a902f2c
+SHA256: 3c99a57a68e84ee4a8c52ba7bbe2eeaea7cff6fd6ce3159dc47edba029f878b0
+Description: Generic Linux kernel image.
+ This package will always depend on the latest generic Linux kernel image
+ available.
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -22579,6 +22730,64 @@ Description: Linux kernel image for version 2.6.32 on IA-64 SMP
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-image-2.6.32-52-ia64
+Priority: optional
+Section: admin
+Installed-Size: 154672
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: ia64
+Source: linux
+Version: 2.6.32-52.114
+Provides: fuse-module, ivtv-modules, linux-image, linux-image-2.6, redhat-cluster-modules
+Depends: initramfs-tools (>= 0.36ubuntu6), coreutils | fileutils (>= 4.0), module-init-tools (>= 3.3-pre11-4ubuntu3), wireless-crda
+Pre-Depends: dpkg (>= 1.10.24)
+Recommends: elilo (>= 3.6-1)
+Suggests: fdutils, linux-doc-2.6.32 | linux-source-2.6.32, linux-tools
+Conflicts: hotplug (<< 0.0.20040105-1)
+Breaks: lvm2 (<< 2.02.54-1ubuntu3)
+Filename: pool/main/l/linux/linux-image-2.6.32-52-ia64_2.6.32-52.114_ia64.deb
+Size: 42150070
+MD5sum: 34dcfedab6dc4ebfc2aa76aa3e3def68
+SHA1: bac0f8b9d96799b03aeafaf48d6b0e09a65baf4b
+SHA256: e440ad89b47fe8637c58241a84fdefc5b2812f1b5d1ed869269ca598eb9cb9aa
+Description: Linux kernel image for version 2.6.32 on IA-64 SMP
+ This package contains the Linux kernel image for version 2.6.32 on
+ IA-64 SMP.
+ .
+ Also includes the corresponding System.map file, the modules built by the
+ packager, and scripts that try to ensure that the system is not left in an
+ unbootable state after an update.
+ .
+ Supports IA-64 SMP processors.
+ .
+ Geared toward desktop or server systems.
+ .
+ You likely do not want to install this package directly. Instead, install
+ the linux-ia64 meta-package, which will ensure that upgrades work
+ correctly, and that supporting packages are also installed.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-image-ia64
+Priority: optional
+Section: metapackages
+Installed-Size: 32
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: ia64
+Source: linux-ports-meta
+Version: 2.6.32.52.44
+Depends: linux-image-2.6.32-52-ia64, linux-firmware
+Filename: pool/main/l/linux-ports-meta/linux-image-ia64_2.6.32.52.44_ia64.deb
+Size: 4394
+MD5sum: a42130742ca3cf38e367d2430a44461f
+SHA1: 4f07a0337c142d8cae4291c74fd5b14a48301616
+SHA256: 5e2ee60ad041ea66fa8c2a174522a786bd7b42c86a76fab19349196891b86eb4
+Description: Linux kernel image on Itanium
+ This package will always depend on the latest kernel image available
+ for Itanium.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-libc-dev
 Priority: optional
 Section: devel
@@ -22586,15 +22795,15 @@ Installed-Size: 4208
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: ia64
 Source: linux
-Version: 2.6.32-51.113
+Version: 2.6.32-52.114
 Replaces: dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), libdrm-dev, linux-kernel-headers
 Provides: linux-kernel-headers
 Conflicts: amd64-libs-dev (<= 1.1), dvb-dev (<< 1.0.1-6), libc6-dev (<< 2.3.2.ds1-6), libc6.1-dev (<< 2.3.2.ds1-6), linux-kernel-headers
-Filename: pool/main/l/linux/linux-libc-dev_2.6.32-51.113_ia64.deb
-Size: 845690
-MD5sum: 0556465acd214d30942aea576a7ad43a
-SHA1: 9041f567b56723d85b1b4b27b51e0d03d02926e9
-SHA256: 9dc7518e50b5c3b1b35c9b0869ae53c1ef14e99e33eda84e1a8e0389005e9ada
+Filename: pool/main/l/linux/linux-libc-dev_2.6.32-52.114_ia64.deb
+Size: 845836
+MD5sum: dad8a1f4faf2979d7a23db9c10b5476d
+SHA1: 29f4872d3071352d300d92d1686012f1ac416f4a
+SHA256: bf9de52b6255ca7cb1a09fccac838c92778e81ae78a6ad722528eda85bfc3222
 Description: Linux Kernel Headers for development
  This package provides headers from the Linux kernel.  These headers
  are used by the installed headers for GNU glibc and other system
@@ -22612,13 +22821,13 @@ Installed-Size: 32
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Architecture: all
 Source: linux-meta
-Version: 2.6.32.51.58
+Version: 2.6.32.52.59
 Depends: linux-source-2.6.32
-Filename: pool/main/l/linux-meta/linux-source_2.6.32.51.58_all.deb
-Size: 5180
-MD5sum: 9aa47c8a16fef7ecde67de1b506bb1d4
-SHA1: 8efe5dad280fec8436a7dd4f58cd545f70e7dd12
-SHA256: 2742691dac26e712307eb36fde4e624435a087734ac6ba8617a7b1eb98e9a666
+Filename: pool/main/l/linux-meta/linux-source_2.6.32.52.59_all.deb
+Size: 5198
+MD5sum: 4a989fa544458aa53408d92703945a41
+SHA1: 43f2172faba49ac1866216fee8d69ec3ede8d420
+SHA256: 598963c5fe3a0d0595039af1f8fcfdea3504f0f57a54b2a29b1d03b9632f630d
 Description: Linux kernel source with Ubuntu patches
  This package will always depend on the latest Linux kernel source code
  available. The Ubuntu patches have been applied.
@@ -22897,6 +23106,40 @@ Description: Linux kernel source for version 2.6.32 with Ubuntu patches
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: linux-source-2.6.32
+Priority: optional
+Section: devel
+Installed-Size: 65612
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 2.6.32-52.114
+Provides: linux-source, linux-source-2.6
+Depends: binutils, bzip2, coreutils | fileutils (>= 4.0)
+Recommends: libc-dev, gcc, make
+Suggests: libncurses-dev | ncurses-dev, kernel-package, libqt3-dev
+Filename: pool/main/l/linux/linux-source-2.6.32_2.6.32-52.114_all.deb
+Size: 67110012
+MD5sum: 8d021ddd496458e924a88d6cd1cdb6a3
+SHA1: 97356b422669d37b401ff20a5982ca643cdee642
+SHA256: b6e53a63243a7fea2ba644e1ed96191de47f4c4f35b102c153663ebe0f4666be
+Description: Linux kernel source for version 2.6.32 with Ubuntu patches
+ This package provides the source code for the Linux kernel version
+ 2.6.32.
+ .
+ This package is mainly meant for other packages to use, in order to build
+ custom flavours.
+ .
+ If you wish to use this package to create a custom Linux kernel, then it
+ is suggested that you investigate the package kernel-package, which has
+ been designed to ease the task of creating kernel image packages.
+ .
+ If you are simply trying to build third-party modules for your kernel,
+ you do not want this package. Install the appropriate linux-headers
+ package instead.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: linux-tools-common
 Priority: optional
 Section: admin
@@ -23051,6 +23294,26 @@ Size: 138600
 MD5sum: 9eb3e7b842f29032321e1c47a211e716
 SHA1: cd57abf8172d6f67390b6d172049934d34bcd3ef
 SHA256: 337928dfbd5759ac7e33e86f84a7af21c7e5206319731947a5d9409e9fb1d5b0
+Description: Linux kernel specific tools for version 2.6.32
+ This package provides the architecture independent parts for kernel
+ version locked tools in the 2.6.32 kernel source.
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: linux-tools-common
+Priority: optional
+Section: admin
+Installed-Size: 212
+Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
+Architecture: all
+Source: linux
+Version: 2.6.32-52.114
+Replaces: linux-tools (<= 2.6.32-16.25)
+Filename: pool/main/l/linux/linux-tools-common_2.6.32-52.114_all.deb
+Size: 138938
+MD5sum: e12b76722da3ecffc5eb4e83094ec6e9
+SHA1: 12192c2462899b3b285ffe333b768a2dedbdc19d
+SHA256: e3eceb9b92644d4038566f35aeb7293b9062114ed9134a9588e2a34444da8596
 Description: Linux kernel specific tools for version 2.6.32
  This package provides the architecture independent parts for kernel
  version locked tools in the 2.6.32 kernel source.
