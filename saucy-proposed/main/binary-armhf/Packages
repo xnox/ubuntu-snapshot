@@ -399,6 +399,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: edubuntu-desktop-gnome
 
+Package: liblxc0
+Priority: optional
+Section: admin
+Installed-Size: 291
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: armhf
+Source: lxc
+Version: 1.0.0~alpha1-0ubuntu3
+Replaces: lxc (<< 0.9.0~alpha3-0ubuntu1~)
+Depends: libapparmor1 (>= 2.6~devel), libc6 (>= 2.17), libcap2 (>= 2.10)
+Pre-Depends: multiarch-support
+Breaks: lxc (<< 0.9.0~alpha3-0ubuntu1~)
+Filename: pool/main/l/lxc/liblxc0_1.0.0~alpha1-0ubuntu3_armhf.deb
+Size: 118186
+MD5sum: add204498df1c476f0735c655aac281d
+SHA1: 1db8fbcf56cf49432917de80cfa091c94c0bc794
+SHA256: 0b182da74ca15f8fb946c496c1385f7ea566e929af708b41ac3d5d856efbfaf2
+Description: Linux Containers userspace tools (library)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: d757397b1a93a5bea5c72032f3ef485d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
 Package: libpathplan4
 Priority: optional
 Section: libs
@@ -787,6 +811,93 @@ Description: Xenstore communications library for Xen
 Description-md5: c2462dfd8088a311ca74072df39a0705
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: lxc
+Priority: optional
+Section: admin
+Installed-Size: 510
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: armhf
+Version: 1.0.0~alpha1-0ubuntu3
+Depends: adduser, apparmor, bridge-utils, dnsmasq-base, iptables, liblxc0 (= 1.0.0~alpha1-0ubuntu3), python3, python3-lxc, rsync, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.15)
+Recommends: cgroup-lite | cgroup-bin, libcap2-bin, lxc-templates (>= 0.8.0~rc1-4ubuntu43), openssl
+Suggests: btrfs-tools, lvm2, lxctl
+Filename: pool/main/l/lxc/lxc_1.0.0~alpha1-0ubuntu3_armhf.deb
+Size: 129624
+MD5sum: bd3d28528f2061b1695f28f3f60f3448
+SHA1: 1dd9d180a70fa9f8d89646a7e14330d66dfccbac
+SHA256: d28827a4dd3eb5bcc7e2dd4c331af736861b4900355ddca7e92c3a7768e7c561
+Description: Linux Containers userspace tools
+Homepage: http://lxc.sourceforge.net/
+Description-md5: 4ece0dffd153c29e95ffdb89f8238dfc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
+Package: lxc-dbg
+Priority: extra
+Section: debug
+Installed-Size: 805
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: armhf
+Source: lxc
+Version: 1.0.0~alpha1-0ubuntu3
+Depends: lxc (= 1.0.0~alpha1-0ubuntu3), lxc-dev (= 1.0.0~alpha1-0ubuntu3)
+Filename: pool/main/l/lxc/lxc-dbg_1.0.0~alpha1-0ubuntu3_armhf.deb
+Size: 509642
+MD5sum: f8d0f0dbe29f0892fa532fc790c5e9d6
+SHA1: 8a28a177a5e832a9958ba725876088dee1f34103
+SHA256: 65eda45080ddd2b61553955fa563af24f195e8c7882f0c5de3051a166ac4fa4a
+Description: Linux Containers userspace tools (debug)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: 9ec9c23e26368a478bce79545cfbb782
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: lxc-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 153
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: armhf
+Source: lxc
+Version: 1.0.0~alpha1-0ubuntu3
+Depends: lxc (= 1.0.0~alpha1-0ubuntu3)
+Filename: pool/main/l/lxc/lxc-dev_1.0.0~alpha1-0ubuntu3_armhf.deb
+Size: 20112
+MD5sum: 0f1083fcac68f2b1a3f6319ae3b26862
+SHA1: 14b24bf4f7b57aa6c6fc00ba2ba1903198caf072
+SHA256: 2da15ba398f6c83bad9b0adc8a8081d91ad10ef2ba0a8a2de71836f2d2f4f15e
+Description: Linux Containers userspace tools (development)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: c719178b7e79ce1ed39519707c589961
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: lxc-templates
+Priority: optional
+Section: admin
+Installed-Size: 226
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: lxc
+Version: 1.0.0~alpha1-0ubuntu3
+Replaces: lxc (<< 0.8.0~rc1-4ubuntu43)
+Depends: lxc (>= 0.8.0~rc1-4ubuntu43)
+Recommends: cloud-image-utils | cloud-utils, debootstrap | cdebootstrap, openssl, rsync
+Suggests: qemu-user-static
+Breaks: lxc (<< 0.8.0~rc1-4ubuntu43)
+Filename: pool/main/l/lxc/lxc-templates_1.0.0~alpha1-0ubuntu3_all.deb
+Size: 41598
+MD5sum: 829691bd9da752dc8951e8e9042643f5
+SHA1: 8a7c00394a0c141282547d5f5b28609267968378
+SHA256: 419376be0eb3d33eab799f88a4e76ef990b8699c823651e177bdf5d77677df16
+Description: Linux Containers userspace tools (templates)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: 9a526ab1c6ccc435c574f17de9485e7e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
 
 Package: nova-api
 Priority: extra
@@ -1368,6 +1479,28 @@ Description-md5: 9e7471c108af7843da4a920afe750d19
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python3-lxc
+Priority: optional
+Section: python
+Installed-Size: 115
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: armhf
+Source: lxc
+Version: 1.0.0~alpha1-0ubuntu3
+Depends: liblxc0 (= 1.0.0~alpha1-0ubuntu3), python3, libc6 (>= 2.4)
+Recommends: lxc-templates (>= 0.8.0~rc1-4ubuntu43)
+Filename: pool/main/l/lxc/python3-lxc_1.0.0~alpha1-0ubuntu3_armhf.deb
+Size: 15926
+MD5sum: 9766d7fbdda1c0807a80adda3ad2cebc
+SHA1: 3feb005940769ba9d2d2d47fd525ff37a67013ac
+SHA256: 0d5a7aad131c73fab6e8451b41601d6b6a21662b399cf1c0aa6a36c77dd3807e
+Description: Linux Containers userspace tools (Python 3.x bindings)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: ee623a31db200104a7207d9de42b8f04
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
 Package: unity-webapps-service
 Priority: optional
 Section: gnome
@@ -1413,6 +1546,29 @@ Description-md5: 83f8894d390ffa31e34c89e43fc95bb1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop
+
+Package: x11-xserver-utils
+Priority: optional
+Section: x11
+Installed-Size: 404
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: armhf
+Version: 7.7+0ubuntu2
+Replaces: iceauth, sessreg, xbase-clients (<< 1:7.3), xgamma, xhost, xmodmap, xrandr, xrdb, xrefresh, xrgb, xset, xsetmode, xsetpointer, xsetroot, xstdcmap, xutils (<< 1:7.2), xvidtune
+Depends: libc6 (>= 2.8), libice6 (>= 1:1.0.0), libx11-6, libxaw7, libxcursor1 (>> 1.1.2), libxext6, libxi6, libxmu6, libxmuu1, libxrandr2 (>= 2:1.4.0), libxt6, libxxf86vm1, cpp
+Suggests: nickle, cairo-5c, xorg-docs-core
+Conflicts: iceauth, sessreg, xgamma, xhost, xmodmap, xrandr, xrdb, xrefresh, xrgb, xset, xsetmode, xsetpointer, xsetroot, xstdcmap, xvidtune
+Filename: pool/main/x/x11-xserver-utils/x11-xserver-utils_7.7+0ubuntu2_armhf.deb
+Size: 169250
+MD5sum: 315294ed3db0d4b25d400baf0afd76b5
+SHA1: b2e959af49d1b34cabfbb9b7be18f8fae7663ae8
+SHA256: 47092ffe8e1af1788be34ace17ebbda8d573acf2da5e9f62b32db980c63500d9
+Description: X server utilities
+Description-md5: 7bc6b40d32fbe568c9539995f7b1053e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: xen-docs-4.3
 Priority: optional

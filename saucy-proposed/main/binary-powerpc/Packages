@@ -399,6 +399,30 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: edubuntu-desktop-gnome
 
+Package: liblxc0
+Priority: optional
+Section: admin
+Installed-Size: 436
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: lxc
+Version: 1.0.0~alpha1-0ubuntu3
+Replaces: lxc (<< 0.9.0~alpha3-0ubuntu1~)
+Depends: libapparmor1 (>= 2.6~devel), libc6 (>= 2.17), libcap2 (>= 2.10)
+Pre-Depends: multiarch-support
+Breaks: lxc (<< 0.9.0~alpha3-0ubuntu1~)
+Filename: pool/main/l/lxc/liblxc0_1.0.0~alpha1-0ubuntu3_powerpc.deb
+Size: 141818
+MD5sum: 9f11b8f5963769bab7fc8837307b069d
+SHA1: d849eb5c7133c80e37c35aacd4470fcbd160df33
+SHA256: d97b36880d74460a932e7923ed4d94ce7fdd493f66132c974f14a2aeead8487f
+Description: Linux Containers userspace tools (library)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: d757397b1a93a5bea5c72032f3ef485d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
 Package: libpathplan4
 Priority: optional
 Section: libs
@@ -797,6 +821,93 @@ Homepage: http://www.graphviz.org/
 Description-md5: 5bb95dff142ccbf7ab2946dc3a7a4dc1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: lxc
+Priority: optional
+Section: admin
+Installed-Size: 553
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Version: 1.0.0~alpha1-0ubuntu3
+Depends: adduser, apparmor, bridge-utils, dnsmasq-base, iptables, liblxc0 (= 1.0.0~alpha1-0ubuntu3), python3, python3-lxc, rsync, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.15)
+Recommends: cgroup-lite | cgroup-bin, libcap2-bin, lxc-templates (>= 0.8.0~rc1-4ubuntu43), openssl
+Suggests: btrfs-tools, lvm2, lxctl
+Filename: pool/main/l/lxc/lxc_1.0.0~alpha1-0ubuntu3_powerpc.deb
+Size: 132424
+MD5sum: ebcb06e0ae6a52e54f637f7b389dc68f
+SHA1: 94a1849611005271ac4006d9e266f8b39df53e91
+SHA256: 294d20798eaf81b2ddca268a351046e916f85dca40bc30879dee196d5e754020
+Description: Linux Containers userspace tools
+Homepage: http://lxc.sourceforge.net/
+Description-md5: 4ece0dffd153c29e95ffdb89f8238dfc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
+Package: lxc-dbg
+Priority: extra
+Section: debug
+Installed-Size: 828
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: lxc
+Version: 1.0.0~alpha1-0ubuntu3
+Depends: lxc (= 1.0.0~alpha1-0ubuntu3), lxc-dev (= 1.0.0~alpha1-0ubuntu3)
+Filename: pool/main/l/lxc/lxc-dbg_1.0.0~alpha1-0ubuntu3_powerpc.deb
+Size: 533644
+MD5sum: 3215d6c71b864bdcf27983a6ae8b1503
+SHA1: 5ace485dc614ee3f9e4f446e061964982b217795
+SHA256: 3f8caea9c4ec8a15f08807edb176af847a47c3ca011e7853e4c835641a28f568
+Description: Linux Containers userspace tools (debug)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: 9ec9c23e26368a478bce79545cfbb782
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: lxc-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 153
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: lxc
+Version: 1.0.0~alpha1-0ubuntu3
+Depends: lxc (= 1.0.0~alpha1-0ubuntu3)
+Filename: pool/main/l/lxc/lxc-dev_1.0.0~alpha1-0ubuntu3_powerpc.deb
+Size: 20172
+MD5sum: b71d60098e7db54eab98452520d72f43
+SHA1: 1d9f1184fabb07a5aa78b95a8e4e6a108d67510c
+SHA256: bb859f267b96429d0c2f8abd941c21761a2aca9f735bfe34487a1a93b33fb6f2
+Description: Linux Containers userspace tools (development)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: c719178b7e79ce1ed39519707c589961
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: lxc-templates
+Priority: optional
+Section: admin
+Installed-Size: 226
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: lxc
+Version: 1.0.0~alpha1-0ubuntu3
+Replaces: lxc (<< 0.8.0~rc1-4ubuntu43)
+Depends: lxc (>= 0.8.0~rc1-4ubuntu43)
+Recommends: cloud-image-utils | cloud-utils, debootstrap | cdebootstrap, openssl, rsync
+Suggests: qemu-user-static
+Breaks: lxc (<< 0.8.0~rc1-4ubuntu43)
+Filename: pool/main/l/lxc/lxc-templates_1.0.0~alpha1-0ubuntu3_all.deb
+Size: 41598
+MD5sum: 829691bd9da752dc8951e8e9042643f5
+SHA1: 8a7c00394a0c141282547d5f5b28609267968378
+SHA256: 419376be0eb3d33eab799f88a4e76ef990b8699c823651e177bdf5d77677df16
+Description: Linux Containers userspace tools (templates)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: 9a526ab1c6ccc435c574f17de9485e7e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
 
 Package: nova-api
 Priority: extra
@@ -1378,6 +1489,28 @@ Description-md5: 9e7471c108af7843da4a920afe750d19
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python3-lxc
+Priority: optional
+Section: python
+Installed-Size: 123
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: powerpc
+Source: lxc
+Version: 1.0.0~alpha1-0ubuntu3
+Depends: liblxc0 (= 1.0.0~alpha1-0ubuntu3), python3, libc6 (>= 2.4)
+Recommends: lxc-templates (>= 0.8.0~rc1-4ubuntu43)
+Filename: pool/main/l/lxc/python3-lxc_1.0.0~alpha1-0ubuntu3_powerpc.deb
+Size: 17288
+MD5sum: 584b86f772194457a885de2fb77c6176
+SHA1: 1f7def9a2e86ab86eed59c28dac3473660610a86
+SHA256: 8767d431fbd678d5c04658132b9598a00d4c959c6a09b2c77e9489eecbe74c05
+Description: Linux Containers userspace tools (Python 3.x bindings)
+Homepage: http://lxc.sourceforge.net/
+Description-md5: ee623a31db200104a7207d9de42b8f04
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
 Package: unity-webapps-service
 Priority: optional
 Section: gnome
@@ -1423,6 +1556,29 @@ Description-md5: 83f8894d390ffa31e34c89e43fc95bb1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop
+
+Package: x11-xserver-utils
+Priority: optional
+Section: x11
+Installed-Size: 452
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: powerpc
+Version: 7.7+0ubuntu2
+Replaces: iceauth, sessreg, xbase-clients (<< 1:7.3), xgamma, xhost, xmodmap, xrandr, xrdb, xrefresh, xrgb, xset, xsetmode, xsetpointer, xsetroot, xstdcmap, xutils (<< 1:7.2), xvidtune
+Depends: libc6 (>= 2.8), libice6 (>= 1:1.0.0), libx11-6, libxaw7, libxcursor1 (>> 1.1.2), libxext6, libxi6, libxmu6, libxmuu1, libxrandr2 (>= 2:1.4.0), libxt6, libxxf86vm1, cpp
+Suggests: nickle, cairo-5c, xorg-docs-core
+Conflicts: iceauth, sessreg, xgamma, xhost, xmodmap, xrandr, xrdb, xrefresh, xrgb, xset, xsetmode, xsetpointer, xsetroot, xstdcmap, xvidtune
+Filename: pool/main/x/x11-xserver-utils/x11-xserver-utils_7.7+0ubuntu2_powerpc.deb
+Size: 176592
+MD5sum: df288c38d8b6801f18f0a9c133c5c401
+SHA1: 9b2522b7c211f89a175246b18cc51656895417b7
+SHA256: adb6e93fd80ad0f66e886db5591fcd402ce9000d3c188f6bbb45ffb27b4ed7cd
+Description: X server utilities
+Description-md5: 7bc6b40d32fbe568c9539995f7b1053e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: xen-docs-4.3
 Priority: optional
