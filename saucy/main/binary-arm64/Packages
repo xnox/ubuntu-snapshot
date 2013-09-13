@@ -1630,6 +1630,53 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: dns-server
 
+Package: binutils
+Priority: optional
+Section: devel
+Installed-Size: 4972
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: arm64
+Version: 2.23.52.20130828-1ubuntu1
+Replaces: binutils-gold (<< 2.20.51.20100415), binutils-mingw-w64-i686 (<< 2.23.52.20130612-1+3), binutils-mingw-w64-x86-64 (<< 2.23.52.20130612-1+3)
+Provides: elf-binutils
+Depends: libc6 (>= 2.17), zlib1g (>= 1:1.2.0)
+Suggests: binutils-doc (>= 2.23.52.20130828-1ubuntu1)
+Conflicts: binutils-gold (<< 2.20.51.20100415), elf-binutils, gas, modutils (<< 2.4.19-1)
+Breaks: binutils-mingw-w64-i686 (<< 2.23.52.20130612-1+3), binutils-mingw-w64-x86-64 (<< 2.23.52.20130612-1+3)
+Filename: pool/main/b/binutils/binutils_2.23.52.20130828-1ubuntu1_arm64.deb
+Size: 1563964
+MD5sum: e0f2a8b6d73e9781c6a6f45ef68b18e4
+SHA1: 2f97ee907cb869ac76b3dad1a1bfb5ec837e3760
+SHA256: 2cce9defd1b651fb1feda2c6272ed97eee7e78a18d2d7d9bf8dca2ab4019a573
+Description: GNU assembler, linker and binary utilities
+Description-md5: fde49b4cfeaad346a6e094f973da28d7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: binutils-dev
+Priority: extra
+Section: devel
+Installed-Size: 20683
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: arm64
+Source: binutils
+Version: 2.23.52.20130828-1ubuntu1
+Replaces: libbfd-dev, libc5-dev
+Provides: libbfd-dev
+Depends: binutils (= 2.23.52.20130828-1ubuntu1)
+Conflicts: libbfd-dev
+Filename: pool/main/b/binutils/binutils-dev_2.23.52.20130828-1ubuntu1_arm64.deb
+Size: 5206814
+MD5sum: 1257eab3ca02b1b673e6f1774bc40bb5
+SHA1: 468f917cafa8a9757bc82aa5f42f01fa7e56f3e3
+SHA256: 4e90feb46fb7fe46564189f82634bbd3e1f5ff749c39a7a0197fb24c3d59f462
+Description: GNU binary utilities (BFD development files)
+Description-md5: ddc22c04156534b000b4f021b88a6023
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: binutils-doc
 Priority: optional
 Section: doc
@@ -24843,6 +24890,48 @@ Description-md5: d79121ddf62669813decdcb1d31db043
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libart-2.0-2
+Priority: optional
+Section: libs
+Installed-Size: 129
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: arm64
+Source: libart-lgpl
+Version: 2.3.21-2
+Depends: libc6 (>= 2.17)
+Pre-Depends: multiarch-support
+Filename: pool/main/liba/libart-lgpl/libart-2.0-2_2.3.21-2_arm64.deb
+Size: 40544
+MD5sum: 8538d44a270c233f6fd14ea75fab588d
+SHA1: 92f760d536afd6b08fd55adc7592b2f97d7d0d5c
+SHA256: 8dbb14fe26ab679c6993f282eb8cd2cd0955d92064f783c07cf4b91117278b40
+Description: Library of functions for 2D graphics - runtime files
+Multi-Arch: same
+Description-md5: c79e80a684d0e1f530bef577fc6a7eed
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libart-2.0-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 284
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Josselin Mouette <joss@debian.org>
+Architecture: arm64
+Source: libart-lgpl
+Version: 2.3.21-2
+Depends: libart-2.0-2 (= 2.3.21-2), pkg-config
+Filename: pool/main/liba/libart-lgpl/libart-2.0-dev_2.3.21-2_arm64.deb
+Size: 52538
+MD5sum: aa1a784fc986697b19fb15790bc89f87
+SHA1: a33d163af2a2c8501c890e7aea07fd24d12e7ecb
+SHA256: ad70485dc0af787c035ad688eb95f2fc13291e15b1b83cb9a6a9aa7e7246d5aa
+Description: Library of functions for 2D graphics - development files
+Description-md5: 18a0bfc8b4617d3d22b390966c9ece77
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: libart2.0-cil
 Priority: optional
@@ -63897,6 +63986,7 @@ Homepage: http://www.tcl.tk/
 Description-md5: ea137b8e140503b1e5c8403761f0412e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Task: ubuntustudio-audio
 
 Package: tcl8.5-dev
 Priority: optional
@@ -63967,6 +64057,7 @@ Homepage: http://www.tcl.tk/
 Description-md5: 60638630cf451e1c9fa7958f06c8dc80
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Task: ubuntustudio-audio
 
 Package: testng
 Priority: optional
