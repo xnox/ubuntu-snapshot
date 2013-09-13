@@ -1571,6 +1571,27 @@ Description-md5: cf6e32334b121b23ad0d84643800ce68
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: bc
+Priority: optional
+Section: math
+Installed-Size: 227
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ryan Kavanagh <rak@debian.org>
+Architecture: arm64
+Version: 1.06.95-8
+Depends: libc6 (>= 2.17), libreadline6 (>= 6.0), install-info
+Filename: pool/main/b/bc/bc_1.06.95-8_arm64.deb
+Size: 86990
+MD5sum: 93c4945f72d5cd2f374b8e56ce96ed83
+SHA1: a741b545bb07bb481824335b554a5e09c2c5c24f
+SHA256: 0b33ecd06e00fe8785a5fd596c2f7f68fd455d044c0f1db3ee973399d44a2860
+Description: GNU bc arbitrary precision calculator language
+Multi-Arch: foreign
+Homepage: http://ftp.gnu.org/gnu/bc/
+Description-md5: b8da7e3f115e4c703a180cdb05aec611
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: bdf2psf
 Priority: optional
 Section: utils
@@ -3044,6 +3065,28 @@ Description: header-only dbus-binding leveraging C++-11
 Multi-Arch: foreign
 Homepage: http://launchpad.net/dbus-cpp
 Description-md5: d97e755c33b36b87f5426fb54680aa16
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: dc
+Priority: optional
+Section: math
+Installed-Size: 149
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ryan Kavanagh <rak@debian.org>
+Architecture: arm64
+Source: bc
+Version: 1.06.95-8
+Depends: libc6 (>= 2.17), install-info
+Filename: pool/main/b/bc/dc_1.06.95-8_arm64.deb
+Size: 48068
+MD5sum: 24f7136d91279da540d54f0590c08937
+SHA1: 685feb07ff2cbcf7b5f92a5f8c298e3a8e3a7b85
+SHA256: 72422e3a0d4a987eed158fa257a9243532b02880ec56ca59117be0fc714d2f17
+Description: GNU dc arbitrary precision reverse-polish calculator
+Multi-Arch: foreign
+Homepage: http://ftp.gnu.org/gnu/bc/
+Description-md5: df0fb5699f014e0d2bb4210971dadffa
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -4972,6 +5015,27 @@ SHA1: 9c47d619d2884634c71d2235c7392c8fa2ce7058
 SHA256: 46f86eb91ef683a7d78f64b06613c6a653e6aabc332f36451b3ad63f502d087c
 Description: Tools to enable AMD's PowerXpress
 Description-md5: 0a15ac553658b71e0c35c66d316ea7ad
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: file
+Priority: important
+Section: utils
+Installed-Size: 97
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Daniel Baumann <daniel.baumann@progress-technologies.net>
+Architecture: arm64
+Version: 5.11-2ubuntu4
+Depends: libc6 (>= 2.17), libmagic1 (= 5.11-2ubuntu4)
+Filename: pool/main/f/file/file_5.11-2ubuntu4_arm64.deb
+Size: 18196
+MD5sum: fc47bb93b53137868df2bb8340e7988d
+SHA1: 998619537e0f71afa3bbc4028a2f2307a49d9ec7
+SHA256: 9d2a066c454844cd95b2d61448888e76a981618a2a55df49e7511d12cf8b11c7
+Description: Determines file type using "magic" numbers
+Multi-Arch: foreign
+Homepage: http://www.darwinsys.com/file/
+Description-md5: 24356148df43e324f7cd0edfa5faa2fc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -32773,6 +32837,53 @@ Description: data compression library (development files)
 Multi-Arch: same
 Homepage: http://www.oberhumer.com/opensource/lzo/
 Description-md5: 33a9c8476074f27fdf0d1f013ef98be9
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libmagic-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 254
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Daniel Baumann <daniel.baumann@progress-technologies.net>
+Architecture: arm64
+Source: file
+Version: 5.11-2ubuntu4
+Depends: libmagic1 (= 5.11-2ubuntu4)
+Suggests: file
+Filename: pool/main/f/file/libmagic-dev_5.11-2ubuntu4_arm64.deb
+Size: 53132
+MD5sum: 51b4f2a7bcff5408db47be100d20bda0
+SHA1: eff2f42c2f33696d47e6e40218e83b58b08098da
+SHA256: 456dd1ff502980852a8a12b530fa4dc76b27dca2b305afd92b34dfe9aa7d4cfc
+Description: File type determination library using "magic" numbers (development)
+Multi-Arch: same
+Homepage: http://www.darwinsys.com/file/
+Description-md5: 8dfdad924ca9981a019ce4d5e66307e2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libmagic1
+Priority: important
+Section: libs
+Installed-Size: 2417
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Daniel Baumann <daniel.baumann@progress-technologies.net>
+Architecture: arm64
+Source: file
+Version: 5.11-2ubuntu4
+Depends: libc6 (>= 2.17), zlib1g (>= 1:1.1.4)
+Pre-Depends: multiarch-support
+Suggests: file
+Filename: pool/main/f/file/libmagic1_5.11-2ubuntu4_arm64.deb
+Size: 163484
+MD5sum: 6988548f93b33d439ed1c72650644997
+SHA1: ed29b49499e4044c53e1faa2bfa8ab6209add34d
+SHA256: 4e241b4076585a8af175bb2ed3f90e7db75cffb09c93de8a66b7d7500137993d
+Description: File type determination library using "magic" numbers
+Multi-Arch: same
+Homepage: http://www.darwinsys.com/file/
+Description-md5: 7bbc15df978ca5c0adea7312cbc02445
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
