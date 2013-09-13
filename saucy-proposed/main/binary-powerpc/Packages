@@ -434,6 +434,171 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
 
+Package: postfix
+Priority: optional
+Section: mail
+Installed-Size: 3452
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Version: 2.10.2-1
+Replaces: mail-transport-agent
+Provides: default-mta, mail-transport-agent
+Depends: libc6 (>= 2.11), libdb5.1, libsasl2-2 (>= 2.1.24), libsqlite3-0 (>= 3.5.9), libssl1.0.0 (>= 1.0.0), debconf (>= 0.5) | debconf-2.0, netbase, adduser (>= 3.48), dpkg (>= 1.8.3), lsb-base (>= 3.0-6), ssl-cert, cpio
+Recommends: python
+Suggests: procmail, postfix-mysql, postfix-pgsql, postfix-ldap, postfix-pcre, sasl2-bin, libsasl2-modules, dovecot-common, resolvconf, postfix-cdb, mail-reader, ufw, postfix-doc
+Conflicts: libnss-db (<< 2.2-3), mail-transport-agent, smail
+Filename: pool/main/p/postfix/postfix_2.10.2-1_powerpc.deb
+Size: 1320550
+MD5sum: ccbc8f807a7391d449dc1b9295f02329
+SHA1: 63b53986669eaf68e7c1b8cec78586f698db763d
+SHA256: 3f992ed69a27ee0dd31fb49333804931d87661c50696bb35e043d6a13973121f
+Description: High-performance mail transport agent
+Homepage: http://www.postfix.org
+Description-md5: 98656fbf1bb45b53edd367037a2e5a90
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: mail-server
+
+Package: postfix-cdb
+Priority: extra
+Section: mail
+Installed-Size: 95
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: postfix
+Version: 2.10.2-1
+Depends: libc6 (>= 2.1.3), libcdb1, postfix (= 2.10.2-1)
+Filename: pool/main/p/postfix/postfix-cdb_2.10.2-1_powerpc.deb
+Size: 12210
+MD5sum: 30382233960829d25fb203ba0e045e39
+SHA1: c47c33176edc54cb66862669606f1cacf05fc4f5
+SHA256: 096eef5a692e30bd326ddca9e28367fe207811475747b08fbbab9830384f1bd3
+Description: CDB map support for Postfix
+Homepage: http://www.postfix.org
+Description-md5: 137b9078314cdc75bd7f6df9b99699ac
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: postfix-dev
+Priority: optional
+Section: devel
+Installed-Size: 575
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: all
+Source: postfix
+Version: 2.10.2-1
+Depends: postfix (>= 2.10.2-0), postfix (<< 2.10.2.0-0)
+Filename: pool/main/p/postfix/postfix-dev_2.10.2-1_all.deb
+Size: 127376
+MD5sum: 4981c1f35277464436b7a30bc93f19b8
+SHA1: 982c77ee6f17fc267bb1cbb3e4e6b822be3fc914
+SHA256: 14cdb4d3e338008e7ec8c2052db19e524ea075586e0934a5b75d5b079d8ab841
+Description: Loadable modules development environment for Postfix
+Homepage: http://www.postfix.org
+Description-md5: 8080454367acb706858ba1650d653656
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: postfix-doc
+Priority: optional
+Section: doc
+Installed-Size: 3330
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: all
+Source: postfix
+Version: 2.10.2-1
+Suggests: postfix
+Filename: pool/main/p/postfix/postfix-doc_2.10.2-1_all.deb
+Size: 1061118
+MD5sum: 95d5c5238653a342f1784fc0f98ae3fd
+SHA1: 5d4dc7f6575f4c2c3338e3a5bbc720d0764eb3b5
+SHA256: 534b97aafac8d24bab2aa1a28e8f385343a9cd229e450f629605842333109385
+Description: Documentation for Postfix
+Homepage: http://www.postfix.org
+Description-md5: 9ed5048d20cb75eebf5288f2c5e010c2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: postfix-ldap
+Priority: optional
+Section: mail
+Installed-Size: 115
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: postfix
+Version: 2.10.2-1
+Depends: libc6 (>= 2.11), libldap-2.4-2 (>= 2.4.7), postfix (= 2.10.2-1)
+Filename: pool/main/p/postfix/postfix-ldap_2.10.2-1_powerpc.deb
+Size: 20750
+MD5sum: ed38df56516edf0a3c1a7ef0ea532b73
+SHA1: bd83dfeb2baef9b39c19761e9c9dfb51c3cfb4e5
+SHA256: 8274d81e0490cadd58ade7a6245b212cb9b3159c3f9a64e85285586b62fd0284
+Description: LDAP map support for Postfix
+Homepage: http://www.postfix.org
+Description-md5: abc2778b6b14473af5b25feccfd2427f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: postfix-mysql
+Priority: optional
+Section: mail
+Installed-Size: 98
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: postfix
+Version: 2.10.2-1
+Depends: libc6 (>= 2.1.3), libmysqlclient18 (>= 5.5.13-1), postfix (= 2.10.2-1)
+Filename: pool/main/p/postfix/postfix-mysql_2.10.2-1_powerpc.deb
+Size: 14246
+MD5sum: 277b5012d19a8bdaeb1405410777688c
+SHA1: 9c51b256998425cd55ab0105b85b49cbbb1928bd
+SHA256: 9f5849677854f804954ff945049f4b03f6567ed46ed84fcc655bcb30309b57e2
+Description: MySQL map support for Postfix
+Homepage: http://www.postfix.org
+Description-md5: ec318b28177bb3a0513f0279e027a8ab
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: postfix-pcre
+Priority: optional
+Section: mail
+Installed-Size: 102
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: postfix
+Version: 2.10.2-1
+Depends: libc6 (>= 2.3), libpcre3 (>= 8.10), postfix (= 2.10.2-1)
+Filename: pool/main/p/postfix/postfix-pcre_2.10.2-1_powerpc.deb
+Size: 14478
+MD5sum: 6505d2ea57bdf0f7226e093058d652db
+SHA1: cb5b1cbac98bfae7f069b307c278716ca7b5d767
+SHA256: dd44692e6ded0095ebf8f16abdb8f7605b7ee1018f817e2c07ee0df90fda4adb
+Description: PCRE map support for Postfix
+Homepage: http://www.postfix.org
+Description-md5: 90d5a11e7449873ee49beaf87a186abd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: postfix-pgsql
+Priority: optional
+Section: mail
+Installed-Size: 98
+Maintainer: LaMont Jones <lamont@debian.org>
+Architecture: powerpc
+Source: postfix
+Version: 2.10.2-1
+Depends: libc6 (>= 2.1.3), libpq5, postfix (= 2.10.2-1)
+Filename: pool/main/p/postfix/postfix-pgsql_2.10.2-1_powerpc.deb
+Size: 14404
+MD5sum: 88e6663395688e0c48aebac1c602db39
+SHA1: 4ab552346ece8baa5a5ad6fc6dafa3dcdc5e3343
+SHA256: 74651f40a5c8c898936ffcf3f61966fbf0da6cbd58b415cb00ed6a810f923483
+Description: PostgreSQL map support for Postfix
+Homepage: http://www.postfix.org
+Description-md5: 01a21ce92bf2cb222b9b9c70e7f95fba
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python
 Priority: optional
 Section: python
@@ -664,50 +829,6 @@ Description-md5: b150af47b4181bd5946d75d2a40a22ae
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
-
-Package: update-notifier
-Priority: optional
-Section: gnome
-Installed-Size: 267
-Maintainer: Michael Vogt <michael.vogt@ubuntu.com>
-Architecture: powerpc
-Version: 0.145
-Depends: libappindicator3-1 (>= 0.2.92), libc6 (>= 2.7), libglib2.0-0 (>= 2.35.9), libgtk-3-0 (>= 3.0.0), libgudev-1.0-0 (>= 146), libnotify4 (>= 0.7.0), libpango-1.0-0 (>= 1.18.0), libx11-6, dconf-gsettings-backend | gsettings-backend, update-notifier-common (= 0.145), python, python-apt, python-dbus, python-debian, update-manager-gnome | update-manager (>= 1:0.165), ubuntu-release-upgrader-gtk, notification-daemon, policykit-1
-Recommends: apport-gtk (>= 2.8-0ubuntu3), python-aptdaemon.gtk3widgets | synaptic (>= 0.75.12), software-properties-gtk, anacron, python-aptdaemon
-Filename: pool/main/u/update-notifier/update-notifier_0.145_powerpc.deb
-Size: 54088
-MD5sum: 36a056ff97191a23d72d6b6420fcb367
-SHA1: fa5158f5c235ab91150ebd106574403126c5c025
-SHA256: d81eb4becc46face139d2a5cbd991422dc7eee69735a1575ceea05242e79175f
-Description: Daemon which notifies about package updates
-Description-md5: 17a8ca38ec1439cd743e00edf3c9a926
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
-
-Package: update-notifier-common
-Priority: optional
-Section: gnome
-Installed-Size: 2056
-Maintainer: Michael Vogt <michael.vogt@ubuntu.com>
-Architecture: all
-Source: update-notifier
-Version: 0.145
-Replaces: update-notifier (<< 0.75.1)
-Depends: python, python-apt (>= 0.6.12), python-debian, debconf, patch
-Pre-Depends: dpkg (>= 1.15.7.2)
-Recommends: libpam-modules (>= 1.0.1-9ubuntu3)
-Suggests: policykit-1
-Filename: pool/main/u/update-notifier/update-notifier-common_0.145_all.deb
-Size: 233034
-MD5sum: d2cb59abf0de255cedb9b2953b605e62
-SHA1: f88f4585b3aa502c420177318bea63c9a8d324d5
-SHA256: bc91354acf825fac0969fd2e5eba133c2c5ffb37ffcfc5439c7d6f4e360c62e5
-Description: Files shared between update-notifier and other packages
-Description-md5: 9e55b33c0bb042acf203440099a61649
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-desktop, ubuntu-usb, cloud-image, server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: usb-modeswitch-data
 Priority: extra
