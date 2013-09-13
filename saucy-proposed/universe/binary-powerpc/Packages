@@ -771,6 +771,71 @@ Description-md5: 2deb03c7c2f4a71cdb16f5191d6e2b0a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: cobbler
+Priority: optional
+Section: universe/misc
+Installed-Size: 279
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jasper Poppe <jpoppe@ebay.com>
+Architecture: all
+Version: 2.4.0-0ubuntu4
+Replaces: cobbler-common (<< 2.4.0-1)
+Depends: debconf (>= 0.5) | debconf-2.0, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), python, apache2, hardlink, libapache2-mod-wsgi, lsb-release, openssl, python-twisted, rsync, syslinux | syslinux-common, libapache2-mod-python, cobbler-common (= 2.4.0-0ubuntu4), distro-info
+Recommends: fence-agents, powerwake, tftpd-hpa
+Suggests: createrepo, bind9, debmirror, dhcp3-server, genisoimage
+Filename: pool/universe/c/cobbler/cobbler_2.4.0-0ubuntu4_all.deb
+Size: 65562
+MD5sum: e515941033cb0e5e2ac4c07044036d25
+SHA1: 01eaa4b3f0c559142d4c5d10c5abbc59a3c26c7c
+SHA256: f4e47f3b3e07d004a79aac20758fe10209ad4b0b44d5b765be467ebf4dd6dde8
+Description: Install server
+Homepage: https://fedorahosted.org/cobbler
+Description-md5: 7c2c8cc39949ca0ea1fe1f1d8dd9f0ef
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: cobbler-common
+Priority: optional
+Section: universe/misc
+Installed-Size: 578
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jasper Poppe <jpoppe@ebay.com>
+Architecture: all
+Source: cobbler
+Version: 2.4.0-0ubuntu4
+Depends: python-cobbler (= 2.4.0-0ubuntu4)
+Filename: pool/universe/c/cobbler/cobbler-common_2.4.0-0ubuntu4_all.deb
+Size: 58080
+MD5sum: 0dac3d377b486b4748b3320d9f07ea06
+SHA1: 649d22c989e951338f37893d90f99aecba126df7
+SHA256: 8a20b250d5d08c807b11c07825c3f231bddf169c765d96013cbd379bcb67a015
+Description: Cobbler Install server - common files
+Homepage: https://fedorahosted.org/cobbler
+Description-md5: c67a5386b3e19fea8505fea8f92e1207
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: cobbler-web
+Priority: optional
+Section: universe/misc
+Installed-Size: 599
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jasper Poppe <jpoppe@ebay.com>
+Architecture: all
+Source: cobbler
+Version: 2.4.0-0ubuntu4
+Depends: cobbler (= 2.4.0-0ubuntu4), cobbler-common (= 2.4.0-0ubuntu4), openssl, apache2-utils
+Filename: pool/universe/c/cobbler/cobbler-web_2.4.0-0ubuntu4_all.deb
+Size: 149758
+MD5sum: cf258343a9de43c62550d3db9215f66e
+SHA1: bb377694bd853fa2ebd3f5d63b886a809aa061a2
+SHA256: 822e1956a4d6d3fd818aab75072100c506a3caae43dc521777a3f7bdea0fb5dc
+Description: Cobbler Install server - web interface
+Homepage: https://fedorahosted.org/cobbler
+Description-md5: c1bef8306e7ae7cf0601f185cc7e47fc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: coquelicot
 Priority: optional
 Section: universe/web
@@ -1189,6 +1254,27 @@ SHA256: 3788341d917e7f963e43687f6648aa174e230b98a15ef84ebbae48542b7dd5ba
 Description: inference of RNA secondary structural alignments – documentation
 Homepage: http://infernal.janelia.org/
 Description-md5: e9b1617d2c59e14b9d4c57e66f9dfb48
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: koan
+Priority: optional
+Section: universe/misc
+Installed-Size: 95
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jasper Poppe <jpoppe@ebay.com>
+Architecture: all
+Source: cobbler
+Version: 2.4.0-0ubuntu4
+Depends: python:any, python-koan, libvirt-bin, virtinst
+Filename: pool/universe/c/cobbler/koan_2.4.0-0ubuntu4_all.deb
+Size: 15140
+MD5sum: 632f43519d6acb4c304e4daeaa523326
+SHA1: ccb5639f32a2a2b8ec4698f7c443076412e80858
+SHA256: 08e4a79bb92239ec944a506056e15121fda1689b8583db41b7ead771168262f5
+Description: kickstart-over-a-network (koan)
+Homepage: https://fedorahosted.org/cobbler
+Description-md5: f37c07448db7b04b4de2d88dae780245
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -3771,6 +3857,28 @@ Description-md5: 9086f1fe4b447d13470edb2e3b91e7dc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-cobbler
+Priority: optional
+Section: universe/python
+Installed-Size: 1080
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jasper Poppe <jpoppe@ebay.com>
+Architecture: all
+Source: cobbler
+Version: 2.4.0-0ubuntu4
+Provides: python2.7-cobbler
+Depends: python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2), python-yaml, python-netaddr, python-cheetah, python-simplejson, python-urlgrabber, python-django (>= 1.2), python-distro-info
+Filename: pool/universe/c/cobbler/python-cobbler_2.4.0-0ubuntu4_all.deb
+Size: 241052
+MD5sum: 961731dfb5b9be8c2402b97b26f961ad
+SHA1: 848932a81cbcdd741b6176ebb4900a8b58d869e3
+SHA256: 6bf2fea182d9bc9fcc32631888c87b5b0c3c1392ad6f2bbd14dbe35dceeeb188
+Description: Install server - python libraries.
+Homepage: https://fedorahosted.org/cobbler
+Description-md5: 90213f7c614a76e4eeeceeb6ad411111
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-csound
 Priority: extra
 Section: universe/python
@@ -3966,6 +4074,30 @@ SHA256: 5e5bf5e6bb72721f7d03c13751728c43cf5757c82e4d8eb988168627bbcfd6ea
 Description: documentation and examples for PyKDE
 Homepage: http://www.kde.org
 Description-md5: a89a4cb17bc1ec6ec1a8abe86ce572a0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-koan
+Priority: optional
+Section: universe/misc
+Installed-Size: 214
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Jasper Poppe <jpoppe@ebay.com>
+Architecture: all
+Source: cobbler
+Version: 2.4.0-0ubuntu4
+Replaces: python-cobbler (<= 2.1.0~bzr2002-0ubuntu2)
+Provides: python2.7-koan
+Depends: python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2), python-libvirt, python-simplejson, python-urlgrabber, python-ethtool
+Conflicts: python-cobbler (<= 2.1.0~bzr2002-0ubuntu2)
+Filename: pool/universe/c/cobbler/python-koan_2.4.0-0ubuntu4_all.deb
+Size: 43412
+MD5sum: 2a6dd5b8f7b826808802bf0902535bea
+SHA1: 9906114b5b7a91ebd178a119f532eb74382a5413
+SHA256: 18a5e8bcc95878cf7a272368b379e6690b1851d2e32f86bb4fdb07e6f2d5b347
+Description: kickstart-over-a-network (koan) - python libraries
+Homepage: https://fedorahosted.org/cobbler
+Description-md5: 2782189acf30864dde3b48c693561c1f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
