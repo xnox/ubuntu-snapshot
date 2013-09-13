@@ -1,52 +1,3 @@
-Package: ampache
-Priority: optional
-Section: universe/web
-Installed-Size: 119
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Charlie Smotherman <cjsmo@cableone.net>
-Architecture: all
-Version: 3.6-rzb2752+dfsg-0ubuntu4
-Replaces: ampache (<< 3.6-git408e713+dfsg-1)
-Depends: debconf (>= 0.5) | debconf-2.0, libapache2-mod-php5 | php5, ampache-common (>= 3.6-rzb2704+dfsg-0ubuntu1), php5-cli, php5-mysql, php5-xmlrpc, ucf
-Pre-Depends: dpkg (>= 1.15.7.2)
-Recommends: apache2 (>= 2.4.6~) | httpd, ampache-themes (>= 3.6.1-2)
-Suggests: php5-gd, phpmyadmin, mysql-server, eyed3, faad, vorbis-tools
-Breaks: ampache (<< 3.6-git408e713+dfsg-1)
-Filename: pool/universe/a/ampache/ampache_3.6-rzb2752+dfsg-0ubuntu4_all.deb
-Size: 25110
-MD5sum: 87a04cf486d88dbb60fcb338881492e7
-SHA1: 658857fc12d28db1fd53334390d5db9c0eda3bf6
-SHA256: 9bedffdbd342743ba2a9d79f8e4aff61f88a42f62e42132166f9ef83f9f42c87
-Description: web-based audio file management system
-Homepage: http://www.ampache.org
-Description-md5: 013767c0a420a00a76abd68aea122b50
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: ampache-common
-Priority: optional
-Section: universe/web
-Installed-Size: 5857
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Charlie Smotherman <cjsmo@cableone.net>
-Architecture: all
-Source: ampache
-Version: 3.6-rzb2752+dfsg-0ubuntu4
-Replaces: ampache (<< 3.6-rzb2704+dfsg-0ubuntu1)
-Depends: fonts-freefont-ttf (<< 20120503.0~), fonts-freefont-ttf (>= 20120503), libjs-prototype (<< 1.7.1.0~), libjs-prototype (>= 1.7.1), libphp-phpmailer (<< 5.1.0~), libphp-phpmailer (>= 5.1), libphp-snoopy (<< 1.2.4.0~), libphp-snoopy (>= 1.2.4), php-getid3 (<< 1.9.6.0~), php-getid3 (>= 1.9.6), php-gettext (<< 1.0.11.0~), php-gettext (>= 1.0.11), ttf-freefont
-Suggests: ampache, php5-gd, phpmyadmin, mysql-server, eyed3, faad, vorbis-tools
-Breaks: ampache (<< 3.6-rzb2704+dfsg-0ubuntu1)
-Filename: pool/universe/a/ampache/ampache-common_3.6-rzb2752+dfsg-0ubuntu4_all.deb
-Size: 1359594
-MD5sum: 5b88efdf4a57e877fd8e3ec209afac6a
-SHA1: c32cdb1575f99741457b02cc0d003dcc6ff9db56
-SHA256: 449c66a491cb9bc62c2764c41974b9d6edbef783e72470c483d744bc768c393a
-Description: web-based audio file management system common files
-Homepage: http://www.ampache.org
-Description-md5: db1e8143f24bd468587e1012d5c747b0
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: autopilot-desktop
 Priority: optional
 Section: universe/metapackages
@@ -1101,6 +1052,27 @@ Description-md5: 264e50866c900ec4a639f91ed62bd407
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: gir1.2-panelapplet-4.0
+Priority: optional
+Section: universe/libs
+Installed-Size: 254
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gnome-panel
+Version: 1:3.6.2-0ubuntu15
+Depends: gir1.2-gconf-2.0, gir1.2-glib-2.0, gir1.2-gtk-3.0, libpanel-applet-4-0 (>= 3.4.1)
+Filename: pool/universe/g/gnome-panel/gir1.2-panelapplet-4.0_3.6.2-0ubuntu15_powerpc.deb
+Size: 4574
+MD5sum: 73491c50da6b77450555ccd5386982be
+SHA1: fe6824c4207cc978f1859c6265347bba62b6f8c8
+SHA256: 6e1dda03da53616810430017f91b369e9fd26ff37afd08d3930d6a7266d641e6
+Description: GObject introspection for the GNOME Panel Applet library
+Description-md5: a8af7aa8a33344ff2c0d9b217270f9fc
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
 Package: gnome-documents
 Priority: optional
 Section: universe/gnome
@@ -1122,6 +1094,119 @@ Description-md5: 037eb12accd9c20f0b95a1939da9c9a5
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-gnome-desktop
+
+Package: gnome-panel
+Priority: optional
+Section: universe/gnome
+Installed-Size: 1373
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Version: 1:3.6.2-0ubuntu15
+Replaces: gnome-panel-data (<< 2.91)
+Depends: gconf-service, libatk1.0-0 (>= 1.12.4), libc6 (>= 2.7), libcairo2 (>= 1.10.0), libdconf1 (>= 0.14.0), libecal-1.2-15 (>= 3.5.91), libedataserver-1.2-17 (>= 3.5.91), libgconf-2-4 (>= 2.31.1), libgdk-pixbuf2.0-0 (>= 2.25.2), libglib2.0-0 (>= 2.37.3), libgnome-desktop-3-7 (>= 3.2.0), libgnome-menu-3-0 (>= 3.2.0.1), libgtk-3-0 (>= 3.3.16), libgweather-3-3 (>= 3.7.91), libical1 (>= 1.0), libice6 (>= 1:1.0.0), libpanel-applet-4-0 (>= 3.4.1), libpango-1.0-0 (>= 1.18.0), libpolkit-gobject-1-0 (>= 0.99), librsvg2-2 (>= 2.32.0), libsm6, libtelepathy-glib0 (>= 0.14.0), libwnck-3-0 (>= 2.91.6), libx11-6, libxrandr2 (>= 2:1.2.99.3), gnome-icon-theme-symbolic (>= 3.0.0), gnome-panel-data (= 1:3.6.2-0ubuntu15), gnome-menus (>= 3.1.4)
+Recommends: gnome-applets, gnome-session (>= 2.26), gnome-session-flashback, gnome-control-center, indicator-applet-complete, evolution-data-server, gnome-icon-theme (>= 2.24), alacarte, gvfs
+Suggests: yelp, gnome-user-guide, gnome-terminal | x-terminal-emulator, nautilus
+Breaks: gnome-applets (<< 2.91), gnome-control-center (<< 1:2.91), gnome-power-manager (<< 2.26), gnome-session (<< 2.26), gnome-settings-daemon (<< 2.91), libpanel-applet2-0, netspeed (<< 0.16-2)
+Filename: pool/universe/g/gnome-panel/gnome-panel_3.6.2-0ubuntu15_powerpc.deb
+Size: 303224
+MD5sum: 30d214224348965e00430ec5ff88ade7
+SHA1: 9c94b478266786a72773b1e645a0e14002050f5d
+SHA256: 8dbb2988604f87e2c24b2bd5b10ca3f2a2f936745850961272ed3c6612e74847
+Description: launcher and docking facility for GNOME
+Description-md5: 02085226815ba9e6a5733ab8ea00c173
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
+Package: gnome-panel-data
+Priority: optional
+Section: universe/gnome
+Installed-Size: 9543
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: gnome-panel
+Version: 1:3.6.2-0ubuntu15
+Depends: dconf-gsettings-backend | gsettings-backend
+Recommends: gnome-panel
+Filename: pool/universe/g/gnome-panel/gnome-panel-data_3.6.2-0ubuntu15_all.deb
+Size: 1162502
+MD5sum: a5971945ea956dae17849d301739761e
+SHA1: 78fb3e7ced0ec6aa37c89f02f76ff6a7d835bacb
+SHA256: 0fbcfca55836afc25ff7ee298c407e46cdb6039c4262f3f4bf50bf394edd1906
+Description: common files for the GNOME Panel
+Description-md5: 2ff7a42de238e01d2b058a28db414f26
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
+Package: gnome-panel-dbg
+Priority: extra
+Section: universe/libdevel
+Installed-Size: 3644
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gnome-panel
+Version: 1:3.6.2-0ubuntu15
+Depends: gnome-panel (= 1:3.6.2-0ubuntu15), libpanel-applet-4-0 (= 1:3.6.2-0ubuntu15)
+Filename: pool/universe/g/gnome-panel/gnome-panel-dbg_3.6.2-0ubuntu15_powerpc.deb
+Size: 918354
+MD5sum: 57e7f9c0fe9e99751d9229762584ff4c
+SHA1: a7d574e3d351c61a8af7bd05cf7fed19986896d7
+SHA256: 7bf72eab1dba4d3b2e8b944258fee053c1a4b2bcbfae9f8284fa81b03720cf56
+Description: GNOME Panel and library for panel applets - debugging symbols
+Description-md5: acffe68cac40a2d7b07ad491b1095c67
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gnome-session-fallback
+Priority: optional
+Section: universe/gnome
+Installed-Size: 241
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: gnome-panel
+Version: 1:3.6.2-0ubuntu15
+Depends: gnome-session-flashback
+Filename: pool/universe/g/gnome-panel/gnome-session-fallback_3.6.2-0ubuntu15_all.deb
+Size: 2914
+MD5sum: 7fdaa3f13d8e4ee97901e6a4c6fa212e
+SHA1: dbfb733f4f05e27526125a36ac3f309f911465c6
+SHA256: ff383223cba77c2efb1f1718cc251f5ffe9331bb5f1b40397a6dd606e2e5e518
+Description: GNOME Session Manager - GNOME Flashback (transitional package)
+Description-md5: a9b7b1151c7ebe84c570efc963677946
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
+Package: gnome-session-flashback
+Priority: optional
+Section: universe/gnome
+Installed-Size: 263
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: gnome-panel
+Version: 1:3.6.2-0ubuntu15
+Replaces: gnome-session (<< 3.0), gnome-session-bin (<< 3.0), gnome-session-fallback (<< 1:3.6.2-0ubuntu10)
+Provides: x-session-manager
+Depends: gnome-screensaver, gnome-settings-daemon (>= 3.0), gnome-panel (>= 3.0), metacity (>= 2.30), notification-daemon (>= 0.7), policykit-1-gnome, gnome-session-bin, gnome-session-common
+Recommends: gnome-power-manager
+Suggests: gnome-user-guide, desktop-base, gnome-keyring
+Breaks: gnome-session-fallback (<< 1:3.6.2-0ubuntu10)
+Filename: pool/universe/g/gnome-panel/gnome-session-flashback_3.6.2-0ubuntu15_all.deb
+Size: 70578
+MD5sum: d6791c7cd6e67d6f2ae6de50a1d0a363
+SHA1: ac3ed4ca337e2170312011b469074bb7a7f2d0a3
+SHA256: d0faf55820b14fa82d4ce86114308044cf98b94474ee07d94d080098bba51142
+Description: GNOME Session Manager - GNOME Flashback session
+Description-md5: a7ddbb3186df90f765f0a5e61d98c16d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
 
 Package: gnuradio-doc
 Priority: optional
@@ -1198,6 +1283,26 @@ SHA256: e3550cc0ed1131613bf3986c76ba87100cfaf9ca345f07811dc1dd99911fa208
 Description: Fully configurable process monitoring
 Homepage: http://god.rubyforge.org/
 Description-md5: e507e6d9d0acf312b7c0025c14164de2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: gtkwave
+Priority: optional
+Section: universe/electronics
+Installed-Size: 4002
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Electronics Team <pkg-electronics-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Version: 3.3.48-1
+Depends: gconf-service, libbz2-1.0, libc6 (>= 2.11), libgcc1 (>= 1:4.2.1), libgconf-2-4 (>= 2.31.1), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.12.0), libgtk2.0-0 (>= 2.14.0), libjudydebian1, liblzma5 (>= 5.1.1alpha+20120614), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), tcl8.5 (>= 8.5.0), tk8.5 (>= 8.5.0), zlib1g (>= 1:1.1.4)
+Filename: pool/universe/g/gtkwave/gtkwave_3.3.48-1_powerpc.deb
+Size: 2517330
+MD5sum: bce136e7f27d9d04617736c964520b6a
+SHA1: bc6af3cd54cc47f7e8b79ecf6ff0b1469c2e4500
+SHA256: b056257ba273a37b1480489c26b0a513dffbb4d0d070c1a11b5c856e638da0ed
+Description: VCD (Value Change Dump) file waveform viewer
+Homepage: http://gtkwave.sourceforge.net/
+Description-md5: 61715897448c17f5ed5a42e1469ffffe
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -2416,6 +2521,67 @@ SHA256: 8b31e68bdcd25f8f6873aa236dcc12624425a00594025fdb2726653cc9a3cd5b
 Description: parsing library for openbox
 Homepage: http://www.openbox.org
 Description-md5: c6c89fc6e3fd0e035c3b5033ac8de758
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpanel-applet-4-0
+Priority: optional
+Section: universe/libs
+Installed-Size: 313
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gnome-panel
+Version: 1:3.6.2-0ubuntu15
+Depends: gconf-service, libc6 (>= 2.4), libcairo-gobject2 (>= 1.10.0), libcairo2 (>= 1.10.0), libgconf-2-4 (>= 2.31.1), libglib2.0-0 (>= 2.37.3), libgtk-3-0 (>= 3.3.8), libx11-6
+Filename: pool/universe/g/gnome-panel/libpanel-applet-4-0_3.6.2-0ubuntu15_powerpc.deb
+Size: 87532
+MD5sum: 236bbe0fb044144ebc7c273e911c695d
+SHA1: 14da2ea8d444aff277a13f7fa187b10df8937564
+SHA256: 3c73b508eae3d466c9f2232095883314f5a28001e8d2b622629da37a7f692d3b
+Description: library for GNOME Panel applets
+Description-md5: a8beb10b9467270d245d73767b1d6c59
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-desktop-gnome
+
+Package: libpanel-applet-4-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 330
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: gnome-panel
+Version: 1:3.6.2-0ubuntu15
+Depends: libpanel-applet-4-0 (= 1:3.6.2-0ubuntu15), gir1.2-panelapplet-4.0 (= 1:3.6.2-0ubuntu15), libgconf2-dev, libglib2.0-dev (>= 2.31.14), libgtk-3-dev (>= 3.3.8)
+Recommends: libpanel-applet-4-doc
+Filename: pool/universe/g/gnome-panel/libpanel-applet-4-dev_3.6.2-0ubuntu15_powerpc.deb
+Size: 10762
+MD5sum: 2a66e8075779399e184e488c0d5ce262
+SHA1: 22a951fab73a0184d46ad9a4f9e1019990959061
+SHA256: 2a4ad7ff3aede5da207a0c15f808c355422fae20499e5385557c72a2873b0751
+Description: library for GNOME Panel applets - development files
+Description-md5: 54d05ffa2768c90dac4725e6de1f5b9b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpanel-applet-4-doc
+Priority: optional
+Section: universe/doc
+Installed-Size: 460
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: gnome-panel
+Version: 1:3.6.2-0ubuntu15
+Filename: pool/universe/g/gnome-panel/libpanel-applet-4-doc_3.6.2-0ubuntu15_all.deb
+Size: 91344
+MD5sum: f0caee07295f62e6a62b4db3484fe5c1
+SHA1: 99e71363d5f0e6077eaf89f5c2d1bef4adaabfd7
+SHA256: b62c46527d18a965d182b73385e22154adc43be6acf0ee0868e9f825bfdd899c
+Description: library for GNOME Panel applets - documentation files
+Description-md5: d6ba5e667d59eb12ab2bc47bc9798559
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
