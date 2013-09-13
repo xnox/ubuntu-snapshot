@@ -137,6 +137,30 @@ Origin: Ubuntu
 Supported: 18m
 Task: minimal
 
+Package: cloud-init
+Priority: extra
+Section: admin
+Installed-Size: 487
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Version: 0.6.3-0ubuntu1.7
+Replaces: ec2-init (<< 0.5.3)
+Provides: ec2-init
+Depends: cloud-utils, ifupdown (>= 0.6.10ubuntu5), mountall (>= 2.36.3), procps, python (>= 2.7.1-0ubuntu2), python-cheetah, python-configobj, python-oauth, python-software-properties, python-yaml, debconf (>= 0.5) | debconf-2.0, python2.7, python (<< 2.8)
+Conflicts: ec2-init (<< 0.5.3)
+Filename: pool/main/c/cloud-init/cloud-init_0.6.3-0ubuntu1.7_all.deb
+Size: 112720
+MD5sum: 3a3d7779bf24a31b9a992465de20fe81
+SHA1: f8b0322a9c305c5ae3be8f0f10c4df966946efe0
+SHA256: 1b4dc96ad7c7059bc8cf4ce232f2ad70c8e7eca2bec9f7c14a64cb1e1943c57d
+Description: Init scripts for cloud instances
+Python-Version: 2.7
+Description-md5: 8719ef0e4178017b7147590b1fde082e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: cloud-image
+
 Package: consolekit
 Priority: optional
 Section: admin
@@ -393,6 +417,29 @@ Description-md5: 0cf5a8771cafcd619336f37af75b9a7c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 18m
+
+Package: grub-legacy-ec2
+Priority: extra
+Section: admin
+Installed-Size: 130
+Maintainer: Scott Moser <smoser@ubuntu.com>
+Architecture: all
+Source: cloud-init
+Version: 0.6.3-0ubuntu1.7
+Depends: debconf (>= 1.5.19) | cdebconf, util-linux (>= 2.15-1), debconf (>= 0.5) | debconf-2.0
+Suggests: grub-legacy-doc
+Conflicts: grub
+Filename: pool/main/c/cloud-init/grub-legacy-ec2_0.6.3-0ubuntu1.7_all.deb
+Size: 24294
+MD5sum: e1f70a76f067d0e1c669dd019f14a987
+SHA1: 5595a8d14416dd9c79ec6eb0e0db9cb8fae4cf57
+SHA256: 7e2fc81c8d5f8cfefd54b79a9fe87e8145f28f5823542d42406e44cdf18da828
+Description: Handles update-grub for ec2 instances
+Description-md5: e5f8ea347000ef0d0aedb42c000e0b9c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 18m
+Task: cloud-image
 
 Package: idle-python2.7
 Priority: optional
