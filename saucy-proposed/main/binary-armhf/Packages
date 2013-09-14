@@ -89,6 +89,185 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-active, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: ceph
+Priority: optional
+Section: admin
+Installed-Size: 93466
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Version: 0.67.3-0ubuntu1
+Depends: binutils, ceph-common, cryptsetup-bin | cryptsetup, gdisk, hdparm | sdparm, parted, python, python-argparse, uuid-runtime, xfsprogs, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libaio1 (>= 0.3.93), libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.16), libgcc1 (>= 1:4.4.0), libgoogle-perftools4, libleveldb1, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Recommends: libcephfs1, librados2, librbd1
+Filename: pool/main/c/ceph/ceph_0.67.3-0ubuntu1_armhf.deb
+Size: 20509336
+MD5sum: edf90c77d6eeca78e53590299d7aac46
+SHA1: 705253602459573ec4860c40beb3fbf6ee4da336
+SHA256: d6053a22ab1deb415ae2d10b6fdb321f8a1f2458c9c0dc2c161879f6bb62a8fe
+Description: distributed storage and file system
+Homepage: http://ceph.com/
+Description-md5: 8076f05fe2327940c1772acbf6f471cf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-common
+Priority: optional
+Section: admin
+Installed-Size: 12452
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Replaces: ceph-client-tools
+Depends: librbd1 (= 0.67.3-0ubuntu1), python, python-ceph (= 0.67.3-0ubuntu1), libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.16), libgcc1 (>= 1:4.4.0), libkeyutils1, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), librados2, libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Suggests: ceph, ceph-mds
+Conflicts: ceph-client-tools
+Filename: pool/main/c/ceph/ceph-common_0.67.3-0ubuntu1_armhf.deb
+Size: 5132676
+MD5sum: 697e061d2734766237682abd704a1397
+SHA1: 5ebab58e73ad4805bd20ec7053ba221f411c111b
+SHA256: 5b91196bf87136735a37f890bb8f08831ae770b28fe264b2257bf772c7ad7ef6
+Description: common utilities to mount and interact with a ceph storage cluster
+Homepage: http://ceph.com/
+Description-md5: e302e645c41e2c6148fcff41573e283b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-common-dbg
+Priority: extra
+Section: debug
+Installed-Size: 218709
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Replaces: ceph-client-tools-dbg
+Depends: ceph-common (= 0.67.3-0ubuntu1)
+Conflicts: ceph-client-tools-dbg
+Filename: pool/main/c/ceph/ceph-common-dbg_0.67.3-0ubuntu1_armhf.deb
+Size: 66993120
+MD5sum: e83d60fe2bd069439f6bd4ac0e7437e3
+SHA1: 6a14adfe44f173459163e6f10b468ab2da1f5a41
+SHA256: cbb0ddfb59c77a4d28be18f4bdb962ee9ea43416c41cbcd15fd8ced5ffbc080d
+Description: debugging symbols for ceph-common
+Homepage: http://ceph.com/
+Description-md5: 4e090d4d7aa07af441f4e2ba271159ef
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-dbg
+Priority: extra
+Section: debug
+Installed-Size: 243338
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Depends: ceph (= 0.67.3-0ubuntu1)
+Filename: pool/main/c/ceph/ceph-dbg_0.67.3-0ubuntu1_armhf.deb
+Size: 67412160
+MD5sum: 3ed14dd0cf9f86f0bd9ee3691a224e7e
+SHA1: f1a451b1884bcd845c75d728b159861a111a0ac3
+SHA256: 8846ab11d135b49f51fddde5a0389381be0199f54ecd5afc3ec880beeb2c1349
+Description: debugging symbols for ceph
+Homepage: http://ceph.com/
+Description-md5: 43fb0fb4a4a9eb4d08ff4a0f12738692
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-fs-common
+Priority: optional
+Section: admin
+Installed-Size: 88
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Replaces: ceph-client-tools
+Depends: libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libkeyutils1, libstdc++6 (>= 4.4.0)
+Suggests: ceph-mds
+Conflicts: ceph-client-tools
+Filename: pool/main/c/ceph/ceph-fs-common_0.67.3-0ubuntu1_armhf.deb
+Size: 24606
+MD5sum: d2c63883a433caaf419ae14a8bf670d1
+SHA1: 0293698db01bf45e1df16c022d5e7de66464f24c
+SHA256: 67272277497f8c2f35b809f23df4222ec9421ee3eb6f27cd29bdf2e4cb954636
+Description: common utilities to mount and interact with a ceph file system
+Homepage: http://ceph.com/
+Description-md5: b2714a5dd73de6b9a1f8478ea36a611a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-fs-common-dbg
+Priority: extra
+Section: debug
+Installed-Size: 205
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Replaces: ceph-client-tools-dbg
+Depends: ceph-fs-common (= 0.67.3-0ubuntu1)
+Conflicts: ceph-client-tools-dbg
+Filename: pool/main/c/ceph/ceph-fs-common-dbg_0.67.3-0ubuntu1_armhf.deb
+Size: 66968
+MD5sum: 133ecbb1a53a431d57d428007bba1cfc
+SHA1: b7d57cdaf3f8b5e35f8497a124ea785bcc46e49f
+SHA256: 753d7e94cfcaf45514b6e86c5053bbba973444d7fefc0798b071113d8b4e9658
+Description: debugging symbols for ceph-fs-common
+Homepage: http://ceph.com/
+Description-md5: aa04d5e291a121b5512a5c379fed4f57
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-mds
+Priority: optional
+Section: admin
+Installed-Size: 4817
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Depends: ceph, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.16), libgcc1 (>= 1:4.4.0), libgoogle-perftools4, libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Recommends: ceph-fs-common, ceph-fuse, libcephfs1
+Filename: pool/main/c/ceph/ceph-mds_0.67.3-0ubuntu1_armhf.deb
+Size: 2300924
+MD5sum: 69b70350be3f96f8bd3845923c7e136a
+SHA1: 9cc871265abbd46ca66d687c5a5e30ac90d22862
+SHA256: aa9bddf0b79811f8cb336d0adfcb45725242ea79ee51c1900f7942abd8ae7e3c
+Description: metadata server for the ceph distributed file system
+Homepage: http://ceph.com/
+Description-md5: d37d51a4735a093f21799c80f707168f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ceph-mds-dbg
+Priority: extra
+Section: debug
+Installed-Size: 100435
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Depends: ceph-mds (= 0.67.3-0ubuntu1)
+Filename: pool/main/c/ceph/ceph-mds-dbg_0.67.3-0ubuntu1_armhf.deb
+Size: 33552470
+MD5sum: ede5766cab8b5b9b597343187118883a
+SHA1: b7daf5b6b2d7a567049d399fe9e765510d86a957
+SHA256: b2894ab0fe6c70f33ac106e34537b6cd8b3ed852e1a7bf5ff831b277f24a36c0
+Description: debugging symbols for ceph-mds
+Homepage: http://ceph.com/
+Description-md5: 4bccb890723e465eee1809af0c5a17ed
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: cpp-4.8
 Priority: optional
 Section: interpreters
@@ -1287,6 +1466,117 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: edubuntu-desktop-gnome, ubuntustudio-audio
 
+Package: libcephfs-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 130901
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Replaces: libceph-dev, libceph1-dev, libcephfs1-dev
+Depends: libcephfs1 (= 0.67.3-0ubuntu1)
+Conflicts: libceph-dev, libceph1-dev, libcephfs1-dev
+Filename: pool/main/c/ceph/libcephfs-dev_0.67.3-0ubuntu1_armhf.deb
+Size: 32278338
+MD5sum: 2c95aa7133e9b045c4cbb203122ec4af
+SHA1: f78f680eb64ba6c32f3f11ee7a30b71986cdfcb0
+SHA256: 982d4f5f7c293edcdf3a376416c54cee5099c5e4f5cfe5081763ac03324f3e28
+Description: Ceph distributed file system client library (development files)
+Homepage: http://ceph.com/
+Description-md5: 6b03c162d6b2cd6497a86ae380717147
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcephfs-jni
+Priority: optional
+Section: libs
+Installed-Size: 115
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Depends: libcephfs1 (= 0.67.3-0ubuntu1), libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.6)
+Filename: pool/main/c/ceph/libcephfs-jni_0.67.3-0ubuntu1_armhf.deb
+Size: 34368
+MD5sum: c53c0cf587fe7313151811eca212476c
+SHA1: 8ffc554059b10abb269a949238d3a945d6052433
+SHA256: f20a2bceeda14533f4e20ee800e033435b4d327378fecffe109e4b1004ca32e2
+Description: Java Native Interface library for CephFS Java bindings
+Homepage: http://ceph.com/
+Description-md5: eeccae7ad4653bc059b325a5ec4ddd58
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcephfs-jni-dbg
+Priority: extra
+Section: debug
+Installed-Size: 806
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Depends: libcephfs-jni (= 0.67.3-0ubuntu1)
+Filename: pool/main/c/ceph/libcephfs-jni-dbg_0.67.3-0ubuntu1_armhf.deb
+Size: 247074
+MD5sum: e3c676d537439cbc50769ad90987b2fe
+SHA1: 69d9bdf5d56531a686925500d04280b9b311cf2a
+SHA256: 76ddeb645d2c38bf3f98b9a68b02fc1e0413e353a09dcf0e557356adbe57f304
+Description: Debugging symbols for libcephfs-jni
+Homepage: http://ceph.com/
+Description-md5: b463ee0275120595e8db9a2d2d079cf8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcephfs1
+Priority: optional
+Section: libs
+Installed-Size: 3663
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Replaces: libceph, libceph1, libcephfs
+Depends: libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.9), libgcc1 (>= 1:4.4.0), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Conflicts: libceph, libceph1, libcephfs
+Filename: pool/main/c/ceph/libcephfs1_0.67.3-0ubuntu1_armhf.deb
+Size: 1499968
+MD5sum: 618c3c710970d8454c736f3cf864b1a4
+SHA1: 859848e14fb1cbd7f14f4e579d7cd16fa01628c9
+SHA256: 36955acdc837347c45d05f60fc488b49480e7e3c6eb1a1beefc32d1007a080dc
+Description: Ceph distributed file system client library
+Homepage: http://ceph.com/
+Description-md5: 02d5e7983127037e5b5e5e07dea2a6e4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libcephfs1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 66147
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Replaces: libceph1-dbg
+Depends: libcephfs1 (= 0.67.3-0ubuntu1)
+Conflicts: libceph1-dbg
+Filename: pool/main/c/ceph/libcephfs1-dbg_0.67.3-0ubuntu1_armhf.deb
+Size: 19275826
+MD5sum: 22434f24b51585467e6b6ffbfc6d83bd
+SHA1: 3ba8f7ad94a193af610e6d5b7f055920f712419e
+SHA256: d197f211fe788c6e0174e4df66975e8255a8949286c187fd3e793e8f9056f3fa
+Description: debugging symbols for libcephfs1
+Homepage: http://ceph.com/
+Description-md5: ef23abe3fb9706def734dae7e4f8e64f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libcgraph5
 Priority: optional
 Section: libs
@@ -2054,6 +2344,142 @@ Description-md5: 6fbf042f6ad7705da06e08f12aba94f2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: librados-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 10553
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Replaces: librados1-dev, librados2-dev
+Depends: librados2 (= 0.67.3-0ubuntu1), libc6 (>= 2.16), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.4.0)
+Conflicts: librados1-dev, librados2-dev
+Filename: pool/main/c/ceph/librados-dev_0.67.3-0ubuntu1_armhf.deb
+Size: 2390302
+MD5sum: 28592e816fd26bc09eee6d0403168013
+SHA1: 71b4860ce229435875ea2b9571924da4682ae77b
+SHA256: 4789e505248aa46405e49a4400103c37e42b18881ba664484541c900aac47e39
+Description: RADOS distributed object store client library (development files)
+Homepage: http://ceph.com/
+Description-md5: 45a1795729f9041b2c4d34b965fbaee2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: librados2
+Priority: optional
+Section: libs
+Installed-Size: 3383
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Replaces: librados, librados1
+Depends: libboost-system1.53.0, libboost-thread1.53.0, libc6 (>= 2.9), libgcc1 (>= 1:4.4.0), libnspr4 (>= 2:4.9-2~) | libnspr4-0d (>= 1.8.0.10), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), libstdc++6 (>= 4.6), libuuid1 (>= 2.16)
+Conflicts: librados, librados1
+Filename: pool/main/c/ceph/librados2_0.67.3-0ubuntu1_armhf.deb
+Size: 1318924
+MD5sum: ed3b3455ff0a374ad0c2b62aca43d553
+SHA1: 5042e92848566dcb33d7baa5788f89857dc17318
+SHA256: 16cf033f7a753a36ff4ddf5807a94cff9a11bf82999f3b8f4c7d8a23ae94a22d
+Description: RADOS distributed object store client library
+Homepage: http://ceph.com/
+Description-md5: 42d0f393b45b7f226597be77c6f81917
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: virt-host, edubuntu-desktop-gnome
+
+Package: librados2-dbg
+Priority: extra
+Section: debug
+Installed-Size: 60715
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Replaces: librados1-dbg
+Depends: librados2 (= 0.67.3-0ubuntu1)
+Conflicts: librados1-dbg
+Filename: pool/main/c/ceph/librados2-dbg_0.67.3-0ubuntu1_armhf.deb
+Size: 17032394
+MD5sum: 67205c7a82ca69110b738182301cce52
+SHA1: 05c527df27aab462c79d2ae389d9ee56b4f2eb30
+SHA256: eaf36cbc50c099ee47c1e33a48a02d4a8278e4fc133fe720c65f0ad8663d87ef
+Description: debugging symbols for librados2
+Homepage: http://ceph.com/
+Description-md5: 5fed3bffffed20ba3eae296a5cd8e215
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: librbd-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 25189
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Replaces: librbd1-dev
+Depends: librados-dev, librbd1 (= 0.67.3-0ubuntu1)
+Conflicts: librbd1-dev
+Filename: pool/main/c/ceph/librbd-dev_0.67.3-0ubuntu1_armhf.deb
+Size: 6876504
+MD5sum: 09da47d5fa8ba8461475e7c6be77cf62
+SHA1: 19a6760205513c8ac516ecd7238506b4c561fd1b
+SHA256: 3dd9fe12181d61b2c76a1948e26a20694f8086f7d042072c387626d4753d670c
+Description: RADOS block device client library (development files)
+Homepage: http://ceph.com/
+Description-md5: 5a3f9d05f90eae572a3f0c323daf1cab
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: librbd1
+Priority: optional
+Section: libs
+Installed-Size: 477
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Depends: librados2 (= 0.67.3-0ubuntu1), libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libstdc++6 (>= 4.6)
+Filename: pool/main/c/ceph/librbd1_0.67.3-0ubuntu1_armhf.deb
+Size: 237776
+MD5sum: 2c9f98c408d06faa71728eb5e89bf8e8
+SHA1: d861e379be86803ea45055c1b406c73a02ddc21a
+SHA256: d11b695c463dcb8e87011ead7521f3e05fe33073c3c151c057426bcd9a0cfce6
+Description: RADOS block device client library
+Homepage: http://ceph.com/
+Description-md5: 3b39955e1c12f7ad8d4c44efcc8ec188
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: virt-host, edubuntu-desktop-gnome
+
+Package: librbd1-dbg
+Priority: extra
+Section: debug
+Installed-Size: 10330
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Depends: librbd1 (= 0.67.3-0ubuntu1)
+Filename: pool/main/c/ceph/librbd1-dbg_0.67.3-0ubuntu1_armhf.deb
+Size: 4045858
+MD5sum: 99d1a88ee68bdba7737046724e8217c7
+SHA1: ed135252174c345392da6e018f0ed2f2ded0dd8a
+SHA256: 84c4e0f59bad23f19fd6676a59425ec815728c00382dedc9fcd7c8e08138bd83
+Description: debugging symbols for librbd1
+Homepage: http://ceph.com/
+Description-md5: 0479c6b8befcd3b46093c4fdfaef7ca4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
 
 Package: libsfasan0
 Priority: extra
@@ -3176,6 +3602,27 @@ Description-md5: 093e21cc6d98e14410050c8edd9d6fe2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-ceph
+Priority: optional
+Section: python
+Installed-Size: 204
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Depends: librados2, librbd1, python-flask, python-requests, python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2)
+Filename: pool/main/c/ceph/python-ceph_0.67.3-0ubuntu1_armhf.deb
+Size: 38350
+MD5sum: 8923d6028d2d3c2478399bd70c269e4e
+SHA1: 5019ed6f67a65e1ffb84beffad9dd91c875a8c08
+SHA256: 85d7b75ce1a6a792daff64f5d3d01e4fe56847396e88a074d85c8db310a1680c
+Description: Python libraries for the Ceph distributed filesystem
+Homepage: http://ceph.com/
+Description-md5: 0a80206bd610ad5550e3d80267effede
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-cliff
 Priority: optional
 Section: python
@@ -3421,6 +3868,91 @@ Description: OpenStack Compute Python libraries
 Homepage: http://launchpad.net/nova
 Python-Version: 2.7
 Description-md5: 9e7471c108af7843da4a920afe750d19
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: radosgw
+Priority: optional
+Section: admin
+Installed-Size: 2128
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Depends: ceph-common (= 0.67.3-0ubuntu1), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.16), libcurl3-gnutls (>= 7.28.0), libexpat1 (>= 2.0.1), libfcgi0ldbl, libgcc1 (>= 1:4.4.0), libnss3 (>= 2:3.13.4-2~) | libnss3-1d (>= 3.12.0~1.9b1), librados2, libstdc++6 (>= 4.6)
+Filename: pool/main/c/ceph/radosgw_0.67.3-0ubuntu1_armhf.deb
+Size: 1113570
+MD5sum: 7ce1e7a39d84790935091d7fc4c04042
+SHA1: 20dcf9a7834d2b10c1e1015edf2fa38cbdd26e45
+SHA256: 6e9d6bb574ed7a5e049aadc343af233846b3adb35ba7b5a53002ff4bea665b8a
+Description: REST gateway for RADOS distributed object store
+Homepage: http://ceph.com/
+Description-md5: fa947d9328112c7b2e6719d10f788061
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: radosgw-dbg
+Priority: extra
+Section: debug
+Installed-Size: 42409
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Depends: radosgw (= 0.67.3-0ubuntu1)
+Filename: pool/main/c/ceph/radosgw-dbg_0.67.3-0ubuntu1_armhf.deb
+Size: 16323626
+MD5sum: c10ea27464ffc97a4c1575b872c7e149
+SHA1: c16e21030950bf3a42b83ada616bf9611d63be07
+SHA256: f1a34ebcd8cc1c83ce7cb18b3c290bf86342817dc8f9fe9f16a677d94d7e42fd
+Description: debugging symbols for radosgw
+Homepage: http://ceph.com/
+Description-md5: b21018ad5ddfda350f7a8d6ec0e73923
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: rbd-fuse
+Priority: optional
+Section: admin
+Installed-Size: 61
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Depends: libc6 (>= 2.4), libfuse2 (>= 2.8.1), librados2, librbd1
+Recommends: fuse
+Filename: pool/main/c/ceph/rbd-fuse_0.67.3-0ubuntu1_armhf.deb
+Size: 10760
+MD5sum: 72a2d8cc197fd2c091a28f8e3d3a5082
+SHA1: 7694a114393131254fa3488aa880c4828e1d1b23
+SHA256: 124e16d8b2ea20d818a0883002afc7fffbac3939b6118d2be53446d3522baf7f
+Description: FUSE-based rbd client for the Ceph distributed file system
+Homepage: http://ceph.com/
+Description-md5: fca395d7d420f9ee7c9d4be9e208b26a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: rbd-fuse-dbg
+Priority: extra
+Section: debug
+Installed-Size: 84
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Architecture: armhf
+Source: ceph
+Version: 0.67.3-0ubuntu1
+Depends: rbd-fuse (= 0.67.3-0ubuntu1)
+Filename: pool/main/c/ceph/rbd-fuse-dbg_0.67.3-0ubuntu1_armhf.deb
+Size: 19074
+MD5sum: 4511d7995d2e2354e652fa79368c56ae
+SHA1: 4d014fff9844b08631b38909184ddd4af1552a79
+SHA256: a495a54f970362c6546b90fac16de3c2ce1dc1706187440aa4b769f1c84db060
+Description: debugging symbols for rbd-fuse
+Homepage: http://ceph.com/
+Description-md5: 987d7c5ba369f3c877ccf7f5d48fb86f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
