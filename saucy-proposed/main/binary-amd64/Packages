@@ -963,31 +963,6 @@ Origin: Ubuntu
 Supported: 9m
 Task: edubuntu-desktop-gnome
 
-Package: liblxc0
-Priority: optional
-Section: admin
-Installed-Size: 395
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: amd64
-Source: lxc
-Version: 1.0.0~alpha1-0ubuntu3
-Replaces: lxc (<< 0.9.0~alpha3-0ubuntu1~)
-Depends: libapparmor1 (>= 2.6~devel), libc6 (>= 2.17), libcap2 (>= 2.10), libseccomp1 (>= 0.0.0~20120605)
-Pre-Depends: multiarch-support
-Breaks: lxc (<< 0.9.0~alpha3-0ubuntu1~)
-Filename: pool/main/l/lxc/liblxc0_1.0.0~alpha1-0ubuntu3_amd64.deb
-Size: 136992
-MD5sum: d502ccbf59b94ef250b2bbb36577b871
-SHA1: 0074a592965d0f29f613ff48e8758177ee3c2fe1
-SHA256: fdd925211a4ba1e9052175d85e848a9f92d67e68f35062deed124677b966f200
-Description: Linux Containers userspace tools (library)
-Homepage: http://lxc.sourceforge.net/
-Description-md5: d757397b1a93a5bea5c72032f3ef485d
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: edubuntu-desktop-gnome
-
 Package: libpathplan4
 Priority: optional
 Section: libs
@@ -1511,97 +1486,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: virt-host
-
-Package: lxc
-Priority: optional
-Section: admin
-Installed-Size: 584
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: amd64
-Version: 1.0.0~alpha1-0ubuntu3
-Depends: adduser, apparmor, bridge-utils, dnsmasq-base, iptables, liblxc0 (= 1.0.0~alpha1-0ubuntu3), python3, python3-lxc, rsync, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), libc6 (>= 2.15)
-Recommends: cgroup-lite | cgroup-bin, libcap2-bin, lxc-templates (>= 0.8.0~rc1-4ubuntu43), openssl
-Suggests: btrfs-tools, lvm2, lxctl
-Filename: pool/main/l/lxc/lxc_1.0.0~alpha1-0ubuntu3_amd64.deb
-Size: 142136
-MD5sum: b9c92333fdc49ee09931ff6f2e9d421b
-SHA1: 937b0ebe1a9bf74a9785cf997a4705971f67b38b
-SHA256: 0fcb02e564b9426446ff8597f435247c39d4d733e0772da66ebdb51d8d28476c
-Description: Linux Containers userspace tools
-Homepage: http://lxc.sourceforge.net/
-Description-md5: 4ece0dffd153c29e95ffdb89f8238dfc
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: edubuntu-desktop-gnome
-
-Package: lxc-dbg
-Priority: extra
-Section: debug
-Installed-Size: 840
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: amd64
-Source: lxc
-Version: 1.0.0~alpha1-0ubuntu3
-Depends: lxc (= 1.0.0~alpha1-0ubuntu3), lxc-dev (= 1.0.0~alpha1-0ubuntu3)
-Filename: pool/main/l/lxc/lxc-dbg_1.0.0~alpha1-0ubuntu3_amd64.deb
-Size: 526050
-MD5sum: 9c12a371b0495f3f4ca3c6a6e50bf1fe
-SHA1: 49492c160ab10776aef8142c01bded821f80a696
-SHA256: ba6384e7f623f8479b15964d5b8c6db3a077e98330342af17df0279befaa47b6
-Description: Linux Containers userspace tools (debug)
-Homepage: http://lxc.sourceforge.net/
-Description-md5: 9ec9c23e26368a478bce79545cfbb782
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: lxc-dev
-Priority: optional
-Section: libdevel
-Installed-Size: 153
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: amd64
-Source: lxc
-Version: 1.0.0~alpha1-0ubuntu3
-Depends: lxc (= 1.0.0~alpha1-0ubuntu3)
-Filename: pool/main/l/lxc/lxc-dev_1.0.0~alpha1-0ubuntu3_amd64.deb
-Size: 20194
-MD5sum: 16565432abd497dd411485168a505449
-SHA1: 246601dc4eb386632b5db35eed64f53c2f80c4ac
-SHA256: 798611f42b343f2b5414ff13e0a461aab6b9af8429b1a80c35e841f3800dfd3a
-Description: Linux Containers userspace tools (development)
-Homepage: http://lxc.sourceforge.net/
-Description-md5: c719178b7e79ce1ed39519707c589961
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: lxc-templates
-Priority: optional
-Section: admin
-Installed-Size: 226
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: all
-Source: lxc
-Version: 1.0.0~alpha1-0ubuntu3
-Replaces: lxc (<< 0.8.0~rc1-4ubuntu43)
-Depends: lxc (>= 0.8.0~rc1-4ubuntu43)
-Recommends: cloud-image-utils | cloud-utils, debootstrap | cdebootstrap, openssl, rsync
-Suggests: qemu-user-static
-Breaks: lxc (<< 0.8.0~rc1-4ubuntu43)
-Filename: pool/main/l/lxc/lxc-templates_1.0.0~alpha1-0ubuntu3_all.deb
-Size: 41598
-MD5sum: 829691bd9da752dc8951e8e9042643f5
-SHA1: 8a7c00394a0c141282547d5f5b28609267968378
-SHA256: 419376be0eb3d33eab799f88a4e76ef990b8699c823651e177bdf5d77677df16
-Description: Linux Containers userspace tools (templates)
-Homepage: http://lxc.sourceforge.net/
-Description-md5: 9a526ab1c6ccc435c574f17de9485e7e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: edubuntu-desktop-gnome
 
 Package: nova-api
 Priority: extra
@@ -2231,29 +2115,6 @@ Description-md5: 9e7471c108af7843da4a920afe750d19
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
-
-Package: python3-lxc
-Priority: optional
-Section: python
-Installed-Size: 125
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Architecture: amd64
-Source: lxc
-Version: 1.0.0~alpha1-0ubuntu3
-Depends: liblxc0 (= 1.0.0~alpha1-0ubuntu3), python3, libc6 (>= 2.3.4)
-Recommends: lxc-templates (>= 0.8.0~rc1-4ubuntu43)
-Filename: pool/main/l/lxc/python3-lxc_1.0.0~alpha1-0ubuntu3_amd64.deb
-Size: 18232
-MD5sum: b61a7c3318a4c88416512762694bbdaa
-SHA1: 2f111f50ac45bdb49f81ae2d4aeaa52c15971de5
-SHA256: 5ab6db3cf3e118859e84a66b34e0bf413c86396b2190051f0d45e79f0ea030aa
-Description: Linux Containers userspace tools (Python 3.x bindings)
-Homepage: http://lxc.sourceforge.net/
-Description-md5: ee623a31db200104a7207d9de42b8f04
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: edubuntu-desktop-gnome
 
 Package: unity-webapps-service
 Priority: optional
