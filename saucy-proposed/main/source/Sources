@@ -519,6 +519,45 @@ Checksums-Sha256:
  a894957adca3232d34eb2f9487f5b50898f05bf36baa7a12a570de90f43ad532 890 language-pack-gl_13.10+20130912.dsc
  3ed8cb7daa6b11377e6f662a116459b18e6fd9d90a69c10edc24563c9a65074e 1430949 language-pack-gl_13.10+20130912.tar.gz
 
+Package: lapack
+Binary: liblapack3, liblapack3gf, liblapacke, liblapacke-dev, liblapack-dev, liblapack-pic, liblapack-test, liblapack-doc, liblapack-doc-man
+Version: 3.4.2+dfsg-2
+Section: libs
+Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), gfortran, libblas-dev (>= 1.2.20110419-3), python
+Build-Depends-Indep: doxygen, graphviz
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/l/lapack
+Files:
+ 1aae24accf702924a6c83b5bff12e14b 2535 lapack_3.4.2+dfsg-2.dsc
+ 1cc626389215aba1060dd9b1c7d7e28a 4276407 lapack_3.4.2+dfsg.orig.tar.bz2
+ 5526a719f8549a7ce5bf36cb57eeec36 19173 lapack_3.4.2+dfsg-2.debian.tar.gz
+Uploaders: Sylvestre Ledru <sylvestre@debian.org>, Sébastien Villemot <sebastien@debian.org>
+Homepage: http://www.netlib.org/lapack/
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=debian-science/packages/lapack.git
+Vcs-Git: git://anonscm.debian.org/debian-science/packages/lapack.git
+Package-List: 
+ liblapack-dev deb libdevel optional
+ liblapack-doc deb doc optional
+ liblapack-doc-man deb doc optional
+ liblapack-pic deb libdevel optional
+ liblapack-test deb devel extra
+ liblapack3 deb libs optional
+ liblapack3gf deb oldlibs optional
+ liblapacke deb libs optional
+ liblapacke-dev deb libdevel optional
+Checksums-Sha1:
+ 75453312997c66b9035a84d95e2ff0428e18e7fb 2535 lapack_3.4.2+dfsg-2.dsc
+ 4753890f52f9f87b2f605c155a4e3c4c67cd8b40 4276407 lapack_3.4.2+dfsg.orig.tar.bz2
+ 34fe5637a77139c57ad43c81908caec8e22bb8a9 19173 lapack_3.4.2+dfsg-2.debian.tar.gz
+Checksums-Sha256:
+ 953059d8086f3c5924a3b7aee4abfd651bc3e12d3eff4dada04238c6ea300538 2535 lapack_3.4.2+dfsg-2.dsc
+ d85407710dd375d42feedb20a3ea74d2622e3682bfa50bd73d957048a8da77c7 4276407 lapack_3.4.2+dfsg.orig.tar.bz2
+ 661154e1c4c0e25866e0afe0bda5164709d9d208d9b2ced3a8f9f97238f58cd1 19173 lapack_3.4.2+dfsg-2.debian.tar.gz
+Testsuite: autopkgtest
+
 Package: libgdata
 Binary: libgdata13, libgdata-common, libgdata-dev, libgdata-doc, gir1.2-gdata-0.0
 Version: 0.14.0-1ubuntu1
@@ -750,6 +789,7 @@ Checksums-Sha256:
 Package: mutt
 Binary: mutt, mutt-patched, mutt-dbg
 Version: 1.5.21-6.4
+Priority: optional
 Section: mail
 Maintainer: Antonio Radici <antonio@dyne.org>
 Build-Depends: automake, debhelper (>> 7), docbook-xml, docbook-xsl, w3m, gawk, gettext, libgnutls-dev, libgpgme11-dev, libidn11-dev, libkrb5-dev, libncurses5-dev, libncursesw5-dev, libsasl2-dev, libtool, pkg-config, quilt, xsltproc, zlib1g-dev, libtokyocabinet-dev [!hurd-i386], libgdbm-dev [hurd-i386]
