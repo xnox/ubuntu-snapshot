@@ -311,6 +311,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: minimal
 
+Package: djvulibre-dbg
+Priority: extra
+Section: libs
+Installed-Size: 554
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: powerpc
+Source: djvulibre
+Version: 3.5.25.4-2
+Depends: libdjvulibre21 (= 3.5.25.4-2)
+Filename: pool/main/d/djvulibre/djvulibre-dbg_3.5.25.4-2_powerpc.deb
+Size: 114758
+MD5sum: c9990e250c1479aa51a28c9e9aa5b86d
+SHA1: a9eb4a37e8b7b8b31b061e5417011c0554809543
+SHA256: 04a9159caeeca851d51fe3b3de0e6a66b99f824280749f43b4c4b902a45c4000
+Description: Debug symbols for the DjVu image format
+Multi-Arch: same
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 491e47717200675c2416d353ba9f4f8f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: fonts-liberation
 Priority: optional
 Section: fonts
@@ -1090,6 +1112,77 @@ Description-md5: 3c0eff44ae2d3aa5e19d60a4384485eb
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: edubuntu-desktop-gnome
+
+Package: libdjvulibre-dev
+Priority: optional
+Section: devel
+Installed-Size: 5349
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: powerpc
+Source: djvulibre
+Version: 3.5.25.4-2
+Depends: libdjvulibre21 (= 3.5.25.4-2), libjpeg-dev
+Filename: pool/main/d/djvulibre/libdjvulibre-dev_3.5.25.4-2_powerpc.deb
+Size: 2774134
+MD5sum: 89d7d99a92ad773268916347beaf9c06
+SHA1: 2ec3e65043f55e906e5ec230250d0eed61eb9408
+SHA256: df0a51a2362a8e55050e823ffd30df71322a795c71ce30a607c8be5de7299195
+Description: Development files for the DjVu image format
+Multi-Arch: same
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 7a47b77e06ba2a68a7aff0a9650a0118
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libdjvulibre-text
+Priority: optional
+Section: libs
+Installed-Size: 382
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: all
+Source: djvulibre
+Version: 3.5.25.4-2
+Replaces: djview3 (= 3.5.20-9), djvulibre-desktop (<< 3.5.20-9), libdjvulibre15
+Filename: pool/main/d/djvulibre/libdjvulibre-text_3.5.25.4-2_all.deb
+Size: 67526
+MD5sum: c1a74d7c6ae827e3738a82e038f6ec99
+SHA1: 3e014cc198a41ead6674eb8c53effe2704a1f5c0
+SHA256: 8e193ece4ff6261ebc833a88f7147ab9fe4dba5506af7324e11bb4da75e3c727
+Description: Linguistic support files for libdjvulibre
+Multi-Arch: foreign
+Homepage: http://djvu.sourceforge.net/
+Description-md5: d5fca3d4995b08f997ca3b715715e14b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libdjvulibre21
+Priority: optional
+Section: libs
+Installed-Size: 1828
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: powerpc
+Source: djvulibre
+Version: 3.5.25.4-2
+Replaces: libdjvulibre1, libdjvulibre15
+Depends: libc6 (>= 2.11), libgcc1 (>= 1:4.1.1), libjpeg8 (>= 8c), libstdc++6 (>= 4.1.1), libdjvulibre-text (>= 3.5.25.4-2)
+Pre-Depends: multiarch-support
+Conflicts: libdjvulibre1
+Filename: pool/main/d/djvulibre/libdjvulibre21_3.5.25.4-2_powerpc.deb
+Size: 716706
+MD5sum: 25825fc4433de0fd414ad2d8d0825051
+SHA1: 7568718c4b10661dd6642b93d0274afc2f5cc461
+SHA256: c46d61e74b8529803cde3ce6cd40fc0e3811b43514375ea255c865127609257b
+Description: Runtime support for the DjVu image format
+Multi-Arch: same
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 377e0a8fb1d56ba31c3feadafc4781b8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libgdata-common
 Priority: optional
@@ -1893,53 +1986,6 @@ SHA256: 9da0863e2f7033044cd8cab9976582eff305f3647e4ac9a3dc259d535889d324
 Description: rich set of graph drawing tools - xdot library
 Homepage: http://www.graphviz.org/
 Description-md5: 5bb95dff142ccbf7ab2946dc3a7a4dc1
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: mutt
-Priority: optional
-Section: mail
-Installed-Size: 3520
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Antonio Radici <antonio@dyne.org>
-Architecture: powerpc
-Version: 1.5.21-6.4
-Replaces: mutt-utf8
-Provides: imap-client, mail-reader
-Depends: libc6 (>= 2.15), libgnutls26 (>= 2.12.17-0), libgpg-error0 (>= 1.10), libgpgme11 (>= 1.2.0), libgssapi-krb5-2 (>= 1.10+dfsg~), libidn11 (>= 1.13), libncursesw5 (>= 5.6+20070908), libsasl2-2 (>= 2.1.24), libtinfo5, libtokyocabinet9 (>= 1.4.47)
-Recommends: default-mta | mail-transport-agent, locales, mime-support, libsasl2-modules
-Suggests: urlview, aspell | ispell, gnupg, mixmaster, openssl, ca-certificates
-Conflicts: mutt-utf8
-Filename: pool/main/m/mutt/mutt_1.5.21-6.4_powerpc.deb
-Size: 778674
-MD5sum: 44b9116e9572962068f35c7040ce7a52
-SHA1: 8ffcfabf8dd9081a70c7514ce81334d4a57b8bb9
-SHA256: 3a3faa5a987d1f1deb325550f7cb227f4b6292ba25fb3029f944349dc380a736
-Description: text-based mailreader supporting MIME, GPG, PGP and threading
-Homepage: http://www.mutt.org/
-Description-md5: a2a425952f4b623e21ee73d317640a85
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: mail-server
-
-Package: mutt-dbg
-Priority: extra
-Section: mail
-Installed-Size: 5415
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Antonio Radici <antonio@dyne.org>
-Architecture: powerpc
-Source: mutt
-Version: 1.5.21-6.4
-Depends: mutt (= 1.5.21-6.4)
-Filename: pool/main/m/mutt/mutt-dbg_1.5.21-6.4_powerpc.deb
-Size: 1085860
-MD5sum: c879bcc2982631fdfa1b513b5cc76715
-SHA1: cce3e312adeef609eb448ce6d9840734de25de97
-SHA256: b09124e50b71b5b6807c8186429f8e462e9dc3a5b9d0ea2b96ca233033787ab8
-Description: debugging symbols for mutt
-Homepage: http://www.mutt.org/
-Description-md5: 84ae750c0a18926ab30eccaa18b243a6
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 

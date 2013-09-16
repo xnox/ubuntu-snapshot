@@ -325,46 +325,25 @@ Origin: Ubuntu
 Supported: 9m
 Task: minimal
 
-Package: dmidecode
-Priority: standard
-Section: utils
-Installed-Size: 155
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Luk Claes <luk@debian.org>
-Architecture: i386
-Version: 2.12-2
-Depends: libc6 (>= 2.4)
-Filename: pool/main/d/dmidecode/dmidecode_2.12-2_i386.deb
-Size: 42834
-MD5sum: b2571a7116d4b69fa74ea1858b50b473
-SHA1: 4510f12dfce0ed486bfa13a0cf6dc5d20c7ad9a9
-SHA256: bb5266d21980bd323f7b7edea597957949f80c284273e7613004dc458e58d999
-Description: SMBIOS/DMI table decoder
-Homepage: http://dmidecode.nongnu.org/
-Description-md5: 266176aa2231f4b521210b81955e4d36
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master
-
-Package: dmidecode-dbg
+Package: djvulibre-dbg
 Priority: extra
-Section: debug
-Installed-Size: 159
+Section: libs
+Installed-Size: 546
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Luk Claes <luk@debian.org>
+Original-Maintainer: Barak A. Pearlmutter <bap@debian.org>
 Architecture: i386
-Source: dmidecode
-Version: 2.12-2
-Depends: dmidecode (= 2.12-2)
-Filename: pool/main/d/dmidecode/dmidecode-dbg_2.12-2_i386.deb
-Size: 84670
-MD5sum: 03ad96a1b7100c9676b1b6879e0592ca
-SHA1: cd58e3146d15b50175a8df1f637fc1b1634f12df
-SHA256: d3387a797439fec85b766309da19f64f89658b3e2d466d302a8a237d71406ce2
-Description: SMBIOS/DMI table decoder (debug)
-Homepage: http://dmidecode.nongnu.org/
-Description-md5: d50c751833be541ddf30c9f81198d451
+Source: djvulibre
+Version: 3.5.25.4-2
+Depends: libdjvulibre21 (= 3.5.25.4-2)
+Filename: pool/main/d/djvulibre/djvulibre-dbg_3.5.25.4-2_i386.deb
+Size: 112308
+MD5sum: 32237f7c24eb9b8624763a06bf60256d
+SHA1: 12022d9ee567ef5288088839672974ceeb3a765b
+SHA256: 6668df59b5e0b98cce8be1b352f3c28b6eb876142bbe4e894303c15b5e550546
+Description: Debug symbols for the DjVu image format
+Multi-Arch: same
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 491e47717200675c2416d353ba9f4f8f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
@@ -1182,6 +1161,80 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: edubuntu-desktop-gnome
+
+Package: libdjvulibre-dev
+Priority: optional
+Section: devel
+Installed-Size: 4839
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: i386
+Source: djvulibre
+Version: 3.5.25.4-2
+Depends: libdjvulibre21 (= 3.5.25.4-2), libjpeg-dev
+Filename: pool/main/d/djvulibre/libdjvulibre-dev_3.5.25.4-2_i386.deb
+Size: 2658222
+MD5sum: 8f355c06f17434985e1dc988451adcd5
+SHA1: 6ce5850bb1675c16bd4c383466f4b6ccf1b9c82a
+SHA256: 68153a10084defe6a4df03b906c4a8c7f52ba43317150fbe8a97178d6b834b6f
+Description: Development files for the DjVu image format
+Multi-Arch: same
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 7a47b77e06ba2a68a7aff0a9650a0118
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libdjvulibre-text
+Priority: optional
+Section: libs
+Installed-Size: 382
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: all
+Source: djvulibre
+Version: 3.5.25.4-2
+Replaces: djview3 (= 3.5.20-9), djvulibre-desktop (<< 3.5.20-9), libdjvulibre15
+Filename: pool/main/d/djvulibre/libdjvulibre-text_3.5.25.4-2_all.deb
+Size: 67526
+MD5sum: c1a74d7c6ae827e3738a82e038f6ec99
+SHA1: 3e014cc198a41ead6674eb8c53effe2704a1f5c0
+SHA256: 8e193ece4ff6261ebc833a88f7147ab9fe4dba5506af7324e11bb4da75e3c727
+Description: Linguistic support files for libdjvulibre
+Multi-Arch: foreign
+Homepage: http://djvu.sourceforge.net/
+Description-md5: d5fca3d4995b08f997ca3b715715e14b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libdjvulibre21
+Priority: optional
+Section: libs
+Installed-Size: 1643
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: i386
+Source: djvulibre
+Version: 3.5.25.4-2
+Replaces: libdjvulibre1, libdjvulibre15
+Depends: libc6 (>= 2.11), libgcc1 (>= 1:4.1.1), libjpeg8 (>= 8c), libstdc++6 (>= 4.1.1), libdjvulibre-text (>= 3.5.25.4-2)
+Pre-Depends: multiarch-support
+Conflicts: libdjvulibre1
+Filename: pool/main/d/djvulibre/libdjvulibre21_3.5.25.4-2_i386.deb
+Size: 677586
+MD5sum: 4ad53841d921724166b4cb28f954d9c1
+SHA1: b3068611d4bb48211f48a4b828fc95dc03bf36d6
+SHA256: 90cd4874b5edde7a3a491dab2b1fb46c2898186476633b11f10559e8823446f3
+Description: Runtime support for the DjVu image format
+Multi-Arch: same
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 377e0a8fb1d56ba31c3feadafc4781b8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libgdata-common
 Priority: optional
@@ -2036,55 +2089,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: virt-host
-
-Package: mutt
-Priority: optional
-Section: mail
-Installed-Size: 3480
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Antonio Radici <antonio@dyne.org>
-Architecture: i386
-Version: 1.5.21-6.4
-Replaces: mutt-utf8
-Provides: imap-client, mail-reader
-Depends: libc6 (>= 2.15), libgnutls26 (>= 2.12.17-0), libgpg-error0 (>= 1.10), libgpgme11 (>= 1.2.0), libgssapi-krb5-2 (>= 1.10+dfsg~), libidn11 (>= 1.13), libncursesw5 (>= 5.6+20070908), libsasl2-2 (>= 2.1.24), libtinfo5, libtokyocabinet9 (>= 1.4.47)
-Recommends: default-mta | mail-transport-agent, locales, mime-support, libsasl2-modules
-Suggests: urlview, aspell | ispell, gnupg, mixmaster, openssl, ca-certificates
-Conflicts: mutt-utf8
-Filename: pool/main/m/mutt/mutt_1.5.21-6.4_i386.deb
-Size: 807498
-MD5sum: c7a8049e03cb0b151770e6ba9851ab2d
-SHA1: 78409ad23622d04abbaf1711ac7a1367b61d0e61
-SHA256: f6e6b4abeef2a6ccb3440393f5082d6e6b947d9922df239065e8b0696179d562
-Description: text-based mailreader supporting MIME, GPG, PGP and threading
-Homepage: http://www.mutt.org/
-Description-md5: a2a425952f4b623e21ee73d317640a85
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: mail-server
-
-Package: mutt-dbg
-Priority: extra
-Section: mail
-Installed-Size: 4809
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Antonio Radici <antonio@dyne.org>
-Architecture: i386
-Source: mutt
-Version: 1.5.21-6.4
-Depends: mutt (= 1.5.21-6.4)
-Filename: pool/main/m/mutt/mutt-dbg_1.5.21-6.4_i386.deb
-Size: 1067888
-MD5sum: 003860f8a66cdc4aede9f35844d2b315
-SHA1: 3ed72f02a35da007477d0aedffdd16f6c1ff7dca
-SHA256: 35a2cec2a2b71e0c0051fce69f99654359fece9788a9b00b972ce76d9477bde3
-Description: debugging symbols for mutt
-Homepage: http://www.mutt.org/
-Description-md5: 84ae750c0a18926ab30eccaa18b243a6
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
 
 Package: nova-api
 Priority: extra
