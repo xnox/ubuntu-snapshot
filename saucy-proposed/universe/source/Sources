@@ -1125,36 +1125,6 @@ Checksums-Sha256:
  0875d2f0a7da0f3bcc1771b528b0f98f79d9ab69aa1ef953651bbbe1f57b4621 3150283 gnuradio_3.6.5.1.orig.tar.gz
  9e6da20018db8572efd9bb67bb40280e8694dff0521b91511c5ba8bff1d2a4f1 37767 gnuradio_3.6.5.1-1ubuntu1.debian.tar.gz
 
-Package: grive
-Binary: grive
-Version: 0.2.0-1build7
-Priority: extra
-Section: universe/misc
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: José Luis Segura Lucas <josel.segura@gmx.es>
-Build-Depends: binutils-dev, cmake, debhelper (>= 9), libboost-filesystem-dev, libboost-program-options-dev, libboost-system-dev, libcppunit-dev, libcurl4-gnutls-dev | libcurl-dev, libexpat-dev, libgcrypt-dev, libjson0-dev, xsltproc, docbook-xsl
-Architecture: any
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/universe/g/grive
-Files:
- 616bf3dbbd29679678c6ad1b5a5abed6 1467 grive_0.2.0-1build7.dsc
- 00fe68e3fa1c047e48e3b2ac4a17b606 144474 grive_0.2.0.orig.tar.gz
- dac6ec1f0b35f5c7f89a788b087383d7 5449 grive_0.2.0-1build7.debian.tar.gz
-Uploaders: Cleto Martín <cleto@debian.org>
-Homepage: https://github.com/Grive/grive
-Vcs-Git: git://github.com/JoseLSegura/Grive-Debian-packaging.git
-Package-List: 
- grive deb net extra
-Checksums-Sha1:
- 2100707e2aedca1d440baa5a9c7d17a0fea57bc7 1467 grive_0.2.0-1build7.dsc
- 0a51833c5fa7412d0e6cda05f18114832758f04d 144474 grive_0.2.0.orig.tar.gz
- 7d7a1a1646feaaa76f28ece903f152fb2b4e42f2 5449 grive_0.2.0-1build7.debian.tar.gz
-Checksums-Sha256:
- 2b91fddfb83edc04ecabd53f575df14139d094320e40af8ad8dd1253a323d367 1467 grive_0.2.0-1build7.dsc
- f9b32eb9da9f2d47b6642248e1e25606e9ab2cd5b3e94730b23399250ec7f2ec 144474 grive_0.2.0.orig.tar.gz
- 44a177019913c121b82738aab074350255f2225f84ab07260a97679759cb377d 5449 grive_0.2.0-1build7.debian.tar.gz
-
 Package: handbrake
 Binary: handbrake, handbrake-cli, handbrake-dbg
 Version: 0.9.8+dfsg2+git0b44ec-2
@@ -1831,6 +1801,7 @@ Checksums-Sha256:
 Package: lua-lgi
 Binary: lua-lgi, lua-lgi-dev, lua-lgi-dbg
 Version: 0.7.2-1
+Priority: optional
 Section: universe/interpreters
 Maintainer: Enrico Tassi <gareuselesinge@debian.org>
 Build-Depends: debhelper (>= 9), dh-lua, libgirepository1.0-dev, libcairo2-dev, gir1.2-gtk-3.0, libffi-dev, libglib2.0-dev, xvfb, xauth
@@ -3694,48 +3665,6 @@ Checksums-Sha256:
  4a11cd2a520fa5055e61cede9bbea00d30995e7ce5428cb33fb7ded31f619543 2215 systemd-ui_2-2.dsc
  fa45819cd9419a8928a49097c879148f195944c9ed2b842310af58ab5254a694 149892 systemd-ui_2.orig.tar.xz
  2ac0b8ed0e923b285d5d3f66d1f63049f4ccebf41b46098414118f47c36671cf 2153 systemd-ui_2-2.debian.tar.gz
-
-Package: tarantool
-Binary: tarantool-common, tarantool, tarantool-dbg, tarantool-client, tarantool-client-dbg, libtarantool1, libtarantool1-dbg, libtarantool-dev, libtarantoolnet1, libtarantoolnet1-dbg, libtarantoolsql1, libtarantoolsql1-dbg, libtarantoolrpl1, libtarantoolrpl1-dbg
-Version: 1.4.9+20130611.2012-1build6
-Priority: optional
-Section: universe/database
-Maintainer: Dmitry E. Oboukhov <unera@debian.org>
-Build-Depends: cdbs, debhelper (>= 8), gobjc, cmake, libreadline-dev, python-yaml, python-daemon, python-pexpect, libncurses5-dev, binutils-dev
-Architecture: all i386 amd64 kfreebsd-i386 kfreebsd-amd64 hurd-i386
-Standards-Version: 3.9.3
-Format: 3.0 (quilt)
-Directory: pool/universe/t/tarantool
-Files:
- 2813755c1b8f51d0f6cdca2b2ff2f3cb 2194 tarantool_1.4.9+20130611.2012-1build6.dsc
- b520e233f0c9818921642fb62a88a1ed 7145085 tarantool_1.4.9+20130611.2012.orig.tar.gz
- de6b7feb34496616d92a827aa03e04d5 15457 tarantool_1.4.9+20130611.2012-1build6.debian.tar.gz
-Homepage: http://tarantool.org/
-Vcs-Browser: https://github.com/mailru/tarantool
-Vcs-Git: git://github.com/mailru/tarantool.git
-Package-List: 
- libtarantool-dev deb libdevel optional
- libtarantool1 deb database optional
- libtarantool1-dbg deb debug extra
- libtarantoolnet1 deb database optional
- libtarantoolnet1-dbg deb debug extra
- libtarantoolrpl1 deb database optional
- libtarantoolrpl1-dbg deb debug extra
- libtarantoolsql1 deb database optional
- libtarantoolsql1-dbg deb debug extra
- tarantool deb database optional
- tarantool-client deb database optional
- tarantool-client-dbg deb debug extra
- tarantool-common deb database optional
- tarantool-dbg deb debug extra
-Checksums-Sha1:
- 82597a49758fb126366b36f7bbe1fa93cb5553f2 2194 tarantool_1.4.9+20130611.2012-1build6.dsc
- b6be16112d40a73be9d1b3d5c97f1660d46c2b3f 7145085 tarantool_1.4.9+20130611.2012.orig.tar.gz
- edad4c1ab67ae6c6ed18a488285291c4027eb42f 15457 tarantool_1.4.9+20130611.2012-1build6.debian.tar.gz
-Checksums-Sha256:
- 2c43f6e8cdef4543987888a5586df65389dda91a808f8e86c51d78dd0e2fc145 2194 tarantool_1.4.9+20130611.2012-1build6.dsc
- 9a1de90f8e6280fbecdbef51e3368030aff4dbffee11e74bf857363637e9f5f0 7145085 tarantool_1.4.9+20130611.2012.orig.tar.gz
- a56555c042121f5fb0935a93e6521486f2fe725a6047a5cbf7853a6911c05ee6 15457 tarantool_1.4.9+20130611.2012-1build6.debian.tar.gz
 
 Package: tbb
 Binary: libtbb-dev, libtbb2, libtbb2-dbg, libtbb-doc, tbb-examples
