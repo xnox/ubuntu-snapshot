@@ -110,6 +110,55 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-active, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: binutils
+Priority: optional
+Section: devel
+Installed-Size: 7888
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: armhf
+Version: 2.23.52.20130913-0ubuntu1
+Replaces: binutils-gold (<< 2.20.51.20100415), binutils-mingw-w64-i686 (<< 2.23.52.20130612-1+3), binutils-mingw-w64-x86-64 (<< 2.23.52.20130612-1+3)
+Provides: binutils-gold, elf-binutils
+Depends: libc6 (>= 2.11), zlib1g (>= 1:1.2.0)
+Suggests: binutils-doc (>= 2.23.52.20130913-0ubuntu1)
+Conflicts: binutils-gold (<< 2.20.51.20100415), elf-binutils, gas, modutils (<< 2.4.19-1)
+Breaks: binutils-mingw-w64-i686 (<< 2.23.52.20130612-1+3), binutils-mingw-w64-x86-64 (<< 2.23.52.20130612-1+3)
+Filename: pool/main/b/binutils/binutils_2.23.52.20130913-0ubuntu1_armhf.deb
+Size: 3430320
+MD5sum: c20732dacd06feedc489dea394539594
+SHA1: 5919a37bc2f77866f2f3bb0b394b07174a8d8636
+SHA256: 1f590bf75a045d26ce70824f6c8f15db8bf45d35f3e3c0e207ec61428913f62e
+Description: GNU assembler, linker and binary utilities
+Description-md5: fde49b4cfeaad346a6e094f973da28d7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Build-Essential: yes
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: binutils-dev
+Priority: extra
+Section: devel
+Installed-Size: 9930
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: armhf
+Source: binutils
+Version: 2.23.52.20130913-0ubuntu1
+Replaces: libbfd-dev, libc5-dev
+Provides: libbfd-dev
+Depends: binutils (= 2.23.52.20130913-0ubuntu1)
+Conflicts: libbfd-dev
+Filename: pool/main/b/binutils/binutils-dev_2.23.52.20130913-0ubuntu1_armhf.deb
+Size: 3838374
+MD5sum: d7126ecb1258424131da8978097be368
+SHA1: e5a66638ecdb1af4deea4342a6f125c273de8a92
+SHA256: a1535909a5f7bca5e39ef9feb5bb66af88b755f35ac9d3e9411715f76ce52124
+Description: GNU binary utilities (BFD development files)
+Description-md5: ddc22c04156534b000b4f021b88a6023
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: binutils-doc
 Priority: optional
 Section: doc
@@ -311,6 +360,29 @@ Description-md5: 4bccb890723e465eee1809af0c5a17ed
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: clvm
+Priority: extra
+Section: admin
+Installed-Size: 602
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: lvm2
+Version: 2.02.98-6ubuntu1
+Depends: libc6 (>= 2.15), libcmap4 (>= 2.3.0), libcpg4 (>= 2.3.0), libdevmapper-event1.02.1 (>= 2:1.02.74), libdevmapper1.02.1 (>= 2:1.02.77), libdlm3, libquorum5 (>= 2.3.0), libudev1 (>= 183), lvm2 (= 2.02.98-6ubuntu1), lsb-base
+Recommends: corosync
+Filename: pool/main/l/lvm2/clvm_2.02.98-6ubuntu1_armhf.deb
+Size: 286940
+MD5sum: 7fdca4c498ce18c077818de8c4b220bb
+SHA1: d20a2f3a8b11edde17036da8cddc05a90c3f9b76
+SHA256: a35b4d937426b6e0daa2818b6b7a24c4bb0806960ac334454688aaa02e68ebbe
+Description: Cluster LVM Daemon for lvm2
+Multi-Arch: foreign
+Homepage: http://sources.redhat.com/lvm2/
+Description-md5: 46f93b5b21bc2e311bd9e9e51949e9a1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: dh-python
 Priority: optional
 Section: python
@@ -329,6 +401,31 @@ SHA1: adaaf8242464c66f6d5072082bcfa85619abc607
 SHA256: 62986fa9247971bb02983162d930c23cb2f6c1ea638b61780832167bd41b1c55
 Description: Debian helper tools for packaging Python libraries and applications
 Description-md5: 9f24690d2f6e9b70048dc4079a2dfca7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: dmsetup
+Priority: important
+Section: admin
+Installed-Size: 162
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: lvm2 (2.02.98-6ubuntu1)
+Version: 2:1.02.77-6ubuntu1
+Depends: libc6 (>= 2.4), libdevmapper1.02.1 (>= 2:1.02.77), initramfs-tools, util-linux (>> 2.16), udev (>> 141-2)
+Conflicts: devicekit-disks (<< 009)
+Breaks: udev (<< 138-1)
+Filename: pool/main/l/lvm2/dmsetup_1.02.77-6ubuntu1_armhf.deb
+Size: 42436
+MD5sum: 5f5b5e2566afac2b2b91226f84b6dd35
+SHA1: c296c5ddcb6603129a8ba76d9d71a8954e83f0b6
+SHA256: 958c8bb8ca4227914deb2345e831db35938271ac2b830dedc0ae50198e6143c9
+Description: Linux Kernel Device Mapper userspace library
+Multi-Arch: foreign
+Homepage: http://sources.redhat.com/lvm2/
+Description-md5: 808f3b8b96c64d5f095bd9a6d6d9c928
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: minimal
@@ -1113,6 +1210,79 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: edubuntu-desktop-gnome
 
+Package: libdevmapper-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 135
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: lvm2 (2.02.98-6ubuntu1)
+Version: 2:1.02.77-6ubuntu1
+Depends: libdevmapper1.02.1 (= 2:1.02.77-6ubuntu1), libdevmapper-event1.02.1 (= 2:1.02.77-6ubuntu1), libselinux1-dev, libudev-dev
+Filename: pool/main/l/lvm2/libdevmapper-dev_1.02.77-6ubuntu1_armhf.deb
+Size: 18888
+MD5sum: 947cc310c1cbf1818b5ec764af936047
+SHA1: c32c32357801d5fcf91c15b24b3e6eea812e6d83
+SHA256: b1ffa55a1d4fd9d97343ae62f4fd391cc4ac680d20efc652e6cc47049455bc18
+Description: Linux Kernel Device Mapper header files
+Multi-Arch: same
+Homepage: http://sources.redhat.com/lvm2/
+Description-md5: cd4f4f9d4fde600f0d1e37da66d54c85
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libdevmapper-event1.02.1
+Priority: optional
+Section: libs
+Installed-Size: 82
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: lvm2 (2.02.98-6ubuntu1)
+Version: 2:1.02.77-6ubuntu1
+Depends: libc6 (>= 2.15), libdevmapper1.02.1 (>= 2:1.02.63)
+Pre-Depends: multiarch-support
+Breaks: dmeventd (<< 2.02.95-4ubuntu1)
+Filename: pool/main/l/lvm2/libdevmapper-event1.02.1_1.02.77-6ubuntu1_armhf.deb
+Size: 11182
+MD5sum: 3973378eac9d93f6d2aaef9a063e8889
+SHA1: bc68eb6565c4391f404f336e685f9d97e609fc86
+SHA256: 5bc5f83d57568fe66dc44fd4f26121a4d1ba0ce4847e0cfc3757a5afe4e1697f
+Description: Linux Kernel Device Mapper event support library
+Multi-Arch: same
+Homepage: http://sources.redhat.com/lvm2/
+Description-md5: 13d66a8a0057f6e6c6d6c2b25188a38d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: libdevmapper1.02.1
+Priority: important
+Section: libs
+Installed-Size: 244
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: lvm2 (2.02.98-6ubuntu1)
+Version: 2:1.02.77-6ubuntu1
+Depends: libc6 (>= 2.4), libselinux1 (>= 1.32), libudev1 (>= 183), dmsetup (>= 2:1.02.77-6ubuntu1)
+Pre-Depends: multiarch-support
+Conflicts: libdevmapper1.02
+Breaks: lvm2 (<< 2.02.66)
+Filename: pool/main/l/lvm2/libdevmapper1.02.1_1.02.77-6ubuntu1_armhf.deb
+Size: 104106
+MD5sum: 1328b26d85f33554237259633a0260cd
+SHA1: 03125a599c455520d8dce7ed9f0fe26386c35df6
+SHA256: 5fbe187cdb13636fd64982dbff0c42cadf950106258ce6ce0207cef19f6ea451
+Description: Linux Kernel Device Mapper userspace library
+Multi-Arch: same
+Homepage: http://sources.redhat.com/lvm2/
+Description-md5: f57d8a0a3606e56cb6cc150cb7a19e50
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
 Package: libgdata-common
 Priority: optional
 Section: libs
@@ -1293,116 +1463,71 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: edubuntu-desktop-gnome
 
-Package: liblapack-dev
-Priority: optional
-Section: devel
-Installed-Size: 7219
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
-Architecture: armhf
-Source: lapack
-Version: 3.4.2+dfsg-2
-Provides: liblapack.so
-Depends: liblapack3 (= 3.4.2+dfsg-2), libblas-dev | libblas.so
-Filename: pool/main/l/lapack/liblapack-dev_3.4.2+dfsg-2_armhf.deb
-Size: 3756416
-MD5sum: ca829537fd9cc31d6e8dc0f0fe65e6e5
-SHA1: bda61ab1fb0e4940f36795ac85efd2627f178d98
-SHA256: f5768dff785e3d1af47529b1905131c43fda40613b0a1be500e224f24f1d8ede
-Description: Library of linear algebra routines 3 - static version
-Homepage: http://www.netlib.org/lapack/
-Description-md5: 06d5e223d8871e3c280e43aebafd3bb6
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: liblapack-doc
-Priority: optional
-Section: doc
-Installed-Size: 470811
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
-Architecture: all
-Source: lapack
-Version: 3.4.2+dfsg-2
-Replaces: lapack-doc, lapack3-doc
-Depends: libjs-jquery
-Conflicts: lapack-doc, lapack3-doc
-Filename: pool/main/l/lapack/liblapack-doc_3.4.2+dfsg-2_all.deb
-Size: 86837448
-MD5sum: f65c3ec5171d63b214c39b122d281693
-SHA1: f919d81dfd46989687010dfd5e60dbec30a9eacd
-SHA256: 03bb21d37e8053365e8826aee23a66af045d49a8d8c68fdffe8e761e4091e1e3
-Description: Library of linear algebra routines 3 - documentation
-Homepage: http://www.netlib.org/lapack/
-Description-md5: b05d59494a79dab7b6037e4cf582291c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: liblapack3
-Priority: optional
-Section: libs
-Installed-Size: 5134
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
-Architecture: armhf
-Source: lapack
-Version: 3.4.2+dfsg-2
-Replaces: libatlas3gf-base (<< 3.8.4-4), liblapack3gf (<< 3.4.1-1)
-Provides: liblapack.so.3, liblapack.so.3gf, liblapack3gf
-Depends: libblas3 | libblas.so.3 | libatlas3-base, libc6 (>= 2.4), libgcc1 (>= 1:4.4.0), libgfortran3 (>= 4.6)
-Breaks: libatlas3gf-base (<< 3.8.4-4), liblapack3gf (<< 3.4.1-1)
-Filename: pool/main/l/lapack/liblapack3_3.4.2+dfsg-2_armhf.deb
-Size: 3475968
-MD5sum: a677866b90e298fa543560df786d8f6e
-SHA1: f5917a078f184014d1adbac7aa7756805858e3c5
-SHA256: bde5ab1d7d96629ddab83f02ade8577fc4f54c796813ba2f8c7ffe903ce94936
-Description: Library of linear algebra routines 3 - shared version
-Homepage: http://www.netlib.org/lapack/
-Description-md5: 26eaee65bec96885b8ad95ea62fe6a31
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-usb, edubuntu-desktop-gnome, edubuntu-usb, ubuntustudio-video, ubuntustudio-publishing, ubuntustudio-photography, ubuntustudio-graphics
-
-Package: liblapacke
-Priority: optional
-Section: libs
-Installed-Size: 988
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
-Architecture: armhf
-Source: lapack
-Version: 3.4.2+dfsg-2
-Provides: liblapacke.so.3
-Depends: libblas3 | libblas.so.3 | libatlas3-base, libc6 (>= 2.4), liblapack3 | liblapack.so.3
-Filename: pool/main/l/lapack/liblapacke_3.4.2+dfsg-2_armhf.deb
-Size: 482802
-MD5sum: e1377a826d7334564f4eaddb0a4915bb
-SHA1: 4f6b92b0dca71b2d8caceb7002ca8a5d5dae999d
-SHA256: 4cd10d160f752717893a60dc9575d123f8c50a4b6e359a8240b2ab2f8392e0fa
-Description: Library of linear algebra routines 3 - C lib shared version
-Homepage: http://www.netlib.org/lapack/
-Description-md5: 7f2e7790d8a3b93e084fa76cd32e2fd0
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: liblapacke-dev
+Package: liblvm2-dev
 Priority: optional
 Section: libdevel
-Installed-Size: 4602
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Installed-Size: 154
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
 Architecture: armhf
-Source: lapack
-Version: 3.4.2+dfsg-2
-Depends: liblapacke (= 3.4.2+dfsg-2)
-Filename: pool/main/l/lapack/liblapacke-dev_3.4.2+dfsg-2_armhf.deb
-Size: 711012
-MD5sum: 1faed005c3b68641572f5cf72c313d84
-SHA1: d394851692b5bbfdd1f5e02c34128be6d5115e54
-SHA256: 872660227b3ebf4e145e42131cf31e3ec308d79d6e62b722c558a9aff4b19374
-Description: Library of linear algebra routines 3 - Headers
-Homepage: http://www.netlib.org/lapack/
-Description-md5: e0363472469ab8a216d170cc0d7bbfe8
+Source: lvm2
+Version: 2.02.98-6ubuntu1
+Depends: liblvm2app2.2 (= 2.02.98-6ubuntu1), liblvm2cmd2.02 (= 2.02.98-6ubuntu1), libdevmapper-dev
+Filename: pool/main/l/lvm2/liblvm2-dev_2.02.98-6ubuntu1_armhf.deb
+Size: 11062
+MD5sum: 64c48af6648f168d3ec6fe4e3252c630
+SHA1: 3a3cfbd3be2fbc0214dbca0b7bbcf04e4dfecbf0
+SHA256: f34402e8ab0ef84cbb9b292621feb664dd1e42647efa79ed646a5f8800648a91
+Description: LVM2 libraries - development files
+Homepage: http://sources.redhat.com/lvm2/
+Description-md5: 9355c51a0fa4f1589861097790213f32
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: liblvm2app2.2
+Priority: optional
+Section: libs
+Installed-Size: 533
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: lvm2
+Version: 2.02.98-6ubuntu1
+Depends: libc6 (>= 2.4), libdevmapper-event1.02.1 (>= 2:1.02.74), libdevmapper1.02.1 (>= 2:1.02.77), libudev1 (>= 183)
+Pre-Depends: multiarch-support
+Filename: pool/main/l/lvm2/liblvm2app2.2_2.02.98-6ubuntu1_armhf.deb
+Size: 261242
+MD5sum: f3e558b01521c339a3f981870b455a4c
+SHA1: 05294a308d6b24ea6cce1e5d0744afaff7a0982a
+SHA256: 654a33fdf3670b9d4700abae0ac4a190eafe7b6b348f6ece1572f86a2518e27a
+Description: LVM2 application library
+Multi-Arch: same
+Homepage: http://sources.redhat.com/lvm2/
+Description-md5: 577f83d733f4a66a06fad9f3866d0316
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-active
+
+Package: liblvm2cmd2.02
+Priority: optional
+Section: libs
+Installed-Size: 732
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Source: lvm2
+Version: 2.02.98-6ubuntu1
+Depends: libc6 (>= 2.4), libdevmapper-event1.02.1 (>= 2:1.02.74), libdevmapper1.02.1 (>= 2:1.02.77), libudev1 (>= 183)
+Pre-Depends: multiarch-support
+Filename: pool/main/l/lvm2/liblvm2cmd2.02_2.02.98-6ubuntu1_armhf.deb
+Size: 368110
+MD5sum: 13bd23c63a18957c21bc54b64a09bcde
+SHA1: 983b4ccd193eef948bacc6b61f72a5a36bd14d2c
+SHA256: 21289ab16707a172fa238b184baedf3d9d7cfbfac1877a078a9d7121bc977d8b
+Description: LVM2 command library
+Multi-Arch: same
+Homepage: http://sources.redhat.com/lvm2/
+Description-md5: 8f4d76592086bd210b07fd8b6370be43
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1930,6 +2055,30 @@ Description: Xenstore communications library for Xen
 Description-md5: c2462dfd8088a311ca74072df39a0705
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: lvm2
+Priority: optional
+Section: admin
+Installed-Size: 977
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: armhf
+Version: 2.02.98-6ubuntu1
+Depends: libc6 (>= 2.4), libdevmapper-event1.02.1 (>= 2:1.02.74), libdevmapper1.02.1 (>= 2:1.02.77), libreadline5 (>= 5.2), libudev1 (>= 183), lsb-base, dmsetup (>> 2:1.02.47), initscripts (>= 2.88dsf-13.3), watershed (>= 2)
+Suggests: thin-provisioning-tools
+Breaks: initramfs-tools (<< 0.99)
+Filename: pool/main/l/lvm2/lvm2_2.02.98-6ubuntu1_armhf.deb
+Size: 515280
+MD5sum: 002bab945ec5ac4f6f20442b6695671e
+SHA1: 1f23f9c37065eb6b3783560c63e68082a5eea602
+SHA256: 130db642ad527f7492e788b7ba45a0015b0e89f592a6ed26a47de39609d5601c
+Description: Linux Logical Volume Manager
+Multi-Arch: foreign
+Homepage: http://sources.redhat.com/lvm2/
+Description-md5: 9df95d102d2b0aad5aff13603ef0cb3f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-usb-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
 
 Package: nova-api
 Priority: extra

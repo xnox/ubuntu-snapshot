@@ -1,3 +1,46 @@
+Package: binutils-static-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 1773
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: powerpc
+Source: binutils
+Version: 2.23.52.20130913-0ubuntu1
+Filename: pool/main/b/binutils/binutils-static-udeb_2.23.52.20130913-0ubuntu1_powerpc.udeb
+Size: 756826
+MD5sum: f6ebc826750560eaf9ccdb052f2de7e9
+SHA1: e847a5d11fac5ca981a650dc454b872a3a02d0e3
+SHA256: 8603528d9dd18299d10ad454d06a35884e9d7eb8a976c1cee81d06e616fc3e18
+Description: statically linked binutils tools for for the Debian installer
+ This package contains statically linked binutils tools used
+ for linking kernel modules needed to mount /usr or /.  At the moment,
+ it only contains ld.
+
+Package: dmsetup-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 98
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: lvm2 (2.02.98-6ubuntu1)
+Version: 2:1.02.77-6ubuntu1
+Depends: libc6-udeb (>= 2.17), libdevmapper1.02.1-udeb (>= 2:1.02.77)
+Filename: pool/main/l/lvm2/dmsetup-udeb_1.02.77-6ubuntu1_powerpc.udeb
+Size: 21254
+MD5sum: 7cfe8e6e848dba9ba3ac814fded75f85
+SHA1: 8fbafafa6b29fe1e88480eb9f8054362a48c740d
+SHA256: 633ab2b74d33aa996d8486b97903be19397a8b1ed2cbc5bdff689a74ee37d3a4
+Description: Linux Kernel Device Mapper userspace library
+ The Linux Kernel Device Mapper is the LVM (Linux Logical Volume Management)
+ Team's implementation of a minimalistic kernel-space driver that handles
+ volume management, while keeping knowledge of the underlying device layout
+ in user-space.  This makes it useful for not only LVM, but EVMS, software
+ raid, and other drivers that create "virtual" block devices.
+ .
+ This package contains a utility for modifying device mappings.
+
 Package: libavahi-common3-udeb
 Priority: optional
 Section: debian-installer
@@ -31,4 +74,53 @@ MD5sum: 08dfad4b34d17566baba1ac1a33d35b1
 SHA1: 21670ef69625db0dbf080cf21db772c6e68e2385
 SHA256: 554f4b7215ee680a75d81115bef924d779bcffc79e099779860f8bf6052b1c83
 Description: Avahi's embeddable mDNS/DNS-SD library (debian-installer)
+
+Package: libdevmapper1.02.1-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 203
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: lvm2 (2.02.98-6ubuntu1)
+Version: 2:1.02.77-6ubuntu1
+Depends: libc6-udeb (>= 2.17)
+Recommends: dmsetup-udeb
+Filename: pool/main/l/lvm2/libdevmapper1.02.1-udeb_1.02.77-6ubuntu1_powerpc.udeb
+Size: 58468
+MD5sum: 112944547a84c9e3863c759634ed0eb5
+SHA1: 5cace04b39f55937262977b9d7798773f41cd39c
+SHA256: 6e4944349960e0f0ef4165447c777c6c7a2bb9f66f4dd93caa650da5672bda6c
+Description: Linux Kernel Device Mapper userspace library
+ This is a udeb, or a microdeb, for the debian-installer.
+ .
+ The Linux Kernel Device Mapper is the LVM (Linux Logical Volume Management)
+ Team's implementation of a minimalistic kernel-space driver that handles
+ volume management, while keeping knowledge of the underlying device layout
+ in user-space.  This makes it useful for not only LVM, but EVMS, software
+ raid, and other drivers that create "virtual" block devices.
+
+Package: lvm2-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 826
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: lvm2
+Version: 2.02.98-6ubuntu1
+Depends: libc6-udeb (>= 2.17), libdevmapper1.02.1-udeb (>= 2:1.02.77), watershed-udeb
+Filename: pool/main/l/lvm2/lvm2-udeb_2.02.98-6ubuntu1_powerpc.udeb
+Size: 258606
+MD5sum: bb53466686e911d5a291a39d1cf4fd8d
+SHA1: e11d021e7f9fa95f396c29cce1b276d3a69f0c94
+SHA256: 7ab0074e65a162b67e3391e672fa79fc074434ccefea61d809aef354739a74ca
+Description: Linux Logical Volume Manager
+ This is a udeb, or a microdeb, for the debian-installer.
+ .
+ This is LVM2, the rewrite of The Linux Logical Volume Manager.  LVM
+ supports enterprise level volume management of disk and disk subsystems
+ by grouping arbitrary disks into volume groups. The total capacity of
+ volume groups can be allocated to logical volumes, which are accessed as
+ regular block devices.
 

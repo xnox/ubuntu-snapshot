@@ -17,6 +17,30 @@ Description: statically linked binutils tools for for the Debian installer
  for linking kernel modules needed to mount /usr or /.  At the moment,
  it only contains ld.
 
+Package: dmsetup-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 98
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: lvm2 (2.02.98-6ubuntu1)
+Version: 2:1.02.77-6ubuntu1
+Depends: libc6-udeb (>= 2.17), libdevmapper1.02.1-udeb (>= 2:1.02.77)
+Filename: pool/main/l/lvm2/dmsetup-udeb_1.02.77-6ubuntu1_i386.udeb
+Size: 23676
+MD5sum: c774837916ffc3347c7d5b3938c0f016
+SHA1: 84908a68f1c3ef3d07ef8242e9e155047228a767
+SHA256: 63a590ac269992530fa65c32b91d575ece2f9e6f949ceaf76f8c9ae6744ee5d4
+Description: Linux Kernel Device Mapper userspace library
+ The Linux Kernel Device Mapper is the LVM (Linux Logical Volume Management)
+ Team's implementation of a minimalistic kernel-space driver that handles
+ volume management, while keeping knowledge of the underlying device layout
+ in user-space.  This makes it useful for not only LVM, but EVMS, software
+ raid, and other drivers that create "virtual" block devices.
+ .
+ This package contains a utility for modifying device mappings.
+
 Package: libavahi-common3-udeb
 Priority: optional
 Section: debian-installer
@@ -50,4 +74,53 @@ MD5sum: 325c77f0f59bb8a0dd30a0b7d1ed84fa
 SHA1: 6192501f462879e2b35da03511db3728d02c474e
 SHA256: 68e839a0906aac039b7e7062b46f3c1487a266d5780f9db3acd95a2e01537201
 Description: Avahi's embeddable mDNS/DNS-SD library (debian-installer)
+
+Package: libdevmapper1.02.1-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 191
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: lvm2 (2.02.98-6ubuntu1)
+Version: 2:1.02.77-6ubuntu1
+Depends: libc6-udeb (>= 2.17)
+Recommends: dmsetup-udeb
+Filename: pool/main/l/lvm2/libdevmapper1.02.1-udeb_1.02.77-6ubuntu1_i386.udeb
+Size: 66524
+MD5sum: aee3fd13e82c96438e7142299a43fe99
+SHA1: cd857febd34fae15fc2b96b649e5ce88f82e2ca9
+SHA256: b6f9705dee9f325fd3a5aa7c44f4350796fc585ab5797ee7a8d4e9a8ebbe8f14
+Description: Linux Kernel Device Mapper userspace library
+ This is a udeb, or a microdeb, for the debian-installer.
+ .
+ The Linux Kernel Device Mapper is the LVM (Linux Logical Volume Management)
+ Team's implementation of a minimalistic kernel-space driver that handles
+ volume management, while keeping knowledge of the underlying device layout
+ in user-space.  This makes it useful for not only LVM, but EVMS, software
+ raid, and other drivers that create "virtual" block devices.
+
+Package: lvm2-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 846
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian LVM Team <pkg-lvm-maintainers@lists.alioth.debian.org>
+Architecture: i386
+Source: lvm2
+Version: 2.02.98-6ubuntu1
+Depends: libc6-udeb (>= 2.17), libdevmapper1.02.1-udeb (>= 2:1.02.77), watershed-udeb
+Filename: pool/main/l/lvm2/lvm2-udeb_2.02.98-6ubuntu1_i386.udeb
+Size: 297660
+MD5sum: 3712948d0f2e8171c1b8f8f11846fcbb
+SHA1: 63fc1e53752d55263f2b554c8b6421c1507c9cb2
+SHA256: c44c321705725a73b80e6b6cf3b3bc7fb7bc9107e3533d49d96e6ebbf27ba3ca
+Description: Linux Logical Volume Manager
+ This is a udeb, or a microdeb, for the debian-installer.
+ .
+ This is LVM2, the rewrite of The Linux Logical Volume Manager.  LVM
+ supports enterprise level volume management of disk and disk subsystems
+ by grouping arbitrary disks into volume groups. The total capacity of
+ volume groups can be allocated to logical volumes, which are accessed as
+ regular block devices.
 
