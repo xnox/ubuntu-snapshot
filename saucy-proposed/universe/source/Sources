@@ -1767,6 +1767,7 @@ Checksums-Sha256:
 Package: linux-goldfish
 Binary: linux-goldfish-headers-3.4.0-0, linux-goldfish-tools-3.4.0-0, linux-image-3.4.0-0-goldfish, linux-headers-3.4.0-0-goldfish, linux-image-3.4.0-0-goldfish-dbgsym, linux-tools-3.4.0-0-goldfish
 Version: 3.4.0-0.4
+Priority: optional
 Section: universe/devel
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Build-Depends: debhelper (>= 5), cpio, module-init-tools, kernel-wedge (>= 2.24ubuntu1), libelf-dev, binutils-dev, rsync, libdw-dev, libpci-dev, python-dev, gcc-4.7, flex, bison, xmlto, docbook-utils, ghostscript, transfig, bzip2, sharutils, asciidoc
@@ -1795,6 +1796,7 @@ Checksums-Sha256:
 Package: linux-meta-goldfish
 Binary: linux-headers-goldfish, linux-image-goldfish, linux-tools-goldfish, linux-goldfish
 Version: 3.4.0.0.2
+Priority: optional
 Section: universe/devel
 Maintainer: Ubuntu Kernel Team <kernel-team@lists.ubuntu.com>
 Build-Depends: dpkg (>= 1.13.19), debhelper (>= 5), gawk
@@ -1857,6 +1859,7 @@ Checksums-Sha256:
 Package: magics++
 Binary: libmagplus3, libmagics++-dev, magics++, python-magics++, libmagics++-data
 Version: 2.18.15-1build1
+Priority: optional
 Section: universe/utils
 Maintainer: Alastair McKinstry <mckinstry@debian.org>
 Build-Depends: debhelper (>= 9), dh-buildinfo, libhdf5-serial-dev | libhdf5-dev, libnetcdf-dev, libgl1-mesa-dev, libgd2-dev, libemos-dev, libgrib-api-dev, libterralib-dev, libjasper-dev, libcairo2-dev, libpango1.0-dev, autoconf, automake, libtool, gfortran, ttf-dejavu-core, libxml-parser-perl, python-all-dev (>= 2.6.6-3), swig, chrpath, python-numpy, libopenjpeg-dev, ghostscript, zlib1g-dev, dh-autoreconf (>= 4~), libboost-dev, python-instant, python3-all-dev, libproj-dev
@@ -2805,36 +2808,6 @@ Checksums-Sha256:
  75476b924314aa92239e8c696ce8f26bd2e168d145a968b47613f4c987c0f00b 47376 ratpoints_2.1.3+dfsg.orig.tar.gz
  67d15d18f9900c39c043d9527a52e0a82b93dfee7a6afd797b87b06c4e9027fa 7486 ratpoints_2.1.3+dfsg-2.debian.tar.gz
 
-Package: right-aws
-Binary: libright-aws-ruby1.8, libright-aws-ruby-doc, libright-aws-ruby
-Version: 1.10.0-0ubuntu3
-Priority: optional
-Section: universe/ruby
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Build-Depends: debhelper (>= 7), cdbs, libsetup-ruby1.8, ruby-pkg-tools
-Build-Depends-Indep: ruby1.8 (>= 1.8.7.249-3) | rdoc (>= 1.8.1), graphviz, ruby
-Architecture: all
-Standards-Version: 3.8.4
-Format: 1.0
-Directory: pool/universe/r/right-aws
-Files:
- ab6874f43bdbe2a0a6c50238449fb150 2000 right-aws_1.10.0-0ubuntu3.dsc
- c245ab6f3030cafdaf53970b7c6ffa95 99267 right-aws_1.10.0.orig.tar.gz
- 40295c14d93c4b21561524c131976b1b 2022 right-aws_1.10.0-0ubuntu3.diff.gz
-Homepage: http://rightscale.rubyforge.org/
-Package-List: 
- libright-aws-ruby deb ruby optional
- libright-aws-ruby-doc deb doc optional
- libright-aws-ruby1.8 deb ruby optional
-Checksums-Sha1:
- bb77cf8d1ac5405c6d277b10a0a76e9461b62d08 2000 right-aws_1.10.0-0ubuntu3.dsc
- e98350203e35056720a1c4d845f908f251a946fd 99267 right-aws_1.10.0.orig.tar.gz
- 7a542e84d09b25424483430182bce2b22bb0fc36 2022 right-aws_1.10.0-0ubuntu3.diff.gz
-Checksums-Sha256:
- 2e7837c6139454f8895ce6027ead3b57a79b099b1738cf59d93727495c7d00b2 2000 right-aws_1.10.0-0ubuntu3.dsc
- dbbeaec6e816f4d0fcc95f76d32f7e1d6ad8ace998237443e5137feebc68e0cc 99267 right-aws_1.10.0.orig.tar.gz
- 5dd981dc2ec8a7d6d2ec55a4a1a79e1c507b3c0710c0fe520eb821e77b654612 2022 right-aws_1.10.0-0ubuntu3.diff.gz
-
 Package: ruby-factory-girl
 Binary: ruby-factory-girl
 Version: 4.2.0-1
@@ -2984,6 +2957,36 @@ Checksums-Sha256:
  09e1e5fbb5d6a35571e07b4fc6b51719c95ab925ce1d1566eea89ab67619cb14 2042 ruby-gruff_0.3.7-1.dsc
  ea3e3e2fe7f3256d8d42115ba47aad013fd43e7512bd6fa3e407b9f23e10ab64 280629 ruby-gruff_0.3.7.orig.tar.gz
  1f12b9333b469ff373dab3d306390c1eae6320b6515f5cc3db908c61790c0f07 4315 ruby-gruff_0.3.7-1.debian.tar.gz
+Ruby-Versions: all
+
+Package: ruby-http-cookie
+Binary: ruby-http-cookie
+Version: 1.0.1-1
+Section: universe/misc
+Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 7.0.50~), gem2deb (>= 0.4.1~), ruby-test-unit, ruby-sqlite3, ruby-domain-name
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/universe/r/ruby-http-cookie
+Files:
+ 16a8c6d10856166f7d32a49141fc04a6 2137 ruby-http-cookie_1.0.1-1.dsc
+ 75ee2ebeeaf6364404013ef81dbdde1b 35208 ruby-http-cookie_1.0.1.orig.tar.gz
+ a28445ee3fb7b3ddd38242ea292f8c04 2267 ruby-http-cookie_1.0.1-1.debian.tar.gz
+Uploaders: Gunnar Wolf <gwolf@debian.org>
+Homepage: https://github.com/sparklemotion/http-cookie
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-ruby-extras/ruby-http-cookie.git;a=summary
+Vcs-Git: git://anonscm.debian.org/pkg-ruby-extras/ruby-http-cookie.git
+Package-List: 
+ ruby-http-cookie deb ruby optional
+Checksums-Sha1:
+ 59188ba7d71271cdfa2c6325e2d86c72678183d2 2137 ruby-http-cookie_1.0.1-1.dsc
+ 762b6738c2e29f25717f9c898473142c031adcab 35208 ruby-http-cookie_1.0.1.orig.tar.gz
+ ad2b07d4e72ac6317f26e244d7dc48568e378a5e 2267 ruby-http-cookie_1.0.1-1.debian.tar.gz
+Checksums-Sha256:
+ 39fec37bbc9950a0a1195836d7a1b1c023accbda4b18f6f5be2de727c5b6fb89 2137 ruby-http-cookie_1.0.1-1.dsc
+ 64568c47473a65e5ceb07a81c2558ee76423c14728a1690d9bd5c2dfaa061187 35208 ruby-http-cookie_1.0.1.orig.tar.gz
+ 6b16602bd757576b8eede1104510ac66f864e867a23ed8c518b570eea25684fb 2267 ruby-http-cookie_1.0.1-1.debian.tar.gz
 Ruby-Versions: all
 
 Package: ruby-jbuilder
@@ -3819,31 +3822,6 @@ Checksums-Sha256:
  bc65fc45bcae9fd4a7d2f9dfeeace40babd5c8dd57161d5c31f9420bc9b4f219 2520 ulogd2_2.0.2-3.dsc
  a36c4032d83edaef1b13f96b6647e9e150d7f20b5af7035f0a91c17fe2e066c5 466664 ulogd2_2.0.2.orig.tar.bz2
  9ab79b0b532571fff479dd4c1bde3a1afbaccdc7c1176bf1ca16316b13d5d175 13697 ulogd2_2.0.2-3.debian.tar.gz
-
-Package: unity-tweak-tool
-Binary: unity-tweak-tool
-Version: 0.0.5
-Priority: optional
-Section: universe/gnome
-Maintainer: Barneedhar Vigneshwar <barneedhar@ubuntu.com>
-Build-Depends: debhelper (>= 9~), python3 (>= 3.2), python3-distutils-extra (>= 2.10)
-Build-Depends-Indep: python (>= 2.6.6-3~)
-Architecture: all
-Standards-Version: 3.9.4
-Format: 3.0 (native)
-Directory: pool/universe/u/unity-tweak-tool
-Files:
- 4481600c449439ea0434f72f0ecd70a2 1607 unity-tweak-tool_0.0.5.dsc
- dec4b49e3a8a1af97f1d631deb4b1b47 594298 unity-tweak-tool_0.0.5.tar.gz
-Homepage: https://github.com/freyja-dev/unity-tweak-tool
-Package-List: 
- unity-tweak-tool deb gnome optional
-Checksums-Sha1:
- 2345b11019613c81d4f94f6fb31a0fdbf75d153b 1607 unity-tweak-tool_0.0.5.dsc
- 7c0cd82d1d7953dc3a1b9e839e8be73b0caeb18f 594298 unity-tweak-tool_0.0.5.tar.gz
-Checksums-Sha256:
- 97b4f1617f4e4b13c9bc1ca6148945770d67ac419d6e0073aad5334033fe80f1 1607 unity-tweak-tool_0.0.5.dsc
- ac1bd3217330b367cac6575081348268eb26c0a8c7415a13a4ee377a4ca2e6f7 594298 unity-tweak-tool_0.0.5.tar.gz
 
 Package: varconf
 Binary: libvarconf-1.0-8, libvarconf-dev, libvarconf-1.0-8-dbg
