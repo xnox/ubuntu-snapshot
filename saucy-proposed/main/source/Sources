@@ -163,6 +163,42 @@ Checksums-Sha256:
 Debian-Vcs-Browser: http://git.debian.org/?p=pkg-utopia/avahi.git;a=summary
 Debian-Vcs-Git: git://git.debian.org/git/pkg-utopia/avahi.git
 
+Package: binutils
+Binary: binutils, binutils-dev, binutils-multiarch, binutils-static, binutils-static-udeb, binutils-hppa64, binutils-spu, binutils-doc, binutils-source
+Version: 2.23.52.20130913-0ubuntu1
+Section: devel
+Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Build-Depends: dpkg-dev (>= 1.13.9), autoconf (>= 2.64), bison, flex, gettext, texinfo, dejagnu (>= 1.4.2-1.1), quilt, python3, file, xz-utils, lsb-release, zlib1g-dev
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 1.0
+Directory: pool/main/b/binutils
+Files:
+ ccf4a6ba67d16ca142937239ab21b4f8 1860 binutils_2.23.52.20130913-0ubuntu1.dsc
+ 133e3d827104d1e431a6f2feba56c19b 141943274 binutils_2.23.52.20130913.orig.tar.gz
+ 32d36accfbd4ef8154343a54758940f3 84282 binutils_2.23.52.20130913-0ubuntu1.diff.gz
+Uploaders: James Troup <james@nocrew.org>, Daniel Jacobowitz <dan@debian.org>
+Package-List: 
+ binutils deb devel optional
+ binutils-dev deb devel extra
+ binutils-doc deb doc optional
+ binutils-hppa64 deb devel optional
+ binutils-multiarch deb devel extra
+ binutils-source deb devel optional
+ binutils-spu deb devel optional
+ binutils-static deb devel optional
+ binutils-static-udeb deb debian-installer optional
+Checksums-Sha1:
+ 4fa39181b8dd57499337d97eff942811ac6c113d 1860 binutils_2.23.52.20130913-0ubuntu1.dsc
+ 56544f5edad36a9f80e905fa0ad6062ebe5e889f 141943274 binutils_2.23.52.20130913.orig.tar.gz
+ e678af4037f3b5ba285eac6ab050ae51ae55e185 84282 binutils_2.23.52.20130913-0ubuntu1.diff.gz
+Checksums-Sha256:
+ e6efa523aa821007597d06b6dde018e747776a2dc13fdf818cb933920636422d 1860 binutils_2.23.52.20130913-0ubuntu1.dsc
+ dae0f077a268d81daafcca3794eb124a360055c70800469a9e8acfd5665fe8c1 141943274 binutils_2.23.52.20130913.orig.tar.gz
+ b2ccb40cbc00d8770939735b3ecd00d174a97a79606a3fb1b64604453fc51dc2 84282 binutils_2.23.52.20130913-0ubuntu1.diff.gz
+Testsuite: autopkgtest
+
 Package: ceph
 Binary: ceph, ceph-dbg, ceph-mds, ceph-mds-dbg, ceph-fuse, ceph-fuse-dbg, rbd-fuse, rbd-fuse-dbg, ceph-common, ceph-common-dbg, ceph-fs-common, ceph-fs-common-dbg, ceph-resource-agents, librados2, librados2-dbg, librados-dev, librbd1, librbd1-dbg, librbd-dev, libcephfs1, libcephfs1-dbg, libcephfs-dev, radosgw, radosgw-dbg, rest-bench, rest-bench-dbg, ceph-test, ceph-test-dbg, python-ceph, libcephfs-java, libcephfs-jni, libcephfs-jni-dbg
 Version: 0.67.3-0ubuntu1
@@ -255,44 +291,6 @@ Checksums-Sha256:
  2d82cca80b370515973b3e08e54d653fbc5c12ec62aac5c4ec88106172f7351b 52660 dh-python_1.20130913.orig.tar.xz
  e95b0d639e7f78f8da73c48e8d333a5492e229047e80fa60c819aca938913599 4241 dh-python_1.20130913-1.debian.tar.gz
 Testsuite: autopkgtest
-
-Package: djvulibre
-Binary: libdjvulibre-dev, libdjvulibre21, libdjvulibre-text, djvulibre-dbg, djvulibre-desktop, djview, djview3, djvuserve, djvulibre-bin
-Version: 3.5.25.4-2
-Priority: optional
-Section: graphics
-Maintainer: Barak A. Pearlmutter <bap@debian.org>
-Build-Depends: dh-autoreconf, debhelper (>= 9), libjpeg-dev, libtiff5-dev | libtiff4-dev | libtiff3g-dev | libtiff-dev, librsvg2-bin | imagemagick
-Architecture: any all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/main/d/djvulibre
-Files:
- fae32390def1fb013fe8600e89981108 1791 djvulibre_3.5.25.4-2.dsc
- 0a7ab14f159fcf53cd3743a1514e8a9c 3575460 djvulibre_3.5.25.4.orig.tar.gz
- bc4e913112dd1bf8e066f21f1efbc8e1 37981 djvulibre_3.5.25.4-2.debian.tar.gz
-Uploaders: Leon Bottou <leonb@bottou.org>
-Homepage: http://djvu.sourceforge.net/
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/djvulibre.git
-Vcs-Git: git://anonscm.debian.org/collab-maint/djvulibre.git
-Package-List: 
- djview deb graphics optional
- djview3 deb graphics optional
- djvulibre-bin deb graphics optional
- djvulibre-dbg deb debug extra
- djvulibre-desktop deb libs optional
- djvuserve deb web optional
- libdjvulibre-dev deb libdevel optional
- libdjvulibre-text deb libs optional
- libdjvulibre21 deb libs optional
-Checksums-Sha1:
- 6f723840b11910b3ddcc04fcb30b23793125223f 1791 djvulibre_3.5.25.4-2.dsc
- c7044201703f30df0f1732c54c6544467412811d 3575460 djvulibre_3.5.25.4.orig.tar.gz
- 6cfc96a9436b7368b1cc0387a4eb05fdc6e6fe4f 37981 djvulibre_3.5.25.4-2.debian.tar.gz
-Checksums-Sha256:
- d6fcfa699a1a5679074e7873fbe866befae31d72159f761692568bf1d92683dc 1791 djvulibre_3.5.25.4-2.dsc
- 6d8b3414d8ec87c5a40d3dde6fee54beebee6cbf6ec56aa7851dfbca9aaa3f36 3575460 djvulibre_3.5.25.4.orig.tar.gz
- ec1aa12fcd2eb39d90371bd409123d8f6815f5e04473bb4284aac8e1a1d4d332 37981 djvulibre_3.5.25.4-2.debian.tar.gz
 
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
