@@ -370,6 +370,29 @@ Origin: Ubuntu
 Supported: 9m
 Task: minimal
 
+Package: djvulibre-dbg
+Priority: extra
+Section: libs
+Installed-Size: 621
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: amd64
+Source: djvulibre
+Version: 3.5.25.4-2
+Depends: libdjvulibre21 (= 3.5.25.4-2)
+Filename: pool/main/d/djvulibre/djvulibre-dbg_3.5.25.4-2_amd64.deb
+Size: 116236
+MD5sum: 3d9bffd32cd17ba9994f9eb774767e92
+SHA1: 23a35482229eebff79bd92db67df0257ff7dfe46
+SHA256: f59b6d1bafa19da738392b1e223e7ac097159b15b969293df7cc1fd511f03b03
+Description: Debug symbols for the DjVu image format
+Multi-Arch: same
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 491e47717200675c2416d353ba9f4f8f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: dmidecode
 Priority: standard
 Section: utils
@@ -1204,6 +1227,56 @@ Origin: Ubuntu
 Supported: 9m
 Task: edubuntu-desktop-gnome
 
+Package: libdjvulibre-dev
+Priority: optional
+Section: devel
+Installed-Size: 5885
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: amd64
+Source: djvulibre
+Version: 3.5.25.4-2
+Depends: libdjvulibre21 (= 3.5.25.4-2), libjpeg-dev
+Filename: pool/main/d/djvulibre/libdjvulibre-dev_3.5.25.4-2_amd64.deb
+Size: 2729854
+MD5sum: 0d944660569578b3d9aa7aa8eee0c00a
+SHA1: 502fe524db6cafe19766fde8c3a2886bdf3e1a15
+SHA256: 532771ab9f363a47a49dcb61aa4a97e65a6df8ca10838e90a671cf74d58d0e53
+Description: Development files for the DjVu image format
+Multi-Arch: same
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 7a47b77e06ba2a68a7aff0a9650a0118
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libdjvulibre21
+Priority: optional
+Section: libs
+Installed-Size: 1649
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Barak A. Pearlmutter <bap@debian.org>
+Architecture: amd64
+Source: djvulibre
+Version: 3.5.25.4-2
+Replaces: libdjvulibre1, libdjvulibre15
+Depends: libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libjpeg8 (>= 8c), libstdc++6 (>= 4.1.1), libdjvulibre-text (>= 3.5.25.4-2)
+Pre-Depends: multiarch-support
+Conflicts: libdjvulibre1
+Filename: pool/main/d/djvulibre/libdjvulibre21_3.5.25.4-2_amd64.deb
+Size: 684170
+MD5sum: 41713edba1877e846b7b42f765fd1eaf
+SHA1: aea05ca42e36caa567a5098dc0a931622d1646e6
+SHA256: 0d050ccfd0a9f0fdf19ff3fe974fd62b52b3d23cdb2a5f2bb5463b42778276fe
+Description: Runtime support for the DjVu image format
+Multi-Arch: same
+Homepage: http://djvu.sourceforge.net/
+Description-md5: 377e0a8fb1d56ba31c3feadafc4781b8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: libgdata-common
 Priority: optional
 Section: libs
@@ -1345,6 +1418,100 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: edubuntu-desktop-gnome
+
+Package: liblapack-dev
+Priority: optional
+Section: devel
+Installed-Size: 13558
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: lapack
+Version: 3.4.2+dfsg-2
+Provides: liblapack.so
+Depends: liblapack3 (= 3.4.2+dfsg-2), libblas-dev | libblas.so
+Filename: pool/main/l/lapack/liblapack-dev_3.4.2+dfsg-2_amd64.deb
+Size: 4826420
+MD5sum: a4f38641bc4521b78478530fc6f29bc2
+SHA1: 2014196d99b367c98970a38c38852581bb1ab531
+SHA256: 00c9ad9587abe535a765a41513032cf76c0a647c1c3c41133b67b6e287c7e896
+Description: Library of linear algebra routines 3 - static version
+Homepage: http://www.netlib.org/lapack/
+Description-md5: 06d5e223d8871e3c280e43aebafd3bb6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: liblapack3
+Priority: optional
+Section: libs
+Installed-Size: 8747
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: lapack
+Version: 3.4.2+dfsg-2
+Replaces: libatlas3gf-base (<< 3.8.4-4), liblapack3gf (<< 3.4.1-1)
+Provides: liblapack.so.3, liblapack.so.3gf, liblapack3gf
+Depends: libblas3 | libblas.so.3 | libatlas3-base, libc6 (>= 2.14), libgcc1 (>= 1:4.1.1), libgfortran3 (>= 4.6)
+Breaks: libatlas3gf-base (<< 3.8.4-4), liblapack3gf (<< 3.4.1-1)
+Filename: pool/main/l/lapack/liblapack3_3.4.2+dfsg-2_amd64.deb
+Size: 4337840
+MD5sum: cef22b07de1c0753b16231c022223b81
+SHA1: c3ff6cd1aac698258172be6f040898f08fac0731
+SHA256: e08f31cfa8dfa47e77a206e01378010852f045043f72f6b80bf31c077bdcded3
+Description: Library of linear algebra routines 3 - shared version
+Homepage: http://www.netlib.org/lapack/
+Description-md5: 26eaee65bec96885b8ad95ea62fe6a31
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-usb, kubuntu-full, kubuntu-active-full, edubuntu-desktop-gnome, edubuntu-usb, ubuntustudio-video, ubuntustudio-publishing, ubuntustudio-photography, ubuntustudio-graphics
+
+Package: liblapacke
+Priority: optional
+Section: libs
+Installed-Size: 1845
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: lapack
+Version: 3.4.2+dfsg-2
+Provides: liblapacke.so.3
+Depends: libblas3 | libblas.so.3 | libatlas3-base, libc6 (>= 2.3.4), liblapack3 | liblapack.so.3
+Filename: pool/main/l/lapack/liblapacke_3.4.2+dfsg-2_amd64.deb
+Size: 600020
+MD5sum: 7b8c3d40612dee6ccc87e40641be3018
+SHA1: b47525f346449e06dec6b824a639304f55fe286a
+SHA256: 05c3dbe1b90372f9a4dc6d3220dceb676f5eb39545cd2341acb851a7e4fbbf51
+Description: Library of linear algebra routines 3 - C lib shared version
+Homepage: http://www.netlib.org/lapack/
+Description-md5: 7f2e7790d8a3b93e084fa76cd32e2fd0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: liblapacke-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 6788
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Science Team <debian-science-maintainers@lists.alioth.debian.org>
+Architecture: amd64
+Source: lapack
+Version: 3.4.2+dfsg-2
+Depends: liblapacke (= 3.4.2+dfsg-2)
+Filename: pool/main/l/lapack/liblapacke-dev_3.4.2+dfsg-2_amd64.deb
+Size: 878022
+MD5sum: 3edf288d63296374e5ed112531bf3e4e
+SHA1: e258d8257c7b49f6009ed9fdc54359ed50ed0624
+SHA256: 1bebed777fdfd93588919843bc9258b153f6d2569e1a648c7a1039e1db651d0f
+Description: Library of linear algebra routines 3 - Headers
+Homepage: http://www.netlib.org/lapack/
+Description-md5: e0363472469ab8a216d170cc0d7bbfe8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: libpathplan4
 Priority: optional
