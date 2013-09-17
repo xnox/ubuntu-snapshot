@@ -1095,6 +1095,44 @@ Description-md5: 264e50866c900ec4a639f91ed62bd407
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: fwts
+Priority: optional
+Section: universe/devel
+Installed-Size: 872
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: amd64
+Version: 13.09.01-0ubuntu1
+Depends: libfwtsiasl1 (= 13.09.01-0ubuntu1), libfwtsacpica1 (= 13.09.01-0ubuntu1), libfwts1 (= 13.09.01-0ubuntu1), fwts-efi-runtime-dkms (= 13.09.01-0ubuntu1), libc6 (>= 2.14), libjson-c2 (>= 0.10), pciutils
+Suggests: dmidecode, net-tools, wireless-tools, bluez, xinput, pulseaudio-utils
+Filename: pool/universe/f/fwts/fwts_13.09.01-0ubuntu1_amd64.deb
+Size: 243482
+MD5sum: c90be220c9e47ae4f09b171fde749595
+SHA1: 9ba1c1cfc5dd5f05d9bd478abc9a50131de36c4c
+SHA256: e6889eff54467300dcc381e1f3bdbd8af70a7358d31a3de7d6a9150799212193
+Description: FirmWare Test Suite
+Description-md5: d6b6141d7ca394b5197f5a8e24578b35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fwts-efi-runtime-dkms
+Priority: optional
+Section: universe/devel
+Installed-Size: 81
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: amd64
+Source: fwts
+Version: 13.09.01-0ubuntu1
+Depends: dkms (>= 2.1.0.0), linux-headers-generic | linux-headers | linux-headers-generic-lts-quantal | linux-headers-generic-lts-raring
+Filename: pool/universe/f/fwts/fwts-efi-runtime-dkms_13.09.01-0ubuntu1_amd64.deb
+Size: 16552
+MD5sum: cf2a0db22b2b4bc1c4e658635e0aba7e
+SHA1: 414aa2c31330a7214ae3cd36e43595d5d8fef168
+SHA256: 28aacd916ff0510f9905e64ca17bd8d78f3dc7182c50080f3a5d37c7cced8ea0
+Description: Firmware Test Suite UEFI Runtime Service kernel driver
+Description-md5: 872c3fa1034eabae1745eeec37ab3e38
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: gcc-snapshot
 Priority: extra
 Section: universe/devel
@@ -2087,6 +2125,63 @@ SHA256: 0af36edaf083754ecd040f006a839d54cd0e5e6f0d0583c0fb6509b0cfc5998e
 Description: library with support for Expert Witness Compression Format
 Homepage: http://code.google.com/p/libewf/
 Description-md5: fda969c7925554537df518bd06a2676e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libfwts1
+Priority: optional
+Section: universe/devel
+Installed-Size: 225
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: amd64
+Source: fwts
+Version: 13.09.01-0ubuntu1
+Depends: libc6 (>= 2.15), libfwtsiasl1, libjson-c2 (>= 0.10), libpcre3 (>= 8.10)
+Filename: pool/universe/f/fwts/libfwts1_13.09.01-0ubuntu1_amd64.deb
+Size: 72900
+MD5sum: 14569e9ddae4b01abe6abce4754f541b
+SHA1: ac2c55367df946725ab0c6bc4ec572b872f9e588
+SHA256: 713922dffa465b520181cb00c6a8027ddba2cd6c66eeda4762d1a162b7e3dae0
+Description: FirmWare Test Suite core support library
+Description-md5: 52ff91e0d92988cc3e64dca37e83ded3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libfwtsacpica1
+Priority: optional
+Section: universe/devel
+Installed-Size: 677
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: amd64
+Source: fwts
+Version: 13.09.01-0ubuntu1
+Depends: libc6 (>= 2.14), libfwts1
+Filename: pool/universe/f/fwts/libfwtsacpica1_13.09.01-0ubuntu1_amd64.deb
+Size: 272706
+MD5sum: 25154cc8d77a536d498c87f8ec294ab1
+SHA1: 37b14fa966e04581f528b119aca731024e23e21d
+SHA256: c0005a15f57f736b932d17d9cd268b96b53cdc5a3295de95139e5f4f0a208db1
+Description: FirmWare Test Suite ACPICA core built for acpiexec functionality
+Description-md5: a5000d353030a31da5111f9694fad744
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libfwtsiasl1
+Priority: optional
+Section: universe/devel
+Installed-Size: 924
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: amd64
+Source: fwts
+Version: 13.09.01-0ubuntu1
+Depends: libc6 (>= 2.14)
+Filename: pool/universe/f/fwts/libfwtsiasl1_13.09.01-0ubuntu1_amd64.deb
+Size: 340244
+MD5sum: abf165c8fd667240bd2676eca65d14e1
+SHA1: e32dc660c07c82ccb9fdb5249948e6f0c0df474e
+SHA256: 4a0ac71e9217abb63b7305e1b60498027ed2ec1dba88a6eaf8f1d4263077c043
+Description: FirmWare Test Suite ACPICA core built for iasl functionality
+Description-md5: 0fdb8bb43f21085e686e7b8bb3529034
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -5071,6 +5166,31 @@ Description-md5: 9b068543ba030016602d8d95ac8a603d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: maptool
+Priority: extra
+Section: universe/misc
+Installed-Size: 753
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Gilles Filippini <pini@debian.org>
+Architecture: amd64
+Source: navit
+Version: 0.5.0~svn5530+dfsg.1-1ubuntu1
+Replaces: osm2navit
+Provides: osm2navit
+Depends: libc6 (>= 2.14), libglib2.0-0 (>= 2.24.0), libssl1.0.0 (>= 1.0.0), zlib1g (>= 1:1.1.4)
+Suggests: navit
+Conflicts: osm2navit
+Filename: pool/universe/n/navit/maptool_0.5.0~svn5530+dfsg.1-1ubuntu1_amd64.deb
+Size: 324196
+MD5sum: 5a9a48fef475ac22800e362379e92409
+SHA1: 8de8a7007d3fc3345468732475f19e9ba8554bfb
+SHA256: b34cbb34637a670b7a9496a2e0c64c067bbda26c0c96ae9f8a9cb1f23d778453
+Description: Converts OpenStreetMap maps to Navit
+Homepage: http://navit.sourceforge.net/
+Description-md5: 028f593501cc388e3b42cea6297d2c93
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: minc-tools
 Priority: optional
 Section: universe/science
@@ -5169,6 +5289,137 @@ SHA256: f615aeae38d8a416c5a856848bbf905f4a9d8864e0c2f24df9e281078f0314f7
 Description: Mobile Robot Programming Toolkit - Documentation and examples
 Homepage: http://www.mrpt.org/
 Description-md5: 6e84e39c4c04e92fb8d96960458b3b25
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: navit
+Priority: extra
+Section: universe/misc
+Installed-Size: 1442
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Gilles Filippini <pini@debian.org>
+Architecture: amd64
+Version: 0.5.0~svn5530+dfsg.1-1ubuntu1
+Depends: libc6 (>= 2.14), libdbus-1-3 (>= 1.0.2), libdbus-glib-1-2 (>= 0.78), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.3.5), libfribidi0 (>= 0.19.2), libgarmin0 (>= 0~svn320), libglib2.0-0 (>= 2.24.0), libgps20 (>= 3.3), libspeechd2 (>= 0.7.1), libssl1.0.0 (>= 1.0.0), zlib1g (>= 1:1.1.4), navit-data (= 0.5.0~svn5530+dfsg.1-1ubuntu1), navit-gui-internal (= 0.5.0~svn5530+dfsg.1-1ubuntu1) | navit-gui-gtk (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Recommends: gpsd
+Suggests: maptool
+Filename: pool/universe/n/navit/navit_0.5.0~svn5530+dfsg.1-1ubuntu1_amd64.deb
+Size: 467228
+MD5sum: 77ba6f4b81bdd07c2c14cc77a5288d36
+SHA1: 07f6e30efbf9723a6599e785f2dcbf1902800406
+SHA256: 28f0d4fadbca55332f320642a6a1921065ac7edee4e597f8ea165ed0833464bd
+Description: Car navigation system with routing engine
+Homepage: http://navit.sourceforge.net/
+Description-md5: 783e456ea628a6c205c86789c03eec11
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: navit-data
+Priority: extra
+Section: universe/misc
+Installed-Size: 7194
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Gilles Filippini <pini@debian.org>
+Architecture: all
+Source: navit
+Version: 0.5.0~svn5530+dfsg.1-1ubuntu1
+Recommends: navit
+Filename: pool/universe/n/navit/navit-data_0.5.0~svn5530+dfsg.1-1ubuntu1_all.deb
+Size: 4229196
+MD5sum: 975bfdc30c1dab5ed661de6993d73795
+SHA1: 45766cb254d927574a05a7f0ea9908e8437847bd
+SHA256: c8848144857c88ac6ff5192bb604696b1558ab22bb03bcd3088ad92e19cbbbd1
+Description: Car navigation system with routing engine - data files
+Homepage: http://navit.sourceforge.net/
+Description-md5: a97d8f857d2e846ef7e02bb355a200c6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: navit-graphics-gtk-drawing-area
+Priority: extra
+Section: universe/misc
+Installed-Size: 117
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Gilles Filippini <pini@debian.org>
+Architecture: amd64
+Source: navit
+Version: 0.5.0~svn5530+dfsg.1-1ubuntu1
+Depends: libc6 (>= 2.7), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.12.0), libgtk2.0-0 (>= 2.24.0), libimlib2, librsvg2-common
+Recommends: navit (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Filename: pool/universe/n/navit/navit-graphics-gtk-drawing-area_0.5.0~svn5530+dfsg.1-1ubuntu1_amd64.deb
+Size: 31252
+MD5sum: c42e7774b6aa8567a5ce6191e3ca7988
+SHA1: c0113042c0fd0466202e049a67112e64e37e72f0
+SHA256: c00f7e0222a61bac77faac4664bdcb85754c2c55e37d6831a9175f5ec201a926
+Description: Car navigation system with routing engine - GTK+ graphic plugin
+Homepage: http://navit.sourceforge.net/
+Description-md5: 1837b5e747b802c091352d912b743429
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: navit-graphics-qt-qpainter
+Priority: extra
+Section: universe/misc
+Installed-Size: 130
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Gilles Filippini <pini@debian.org>
+Architecture: amd64
+Source: navit
+Version: 0.5.0~svn5530+dfsg.1-1ubuntu1
+Depends: libc6 (>= 2.2.5), libgcc1 (>= 1:4.1.1), libqt4-svg (>= 4:4.5.3), libqtcore4 (>= 4:4.6.1), libqtgui4 (>= 4:4.6.1), libstdc++6 (>= 4.1.1)
+Recommends: navit (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Filename: pool/universe/n/navit/navit-graphics-qt-qpainter_0.5.0~svn5530+dfsg.1-1ubuntu1_amd64.deb
+Size: 35050
+MD5sum: a0fc64f6cf0b691578aa2a6f5dbd7b3b
+SHA1: 1eb165b1352eeed46558f2efec5f80db091a3aef
+SHA256: a62f99ad673b381140bcaf933b754927573fa0a62b8fddc18d551e97658d76ee
+Description: Car navigation system with routing engine - Qt graphic plugin
+Homepage: http://navit.sourceforge.net/
+Description-md5: f7fed8c770ef4123db5ae2899e2c65bd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: navit-gui-gtk
+Priority: extra
+Section: universe/misc
+Installed-Size: 151
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Gilles Filippini <pini@debian.org>
+Architecture: amd64
+Source: navit
+Version: 0.5.0~svn5530+dfsg.1-1ubuntu1
+Depends: libc6 (>= 2.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.12.0), libgtk2.0-0 (>= 2.8.0), navit-graphics-gtk-drawing-area (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Recommends: navit (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Filename: pool/universe/n/navit/navit-gui-gtk_0.5.0~svn5530+dfsg.1-1ubuntu1_amd64.deb
+Size: 38912
+MD5sum: 87f3d2496745938bf4703c31afe9f5ca
+SHA1: 9572d0a72ad5d4aea6f140deba193bb65995ba7f
+SHA256: d44f06cae3032925fd1ca6c652581aa6ab140a43b89a0da9b6c9677a25032603
+Description: Car navigation system with routing engine - GTK+ GUI
+Homepage: http://navit.sourceforge.net/
+Description-md5: 0a235c9ef0c8378d7c7dfa9b06b6171e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: navit-gui-internal
+Priority: extra
+Section: universe/misc
+Installed-Size: 241
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Gilles Filippini <pini@debian.org>
+Architecture: amd64
+Source: navit
+Version: 0.5.0~svn5530+dfsg.1-1ubuntu1
+Depends: libc6 (>= 2.7), navit-graphics-gtk-drawing-area (= 0.5.0~svn5530+dfsg.1-1ubuntu1) | navit-graphics-qt-qpainter (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Recommends: navit (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Filename: pool/universe/n/navit/navit-gui-internal_0.5.0~svn5530+dfsg.1-1ubuntu1_amd64.deb
+Size: 82532
+MD5sum: 86c2dba0fa8e13ad3642c1436d770d8d
+SHA1: 17a2b3def038eb6f4bc2fa444f1b66ecf391909d
+SHA256: ceb34f29c289d5dbd533dba542b6f7371a46f348f236f18275e372bd5472cf27
+Description: Car navigation system with routing engine - internal GUI
+Homepage: http://navit.sourceforge.net/
+Description-md5: c66cdd6a9343846105342185cdf44171
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
