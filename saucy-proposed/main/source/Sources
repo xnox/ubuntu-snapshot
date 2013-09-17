@@ -73,34 +73,6 @@ Checksums-Sha256:
  9d81e4228329e2d5cccb018ab06bc8b734fb2dede2c4d9b5c02303d4a690b76b 1940928 augeas_1.1.0.orig.tar.gz
  45c6484a3636ec838a508db600f731bfee8bf2164d8f622981757a95f29157c2 8730 augeas_1.1.0-0ubuntu1.debian.tar.gz
 
-Package: click
-Binary: click, click-dev, python3-click, click-doc, packagekit-plugin-click
-Version: 0.4.6
-Priority: optional
-Section: admin
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Build-Depends: debhelper (>= 9~), dh-autoreconf, autopoint (>= 0.18.1), intltool, python3 (>= 3.2), python3-all, python3-setuptools, python3-debian, python3 (>= 3.3) | python3-mock, pep8, pyflakes, python3-sphinx, libglib2.0-dev (>= 2.34), libjson-glib-dev (>= 0.10), libpackagekit-glib2-dev (>= 0.7.2)
-Architecture: any all
-Standards-Version: 3.9.4
-Format: 3.0 (native)
-Directory: pool/main/c/click
-Files:
- 0149b41f70380c0e4afa99eef574ee23 1955 click_0.4.6.dsc
- 924201c793adfdf4dd22b1ec932ee7eb 73441 click_0.4.6.tar.gz
-Vcs-Bzr: http://bazaar.launchpad.net/+branch/click
-Package-List: 
- click deb admin optional
- click-dev deb admin optional
- click-doc deb doc optional
- packagekit-plugin-click deb admin optional
- python3-click deb python optional
-Checksums-Sha1:
- 7ca76843a2d415f93086aa4a5d401369a37efc74 1955 click_0.4.6.dsc
- 93d82cfcb47c02e2619fb24aa377bbf1474f9801 73441 click_0.4.6.tar.gz
-Checksums-Sha256:
- fddd71403b771117634da17c1d8b9494151e98324209aa201534f881ffc969f1 1955 click_0.4.6.dsc
- 55291c4fc13dea2998766b401e74eaaf0bcca3ea5e39c19b9de5879f94cba501 73441 click_0.4.6.tar.gz
-
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
 Version: 0.10.1-2
@@ -768,6 +740,37 @@ Checksums-Sha256:
  f8063116637ee539d2a229238e4453a4b7bb2bf2a5c53c9ece4d383d61d9a666 8221576 nova_2013.2~b3.orig.tar.gz
  669978abf9cc58640186559cf9cc89cbadc5da4b8b975c07f0e7a47faa74b3d1 35469 nova_2013.2~b3-0ubuntu2.debian.tar.gz
 Testsuite: autopkgtest
+
+Package: nvidia-settings-319-updates
+Binary: nvidia-settings-319-updates, nvidia-settings-310-updates, nvidia-settings-313-updates
+Version: 319.49-0ubuntu1
+Section: x11
+Maintainer: Ubuntu MOTU Developers <ubuntu-motu@lists.ubuntu.com>
+Original-Maintainer: Debian NVIDIA Maintainers <pkg-nvidia-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 7), m4, libgtk2.0-dev, libxext-dev, xutils-dev, libxrandr-dev, libgl1-mesa-dev | libgl-dev, libxxf86vm-dev, libxv-dev, libvdpau-dev, quilt
+Architecture: i386 amd64 lpia
+Standards-Version: 3.8.0
+Format: 1.0
+Directory: pool/main/n/nvidia-settings-319-updates
+Files:
+ 6e39a19919c9ed4d295c3d49e2ac99eb 1789 nvidia-settings-319-updates_319.49-0ubuntu1.dsc
+ 1a216e68415df9a5019dac171cbe6e88 1994930 nvidia-settings-319-updates_319.49.orig.tar.gz
+ 4906da6ca667e2ec13f807bd4f4b8db4 9044 nvidia-settings-319-updates_319.49-0ubuntu1.diff.gz
+Uploaders: Randall Donald <rdonald@debian.org>
+Vcs-Browser: http://github.com/tseliot/nvidia-settings
+Vcs-Git: git://github.com/tseliot/nvidia-settings.git
+Package-List: 
+ nvidia-settings-310-updates deb contrib/x11 optional
+ nvidia-settings-313-updates deb contrib/x11 optional
+ nvidia-settings-319-updates deb contrib/x11 optional
+Checksums-Sha1:
+ 2fc358ab4d39433b3e77b5a2ad7b87b14726fc9e 1789 nvidia-settings-319-updates_319.49-0ubuntu1.dsc
+ 261c673b2b4e12c82e0f8159f2bc88f1c9b59e7a 1994930 nvidia-settings-319-updates_319.49.orig.tar.gz
+ cd603333d2089e718cd577d7f593e1a9ece43535 9044 nvidia-settings-319-updates_319.49-0ubuntu1.diff.gz
+Checksums-Sha256:
+ 688217071457cd3169bf7b640a8df5cc9a95bf7062225d2acbcb08681d08a22d 1789 nvidia-settings-319-updates_319.49-0ubuntu1.dsc
+ 389e6bd7b129b220b4b8f420259eb32632536194ca5488c8d14f491ad7309932 1994930 nvidia-settings-319-updates_319.49.orig.tar.gz
+ 96280ec4e7bca0179f22d848cba16c11a6f3205331a1541fc25565f9a6c1f4b9 9044 nvidia-settings-319-updates_319.49-0ubuntu1.diff.gz
 
 Package: python-defaults
 Binary: python, python-minimal, python-examples, python-dev, libpython-dev, libpython-stdlib, idle, python-doc, python-dbg, libpython-dbg, python-all, python-all-dev, python-all-dbg, libpython-all-dev, libpython-all-dbg
