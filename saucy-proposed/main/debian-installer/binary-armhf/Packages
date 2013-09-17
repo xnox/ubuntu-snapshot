@@ -1,0 +1,37 @@
+Package: cdrom-retriever
+Priority: optional
+Section: debian-installer
+Installed-Size: 54
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Version: 1.32
+Provides: retriever
+Depends: cdebconf-udeb, cdrom-detect
+Filename: pool/main/c/cdrom-retriever/cdrom-retriever_1.32_all.udeb
+Size: 14328
+MD5sum: ca21b1041431b02c19eede4b1399c682
+SHA1: 51878ba4d466fa2eee7d16ca686775ed685405df
+SHA256: 35fbd63385b3b4476331246f6ffd7504b9220c6a4f5b5e700cb31a31ebfb6286
+Description: Fetch modules from a CDROM
+ This is a retriever module that just symlinks files around since
+ the CDROM is supposed to be mounted on /cdrom.
+
+Package: load-cdrom
+Priority: extra
+Section: debian-installer
+Installed-Size: 15
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Architecture: all
+Source: cdrom-retriever
+Version: 1.32
+Depends: cdebconf-udeb, cdrom-retriever, anna (>= 1.07)
+Filename: pool/main/c/cdrom-retriever/load-cdrom_1.32_all.udeb
+Size: 3936
+MD5sum: 566e7a17a0e8c4e32d05bb95e0db3d99
+SHA1: b7678725c9b8d3b3c19113e16e92b05f0c7ea36b
+SHA256: cd798d957f05227c7cbd7bae880ea6e076a10a514f28433ea4659416bc81d3a8
+Description: Load installer components from CD
+Installer-Menu-Item: 1600
+
