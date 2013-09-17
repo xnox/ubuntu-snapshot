@@ -1,3 +1,111 @@
+Package: apport
+Priority: optional
+Section: utils
+Installed-Size: 1172
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Version: 2.12.2-0ubuntu1
+Replaces: python-apport (<< 2.2-0ubuntu1)
+Depends: python3, python3-apport (>= 2.12.2-0ubuntu1), lsb-base (>= 3.0-6), python3-gi, gir1.2-glib-2.0 (>= 1.29.17), sysv-rc (>= 2.86.ds1-14.1ubuntu2), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
+Recommends: apport-symptoms, policykit-1
+Suggests: apport-gtk | apport-kde
+Breaks: python-apport (<< 2.2-0ubuntu1)
+Filename: pool/main/a/apport/apport_2.12.2-0ubuntu1_all.deb
+Size: 184092
+MD5sum: 94250c8e8c02dcab971a327fb89fc211
+SHA1: 9cfdb196a144718b9347b6e733604d2bde6a6ed2
+SHA256: c49881102c6da63e5aab366ad4b1b020f13e85efc7f8e627fb8afd4dd66d1aa4
+Description: automatically generate crash reports for debugging
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: c04626471654f9246cf5e28b560d262e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: apport-gtk
+Priority: optional
+Section: gnome
+Installed-Size: 199
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.2-0ubuntu1
+Depends: python3, python3-apport (>= 2.12.2-0ubuntu1), gir1.2-gtk-3.0 (>= 3.1.90), gir1.2-wnck-3.0, python3-gi, apport (>= 0.41), procps, x-terminal-emulator
+Recommends: update-notifier, gdb | gdb-minimal
+Filename: pool/main/a/apport/apport-gtk_2.12.2-0ubuntu1_all.deb
+Size: 10080
+MD5sum: dba8fef04073f0867b2859645368fef5
+SHA1: 6daa1e789e7fb7904d6a24757f0003f0d1ed67d3
+SHA256: 83ca09339e1cc459a783dde21b6bef86de5e88e5cdbd3807be9c09799f9e18e2
+Description: GTK+ frontend for the apport crash report system
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 2f45e17d5bf22355d7921dba196ae6dd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: apport-noui
+Priority: optional
+Section: utils
+Installed-Size: 144
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.2-0ubuntu1
+Depends: python3, python3-apport (>= 2.12.2-0ubuntu1), apport (>= 0.41), procps, gdb-minimal | gdb, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
+Filename: pool/main/a/apport/apport-noui_2.12.2-0ubuntu1_all.deb
+Size: 2174
+MD5sum: e95a8fddfdac578a16080b8c30baf9ed
+SHA1: 4334abe4079a9f82ee5c77a7eb6715edfe2b74d7
+SHA256: b4dc5b7b35d9ff62a8f2faaeb138b769beecd13cd9307a24929bc71315e6cc24
+Description: tools for automatically reporting Apport crash reports
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 679b8a64ce43a788744dbacfc594051c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apport-retrace
+Priority: optional
+Section: devel
+Installed-Size: 177
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.2-0ubuntu1
+Depends: python (>= 2.7), python3, python-apport (>= 2.12.2-0ubuntu1), apt, binutils, dpkg-dev, gdb, libc6-dbg | libc6-dbgsym | libc-dbg
+Suggests: gdb-multiarch
+Filename: pool/main/a/apport/apport-retrace_2.12.2-0ubuntu1_all.deb
+Size: 13188
+MD5sum: 2684a827f729b1dc88f15368aca46f03
+SHA1: 98528984c5e67fe48ae5511e068fb0d092e8bb63
+SHA256: 4b209036486785498913095b2ee8cad4f640e2583a6e81abb97e191d956e3b4c
+Description: tools for reprocessing Apport crash reports
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 7608c287131a28c4611767ba61f02050
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: dh-apport
+Priority: optional
+Section: devel
+Installed-Size: 167
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.2-0ubuntu1
+Depends: perl
+Filename: pool/main/a/apport/dh-apport_2.12.2-0ubuntu1_all.deb
+Size: 7760
+MD5sum: 888f7a2800af3e4173236f93221aa7a8
+SHA1: 6d55aa8793a35c8bed6e4527d5c3d4ef296a51c3
+SHA256: 0c1883ae4bb011bdded0d908767aa509cc9cb3f1c4616333f7f056e6811027b3
+Description: debhelper extension for the apport crash report system
+Multi-Arch: foreign
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: a5c779df9e0b356100c76151d7cef527
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: firefox
 Priority: optional
 Section: web
@@ -3847,6 +3955,27 @@ Description-md5: 36aea35250eb42eb8dfe870c124f95c3
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-apport
+Priority: optional
+Section: python
+Installed-Size: 526
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.2-0ubuntu1
+Depends: python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2), python-apt (>= 0.7.9), python-problem-report (>= 0.94), lsb-release, python-launchpadlib (>= 1.5.7)
+Recommends: apport
+Filename: pool/main/a/apport/python-apport_2.12.2-0ubuntu1_all.deb
+Size: 90622
+MD5sum: 740175d5c15198d60734b10fb1cb4b0c
+SHA1: 4640f37d05f87fa520590bab0097ec12c77d4d5a
+SHA256: f5225c9462caf5e608cde3ce5cc833c1674d48e00a0c8fbc9e7687f169f6b8fa
+Description: Python library for Apport crash report handling
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 23518535b15759d78d26010a6b43517a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-dbg
 Priority: extra
 Section: python
@@ -4012,6 +4141,71 @@ Description-md5: 9e7471c108af7843da4a920afe750d19
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-problem-report
+Priority: optional
+Section: python
+Installed-Size: 174
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.2-0ubuntu1
+Depends: python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2)
+Filename: pool/main/a/apport/python-problem-report_2.12.2-0ubuntu1_all.deb
+Size: 10664
+MD5sum: e474818cb20261f0c087c1a2d87c32da
+SHA1: ff2e2333c507440d3fd2a591b6f8eacedf981e2d
+SHA256: 4b9d3d0995b87fad152c0f3631194ac60405e2ca2bb6c93d009122a43860f9ce
+Description: Python library to handle problem reports
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 06dbdefca60b63fb6c44c8daf9a9cc5f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-apport
+Priority: optional
+Section: python
+Installed-Size: 513
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.2-0ubuntu1
+Depends: python3:any (>= 3.2.3-3~), python3 (>= 3.0), python3-apt (>= 0.7.9), python3-problem-report (>= 0.94), lsb-release
+Recommends: apport
+Suggests: python3-launchpadlib
+Filename: pool/main/a/apport/python3-apport_2.12.2-0ubuntu1_all.deb
+Size: 90358
+MD5sum: 30c819774ebda8c621673afa5f0b4d6c
+SHA1: 8502343f12ac8a711ea67eab21f57200e77df490
+SHA256: c2f881fea0ab5849cd75fcfcf4597d53bcf98fc93ae20440a0f69375b0f4f0aa
+Description: Python 3 library for Apport crash report handling
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 90fc3702a69ad06599a95a46ceb5778a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: python3-distupgrade
+Priority: standard
+Section: python
+Installed-Size: 630
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: ubuntu-release-upgrader
+Version: 1:0.204
+Replaces: python3-update-manager (<< 1:0.165)
+Depends: python3 (>= 3.2), python3:any (>= 3.2.3-3~), python3-update-manager, python3-apt (>= 0.8.5~), lsb-release
+Breaks: python3-update-manager (<< 1:0.165)
+Filename: pool/main/u/ubuntu-release-upgrader/python3-distupgrade_0.204_all.deb
+Size: 137000
+MD5sum: 56747a694052b63160e04cbb212dcdfb
+SHA1: f3e94e90ec9c87ac0b9b8fe279e5733bf0ddf53e
+SHA256: 54bc154d8b2d629d53fd8bf3bffcf96d2247fa4233c67e224588eb20c4ca86bf
+Description: manage release upgrades
+Description-md5: f6e22affea82016bac7bf2c9371af261
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
 Package: python3-lxc
 Priority: optional
 Section: python
@@ -4033,6 +4227,27 @@ Description-md5: ee623a31db200104a7207d9de42b8f04
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: edubuntu-desktop-gnome
+
+Package: python3-problem-report
+Priority: optional
+Section: python
+Installed-Size: 170
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.2-0ubuntu1
+Depends: python3:any (>= 3.2.3-3~), python3 (>= 3.0)
+Filename: pool/main/a/apport/python3-problem-report_2.12.2-0ubuntu1_all.deb
+Size: 10712
+MD5sum: 7683013e8bf9e472f39b2eefa1628a63
+SHA1: 80790b30aa1cd421d6e4233904217c00ff085780
+SHA256: 1aacea3355cab484fe7e1d1949b4a2e85e15d3955a50ab16a23c53eb17e5ff2e
+Description: Python 3 library to handle problem reports
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 9c38d91ac205b1680832021377d9156d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: qemu-common
 Priority: optional
@@ -5827,6 +6042,49 @@ Description: Email, RSS and newsgroup client - testsuite
 Description-md5: 743f5679caf063b6d5ed211311011154
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: ubuntu-release-upgrader-core
+Priority: standard
+Section: admin
+Installed-Size: 312
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: ubuntu-release-upgrader
+Version: 1:0.204
+Replaces: update-manager (<< 1:0.165), update-manager-core (<< 1:0.165)
+Depends: python3, python3:any (>= 3.2), python3-distupgrade (= 1:0.204)
+Recommends: libpam-modules (>= 1.0.1-9ubuntu3)
+Breaks: software-properties (<< 0.9.27), update-manager (<< 1:0.165), update-manager-core (<< 1:0.165)
+Filename: pool/main/u/ubuntu-release-upgrader/ubuntu-release-upgrader-core_0.204_all.deb
+Size: 24282
+MD5sum: 2aa98bb9346aa8fe2ee399e9b12a7cca
+SHA1: 3e7f1b4423ab27576e6c0619537e53efe168be8c
+SHA256: 35eca21c0f95985e167d392d6a940f35ffef647b3738b248de78cbe1bbf9b57f
+Description: manage release upgrades
+Description-md5: 9b6ae3ba71aff05989e4c93c17227206
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: ubuntu-release-upgrader-gtk
+Priority: optional
+Section: admin
+Installed-Size: 219
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: ubuntu-release-upgrader
+Version: 1:0.204
+Depends: ubuntu-release-upgrader-core (= 1:0.204), update-manager, python3-distupgrade (= 1:0.204), python3-dbus, python3-gi (>= 3.8), gir1.2-vte-2.90, gir1.2-gtk-3.0, gir1.2-webkit-3.0
+Filename: pool/main/u/ubuntu-release-upgrader/ubuntu-release-upgrader-gtk_0.204_all.deb
+Size: 11156
+MD5sum: ab04043e809bfa1732f86b6b64f70692
+SHA1: 974aef72abda4af3a0514f70af0c76f0395dcb3e
+SHA256: e2027c264f666c752bf4a86b3a1002ffcfe32c8c2dc2b432338c5699cc99027b
+Description: manage release upgrades
+Description-md5: 0f775b1b3e524ee71526ea41b76d44cb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: umockdev
 Priority: optional
