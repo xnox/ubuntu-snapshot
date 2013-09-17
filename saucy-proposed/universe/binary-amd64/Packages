@@ -1098,19 +1098,19 @@ Origin: Ubuntu
 Package: gcc-snapshot
 Priority: extra
 Section: universe/devel
-Installed-Size: 501324
+Installed-Size: 503250
 Maintainer: Ubuntu Core developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian GCC Maintainers <debian-gcc@lists.debian.org>
 Architecture: amd64
-Version: 20130821-1ubuntu1
+Version: 20130917-1ubuntu1
 Provides: c++-compiler, c++abi2-dev
-Depends: binutils (>= 2.23.52.20130727), libc6-dev-i386 (>= 2.11), libc6-dev-x32 (>= 2.11), libc6-dev (>= 2.13-0ubuntu6), libasound2 (>= 1.0.16), libatk1.0-0 (>= 1.12.4), libc6 (>= 2.17), libc6-i386 (>= 2.17), libc6-x32 (>= 2.17), libcairo2 (>= 1.2.4), libcloog-isl4 (>= 0.17), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.2.1), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.24.0), libgmp10, libgtk2.0-0 (>= 2.24.0), libice6 (>= 1:1.0.0), libisl10 (>= 0.10), libmpc3, libmpfr4 (>= 3.1.1), libpango-1.0-0 (>= 1.22.0), libpangocairo-1.0-0 (>= 1.14.0), libpangoft2-1.0-0 (>= 1.14.0), libsm6, libxrandr2 (>= 4.3), libxrender1, libxtst6, zlib1g (>= 1:1.1.4), libecj-java (>= 3.5.1), python
-Suggests: binutils-gold (>= 2.23.52.20130727)
-Filename: pool/universe/g/gcc-snapshot/gcc-snapshot_20130821-1ubuntu1_amd64.deb
-Size: 167340806
-MD5sum: 286a9ba3c9baf95b325067d5b65d20ec
-SHA1: adaf1535a0cf8609b57375ca620b30d153ecdbf0
-SHA256: 5b97bceb4288a63c913f603eb4345989947e638753849da62bb096cc64deb295
+Depends: binutils (>= 2.23.52.20130913), libc6-dev-i386 (>= 2.11), libc6-dev-x32 (>= 2.11), libc6-dev (>= 2.13-0ubuntu6), libasound2 (>= 1.0.16), libatk1.0-0 (>= 1.12.4), libc6 (>> 2.17), libc6 (<< 2.18), libc6-i386 (>= 2.17), libc6-x32 (>= 2.17), libcairo2 (>= 1.2.4), libcloog-isl4 (>= 0.17), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.2.1), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.24.0), libgmp10, libgtk2.0-0 (>= 2.24.0), libice6 (>= 1:1.0.0), libisl10 (>= 0.10), libmpc3, libmpfr4 (>= 3.1.1), libpango-1.0-0 (>= 1.22.0), libpangocairo-1.0-0 (>= 1.14.0), libpangoft2-1.0-0 (>= 1.14.0), libsm6, libxrandr2 (>= 4.3), libxrender1, libxtst6, zlib1g (>= 1:1.1.4), libecj-java (>= 3.5.1), python
+Suggests: binutils-gold (>= 2.23.52.20130913)
+Filename: pool/universe/g/gcc-snapshot/gcc-snapshot_20130917-1ubuntu1_amd64.deb
+Size: 167972082
+MD5sum: 2080a927b6a616197e3da9e3e0f7668b
+SHA1: 8b27c517a6f499adf4e7364a260f344a01b8b987
+SHA256: d30563134a20ef51b857da2cfb691f582f9cd0ee6829094746fb36bbd146a07d
 Description: A SNAPSHOT of the GNU Compiler Collection
 Homepage: http://gcc.gnu.org/
 Description-md5: 136895aae4810995ff42b63db3299ed4
@@ -2264,6 +2264,51 @@ Description: GETFEM++ generic finite element library
 Multi-Arch: same
 Homepage: http://home.gna.org/getfem/
 Description-md5: 6f04ed9278a95b0674fd911db214c110
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgl1-mesa-dri-experimental
+Priority: optional
+Section: universe/libs
+Installed-Size: 81
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: mesa
+Version: 9.2-1ubuntu2
+Depends: libgl1-mesa-dri (>= 7.11.1)
+Breaks: libgl1-mesa-glx (<< 7.11.1), libgl1-mesa-glx-no-multiarch, xserver-xorg-core (<< 2:1.10.2-2), xserver-xorg-core-no-multiarch
+Filename: pool/universe/m/mesa/libgl1-mesa-dri-experimental_9.2-1ubuntu2_amd64.deb
+Size: 4884
+MD5sum: 37cb402bf956b7c48531a439f07a1ba2
+SHA1: 8976a1f6f35e875e9b5a655e5f4c8f7a9db942d9
+SHA256: 95c7e97601b34aba46a86ee3b997cbf3a01b4cecdcfa9c5d4578f1458060e50b
+Description: free implementation of the OpenGL API -- Extra DRI modules
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: f8b3ece44551927dfcce4afcc27c1792
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libgl1-mesa-dri-experimental-dbg
+Priority: extra
+Section: universe/debug
+Installed-Size: 73
+Maintainer: Ubuntu X-SWAT <ubuntu-x@lists.ubuntu.com>
+Original-Maintainer: Debian X Strike Force <debian-x@lists.debian.org>
+Architecture: amd64
+Source: mesa
+Version: 9.2-1ubuntu2
+Depends: libgl1-mesa-dri-experimental (= 9.2-1ubuntu2)
+Filename: pool/universe/m/mesa/libgl1-mesa-dri-experimental-dbg_9.2-1ubuntu2_amd64.deb
+Size: 4654
+MD5sum: 6f7ef28350d4c7ed8b89d7e0dd34d70c
+SHA1: 0c1f9c3bf9c9179e2c9b8d9cea288b647a61cfe9
+SHA256: ba9d4cdccfa6cb5963482b35d1004abf98764783fc4ade9206f1e61dd7f28587
+Description: Debugging symbols for the experimental Mesa DRI modules
+Multi-Arch: same
+Homepage: http://mesa3d.sourceforge.net/
+Description-md5: 24f835b4e24097fb9c67cbdde6d6e9d2
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
