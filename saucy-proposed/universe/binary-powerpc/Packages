@@ -2178,6 +2178,78 @@ Description-md5: d6b9e31011dcc86ff7be8639344c068d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libopenmpi-dbg
+Priority: extra
+Section: universe/devel
+Installed-Size: 18956
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Open MPI Maintainers <pkg-openmpi-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: openmpi
+Version: 1.4.5-1ubuntu2
+Replaces: openmpi-dbg
+Provides: openmpi-dbg
+Depends: openmpi-bin (= 1.4.5-1ubuntu2), libopenmpi1.3 (= 1.4.5-1ubuntu2)
+Conflicts: openmpi-dbg
+Filename: pool/universe/o/openmpi/libopenmpi-dbg_1.4.5-1ubuntu2_powerpc.deb
+Size: 6442936
+MD5sum: 75c084d98b8af34393333403850eaaa6
+SHA1: 4683f94173da12877eeaee25600c29344320f67d
+SHA256: a399c802301162628051444cd0ff6613c633a8d9cbd88e23e68fe4967cb0e9ca
+Description: high performance message passing library -- debug library
+Homepage: http://www.open-mpi.org/
+Description-md5: b3e7668c1dd8453a62323e210bc7a4d3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libopenmpi-dev
+Priority: extra
+Section: universe/libdevel
+Installed-Size: 11048
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Open MPI Maintainers <pkg-openmpi-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: openmpi
+Version: 1.4.5-1ubuntu2
+Replaces: openmpi-bin (<= 1.2.4-0), openmpi-dev
+Provides: openmpi-dev
+Depends: libc6 (>= 2.8), libopenmpi1.3 (= 1.4.5-1ubuntu2), openmpi-common (= 1.4.5-1ubuntu2), libibverbs-dev
+Conflicts: openmpi-dev
+Filename: pool/universe/o/openmpi/libopenmpi-dev_1.4.5-1ubuntu2_powerpc.deb
+Size: 2590480
+MD5sum: 9f08003541a06d87c4fed18d54426085
+SHA1: 8ad881b633584a28b5632c756731c7d22182779d
+SHA256: 6708843d88418eaef397bb42df35113b0865240111582a53babbdc8aae9c761b
+Description: high performance message passing library -- header files
+Homepage: http://www.open-mpi.org/
+Description-md5: 8e5ff602ff3f7813a4a4cf41dfc27331
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libopenmpi1.3
+Priority: extra
+Section: universe/libs
+Installed-Size: 4003
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Open MPI Maintainers <pkg-openmpi-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: openmpi
+Version: 1.4.5-1ubuntu2
+Replaces: libopenmpi1, openmpi-libs0
+Provides: openmpi-libs0
+Depends: libc6 (>= 2.15), libgcc1 (>= 1:4.1.1), libibverbs1 (>= 1.1), libnuma1, libstdc++6 (>= 4.1.1), libtorque2 (>= 2.4.16+dfsg)
+Conflicts: libopenmpi1, openmpi-libs0
+Filename: pool/universe/o/openmpi/libopenmpi1.3_1.4.5-1ubuntu2_powerpc.deb
+Size: 1290108
+MD5sum: 656bc113500de56bde8cb1bd13d715ee
+SHA1: 2a26ce0050cb43013f6e449667220ddb08928c77
+SHA256: 9e953fd54d771febf8d9cc3c6c79f8efb8c3aab809338813b06ebb057376db80
+Description: high performance message passing library -- shared library
+Homepage: http://www.open-mpi.org/
+Description-md5: 8026293bec4a895cb11750955cc4fd90
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libpari-dbg
 Priority: extra
 Section: universe/libdevel
@@ -3330,6 +3402,50 @@ SHA1: 9f9f12881d7416ddb723715170c2740001630425
 SHA256: 0f9c4f5b636619bc8c6e44447eea84eebf1e25e9193636dc4484ca0673c73cb4
 Description: OCaml cross-compiler based on mingw -- Meta-package
 Description-md5: de81facfed8d9a5e7bfa68fae6882c76
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openmpi-bin
+Priority: optional
+Section: universe/net
+Installed-Size: 386
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Open MPI Maintainers <pkg-openmpi-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: openmpi
+Version: 1.4.5-1ubuntu2
+Depends: libc6 (>= 2.8), libgcc1 (>= 1:4.1.1), libopenmpi1.3, libstdc++6 (>= 4.4.0), openmpi-common (= 1.4.5-1ubuntu2)
+Recommends: openmpi-checkpoint
+Suggests: gfortran
+Filename: pool/universe/o/openmpi/openmpi-bin_1.4.5-1ubuntu2_powerpc.deb
+Size: 158470
+MD5sum: c851ff304a43b48f975b307388902a00
+SHA1: aa867c57b00caec12b2f19c640d3415db1e56f0a
+SHA256: c953ac1a1cb7d5f71df3a272a2ce138303877183b6d956051d0b6c44a11cf48a
+Description: high performance message passing library -- binaries
+Homepage: http://www.open-mpi.org/
+Description-md5: 3766094d9bbf1b8d522f89c53eed9162
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: openmpi-checkpoint
+Priority: extra
+Section: universe/net
+Installed-Size: 162
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Open MPI Maintainers <pkg-openmpi-maintainers@lists.alioth.debian.org>
+Architecture: powerpc
+Source: openmpi
+Version: 1.4.5-1ubuntu2
+Depends: libc6 (>= 2.8), libcr0 (>= 0.8.2), libopenmpi1.3, openmpi-bin (= 1.4.5-1ubuntu2), blcr-util
+Filename: pool/universe/o/openmpi/openmpi-checkpoint_1.4.5-1ubuntu2_powerpc.deb
+Size: 38920
+MD5sum: eeaee9d34909651a6d71da34e49e5b4e
+SHA1: a4f8b520275ced91c2450f4cd1363e8a8eee669b
+SHA256: b2d6c5b06f73ed72a27e47d5c472ff08a5b456c129843f5d33e8245cd2bbed30
+Description: high performance message passing library -- checkpoint support
+Homepage: http://www.open-mpi.org/
+Description-md5: 71be90d05bb19a13eb6041d46a58aed1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
