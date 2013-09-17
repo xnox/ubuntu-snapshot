@@ -314,6 +314,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-dvd-live
 
+Package: libatk-adaptor-data
+Priority: optional
+Section: universe/misc
+Installed-Size: 34
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
+Architecture: all
+Source: at-spi2-atk
+Version: 2.9.92-0ubuntu1
+Replaces: libatk-adaptor-schemas
+Conflicts: libatk-adaptor-schemas
+Filename: pool/universe/a/at-spi2-atk/libatk-adaptor-data_2.9.92-0ubuntu1_all.deb
+Size: 2502
+MD5sum: f8e049674eb615c42a4ca8d9aa67a455
+SHA1: 16700b94d393dad0547fd23007883bc7243bfb0e
+SHA256: 598091232507659d7b24306ade864b5d96fe4db4cc89d2bab2aa5054ebf5071b
+Description: AT-SPI 2 toolkit bridge - transitional dummy package
+Homepage: http://live.gnome.org/Accessibility
+Description-md5: 69b2fccd736b65779e1a0bfd15cbc466
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libcdd-doc
 Priority: optional
 Section: universe/doc
@@ -593,26 +615,6 @@ SHA256: b15c7a31fef6203273e496acbb6223befca5f7433a37daa4d801055cabb00011
 Description: Geographic objects support for PostgreSQL -- JDBC support
 Homepage: http://postgis.refractions.net/
 Description-md5: 9a0091420d5a2bf380ec2f5dff0a1246
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: librecad-data
-Priority: optional
-Section: universe/graphics
-Installed-Size: 56060
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
-Architecture: all
-Source: librecad
-Version: 2.0.0~rc2+nolibs-1
-Filename: pool/universe/libr/librecad/librecad-data_2.0.0~rc2+nolibs-1_all.deb
-Size: 11922210
-MD5sum: 28748622f1536bd78dae53c1a8eb6a75
-SHA1: 472f68e28a781d2198965a542da21689db31458f
-SHA256: 20fa567dd8dd3008f3b5054c0703185cc2b4c80391c3e9e9681b4ca8b8fe10f3
-Description: Computer-aided design (CAD) system -- shared files
-Homepage: http://www.librecad.org/
-Description-md5: 0e5eafc76941eb84c7ad1d26fcab39e8
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1522,46 +1524,47 @@ Description-md5: a89a4cb17bc1ec6ec1a8abe86ce572a0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: python-nose2
+Package: python-pyatspi
 Priority: optional
 Section: universe/python
-Installed-Size: 434
+Installed-Size: 228
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Barry Warsaw <barry@debian.org>
+Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
 Architecture: all
-Source: nose2
-Version: 0.4.7-2
-Depends: python-pkg-resources, python-six, python (>= 2.7), python (<< 2.8)
-Suggests: python-nose2-doc, python3-nose2
-Filename: pool/universe/n/nose2/python-nose2_0.4.7-2_all.deb
-Size: 77990
-MD5sum: 5c55444b6a90efe28550fae5e520bb9f
-SHA1: 5e84a39b6f35f0ca48ddb4d6cf1e931018f1af6c
-SHA256: 053e287c60790ca3dc00ad12661c5fe05822773f620095c6b9daf343b6c9b5d7
-Description: next generation of nicer testing for Python (Python 2)
-Homepage: https://nose2.readthedocs.org/en/latest/index.html
-Description-md5: 2410efd63fa229942ca2ec46dbe036a0
+Source: pyatspi
+Version: 2.9.92+dfsg-0ubuntu1
+Replaces: python-pyatspi2 (<< 2.7.2+dfsg-2)
+Depends: python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2), python-gi (>= 2.90.1), gir1.2-atspi-2.0 (>= 2.9.90), libatk-adaptor, libgail-common
+Breaks: python-pyatspi2 (<< 2.7.2+dfsg-2)
+Filename: pool/universe/p/pyatspi/python-pyatspi_2.9.92+dfsg-0ubuntu1_all.deb
+Size: 41662
+MD5sum: 36fe9133795fe14f9c864f2a9c624f4d
+SHA1: 020c7f4fb4c791f58bf0d71be71e7a93c0287bcc
+SHA256: 0d266f319af980ad3a1c4784e448073fd81c81733e95179a6151525a00b6626d
+Description: Assistive Technology Service Provider Interface - Python bindings
+Homepage: http://live.gnome.org/Accessibility
+Description-md5: 0659b472046cce3ac50d83e2ac699e4b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: python-nose2-doc
+Package: python-pyatspi2
 Priority: optional
-Section: universe/doc
-Installed-Size: 1890
+Section: universe/python
+Installed-Size: 29
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Barry Warsaw <barry@debian.org>
+Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
 Architecture: all
-Source: nose2
-Version: 0.4.7-2
-Depends: libjs-sphinxdoc (>= 1.0)
-Filename: pool/universe/n/nose2/python-nose2-doc_0.4.7-2_all.deb
-Size: 237762
-MD5sum: 32d10b695e073d8cb9d7364ea49edfdb
-SHA1: 7dbcbadb3bfbf2936d751d909fa34e122713d986
-SHA256: e462293ce8edaf0db81963f3563f0fc414673caad5fcecbb76b3f5e8e37419ac
-Description: next generation of nicer testing for Python (documentation)
-Homepage: https://nose2.readthedocs.org/en/latest/index.html
-Description-md5: 50ead02182b7a6c97427fb6c98a93646
+Source: pyatspi
+Version: 2.9.92+dfsg-0ubuntu1
+Depends: python-pyatspi (= 2.9.92+dfsg-0ubuntu1)
+Filename: pool/universe/p/pyatspi/python-pyatspi2_2.9.92+dfsg-0ubuntu1_all.deb
+Size: 1600
+MD5sum: 65d4a162f54ffef98d9d7ee31e455de2
+SHA1: de393ac3e5ccdd21e285a154bf82cb66d65a18aa
+SHA256: e293b9e64c04e09da94c84aac0558938b2ea857e9be7ad1002f151f8600dd4a7
+Description: Transitional package for assistive technology Python bindings
+Homepage: http://live.gnome.org/Accessibility
+Description-md5: cdc8429d7e56e05187298c20181377b0
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -1587,25 +1590,24 @@ Description-md5: 0eb68e98a15dd86d677ee3b3f9ebf41c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: python3-nose2
+Package: python3-pyatspi2
 Priority: optional
 Section: universe/python
-Installed-Size: 389
+Installed-Size: 29
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Barry Warsaw <barry@debian.org>
+Original-Maintainer: Debian Accessibility Team <debian-accessibility@lists.debian.org>
 Architecture: all
-Source: nose2
-Version: 0.4.7-2
-Depends: python3-pkg-resources, python3-six, python3:any (>= 3.2.3-3~), python3 (>= 3.2)
-Suggests: python-nose2, python-nose2-doc
-Filename: pool/universe/n/nose2/python3-nose2_0.4.7-2_all.deb
-Size: 76138
-MD5sum: 22b24d4aeace121efb78a88290dcdf02
-SHA1: fb2132019cf24fa4e03bfc64829fd3054c78e200
-SHA256: 81310437de193b503cf960204a81b0372c5dbb913006c2d9c1a91f1c571fc43c
-Description: next generation of nicer testing for Python (Python 3)
-Homepage: https://nose2.readthedocs.org/en/latest/index.html
-Description-md5: f3d7e24837af5a3d7f9e07bf62d44b7b
+Source: pyatspi
+Version: 2.9.92+dfsg-0ubuntu1
+Depends: python3-pyatspi (= 2.9.92+dfsg-0ubuntu1)
+Filename: pool/universe/p/pyatspi/python3-pyatspi2_2.9.92+dfsg-0ubuntu1_all.deb
+Size: 1608
+MD5sum: 3e8088c5180d49565c6f475ebfdd705c
+SHA1: 6f14e081b9dad268910ce58de93d28bee6ed0b32
+SHA256: f4633ab5605a71328aff5fdb6341bbc42f9476f087f0080ce065bbf7719aa1b4
+Description: Transitional package for assistive technology Python3 bindings
+Homepage: http://live.gnome.org/Accessibility
+Description-md5: 5f14178712d737095f110475c8c15e38
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
