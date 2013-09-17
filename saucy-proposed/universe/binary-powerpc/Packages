@@ -1009,6 +1009,44 @@ Description-md5: 264e50866c900ec4a639f91ed62bd407
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: fwts
+Priority: optional
+Section: universe/devel
+Installed-Size: 612
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: powerpc
+Version: 13.09.01-0ubuntu1
+Depends: libfwtsiasl1 (= 13.09.01-0ubuntu1), libfwtsacpica1 (= 13.09.01-0ubuntu1), libfwts1 (= 13.09.01-0ubuntu1), libc6 (>= 2.7), pciutils
+Suggests: dmidecode, net-tools, wireless-tools, bluez, xinput, pulseaudio-utils
+Filename: pool/universe/f/fwts/fwts_13.09.01-0ubuntu1_powerpc.deb
+Size: 156104
+MD5sum: 77ccbd5b635455508b575960d626e5b9
+SHA1: bd21686e45ed69ff977250c1b38690f0a71d6418
+SHA256: 266b5b9e42788ee45457f1ee2ee6dfae257bb6fa9faa5243fbb225a9a90033eb
+Description: FirmWare Test Suite
+Description-md5: d6b6141d7ca394b5197f5a8e24578b35
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: fwts-frontend
+Priority: optional
+Section: universe/devel
+Installed-Size: 82
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: all
+Source: fwts
+Version: 13.09.01-0ubuntu1
+Depends: dialog, fwts
+Filename: pool/universe/f/fwts/fwts-frontend_13.09.01-0ubuntu1_all.deb
+Size: 8576
+MD5sum: 448dc2deb41f581792a2c67d0aed5909
+SHA1: 7946c1c76182a37fab5938475d9f86a5f0f0d49f
+SHA256: bd54769f851b835469c77f93e2dc4c4e41a615bc2e5f764859fbc93522675d7b
+Description: Firmware Test Suite frontend interface
+Description-md5: fc98ee1ccd80b6332c879648cc78e424
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: gnome-documents
 Priority: optional
 Section: universe/gnome
@@ -1764,6 +1802,63 @@ Description-md5: fda969c7925554537df518bd06a2676e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: libfwts1
+Priority: optional
+Section: universe/devel
+Installed-Size: 223
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: powerpc
+Source: fwts
+Version: 13.09.01-0ubuntu1
+Depends: libc6 (>= 2.15), libfwtsiasl1, libjson-c2 (>= 0.10), libpcre3 (>= 8.10)
+Filename: pool/universe/f/fwts/libfwts1_13.09.01-0ubuntu1_powerpc.deb
+Size: 71440
+MD5sum: ae8d6608e260aa201b21e043a6b5a8dd
+SHA1: f687a5bc6e906b06e730115a6c4a4733f9d46820
+SHA256: 67cc9c50fd369ea6fb5e91c9a82766e467176a7d6347bfed5972182ee4ae1fee
+Description: FirmWare Test Suite core support library
+Description-md5: 52ff91e0d92988cc3e64dca37e83ded3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libfwtsacpica1
+Priority: optional
+Section: universe/devel
+Installed-Size: 711
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: powerpc
+Source: fwts
+Version: 13.09.01-0ubuntu1
+Depends: libc6 (>= 2.8), libfwts1
+Filename: pool/universe/f/fwts/libfwtsacpica1_13.09.01-0ubuntu1_powerpc.deb
+Size: 264270
+MD5sum: 1818dde9e4d155a6a87d4881a54890ca
+SHA1: 6a03d02d6bbe00f03f04dfbb7ce953458ecb85de
+SHA256: 5e1c791b365025d19c725edb84f92908797a4b2da20f7cb4f1d76a4db7f7e3bc
+Description: FirmWare Test Suite ACPICA core built for acpiexec functionality
+Description-md5: a5000d353030a31da5111f9694fad744
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libfwtsiasl1
+Priority: optional
+Section: universe/devel
+Installed-Size: 913
+Maintainer: Firmware Testing Team <fwts-devel@lists.ubuntu.com>
+Architecture: powerpc
+Source: fwts
+Version: 13.09.01-0ubuntu1
+Depends: libc6 (>= 2.4)
+Filename: pool/universe/f/fwts/libfwtsiasl1_13.09.01-0ubuntu1_powerpc.deb
+Size: 325286
+MD5sum: 4767129e40cec3693da52213107fa358
+SHA1: 7bfeec601311479e79367244106e811707147092
+SHA256: 1f6ef5f168bb3606955c11ed5f0b7704eca07144f87350ab2fa3f905eae55590
+Description: FirmWare Test Suite ACPICA core built for iasl functionality
+Description-md5: 0fdb8bb43f21085e686e7b8bb3529034
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libgecode-dev
 Priority: optional
 Section: universe/libdevel
@@ -2065,6 +2160,52 @@ Description: Data files needed for magics++ library
 Multi-Arch: foreign
 Homepage: http://www.ecmwf.int/products/data/software/magics++.html
 Description-md5: 180604fa850ab07a7840392c51b69d9b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libmagics++-dev
+Priority: optional
+Section: universe/libdevel
+Installed-Size: 37870
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alastair McKinstry <mckinstry@debian.org>
+Architecture: powerpc
+Source: magics++
+Version: 2.18.15-2
+Depends: libmagplus3 (= 2.18.15-2), python:any
+Recommends: pkg-config
+Filename: pool/universe/m/magics++/libmagics++-dev_2.18.15-2_powerpc.deb
+Size: 8545474
+MD5sum: a51ab7b47cfea11da43afb0cf9eff0f5
+SHA1: 5121a26e614e4cf6e916c1725e3dd3b4cb5cfe20
+SHA256: 4b94276ac485bf54ae48704eb8f8e48958fd169c291cfd28bc06fadf9d5192d1
+Description: Development files for ECMWF  plotting software MAGICS++
+Multi-Arch: same
+Homepage: http://www.ecmwf.int/products/data/software/magics++.html
+Description-md5: baa5d623da7de3a3bfd720cd69bd1fcf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libmagplus3
+Priority: optional
+Section: universe/libs
+Installed-Size: 10593
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alastair McKinstry <mckinstry@debian.org>
+Architecture: powerpc
+Source: magics++
+Version: 2.18.15-2
+Depends: libmagics++-data, libc6 (>= 2.4), libcairo2 (>= 1.6.0), libemos0d, libexpat1 (>= 2.0.1), libgcc1 (>= 1:4.1.1), libgd3 (>= 2.1.0~alpha~), libglib2.0-0 (>= 2.12.0), libgrib-api-1.9.16 (>= 1.9.16), libnetcdfc++4, libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libproj0, libstdc++6 (>= 4.6), libterralib, libx11-6, zlib1g (>= 1:1.1.4), ttf-dejavu-core, ttf-dejavu-extra, ghostscript
+Pre-Depends: multiarch-support
+Filename: pool/universe/m/magics++/libmagplus3_2.18.15-2_powerpc.deb
+Size: 3389794
+MD5sum: 0dab398320e96e101be2e1e47c2fc97f
+SHA1: b4040980b148b4e79f7d6c043e7710d4628e07db
+SHA256: e34e93e9c90cc7ff20d710564f975b9af727b38cd767b395cb232b8a25689c1e
+Description: ECMWF meteorological plotting software library
+Multi-Arch: same
+Homepage: http://www.ecmwf.int/products/data/software/magics++.html
+Description-md5: 25e7234e00d5dfa68d9d523112d26bef
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -2671,6 +2812,52 @@ Description-md5: 0b79642fe78735156da71225d79c1d80
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: magics++
+Priority: optional
+Section: universe/utils
+Installed-Size: 66
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alastair McKinstry <mckinstry@debian.org>
+Architecture: powerpc
+Version: 2.18.15-2
+Depends: libmagplus3 (= 2.18.15-2), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.4.0), python:any
+Filename: pool/universe/m/magics++/magics++_2.18.15-2_powerpc.deb
+Size: 13584
+MD5sum: c4ad682593dcc6a64aa759c5eaf0bf5d
+SHA1: 16f872cdad7bea059e944e4c1d58f1437841a9dd
+SHA256: f1f6fc5e9c6488c90070a7cae7c606569d14962c2ef054787d6c22d414b0b38c
+Description: Executables for the magics++ library
+Multi-Arch: foreign
+Homepage: http://www.ecmwf.int/products/data/software/magics++.html
+Description-md5: 9b068543ba030016602d8d95ac8a603d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: maptool
+Priority: extra
+Section: universe/misc
+Installed-Size: 744
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Gilles Filippini <pini@debian.org>
+Architecture: powerpc
+Source: navit
+Version: 0.5.0~svn5530+dfsg.1-1ubuntu1
+Replaces: osm2navit
+Provides: osm2navit
+Depends: libc6 (>= 2.7), libglib2.0-0 (>= 2.24.0), libssl1.0.0 (>= 1.0.0), zlib1g (>= 1:1.1.4)
+Suggests: navit
+Conflicts: osm2navit
+Filename: pool/universe/n/navit/maptool_0.5.0~svn5530+dfsg.1-1ubuntu1_powerpc.deb
+Size: 321736
+MD5sum: 8b3085960198ee481e95f592eaa9dda4
+SHA1: f2ed6139d65d816db3c6beb0dbec7096b3eedd31
+SHA256: 9b9d8e870caec00ae646379859253f2760ee31ff67c7d37600d798b191bec79b
+Description: Converts OpenStreetMap maps to Navit
+Homepage: http://navit.sourceforge.net/
+Description-md5: 028f593501cc388e3b42cea6297d2c93
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: minc-tools
 Priority: optional
 Section: universe/science
@@ -2751,6 +2938,28 @@ Description-md5: 6e84e39c4c04e92fb8d96960458b3b25
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: navit
+Priority: extra
+Section: universe/misc
+Installed-Size: 1404
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Gilles Filippini <pini@debian.org>
+Architecture: powerpc
+Version: 0.5.0~svn5530+dfsg.1-1ubuntu1
+Depends: libc6 (>= 2.7), libdbus-1-3 (>= 1.0.2), libdbus-glib-1-2 (>= 0.78), libfontconfig1 (>= 2.9.0), libfreetype6 (>= 2.3.5), libfribidi0 (>= 0.19.2), libgarmin0 (>= 0~svn320), libglib2.0-0 (>= 2.24.0), libgps20 (>= 3.3), libspeechd2 (>= 0.7.1), libssl1.0.0 (>= 1.0.0), zlib1g (>= 1:1.1.4), navit-data (= 0.5.0~svn5530+dfsg.1-1ubuntu1), navit-gui-internal (= 0.5.0~svn5530+dfsg.1-1ubuntu1) | navit-gui-gtk (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Recommends: gpsd
+Suggests: maptool
+Filename: pool/universe/n/navit/navit_0.5.0~svn5530+dfsg.1-1ubuntu1_powerpc.deb
+Size: 458388
+MD5sum: 1046b5c8e763842fece21b557ad481ac
+SHA1: 53c7c1d2316f1db72bd5d91d0e9822ea01e8f23b
+SHA256: bbeddf7c6939f3d8b0e24547b325fbb7c5ebdbcd908a1695f495d7eb905287ab
+Description: Car navigation system with routing engine
+Homepage: http://navit.sourceforge.net/
+Description-md5: 783e456ea628a6c205c86789c03eec11
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: navit-data
 Priority: extra
 Section: universe/misc
@@ -2769,6 +2978,94 @@ SHA256: c8848144857c88ac6ff5192bb604696b1558ab22bb03bcd3088ad92e19cbbbd1
 Description: Car navigation system with routing engine - data files
 Homepage: http://navit.sourceforge.net/
 Description-md5: a97d8f857d2e846ef7e02bb355a200c6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: navit-graphics-gtk-drawing-area
+Priority: extra
+Section: universe/misc
+Installed-Size: 116
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Gilles Filippini <pini@debian.org>
+Architecture: powerpc
+Source: navit
+Version: 0.5.0~svn5530+dfsg.1-1ubuntu1
+Depends: libc6 (>= 2.7), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.12.0), libgtk2.0-0 (>= 2.24.0), libimlib2, librsvg2-common
+Recommends: navit (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Filename: pool/universe/n/navit/navit-graphics-gtk-drawing-area_0.5.0~svn5530+dfsg.1-1ubuntu1_powerpc.deb
+Size: 30272
+MD5sum: 34bf203843159a014f63ac35397a309c
+SHA1: 6fc40d0e63d93992fee2e78f9c7ba8d2eed5e285
+SHA256: b18674d95dec1d53d333836c67753a6a61972a0104ade51adf372ec822350df3
+Description: Car navigation system with routing engine - GTK+ graphic plugin
+Homepage: http://navit.sourceforge.net/
+Description-md5: 1837b5e747b802c091352d912b743429
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: navit-graphics-qt-qpainter
+Priority: extra
+Section: universe/misc
+Installed-Size: 129
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Gilles Filippini <pini@debian.org>
+Architecture: powerpc
+Source: navit
+Version: 0.5.0~svn5530+dfsg.1-1ubuntu1
+Depends: libc6 (>= 2.1.3), libgcc1 (>= 1:4.1.1), libqt4-svg (>= 4:4.5.3), libqtcore4 (>= 4:4.6.1), libqtgui4 (>= 4:4.6.1), libstdc++6 (>= 4.1.1)
+Recommends: navit (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Filename: pool/universe/n/navit/navit-graphics-qt-qpainter_0.5.0~svn5530+dfsg.1-1ubuntu1_powerpc.deb
+Size: 36116
+MD5sum: 93bd6ab86caea9ebcd621a35db4c0df4
+SHA1: 2ab2704ef92a3a29547e72512f202a882d554d75
+SHA256: 8f5edc413e80baec74d8e87e56fec441fcb195ce4471bcf8ceddf56c3ec0e89c
+Description: Car navigation system with routing engine - Qt graphic plugin
+Homepage: http://navit.sourceforge.net/
+Description-md5: f7fed8c770ef4123db5ae2899e2c65bd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: navit-gui-gtk
+Priority: extra
+Section: universe/misc
+Installed-Size: 148
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Gilles Filippini <pini@debian.org>
+Architecture: powerpc
+Source: navit
+Version: 0.5.0~svn5530+dfsg.1-1ubuntu1
+Depends: libc6 (>= 2.4), libgdk-pixbuf2.0-0 (>= 2.22.0), libglib2.0-0 (>= 2.12.0), libgtk2.0-0 (>= 2.8.0), navit-graphics-gtk-drawing-area (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Recommends: navit (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Filename: pool/universe/n/navit/navit-gui-gtk_0.5.0~svn5530+dfsg.1-1ubuntu1_powerpc.deb
+Size: 38538
+MD5sum: 678b5dc3d99f2596ce7f0deadcfb03db
+SHA1: 7478576438caf6944e80e869c1772da4d780014b
+SHA256: e8762a07895856f7fdfae98b1edfd1eacf34921a2e297b2d1a331b942561a700
+Description: Car navigation system with routing engine - GTK+ GUI
+Homepage: http://navit.sourceforge.net/
+Description-md5: 0a235c9ef0c8378d7c7dfa9b06b6171e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: navit-gui-internal
+Priority: extra
+Section: universe/misc
+Installed-Size: 242
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Gilles Filippini <pini@debian.org>
+Architecture: powerpc
+Source: navit
+Version: 0.5.0~svn5530+dfsg.1-1ubuntu1
+Depends: libc6 (>= 2.7), navit-graphics-gtk-drawing-area (= 0.5.0~svn5530+dfsg.1-1ubuntu1) | navit-graphics-qt-qpainter (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Recommends: navit (= 0.5.0~svn5530+dfsg.1-1ubuntu1)
+Filename: pool/universe/n/navit/navit-gui-internal_0.5.0~svn5530+dfsg.1-1ubuntu1_powerpc.deb
+Size: 82098
+MD5sum: 42f5484d9b70909658d2f8ad056644ef
+SHA1: 44f831b2b019d5c238a8a5adb5df9ac9666dc15e
+SHA256: 91c82ba0e8d060be5064cb82b14fa31968d7688073a7973f2a22550f210bdab1
+Description: Car navigation system with routing engine - internal GUI
+Homepage: http://navit.sourceforge.net/
+Description-md5: c66cdd6a9343846105342185cdf44171
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -3637,6 +3934,27 @@ SHA256: 21658d1d58509dc2b4601ee52cac3dda7b5846b6d9d1dc8ffe1259f964ee4f69
 Description: documentation and examples for PyKDE
 Homepage: http://www.kde.org
 Description-md5: a89a4cb17bc1ec6ec1a8abe86ce572a0
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python-magics++
+Priority: optional
+Section: universe/python
+Installed-Size: 211
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Alastair McKinstry <mckinstry@debian.org>
+Architecture: powerpc
+Source: magics++
+Version: 2.18.15-2
+Depends: libmagplus3 (= 2.18.15-2), libc6 (>= 2.4), libgcc1 (>= 1:4.1.1), libstdc++6 (>= 4.1.1), python (<< 2.8), python (>= 2.7), python-numpy (>= 1:1.7-0~b1), python-numpy-abi9, python:any (>= 2.7.1-0ubuntu2), python-simplejson
+Filename: pool/universe/m/magics++/python-magics++_2.18.15-2_powerpc.deb
+Size: 38586
+MD5sum: 8830407ce425c670295db7a342b46617
+SHA1: 55888a047912caead076b8d69785172116dd48c4
+SHA256: a504d0d6a427cb18463fb7a4656da6c33cad27165c8fb1cfcce9a4f4ecb07797
+Description: python support for Magics++
+Homepage: http://www.ecmwf.int/products/data/software/magics++.html
+Description-md5: 13f37dc89c116f0b3471a7ec75dede79
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
