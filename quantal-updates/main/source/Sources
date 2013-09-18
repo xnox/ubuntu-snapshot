@@ -3628,6 +3628,31 @@ Checksums-Sha256:
  48dd88010fdd4a7e7d52e141a154d6cd805a67492a4b11b67e9006ecc3dd9739 32170 keystone_2012.2.4-0ubuntu3.1.debian.tar.gz
 Python-Version: >= 2.6
 
+Package: language-selector
+Binary: language-selector-gnome, language-selector-kde, language-selector-common
+Version: 0.90.1
+Priority: standard
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50~), python3, python3-distutils-extra, python3-setuptools, pyqt4-dev-tools, intltool, intltool-debian, dh-translations
+Architecture: all
+Standards-Version: 3.9.3
+Format: 3.0 (native)
+Directory: pool/main/l/language-selector
+Files:
+ 574382a4cdd1fa0c91e89acf5360dc86 1745 language-selector_0.90.1.dsc
+ 537d43df93483ce418762bdf7a2ba2c4 382144 language-selector_0.90.1.tar.gz
+Package-List: 
+ language-selector-common deb admin optional
+ language-selector-gnome deb admin optional
+ language-selector-kde deb admin optional
+Checksums-Sha1:
+ 1dec8a6164a1ba5b7119e3950816ea53fca12f76 1745 language-selector_0.90.1.dsc
+ 18add0943de9af754a44344b272015e5bfd89729 382144 language-selector_0.90.1.tar.gz
+Checksums-Sha256:
+ d8599b614d7e0c671d9f64ed08d89def8bf4317b30c711591e95fb343c2bf933 1745 language-selector_0.90.1.dsc
+ 72ef5fa4ea7a24a6e3d79eafb21e35a42d9ce74c02f0b49b1c5360c6bc23fc75 382144 language-selector_0.90.1.tar.gz
+
 Package: lcms2
 Binary: liblcms2-dev, liblcms2-2, liblcms2-utils
 Version: 2.2+git20110628-2ubuntu4.1
@@ -7628,6 +7653,37 @@ Checksums-Sha256:
 Original-Vcs-Browser: http://git.debian.org/?p=collab-maint/rsyslog.git;a=summary
 Original-Vcs-Git: git://git.debian.org/git/collab-maint/rsyslog.git
 
+Package: rtkit
+Binary: rtkit
+Version: 0.10-2ubuntu0.12.10.1
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Build-Depends: cdbs, debhelper (>= 7.0.50~), autotools-dev, libdbus-1-dev, libpolkit-backend-1-dev, libcap-dev
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/r/rtkit
+Files:
+ 220d70f5509bc4855645dd0368a9b37a 2136 rtkit_0.10-2ubuntu0.12.10.1.dsc
+ 9ab7f2a25ddf05584ea2216dfe4cefd4 160528 rtkit_0.10.orig.tar.gz
+ 9ea1dadd203b572d10e1f5a8ba53d344 5031 rtkit_0.10-2ubuntu0.12.10.1.debian.tar.gz
+Uploaders: Alessio Treglia <alessio@debian.org>, Luke Yelavich <themuso@ubuntu.com>
+Homepage: http://0pointer.de/public/
+Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/rtkit.git
+Vcs-Git: git://git.debian.org/git/pkg-multimedia/rtkit.git
+Package-List: 
+ rtkit deb admin optional
+Checksums-Sha1:
+ ca5ed89676580ebf07a1e7a522f593cb5a2a8ab3 2136 rtkit_0.10-2ubuntu0.12.10.1.dsc
+ 208351063cdcc5289f79490d6bb313597a6508af 160528 rtkit_0.10.orig.tar.gz
+ aad542b8de2303f8162ba60bfdb14345512e162a 5031 rtkit_0.10-2ubuntu0.12.10.1.debian.tar.gz
+Checksums-Sha256:
+ 6f7f060de9f8e966911c1039d98489525fb228ff6387bd9782a3b1145b3fd40c 2136 rtkit_0.10-2ubuntu0.12.10.1.dsc
+ 74ea93ac09d9d5a7cb85bf57ec92090311c9fb105a41bdd633adcf3b94472120 160528 rtkit_0.10.orig.tar.gz
+ ac50536c971e805e27de7fcb21c330b35d9a794f5c3245072c8c1554e0aee4ef 5031 rtkit_0.10-2ubuntu0.12.10.1.debian.tar.gz
+
 Package: ruby1.8
 Binary: ruby1.8, libruby1.8, libruby1.8-dbg, ruby1.8-dev, libtcltk-ruby1.8, ruby1.8-examples, ri1.8, ruby1.8-full
 Version: 1.8.7.358-4ubuntu0.3
@@ -7874,6 +7930,35 @@ Checksums-Sha1:
 Checksums-Sha256:
  9b4889ae56c5cfc8d43f916ee80f4a1ff489f4d042842245eee728e24b78f8de 1081 software-center_5.4.1.4.dsc
  d3556e0602d7959c94b52154ed061e9d4a84bf3f64df0a6a2adc2a0d2ce85e90 1218763 software-center_5.4.1.4.tar.gz
+Testsuite: autopkgtest
+
+Package: software-properties
+Binary: python-software-properties, python3-software-properties, software-properties-common, software-properties-gtk, software-properties-kde
+Version: 0.92.9.3
+Priority: optional
+Section: admin
+Maintainer: Michael Vogt <michael.vogt@ubuntu.com>
+Build-Depends: debhelper (>= 9), libxml-parser-perl, scrollkeeper, intltool, python-all (>= 2.6.6-3~), python-distutils-extra (>= 1.90), python3-all, python3-distutils-extra, dh-translations
+Architecture: all
+Standards-Version: 3.9.3
+Format: 3.0 (native)
+Directory: pool/main/s/software-properties
+Files:
+ c58cd4cd212bed0b8689303368101197 2043 software-properties_0.92.9.3.dsc
+ a2a443989c5a081243b62a36cec7f2aa 1420005 software-properties_0.92.9.3.tar.gz
+Vcs-Bzr: http://code.launchpad.net/~ubuntu-core-dev/software-properties/main
+Package-List: 
+ python-software-properties deb python optional
+ python3-software-properties deb python optional
+ software-properties-common deb admin optional
+ software-properties-gtk deb admin optional
+ software-properties-kde deb kde optional
+Checksums-Sha1:
+ 42652cb78cc8a50df599ac1401593eb6e437231c 2043 software-properties_0.92.9.3.dsc
+ 7ca47b46c8af0045426b9aef6a71a3125d8b2ed2 1420005 software-properties_0.92.9.3.tar.gz
+Checksums-Sha256:
+ f815620a66f65dc1304b07d253c6be67d6cd1d855743c415335f4f4d16716a62 2043 software-properties_0.92.9.3.dsc
+ f258d55f78d62421fcdabe1627cd6d97c57776737e00ec56391e6c769e03879d 1420005 software-properties_0.92.9.3.tar.gz
 Testsuite: autopkgtest
 
 Package: squid3
@@ -8573,6 +8658,31 @@ Checksums-Sha256:
  769ed773b858c35ad6c22a35768331344c86045405578fb2feca42fca0fd892f 1892885 ubuntu-release-upgrader_0.190.8.tar.gz
 Testsuite: autopkgtest
 
+Package: ubuntu-system-service
+Binary: ubuntu-system-service
+Version: 0.2.3.1
+Priority: optional
+Section: admin
+Maintainer: Michael Vogt <mvo@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50~), dh-translations, python-distutils-extra, python (>= 2.6.6-3~), intltool
+Architecture: all
+Standards-Version: 3.9.2
+Format: 3.0 (native)
+Directory: pool/main/u/ubuntu-system-service
+Files:
+ 1a76a382f2a3d19925ae0ead3c23659e 1659 ubuntu-system-service_0.2.3.1.dsc
+ 4b5e33340f8d572dbdea61a46aa49f62 20518 ubuntu-system-service_0.2.3.1.tar.gz
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-core-dev/system-service/ubuntu
+Vcs-Bzr: lp:system-service
+Package-List: 
+ ubuntu-system-service deb admin optional
+Checksums-Sha1:
+ fd963ad0eb886da0c24f302578b0f2fb429b1650 1659 ubuntu-system-service_0.2.3.1.dsc
+ 2d79a7c6df7a9e709bae15b7a4e703450e5c445f 20518 ubuntu-system-service_0.2.3.1.tar.gz
+Checksums-Sha256:
+ 867c98a8ef46b06c053c872e677d41a188823d865fb19e6717aed41a99ca76d6 1659 ubuntu-system-service_0.2.3.1.dsc
+ e46be33d02f39a401f8917ef1f71ac272eccd2ccb5c7940e8ae394f5a3cb0572 20518 ubuntu-system-service_0.2.3.1.tar.gz
+
 Package: udisks2
 Binary: udisks2, udisks2-doc, libudisks2-0, libudisks2-dev, gir1.2-udisks-2.0
 Version: 2.0.0-1ubuntu1
@@ -8910,6 +9020,34 @@ Checksums-Sha256:
  43a931a8413387a2cad8a553b0eebad6981f2a998c5071cf82ed35c697ee9ec8 1363 update-manager_0.174.4.dsc
  d9bc663acdaa36a760568ba3d48885044b2777366e76a0b04b9398f41878604f 3032625 update-manager_0.174.4.tar.gz
 Testsuite: autopkgtest
+
+Package: usb-creator
+Binary: usb-creator-common, usb-creator-gtk, usb-creator-kde
+Version: 0.2.40ubuntu2
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: usb-creator Hackers Team <usb-creator-hackers@lists.launchpad.net>
+Build-Depends: debhelper (>= 7.2.11~), dh-translations, python (>= 2.6), python-distutils-extra, pkg-kde-tools
+Architecture: amd64 i386
+Standards-Version: 3.9.3
+Format: 3.0 (native)
+Directory: pool/main/u/usb-creator
+Files:
+ e0c44c3473eb50b05876a29c6dbe4a36 1934 usb-creator_0.2.40ubuntu2.dsc
+ 55717466152ee0000ca9530e91fc34bf 483283 usb-creator_0.2.40ubuntu2.tar.gz
+Uploaders: Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>, Ignace Mouzannar <mouzannar@gmail.com>
+Vcs-Bzr: http://bazaar.launchpad.net/~usb-creator-hackers/usb-creator/trunk
+Package-List: 
+ usb-creator-common deb admin optional
+ usb-creator-gtk deb admin optional
+ usb-creator-kde deb admin optional
+Checksums-Sha1:
+ c61ba114d9754e58fddfc66c0f2724797494adb1 1934 usb-creator_0.2.40ubuntu2.dsc
+ d7cf7226043896280b40c2912473e1d8967ee636 483283 usb-creator_0.2.40ubuntu2.tar.gz
+Checksums-Sha256:
+ f89e3d8c9844a620fc279b18a69de159a3d6cdce877eb77b063d9081ad671222 1934 usb-creator_0.2.40ubuntu2.dsc
+ b851e988e0a72ea82e539b19a7931c2d912a955fae6e78018ba436be1da703d2 483283 usb-creator_0.2.40ubuntu2.tar.gz
 
 Package: usbmuxd
 Binary: usbmuxd, libusbmuxd2, libusbmuxd-dev, libusbmuxd2-dbg
