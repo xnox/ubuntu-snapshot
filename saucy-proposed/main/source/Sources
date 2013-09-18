@@ -32,6 +32,81 @@ Checksums-Sha256:
  9d81e4228329e2d5cccb018ab06bc8b734fb2dede2c4d9b5c02303d4a690b76b 1940928 augeas_1.1.0.orig.tar.gz
  45c6484a3636ec838a508db600f731bfee8bf2164d8f622981757a95f29157c2 8730 augeas_1.1.0-0ubuntu1.debian.tar.gz
 
+Package: cups
+Binary: libcups2, libcupsimage2, libcupscgi1, libcupsmime1, libcupsppdc1, cups, cups-daemon, cups-client, libcups2-dev, libcupsimage2-dev, libcupscgi1-dev, libcupsmime1-dev, libcupsppdc1-dev, cups-bsd, cups-common, cups-server-common, cups-ppdc, cups-dbg
+Version: 1.7.0~rc1-0ubuntu3
+Priority: optional
+Section: net
+Maintainer: Debian Printing Team <debian-printing@lists.debian.org>
+Build-Depends: debhelper (>= 9~), dpkg-dev (>= 1.16.1~), patch, autoconf, automake, libtool, autotools-dev, pkg-config, ghostscript (>= 9.02~), libavahi-client-dev, libavahi-common-dev, libavahi-compat-libdnssd-dev, libdbus-1-dev, libfontconfig1-dev, libfreetype6-dev, libgnutls-dev, libijs-dev, libjpeg-dev, libldap2-dev, libkrb5-dev, libpam0g-dev, libpaper-dev, libpng-dev | libpng12-dev, libslp-dev, libtiff-dev, libusb-1.0-0-dev [!hurd-any], po4a (>= 0.31~), po-debconf, poppler-utils, sharutils, zlib1g-dev, cups-filters (>= 1.0.25~), libcupsfilters-dev (>= 1.0.25~)
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/c/cups
+Files:
+ 0e1f615ca16913955ee9b81c666502e5 2808 cups_1.7.0~rc1-0ubuntu3.dsc
+ ee162c4be28043f03059f91ec133917a 8373136 cups_1.7.0~rc1.orig.tar.bz2
+ f2870a84369ab1f74b72624093222115 409732 cups_1.7.0~rc1-0ubuntu3.debian.tar.gz
+Uploaders:  Masayuki Hatta (mhatta) <mhatta@debian.org>, Till Kamppeter <till.kamppeter@gmail.com>, Roger Leigh <rleigh@debian.org>, Jeff Licquia <licquia@debian.org>, Martin Pitt <mpitt@debian.org>, Didier Raboud <odyx@debian.org>
+Homepage: http://www.cups.org
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-cups/cups.git;a=summary
+Vcs-Git: git://anonscm.debian.org/pkg-cups/cups.git
+Package-List: 
+ cups deb net optional
+ cups-bsd deb net extra
+ cups-client deb net optional
+ cups-common deb net optional
+ cups-daemon deb net optional
+ cups-dbg deb debug extra
+ cups-ppdc deb utils optional
+ cups-server-common deb net optional
+ libcups2 deb libs optional
+ libcups2-dev deb libdevel optional
+ libcupscgi1 deb libs optional
+ libcupscgi1-dev deb libdevel optional
+ libcupsimage2 deb libs optional
+ libcupsimage2-dev deb libdevel optional
+ libcupsmime1 deb libs optional
+ libcupsmime1-dev deb libdevel optional
+ libcupsppdc1 deb libs optional
+ libcupsppdc1-dev deb libdevel optional
+Checksums-Sha1:
+ 5580747fe5ac57d3edd00b41c6fe3f749e9c53db 2808 cups_1.7.0~rc1-0ubuntu3.dsc
+ 99a1fa1bf697234b02007d502518bf012f632bc2 8373136 cups_1.7.0~rc1.orig.tar.bz2
+ 44f00d6c3132814855646ef3225694c5a67cdeac 409732 cups_1.7.0~rc1-0ubuntu3.debian.tar.gz
+Checksums-Sha256:
+ e1c32616722d255f5c0d3674c28c8e57a65d50ddcdbccadfe3bd7c97927d319e 2808 cups_1.7.0~rc1-0ubuntu3.dsc
+ 891c0b745f5f7ef843049fb881a27d4c9c01978d5e9f03ebad6e29c755a26a4b 8373136 cups_1.7.0~rc1.orig.tar.bz2
+ 4ce849ad89def79923f3482e5cac4f53e860b7e345c4460564623a3c67ef9da6 409732 cups_1.7.0~rc1-0ubuntu3.debian.tar.gz
+
+Package: debian-installer
+Binary: debian-installer, debian-installer-udebs
+Version: 20101020ubuntu265
+Section: devel
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 7.0.0), apt, apt-utils, gnupg, ubuntu-keyring, dctrl-tools, wget, bc, debiandoc-sgml, xsltproc, docbook-xml, docbook-xsl, libbogl-dev [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], lsb-release, glibc-pic, libslang2-pic (>= 2.0.6-4), libnewt-pic (>= 0.52.2-11.3) [!mipsel], libnewt-dev (>= 0.52.2-11.3) [mipsel], libgcc1 [i386 amd64], cramfsprogs [powerpc ia64 mips mipsel armeb armel], genext2fs (>= 1.3-7.1), e2fsprogs, mklibs (>= 0.1.25), genisoimage (>= 9:1.1.10-1ubuntu2) [!s390 !s390x], genromfs [sparc sparc64], hfsutils [powerpc], dosfstools (>= 3.0.9-1ubuntu2) [i386 ia64 m68k amd64 armel armhf], cpio, devio [armeb armel], parted [armel armhf], slugimage (>= 0.10+r58-6) [armeb armel], u-boot-tools [armel armhf], syslinux (>= 2:4.02) [i386 amd64], palo [hppa], elilo [ia64], yaboot [powerpc], aboot (>= 0.9b-2) [alpha], silo [sparc], sparc-utils [sparc sparc64], genisovh [mips], tip22 [mips], colo [mipsel], sibyl [mips mipsel], atari-bootstrap [m68k], vmelilo [m68k], m68k-vme-tftplilo [m68k], amiboot [m68k], emile [m68k], emile-bootblocks [m68k], u-boot-linaro-omap3-beagle [armel armhf], u-boot-linaro-omap4-panda [armel armhf], shim-signed [amd64], tofrodos [i386 amd64 kfreebsd-i386 kfreebsd-amd64], mtools [i386 ia64 m68k amd64 kfreebsd-i386 kfreebsd-amd64 hurd-i386 armel armhf], po4a [i386 amd64], python3 (>= 3.1) [i386 amd64], module-init-tools [i386 armeb armel armhf amd64 alpha hppa ia64 m68k mips mipsel powerpc s390 sh4 sparc sparc64], bf-utf-source [!s390 !s390x], mkvmlinuz [powerpc], openssl [armel], makefs [kfreebsd-i386 kfreebsd-amd64], grub-pc (>= 1.98~20100101-1) [kfreebsd-i386 kfreebsd-amd64 hurd-i386], xorriso [kfreebsd-i386 kfreebsd-amd64 hurd-i386], grub-efi-amd64-bin (>= 2.00) [amd64], grub-common [amd64], debian-ports-archive-keyring [sh4 sparc64]
+Build-Conflicts: libnewt-pic [mipsel]
+Architecture: any
+Standards-Version: 3.8.3
+Format: 1.0
+Directory: pool/main/d/debian-installer
+Files:
+ 0aa7c048f53824e03c4ccdd5ae2a3ceb 3758 debian-installer_20101020ubuntu265.dsc
+ 5fce590e82484631271051066a51a853 1968924 debian-installer_20101020ubuntu265.tar.gz
+Uploaders: Frans Pop <fjp@debian.org>, Otavio Salvador <otavio@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/debian-installer/ubuntu
+Package-List: 
+ debian-installer deb devel optional
+ debian-installer-udebs udeb debian-installer optional
+Checksums-Sha1:
+ 6c3ab637314723d39f9fb1025ec3eb73747b2529 3758 debian-installer_20101020ubuntu265.dsc
+ 2b1d00042e27b5379685d660a3277eb3b6e20d43 1968924 debian-installer_20101020ubuntu265.tar.gz
+Checksums-Sha256:
+ f863416ed198883424f806a6188477a09f36dad8853c64bc97c7048b16335e61 3758 debian-installer_20101020ubuntu265.dsc
+ ebb1352dc2bf6d750b54f86738c4c377b1de83b65334cc833e62fc4285c3bbfd 1968924 debian-installer_20101020ubuntu265.tar.gz
+Debian-Vcs-Svn: svn://svn.debian.org/d-i/trunk/installer
+
 Package: firefox
 Binary: firefox, firefox-dbg, firefox-dev, firefox-mozsymbols, firefox-testsuite, firefox-globalmenu, firefox-locale-af, firefox-locale-ar, firefox-locale-as, firefox-locale-ast, firefox-locale-be, firefox-locale-bg, firefox-locale-bn, firefox-locale-br, firefox-locale-bs, firefox-locale-ca, firefox-locale-cs, firefox-locale-csb, firefox-locale-cy, firefox-locale-da, firefox-locale-de, firefox-locale-el, firefox-locale-en, firefox-locale-eo, firefox-locale-es, firefox-locale-et, firefox-locale-eu, firefox-locale-fa, firefox-locale-fi, firefox-locale-fr, firefox-locale-fy, firefox-locale-ga, firefox-locale-gd, firefox-locale-gl, firefox-locale-gu, firefox-locale-he, firefox-locale-hi, firefox-locale-hr, firefox-locale-hu, firefox-locale-hy, firefox-locale-id, firefox-locale-is, firefox-locale-it, firefox-locale-ja, firefox-locale-ka, firefox-locale-kk, firefox-locale-km, firefox-locale-kn, firefox-locale-ko, firefox-locale-ku, firefox-locale-lg, firefox-locale-lt,
  firefox-locale-lv, firefox-locale-mai, firefox-locale-mk, firefox-locale-ml, firefox-locale-mn, firefox-locale-mr, firefox-locale-nb, firefox-locale-nl, firefox-locale-nn, firefox-locale-nso, firefox-locale-oc, firefox-locale-or, firefox-locale-pa, firefox-locale-pl, firefox-locale-pt, firefox-locale-ro, firefox-locale-ru, firefox-locale-si, firefox-locale-sk, firefox-locale-sl, firefox-locale-sq, firefox-locale-sr, firefox-locale-sv, firefox-locale-sw, firefox-locale-ta, firefox-locale-te, firefox-locale-th, firefox-locale-tr, firefox-locale-uk, firefox-locale-vi, firefox-locale-zh-hans, firefox-locale-zh-hant,
@@ -340,246 +415,6 @@ Checksums-Sha1:
 Checksums-Sha256:
  a2cf344ad92b0a54be99a49e8db3121a8cb66ffb05054b79457184c3411908ac 887 language-pack-as_13.10+20130917.dsc
  e04ae39bb157ddb53fc21880618551cb5903057deeeecf588df07e74c496997e 286967 language-pack-as_13.10+20130917.tar.gz
-
-Package: language-pack-cv
-Binary: language-pack-cv
-Version: 1:13.10+20130917
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-cv
-Files:
- 85dc88981aa7e8213138c723e63a982a 884 language-pack-cv_13.10+20130917.dsc
- ee6ebdb7b8f2adf9e21c5c77dbc12c0f 21799 language-pack-cv_13.10+20130917.tar.gz
-Package-List: 
- language-pack-cv deb translations optional
-Checksums-Sha1:
- 3357d08749b90ac64ace57a4eeabc2bf6a166ee5 884 language-pack-cv_13.10+20130917.dsc
- 73f4375dc4bcbf6ca141372dff0885c8aa0489ea 21799 language-pack-cv_13.10+20130917.tar.gz
-Checksums-Sha256:
- 273ff83131a26ef07708bb8e731844666d9907dfc583369c5413a65fa35f87f2 884 language-pack-cv_13.10+20130917.dsc
- 25208ffa2c171531aaa514026b27989771e06335e7272fa87f52ef227df09251 21799 language-pack-cv_13.10+20130917.tar.gz
-
-Package: language-pack-gnome-bem
-Binary: language-pack-gnome-bem
-Version: 1:13.10+20130917
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-bem
-Files:
- 947dd11e9a8a2515e961162a5cb8364e 926 language-pack-gnome-bem_13.10+20130917.dsc
- 7eecb54bdbcc144b87e233708034c514 10265 language-pack-gnome-bem_13.10+20130917.tar.gz
-Package-List: 
- language-pack-gnome-bem deb translations optional
-Checksums-Sha1:
- 2cce829b79f98212834cbeb7dc9e805571b24cf5 926 language-pack-gnome-bem_13.10+20130917.dsc
- 46177e125ec10f094797fd4e1342a932adb0bb36 10265 language-pack-gnome-bem_13.10+20130917.tar.gz
-Checksums-Sha256:
- fab4e3da15428ade70a6aad13c904d7f8accbd8841e93d9a997c26613ebd59b9 926 language-pack-gnome-bem_13.10+20130917.dsc
- 66d7f77a23c25d66ff8b1cef0f9ffd7462fa427dbe32b27018cfbd41a7e41073 10265 language-pack-gnome-bem_13.10+20130917.tar.gz
-
-Package: language-pack-gnome-cv
-Binary: language-pack-gnome-cv
-Version: 1:13.10+20130917
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-cv
-Files:
- 26630799fdb47aad8c935b0ef9b9764b 920 language-pack-gnome-cv_13.10+20130917.dsc
- 5fef48b4d3bd8803f676b6ffd9a66b47 65664 language-pack-gnome-cv_13.10+20130917.tar.gz
-Package-List: 
- language-pack-gnome-cv deb translations optional
-Checksums-Sha1:
- 74a0f3c5c3d8ca400d506c148db9a86a8966b299 920 language-pack-gnome-cv_13.10+20130917.dsc
- 0e6a0ecae61ba9d8fd60c6f1bb526414e76da82f 65664 language-pack-gnome-cv_13.10+20130917.tar.gz
-Checksums-Sha256:
- fc2432df702437e33b14c289bce2f33e29bb4ec40a0c7e742289f4febf34c9fe 920 language-pack-gnome-cv_13.10+20130917.dsc
- 53c99e7e0c54ef2ef25bdc0bca65345be51d020dfef6617c198aad02efc73e7d 65664 language-pack-gnome-cv_13.10+20130917.tar.gz
-
-Package: language-pack-gnome-ks
-Binary: language-pack-gnome-ks
-Version: 1:13.10+20130917
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-ks
-Files:
- 81492735bd335c00a8f21deaf5089396 920 language-pack-gnome-ks_13.10+20130917.dsc
- ec6d93a556dabb51a8e2f21c6222ecd4 21034 language-pack-gnome-ks_13.10+20130917.tar.gz
-Package-List: 
- language-pack-gnome-ks deb translations optional
-Checksums-Sha1:
- 6514af89084756a43680d07aea0cad7666b7ffc4 920 language-pack-gnome-ks_13.10+20130917.dsc
- 08e9ab4e8e267250976f444016d7dea2bad717c0 21034 language-pack-gnome-ks_13.10+20130917.tar.gz
-Checksums-Sha256:
- e3e012a7a9c5e0212a93a855f4d357cffabd5ccd72b87bdbed3995c012ddd9d2 920 language-pack-gnome-ks_13.10+20130917.dsc
- 2d84945bfdebd5d5821eb6d853c516432dd39f67f8385848efb34923d1591a55 21034 language-pack-gnome-ks_13.10+20130917.tar.gz
-
-Package: language-pack-gnome-mhr
-Binary: language-pack-gnome-mhr
-Version: 1:13.10+20130917
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-mhr
-Files:
- c137aaf83fd903fa036c207322c4cb70 926 language-pack-gnome-mhr_13.10+20130917.dsc
- 431157bc5a2bfd5f580f362d9db5f90c 70639 language-pack-gnome-mhr_13.10+20130917.tar.gz
-Package-List: 
- language-pack-gnome-mhr deb translations optional
-Checksums-Sha1:
- cd62e64e7bee5fe52551dfc038c50a931e104200 926 language-pack-gnome-mhr_13.10+20130917.dsc
- 87f14191b16f3c1804e8206d36139292beae1ee8 70639 language-pack-gnome-mhr_13.10+20130917.tar.gz
-Checksums-Sha256:
- 3e5d653f79375c3763119d6162c8f8848e0e9e79e86208940aec0fdc589e4d4c 926 language-pack-gnome-mhr_13.10+20130917.dsc
- e549cc6d0b645d2ced751a25fb40ef14a98a4e431a3918831876c09f0723b1fb 70639 language-pack-gnome-mhr_13.10+20130917.tar.gz
-
-Package: language-pack-gnome-os
-Binary: language-pack-gnome-os
-Version: 1:13.10+20130917
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-os
-Files:
- 94242c405b14d6eadd69125dbb759d9c 920 language-pack-gnome-os_13.10+20130917.dsc
- 05d0ae8fa6a180d518f150a96d5910b1 17107 language-pack-gnome-os_13.10+20130917.tar.gz
-Package-List: 
- language-pack-gnome-os deb translations optional
-Checksums-Sha1:
- 8b899cc5d62c903d9ba5956188becaf8a562f648 920 language-pack-gnome-os_13.10+20130917.dsc
- 1f57545805f43abeb2db6db68fb2c80ccbf17ca0 17107 language-pack-gnome-os_13.10+20130917.tar.gz
-Checksums-Sha256:
- edd280848a110783ab793c41535582c9d78edd2a0a0099a5e032e5650ad37deb 920 language-pack-gnome-os_13.10+20130917.dsc
- bfdb4ea3a0a938e2f4bdceb37bbec4082d38e228315b7212035996070558641e 17107 language-pack-gnome-os_13.10+20130917.tar.gz
-
-Package: language-pack-gnome-wae
-Binary: language-pack-gnome-wae
-Version: 1:13.10+20130917
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-gnome-wae
-Files:
- fc7becff413bcddc4ca044c9b0ef5f20 926 language-pack-gnome-wae_13.10+20130917.dsc
- 5e8630548f63ede7736e6675abf41c67 42769 language-pack-gnome-wae_13.10+20130917.tar.gz
-Package-List: 
- language-pack-gnome-wae deb translations optional
-Checksums-Sha1:
- 7c6c0925eb35cefb29d3308ee37e6bc5e1db3720 926 language-pack-gnome-wae_13.10+20130917.dsc
- 2343f300509da04649ba8f0e7668a3e8c791a9b3 42769 language-pack-gnome-wae_13.10+20130917.tar.gz
-Checksums-Sha256:
- 54a421df0160fefb4b3e9508e9845220f3438faaba9d03874165c849afd7b885 926 language-pack-gnome-wae_13.10+20130917.dsc
- c4d496d88c53246a4e07ba303cb163d13ba9d23201efef1c60de1e2084067d36 42769 language-pack-gnome-wae_13.10+20130917.tar.gz
-
-Package: language-pack-mhr
-Binary: language-pack-mhr
-Version: 1:13.10+20130917
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-mhr
-Files:
- 858f8218d8386a51848b4ac0bb8e1a26 890 language-pack-mhr_13.10+20130917.dsc
- 779551260e5b3778d5386e6add47baf7 22919 language-pack-mhr_13.10+20130917.tar.gz
-Package-List: 
- language-pack-mhr deb translations optional
-Checksums-Sha1:
- 1a4182b0768b24a1643367e0d76d120a9a74cf0b 890 language-pack-mhr_13.10+20130917.dsc
- 145054f366d6135ca1560551b96928fbf6fc7791 22919 language-pack-mhr_13.10+20130917.tar.gz
-Checksums-Sha256:
- 31aa1ef9873ceb6385a7829180c13043de7ba79d96ad1c8d53a2f15033c39789 890 language-pack-mhr_13.10+20130917.dsc
- 34a5ad8872d660b64b8172cbb06cd78068fa99e0de0d22be3134f9ff9d4d5fe0 22919 language-pack-mhr_13.10+20130917.tar.gz
-
-Package: language-pack-os
-Binary: language-pack-os
-Version: 1:13.10+20130917
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-os
-Files:
- f8d02de45b461698535a0229d9f3a7af 884 language-pack-os_13.10+20130917.dsc
- 661f26600158c989f28e97907b7c0a08 13313 language-pack-os_13.10+20130917.tar.gz
-Package-List: 
- language-pack-os deb translations optional
-Checksums-Sha1:
- 4a84a9ce6f6c71a07fbee067751b5f60933af8b6 884 language-pack-os_13.10+20130917.dsc
- 7b1798b06563cc39031d939e249a56c8a495a5a8 13313 language-pack-os_13.10+20130917.tar.gz
-Checksums-Sha256:
- 773a185f57e9b77bf645d7a3c465586cadfb122505c905d736a0043e38134d66 884 language-pack-os_13.10+20130917.dsc
- d8882643b3419eb8873471374e4eb40a4e29942838086b3bf792c07679f124d4 13313 language-pack-os_13.10+20130917.tar.gz
-
-Package: language-pack-wae
-Binary: language-pack-wae
-Version: 1:13.10+20130917
-Priority: optional
-Section: translations
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Build-Depends: debhelper (>= 8)
-Build-Depends-Indep: gettext
-Architecture: all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/l/language-pack-wae
-Files:
- a8555d31a50c7f4bd67082a4dad58363 890 language-pack-wae_13.10+20130917.dsc
- bdd2d247b2aab43f8e77b1b72cc33dcc 20383 language-pack-wae_13.10+20130917.tar.gz
-Package-List: 
- language-pack-wae deb translations optional
-Checksums-Sha1:
- d50a768ba813bb73d1444b1a80a7f20a09303b90 890 language-pack-wae_13.10+20130917.dsc
- 36af2afb3a567b0e8ed9ac94673a07b3aa2b82ed 20383 language-pack-wae_13.10+20130917.tar.gz
-Checksums-Sha256:
- 9fea18bf0a41ba27b550f1edecf1d398e93813471e1823bcdfcd1a55b40e0df9 890 language-pack-wae_13.10+20130917.dsc
- b4acc59af501bca3c2677776a7a2d9deb95e043125fd7c38177700e69c2dd82a 20383 language-pack-wae_13.10+20130917.tar.gz
 
 Package: libidn
 Binary: idn, libidn11-dev, libidn11, libidn11-java
