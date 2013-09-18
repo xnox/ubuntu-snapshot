@@ -450,6 +450,35 @@ Checksums-Sha256:
  772a23eccd6dc247ee06dc507595e4a532fc7d7bd451fad606bd13a86f8997b2 2431 apt_0.9.7.5ubuntu5.4.dsc
  ee85032c897e48c327e1ad63c1042581b9ad54cea589ae019f6882a044e83454 3394108 apt_0.9.7.5ubuntu5.4.tar.gz
 
+Package: apt-xapian-index
+Binary: apt-xapian-index
+Version: 0.44ubuntu7.1
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Enrico Zini <enrico@debian.org>
+Build-Depends: debhelper (>= 7.0.50~), quilt
+Build-Depends-Indep: help2man, python (>= 2.6.6-3~), bash-completion (>= 1:1.0-1~), python-xapian (>= 1.0.2), python-apt (>= 0.7.93.2), python-debian (>= 0.1.14), python-nose
+Architecture: all
+Standards-Version: 3.9.1.0
+Format: 1.0
+Directory: pool/main/a/apt-xapian-index
+Files:
+ e9c7269fa5545b7d84cea7563c59183e 1970 apt-xapian-index_0.44ubuntu7.1.dsc
+ a64a4d674ab27e99c89ac2d1fe27a42a 60870 apt-xapian-index_0.44ubuntu7.1.tar.gz
+Uploaders: David Paleino <dapal@debian.org>
+Homepage: http://www.enricozini.org/sw/apt-xapian-index/
+Vcs-Browser: http://git.debian.org/?p=collab-maint/apt-xapian-index.git
+Vcs-Git: git://git.debian.org/git/collab-maint/apt-xapian-index.git
+Package-List: 
+ apt-xapian-index deb admin optional
+Checksums-Sha1:
+ c72e5b27681dd429e7f3952c5b483083b7a2dc16 1970 apt-xapian-index_0.44ubuntu7.1.dsc
+ 6775ba86faac59047127f7ac1a092e4011335caa 60870 apt-xapian-index_0.44ubuntu7.1.tar.gz
+Checksums-Sha256:
+ 6b93f3361e27da78fff1fa81fee1e80d8b15949581962bf7a1190ae3f784b8d2 1970 apt-xapian-index_0.44ubuntu7.1.dsc
+ 3c8d4af855b65ff0e6f275a2d9eeccd142b9f1a5ff9153e6b12c610737e4f5f8 60870 apt-xapian-index_0.44ubuntu7.1.tar.gz
+
 Package: aptdaemon
 Binary: aptdaemon, python3-aptdaemon, python-aptdaemon, python3-aptdaemon.test, aptdaemon-data, python-aptdaemon-gtk, python3-aptdaemon.pkcompat, python-aptdaemon.gtkwidgets, python3-aptdaemon.gtk3widgets, python-aptdaemon.gtk3widgets
 Version: 0.45+bzr861-0ubuntu9.1.2
@@ -3097,6 +3126,50 @@ Checksums-Sha256:
  3ec552556b66f9ba076ecf244dd779128acf6a95ebe4532924d87933f04b86d0 1765 horizon_2012.2.4-0ubuntu1.dsc
  a86b6ed640117f4e432f06b0d179aecef7f9ea2c20da4e4e2ab171844d240010 1317182 horizon_2012.2.4.orig.tar.gz
  0224e417d1f6c2cc6389675cc015bd716dfa5d3edb0f15406543c11ec3c24bf4 126232 horizon_2012.2.4-0ubuntu1.debian.tar.gz
+
+Package: hplip
+Binary: hplip, hplip-data, printer-driver-postscript-hp, hplip-gui, hplip-dbg, hplip-doc, hpijs-ppds, hpijs, printer-driver-hpijs, hplip-cups, printer-driver-hpcups, libhpmud0, libhpmud-dev, libsane-hpaio
+Version: 3.12.6-3ubuntu4.1
+Priority: optional
+Section: utils
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HPIJS and HPLIP maintainers <pkg-hpijs-devel@lists.alioth.debian.org>
+Build-Depends: libcups2-dev, libcupsimage2-dev, libsane-dev, libsnmp-dev, libjpeg-dev, libusb-1.0-0-dev [linux-any], libusb-dev [!linux-any], debhelper (>= 9), autotools-dev, autoconf, automake, libtool, cups (>= 1.4.0) | cupsddk, patch (>= 2.5.9-3bpo1), findutils (>= 4.2.28), python-dev, python-all-dev (>= 2.6.6-3~), python-qt4, pyqt4-dev-tools, python-dbus (>= 0.80), python-qt4-dbus, libdbus-1-dev, libudev-dev [linux-any], policykit-1, fdupes, lsb-release, pyppd (>= 0.4.9-5), dh-autoreconf
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/h/hplip
+Files:
+ 3be40fd102c7da05c040ec713a2544b4 3159 hplip_3.12.6-3ubuntu4.1.dsc
+ 5303938e8630775ea6fb383af85775e5 21227044 hplip_3.12.6.orig.tar.gz
+ cb45900b71920260266f0c7bbb28a7af 111518 hplip_3.12.6-3ubuntu4.1.debian.tar.gz
+Uploaders: Mark Purcell <msp@debian.org>, Till Kamppeter <till.kamppeter@gmail.com>
+Homepage: http://hplipopensource.com/hplip-web/index.html
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-hpijs/hplip/?op=log
+Vcs-Svn: svn://svn.debian.org/pkg-hpijs/hplip/trunk/
+Package-List: 
+ hpijs deb oldlibs extra
+ hpijs-ppds deb utils optional
+ hplip deb utils optional
+ hplip-cups deb oldlibs extra
+ hplip-data deb utils optional
+ hplip-dbg deb debug extra
+ hplip-doc deb doc optional
+ hplip-gui deb utils optional
+ libhpmud-dev deb libdevel optional
+ libhpmud0 deb libs optional
+ libsane-hpaio deb libs optional
+ printer-driver-hpcups deb text optional
+ printer-driver-hpijs deb text optional
+ printer-driver-postscript-hp deb utils optional
+Checksums-Sha1:
+ cc12213d5b7236bd031d279456d9766fbfafadf8 3159 hplip_3.12.6-3ubuntu4.1.dsc
+ f3d7f66fb5eff2158ac42bb5a115f8ef8bd7a383 21227044 hplip_3.12.6.orig.tar.gz
+ 6140494645d8d5256fc94ca41d2a76833ec45c58 111518 hplip_3.12.6-3ubuntu4.1.debian.tar.gz
+Checksums-Sha256:
+ ad3923715db20a82853d160181ef1de4d08b5700ae0f0f86b2fac395c927c337 3159 hplip_3.12.6-3ubuntu4.1.dsc
+ 54578000792969adb583e75efeacb9c46ab69659ec7e9424de390613f3595775 21227044 hplip_3.12.6.orig.tar.gz
+ 5a45beaac3b047774893f32a42593d67c31e01de93b1518715967a4415612167 111518 hplip_3.12.6-3ubuntu4.1.debian.tar.gz
 
 Package: hv-kvp-daemon-init
 Binary: hv-kvp-daemon-init
