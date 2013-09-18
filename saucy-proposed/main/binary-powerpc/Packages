@@ -1914,6 +1914,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: gir1.2-gudev-1.0
+Priority: optional
+Section: libs
+Installed-Size: 54
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Depends: gir1.2-glib-2.0, libgudev-1.0-0 (>= 165)
+Filename: pool/main/s/systemd/gir1.2-gudev-1.0_204-0ubuntu12_powerpc.deb
+Size: 3686
+MD5sum: e37cec5d1a6cd187e4f460b8dae17484
+SHA1: f64de7f5176563fd11b4922a6e57198fa7faa52c
+SHA256: 4f7273e6bf8e4b57c5bcdb11d272cce6a84d46ce94022ecd36258ad287a3c34c
+Description: libgudev-1.0 introspection data
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 17b4f1d7865f064cde612f6abf30b636
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
 Package: gir1.2-polkit-1.0
 Priority: optional
 Section: libs
@@ -3024,6 +3046,51 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb, edubuntu-usb
 
+Package: libgudev-1.0-0
+Priority: optional
+Section: libs
+Installed-Size: 90
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd (204-0ubuntu12)
+Version: 1:204-0ubuntu12
+Depends: libc6 (>= 2.3.5), libglib2.0-0 (>= 2.37.3), libudev1 (>= 183)
+Pre-Depends: multiarch-support
+Filename: pool/main/s/systemd/libgudev-1.0-0_204-0ubuntu12_powerpc.deb
+Size: 13466
+MD5sum: 12ceece950407c55eb7ea5dd1d71dc07
+SHA1: ca0dfb3d7b118bb0f5c890c5a2805b4a963873d7
+SHA256: 78befd7773833b7221528cbba120c8da3395a6118da83bf29e28f71f3144cfa7
+Description: GObject-based wrapper library for libudev
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 69c67b853f66d1327190cab12680738c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, print-server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libgudev-1.0-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 353
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd (204-0ubuntu12)
+Version: 1:204-0ubuntu12
+Depends: libgudev-1.0-0 (= 1:204-0ubuntu12), gir1.2-gudev-1.0, libglib2.0-dev, pkg-config
+Filename: pool/main/s/systemd/libgudev-1.0-dev_204-0ubuntu12_powerpc.deb
+Size: 30670
+MD5sum: 1be10779b38ab453537b5162e744e9f9
+SHA1: 851dabd0c997bd8f5b211a9ddd8f9c81d6cc531f
+SHA256: 61652fc4dc245ba8c3e81c4544ab73244e6c3d19d446f93ca882499a5e64a07a
+Description: libgudev-1.0 development files
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 903f84519fd86bd5fb271a04acb09731
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: libhpmud-dev
 Priority: optional
 Section: libdevel
@@ -3186,6 +3253,34 @@ Homepage: http://mesa3d.sourceforge.net/
 Description-md5: 9b1d7a0b3e6a2ea021f4443f42dcff4f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libpam-systemd
+Priority: standard
+Section: admin
+Installed-Size: 149
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Replaces: libpam-xdg-support, systemd-services (<< 198-0ubuntu7)
+Provides: libpam-xdg-support
+Depends: systemd-services (= 204-0ubuntu12), libc6 (>= 2.8), libcap2 (>= 2.10), libdbus-1-3 (>= 1.0.2), libpam0g (>= 0.99.7.1), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
+Pre-Depends: multiarch-support
+Conflicts: libpam-xdg-support
+Breaks: systemd-services (<< 198-0ubuntu7)
+Filename: pool/main/s/systemd/libpam-systemd_204-0ubuntu12_powerpc.deb
+Size: 37358
+MD5sum: e851f0b0220dd1a30082daf3b1cdb821
+SHA1: 794d554163aeffd41ea05e7faa8ec09da21292e3
+SHA256: 39fd24664053589efef82a89c07c6f01370b68dfa9d3f9531e3e132b180dd04a
+Description: system and service manager - PAM module
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: edcf62758ab0554992770cd6ee003898
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
 
 Package: libpolkit-agent-1-0
 Priority: optional
@@ -3815,6 +3910,230 @@ Description-md5: 208dafbff3569d9b6dbc7f0b94df7754
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libsystemd-daemon-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 74
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Depends: libsystemd-daemon0 (= 204-0ubuntu12)
+Filename: pool/main/s/systemd/libsystemd-daemon-dev_204-0ubuntu12_powerpc.deb
+Size: 7228
+MD5sum: ff2e18bcd55cda505abafacf8bc197a2
+SHA1: 44b4ee2fa46ee54967414642640df1af9c11551a
+SHA256: a5db328852606c63e903f1c55ebc61c0f3656ad85a79dba5fdccab22aef1a910
+Description: systemd utility library - development files
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 15fdb9eeef9f47e6b4ff92785bbb9d88
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsystemd-daemon0
+Priority: standard
+Section: libs
+Installed-Size: 61
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Depends: libc6 (>= 2.8)
+Pre-Depends: multiarch-support
+Filename: pool/main/s/systemd/libsystemd-daemon0_204-0ubuntu12_powerpc.deb
+Size: 9090
+MD5sum: 8c765391212ba3947a203e6ae4562445
+SHA1: 20bb50ea61925e3a24bbf5333ca2f0513648c71c
+SHA256: 87435bd93fd634b365ea349a98275296ae6ed00ac7ba3adbee5665a05fb0cfff
+Description: systemd utility library
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 56515555df42a10999b8edaaa40373ce
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libsystemd-id128-0
+Priority: extra
+Section: libs
+Installed-Size: 85
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Depends: libc6 (>= 2.7)
+Pre-Depends: multiarch-support
+Filename: pool/main/s/systemd/libsystemd-id128-0_204-0ubuntu12_powerpc.deb
+Size: 21068
+MD5sum: 1515217ec245562f7bbb7bfc5d648bfb
+SHA1: 7b0f6becef3a3a41ce5421bc3da40a2121df555f
+SHA256: 011234d48088088ff1b72e9b5a9f9ac29c88ebb83ecc400423988ad18594c387
+Description: systemd 128 bit ID utility library
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: f1e829bb4ba3cea00c4172d21882434f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsystemd-id128-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 65
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Depends: libsystemd-id128-0 (= 204-0ubuntu12)
+Filename: pool/main/s/systemd/libsystemd-id128-dev_204-0ubuntu12_powerpc.deb
+Size: 3136
+MD5sum: 7a7c8151998a1b1792e15029b2dacc53
+SHA1: 79db6048b3437b1c576c645a5629e54d7e3df061
+SHA256: 004fba2770aed9249a5a4f3d791af6a74c351335f572d47bb949a4bb2b755509
+Description: systemd 128 bit ID utility library - development files
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: a0489c042528c7c04fd2a6520c578975
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsystemd-journal-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 70
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Depends: libsystemd-journal0 (= 204-0ubuntu12), libsystemd-id128-dev
+Filename: pool/main/s/systemd/libsystemd-journal-dev_204-0ubuntu12_powerpc.deb
+Size: 4928
+MD5sum: 0f89af364fbe80749268b2f487a12e3d
+SHA1: 6d9c104fea5edd353ce06666be5c1d89da7a23f4
+SHA256: f26ea912de2584a61da940b01f8a850a730ded85016f2a33a78339e93f857cc2
+Description: systemd journal utility library - development files
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: e80c34da97e3cfda38731839be115201
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsystemd-journal0
+Priority: extra
+Section: libs
+Installed-Size: 199
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Depends: libc6 (>= 2.9), libgcrypt11 (>= 1.4.5), liblzma5 (>= 5.1.1alpha+20120614), libselinux1 (>= 1.32)
+Pre-Depends: multiarch-support
+Filename: pool/main/s/systemd/libsystemd-journal0_204-0ubuntu12_powerpc.deb
+Size: 72620
+MD5sum: 24350f001ab86f186490db25fcd2856f
+SHA1: e9d35a0fbb6053e317abac87bf2acbee29c48353
+SHA256: 3c24f69f61df05ded2b4382bad0357c27a5e4d45f300a81c597c8f04ab59a22b
+Description: systemd journal utility library
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 954612493a4438c396bb24b45a566df6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libsystemd-login-dev
+Priority: extra
+Section: libdevel
+Installed-Size: 66
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Depends: libsystemd-login0 (= 204-0ubuntu12)
+Filename: pool/main/s/systemd/libsystemd-login-dev_204-0ubuntu12_powerpc.deb
+Size: 3952
+MD5sum: 339585a1573edc23a9dac7393676d397
+SHA1: 6cdfd79207f5367ae96027326cd8c89fcadfa547
+SHA256: 0b718429923622eed54b1d7ae8dc781c05258404062f6be877eba72954062462
+Description: systemd login utility library - development files
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 134f5d47241710892d4b4dbcc9f39609
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libsystemd-login0
+Priority: standard
+Section: libs
+Installed-Size: 126
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Depends: libc6 (>= 2.14)
+Pre-Depends: multiarch-support
+Filename: pool/main/s/systemd/libsystemd-login0_204-0ubuntu12_powerpc.deb
+Size: 35964
+MD5sum: 9aa1a55cd400ac9b1211a9eea172fa59
+SHA1: 2629f86d4662b468e2be1b8fb6bf044fa3a36469
+SHA256: dc1a12efa949159771f77e10c3c2f6df75c49cba54a968fbf297aa6bfe69a513
+Description: systemd login utility library
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 2a0d17f149cad5d96dc1de7cde14133b
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: libudev-dev
+Priority: optional
+Section: admin
+Installed-Size: 299
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Depends: libudev1 (= 204-0ubuntu12)
+Filename: pool/main/s/systemd/libudev-dev_204-0ubuntu12_powerpc.deb
+Size: 26514
+MD5sum: 433262e583679b5113eea6fbd32e497d
+SHA1: 2e2d74a02a00fd85dd63041282592747fa8d4636
+SHA256: fa7741b20107fd2b4210a37d5f24b31bcac0dbeec62cbb5182950721f143714e
+Description: libudev development files
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 4085049214953c1e2cf5d9aee1c32173
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libudev1
+Priority: required
+Section: libs
+Installed-Size: 140
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Depends: libc6 (>= 2.17)
+Pre-Depends: multiarch-support
+Filename: pool/main/s/systemd/libudev1_204-0ubuntu12_powerpc.deb
+Size: 43970
+MD5sum: 8675aae6b17735c5e2013cf652b6de60
+SHA1: 4eeccc46c32f9a311680cfa3c444455ff4128d40
+SHA256: 9584184944edfcb1d385d9b3a38d36e5990baedba05301d9b3c3fb0d27dfa9dd
+Description: libudev shared library
+Multi-Arch: same
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: ace5b83d7b48187416c90173a93255b6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
 
 Package: libvirt-bin
 Priority: optional
@@ -4817,6 +5136,27 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, print-server, server, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-core, ubuntustudio-desktop, ubuntu-gnome-desktop
 
+Package: policykit-1-doc
+Priority: optional
+Section: doc
+Installed-Size: 1121
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Architecture: all
+Source: policykit-1
+Version: 0.105-3ubuntu3
+Suggests: devhelp
+Filename: pool/main/p/policykit-1/policykit-1-doc_0.105-3ubuntu3_all.deb
+Size: 295552
+MD5sum: 19f96abb77e532c51427008d7d56e992
+SHA1: 4b732406edc2d6687e9db16a7887b75374fc8e20
+SHA256: f270a28a51d33d5dfddcc35d2d21af467d76bd491a8ff30039bf09f74669b898
+Description: documentation for PolicyKit-1
+Homepage: http://hal.freedesktop.org/docs/PolicyKit/
+Description-md5: 4f476c937cdfc4c2d7a4b81404d7a637
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: printer-driver-hpcups
 Priority: optional
 Section: text
@@ -4940,6 +5280,26 @@ Python-Version: 2.7
 Description-md5: 9e7471c108af7843da4a920afe750d19
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: python-ubuntuone-control-panel
+Priority: extra
+Section: python
+Installed-Size: 231
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: ubuntuone-control-panel
+Version: 13.09-0ubuntu1
+Depends: python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2), gir1.2-glib-2.0, python-dbus, python-dirspec, python-gi, python-twisted-core, python-ubuntu-sso-client (>= 13.07), python-ubuntuone-client (>= 3.99.1)
+Filename: pool/main/u/ubuntuone-control-panel/python-ubuntuone-control-panel_13.09-0ubuntu1_all.deb
+Size: 30924
+MD5sum: 299eb88378d39e4778deae8aef1278b7
+SHA1: 22fcf4938c888478bde7c854cbdb7c7e850f2926
+SHA256: 3ce66bfeded444b135f4d2c0b5bf4db8a30d6b83ea96605244556632ab4a040d
+Description: Ubuntu One Control Panel - Python Libraries
+Description-md5: 9327e5a8404fdee416e6bfca58ea2d88
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
 Package: python2.7
 Priority: optional
@@ -5283,6 +5643,26 @@ Description-md5: 9f461741db5e1ee36fe64349ccbd57b8
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: minimal
+
+Package: python3-software-properties
+Priority: optional
+Section: python
+Installed-Size: 122
+Maintainer: Michael Vogt <michael.vogt@ubuntu.com>
+Architecture: all
+Source: software-properties
+Version: 0.92.26
+Depends: python3:any (>= 3.2.3-3~), python3, python3-apt (>= 0.6.20ubuntu16), lsb-release, unattended-upgrades, iso-codes
+Filename: pool/main/s/software-properties/python3-software-properties_0.92.26_all.deb
+Size: 19308
+MD5sum: 7b1004e2c3123773690de14ae99fbb0a
+SHA1: bb88d1f251d0ff6f40e0ae77a9e5efb89c3c4da8
+SHA256: e0596468d30e9c0d5b4f4e5419d2f81d533fca55f9c196b231c900d47ae5bd35
+Description: manage the repositories that you install software from
+Description-md5: 2404b69e069f73169a1d424cb63f1d53
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: python3.3
 Priority: important
@@ -5747,6 +6127,164 @@ Description-md5: 49d87b72431bed9d646487053d48658d
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-active, kubuntu-active-desktop, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: software-properties-common
+Priority: optional
+Section: admin
+Installed-Size: 188
+Maintainer: Michael Vogt <michael.vogt@ubuntu.com>
+Architecture: all
+Source: software-properties
+Version: 0.92.26
+Replaces: python-software-properties (<< 0.85), python3-software-properties (<< 0.85)
+Depends: python3:any (>= 3.2.3-3~), python3, python3-gi, gir1.2-glib-2.0, python3-dbus, python3-software-properties, ca-certificates
+Breaks: python-software-properties (<< 0.85), python3-software-properties (<< 0.85)
+Filename: pool/main/s/software-properties/software-properties-common_0.92.26_all.deb
+Size: 10474
+MD5sum: 148f9b3e31721969e89aabce1e91e42e
+SHA1: aed02f48e9c3014503158c6dadbdcfe4cb2e2a0d
+SHA256: 0f1874e8df6efbe5da267b2e66d25dca0c6552eca820b34e6c8318455ad7fd01
+Description: manage the repositories that you install software from (common)
+Description-md5: d19f432480048ad00ac5c2bfd116cd00
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, server, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: software-properties-gtk
+Priority: optional
+Section: gnome
+Installed-Size: 420
+Maintainer: Michael Vogt <michael.vogt@ubuntu.com>
+Architecture: all
+Source: software-properties
+Version: 0.92.26
+Depends: python3:any (>= 3.2.3-3~), python3, python3-software-properties, python3-gi, gir1.2-gtk-3.0, python3-aptdaemon.gtk3widgets, software-properties-common, ubuntu-drivers-common (>= 1:0.2.75)
+Filename: pool/main/s/software-properties/software-properties-gtk_0.92.26_all.deb
+Size: 54916
+MD5sum: b5c0b933bd91b8b9c933d874de218e43
+SHA1: 9c55d26b7312b0e36a626c8fa88c86444348eba9
+SHA256: 68743ea1884d89b2f64d221e493800f8f9e9a857479e3c4f17f318d1107109c8
+Description: manage the repositories that you install software from (gtk)
+Description-md5: 1912baba2086cd851f5a53b65d6c9eea
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: systemd-services
+Priority: standard
+Section: admin
+Installed-Size: 1048
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Replaces: logind, systemd (<< 198-1), ubuntu-system-service
+Provides: logind
+Depends: libacl1 (>= 2.2.51-8), libc6 (>= 2.17), libcap2 (>= 2.10), libdbus-1-3 (>= 1.1.1), libselinux1 (>= 2.0.65), libsystemd-daemon0 (>= 31), libudev1 (>= 183), udev (>= 175-0ubuntu23), dbus
+Recommends: systemd | systemd-shim (>= 3)
+Conflicts: logind
+Breaks: systemd (<< 198-1)
+Filename: pool/main/s/systemd/systemd-services_204-0ubuntu12_powerpc.deb
+Size: 396208
+MD5sum: b982abc5cffbbb28caa7d79a59e651ef
+SHA1: 260926ecff58c8d237ad18b66c0ee4be4813dea1
+SHA256: 83c1098c963cd2790ff869bc45680ff69a53492ee09237579fb54f95d7f3c9f1
+Description: systemd runtime services
+Multi-Arch: foreign
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: 2b01627856e6c435a0ff31af7419b02e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master
+
+Package: ubuntu-system-service
+Priority: optional
+Section: admin
+Installed-Size: 109
+Maintainer: Michael Vogt <mvo@ubuntu.com>
+Architecture: all
+Version: 0.2.5
+Depends: python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2), python-apt (>= 0.7.0), python-dbus, policykit-1
+Breaks: gnome-settings-daemon (<< 3.6.4-0ubuntu8), indicator-datetime (<< 12.10.3daily13.03.07)
+Filename: pool/main/u/ubuntu-system-service/ubuntu-system-service_0.2.5_all.deb
+Size: 9836
+MD5sum: d9030290b261d138532035ab28be7133
+SHA1: 2a4a2bdeb2e940bcaea29ed2568711d1c3f0660e
+SHA256: 0ca7a1c35338612209d23d445b2c1533e22cd2ee22819a7df1a3b9f19d4c87e2
+Description: Dbus service to set various system-wide configurations
+Description-md5: 8cf38bb8f33a85cc1effac46d40ae28f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: ubuntuone-control-panel
+Priority: extra
+Section: python
+Installed-Size: 72
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 13.09-0ubuntu1
+Depends: python, python-ubuntuone-control-panel (= 13.09-0ubuntu1), ubuntuone-client (>= 3.99.1)
+Suggests: ubuntuone-control-panel-gui
+Filename: pool/main/u/ubuntuone-control-panel/ubuntuone-control-panel_13.09-0ubuntu1_all.deb
+Size: 1970
+MD5sum: 04540e0ffe413d7d2dd557e13b1b5ef0
+SHA1: 2ed352b5563f8eb6b10cc05dd6a145496b335057
+SHA256: f71882da8787dc58eb7f58b8190cb820ac37c18ed7c78a4778162cd381935641
+Description: Ubuntu One Control Panel
+Description-md5: b054fc8b306e0767ca543cf47ce15035
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
+Package: ubuntuone-control-panel-qt
+Priority: extra
+Section: python
+Installed-Size: 3758
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: ubuntuone-control-panel
+Version: 13.09-0ubuntu1
+Replaces: ubuntuone-control-panel-common, ubuntuone-control-panel-gtk, ubuntuone-installer
+Provides: ubuntuone-control-panel-gui
+Depends: python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2), python-qt4, python-qt4-dbus, python-twisted-core, python-ubuntu-sso-client (>= 13.07), python-ubuntuone-client (>= 3.99.1), python-ubuntuone-control-panel (= 13.09-0ubuntu1), ubuntu-sso-client (>= 13.07), ubuntu-sso-client-qt (>= 13.07), ubuntuone-client (>= 3.99.1), ubuntuone-control-panel (= 13.09-0ubuntu1)
+Breaks: ubuntuone-control-panel-common, ubuntuone-control-panel-gtk, ubuntuone-installer
+Filename: pool/main/u/ubuntuone-control-panel/ubuntuone-control-panel-qt_13.09-0ubuntu1_all.deb
+Size: 776358
+MD5sum: ab96aba5bcd19591847a067a0d209f78
+SHA1: b2c3abe671771c891385155394994ea5b5543fdc
+SHA256: 523da4f5fcf00b3dab9539f7d2d110f64d3590ffc3766e9889aaf7b6ec214913
+Description: Ubuntu One Control Panel - Qt frontend
+Description-md5: d54977cdb82c2a31cdcda457827d606e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: udev
+Priority: required
+Section: admin
+Installed-Size: 5167
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Replaces: systemd-services (<< 202-0ubuntu6)
+Depends: libacl1 (>= 2.2.51-8), libblkid1 (>= 2.19.1), libc6 (>= 2.17), libkmod2 (>= 5~), libselinux1 (>= 2.0.65), libudev1 (= 204-0ubuntu12), sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16), lsb-base (>= 3.0-6), util-linux (>= 2.16)
+Recommends: usbutils, pciutils
+Filename: pool/main/s/systemd/udev_204-0ubuntu12_powerpc.deb
+Size: 1082420
+MD5sum: 4dfcc721d34f2df02aef07504c58af76
+SHA1: 04bbd88efc342a5b23df5e2fc8268cb5ae325a4a
+SHA256: ed796534727f5148f10a9f835f8d10506613469c7fa0db352b8bd761d2ec06bc
+Description: /dev/ and hotplug management daemon
+Multi-Arch: foreign
+Homepage: http://www.freedesktop.org/wiki/Software/systemd
+Description-md5: e875ddb09f46f1f7672af537f0c875ca
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
 
 Package: unity-webapps-common
 Priority: optional

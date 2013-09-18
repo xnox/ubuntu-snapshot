@@ -866,6 +866,26 @@ Description: GLib library of C routines - minimal runtime
  This package contains the minimal runtime library needed by the Debian
  installer.
 
+Package: libudev1-udeb
+Priority: optional
+Section: debian-installer
+Installed-Size: 106
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Depends: libc6-udeb (>= 2.17)
+Filename: pool/main/s/systemd/libudev1-udeb_204-0ubuntu12_powerpc.udeb
+Size: 30866
+MD5sum: b43b5f7180bf2c248eb6f08c2a06881e
+SHA1: 71982720e1cef33fdc020a1d1e73b497bfb376ae
+SHA256: babc7760143128898564f942faf1ed633ea9905363edf715bab49c7ee7a32054
+Description: libudev shared library
+ This library provides access to udev device information.
+ .
+ This is a minimal version, only for use in the installation system.
+
 Package: linux-ppc-udebs-powerpc-e500
 Priority: optional
 Section: debian-installer
@@ -2197,6 +2217,27 @@ Description: Core storage support
  Includes core SCSI, LibATA, USB-Storage. Also includes related block
  devices for CD, Disk and Tape medium (and IDE Floppy).
 Kernel-Version: 3.11.0-2-powerpc64-smp
+
+Package: udev-udeb
+Priority: extra
+Section: debian-installer
+Installed-Size: 526
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
+Architecture: powerpc
+Source: systemd
+Version: 204-0ubuntu12
+Depends: libblkid1-udeb (>= 2.16), libc6-udeb (>= 2.17), libkmod2-udeb, util-linux-udeb
+Filename: pool/main/s/systemd/udev-udeb_204-0ubuntu12_powerpc.udeb
+Size: 113424
+MD5sum: 96d149342766fd1be223a2e63fa4108e
+SHA1: 5f43abeeecf7f035c4a7b20c317075f0511b7f64
+SHA256: cccbdcfa7ab3cd8044573fbf532aac66371f84a6b1259f4510f77586d0258570
+Description: /dev/ and hotplug management daemon
+ udev is a daemon which dynamically creates and removes device nodes from
+ /dev/, handles hotplug events and loads drivers at boot time.
+ .
+ This is a minimal version, only for use in the installation system.
 
 Package: usb-modules-3.11.0-2-powerpc-e500-di
 Priority: standard
