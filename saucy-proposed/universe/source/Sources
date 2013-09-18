@@ -381,6 +381,36 @@ Checksums-Sha256:
  2cc76a8f5004778d0d16ab9ed4c8104ace0eeec7d5a43bc85f193091d8d3296b 1859117 clhep_2.1.3.1.orig.tar.gz
  6154f66cceb7a47944fd3b9d8d6dc652c9dd19545de50fd33ede9b250c242732 4598 clhep_2.1.3.1-1.debian.tar.gz
 
+Package: cmor
+Binary: libcmor2, libcmor-dev, python-cmor
+Version: 2.8.0-3build1
+Priority: extra
+Section: universe/utils
+Maintainer: Alastair McKinstry <mckinstry@debian.org>
+Build-Depends: debhelper (>= 8.1.3~), dh-buildinfo, libossp-uuid-dev, libudunits2-dev, libnetcdf-dev, uuid-dev, python-all-dev (>= 2.6.6-3~), python-setuptools (>= 0.6b3), libgfortran3, automake, python-numpy, gfortran
+Build-Conflicts: libcmor2
+Architecture: any
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/universe/c/cmor
+Files:
+ e7f64a8e328ca44de10242ed697bd2df 2062 cmor_2.8.0-3build1.dsc
+ a6166d44a58bd6c7eba1dacc45a3689b 3104787 cmor_2.8.0.orig.tar.gz
+ e41174f584bebd3ae5ec1f3007acb8ed 7314 cmor_2.8.0-3build1.debian.tar.gz
+Homepage: http://www2-pcmdi.llnl.gov/cmor
+Package-List: 
+ libcmor-dev deb libdevel extra
+ libcmor2 deb libs extra
+ python-cmor deb python extra
+Checksums-Sha1:
+ a42b52428de32a414bfeb1243181df788121539d 2062 cmor_2.8.0-3build1.dsc
+ 8b9b7e98cab953b3c01e5640b029a917cb7bdb87 3104787 cmor_2.8.0.orig.tar.gz
+ 967ae28b53a9621597d63de0248b1e986e462684 7314 cmor_2.8.0-3build1.debian.tar.gz
+Checksums-Sha256:
+ 001f28f3bb97164b5dfd158f64e66fd865fa69a65bbd60c6533a6be27f2bd608 2062 cmor_2.8.0-3build1.dsc
+ f7ce753488c419fe6f83cbf1aa6ea11810ebb362e2710b0666026512445d9e54 3104787 cmor_2.8.0.orig.tar.gz
+ 11f4aa4a670bf165f8d15bddd56eafc14e50b63f6be59b6f3bd846914aee8714 7314 cmor_2.8.0-3build1.debian.tar.gz
+
 Package: coquelicot
 Binary: coquelicot
 Version: 0.9.2-2
@@ -830,36 +860,6 @@ Checksums-Sha256:
  0e5324732337aed781556bd9e41d7f7ed50405691bf7a14adcd2973b5996a670 3632 gcc-snapshot_20130917-1ubuntu1.dsc
  1b0005f2131e29cd5fced0f0fa16e66845ee5fb432cb870dde5cb26c4d8bb9f6 66653396 gcc-snapshot_20130917.orig.tar.gz
  525c58a7bd61e4af188516d752f8790b9a69ac6938dc4e3835d54dad8ea6f10e 3155115 gcc-snapshot_20130917-1ubuntu1.diff.gz
-
-Package: gconf-editor
-Binary: gconf-editor
-Version: 3.0.1-2ubuntu1
-Priority: optional
-Section: universe/utils
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Josselin Mouette <joss@debian.org>
-Build-Depends: autotools-dev, cdbs (>= 0.4.41), debhelper (>= 8), docbook-xml, gettext, gnome-common, gnome-doc-utils, gnome-pkg-tools (>= 0.10), intltool (>= 0.35.0), libgconf2-dev (>= 2.9.2), libgtk-3-dev (>= 3.0.0), pkg-config
-Architecture: any
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/g/gconf-editor
-Files:
- 9f94824e3f356bafa66743dc27cc8cc3 1757 gconf-editor_3.0.1-2ubuntu1.dsc
- 107b8fa250da4ae2de197a1381a099f5 1452468 gconf-editor_3.0.1.orig.tar.xz
- ebab9a05094da56a325d5581a821a402 7080 gconf-editor_3.0.1-2ubuntu1.debian.tar.gz
-Uploaders: Andreas Henriksson <andreas@fatal.se>, Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>, Josselin Mouette <joss@debian.org>, Michael Biebl <biebl@debian.org>, Sebastian Dröge <slomo@debian.org>
-Vcs-Browser: http://anonscm.debian.org/viewvc/pkg-gnome/packages/unstable/gconf-editor
-Vcs-Svn: svn://anonscm.debian.org/pkg-gnome/packages/unstable/gconf-editor
-Package-List: 
- gconf-editor deb utils optional
-Checksums-Sha1:
- 911992e31d3e1826240c0bb5009bee5b7636798c 1757 gconf-editor_3.0.1-2ubuntu1.dsc
- f046cf681c4b18274f9cd350e427b41b83b3c46d 1452468 gconf-editor_3.0.1.orig.tar.xz
- 2517aac743a22f24d3ba6af9700397df46586528 7080 gconf-editor_3.0.1-2ubuntu1.debian.tar.gz
-Checksums-Sha256:
- 456f3dcd61e38eba64b5583fcf578892c8bb4f1185a8545bba789a9d1d05b564 1757 gconf-editor_3.0.1-2ubuntu1.dsc
- 3064e84967b4b4216f5c7e065cfec8c52019438a590e9ed81366af2770660944 1452468 gconf-editor_3.0.1.orig.tar.xz
- 1574b37cd5df423254dd5bb183bfcd8e41a55b58dc2b06009dad072a9405c3f0 7080 gconf-editor_3.0.1-2ubuntu1.debian.tar.gz
 
 Package: gecode
 Binary: libgecode-dev, libgecode-doc, libgecode33, libgecodegist33, libgecodeflatzinc33, flatzinc
@@ -1710,34 +1710,6 @@ Checksums-Sha256:
  4c0d78b28af8051ff8a19a3a3e10a5edfec50945b8f3c9a76612111c47d671bc 2985640 libtorrent-rasterbar_0.16.10.orig.tar.gz
  f4519aede07e437c6da3648795eb1da94b0c949ba2f80c159ad8aa528eceb4b4 14441 libtorrent-rasterbar_0.16.10-3.1.debian.tar.gz
 
-Package: lightdm-gtk-greeter
-Binary: lightdm-gtk-greeter
-Version: 1.6.1-0ubuntu1
-Priority: optional
-Section: universe/x11
-Maintainer: Xubuntu Developers <xubuntu-devel@lists.ubuntu.com>
-Build-Depends: debhelper (>= 7.0.50~), intltool (>= 0.35.0), gnome-common, libgtk-3-dev, gobject-introspection, liblightdm-gobject-1-dev (>= 1.3.5), dh-autoreconf, exo-utils
-Architecture: any
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/l/lightdm-gtk-greeter
-Files:
- a54cfee85262dcb3ef45b47c9b0d3911 1444 lightdm-gtk-greeter_1.6.1-0ubuntu1.dsc
- a51619d8f85534c22c6d13c8f970fa81 391175 lightdm-gtk-greeter_1.6.1.orig.tar.gz
- 20ca3410fac40302400d197191d0b724 13965 lightdm-gtk-greeter_1.6.1-0ubuntu1.debian.tar.gz
-Uploaders: Julien Lavergne <gilir@ubuntu.com>, Sean Davis <smd.seandavis@gmail.com>
-Homepage: https://launchpad.net/lightdm-gtk-greeter
-Package-List: 
- lightdm-gtk-greeter deb x11 optional
-Checksums-Sha1:
- d61dc8e11b9aa2ca741b41be29ff9fb2ad9eb5b6 1444 lightdm-gtk-greeter_1.6.1-0ubuntu1.dsc
- 7cddf09fa123f57afcc4c7692c8f9ca058a0e99a 391175 lightdm-gtk-greeter_1.6.1.orig.tar.gz
- 26251650eedc3c5e250f5d66755ac3f1b709b395 13965 lightdm-gtk-greeter_1.6.1-0ubuntu1.debian.tar.gz
-Checksums-Sha256:
- b30f58083f321cf8ed4db59a1fb665fa6d2694a323a023c9cb694575171011ea 1444 lightdm-gtk-greeter_1.6.1-0ubuntu1.dsc
- 1f0286ab093d50151f0efc46496aef3f8ed8c7306bbc81807a3fdcbcb2a468d9 391175 lightdm-gtk-greeter_1.6.1.orig.tar.gz
- e723ec6a6b8985db06927394664543f6525db5876cf2970916ca439ace036459 13965 lightdm-gtk-greeter_1.6.1-0ubuntu1.debian.tar.gz
-
 Package: lilypond
 Binary: lilypond, lilypond-data, lilypond-doc, lilypond-doc-pdf, lilypond-doc-html, lilypond-doc-html-cs, lilypond-doc-html-de, lilypond-doc-html-es, lilypond-doc-html-fr, lilypond-doc-html-hu, lilypond-doc-html-it, lilypond-doc-html-ja, lilypond-doc-html-nl, lilypond-doc-html-zh, lilypond-doc-pdf-de, lilypond-doc-pdf-es, lilypond-doc-pdf-fr, lilypond-doc-pdf-hu, lilypond-doc-pdf-it, lilypond-doc-pdf-nl
 Version: 2.16.2-2
@@ -2124,6 +2096,36 @@ Checksums-Sha256:
  7b526e37ac534abb485f233d0d4ff3c55928005928ba8ace4bcde2faed5389ba 2437 mrpt_1.0.2-1.dsc
  6f689badac4d628641fd75515f72520c07def75cc56e3b2915a05600627809d4 19601528 mrpt_1.0.2.orig.tar.gz
  fad3d600722efaa49814cf38be8ab0f44dc2aa5289bdfa7b9275504dca8f70dd 12004 mrpt_1.0.2-1.debian.tar.gz
+
+Package: oasis3
+Binary: oasis3, liboasis3-0d, liboasis3-dev, oasis3-examples
+Version: 3.3.beta.dfsg.1-8build1
+Priority: optional
+Section: universe/science
+Maintainer: Alastair McKinstry <mckinstry@debian.org>
+Build-Depends: mpi-default-dev, debhelper (>= 8.1.3~), gfortran, libhdf5-serial-dev | libhdf5-dev, libnetcdf-dev (>= 4.1.2), libcurl4-gnutls-dev, texlive-latex-base, texlive-latex-extra
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/universe/o/oasis3
+Files:
+ 8b2bfd0799ef8041000131ef47c94506 2188 oasis3_3.3.beta.dfsg.1-8build1.dsc
+ 0d133e92da9022c4e6bbde2b250a1df4 19571439 oasis3_3.3.beta.dfsg.1.orig.tar.gz
+ efde52b0b995bbbb177d7a56f5cab1ad 12507 oasis3_3.3.beta.dfsg.1-8build1.debian.tar.gz
+Homepage: http://www.prism.enes.org/PAEs/coupling_IO/software_OASIS3.php
+Package-List: 
+ liboasis3-0d deb libs optional
+ liboasis3-dev deb libdevel extra
+ oasis3 deb science optional
+ oasis3-examples deb science optional
+Checksums-Sha1:
+ 6c0696582a48c508a4b63347d498f60933204875 2188 oasis3_3.3.beta.dfsg.1-8build1.dsc
+ 7b216d25444600ee270cdd9d76258060eab5ee7a 19571439 oasis3_3.3.beta.dfsg.1.orig.tar.gz
+ 6bd71e549ae02290a17b9c63bb8f5ffa51a0e8a9 12507 oasis3_3.3.beta.dfsg.1-8build1.debian.tar.gz
+Checksums-Sha256:
+ a548585c1666cd5817eb8980161bd5e03fea950a170ff930fa8b3922cefb9ea6 2188 oasis3_3.3.beta.dfsg.1-8build1.dsc
+ 4ec7a3927c8fd4bdf6c4cd5208247afcf8c82b4de1ce31d26ae0b4744dc5e94e 19571439 oasis3_3.3.beta.dfsg.1.orig.tar.gz
+ 483c58a23a6610cba463a0ef0ec48d03c964406e40f9ff3aeec3ebec21d2b88f 12507 oasis3_3.3.beta.dfsg.1-8build1.debian.tar.gz
 
 Package: ocaml-zarith
 Binary: libzarith-ocaml-dev, libzarith-ocaml, libzarith-ocaml-doc
@@ -2632,38 +2634,6 @@ Checksums-Sha256:
  18c0b448c720c30c59fdcbaf5a6cfc57baeedd8741fc885f7626ff6dee0fbdbb 1668 python-regex_0.1.20130605-1.dsc
  4084b83610a3e1d0a6de5e92c557cf11bd94d985d184ed540036c7f5692515f6 1137627 python-regex_0.1.20130605.orig.tar.gz
  ed30f124cc4faae87042bf46dea17807597b02f88ba3a8c222ca802d41fbeec3 3910 python-regex_0.1.20130605-1.debian.tar.gz
-
-Package: qd
-Binary: libqd-dev, libqd0
-Version: 2.3.11.dfsg-2.1ubuntu1
-Priority: optional
-Section: universe/libs
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Science Maintainers <debian-science-maintainers@lists.alioth.debian.org>
-Build-Depends: cdbs, debhelper (>= 7), quilt, dh-autoreconf, g++ (>= 4.1), gfortran (>= 4.1)
-Architecture: any
-Standards-Version: 3.9.1
-Format: 1.0
-Directory: pool/universe/q/qd
-Files:
- 106b374be764ebbea46643af920b2368 2193 qd_2.3.11.dfsg-2.1ubuntu1.dsc
- 42cdf48198cfb9925fc6bb7fd0bd9b4e 699749 qd_2.3.11.dfsg.orig.tar.gz
- 6dcfdcf35887451a627015e0626db22e 5559 qd_2.3.11.dfsg-2.1ubuntu1.diff.gz
-Uploaders: Christophe Prud'homme <prudhomm@debian.org>
-Homepage: http://crd.lbl.gov/~dhbailey/mpdist/
-Vcs-Browser: http://svn.debian.org/wsvn/debian-science/packages/qd/trunk
-Vcs-Svn: svn://svn.debian.org/svn/debian-science/packages/qd/trunk
-Package-List: 
- libqd-dev deb libdevel optional
- libqd0 deb libs optional
-Checksums-Sha1:
- fcc6fa2953f4cb84b0861f285f454120029ffd51 2193 qd_2.3.11.dfsg-2.1ubuntu1.dsc
- 20ac8684b293ed093127866cce83d2492e8c57b8 699749 qd_2.3.11.dfsg.orig.tar.gz
- 0ad6aa3b92aaca6a40cd12d1cd054095398db595 5559 qd_2.3.11.dfsg-2.1ubuntu1.diff.gz
-Checksums-Sha256:
- 06bf3e04c2097a7f421b44c39c18784926d7dc855b973d13ae7acaa2ec6940a5 2193 qd_2.3.11.dfsg-2.1ubuntu1.dsc
- a3a19f85a8c91ea4124019312edfbf16548eb14340599e894085957fd253b4b7 699749 qd_2.3.11.dfsg.orig.tar.gz
- e0980df4777d28b4521057d1deec67bd03ff5f537b36d73b0664d338cbb54a8e 5559 qd_2.3.11.dfsg-2.1ubuntu1.diff.gz
 
 Package: qtiplot
 Binary: qtiplot, qtiplot-doc
@@ -3887,43 +3857,6 @@ Checksums-Sha256:
  bc65fc45bcae9fd4a7d2f9dfeeace40babd5c8dd57161d5c31f9420bc9b4f219 2520 ulogd2_2.0.2-3.dsc
  a36c4032d83edaef1b13f96b6647e9e150d7f20b5af7035f0a91c17fe2e066c5 466664 ulogd2_2.0.2.orig.tar.bz2
  9ab79b0b532571fff479dd4c1bde3a1afbaccdc7c1176bf1ca16316b13d5d175 13697 ulogd2_2.0.2-3.debian.tar.gz
-
-Package: vdr
-Binary: vdr, vdr-dev, vdr-dbg, vdr-plugin-dvbsddevice, vdr-plugin-dvbsddevice-dbg, vdr-plugin-dvbhddevice, vdr-plugin-dvbhddevice-dbg, vdr-plugin-examples
-Version: 2.0.3-1
-Priority: extra
-Section: universe/misc
-Maintainer: Debian VDR Team <pkg-vdr-dvb-devel@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 9), libjpeg-dev, libcap-dev, libncursesw5-dev, libfreetype6-dev, libfontconfig-dev, gettext, python, linux-libc-dev (>= 3.0), libfribidi-dev
-Architecture: any all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/universe/v/vdr
-Files:
- 36df93095d71e0da670d6949e5284469 1802 vdr_2.0.3-1.dsc
- dd8fb1642bdfa7feb0e9a8ae41e9ef2f 838015 vdr_2.0.3.orig.tar.bz2
- d76b06a7bf1f458a02f2d1169776fb7f 47311 vdr_2.0.3-1.debian.tar.bz2
-Uploaders: Thomas Schmidt <tschmidt@debian.org>, Tobias Grimm <etobi@debian.org>, Thomas Günther <tom@toms-cafe.de>
-Homepage: http://www.tvdr.de/
-Vcs-Browser: http://git.debian.org/?p=pkg-vdr-dvb/vdr.git
-Vcs-Git: git://git.debian.org/pkg-vdr-dvb/vdr.git
-Package-List: 
- vdr deb video extra
- vdr-dbg deb debug extra
- vdr-dev deb video extra
- vdr-plugin-dvbhddevice deb video extra
- vdr-plugin-dvbhddevice-dbg deb debug extra
- vdr-plugin-dvbsddevice deb video extra
- vdr-plugin-dvbsddevice-dbg deb debug extra
- vdr-plugin-examples deb video extra
-Checksums-Sha1:
- 828d5481c73031df3261b9063e3370f81d4e5d26 1802 vdr_2.0.3-1.dsc
- acfa9d459023b0461d9dacf31177e80582e476c6 838015 vdr_2.0.3.orig.tar.bz2
- e7f78f07e2a2bf82264a161efb649fe43faa69de 47311 vdr_2.0.3-1.debian.tar.bz2
-Checksums-Sha256:
- afccbaa1db60bfb74ad376dcd999a7f52fb71e87e7662cba8026ca9676456b04 1802 vdr_2.0.3-1.dsc
- 5bcb2b56f49dc9d1617f7e638de26c38eca1df3a33eed4b08412c00c0dfb4719 838015 vdr_2.0.3.orig.tar.bz2
- f61448689f2bae39544e36b27d6d0129ae17cc950aae82815223961979ac7768 47311 vdr_2.0.3-1.debian.tar.bz2
 
 Package: vdr-plugin-xine
 Binary: vdr-plugin-xine
