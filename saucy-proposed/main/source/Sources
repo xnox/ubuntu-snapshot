@@ -1,6 +1,7 @@
 Package: apt-xapian-index
 Binary: apt-xapian-index
 Version: 0.45ubuntu3
+Priority: optional
 Section: admin
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Enrico Zini <enrico@debian.org>
@@ -393,6 +394,7 @@ Testsuite: autopkgtest
 Package: hplip
 Binary: hplip, hplip-data, printer-driver-postscript-hp, hplip-gui, hplip-dbg, hplip-doc, hpijs-ppds, printer-driver-hpijs, printer-driver-hpcups, libhpmud0, libhpmud-dev, libsane-hpaio
 Version: 3.13.9-0ubuntu2
+Priority: optional
 Section: utils
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian HPIJS and HPLIP maintainers <pkg-hpijs-devel@lists.alioth.debian.org>
@@ -484,6 +486,30 @@ Checksums-Sha1:
 Checksums-Sha256:
  a2cf344ad92b0a54be99a49e8db3121a8cb66ffb05054b79457184c3411908ac 887 language-pack-as_13.10+20130917.dsc
  e04ae39bb157ddb53fc21880618551cb5903057deeeecf588df07e74c496997e 286967 language-pack-as_13.10+20130917.tar.gz
+
+Package: language-selector
+Binary: language-selector-gnome, language-selector-common
+Version: 0.115
+Priority: standard
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper (>= 8.1.0~), python3-all, python3-distutils-extra, python3-setuptools, pyqt4-dev-tools, intltool, intltool-debian, dh-translations
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/l/language-selector
+Files:
+ 955d65bcf9d5b7795325261847f8b4e8 1679 language-selector_0.115.dsc
+ e60373f781fcab5943609602a2194812 361683 language-selector_0.115.tar.gz
+Package-List: 
+ language-selector-common deb admin optional
+ language-selector-gnome deb admin optional
+Checksums-Sha1:
+ a43f6ef81b1f598d0b1da6912ad11ca192f6cf98 1679 language-selector_0.115.dsc
+ 9f05510bbbc83704a4b5d5c85be7fbdb318cce6e 361683 language-selector_0.115.tar.gz
+Checksums-Sha256:
+ 41b7ea4e0a55f1df05e170314d5eeb78767813f01dcc27cc5dae28daf3e2bf2b 1679 language-selector_0.115.dsc
+ 38d5bad4c49f3e0d943c7e28dec95f05671037d31f31e2504d1444092803e57a 361683 language-selector_0.115.tar.gz
 
 Package: libidn
 Binary: idn, libidn11-dev, libidn11, libidn11-java
@@ -995,6 +1021,45 @@ Checksums-Sha256:
  669978abf9cc58640186559cf9cc89cbadc5da4b8b975c07f0e7a47faa74b3d1 35469 nova_2013.2~b3-0ubuntu2.debian.tar.gz
 Testsuite: autopkgtest
 
+Package: policykit-1
+Binary: policykit-1, policykit-1-doc, libpolkit-gobject-1-0, libpolkit-gobject-1-dev, libpolkit-agent-1-0, libpolkit-agent-1-dev, libpolkit-backend-1-0, libpolkit-backend-1-dev, gir1.2-polkit-1.0
+Version: 0.105-3ubuntu3
+Priority: standard
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 9), autotools-dev, dh-autoreconf, pkg-config, libglib2.0-dev (>= 2.28.0), libexpat1-dev, libpam0g-dev, libselinux1-dev [linux-any], libsystemd-login-dev, gtk-doc-tools, xsltproc, libgirepository1.0-dev (>= 0.9.12), gobject-introspection (>= 0.9.12-4~), gir1.2-glib-2.0, libglib2.0-doc, libgtk-3-doc
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/p/policykit-1
+Files:
+ 9feb11548542d58140f33f1241978e6f 2916 policykit-1_0.105-3ubuntu3.dsc
+ 9c29e1b6c214f0bd6f1d4ee303dfaed9 1431080 policykit-1_0.105.orig.tar.gz
+ ec0a6b510d7ea2018ed0bf9e71cb4838 19941 policykit-1_0.105-3ubuntu3.debian.tar.gz
+Uploaders: Michael Biebl <biebl@debian.org>, Martin Pitt <mpitt@debian.org>
+Homepage: http://hal.freedesktop.org/docs/PolicyKit/
+Vcs-Browser: http://git.debian.org/?p=pkg-utopia/policykit.git;a=summary
+Vcs-Git: git://git.debian.org/git/pkg-utopia/policykit.git
+Package-List: 
+ gir1.2-polkit-1.0 deb introspection optional
+ libpolkit-agent-1-0 deb libs optional
+ libpolkit-agent-1-dev deb libdevel optional
+ libpolkit-backend-1-0 deb libs optional
+ libpolkit-backend-1-dev deb libdevel optional
+ libpolkit-gobject-1-0 deb libs optional
+ libpolkit-gobject-1-dev deb libdevel optional
+ policykit-1 deb admin optional
+ policykit-1-doc deb doc optional
+Checksums-Sha1:
+ 68b03ea153db86121d3ff9c940cc4d4f48f0f2eb 2916 policykit-1_0.105-3ubuntu3.dsc
+ 53d56484a5bffb0aaf645c8d813b3063e01e8423 1431080 policykit-1_0.105.orig.tar.gz
+ 30840efb3886eeb1a10389cd388d692fc581e358 19941 policykit-1_0.105-3ubuntu3.debian.tar.gz
+Checksums-Sha256:
+ 0ef36589bf454a981534e3fb48f6111c86107b38fec1d09e4ede3301355e3aa7 2916 policykit-1_0.105-3ubuntu3.dsc
+ 8fdc7cc8ba4750fcce1a4db9daa759c12afebc7901237e1c993c38f08985e1df 1431080 policykit-1_0.105.orig.tar.gz
+ b00ad01578a47045fc36a5d18aae0017d27195070eece5271934bfa54992bdee 19941 policykit-1_0.105-3ubuntu3.debian.tar.gz
+
 Package: python2.7
 Binary: python2.7, libpython2.7-stdlib, python2.7-minimal, libpython2.7-minimal, libpython2.7, python2.7-examples, python2.7-dev, libpython2.7-dev, libpython2.7-testsuite, idle-python2.7, python2.7-doc, python2.7-dbg, libpython2.7-dbg
 Version: 2.7.5-8ubuntu1
@@ -1235,9 +1300,69 @@ Checksums-Sha256:
  cc03d1a357cdb7af82e3909ee8ff93cb2b2afb48aca23bfde0117d6f49f624a7 797539 routes_1.13.orig.tar.gz
  2537aa36bfec8b1e8928b2873e89bb846b530a81d19eb183a6f51661cf4bcb86 22290 routes_1.13-3.debian.tar.gz
 
+Package: rtkit
+Binary: rtkit
+Version: 0.10-2ubuntu1
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Build-Depends: cdbs, debhelper (>= 7.0.50~), autotools-dev, libdbus-1-dev, libpolkit-backend-1-dev, libcap-dev
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/r/rtkit
+Files:
+ eb14d6afa456bde5bc03bf5c1796c330 2104 rtkit_0.10-2ubuntu1.dsc
+ 9ab7f2a25ddf05584ea2216dfe4cefd4 160528 rtkit_0.10.orig.tar.gz
+ bc0f3b6931b47f79bb5316aaad761b4c 4991 rtkit_0.10-2ubuntu1.debian.tar.gz
+Uploaders: Alessio Treglia <alessio@debian.org>, Luke Yelavich <themuso@ubuntu.com>
+Homepage: http://0pointer.de/public/
+Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/rtkit.git
+Vcs-Git: git://git.debian.org/git/pkg-multimedia/rtkit.git
+Package-List: 
+ rtkit deb admin optional
+Checksums-Sha1:
+ cb2b0e5bf2e9b25b70097ee20d257adb66944206 2104 rtkit_0.10-2ubuntu1.dsc
+ 208351063cdcc5289f79490d6bb313597a6508af 160528 rtkit_0.10.orig.tar.gz
+ d8d0e9b60b7e39e5bb618509e7542a4576fd8acd 4991 rtkit_0.10-2ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 477667e093495c18019ac99c699d3876118715ed0cc46fcc161dfb3ec60bc13d 2104 rtkit_0.10-2ubuntu1.dsc
+ 74ea93ac09d9d5a7cb85bf57ec92090311c9fb105a41bdd633adcf3b94472120 160528 rtkit_0.10.orig.tar.gz
+ 139cab1c59e0d583c7498112f6b7dbdcf327a5d5d3677d267c86d2f915b3f32c 4991 rtkit_0.10-2ubuntu1.debian.tar.gz
+
+Package: software-properties
+Binary: python-software-properties, python3-software-properties, software-properties-common, software-properties-gtk, software-properties-kde
+Version: 0.92.26
+Section: admin
+Maintainer: Michael Vogt <michael.vogt@ubuntu.com>
+Build-Depends: debhelper (>= 9), libxml-parser-perl, intltool, python-all (>= 2.6.6-3~), python-distutils-extra (>= 1.90), python-setuptools, python3-all, python3-distutils-extra, python3-setuptools, dh-translations
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/s/software-properties
+Files:
+ f7ecb5907a7e3a685dc365cbc94b066e 2061 software-properties_0.92.26.dsc
+ 6816a0e1f2baeceb5f3dac5b2e7a05fb 759657 software-properties_0.92.26.tar.gz
+Vcs-Bzr: http://code.launchpad.net/~ubuntu-core-dev/software-properties/main
+Package-List: 
+ python-software-properties deb python optional
+ python3-software-properties deb python optional
+ software-properties-common deb admin optional
+ software-properties-gtk deb admin optional
+ software-properties-kde deb kde optional
+Checksums-Sha1:
+ d7f248a7f41ed2430c2aeba540328b09c612b543 2061 software-properties_0.92.26.dsc
+ 4a21524b6f0033b442e1c57ec5e8122883e04ace 759657 software-properties_0.92.26.tar.gz
+Checksums-Sha256:
+ b14d8b3889154d5cdae0abf2dad379121380b5523d8889feda2f3206d830705c 2061 software-properties_0.92.26.dsc
+ 28e9ceffdf4b6c86d2f609032b03b770d45c7045345493eef17a9dd796c4330e 759657 software-properties_0.92.26.tar.gz
+Testsuite: autopkgtest
+
 Package: systemd
 Binary: systemd, systemd-sysv, systemd-services, libpam-systemd, libsystemd-login0, libsystemd-login-dev, libsystemd-daemon0, libsystemd-daemon-dev, libsystemd-journal0, libsystemd-journal-dev, libsystemd-id128-0, libsystemd-id128-dev, udev, libudev1, libudev-dev, udev-udeb, libudev1-udeb, libgudev-1.0-0, gir1.2-gudev-1.0, libgudev-1.0-dev, python-systemd
 Version: 204-0ubuntu12
+Priority: required
 Section: admin
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
@@ -1284,6 +1409,86 @@ Checksums-Sha256:
  072c393503c7c1e55ca7acf3db659cbd28c7fe5fa94fab3db95360bafd96731b 2186264 systemd_204.orig.tar.xz
  adae5833721713fd6343da24be8377cdaf3cb47c20e63e072800d1e3e8fd37b1 88245 systemd_204-0ubuntu12.debian.tar.gz
 Testsuite: autopkgtest
+
+Package: ubuntu-system-service
+Binary: ubuntu-system-service
+Version: 0.2.5
+Section: admin
+Maintainer: Michael Vogt <mvo@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50~), dh-translations, python-distutils-extra, python (>= 2.6.6-3~), intltool
+Architecture: all
+Standards-Version: 3.9.2
+Format: 3.0 (native)
+Directory: pool/main/u/ubuntu-system-service
+Files:
+ ff0a08821fff9ab6843508c1c8759ba1 1651 ubuntu-system-service_0.2.5.dsc
+ 7438d58fee6c7bd1ddcae22c70691e5d 18105 ubuntu-system-service_0.2.5.tar.gz
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-core-dev/system-service/ubuntu
+Vcs-Bzr: lp:system-service
+Package-List: 
+ ubuntu-system-service deb admin optional
+Checksums-Sha1:
+ b1bfa3971654265dc8f1bbff439c0d05a52766e5 1651 ubuntu-system-service_0.2.5.dsc
+ ca730b55a86290f87803b81b967efedaef5508e9 18105 ubuntu-system-service_0.2.5.tar.gz
+Checksums-Sha256:
+ f3e08c32a4414cfc29b66c3fc8f3b96411db4997e9ad99f3d37474dee23ab12b 1651 ubuntu-system-service_0.2.5.dsc
+ 2b2c441897276e970f5439b7b0894d58051ec58af1660ffa0c90f707759a7664 18105 ubuntu-system-service_0.2.5.tar.gz
+
+Package: ubuntuone-control-panel
+Binary: ubuntuone-control-panel, python-ubuntuone-control-panel, ubuntuone-control-panel-qt
+Version: 13.09-0ubuntu1
+Section: python
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: dbus, debhelper (>= 7.0.50), dh-translations, gir1.2-glib-2.0, pep8, pyflakes, pyqt4-dev-tools, python (>= 2.6.6-3~), python-dbus, python-dirspec, python-distutils-extra (>= 2.10), python-gi | python-gobject (>= 3.0.0), python-mock, python-mocker, python-qt4, python-qt4-dbus, python-twisted-core, python-ubuntu-sso-client (>= 13.07), python-ubuntu-sso-client.tests (>= 13.07), python-ubuntuone-client (>= 3.99.1), ubuntuone-dev-tools (>= 3.99.0), ubuntu-sso-client-qt (>= 13.07), xvfb
+Architecture: all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/u/ubuntuone-control-panel
+Files:
+ 94a567dd8bcaad58f11dbb0a453b450d 1854 ubuntuone-control-panel_13.09-0ubuntu1.dsc
+ ed987db67c6e46fd729713195585e58e 808281 ubuntuone-control-panel_13.09.orig.tar.gz
+ 5a04ed08937b66946f70b8879bc54e86 13605 ubuntuone-control-panel_13.09-0ubuntu1.debian.tar.gz
+Package-List: 
+ python-ubuntuone-control-panel deb python extra
+ ubuntuone-control-panel deb python extra
+ ubuntuone-control-panel-qt deb python extra
+Checksums-Sha1:
+ ccb5bfaf39abc9770ebe832e6bd31aec55840324 1854 ubuntuone-control-panel_13.09-0ubuntu1.dsc
+ eec685068e2238487c98048a4069b834ee1b8ed4 808281 ubuntuone-control-panel_13.09.orig.tar.gz
+ 047b11339abf86e641563feea4ba65d5831c3778 13605 ubuntuone-control-panel_13.09-0ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ ead9f9a7027c7eea790da8d3c8596160150cfccb9bd5ae46a957b0c0c3460995 1854 ubuntuone-control-panel_13.09-0ubuntu1.dsc
+ 3c2531bbe0adb5b944d02f27244274e7fdd8d703ce0f387bba378aca1fcff64a 808281 ubuntuone-control-panel_13.09.orig.tar.gz
+ 7dd6d056a53165eabe49248016774576b81639c9ed8812581daebb6fe7ccc05b 13605 ubuntuone-control-panel_13.09-0ubuntu1.debian.tar.gz
+Testsuite: autopkgtest
+
+Package: usb-creator
+Binary: usb-creator-common, usb-creator-gtk, usb-creator-kde
+Version: 0.2.49
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: usb-creator Hackers Team <usb-creator-hackers@lists.launchpad.net>
+Build-Depends: debhelper (>= 9), dh-translations, python3, python3-distutils-extra, pkg-kde-tools
+Architecture: amd64 i386
+Standards-Version: 3.9.4
+Format: 3.0 (native)
+Directory: pool/main/u/usb-creator
+Files:
+ 4b64ef215fa1580924a9e7afc8a1d5e3 1893 usb-creator_0.2.49.dsc
+ 8019cd79223076b6c22140b0f4787701 491278 usb-creator_0.2.49.tar.gz
+Uploaders: Dmitrijs Ledkovs <dmitrij.ledkov@ubuntu.com>, Ignace Mouzannar <mouzannar@gmail.com>
+Vcs-Bzr: http://bazaar.launchpad.net/~usb-creator-hackers/usb-creator/trunk
+Package-List: 
+ usb-creator-common deb admin optional
+ usb-creator-gtk deb admin optional
+ usb-creator-kde deb admin optional
+Checksums-Sha1:
+ c87ff36ad68abf984b075c551da4444648fe266c 1893 usb-creator_0.2.49.dsc
+ 3e8b2e6df019f7660f7e7343cf10eea019a152d6 491278 usb-creator_0.2.49.tar.gz
+Checksums-Sha256:
+ 2a5415c1b2e57593fd1680bc9c3f64857b44ab1af35ea7897ea7f4d367560651 1893 usb-creator_0.2.49.dsc
+ c36fadf22340e93ddb4f81fac63d4fc4be03ef21c9a26894f497284905fcdf63 491278 usb-creator_0.2.49.tar.gz
 
 Package: usb-modeswitch-data
 Binary: usb-modeswitch-data
