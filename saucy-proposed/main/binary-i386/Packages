@@ -1761,6 +1761,28 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: gir1.2-accounts-1.0
+Priority: optional
+Section: libs
+Installed-Size: 99
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: libaccounts-glib
+Version: 1.12+13.10.20130918.1-0ubuntu1
+Depends: libaccounts-glib0 (= 1.12+13.10.20130918.1-0ubuntu1)
+Filename: pool/main/liba/libaccounts-glib/gir1.2-accounts-1.0_1.12+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 7156
+MD5sum: ecf2b98be75d2b0640e1b20a51922fc6
+SHA1: 54347450dfb5843e59c9c45b0dc76aaea199d12c
+SHA256: cb20b21b932e3a87aa850dcc5b330284968501f930ab5afe64bcff5142c6c35b
+Description: typelib file for libaccounts-glib0
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: 030c7e7e113a19718bd61ed39007d4f7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
 Package: gir1.2-gudev-1.0
 Priority: optional
 Section: libs
@@ -1900,6 +1922,70 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop
+
+Package: libaccounts-glib-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 262
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: libaccounts-glib
+Version: 1.12+13.10.20130918.1-0ubuntu1
+Depends: gir1.2-accounts-1.0, libaccounts-glib0 (= 1.12+13.10.20130918.1-0ubuntu1), libdbus-glib-1-dev, libglib2.0-dev, libsqlite3-dev, libxml2-dev
+Filename: pool/main/liba/libaccounts-glib/libaccounts-glib-dev_1.12+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 23234
+MD5sum: 1c2fbfa5af44be0a8dc944bfcc10dd45
+SHA1: 3efcd801c37ce58cd9e267c4ee02c81f85111149
+SHA256: 1e559459180adb0cfb4ae28066bd54fdd5d61bc6db6e2740651d1911ddd0445d
+Description: library for single signon - development files
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: 765d6d1ddff9dd3cf4394fe30970f017
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libaccounts-glib-doc
+Priority: optional
+Section: doc
+Installed-Size: 558
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: all
+Source: libaccounts-glib
+Version: 1.12+13.10.20130918.1-0ubuntu1
+Filename: pool/main/liba/libaccounts-glib/libaccounts-glib-doc_1.12+13.10.20130918.1-0ubuntu1_all.deb
+Size: 64510
+MD5sum: ae8df352acbd8fb2c408232ad643f8da
+SHA1: b22fc1e99b4475ba3967e478c713c48ae2670950
+SHA256: 78471cec1daca6a30592e6967abf72d1e1d0e912ba04b5a226b7704a03503487
+Description: library for single signon - documentation
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: 8a097664e340ebf00e0822ccc0ac4e04
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libaccounts-glib0
+Priority: optional
+Section: libs
+Installed-Size: 146
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: libaccounts-glib
+Version: 1.12+13.10.20130918.1-0ubuntu1
+Depends: libc6 (>= 2.17), libglib2.0-0 (>= 2.37.3), libsqlite3-0 (>= 3.5.9), libxml2 (>= 2.7.4)
+Pre-Depends: multiarch-support
+Filename: pool/main/liba/libaccounts-glib/libaccounts-glib0_1.12+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 46800
+MD5sum: c53ff763cbd5fa84aca1a2130e3b611e
+SHA1: 510b3ea87c8f3d9c3ed3b14e0ba50d9e0f2b4de2
+SHA256: 67961aad332fd415f0f58e63bb187b5566312a795467f7fac152bb90d1016eb8
+Description: library for single signon
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: 04337bac8cab900bc597648cf0e9cf55
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntustudio-desktop, ubuntu-gnome-desktop
 
 Package: libapache2-mod-auth-mysql
 Priority: optional
@@ -3267,6 +3353,175 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: libsignon-extension1
+Priority: optional
+Section: libs
+Installed-Size: 99
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Depends: libc6 (>= 2.3.6-6~), libqt5core5 (>= 5.0.2), libqt5dbus5 (>= 5.0.2), libstdc++6 (>= 4.1.1)
+Filename: pool/main/s/signon/libsignon-extension1_8.54+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 26650
+MD5sum: af3e36b72905a3b08a9495a26a22f227
+SHA1: 51bb1f96432bfafdb44f6866e731b6f53955084e
+SHA256: 566745f7ec0c5686cdddb2293523277a5203932fe3f94b19189b2a6d29409599
+Description: Single Sign On framework
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: e82cc644df18f6d1c382ada5d5c88928
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: libsignon-plugins-common1
+Priority: optional
+Section: libs
+Installed-Size: 63
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Depends: libc6 (>= 2.1.3), libqt5core5 (>= 5.0.2), libqt5dbus5 (>= 5.0.2), libstdc++6 (>= 4.1.1)
+Filename: pool/main/s/signon/libsignon-plugins-common1_8.54+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 15774
+MD5sum: 223cc09c79fc3d62dcd73bd0827b8235
+SHA1: 924f8c1704aa06d39cb07f0d525ec52abdbe3a7b
+SHA256: ac1ac675068863794a6e4edac1b86c85a792979cf636dd38951c781d2542ae73
+Description: Single Sign On framework
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: e82cc644df18f6d1c382ada5d5c88928
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: libsignon-plugins-doc
+Priority: optional
+Section: doc
+Installed-Size: 558
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: all
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Filename: pool/main/s/signon/libsignon-plugins-doc_8.54+13.10.20130918.1-0ubuntu1_all.deb
+Size: 165050
+MD5sum: 431704f295c181a3b7a8cad211b7b7df
+SHA1: 8cbf8ce0292d5f35ad7c2849c4ce482ed95ee88e
+SHA256: eb8516ef1b92b519ee9f5c1ba1a636949195444c86d8010318b6d02565df2052
+Description: Single Sign On framework plugins - documentation
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: 261b6b2151c83e14b3f866d069eecffa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libsignon-qt-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 108
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Depends: libsignon-qt1 (= 8.54+13.10.20130918.1-0ubuntu1), libqt4-dev (>= 4.5)
+Filename: pool/main/s/signon/libsignon-qt-dev_8.54+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 14182
+MD5sum: c94100d6cddb75a331476ea5bbf11d63
+SHA1: 6324dd08ce9464ce517f3faeefe71605134a4ed2
+SHA256: 4968c6d5bb033509b8e51b95bac1e06b28705e91233352709dd0296a2c56e782
+Description: Development files for libsignon-qt
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: cf54ad814c7c7abcf70c32b44f66c2bd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libsignon-qt-doc
+Priority: optional
+Section: doc
+Installed-Size: 1276
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: all
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Filename: pool/main/s/signon/libsignon-qt-doc_8.54+13.10.20130918.1-0ubuntu1_all.deb
+Size: 292564
+MD5sum: 4a13ef1972a6c672a93b298effc3792b
+SHA1: 0eaba9e80965e4809d7402034b06bfb5d1c633a7
+SHA256: d3320cca1dfcaa9ce1a0c65722ebae0a4191b645c60a238fdd0bb56327547abd
+Description: QT bindings for single signon - documentation
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: 97bab6ea9929a3023462acc349535d16
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libsignon-qt1
+Priority: optional
+Section: libs
+Installed-Size: 195
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Depends: libc6 (>= 2.1.3), libqt4-dbus (>= 4:4.8.0), libqtcore4 (>= 4:4.7.0~beta1), libstdc++6 (>= 4.1.1)
+Filename: pool/main/s/signon/libsignon-qt1_8.54+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 62750
+MD5sum: f719ba09de22ff761c52afcee8773a52
+SHA1: 02854731beecab27e796c4700b12f581913da0be
+SHA256: a8d5c59741323c8f876ba18f5aaef5d12631838f698d9f1ebbaf2e8b978e27f6
+Description: Single Sign On framework
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: e82cc644df18f6d1c382ada5d5c88928
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libsignon-qt5-1
+Priority: optional
+Section: libs
+Installed-Size: 232
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Depends: libc6 (>= 2.4), libqt5core5 (>= 5.0.2), libqt5dbus5 (>= 5.0.2), libstdc++6 (>= 4.1.1)
+Filename: pool/main/s/signon/libsignon-qt5-1_8.54+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 74880
+MD5sum: d53bc03edd4d0071030f35442e81756f
+SHA1: 3bad9464d9ce4c2675736826edca1b2274617a8c
+SHA256: e83d697089653bcc58bdfb53d5c8b69df02bc23485162d2fdb6230920da307e1
+Description: Single Sign On framework
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: e82cc644df18f6d1c382ada5d5c88928
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: libsignon-qt5-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 108
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Depends: libsignon-qt5-1 (= 8.54+13.10.20130918.1-0ubuntu1), qtbase5-dev
+Filename: pool/main/s/signon/libsignon-qt5-dev_8.54+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 14174
+MD5sum: 5000c3c2bdd20453de087b74ab889791
+SHA1: f709eecd2843db54c798050259cf301a0850d00e
+SHA256: e9b7197cd2435c5c90de096509903cac22f9ea1a13ce877ba1f999aa4e9dfb3b
+Description: Development files for libsignon-qt
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: cf54ad814c7c7abcf70c32b44f66c2bd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: libsystemd-daemon-dev
 Priority: extra
 Section: libdevel
@@ -4114,6 +4369,51 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: python-django
+Priority: optional
+Section: python
+Installed-Size: 43147
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chris Lamb <lamby@debian.org>
+Architecture: all
+Version: 1.5.4-1
+Depends: python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2)
+Recommends: libjs-jquery
+Suggests: python-psycopg2, python-psycopg, python-mysqldb, python-flup, python-sqlite, python-yaml, geoip-database-contrib, gettext
+Filename: pool/main/p/python-django/python-django_1.5.4-1_all.deb
+Size: 5574844
+MD5sum: 6565904b43ae9beb852a59299210fe72
+SHA1: 959dd91d1118a6dfcba52b3cdecd42fce56909a8
+SHA256: bef0b7761334f72c8aaf29de5fe0f91de5891baf69ce239d925114561bbfe74c
+Description: High-level Python web development framework
+Homepage: http://www.djangoproject.com/
+Description-md5: efe2f6ec2ae89851c710c280956fa785
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: python-django-doc
+Priority: optional
+Section: doc
+Installed-Size: 12390
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Chris Lamb <lamby@debian.org>
+Architecture: all
+Source: python-django
+Version: 1.5.4-1
+Depends: libjs-sphinxdoc (>= 1.0)
+Filename: pool/main/p/python-django/python-django-doc_1.5.4-1_all.deb
+Size: 2586144
+MD5sum: cd1867584a107ff1b6e0f05308dff584
+SHA1: f5ac607ae1ebf4bf8ebb469845733b4ca99a9149
+SHA256: fab90297d7b34c15d48890bbae8313ca46bdafdfef1bf846340ab23049d2ce9a
+Description: High-level Python web development framework (documentation)
+Homepage: http://www.djangoproject.com/
+Description-md5: 257e8ca2132ad054b44d0dd521e727f5
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: python-libvirt
 Priority: optional
 Section: devel
@@ -4883,6 +5183,140 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: virt-host, edubuntu-desktop-gnome
+
+Package: signon-plugin-password
+Priority: optional
+Section: libs
+Installed-Size: 79
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Replaces: signon-passwordplugin
+Depends: libc6 (>= 2.1.3), libqt5core5 (>= 5.0.2), libstdc++6 (>= 4.1.1), signond
+Conflicts: signon-passwordplugin
+Filename: pool/main/s/signon/signon-plugin-password_8.54+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 17412
+MD5sum: c6a226a6cc0e4109179cc416f60b9cf3
+SHA1: 6445bcd9b8cd4d6420fbb5f8801cd8b69528a075
+SHA256: b10e032d941c1e080f66fd456d29a1033286e88365ac37b8d69f3851aa53b446
+Description: Plain Password plugin for Single Sign On
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: 1443d094b0a2eedfe1ff7ebe9adcd172
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: signon-plugin-ssotest
+Priority: optional
+Section: libs
+Installed-Size: 180
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Depends: libc6 (>= 2.1.3), libqt5core5 (>= 5.0.2), libqt5gui5 (>= 5.0.2), libstdc++6 (>= 4.1.1), signond
+Filename: pool/main/s/signon/signon-plugin-ssotest_8.54+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 73986
+MD5sum: a164ec8700e03f8873c69c5bac59e704
+SHA1: 854d151b95bfda8f169d8f20e911cdbb9a05a855
+SHA256: d9f3ce609a0cc5926e00a494cc26921e030a55c2a560a3ea66d452ff9f811768
+Description: Test plugin for Single Sign On
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: 75c64b001f11cd599e8f4b09f366f77a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: signon-plugins-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 112
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Depends: libsignon-qt5-dev
+Filename: pool/main/s/signon/signon-plugins-dev_8.54+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 19062
+MD5sum: cf1e9da1421f716e3e0371708deea9d2
+SHA1: ff299b6fe6911d71ca40fc83215ad1ce1d4f261b
+SHA256: 612dd2dd5e4c763b81bfd82654aed11de723f171d229af9f39e2c7705b06006a
+Description: Development files for Single Sign On plugins
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: 0fdec0bbfa0388a1714a386572561362
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: signond
+Priority: optional
+Section: gnome
+Installed-Size: 672
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Replaces: signon-plugins, signon-saslplugin (<< 8.40)
+Depends: libc6 (>= 2.4), libproxy1 (>= 0.4.7), libqt5core5 (>= 5.0.2), libqt5dbus5 (>= 5.0.2), libqt5network5 (>= 5.0.2), libqt5sql5 (>= 5.0.2), libsignon-extension1, libsignon-plugins-common1, libstdc++6 (>= 4.1.1), session-migration, libqt5sql5-sqlite
+Recommends: signon-ui, signon-keyring-extension
+Breaks: signon-plugins, signon-saslplugin (<< 8.40)
+Filename: pool/main/s/signon/signond_8.54+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 223280
+MD5sum: f4f676d22409a7545b9ac21b1d5df69a
+SHA1: 4768b886f1f71f5926821d5c3df7970ecdae0fa3
+SHA256: 475c35bfa469ba9eca88c653a98b5a6ea43f1ad9648b80f6b5f493a0d5eee868
+Description: Single Sign On framework
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: e82cc644df18f6d1c382ada5d5c88928
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: signond-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 210
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: i386
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Replaces: signon-saslplugin-dev (<< 8.40)
+Depends: signond (= 8.54+13.10.20130918.1-0ubuntu1), qtbase5-dev
+Breaks: signon-saslplugin-dev (<< 8.40)
+Filename: pool/main/s/signon/signond-dev_8.54+13.10.20130918.1-0ubuntu1_i386.deb
+Size: 32386
+MD5sum: de21b70d96bb7a58fd7a124cc5ecd585
+SHA1: e0ac222bdf240d63ba00aef7319f4d7a36f2f9b0
+SHA256: 7e14a6779db8791467afcc3a948935e6d13c7e138f1b2c4bdd2cd3e1f699cc5d
+Description: Development files for Signon client library development
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: b42d5c20c50bc859c56c797635fa1d8a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: signond-doc
+Priority: optional
+Section: doc
+Installed-Size: 20277
+Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
+Architecture: all
+Source: signon
+Version: 8.54+13.10.20130918.1-0ubuntu1
+Filename: pool/main/s/signon/signond-doc_8.54+13.10.20130918.1-0ubuntu1_all.deb
+Size: 15602440
+MD5sum: 35612b9110247889fc3bc1f4576e977a
+SHA1: bf4625671022b2eaca479a3e9a317dbe5de0fdbb
+SHA256: 67d84bc3346079222984f4451ac1bd400cae4edfdb63e023eada08877707f449
+Description: Single Sign On framework - documentation
+Homepage: http://code.google.com/p/accounts-sso/
+Description-md5: 3a68da7e7c27f3c2ca7fecd296974d05
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
 
 Package: software-properties-common
 Priority: optional
