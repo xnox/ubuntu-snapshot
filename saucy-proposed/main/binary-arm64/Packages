@@ -64,6 +64,26 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, lubuntu-desktop, ubuntustudio-desktop, ubuntustudio-font-meta, ubuntu-gnome-desktop
 
+Package: hud-doc
+Priority: optional
+Section: doc
+Installed-Size: 77
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: hud
+Version: 13.10.1+13.10.20130918-0ubuntu1
+Recommends: hud (= 13.10.1+13.10.20130918-0ubuntu1)
+Filename: pool/main/h/hud/hud-doc_13.10.1+13.10.20130918-0ubuntu1_all.deb
+Size: 10362
+MD5sum: feadda3adc3f6694b0f344b0198238b2
+SHA1: b7c9fe52b3edfa7b25301448d300e798577d1a1d
+SHA256: a9a0c87b35cad74450deb9e5bf08b11de04021b83517656f474393efa328f0ab
+Description: Backend for the Unity HUD
+Homepage: http://launchpad.net/hud
+Description-md5: 6f462a46ce37bf857af0688d624e6f32
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: idle
 Priority: optional
 Section: python
@@ -88,317 +108,619 @@ Description-md5: d98c42430725f0a7a890e93ce1835e7a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: language-pack-es
+Package: idle-python2.7
 Priority: optional
-Section: translations
-Installed-Size: 6918
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Section: python
+Installed-Size: 977
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
 Architecture: all
-Version: 1:13.10+20130917
-Replaces: language-pack-es (<< 1:13.10+20130917), language-pack-es-base, language-pack-gnome-es (<< 1:13.10+20130917), language-pack-gnome-es-base (<< 1:13.10+20130917), language-pack-kde-es (<< 1:13.10+20130917), language-pack-kde-es-base (<< 1:13.10+20130917)
-Depends: language-pack-es-base (>= 1:13.10+20130723)
-Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-es/language-pack-es_13.10+20130917_all.deb
-Size: 2024936
-MD5sum: 4294bec7c561088f28f1eb7b1acb74f2
-SHA1: 25623ebdbc1d7774e8fcc553369fc6d07a1e8e1f
-SHA256: 7476faca1614987385e5e98bf89bc950153c1ca0fc4befd1b04a592821a9b3e8
-Description: translation updates for language Spanish; Castilian
-Description-md5: 7a373fb17da933b78cbebcb492badd03
+Source: python2.7
+Version: 2.7.5-8ubuntu1
+Replaces: python2.7 (<< 2.6.1-2)
+Depends: python2.7, python-tk (>= 2.6~a3), python2.7-tk
+Filename: pool/main/p/python2.7/idle-python2.7_2.7.5-8ubuntu1_all.deb
+Size: 257344
+MD5sum: 87f3e240cdadc46b99a329b34882ff93
+SHA1: 9644d1973bd5e6709f8e75777a22595bcf938163
+SHA256: 8b9e202a0edfb8d551c4467cd408b4332cb30b424de6ed728ac06df6e8738019
+Description: IDE for Python (v2.7) using Tkinter
+Enhances: python2.7
+Description-md5: 1fd93a936611995336444949b73d0b8a
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: ubuntu-live, ubuntu-usb-live, kubuntu-active-live, kubuntu-active-live, edubuntu-usb-live, xubuntu-live, lubuntu-live, ubuntu-gnome-live
 
-Package: language-pack-gnome-es
+Package: idle-python3.3
+Priority: optional
+Section: python
+Installed-Size: 198
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python3.3
+Version: 3.3.2-7ubuntu1
+Depends: python3.3, python3-tk, python3.3-tk
+Filename: pool/main/p/python3.3/idle-python3.3_3.3.2-7ubuntu1_all.deb
+Size: 36760
+MD5sum: 2693c889b5887de1e05f55d0f610a161
+SHA1: 0c58808a7d973c88fd2b8eeb95fca7e9ce5cfdd6
+SHA256: 4d55b04969438edfa98577bcbcaf1b107db5eb5c90f8e3be44bc8eb4dd55d606
+Description: IDE for Python (v3.3) using Tkinter
+Enhances: python3.3
+Description-md5: 2b9abddd01ad9591f2c4142fa7d37ddb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: idle3
+Priority: optional
+Section: python
+Installed-Size: 54
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python3-defaults
+Version: 3.3.2-14ubuntu1
+Replaces: python3 (<< 3.2.3-1~)
+Depends: python3 (>= 3.3.2-14ubuntu1), python3-tk, idle-python3.3
+Breaks: python3 (<< 3.2.3-1~)
+Filename: pool/main/p/python3-defaults/idle3_3.3.2-14ubuntu1_all.deb
+Size: 3182
+MD5sum: 870bb46f0d0e6f41e1adf12e152d5982
+SHA1: 006319550c26bf6a9a940c9705f5b8fba497f158
+SHA256: d76eefb71134e0d9a83e7d413ecc31eb8a5b2186ef5909eb5f41991fcad85151
+Description: IDE for Python using Tkinter (default version)
+Enhances: python3
+Homepage: http://www.python.org/
+Description-md5: c61252ba915625e387579a62fb0c24f4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: language-pack-az
 Priority: optional
 Section: translations
-Installed-Size: 3060
+Installed-Size: 84
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130917
-Replaces: language-pack-es (<< 1:13.10+20130917), language-pack-es-base (<< 1:13.10+20130917), language-pack-gnome-es (<< 1:13.10+20130917), language-pack-gnome-es-base, language-pack-kde-es (<< 1:13.10+20130917), language-pack-kde-es-base (<< 1:13.10+20130917)
-Depends: language-pack-gnome-es-base (>= 1:13.10+20130723), language-pack-es
+Replaces: language-pack-az (<< 1:13.10+20130917), language-pack-az-base, language-pack-gnome-az (<< 1:13.10+20130917), language-pack-gnome-az-base (<< 1:13.10+20130917), language-pack-kde-az (<< 1:13.10+20130917), language-pack-kde-az-base (<< 1:13.10+20130917)
+Depends: language-pack-az-base (>= 1:13.10+20130723)
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-gnome-es/language-pack-gnome-es_13.10+20130917_all.deb
-Size: 946742
-MD5sum: 8cbac6a57670fc5026ef2458ce5f9f7e
-SHA1: 2a4ee642ffdfb74151d05fec122d899d5bb0fda2
-SHA256: f162750cbab367dd5071fd44ae38d30d958ce32d88aec1156ab84d7d13884fd2
-Description: GNOME translation updates for language Spanish; Castilian
-Description-md5: 7a7b33095707884163c9cbe9ae7373b0
+Filename: pool/main/l/language-pack-az/language-pack-az_13.10+20130917_all.deb
+Size: 19862
+MD5sum: 2ba1b4396ae87e89336be4791b86a9e4
+SHA1: 84f311d773edffe28556465b678c94dcadef3a43
+SHA256: d79cb0af1e1dcfb016ca2842c35e0250cbe615cd9b87bad6cb0dac1dd479f0ec
+Description: translation updates for language Azerbaijani
+Description-md5: df7b32eca79a0fba5010572dd26a64e7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-dz
+Priority: optional
+Section: translations
+Installed-Size: 310
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-dz (<< 1:13.10+20130917), language-pack-dz-base, language-pack-gnome-dz (<< 1:13.10+20130917), language-pack-gnome-dz-base (<< 1:13.10+20130917), language-pack-kde-dz (<< 1:13.10+20130917), language-pack-kde-dz-base (<< 1:13.10+20130917)
+Depends: language-pack-dz-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-dz/language-pack-dz_13.10+20130917_all.deb
+Size: 50412
+MD5sum: f8fcae0e89d6f2cd7c83945ea3f96965
+SHA1: 67053148c07af41f9206c676fd2b095d5ff21970
+SHA256: 2e5f1ffae03534bdd5c7553ea7ab51b968287c1413eae7ca790925f56dcbf8e8
+Description: translation updates for language Dzongkha
+Description-md5: 08aa62e809ba382e782284536ab109dd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-en
+Priority: optional
+Section: translations
+Installed-Size: 1169
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-en (<< 1:13.10+20130917), language-pack-en-base, language-pack-gnome-en (<< 1:13.10+20130917), language-pack-gnome-en-base (<< 1:13.10+20130917), language-pack-kde-en (<< 1:13.10+20130917), language-pack-kde-en-base (<< 1:13.10+20130917)
+Depends: language-pack-en-base (>= 1:13.10+20130723)
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-en/language-pack-en_13.10+20130917_all.deb
+Size: 236506
+MD5sum: 70fae73ea283dd28597083d140ff8fed
+SHA1: cae8a5ecbfe6a1a783b3148eab28fb15d024d432
+SHA256: bdd1860dd49a0df6b5d6f7e349e7362af64ec1a290b84462405bc117e5c1b3ee
+Description: translation updates for language English
+Description-md5: 1d50dcc1c889caf78b59116d95acb689
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-live, ubuntu-usb-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-dvd-live, edubuntu-usb-live, xubuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: language-pack-gnome-az
+Priority: optional
+Section: translations
+Installed-Size: 242
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-az (<< 1:13.10+20130917), language-pack-az-base (<< 1:13.10+20130917), language-pack-gnome-az (<< 1:13.10+20130917), language-pack-gnome-az-base, language-pack-kde-az (<< 1:13.10+20130917), language-pack-kde-az-base (<< 1:13.10+20130917)
+Depends: language-pack-gnome-az-base (>= 1:13.10+20130723), language-pack-az
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-az/language-pack-gnome-az_13.10+20130917_all.deb
+Size: 70352
+MD5sum: a5f59858f3c9dd98df08398d1bb5bc95
+SHA1: 79bc38e373edb8987a801d1e330d60514cf1feb6
+SHA256: 02a91662e411a6742487b3d668c907baa3235b0ac5be567972f3f0e7262cbc63
+Description: GNOME translation updates for language Azerbaijani
+Description-md5: 0586b807626a158d1c297704e9693094
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-dz
+Priority: optional
+Section: translations
+Installed-Size: 1486
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-dz (<< 1:13.10+20130917), language-pack-dz-base (<< 1:13.10+20130917), language-pack-gnome-dz (<< 1:13.10+20130917), language-pack-gnome-dz-base, language-pack-kde-dz (<< 1:13.10+20130917), language-pack-kde-dz-base (<< 1:13.10+20130917)
+Depends: language-pack-gnome-dz-base (>= 1:13.10+20130723), language-pack-dz
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-dz/language-pack-gnome-dz_13.10+20130917_all.deb
+Size: 272618
+MD5sum: 948e0fb218e94caf8c2b0a26591c5807
+SHA1: bed591980cb1333ce16905139857e14d98d78454
+SHA256: 7f1a78ab3f1410e228bc0cd090c43ff782929ee76c400d6642c6fdfaf8d78224
+Description: GNOME translation updates for language Dzongkha
+Description-md5: b1d3795c03d04099c6060bca58c796ab
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-en
+Priority: optional
+Section: translations
+Installed-Size: 1421
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-en (<< 1:13.10+20130917), language-pack-en-base (<< 1:13.10+20130917), language-pack-gnome-en (<< 1:13.10+20130917), language-pack-gnome-en-base, language-pack-kde-en (<< 1:13.10+20130917), language-pack-kde-en-base (<< 1:13.10+20130917)
+Depends: language-pack-gnome-en-base (>= 1:13.10+20130723), language-pack-en
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-en/language-pack-gnome-en_13.10+20130917_all.deb
+Size: 337232
+MD5sum: d2a3cbe2ed7dab410c9e2277687ea9f9
+SHA1: 8203e87b4fa00c5eab36414e73fd1389a9456d60
+SHA256: 33a0ec259724c2d78a0fdd3f3278a43991a5acbdc9d4ae4625a9143c071d6a36
+Description: GNOME translation updates for language English
+Description-md5: f157b41ce91b17658e35473d760b0ee8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-live, ubuntu-usb-live, edubuntu-live, edubuntu-dvd-live, edubuntu-usb-live, xubuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+
+Package: language-pack-gnome-km
+Priority: optional
+Section: translations
+Installed-Size: 3965
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-gnome-km (<< 1:13.10+20130917), language-pack-gnome-km-base, language-pack-kde-km (<< 1:13.10+20130917), language-pack-kde-km-base (<< 1:13.10+20130917), language-pack-km (<< 1:13.10+20130917), language-pack-km-base (<< 1:13.10+20130917)
+Depends: language-pack-gnome-km-base (>= 1:13.10+20130723), language-pack-km
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-km/language-pack-gnome-km_13.10+20130917_all.deb
+Size: 770550
+MD5sum: ab86952b0248d8708be4cc6f463eeb0b
+SHA1: 602713a776062a7a60892fb981f979dfff7211d4
+SHA256: a3c8d7b329782b9c4cafa0e7ebda6ef031d84efa8b4c3a035b08923d5c9a66ec
+Description: GNOME translation updates for language Central Khmer
+Description-md5: e14deb3436dbea25abc58ec302b968f8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-lt
+Priority: optional
+Section: translations
+Installed-Size: 1990
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-gnome-lt (<< 1:13.10+20130917), language-pack-gnome-lt-base, language-pack-kde-lt (<< 1:13.10+20130917), language-pack-kde-lt-base (<< 1:13.10+20130917), language-pack-lt (<< 1:13.10+20130917), language-pack-lt-base (<< 1:13.10+20130917)
+Depends: language-pack-gnome-lt-base (>= 1:13.10+20130723), language-pack-lt
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-lt/language-pack-gnome-lt_13.10+20130917_all.deb
+Size: 626992
+MD5sum: ce4e810cd0797bab9d646bf2d86ad799
+SHA1: 47226f90a5dc3b03a659ebbfc2f9d97da41dce64
+SHA256: bbef01820e75290aaadad4f5cce6e8b74a9788d1365bf8f8c5f4bdc7118b6a9b
+Description: GNOME translation updates for language Lithuanian
+Description-md5: 4ba7442de17833bbc1569f5cc3616989
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-mr
+Priority: optional
+Section: translations
+Installed-Size: 2024
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-gnome-mr (<< 1:13.10+20130917), language-pack-gnome-mr-base, language-pack-kde-mr (<< 1:13.10+20130917), language-pack-kde-mr-base (<< 1:13.10+20130917), language-pack-mr (<< 1:13.10+20130917), language-pack-mr-base (<< 1:13.10+20130917)
+Depends: language-pack-gnome-mr-base (>= 1:13.10+20130723), language-pack-mr
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-mr/language-pack-gnome-mr_13.10+20130917_all.deb
+Size: 447466
+MD5sum: 8686da5d705a6254f366cc3b3f11d396
+SHA1: 1941e7c84565c28e17cdea5bb81a5c44fb81a09c
+SHA256: 53a400e383dee8f5c3365079903f69b763f65d163ccd8a2a6a626f0b92a33f5a
+Description: GNOME translation updates for language Marathi
+Description-md5: 9b0e9d1864953992f55621e31fea2dd6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-ne
+Priority: optional
+Section: translations
+Installed-Size: 1145
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-gnome-ne (<< 1:13.10+20130917), language-pack-gnome-ne-base, language-pack-kde-ne (<< 1:13.10+20130917), language-pack-kde-ne-base (<< 1:13.10+20130917), language-pack-ne (<< 1:13.10+20130917), language-pack-ne-base (<< 1:13.10+20130917)
+Depends: language-pack-gnome-ne-base (>= 1:13.10+20130723), language-pack-ne
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-ne/language-pack-gnome-ne_13.10+20130917_all.deb
+Size: 244496
+MD5sum: b30b5ab624f939dc2ad43d1a03554bd2
+SHA1: 5e7773e0d426d631a64edf1a9c03fcc4ae9ace9d
+SHA256: 6a92eaa24c2481483fa080ec46d089283d79df05ae07799d8f2f7c3fd7fd03c2
+Description: GNOME translation updates for language Nepali
+Description-md5: 2f1a937545a84cfe0c3b4ffca7267bf1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-nn
+Priority: optional
+Section: translations
+Installed-Size: 1261
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-gnome-nn (<< 1:13.10+20130917), language-pack-gnome-nn-base, language-pack-kde-nn (<< 1:13.10+20130917), language-pack-kde-nn-base (<< 1:13.10+20130917), language-pack-nn (<< 1:13.10+20130917), language-pack-nn-base (<< 1:13.10+20130917)
+Depends: language-pack-gnome-nn-base (>= 1:13.10+20130723), language-pack-nn
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-nn/language-pack-gnome-nn_13.10+20130917_all.deb
+Size: 410718
+MD5sum: 530949b76ca95c5a82bfe9d2444a4644
+SHA1: 579fdd450f664f7489cfe4208c06494ceedb1b1e
+SHA256: c01816f92f84f89088650a55fefb81d5c11a1f2fee3a7171caf7dfc681b29bba
+Description: GNOME translation updates for language Norwegian Nynorsk; Nynorsk, Norwegian
+Description-md5: 94f1a27ad27bb708529205507fd85429
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-tl
+Priority: optional
+Section: translations
+Installed-Size: 103
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-gnome-tl (<< 1:13.10+20130917), language-pack-gnome-tl-base, language-pack-kde-tl (<< 1:13.10+20130917), language-pack-kde-tl-base (<< 1:13.10+20130917), language-pack-tl (<< 1:13.10+20130917), language-pack-tl-base (<< 1:13.10+20130917)
+Depends: language-pack-gnome-tl-base (>= 1:13.10+20130723), language-pack-tl
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-tl/language-pack-gnome-tl_13.10+20130917_all.deb
+Size: 24352
+MD5sum: f55b8e8940828edef651f51ac8cf9256
+SHA1: 5cc54a5e9c0de1c284939736160a726d992d0743
+SHA256: 62c05e4aec115f9964201b99e5f22b1b29bd5290357ec6afe18bbfd6d5584a8a
+Description: GNOME translation updates for language Tagalog
+Description-md5: 842cd1089ad73599f7c57dc2063355dd
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-ur
+Priority: optional
+Section: translations
+Installed-Size: 110
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-gnome-ur (<< 1:13.10+20130917), language-pack-gnome-ur-base, language-pack-kde-ur (<< 1:13.10+20130917), language-pack-kde-ur-base (<< 1:13.10+20130917), language-pack-ur (<< 1:13.10+20130917), language-pack-ur-base (<< 1:13.10+20130917)
+Depends: language-pack-gnome-ur-base (>= 1:13.10+20130723), language-pack-ur
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-ur/language-pack-gnome-ur_13.10+20130917_all.deb
+Size: 25264
+MD5sum: 1b875a807acd5ffbedbf06d2a57df39b
+SHA1: c414144a7e236e86bf64016a08eae7b2f4f99f3e
+SHA256: 009d5c47aabcb8ba5e9e1c1654aa336130034686ecc54c2cc8060c2ff7597403
+Description: GNOME translation updates for language Urdu
+Description-md5: def38b01d3dfd7698b77f0b0497d5949
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-vi
+Priority: optional
+Section: translations
+Installed-Size: 2486
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-gnome-vi (<< 1:13.10+20130917), language-pack-gnome-vi-base, language-pack-kde-vi (<< 1:13.10+20130917), language-pack-kde-vi-base (<< 1:13.10+20130917), language-pack-vi (<< 1:13.10+20130917), language-pack-vi-base (<< 1:13.10+20130917)
+Depends: language-pack-gnome-vi-base (>= 1:13.10+20130723), language-pack-vi
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Filename: pool/main/l/language-pack-gnome-vi/language-pack-gnome-vi_13.10+20130917_all.deb
+Size: 739092
+MD5sum: a1ab907360db4a5e2a7591de34510c4e
+SHA1: 067dc09f802f2312e80b5e8d6d29a8e320905459
+SHA256: f7781376c4455ba0bb815ac185c0955fd507cf53f17683f3d1616581992747e9
+Description: GNOME translation updates for language Vietnamese
+Description-md5: cb187da4eec75784dd42a52057c4afe6
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-usb-live, edubuntu-usb-live
+
+Package: language-pack-gnome-zh-hans
+Priority: optional
+Section: translations
+Installed-Size: 2692
+Maintainer: Language pack maintainers <language-packs@ubuntu.com>
+Architecture: all
+Version: 1:13.10+20130917
+Replaces: language-pack-gnome-zh (<< 1:9.10), language-pack-gnome-zh-hans (<< 1:13.10+20130917), language-pack-gnome-zh-hans-base, language-pack-kde-zh-hans (<< 1:13.10+20130917), language-pack-kde-zh-hans-base (<< 1:13.10+20130917), language-pack-zh-hans (<< 1:13.10+20130917), language-pack-zh-hans-base (<< 1:13.10+20130917)
+Depends: language-pack-gnome-zh-hans-base (>= 1:13.10+20130723), language-pack-zh-hans
+Pre-Depends: dpkg (>= 1.10.27ubuntu1)
+Conflicts: language-pack-gnome-zh (<< 1:9.10)
+Filename: pool/main/l/language-pack-gnome-zh-hans/language-pack-gnome-zh-hans_13.10+20130917_all.deb
+Size: 877052
+MD5sum: 3ecd95ece491a47929c43428af68d9b4
+SHA1: b6cf83ee1c1c0eda5ff9eeb825e62e53ea6acafd
+SHA256: 709568f168c68a179de8a9252bc3d3649201f48203947184c9b8971b8c4f4e79
+Description: GNOME translation updates for language Simplified Chinese
+Description-md5: 00a9e6c608c7c1c1ea6b2a39cdb1d336
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-live, ubuntu-usb-live, edubuntu-usb-live, xubuntu-live, lubuntu-live, ubuntu-gnome-live
 
-Package: language-pack-gnome-hr
+Package: language-pack-gnome-zh-hant
 Priority: optional
 Section: translations
-Installed-Size: 1121
+Installed-Size: 4908
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130917
-Replaces: language-pack-gnome-hr (<< 1:13.10+20130917), language-pack-gnome-hr-base, language-pack-hr (<< 1:13.10+20130917), language-pack-hr-base (<< 1:13.10+20130917), language-pack-kde-hr (<< 1:13.10+20130917), language-pack-kde-hr-base (<< 1:13.10+20130917)
-Depends: language-pack-gnome-hr-base (>= 1:13.10+20130723), language-pack-hr
+Replaces: language-pack-gnome-zh (<< 1:9.10), language-pack-gnome-zh-hant (<< 1:13.10+20130917), language-pack-gnome-zh-hant-base, language-pack-kde-zh-hant (<< 1:13.10+20130917), language-pack-kde-zh-hant-base (<< 1:13.10+20130917), language-pack-zh-hant (<< 1:13.10+20130917), language-pack-zh-hant-base (<< 1:13.10+20130917)
+Depends: language-pack-gnome-zh-hant-base (>= 1:13.10+20130723), language-pack-zh-hant
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-gnome-hr/language-pack-gnome-hr_13.10+20130917_all.deb
-Size: 359690
-MD5sum: 14b8f98f4c72e25798163babf0e0c8a8
-SHA1: 291f53eb5ba4a43ac0dbf1a360fe71a6bcde76d9
-SHA256: adb64b382b6c8f274dca0b280541caa0f9158cc77ec165daaa1fa8de0d9e9403
-Description: GNOME translation updates for language Croatian
-Description-md5: 044892d57458d04841f2ae46766bbe68
+Conflicts: language-pack-gnome-zh (<< 1:9.10)
+Filename: pool/main/l/language-pack-gnome-zh-hant/language-pack-gnome-zh-hant_13.10+20130917_all.deb
+Size: 1607634
+MD5sum: 0cef204e49ff071593fe80d76dcbf690
+SHA1: 250e7c47e1525c7406f8298860e8109bd3b45f98
+SHA256: 9331cb5180b9db71ddec6ebfe0dbd71087996391b36b93bdbaa0a76477fc7258
+Description: GNOME translation updates for language Traditional Chinese
+Description-md5: 98d147f4998bf5fd350d5dcd4b0bdd8f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
 
-Package: language-pack-gnome-sk
+Package: language-pack-km
 Priority: optional
 Section: translations
-Installed-Size: 2401
+Installed-Size: 1427
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130917
-Replaces: language-pack-gnome-sk (<< 1:13.10+20130917), language-pack-gnome-sk-base, language-pack-kde-sk (<< 1:13.10+20130917), language-pack-kde-sk-base (<< 1:13.10+20130917), language-pack-sk (<< 1:13.10+20130917), language-pack-sk-base (<< 1:13.10+20130917)
-Depends: language-pack-gnome-sk-base (>= 1:13.10+20130723), language-pack-sk
+Replaces: language-pack-gnome-km (<< 1:13.10+20130917), language-pack-gnome-km-base (<< 1:13.10+20130917), language-pack-kde-km (<< 1:13.10+20130917), language-pack-kde-km-base (<< 1:13.10+20130917), language-pack-km (<< 1:13.10+20130917), language-pack-km-base
+Depends: language-pack-km-base (>= 1:13.10+20130723)
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-gnome-sk/language-pack-gnome-sk_13.10+20130917_all.deb
-Size: 769794
-MD5sum: d201a4774d15f87991558ee33967a6d1
-SHA1: 2d087bcf1e8c445aedeb882a3cc30236e290b99a
-SHA256: 0aaaedfc98307f5366f5aadd96206f45f5ff4529b2fcbbf92993d1885f172f87
-Description: GNOME translation updates for language Slovak
-Description-md5: 7f1bb07378a0d7c8013f9aeaebdef863
+Filename: pool/main/l/language-pack-km/language-pack-km_13.10+20130917_all.deb
+Size: 304048
+MD5sum: 345d75cc69609521b6fb1e76fbb93ab9
+SHA1: 33a91d3f357d0d120ad798e64011b9bdb35e7dcd
+SHA256: ae5b3bb76d2b0b926b13f3deb153808266dc2813fdac75571c60b868761118b6
+Description: translation updates for language Central Khmer
+Description-md5: ca40fa76b2a05d161972d2b9fe61acf1
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
 
-Package: language-pack-gnome-sl
+Package: language-pack-lt
 Priority: optional
 Section: translations
-Installed-Size: 2867
+Installed-Size: 619
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130917
-Replaces: language-pack-gnome-sl (<< 1:13.10+20130917), language-pack-gnome-sl-base, language-pack-kde-sl (<< 1:13.10+20130917), language-pack-kde-sl-base (<< 1:13.10+20130917), language-pack-sl (<< 1:13.10+20130917), language-pack-sl-base (<< 1:13.10+20130917)
-Depends: language-pack-gnome-sl-base (>= 1:13.10+20130723), language-pack-sl
+Replaces: language-pack-gnome-lt (<< 1:13.10+20130917), language-pack-gnome-lt-base (<< 1:13.10+20130917), language-pack-kde-lt (<< 1:13.10+20130917), language-pack-kde-lt-base (<< 1:13.10+20130917), language-pack-lt (<< 1:13.10+20130917), language-pack-lt-base
+Depends: language-pack-lt-base (>= 1:13.10+20130723)
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-gnome-sl/language-pack-gnome-sl_13.10+20130917_all.deb
-Size: 920138
-MD5sum: 847dff230af020b7e7e582945d6583cd
-SHA1: 62628ce71dd65a5464de12953224e8e6f2759bca
-SHA256: 50e02920d2734b33e2571c60c930881d9d4d11ef3c6d82cd26c087cb17d6f36e
-Description: GNOME translation updates for language Slovenian
-Description-md5: 9ff05ef79f08a9edbbf7d641dada217c
+Filename: pool/main/l/language-pack-lt/language-pack-lt_13.10+20130917_all.deb
+Size: 180646
+MD5sum: b37ad984f818f5e36db72df2f4e6a233
+SHA1: 844e07808a0adebfbfb9c3a0e378c84236e47e99
+SHA256: fc0c15eae22cc8c486e56a202ab74dd7d0027033e0abf41e2061a42b3deb2686
+Description: translation updates for language Lithuanian
+Description-md5: 0aa9b7870b4e450291143f74e957e291
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
 
-Package: language-pack-gnome-sv
+Package: language-pack-mr
 Priority: optional
 Section: translations
-Installed-Size: 2870
+Installed-Size: 1506
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130917
-Replaces: language-pack-gnome-sv (<< 1:13.10+20130917), language-pack-gnome-sv-base, language-pack-kde-sv (<< 1:13.10+20130917), language-pack-kde-sv-base (<< 1:13.10+20130917), language-pack-sv (<< 1:13.10+20130917), language-pack-sv-base (<< 1:13.10+20130917)
-Depends: language-pack-gnome-sv-base (>= 1:13.10+20130723), language-pack-sv
+Replaces: language-pack-gnome-mr (<< 1:13.10+20130917), language-pack-gnome-mr-base (<< 1:13.10+20130917), language-pack-kde-mr (<< 1:13.10+20130917), language-pack-kde-mr-base (<< 1:13.10+20130917), language-pack-mr (<< 1:13.10+20130917), language-pack-mr-base
+Depends: language-pack-mr-base (>= 1:13.10+20130723)
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-gnome-sv/language-pack-gnome-sv_13.10+20130917_all.deb
-Size: 915458
-MD5sum: 8865526d55c773b722246b37536f5922
-SHA1: 1b8eb237a340b47ef802186b2840f55a9ab9cb09
-SHA256: 133899b16b045c361698a376edad2734296d13e1ee995b49baaf988b27da3490
-Description: GNOME translation updates for language Swedish
-Description-md5: bb1d72d15af6affc7a4b16c6e635c08f
+Filename: pool/main/l/language-pack-mr/language-pack-mr_13.10+20130917_all.deb
+Size: 293370
+MD5sum: b0957be53f3567c8173df1af884a5034
+SHA1: 6382786a9aaa7491926fb32fed86999e75c603e5
+SHA256: f61c8d6d248ae39cf4c28ff15de3ce8ba58cec8333dc2278721ccfbf4d36a52a
+Description: translation updates for language Marathi
+Description-md5: c1463a5845988903df6aae41d673717f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
 
-Package: language-pack-gnome-ta
+Package: language-pack-ne
 Priority: optional
 Section: translations
-Installed-Size: 2358
+Installed-Size: 270
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130917
-Replaces: language-pack-gnome-ta (<< 1:13.10+20130917), language-pack-gnome-ta-base, language-pack-kde-ta (<< 1:13.10+20130917), language-pack-kde-ta-base (<< 1:13.10+20130917), language-pack-ta (<< 1:13.10+20130917), language-pack-ta-base (<< 1:13.10+20130917)
-Depends: language-pack-gnome-ta-base (>= 1:13.10+20130723), language-pack-ta
+Replaces: language-pack-gnome-ne (<< 1:13.10+20130917), language-pack-gnome-ne-base (<< 1:13.10+20130917), language-pack-kde-ne (<< 1:13.10+20130917), language-pack-kde-ne-base (<< 1:13.10+20130917), language-pack-ne (<< 1:13.10+20130917), language-pack-ne-base
+Depends: language-pack-ne-base (>= 1:13.10+20130723)
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-gnome-ta/language-pack-gnome-ta_13.10+20130917_all.deb
-Size: 470992
-MD5sum: 47652de0014399d891a6c8413c34c34e
-SHA1: e6053e0cd7d93d78f12e116cefe162f773d29378
-SHA256: 794a10236c76e01f0470ef1ecab53486e35ff1262b7d318f13f59ee193ddc0e5
-Description: GNOME translation updates for language Tamil
-Description-md5: 1f87e19e829b55bdf13e56bd13043076
+Filename: pool/main/l/language-pack-ne/language-pack-ne_13.10+20130917_all.deb
+Size: 52218
+MD5sum: 31c10849e2df2a191298b27a20c2b417
+SHA1: e98cf1a1264e5f0f0a0d05d25127be6eb3f854a5
+SHA256: e76a9ce0a63ac724914edbf1f98955e8fc01e02662cc4c367e41f0e6ebd103ed
+Description: translation updates for language Nepali
+Description-md5: c1403e2f1c360545ad4ecd7ec86dd29f
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
 
-Package: language-pack-gnome-tr
+Package: language-pack-nn
 Priority: optional
 Section: translations
-Installed-Size: 3499
+Installed-Size: 258
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130917
-Replaces: language-pack-gnome-tr (<< 1:13.10+20130917), language-pack-gnome-tr-base, language-pack-kde-tr (<< 1:13.10+20130917), language-pack-kde-tr-base (<< 1:13.10+20130917), language-pack-tr (<< 1:13.10+20130917), language-pack-tr-base (<< 1:13.10+20130917)
-Depends: language-pack-gnome-tr-base (>= 1:13.10+20130723), language-pack-tr
+Replaces: language-pack-gnome-nn (<< 1:13.10+20130917), language-pack-gnome-nn-base (<< 1:13.10+20130917), language-pack-kde-nn (<< 1:13.10+20130917), language-pack-kde-nn-base (<< 1:13.10+20130917), language-pack-nn (<< 1:13.10+20130917), language-pack-nn-base
+Depends: language-pack-nn-base (>= 1:13.10+20130723)
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-gnome-tr/language-pack-gnome-tr_13.10+20130917_all.deb
-Size: 1117356
-MD5sum: d1d1ed1a2a098477edef81c807c3a0c0
-SHA1: bcaf3bdcac34a0ae27e10630f4c4b0ee3e8dbc1a
-SHA256: 66a4c65b13cc66db6d3fdb1e6c60e6ee30bc90fa6325871722af0e0e41b9ca84
-Description: GNOME translation updates for language Turkish
-Description-md5: 1df43f38739a28f0cf07581e88d49cc5
+Filename: pool/main/l/language-pack-nn/language-pack-nn_13.10+20130917_all.deb
+Size: 75794
+MD5sum: 66f3d5a80158869a0687f1a1828c439d
+SHA1: a78e1cca42d50a791ec9f655192617a864cb7d99
+SHA256: 87a85a220b9fd9e6b6fb29004addde03910af60a56ae568e3b9718a625ec31f2
+Description: translation updates for language Norwegian Nynorsk; Nynorsk, Norwegian
+Description-md5: 12e80421f55580d4f4bb594b12a48b81
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
 
-Package: language-pack-hr
+Package: language-pack-tl
 Priority: optional
 Section: translations
-Installed-Size: 603
+Installed-Size: 174
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130917
-Replaces: language-pack-gnome-hr (<< 1:13.10+20130917), language-pack-gnome-hr-base (<< 1:13.10+20130917), language-pack-hr (<< 1:13.10+20130917), language-pack-hr-base, language-pack-kde-hr (<< 1:13.10+20130917), language-pack-kde-hr-base (<< 1:13.10+20130917)
-Depends: language-pack-hr-base (>= 1:13.10+20130723)
+Replaces: language-pack-gnome-tl (<< 1:13.10+20130917), language-pack-gnome-tl-base (<< 1:13.10+20130917), language-pack-kde-tl (<< 1:13.10+20130917), language-pack-kde-tl-base (<< 1:13.10+20130917), language-pack-tl (<< 1:13.10+20130917), language-pack-tl-base
+Depends: language-pack-tl-base (>= 1:13.10+20130723)
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-hr/language-pack-hr_13.10+20130917_all.deb
-Size: 181764
-MD5sum: 2d8f8ebd4fa377681ed3d71d347ff6d7
-SHA1: 7352368b7ae5abd9af01db0a2c84ba5f761bdc37
-SHA256: 9a41542fd3a94e04044cf2f1693a1c027e21f53ce47360ac242bfef3e0555588
-Description: translation updates for language Croatian
-Description-md5: 34c162e587e1cdea815ca5ed6f077313
+Filename: pool/main/l/language-pack-tl/language-pack-tl_13.10+20130917_all.deb
+Size: 46036
+MD5sum: 2b95112261cb44ca71d3ac920d18ff56
+SHA1: aa9c71e8daef3ee8915eff5cc02f5fba1f51b768
+SHA256: 7ced1cae7aa71c476a449f594d938d723b3ce3598ee402bdc653366c469f0e40
+Description: translation updates for language Tagalog
+Description-md5: 9dd6b9cfcd1ac0b0f33038565350a683
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
 
-Package: language-pack-sk
+Package: language-pack-ur
 Priority: optional
 Section: translations
-Installed-Size: 1006
+Installed-Size: 57
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130917
-Replaces: language-pack-gnome-sk (<< 1:13.10+20130917), language-pack-gnome-sk-base (<< 1:13.10+20130917), language-pack-kde-sk (<< 1:13.10+20130917), language-pack-kde-sk-base (<< 1:13.10+20130917), language-pack-sk (<< 1:13.10+20130917), language-pack-sk-base
-Depends: language-pack-sk-base (>= 1:13.10+20130723)
+Replaces: language-pack-gnome-ur (<< 1:13.10+20130917), language-pack-gnome-ur-base (<< 1:13.10+20130917), language-pack-kde-ur (<< 1:13.10+20130917), language-pack-kde-ur-base (<< 1:13.10+20130917), language-pack-ur (<< 1:13.10+20130917), language-pack-ur-base
+Depends: language-pack-ur-base (>= 1:13.10+20130723)
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-sk/language-pack-sk_13.10+20130917_all.deb
-Size: 305992
-MD5sum: 8f7ecdf605309193b19172ceaba6f928
-SHA1: 349855d76e0c15a447586a7e4851cf4490e7ff6a
-SHA256: 547320dba1d9e12de8b989469566fcca86c75b678a70d2cefa1399d6bb4b4874
-Description: translation updates for language Slovak
-Description-md5: a1e721be17e337b689ba82909703eb86
+Filename: pool/main/l/language-pack-ur/language-pack-ur_13.10+20130917_all.deb
+Size: 8158
+MD5sum: 9c232a713f53f1f39357f3d7e5b4adaf
+SHA1: 0ec9de1619a4b075280d912f0ab61e4daf07f663
+SHA256: f717ce491906040d7931a6e5c8a303c03e499ae51252a21df62df04cd10462a7
+Description: translation updates for language Urdu
+Description-md5: 469e93f68fdb2f05c5bf98f21b4d2348
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
 
-Package: language-pack-sl
+Package: language-pack-vi
 Priority: optional
 Section: translations
-Installed-Size: 1493
+Installed-Size: 2150
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130917
-Replaces: language-pack-gnome-sl (<< 1:13.10+20130917), language-pack-gnome-sl-base (<< 1:13.10+20130917), language-pack-kde-sl (<< 1:13.10+20130917), language-pack-kde-sl-base (<< 1:13.10+20130917), language-pack-sl (<< 1:13.10+20130917), language-pack-sl-base
-Depends: language-pack-sl-base (>= 1:13.10+20130723)
+Replaces: language-pack-gnome-vi (<< 1:13.10+20130917), language-pack-gnome-vi-base (<< 1:13.10+20130917), language-pack-kde-vi (<< 1:13.10+20130917), language-pack-kde-vi-base (<< 1:13.10+20130917), language-pack-vi (<< 1:13.10+20130917), language-pack-vi-base
+Depends: language-pack-vi-base (>= 1:13.10+20130723)
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-sl/language-pack-sl_13.10+20130917_all.deb
-Size: 477230
-MD5sum: d23614af31a92375d721c45c22691102
-SHA1: 3560fdc8e129f0debcdd977ca087e63defbabbc8
-SHA256: 88ac061f1d0fc22307ba4f79f30240e4508943c21395bc8f5e1f30de10dcda10
-Description: translation updates for language Slovenian
-Description-md5: b1747d91b5340c785a6855fc4dea8bdf
+Filename: pool/main/l/language-pack-vi/language-pack-vi_13.10+20130917_all.deb
+Size: 596112
+MD5sum: 47bf8138cc84f0a5f1cf868bab188b1a
+SHA1: c700c514ef8465a1d8c39657b61595ad253e8a28
+SHA256: 530ce61a0ce0368a77d62c36e293021a35452664e0a88b9478f666eb43961ced
+Description: translation updates for language Vietnamese
+Description-md5: c05ab7d70ecda888c4f951b61413e4c4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
 
-Package: language-pack-sv
+Package: language-pack-zh-hans
 Priority: optional
 Section: translations
-Installed-Size: 2885
+Installed-Size: 2851
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130917
-Replaces: language-pack-gnome-sv (<< 1:13.10+20130917), language-pack-gnome-sv-base (<< 1:13.10+20130917), language-pack-kde-sv (<< 1:13.10+20130917), language-pack-kde-sv-base (<< 1:13.10+20130917), language-pack-sv (<< 1:13.10+20130917), language-pack-sv-base
-Depends: language-pack-sv-base (>= 1:13.10+20130723)
+Replaces: language-pack-gnome-zh-hans (<< 1:13.10+20130917), language-pack-gnome-zh-hans-base (<< 1:13.10+20130917), language-pack-kde-zh-hans (<< 1:13.10+20130917), language-pack-kde-zh-hans-base (<< 1:13.10+20130917), language-pack-zh (<< 1:9.10), language-pack-zh-hans (<< 1:13.10+20130917), language-pack-zh-hans-base
+Depends: language-pack-zh-hans-base (>= 1:13.10+20130723)
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-sv/language-pack-sv_13.10+20130917_all.deb
-Size: 879146
-MD5sum: 92010d45f90abbede3d50a29a0ad8d2e
-SHA1: 60d7e2ec83673ed09b547e336c881a1856d73dfa
-SHA256: 65ee42b0921b91762e297843d3c748234368c30be346fb9f96d6e43d8571ca51
-Description: translation updates for language Swedish
-Description-md5: 4dbf209ddea3cc582301e63976d4b356
+Conflicts: language-pack-zh (<< 1:9.10)
+Filename: pool/main/l/language-pack-zh-hans/language-pack-zh-hans_13.10+20130917_all.deb
+Size: 866808
+MD5sum: 7dd52bf438bb3aaafa4c2fc34f410704
+SHA1: cc0aa4722e4b8e5116d64d9bc11ccb2ab92b11e9
+SHA256: 33691433a4781cf42437c2378fe83366aa9fddf1b704b2a0990c79db6ae40bcc
+Description: translation updates for language Simplified Chinese
+Description-md5: 964ab477e1a08bec8503df90f7f29cc7
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: ubuntu-usb-live, kubuntu-active-live, kubuntu-active-live, edubuntu-usb-live
+Task: ubuntu-live, ubuntu-usb-live, edubuntu-usb-live, xubuntu-live, lubuntu-live, ubuntu-gnome-live
 
-Package: language-pack-ta
+Package: language-pack-zh-hant
 Priority: optional
 Section: translations
-Installed-Size: 1407
+Installed-Size: 2373
 Maintainer: Language pack maintainers <language-packs@ubuntu.com>
 Architecture: all
 Version: 1:13.10+20130917
-Replaces: language-pack-gnome-ta (<< 1:13.10+20130917), language-pack-gnome-ta-base (<< 1:13.10+20130917), language-pack-kde-ta (<< 1:13.10+20130917), language-pack-kde-ta-base (<< 1:13.10+20130917), language-pack-ta (<< 1:13.10+20130917), language-pack-ta-base
-Depends: language-pack-ta-base (>= 1:13.10+20130723)
+Replaces: language-pack-gnome-zh-hant (<< 1:13.10+20130917), language-pack-gnome-zh-hant-base (<< 1:13.10+20130917), language-pack-kde-zh-hant (<< 1:13.10+20130917), language-pack-kde-zh-hant-base (<< 1:13.10+20130917), language-pack-zh (<< 1:9.10), language-pack-zh-hant (<< 1:13.10+20130917), language-pack-zh-hant-base
+Depends: language-pack-zh-hant-base (>= 1:13.10+20130723)
 Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-ta/language-pack-ta_13.10+20130917_all.deb
-Size: 241566
-MD5sum: afdcf678a1c4b6fff61fa2bb817f5ce6
-SHA1: ed6f397d685822ade93cd2952cfe281b9183797c
-SHA256: 35ab4e41f65ece53c5df87353d3f9bc9bba4b0c2acade134fcf053b5ea424717
-Description: translation updates for language Tamil
-Description-md5: 8806053a2a2cb360f22ec971454fc79c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-usb-live, edubuntu-usb-live
-
-Package: language-pack-tr
-Priority: optional
-Section: translations
-Installed-Size: 3991
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Architecture: all
-Version: 1:13.10+20130917
-Replaces: language-pack-gnome-tr (<< 1:13.10+20130917), language-pack-gnome-tr-base (<< 1:13.10+20130917), language-pack-kde-tr (<< 1:13.10+20130917), language-pack-kde-tr-base (<< 1:13.10+20130917), language-pack-tr (<< 1:13.10+20130917), language-pack-tr-base
-Depends: language-pack-tr-base (>= 1:13.10+20130723)
-Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-tr/language-pack-tr_13.10+20130917_all.deb
-Size: 1283720
-MD5sum: ec659d4a3a2983a5064383fe95390a26
-SHA1: 8ec167ae13f417d4b126426810e55b360ffbf14b
-SHA256: 757cec19b13eb29683d9c8429e3d27bfb06a5d0f07922d7fd0352b09cd1f17da
-Description: translation updates for language Turkish
-Description-md5: dfefbe4b5c37c26ad9200ad67f24f22f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-usb-live, edubuntu-usb-live
-
-Package: language-pack-ug
-Priority: optional
-Section: translations
-Installed-Size: 904
-Maintainer: Language pack maintainers <language-packs@ubuntu.com>
-Architecture: all
-Version: 1:13.10+20130917
-Replaces: language-pack-gnome-ug (<< 1:13.10+20130917), language-pack-gnome-ug-base (<< 1:13.10+20130917), language-pack-kde-ug (<< 1:13.10+20130917), language-pack-kde-ug-base (<< 1:13.10+20130917), language-pack-ug (<< 1:13.10+20130917), language-pack-ug-base
-Depends: language-pack-ug-base (>= 1:13.10+20130723)
-Pre-Depends: dpkg (>= 1.10.27ubuntu1)
-Filename: pool/main/l/language-pack-ug/language-pack-ug_13.10+20130917_all.deb
-Size: 232532
-MD5sum: 1acf678a6ddc9b801e6a4fae405597b1
-SHA1: b8a8e9e2d584682265728b0cdfb384af3f5a6f5f
-SHA256: 5f453d625f2a0f0029256adb7a92a59cbc7f1a18c81406a2749f867cfec99ba8
-Description: translation updates for language Uighur; Uyghur
-Description-md5: 98fee795d8737d35feb2278d1100a452
+Conflicts: language-pack-zh (<< 1:9.10)
+Filename: pool/main/l/language-pack-zh-hant/language-pack-zh-hant_13.10+20130917_all.deb
+Size: 777248
+MD5sum: 175c0b19112e72eebf4db1704cd27686
+SHA1: f70220ccdaadd1cbda081da8353c5bd7824fd1d3
+SHA256: b9b9a9dac655b9d8b83aa7706c36f8a8e791f28d75754e8f86a35b26a190a7bf
+Description: translation updates for language Traditional Chinese
+Description-md5: 4e63dbe1bf430bb900a0e6924be90980
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-usb-live, edubuntu-usb-live
@@ -443,6 +765,108 @@ Description: Documentation files for the GLib library
 Multi-Arch: foreign
 Homepage: http://www.gtk.org/
 Description-md5: bdb9aa53f83dabd5dab7d58c0e8cd803
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libhud-client2-doc
+Priority: optional
+Section: doc
+Installed-Size: 173
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: hud
+Version: 13.10.1+13.10.20130918-0ubuntu1
+Depends: libhud-client2-dev (>= 13.10.1+13.10.20130918-0ubuntu1)
+Filename: pool/main/h/hud/libhud-client2-doc_13.10.1+13.10.20130918-0ubuntu1_all.deb
+Size: 17178
+MD5sum: 810144058b6bba47ec76c5c8f416cd79
+SHA1: 052cca244659f6856b4932fc8c75a90988fcc070
+SHA256: 589f1f5cd7261557c5992b5332403d31842993263d13dda78131fa57a3a69625
+Description: private library for implementing a HUD frontend
+Homepage: http://launchpad.net/hud
+Description-md5: be36e1ce1035bc219738d87ad6e9c7ef
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libhud-gtk1-doc
+Priority: optional
+Section: doc
+Installed-Size: 70
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: hud
+Version: 13.10.1+13.10.20130918-0ubuntu1
+Depends: libhud-gtk1-dev (>= 13.10.1+13.10.20130918-0ubuntu1), libhud2-doc (>= 13.10.1+13.10.20130918-0ubuntu1)
+Filename: pool/main/h/hud/libhud-gtk1-doc_13.10.1+13.10.20130918-0ubuntu1_all.deb
+Size: 8510
+MD5sum: 01c4df31abcb1df3db80b6ce8d2a1d8a
+SHA1: 77709bc8a854be6880ec7a4279541c4e6f366568
+SHA256: 52082eb578c8919184d540f8fdca4ba33eb56de182f6878c7a663e36acd1d1cb
+Description: GTK helpers for exporting items to the Unity HUD
+Homepage: http://launchpad.net/hud
+Description-md5: 7e11e2cb6c06b23481c1a630bdec8d15
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libhud2-doc
+Priority: optional
+Section: doc
+Installed-Size: 150
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: hud
+Version: 13.10.1+13.10.20130918-0ubuntu1
+Depends: libhud2-dev (>= 13.10.1+13.10.20130918-0ubuntu1)
+Filename: pool/main/h/hud/libhud2-doc_13.10.1+13.10.20130918-0ubuntu1_all.deb
+Size: 16188
+MD5sum: 64415399028b75af6ef25d3486eac113
+SHA1: 578cc28fbeda7f9cce005943e117f0123f7c1d2b
+SHA256: db41b2ee66cbb52c462a7105fbead2c2ee842c835357e1b7e044728ecc390bd4
+Description: library for exporting items to the Unity HUD
+Homepage: http://launchpad.net/hud
+Description-md5: c29f9b6554b89d87d21bf40b550d0e8a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpython2.7-testsuite
+Priority: optional
+Section: libdevel
+Installed-Size: 13110
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python2.7
+Version: 2.7.5-8ubuntu1
+Depends: libpython2.7-stdlib (>= 2.7.5-8ubuntu1)
+Suggests: python-gdbm, python-tk
+Filename: pool/main/p/python2.7/libpython2.7-testsuite_2.7.5-8ubuntu1_all.deb
+Size: 2663052
+MD5sum: cccd4cdfa0bc4e89364e91285cf7877d
+SHA1: 9d7c52cc2f9f30ea21a938d83b244d2f4462d196
+SHA256: 07ae1d768af8f73f85ba866c708f0e0a6d05b8e9a23c8727a9c2a2cf7e41f509
+Description: Testsuite for the Python standard library (v2.7)
+Description-md5: ca1ecfb5f297f44ae0729c2b3459e146
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpython3.3-testsuite
+Priority: optional
+Section: libdevel
+Installed-Size: 15178
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python3.3
+Version: 3.3.2-7ubuntu1
+Depends: libpython3.3-stdlib (>= 3.3.2-7ubuntu1)
+Suggests: python-gdbm, python-tk
+Filename: pool/main/p/python3.3/libpython3.3-testsuite_3.3.2-7ubuntu1_all.deb
+Size: 2843238
+MD5sum: d75e2dc5526983fce7da3f2262c2a8f5
+SHA1: c5947fe3b3ebc91fef7f79e4ff00dd62f5ebb3c3
+SHA256: 1f9e05bfa0efbd54a26600c68f1856c6139fead20ecd5763c00d4ef74d5381b9
+Description: Testsuite for the Python standard library (v3.3)
+Description-md5: 1db9210c7a31dae14e26d3f378d2eb7b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -916,6 +1340,47 @@ Description-md5: 9e7471c108af7843da4a920afe750d19
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python2.7-doc
+Priority: optional
+Section: doc
+Installed-Size: 31109
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python2.7
+Version: 2.7.5-8ubuntu1
+Depends: libjs-jquery
+Suggests: python2.7
+Filename: pool/main/p/python2.7/python2.7-doc_2.7.5-8ubuntu1_all.deb
+Size: 6330530
+MD5sum: 42c8d7d1bc7338e3a7032b91bf09ca7c
+SHA1: 30d31fc5c0bd3f9f8854e0ef4b15d559b575a020
+SHA256: fda8d589e4bb81b6a8914de3232ddc95687fb23542ca9174155ff0ac8dbbd7bb
+Description: Documentation for the high-level object-oriented language Python (v2.7)
+Description-md5: 427bb0bb2c7ff8d97e3a833c92820507
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python2.7-examples
+Priority: optional
+Section: python
+Installed-Size: 2691
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python2.7
+Version: 2.7.5-8ubuntu1
+Depends: python2.7 (>= 2.7.5-8ubuntu1)
+Filename: pool/main/p/python2.7/python2.7-examples_2.7.5-8ubuntu1_all.deb
+Size: 680962
+MD5sum: 40f21181d9c9c746e8d4c7d023021c6d
+SHA1: 5ba64da05e23f7c3efdf55a343e4df2ae041dcaf
+SHA256: 56f60691ba6721f97df43f8a5a2de082a8938c4d6dd19bb1bfbea7b64b136e9e
+Description: Examples for the Python language (v2.7)
+Description-md5: 4f24bb2b1825659042443224cf985199
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python3-aptdaemon
 Priority: extra
 Section: python
@@ -1009,6 +1474,90 @@ SHA256: fc13f7ca2e5feb261af80d50a9e9bc16b440ddbbc9e891f91a15381e6d5cba0c
 Description: Test environment for aptdaemon clients
 Homepage: https://launchpad.net/aptdaemon
 Description-md5: 1a901b5468edd109ab5809bbe10ba40d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-doc
+Priority: optional
+Section: doc
+Installed-Size: 56
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python3-defaults
+Version: 3.3.2-14ubuntu1
+Depends: python3.3-doc (>= 3.3.1-1~)
+Suggests: python3 (>= 3.3.2-14ubuntu1), python3-examples
+Filename: pool/main/p/python3-defaults/python3-doc_3.3.2-14ubuntu1_all.deb
+Size: 8274
+MD5sum: 85f7094605e60e637876f30715bae732
+SHA1: b0d7a91805de3164ffda91c58cb2e977d4980ea2
+SHA256: a538d786614f436e9dabf87bd8dd4f2b4365efd5f4f6b87bb49c6df514f69469
+Description: documentation for the high-level object-oriented language Python 3
+Homepage: http://www.python.org/
+Description-md5: 73650dd5e6c2848802517ef683ed6159
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-examples
+Priority: optional
+Section: python
+Installed-Size: 21
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python3-defaults
+Version: 3.3.2-14ubuntu1
+Depends: python3 (>= 3.3.2-14ubuntu1), python3.3-examples (>= 3.3.1-1~)
+Filename: pool/main/p/python3-defaults/python3-examples_3.3.2-14ubuntu1_all.deb
+Size: 908
+MD5sum: 1560bb355b74ab66cde464b561aa1d67
+SHA1: e5d368a4501d482f499f8f642e091ffe93cf07c9
+SHA256: 9f7840fb784adaeb267538f48e3def554c08db61c0b06649dd0e716a32cd62aa
+Description: examples for the Python language (default version)
+Homepage: http://www.python.org/
+Description-md5: 069da0326d354d5bfcf3b6b1fcda3ca1
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3.3-doc
+Priority: optional
+Section: doc
+Installed-Size: 33507
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python3.3
+Version: 3.3.2-7ubuntu1
+Depends: libjs-jquery, libjs-underscore
+Suggests: python3.3
+Filename: pool/main/p/python3.3/python3.3-doc_3.3.2-7ubuntu1_all.deb
+Size: 6834486
+MD5sum: f7d3040c81ee007b27714dbd4d747b5c
+SHA1: 1cf7c1aadb48aa62633f3dace12874b865ace065
+SHA256: 0f308bce9710bea02df490bef088b3d5859e10246d90ef5f338543ae60259eb7
+Description: Documentation for the high-level object-oriented language Python (v3.3)
+Description-md5: 1c5f93bb159770de25ff400f5d851dc2
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3.3-examples
+Priority: optional
+Section: python
+Installed-Size: 1602
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python3.3
+Version: 3.3.2-7ubuntu1
+Depends: python3.3 (>= 3.3.2-7ubuntu1)
+Filename: pool/main/p/python3.3/python3.3-examples_3.3.2-7ubuntu1_all.deb
+Size: 381052
+MD5sum: 95893c64793b54db1312365b8bd7ee2e
+SHA1: 64289584b9c52c9b3b347b497a6111d28a995701
+SHA256: c4340a0dcfdfbb9e46bc7dad2ec0c4305d17511df4282244a228abf9a22ed8bd
+Description: Examples for the Python language (v3.3)
+Description-md5: 47348d11732a1f26bdd561fc1c509b82
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 

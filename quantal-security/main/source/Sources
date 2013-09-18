@@ -79,6 +79,35 @@ Checksums-Sha256:
  772a23eccd6dc247ee06dc507595e4a532fc7d7bd451fad606bd13a86f8997b2 2431 apt_0.9.7.5ubuntu5.4.dsc
  ee85032c897e48c327e1ad63c1042581b9ad54cea589ae019f6882a044e83454 3394108 apt_0.9.7.5ubuntu5.4.tar.gz
 
+Package: apt-xapian-index
+Binary: apt-xapian-index
+Version: 0.44ubuntu7.1
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Enrico Zini <enrico@debian.org>
+Build-Depends: debhelper (>= 7.0.50~), quilt
+Build-Depends-Indep: help2man, python (>= 2.6.6-3~), bash-completion (>= 1:1.0-1~), python-xapian (>= 1.0.2), python-apt (>= 0.7.93.2), python-debian (>= 0.1.14), python-nose
+Architecture: all
+Standards-Version: 3.9.1.0
+Format: 1.0
+Directory: pool/main/a/apt-xapian-index
+Files:
+ e9c7269fa5545b7d84cea7563c59183e 1970 apt-xapian-index_0.44ubuntu7.1.dsc
+ a64a4d674ab27e99c89ac2d1fe27a42a 60870 apt-xapian-index_0.44ubuntu7.1.tar.gz
+Uploaders: David Paleino <dapal@debian.org>
+Homepage: http://www.enricozini.org/sw/apt-xapian-index/
+Vcs-Browser: http://git.debian.org/?p=collab-maint/apt-xapian-index.git
+Vcs-Git: git://git.debian.org/git/collab-maint/apt-xapian-index.git
+Package-List: 
+ apt-xapian-index deb admin optional
+Checksums-Sha1:
+ c72e5b27681dd429e7f3952c5b483083b7a2dc16 1970 apt-xapian-index_0.44ubuntu7.1.dsc
+ 6775ba86faac59047127f7ac1a092e4011335caa 60870 apt-xapian-index_0.44ubuntu7.1.tar.gz
+Checksums-Sha256:
+ 6b93f3361e27da78fff1fa81fee1e80d8b15949581962bf7a1190ae3f784b8d2 1970 apt-xapian-index_0.44ubuntu7.1.dsc
+ 3c8d4af855b65ff0e6f275a2d9eeccd142b9f1a5ff9153e6b12c610737e4f5f8 60870 apt-xapian-index_0.44ubuntu7.1.tar.gz
+
 Package: bind9
 Binary: bind9, bind9utils, bind9-doc, host, bind9-host, libbind-dev, libbind9-80, libdns81, libisc83, liblwres80, libisccc80, libisccfg82, dnsutils, lwresd
 Version: 1:9.8.1.dfsg.P1-4.2ubuntu3.3
@@ -971,6 +1000,50 @@ Checksums-Sha256:
  ec2b6222a34d11f97cf7cf5cc696080dac34e94deb8e6cf3822b27442e0793fa 820427 haproxy_1.4.18.orig.tar.gz
  19ed731eccf026a30f83453d11ae9cefb61195c2f85ea5d208a17543e319ea3c 14713 haproxy_1.4.18-0ubuntu2.2.debian.tar.gz
 
+Package: hplip
+Binary: hplip, hplip-data, printer-driver-postscript-hp, hplip-gui, hplip-dbg, hplip-doc, hpijs-ppds, hpijs, printer-driver-hpijs, hplip-cups, printer-driver-hpcups, libhpmud0, libhpmud-dev, libsane-hpaio
+Version: 3.12.6-3ubuntu4.1
+Priority: optional
+Section: utils
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian HPIJS and HPLIP maintainers <pkg-hpijs-devel@lists.alioth.debian.org>
+Build-Depends: libcups2-dev, libcupsimage2-dev, libsane-dev, libsnmp-dev, libjpeg-dev, libusb-1.0-0-dev [linux-any], libusb-dev [!linux-any], debhelper (>= 9), autotools-dev, autoconf, automake, libtool, cups (>= 1.4.0) | cupsddk, patch (>= 2.5.9-3bpo1), findutils (>= 4.2.28), python-dev, python-all-dev (>= 2.6.6-3~), python-qt4, pyqt4-dev-tools, python-dbus (>= 0.80), python-qt4-dbus, libdbus-1-dev, libudev-dev [linux-any], policykit-1, fdupes, lsb-release, pyppd (>= 0.4.9-5), dh-autoreconf
+Architecture: any all
+Standards-Version: 3.9.3
+Format: 3.0 (quilt)
+Directory: pool/main/h/hplip
+Files:
+ 3be40fd102c7da05c040ec713a2544b4 3159 hplip_3.12.6-3ubuntu4.1.dsc
+ 5303938e8630775ea6fb383af85775e5 21227044 hplip_3.12.6.orig.tar.gz
+ cb45900b71920260266f0c7bbb28a7af 111518 hplip_3.12.6-3ubuntu4.1.debian.tar.gz
+Uploaders: Mark Purcell <msp@debian.org>, Till Kamppeter <till.kamppeter@gmail.com>
+Homepage: http://hplipopensource.com/hplip-web/index.html
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-hpijs/hplip/?op=log
+Vcs-Svn: svn://svn.debian.org/pkg-hpijs/hplip/trunk/
+Package-List: 
+ hpijs deb oldlibs extra
+ hpijs-ppds deb utils optional
+ hplip deb utils optional
+ hplip-cups deb oldlibs extra
+ hplip-data deb utils optional
+ hplip-dbg deb debug extra
+ hplip-doc deb doc optional
+ hplip-gui deb utils optional
+ libhpmud-dev deb libdevel optional
+ libhpmud0 deb libs optional
+ libsane-hpaio deb libs optional
+ printer-driver-hpcups deb text optional
+ printer-driver-hpijs deb text optional
+ printer-driver-postscript-hp deb utils optional
+Checksums-Sha1:
+ cc12213d5b7236bd031d279456d9766fbfafadf8 3159 hplip_3.12.6-3ubuntu4.1.dsc
+ f3d7f66fb5eff2158ac42bb5a115f8ef8bd7a383 21227044 hplip_3.12.6.orig.tar.gz
+ 6140494645d8d5256fc94ca41d2a76833ec45c58 111518 hplip_3.12.6-3ubuntu4.1.debian.tar.gz
+Checksums-Sha256:
+ ad3923715db20a82853d160181ef1de4d08b5700ae0f0f86b2fac395c927c337 3159 hplip_3.12.6-3ubuntu4.1.dsc
+ 54578000792969adb583e75efeacb9c46ab69659ec7e9424de390613f3595775 21227044 hplip_3.12.6.orig.tar.gz
+ 5a45beaac3b047774893f32a42593d67c31e01de93b1518715967a4415612167 111518 hplip_3.12.6-3ubuntu4.1.debian.tar.gz
+
 Package: hv-kvp-daemon-init
 Binary: hv-kvp-daemon-init
 Version: 0.3ubuntu4~12.10.0
@@ -1207,6 +1280,31 @@ Checksums-Sha256:
  ab3a9a6c1f8ef9b95a73920883294f888f298db6330b8d4ed43e28354e8ca7af 555448 keystone_2012.2.4.orig.tar.gz
  48dd88010fdd4a7e7d52e141a154d6cd805a67492a4b11b67e9006ecc3dd9739 32170 keystone_2012.2.4-0ubuntu3.1.debian.tar.gz
 Python-Version: >= 2.6
+
+Package: language-selector
+Binary: language-selector-gnome, language-selector-kde, language-selector-common
+Version: 0.90.1
+Priority: standard
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50~), python3, python3-distutils-extra, python3-setuptools, pyqt4-dev-tools, intltool, intltool-debian, dh-translations
+Architecture: all
+Standards-Version: 3.9.3
+Format: 3.0 (native)
+Directory: pool/main/l/language-selector
+Files:
+ 574382a4cdd1fa0c91e89acf5360dc86 1745 language-selector_0.90.1.dsc
+ 537d43df93483ce418762bdf7a2ba2c4 382144 language-selector_0.90.1.tar.gz
+Package-List: 
+ language-selector-common deb admin optional
+ language-selector-gnome deb admin optional
+ language-selector-kde deb admin optional
+Checksums-Sha1:
+ 1dec8a6164a1ba5b7119e3950816ea53fca12f76 1745 language-selector_0.90.1.dsc
+ 18add0943de9af754a44344b272015e5bfd89729 382144 language-selector_0.90.1.tar.gz
+Checksums-Sha256:
+ d8599b614d7e0c671d9f64ed08d89def8bf4317b30c711591e95fb343c2bf933 1745 language-selector_0.90.1.dsc
+ 72ef5fa4ea7a24a6e3d79eafb21e35a42d9ce74c02f0b49b1c5360c6bc23fc75 382144 language-selector_0.90.1.tar.gz
 
 Package: lcms2
 Binary: liblcms2-dev, liblcms2-2, liblcms2-utils
@@ -1558,21 +1656,21 @@ Checksums-Sha256:
 
 Package: libvirt
 Binary: libvirt-bin, libvirt0, libvirt0-dbg, libvirt-doc, libvirt-dev, python-libvirt
-Version: 0.9.13-0ubuntu12.2
+Version: 0.9.13-0ubuntu12.5
 Priority: optional
 Section: devel
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Libvirt Maintainers <pkg-libvirt-maintainers@lists.alioth.debian.org>
-Build-Depends: cdbs (>= 0.4.90~), debhelper (>= 7), libxml2-dev, libncurses5-dev, libreadline-dev, zlib1g-dev, libgnutls-dev, libgcrypt11-dev, python-all-dev (>= 2.6.6-3~), libavahi-client-dev, libsasl2-dev, libxen-dev [i386 amd64], lvm2 [linux-any], open-iscsi-utils, libparted0-dev (>= 2.2), parted (>= 2.2), libdevmapper-dev [linux-any], uuid-dev, libudev-dev [linux-any], libhal-dev [!linux-any], libpciaccess-dev, module-init-tools [linux-any], policykit-1, libcap-ng-dev [linux-any], libnl-3-dev, libnl-route-3-dev, libyajl-dev, libpcap0.8-dev, libnuma-dev [amd64 i386 ia64 mips mipsel powerpc], radvd [linux-any], libnetcf-dev [linux-any], dwarves, libxml2-utils, libapparmor-dev, dnsmasq-base, openssh-client, netcat-openbsd
+Build-Depends: cdbs (>= 0.4.90~), debhelper (>= 7), dh-autoreconf, autopoint, libxml2-dev, libncurses5-dev, libreadline-dev, zlib1g-dev, libgnutls-dev, libgcrypt11-dev, python-all-dev (>= 2.6.6-3~), libavahi-client-dev, libsasl2-dev, libxen-dev [i386 amd64], lvm2 [linux-any], open-iscsi-utils, libparted0-dev (>= 2.2), parted (>= 2.2), libdevmapper-dev [linux-any], uuid-dev, libudev-dev [linux-any], libhal-dev [!linux-any], libpciaccess-dev, module-init-tools [linux-any], policykit-1 (>= 0.104-2ubuntu1.1), libpolkit-gobject-1-dev (>= 0.104-2ubuntu1.1), libcap-ng-dev [linux-any], libnl-3-dev, libnl-route-3-dev, libyajl-dev, libpcap0.8-dev, libnuma-dev [amd64 i386 ia64 mips mipsel powerpc], radvd [linux-any], libnetcf-dev [linux-any], dwarves, libxml2-utils, libapparmor-dev, dnsmasq-base, openssh-client, netcat-openbsd
 Build-Conflicts: dpkg-dev (= 1.15.3)
 Architecture: any all
 Standards-Version: 3.9.3
 Format: 3.0 (quilt)
 Directory: pool/main/libv/libvirt
 Files:
- 11642f1d993bc3aa6f5adceeecfb1607 2946 libvirt_0.9.13-0ubuntu12.2.dsc
+ 5aae4a83c07a693423569c8f92333ff3 3041 libvirt_0.9.13-0ubuntu12.5.dsc
  86cbe53ee662e3b9e8bb0c63c737ba27 20276757 libvirt_0.9.13.orig.tar.gz
- 12617f2469c1a42b8caa01dc048fa051 108647 libvirt_0.9.13-0ubuntu12.2.debian.tar.gz
+ 025af73d34288aedde0e3a696262c5d2 115125 libvirt_0.9.13-0ubuntu12.5.debian.tar.gz
 Uploaders: Guido Günther <agx@sigxcpu.org>, Laurent Léonard <laurent@open-minds.org>
 Dm-Upload-Allowed: yes
 Homepage: http://libvirt.org
@@ -1584,13 +1682,13 @@ Package-List:
  libvirt0-dbg deb debug extra
  python-libvirt deb python optional
 Checksums-Sha1:
- 7ae80708b811fa808adcb9a0cfa8bcf826f6fea6 2946 libvirt_0.9.13-0ubuntu12.2.dsc
+ fecb5203a7123d94b0c7550f113af105cee081c1 3041 libvirt_0.9.13-0ubuntu12.5.dsc
  4a2f8391455e39624440571d9d369bf254b300f7 20276757 libvirt_0.9.13.orig.tar.gz
- 7d2f69a2ef19982b830b88fbff3bbc2a4a2bbb40 108647 libvirt_0.9.13-0ubuntu12.2.debian.tar.gz
+ 00c5c5268f0e1b140e74dd1dd5edb88348d8203d 115125 libvirt_0.9.13-0ubuntu12.5.debian.tar.gz
 Checksums-Sha256:
- ac3f1569d6ba19d876de1a37fc9083ca0c0f64ff1e49d10384b92fbb63821852 2946 libvirt_0.9.13-0ubuntu12.2.dsc
+ 2816533568b72df2d563e49a3c3a5d5734887c8c470ad3f899f97d6bce6adfb6 3041 libvirt_0.9.13-0ubuntu12.5.dsc
  d124e9915c88c195da9c008a6d855e53e555dca5816052e163dda61388359d5b 20276757 libvirt_0.9.13.orig.tar.gz
- 06c1ca2305b999d609d8de6feb4c3c82642bd8358c862b9bde7f131907305a21 108647 libvirt_0.9.13-0ubuntu12.2.debian.tar.gz
+ b608dcebcbbaeb50babd6f536a43a1d917a453a00db7b1eeeb56db6e76985e01 115125 libvirt_0.9.13-0ubuntu12.5.debian.tar.gz
 
 Package: libx11
 Binary: libx11-6, libx11-6-udeb, libx11-data, libx11-6-dbg, libx11-dev, libx11-xcb1, libx11-xcb1-dbg, libx11-xcb-dev, libx11-doc
@@ -3261,6 +3359,45 @@ Checksums-Sha256:
  3e25a633b97cbfa8326999a30282e7a662a9b9bbf2853be84af0b8fb60392c96 10007092 pidgin_2.10.6.orig.tar.bz2
  0bf5542c36d8a17bed89fd74a93904c5f908650a670b13c9184338160589d53e 68307 pidgin_2.10.6-0ubuntu2.2.debian.tar.gz
 
+Package: policykit-1
+Binary: policykit-1, policykit-1-doc, libpolkit-gobject-1-0, libpolkit-gobject-1-dev, libpolkit-agent-1-0, libpolkit-agent-1-dev, libpolkit-backend-1-0, libpolkit-backend-1-dev, gir1.2-polkit-1.0
+Version: 0.104-2ubuntu1.1
+Priority: standard
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 8.1.3), autotools-dev, pkg-config, libglib2.0-dev (>= 2.28.0), libexpat1-dev, libpam0g-dev, libselinux1-dev [linux-any], gtk-doc-tools, xsltproc, libgirepository1.0-dev (>= 0.9.12), gobject-introspection (>= 0.9.12-4~), gir1.2-glib-2.0, libglib2.0-doc, libgtk-3-doc
+Architecture: any all
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/p/policykit-1
+Files:
+ 203f07ad6a4fcd9955f904e528f9f7d0 2891 policykit-1_0.104-2ubuntu1.1.dsc
+ e380b4c6fb1e7bccf854e92edc0a8ce1 1416583 policykit-1_0.104.orig.tar.gz
+ cc9c1d21835ff7ceae53979f3ba49bf2 18122 policykit-1_0.104-2ubuntu1.1.debian.tar.gz
+Uploaders: Michael Biebl <biebl@debian.org>, Martin Pitt <mpitt@debian.org>
+Homepage: http://hal.freedesktop.org/docs/PolicyKit/
+Vcs-Browser: http://git.debian.org/?p=pkg-utopia/policykit.git;a=summary
+Vcs-Git: git://git.debian.org/git/pkg-utopia/policykit.git
+Package-List: 
+ gir1.2-polkit-1.0 deb introspection optional
+ libpolkit-agent-1-0 deb libs optional
+ libpolkit-agent-1-dev deb libdevel optional
+ libpolkit-backend-1-0 deb libs optional
+ libpolkit-backend-1-dev deb libdevel optional
+ libpolkit-gobject-1-0 deb libs optional
+ libpolkit-gobject-1-dev deb libdevel optional
+ policykit-1 deb admin optional
+ policykit-1-doc deb doc optional
+Checksums-Sha1:
+ 9695c3af6eaec477cd57951160404b8a6c8a0f98 2891 policykit-1_0.104-2ubuntu1.1.dsc
+ 599208cf584b9e13f8c9d863238a8271af4aba62 1416583 policykit-1_0.104.orig.tar.gz
+ 2ddabb963cdab878360e40eff757ca6231c93817 18122 policykit-1_0.104-2ubuntu1.1.debian.tar.gz
+Checksums-Sha256:
+ 6db64c2d1711acc5dc7687413059f26066a96600c596c972da92ecff069a1280 2891 policykit-1_0.104-2ubuntu1.1.dsc
+ 6b0a13d8381e4a7b7e37c18a54595191b50757e0fcd186cd9918e9ad0f18c7f9 1416583 policykit-1_0.104.orig.tar.gz
+ a92223ae217f80d073b905f6f4069d7b9608b3e6aa7978292e91daa6fdd321df 18122 policykit-1_0.104-2ubuntu1.1.debian.tar.gz
+
 Package: poppler
 Binary: libpoppler28, libpoppler-dev, libpoppler-private-dev, libpoppler-glib8, libpoppler-glib-dev, gir1.2-poppler-0.18, libpoppler-qt4-4, libpoppler-qt4-dev, libpoppler-cpp0, libpoppler-cpp-dev, poppler-utils, poppler-dbg
 Version: 0.20.4-0ubuntu1.2
@@ -3746,6 +3883,37 @@ Checksums-Sha256:
  0e2e237235b64c07ee4a4152e4eb77aad4eb559737eac9b6713c5e1bcabfe4a9 3530378 rpm_4.10.0.orig.tar.bz2
  a0a9047c42a1303037f8b439eb89a4a1a3f2c2b22af034f5e2c519a3f7334fe3 35361 rpm_4.10.0-4ubuntu0.1.debian.tar.gz
 
+Package: rtkit
+Binary: rtkit
+Version: 0.10-2ubuntu0.12.10.1
+Priority: optional
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Multimedia Maintainers <pkg-multimedia-maintainers@lists.alioth.debian.org>
+Build-Depends: cdbs, debhelper (>= 7.0.50~), autotools-dev, libdbus-1-dev, libpolkit-backend-1-dev, libcap-dev
+Architecture: any
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/r/rtkit
+Files:
+ 220d70f5509bc4855645dd0368a9b37a 2136 rtkit_0.10-2ubuntu0.12.10.1.dsc
+ 9ab7f2a25ddf05584ea2216dfe4cefd4 160528 rtkit_0.10.orig.tar.gz
+ 9ea1dadd203b572d10e1f5a8ba53d344 5031 rtkit_0.10-2ubuntu0.12.10.1.debian.tar.gz
+Uploaders: Alessio Treglia <alessio@debian.org>, Luke Yelavich <themuso@ubuntu.com>
+Homepage: http://0pointer.de/public/
+Vcs-Browser: http://git.debian.org/?p=pkg-multimedia/rtkit.git
+Vcs-Git: git://git.debian.org/git/pkg-multimedia/rtkit.git
+Package-List: 
+ rtkit deb admin optional
+Checksums-Sha1:
+ ca5ed89676580ebf07a1e7a522f593cb5a2a8ab3 2136 rtkit_0.10-2ubuntu0.12.10.1.dsc
+ 208351063cdcc5289f79490d6bb313597a6508af 160528 rtkit_0.10.orig.tar.gz
+ aad542b8de2303f8162ba60bfdb14345512e162a 5031 rtkit_0.10-2ubuntu0.12.10.1.debian.tar.gz
+Checksums-Sha256:
+ 6f7f060de9f8e966911c1039d98489525fb228ff6387bd9782a3b1145b3fd40c 2136 rtkit_0.10-2ubuntu0.12.10.1.dsc
+ 74ea93ac09d9d5a7cb85bf57ec92090311c9fb105a41bdd633adcf3b94472120 160528 rtkit_0.10.orig.tar.gz
+ ac50536c971e805e27de7fcb21c330b35d9a794f5c3245072c8c1554e0aee4ef 5031 rtkit_0.10-2ubuntu0.12.10.1.debian.tar.gz
+
 Package: ruby1.8
 Binary: ruby1.8, libruby1.8, libruby1.8-dbg, ruby1.8-dev, libtcltk-ruby1.8, ruby1.8-examples, ri1.8, ruby1.8-full
 Version: 1.8.7.358-4ubuntu0.3
@@ -3822,6 +3990,35 @@ Checksums-Sha256:
  700aa42d461daaba303d93905215df5b2ba12a31b1aea87b4b07b17e86b8e7f0 2749 ruby1.9.1_1.9.3.194-1ubuntu1.5.dsc
  46e2fa80be7efed51bd9cdc529d1fe22ebc7567ee0f91db4ab855438cf4bd8bb 12432239 ruby1.9.1_1.9.3.194.orig.tar.gz
  5e2fe2968cbbe4e8b90f7e563c44398e7bc9cfaf99a17e0b6679c3fe1267a224 64810 ruby1.9.1_1.9.3.194-1ubuntu1.5.debian.tar.gz
+
+Package: software-properties
+Binary: python-software-properties, python3-software-properties, software-properties-common, software-properties-gtk, software-properties-kde
+Version: 0.92.9.3
+Priority: optional
+Section: admin
+Maintainer: Michael Vogt <michael.vogt@ubuntu.com>
+Build-Depends: debhelper (>= 9), libxml-parser-perl, scrollkeeper, intltool, python-all (>= 2.6.6-3~), python-distutils-extra (>= 1.90), python3-all, python3-distutils-extra, dh-translations
+Architecture: all
+Standards-Version: 3.9.3
+Format: 3.0 (native)
+Directory: pool/main/s/software-properties
+Files:
+ c58cd4cd212bed0b8689303368101197 2043 software-properties_0.92.9.3.dsc
+ a2a443989c5a081243b62a36cec7f2aa 1420005 software-properties_0.92.9.3.tar.gz
+Vcs-Bzr: http://code.launchpad.net/~ubuntu-core-dev/software-properties/main
+Package-List: 
+ python-software-properties deb python optional
+ python3-software-properties deb python optional
+ software-properties-common deb admin optional
+ software-properties-gtk deb admin optional
+ software-properties-kde deb kde optional
+Checksums-Sha1:
+ 42652cb78cc8a50df599ac1401593eb6e437231c 2043 software-properties_0.92.9.3.dsc
+ 7ca47b46c8af0045426b9aef6a71a3125d8b2ed2 1420005 software-properties_0.92.9.3.tar.gz
+Checksums-Sha256:
+ f815620a66f65dc1304b07d253c6be67d6cd1d855743c415335f4f4d16716a62 2043 software-properties_0.92.9.3.dsc
+ f258d55f78d62421fcdabe1627cd6d97c57776737e00ec56391e6c769e03879d 1420005 software-properties_0.92.9.3.tar.gz
+Testsuite: autopkgtest
 
 Package: squid3
 Binary: squid3, squid3-dbg, squid3-common, squidclient, squid-cgi, squid, squid-common
@@ -4304,6 +4501,31 @@ Checksums-Sha256:
  232274aa5395df0f7df46591a18b6a957025d8fe66a4416dfd3594e5711364cd 2096 ubuntu-release-upgrader_0.190.7.dsc
  25e3dd1e279a94e11e73d67b78139f13bc89613b36115c8488e0d7af34d3d164 1891937 ubuntu-release-upgrader_0.190.7.tar.gz
 Testsuite: autopkgtest
+
+Package: ubuntu-system-service
+Binary: ubuntu-system-service
+Version: 0.2.3.1
+Priority: optional
+Section: admin
+Maintainer: Michael Vogt <mvo@ubuntu.com>
+Build-Depends: debhelper (>= 7.0.50~), dh-translations, python-distutils-extra, python (>= 2.6.6-3~), intltool
+Architecture: all
+Standards-Version: 3.9.2
+Format: 3.0 (native)
+Directory: pool/main/u/ubuntu-system-service
+Files:
+ 1a76a382f2a3d19925ae0ead3c23659e 1659 ubuntu-system-service_0.2.3.1.dsc
+ 4b5e33340f8d572dbdea61a46aa49f62 20518 ubuntu-system-service_0.2.3.1.tar.gz
+Vcs-Browser: http://bazaar.launchpad.net/~ubuntu-core-dev/system-service/ubuntu
+Vcs-Bzr: lp:system-service
+Package-List: 
+ ubuntu-system-service deb admin optional
+Checksums-Sha1:
+ fd963ad0eb886da0c24f302578b0f2fb429b1650 1659 ubuntu-system-service_0.2.3.1.dsc
+ 2d79a7c6df7a9e709bae15b7a4e703450e5c445f 20518 ubuntu-system-service_0.2.3.1.tar.gz
+Checksums-Sha256:
+ 867c98a8ef46b06c053c872e677d41a188823d865fb19e6717aed41a99ca76d6 1659 ubuntu-system-service_0.2.3.1.dsc
+ e46be33d02f39a401f8917ef1f71ac272eccd2ccb5c7940e8ae394f5a3cb0572 20518 ubuntu-system-service_0.2.3.1.tar.gz
 
 Package: unity-firefox-extension
 Binary: xul-ext-unity, libufe-xidgetter0

@@ -4303,21 +4303,21 @@ Checksums-Sha256:
 
 Package: libvirt
 Binary: libvirt-bin, libvirt0, libvirt0-dbg, libvirt-doc, libvirt-dev, python-libvirt
-Version: 0.9.13-0ubuntu12.3
+Version: 0.9.13-0ubuntu12.5
 Priority: optional
 Section: devel
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Libvirt Maintainers <pkg-libvirt-maintainers@lists.alioth.debian.org>
-Build-Depends: cdbs (>= 0.4.90~), debhelper (>= 7), libxml2-dev, libncurses5-dev, libreadline-dev, zlib1g-dev, libgnutls-dev, libgcrypt11-dev, python-all-dev (>= 2.6.6-3~), libavahi-client-dev, libsasl2-dev, libxen-dev [i386 amd64], lvm2 [linux-any], open-iscsi-utils, libparted0-dev (>= 2.2), parted (>= 2.2), libdevmapper-dev [linux-any], uuid-dev, libudev-dev [linux-any], libhal-dev [!linux-any], libpciaccess-dev, module-init-tools [linux-any], policykit-1, libcap-ng-dev [linux-any], libnl-3-dev, libnl-route-3-dev, libyajl-dev, libpcap0.8-dev, libnuma-dev [amd64 i386 ia64 mips mipsel powerpc], radvd [linux-any], libnetcf-dev [linux-any], dwarves, libxml2-utils, libapparmor-dev, dnsmasq-base, openssh-client, netcat-openbsd
+Build-Depends: cdbs (>= 0.4.90~), debhelper (>= 7), dh-autoreconf, autopoint, libxml2-dev, libncurses5-dev, libreadline-dev, zlib1g-dev, libgnutls-dev, libgcrypt11-dev, python-all-dev (>= 2.6.6-3~), libavahi-client-dev, libsasl2-dev, libxen-dev [i386 amd64], lvm2 [linux-any], open-iscsi-utils, libparted0-dev (>= 2.2), parted (>= 2.2), libdevmapper-dev [linux-any], uuid-dev, libudev-dev [linux-any], libhal-dev [!linux-any], libpciaccess-dev, module-init-tools [linux-any], policykit-1 (>= 0.104-2ubuntu1.1), libpolkit-gobject-1-dev (>= 0.104-2ubuntu1.1), libcap-ng-dev [linux-any], libnl-3-dev, libnl-route-3-dev, libyajl-dev, libpcap0.8-dev, libnuma-dev [amd64 i386 ia64 mips mipsel powerpc], radvd [linux-any], libnetcf-dev [linux-any], dwarves, libxml2-utils, libapparmor-dev, dnsmasq-base, openssh-client, netcat-openbsd
 Build-Conflicts: dpkg-dev (= 1.15.3)
 Architecture: any all
 Standards-Version: 3.9.3
 Format: 3.0 (quilt)
 Directory: pool/main/libv/libvirt
 Files:
- 47a4f1899e85e25fd75e1ba05ca4d496 2598 libvirt_0.9.13-0ubuntu12.3.dsc
+ 5aae4a83c07a693423569c8f92333ff3 3041 libvirt_0.9.13-0ubuntu12.5.dsc
  86cbe53ee662e3b9e8bb0c63c737ba27 20276757 libvirt_0.9.13.orig.tar.gz
- d99b04b35cd26500d9445c968eda7c43 109718 libvirt_0.9.13-0ubuntu12.3.debian.tar.gz
+ 025af73d34288aedde0e3a696262c5d2 115125 libvirt_0.9.13-0ubuntu12.5.debian.tar.gz
 Uploaders: Guido Günther <agx@sigxcpu.org>, Laurent Léonard <laurent@open-minds.org>
 Dm-Upload-Allowed: yes
 Homepage: http://libvirt.org
@@ -4329,13 +4329,13 @@ Package-List:
  libvirt0-dbg deb debug extra
  python-libvirt deb python optional
 Checksums-Sha1:
- cd9f83f14a29eb5637e5f10e4bd8fd56fc12bb44 2598 libvirt_0.9.13-0ubuntu12.3.dsc
+ fecb5203a7123d94b0c7550f113af105cee081c1 3041 libvirt_0.9.13-0ubuntu12.5.dsc
  4a2f8391455e39624440571d9d369bf254b300f7 20276757 libvirt_0.9.13.orig.tar.gz
- 94707b37ed0ed218e1779d2e21f84dbcf505c0d6 109718 libvirt_0.9.13-0ubuntu12.3.debian.tar.gz
+ 00c5c5268f0e1b140e74dd1dd5edb88348d8203d 115125 libvirt_0.9.13-0ubuntu12.5.debian.tar.gz
 Checksums-Sha256:
- 9f1acd1a053a5fabade4201fb93a90288aa0b11719d06024d5eb0618a6d04d00 2598 libvirt_0.9.13-0ubuntu12.3.dsc
+ 2816533568b72df2d563e49a3c3a5d5734887c8c470ad3f899f97d6bce6adfb6 3041 libvirt_0.9.13-0ubuntu12.5.dsc
  d124e9915c88c195da9c008a6d855e53e555dca5816052e163dda61388359d5b 20276757 libvirt_0.9.13.orig.tar.gz
- a0598ebed194f36af62afe02a58a56a6e00dbc79eac1af659f4a725515ec9e6b 109718 libvirt_0.9.13-0ubuntu12.3.debian.tar.gz
+ b608dcebcbbaeb50babd6f536a43a1d917a453a00db7b1eeeb56db6e76985e01 115125 libvirt_0.9.13-0ubuntu12.5.debian.tar.gz
 
 Package: libx11
 Binary: libx11-6, libx11-6-udeb, libx11-data, libx11-6-dbg, libx11-dev, libx11-xcb1, libx11-xcb1-dbg, libx11-xcb-dev, libx11-doc
@@ -6541,6 +6541,45 @@ Checksums-Sha256:
  c120464eee59900ae12a1915dab178292711c16273f251a5dfee169a25028229 2916 pidgin_2.10.6-0ubuntu2.2.dsc
  3e25a633b97cbfa8326999a30282e7a662a9b9bbf2853be84af0b8fb60392c96 10007092 pidgin_2.10.6.orig.tar.bz2
  0bf5542c36d8a17bed89fd74a93904c5f908650a670b13c9184338160589d53e 68307 pidgin_2.10.6-0ubuntu2.2.debian.tar.gz
+
+Package: policykit-1
+Binary: policykit-1, policykit-1-doc, libpolkit-gobject-1-0, libpolkit-gobject-1-dev, libpolkit-agent-1-0, libpolkit-agent-1-dev, libpolkit-backend-1-0, libpolkit-backend-1-dev, gir1.2-polkit-1.0
+Version: 0.104-2ubuntu1.1
+Priority: standard
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Utopia Maintenance Team <pkg-utopia-maintainers@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 8.1.3), autotools-dev, pkg-config, libglib2.0-dev (>= 2.28.0), libexpat1-dev, libpam0g-dev, libselinux1-dev [linux-any], gtk-doc-tools, xsltproc, libgirepository1.0-dev (>= 0.9.12), gobject-introspection (>= 0.9.12-4~), gir1.2-glib-2.0, libglib2.0-doc, libgtk-3-doc
+Architecture: any all
+Standards-Version: 3.9.2
+Format: 3.0 (quilt)
+Directory: pool/main/p/policykit-1
+Files:
+ 203f07ad6a4fcd9955f904e528f9f7d0 2891 policykit-1_0.104-2ubuntu1.1.dsc
+ e380b4c6fb1e7bccf854e92edc0a8ce1 1416583 policykit-1_0.104.orig.tar.gz
+ cc9c1d21835ff7ceae53979f3ba49bf2 18122 policykit-1_0.104-2ubuntu1.1.debian.tar.gz
+Uploaders: Michael Biebl <biebl@debian.org>, Martin Pitt <mpitt@debian.org>
+Homepage: http://hal.freedesktop.org/docs/PolicyKit/
+Vcs-Browser: http://git.debian.org/?p=pkg-utopia/policykit.git;a=summary
+Vcs-Git: git://git.debian.org/git/pkg-utopia/policykit.git
+Package-List: 
+ gir1.2-polkit-1.0 deb introspection optional
+ libpolkit-agent-1-0 deb libs optional
+ libpolkit-agent-1-dev deb libdevel optional
+ libpolkit-backend-1-0 deb libs optional
+ libpolkit-backend-1-dev deb libdevel optional
+ libpolkit-gobject-1-0 deb libs optional
+ libpolkit-gobject-1-dev deb libdevel optional
+ policykit-1 deb admin optional
+ policykit-1-doc deb doc optional
+Checksums-Sha1:
+ 9695c3af6eaec477cd57951160404b8a6c8a0f98 2891 policykit-1_0.104-2ubuntu1.1.dsc
+ 599208cf584b9e13f8c9d863238a8271af4aba62 1416583 policykit-1_0.104.orig.tar.gz
+ 2ddabb963cdab878360e40eff757ca6231c93817 18122 policykit-1_0.104-2ubuntu1.1.debian.tar.gz
+Checksums-Sha256:
+ 6db64c2d1711acc5dc7687413059f26066a96600c596c972da92ecff069a1280 2891 policykit-1_0.104-2ubuntu1.1.dsc
+ 6b0a13d8381e4a7b7e37c18a54595191b50757e0fcd186cd9918e9ad0f18c7f9 1416583 policykit-1_0.104.orig.tar.gz
+ a92223ae217f80d073b905f6f4069d7b9608b3e6aa7978292e91daa6fdd321df 18122 policykit-1_0.104-2ubuntu1.1.debian.tar.gz
 
 Package: poppler
 Binary: libpoppler28, libpoppler-dev, libpoppler-private-dev, libpoppler-glib8, libpoppler-glib-dev, gir1.2-poppler-0.18, libpoppler-qt4-4, libpoppler-qt4-dev, libpoppler-cpp0, libpoppler-cpp-dev, poppler-utils, poppler-dbg
