@@ -19,6 +19,52 @@ Description-md5: d943033bedada21853d2ae54a2578a7b
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: 0ad-data
+Priority: optional
+Section: universe/games
+Installed-Size: 1151136
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: all
+Version: 0.0.14-1
+Pre-Depends: dpkg (>= 1.15.6~)
+Suggests: 0ad
+Filename: pool/universe/0/0ad-data/0ad-data_0.0.14-1_all.deb
+Size: 456977282
+MD5sum: 783e54a76964514f9da46185cea6128e
+SHA1: 68248e032b57a7573e44b74e23a3179f31a20cb4
+SHA256: f68bc3061fd94f1a34cf15be978b3d9f80a31b343daf1e5339d5cbf774b66275
+Description: Real-time strategy game of ancient warfare (data files)
+Homepage: http://play0ad.com/
+Description-md5: 26581e685027d5ae84824362a4ba59ee
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: 0ad-data-common
+Priority: optional
+Section: universe/games
+Installed-Size: 177
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Architecture: all
+Source: 0ad-data
+Version: 0.0.14-1
+Replaces: 0ad-data (<< 0.0.12-1~)
+Depends: fonts-texgyre, fonts-dejavu-core
+Pre-Depends: dpkg (>= 1.15.6~)
+Suggests: 0ad
+Breaks: 0ad-data (<< 0.0.12-1~)
+Filename: pool/universe/0/0ad-data/0ad-data-common_0.0.14-1_all.deb
+Size: 64710
+MD5sum: e506eebaac5fa6cd1a002ddbeee12001
+SHA1: 8eae754e19d900d2cd6cec29766a623d2a4ec44d
+SHA256: e39d6f5b525f229a291ed509b63c8830bd9538dba11c95c2076ff33193fa28d3
+Description: Real-time strategy game of ancient warfare (common data files)
+Homepage: http://play0ad.com/
+Description-md5: 8d014b839c4c4e9b6f82c7512d7e3496
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: 0ad-dbg
 Priority: extra
 Section: universe/debug
@@ -38,6 +84,68 @@ SHA256: f493a381629db2d237bdc65327405ac54c69b0e6c7c0c68517bd4e84c0ad761a
 Description: Real-time strategy game of ancient warfare (debug)
 Homepage: http://play0ad.com/
 Description-md5: a858b67397d1d84d8b4cac9d0deae0d7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apport-kde
+Priority: optional
+Section: universe/kde
+Installed-Size: 205
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.3-0ubuntu1
+Depends: python3, python3-apport (>= 2.12.3-0ubuntu1), python3-pykde4, apport (>= 0.41), procps, x-terminal-emulator
+Recommends: kubuntu-notification-helper, gdb | gdb-minimal
+Filename: pool/universe/a/apport/apport-kde_2.12.3-0ubuntu1_all.deb
+Size: 20674
+MD5sum: 658f4ad9df1deec8414b17518d16c407
+SHA1: 60bb3552b8d1ff3ea632316bd722f461c1de53dc
+SHA256: 471793f2ad1feeee45b0a33e8d7574b9cfea279f944155fd51d7053e9f84e2e0
+Description: KDE frontend for the apport crash report system
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: c8fd570a74a013e8fc3c502dd64152ce
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
+Package: apport-noui
+Priority: optional
+Section: universe/utils
+Installed-Size: 144
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.3-0ubuntu1
+Depends: python3, python3-apport (>= 2.12.3-0ubuntu1), apport (>= 0.41), procps, gdb-minimal | gdb, sysv-rc (>= 2.88dsf-24) | file-rc (>= 0.8.16)
+Filename: pool/universe/a/apport/apport-noui_2.12.3-0ubuntu1_all.deb
+Size: 2164
+MD5sum: e14afc80bb04a26bf4ab3d4c07eb1b21
+SHA1: 140f49c29e6b044040f883433e1a079268c52a15
+SHA256: 36e8496e709ea3f24f3f6214ebe64c048b121690e6c67bb4e45a5053da9dc32b
+Description: tools for automatically reporting Apport crash reports
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 679b8a64ce43a788744dbacfc594051c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: apport-valgrind
+Priority: optional
+Section: universe/devel
+Installed-Size: 154
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Architecture: all
+Source: apport
+Version: 2.12.3-0ubuntu1
+Depends: python3, python3-apport (>= 2.12.3-0ubuntu1), apt, binutils, valgrind (>= 3.8.1-1ubuntu1~), dpkg-dev, libc6-dbg | libc6-dbgsym | libc-dbg
+Filename: pool/universe/a/apport/apport-valgrind_2.12.3-0ubuntu1_all.deb
+Size: 5354
+MD5sum: 0ba77ec5bb63a13e2e91dcb5711c6425
+SHA1: 2c201ac746c63bec7658ca337f1763e0bcd2de12
+SHA256: 9d8fa4c68abe7a8d20f837b3571777c87b88f446907ec440e2e86037a2906d4c
+Description: valgrind wrapper that first downloads debug symbols
+Homepage: https://wiki.ubuntu.com/Apport
+Description-md5: 21b17902929fcb9d5f6a9bcc53f2af83
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
