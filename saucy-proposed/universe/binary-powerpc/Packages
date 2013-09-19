@@ -920,6 +920,46 @@ Description-md5: 1365c03a7b29c6abc9718d95b9c22884
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: curtin
+Priority: extra
+Section: universe/admin
+Installed-Size: 33
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1.0~bzr82-0ubuntu1
+Depends: python, python-curtin (= 0.1.0~bzr82-0ubuntu1)
+Filename: pool/universe/c/curtin/curtin_0.1.0~bzr82-0ubuntu1_all.deb
+Size: 2756
+MD5sum: 69e420bcff4b6a477287fd6b28c5c29e
+SHA1: dff830b43251f46becad92661069b8b7418879f6
+SHA256: 0c588f8549dbc279dd3091caf04f8adab3d8b0f012084c965bc45156890bb816
+Description: Library and tools for the curtin installer
+Homepage: http://launchpad.net/curtin
+Description-md5: 131b2c82b3ac98e404f8679da8cf7637
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: curtin-common
+Priority: extra
+Section: universe/admin
+Installed-Size: 50
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: curtin
+Version: 0.1.0~bzr82-0ubuntu1
+Depends: util-linux (>= 2.20.1-1ubuntu3)
+Conflicts: curtin (<= 0.1.0~bzr54-0ubuntu1)
+Filename: pool/universe/c/curtin/curtin-common_0.1.0~bzr82-0ubuntu1_all.deb
+Size: 6264
+MD5sum: a44377a8bebc0a2a6b106a0a5ccd18dc
+SHA1: 5b7537943fd006b9b830d214f2a22ca477b44804
+SHA256: 2a3c07eb4b41df4c9ec49bde7a55967869222bfc7b903acf63ea85f4d5bb8332
+Description: Library and tools for curtin installer
+Homepage: http://launchpad.net/curtin
+Description-md5: b24ac6ac0cf9c430ccd5e7cc40c446ae
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: dff
 Priority: optional
 Section: universe/admin
@@ -2981,6 +3021,51 @@ Description-md5: 6e84e39c4c04e92fb8d96960458b3b25
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: munin-async
+Priority: optional
+Section: universe/net
+Installed-Size: 112
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Munin Debian Maintainers <packaging@munin-monitoring.org>
+Architecture: all
+Source: munin
+Version: 2.0.17-2ubuntu1
+Depends: perl, init-system-helpers (>= 1.5), perl-modules, adduser, munin-common (>= 2.0.17-2ubuntu1), munin-node
+Filename: pool/universe/m/munin/munin-async_2.0.17-2ubuntu1_all.deb
+Size: 13226
+MD5sum: 4a188a7e372db5a046398460a72199fb
+SHA1: b6478154f54f582749d16ab268d0f96389cab2da
+SHA256: 295e03d075c21aed2bd07ae0c81407ba64dd838b223a5d3ecd8035fb7daccce6
+Description: network-wide graphing framework (async master/client)
+Homepage: http://munin-monitoring.org
+Description-md5: 390d7c71211032ea3977a22eb57cde62
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: munin-plugins-java
+Priority: optional
+Section: universe/net
+Installed-Size: 144
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Munin Debian Maintainers <packaging@munin-monitoring.org>
+Architecture: all
+Source: munin
+Version: 2.0.17-2ubuntu1
+Replaces: munin-java-plugins (<< 1.999.4548-3~)
+Provides: munin-plugins
+Depends: default-jre-headless | java6-runtime-headless | java5-runtime-headless | java2-runtime-headless, munin-common (>= 2.0.17-2ubuntu1)
+Breaks: munin-java-plugins (<< 1.999.4548-3~)
+Filename: pool/universe/m/munin/munin-plugins-java_2.0.17-2ubuntu1_all.deb
+Size: 73156
+MD5sum: e5998bd630734cb83ce0e99b8a79c457
+SHA1: 41bfa13eefd09f7950916bb202540f609d00869b
+SHA256: be00d92288f4fd48fb8d5a604332be4b1b75c4a595622da84b9b265ae36516ea
+Description: network-wide graphing framework (java plugins for node)
+Homepage: http://munin-monitoring.org
+Description-md5: 072855de8e842c9eb4ce249c588de592
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: nova-ajax-console-proxy
 Priority: extra
 Section: universe/net
@@ -3982,6 +4067,26 @@ Description-md5: d08c4c39c95be9d9699f8a704e0e37bc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-curtin
+Priority: extra
+Section: universe/python
+Installed-Size: 132
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: curtin
+Version: 0.1.0~bzr82-0ubuntu1
+Depends: curl | wget, curtin-common (= 0.1.0~bzr82-0ubuntu1), util-linux (>= 2.20.1-1ubuntu3), python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2)
+Filename: pool/universe/c/curtin/python-curtin_0.1.0~bzr82-0ubuntu1_all.deb
+Size: 16458
+MD5sum: 36d308d5cd90f669f11632c357df15d2
+SHA1: 3ca7f8a526f245935aa981ff593a5e201868454a
+SHA256: e7f620786c5a6da6b1c2468683be75ee2534aeb3ae65f90d45f631cbf55e893d
+Description: Library and tools for curtin installer
+Homepage: http://launchpad.net/curtin
+Description-md5: 31e48f4bf426e243b1a4f94280ebcafb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-flake8
 Priority: optional
 Section: universe/python
@@ -4175,6 +4280,27 @@ SHA256: 5499a24ba28417e501a3c0dd8b843a9b3ebd7e4deabe6156e16e65d890282b4b
 Description: Xen Cloud Platform - XenAPI Python libraries
 Homepage: http://www.xen.org/products/cloudxen.html
 Description-md5: 0eb68e98a15dd86d677ee3b3f9ebf41c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-curtin
+Priority: extra
+Section: universe/python
+Installed-Size: 111
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: curtin
+Version: 0.1.0~bzr82-0ubuntu1
+Depends: curl | wget, curtin-common (= 0.1.0~bzr82-0ubuntu1), util-linux (>= 2.20.1-1ubuntu3), python3 (>= 3.2), python3:any (>= 3.2.3-3~)
+Conflicts: curtin (<= 0.1.0~bzr54-0ubuntu1)
+Filename: pool/universe/c/curtin/python3-curtin_0.1.0~bzr82-0ubuntu1_all.deb
+Size: 16126
+MD5sum: c2f38fe7537dd629763b2cee7b1fc14d
+SHA1: 403f1b0b68811116d559e0e6bbeac651702cc1c2
+SHA256: 290de9ad66d342826c1e1a2ab5142b9e6af781aca2a41fc4d088d543fb795d0d
+Description: Library and tools for curtin installer
+Homepage: http://launchpad.net/curtin
+Description-md5: e0f139c6d97022bcf1c0380aa05a6f57
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -5034,6 +5160,150 @@ Homepage: http://trac.edgewall.com
 Description-md5: 2cccb18baaf0a79bddc72153a6b2f521
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: ubiquity-slideshow-edubuntu
+Priority: optional
+Section: universe/x11
+Installed-Size: 1967
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ubiquity Slideshow Team <ubiquity-slideshow@lists.launchpad.net>
+Architecture: all
+Source: ubiquity-slideshow-ubuntu
+Version: 74
+Replaces: ubiquity-slideshow
+Provides: ubiquity-slideshow
+Conflicts: ubiquity-slideshow
+Filename: pool/universe/u/ubiquity-slideshow-ubuntu/ubiquity-slideshow-edubuntu_74_all.deb
+Size: 1049548
+MD5sum: 78bc5c84b3a7db27cb6dcfff8d690f31
+SHA1: 67d14ef451f9c422275dfe5de5e1d59687f61254
+SHA256: 25d78fdb0a2365236c12ed0df512ccbff452a1be2ddc71dd90759d3ad8cfba71
+Description: Ubiquity slideshow for Edubuntu
+Homepage: https://launchpad.net/ubiquity-slideshow-ubuntu
+Description-md5: 41ab9626feda9ac247c07f1c1bb3ae05
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: edubuntu-live
+
+Package: ubiquity-slideshow-kubuntu
+Priority: optional
+Section: universe/x11
+Installed-Size: 1765
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ubiquity Slideshow Team <ubiquity-slideshow@lists.launchpad.net>
+Architecture: all
+Source: ubiquity-slideshow-ubuntu
+Version: 74
+Replaces: ubiquity-slideshow
+Provides: ubiquity-slideshow
+Conflicts: ubiquity-slideshow
+Filename: pool/universe/u/ubiquity-slideshow-ubuntu/ubiquity-slideshow-kubuntu_74_all.deb
+Size: 835370
+MD5sum: 696d8b638aa80a2df4dbac3136721d33
+SHA1: b382cd80dc3d553d3b3b0a75a797855a48f135b8
+SHA256: 7733f4d0b8f7694ce0e61112e9290587f124ff20e113e3b07a0e21329dbb1131
+Description: Ubiquity slideshow for Kubuntu
+Homepage: https://launchpad.net/ubiquity-slideshow-ubuntu
+Description-md5: 6cf95b6a231fe40b88afa5beaa30676e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live
+
+Package: ubiquity-slideshow-lubuntu
+Priority: optional
+Section: universe/x11
+Installed-Size: 1422
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ubiquity Slideshow Team <ubiquity-slideshow@lists.launchpad.net>
+Architecture: all
+Source: ubiquity-slideshow-ubuntu
+Version: 74
+Replaces: ubiquity-slideshow
+Provides: ubiquity-slideshow
+Conflicts: ubiquity-slideshow
+Filename: pool/universe/u/ubiquity-slideshow-ubuntu/ubiquity-slideshow-lubuntu_74_all.deb
+Size: 738142
+MD5sum: 14b2ce29fec1ca24bd09e6d00b0b4f24
+SHA1: 7e070523930faca1eab6a5e4b1995010f857fd1e
+SHA256: 06c28b9b78f8256d31b4874eec276d99e92358f3bfa2afb0256eec34011e64bc
+Description: Ubiquity slideshow for Lubuntu
+Homepage: https://launchpad.net/ubiquity-slideshow-ubuntu
+Description-md5: 1bd4f6d667559ea752c142e5055e157e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: lubuntu-live
+
+Package: ubiquity-slideshow-ubuntu-gnome
+Priority: optional
+Section: universe/x11
+Installed-Size: 985
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ubiquity Slideshow Team <ubiquity-slideshow@lists.launchpad.net>
+Architecture: all
+Source: ubiquity-slideshow-ubuntu
+Version: 74
+Replaces: ubiquity-slideshow
+Provides: ubiquity-slideshow
+Conflicts: ubiquity-slideshow
+Filename: pool/universe/u/ubiquity-slideshow-ubuntu/ubiquity-slideshow-ubuntu-gnome_74_all.deb
+Size: 763766
+MD5sum: 7a830a837c9c856593f33ccb1c1747f4
+SHA1: f9d40f01f003929afd40a7564ee9e9f4497bd45b
+SHA256: 380f78813394edde11a8abc0cba0c410b2efa6062bb33971b1bf5038bb86e617
+Description: Ubiquity slideshow for Ubuntu GNOME
+Homepage: https://launchpad.net/ubiquity-slideshow-ubuntu
+Description-md5: 5edfe16050d3b7d1320a3ae2447692fb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-gnome-live
+
+Package: ubiquity-slideshow-ubuntustudio
+Priority: optional
+Section: universe/x11
+Installed-Size: 1947
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ubiquity Slideshow Team <ubiquity-slideshow@lists.launchpad.net>
+Architecture: all
+Source: ubiquity-slideshow-ubuntu
+Version: 74
+Replaces: ubiquity-slideshow
+Provides: ubiquity-slideshow
+Conflicts: ubiquity-slideshow
+Filename: pool/universe/u/ubiquity-slideshow-ubuntu/ubiquity-slideshow-ubuntustudio_74_all.deb
+Size: 1406822
+MD5sum: cc8ac7896cd1c4ebf1c6698c8041166c
+SHA1: 8ffe8fdce6e929080be664d3b6a057d3b433e5c2
+SHA256: 9b7a79099e547300f7d2995d8b7358aff47b51fe2ca9382e4e50208c23109de9
+Description: Ubiquity slideshow for Ubuntu Studio
+Homepage: https://launchpad.net/ubiquity-slideshow-ubuntu
+Description-md5: 78f43f953b327b222ca6e8b0b7486fea
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntustudio-dvd-live
+
+Package: ubiquity-slideshow-xubuntu
+Priority: optional
+Section: universe/x11
+Installed-Size: 1149
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Ubiquity Slideshow Team <ubiquity-slideshow@lists.launchpad.net>
+Architecture: all
+Source: ubiquity-slideshow-ubuntu
+Version: 74
+Replaces: ubiquity-slideshow
+Provides: ubiquity-slideshow
+Conflicts: ubiquity-slideshow
+Filename: pool/universe/u/ubiquity-slideshow-ubuntu/ubiquity-slideshow-xubuntu_74_all.deb
+Size: 538630
+MD5sum: cb8ba0ab45af7c20be8feba285d861d4
+SHA1: 932a94431bc751e452b5c84be81ab13a1992c09d
+SHA256: 9b7ed30229ffb713dec4ed3d76358277b519c51989919e94e625f52fffab83fe
+Description: Ubiquity slideshow for Xubuntu
+Homepage: https://launchpad.net/ubiquity-slideshow-ubuntu
+Description-md5: d6dad0ead0d2a1145858994cf16fe612
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: xubuntu-live
 
 Package: ucommon-doc
 Priority: optional
