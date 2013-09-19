@@ -1,23 +1,28 @@
-Package: flash-kernel
+Package: byobu
 Priority: optional
-Section: utils
-Installed-Size: 135
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
-Architecture: armhf
-Version: 3.0~rc.4ubuntu40
-Depends: devio, initramfs-tools (>= 0.92f), linux-base (>= 3.2)
-Suggests: u-boot-tools
-Filename: pool/main/f/flash-kernel/flash-kernel_3.0~rc.4ubuntu40_armhf.deb
-Size: 16862
-MD5sum: 3d9c27baf03675f80e9d374078916466
-SHA1: 3b02e8b8dc291893092f715303265e17209e629d
-SHA256: 8d66d37dcd6f5542b8b7989172a34030ea3665a94412c04b0992c440ed83a13f
-Description: utility to make certain embedded devices bootable
-Description-md5: 20e5ff2238f4ed9bfdf4651b31ecd6f9
+Section: misc
+Installed-Size: 581
+Maintainer: Dustin Kirkland <kirkland@ubuntu.com>
+Architecture: all
+Version: 5.59-0ubuntu1
+Replaces: byobu-extras (<< 2.17), screen-profiles (<< 2.0), screen-profiles-extras (<< 2.0)
+Provides: byobu-extras, screen-profiles, screen-profiles-extras
+Depends: debconf (>= 0.5) | debconf-2.0, gettext-base, python, python-newt (>= 0.52.2-11), tmux (>= 1.5) | screen, gawk
+Recommends: screen, tmux (>= 1.5)
+Suggests: apport, lsb-release, po-debconf, ttf-ubuntu-font-family (>= 0.80-0ubuntu1~medium), update-notifier-common, vim, w3m
+Breaks: byobu-extras (<< 2.17), screen-profiles (<< 2.0), screen-profiles-extras (<< 2.0)
+Filename: pool/main/b/byobu/byobu_5.59-0ubuntu1_all.deb
+Size: 105534
+MD5sum: 577c027808d91a6a4279630b5e9d2f69
+SHA1: 9f8e2fbe30f3d6ad7ce2f1f0a07ddab4c0d9e1fe
+SHA256: f2f08e6634d9b247614de48a950a850da1ba5cf6942185b9c3dfd123d9856fb4
+Description: powerful, text based window manager and shell multiplexer
+Enhances: screen
+Homepage: http://byobu.co
+Description-md5: 024f61f4fb7dd0808208a74ed4c03472
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
+Task: ubuntu-usb, cloud-image, server, edubuntu-usb
 
 Package: idle-python2.7
 Priority: optional
@@ -223,6 +228,129 @@ Description: Testsuite for the Python standard library (v2.7)
 Description-md5: ca1ecfb5f297f44ae0729c2b3459e146
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: libpython3.3
+Priority: optional
+Section: libs
+Installed-Size: 2895
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: armhf
+Source: python3.3
+Version: 3.3.2-7ubuntu2
+Replaces: python3.3 (<< 3.0~rc1)
+Depends: libpython3.3-stdlib (= 3.3.2-7ubuntu2), libc6 (>= 2.15), libexpat1 (>= 2.1~beta3), zlib1g (>= 1:1.2.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/p/python3.3/libpython3.3_3.3.2-7ubuntu2_armhf.deb
+Size: 1363800
+MD5sum: 5e6beec0385c7a67bc9be303542ee943
+SHA1: 3f2804de759b59bef8366e7d93ece0b3af8193d4
+SHA256: 167fef17ff2081c15b02f9a00a3c5a4c93c99d9c9c01379c55105c1ad9d54241
+Description: Shared Python runtime library (version 3.3)
+Multi-Arch: same
+Description-md5: 337a95ddb67b8ca2cc90263c203ca117
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, mythbuntu-backend-master, lubuntu-live, ubuntustudio-desktop, ubuntu-gnome-desktop
+
+Package: libpython3.3-dbg
+Priority: extra
+Section: debug
+Installed-Size: 19699
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: armhf
+Source: python3.3
+Version: 3.3.2-7ubuntu2
+Replaces: python3.3-dbg (<< 3.3.0~rc1-1)
+Depends: libpython3.3-stdlib (= 3.3.2-7ubuntu2), libbz2-1.0, libc6 (>= 2.9), libdb5.1, libexpat1 (>= 2.1~beta3), libffi6 (>= 3.0.4), liblzma5 (>= 5.1.1alpha+20120614), libncursesw5 (>= 5.6+20070908), libreadline6 (>= 6.0), libsqlite3-0 (>= 3.5.9), libssl1.0.0 (>= 1.0.1), libtinfo5, zlib1g (>= 1:1.2.0)
+Pre-Depends: multiarch-support
+Filename: pool/main/p/python3.3/libpython3.3-dbg_3.3.2-7ubuntu2_armhf.deb
+Size: 7499384
+MD5sum: d9bbceee841caddd1723d3763bc510f1
+SHA1: 1adbde73abf661377bfa2a661901fababfa0d5a2
+SHA256: 29e2c13b56583f9ed6702294795f912233d90899a558066f2b41bbc4ccfb6188
+Description: Debug Build of the Python Interpreter (version 3.3)
+Multi-Arch: same
+Description-md5: 5c9af14195b8ebe6b06100159e231054
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpython3.3-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 8818
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: armhf
+Source: python3.3
+Version: 3.3.2-7ubuntu2
+Replaces: python3.3 (<< 3.2~rc1-2), python3.3-dev (<< 3.3.0~b1-2), python3.3-minimal (<< 3.3.0~rc1-1~)
+Depends: libpython3.3-stdlib (= 3.3.2-7ubuntu2), libpython3.3 (= 3.3.2-7ubuntu2), libexpat1-dev
+Pre-Depends: multiarch-support
+Recommends: libc6-dev | libc-dev
+Filename: pool/main/p/python3.3/libpython3.3-dev_3.3.2-7ubuntu2_armhf.deb
+Size: 3750340
+MD5sum: 5136b96a95fcd0ad1491df51f9b6a810
+SHA1: d6033d7328b9ba8bdcb3f0696b1b4c21983e2c8b
+SHA256: d42a33ab03b89ffdc7c0530b9ebd163a1a4412149d61c5e7d5382da5dcda5281
+Description: Header files and a static library for Python (v3.3)
+Multi-Arch: same
+Description-md5: 7b432cb6f91ea62270751aad16aa5fe3
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: libpython3.3-minimal
+Priority: important
+Section: python
+Installed-Size: 2933
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: armhf
+Source: python3.3
+Version: 3.3.2-7ubuntu2
+Replaces: libpython3.3-stdlib (<< 3.3.2-7), python3.3 (<< 3.3~a4-1~), python3.3-minimal (<< 3.3.2-7)
+Depends: libc6 (>= 2.4), libssl1.0.0 (>= 1.0.1)
+Pre-Depends: multiarch-support
+Recommends: libpython3.3-stdlib
+Conflicts: binfmt-support (<< 1.1.2)
+Breaks: python3.3-minimal (<< 3.3.1-0~)
+Filename: pool/main/p/python3.3/libpython3.3-minimal_3.3.2-7ubuntu2_armhf.deb
+Size: 609478
+MD5sum: 302ac81fd8600559b542162fc6938c73
+SHA1: df2a0d3cbbc5bd8b39398b2b4d1617a15e5c116b
+SHA256: 4a10adb19c4aeb09d3a128297c2edab32f187601877b53b9fd7b18fe4f03be11
+Description: Minimal subset of the Python language (version 3.3)
+Multi-Arch: same
+Description-md5: 45bb7b11611b607087c84b8ab87fb1ce
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: libpython3.3-stdlib
+Priority: important
+Section: python
+Installed-Size: 8573
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: armhf
+Source: python3.3
+Version: 3.3.2-7ubuntu2
+Replaces: python3.3 (<< 3.3.1~rc1-2~)
+Provides: python3.3-celementtree, python3.3-cjkcodecs, python3.3-ctypes, python3.3-elementtree, python3.3-gdbm, python3.3-lzma, python3.3-profiler, python3.3-wsgiref
+Depends: libpython3.3-minimal (= 3.3.2-7ubuntu2), mime-support, libbz2-1.0, libc6 (>= 2.15), libdb5.1, libffi6 (>= 3.0.4), liblzma5 (>= 5.1.1alpha+20120614), libncursesw5 (>= 5.6+20070908), libreadline6 (>= 6.0), libsqlite3-0 (>= 3.5.9), libtinfo5
+Pre-Depends: multiarch-support
+Filename: pool/main/p/python3.3/libpython3.3-stdlib_3.3.2-7ubuntu2_armhf.deb
+Size: 2608138
+MD5sum: 3197cf15acbe37f8835130b9d90ed2b1
+SHA1: 05dbb7efc33487c5e2820d1e31d4c3772eac51a9
+SHA256: 74905c6d5aeae4d51489bf6244dab8687463dade664530e0b3f6ac8b7c00dc5b
+Description: Interactive high-level object-oriented language (standard library, version 3.3)
+Multi-Arch: same
+Description-md5: c9284437f7a741c2dd12f6e386b4a611
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
 
 Package: libpython3.3-testsuite
 Priority: optional
@@ -910,6 +1038,74 @@ Description-md5: a41bdd6dd21cf7256ece550225f4077c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python3.3
+Priority: important
+Section: python
+Installed-Size: 285
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: armhf
+Version: 3.3.2-7ubuntu2
+Depends: python3.3-minimal (= 3.3.2-7ubuntu2), libpython3.3-stdlib (= 3.3.2-7ubuntu2), mime-support
+Suggests: python3.3-doc, binutils
+Filename: pool/main/p/python3.3/python3.3_3.3.2-7ubuntu2_armhf.deb
+Size: 127324
+MD5sum: 8e2101d5f51f4c97bb62313079ec9b1a
+SHA1: 73593c4fd72643ca290ffd97655ed6e287c530df
+SHA256: 2580083d64d39e3237f5f0247a3434c56de7b6bdfc024a67aeec665d44f60ee7
+Description: Interactive high-level object-oriented language (version 3.3)
+Multi-Arch: allowed
+Description-md5: d77f2abf1b0095e2e7bf5e21022e3d54
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
+
+Package: python3.3-dbg
+Priority: extra
+Section: debug
+Installed-Size: 22400
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: armhf
+Source: python3.3
+Version: 3.3.2-7ubuntu2
+Depends: python3.3 (= 3.3.2-7ubuntu2), libpython3.3-dbg (= 3.3.2-7ubuntu2), libc6 (>= 2.9), libexpat1 (>= 2.1~beta3), zlib1g (>= 1:1.2.0)
+Recommends: gdb
+Suggests: python3-gdbm-dbg, python3-tk-dbg
+Filename: pool/main/p/python3.3/python3.3-dbg_3.3.2-7ubuntu2_armhf.deb
+Size: 8736076
+MD5sum: 35f2c65b33f107380744d4026d59cd56
+SHA1: 4bdfad5d8b1aa0c5a1a7281ad8814b7cd3da6258
+SHA256: 36ca562e711b007caa6596625d77d505cdbf6ce260374d4233f09ff222e13382
+Description: Debug Build of the Python Interpreter (version 3.3)
+Multi-Arch: allowed
+Description-md5: 3f5ccf51233a72e9920e6933858ce33e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3.3-dev
+Priority: optional
+Section: python
+Installed-Size: 505
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: armhf
+Source: python3.3
+Version: 3.3.2-7ubuntu2
+Replaces: python3.3 (<< 3.2~rc1-2)
+Depends: python3.3 (= 3.3.2-7ubuntu2), libpython3.3-dev (= 3.3.2-7ubuntu2), libpython3.3 (= 3.3.2-7ubuntu2), libexpat1-dev
+Recommends: libc6-dev | libc-dev
+Filename: pool/main/p/python3.3/python3.3-dev_3.3.2-7ubuntu2_armhf.deb
+Size: 478986
+MD5sum: 269e92838d45dee54fd3001312a7eab3
+SHA1: a856d118ec92a444f02a92cd567b3f319993a67e
+SHA256: 94a330b6707928a1ebe6d52f924c7105ef1659777bbe24694343362cd13f012b
+Description: Header files and a static library for Python (v3.3)
+Multi-Arch: allowed
+Description-md5: c0ed12ef8aaf6bcb18ac2074f5487d17
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python3.3-doc
 Priority: optional
 Section: doc
@@ -950,6 +1146,33 @@ Description: Examples for the Python language (v3.3)
 Description-md5: 47348d11732a1f26bdd561fc1c509b82
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+
+Package: python3.3-minimal
+Priority: important
+Section: python
+Installed-Size: 2854
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: armhf
+Source: python3.3
+Version: 3.3.2-7ubuntu2
+Replaces: python3.3 (<< 3.3~a4-1~)
+Depends: libpython3.3-minimal (= 3.3.2-7ubuntu2), libexpat1 (>= 2.1~beta3), zlib1g (>= 1:1.2.0)
+Pre-Depends: libc6 (>= 2.15)
+Recommends: python3.3
+Suggests: binfmt-support
+Conflicts: binfmt-support (<< 1.1.2)
+Filename: pool/main/p/python3.3/python3.3-minimal_3.3.2-7ubuntu2_armhf.deb
+Size: 1417848
+MD5sum: ff34817d5b53d954d683adaa49290ab9
+SHA1: 99c30449414c6b59fe7c6774d7f470b702ab3537
+SHA256: b7714553560beada3bcb4e7c049924478a0d66ce0579f3c51f0390a7813658b1
+Description: Minimal subset of the Python language (version 3.3)
+Multi-Arch: allowed
+Description-md5: 6233066c148b19f678deee22a6a2e61d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: minimal
 
 Package: qemu-common
 Priority: optional
