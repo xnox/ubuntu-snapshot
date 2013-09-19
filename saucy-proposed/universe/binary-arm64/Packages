@@ -596,50 +596,6 @@ Description-md5: 0bfec9c5aec6af1eabdad601b9e69a74
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: libgpewidget-data
-Priority: optional
-Section: universe/utils
-Installed-Size: 327
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Neil Williams <codehelp@debian.org>
-Architecture: all
-Source: libgpewidget
-Version: 0.118-2
-Replaces: libgpewidget1 (<< 0.117-3)
-Filename: pool/universe/libg/libgpewidget/libgpewidget-data_0.118-2_all.deb
-Size: 45334
-MD5sum: d577aed72c87df3c878726c13dc4b2c3
-SHA1: f037bd43ca8bbe8c32f3fe0bae9ac0de9334365b
-SHA256: 5b5f1595b1c5bd710b4ec1453f506c1231687b3d144bc510c23bfee13a705d85
-Description: data files for libgpewidget
-Multi-Arch: foreign
-Homepage: http://www.kernelconcepts.de/~fuchs/gpe/doc/libgpewidget/
-Description-md5: 5ad53026eb2daf510bc0e48ef3bf23b9
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: libgpewidget-doc
-Priority: optional
-Section: universe/doc
-Installed-Size: 352
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Neil Williams <codehelp@debian.org>
-Architecture: all
-Source: libgpewidget
-Version: 0.118-2
-Recommends: dwww, devhelp
-Filename: pool/universe/libg/libgpewidget/libgpewidget-doc_0.118-2_all.deb
-Size: 33230
-MD5sum: 936367d883c3cb98c91af62730d5b421
-SHA1: a0b8afd024dafd6dffada3edc5f4bea54b01642f
-SHA256: 2d44c9f4f938a89476067b1366e5b53fb66aa657b5c31e9ad3335d95d405dab0
-Description: GPE Palmtop Environment widget library Reference Manual
-Multi-Arch: foreign
-Homepage: http://www.kernelconcepts.de/~fuchs/gpe/doc/libgpewidget/
-Description-md5: 5b55d51a0910e73edfa6b399a9fd4251
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: libluabridge-ruby
 Priority: optional
 Section: universe/libdevel
@@ -1549,24 +1505,28 @@ Description-md5: 4c7c3936b37c71d3941c324bf58172c3
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: overgod-data
+Package: plymouth-theme-ubuntustudio
 Priority: optional
-Section: universe/games
-Installed-Size: 2167
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Games Team <pkg-games-devel@lists.alioth.debian.org>
+Section: universe/x11
+Installed-Size: 1348
+Maintainer: Ubuntu Studio Developers <ubuntu-studio-devel@lists.ubuntu.com>
 Architecture: all
-Source: overgod
-Version: 1.0-4
-Filename: pool/universe/o/overgod/overgod-data_1.0-4_all.deb
-Size: 1579224
-MD5sum: 67da05a115cbb2f66252719cf54f996c
-SHA1: 6153023f4ccac49ddde6e0bd610089f74058d205
-SHA256: db1d7928c2b99b98a4a1ee6c044c877d5febc243d0614a85fe052d7322fd5c1f
-Description: graphics and audio data for overgod
-Description-md5: 69663ff2d0f06d03ec455a56e06430f2
+Source: ubuntustudio-look
+Version: 0.47
+Replaces: ubuntustudio-plymouth-theme
+Provides: plymouth-theme
+Depends: plymouth, plymouth-label
+Conflicts: ubuntustudio-plymouth-theme
+Filename: pool/universe/u/ubuntustudio-look/plymouth-theme-ubuntustudio_0.47_all.deb
+Size: 906502
+MD5sum: 387e7780c9c17d3115158e3998d9d771
+SHA1: d93e0b12a1ca8460ae062c65cc68ebc05b32fd1c
+SHA256: 76b536c0047b6d42425b1c2dba9b7a2524aa4d6bfde415076204e48281955036
+Description: Ubuntu Studio Plymouth theme
+Description-md5: 46cb6fb91f552d975611b37668e232e9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Task: ubuntustudio-desktop
 
 Package: postgis-doc
 Priority: optional
@@ -2194,26 +2154,46 @@ Description-md5: 2cccb18baaf0a79bddc72153a6b2f521
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: tumbler-common
+Package: ubuntustudio-look
 Priority: optional
-Section: universe/xfce
-Installed-Size: 804
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Xfce Maintainers <pkg-xfce-devel@lists.alioth.debian.org>
+Section: universe/x11
+Installed-Size: 66
+Maintainer: Ubuntu Studio Developers <ubuntu-studio-devel@lists.ubuntu.com>
 Architecture: all
-Source: tumbler
-Version: 0.1.29-2
-Suggests: libtumbler-1-0
-Filename: pool/universe/t/tumbler/tumbler-common_0.1.29-2_all.deb
-Size: 76948
-MD5sum: 4c75e3943308a2f55ac681369469555e
-SHA1: 732d94012a6bdb7a0c5e0425f6227bce40aeb587
-SHA256: 293b390593aee9f9cf582347cb78cf5c4ba733431ea003b32b73923136f623bd
-Description: D-Bus thumbnailing service (common files)
-Homepage: http://www.xfce.org/
-Description-md5: c95de190b55b9dee4943b3dd6c420777
+Version: 0.47
+Replaces: ubuntustudio-artwork, ubuntustudio-theme
+Depends: gtk2-engines-murrine, murrine-themes (>= 0.98.2), libnewt0.52 (>= 0.52.11-2ubuntu7)
+Recommends: plymouth-theme-ubuntustudio, ubuntustudio-wallpapers, elementary-icon-theme, ubuntustudio-sounds
+Conflicts: ubuntustudio-artwork, ubuntustudio-theme
+Filename: pool/universe/u/ubuntustudio-look/ubuntustudio-look_0.47_all.deb
+Size: 13222
+MD5sum: 1d942936c432140930b8b0fb60e9f6c4
+SHA1: 7ca0decc63f77e1e13dcd1a52415236c68f20a0d
+SHA256: 90b793471f514cec8761f11f68a1270b098fd7903e3e2c1bb66b692d1db00fc4
+Description: Ubuntu Studio look
+Description-md5: 42f35f4b1f2ca4c6fca5a02d810f2bdc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
+Task: ubuntustudio-desktop
+
+Package: ubuntustudio-wallpapers
+Priority: optional
+Section: universe/x11
+Installed-Size: 21543
+Maintainer: Ubuntu Studio Developers <ubuntu-studio-devel@lists.ubuntu.com>
+Architecture: all
+Source: ubuntustudio-look
+Version: 0.47
+Filename: pool/universe/u/ubuntustudio-look/ubuntustudio-wallpapers_0.47_all.deb
+Size: 19226504
+MD5sum: a2922601e7b045f678824b2297a96566
+SHA1: 4451f67f9c693d521d561047dd94086b04798b57
+SHA256: f8fd5c4f4a4d42a3d4ea3ed5fb58656713a815ad6ef140dcdc1fa7be2bc71390
+Description: Ubuntu Studio - Wallpapers
+Description-md5: e1b8ad061472d34ed278c207c9232890
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntustudio-desktop
 
 Package: ucommon-doc
 Priority: optional
@@ -2275,24 +2255,6 @@ Description: Xen administrative tools - common files
 Description-md5: 8af52ba7dfa8ab5d2f2013a4e86ceb1e
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
-
-Package: xubuntu-docs
-Priority: optional
-Section: universe/text
-Installed-Size: 416
-Maintainer: Ubuntu Documentation Team <ubuntu-doc@lists.ubuntu.com>
-Architecture: all
-Version: 13.10.0
-Filename: pool/universe/x/xubuntu-docs/xubuntu-docs_13.10.0_all.deb
-Size: 94842
-MD5sum: 9e076df6f43c7b75e10d773c9f4978cc
-SHA1: f5bd6da14cd764a354b8895f4a96521f657cf1f8
-SHA256: 3d05732a3595953217f19c5ea668d439abf2d635c1f4fb79c57920d2cec1837b
-Description: xubuntu documentation
-Description-md5: 01e4471d492e29766a0eafd4ad284fca
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: xubuntu-desktop
 
 Package: zotero-libreoffice-integration
 Priority: optional
