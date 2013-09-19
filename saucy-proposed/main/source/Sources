@@ -143,6 +143,7 @@ Python-Version: all
 Package: gnome-control-center
 Binary: gnome-control-center, gnome-control-center-dev, gnome-control-center-data, libgnome-control-center-dev, libgnome-control-center1
 Version: 1:3.6.3-0ubuntu38
+Priority: optional
 Section: gnome
 Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
 Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
@@ -392,6 +393,47 @@ Checksums-Sha256:
  669978abf9cc58640186559cf9cc89cbadc5da4b8b975c07f0e7a47faa74b3d1 35469 nova_2013.2~b3-0ubuntu2.debian.tar.gz
 Testsuite: autopkgtest
 
+Package: platform-api
+Binary: libplatform-api-headers, libplatform-hardware-api-headers, libplatform-api1-dev, libubuntu-application-api-mirserver1, libubuntu-application-api-mirclient1, libplatform-hardware-api1-dev, libplatform-api1-doc, libubuntu-platform-hardware-api1, libubuntu-application-api1, libplatform-api1-hybris-tests, libubuntu-platform-api1-dev, libplatform-api1-hybris, libplatform-hardware-api1-hybris
+Version: 0.19+13.10.20130919.3-0ubuntu1
+Priority: optional
+Section: devel
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Build-Depends: cmake, debhelper (>= 9), doxygen, graphviz, libgles2-mesa-dev, gcc-4.7, g++-4.7, libhybris-common-dev, pkg-config, libmirclient-dev, libmirserver-dev, liburl-dispatcher1-dev, libdbus-1-dev, dbus-cpp-dev, libubuntu-location-service-dev
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 1.0
+Directory: pool/main/p/platform-api
+Files:
+ cac529b9f073b4fec7c49651153aaaad 3174 platform-api_0.19+13.10.20130919.3-0ubuntu1.dsc
+ 3823aeb93662ea266af257fb2bb9b62d 161217 platform-api_0.19+13.10.20130919.3.orig.tar.gz
+ 0ad14653483173ef681d594282f9a4d0 10698 platform-api_0.19+13.10.20130919.3-0ubuntu1.diff.gz
+Homepage: https://launchpad.net/platform-api
+Vcs-Browser: https://code.launchpad.net/platform-api
+Vcs-Bzr: lp:platform-api
+Package-List: 
+ libplatform-api-headers deb libdevel optional
+ libplatform-api1-dev deb libdevel optional
+ libplatform-api1-doc deb doc optional
+ libplatform-api1-hybris deb oldlibs optional
+ libplatform-api1-hybris-tests deb devel optional
+ libplatform-hardware-api-headers deb libdevel optional
+ libplatform-hardware-api1-dev deb libdevel optional
+ libplatform-hardware-api1-hybris deb oldlibs optional
+ libubuntu-application-api-mirclient1 deb libs optional
+ libubuntu-application-api-mirserver1 deb libs optional
+ libubuntu-application-api1 deb libs optional
+ libubuntu-platform-api1-dev deb oldlibs optional
+ libubuntu-platform-hardware-api1 deb libs optional
+Checksums-Sha1:
+ 5120e9cd1377eeeab9e3446c3bebacd998cae08a 3174 platform-api_0.19+13.10.20130919.3-0ubuntu1.dsc
+ 8eb448c1f31b4f8fd7889a166bd16d8f81a9adcc 161217 platform-api_0.19+13.10.20130919.3.orig.tar.gz
+ f4534ccf7bd2f3d98dff95f6fa953ce8ebe969c4 10698 platform-api_0.19+13.10.20130919.3-0ubuntu1.diff.gz
+Checksums-Sha256:
+ dd708c2b495581cd9724824fd88bca5f4b85f12cc816a50332d8186e296258b7 3174 platform-api_0.19+13.10.20130919.3-0ubuntu1.dsc
+ 479f07cacdfdafb4bacdff95258db0499bf647bd0c9e35689beba449ed8c3ae2 161217 platform-api_0.19+13.10.20130919.3.orig.tar.gz
+ 9f40b50e65f5406379204d6105dbff7a39a3835d3197efc8f23b20d4e7757fda 10698 platform-api_0.19+13.10.20130919.3-0ubuntu1.diff.gz
+
 Package: python-defaults
 Binary: python, python-minimal, python-examples, python-dev, libpython-dev, libpython-stdlib, idle, python-doc, python-dbg, libpython-dbg, python-all, python-all-dev, python-all-dbg, libpython-all-dev, libpython-all-dbg
 Version: 2.7.5-5ubuntu1
@@ -523,44 +565,6 @@ Checksums-Sha256:
  c600aa785ef9b202babf2ac795df43599d4bb9bfaae93c9e5849d69585822630 3354 qemu_1.5.0+dfsg-3ubuntu4.dsc
  533391a3edc731e2add540f4adcc403ee6fec7a17b48c5ea8daa3e23d09d1319 4419620 qemu_1.5.0+dfsg.orig.tar.xz
  3cbb51bbb23f61291520d1a0cc460d13941603f07a3302c333ff887254801b3c 245835 qemu_1.5.0+dfsg-3ubuntu4.debian.tar.gz
-
-Package: qtwebkit-opensource-src
-Binary: libqt5webkit5-dev, libqt5webkit5, libqt5webkit5-qmlwebkitplugin, libqt5webkit5-dbg, qtwebkit5-doc, qtwebkit5-doc-html
-Version: 5.1.1-1ubuntu2
-Priority: optional
-Section: libs
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Build-Depends: debhelper (>= 9.0.0), flex, bison, gperf, python-minimal, python2.7, ruby, libgstreamer1.0-dev, libgstreamer-plugins-base1.0-dev, libicu-dev, libsqlite3-dev, libxml2-dev, mesa-common-dev, libgl1-mesa-dev [!armel !armhf] | libgl-dev [!armel !armhf], libgles2-mesa-dev [armel armhf] | libgles2-dev [armel armhf], libglib2.0-dev, libglu1-mesa-dev [!armel !armhf] | libglu-dev [!armel !armhf], libxrender-dev, libxslt1-dev, libqt5xmlpatterns5-private-dev (>= 5.0.2), qtbase5-private-dev (>= 5.0.2), libqt5opengl5-dev (>= 5.0.2), qtscript5-private-dev (>= 5.0.2), qtdeclarative5-private-dev (>= 5.0.2), pkg-config, pkg-kde-tools (>= 0.6.4), chrpath, libpng-dev, libjpeg-dev, libfontconfig1-dev, libxcomposite-dev, qtsensors5-dev, qtlocation5-dev
-Build-Depends-Indep: libqt5sql5-sqlite, qttools5-dev-tools (>= 5.0.2)
-Architecture: any all
-Standards-Version: 3.9.4
-Format: 3.0 (quilt)
-Directory: pool/main/q/qtwebkit-opensource-src
-Files:
- ff1eb4a2ee885d9965092914edeccb5e 3427 qtwebkit-opensource-src_5.1.1-1ubuntu2.dsc
- 70e956dafcee1969de53d4de7b4691ad 31950900 qtwebkit-opensource-src_5.1.1.orig.tar.xz
- c3c69dd40bfd00ed649bb0ed892123b5 92922 qtwebkit-opensource-src_5.1.1-1ubuntu2.debian.tar.gz
-Uploaders: Fathi Boudra <fabo@debian.org>, Timo Jyrinki <timo@debian.org>, Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
-Homepage: http://trac.webkit.org/wiki/QtWebKit
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/qt/qt5webkit.git;a=summary
-Vcs-Bzr: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging/qtwebkit-opensource-src
-Vcs-Git: git://anonscm.debian.org/pkg-kde/qt/qt5webkit.git
-Package-List: 
- libqt5webkit5 deb libs optional
- libqt5webkit5-dbg deb debug extra
- libqt5webkit5-dev deb libdevel optional
- libqt5webkit5-qmlwebkitplugin deb libs optional
- qtwebkit5-doc deb doc extra
- qtwebkit5-doc-html deb doc extra
-Checksums-Sha1:
- 5335053e74ae893d6b1d0f892ec272b5db466aaa 3427 qtwebkit-opensource-src_5.1.1-1ubuntu2.dsc
- b2b016e34f8c169736faa52c1fbc7555abcd8e1e 31950900 qtwebkit-opensource-src_5.1.1.orig.tar.xz
- 0bbea7ac44755426d6ffdca48c61cbe21524d0cd 92922 qtwebkit-opensource-src_5.1.1-1ubuntu2.debian.tar.gz
-Checksums-Sha256:
- 71571071f3b1efcc65f027759fee4c54f6615132a2efdd8b706a4cb0ff556562 3427 qtwebkit-opensource-src_5.1.1-1ubuntu2.dsc
- d6ee1e9111b0996277a512ae71736a05faa7c0de6d69ac2978adce79c3116a24 31950900 qtwebkit-opensource-src_5.1.1.orig.tar.xz
- fc6f400ff1475f2c94959f9e90f163ae46560ae4a8ae988209c7c208d83121b7 92922 qtwebkit-opensource-src_5.1.1-1ubuntu2.debian.tar.gz
 
 Package: qtwebkit-source
 Binary: libqtwebkit-dev, libqtwebkit4, libqtwebkit-qmlwebkitplugin, libqtwebkit4-dbg
