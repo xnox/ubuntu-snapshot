@@ -1965,6 +1965,28 @@ Description-md5: b972f79c12c920c9cc3d5a15032903d9
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: rmail
+Priority: extra
+Section: universe/mail
+Installed-Size: 341
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Richard A Nelson (Rick) <cowboy@debian.org>
+Architecture: amd64
+Source: sendmail
+Version: 8.14.4-2ubuntu2.1
+Depends: sendmail-bin | mail-transport-agent, libc6 (>= 2.15), libldap-2.4-2 (>= 2.4.7)
+Conflicts: courier-mta, exim, exim-tls, exim4-daemon-custom, exim4-daemon-heavy, exim4-daemon-light, masqmail, postfix, sendmail (<< 8.13.1-7), smail, zmailer
+Filename: pool/universe/s/sendmail/rmail_8.14.4-2ubuntu2.1_amd64.deb
+Size: 41192
+MD5sum: 80962308ba48389b435c0d617267d284
+SHA1: 081acab63f23ba264b42b00a93cba802c98cd0bc
+SHA256: 62e792353cdb592eec94ce4b31c5a828981ef82b2573ec42ff75b5dfc6d09e30
+Description: MTA->UUCP remote mail handler
+Homepage: http://www.sendmail.org
+Description-md5: 5999f32ca68d0cb331555bc479168fd4
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: rsyslog-gnutls
 Priority: extra
 Section: universe/admin
@@ -2127,6 +2149,138 @@ SHA256: 69b534066a28804a640358df7deba366b38ca17d294cce61129f08b56fc4fa42
 Description: Samba testing utilities
 Homepage: http://www.samba.org
 Description-md5: e2a81a28e5322f5eb71f94b5b89163fa
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: sendmail
+Priority: extra
+Section: universe/mail
+Installed-Size: 245
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Richard A Nelson (Rick) <cowboy@debian.org>
+Architecture: all
+Version: 8.14.4-2ubuntu2.1
+Replaces: sendmail-tls
+Depends: sendmail-base, sendmail-bin, sendmail-cf, sensible-mda
+Suggests: sendmail-doc, rmail
+Filename: pool/universe/s/sendmail/sendmail_8.14.4-2ubuntu2.1_all.deb
+Size: 3478
+MD5sum: 0628e56524993f3de14800a1295d489d
+SHA1: 63266ecd08ad3390362cb205c975fa82b52e7cef
+SHA256: 9b51542f798b66e70d62accd3ca6cd63b22e5851d086be59365704937e22be56
+Description: powerful, efficient, and scalable Mail Transport Agent
+Homepage: http://www.sendmail.org
+Description-md5: 3d4ca2b4b9193fbc8369a292cbcb2d95
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: sendmail-base
+Priority: extra
+Section: universe/mail
+Installed-Size: 965
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Richard A Nelson (Rick) <cowboy@debian.org>
+Architecture: all
+Source: sendmail
+Version: 8.14.4-2ubuntu2.1
+Depends: m4, make, adduser, perl
+Suggests: sendmail-doc, ca-certificates, logcheck, logrotate, resolvconf
+Filename: pool/universe/s/sendmail/sendmail-base_8.14.4-2ubuntu2.1_all.deb
+Size: 165772
+MD5sum: 91e42be2f2b763403cb2cd64116c4670
+SHA1: 2d2f9adf5812d960cda26690556e7d80461e7049
+SHA256: 026ce3937762cea3c9c943617a1193a31b5834d27478f832610f99be14259a1a
+Description: powerful, efficient, and scalable Mail Transport Agent
+Homepage: http://www.sendmail.org
+Description-md5: 253b797e818d3634eaeb6f4aa0c86294
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: sendmail-bin
+Priority: extra
+Section: universe/mail
+Installed-Size: 1928
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Richard A Nelson (Rick) <cowboy@debian.org>
+Architecture: amd64
+Source: sendmail
+Version: 8.14.4-2ubuntu2.1
+Replaces: mail-transport-agent
+Provides: mail-transport-agent
+Depends: sendmail-base, sendmail-cf, procps, libc6 (>= 2.15), libdb4.8, libldap-2.4-2 (>= 2.4.7), liblockfile1 (>= 1.0), libsasl2-2 (>= 2.1.24), libssl1.0.0 (>= 1.0.0), libwrap0 (>= 7.6-4~)
+Suggests: sendmail-doc, sasl2-bin, libsasl2-modules, openssl
+Conflicts: mail-transport-agent
+Filename: pool/universe/s/sendmail/sendmail-bin_8.14.4-2ubuntu2.1_amd64.deb
+Size: 784160
+MD5sum: 4df03edfde09164641022441686be685
+SHA1: 84b8d73a5651410209b88ab0db2487287325a922
+SHA256: 2cf3e0e75504907dbdf1ca027c2a72ecc44a7376a5e1eef1dfcb988e5188155c
+Description: powerful, efficient, and scalable Mail Transport Agent
+Homepage: http://www.sendmail.org
+Description-md5: 88ee8c6a7337b272ccfe94862f9b3979
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: sendmail-cf
+Priority: extra
+Section: universe/mail
+Installed-Size: 638
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Richard A Nelson (Rick) <cowboy@debian.org>
+Architecture: all
+Source: sendmail
+Version: 8.14.4-2ubuntu2.1
+Depends: m4
+Suggests: sendmail-doc
+Filename: pool/universe/s/sendmail/sendmail-cf_8.14.4-2ubuntu2.1_all.deb
+Size: 102678
+MD5sum: 14000204a45111f224e84092b2f295e6
+SHA1: e292d02a999bb90183e00e4c76a472a44d58201c
+SHA256: 7dc6f4cae4bb94e563d8d98b119b759432cde4e0d4ba3f6164d18c99418cc08a
+Description: powerful, efficient, and scalable Mail Transport Agent
+Homepage: http://www.sendmail.org
+Description-md5: 839b4c18631f11e259a93a74e7927131
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: sendmail-doc
+Priority: extra
+Section: universe/doc
+Installed-Size: 1003
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Richard A Nelson (Rick) <cowboy@debian.org>
+Architecture: all
+Source: sendmail
+Version: 8.14.4-2ubuntu2.1
+Filename: pool/universe/s/sendmail/sendmail-doc_8.14.4-2ubuntu2.1_all.deb
+Size: 645972
+MD5sum: b24f341d905efe80b90df97812429a2d
+SHA1: d486eddb097ad2be6809045a300af5b00bb53dcf
+SHA256: a7cb0618c158836fcf863b4f878f79aaa392118a49c6b7bce9052d1534c16f41
+Description: powerful, efficient, and scalable Mail Transport Agent
+Homepage: http://www.sendmail.org
+Description-md5: 35a2e58a9d69aca9b73189ed6d3e3528
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: sensible-mda
+Priority: extra
+Section: universe/mail
+Installed-Size: 270
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Richard A Nelson (Rick) <cowboy@debian.org>
+Architecture: amd64
+Source: sendmail
+Version: 8.14.4-2ubuntu2.1
+Depends: sendmail-bin | mail-transport-agent, procmail | maildrop | deliver, libc6 (>= 2.4)
+Filename: pool/universe/s/sendmail/sensible-mda_8.14.4-2ubuntu2.1_amd64.deb
+Size: 9496
+MD5sum: 914ed24d7efbb68f833b16110317b326
+SHA1: 0d1fe784d63d84a468af5d49a4d8282d2d44f30e
+SHA256: ce2fa162f9a11f2c4bc05ddb8222ccb9636530bad2449e4fd57004392f862faa
+Description: Mail Delivery Agent wrapper
+Homepage: http://www.sendmail.org
+Description-md5: bea515eec8582f9eac6796d823698ba5
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 

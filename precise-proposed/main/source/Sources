@@ -1199,6 +1199,32 @@ Checksums-Sha256:
  c836c6095cab363ccd1bbde9f96d0fa008eaa880ed838c9ce04579bc0d283d3a 1203498 networkmanagement_0.9.0.1.orig.tar.bz2
  565c73c206ba3c160756866fa6891dfa6d2797406806c0028d0a97aa6b808f3c 10357 networkmanagement_0.9.0.1-0ubuntu2.1.debian.tar.gz
 
+Package: partman-auto
+Binary: partman-auto
+Version: 101ubuntu2.1
+Section: debian-installer
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 7.0.50), dh-di, po-debconf (>= 0.5.0)
+Architecture: any
+Format: 1.0
+Directory: pool/main/p/partman-auto
+Files:
+ 74fae24be8caa9e33c6bb52d330a08d5 1864 partman-auto_101ubuntu2.1.dsc
+ 27c8db0a0e37e4e16952cb50c5a07a0f 139694 partman-auto_101ubuntu2.1.tar.gz
+Uploaders: Anton Zinoviev <zinoviev@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/partman-auto/ubuntu
+Package-List: 
+ partman-auto udeb debian-installer standard
+Checksums-Sha1:
+ faad4b6b982feed8801d680bd13e25f2f00d9196 1864 partman-auto_101ubuntu2.1.dsc
+ a32d819508a4e11165a0e65f799467317d581f8a 139694 partman-auto_101ubuntu2.1.tar.gz
+Checksums-Sha256:
+ 9e489eb66e74d12754a4796ea905bfc9b5967eae4942d8d86829c7a7d696b776 1864 partman-auto_101ubuntu2.1.dsc
+ e53c863c67253102508b6333d71a48075cffb74b4b82ff9bef9d3b09d7427307 139694 partman-auto_101ubuntu2.1.tar.gz
+Debian-Vcs-Browser: http://git.debian.org/?p=d-i/partman-auto.git
+Debian-Vcs-Git: git://git.debian.org/d-i/partman-auto.git
+
 Package: partman-basicfilesystems
 Binary: partman-basicfilesystems
 Version: 71ubuntu3.2
@@ -1441,6 +1467,45 @@ Checksums-Sha256:
  537556fc4ec1deee45b9db26da785260328cf47e4d25dccaf026f7a13c503e67 3096 samba_3.6.3-2ubuntu2.7.dsc
  34393921b220e97bdb29de28c560e305c4f2ede74ca35355d08f43f521c90533 24477313 samba_3.6.3.orig.tar.bz2
  7e41e9069415b0f76ff18dfd4679fc84b4c9f9e3e321f112976fa52c616b3a2a 398419 samba_3.6.3-2ubuntu2.7.debian.tar.gz
+
+Package: sendmail
+Binary: sendmail-bin, rmail, sensible-mda, libmilter1.0.1, libmilter1.0.1-dbg, libmilter-dev, sendmail-doc, sendmail, sendmail-base, sendmail-cf
+Version: 8.14.4-2ubuntu2.1
+Priority: extra
+Section: mail
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Richard A Nelson (Rick) <cowboy@debian.org>
+Build-Depends: make (>> 3.79.1-14), m4, cdbs, quilt, patchutils, dh-buildinfo, debhelper (>= 5), linux-libc-dev (>= 2.6.21-3) [!kfreebsd-i386 !kfreebsd-amd64 !hurd-i386], groff, bsdmainutils, libdb4.8-dev, libldap2-dev, libwrap0-dev, liblockfile-dev, libsasl2-dev, libssl-dev
+Build-Depends-Indep: groff, bsdmainutils
+Build-Conflicts: bind-dev, fakeroot (<< 0.4.5), libbind-dev
+Architecture: any all
+Standards-Version: 3.8.3
+Format: 1.0
+Directory: pool/main/s/sendmail
+Files:
+ 95a84708d39ef667fc24ee727b188adb 2586 sendmail_8.14.4-2ubuntu2.1.dsc
+ 55701f352bb8285e4de14ad6f3d48e35 2072180 sendmail_8.14.4.orig.tar.gz
+ 88d0b47c05baf29227276d3057277b1f 487912 sendmail_8.14.4-2ubuntu2.1.diff.gz
+Homepage: http://www.sendmail.org
+Package-List: 
+ libmilter-dev deb libdevel extra
+ libmilter1.0.1 deb libs extra
+ libmilter1.0.1-dbg deb libs extra
+ rmail deb mail extra
+ sendmail deb mail extra
+ sendmail-base deb mail extra
+ sendmail-bin deb mail extra
+ sendmail-cf deb mail extra
+ sendmail-doc deb doc extra
+ sensible-mda deb mail extra
+Checksums-Sha1:
+ be3fa0b180bfc0ead63eff1acfd5df96ea8d5d7f 2586 sendmail_8.14.4-2ubuntu2.1.dsc
+ 401096475f2e89f68ca5edc1456eb13269f950ad 2072180 sendmail_8.14.4.orig.tar.gz
+ b2d83fda6a4af71cf49a0ca2626f0066c0ec7b47 487912 sendmail_8.14.4-2ubuntu2.1.diff.gz
+Checksums-Sha256:
+ ff9cf54d2bba73d4c5aa6c84a1009915a5b0cea6529f171a884a9eaa39c514c1 2586 sendmail_8.14.4-2ubuntu2.1.dsc
+ 40246cd35e99c40f22f4e88d328ff0084ef925257f2b0708a62ee6588725c7a3 2072180 sendmail_8.14.4.orig.tar.gz
+ bfaedcc3cb2c761f0b367bd5523aac7d2771c9a27e0d2604c792809281438707 487912 sendmail_8.14.4-2ubuntu2.1.diff.gz
 
 Package: ubuntuone-client
 Binary: ubuntuone-client, ubuntuone-client-proxy, python-ubuntuone-client, libsyncdaemon-1.0-1, libsyncdaemon-1.0-dev, gir1.2-syncdaemon-1.0, ubuntuone-client-dbg
