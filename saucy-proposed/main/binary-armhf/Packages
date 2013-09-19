@@ -66,6 +66,91 @@ Description-md5: c61252ba915625e387579a62fb0c24f4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: landscape-client
+Priority: optional
+Section: admin
+Installed-Size: 113
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Landscape Team <landscape-team@canonical.com>
+Architecture: armhf
+Version: 13.07.3-0ubuntu1
+Depends: python:any, debconf (>= 0.5) | debconf-2.0, libc6 (>= 2.4), python-twisted-web, python-twisted-names, python-pycurl, landscape-common (= 13.07.3-0ubuntu1)
+Filename: pool/main/l/landscape-client/landscape-client_13.07.3-0ubuntu1_armhf.deb
+Size: 20078
+MD5sum: 05f5d537c81e1ad56e9a0092d03f606a
+SHA1: 3b05432ebd273aa52b8577f8f08126ff55bde8e4
+SHA256: ca1980a22b8b1a9a76e4d3925aea16bbb5606b3c310480767b3df3208d74a11d
+Description: The Landscape administration system client
+Description-md5: 3b6c233c041e3a732a8f320ae24c6a60
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: cloud-image
+
+Package: landscape-client-ui
+Priority: optional
+Section: admin
+Installed-Size: 90
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Landscape Team <landscape-team@canonical.com>
+Architecture: armhf
+Source: landscape-client
+Version: 13.07.3-0ubuntu1
+Replaces: landscape-client (<< 13.05.1+bzr682)
+Depends: python:any, landscape-client (= 13.07.3-0ubuntu1), landscape-client-ui-install (= 13.07.3-0ubuntu1), python-gi, python-dbus, policykit-1, gir1.2-notify-0.7, gir1.2-gtk-3.0
+Filename: pool/main/l/landscape-client/landscape-client-ui_13.07.3-0ubuntu1_armhf.deb
+Size: 4230
+MD5sum: e2071de48b44e94eadacfdc2025defcb
+SHA1: 74346b11591f1d05be5bfc0b3ea68593e18a1951
+SHA256: e563d80b840fffa4bcb6ced02895559dfc3f74a6f1b6db7aa4389ef774c99342
+Description: The Landscape administration system client - UI configuration
+Description-md5: 492e934962914cbe7430f25c3860cdec
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: landscape-client-ui-install
+Priority: optional
+Section: admin
+Installed-Size: 92
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Landscape Team <landscape-team@canonical.com>
+Architecture: armhf
+Source: landscape-client
+Version: 13.07.3-0ubuntu1
+Depends: python:any, python-gi, python-dbus, policykit-1, gir1.2-gtk-3.0, python-aptdaemon.gtk3widgets
+Filename: pool/main/l/landscape-client/landscape-client-ui-install_13.07.3-0ubuntu1_armhf.deb
+Size: 7732
+MD5sum: a0258b3e1eed3568f3516099289228e9
+SHA1: 8073fc614dd429e102831ac08f11f10648bea4ed
+SHA256: fbc95acc4043bb7ef9d1f084cd2110195ff3fc51261ea8014b5a59c68356c58e
+Description: The Landscape administration system client - UI installer
+Description-md5: 3d4cc26e92f97555be860321697a84bb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb
+
+Package: landscape-common
+Priority: optional
+Section: admin
+Installed-Size: 1014
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Landscape Team <landscape-team@canonical.com>
+Architecture: armhf
+Source: landscape-client
+Version: 13.07.3-0ubuntu1
+Replaces: landscape-client (<< 12.09+bzr582)
+Depends: python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2), debconf (>= 0.5) | debconf-2.0, python-twisted-core, python-apt, ca-certificates, python-gdbm, lsb-release, lsb-base, adduser, bc, lshw, libpam-modules
+Filename: pool/main/l/landscape-client/landscape-common_13.07.3-0ubuntu1_armhf.deb
+Size: 204896
+MD5sum: ff7412f82f189c50134d980d49c60b70
+SHA1: e390c62e5990dd140643bf8b019c53edcb713cce
+SHA256: 29139182b4391cea7b746073b5288afc637312e4a234446075355865f7a47de5
+Description: The Landscape administration system client - Common files
+Python-Version: 2.7
+Description-md5: 835e5462d72cec2787f651391834f9a8
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: server
+
 Package: libapache2-mod-auth-mysql
 Priority: optional
 Section: web
