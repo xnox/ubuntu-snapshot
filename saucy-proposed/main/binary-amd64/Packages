@@ -21,325 +21,6 @@ Origin: Ubuntu
 Supported: 9m
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, xubuntu-desktop, mythbuntu-frontend, mythbuntu-desktop, mythbuntu-backend-slave, mythbuntu-backend-master, lubuntu-desktop, ubuntustudio-desktop, ubuntu-gnome-desktop
 
-Package: grub-common
-Priority: optional
-Section: admin
-Installed-Size: 5492
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: grub2
-Version: 2.00-19ubuntu1
-Replaces: grub-coreboot (<< 2.00-4), grub-efi (<< 1.99-1), grub-efi-amd64 (<< 2.00-4), grub-efi-ia32 (<< 2.00-4), grub-efi-ia64 (<< 2.00-4), grub-ieee1275 (<< 2.00-4), grub-linuxbios (<< 1.96+20080831-1), grub-pc (<< 2.00-4), grub-yeeloong (<< 2.00-4)
-Depends: libc6 (>= 2.8), libdevmapper1.02.1 (>= 2:1.02.36), libfreetype6 (>= 2.2.1), libfuse2 (>= 2.8.1), liblzma5 (>= 5.1.1alpha+20120614), gettext-base, lsb-base (>= 3.0-6)
-Recommends: os-prober (>= 1.33)
-Suggests: multiboot-doc, grub-emu, xorriso (>= 0.5.6.pl00), desktop-base (>= 4.0.6), console-setup
-Conflicts: mdadm (<< 2.6.7-2)
-Breaks: apport (<< 2.1.1), friendly-recovery (<< 0.2.13), lupin-support (<< 0.30)
-Filename: pool/main/g/grub2/grub-common_2.00-19ubuntu1_amd64.deb
-Size: 1261280
-MD5sum: 7aa70b1970fa548d1c647cc3cb857242
-SHA1: 7ef7213c56cbb41ae55d07de8720d8bd923d494b
-SHA256: 019cfa6fdeff7492edf2eeb4afdcde02de12c1e8f1d0e9583ca7b119b9762165
-Description: GRand Unified Bootloader (common files)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 6e1c01c5245ffb9578aee58ee944229b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-dvd-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
-
-Package: grub-efi
-Priority: extra
-Section: admin
-Installed-Size: 32
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: grub2
-Version: 2.00-19ubuntu1
-Depends: grub-common, grub-efi-amd64 (= 2.00-19ubuntu1)
-Filename: pool/main/g/grub2/grub-efi_2.00-19ubuntu1_amd64.deb
-Size: 2558
-MD5sum: fb9fcab0b432f0d1593fcc1405f8c5c6
-SHA1: 39eade8317b7b830f50024f630cbc1f0d7fe41c2
-SHA256: 92b755878090723157eb52100bb36cd502f6eacc0ccae25a2fd76a2cfe5c1ded
-Description: GRand Unified Bootloader, version 2 (dummy package)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: ab0258bbb994f6742ad233346c11cf50
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: grub-efi-amd64
-Priority: extra
-Section: admin
-Installed-Size: 185
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: grub2
-Version: 2.00-19ubuntu1
-Replaces: grub, grub-common (<= 1.97~beta2-1), grub-coreboot, grub-efi-ia32, grub-ieee1275, grub-legacy, grub-pc, grub2 (<< 2.00-19ubuntu1)
-Depends: debconf (>= 0.5) | debconf-2.0, grub-common, grub2-common (= 2.00-19ubuntu1), grub-efi-amd64-bin (= 2.00-19ubuntu1), ucf
-Conflicts: grub, grub-coreboot, grub-efi-ia32, grub-ieee1275, grub-legacy, grub-pc
-Filename: pool/main/g/grub2/grub-efi-amd64_2.00-19ubuntu1_amd64.deb
-Size: 45136
-MD5sum: 11ab15a2164a67a54fd6139c7b9345e4
-SHA1: 6024e539f02e22c0bb407ef13320c9ca1f8fdcc5
-SHA256: 7c12c010aabb65e4e0e20a46282fc2ad0d582b61ca5c2743835d758a98802cfe
-Description: GRand Unified Bootloader, version 2 (EFI-AMD64 version)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 1ec69fc2c3202308968b8f3288b1500c
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: grub-efi-amd64-bin
-Priority: extra
-Section: admin
-Installed-Size: 2161
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: grub2
-Version: 2.00-19ubuntu1
-Replaces: grub-common (<= 1.97~beta2-1), grub-efi-amd64 (<< 1.99-1), grub2 (<< 2.00-19ubuntu1)
-Depends: grub-common (= 2.00-19ubuntu1), efibootmgr
-Filename: pool/main/g/grub2/grub-efi-amd64-bin_2.00-19ubuntu1_amd64.deb
-Size: 549348
-MD5sum: acfad07ce48adfa071938a63ab5dcc93
-SHA1: c4fd82e16ca4d865b275c7644d08cb0ce63466d0
-SHA256: 77afd9ae11e13dc7d87e222b9562b72a47b555a1868e7eea6b0e4ef01e0e9980
-Description: GRand Unified Bootloader, version 2 (EFI-AMD64 binaries)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 598ec5b1a14f26c488bd7d7079c3e538
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: grub-efi-amd64-dbg
-Priority: extra
-Section: debug
-Installed-Size: 13170
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: grub2
-Version: 2.00-19ubuntu1
-Depends: grub-common (= 2.00-19ubuntu1), grub-efi-amd64-bin (= 2.00-19ubuntu1)
-Filename: pool/main/g/grub2/grub-efi-amd64-dbg_2.00-19ubuntu1_amd64.deb
-Size: 2345482
-MD5sum: bc879ed85f42a3d5d4b8d16de9a86198
-SHA1: 619e554faf6d5c24e3fa2bb9456d770ee88d0050
-SHA256: 34395575e3e1280c4f44f5f773a1c0bc0f30595e72c4b2e06c755bf3a586792e
-Description: GRand Unified Bootloader, version 2 (EFI-AMD64 debug files)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 01a50868394847340399eb4743e46af0
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: grub-efi-amd64-signed
-Priority: optional
-Section: utils
-Installed-Size: 2766
-Maintainer: Colin Watson <cjwatson@ubuntu.com>
-Architecture: amd64
-Source: grub2-signed (1.20)
-Version: 1.20+2.00-19ubuntu1
-Depends: grub-efi-amd64 (= 2.00-19ubuntu1)
-Recommends: secureboot-db
-Filename: pool/main/g/grub2-signed/grub-efi-amd64-signed_1.20+2.00-19ubuntu1_amd64.deb
-Size: 843614
-MD5sum: 0b3c9d34668fe1d1e39b80b87fabfac4
-SHA1: 787ea0eefa5a6392d2481a64367e3006d56b652c
-SHA256: fbe6c88e57005c534fd20a3d0836a26d66d0b0b7edd49da06a5ce1f3bab463cb
-Description: GRand Unified Bootloader, version 2 (EFI-AMD64 version, signed)
-Built-Using: grub2 (= 2.00-19ubuntu1)
-Description-md5: e51baf79d7fed18d4cd4c2b834b9958b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: grub-efi-ia32
-Priority: extra
-Section: admin
-Installed-Size: 185
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: grub2
-Version: 2.00-19ubuntu1
-Replaces: grub, grub-common (<= 1.97~beta2-1), grub-coreboot, grub-efi, grub-efi-amd64, grub-ieee1275, grub-legacy, grub-pc, grub2 (<< 2.00-19ubuntu1)
-Depends: debconf (>= 0.5) | debconf-2.0, grub-common, grub2-common (= 2.00-19ubuntu1), grub-efi-ia32-bin (= 2.00-19ubuntu1), ucf
-Conflicts: grub (<< 0.97-54), grub-coreboot, grub-efi-amd64, grub-ieee1275, grub-legacy, grub-pc
-Filename: pool/main/g/grub2/grub-efi-ia32_2.00-19ubuntu1_amd64.deb
-Size: 45146
-MD5sum: bf6eea5125ed90903e486fb09689c381
-SHA1: bf560d7977d1892a91f7f581a33299794e6d0ffc
-SHA256: 1f866736f5b7278338b84bdb9771ca3ea84196c7775b9d436d8c883558fd2345
-Description: GRand Unified Bootloader, version 2 (EFI-IA32 version)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 0b211963be056bf8e983c31763cd0a45
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: grub-efi-ia32-bin
-Priority: extra
-Section: admin
-Installed-Size: 1558
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: grub2
-Version: 2.00-19ubuntu1
-Replaces: grub-common (<= 1.97~beta2-1), grub-efi, grub-efi-ia32 (<< 1.99-1), grub2 (<< 2.00-19ubuntu1)
-Depends: grub-common (= 2.00-19ubuntu1), efibootmgr
-Filename: pool/main/g/grub2/grub-efi-ia32-bin_2.00-19ubuntu1_amd64.deb
-Size: 532260
-MD5sum: c8fe98f284532f50d5caddad3d40e5d2
-SHA1: 280cf003e8625bc920004907bd7552f6e0a43831
-SHA256: 4e9d04de202112fcdb1ab81cf6e0fb530f2420e5f405e9dddad9f7788fc558a8
-Description: GRand Unified Bootloader, version 2 (EFI-IA32 binaries)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 9f83262e22d6097ee9567fff6e1de4bb
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: grub-efi-ia32-dbg
-Priority: extra
-Section: debug
-Installed-Size: 8729
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: grub2
-Version: 2.00-19ubuntu1
-Depends: grub-common (= 2.00-19ubuntu1), grub-efi-ia32-bin (= 2.00-19ubuntu1)
-Filename: pool/main/g/grub2/grub-efi-ia32-dbg_2.00-19ubuntu1_amd64.deb
-Size: 2263152
-MD5sum: 08b584869acb2b3c723a04a4e676ad22
-SHA1: 8b104baa7ac410627ef3b74dc217b1879a7fad9f
-SHA256: 323c712a8d2aedd0c355382b0ddbc6a198fd8c6a146d236f5302662068105e1a
-Description: GRand Unified Bootloader, version 2 (EFI-IA32 debug files)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 985cf475352ed91c8a577b3365c0062f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: grub-pc
-Priority: optional
-Section: admin
-Installed-Size: 552
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: grub2
-Version: 2.00-19ubuntu1
-Replaces: grub, grub-common (<= 1.97~beta2-1), grub-coreboot, grub-efi-amd64, grub-efi-ia32, grub-ieee1275, grub-legacy, grub2 (<< 2.00-19ubuntu1)
-Depends: debconf (>= 0.5) | debconf-2.0, grub-common, grub2-common (= 2.00-19ubuntu1), grub-pc-bin (= 2.00-19ubuntu1), ucf, grub-gfxpayload-lists
-Conflicts: grub (<< 0.97-54), grub-coreboot, grub-efi-amd64, grub-efi-ia32, grub-ieee1275, grub-legacy
-Filename: pool/main/g/grub2/grub-pc_2.00-19ubuntu1_amd64.deb
-Size: 173396
-MD5sum: ad69c0478c96b48dc00327061830106a
-SHA1: 627ab625b21afd5e278934da23373ca4d81bce13
-SHA256: f3d08530970261fe62c395b005bdff57963b74b9a08581ff5b3158ed0fb0a670
-Description: GRand Unified Bootloader, version 2 (PC/BIOS version)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 7cb7fdca20b02381c6123a250be96bab
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-dvd-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
-
-Package: grub-pc-bin
-Priority: optional
-Section: admin
-Installed-Size: 2454
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: grub2
-Version: 2.00-19ubuntu1
-Replaces: grub-common (<= 1.97~beta2-1), grub-pc (<< 1.99-1), grub2 (<< 2.00-19ubuntu1)
-Depends: libc6 (>= 2.14), libdevmapper1.02.1 (>= 2:1.02.36), grub-common (= 2.00-19ubuntu1)
-Suggests: desktop-base (>= 4.0.6)
-Filename: pool/main/g/grub2/grub-pc-bin_2.00-19ubuntu1_amd64.deb
-Size: 804674
-MD5sum: ee740797ad71797c122c8358e3ab183f
-SHA1: 8bdc8d3f70ce2364d317ba5d6ceb59240bfaee3e
-SHA256: 136d4c34f7a022f75e263a2dacaf5af910473b32d81386209be21616931dc7e4
-Description: GRand Unified Bootloader, version 2 (PC/BIOS binaries)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: d3fd4372607d45553d46ed1fecfb4f99
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-dvd-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
-
-Package: grub-pc-dbg
-Priority: extra
-Section: debug
-Installed-Size: 9244
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: grub2
-Version: 2.00-19ubuntu1
-Depends: grub-common (= 2.00-19ubuntu1), grub-pc-bin (= 2.00-19ubuntu1)
-Filename: pool/main/g/grub2/grub-pc-dbg_2.00-19ubuntu1_amd64.deb
-Size: 2374848
-MD5sum: c75cf96f6e61fd9a0e8c9b45a6aba93e
-SHA1: f078195e5baabe3a4f61bfe3ecac7f603c0f235e
-SHA256: 7e328b091c296a1f7d2743423fbb9372a992c583292c67642fb52e08c2c02ada
-Description: GRand Unified Bootloader, version 2 (PC/BIOS debug files)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 7c0972b8a14a3f1091b6056556730eb4
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-
-Package: grub2-common
-Priority: optional
-Section: admin
-Installed-Size: 198
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: amd64
-Source: grub2
-Version: 2.00-19ubuntu1
-Replaces: grub, grub-common (<< 1.99-1), grub-coreboot (<< 2.00-4), grub-efi (<< 1.99-1), grub-efi-amd64 (<< 2.00-4), grub-efi-ia32 (<< 2.00-4), grub-efi-ia64 (<< 2.00-4), grub-ieee1275 (<< 2.00-4), grub-legacy, grub-linuxbios (<< 1.99-1), grub-pc (<< 2.00-4), grub-yeeloong (<< 2.00-4)
-Depends: grub-common (= 2.00-19ubuntu1), dpkg (>= 1.15.4) | install-info
-Conflicts: grub (<< 0.97-54), grub-doc (<< 0.97-29ubuntu60), grub-legacy, grub-legacy-doc (<< 0.97-29ubuntu60)
-Filename: pool/main/g/grub2/grub2-common_2.00-19ubuntu1_amd64.deb
-Size: 116628
-MD5sum: 3c59d402d3515f369e49b5c68d080669
-SHA1: 746789b70971ccda9177cbe40fe4e3ec293caba6
-SHA256: 77e957d60406b9078d6a808e8446c79f3b673e9ecae55be27aff1a5402594a64
-Description: GRand Unified Bootloader (common files for version 2)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: a969e6536e745e177a340b30bdb5ba3f
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Supported: 9m
-Task: ubuntu-live, kubuntu-live, kubuntu-active-live, kubuntu-active-live, kubuntu-active-live, edubuntu-live, edubuntu-dvd-live, xubuntu-live, mythbuntu-live, lubuntu-live, ubuntustudio-dvd-live, ubuntu-gnome-live
-
 Package: idle-python2.7
 Priority: optional
 Section: python
@@ -356,6 +37,29 @@ Size: 257344
 MD5sum: 87f3e240cdadc46b99a329b34882ff93
 SHA1: 9644d1973bd5e6709f8e75777a22595bcf938163
 SHA256: 8b9e202a0edfb8d551c4467cd408b4332cb30b424de6ed728ac06df6e8738019
+Description: IDE for Python (v2.7) using Tkinter
+Enhances: python2.7
+Description-md5: 1fd93a936611995336444949b73d0b8a
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: idle-python2.7
+Priority: optional
+Section: python
+Installed-Size: 977
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python2.7
+Version: 2.7.5-8ubuntu2
+Replaces: python2.7 (<< 2.6.1-2)
+Depends: python2.7, python-tk (>= 2.6~a3), python2.7-tk
+Filename: pool/main/p/python2.7/idle-python2.7_2.7.5-8ubuntu2_all.deb
+Size: 255568
+MD5sum: 1659fde786717a5c7b01b4ec7b9ceb73
+SHA1: 295596e7946d1b9382f676b02068a48dea0eb6c8
+SHA256: 76d82fefda1a278b9fd5fbfcdedeef9f71052e680f0ab668c5b453bd50cc64b4
 Description: IDE for Python (v2.7) using Tkinter
 Enhances: python2.7
 Description-md5: 1fd93a936611995336444949b73d0b8a
@@ -467,15 +171,15 @@ Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Matthias Klose <doko@debian.org>
 Architecture: amd64
 Source: python2.7
-Version: 2.7.5-8ubuntu1
+Version: 2.7.5-8ubuntu2
 Replaces: python2.7 (<< 2.6)
-Depends: libpython2.7-stdlib (= 2.7.5-8ubuntu1), libc6 (>= 2.15), zlib1g (>= 1:1.2.0)
+Depends: libpython2.7-stdlib (= 2.7.5-8ubuntu2), libc6 (>= 2.15), zlib1g (>= 1:1.2.0)
 Pre-Depends: multiarch-support
-Filename: pool/main/p/python2.7/libpython2.7_2.7.5-8ubuntu1_amd64.deb
-Size: 1352952
-MD5sum: 1336229aca0541eb6dbc6eb7aef51951
-SHA1: 5e25fbc545473b05e5a35b89ffa44435709a9dc7
-SHA256: 12c510bde83cd562fab5a7c406d1967f09079615cf35dc88def0e0b730fcf755
+Filename: pool/main/p/python2.7/libpython2.7_2.7.5-8ubuntu2_amd64.deb
+Size: 1352944
+MD5sum: ef0d68999ad0e240247424a47615c105
+SHA1: 4dec3047db4a086d900d199ecf0d4b7388e48ed0
+SHA256: df334acb035d07b3c659997831ce8d89d49a3b687e7bacf9b8ed993bef0f2184
 Description: Shared Python runtime library (version 2.7)
 Multi-Arch: same
 Description-md5: ca83a75c05dbdfe28eaeb1252ff614a4
@@ -492,16 +196,16 @@ Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Matthias Klose <doko@debian.org>
 Architecture: amd64
 Source: python2.7
-Version: 2.7.5-8ubuntu1
+Version: 2.7.5-8ubuntu2
 Replaces: python2.7-dbg (<< 2.7.3-10)
-Depends: libpython2.7-stdlib (= 2.7.5-8ubuntu1), libbz2-1.0, libc6 (>= 2.14), libdb5.1, libexpat1 (>= 2.1~beta3), libffi6 (>= 3.0.4), libncursesw5 (>= 5.6+20070908), libreadline6 (>= 6.0), libsqlite3-0 (>= 3.5.9), libssl1.0.0 (>= 1.0.0), libtinfo5, zlib1g (>= 1:1.2.0), python
+Depends: libpython2.7-stdlib (= 2.7.5-8ubuntu2), libbz2-1.0, libc6 (>= 2.14), libdb5.1, libexpat1 (>= 2.1~beta3), libffi6 (>= 3.0.4), libncursesw5 (>= 5.6+20070908), libreadline6 (>= 6.0), libsqlite3-0 (>= 3.5.9), libssl1.0.0 (>= 1.0.0), libtinfo5, zlib1g (>= 1:1.2.0), python
 Pre-Depends: multiarch-support
 Suggests: python2.7-gdbm-dbg, python2.7-tk-dbg
-Filename: pool/main/p/python2.7/libpython2.7-dbg_2.7.5-8ubuntu1_amd64.deb
-Size: 6671334
-MD5sum: c834565bad8603b1066dea8868683d16
-SHA1: 25eadb5d9aae78274d6937d77d5a81b2f9a12713
-SHA256: c2b6a17d78c28e1f61b83c9b09fa95e8cb08d1dec60c598038a510e0312acca8
+Filename: pool/main/p/python2.7/libpython2.7-dbg_2.7.5-8ubuntu2_amd64.deb
+Size: 6671454
+MD5sum: 265be8b4535b3088897429bb759e83b2
+SHA1: 5d32ebeb82cb0fad7ce11ba3a49f2dae1530a8c1
+SHA256: a35b797d0f1c795c0288f9bc5c5a210eab092b6c5cae7593a30fa727e224ea1f
 Description: Debug Build of the Python Interpreter (version 2.7)
 Multi-Arch: same
 Description-md5: f2b41391895402a123a55c07a1d6812f
@@ -512,21 +216,21 @@ Supported: 9m
 Package: libpython2.7-dev
 Priority: optional
 Section: libdevel
-Installed-Size: 32939
+Installed-Size: 32936
 Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Matthias Klose <doko@debian.org>
 Architecture: amd64
 Source: python2.7
-Version: 2.7.5-8ubuntu1
+Version: 2.7.5-8ubuntu2
 Replaces: python2.7 (<< 2.7-3), python2.7-dev (<< 2.7.3-10), python2.7-minimal (<< 2.7.3-10)
-Depends: libpython2.7-stdlib (= 2.7.5-8ubuntu1), libpython2.7 (= 2.7.5-8ubuntu1), libexpat1-dev
+Depends: libpython2.7-stdlib (= 2.7.5-8ubuntu2), libpython2.7 (= 2.7.5-8ubuntu2), libexpat1-dev
 Pre-Depends: multiarch-support
 Recommends: libc6-dev | libc-dev
-Filename: pool/main/p/python2.7/libpython2.7-dev_2.7.5-8ubuntu1_amd64.deb
-Size: 23502034
-MD5sum: dc86f632137663c4ca18816ac573dc79
-SHA1: 089d2307a90a2d9221bbdff5e73c0f55790879e8
-SHA256: 5c991b80eaee05acac2bf17fddd77fbcf5db89a33d7b0ea2d2e7a425b58bc128
+Filename: pool/main/p/python2.7/libpython2.7-dev_2.7.5-8ubuntu2_amd64.deb
+Size: 23500426
+MD5sum: 4f53638cc7ff36bdc8d8b919e5a9e97f
+SHA1: 64b746050385a7d749aca3638426bb41dce7c498
+SHA256: d5a9df7c9648ce4347c58e18eb020a7731f347ff68e1f3969a726dfac9b95efc
 Description: Header files and a static library for Python (v2.7)
 Multi-Arch: same
 Description-md5: 2ef5e0390998d9ab1872bc0f6b694ff7
@@ -542,16 +246,16 @@ Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Matthias Klose <doko@debian.org>
 Architecture: amd64
 Source: python2.7
-Version: 2.7.5-8ubuntu1
+Version: 2.7.5-8ubuntu2
 Replaces: libpython2.7-stdlib (<< 2.7.4-2), python2.7 (<< 2.7.4-2), python2.7-minimal (<< 2.7.3-10)
 Recommends: libpython2.7-stdlib
 Conflicts: binfmt-support (<< 1.1.2)
 Breaks: python2.7-minimal (<< 2.7.4~rc1-1~)
-Filename: pool/main/p/python2.7/libpython2.7-minimal_2.7.5-8ubuntu1_amd64.deb
-Size: 504416
-MD5sum: 6992afed2de7951e12b71e11ff4770a8
-SHA1: 2a29fcbb35fda4717f0490bb6cf30d50e17a2ce0
-SHA256: 941c61cfb661c16f8ef5fd8128248066c5e32b25d309277ca9425ccf15bbfa12
+Filename: pool/main/p/python2.7/libpython2.7-minimal_2.7.5-8ubuntu2_amd64.deb
+Size: 503876
+MD5sum: 397b410c037e8d934673bcbf5108fa90
+SHA1: 45ba4b9505c28be66de41de6a3dcb6f1539ab8d6
+SHA256: bf7cde6eae3c07f6192c3097acdec8833b56c155f6ad3d79eba2a00794bfb484
 Description: Minimal subset of the Python language (version 2.7)
 Multi-Arch: same
 Description-md5: 703efc0a29ea636b32f475404406f7cc
@@ -568,15 +272,15 @@ Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Matthias Klose <doko@debian.org>
 Architecture: amd64
 Source: python2.7
-Version: 2.7.5-8ubuntu1
+Version: 2.7.5-8ubuntu2
 Replaces: python2.7 (<< 2.7.5-0~)
 Provides: python-argparse, python2.7-argparse, python2.7-celementtree, python2.7-cjkcodecs, python2.7-ctypes, python2.7-elementtree, python2.7-profiler, python2.7-wsgiref
-Depends: libpython2.7-minimal (= 2.7.5-8ubuntu1), mime-support, libbz2-1.0, libc6 (>= 2.15), libdb5.1, libexpat1 (>= 2.1~beta3), libffi6 (>= 3.0.4), libncursesw5 (>= 5.6+20070908), libreadline6 (>= 6.0), libsqlite3-0 (>= 3.5.9), libssl1.0.0 (>= 1.0.0), libtinfo5
-Filename: pool/main/p/python2.7/libpython2.7-stdlib_2.7.5-8ubuntu1_amd64.deb
-Size: 2489934
-MD5sum: a6141a7021da19512edf2ea079f7f8bc
-SHA1: 89ea9262250e2fb018677e86144219715959acdb
-SHA256: 5dded83f8709725c569ba67265bd8aa280269a1608282fdd647c494214b3a58d
+Depends: libpython2.7-minimal (= 2.7.5-8ubuntu2), mime-support, libbz2-1.0, libc6 (>= 2.15), libdb5.1, libexpat1 (>= 2.1~beta3), libffi6 (>= 3.0.4), libncursesw5 (>= 5.6+20070908), libreadline6 (>= 6.0), libsqlite3-0 (>= 3.5.9), libssl1.0.0 (>= 1.0.0), libtinfo5
+Filename: pool/main/p/python2.7/libpython2.7-stdlib_2.7.5-8ubuntu2_amd64.deb
+Size: 2489852
+MD5sum: ef4627a6bc8083be3ddcce8e78e3bb8e
+SHA1: 4fd8d52f1fe25c789ca89164e395fa56df117f1f
+SHA256: a4151459ff53d0709aa17559b68c80aba83a4b910976f8dd817e157bbb386377
 Description: Interactive high-level object-oriented language (standard library, version 2.7)
 Multi-Arch: same
 Description-md5: f4f7d2df11420ed1433b778b1a144502
@@ -601,6 +305,28 @@ Size: 2663052
 MD5sum: cccd4cdfa0bc4e89364e91285cf7877d
 SHA1: 9d7c52cc2f9f30ea21a938d83b244d2f4462d196
 SHA256: 07ae1d768af8f73f85ba866c708f0e0a6d05b8e9a23c8727a9c2a2cf7e41f509
+Description: Testsuite for the Python standard library (v2.7)
+Description-md5: ca1ecfb5f297f44ae0729c2b3459e146
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libpython2.7-testsuite
+Priority: optional
+Section: libdevel
+Installed-Size: 13110
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python2.7
+Version: 2.7.5-8ubuntu2
+Depends: libpython2.7-stdlib (>= 2.7.5-8ubuntu2)
+Suggests: python-gdbm, python-tk
+Filename: pool/main/p/python2.7/libpython2.7-testsuite_2.7.5-8ubuntu2_all.deb
+Size: 2665672
+MD5sum: af66e69b1cf8ed76889665a37d0b54cc
+SHA1: 8892015e5d1625fe39ce66175b16fd4faf560649
+SHA256: 6f959dc16a58d08d79a4f040e8ba8daeafc51bfc810dc0f37448968f9ee62bfe
 Description: Testsuite for the Python standard library (v2.7)
 Description-md5: ca1ecfb5f297f44ae0729c2b3459e146
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
@@ -1445,17 +1171,17 @@ Installed-Size: 338
 Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Matthias Klose <doko@debian.org>
 Architecture: amd64
-Version: 2.7.5-8ubuntu1
+Version: 2.7.5-8ubuntu2
 Replaces: python-profiler (<= 2.7.1-2), python2.7-minimal (<< 2.7.3-7~)
-Depends: python2.7-minimal (= 2.7.5-8ubuntu1), libpython2.7-stdlib (= 2.7.5-8ubuntu1), mime-support
+Depends: python2.7-minimal (= 2.7.5-8ubuntu2), libpython2.7-stdlib (= 2.7.5-8ubuntu2), mime-support
 Suggests: python2.7-doc, binutils
 Conflicts: python-profiler (<= 2.7.1-2)
 Breaks: python-virtualenv (<< 1.7.1.2-2~), vim-athena (<< 2:7.3.547-4), vim-gnome (<< 2:7.3.547-4), vim-gtk (<< 2:7.3.547-4), vim-nox (<< 2:7.3.547-4)
-Filename: pool/main/p/python2.7/python2.7_2.7.5-8ubuntu1_amd64.deb
-Size: 190658
-MD5sum: a570709ed33bf47de2c8124f570416c9
-SHA1: cef2ae30e50fe7acfe295c350a9f6f7f53da6635
-SHA256: a4726ea9bd537adda528a13f5fbe8255d7e11fa77cdc22ed91349205ae4dda84
+Filename: pool/main/p/python2.7/python2.7_2.7.5-8ubuntu2_amd64.deb
+Size: 190664
+MD5sum: d55961db953aec9575f52ce69e8dac0f
+SHA1: e920e934691067a7f9779683db607435f42a7f27
+SHA256: 97c1443149eeef4762891659523ab02ba8c4156a95af633b81be45694f5ecfea
 Description: Interactive high-level object-oriented language (version 2.7)
 Multi-Arch: allowed
 Description-md5: 28620f1beffd6b598125304a83bfcb87
@@ -1467,19 +1193,19 @@ Task: standard, kubuntu-active, kubuntu-active, mythbuntu-frontend, mythbuntu-fr
 Package: python2.7-dbg
 Priority: extra
 Section: debug
-Installed-Size: 26679
+Installed-Size: 26748
 Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Matthias Klose <doko@debian.org>
 Architecture: amd64
 Source: python2.7
-Version: 2.7.5-8ubuntu1
-Depends: python2.7 (= 2.7.5-8ubuntu1), libpython2.7-dbg (= 2.7.5-8ubuntu1), libc6 (>= 2.14), zlib1g (>= 1:1.2.0)
+Version: 2.7.5-8ubuntu2
+Depends: python2.7 (= 2.7.5-8ubuntu2), libpython2.7-dbg (= 2.7.5-8ubuntu2), libc6 (>= 2.14), zlib1g (>= 1:1.2.0)
 Suggests: python-gdbm-dbg, python-tk-dbg
-Filename: pool/main/p/python2.7/python2.7-dbg_2.7.5-8ubuntu1_amd64.deb
-Size: 9041450
-MD5sum: c3b958e939825ac8ce0960694cda34c8
-SHA1: 82fb2f57a5e541ac850d918abaf8323ad0363a38
-SHA256: 0d257b37cf42d1700ca83baed29c10c56129dd2b12eae8dfa26e21fa52e79c8a
+Filename: pool/main/p/python2.7/python2.7-dbg_2.7.5-8ubuntu2_amd64.deb
+Size: 9061774
+MD5sum: cdbf87a1b5dab8cba2432b6f8d7d1252
+SHA1: e29fbfab43a6b7e9c9cb20588795b288bcbb1945
+SHA256: d7b45a5b1b6e392751105face455f2776cd81d44df93687bbb557b904b8bac29
 Description: Debug Build of the Python Interpreter (version 2.7)
 Multi-Arch: allowed
 Description-md5: 3220dd61a40cd6c408ecc3fbbcb8ef1f
@@ -1495,15 +1221,15 @@ Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Matthias Klose <doko@debian.org>
 Architecture: amd64
 Source: python2.7
-Version: 2.7.5-8ubuntu1
+Version: 2.7.5-8ubuntu2
 Replaces: python2.7 (<< 2.7-3)
-Depends: python2.7 (= 2.7.5-8ubuntu1), libpython2.7-dev (= 2.7.5-8ubuntu1), libpython2.7 (= 2.7.5-8ubuntu1), libexpat1-dev
+Depends: python2.7 (= 2.7.5-8ubuntu2), libpython2.7-dev (= 2.7.5-8ubuntu2), libpython2.7 (= 2.7.5-8ubuntu2), libexpat1-dev
 Recommends: libc6-dev | libc-dev
-Filename: pool/main/p/python2.7/python2.7-dev_2.7.5-8ubuntu1_amd64.deb
-Size: 288274
-MD5sum: 5786b1ef0e2ffd2c8144d4118b17adfd
-SHA1: c373be0ede908bf74bf4bec17fbb5e8d7156751e
-SHA256: d2c497119519ce2cf64ba625b22c56fbe125e2934f452e817582420408be7d88
+Filename: pool/main/p/python2.7/python2.7-dev_2.7.5-8ubuntu2_amd64.deb
+Size: 288296
+MD5sum: c166357342a5a7bd673191257486816f
+SHA1: b4e4f1b46e81c34c630d4dd3d5833ab53defc21e
+SHA256: 2fc11756963c260e739baeb5ce9495e986a0fcb239ed0bab3a003dc8d885a8b0
 Description: Header files and a static library for Python (v2.7)
 Multi-Arch: allowed
 Description-md5: 0f13a410a5bbc68affef1492eee5d8e2
@@ -1533,6 +1259,28 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: python2.7-doc
+Priority: optional
+Section: doc
+Installed-Size: 31109
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python2.7
+Version: 2.7.5-8ubuntu2
+Depends: libjs-jquery
+Suggests: python2.7
+Filename: pool/main/p/python2.7/python2.7-doc_2.7.5-8ubuntu2_all.deb
+Size: 6327196
+MD5sum: ffaeae212a97e1755985c25708ffbf91
+SHA1: 9fa07426d74221e4fb5c83f709020a03ca0a4c18
+SHA256: dbe8dbefc9028522e1fff692c7d28baed1d7b94270f789eb2f6fa48589fff29b
+Description: Documentation for the high-level object-oriented language Python (v2.7)
+Description-md5: 427bb0bb2c7ff8d97e3a833c92820507
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: python2.7-examples
 Priority: optional
 Section: python
@@ -1554,26 +1302,47 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 
+Package: python2.7-examples
+Priority: optional
+Section: python
+Installed-Size: 2691
+Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Matthias Klose <doko@debian.org>
+Architecture: all
+Source: python2.7
+Version: 2.7.5-8ubuntu2
+Depends: python2.7 (>= 2.7.5-8ubuntu2)
+Filename: pool/main/p/python2.7/python2.7-examples_2.7.5-8ubuntu2_all.deb
+Size: 684668
+MD5sum: f379bbb3aaaa0cdbdf916a356553ca06
+SHA1: e836eae2335eb0b96caa1fbe2bde5ecd1c17f655
+SHA256: 25dd1a00c1ebb595859b8380678834c4f898b630720675bf628e8364325efcf6
+Description: Examples for the Python language (v2.7)
+Description-md5: 4f24bb2b1825659042443224cf985199
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
 Package: python2.7-minimal
 Priority: optional
 Section: python
-Installed-Size: 3379
+Installed-Size: 3395
 Maintainer: Ubuntu Core Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Matthias Klose <doko@debian.org>
 Architecture: amd64
 Source: python2.7
-Version: 2.7.5-8ubuntu1
+Version: 2.7.5-8ubuntu2
 Replaces: python2.7 (<< 2.7.1~rc1-2~)
-Depends: libpython2.7-minimal (= 2.7.5-8ubuntu1), zlib1g (>= 1:1.2.0)
+Depends: libpython2.7-minimal (= 2.7.5-8ubuntu2), zlib1g (>= 1:1.2.0)
 Pre-Depends: libc6 (>= 2.15)
 Recommends: python2.7
 Suggests: binfmt-support
 Conflicts: binfmt-support (<< 1.1.2)
-Filename: pool/main/p/python2.7/python2.7-minimal_2.7.5-8ubuntu1_amd64.deb
-Size: 1503434
-MD5sum: 6a2a38868b54af202f81c8d404ed33cd
-SHA1: cbfb9fde73ad2cf6fde6c03496225176f0911e37
-SHA256: f4f775069d02cd223da003b6da3faccead3db3862f52c4ae004cdfdc7ff1a2a1
+Filename: pool/main/p/python2.7/python2.7-minimal_2.7.5-8ubuntu2_amd64.deb
+Size: 1513462
+MD5sum: 7a71759c5bb1bb48ab7a69ed950f04db
+SHA1: 2c5430580a3a958f064f6f702c9cbd72602b5214
+SHA256: e6a6520e7298beb9c65d19cfeea99da9496abc33e98cbe1e4e36b9ab1cc40252
 Description: Minimal subset of the Python language (version 2.7)
 Multi-Arch: allowed
 Description-md5: 4e3d580f5374e0e392e97c8e6fedf594

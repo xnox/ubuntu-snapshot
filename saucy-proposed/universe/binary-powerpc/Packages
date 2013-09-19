@@ -901,6 +901,46 @@ Description-md5: 1365c03a7b29c6abc9718d95b9c22884
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: curtin
+Priority: extra
+Section: universe/admin
+Installed-Size: 33
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Version: 0.1.0~bzr75-0ubuntu1
+Depends: python, python-curtin (= 0.1.0~bzr75-0ubuntu1)
+Filename: pool/universe/c/curtin/curtin_0.1.0~bzr75-0ubuntu1_all.deb
+Size: 2756
+MD5sum: 697dc8022426693a7316c9c529d07629
+SHA1: 00c823fe3f468c3484a4ffb399b479050d80dfcd
+SHA256: d71f9692323523afdc1fb4d01a53dc167a52cece375a1aefe6c54b2f9de2d68c
+Description: Library and tools for the curtin installer
+Homepage: http://launchpad.net/curtin
+Description-md5: 131b2c82b3ac98e404f8679da8cf7637
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: curtin-common
+Priority: extra
+Section: universe/admin
+Installed-Size: 46
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: curtin
+Version: 0.1.0~bzr75-0ubuntu1
+Depends: util-linux (>= 2.20.1-1ubuntu3)
+Conflicts: curtin (<= 0.1.0~bzr54-0ubuntu1)
+Filename: pool/universe/c/curtin/curtin-common_0.1.0~bzr75-0ubuntu1_all.deb
+Size: 4998
+MD5sum: ca03a91d7005ebc6e6f0aa2efbc60384
+SHA1: c8929c243722c48da1131e22d060a9fd52c5938b
+SHA256: a0e3bd705648319c0101f09a4ff278aefd998a4b3cee356146d7b6c9e3299bc2
+Description: Library and tools for curtin installer
+Homepage: http://launchpad.net/curtin
+Description-md5: b24ac6ac0cf9c430ccd5e7cc40c446ae
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: dff
 Priority: optional
 Section: universe/admin
@@ -1267,164 +1307,6 @@ SHA256: 77e18ad648f1fced0bb3ed64c5f723dadfcb5a2844b65b8b76f99db1b33865c8
 Description: GRASS GIS graphical user interfaces
 Homepage: http://grass.osgeo.org/
 Description-md5: 6bf145f40e4f052910e511eb22945ae8
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: grub-emu
-Priority: extra
-Section: universe/admin
-Installed-Size: 12108
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: grub2
-Version: 2.00-19ubuntu1
-Replaces: grub-common (<= 1.97~beta3-1)
-Depends: libc6 (>= 2.11), libdevmapper1.02.1 (>= 2:1.02.36), libncurses5 (>= 5.5-5~), libsdl1.2debian (>= 1.2.11), libtinfo5, grub-common (= 2.00-19ubuntu1)
-Filename: pool/universe/g/grub2/grub-emu_2.00-19ubuntu1_powerpc.deb
-Size: 2299088
-MD5sum: 32efc453a6d1b4ccc40df9afe93ea28e
-SHA1: 1ca12116c957361f2fccd966733005a39f8c4fde
-SHA256: cb03a0d5134313480ed87f416264ab673b09ec27f153f396f747e0e648c2ebf8
-Description: GRand Unified Bootloader, version 2 (emulated version)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: eaa24f3f146f8d2e05f7109f088cfa8b
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: grub-emu-dbg
-Priority: extra
-Section: universe/debug
-Installed-Size: 7488
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: grub2
-Version: 2.00-19ubuntu1
-Depends: grub-common (= 2.00-19ubuntu1), grub-emu (= 2.00-19ubuntu1)
-Filename: pool/universe/g/grub2/grub-emu-dbg_2.00-19ubuntu1_powerpc.deb
-Size: 1715384
-MD5sum: 4840f9e4d4e7a01ce187cf0e05a4831a
-SHA1: 515e4fd99a319a9eb6cbe045039ace469c696432
-SHA256: 18eeae81bd4e4cc18e40bac0c2c93ae4f0ee2c97adf67d666320e7531610ff85
-Description: GRand Unified Bootloader, version 2 (emulated debug files)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 4066695808b06e6425e6d4c1f6d4205e
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: grub-ieee1275
-Priority: extra
-Section: universe/admin
-Installed-Size: 185
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: grub2
-Version: 2.00-19ubuntu1
-Replaces: grub-common (<= 1.97~beta2-1), grub-coreboot, grub-efi-amd64, grub-efi-ia32, grub-legacy, grub-pc, grub2 (<< 2.00-19ubuntu1)
-Depends: debconf (>= 0.5) | debconf-2.0, grub-common, grub2-common (= 2.00-19ubuntu1), grub-ieee1275-bin (= 2.00-19ubuntu1), ucf, powerpc-ibm-utils (>= 1.2.12-1), powerpc-utils
-Conflicts: grub (<< 0.97-54), grub-coreboot, grub-efi-amd64, grub-efi-ia32, grub-legacy, grub-pc
-Filename: pool/universe/g/grub2/grub-ieee1275_2.00-19ubuntu1_powerpc.deb
-Size: 44824
-MD5sum: e7782cb54d503993fc6cd0009cb4a75d
-SHA1: 1a86a7808fdac66e6c45fc7f48bb714e7b5bc3ed
-SHA256: c0a5e365a3454200bdbb43091f7a884039565b153abc4083225dd3cb7a54538f
-Description: GRand Unified Bootloader, version 2 (Open Firmware version)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 2c687718a62801e41cd0aa29811470e4
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: grub-ieee1275-bin
-Priority: extra
-Section: universe/admin
-Installed-Size: 1493
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: grub2
-Version: 2.00-19ubuntu1
-Replaces: grub-common (<= 1.97~beta2-1), grub-ieee1275 (<< 1.99-1), grub2 (<< 2.00-19ubuntu1)
-Depends: grub-common (= 2.00-19ubuntu1)
-Suggests: genisoimage
-Filename: pool/universe/g/grub2/grub-ieee1275-bin_2.00-19ubuntu1_powerpc.deb
-Size: 443632
-MD5sum: fbcaea1082153d7c99809520fdeff176
-SHA1: bc373caa1477abf1897301bc216db38ebe10703a
-SHA256: 666b0f77d97b22fa1f8999f874e39850a7a14c44d198892e003e212c42fa2c1b
-Description: GRand Unified Bootloader, version 2 (Open Firmware binaries)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 2aa28ecd15d342ed322b1e1858743f29
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: grub-ieee1275-dbg
-Priority: extra
-Section: universe/debug
-Installed-Size: 7041
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: grub2
-Version: 2.00-19ubuntu1
-Depends: grub-common (= 2.00-19ubuntu1), grub-ieee1275-bin (= 2.00-19ubuntu1)
-Filename: pool/universe/g/grub2/grub-ieee1275-dbg_2.00-19ubuntu1_powerpc.deb
-Size: 1615752
-MD5sum: 94d68430642f759a23d1770fb8fcc622
-SHA1: 8466ecee9fdb4e9bb89dc71b675ecd55adecca78
-SHA256: 0521956bb1faeb772896ebfce982972f28cab6b328561a92196261444ee7439f
-Description: GRand Unified Bootloader, version 2 (Open Firmware debug files)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 3e4b991fd886a5a8442d2e484c000e45
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: grub-theme-starfield
-Priority: extra
-Section: universe/admin
-Installed-Size: 2772
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Source: grub2
-Version: 2.00-19ubuntu1
-Depends: grub-common (= 2.00-19ubuntu1)
-Filename: pool/universe/g/grub2/grub-theme-starfield_2.00-19ubuntu1_powerpc.deb
-Size: 1668844
-MD5sum: a915a4fdc3ec91f338e539b2293ec401
-SHA1: 637d50d219de6b9eeea98015286daddb9626c52a
-SHA256: f1712a1bde353e3675c4e5eac0688177eb2681b83504c9d5f3d8c78356352eca
-Description: GRand Unified Bootloader, version 2 (starfield theme)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: 52232de4094a1dafa8ade1df40ec6451
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
-Package: grub2
-Priority: extra
-Section: universe/admin
-Installed-Size: 32
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: GRUB Maintainers <pkg-grub-devel@lists.alioth.debian.org>
-Architecture: powerpc
-Version: 2.00-19ubuntu1
-Depends: grub-ieee1275 (= 2.00-19ubuntu1), grub-common
-Filename: pool/universe/g/grub2/grub2_2.00-19ubuntu1_powerpc.deb
-Size: 2546
-MD5sum: 31295b9a4b707c2ba9d6bd20d4da3a77
-SHA1: af70adbc103a0ea77430c181014029375d30d8fa
-SHA256: a94bcb6815cb25443f2d42d02ebd72aa06b32eb13f05a80557295a7dd7e734fa
-Description: GRand Unified Bootloader, version 2 (dummy package)
-Multi-Arch: foreign
-Homepage: http://www.gnu.org/software/grub/
-Description-md5: bbb470013d1f2450dba730f10fbd09b4
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -3936,6 +3818,26 @@ Description-md5: d08c4c39c95be9d9699f8a704e0e37bc
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: python-curtin
+Priority: extra
+Section: universe/python
+Installed-Size: 127
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: curtin
+Version: 0.1.0~bzr75-0ubuntu1
+Depends: curl | wget, curtin-common (= 0.1.0~bzr75-0ubuntu1), util-linux (>= 2.20.1-1ubuntu3), python (>= 2.7), python (<< 2.8), python:any (>= 2.7.1-0ubuntu2)
+Filename: pool/universe/c/curtin/python-curtin_0.1.0~bzr75-0ubuntu1_all.deb
+Size: 15322
+MD5sum: 44f41074254ba44fa0369750c6bf227e
+SHA1: 6a5c9996323786fc53a3b74bed36bf674e9f56f1
+SHA256: fef5ade4649cbc9c4d53abc572493a5f7ccd170a46a92ed9f2d85766621f35eb
+Description: Library and tools for curtin installer
+Homepage: http://launchpad.net/curtin
+Description-md5: 31e48f4bf426e243b1a4f94280ebcafb
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: python-flake8
 Priority: optional
 Section: universe/python
@@ -4150,6 +4052,27 @@ SHA256: 5499a24ba28417e501a3c0dd8b843a9b3ebd7e4deabe6156e16e65d890282b4b
 Description: Xen Cloud Platform - XenAPI Python libraries
 Homepage: http://www.xen.org/products/cloudxen.html
 Description-md5: 0eb68e98a15dd86d677ee3b3f9ebf41c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: python3-curtin
+Priority: extra
+Section: universe/python
+Installed-Size: 106
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Architecture: all
+Source: curtin
+Version: 0.1.0~bzr75-0ubuntu1
+Depends: curl | wget, curtin-common (= 0.1.0~bzr75-0ubuntu1), util-linux (>= 2.20.1-1ubuntu3), python3:any (>= 3.2.3-3~), python3 (>= 3.2)
+Conflicts: curtin (<= 0.1.0~bzr54-0ubuntu1)
+Filename: pool/universe/c/curtin/python3-curtin_0.1.0~bzr75-0ubuntu1_all.deb
+Size: 14992
+MD5sum: dac38b372378eda8416a7401a9a90462
+SHA1: 7446cd86fb93e890f37ea2656d1297290a625c86
+SHA256: 52b09a3cdf2c1bb5325544316115012f24ae982ff85f310d8531e8e6da93e6d7
+Description: Library and tools for curtin installer
+Homepage: http://launchpad.net/curtin
+Description-md5: e0f139c6d97022bcf1c0380aa05a6f57
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
@@ -4460,28 +4383,6 @@ Description-md5: 6b39ba601293854e25f21dcf5af2af89
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
-Package: ruby-http-cookie
-Priority: optional
-Section: universe/ruby
-Installed-Size: 141
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
-Architecture: all
-Version: 1.0.1-1ubuntu1
-Depends: ruby | ruby-interpreter, ruby-domain-name
-Recommends: ruby-sqlite3
-Filename: pool/universe/r/ruby-http-cookie/ruby-http-cookie_1.0.1-1ubuntu1_all.deb
-Size: 24502
-MD5sum: e56a3955f9acc13a34ade6138ffc63b3
-SHA1: 10dc5c74733913d5bbdec06379a1371e136f8e85
-SHA256: 310627fd764c2950b3ca03dbaa82ab463bd37eb96b50566014e4f2c66834b1a9
-Description: Ruby library to handle HTTP Cookies based on RFC 6265
-Homepage: https://github.com/sparklemotion/http-cookie
-Ruby-Versions: ruby1.8 ruby1.9.1
-Description-md5: 16cac6ab303c54c40bedc64ae3023afc
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-
 Package: ruby-hyperestraier-doc
 Priority: optional
 Section: universe/doc
@@ -4527,6 +4428,27 @@ SHA256: 486526a0e7782e457ddfcc55c071a92602185867c5664255b2ae1b7bb219fe69
 Description: access Lua from Ruby
 Homepage: http://rubyluabridge.rubyforge.org
 Description-md5: 57173e61996bf9ffbbb613c6e389b858
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: ruby-mechanize
+Priority: optional
+Section: universe/ruby
+Installed-Size: 316
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Ruby Extras Maintainers <pkg-ruby-extras-maintainers@lists.alioth.debian.org>
+Architecture: all
+Version: 2.7.1-1
+Depends: ruby | ruby-interpreter, ruby-net-http-digest-auth, ruby-net-http-persistent (>= 2.5), ruby-nokogiri, ruby-webrobots, ruby-ntlm, ruby-domain-name, ruby-mime-types, ruby-http-cookie
+Filename: pool/universe/r/ruby-mechanize/ruby-mechanize_2.7.1-1_all.deb
+Size: 72666
+MD5sum: fd54ca7c24ad25b264cd7a427015bd0a
+SHA1: 3af1a294fa844316d3bcb27f22d41912a26d2f4a
+SHA256: a6b2762761e2ec47c253331c1ca707a8836523675a3aaa8281baad079977afe4
+Description: library used for automating interaction with websites
+Homepage: http://mechanize.rubyforge.org
+Ruby-Versions: ruby1.8 ruby1.9.1
+Description-md5: 4d9d0170efed2b2dca969ba29bae04d3
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
