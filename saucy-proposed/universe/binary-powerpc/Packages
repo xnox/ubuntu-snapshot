@@ -1074,28 +1074,6 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-gnome-desktop
 
-Package: gnome-online-accounts
-Priority: optional
-Section: universe/gnome
-Installed-Size: 251
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
-Architecture: powerpc
-Version: 3.8.3-1ubuntu1
-Depends: libc6 (>= 2.8), libgcr-base-3-1 (>= 3.8.0), libglib2.0-0 (>= 2.37.3), libgoa-1.0-0 (= 3.8.3-1ubuntu1), libkrb5-3 (>= 1.9+dfsg~beta1), librest-0.7-0 (>= 0.7), libsoup2.4-1 (>= 2.41)
-Recommends: gnome-control-center (>= 3.6.1)
-Filename: pool/universe/g/gnome-online-accounts/gnome-online-accounts_3.8.3-1ubuntu1_powerpc.deb
-Size: 51198
-MD5sum: a140356a6b2960cb2e0eb09191664e58
-SHA1: 9269cec3402edb473a9cf4dfc0c5ee4cb7e916ce
-SHA256: e6020f88417414f1fe3994be90c7b25d52f4d1c40e4bb73b1b68932beac3b4cd
-Description: GNOME Online Accounts
-Homepage: https://wiki.gnome.org/GnomeOnlineAccounts
-Description-md5: fab27d4f23d8bb1141d68ba95c8a6412
-Bugs: https://bugs.launchpad.net/ubuntu/+filebug
-Origin: Ubuntu
-Task: ubuntu-gnome-desktop
-
 Package: gnuradio-doc
 Priority: optional
 Section: universe/doc
@@ -1175,6 +1153,56 @@ Description-md5: 927e5df9adc0c220121824a1dcc21063
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: grass-core
+Priority: optional
+Section: universe/science
+Installed-Size: 31421
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: grass
+Version: 6.4.3-1
+Replaces: grass (<< 6.4.2-1~)
+Provides: grass643
+Depends: libc6 (>= 2.15), libcairo2 (>= 1.6.0), libfftw3-double3, libfreetype6 (>= 2.2.1), libgcc1 (>= 1:4.1.1), libgdal1 (>= 1.8.0), libgeos-c1 (>= 3.3.3), libgl1-mesa-glx | libgl1, libglu1-mesa | libglu1, libmysqlclient18 (>= 5.5.13-1), libncurses5 (>= 5.5-5~), libodbc1 (>= 2.2.11) | unixodbc (>= 2.2.11), libpng12-0 (>= 1.2.13-4), libpq5, libproj0, libreadline6 (>= 6.0), libsqlite3-0 (>= 3.5.9), libstdc++6 (>= 4.4.0), libtiff5 (>> 4.0.0-1~), libtinfo5, libx11-6, zlib1g (>= 1:1.1.4), python:any (>= 2.7.1-0ubuntu2), python-numpy
+Recommends: gdal-bin, proj-bin
+Suggests: grass-doc, grass-gui, grass-dev, e00compr, avce00, gnuplot, gpsbabel, gpstrans, netpbm, python-rpy2, wget | curl, xml2
+Breaks: grass (<< 6.4.2-1~)
+Filename: pool/universe/g/grass/grass-core_6.4.3-1_powerpc.deb
+Size: 11692252
+MD5sum: 574e6b34bae4a8465bbcf5115449cf01
+SHA1: 2ee7e9741a326523baef8a87fb6ba9168086aa35
+SHA256: e9861412cefd6800cbdd8ece55d7c4e2ce62c9db3de08ae0241736a540b25348
+Description: GRASS GIS core components
+Homepage: http://grass.osgeo.org/
+Description-md5: 33e9934554fa4350e5e0a1f805667d00
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: grass-dev
+Priority: optional
+Section: universe/devel
+Installed-Size: 1101
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: grass
+Version: 6.4.3-1
+Provides: grass64-dev
+Depends: grass-core (= 6.4.3-1), fakeroot, libproj-dev, libgdal-dev | libgdal1-dev (>= 1.5.0), libfreetype6-dev
+Recommends: subversion
+Suggests: grass-dev-doc, pkg-config
+Filename: pool/universe/g/grass/grass-dev_6.4.3-1_powerpc.deb
+Size: 207286
+MD5sum: ad5cf4b410e0089c48e211743b3762b7
+SHA1: ea61f1e74e9227f4c2d9a278be22ee6d2485e6d7
+SHA256: 0eee82a0e4c6f055a0253fe8591b205276566747f8c6e951efab7644701ff0de
+Description: GRASS GIS development files
+Homepage: http://grass.osgeo.org/
+Description-md5: 616bd30de8154cdd565de75c39c27e9e
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: grass-dev-doc
 Priority: optional
 Section: universe/doc
@@ -1215,6 +1243,30 @@ SHA256: c451370366dbf9963815dfd8525b20dd759b9732a05d69241c067925da7d18dd
 Description: GRASS GIS user documentation
 Homepage: http://grass.osgeo.org/
 Description-md5: 02ab14d43af943d7df222d347f112b94
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
+Package: grass-gui
+Priority: optional
+Section: universe/science
+Installed-Size: 7525
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Source: grass
+Version: 6.4.3-1
+Replaces: grass (<< 6.4.2-1~)
+Depends: libc6 (>= 2.7), libgl1-mesa-glx | libgl1, libx11-6, libxm4 (>= 2.3.4), libxmu6, libxt6, tcl8.5 (>= 8.5.0), tk8.5 (>= 8.5.0), grass-core, python:any (>= 2.7.1-0ubuntu2), python-wxgtk2.8, python-opengl, xterm | x-terminal-emulator
+Recommends: ghostscript, python-imaging
+Breaks: grass (<< 6.4.2-1~)
+Filename: pool/universe/g/grass/grass-gui_6.4.3-1_powerpc.deb
+Size: 2456052
+MD5sum: 1448c722d80fd5f4e1b4fb4e2ebe8f29
+SHA1: 642174cc47c13fd7abdaa7b7451b0763dca32e8b
+SHA256: 77e18ad648f1fced0bb3ed64c5f723dadfcb5a2844b65b8b76f99db1b33865c8
+Description: GRASS GIS graphical user interfaces
+Homepage: http://grass.osgeo.org/
+Description-md5: 6bf145f40e4f052910e511eb22945ae8
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
