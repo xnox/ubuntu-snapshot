@@ -509,6 +509,43 @@ Checksums-Sha256:
  533391a3edc731e2add540f4adcc403ee6fec7a17b48c5ea8daa3e23d09d1319 4419620 qemu_1.5.0+dfsg.orig.tar.xz
  3cbb51bbb23f61291520d1a0cc460d13941603f07a3302c333ff887254801b3c 245835 qemu_1.5.0+dfsg-3ubuntu4.debian.tar.gz
 
+Package: qtwebkit-opensource-src
+Binary: libqt5webkit5-dev, libqt5webkit5, libqt5webkit5-qmlwebkitplugin, libqt5webkit5-dbg, qtwebkit5-doc, qtwebkit5-doc-html
+Version: 5.1.1-1ubuntu1
+Section: libs
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Build-Depends: debhelper (>= 9.0.0), flex, bison, gperf, python-minimal, python2.7, ruby, libgstreamer1.0-dev, libgstreamer-plugins-base1.0-dev, libicu-dev, libsqlite3-dev, libxml2-dev, mesa-common-dev, libgl1-mesa-dev [!armel !armhf] | libgl-dev [!armel !armhf], libgles2-mesa-dev [armel armhf] | libgles2-dev [armel armhf], libglib2.0-dev, libglu1-mesa-dev [!armel !armhf] | libglu-dev [!armel !armhf], libxrender-dev, libxslt1-dev, libqt5xmlpatterns5-private-dev (>= 5.0.2), qtbase5-private-dev (>= 5.0.2), libqt5opengl5-dev (>= 5.0.2), qtscript5-private-dev (>= 5.0.2), qtdeclarative5-private-dev (>= 5.0.2), pkg-config, pkg-kde-tools (>= 0.6.4), chrpath, libpng-dev, libjpeg-dev, libfontconfig1-dev, libwebp-dev, libxcomposite-dev, qtsensors5-dev, qtlocation5-dev
+Build-Depends-Indep: libqt5sql5-sqlite, qttools5-dev-tools (>= 5.0.2)
+Architecture: any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/q/qtwebkit-opensource-src
+Files:
+ fe3b3dfe2d1bbbf5a3ba3ee62c402c39 3440 qtwebkit-opensource-src_5.1.1-1ubuntu1.dsc
+ 70e956dafcee1969de53d4de7b4691ad 31950900 qtwebkit-opensource-src_5.1.1.orig.tar.xz
+ 218bd83868c5ede3c03352437b23c55f 92962 qtwebkit-opensource-src_5.1.1-1ubuntu1.debian.tar.gz
+Uploaders: Fathi Boudra <fabo@debian.org>, Timo Jyrinki <timo@debian.org>, Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
+Homepage: http://trac.webkit.org/wiki/QtWebKit
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/qt/qt5webkit.git;a=summary
+Vcs-Bzr: https://code.launchpad.net/~kubuntu-packagers/kubuntu-packaging/qtwebkit-opensource-src
+Vcs-Git: git://anonscm.debian.org/pkg-kde/qt/qt5webkit.git
+Package-List: 
+ libqt5webkit5 deb libs optional
+ libqt5webkit5-dbg deb debug extra
+ libqt5webkit5-dev deb libdevel optional
+ libqt5webkit5-qmlwebkitplugin deb libs optional
+ qtwebkit5-doc deb doc extra
+ qtwebkit5-doc-html deb doc extra
+Checksums-Sha1:
+ 55e3729e90ecb732031c8cf140994ef2a5f58ef0 3440 qtwebkit-opensource-src_5.1.1-1ubuntu1.dsc
+ b2b016e34f8c169736faa52c1fbc7555abcd8e1e 31950900 qtwebkit-opensource-src_5.1.1.orig.tar.xz
+ b2a52de37f32f4fb6646cb8d4b8362effe0ad6e3 92962 qtwebkit-opensource-src_5.1.1-1ubuntu1.debian.tar.gz
+Checksums-Sha256:
+ 47853a28c063be92f7862de474b504be8ee2cc683dfd713ede42a29b177a666c 3440 qtwebkit-opensource-src_5.1.1-1ubuntu1.dsc
+ d6ee1e9111b0996277a512ae71736a05faa7c0de6d69ac2978adce79c3116a24 31950900 qtwebkit-opensource-src_5.1.1.orig.tar.xz
+ 2f6fa7b64723bb2e886fa149e05ecfe8824ac6f660595e5a67d09953d5500e63 92962 qtwebkit-opensource-src_5.1.1-1ubuntu1.debian.tar.gz
+
 Package: qtwebkit-source
 Binary: libqtwebkit-dev, libqtwebkit4, libqtwebkit-qmlwebkitplugin, libqtwebkit4-dbg
 Version: 2.3.2-0ubuntu1
@@ -572,60 +609,10 @@ Checksums-Sha256:
  cc03d1a357cdb7af82e3909ee8ff93cb2b2afb48aca23bfde0117d6f49f624a7 797539 routes_1.13.orig.tar.gz
  2537aa36bfec8b1e8928b2873e89bb846b530a81d19eb183a6f51661cf4bcb86 22290 routes_1.13-3.debian.tar.gz
 
-Package: systemd
-Binary: systemd, systemd-sysv, systemd-services, libpam-systemd, libsystemd-login0, libsystemd-login-dev, libsystemd-daemon0, libsystemd-daemon-dev, libsystemd-journal0, libsystemd-journal-dev, libsystemd-id128-0, libsystemd-id128-dev, udev, libudev1, libudev-dev, udev-udeb, libudev1-udeb, libgudev-1.0-0, gir1.2-gudev-1.0, libgudev-1.0-dev, python-systemd
-Version: 204-0ubuntu12
-Priority: required
-Section: admin
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Tollef Fog Heen <tfheen@debian.org>
-Build-Depends: debhelper (>= 9), libcap-dev, pkg-config, libdbus-1-dev (>= 1.3.2~), libglib2.0-dev (>= 2.22.0), xsltproc, docbook-xsl, docbook-xml, gtk-doc-tools, m4, libpam0g-dev, libaudit-dev, dh-autoreconf, automake (>= 1.11), autoconf (>= 2.63), intltool, libcryptsetup-dev (>= 2:1.4.2), libwrap0-dev, libselinux1-dev (>= 2.1.9), libacl1-dev, libattr1-dev, liblzma-dev, gperf, libkmod-dev (>= 5), libblkid-dev (>= 2.20), libgirepository1.0-dev (>= 1.31.1), gobject-introspection (>= 1.31.1), python-dev, libgcrypt11-dev, libglib2.0-doc
-Architecture: linux-any
-Standards-Version: 3.9.2
-Format: 3.0 (quilt)
-Directory: pool/main/s/systemd
-Files:
- 2cffe170a6bbe4d816886c61da4039b8 3559 systemd_204-0ubuntu12.dsc
- a07619bb19f48164fbf0761d12fd39a8 2186264 systemd_204.orig.tar.xz
- c29483bb8ac388296a803d84abff1e86 88245 systemd_204-0ubuntu12.debian.tar.gz
-Homepage: http://www.freedesktop.org/wiki/Software/systemd
-Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-systemd/systemd.git;a=summary
-Vcs-Git: git://anonscm.debian.org/pkg-systemd/systemd.git -b debian
-Package-List: 
- gir1.2-gudev-1.0 deb libs optional
- libgudev-1.0-0 deb libs optional
- libgudev-1.0-dev deb libdevel optional
- libpam-systemd deb admin extra
- libsystemd-daemon-dev deb libdevel extra
- libsystemd-daemon0 deb libs extra
- libsystemd-id128-0 deb libs extra
- libsystemd-id128-dev deb libdevel extra
- libsystemd-journal-dev deb libdevel extra
- libsystemd-journal0 deb libs extra
- libsystemd-login-dev deb libdevel extra
- libsystemd-login0 deb libs extra
- libudev-dev deb libdevel optional
- libudev1 deb libs important
- libudev1-udeb udeb debian-installer optional
- python-systemd deb python extra
- systemd deb admin extra
- systemd-services deb admin extra
- systemd-sysv deb admin extra
- udev deb admin extra
- udev-udeb udeb debian-installer extra
-Checksums-Sha1:
- 2b2602c246ab42a19291e5b070d24d37c3f909f3 3559 systemd_204-0ubuntu12.dsc
- 37b45766a44a95a6b6a7cdf4b587c151375b2053 2186264 systemd_204.orig.tar.xz
- 696ae214b77afcb424e6df48d2b0602cf076a1c8 88245 systemd_204-0ubuntu12.debian.tar.gz
-Checksums-Sha256:
- d1ed9b2f202d2784d76718ac6cfb68c116ce07f70a85add84b052f9fd4b45161 3559 systemd_204-0ubuntu12.dsc
- 072c393503c7c1e55ca7acf3db659cbd28c7fe5fa94fab3db95360bafd96731b 2186264 systemd_204.orig.tar.xz
- adae5833721713fd6343da24be8377cdaf3cb47c20e63e072800d1e3e8fd37b1 88245 systemd_204-0ubuntu12.debian.tar.gz
-Testsuite: autopkgtest
-
 Package: ubuntu-settings
 Binary: ubuntu-settings, ubuntu-touch-settings
 Version: 13.10.7
+Priority: optional
 Section: x11
 Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
 Build-Depends: debhelper (>= 9)
