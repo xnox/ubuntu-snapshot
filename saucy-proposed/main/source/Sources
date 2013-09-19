@@ -32,6 +32,68 @@ Checksums-Sha256:
  9d81e4228329e2d5cccb018ab06bc8b734fb2dede2c4d9b5c02303d4a690b76b 1940928 augeas_1.1.0.orig.tar.gz
  45c6484a3636ec838a508db600f731bfee8bf2164d8f622981757a95f29157c2 8730 augeas_1.1.0-0ubuntu1.debian.tar.gz
 
+Package: ceph
+Binary: ceph, ceph-dbg, ceph-mds, ceph-mds-dbg, ceph-fuse, ceph-fuse-dbg, rbd-fuse, rbd-fuse-dbg, ceph-common, ceph-common-dbg, ceph-fs-common, ceph-fs-common-dbg, ceph-resource-agents, librados2, librados2-dbg, librados-dev, librbd1, librbd1-dbg, librbd-dev, libcephfs1, libcephfs1-dbg, libcephfs-dev, radosgw, radosgw-dbg, rest-bench, rest-bench-dbg, ceph-test, ceph-test-dbg, python-ceph, libcephfs-java, libcephfs-jni, libcephfs-jni-dbg
+Version: 0.67.3-0ubuntu2
+Section: admin
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.hu>
+Build-Depends: autoconf, automake, autotools-dev, debhelper (>= 8~), default-jdk, dpkg-dev (>= 1.16.1~), javahelper, junit4, libaio-dev, libatomic-ops-dev, libboost-dev (>= 1.42), libboost-program-options-dev (>= 1.42), libboost-system-dev (>= 1.42), libboost-thread-dev (>= 1.42), libcurl4-gnutls-dev, libedit-dev, libexpat1-dev, libfcgi-dev, libfuse-dev, libgoogle-perftools-dev, libkeyutils-dev, libleveldb-dev, libnss3-dev, libs3-dev, libsnappy-dev, libtool, libxml2-dev, pkg-config, python-all (>= 2.6.6-3~), uuid-dev
+Architecture: linux-any all
+Standards-Version: 3.9.4
+Format: 3.0 (quilt)
+Directory: pool/main/c/ceph
+Files:
+ ec9e4a34cc54d0c28832290b9e8b5cb7 3836 ceph_0.67.3-0ubuntu2.dsc
+ 1d7f697c17cb6f4233994063598d6d6f 3309692 ceph_0.67.3.orig.tar.bz2
+ e1ef4ef0c034046bbf2530b4167c1760 15217 ceph_0.67.3-0ubuntu2.debian.tar.gz
+Uploaders: Sage Weil <sage@newdream.net>
+Homepage: http://ceph.com/
+Vcs-Browser: https://github.com/ceph/ceph
+Vcs-Git: git://github.com/ceph/ceph.git
+Package-List: 
+ ceph deb admin optional
+ ceph-common deb admin optional
+ ceph-common-dbg deb debug extra
+ ceph-dbg deb debug extra
+ ceph-fs-common deb admin optional
+ ceph-fs-common-dbg deb debug extra
+ ceph-fuse deb admin optional
+ ceph-fuse-dbg deb debug extra
+ ceph-mds deb admin optional
+ ceph-mds-dbg deb debug extra
+ ceph-resource-agents deb admin extra
+ ceph-test deb admin optional
+ ceph-test-dbg deb debug extra
+ libcephfs-dev deb libdevel optional
+ libcephfs-java deb java optional
+ libcephfs-jni deb libs optional
+ libcephfs-jni-dbg deb debug extra
+ libcephfs1 deb libs optional
+ libcephfs1-dbg deb debug extra
+ librados-dev deb libdevel optional
+ librados2 deb libs optional
+ librados2-dbg deb debug extra
+ librbd-dev deb libdevel optional
+ librbd1 deb libs optional
+ librbd1-dbg deb debug extra
+ python-ceph deb python optional
+ radosgw deb admin optional
+ radosgw-dbg deb debug extra
+ rbd-fuse deb admin optional
+ rbd-fuse-dbg deb debug extra
+ rest-bench deb admin optional
+ rest-bench-dbg deb debug extra
+Checksums-Sha1:
+ 94dfd0588fa1f044c882895bc5b9c423d536f4b0 3836 ceph_0.67.3-0ubuntu2.dsc
+ 7e928ff86cfa6edc00806c6e881f6b91fa994881 3309692 ceph_0.67.3.orig.tar.bz2
+ 10de5a5679cef3944a8d39deeef55773541b88a9 15217 ceph_0.67.3-0ubuntu2.debian.tar.gz
+Checksums-Sha256:
+ 775fb8eacdccce505b36f20563192d9286eea5cc65c238d5931abf1e78fc0d47 3836 ceph_0.67.3-0ubuntu2.dsc
+ b95532aaaa5a89d8169845afbe9255ff268aa47bf607c25af1ad75bfbb594617 3309692 ceph_0.67.3.orig.tar.bz2
+ 3ba6d0399bc3eb2666aea709008f8b49f103f8c1b66ec1f92150fae781eeee96 15217 ceph_0.67.3-0ubuntu2.debian.tar.gz
+Testsuite: autopkgtest
+
 Package: flask
 Binary: python-flask, python3-flask, python-flask-doc
 Version: 0.10.1-2
@@ -485,49 +547,6 @@ Checksums-Sha256:
  d073e86407dd6eef9ae8bed1b87a1e8bac8b4c0f2ac98c2c776b15caf1a15570 14581581 python2.7_2.7.5.orig.tar.gz
  e7f71105ff0ad7a96a106cd8111d6c89275e8740be36110c2dbc4e8eb27b8c58 430146 python2.7_2.7.5-8ubuntu2.diff.gz
 Testsuite: autopkgtest
-
-Package: python3-defaults
-Binary: python3, python3-minimal, python3-examples, python3-dev, libpython3-dev, libpython3-stdlib, idle3, python3-doc, python3-dbg, libpython3-dbg, python3-all, python3-all-dev, python3-all-dbg, libpython3-all-dev, libpython3-all-dbg
-Version: 3.3.2-14ubuntu1
-Priority: important
-Section: python
-Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
-Original-Maintainer: Matthias Klose <doko@debian.org>
-Build-Depends: debhelper (>= 7.0.50~), python3-minimal:any, python3-docutils, dpkg-dev (>= 1.16.1~), debiandoc-sgml, lsb-release
-Build-Depends-Indep: libhtml-tree-perl
-Architecture: any all
-Standards-Version: 3.9.4
-Format: 1.0
-Directory: pool/main/p/python3-defaults
-Files:
- 05d413f37580fd0564d1ef339a045389 2027 python3-defaults_3.3.2-14ubuntu1.dsc
- d56d44ae165cc6739955c24daea1af15 130105 python3-defaults_3.3.2-14ubuntu1.tar.gz
-Uploaders: Piotr Ożarowski <piotr@debian.org>, Scott Kitterman <scott@kitterman.com>
-Homepage: http://www.python.org/
-Vcs-Browser: http://alioth.debian.org/scm/loggerhead/pkg-python/python3-defaults-debian/files
-Vcs-Bzr: http://alioth.debian.org/anonscm/bzr/pkg-python/python3-defaults-debian
-Package-List: 
- idle3 deb python optional
- libpython3-all-dbg deb debug extra
- libpython3-all-dev deb python optional
- libpython3-dbg deb debug extra
- libpython3-dev deb python optional
- libpython3-stdlib deb python optional
- python3 deb python optional
- python3-all deb python optional
- python3-all-dbg deb debug extra
- python3-all-dev deb python optional
- python3-dbg deb debug extra
- python3-dev deb python optional
- python3-doc deb doc optional
- python3-examples deb python optional
- python3-minimal deb python optional
-Checksums-Sha1:
- df94dcd2c142a3cfe3550d7dec93d660070f4a5f 2027 python3-defaults_3.3.2-14ubuntu1.dsc
- 45b7f515508eb8f3fba4f97b7142070b42bc5e67 130105 python3-defaults_3.3.2-14ubuntu1.tar.gz
-Checksums-Sha256:
- dc83b814cbb6d554f036da446097495b83cc97483898174a63b6175b0b2e7632 2027 python3-defaults_3.3.2-14ubuntu1.dsc
- e00e8a1dc5235703ae33d4ebd2562489becc1ba30af85564d2f206ee0ef9d2f1 130105 python3-defaults_3.3.2-14ubuntu1.tar.gz
 
 Package: qemu
 Binary: qemu, qemu-keymaps, qemu-system, qemu-system-common, qemu-system-misc, qemu-system-arm, qemu-system-mips, qemu-system-ppc, qemu-system-sparc, qemu-system-x86, qemu-user, qemu-user-static, qemu-utils, qemu-guest-agent, qemu-kvm, qemu-common
