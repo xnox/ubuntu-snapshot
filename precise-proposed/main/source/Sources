@@ -170,6 +170,7 @@ Checksums-Sha256:
 Package: gnome-settings-daemon
 Binary: gnome-settings-daemon, gnome-settings-daemon-dev
 Version: 3.4.2-0ubuntu0.6.3
+Priority: extra
 Section: gnome
 Maintainer: Ubuntu Desktop Team <ubuntu-desktop@lists.ubuntu.com>
 Original-Maintainer: Debian GNOME Maintainers <pkg-gnome-maintainers@lists.alioth.debian.org>
@@ -1228,6 +1229,42 @@ Checksums-Sha256:
  c836c6095cab363ccd1bbde9f96d0fa008eaa880ed838c9ce04579bc0d283d3a 1203498 networkmanagement_0.9.0.1.orig.tar.bz2
  565c73c206ba3c160756866fa6891dfa6d2797406806c0028d0a97aa6b808f3c 10357 networkmanagement_0.9.0.1-0ubuntu2.1.debian.tar.gz
 
+Package: openldap
+Binary: slapd, ldap-utils, libldap-2.4-2, libldap-2.4-2-dbg, libldap2-dev, slapd-dbg
+Version: 2.4.28-1.1ubuntu4.4
+Section: net
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian OpenLDAP Maintainers <pkg-openldap-devel@lists.alioth.debian.org>
+Build-Depends: debhelper (>= 8.9.0~), dpkg-dev (>= 1.16.1), libdb5.1-dev, libgcrypt-dev, libgnutls-dev (>= 1.7), unixodbc-dev, libncurses5-dev, libperl-dev (>= 5.8.0), libsasl2-dev, libslp-dev, libltdl-dev | libltdl3-dev (>= 1.4.3), libwrap0-dev, perl, debconf-utils, po-debconf, quilt (>= 0.46-7), groff-base, time, heimdal-dev, hardening-wrapper, dh-autoreconf, dh-apparmor
+Build-Conflicts: autoconf2.13, bind-dev, libbind-dev, libicu-dev
+Architecture: any
+Standards-Version: 3.9.1
+Format: 1.0
+Directory: pool/main/o/openldap
+Files:
+ 767180836dcab36fa2b16212cf07989d 2196 openldap_2.4.28-1.1ubuntu4.4.dsc
+ 3812086464b9145342733f9ea735ea66 4714012 openldap_2.4.28.orig.tar.gz
+ 3e0bfc9b167e1cb00cfaab91de67cbd8 177940 openldap_2.4.28-1.1ubuntu4.4.diff.gz
+Uploaders: Roland Bauerschmidt <rb@debian.org>, Stephen Frost <sfrost@debian.org>, Steve Langasek <vorlon@debian.org>, Torsten Landschoff <torsten@debian.org>, Matthijs Möhlmann <matthijs@cacholong.nl>, Russ Allbery <rra@debian.org>
+Homepage: http://www.openldap.org/
+Vcs-Browser: http://svn.debian.org/wsvn/pkg-openldap/openldap/trunk
+Vcs-Svn: svn://svn.debian.org/pkg-openldap/openldap/trunk
+Package-List: 
+ ldap-utils deb net optional
+ libldap-2.4-2 deb libs standard
+ libldap-2.4-2-dbg deb debug extra
+ libldap2-dev deb libdevel extra
+ slapd deb net optional
+ slapd-dbg deb debug extra
+Checksums-Sha1:
+ b5e51b4492d4a9080bd474ab536f3884314ee6a8 2196 openldap_2.4.28-1.1ubuntu4.4.dsc
+ c1345e4cabea83912d511b77bd227c120e29834b 4714012 openldap_2.4.28.orig.tar.gz
+ dffe90d6d9efbf9d00c9e69eea0ba7b052e2922c 177940 openldap_2.4.28-1.1ubuntu4.4.diff.gz
+Checksums-Sha256:
+ 921543f446e786ac8373b7b2e075f47a811fbc484f2d3d48d30054315b2994e2 2196 openldap_2.4.28-1.1ubuntu4.4.dsc
+ 1fcc10fc22d9ffff7940df76135a4a349ea4c6d1ec212e4542493a500e85448a 4714012 openldap_2.4.28.orig.tar.gz
+ ccbd7d270f9a6cf9fb2b90bd1f85bbd2f0d5f159c4671e4c6e90fc0f97791b27 177940 openldap_2.4.28-1.1ubuntu4.4.diff.gz
+
 Package: partman-auto
 Binary: partman-auto
 Version: 101ubuntu2.1
@@ -1279,6 +1316,33 @@ Checksums-Sha256:
  144a71a261b648e9d4948e336bf2680a8ee39a29f5d37397bc467596bb5e0291 184766 partman-basicfilesystems_71ubuntu3.2.tar.gz
 Debian-Vcs-Browser: http://git.debian.org/?p=d-i/partman-basicfilesystems.git
 Debian-Vcs-Git: git://git.debian.org/d-i/partman-basicfilesystems.git
+
+Package: partman-efi
+Binary: partman-efi
+Version: 25ubuntu1.2
+Section: debian-installer
+Maintainer: Ubuntu Installer Team <ubuntu-installer@lists.ubuntu.com>
+Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.org>
+Build-Depends: debhelper (>= 7.0.8), dh-di, po-debconf (>= 0.5.0)
+Architecture: i386 ia64 amd64
+Standards-Version: 3.8.1
+Format: 1.0
+Directory: pool/main/p/partman-efi
+Files:
+ 91bc714c271c4a32667e97cdaef6b260 1919 partman-efi_25ubuntu1.2.dsc
+ 7f6d53134be763adecff49920f0496c5 54450 partman-efi_25ubuntu1.2.tar.gz
+Uploaders: dann frazier <dannf@debian.org>, Christian Perrier <bubulle@debian.org>
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/partman-efi/ubuntu
+Package-List: 
+ partman-efi udeb debian-installer standard
+Checksums-Sha1:
+ eb7ad5b12869fbe7c8d2d8d7b6f7e32e95cd3385 1919 partman-efi_25ubuntu1.2.dsc
+ 5e4ee7b7b4697a27fa4269ff34fd60f53412cf1d 54450 partman-efi_25ubuntu1.2.tar.gz
+Checksums-Sha256:
+ 3443a06fbb32c8768191e6c89414a8d3112e4e2a7425353d04d550fe6309cdda 1919 partman-efi_25ubuntu1.2.dsc
+ 73dc2f867ea847821dfdbb5c5c31d6546ce8a7b1253953d83c9634e16c164424 54450 partman-efi_25ubuntu1.2.tar.gz
+Debian-Vcs-Browser: http://git.debian.org/?p=d-i/partman-efi.git
+Debian-Vcs-Git: git://git.debian.org/d-i/partman-efi.git
 
 Package: python-boto
 Binary: python-boto
