@@ -970,17 +970,17 @@ Installed-Size: 207
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Andrew O. Shadura <bugzilla@tut.by>
 Architecture: amd64
-Version: 0.7.5ubuntu2.1
+Version: 0.7.5ubuntu2.2
 Replaces: netbase (<< 5.0)
 Depends: iproute (>= 20071016-1), libc6 (>= 2.14), upstart-job, lsb-base, initscripts (>= 2.88dsf-13.3)
 Pre-Depends: dpkg (>= 1.15.7.2)
 Suggests: isc-dhcp-client | dhcp-client, ppp, rdnssd, net-tools
 Breaks: dhcp-client (<< 3.0), netbase (<< 5.0)
-Filename: pool/main/i/ifupdown/ifupdown_0.7.5ubuntu2.1_amd64.deb
-Size: 52786
-MD5sum: 844e6c8d5a48b15310567f323cfe34c9
-SHA1: a659b8c9b62ab5e219a780a3158298edeb5f03c4
-SHA256: 7a0125424784a6dfac68bfd78d0fe42f493719d137b43ff657d2841125119fe2
+Filename: pool/main/i/ifupdown/ifupdown_0.7.5ubuntu2.2_amd64.deb
+Size: 52580
+MD5sum: 63c49a87a73c7bf885cb2f812800acac
+SHA1: 082fd74da8d4329f468c3be25761a9937957ae78
+SHA256: b7d56d4a514af2980c95ee5fc3123b65f09db964088705d685aa04a9749bf6ed
 Description: high level tools to configure network interfaces
 Multi-Arch: foreign
 Description-md5: 442edbd184a6e1febc9b203604eb38f4
@@ -2313,6 +2313,115 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Supported: 9m
 Task: minimal
+
+Package: libxen-4.2
+Priority: optional
+Section: libs
+Installed-Size: 371
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Xen Team <pkg-xen-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: xen
+Version: 4.2.2-0ubuntu0.13.04.1
+Depends: libc6 (>= 2.15), liblzma5 (>= 5.1.1alpha+20120614), zlib1g (>= 1:1.1.4)
+Filename: pool/main/x/xen/libxen-4.2_4.2.2-0ubuntu0.13.04.1_amd64.deb
+Size: 140752
+MD5sum: 83fb296e9f16e7565fa492cb3b8a7aa9
+SHA1: 06bcc2238fea45390134fafa0febc0dd5933e399
+SHA256: 86584b3fe32b790ae55eb8279da844db0db88a8eb93bf250f3ed2a3d65f250d6
+Description: Public libs for Xen
+Description-md5: cd7ad869e7a3a001fd3c7b337111e06f
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: virt-host
+
+Package: libxen-dev
+Priority: optional
+Section: libdevel
+Installed-Size: 1246
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Xen Team <pkg-xen-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: xen
+Version: 4.2.2-0ubuntu0.13.04.1
+Depends: libxen-4.2 (= 4.2.2-0ubuntu0.13.04.1), libxenstore3.0 (= 4.2.2-0ubuntu0.13.04.1)
+Filename: pool/main/x/xen/libxen-dev_4.2.2-0ubuntu0.13.04.1_amd64.deb
+Size: 311874
+MD5sum: bac5a98a806e2eca8e0997ffb4214395
+SHA1: 9f8fcb1a479dda65cdbd585ec11cc31ec0ddb0b3
+SHA256: 45236f8d62ef277c9a5349b1d07e0208b2cffad7fcd2a6e33a9a940742b5e912
+Description: Public headers and libs for Xen
+Description-md5: 16aef021d38a9f4fed58c122c9b3e1cf
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libxen-ocaml
+Priority: optional
+Section: ocaml
+Installed-Size: 233
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Xen Team <pkg-xen-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: xen
+Version: 4.2.2-0ubuntu0.13.04.1
+Provides: libxen-ocaml-ev576
+Depends: libc6 (>= 2.14), libxen-4.2 (>= 4.2.2), ocaml-base-nox-3.12.1
+Filename: pool/main/x/xen/libxen-ocaml_4.2.2-0ubuntu0.13.04.1_amd64.deb
+Size: 54690
+MD5sum: 7f874eec493c8c9cba15d8080b1417dc
+SHA1: c8a371bf6e611bc8b02f4e411933ba9a14da721f
+SHA256: 46fe46f2071a899d44e9dd2f3cce2f833bb634382655fdc751ea429d55691dde
+Description: OCaml libraries for controlling Xen
+Description-md5: c9c37edde6c8bfae0ec1ac70e828dbac
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libxen-ocaml-dev
+Priority: optional
+Section: ocaml
+Installed-Size: 372
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Xen Team <pkg-xen-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: xen
+Version: 4.2.2-0ubuntu0.13.04.1
+Provides: libxen-ocaml-dev-ev576
+Depends: libxen-ocaml (= 4.2.2-0ubuntu0.13.04.1), libxen-dev (= 4.2.2-0ubuntu0.13.04.1), ocaml-nox-3.12.1
+Filename: pool/main/x/xen/libxen-ocaml-dev_4.2.2-0ubuntu0.13.04.1_amd64.deb
+Size: 81396
+MD5sum: 0d242b508d8a037ea1c55fa8a13c92ba
+SHA1: b3c7eb3668e67d20a2f565119522593a81bd0902
+SHA256: 1ad2ff26cbdb4475a7826347d928c1d44e7d4900a142031d51157e39afa1ba18
+Description: OCaml libraries for controlling Xen (devel package)
+Description-md5: 9c87ca7440bf9a1fcef15be5c5ae0a2d
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+
+Package: libxenstore3.0
+Priority: optional
+Section: libs
+Installed-Size: 83
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Debian Xen Team <pkg-xen-devel@lists.alioth.debian.org>
+Architecture: amd64
+Source: xen
+Version: 4.2.2-0ubuntu0.13.04.1
+Depends: libc6 (>= 2.14)
+Filename: pool/main/x/xen/libxenstore3.0_4.2.2-0ubuntu0.13.04.1_amd64.deb
+Size: 21552
+MD5sum: a83c45131a0d20ade073d963e89991a9
+SHA1: 52bf6b116de090f78a70e78f155d615421cb6bbf
+SHA256: fcf87444be59f1d3dcfab48cfd609eb092a419169d48f9a9d96ab9acda1b161f
+Description: Xenstore communications library for Xen
+Description-md5: c2462dfd8088a311ca74072df39a0705
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Supported: 9m
+Task: virt-host
 
 Package: linux
 Priority: optional
