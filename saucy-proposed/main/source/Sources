@@ -1,6 +1,7 @@
 Package: acct
 Binary: acct
 Version: 6.5.5-1ubuntu4
+Priority: optional
 Section: admin
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Mathieu Trudel-Lapierre <mathieu.tl@gmail.com>
@@ -24,6 +25,45 @@ Checksums-Sha256:
  d7dc0f717ecc3dc3f2b2242730ed61b3e144fb460d07e101064ab484e4d3cf2b 1855 acct_6.5.5-1ubuntu4.dsc
  4163c87b9e92a73a65eaeadc6c41caa4626da782ff26d6e7a945edcc140a6fd5 747225 acct_6.5.5.orig.tar.gz
  cb5e64cc08319e1f4a3c3945edab07826fef18711bea5ce59a49ca87df956eea 23235 acct_6.5.5-1ubuntu4.debian.tar.gz
+
+Package: apport
+Binary: apport, python-problem-report, python3-problem-report, python-apport, python3-apport, apport-retrace, apport-valgrind, apport-gtk, apport-kde, dh-apport, apport-noui
+Version: 2.12.3-0ubuntu1
+Section: utils
+Maintainer: Martin Pitt <martin.pitt@ubuntu.com>
+Build-Depends: debhelper (>= 9), dh-translations, gdb, python-twisted-core, python-gi, python3-gi, gir1.2-glib-2.0 (>= 1.29.17), lsb-release, net-tools, python-all, python3-all
+Build-Depends-Indep: python-distutils-extra (>= 2.24~), python3-distutils-extra (>= 2.24~), python-apt (>= 0.7.9), python3-apt (>= 0.7.9), intltool, xvfb, python3-mock, procps, psmisc, gir1.2-gtk-3.0 (>= 3.1.90), gir1.2-wnck-3.0, pep8, pyflakes, xterm, dbus-x11, gvfs-daemons, libglib2.0-dev, libnih-dev, libc6-dbg | libc-dbg, default-jdk | java-sdk
+Architecture: all
+Standards-Version: 3.9.4
+Format: 1.0
+Directory: pool/main/a/apport
+Files:
+ e5c891728fede5db1f40b712a671c730 2812 apport_2.12.3-0ubuntu1.dsc
+ d091be5693196e42704113797be772fc 1215540 apport_2.12.3.orig.tar.gz
+ 84bfc7638e13ec379d7618d0a65f80b5 132132 apport_2.12.3-0ubuntu1.diff.gz
+Homepage: https://wiki.ubuntu.com/Apport
+Vcs-Bzr: https://code.launchpad.net/~ubuntu-core-dev/ubuntu/saucy/apport/ubuntu
+Package-List: 
+ apport deb utils optional
+ apport-gtk deb gnome optional
+ apport-kde deb kde optional
+ apport-noui deb utils optional
+ apport-retrace deb devel optional
+ apport-valgrind deb devel optional
+ dh-apport deb devel optional
+ python-apport deb python optional
+ python-problem-report deb python optional
+ python3-apport deb python optional
+ python3-problem-report deb python optional
+Checksums-Sha1:
+ f849dd41ca5492894dcbe3f8a44b8da84dedbe54 2812 apport_2.12.3-0ubuntu1.dsc
+ 19c2467ae44b46cbf6e57f44143f20bdc08f80b2 1215540 apport_2.12.3.orig.tar.gz
+ f78a427d499f27657e405565e7475c5d0b56dc93 132132 apport_2.12.3-0ubuntu1.diff.gz
+Checksums-Sha256:
+ d2e3f7c1b7ab821ad76ff9161776ca6658ac100f5f1ec48085cc49e03d36b555 2812 apport_2.12.3-0ubuntu1.dsc
+ c89e36f61a09be03d41e0fa5045d267151780a8bca3067d044f4aebc791b92cf 1215540 apport_2.12.3.orig.tar.gz
+ d0ff2380e2fa12820806ba4d627a462bc5b89c7bf1bba310a809fc7f7881f120 132132 apport_2.12.3-0ubuntu1.diff.gz
+Testsuite: autopkgtest
 
 Package: augeas
 Binary: augeas-tools, libaugeas-dev, libaugeas0, augeas-dbg, augeas-lenses, augeas-doc
@@ -482,20 +522,20 @@ Checksums-Sha256:
 
 Package: qtwebkit-opensource-src
 Binary: libqt5webkit5-dev, libqt5webkit5, libqt5webkit5-qmlwebkitplugin, libqt5webkit5-dbg, qtwebkit5-doc, qtwebkit5-doc-html
-Version: 5.1.1-1ubuntu1
+Version: 5.1.1-1ubuntu2
 Section: libs
 Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
 Original-Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
-Build-Depends: debhelper (>= 9.0.0), flex, bison, gperf, python-minimal, python2.7, ruby, libgstreamer1.0-dev, libgstreamer-plugins-base1.0-dev, libicu-dev, libsqlite3-dev, libxml2-dev, mesa-common-dev, libgl1-mesa-dev [!armel !armhf] | libgl-dev [!armel !armhf], libgles2-mesa-dev [armel armhf] | libgles2-dev [armel armhf], libglib2.0-dev, libglu1-mesa-dev [!armel !armhf] | libglu-dev [!armel !armhf], libxrender-dev, libxslt1-dev, libqt5xmlpatterns5-private-dev (>= 5.0.2), qtbase5-private-dev (>= 5.0.2), libqt5opengl5-dev (>= 5.0.2), qtscript5-private-dev (>= 5.0.2), qtdeclarative5-private-dev (>= 5.0.2), pkg-config, pkg-kde-tools (>= 0.6.4), chrpath, libpng-dev, libjpeg-dev, libfontconfig1-dev, libwebp-dev, libxcomposite-dev, qtsensors5-dev, qtlocation5-dev
+Build-Depends: debhelper (>= 9.0.0), flex, bison, gperf, python-minimal, python2.7, ruby, libgstreamer1.0-dev, libgstreamer-plugins-base1.0-dev, libicu-dev, libsqlite3-dev, libxml2-dev, mesa-common-dev, libgl1-mesa-dev [!armel !armhf] | libgl-dev [!armel !armhf], libgles2-mesa-dev [armel armhf] | libgles2-dev [armel armhf], libglib2.0-dev, libglu1-mesa-dev [!armel !armhf] | libglu-dev [!armel !armhf], libxrender-dev, libxslt1-dev, libqt5xmlpatterns5-private-dev (>= 5.0.2), qtbase5-private-dev (>= 5.0.2), libqt5opengl5-dev (>= 5.0.2), qtscript5-private-dev (>= 5.0.2), qtdeclarative5-private-dev (>= 5.0.2), pkg-config, pkg-kde-tools (>= 0.6.4), chrpath, libpng-dev, libjpeg-dev, libfontconfig1-dev, libxcomposite-dev, qtsensors5-dev, qtlocation5-dev
 Build-Depends-Indep: libqt5sql5-sqlite, qttools5-dev-tools (>= 5.0.2)
 Architecture: any all
 Standards-Version: 3.9.4
 Format: 3.0 (quilt)
 Directory: pool/main/q/qtwebkit-opensource-src
 Files:
- fe3b3dfe2d1bbbf5a3ba3ee62c402c39 3440 qtwebkit-opensource-src_5.1.1-1ubuntu1.dsc
+ ff1eb4a2ee885d9965092914edeccb5e 3427 qtwebkit-opensource-src_5.1.1-1ubuntu2.dsc
  70e956dafcee1969de53d4de7b4691ad 31950900 qtwebkit-opensource-src_5.1.1.orig.tar.xz
- 218bd83868c5ede3c03352437b23c55f 92962 qtwebkit-opensource-src_5.1.1-1ubuntu1.debian.tar.gz
+ c3c69dd40bfd00ed649bb0ed892123b5 92922 qtwebkit-opensource-src_5.1.1-1ubuntu2.debian.tar.gz
 Uploaders: Fathi Boudra <fabo@debian.org>, Timo Jyrinki <timo@debian.org>, Lisandro Damián Nicanor Pérez Meyer <lisandro@debian.org>
 Homepage: http://trac.webkit.org/wiki/QtWebKit
 Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-kde/qt/qt5webkit.git;a=summary
@@ -509,13 +549,13 @@ Package-List:
  qtwebkit5-doc deb doc extra
  qtwebkit5-doc-html deb doc extra
 Checksums-Sha1:
- 55e3729e90ecb732031c8cf140994ef2a5f58ef0 3440 qtwebkit-opensource-src_5.1.1-1ubuntu1.dsc
+ 5335053e74ae893d6b1d0f892ec272b5db466aaa 3427 qtwebkit-opensource-src_5.1.1-1ubuntu2.dsc
  b2b016e34f8c169736faa52c1fbc7555abcd8e1e 31950900 qtwebkit-opensource-src_5.1.1.orig.tar.xz
- b2a52de37f32f4fb6646cb8d4b8362effe0ad6e3 92962 qtwebkit-opensource-src_5.1.1-1ubuntu1.debian.tar.gz
+ 0bbea7ac44755426d6ffdca48c61cbe21524d0cd 92922 qtwebkit-opensource-src_5.1.1-1ubuntu2.debian.tar.gz
 Checksums-Sha256:
- 47853a28c063be92f7862de474b504be8ee2cc683dfd713ede42a29b177a666c 3440 qtwebkit-opensource-src_5.1.1-1ubuntu1.dsc
+ 71571071f3b1efcc65f027759fee4c54f6615132a2efdd8b706a4cb0ff556562 3427 qtwebkit-opensource-src_5.1.1-1ubuntu2.dsc
  d6ee1e9111b0996277a512ae71736a05faa7c0de6d69ac2978adce79c3116a24 31950900 qtwebkit-opensource-src_5.1.1.orig.tar.xz
- 2f6fa7b64723bb2e886fa149e05ecfe8824ac6f660595e5a67d09953d5500e63 92962 qtwebkit-opensource-src_5.1.1-1ubuntu1.debian.tar.gz
+ fc6f400ff1475f2c94959f9e90f163ae46560ae4a8ae988209c7c208d83121b7 92922 qtwebkit-opensource-src_5.1.1-1ubuntu2.debian.tar.gz
 
 Package: qtwebkit-source
 Binary: libqtwebkit-dev, libqtwebkit4, libqtwebkit-qmlwebkitplugin, libqtwebkit4-dbg
