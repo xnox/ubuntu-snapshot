@@ -133,6 +133,30 @@ Description-md5: 881dd7ae5d144e48dc92946d884ecd75
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 
+Package: devscripts
+Priority: optional
+Section: devel
+Installed-Size: 1727
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Devscripts Devel Team <devscripts-devel@lists.alioth.debian.org>
+Architecture: powerpc
+Version: 2.13.4
+Replaces: ubuntu-dev-tools (<< 0.124~)
+Depends: dpkg-dev (>= 1.16.4), perl, python3:any (>= 3.2.3-3~), python3, libc6 (>= 2.4)
+Recommends: at, dctrl-tools, dput | dupload, fakeroot, gnupg, libdistro-info-perl, libencode-locale-perl, libjson-perl, libparse-debcontrol-perl, liburi-perl, libwww-perl, lintian, man-db, patch, patchutils, python3-debian (>= 0.1.15), python3-magic, sensible-utils, strace, unzip, wdiff, wget | curl, xz-utils
+Suggests: bsd-mailx | mailx, build-essential, cvs-buildpackage, devscripts-el, gnuplot, gpgv, libauthen-sasl-perl, libfile-desktopentry-perl, libnet-smtp-ssl-perl, libterm-size-perl, libtimedate-perl, libyaml-syck-perl, mutt, ssh-client, svn-buildpackage, w3m, debian-keyring, equivs, libcrypt-ssleay-perl, libsoap-lite-perl
+Breaks: ubuntu-dev-tools (<< 0.147~)
+Filename: pool/main/d/devscripts/devscripts_2.13.4_powerpc.deb
+Size: 848180
+MD5sum: 22f60e8d886faf1e2c412d9497a1d51b
+SHA1: 986827b965b7419388b7c880ff79f40031c87a7b
+SHA256: c2a4b42ae7d19e2005c7883adb850af43644aba4e40657041e2ff034ffd89a4f
+Description: scripts to make the life of a Debian Package maintainer easier
+Multi-Arch: foreign
+Description-md5: fe9e301f48e4d09d92b3c42677fb7310
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+
 Package: fonts-opensymbol
 Priority: optional
 Section: fonts
@@ -178,6 +202,81 @@ Description-md5: 162c569a3952f4e1717dfc2d72f6bb6c
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
+
+Package: gnupg-agent
+Priority: optional
+Section: utils
+Installed-Size: 1050
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Eric Dorland <eric@debian.org>
+Architecture: powerpc
+Source: gnupg2
+Version: 2.0.20-1ubuntu2
+Replaces: gnupg2 (<< 2.0.18-2), gpgsm (<< 2.0.18-2), newpg
+Depends: libassuan0 (>= 2.0.2), libc6 (>= 2.15), libgcrypt11 (>= 1.4.5), libgpg-error0 (>= 1.10), libpth20 (>= 2.0.7), libreadline6 (>= 6.0), pinentry-gtk2 | pinentry-curses | pinentry
+Recommends: gnupg2 | gpgsm | gnupg
+Conflicts: newpg
+Breaks: gnupg2 (<< 2.0.18-2), gpgsm (<< 2.0.18-2)
+Filename: pool/main/g/gnupg2/gnupg-agent_2.0.20-1ubuntu2_powerpc.deb
+Size: 434530
+MD5sum: 31cbd0f6ee5e85868f7509cba5de9e94
+SHA1: 25033dad9ac2b24b7ba11c4fa565744820bbdfd9
+SHA256: 2b3efe8217080412e1773f1829eff4e62a10453fd48d50c8e94fdb5fdc04022a
+Description: GNU privacy guard - password agent
+Multi-Arch: foreign
+Homepage: http://www.gnupg.org/
+Description-md5: dcf7e2d3c3f22b87f14eec4c0034623c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
+Package: gnupg2
+Priority: extra
+Section: utils
+Installed-Size: 2612
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Eric Dorland <eric@debian.org>
+Architecture: powerpc
+Version: 2.0.20-1ubuntu2
+Depends: gnupg-agent (= 2.0.20-1ubuntu2), libassuan0 (>= 2.0.1), libbz2-1.0, libc6 (>= 2.15), libcurl3-gnutls (>= 7.16.2), libgcrypt11 (>= 1.4.5), libgpg-error0 (>= 1.10), libksba8 (>= 1.2.0), libreadline6 (>= 6.0), zlib1g (>= 1:1.1.4), dpkg (>= 1.15.4) | install-info
+Suggests: gnupg-doc, xloadimage
+Conflicts: gpg-idea (<= 2.2)
+Filename: pool/main/g/gnupg2/gnupg2_2.0.20-1ubuntu2_powerpc.deb
+Size: 1048474
+MD5sum: 352097459b540add7191cba6e4104d6c
+SHA1: 35b244a18953a8024f6fe8e6c6e1d661eb66b450
+SHA256: 528b62437eab4e6a3e1d85ab5b1b957faaa4867b9574f41c287ea10340da3958
+Description: GNU privacy guard - a free PGP replacement (new v2.x)
+Multi-Arch: foreign
+Homepage: http://www.gnupg.org/
+Description-md5: bc5f056bcf1325a9dbf2ba884ea744db
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
+Package: gpgsm
+Priority: optional
+Section: utils
+Installed-Size: 546
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Eric Dorland <eric@debian.org>
+Architecture: powerpc
+Source: gnupg2
+Version: 2.0.20-1ubuntu2
+Replaces: gnupg-agent, gnupg2 (<< 2.0.0-2)
+Depends: libassuan0 (>= 2.0.1), libc6 (>= 2.7), libgcrypt11 (>= 1.4.5), libgpg-error0 (>= 1.10), libksba8 (>= 1.2.0), libreadline6 (>= 6.0), scdaemon (= 2.0.20-1ubuntu2)
+Filename: pool/main/g/gnupg2/gpgsm_2.0.20-1ubuntu2_powerpc.deb
+Size: 222034
+MD5sum: e7c27a096480099aa5c1697efe014926
+SHA1: c41a04045c0d396a54eae2f65347a6bf1eed2dd9
+SHA256: 146b7f5e372daf0503d00f441aeb268a7e08ae0704a7fbba88c096ab4a7c85c9
+Description: GNU privacy guard - S/MIME version
+Multi-Arch: foreign
+Homepage: http://www.gnupg.org/
+Description-md5: eaa08168026822f8656ab2343df90485
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full
 
 Package: idle
 Priority: optional
@@ -5301,6 +5400,31 @@ Description-md5: 2c65298afe6300be7b1ce793bdf9fb81
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: virt-host, edubuntu-desktop-gnome
+
+Package: scdaemon
+Priority: optional
+Section: utils
+Installed-Size: 494
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Eric Dorland <eric@debian.org>
+Architecture: powerpc
+Source: gnupg2
+Version: 2.0.20-1ubuntu2
+Replaces: gpgsm (<< 2.0.18-2)
+Depends: libassuan0 (>= 2.0.2), libc6 (>= 2.15), libgcrypt11 (>= 1.4.5), libgpg-error0 (>= 1.10), libksba8 (>= 1.2.0), libpth20 (>= 2.0.7), libusb-0.1-4 (>= 2:0.1.12)
+Breaks: gpgsm (<< 2.0.18-2)
+Filename: pool/main/g/gnupg2/scdaemon_2.0.20-1ubuntu2_powerpc.deb
+Size: 188000
+MD5sum: 0168b2789fd918b8c0ccccae7cc62460
+SHA1: 8a374f1327ef5c62eb99413f9f842f15da5be992
+SHA256: 5b2d6f7680205e9320b5f10e9c1c5aa3ca04b415f31131d1e408fa0bee91305e
+Description: GNU privacy guard - smart card support
+Multi-Arch: foreign
+Homepage: http://www.gnupg.org/
+Description-md5: ade00d73739242cbebc5e97599fd6bb7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full
 
 Package: unity
 Priority: optional
