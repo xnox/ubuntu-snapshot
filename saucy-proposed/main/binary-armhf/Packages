@@ -203,6 +203,81 @@ Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: ubuntu-desktop, ubuntu-usb, edubuntu-desktop, edubuntu-usb, ubuntu-gnome-desktop
 
+Package: gnupg-agent
+Priority: optional
+Section: utils
+Installed-Size: 641
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Eric Dorland <eric@debian.org>
+Architecture: armhf
+Source: gnupg2
+Version: 2.0.20-1ubuntu2
+Replaces: gnupg2 (<< 2.0.18-2), gpgsm (<< 2.0.18-2), newpg
+Depends: libassuan0 (>= 2.0.2), libc6 (>= 2.15), libgcrypt11 (>= 1.4.5), libgpg-error0 (>= 1.10), libpth20 (>= 2.0.7), libreadline6 (>= 6.0), pinentry-gtk2 | pinentry-curses | pinentry
+Recommends: gnupg2 | gpgsm | gnupg
+Conflicts: newpg
+Breaks: gnupg2 (<< 2.0.18-2), gpgsm (<< 2.0.18-2)
+Filename: pool/main/g/gnupg2/gnupg-agent_2.0.20-1ubuntu2_armhf.deb
+Size: 355834
+MD5sum: 609bfe5b1074eb0bb6a57688a2467dd7
+SHA1: d4d23d13b9c76de685f1a105a2eefd73e602da50
+SHA256: 29966acea590214d1a52f47b0a505791be118368ae0df97f1becfc343addd5fa
+Description: GNU privacy guard - password agent
+Multi-Arch: foreign
+Homepage: http://www.gnupg.org/
+Description-md5: dcf7e2d3c3f22b87f14eec4c0034623c
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
+Package: gnupg2
+Priority: extra
+Section: utils
+Installed-Size: 1900
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Eric Dorland <eric@debian.org>
+Architecture: armhf
+Version: 2.0.20-1ubuntu2
+Depends: gnupg-agent (= 2.0.20-1ubuntu2), libassuan0 (>= 2.0.1), libbz2-1.0, libc6 (>= 2.15), libcurl3-gnutls (>= 7.16.2), libgcrypt11 (>= 1.4.5), libgpg-error0 (>= 1.10), libksba8 (>= 1.2.0), libreadline6 (>= 6.0), zlib1g (>= 1:1.1.4), dpkg (>= 1.15.4) | install-info
+Suggests: gnupg-doc, xloadimage
+Conflicts: gpg-idea (<= 2.2)
+Filename: pool/main/g/gnupg2/gnupg2_2.0.20-1ubuntu2_armhf.deb
+Size: 914502
+MD5sum: cf2c12c8a94eccef3df00f2f56dfc3c4
+SHA1: ecbac13846ea221dcf626caf1a841c11e3737c0f
+SHA256: 6db0390014ff6458c145c27b2c9b01cba6f88e53f186cf73d619b71cc01b62e0
+Description: GNU privacy guard - a free PGP replacement (new v2.x)
+Multi-Arch: foreign
+Homepage: http://www.gnupg.org/
+Description-md5: bc5f056bcf1325a9dbf2ba884ea744db
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active, kubuntu-active-desktop, kubuntu-active-full, kubuntu-active
+
+Package: gpgsm
+Priority: optional
+Section: utils
+Installed-Size: 358
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Eric Dorland <eric@debian.org>
+Architecture: armhf
+Source: gnupg2
+Version: 2.0.20-1ubuntu2
+Replaces: gnupg-agent, gnupg2 (<< 2.0.0-2)
+Depends: libassuan0 (>= 2.0.1), libc6 (>= 2.7), libgcrypt11 (>= 1.4.5), libgpg-error0 (>= 1.10), libksba8 (>= 1.2.0), libreadline6 (>= 6.0), scdaemon (= 2.0.20-1ubuntu2)
+Filename: pool/main/g/gnupg2/gpgsm_2.0.20-1ubuntu2_armhf.deb
+Size: 187834
+MD5sum: 38c3a37f730c018c8d335ed9a51af764
+SHA1: 294899ffa21f53d2f5864f07b567cd44344c3337
+SHA256: ea8ad10af060bbc534840913357a7ccf6c81fb16d3b4d10bfcccff58275d6d4a
+Description: GNU privacy guard - S/MIME version
+Multi-Arch: foreign
+Homepage: http://www.gnupg.org/
+Description-md5: eaa08168026822f8656ab2343df90485
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full
+
 Package: idle
 Priority: optional
 Section: python
@@ -5500,6 +5575,31 @@ Description-md5: 2c65298afe6300be7b1ce793bdf9fb81
 Bugs: https://bugs.launchpad.net/ubuntu/+filebug
 Origin: Ubuntu
 Task: virt-host, edubuntu-desktop-gnome
+
+Package: scdaemon
+Priority: optional
+Section: utils
+Installed-Size: 326
+Maintainer: Ubuntu Developers <ubuntu-devel-discuss@lists.ubuntu.com>
+Original-Maintainer: Eric Dorland <eric@debian.org>
+Architecture: armhf
+Source: gnupg2
+Version: 2.0.20-1ubuntu2
+Replaces: gpgsm (<< 2.0.18-2)
+Depends: libassuan0 (>= 2.0.2), libc6 (>= 2.15), libgcrypt11 (>= 1.4.5), libgpg-error0 (>= 1.10), libksba8 (>= 1.2.0), libpth20 (>= 2.0.7), libusb-0.1-4 (>= 2:0.1.12)
+Breaks: gpgsm (<< 2.0.18-2)
+Filename: pool/main/g/gnupg2/scdaemon_2.0.20-1ubuntu2_armhf.deb
+Size: 157400
+MD5sum: 3ecaec7665ef13b97e5f1ee9c9ba1ae3
+SHA1: 82281a5d1affe8b54fb5e2f5602803b2e889ce3d
+SHA256: 2221247dccc165b7f3703ce03b874f7f967c113a6a50e5fa18972cd913eb873f
+Description: GNU privacy guard - smart card support
+Multi-Arch: foreign
+Homepage: http://www.gnupg.org/
+Description-md5: ade00d73739242cbebc5e97599fd6bb7
+Bugs: https://bugs.launchpad.net/ubuntu/+filebug
+Origin: Ubuntu
+Task: kubuntu-desktop, kubuntu-full, kubuntu-active-desktop, kubuntu-active-full
 
 Package: unity
 Priority: optional
